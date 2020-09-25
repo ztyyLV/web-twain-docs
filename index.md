@@ -13,27 +13,27 @@ breadcrumbText: HomePage
    - [FAQs]({{site.about}}faqs.html)
    - [Support]({{site.about}}getsupport.html)
 
-* GETTING STARTED
+* [GETTING STARTED]({{site.getstarted}}starting.html)
 
    - [HelloWorld]({{site.getstarted}}helloworld.html)
    - [Hardware]({{site.getstarted}}hardware.html)
    - [Platform]({{site.getstarted}}platform.html)
    - [FileTypes]({{site.getstarted}}filetype.html)
 
-* TECHNIQUES
+* [TECHNIQUES]({{site.indepth}}features/tech-index.html)
 
-   - [Initialize]({{site.indepth}}initialize.html)
-   - [Input]({{site.indepth}}input.html)
-   - [Output]({{site.indepth}}output.html)
-   - [Buffer]({{site.indepth}}buffer.html)
-   - [Viewer]({{site.indepth}}viewer.html)
-   - [UI]({{site.indepth}}ui.html)
-   - [Edit]({{site.indepth}}edit.html)
-   - [Read Barcode]({{site.indepth}}barcode.html)
-   - [OCR]({{site.indepth}}ocr.html)
-   - [Handle PDF]({{site.indepth}}pdf.html)
+   - [Initialize]({{site.indepth}}features/initialize.html)
+   - [Input]({{site.indepth}}features/input.html)
+   - [Output]({{site.indepth}}features/output.html)
+   - [Buffer]({{site.indepth}}features/buffer.html)
+   - [Viewer]({{site.indepth}}features/viewer.html)
+   - [UI]({{site.indepth}}features/ui.html)
+   - [Edit]({{site.indepth}}features/edit.html)
+   - [Read Barcode]({{site.indepth}}features/barcode.html)
+   - [OCR]({{site.indepth}}features/ocr.html)
+   - [Handle PDF]({{site.indepth}}features/pdf.html)
 
-* DEVELOPMENT
+* [DEVELOPMENT]({{site.indepth}}development/dev-index.html)
 
    - [Angular Integration]({{site.indepth}}development/angular.html)
    - [React Integration]({{site.indepth}}development/react.html)
@@ -45,30 +45,30 @@ breadcrumbText: HomePage
    - [About ActiveX]({{site.indepth}}development/activex.html)
    - [Other Topics]({{site.indepth}}development/topics.html)
 
-* DEPLOYMENT
+* [DEPLOYMENT]({{site.indepth}}deployment/deploy-index.html)
 
    - [Server Setup]({{site.indepth}}deployment/server.html)
    - [Service Setup]({{site.indepth}}deployment/service.html)
    - [Scenarios]({{site.indepth}}deployment/scenarios.html)
 
-* TROUBLESHOOTING
+* [TROUBLESHOOTING]({{site.indepth}}troubleshooting/debug-index.html)
 
    - [How to Debug]({{site.indepth}}troubleshooting/debug.html)
    - [Handle Errors]({{site.indepth}}troubleshooting/handleerrors.html)
 
 * [GOVERNANCE]({{site.info}}governance.html)
 
-* RELEASES
+* [RELEASES]({{site.info}}schedule/planning.html)
 
-   - [No active development]({{site.info}}releases/ideas.html)
-   - [Proposed]({{site.info}}releases/proposed.html)
-   - [In development]({{site.info}}releases/indev.html)
-   - [Deprecated]({{site.info}}releases/deprecated.html)
-   - [Known bugs]({{site.info}}releases/bugs.html)
-   - [Beta]({{site.info}}releases/beta.html)
-   - [Released]({{site.info}}releases/released.html)
+   - [Stable]({{site.info}}schedule/released.html)
+   - [Beta]({{site.info}}schedule/beta.html)
+   - [Developping]({{site.info}}schedule/indev.html)
+   - [Proposed]({{site.info}}schedule/proposed.html)
+   - [To Consider]({{site.info}}schedule/ideas.html)
+   - [Deprecated]({{site.info}}schedule/deprecated.html)
+   - [Known bugs]({{site.info}}schedule/bugs.html)
 
-* [API REFERENCE]({{site.info}}api/API-Index.html)
+* [API REFERENCE]({{site.info}}api/api-index.html)
 
    - [Dynamsoft_WebTwainEnv]({{site.info}}api/Dynamsoft_WebTwainEnv.html)
    - [Dynamsoft_Enum]({{site.info}}api/Dynamsoft_Enum.html)

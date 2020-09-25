@@ -1,8 +1,9 @@
-repositoryUrl: https://github.com/Tom-Dynamsoftblob/master
+repositoryUrl: https://github.com/Dynamsoft/web-twain-docs/master
 
 docHomePage: /
 dynamsoft_logo: /assets/img-icon/dynamsoft-logo.png
 dwt_logo: /assets/img-icon/dwt-logo.png
+edit_icon: /assets/img-icon/edit-icon.png
 
 assets: /assets/
 _includes: /_includes/
