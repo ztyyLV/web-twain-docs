@@ -9,11 +9,13 @@ title: "TOADD"
 
 ## How to install DWT
 
-- For development and test
-  - Refer to [how to get dwt]({{site.about}}resources.html#how-to-get-dwt) to download and install the library.
-- For production (installation on the client machines)
-  - The library has built-in guidance for the installation
+* For development and test
+  + Refer to [how to get dwt]({{site.about}}resources.html#how-to-get-dwt) to download and install the library.
+* For production
+  + Once `DWT` has been integrated into your application and
+
   
+
 * How to install it (what if an older version exists --> must consider uninstalling)
     - Normal procedure (prompt and such)
     - Install by command
@@ -21,7 +23,6 @@ title: "TOADD"
     - Mass installation
         - Group policy
         - Others?
-
 
 # Uninstall Old Service on the Client Machines
 
@@ -60,7 +61,6 @@ Once the installation is done, you can click 'Reconnect to the service' or refre
 
 ![service reconnect](../assets/servicereconnect.png)
 
-
 * Customize the installer
     - Built into customer's bigger installer
     - White label options
@@ -75,8 +75,6 @@ Once the installation is done, you can click 'Reconnect to the service' or refre
 * Info about the service status page
 
 https://127.0.0.1:18626/
-
-
 
 https://developer.dynamsoft.com/dwt/kb/how-to-get-support/dynamic-web-twain-how-to-restart-dynamic-web-twain-service
 https://www.dynamsoft.com/docs/dwt/KB/Deploy-Dist.html#aboutservices
