@@ -89,6 +89,7 @@ title: "TOADD"
 * [IfTiffMultiPage](#iftiffmultipage) 
 * [TIFFCompressionType]()
 * [MaxUploadImageSize](#maxuploadimagesize)
+* [IfAppendImage](#ifappendimage)
 
 **Events**
 

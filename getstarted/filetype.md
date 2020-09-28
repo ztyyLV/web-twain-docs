@@ -1,3 +1,12 @@
+---
+layout: default-layout
+needAutoGenerateSidebar: true
+description: "TOADD"
+title: "TOADD"
+---
+
+# File Types Supported by DWT
+
 Dynamic Web TWAIN: Is PDF/A format supported?
 The core module of Dynamic Web TWAIN does not support PDF/A.
 

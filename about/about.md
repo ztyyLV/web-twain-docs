@@ -5,7 +5,7 @@ description: "TOADD"
 title: "TOADD"
 ---
 
-# About the docs.
+# About the docs
 
 These docs aim to help you learn and use the Dynamic Web TWAIN library. They will help you integrate the library into your app no matter whether you are building a workflow from scratch or optimzing an existing workflow.
 
@@ -13,7 +13,7 @@ These docs aim to help you learn and use the Dynamic Web TWAIN library. They wil
 
 The Dynamic Web TWAIN library (`DWT` for short) is a software development kit (SDK) specifically designed for adding efficient document management workflows to any kind of web apps.
 
-For more info, please check out [release history]({{site.info}}releases/released.html).
+For more info, please check out [release history]({{site.info}}schedule/released.html).
 
 ## Assumptions
 
