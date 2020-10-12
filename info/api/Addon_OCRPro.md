@@ -60,10 +60,6 @@ Download(
 IsModuleInstalled(): boolean;
 ```
 
-**Usage notes**
-
-This method will attempt to download and install the dll from the server if the dll doesn't exist already or the exising one is of a different version. You can also call `IsModuleInstalled()` first to determine whether it is necessary to call `Download()`.
-
 ---
 
 ## Recognize
