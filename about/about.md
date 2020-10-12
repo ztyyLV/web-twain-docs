@@ -11,7 +11,7 @@ These docs aim to help you learn and use the Dynamic Web TWAIN library. They wil
 
 ## Introduction to Dynamic Web TWAIN
 
-The Dynamic Web TWAIN library (`DWT` for short) is a software development kit (SDK) specifically designed for adding efficient document management workflows to any kind of web apps.
+The Dynamic Web TWAIN library (`DWT` for short thereafter) is a software development kit (SDK) specifically designed for adding efficient document management workflows to any kind of web apps.
 
 For more info, please check out [release history]({{site.info}}schedule/released.html).
 

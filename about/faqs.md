@@ -33,13 +33,13 @@ DWT is a commercial software. Generally, Dynamsoft allows it to be used free of 
 
 ## What can I do when my trial license expires
 
-DWT comes with a 30-day free trial license from the day the software is installed with the [Official installer](https://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx). After that, a developer can extend the trial twice on [this page](https://www.dynamsoft.com/CustomerPortal/Portal/TrialLicense.aspx?product=dwt).
+DWT comes with a 30-day free trial license from the day the software is installed with the [Official installer](https://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx). After that, a developer can extend the trial twice on [this page](https://www.dynamsoft.com/customer/license/trialLicense).
 
-If more time is required for evaluation purposes, you can contact [Dynamsoft Support]({{site.about}}getsupport.html).
+If more time is required for evaluation purposes, you can contact [Dynamsoft Support]({{site.about}}Getsupport.html).
 
 ## What if I want Dynamsoft help with the implementation
 
-Dynamsoft provides detailed documentation including multiple samples for the DWT library. However, if you don't want to do the development yourself, you can take advantage of the [Professional Service]({{site.info}}proservice.html).
+Dynamsoft provides detailed documentation including multiple samples for the DWT library. However, if you don't want to do the development yourself, you can take advantage of the [Professional Service]({{site.indepth}}development/Pro-service.html).
 
 ## What are the most common issues when clients start to use my scan application
 
@@ -91,7 +91,7 @@ Resources files help you include DWT in your application. The following shows th
       > For Linux
       - LICENSE
     - src
-    > These files contain the following functionalities for the [WASM-mode]({{site.indepth}}initialize.html#wasm-mode)
+    > These files contain the following functionalities for the [WASM-mode]({{site.indepth}}features/initialize.html#wasm-mode)
     > - image input & output
     > - decode & encode
     > - PDF read & write
