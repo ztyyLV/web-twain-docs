@@ -8,7 +8,7 @@ edit_icon: /assets/img-icon/edit-icon.png
 assets: /assets/
 _includes: /_includes/
 _layouts: /_layouts/
-about: /web-twain/about/
+about: /web-twain/docs/about/
 getstarted: /getstarted/
 indepth: /indepth/
 info: /info/
