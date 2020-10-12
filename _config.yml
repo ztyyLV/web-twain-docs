@@ -1,15 +1,15 @@
 repositoryUrl: https://github.com/Dynamsoft/web-twain-docs/master
 
-docHomePage: /
-dynamsoft_logo: /assets/img-icon/dynamsoft-logo.png
-dwt_logo: /assets/img-icon/dwt-logo.png
-edit_icon: /assets/img-icon/edit-icon.png
+docHomePage: /web-twain/docs/
+dynamsoft_logo: /web-twain/docs/assets/img-icon/dynamsoft-logo.png
+dwt_logo: /web-twain/docs/assets/img-icon/dwt-logo.png
+edit_icon: /web-twain/docs/assets/img-icon/edit-icon.png
 
-assets: /assets/
-_includes: /_includes/
-_layouts: /_layouts/
+assets: /web-twain/docs/assets/
+_includes: /web-twain/docs/_includes/
+_layouts: /web-twain/docs/_layouts/
 about: /web-twain/docs/about/
-getstarted: /getstarted/
-indepth: /indepth/
-info: /info/
+getstarted: /web-twain/docs/getstarted/
+indepth: /web-twain/docs/indepth/
+info: /web-twain/docs/info/
 theme: jekyll-theme-cayman
