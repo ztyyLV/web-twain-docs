@@ -137,7 +137,7 @@ The following versions are supported
 
 ## WASM browsers
 
-WASM browsers refer to the browsers with the following advanced features and when `DWT` runs in the [WASM mode]({{site.indepth}}initialize.html#wasm-mode):
+WASM browsers refer to the browsers with the following advanced features.
 
 [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) - [More info](https://caniuse.com/#feat=blobbuilder)
 
@@ -154,11 +154,11 @@ Dynamsoft recommends the use of the latest versions of the modern browsers. Chec
 
 ## Other operating systems
 
-Apart from the systems listed above, there could be some other systems which are also supported but not listed. However, Dynamsoft doesn't recommend the use of such systems as they are not tested by us. If you need to use the Dynamic Web TWAIN library on a system not mentioned above, please first contact [Dynamsoft Support]({{site.about}}getsupport.html) to get more information.
+There could be some other systems which are also supported but not listed above. Dynamsoft doesn't recommend the use of such systems as they are not officially tested. If you need to use `DWT` on a system not mentioned above, please first contact [Dynamsoft Support]({{site.about}}getsupport.html) to get more information.
 
 ## Other browsers.
 
-There are many different browsers on the market which may not have been listed above. However, these browsers most likely use the same browser engines that one of the listed browsers use. For example, Opera uses [ `Blink` ](https://en.wikipedia.org/wiki/Blink_(web_engine)) just like Chrome on desktop. These browsers probably work too. If you plan to use any of the browsers that haven't been listed above, you should
+There are many different browsers on the market which may not have been listed above. However, these browsers most likely use the same browser engines that one of the listed browsers use. For example, on desktop Opera uses [ `Blink` ](https://en.wikipedia.org/wiki/Blink_(web_engine)) just like Chrome. These browsers probably work too. If you plan to use any of the browsers that are not listed above, you should
 
-  + Make sure it works by testing our [demo page](https://demo.dynamsoft.com/dwt/online_demo_scan.aspx)
-  + Do thorough tests before going into production
+* Make sure it works by testing our [demo page](https://demo.dynamsoft.com/dwt/online_demo_scan.aspx)
+* Do thorough tests before going into production

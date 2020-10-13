@@ -85,7 +85,7 @@ title: "TOADD"
 * [IfShowFileDialog](#ifshowfiledialog) 
 * [IfShowCancelDialogWhenImageTransfer](#ifshowcanceldialogwhenimagetransfer)
 * [IfShowProgressBar](#ifshowprogressbar) 
-* [JPEGQuality]()
+* [JPEGQuality](#jpegquality)
 * [IfTiffMultiPage](#iftiffmultipage) 
 * [TIFFCompressionType]()
 * [MaxUploadImageSize](#maxuploadimagesize)
