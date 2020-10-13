@@ -16,7 +16,7 @@ title: "TOADD"
 * The following versions of Windows are supported
   + 7
   + 8 & 8.1
-  + 10 **[Recommended]**
+  + 10 `Recommended`
   + Server 2008
   + Server 2012
   + Server 2016
@@ -24,11 +24,11 @@ title: "TOADD"
 
 * The following browsers are supported
   + Chrome 68.* ~ 79.*
-  + Chrome 80.* ~ 85.* **[Recommended]**
+  + Chrome 80.* ~ 85.* `Recommended`
   + Firefox 61.* ~ 69.*
-  + Firefox 70.* ~ 80.* **[Recommended]**
+  + Firefox 70.* ~ 80.* `Recommended`
   + Microsoft Edge Spartan
-  + Microsoft Edge Anaheim **[Recommended]**
+  + Microsoft Edge Anaheim `Recommended`
   + Internet Explorer 10 ~ 11
 
 ### Browsers on macOS
@@ -41,17 +41,16 @@ title: "TOADD"
   + OS X 10.10 Yosemite
   + OS X 10.11 El Capitan
   + macOS 10.12 Sierra
-  + macOS 10.13 High Sierra **[Recommended]**
-  + macOS 10.14 Mojave **[Recommended]**
-  + macOS 10.15 Catalina **[Recommended]**
-
+  + macOS 10.13 High Sierra `Recommended`
+  + macOS 10.14 Mojave `Recommended`
+  + macOS 10.15 Catalina `Recommended`
 * The following browsers are supported
   + Chrome 68.* ~ 79.*
-  + Chrome 80.* ~ 85.* **[Recommended]**
+  + Chrome 80.* ~ 85.* `Recommended`
   + Firefox 61.* ~ 69.*
-  + Firefox 70.* ~ 80.* **[Recommended]**
+  + Firefox 70.* ~ 80.* `Recommended`
   + Safari 7.* ~ 12.*
-  + Safari 13.* ~ 14.* **[Recommended]**
+  + Safari 13.* ~ 14.* `Recommended`
 
 ### Browsers on Linux
 
@@ -68,14 +67,14 @@ title: "TOADD"
   + Ubuntu 16.10 (Yakkety Yak)
   + Ubuntu 17.04 (Zesty Zapus)
   + Ubuntu 17.10 (Artful Aardvark)
-  + Ubuntu 18.04 LTS (Bionic Beaver) **[Recommended]**
+  + Ubuntu 18.04 LTS (Bionic Beaver) `Recommended`
   + Ubuntu 18.10 (Cosmic Cuttlefish)
   + Ubuntu 19.04 (Disco Dingo)
   + Ubuntu 19.10 (Eoan Ermine)
   + Ubuntu 20.04 LTS (Focal Fossa)
   + Ubuntu 20.10 (Groovy Gorilla)
   + Debian 8 (Jessie)
-  + Debian 9 (Stretch) **[Recommended]**
+  + Debian 9 (Stretch) `Recommended`
   + Debian 10 (Buster)
   + Fedora 24
   + Fedora 25
@@ -85,7 +84,7 @@ title: "TOADD"
   + Fedora 29
   + Fedora 30
   + Fedora 31
-  + Fedora 32 **[Recommended]**
+  + Fedora 32 `Recommended`
   + Mint 18.3 Sylvia
   + Mint 19 Tara
   + Mint 19.1 Tessa
@@ -95,9 +94,9 @@ title: "TOADD"
 
 * The following browsers are supported
   + Chrome 68.* ~ 79.*
-  + Chrome 80.* ~ 85.* **[Recommended]**
+  + Chrome 80.* ~ 85.* `Recommended`
   + Firefox 61.* ~ 69.*
-  + Firefox 70.* ~ 80.* **[Recommended]**
+  + Firefox 70.* ~ 80.* `Recommended`
 
 ## ActiveX browsers
 
@@ -110,30 +109,28 @@ ActiveX browsers refer to Internet Explorer 8 and 9. They are not included in th
 The following versions are supported
 
   + iOS 12.*
-  + iOS 13.* **[Recommended]**
-  + iPadOS 13.* **[Recommended]**
-
+  + iOS 13.* `Recommended`
+  + iPadOS 13.* `Recommended`
 * The following browsers are supported
   + Chrome 68.* ~ 79.* (no video streaming)
-  + Chrome 80.* ~ 85.* (no video streaming) **[Recommended]**
+  + Chrome 80.* ~ 85.* (no video streaming) `Recommended`
   + Firefox 61.* ~ 69.* (no video streaming)
-  + Firefox 70.* ~ 80.* **[Recommended]**
+  + Firefox 70.* ~ 80.* `Recommended`
   + Safari 7.* ~ 12.*
-  + Safari 13.* ~ 14.* **[Recommended]**
+  + Safari 13.* ~ 14.* `Recommended`
 
 ### Browsers on Android
 
 The following versions are supported
 
   + Android 8.0 Oreo
-  + Android 9 Pie **[Recommended]**
-  + Android 10 **[Recommended]**
-
+  + Android 9 Pie `Recommended`
+  + Android 10 `Recommended`
 * The following browsers are supported
   + Chrome 68.* ~ 79.*
-  + Chrome 80.* ~ 85.* **[Recommended]**
+  + Chrome 80.* ~ 85.* `Recommended`
   + Firefox 61.* ~ 69.*
-  + Firefox 70.* ~ 80.* **[Recommended]**
+  + Firefox 70.* ~ 80.* `Recommended`
 
 ## WASM browsers
 
