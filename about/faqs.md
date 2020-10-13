@@ -39,18 +39,18 @@ If more time is required for evaluation purposes, you can contact [Dynamsoft Sup
 
 ## What if I want Dynamsoft help with the implementation
 
-Dynamsoft provides detailed documentation including multiple samples for the DWT library. However, if you don't want to do the development yourself, you can take advantage of the [Professional Service]({{site.indepth}}development/Pro-service.html).
+Dynamsoft provides detailed documentation including multiple samples for `DWT` . However, if you don't want to do the development yourself, you can take advantage of the [Professional Virtual Developer Service]({{site.indepth}}development/Pro-service.html#virtual-developer-service).
 
 ## What are the most common issues when clients start to use my scan application
 
-* When end clients visit your scan page for the first time on a desktop, they will be automatically asked to download and manually install the Dynamsoft Service. Make sure the clients are aware of this.
-* `DWT` works with scanners via their own vendor-developed drivers. Make sure the proper driver is installed and the scanner itself already works on the system before attempting to use it with the library.
+* When end clients visit your scan page for the first time on a desktop, they will be automatically asked to download and manually [install the Dynamsoft Service]({{site.indepth}}deployment/Service.html#how-to-install-dwt). Make sure the clients are aware of this.
+* `DWT` is NOT the scanner driver. Instead, it works with scanners via their own vendor-developed drivers. Make sure the proper driver is installed and the scanner itself already works on the system before attempting to use it with `DWT` .
 
 ## What are the Resources files
 
 Resources files help you include `DWT` in your application. The following shows the purpose of these files
 
-> **Resources** is the default name of the folder that contain these files. It can be changed. For example, in the [dwt package](https://github.com/dynamsoft-dwt/web-twain-package), it's called **dist**.
+> *Resources* is the default name of the folder that contain these files. It can be changed. For example, in the [dwt package](https://github.com/dynamsoft-dwt/web-twain-package), it's called *dist*.
 
 * Resources
   + dynamsoft.webtwain.config.js

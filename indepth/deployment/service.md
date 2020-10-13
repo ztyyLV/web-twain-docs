@@ -14,8 +14,6 @@ title: "TOADD"
 * For production
   + Once `DWT` has been integrated into your application and
 
-  
-
 * How to install it (what if an older version exists --> must consider uninstalling)
     - Normal procedure (prompt and such)
     - Install by command
