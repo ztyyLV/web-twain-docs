@@ -52,6 +52,8 @@ Resources files help you include `DWT` in your application. The following shows 
 
 > *Resources* is the default name of the folder that contain these files. It can be changed. For example, in the [dwt package](https://github.com/dynamsoft-dwt/web-twain-package), it's called *dist*.
 
+### Default files
+
 * dynamsoft.webtwain.config.js
 
 > This file is used to make basic configuration of the Dynamic Web TWAIN library. It's where you enter the product key for the product and to change the initial viewer size, etc.
