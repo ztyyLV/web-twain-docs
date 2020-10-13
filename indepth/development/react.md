@@ -5,7 +5,7 @@ description: "TOADD"
 title: "TOADD"
 ---
 
-# Use `DWT` with React
+# Use DWT with React
 
 [React](https://reactjs.org/) is a JavaScript library specifically meant for creating interactive UIs. Check out the following on how to implement `DWT` into a React application.
 

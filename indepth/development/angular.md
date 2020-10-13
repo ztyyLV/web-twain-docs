@@ -5,7 +5,7 @@ description: "TOADD"
 title: "TOADD"
 ---
 
-# Use `DWT` with Angular
+# Use DWT with Angular
 
 [Angular](https://angular.io/) is one of the most popular and mature JavaScript frameworks. Check out the following on how to implement `DWT` into an Angular application.
 

@@ -5,7 +5,7 @@ description: "TOADD"
 title: "TOADD"
 ---
 
-# Use `DWT` with Vue
+# Use DWT with Vue
 
 [Vue](https://vuejs.org/) is a progressive framework for building user interfaces. Check out the following on how to implement `DWT` into a Vue application.
 
