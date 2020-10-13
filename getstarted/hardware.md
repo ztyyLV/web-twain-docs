@@ -209,7 +209,7 @@ There are 3 ways to verify
 
   + Try showing the video stream and try capturing a frame to see if it works without any errors
 
-## Troubleshooting
+## QA
 
 ### How to exclude WIA sources in the source list
 
