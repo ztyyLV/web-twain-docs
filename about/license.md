@@ -9,7 +9,7 @@ title: "TOADD"
 
 ## TERMS
 
-Read the official [License Agreement](https://www.dynamsoft.com/Products/WebTwain_license.aspx) for `DWT` .
+The official [DWT License Agreement](https://www.dynamsoft.com/Products/WebTwain_license.aspx).
 
 ## QA
 

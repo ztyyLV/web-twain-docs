@@ -150,8 +150,8 @@ The following two files are present in the [dwt package](https://github.com/dyna
 
 * dynamsoft.webtwain.min.js
 
-> This is an all-in-one JavaScript file that consists of the files `dynamsoft.webtwain.initiate.js` , `dynamsoft.webtwain.config.js` , `dynamsoft.webtwain.install.js` as well as all the add-on JavaScript files. If you include this file in the application, you no longer need to include these constituent files separately.
+> This is an all-in-one JavaScript file that consists of the files dynamsoft.webtwain.initiate.js , dynamsoft.webtwain.config.js , dynamsoft.webtwain.install.js as well as all the add-on JavaScript files. If you include this file in the application, you no longer need to include these constituent files separately.
 
 * dynamsoft.webtwain.min.mjs
 
-> This file is like `dynamsoft.webtwain.min.js` but is built by the ECMAScript 5 (es5) standard. It's used by applications (Angular, React, Vue, etc.) that import the `dwt` package as an module.
+> This file is like dynamsoft.webtwain.min.js but is built by the ECMAScript 5 (es5) standard. It's used by applications (Angular, React, Vue, etc.) that import the `dwt` package as an module.
