@@ -48,100 +48,99 @@ Dynamsoft provides detailed documentation including multiple samples for `DWT` .
 
 ## What are the Resources files
 
-Resources files help you include `DWT` in your application. The following shows the purpose of these files
+Resources files help you include `DWT` in your application. The following shows the purpose of these files.
 
 > *Resources* is the default name of the folder that contain these files. It can be changed. For example, in the [dwt package](https://github.com/dynamsoft-dwt/web-twain-package), it's called *dist*.
 
-* Resources
-  + dynamsoft.webtwain.config.js
+* dynamsoft.webtwain.config.js
 
-  > This file is used to make basic configuration of the Dynamic Web TWAIN library. It's where you enter the product key for the product and to change the initial viewer size, etc.
+> This file is used to make basic configuration of the Dynamic Web TWAIN library. It's where you enter the product key for the product and to change the initial viewer size, etc.
 
-  + dynamsoft.webtwain.initiate.js
+* dynamsoft.webtwain.initiate.js
 
-  > This file is the core of the Dynamic Web TWAIN library. 
+> This file is the core of the Dynamic Web TWAIN library. 
 
-  + dynamsoft.webtwain.install.js
+* dynamsoft.webtwain.install.js
 
-  > This file is used to configure the dialogs which are shown when the Dynamic Web TWAIN library is not installed or needs to be upgraded. This file is already referenced inside the dynamsoft.webtwain.initiate.js
+> This file is used to configure the dialogs which are shown when the Dynamic Web TWAIN library is not installed or needs to be upgraded. This file is already referenced inside the dynamsoft.webtwain.initiate.js
 
-  + Readme.txt
-  + addon
-    - dynamsoft.upload.js
+* Readme.txt
+* addon
+  + dynamsoft.upload.js
 
-    > This file contains the functionalities of the Dynamsoft Upload Module. 
+  > This file contains the functionalities of the Dynamsoft Upload Module. 
 
-    - dynamsoft.webtwain.addon.barcodereader.js
+  + dynamsoft.webtwain.addon.camera.js
 
-    > This file contains the functionalities of the Barcode addon. 
+  > This file contains the functionalities of the Camera addon. 
 
-    - dynamsoft.webtwain.addon.camera.js
+  + dynamsoft.webtwain.addon.ocr.js
 
-    > This file contains the functionalities of the Camera addon. 
+  > This file contains the functionalities of the OCR Basic addon. It's not included by default, contact [Dynamsoft Support]({{site.about}}Getsupport.html) to get it.
 
-    - dynamsoft.webtwain.addon.ocr.js
+  + dynamsoft.webtwain.addon.ocrpro.js
 
-    > This file contains the functionalities of the OCR Basic addon. 
+  > This file contains the functionalities of the OCR Professional addon. It's not included by default, contact [Dynamsoft Support]({{site.about}}Getsupport.html) to get it.
 
-    - dynamsoft.webtwain.addon.ocrpro.js
+  + dynamsoft.webtwain.addon.pdf.js
 
-    > This file contains the functionalities of the OCR Professional addon. 
+  > This file contains the functionalities of the PDF Rasterizer addon. 
 
-    - dynamsoft.webtwain.addon.pdf.js
+  + dynamsoft.webtwain.addon.webcam.js
 
-    > This file contains the functionalities of the PDF Rasterizer addon. 
+  > This file contains the functionalities of the Webcam addon. 
 
-    - dynamsoft.webtwain.addon.webcam.js
+  + dynamsoft.webtwain.addon.barcodereader.js
 
-    > This file contains the functionalities of the Webcam addon. 
+  > This file contains the functionalities of the Barcode addon. 
 
-    - dbrjs
+  + dbrjs
 
-    > These files are meant for the barcode reader addon under wasm mode.
+  > These files are meant for the barcode reader addon under [WASM mode]({{site.indepth}}initialize.html#wasm-mode).
 
-      - dbr.js
-      - dbr-7.4.0.1.full.wasm
-      - dbr-7.4.0.1.full.wasm.js
-      - dbr-7.4.0.1.worker.js
-    - dist
+    - dbr.js
+    - dbr-7.4.0.1.full.wasm
+    - dbr-7.4.0.1.full.wasm.js
+    - dbr-7.4.0.1.worker.js
+* dist
 
-    > Under this directory are the installers for the Dynamsoft Service which needs to be manually installed on each client machine that uses the Dynamic Web TWAIN library as a service.
+  > Under this directory are the installers for the Dynamsoft Service which needs to be manually installed on each client machine that uses the Dynamic Web TWAIN library as a service.
 
-      - DynamsoftServiceSetup.deb
+    - DynamsoftServiceSetup.deb
 
-      > For Linux
+    > For Linux
 
-      - DynamsoftServiceSetup.msi
+    - DynamsoftServiceSetup.msi
 
-      > For Windows
+    > For Windows
 
-      - DynamsoftServiceSetup.pkg
+    - DynamsoftServiceSetup.pkg
 
-      > For macOS
+    > For macOS
 
-      - DynamsoftServiceSetup.rpm
+    - DynamsoftServiceSetup.rpm
 
-      > For Linux
+    > For Linux
 
-      - LICENSE
-    - src
+    - LICENSE
+  + src
 
-    > These files contain the following functionalities for the [WASM-mode]({{site.indepth}}features/initialize.html#wasm-mode)
-    > - image input & output
-    > - decode & encode
-    > - PDF read & write
-    > - Viewer & UI
+  > These files contain the following functionalities for the [WASM-mode]({{site.indepth}}features/initialize.html#wasm-mode)
+  > - image input & output
+  > - decode & encode
+  > - PDF read & write
+  > - Viewer & UI
 
-      - dynamsoft.imageio.js
-      - dynamsoft.imageio_wasm-<version number>.js
-      - dynamsoft.imagecore-<version number>.wasm
-      - dynamsoft.imageio-<version number>.wasm
-      - dynamsoft.imageProc-<version number>.wasm
-      - dynamsoft.pdfReader-<version number>.wasm
-      - dynamsoft.pdfWriter-<version number>.wasm
-      - dynamsoft.viewer.css
-      - dynamsoft.viewer.js
-      - dynamsoft.webtwain.css
+    - dynamsoft.imageio.js
+    - dynamsoft.imageio_wasm-<version number>.js
+    - dynamsoft.imagecore-<version number>.wasm
+    - dynamsoft.imageio-<version number>.wasm
+    - dynamsoft.imageProc-<version number>.wasm
+    - dynamsoft.pdfReader-<version number>.wasm
+    - dynamsoft.pdfWriter-<version number>.wasm
+    - dynamsoft.viewer.css
+    - dynamsoft.viewer.js
+    - dynamsoft.webtwain.css
 
 ### Other Resources files
 
