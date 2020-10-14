@@ -112,18 +112,18 @@
         <div class="subHeader container">
             <div class="row">
                 <ul class="subHeaderMenuUl col-xs-12 clearfix">
-                    <li class="title"><a class="f18 fontOswald" href="https://www.dynamsoft.com/Products/Dynamic-Barcode-Reader.aspx">Dynamsoft Barcode Reader</a> <span class="fc9">|</span> Developer's Center</li>
-                    <li class="on"><a class="orangelink" href="{{ site.docHomePage }}">Documentation</a></li>
-                    <li><a class="whitelink hide-xs" href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx">Code Gallery</a></li>
-                    <li><a class="whitelink hide-xs" href="https://www.dynamsoft.com/Products/Barcode-Reader-Resources.aspx">Resources</a></li>
-                    <li class="fr" style="margin-right: 0; padding: 0;"><a class="btn d-btn bgOrange hide-sm hide-xs" href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx">Download 30-Day Free Trial</a></li>
+                    <li class="title"><a class="f18 fontOswald" href="https://www.dynamsoft.com/Products/WebTWAIN_Overview.aspx">Dynamic Web Twain</a> <span class="fc9">|</span> Developer's Center</li>
+                    <li class="on"><a class="orangelink" href = "{{ site.docHomePage }}">Documentation</a></li>
+                    <li><a class="whitelink hide-xs" href="https://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx">Code Gallery</a></li>
+                    <li><a class="whitelink hide-xs" href="https://developer.dynamsoft.com/dwt">Dev Center</a></li>
+                    <li class="fr" style="margin-right: 0; padding: 0;"><a class="btn d-btn bgOrange hide-sm hide-xs" href="https://www.dynamsoft.com/web-twain/downloads">Download 30-Day Free Trial</a></li>
                 </ul>
             </div>
             <div class="row mobileSubHeaderMenu">
                 <ul class="col-xs-12 show-xs">
                     <li><a class="orangelink" href = "{{ site.docHomePage }}">Documentation</a></li>
-                    <li><a class="whitelink" href="https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx">Code Gallery</a></li>
-                    <li><a class="whitelink" href="https://www.dynamsoft.com/Products/Barcode-Reader-Resources.aspx">Resources</a></li>
+                    <li><a class="whitelink" href="https://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx">Code Gallery</a></li>
+                    <li><a class="whitelink" href="https://developer.dynamsoft.com/dwt">Dev Center</a></li>
                 </ul>
             </div>
         </div>
@@ -131,25 +131,7 @@
     <div class="sideBarIcon"><i class="fa fa-list" style="margin-right: 5px;"></i> Table of contents</div>
     <div class="container" id="searchContent">
       <div class="row">
-          <div class="sideBar col-xs-12 col-md-3 hide-xs hide-sm">
-            <div id="sideBarCnt">
-                <div class="docSearchPart" style="margin-top: 30px;">
-                    <input id="txtSearch" class="search" type="text">
-                </div>
-                <ul class="mainPage" id="fullTreeMenuListContainer" name="listLevel1">
-                  {%- include sidelist-about/about.html -%}
-                  {%- include sidelist-getting-started/getting-started.html -%}
-                  {%- include sidelist-indepth/features.html -%}
-                  {%- include sidelist-indepth/development.html -%}
-                  {%- include sidelist-indepth/deployment.html -%}
-                  {%- include sidelist-indepth/troubleshooting.html -%}
-                  <li><a href="{{ site.info }}Governance.html" class="otherLinkColour">GOVERNANCE</a></li>
-                  {%- include sidelist-info/releases.html -%}
-                  {%- include sidelist-info/API-index.html -%}
-                </ul>
-            </div>
-          </div>
-          <div class="docContainer col-xs-12 col-md-9">
+          <div class="docContainer col-xs-12" style="border-left: 0;">
               <div class="main row">
                   <div id="searchResult" class="container pt40 pb60 sm-pt50">
                       <div class="row">
@@ -281,7 +263,7 @@
 
     $('#txtSearch').keydown(function(e) { 
         if (e.keyCode == 13) {
-            window.location.href = '/barcode-reader/search?q=' + $('#txtSearch').val()
+            window.location.href = '/web-twain/docs/search.html?q=' + $('#txtSearch').val()
         }
     })
 
