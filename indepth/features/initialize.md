@@ -277,7 +277,7 @@ This method manually creates a `WebTwain` instance with a default built-in viewe
 
 As mentioned above, [Load](#dynamsoftwebtwainenvload) is called automatically if `Dynamsoft.WebTwainEnv.AutoLoad` is set to `true` . Therefore, to ignore [Load](#dynamsoftwebtwainenvload), `Dynamsoft.WebTwainEnv.AutoLoad` must be set to `false` .
 
-##### How does `CreateDWTObject` look like in code
+##### How to use `CreateDWTObject`
 
 This method has the following syntax
 
@@ -301,7 +301,7 @@ CreateDWTObject(
 ): void;
 ```
 
-The following would be equivalent to using [Load](#dynamsoftwebtwainenvload) with the configuration `Dynamsoft.WebTwainEnv.Containers = [{ContainerId: 'dwtcontrolContainer1', Width: '585px', Height: '513px'}`
+The following would be equivalent to using [Load](#dynamsoftwebtwainenvload) with the configuration `Dynamsoft.WebTwainEnv.Containers = [{ContainerId: 'dwtcontrolContainer', Width: '585px', Height: '513px'}`
 
 ``` javascript
 Dynamsoft.WebTwainEnv.CreateDWTObject(
@@ -316,9 +316,9 @@ Dynamsoft.WebTwainEnv.CreateDWTObject(
 );
 ```
 
-The method can do more than [Load](#dynamsoftwebtwainenvload) though. The following code creates a `WebTwain` instance that connects to the Dynamsoft Service running on another machine with the IP 192.168.8.221 and ports 18622 and 18623 (SSL)
+The method can also do something that [Load](#dynamsoftwebtwainenvload) can't. The following code creates a `WebTwain` instance that connects to the Dynamsoft Service running on another machine with the IP 192.168.8.221 and ports 18622 and 18623 (SSL)
 
-> NOTE that `Dynamsoft.WebTwainEnv.UseLocalService` must be `true` for this usage.
+> NOTE that [ `Dynamsoft.WebTwainEnv.UseLocalService` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#uselocalservice) must be `true` for this usage.
 
 ``` javascript
 Dynamsoft.WebTwainEnv.UseLocalService = true;
@@ -333,23 +333,23 @@ Dynamsoft.WebTwainEnv.CreateDWTObject(
 );
 ```
 
-For more information, check out [how to enable remote scan]({{site.indepth}}input.html##how-to-enable-remote-scan).
+For more information, check out [how to enable remote scan]({{site.indepth}}features/input.html#how-to-enable-remote-scan).
 
-### `Dynamsoft.WebTwainEnv.CreateDWTObjectEx`
+### [ `Dynamsoft.WebTwainEnv.CreateDWTObjectEx` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#createdwtobjectex)
 
 This method manually creates a `WebTwain` instance without a default built-in viewer.
 
 #### Questions
 
-##### Can this method be used alongside [Load](#dynamsoftwebtwainenvload)?
+##### Can this method be used alongside [Load](#dynamsoftwebtwainenvload)
 
 Yes, same as  [ `CreateDWTObject` ](#dynamsoftwebtwainenvcreatedwtobject).
 
-##### How do I use this method to create `WebTwain` instances without using [Load](#dynamsoftwebtwainenvload)?
+##### How do I use this method to create `WebTwain` instances without using [Load](#dynamsoftwebtwainenvload)
 
 Same as  [ `CreateDWTObject` ](#dynamsoftwebtwainenvcreatedwtobject).
 
-##### How does `CreateDWTObjectEx` look like in code?
+##### How to use `CreateDWTObjectEx`
 
 This method has the following syntax
 
@@ -380,15 +380,15 @@ interface DWTInitialConfig {
 
 Compared with [ `CreateDWTObject` ](#dynamsoftwebtwainenvcreatedwtobject), `CreateDWTObjectEx` requires a `WebTwainId` instead of a `ContainerId` .
 
-The following would be equivalent to using [Load](#dynamsoftwebtwainenvload) with the configuration `Dynamsoft.WebTwainEnv.Containers = [{ContainerId: 'dwtcontrolContainer1', Width: '585px', Height: '513px'}`
-> NOTE that the created instance doesn't have a built-in viewer but used the method [ `BindViewer()` ]({{site.info}}api/WebTwain_Viewer.html#bindviewer) to add a viewer
+The following would be equivalent to using [Load](#dynamsoftwebtwainenvload) with the configuration `Dynamsoft.WebTwainEnv.Containers = [{ContainerId: 'dwtcontrolContainer', Width: '585px', Height: '513px'}`
+> NOTE that the created instance doesn't have a built-in viewer but used the method [ `BindViewer()` ]({{site.info}}api/WebTwain_Viewer.html#bindviewer) to add a viewer.
 
 ``` javascript
 Dynamsoft.WebTwainEnv.CreateDWTObjectEx({
-        WebTwainId: 'dwtcontrolContainer1'
+        WebTwainId: 'dwtcontrolContainer'
     },
     function(obj) {
-        obj.BindViewer('dwtcontrolContainer1', {
+        obj.BindViewer('dwtcontrolContainer', {
             Height: 513,
             Width: 585
         });
@@ -399,7 +399,7 @@ Dynamsoft.WebTwainEnv.CreateDWTObjectEx({
 );
 ```
 
-Similarly to [ `CreateDWTObject` ](#dynamsoftwebtwainenvcreatedwtobject), `CreateDWTObjectEx` can also connect to the Dynamsoft Service running on another machine
+Similar to [ `CreateDWTObject` ](#dynamsoftwebtwainenvcreatedwtobject), `CreateDWTObjectEx` can also connect to the Dynamsoft Service running on another machine
 
 > NOTE that `Dynamsoft.WebTwainEnv.UseLocalService` must be `true` for this usage.
 
@@ -418,7 +418,7 @@ Dynamsoft.WebTwainEnv.CreateDWTObjectEx({
 );
 ```
 
-For more information, check out [how to enable remote scan]({{site.indepth}}input.html##how-to-enable-remote-scan).
+For more information, check out [how to enable remote scan]({{site.indepth}}features/input.html#how-to-enable-remote-scan).
 
 ## The Dynamsoft Namespace
 
@@ -426,7 +426,8 @@ For more information, check out [how to enable remote scan]({{site.indepth}}inpu
 
 `Dynamsoft` is the top-level namespace. `DWT` and other Dynamsoft libraries are all defined under `Dynamsoft` . For `DWT` , the major members of this namespace are
 
-* `WebTwainEnv`
+* [ `WebTwainEnv` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html)
+
     Includes global methods, properties to help with `WebTwain` initialization and instantiation, etc. as shown in previous context.
 
 * `Lib`
