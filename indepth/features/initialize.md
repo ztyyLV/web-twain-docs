@@ -100,7 +100,7 @@ dynamsoft.webtwain.initiate.js
 These two files are the main JavaScript files that define the configuration and operation of `DWT` . Let's break down each file's purpose:
 
 * `dynamsoft.webtwain.initiate.js`
-This file is the **core** of the `DWT` JavaScript Library. You're not supposed to change it without consulting the Dynamsoft Support Team. 
+This file is the **core** of the `DWT` JavaScript Library. You're not supposed to change it without consulting the [Dynamsoft Support Team]({{site.about}}Getsupport.html). 
 
 * `dynamsoft.webtwain.config.js`
 This file is used to make basic configuration of `DWT` . Here is where you configure the product key, change the initial viewer size, and more.
@@ -111,9 +111,9 @@ This file is used to make basic configuration of `DWT` . Here is where you confi
 
 Generally, both `dynamsoft.webtwain.initiate.js` and `dynamsoft.webtwain.config.js` need to be referenced. In the former file, it detects whether the latter has been loaded, if not, it'll wait. Therefore, it doesn't matter which file comes first.
 
-#### Why do I see `dynamsoft.webtwain.min.js` and `dynamsoft.webtwain.min.mjs` instead of the 3 files above
+#### Why do I see `dynamsoft.webtwain.min.js` and `dynamsoft.webtwain.min.mjs` instead of the 2 files above
 
-The two files are present in the official npm package `dwt` . For simplicity, in each of these files Dynamsoft has included all necessary JavaScript code which include both files mentioned above plus `dynamsoft.webtwain.install.js` and all extra add-ons components. The ".js" file is a simple combination of the code while the ".mjs" file is built as a ES Module that is used in applications based on `Angular` , `React` and `Vue` , etc.
+The two files are present in the official [npm package `dwt` ](https://github.com/dynamsoft-dwt/web-twain-package) . For simplicity, in each of these files Dynamsoft has included all necessary JavaScript code which includes both files mentioned above plus `dynamsoft.webtwain.install.js` and all extra components (add-ons). The ".js" file is a simple combination of the code while the ".mjs" file is built as an ES6 Module that is used in applications based on `Angular` , `React` and `Vue` , etc.
 
 In a regular application, referencing `dynamsoft.webtwain.min.js` alone would be more than enough than referencing `dynamsoft.webtwain.config.js` and `dynamsoft.webtwain.initiate.js` . 
 
@@ -141,12 +141,12 @@ src/dynamsoft.webtwain.css
 ```
 
 * `dynamsoft.webtwain.install.js`
-This file is used to configure the dialogs which show up when the Dynamsoft Service or any of the `DWT` modules is not installed or needs to be upgraded. This file is automatically loaded in `dynamsoft.webtwain.initiate.js` , and therefore does not need to be referenced in the HTML page.
+This file is used to configure the dialogs which show up when the Dynamsoft Service is not installed or needs to be upgraded, etc. This file is automatically loaded when the code in `dynamsoft.webtwain.initiate.js` executes. Therefore, it does not need to be referenced in the HTML page.
 
 > As mentioned above, if you use any of the `min` file from the `dwt` package, this `install` file is already included.
 
 * `dynamsoft.viewer.js` , `dynamsoft.viewer.css` and `dynamsoft.webtwain.css`
-These three files are used to build the viewer component of `DWT` , as well as define the css of the other components of the library.
+These three files are used to build the viewer component of `DWT` , as well as define the css of the other UI elements of the library.
 
 ### WASM-specific files
 
@@ -163,42 +163,42 @@ dynamsoft.pdfReader-<version number>.wasm
 dynamsoft.pdfWriter-<version number>.wasm
 ```
 
-The first five files in the above list contain functionalities for image input and output as well as decoding and encoding. The last two files contain functionalities for PDF reading & writing.
+The first five files in the above list contain functionalities for image IO (decoding and encoding included). The last two files contain functionalities for PDF reading & writing.
 
 > These 7 files are loaded only when the first `WebTwain` instance in WASM mode is created.
 
 #### Questions
 
-##### Are all 7 files mentioned above used exclusivly in WASM mode?
+##### Are all 7 files mentioned above used exclusivly in WASM mode
 
 No, the library will use the WASM files even in service mode when one of the following conditions is met
 
-* The APIs for the [ `WebTwain.Addon.Camera` ](https://www.dynamsoft.com/docs/dwt/API/Addon.Camera.html) component are called. 
-* The API [ `WebTwain.Viewer.showVideo()` ](https://www.dynamsoft.com/docs/dwt/API/WebTwain.Viewer.html#showvideo) or [ `WebTwain.Viewer.closeVideo()` ](https://www.dynamsoft.com/docs/dwt/API/WebTwain.Viewer.html#closevideo) is called.
+* The APIs for the [ `WebTwain.Addon.Camera` ]({{site.info}}api/Addon_Camera.html) component are called. 
+* The API [ `WebTwain.Viewer.showVideo()` ]({{site.info}}api/WebTwain_Viewer.html#showvideo) or [ `WebTwain.Viewer.closeVideo()` ]({{site.info}}api/WebTwain_Viewer.html#closevideo) is called.
 
 ## Creating the WebTwain instance
 
 This is the last step of the initialization.
 
-The leading player of `DWT` is the `WebTwain` "class". Almost all methods and properties are defined in this "class". As mentioned [previously](#installation-of-the-dynamsoft-service), creating a `WebTwain` instance in service mode requires the successful connection to the Dynamsoft Service. On the other hand, creating a `WebTwain` instance in WASM mode requires these [extra files](#wasm-specific-files).
+The leading player of `DWT` is the `WebTwain` "class". Almost all methods and properties are defined in this "class". As [mentioned previously](#installation-of-the-dynamsoft-service), creating a `WebTwain` instance in Service mode requires the successful connection to the Dynamsoft Service. On the other hand, creating a `WebTwain` instance in WASM mode requires these [extra files](#wasm-specific-files).
 
 Read on to learn the three methods to instantiate `DWT` .
 
-### `Dynamsoft.WebTwainEnv.Load`
+### [ `Dynamsoft.WebTwainEnv.Load` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#load)
 
 This is the default method to create `WebTwain` instances. 
 
 #### Questions
 
-##### Is it necessary to call `Dynamsoft.WebTwainEnv.Load` manually?
+##### Is it necessary to call `Dynamsoft.WebTwainEnv.Load` manually
 
 No. It needs to be called only if `Dynamsoft.WebTwainEnv.AutoLoad` is set to `false` . If `AutoLoad` is already `true` , `Load` will be called automatically as soon as the running environment is ready.
 
 `Dynamsoft.WebTwainEnv.AutoLoad` is defined in the file `dynamsoft.webtwain.config.js` but can be called anywhere before the actual loading begins. It is set to `true` by default.
 
-##### Where can I get the handler(s) of the instance(s)?
+##### Where can I get the handler(s) of the instance(s)
 
-When `Load` is called, `DWT` tries to create the `WebTwain` instances. Once it's done, `DWT` triggers the built-in callback `Dynamsoft.WebTwainEnv.OnWebTwainReady` in which the method `Dynamsoft.WebTwainEnv.GetWebTwain` can be used to get handlers of the instances. For simplicity, the callback points to `Dynamsoft_OnReady` by default. So the following snippets are equivalent
+When `Load` is called, `DWT` tries to create the `WebTwain` instances. Once it's done, `DWT` triggers the built-in callback `Dynamsoft.WebTwainEnv.OnWebTwainReady` in which the method [ `Dynamsoft.WebTwainEnv.GetWebTwain` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#getwebtwain) can be used to get the handler(s) of the instance(s). For simplicity, the `OnWebTwainReady` callback points to a global function called `Dynamsoft_OnReady` . The following snippets are equivalent
 
 Snippet one
 
@@ -243,9 +243,9 @@ interface Container {
 
 `Width` and `Height` determines the initial viewer size of the instance.
 
-When instantiating with `Dynamsoft.WebTwainEnv.Load` , `ContainerId` , `Width` and `Height` are required. `DWT` will try to locate a HTML element with the id defined in `ContainerId` and use `Width` and `Height` as the viewer size.
+When instantiating with `Dynamsoft.WebTwainEnv.Load` , `ContainerId` , `Width` and `Height` are required. `DWT` will try to locate a HTML element with the id defined by `ContainerId` and use `Width` and `Height` as the viewer size.
 
-To create multiple instances, simple provide multiple `Container` 's, for example, the following creates two `WebTwain` instances
+To create multiple instances, simple provide multiple `Container` s, for example, the following creates two `WebTwain` instances
 
 ``` javascript
 Dynamsoft.WebTwainEnv.Containers = [{
@@ -259,25 +259,25 @@ Dynamsoft.WebTwainEnv.Containers = [{
 }];
 ```
 
-### `Dynamsoft.WebTwainEnv.CreateDWTObject`
+### [ `Dynamsoft.WebTwainEnv.CreateDWTObject` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#createdwtobject)
 
 This method manually creates a `WebTwain` instance with a default built-in viewer.
 
 #### Questions
 
-##### Can this method create a `WebTwain` instance that does not come with a default viewer?
+##### Can this method create a `WebTwain` instance that does not come with a default viewer
 
-No, only [ `CreateDWTObjectEx` ](#dynamsoftwebtwainenvcreatedwtobjectex) can do that.
+  No, only [ `CreateDWTObjectEx` ](#dynamsoftwebtwainenvcreatedwtobjectex) can do that.
 
-##### Can this method be used alongside [Load](#dynamsoftwebtwainenvload)?
+##### Can this method be used alongside [Load](#dynamsoftwebtwainenvload)
 
-Yes, this method can create more `WebTwain` instances after  [Load](#dynamsoftwebtwainenvload) has created the initial one.
+  Yes, this method can create more `WebTwain` instances after  [Load](#dynamsoftwebtwainenvload) has created the initial one.
 
-##### How do I use this method to create `WebTwain` instances without using [Load](#dynamsoftwebtwainenvload)?
+##### How do I use this method to create `WebTwain` instances without using [Load](#dynamsoftwebtwainenvload)
 
-As mentioned above, [Load](#dynamsoftwebtwainenvload) is called automatically if `Dynamsoft.WebTwainEnv.AutoLoad` is set to `true` . Therefore, in order to ignore [Load](#dynamsoftwebtwainenvload), `Dynamsoft.WebTwainEnv.AutoLoad` must be set to `true` first.
+As mentioned above, [Load](#dynamsoftwebtwainenvload) is called automatically if `Dynamsoft.WebTwainEnv.AutoLoad` is set to `true` . Therefore, to ignore [Load](#dynamsoftwebtwainenvload), `Dynamsoft.WebTwainEnv.AutoLoad` must be set to `false` .
 
-##### How does `CreateDWTObject` look like in code?
+##### How does `CreateDWTObject` look like in code
 
 This method has the following syntax
 
