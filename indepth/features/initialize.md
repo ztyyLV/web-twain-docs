@@ -7,7 +7,7 @@ title: "TOADD"
 
 # INITIALIZATION
 
-Initializing `DWT` takes a few simple steps, as you have seen in the ["Getting Started" guide]({{site.getstarted}}helloworld.html). The following guide will dive deeper into how `DWT` is intialized once the page is loaded.
+Initializing `DWT` takes a few simple steps, as you have seen in the ["Getting Started"]({{site.getstarted}}helloworld.html)chapter. The following guide will dive deeper into how `DWT` is intialized once the page loads.
 
 ## Usage Modes
 
@@ -17,13 +17,13 @@ Before we dive into the details of initialization, let's take a look at the two 
 
 #### What is Service Mode
 
-Service mode means `DWT` operates through the **Dynamsoft Service** which is a quiet, background system service that handles the communication between the connected devices and the browser client as well as imaging processing, encoding, decoding, etc.
+Service mode means `DWT` operates through the [Dynamsoft Service]({{site.indpeth}}deployment/Service.html) which is a quiet, background system service that handles the communication between the connected devices and the browser client as well as imaging processing, encoding, decoding, etc.
 
 When using `DWT` on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices), the user by default goes with service mode (recommended). That means, the installation of the Dynamsoft Service is mandatory.
 
 #### Installation of the Dynamsoft Service
 
-If a user who hasn't installed the Dynamsoft Service accesses the web page (which has `DWT` ) for the first time, they will be prompted to install it. This is a built-in behavior of the library. The prompt will display the download link, and once the installer is downloaded, the installation process will take just a few seconds.
+If a user who hasn't installed the Dynamsoft Service accesses the web page (which has `DWT` ) for the first time, they will be prompted to install it. This is a built-in behaviour of the library. The prompt will display the download link, and once the installer is downloaded, the installation process will take just a few seconds.
 
 > The prompt comes up when you try to [create a `WebTwain` instance](#creating-the-webtwain-instance) in service mode.
 
@@ -31,21 +31,31 @@ If a user who hasn't installed the Dynamsoft Service accesses the web page (whic
 
 #### About the Dynamsoft Service
 
-The Dynamsoft Service uses the localhost connection to communicate with the browser client. The service uses ports **18622, 18625, 18623, and 18626** for connection. The latter two ports are used when there is an SSL encryption, and the earlier two when otherwise. These ports can be configured in the DSConfiguration.ini file of the service, located in:
-`C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64)\DSConfiguration.ini` (on Windows)
+The Dynamsoft Service uses `localhost` and the ports **18622, 18625, 18623, and 18626** for connection. The latter two ports are used when there is an SSL encryption, and the earlier two when otherwise. These ports can be configured in the *DSConfiguration.ini* file located in:
+`C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64)\DSConfiguration.ini` (Windows as an example)
 
-By default, there are always three Dynamsoft Service processes running. All of them are called `Dynamsoft Service` and use the same file `DynamsoftService.exe` . However they start under different arguments.
+By default, there are always three Dynamsoft Service processes running. All of them are called `Dynamsoft Service` and use the same file `DynamsoftService.exe` . However, they are started with different arguments.
 
 The main process starts without any argument as follows:
-`"C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\DynamsoftService.exe"` .
 
-Then there is a monitor process which is meant to monitor the main process and automatically start it in case it crashes
-`'C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\DynamsoftService.exe -asmonitor Global\Dynamsoft_1.5.0_352325843_stop_service_event Global\Dynamsoft_1.5.0_352325828_certcheck_event'` .
+``` cmd
+C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\DynamsoftService.exe
+```
+
+Then the monitor process which is meant to monitor the main process and automatically start it in case it crashes starts like this:
+
+``` cmd
+C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\DynamsoftService.exe -asmonitor Global\Dynamsoft_1.5.0_352325843_stop_service_event Global\Dynamsoft_1.5.0_352325828_certcheck_event
+```
+
  
-The last always-running process is meant to support the SSL certificate for Firefox
-`'"-scan" "\\.\pipe\dynamsoftscan_15.0_70056_60" "0" "Global\ss352604281_61_70056" "0" "C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\dwt_trial_15.0.0.0625.dll"'` .
- 
-Service mode *needs* to be used if you wish to [use a connected physical scanner]({{site.indepth}}input.html#scan-from-a-local-scanner). It is this Dynamsoft Service that handles all communication between the browser client and the scanner driver. As mentioned previously, Service mode is the default if the user is on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices).
+The last always-running process is meant to support the SSL certificate specifically for the Firefox browser:
+
+``` 
+"-scan" "\\.\pipe\dynamsoftscan_15.0_70056_60" "0" "Global\ss352604281_61_70056" "0" "C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\dwt_trial_15.0.0.0625.dll"
+```
+
+Service mode *needs* to be used if you wish to [use a connected physical scanner]({{site.indepth}}features/input.html#scan-from-a-local-scanner). It is this Dynamsoft Service that handles all communication between the browser client and the scanner driver. As mentioned previously, Service mode is used by default if the user is on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices).
 
 > NOTE:
 > * On Windows, the service runs in the "Local System" account
@@ -58,15 +68,17 @@ Service mode *needs* to be used if you wish to [use a connected physical scanner
 
 WASM mode means `DWT` operates completely within the browser with the help of `Web Worker` and `WebAssembly` . It relieves users from manually installing anything but it does require advanced features that only modern [WASM browsers]({{site.getstarted}}platform.html#wasm-browsers) provide.
 
-If a user decides to access the `DWT` application via [mobile]({{site.getstarted}}platform.html#browsers-on-mobile-devices) or they don't want to install anything on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices), they can choose the WASM mode.
+If a user decides to access the `DWT` application via [a mobile browser]({{site.getstarted}}platform.html#browsers-on-mobile-devices) or they don't want to install anything on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices), they can choose the WASM mode.
+
+Read more on how to [expand your application to mobile platforms]({{site.indepth}}development/upgrade.html#expand-your-application-to-mobile-platforms).
 
 #### Comparison of the two modes
 
-A major difference between the Service mode and the WASM mode is that the latter can not access local devices which means [utilization of local scanners]({{site.indepth}}input.html#scan-from-a-local-scanner) is not possible.
+A major difference between Service mode and WASM mode is that the latter can not access local devices, which means that it is impossible to [use local scanners]({{site.indepth}}features/input.html#scan-from-a-local-scanner).
 
-Other than that, the performance and speed of the WASM mode is inferior as well because it is not able to gain as many resources as the service mode.
+Also, the performance and speed of WASM mode is not as good as Service mode because it is not able to make use of as many resources.
 
-At Dynamsoft, we tried and are still trying to make these two modes to function as closely to each other as possible. Also check out [Expand your application to mobile platforms]({{site.indepth}}development/upgrade.html#expand-your-application-to-mobile-platforms).
+At Dynamsoft, we tried and are still trying to make these two modes to function as closely to each other as possible. 
 
 #### How to use WASM mode on desktop
 
