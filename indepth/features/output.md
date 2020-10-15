@@ -74,9 +74,9 @@ function getExtension(type) {
 
 #### Questions
 
-##### How is the upload done
+##### Q: How is the upload done
 
-`DWT` does the uploading in a few steps
+**A**: `DWT` does the uploading in a few steps
 
 * Grab the image(s) specified by `indices` ; 
 
@@ -87,25 +87,25 @@ function getExtension(type) {
 
 The server-side script specified by `url` is very important, check out [Server-side Scripting]({{site.indepth}}development/serverScript.html) for more information.
 
-##### Is SSL supported
+##### Q: Is SSL supported
 
-Yes, as shown in the following line, you just need to make sure the correct protocol is used
+**A**: Yes, as shown in the following line, you just need to make sure the correct protocol is used
 
 ``` javascript
 var protocol = Dynamsoft.Lib.detect.ssl ? "https://" : "http://"
 ```
 
-##### What file types are supported
+##### Q: What file types are supported
 
-As shown in the above function `getExtension()` , `DWT` supports `BMP` , `JPG` , `TIF` , `PNG` and `PDF` .
+**A**: As shown in the above function `getExtension()` , `DWT` supports `BMP` , `JPG` , `TIF` , `PNG` and `PDF` .
 
-##### Can I upload multiple images as one file
+##### Q: Can I upload multiple images as one file
 
-Yes, the file types `TIF` and `PDF` support multi-page. Make sure you use these two types when trying to upload multiple images as one file.
+**A**: Yes, the file types `TIF` and `PDF` support multi-page. Make sure you use these two types when trying to upload multiple images as one file.
 
-##### Can I upload multiple images as separate files in one go
+##### Q: Can I upload multiple images as separate files in one go
 
-By design, the method `HTTPUpload()` only contains one file. But as it essentially sends an HTTP form to the server, you can attach multiple files in that form using the methods [ `ConvertToBlob()` ]({{site.info}}api/WebTwain_IO.html#converttoblob) and [ `SetHTTPFormField()` ]({{site.info}}api/WebTwain_IO.html#sethttpformfield).
+**A**: By design, the method `HTTPUpload()` only contains one file. But as it essentially sends an HTTP form to the server, you can attach multiple files in that form using the methods [ `ConvertToBlob()` ]({{site.info}}api/WebTwain_IO.html#converttoblob) and [ `SetHTTPFormField()` ]({{site.info}}api/WebTwain_IO.html#sethttpformfield).
 
 Check out the following snippet on how it is done. NOTE that the method `HTTPUpload()` only has 3 parameters as it doesn't need to specify a file anymore.
 
@@ -161,21 +161,21 @@ function uploadSeparateFiles(indices, type) {
 }
 ```
 
-##### Can I upload the file as a base64 string
+##### Q: Can I upload the file as a base64 string
 
-Yes, the 4th parameter of the method `HTTPUpload()` is `dataFormat` and it has two allowed values which are `Dynamsoft.EnumDWT_UploadDataFormat.Binary` and `Dynamsoft.EnumDWT_UploadDataFormat.Base64` . The code snippet uses the former but you can feel free to use the latter to upload the file as a base64 string.
+**A**: Yes, the 4th parameter of the method `HTTPUpload()` is `dataFormat` and it has two allowed values which are `Dynamsoft.EnumDWT_UploadDataFormat.Binary` and `Dynamsoft.EnumDWT_UploadDataFormat.Base64` . The code snippet uses the former but you can feel free to use the latter to upload the file as a base64 string.
 
-##### How to specify the images to upload
+##### Q: How to specify the images to upload
 
-Use the 2nd parameter `indices` to specify the images by their indices. Note that even if you upload just one file, you still needs to supply an array of it's index. For example: `[0]` .
+**A**: Use the 2nd parameter `indices` to specify the images by their indices. Note that even if you upload just one file, you still needs to supply an array of it's index. For example: `[0]` .
 
-##### Can I change the header of the HTTP form
+##### Q: Can I change the header of the HTTP form
 
-Yes, you can use the method [ `SetHTTPHeader()` ]({{site.info}}api/WebTwain_IO.html#sethttpheader) to add or change the header(s). It's recommended that you don't change the default fields including but not limited to `Accept` , `Connection` , `Cookie` , etc.
+**A**: Yes, you can use the method [ `SetHTTPHeader()` ]({{site.info}}api/WebTwain_IO.html#sethttpheader) to add or change the header(s). It's recommended that you don't change the default fields including but not limited to `Accept` , `Connection` , `Cookie` , etc.
 
-##### Can I change the fields of the HTTP form
+##### Q: Can I change the fields of the HTTP form
 
-Yes, you can use the method [ `SetHTTPFormField()` ]({{site.info}}api/WebTwain_IO.html#sethttpformfield) to add extra fields to the field. In a [previous question](#can-i-upload-multiple-images-as-separate-files-in-one-go), the method is used to add files to the form. But you can also use the method to add extra text information to the form as shown below
+**A**: Yes, you can use the method [ `SetHTTPFormField()` ]({{site.info}}api/WebTwain_IO.html#sethttpformfield) to add extra fields to the field. In a [previous question](#can-i-upload-multiple-images-as-separate-files-in-one-go), the method is used to add files to the form. But you can also use the method to add extra text information to the form as shown below
 
 ``` javascript
 // Clear old fields before adding new ones
@@ -183,17 +183,17 @@ DWObject.ClearAllHTTPFormField();
 DWObject.SetHTTPFormField("FileType", "Insurance Doc");
 ```
 
-##### Can I change the default field name of the file
+##### Q: Can I change the default field name of the file
 
-Yes, you can use the API [ `HttpFieldNameOfUploadedImage` ]({{site.info}}api/WebTwain_IO.html#httpfieldnameofuploadedimage) to change the default field name "RemoteFile".
+**A**: Yes, you can use the API [ `HttpFieldNameOfUploadedImage` ]({{site.info}}api/WebTwain_IO.html#httpfieldnameofuploadedimage) to change the default field name "RemoteFile".
 
-##### Can I show my own upgrade progress bar
+##### Q: Can I show my own upgrade progress bar
 
-Yes, please check out [customize the progress bar]({{site.indepth}}ui.html#progress-bar).
+**A**: Yes, please check out [customize the progress bar]({{site.indepth}}ui.html#progress-bar).
 
-#### How do I know whether the upload succeeded
+#### Q: How do I know whether the upload succeeded
 
-Every HTTP upload method has two callbacks with signatures like this
+**A**: Every HTTP upload method has two callbacks with signatures like this
 
 ``` typescript
 onEmptyResponse: () => void,
@@ -209,15 +209,15 @@ Of course, in your own server-side script to accept and process the HTTP Post re
 
 `DWT` also provides an API called [ `HTTPPostResponseString` ]({{site.info}}api/WebTwain_IO.html#httppostresponsestring) which contains `response` but can be read outside of the upload method.
 
-##### Can I limit the size of the uploaded file
+##### Q: Can I limit the size of the uploaded file
 
-Yes, you can set the limit (in bytes) using the API [ `MaxUploadImageSize` ]({{site.info}}api/WebTwain_IO.html#maxuploadimagesize). After that, `DWT` will refuse to perform an upload should the size of the file exceeds the limit.
+**A**: Yes, you can set the limit (in bytes) using the API [ `MaxUploadImageSize` ]({{site.info}}api/WebTwain_IO.html#maxuploadimagesize). After that, `DWT` will refuse to perform an upload should the size of the file exceeds the limit.
 
 > NOTE: the API `MaxUploadImageSize` doesn't limit other fields of the upload. Therefore, if you append a very big string as a field or perhaps a few big Blobs as fiels, they can not be limited.
 
-##### Can I upload a big file in segments
+##### Q: Can I upload a big file in segments
 
-Yes, when the file to upload is huge, you can use the method [ `SetUploadSegment()` ]({{site.info}}api/WebTwain_IO.html#setuploadsegment) to configure a segmented upload operation
+**A**: Yes, when the file to upload is huge, you can use the method [ `SetUploadSegment()` ]({{site.info}}api/WebTwain_IO.html#setuploadsegment) to configure a segmented upload operation
 
 ``` javascript
 // For a file bigger than 1 MB, upload it in 500-KB segments 
@@ -226,9 +226,9 @@ DWObject.SetUploadSegment(1, 500);
 
 For segmented upload, the server-side script is quite different. Check out how it is done in C# [here]({{site.indepth}}development/serverscript.html#segmented-upload).
 
-##### What are all the APIs `DWT` provides for HTTP upload
+##### Q: What are all the APIs `DWT` provides for HTTP upload
 
-Apart from the recommended `HTTPUpload()` method and those already mentioned above, `DWT` provides 8 more methods and a few other properties for making a HTTP upload. They are listed below
+**A**: Apart from the recommended `HTTPUpload()` method and those already mentioned above, `DWT` provides 8 more methods and a few other properties for making a HTTP upload. They are listed below
 
 * [ `HTTPUploadThroughPutEx()` ]({{site.info}}api/WebTwain_IO.html#httpuploadthroughputex)
 * [ `HTTPUploadThroughPost()` ]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpost)
@@ -549,9 +549,9 @@ DWObject.ConvertToBase64(
 
 ## Other Questions
 
-### How to reduce the size of a resulting file
+### Q: How to reduce the size of a resulting file
 
-There are a few things that you can try to reduce the size of a resulting file
+**A**: There are a few things that you can try to reduce the size of a resulting file
 
 * Scan in grayscale or black & white instead of RGB; 
 * Convert the images to grayscale or black & white before the output, read more [here](#how-to-convert); 
@@ -559,12 +559,14 @@ There are a few things that you can try to reduce the size of a resulting file
 * Convert the images to a lower resolution, read more [here](#how-to-set-dpi); 
 * [Optional] If the resulting file is in the JPEG format (.jpg) or is a TIF or PDF that is encoded by the JPEG standard, you can set [ `JPEGQuality` ]({{site.info}}api/WebTwain_IO.html#jpegquality) to a lower value.
 
-### How can I customize a resulting TIFF file
+### Q: How can I customize a resulting TIFF file
+
+**A**: There are a few ways
 
 * Change its compression type with [ `TIFFCompressionType` ]({{site.info}}api/WebTwain_IO.html#tiffcompressiontype); 
 * Specify whether it is multi-page or single-page with [ `IfTiffMultiPage` ]({{site.info}}api/WebTwain_IO.html#iftiffmultipage); 
 * Set TIFF tags with [ `ClearTiffCustomTag()` ]({{site.info}}api/WebTwain_IO.html#cleartiffcustomtag) and [ `SetTiffCustomTag()` ]({{site.info}}api/WebTwain_IO.html#settiffcustomtag); 
 
-### Can I hide the progress bar
+### Q: Can I hide the progress bar
 
-Yes, check out [hide the progress bar]({{site.indepth}}ui.html#progress-bar) for more information.
+**A**: Yes, check out [hide the progress bar]({{site.indepth}}ui.html#progress-bar) for more information.
