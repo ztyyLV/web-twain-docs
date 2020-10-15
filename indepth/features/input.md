@@ -15,7 +15,7 @@ Different ways to get data into `DWT` buffer.
 
 ### Scan from a local scanner
 
-> Supported on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and only when `DWT` runs in the [service mode]({{site.indepth}}initialize.html#service-mode)
+> Supported on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and only when `DWT` runs in the [service mode]({{site.indepth}}features/initialize.html#service-mode)
 
 A local scanner refers to a scanner that is plugged in the same desktop via USB or one that is available on the local network and is accessible on the local desktop. The latter is normally known as a network scanner. Generally, a network scanner is connected to the LAN itself (cable or WI-FI) and is assigned a static IP. Then the scanner driver from the device vendor configures the IP to connect to the scanner.
 
@@ -32,6 +32,8 @@ A remote scanner refers to a scanner that is
 
 For more information, check out [how to enable remote scan](#how-to-enable-remote-scan).
 
+<!--
+
 ### Scan from a TWAIN-Direct scanner
 
 > Supported on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and [mobile]({{site.getstarted}}platform.html#browsers-on-mobile-devices).
@@ -39,22 +41,32 @@ For more information, check out [how to enable remote scan](#how-to-enable-remot
 A TWAIN-Direct scanner refers to a device that supports the next generation of the TWAIN protocal called [ `TWAIN-Direct` ](https://www.twaindirect.org/).
 
 For more information, check [How to use a TWAIN-Direct scanner](#how-to-use-a-twain-direct-scanner).
+-->
 
 ### Questions
 
-#### Configure the scan
+#### Q: How to configure the scan
 
-* Basic settings (resolution, pixeltype, duplex, etc.)
+**A**: `DWT` provides two ways to set up a scan operation.
 
-#### How many images can be scanned
+* Change one setting at a time, take a few APIs for example
+  + [PageSize]({{site.info}}api/WebTwain_Acquire.html#pagesize) 
+  + [PixelType]({{site.info}}api/WebTwain_Acquire.html#pixeltype)
+  + [Resolution]({{site.info}}api/WebTwain_Acquire.html#resolution) 
+  + [SourceCount]({{site.info}}api/WebTwain_Acquire.html#sourcecount)
+* Change all settings at once, these two APIs can accomplish this
+  + [AcquireImage()]({{site.info}}api/WebTwain_Acquire.html#acquireimage)
+  + [startScan()]({{site.info}}api/WebTwain_Acquire.html#startscan)
 
-> Check out [Buffer Management]({{site.indepth}}buffer.html#memory-limits-and-disk-caching)
+#### Q: How many images can be scanned
 
-#### How to use Custom DataSource Data
+**A**: Check out [Buffer Management]({{site.indepth}}features/buffer.html#memory-limits-and-disk-caching)
+
+#### Q: How to use Custom DataSource Data
 
 > This feature is only for [TWAIN scanners]({{site.getstarted}}hardware.html#twain-scanners)
 
-Custom DataSource Data (CDD for short) is a feature provided by TWAIN and implemented by TWAIN sources (drivers). The idea is to save all TWAIN-related configurations in a file or a base64 string and use it later to restore the same configurations on the same device or a device of the same model. This feature can be very useful in cases like sharing the same configurations across multiple devices, or presetting a device for scanning, etc. `DWT` provides 2 pairs of methods to enable this feature which are
+**A**: Custom DataSource Data (CDD for short) is a feature provided by TWAIN and implemented by TWAIN sources (drivers). The idea is to save all TWAIN-related configurations in a file or a base64 string and use it later to restore the same configurations on the same device or a device of the same model. This feature can be very useful in cases like sharing the same configurations across multiple devices, or presetting a device for scanning, etc. `DWT` provides 2 pairs of methods to enable this feature which are
 
 * [ `GetCustomDSData()` ]({{site.info}}api/WebTwain_Acquire.html#getcustomdsdata) , [ `SetCustomDSData()` ]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdata)
 * [ `GetCustomDSDataEx()` ]({{site.info}}api/WebTwain_Acquire.html#getcustomdsdataex) , [ `SetCustomDSDataEx()` ]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdataex)
@@ -97,11 +109,11 @@ The following shows how to use the 2nd pair in JavaScript
   });
 ```
 
-#### Use Capability Negotiation
+#### Q: How to use Capability Negotiation
 
 > This feature is only for [TWAIN scanners]({{site.getstarted}}hardware.html#twain-scanners)
 
-Capability Negotiation is the way a TWAIN application like `DWT` talk with a TWAIN source like a scanner. It goes like
+**A**: Capability Negotiation is the way a TWAIN application like `DWT` talk with a TWAIN source like a scanner. It goes like
 
 * [DWT] Are you capable of ***?
 * [Scanner] Yes and here is what I can do...
@@ -110,9 +122,7 @@ Capability Negotiation is the way a TWAIN application like `DWT` talk with a TWA
 
 `DWT` provides two methods `getCapabilities()` and `setCapabilities()` for the negotiation. The following shows how to ask for supported pagesizes and set it to A4 using the negotiation.
 
-#### Use a standard capability
-
-The following retrieve the capabilities and read the available page sizes
+##### Ask for supported sizes
 
 ``` javascript
 DWObject.getCapabilities(function(result) {
@@ -126,7 +136,7 @@ DWObject.getCapabilities(function(result) {
 });
 ```
 
-The following sets page size to A4
+##### Set page size to A4
 
 ``` javascript
 DWObject.setCapabilities({
@@ -146,9 +156,9 @@ DWObject.setCapabilities({
 );
 ```
 
-#### Use a custom capability
+#### Q: How to use a custom capability
 
-The TWAIN specification defines more than 150 standard capabilities for TWAIN App & Source to choose from. However, some scanner vendors provide advanced and model-specific capabilities which are not included in the specification. We call them custom capabilities. The following steps show how to use them
+**A**: The TWAIN specification defines more than 150 standard capabilities for TWAIN App & Source to choose from. However, some scanner vendors provide advanced and model-specific capabilities which are not included in the specification. We call them custom capabilities. The following steps show how to use them
 
 * Install the [TWAIN sample application](http://www.dynamsoft.com/download/support/twainapp.win32.installer.msi)
 
@@ -261,7 +271,7 @@ function CaptureImage() {
 
 To load means to open files which are accessible on the system. These files can be those residing on the local disk or those shared on the network.
 
-> As a lightweight library, `DWT` only supports the following file types: BMP, JPG, TIF, PNG, PDF. And not all files of these types can be read correctly. If you come across a file that is of one of these types but fail to load, you can contact [Dynamsoft Support]({{site.about}}getsupport.html).
+> As a lightweight library, `DWT` only supports the following file types: BMP, JPG, TIF, PNG, PDF. And not all files of these types can be read correctly. Read more [here]({{site.getstarted}}Filetype.html). If you come across a file that is of one of these types but fail to load, you can contact [Dynamsoft Support]({{site.about}}getsupport.html).
 
 ### [Recommended] Show the `Open File` dialog and select files to load.
 
@@ -285,7 +295,7 @@ DWObject.LoadImageEx("", Dynamsoft.EnumDWT_ImageType.IT_ALL, onSuccess, onFailur
 
 ### Open an existing file with its absolute path
 
-> Only supported on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and only when `DWT` runs in the [service mode]({{site.indepth}}initialize.html#service-mode). Example code is as follows
+> Only supported on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and only when `DWT` runs in the [service mode]({{site.indepth}}features/initialize.html#service-mode). Example code is as follows
 
 ``` javascript
 var onSuccess = function() {
@@ -318,7 +328,7 @@ DWObject.LoadImage("YOUR-FILE-PATH", onSuccess, onFailure);
 
 #### `HTTP` or `HTTPS`
 
-> Supported on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and [mobile]({{site.getstarted}}platform.html#browsers-on-mobile-devices). For this option, a URL specifies the file to download. That URL either specifies the path of the file itself or points to a server-side script that eventually returns a file. Check out the code snippets below for both scenarios.
+> Supported on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and [mobile]({{site.getstarted}}platform.html#browsers-on-mobile-devices). For this option, use a URL to fetch the file. The URL either specifies the path of the file itself or points to a server-side script that eventually returns a file. Check out the code snippets below for both scenarios.
 
 ##### The URL specifies a file
 
@@ -461,7 +471,7 @@ function loadFileFromBase64() {
 
 ### Load files from the system clipboard
 
-> Supported on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and only when `DWT` runs in the [service mode]({{site.indepth}}initialize.html#service-mode).
+> Supported on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and only when `DWT` runs in the [service mode]({{site.indepth}}features/initialize.html#service-mode).
 
 ``` javascript
 DWObject.LoadDibFromClipboard()
@@ -469,7 +479,7 @@ DWObject.LoadDibFromClipboard()
 
 ## Other Topics
 
-### How to select a scanner by its name
+### Select a scanner by its name
 
 `DWT` has a method `SelectSourceByIndex()` which allows you select a scanner by its index in the source list. In some cases, you may want to select a source by its name. Check out the following code on how to do it.
 
@@ -491,13 +501,19 @@ sources.find(function(name, index) {
   + Find the file `DSConfiguration.ini`
   + Add the following line
 
-    > Assume the IP of this desktop is `192.168.8.221`
-    > `Server=192.168.8.221`
+  > Assume the IP of this desktop is `192.168.8.221`
+
+``` 
+Server=192.168.8.221`
+```
+
   + Find the service `Dynamsoft Service` in Windows services list and restart it.
 
-#### Create a WebTwain instance to connect to that service
+#### In your application
 
-> Read more [here]({{site.indepth}}initialize.html#dynamsoftwebtwainenvcreatedwtobject))
+* Create a WebTwain instance to connect to that service
+
+> Read more [here]({{site.indepth}}features/initialize.html#dynamsoftwebtwainenvcreatedwtobject)
 
 ``` javascript
 Dynamsoft.WebTwainEnv.CreateDWTObject(
@@ -512,13 +528,17 @@ Dynamsoft.WebTwainEnv.CreateDWTObject(
 );
 ```
 
-#### Use this WebTwain instance `DWObject` as usual to scan documents.
+* Use this WebTwain instance `DWObject` as usual to scan documents from the scanner connected to the PC (192.168.8.221)
+
+<!--
 
 ### How to use a TWAIN-Direct scanner
 
+-->
+
 ### How to scan only a selected region
 
-There are a few available ways to achieve this
+There are a few ways to achieve this
 
 #### Set `PageSize`
 
