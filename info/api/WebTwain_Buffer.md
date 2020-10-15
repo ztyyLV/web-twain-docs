@@ -14,7 +14,9 @@ title: "TOADD"
 * [SetDefaultTag()](#setdefaulttag) 
 * [TagImages()](#tagimages)
 * [GetImageBitDepth()](#getimagebitdepth)
+
 <!--* [GetImageBitDepthAsync()](#getimagebitdepthasync)-->
+
 * [GetImageSize()](#getimagesize)
 * [GetImageSizeWithSpecifiedType()](#getimagesizewithspecifiedtype) 
 * [GetSelectedImagesSize()](#getselectedimagessize)
@@ -36,8 +38,11 @@ title: "TOADD"
 * [SwitchImage()](#switchimage)
 * [RemoveImage()](#removeimage) 
 * [RemoveAllImages()](#removeallimages)
+
 <!--* [RemoveAllImagesAsync()](#removeallimagesasync)-->
+
 * [RemoveAllSelectedImages()](#removeallselectedimages)
+
 <!--* [RemoveAllSelectedImagesAsync()](#removeallselectedimagesasync)-->
 
 **Properties**
@@ -76,8 +81,10 @@ title: "TOADD"
 
 ``` typescript
 /**
+
 * Return the imageId of an image specified by the index.
 * @param index The index of the image.
+
 */
 IndexToImageID(index: number): number;
 ```
@@ -121,7 +128,7 @@ ClearImageTags(index: number): boolean;
 ``` typescript
 /**
  * Filter images by the specified tag.
- * @param tag The tag used as the filter.
+ * @param tag The tag used as the filter. If nothing or an empty string is used, the filter is cleared.
  */
 FilterImagesByTag(tag: string): boolean;
 ```
@@ -171,6 +178,7 @@ GetImageBitDepth(index: number): number;
 
 ---
 <!--
+
 ## GetImageBitDepthAsync
 
 **Syntax**
@@ -538,6 +546,7 @@ RemoveAllImages(): boolean;
 
 ---
 <!--
+
 ## RemoveAllImagesAsync
 
 **Syntax**
@@ -564,6 +573,7 @@ RemoveAllSelectedImages(): boolean;
 
 ---
 <!--
+
 ## RemoveAllSelectedImagesAsync
 
 **Syntax**
@@ -615,6 +625,7 @@ BlankImageMaxStdDev: number;
 ```
 
 ---
+
 ## BufferMemoryLimit
 
 **Syntax**
@@ -628,6 +639,7 @@ BufferMemoryLimit: number;
 ```
 
 ---
+
 ## IsBlankImage
 
 **Syntax**

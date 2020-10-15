@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Output
+title: Dynamic Web TWAIN Features - Output
 keywords: Dynamic Web TWAIN, Documentation, Output
 breadcrumbText: Output
 description: Dynamic Web TWAIN SDK Documentation Output Page

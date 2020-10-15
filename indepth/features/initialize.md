@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Initialization
+title: Dynamic Web TWAIN Features - Initialization
 keywords: Dynamic Web TWAIN, Documentation, Initialization
 breadcrumbText: Initialization
 description: Dynamic Web TWAIN SDK Documentation Initialization Page

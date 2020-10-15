@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Input
+title: Dynamic Web TWAIN Features - Input
 keywords: Dynamic Web TWAIN, Documentation, Input
 breadcrumbText: Input
 description: Dynamic Web TWAIN SDK Documentation Input Page
