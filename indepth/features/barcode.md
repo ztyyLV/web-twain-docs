@@ -242,6 +242,7 @@ If you are not sure how to change the `RuntimSettings` , the addon also comes wi
 * `speed` : fast but may miss some codes
 * `coverage` : slow but cover most codes
 * `balance` : between `speed` and `coverage`
+
 The following shows their differences
 
 | Parameter | `speed` | `balance` | `coverage` | `default` |
@@ -335,7 +336,7 @@ ReadBarcode(0);
 
 ### As document classifier
 
-The following code reads all barcodes from all images and put images which have the same barcode into one document. Images without any barcode are put into one document as well.
+The following code reads all barcodes from all images and put images which have the same barcode into one document. Images without any barcode are put into another separate document.
 
 ``` javascript
 // `aryIndices` consists of multiple arrays each of which represents a document
@@ -409,4 +410,4 @@ function ReadBarcode(index) {
 ReadBarcode(0);
 ```
 
-[Try](https://demo.dynamsoft.com/Samples/dwt/Scan-Documents-and-Separate-them-by-Barcode/Scan-Separate-Barcode.html) or [download](https://www.dynamsoft.com/handle-sample?demoSampleId=102&type=2&productId=1000001&link=https%3a%2f%2fdownload2.dynamsoft.com%2fSamples%2fDWT%2fScan-Documents-and-Separate-them-by-Barcode.zip) an official demo.
+[Try](https://demo.dynamsoft.com/Samples/dwt/Scan-Documents-and-Separate-them-by-Barcode/Scan-Separate-Barcode.html) or [download](https://www.dynamsoft.com/handle-sample?demoSampleId=102&type=2&productId=1000001&link=https%3a%2f%2fdownload2.dynamsoft.com%2fSamples%2fDWT%2fScan-Documents-and-Separate-them-by-Barcode.zip) the official demo.
