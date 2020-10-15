@@ -1,8 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN Features - OCR
+keywords: Dynamic Web TWAIN, Documentation, OCR
+breadcrumbText: OCR
+description: Dynamic Web TWAIN SDK Documentation OCR Page
 ---
 
 # OCR

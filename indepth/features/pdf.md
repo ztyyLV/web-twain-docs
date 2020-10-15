@@ -1,8 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN Features - Handle PDF
+keywords: Dynamic Web TWAIN, Documentation, Handle PDF
+breadcrumbText: Handle PDF
+description: Dynamic Web TWAIN SDK Documentation Handle PDF Page
 ---
 
 # PDF HANDLING 
