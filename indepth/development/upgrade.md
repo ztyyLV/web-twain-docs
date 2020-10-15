@@ -77,7 +77,7 @@ Normally, you can just make the change in the file `dynamsoft.webtwain.config.js
 Dynamsoft.WebTwainEnv.ProductKey = 't0076lQAAAGNcO61He******; t0076lQAAAGNcO61He******';
 ```
 
-If you set it elsewhere, you just find it and replace it.
+If it is set elsewhere, you just find it and replace it. For example, if you are making use of the [dwt package](https://www.npmjs.com/package/dwt)( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ), the file `dynamsoft.webtwain.config.js` doesn't exist and you need to put the above line of code in your own JavaScript to set the license.
 
 ## Update `DWT` on the client-side
 

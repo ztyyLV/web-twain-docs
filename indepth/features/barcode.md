@@ -12,7 +12,7 @@ description: Dynamic Web TWAIN SDK Documentation Read Barcode Page
 With the increasing use of barcode reading in document management systems, the Barcode Reader SDK add-on of `DWT` presents an easy and seamless way of integrating one of the indutry's best barcode reading components into your document management systrem. In this section, we will show you how to get started with the add-on and demonstrate how it can be used as a batch document classifier and separator.
 
 > NOTE
-> 
+>  
 > Barcode reading can be performed on the client side as well as the server side. For `DWT` , we only consider client-side reading. If you are interested in reading on the server side, you can contact [Dynamsoft Support]({{site.about}}getsupport.html).
 
 ## Environment
@@ -97,15 +97,15 @@ DWObject.Addon.BarcodeReader.decode(imageIndex)
 
 ## Runtime Settings
 
-Most of the time, you simply need to use the default decode method to read most of the barcode images out there. However, you may encounter some barcodes that are not being read by default or a situation where you would like to customize which barcode types your reader should pick up, and more.
+Most of the time, you simply need to use the default decode method to read most of the barcode images out there. However, you may encounter some barcodes that fail to be read and sometimes you might want to limit which barcode types the reader should pick up, and more.
 
-The runtime settings of the addon give you access to a wide array fo customizable parameters, all of which you can check out with the method [ `getRuntimeSettings()` ]({{site.info}}api/Addon_BarcodeReader.html#getruntimesettings) and change with the method [ `updateRuntimeSettings()` ]({{site.info}}api/Addon_BarcodeReader.html#updateruntimesettings). Now to demonstrate a few typical customization scenarios:
+The runtime settings of the addon give you access to a wide array of customizable parameters, all of which you can check out with the method [ `getRuntimeSettings()` ]({{site.info}}api/Addon_BarcodeReader.html#getruntimesettings) and change with the method [ `updateRuntimeSettings()` ]({{site.info}}api/Addon_BarcodeReader.html#updateruntimesettings). Now to demonstrate a few typical customization scenarios:
 
 ### Specify the Barcode Type(s) to Read
 
 By default, the addon will read all the supported barcode types from the image. (See the `Supported Symbologies` in the [overview page](https://www.dynamsoft.com/Products/Dynamic-Barcode-Reader.aspx) for the full list.)
 
-If your license only covers a subset of the full list or you want to read specific barcoe types, you can use the `barcodeFormatIds` and `barcodeFormatIds2` parameters to specify the barcode format(s). For example, to enable only 1D barcode reading, you can use the following code snippet:
+If your license only covers a subset of the full list or you want to read specific barcode types, you can use `barcodeFormatIds` and `barcodeFormatIds2` to specify the barcode format(s). For example, to enable only 1D barcode reading, you can use the following code snippet:
 
 ``` javascript
 DWObject.Addon.BarcodeReader.getRuntimeSettings()
@@ -137,11 +137,12 @@ DWObject.Addon.BarcodeReader.getRuntimeSettings()
 
 ### Specify maximum barcode count
 
-By default, the addon will read as many barcodes as it can. To increase the recognition efficiency, you can use the `expectedBarcodesCount` parameter to specify the maximum number of barcodes to recognize according to your scenario.
+By default, the addon will read as many barcodes as it can. To increase the recognition efficiency, you can use `expectedBarcodesCount` to specify the maximum number of barcodes to recognize according to your scenario.
 
 ``` javascript
 // No matter how many barcodes are on the image, stop reading as soon as one barcode is found
 runtimeSettings.expectedBarcodesCount = 1;
+DWObject.Addon.BarcodeReader.updateRuntimeSettings(runtimeSettings);
 ```
 
 ### Specify a scan Region
@@ -155,6 +156,7 @@ runtimeSettings.region.regionBottom = 75;
 runtimeSettings.region.regionLeft = 25;
 runtimeSettings.region.regionRight = 75;
 runtimeSettings.region.regionMeasuredByPercentage = 1;
+DWObject.Addon.BarcodeReader.updateRuntimeSettings(runtimeSettings);
 ```
 
 ### Set the runtime settings using JSON
@@ -163,7 +165,7 @@ So far, we edited the values of specific runtime settings via accessing each ind
 
 > Some advanced features such as dedicate configuration of a binarization mode is only possible when using the method `initRuntimeSettingsWithString()` .
 
-Here is a JSON template that you can use:
+Here is a JSON template for your reference:
 
 ``` javascript
 var settings = {
