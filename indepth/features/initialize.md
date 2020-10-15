@@ -1,8 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN Initialization
+keywords: Dynamic Web TWAIN, Documentation, Initialization
+breadcrumbText: Initialization
+description: Dynamic Web TWAIN SDK Documentation Initialization Page
 ---
 
 # INITIALIZATION
