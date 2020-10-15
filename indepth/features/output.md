@@ -79,13 +79,12 @@ function getExtension(type) {
 **A**: `DWT` does the uploading in a few steps
 
 * Grab the image(s) specified by `indices` ; 
-
 * Encode the image(s) in the specified type which results in a binary file; 
 * [Optional] Convert the file into a base64 string; 
 * Create an HTTP Form and perform an asynchronous HTTP (Ajax) request to send the form to the specified `url` ; 
 * Wait for the confirmation from the server.
 
-The server-side script specified by `url` is very important, check out [Server-side Scripting]({{site.indepth}}development/serverScript.html) for more information.
+The server-side script specified by `url` is very important, check out [Server-side Scripting]({{site.indepth}}development/Server-script.html) for more information.
 
 ##### Q: Is SSL supported
 
@@ -175,7 +174,7 @@ function uploadSeparateFiles(indices, type) {
 
 ##### Q: Can I change the fields of the HTTP form
 
-**A**: Yes, you can use the method [ `SetHTTPFormField()` ]({{site.info}}api/WebTwain_IO.html#sethttpformfield) to add extra fields to the field. In a [previous question](#can-i-upload-multiple-images-as-separate-files-in-one-go), the method is used to add files to the form. But you can also use the method to add extra text information to the form as shown below
+**A**: Yes, you can use the method [ `SetHTTPFormField()` ]({{site.info}}api/WebTwain_IO.html#sethttpformfield) to add extra fields to the field. In a [previous question](#q-can-i-upload-multiple-images-as-separate-files-in-one-go), the method is used to add files to the form. But you can also use the method to add extra text information to the form as shown below
 
 ``` javascript
 // Clear old fields before adding new ones
@@ -189,9 +188,9 @@ DWObject.SetHTTPFormField("FileType", "Insurance Doc");
 
 ##### Q: Can I show my own upgrade progress bar
 
-**A**: Yes, please check out [customize the progress bar]({{site.indepth}}ui.html#progress-bar).
+**A**: Yes, please check out [customize the progress bar]({{site.indepth}}features/ui.html#progress-bar).
 
-#### Q: How do I know whether the upload succeeded
+##### Q: How do I know whether the upload succeeded
 
 **A**: Every HTTP upload method has two callbacks with signatures like this
 
@@ -207,13 +206,19 @@ The 1st callback `onEmptyResponse` is triggered when the server returns nothing.
 
 Of course, in your own server-side script to accept and process the HTTP Post request, you know whether the upload is successful and can make it more obvious by returning some custom information to indicate that. In this case, the 2nd callback `onServerReturnedSomething` is triggered on purpose and you can read the argument `response` which contains what is returned by the server.
 
+> NOTE 
+>  
+> When the callback `onServerReturnedSomething` is triggered, you'll always get an `errorCode` and an `errorString` but you can choose to ignore them if it's triggered on purpose.
+
 `DWT` also provides an API called [ `HTTPPostResponseString` ]({{site.info}}api/WebTwain_IO.html#httppostresponsestring) which contains `response` but can be read outside of the upload method.
 
 ##### Q: Can I limit the size of the uploaded file
 
 **A**: Yes, you can set the limit (in bytes) using the API [ `MaxUploadImageSize` ]({{site.info}}api/WebTwain_IO.html#maxuploadimagesize). After that, `DWT` will refuse to perform an upload should the size of the file exceeds the limit.
 
-> NOTE: the API `MaxUploadImageSize` doesn't limit other fields of the upload. Therefore, if you append a very big string as a field or perhaps a few big Blobs as fiels, they can not be limited.
+> NOTE 
+>  
+> The API `MaxUploadImageSize` doesn't limit other fields of the upload. Therefore, if you append a very big string as a field or perhaps a few big *Blobs* as files, they will not be limited.
 
 ##### Q: Can I upload a big file in segments
 
@@ -224,7 +229,7 @@ Of course, in your own server-side script to accept and process the HTTP Post re
 DWObject.SetUploadSegment(1, 500);
 ```
 
-For segmented upload, the server-side script is quite different. Check out how it is done in C# [here]({{site.indepth}}development/serverscript.html#segmented-upload).
+For segmented upload, the server-side script is quite different. Check out how it is done in C# [here]({{site.indepth}}development/Server-script.html#segmented-upload).
 
 ##### Q: What are all the APIs `DWT` provides for HTTP upload
 
@@ -249,16 +254,16 @@ The file uploader is an independent component that is dedicated to file uploadin
 
 #### How is upload done with the File Uploader
 
-* `DWT` prepares the file to upload with the method [ `GenerateURLForUploadData()` ]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata); 
-* Create a File Uploader instance with the method [ `Init()` ]({{site.info}}api/Dynamsoft_FileUploader.html#init); 
-* Create an upload job with [ `Init()` ]({{site.info}}api/Dynamsoft_FileUploader.html#createjob); 
-  + Define the target URL ( `ServerUrl` ); 
-  + Define the upload content ( `SourceValue` ); 
-  + [Optional] Define callback functions ( `OnUploadTransferPercentage` , `OnRunSuccess` , `OnRunFailure` ); 
-* Run the job; 
-* Wait for the confirmation from the server.
+* `DWT` prepares the file to upload with the method [ `GenerateURLForUploadData()` ]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)
+* Create a File Uploader instance with the method [ `Init()` ]({{site.info}}api/Dynamsoft_FileUploader.html#init)
+* Create an upload job with [ `CreateJob()` ]({{site.info}}api/Dynamsoft_FileUploader.html#createjob)
+  + Define the target URL ( `ServerUrl` )
+  + Define the upload content ( `SourceValue` )
+  + [Optional] Define callback functions ( `OnUploadTransferPercentage` , `OnRunSuccess` , `OnRunFailure` )
+* Run the job
+* Wait for the confirmation from the server
 
-Check out [Server-side Scripting]({{site.indepth}}development/serverScript.html) for more information on the target URL.
+Check out how to use the Uploader in the following code snippets
 
 ``` html
 <div id="processbar" style="width:0%;"></div>
@@ -295,6 +300,8 @@ function useUploader(indices, type) {
     }
 }
 ```
+
+Check out [Server-side Scripting]({{site.indepth}}development/Server-script.html) for more information on the target URL.
 
 ### HTTP with existing upload logic
 
@@ -400,13 +407,13 @@ DWObject.FTPUpload(
 
 Dynamsoft offers several methods to save your images to an absolute file path. Depending on what your exact needs are, you can choose from any of the following methods:
 
-* [ `SaveAsBMP()` ]({{site.info}}api/WebTwain_IO.html#SaveAsBMP)
-* [ `SaveAsJPEG()` ]({{site.info}}api/WebTwain_IO.html#SaveAsJPEG)
-* [ `SaveAsPDF()` ]({{site.info}}api/WebTwain_IO.html#SaveAsPDF)
-* [ `SaveAsPNG()` ]({{site.info}}api/WebTwain_IO.html#SaveAsPNG)	
-* [ `SaveAsTIFF()` ]({{site.info}}api/WebTwain_IO.html#SaveAsTIFF)
-* [ `SaveSelectedImagesAsMultiPagePDF()` ]({{site.info}}api/WebTwain_IO.html#SaveSelectedImagesAsMultiPagePDF)
-* [ `SaveSelectedImagesAsMultiPageTIFF()` ]({{site.info}}api/WebTwain_IO.html#Saveselectedimagesasmultipagetiff)
+* [ `SaveAsBMP()` ]({{site.info}}api/WebTwain_IO.html#saveasbmp)
+* [ `SaveAsJPEG()` ]({{site.info}}api/WebTwain_IO.html#saveasjpeg)
+* [ `SaveAsPDF()` ]({{site.info}}api/WebTwain_IO.html#saveaspdf)
+* [ `SaveAsPNG()` ]({{site.info}}api/WebTwain_IO.html#saveaspng)	
+* [ `SaveAsTIFF()` ]({{site.info}}api/WebTwain_IO.html#saveastiff)
+* [ `SaveSelectedImagesAsMultiPagePDF()` ]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagepdf)
+* [ `SaveSelectedImagesAsMultiPageTIFF()` ]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagetiff)
 * [ `SaveAllAsPDF()` ]({{site.info}}api/WebTwain_IO.html#saveallaspdf)
 * [ `SaveAllAsMultiPageTIFF()` ]({{site.info}}api/WebTwain_IO.html#saveallasmultipagetiff)
 
@@ -453,14 +460,14 @@ DWObject.SaveAllAsPDF("D:\\Sample.pdf",
 
 > Supported on [WASM browsers]({{site.getstarted}}platform.html#wasm-browsers).
 
-On [WASM browsers]({{site.getstarted}}platform.html#wasm-browsers), `DWT` runs its entire operations within the browser. So saving locally becomses downloading and [ `IfShowFileDialog` ]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) is not effective.
+In [WASM browsers]({{site.getstarted}}platform.html#wasm-browsers), `DWT` runs its entire operations within the browser. So saving locally becomses downloading and [ `IfShowFileDialog` ]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) is not effective.
 
 ``` javascript
 // The following line only works on desktop but it 
 // doesn't throw errors on WASM browsers either 
 DWObject.IfShowFileDialog = false;
 // The following line specifies an absolute path but 
-// only the name 'Sample.pdf' is used on WASM browsers
+// only the name 'Sample.pdf' is used in WASM browsers
 DWObject.SaveAllAsPDF("D:\\Sample.pdf",
     function() {
         console.log('Successful!');
@@ -473,7 +480,7 @@ DWObject.SaveAllAsPDF("D:\\Sample.pdf",
 
 ### Save multiple files to the same loation
 
-If you want to the user to choose a file path once and then save multiple images to that location, you can do so via the [ `OnGetFilePath` ]({{site.info}}api/WebTwain_IO.html#ongetfilepath) event.
+If you want the user to choose a file path once and then save multiple images to that location, you can do so via the [ `OnGetFilePath` ]({{site.info}}api/WebTwain_IO.html#ongetfilepath) event.
 
 ``` javascript
 DWObject.RegisterEvent("OnGetFilePath", (isSave, filesCount, index, directory, _fn) => {
@@ -554,9 +561,9 @@ DWObject.ConvertToBase64(
 **A**: There are a few things that you can try to reduce the size of a resulting file
 
 * Scan in grayscale or black & white instead of RGB; 
-* Convert the images to grayscale or black & white before the output, read more [here](#how-to-convert); 
+* Convert the images to grayscale or black & white before the output, read more [here]({{site.indepth}}features/edit.html#working-with-pixels-and-bit-depth); 
 * Scan in a lower resolution; 
-* Convert the images to a lower resolution, read more [here](#how-to-set-dpi); 
+* Convert the images to a lower resolution, read more [here]({{site.indepth}}features/edit.html#working-with-pixels-and-bit-depth); 
 * [Optional] If the resulting file is in the JPEG format (.jpg) or is a TIF or PDF that is encoded by the JPEG standard, you can set [ `JPEGQuality` ]({{site.info}}api/WebTwain_IO.html#jpegquality) to a lower value.
 
 ### Q: How can I customize a resulting TIFF file
@@ -569,4 +576,4 @@ DWObject.ConvertToBase64(
 
 ### Q: Can I hide the progress bar
 
-**A**: Yes, check out [hide the progress bar]({{site.indepth}}ui.html#progress-bar) for more information.
+**A**: Yes, check out more [here]({{site.indepth}}features/ui.html#progress-bar) for more information.
