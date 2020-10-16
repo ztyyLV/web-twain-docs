@@ -1,8 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN Development - Server Scripts
+keywords: Dynamic Web TWAIN, Documentation, Development, Server Scripts
+breadcrumbText: Server Scripts
+description: Dynamic Web TWAIN SDK Documentation Server Scripts Page
 ---
 
 # SERVER SIDE SCRIPTING
@@ -11,9 +13,9 @@ title: "TOADD"
 
 ## How to process uploaded files
 
-As mentioned in [how to upload]({{site.indepth}}output.html#upload), `DWT` sends an HTTP POST request to the server when doing an upload. The file in the POST Form has the name `RemoteFile` by default. If you wish to change that, you can use [ `HttpFieldNameOfUploadedImage` ]({{site.info}}api/WebTwain_IO.html#httpfieldnameofuploadedimage). 
+As mentioned in [how to upload]({{site.indepth}}features/output.html#upload), `DWT` sends an HTTP POST request to the server when doing an upload. The file in the POST Form has the name `RemoteFile` by default. If you wish to change that, you can use [ `HttpFieldNameOfUploadedImage` ]({{site.info}}api/WebTwain_IO.html#httpfieldnameofuploadedimage). 
 
-The following assumes the default `RemoteFile` is used and that [extra Form fields]({{site.indepth}}output.html#can-i-change-the-fields-of-the-http-form)) might accompany the file.
+The following assumes the default `RemoteFile` is used and that [extra Form fields]({{site.indepth}}features/output.html#can-i-change-the-fields-of-the-http-form) might accompany the file.
 
 ### Upload via CSharp
 
@@ -312,7 +314,7 @@ The following packages are required
 <%@  page language="java" import="java.io.*,java.util.*,org.apache.commons.fileupload.*,org.apache.commons.fileupload.disk.*,org.apache.commons.fileupload.servlet.*"%>
 ```
 
-The code to save file to the disk
+The code to save the file to the disk
 
 ``` java
 // Create a factory for disk-based file items
@@ -407,12 +409,12 @@ The following packages are required
 <%@  page language="java" import="java.sql.*,java.io.*,java.util.*,org.apache.commons.fileupload.*,org.apache.commons.fileupload.disk.*,org.apache.commons.fileupload.servlet.*"%>
 ```
 
-The code to save file to Oracle
+The code to save the file to Oracle
 
 ``` java
 // Prepare credentials for connectiong to Oracle, here we use Oracle express (XE)
 String strDBUser = "dwtDB"; //database,schema name as well
-String strDBPassword = "Aa000000";
+String strDBPassword = "NotRealPWD";
 String strDriverName = "oracle.jdbc.driver.OracleDriver";
 String strConnString = "jdbc:oracle:thin:@127.0.0.1:1521:XE";
 Connection conn=null;
@@ -641,7 +643,7 @@ data.Dispose();
 
 ## Download a file
 
-The following scripts are used for [downloading from a URL which points to a server-side script]({{site.indepth}}input.html#the-url-points-to-a-server-side-script)
+The following scripts are used for [downloading from a URL which points to a server-side script]({{site.indepth}}features/input.html#the-url-points-to-a-server-side-script)
 
 ### Download via CSharp
 
@@ -813,7 +815,7 @@ if (res_getData.next()){
 
 ### License Checker for OCRPro
 
-When performing a [client-side OCR operation]({{site.indepth}}ocr.html#use-ocrb-on-the-client-side) with `OCRPro`, the engine sends HTTP POST requests to the server for license tracking. The following code snippet shows how the requests are redirected to the class `LicenseCheckerServer`.
+When performing a [client-side OCR operation]({{site.indepth}}features/ocr.html#use-ocrb-on-the-client-side) with `OCRPro`, the engine sends HTTP POST requests to the server for license tracking. The following code snippet shows how the requests are redirected to the class `LicenseCheckerServer`.
 
 > The class `LicenseCheckerServer` is defined in the files `CheckLicense.dll` and `LicenseReader.dll`. If you don't have these files in your application, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) or download them from [here](https://tst.dynamsoft.com/public/download/ocr/OCRProx64-v16.zip).
 

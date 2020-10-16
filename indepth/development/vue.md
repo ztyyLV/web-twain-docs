@@ -1,8 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN Development - Vue Integration
+keywords: Dynamic Web TWAIN, Documentation, Development, Vue Integration
+breadcrumbText: Vue Integration
+description: Dynamic Web TWAIN SDK Documentation Vue Integration Page
 ---
 
 # Use DWT with Vue
@@ -139,7 +141,7 @@ Change the file `/src/components/HelloWorld.vue` to match the following `templat
 ```
 
 > Note:
-> * `containerId` specifies the DIV to create `DWT` viewer in which is defined in the template.
+> * `containerId` specifies the DIV to create `DWT` viewer in which is defined in the `template`.
 > * `OnWebTwainReady` is the callback triggered when the initialization succeeds.
 > * `ProductKey` must be set to a valid trial or full key.
 > * `ResourcesPath` is set to the location of the static files mentioned in [Configure the project](#configure-the-project).
@@ -152,7 +154,7 @@ yarn serve
 
 #### On desktop
 
-If you have installed `DWT` and have configured a valid `ProductKey` . You will have a working page to scan documents from your scanner now. Otherwise, you should see instructions on the page that guide you to install the library. [More info>>]({{site.indepth}}initialize.html#installation-of-the-dynamsoft-service).
+If you have installed `DWT` and have configured a valid `ProductKey` . You will have a working page to scan documents from your scanner now. Otherwise, you should see instructions on the page that guide you to install the library. [More info>>]({{site.indepth}}features/initialize.html#installation-of-the-dynamsoft-service).
 
 #### On mobile
 

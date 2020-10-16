@@ -1,8 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN Development - React Integration
+keywords: Dynamic Web TWAIN, Documentation, Development, React Integration
+breadcrumbText: React Integration
+description: Dynamic Web TWAIN SDK Documentation React Integration Page
 ---
 
 # Use DWT with React
@@ -15,7 +17,7 @@ Make sure you have [node](https://nodejs.org/) and [yarn](https://yarnpkg.com/cl
 
 ## Create the sample project
 
-### Create an bootstrapped raw React application
+### Create a bootstrapped raw React application
 
 ``` cmd
 npx create-react-app dwt-react
@@ -99,7 +101,7 @@ export default class DWT extends React.Component {
 ```
 
 > Note:
-> * `containerId` specifies the DIV to create `DWT` viewer in which is defined in the template.
+> * `containerId` specifies the DIV to create `DWT` viewer in which is defined in the `template`.
 > * `OnWebTwainReady` is the callback triggered when the initialization succeeds.
 > * `ProductKey` must be set to a valid trial or full key.
 > * `ResourcesPath` is set to the location of the static files mentioned in [Configure the project](#configure-the-project).
@@ -112,9 +114,7 @@ import './App.css';
 import DWT from './dwt';
 
 function App() {
-    return ( <
-        DWT / >
-    );
+    return ( < DWT /> );
 }
 
 export default App;
@@ -126,7 +126,7 @@ export default App;
 yarn start
 ```
 
-> If you have installed `DWT` and have configured a valid `ProductKey` . You will have a working page to scan documents from your scanner now. Otherwise, you should see instructions on the page that guide you to install the library. [More info>>]({{site.indepth}}initialize.html#installation-of-the-dynamsoft-service).
+> If you have installed `DWT` and have configured a valid `ProductKey` . You will have a working page to scan documents from your scanner now. Otherwise, you should see instructions on the page that guide you to install the library. [More info>>]({{site.indepth}}features/initialize.html#installation-of-the-dynamsoft-service).
 
 ## Official Samples
 
