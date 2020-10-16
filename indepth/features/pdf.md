@@ -15,7 +15,7 @@ PDF is one of the most popular file types on the market which is why it is the o
 
 * [Desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and [Mobile]({{site.getstarted}}platform.html#browsers-on-mobile-devices).
 
-* [Service mode]({{site.indepth}}initialize.html#service-mode) and [WASM mode]({{site.indepth}}initialize.html#wasm-mode).
+* [Service mode]({{site.indepth}}features/initialize.html#service-mode) and [WASM mode]({{site.indepth}}features/initialize.html#wasm-mode).
 
 ## Include the PDF addon 
 
@@ -24,8 +24,7 @@ To include the PDF addon is to reference the necessary JavaScript file which is 
 > If you are using the [dwt package](https://www.npmjs.com/package/dwt), the barcode reader is already included in the main JavaScript file ( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ) which means you can skip this step.
 
 ``` html
-< script src="dynamsoft.webtwain.addon.pdf.js">
-    < /script>
+<script src="dynamsoft.webtwain.addon.pdf.js"></script>
 ```
 
 ## INPUT
@@ -50,42 +49,42 @@ DWObject.Addon.PDF.SetConvertMode(Dynamsoft.EnumDWT_ConvertMode.CM_RENDERALL);
 DWObject.LoadImageEx("", Dynamsoft.EnumDWT_ImageType.IT_ALL, onSuccess, onFailure);
 ```
 
-The method [ `SetConvertMode()` ]({{site.info}}api/Addon_PDF.html#setconvertmode) decides how `PDFR` works and [ `SetResolution()` ]({{site.info}}api/Addon_PDF.html#setresolution) specifies the resolution. These two methods configure and get `PDFR` ready to detect and, if necessary, rasterize any file that come thereafter.
+The method [ `SetConvertMode()` ]({{site.info}}api/Addon_PDF.html#setconvertmode) decides how `PDFR` works and [ `SetResolution()` ]({{site.info}}api/Addon_PDF.html#setresolution) specifies the resolution. These two methods configure `PDFR` to detect and, if necessary, rasterize any PDF file that comes thereafter.
 
 ### Questions
 
-#### When shall I use PDFR
+#### Q: When shall I use PDFR
 
-`PDFR` is only required for text-based PDFs, to find out whether a file is text-based. Use the method [ `IsTextBasedPDF()` ]({{site.info}}api/Addon_PDF.html#istextbasedpdf) .
+A: `PDFR` is only required for text-based PDFs, to find out whether a file is text-based. Use the method [ `IsTextBasedPDF()` ]({{site.info}}api/Addon_PDF.html#istextbasedpdf) .
 
-#### When is it effective
+#### Q: When is it effective
 
-Once `PDFR` has been configured, it will automatically detect if a file needs to be rasterized and if so, it will convert it to an image(s) with the set resolution. If no resolution is set, the default is 200. `PDFR` is only effective when you input a text-based PDF(s) into the viewer on your webpage. The **inputting** happens when you call any of the following methods
+A: Once `PDFR` has been configured, it will automatically detect if a file needs to be rasterized and if so, it will convert it to an image(s) with the set resolution(If no resolution is set, the default is 200). This happens when you call any of the following methods
 
 > `PDFR` also works when you drag and drop the file onto the viewer to load it
 
-* [ `LoadImage()` ]({{site.info}}api/input.html#loadimage)
-* [ `LoadImageEx()` ]({{site.info}}api/input.html#loadimageex)
-* [ `LoadImageFromBase64Binary()` ]({{site.info}}api/input.html#loadimagefrombase64binary)
-* [ `LoadImageFromBinary()` ]({{site.info}}api/input.html#loadimagefrombinary)
-* [ `FTPDownload()` ]({{site.info}}api/input.html#ftpdownload)
-* [ `FTPDownloadEx()` ]({{site.info}}api/input.html#ftpdownloadex)
-* [ `HTTPDownload()` ]({{site.info}}api/input.html#httpdownload)
-* [ `HTTPDownloadEx()` ]({{site.info}}api/input.html#httpdownloadex)
-* [ `HTTPDownloadThroughPost()` ]({{site.info}}api/input.html#httpdownloadthroughpost)
-* [ `HTTPDownloadDirectly()` ]({{site.info}}api/input.html#httpdownloaddirectly)
+* [ `LoadImage()` ]({{site.info}}api/WebTwain_IO.html#loadimage)
+* [ `LoadImageEx()` ]({{site.info}}api/WebTwain_IO.html#loadimageex)
+* [ `LoadImageFromBase64Binary()` ]({{site.info}}api/WebTwain_IO.html#loadimagefrombase64binary)
+* [ `LoadImageFromBinary()` ]({{site.info}}api/WebTwain_IO.html#loadimagefrombinary)
+* [ `FTPDownload()` ]({{site.info}}api/WebTwain_IO.html#ftpdownload)
+* [ `FTPDownloadEx()` ]({{site.info}}api/WebTwain_IO.html#ftpdownloadex)
+* [ `HTTPDownload()` ]({{site.info}}api/WebTwain_IO.html#httpdownload)
+* [ `HTTPDownloadEx()` ]({{site.info}}api/WebTwain_IO.html#httpdownloadex)
+* [ `HTTPDownloadThroughPost()` ]({{site.info}}api/WebTwain_IO.html#httpdownloadthroughpost)
+* [ `HTTPDownloadDirectly()` ]({{site.info}}api/WebTwain_IO.html#httpdownloaddirectly)
 
 ### Other methods
 
-* [ `ConvertToImage()` ]({{site.info}}api/input.html#converttoimage): This method proactively converts a PDF into images.
-* [ `GetConvertMode()` ]({{site.info}}api/input.html#getconvertmode): This method returns the current convert mode.
-* [ `SetPassword()` ]({{site.info}}api/input.html#setpassword): This method sets a password which is used to open encrypted PDF file(s).
+* [ `ConvertToImage()` ]({{site.info}}api/Addon_PDF.html#converttoimage): This method proactively converts a PDF into images.
+* [ `GetConvertMode()` ]({{site.info}}api/Addon_PDF.html#getconvertmode): This method returns the current convert mode.
+* [ `SetPassword()` ]({{site.info}}api/Addon_PDF.html#setpassword): This method sets a password which is used to open encrypted PDF file(s).
 
 ## OUTPUT
 
-`DWT` can output one or multiple images in the buffer as PDF file(s). The resulting file(s) is pure image-based, therefore this feature is built into the core module and no addon is required as was covered in the [output]({{site.indepth}}output.html) section.
+`DWT` can output one or multiple images in the buffer as image-based PDF file(s). This feature is built into the core module and no addon is required as was covered in the [output]({{site.indepth}}features/output.html) section.
 
-However, some advanced features are only possible with the help of the PDF addon. At present, that means configuring the resulting file(s) with the API [ `Write.Setup()` ]({{site.info}}api/input.html#writesetup) as shown below
+However, some advanced features are only possible with the help of the PDF addon. At present, that means configuring the resulting file(s) with the API [ `Write.Setup()` ]({{site.info}}api/Addon_PDF.html#writesetup) as shown below
 
 ``` javascript
 DWObject.Addon.PDF.Write.Setup({

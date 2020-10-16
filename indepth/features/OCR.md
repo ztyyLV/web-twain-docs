@@ -41,7 +41,7 @@ To include this addon is to reference the necessary JavaScript file `dynamsoft.w
 
 #### Step two - Install OCRB
 
-`OCRB` is not included by default in the [service installation]({{site.indepth}}features/deployment/service.html#how-to-install-dwt). To use it, you need to download and install it with the APIs [ `Download()` ]({{site.info}}api/Addon_OCR.html#download) and [ `DownloadLangData()` ]({{site.info}}api/Addon_OCR.html#downloadlangdata). Check out the code snippet on how it works.
+`OCRB` is not included by default in the [service installation]({{site.indepth}}deployment/service.html#how-to-install-dwt). To use it, you need to download and install it with the APIs [ `Download()` ]({{site.info}}api/Addon_OCR.html#download) and [ `DownloadLangData()` ]({{site.info}}api/Addon_OCR.html#downloadlangdata). Check out the code snippet on how it works.
 
 > `OCRB` requires a dictionary / data when reading a specific language. The following code assumes the target language is "English".
 
@@ -141,7 +141,7 @@ To include this addon is to reference the necessary JavaScript file `dynamsoft.w
 
 #### Step two - Install OCRPro
 
-`OCRPro` is not included by default in the [service installation]({{site.indepth}}features/deployment/service.html#how-to-install-dwt). To use it, you need to download and install it with the APIs [ `Download()` ]({{site.info}}api/Addon_OCRPro.html#download).
+`OCRPro` is not included by default in the [service installation]({{site.indepth}}deployment/service.html#how-to-install-dwt). To use it, you need to download and install it with the APIs [ `Download()` ]({{site.info}}api/Addon_OCRPro.html#download).
 
 > NOTE: The `OCRPro` engine is huge (over 150MB) which takes quite a bit of time to download. The good news is that it only needs to be done once.
 
@@ -358,7 +358,7 @@ The resources of `OCRPro` can be downloaded [here](https://tst.dynamsoft.com/pub
 
 #### Install OCRPro on the Server
 
-`OCRPro` must be used with `Dynamsoft Service` . If the service is not installed yet, install it first. Check out [How to install Dynamsoft Service]({{site.indepth}}features/deployment/service.html#how-to-install-dwt). Once the service is installed, unzip the resources downloaded in the previous step and put all the files in the service directory which is typically located at `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16` .
+`OCRPro` must be used with `Dynamsoft Service` . If the service is not installed yet, install it first. Check out [How to install Dynamsoft Service]({{site.indepth}}deployment/service.html#how-to-install-dwt). Once the service is installed, unzip the resources downloaded in the previous step and put all the files in the service directory which is typically located at `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16` .
 
 #### Use OCRPro on the Server
 
