@@ -667,7 +667,7 @@ Response.WriteFile(fileInfo.FullName);
 
 #### Get a file from MS SQL
 
-Check out [Save to MS SQL](#save-to-ms-sql) for code on making the connection to the SQL.
+> Check out [Save to MS SQL](#save-to-ms-sql) for code on making the connection to the SQL.
 
 ``` csharp
 // ...Code to connect to MS SQL
@@ -717,7 +717,7 @@ using (System.Data.SqlClient.SqlCommand sqlcmd_getData = new System.Data.SqlClie
 
 #### Get a file out of MySQL
 
-Check out [Save to MySQL](#save-to-mysql) for code on making the connection to MySQL.
+> Check out [Save to MySQL](#save-to-mysql) for code on making the connection to MySQL.
 
 ``` php
 // ...Code to connect to MySQL
@@ -758,7 +758,7 @@ echo $documentData;
 
 #### Get a file out of Oracle
 
-Check out [Save to Oracle](#save-to-oracle) for code on making the connection to MySQL.
+> Check out [Save to Oracle](#save-to-oracle) for code on making the connection to MySQL.
 
 ``` java
 // ...Code to connect to Oracle

@@ -1,19 +1,21 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN Development - Upgrade Guide
+keywords: Dynamic Web TWAIN, Documentation, Development, Upgrade Guide
+breadcrumbText: Upgrade Guide
+description: Dynamic Web TWAIN SDK Documentation Upgrade Guide Page
 ---
 
 # UPGRADE
 
 Dynamsoft tries to improve `DWT` constantly and release one major version and 2 to 4 minor versions each year. The recommendation for our customers is to always keep your application up-to-date with our latest release. In this section, we'll talk about how to upgrade your application.
 
-Essentially, there are three steps required to upgrade your application to use a newer version of `DWT` . Two of the steps would be done by the **application developer** on the server-side. The 3rd step would be done by **users** or **system administrators** on the client side.
+Essentially, the following three steps are required to upgrade your application to use a newer version of `DWT` . Two of the steps would be done by the **application developer** on the server-side. The 3rd step would be done by **users** or **system administrators** on the client side.
 
-1. Update the server-side resources for `DWT` ; 
-2. Replace your old license key with the newer one;
-3. Ensure client machines have uninstalled the old version of the service in preparation to install the newer version;
+1. Update the server-side resources for `DWT`
+2. Replace your old license key with the newer one
+3. Ensure client machines have uninstalled the old version of the service in preparation to install the newer version
 
 > If you are upgrading from a very old version (over 2 major versions apart like from v12 to v15), more steps may be needed. Please contact [Dynamsoft Support]({{site.about}}getsupport.html) for more information.
 
@@ -31,7 +33,7 @@ Read more about [resources files]({{site.about}}faqs.html#what-are-the-resources
 
 #### Install the new version
 
-Generally, you can [get the installer]({{site.about}}resources.html#how-to-get-dwt) to install the new verion.
+Generally, you can [use the official installer]({{site.about}}resources.html#how-to-get-dwt) to install the new verion.
 
 #### Replace the resources files
 
@@ -68,7 +70,7 @@ yarn add @types/dwt
 
 ## Update the License Key
 
-When you upgrade across major versions, the license is different and needs to be updated. The license of `DWT` is set using the global API `Dynamsoft.WebTwainEnv.ProductKey` and the change is only effective before [creating `WebTwain` instances]({{site.indepth}}initialize.html#creating-the-webtwain-instance). 
+When you upgrade across major versions, the license is different and needs to be updated. The license of `DWT` is set using the global API `Dynamsoft.WebTwainEnv.ProductKey` and the change is only effective before [creating `WebTwain` instances]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance). 
 
 Normally, you can just make the change in the file `dynamsoft.webtwain.config.js` .
 
@@ -95,7 +97,7 @@ That means, once you, as the maintainer, have finished upgrading your applicatio
 
 ### WASM mode
 
-By comparison, if `DWT` runs only in the [wasm mode]({{site.indepth}}initialize.html#wasm-mode), the clients don't need to install anything themselves as the [WASM browsers]({{site.getstarted}}platform.html#wasm-browsers) will take care of the upgrade process. What the clients may encounter is a slower-than-usual page loading when they visit the application for the first time after the upgrade.
+By comparison, if `DWT` runs only in the [wasm mode]({{site.indepth}}features/initialize.html#wasm-mode), the clients don't need to install anything themselves as the [WASM browsers]({{site.getstarted}}platform.html#wasm-browsers) will take care of the upgrade process. What the clients may encounter is a slower-than-usual page loading when they visit the application for the first time after the upgrade.
 
 Once upgraded, the old WASM files will continue to exist in the browser as cached data until it's purged by the browser or by the user.
 
@@ -103,13 +105,13 @@ Once upgraded, the old WASM files will continue to exist in the browser as cache
 
 ### Expand your application to mobile platforms
 
-If you are upgrading to version 16 for mobile functionality (basically, `DWT` in [wasm mode]({{site.indepth}}initialize.html#wasm-mode)), there are some considerations to be made. As mobile support is one of the newest offerings from Dynamsoft, not all of the old `DWT` features are fully available at present. That said, we are constantly working on increasing the mobile supported feature set, so we recommend reviewing our **[release notes]({{site.info}}releases/released.html)**, and if you have any doubts, contact [Dynamsoft Support]({{site.about}}getsupport.html).
+If you are upgrading to version 16 for mobile functionality (basically, `DWT` in [wasm mode]({{site.indepth}}features/initialize.html#wasm-mode)), there are some considerations to be made. As mobile support is one of the newest offerings from Dynamsoft, not all of the old `DWT` features are fully available at present. That said, we are constantly working on increasing the mobile supported feature set, so we recommend reviewing our **[release notes]({{site.info}}releases/released.html)**, and if you have any doubts, contact [Dynamsoft Support]({{site.about}}getsupport.html).
 
 As an example for how some existing `DWT` features will work on [mobile platforms]({{site.getstarted}}platform.html#browsers-on-mobile-devices), see below: 
 
-* **Scanning**: this will become either capturing from mobile cameras or [capturing from a Windows machine]({{site.indepth}}input.html#how-to-enable-remote-scan) in the LAN; 
+* **Scanning**: this will become either capturing from mobile cameras or [capturing from a Windows machine]({{site.indepth}}features/input.html#how-to-enable-remote-scan) in the LAN; 
 * **Loading**: this will be either loading or capturing; 
-* **Saving**: this will become an in-browser downloading operation as mentioned [here]({{site.indepth}}output.html#save-as-a-download); 
+* **Saving**: this will become an in-browser downloading operation as mentioned [here]({{site.indepth}}features/output.html#save-as-a-download); 
 * **Editing**: similar to existing desktop functionality but the performance is not as good; 
 * **Uploading**: similiar to existing desktop browser functionality but is limited to only one API [ `HTTPUpload()` ]({{site.info}}api/WebTwain_IO.html#httpupload); 
 * **Viewing**: Identical to current desktop browser functionality; 
