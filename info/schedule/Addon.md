@@ -5,6 +5,13 @@ description: "TOADD"
 title: "TOADD"
 ---
 
+# DWT Core and Addon
+
+| Core Version | PDFR | Barcode | Camera | OCRB | OCRPro|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+||||||| 
+
+
 ## PDFR
 
 It is a light-weighted PDF library working with Dynamic Web TWAIN SDK on the client side to convert text-based PDF files into images and display in the image viewer.

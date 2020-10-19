@@ -1,8 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN Schedule - Stable Release
+keywords: Dynamic Web TWAIN, Documentation, Schedule, Stable Release
+breadcrumbText: API Reference
+description: Dynamic Web TWAIN SDK Documentation API Reference Schedule Stable Release Page
 ---
 
 # RELEASES

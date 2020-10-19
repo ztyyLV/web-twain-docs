@@ -1,8 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN API Reference - Buffer APIs
+keywords: Dynamic Web TWAIN, Documentation, API Reference, Buffer APIs
+breadcrumbText: API Reference
+description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page
 ---
 
 # WebTwain Buffer Manage

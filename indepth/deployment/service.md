@@ -9,26 +9,77 @@ description: Dynamic Web TWAIN SDK Documentation Dynamsoft Service Page
 
 # DYNAMSOFT SERVICE
 
+> This article is meant exclusively for the [Service mode]({{site.indepth}}features/initialize.html#service-mode) of `DWT` .
+
+Dynamsoft Service is the core piece of `DWT` when it runs in [Service mode]({{site.indepth}}features/initialize.html#service-mode). It handles the communication between the hardware (scanner, webcam, etc.) and the browser, manages the image buffer and coordinates data between different modules. When we say "install `DWT` ", we are actually saying "install Dynamsoft Service" because the service installation includes the installation of all the major modules of `DWT` .
+
 ## How to install DWT
 
-* For development and test
-  + Refer to [how to get dwt]({{site.about}}resources.html#how-to-get-dwt) to download and install the library.
-* For production
-  + Once `DWT` has been integrated into your application and
+### For development and test
 
-* How to install it (what if an older version exists --> must consider uninstalling)
-    - Normal procedure (prompt and such)
-    - Install by command
-    - Personal installer
-    - Mass installation
-        - Group policy
-        - Others?
+Refer to [how to get dwt]({{site.about}}resources.html#how-to-get-dwt) to download and install `DWT` , the official installer is recommended in most cases.
 
-# Uninstall Old Service on the Client Machines
+### For production
 
-On Windows
-1) Remove Dynamsoft Service (Trial) through Control Panel, if you see anything named like "Dynamsoft " or "Dynamic Web TWAIN ", Then remove them as well.
-2) Remove the folder C:\Windows\SysWOW64\Dynamsoft\DynamsoftService and C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64 together with all files under it.
+Once `DWT` has been integrated into your application and you have properly deployed your application on the server. Your clients will get prompted to install `DWT` the first time they access your application. For more information on the process, check out [installation of the Dynamsoft Service]({{site.indepth}}features/initialize.html#installation-of-the-dynamsoft-service).
+
+#### Questions
+
+##### Q: Does installation require administrator rights
+
+A: Yes, the installer is a `.msi` file which requires administrator rights. If your organization doesn't allow end users to have admin rights, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) to get a special "Personal Installer" that doesn't require admin rights.
+
+> NOTE
+>  
+> Once Dynamsoft Service is installed with admin rights, every user on that machine can use it. On the other hand, if it is installed with a "Personal Installer", only that specific user can use it.
+
+##### Q: What if I am installing over an old version
+
+A: If an old version already exist, since it's unknown which version it is. It's recommended that the user uninstalls the old version before installing the new one. Check out [how to uninstall](#how-to-uninstall-dwt). Check out more [here]({{site.indepth}}development/upgrade.html#service-mode).
+
+##### Q: Can I install Dynamsoft Service for all my clients
+
+A: Yes. In a controlled environment, Dynamic Web TWAIN can be pushed to all clients in one go just like other similar programs. [Group Policy](https://docs.microsoft.com/en-us/troubleshoot/windows-server/group-policy/use-group-policy-to-install-software) is one such technology.
+
+##### Q: Can I install Dynamsoft Service silently
+
+A: Yes. The following are the commands for this purpose
+
+* Windows
+
+``` shell
+msiexec  /i  "/path/to/DynamsoftServiceSetup.msi"   /qn
+```
+
+* macOS
+
+``` shell
+// Install
+sudo installer -pkg /path/to/DynamsoftServiceSetup.pkg -target /Applications
+// Stop service
+sudo launchctl unload /Library/LaunchAgents/com.dynamsoft.dynamsoftservicex64.plist
+// Start service
+launchctl load /Library/LaunchAgents/com.dynamsoft.dynamsoftservicex64.plist
+```
+
+* Linux
+
+``` shell
+sudo dpkg -i  /path/to/DynamsoftServiceSetup.deb
+```
+
+or
+
+``` shell
+sudo rpm -i path/to/DynamsoftServiceSetup.rpm
+```
+
+## How to uninstall DWT
+
+### On Windows
+
+* Remove Dynamsoft Service through Control Panel, if you see anything named like "Dynamsoft " or "Dynamic Web TWAIN ", remove them as well.
+* Remove the folder `C:\Windows\SysWOW64\Dynamsoft\DynamsoftService` and `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64(version)` together with all files under there.
 
 On macOS
 3)Run the file Uninstall.pkg to uninstall it. The file can be found in Go > Applications > Dynamsoft > WebTwain > {installed version No.} >

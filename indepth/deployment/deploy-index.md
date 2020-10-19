@@ -12,5 +12,6 @@ description: Dynamic Web TWAIN SDK Documentation Index Page
 ## [Set up the server]({{site.indepth}}deployment/server.html)
 
 ## [Set up the service]({{site.indepth}}deployment/service.html)
-
+<!--
 ## [Scenarios]({{site.indepth}}deployment/scenarios.html)
+-->
