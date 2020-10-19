@@ -1,8 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN Platform
+keywords: Dynamic Web TWAIN, Documentation, Platform
+breadcrumbText: Platform
+description: Dynamic Web TWAIN SDK Documentation Platform Page
 ---
 
 # PLATFORMS

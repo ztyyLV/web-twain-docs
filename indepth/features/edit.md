@@ -1,8 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN Features - Edit
+keywords: Dynamic Web TWAIN, Documentation, Edit
+breadcrumbText: Edit
+description: Dynamic Web TWAIN SDK Documentation Edit Page
 ---
 
 # EDIT
@@ -39,7 +41,7 @@ DWObject.CopyToClipboard() // Copies the specified image to the clipboard of the
 DWObject.Erase() // Erases a rectangular area from the specified image using the input coordinates
 ```
 
-Several of these methods require input coordinates to define the frame in question. `DWT` provides a way in which you can visually define those coordinates to make the process as easy for the user as possible. Feel free to check out [select an area]({{site.indepth}}viewer.html#select-an-area).
+Several of these methods require input coordinates to define the frame in question. `DWT` provides a way in which you can visually define those coordinates to make the process as easy for the user as possible. Feel free to check out [select an area]({{site.indepth}}features/viewer.html#select-an-area).
 
 ### Resizing an image
 

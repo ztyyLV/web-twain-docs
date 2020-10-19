@@ -1,8 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN API Reference - Global APIs
+keywords: Dynamic Web TWAIN, Documentation, API Reference, Global APIs
+breadcrumbText: API Reference
+description: Dynamic Web TWAIN SDK Documentation API Reference Global APIs Page
 ---
 
 # `Dynamsoft.WebTwainEnv`

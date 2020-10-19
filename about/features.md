@@ -1,9 +1,12 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN Features
+keywords: Dynamic Web TWAIN, TWAIN, Documentation, Features
+breadcrumbText: Features & Benefits
+description: Dynamic Web TWAIN SDK Documentation Features Page
 ---
+
 
 # FEATURES & BENEFITS 
 

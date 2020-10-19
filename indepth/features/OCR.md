@@ -1,35 +1,37 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN Features - OCR
+keywords: Dynamic Web TWAIN, Documentation, OCR
+breadcrumbText: OCR
+description: Dynamic Web TWAIN SDK Documentation OCR Page
 ---
 
 # OCR
 
-Dynamsoft has two offerings for OCR engines that can be used as addons for `DWT` : `OCR Basic` ( `OCRB` for short) and `OCR Professional` ( `OCRPro` for short).
+Dynamsoft offers two OCR engines that can be used as addons for `DWT` : OCR Basic ( `OCRB` for short) and OCR Professional ( `OCRPro` for short).
 
 `OCRB` is developed on top of the open source [Tesseract engine](https://github.com/tesseract-ocr/tesseract). `OCRPro` on the other hand was developed on top of Kofax's proprietary OCR engine. 
 
 For simple OCR of relatively clear images, `OCRB` will suffice. It supports 27 languages including English, Arabic, Chinese, and Russian, etc. [Here is a full list of all the languages supported by OCRB](https://www.dynamsoft.com/Products/ocr-basic-languages.aspx).
 
-As the name implies, `OCRPro` is fast, robust and comes with built-in image pre-processing. It currently supports 119 languages and is the recommended option for any large-scale enterprise grade solution. [Here is a full list of all the languages supported by OCRPro](https://www.dynamsoft.com/Products/ocr-pro-languages.aspx).
+As the name implies, `OCRPro` is faster, more robust and comes with built-in image pre-processing. It currently supports 119 languages and is the recommended option for any large-scale enterprise grade solution. [Here is a full list of all the languages supported by OCRPro](https://www.dynamsoft.com/Products/ocr-pro-languages.aspx).
 
 For a quick comparison, you can use [this sample application](https://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx?SampleID=210) to test the performance of both engines side by side.
 
-OCR can be performed on the client side as well as the server side.
+OCR can be performed both on the client side and on the server side.
 
 ## Client side OCR
 
 ### Environment
 
-Client side OCR only works in [browsers on Windows]({{site.getstarted}}platform.html#browsers-on-Windows) and [Mobile]({{site.getstarted}}platform.html#browsers-on-mobile-devices) and in [Service mode]({{site.indepth}}initialize.html#service-mode).
+Client side OCR only works in [browsers on Windows]({{site.getstarted}}platform.html#browsers-on-Windows) and in [Service mode]({{site.indepth}}features/initialize.html#service-mode).
 
 ### Use OCRB on the Client Side
 
 #### Step one - Include OCRB
 
-To include this addon is to reference the necessary JavaScript file `dynamsoft.webtwain.addon.ocr.js` which is **NOT** included in the [resources files]({{site.about}}faqs.html#what-are-the-resources-files). If you can't find this file, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) or get it from [here](https://tst.dynamsoft.com/public/download/ocr/OCRBasicx64-v16.zip).
+To include this addon is to reference the necessary JavaScript file `dynamsoft.webtwain.addon.ocr.js` which is **NOT** included in the [resources files]({{site.about}}faqs.html#what-are-the-resources-files). If you can't find this file, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) or get it from [64bit-OCRB-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRBasicx64-v16.zip).
 
 > If you are using the [dwt package](https://www.npmjs.com/package/dwt), the addon is already included in the main JavaScript file ( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ) which means you can skip this step.
 
@@ -39,7 +41,7 @@ To include this addon is to reference the necessary JavaScript file `dynamsoft.w
 
 #### Step two - Install OCRB
 
-`OCRB` is not included by default in the [service installation]({{site.indepth}}deployment/service.html#how-to-install-dwt). To use it, you need to download and install it with the APIs [ `Download()` ]({{site.info}}api/Addon_OCR.html#download) and [ `DownloadLangData()` ]({{site.info}}api/Addon_OCR.html#downloadlangdata).
+`OCRB` is not included by default in the [service installation]({{site.indepth}}deployment/service.html#how-to-install-dwt). To use it, you need to download and install it with the APIs [ `Download()` ]({{site.info}}api/Addon_OCR.html#download) and [ `DownloadLangData()` ]({{site.info}}api/Addon_OCR.html#downloadlangdata). Check out the code snippet on how it works.
 
 > `OCRB` requires a dictionary / data when reading a specific language. The following code assumes the target language is "English".
 
@@ -70,9 +72,9 @@ function downloadOCRB(bDownloadDLL) {
 downloadOCRB(true);
 ```
 
-The code asks `DWT` to download `OCRB` from the URL `Dynamsoft.WebTwainEnv.ResourcesPath + '/addon/OCRx64.zip'` and the language data from the URL `Dynamsoft.WebTwainEnv.ResourcesPath + '/addon/OCRBasicLanguages/English.zip'` . Both zip files need to be placed on the server where you placed the [resources files]({{site.about}}faqs.html#what-are-the-resources-files). As mentioned above, if you can't find these files, you can get them from [here](https://tst.dynamsoft.com/public/download/ocr/OCRBasicx64-v16.zip).
+The code asks `DWT` to download `OCRB` from the URL `Dynamsoft.WebTwainEnv.ResourcesPath + '/addon/OCRx64.zip'` and the language data from the URL `Dynamsoft.WebTwainEnv.ResourcesPath + '/addon/OCRBasicLanguages/English.zip'` . Both zip files need to be placed on the server where you placed the [resources files]({{site.about}}faqs.html#what-are-the-resources-files). As mentioned above, if you can't find these files, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) or get it from [64bit-OCRB-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRBasicx64-v16.zip).
 
-Once the installation is done, you should be able to find the following file and directory in `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16\DynamicOCR` .
+Once the installation is done, you should be able to find the following files under `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16\DynamicOCR` .
 
 * `DynamicOCRx64_10.0.0.0618.dll` : The version number may vary.
 * `DynamicOCR\eng.traineddata` : This is for English, other language(s) may have different name(s).
@@ -129,7 +131,7 @@ function DoOCR() {
 
 #### Step one - Include OCRPro
 
-To include this addon is to reference the necessary JavaScript file `dynamsoft.webtwain.addon.ocrpro.js` which is **NOT** included in the [resources files]({{site.about}}faqs.html#what-are-the-resources-files). If you can't find this file, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) or get it from [here](https://tst.dynamsoft.com/public/download/ocr/OCRProx64-v16.zip).
+To include this addon is to reference the necessary JavaScript file `dynamsoft.webtwain.addon.ocrpro.js` which is **NOT** included in the [resources files]({{site.about}}faqs.html#what-are-the-resources-files). If you can't find this file, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) or get it from [64bit-OCRPro-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRProx64-v16.zip).
 
 > If you are using the [dwt package](https://www.npmjs.com/package/dwt), the addon is already included in the main JavaScript file ( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ) which means you can skip this step.
 
@@ -141,7 +143,7 @@ To include this addon is to reference the necessary JavaScript file `dynamsoft.w
 
 `OCRPro` is not included by default in the [service installation]({{site.indepth}}deployment/service.html#how-to-install-dwt). To use it, you need to download and install it with the APIs [ `Download()` ]({{site.info}}api/Addon_OCRPro.html#download).
 
-> NOTE: The `OCRPro` engine is huge (over 150MB), so it'll take quite a bit of time to download. The good news is that it only needs to be done once.
+> NOTE: The `OCRPro` engine is huge (over 150MB) which takes quite a bit of time to download. The good news is that it only needs to be done once.
 
 ``` javascript
 function downloadOCRPro() {
@@ -157,7 +159,7 @@ function downloadOCRPro() {
 downloadOCRPro();
 ```
 
-The code asks `DWT` to download `OCRPro` from the URL `Dynamsoft.WebTwainEnv.ResourcesPath + '/addon/OCRProx64.zip'` . This zip file needs to be placed on the server where you placed the [resources files]({{site.about}}faqs.html#what-are-the-resources-files). As mentioned above, if you can't find these files, you can get them from [here](https://tst.dynamsoft.com/public/download/ocr/OCRProx64-v16.zip).
+The code asks `DWT` to download `OCRPro` from the URL `Dynamsoft.WebTwainEnv.ResourcesPath + '/addon/OCRProx64.zip'` . This zip file needs to be placed on the server where you placed the [resources files]({{site.about}}faqs.html#what-are-the-resources-files). As mentioned above, if you can't find these files, you can get them from [64bit-OCRPro-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRProx64-v16.zip).
 
 Once the installation is done, you should be able to find the following under `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16`
 * `DynamicOCRProx64_1.2.0.0806.dll` : The version number may vary.
@@ -249,18 +251,18 @@ settings.Redaction.FindTextAction = Dynamsoft.EnumDWT_OCRFindTextAction.OCRFT_ST
 
 ### Questions
 
-#### Can I OCR multiple languages at the same time
+#### Q: Can I OCR multiple languages at the same time
 
-Yes, but only with [OCRPro](use-ocrpro). The code is like
+**A**: Yes, but only with `OCRPro` . The code is like
 
 ``` javascript
 // Reads both English and Arabic
 settings.Languages = "eng,arabic"
 ```
 
-#### Can I OCR multiple zones at the same time
+#### Q: Can I OCR multiple zones at the same time
 
-Yes, but only with [OCRPro](use-ocrpro). The code is like
+**A**: Yes, but only with `OCRPro` . The code is like
 
 ``` javascript
 var aryRects = [{
@@ -317,23 +319,23 @@ DWObject.Addon.OCRPro.RecognizeRect(
 );
 ```
 
-#### What is a LicenseChecker
+#### Q: What is a LicenseChecker
 
-The `LicenseChecker` is a server-side script that tracks the usage of the license. It's required by [OCRPro](use-ocrpro). For more info, please check out [OCRPro License Tracking Mechanism](https://tst.dynamsoft.com/public/docs/ocr/OCRPRO-LICENSE-TRACKING-MECHANISM.pdf).
+**A**: The `LicenseChecker` is a server-side script that tracks the usage of the license. It's required by `OCRPro` . For more info, please check out [OCRPro License Tracking Mechanism](https://tst.dynamsoft.com/public/docs/ocr/OCRPRO-LICENSE-TRACKING-MECHANISM.pdf).
 
-Also check out [License Checker for OCRPro]({{server.indepth}}development/serverscript.md#license-checker-for-ocrpro) on how to write the server side script.
+Also check out [License Checker for OCRPro]({{site.indepth}}development/serverscript.md#license-checker-for-ocrpro) on how to write the server side script.
 
-#### Comparsion between OCRB and OCRPro
+#### Q: Comparsion between OCRB and OCRPro
 
-Check out the comparison sheet [here](https://www.dynamsoft.com/Documents/ocr-basic-versus-ocr-pro.pdf).
+**A**: Check out the comparison sheet [here](https://www.dynamsoft.com/Documents/ocr-basic-versus-ocr-pro.pdf).
 
-#### How to optimize Recognition
+#### Q: How to optimize Recognition
 
-There are several ways to improve the OCR accuracy, they involve either adjusting the scanner settings or choosing high-quality source files.
+**A**: There are several ways to improve the OCR accuracy, they involve either adjusting the scanner settings or choosing high-quality source files.
 
-* Adjust resolution -- 300DPI is usually recommended; 
-* Adjust color of scanned document - greyscale is recommended; 
-* Adjust brightness settings. You would use the [Brightness]({{site.info}}api/WebTwain_Acquire.html#brightness) property for this. A 50% brightness is usually suitable; 
+* Adjust resolution -- 300DPI is usually recommended
+* Adjust color of scanned document - greyscale is recommended
+* Adjust brightness settings. You would use the [Brightness]({{site.info}}api/WebTwain_Acquire.html#brightness) property for this. A 50% brightness is usually suitable
 * File type and compression - Lossless compression types would be the better option (i.e. `TIFF` or `PNG` but not `JPEG` )
 
 > For more elaboration, please see our [blog post](https://www.dynamsoft.com/blog/insights/scan-settings-for-best-ocr-accuracy/) on the matter.
@@ -342,7 +344,7 @@ There are several ways to improve the OCR accuracy, they involve either adjustin
 
 ### Environment
 
-Server side OCR has no restriction on what OS or application is running on the client side. It receives an OCR request via HTTP from a client, carries out the OCR operation and returns the results to the client. While both `OCRB` and `OCRPro` can work on the server side, we generally recommend the use of `OCRPro` in this scenario.
+Server side OCR has no restriction on what OS or application is running on the client side. It receives an OCR request via HTTP from a client, carries out the OCR operation and returns the results to the client. While both `OCRB` and `OCRPro` can work on the server side, we generally recommend the use of `OCRPro` for this scenario.
 
 For `OCRPro` , only Windows can be used as the server OS. For `OCRB` , the server can run either `Windows` or `Linux` .
 
@@ -360,9 +362,7 @@ The resources of `OCRPro` can be downloaded [here](https://tst.dynamsoft.com/pub
 
 #### Use OCRPro on the Server
 
-`OCRPro` runs as a service on the server, it receives an OCR request and process it before returning the results. But there are lots of other things to be considered which are listed below. 
-
-> For more informaiton on how it works, check out [the demos](#online-demo-for-ocrpro-on-the-server-side)
+`OCRPro` runs as a service on the server, it receives an OCR request and process it before returning the results.
 
 ##### What the client needs to do
 
@@ -520,7 +520,7 @@ For more information on the resulting object, check out [OCRPro Response]({{site
 
 As mentioned above, using OCRB on the server side is not recommended by Dynamsoft unless
 
-* You need to read a language not supported by `OCRPro` like Chinese. [Languages List](https://www.dynamsoft.com/Products/ocr-pro-languages.aspx)
+* You need to read a language not supported by `OCRPro` like Chinese ([The full languages List](https://www.dynamsoft.com/Products/ocr-pro-languages.aspx)).
 * You need to do OCR on Linux
 
 The following shows how to get `OCRB` set up, the environment is
@@ -612,7 +612,7 @@ try {
 }
 ```
 
-The above code (extracted from `service()` ) is used for receiving and saving the uploaded file, it's not really necessary as OCR happens at the same time.
+The above code (extracted from `service()` ) is used for receiving and saving the uploaded file, if you don't need the file on the server, you can ignore the saving part.
 
 ##### Perform OCR and return the results
 
@@ -649,7 +649,7 @@ outResult.write(result, 0, result.length);
 outResult.close();
 ```
 
-As shown in the above code, `OCRB` is represented by the class `DynamsoftOCRBasic` and the key method is `ocrImage()` . Check out the [full list of the OCRB server-side methods]({{server.info}}api/Addon_OCR.html#server-side).
+As shown in the above code, `OCRB` is represented by the class `DynamsoftOCRBasic` and the key method is `ocrImage()` . Check out the [full list of the OCRB server-side methods]({{site.info}}api/Addon_OCR.html#server-side).
 
 ##### Online demo for OCRB on the Server side
 

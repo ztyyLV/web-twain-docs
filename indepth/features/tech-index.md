@@ -1,8 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN Tech Index
+keywords: Dynamic Web TWAIN, Documentation, Tech Index
+breadcrumbText: Tech Index
+description: Dynamic Web TWAIN SDK Documentation Tech Index Page
 ---
 
 # TECHNIQUES

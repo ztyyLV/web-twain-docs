@@ -1,8 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN License
+keywords: Dynamic Web TWAIN, Documentation, License
+breadcrumbText: License
+description: Dynamic Web TWAIN SDK Documentation License Page
 ---
 
 # DWT LICENSE

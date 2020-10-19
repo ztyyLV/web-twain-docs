@@ -1,7 +1,7 @@
 ---
 layout: home-page
 title: Dynamic Web TWAIN SDK Documentation
-keywords: Dynamic Web TWAIN, dbr, documentation
+keywords: Dynamic Web TWAIN, TWAIN, documentation
 breadcrumbText: HomePage
 description: Dynamic Web TWAIN SDK Documentation Homepage
 ---
@@ -41,7 +41,7 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
    - [Angular Integration]({{site.indepth}}development/Angular.html)
    - [React Integration]({{site.indepth}}development/React.html)
    - [Vue Integration]({{site.indepth}}development/Vue.html)
-   - [MVC Integration]({{site.indepth}}development/MVC.html)
+  <!-- - [MVC Integration]({{site.indepth}}development/MVC.html)-->
    - [Server-side Scripting]({{site.indepth}}development/Server-script.html)
    - [Professional Service]({{site.indepth}}development/Pro-service.html)
    - [Upgrade Guide]({{site.indepth}}development/Upgrade.html)
@@ -58,9 +58,9 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
 
    - [How to Debug]({{site.indepth}}troubleshooting/Debug.html)
    - [Handle Errors]({{site.indepth}}troubleshooting/Handle-Errors.html)
-
+<!--
 * [GOVERNANCE]({{site.info}}Governance.html)
-
+-->
 * [RELEASES]({{site.info}}schedule/Schedule.html)
 
    - [Stable]({{site.info}}schedule/Released.html)
@@ -70,7 +70,6 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
    - [To Consider]({{site.info}}schedule/Ideas.html)
    - [Deprecated]({{site.info}}schedule/Deprecated.html)
    - [Addon]({{site.info}}schedule/Addon.html)
-   - [Core & Addon]({{site.info}}schedule/Core-Addon.html)
    - [Known bugs]({{site.info}}schedule/Bugs.html)
 
 * [API REFERENCE]({{site.info}}api/API-index.html)

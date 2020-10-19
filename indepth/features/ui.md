@@ -1,8 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN Features - UI Elements
+keywords: Dynamic Web TWAIN, Documentation, UI
+breadcrumbText: UI
+description: Dynamic Web TWAIN SDK Documentation UI Page
 ---
 
 # UI Elements
@@ -13,7 +15,7 @@ In this section, we'll explore the UI Elements that are built in the `DWT` libra
 
 ![UI 1]({{site.assets}}imgs/UI-1.png)
 
-This dialog comes up when running `DWT` in [service mode]({{site.indepth}}initialize.html#service-mode) under one of the following conditions
+This dialog comes up when running `DWT` in [service mode]({{site.indepth}}features/initialize.html#service-mode) under one of the following conditions
 
 * The Dynamsoft Service is not installed
 * The Dynamsoft Service is not running
@@ -33,23 +35,17 @@ This dialog is opened by one of the following functions
 > For [macOS clients]({{site.getstarted}}platform.html#browsers-on-macos) 
 
 * `OnRemoteWebTwainNotFoundCallback`
-> For any client that [connect to a remote Dynamsoft Service] ({{site.indepth}}input.html##how-to-enable-remote-scan)
+> For any client that [connect to a remote Dynamsoft Service]({{site.indepth}}features/input.html#how-to-enable-remote-scan)
 
-All four of these functions eventually calls the global API `Dynamsoft.WebTwainEnv.ShowDialog()` to show the installation dialog. You can use your own method to show the necessary information so that your users know how to proceed.
-
-The last function is just a warning message and it returns the `IP` of the remote Dynamsoft Service so that the user can locate the machine. A simple customization is like this
-
-``` javascript
-function OnRemoteWebTwainNotFoundCallback(ProductName, ip, port, bSSL) {
-    alert("The Dynamsoft Service is not installed or not running on the machine with IP" + ip);
-}
-```
-
-The first three functions all return a URL to download the Dynamsoft Service, in your customization, you should find a way to let the user download and install it. For example
+All four of these functions eventually call the global API `Dynamsoft.WebTwainEnv.ShowDialog()` to show the installation dialog. You can use your own method to show the necessary information so that your users know how to proceed. For example
 
 ``` javascript
 function OnWebTwainNotFoundOnWindowsCallback(ProductName, InstallerUrl, bHTML5, bIE, bSafari, bSSL, strIEVersion) {
     alert(ProductName + " is not installed, please download and install it from " + InstallerUrl);
+}
+// same for macOS & Linux...
+function OnRemoteWebTwainNotFoundCallback(ProductName, ip, port, bSSL) {
+    alert("The Dynamsoft Service is not installed or not running on the machine with IP" + ip);
 }
 ```
 
@@ -57,7 +53,7 @@ function OnWebTwainNotFoundOnWindowsCallback(ProductName, InstallerUrl, bHTML5, 
 
 If you are not using `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` . you can simply make the changes in the file `dynamsoft.webtwain.install.js` .
 
-If you are using `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` , the file `dynamsoft.webtwain.install.js` doesn't exist. In this case, you must make the change before you [create a WebTwain instance]({{site.indepth}}initialize.html#creating-the-webtwain-instance) . For example
+If you are using `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` , the file `dynamsoft.webtwain.install.js` doesn't exist. In this case, you must make the changes before you [create a WebTwain instance]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance) . For example
 
 ``` javascript
 window.OnWebTwainNotFoundOnWindowsCallback = function(ProductName, InstallerUrl, bHTML5, bIE, bSafari, bSSL, strIEVersion) {
@@ -88,10 +84,6 @@ Dynamsoft.WebTwainEnv.OnWebTwainPostExecute = function() {
 On the other hand, you can also call the functions `Dynamsoft.WebTwainEnv.OnWebTwainPreExecute()` and `Dynamsoft.WebTwainEnv.OnWebTwainPostExecute()` to show and hide the loader bar and backdrop when you need it in your own workflow.
 
 If you just want to change the loader bar, you can use the method `Dynamsoft.WebTwainEnv.SetLoaderBar()` .
-
-#### Change the bar
-
-If you just feel like changing the look of the bar, you can 
 
 ### Progress bar
 

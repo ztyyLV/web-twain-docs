@@ -1,8 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN Development - Other Topics
+keywords: Dynamic Web TWAIN, Documentation, Development, Other Topics
+breadcrumbText: Other Topics
+description: Dynamic Web TWAIN SDK Documentation Other Topics Page
 ---
 
 # TOPICS
@@ -22,9 +24,9 @@ DWObject.OpenSource();
 DWObject.IfAutomaticDeskew = true;
 ```
 
-### Use `DWT` to deskew an image as it is scanned
+### Use DWT to deskew an image as it is scanned
 
-> The function `deskew()` is applicable to all platforms. The event `OnPostTransferAsync` is only triggered during scanning
+> The function `deskew()` below is applicable to all platforms. The event `OnPostTransferAsync` is only triggered during scanning
 
 ``` javascript
 function deskew(index) {
@@ -50,7 +52,7 @@ DWObject.RegisterEvent("OnPostTransferAsync", function(info) {
     deskew(DWObject.ImageIDToIndex(info.imageId));
 });
 ```
-
+<!--
 ## How to achieve automation
 
 * Event-driving workflow
@@ -77,3 +79,4 @@ https://developer.dynamsoft.com/dwt/kb/develop-with-dynamic-web-twain/how-to-cha
 
 https://developer.dynamsoft.com/dwt/kb/distribution-deployment/bypass-proxy-server-for-local-addresses
 https://developer.dynamsoft.com/dwt/kb/trouble-shooting-for-end-users/the-install-popup-shows-up-if-6-or-more-web-twain-object-are-opened-on-ie
+-->

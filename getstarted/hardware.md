@@ -1,8 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN Hardware
+keywords: Dynamic Web TWAIN, Documentation, TWAIN, ICA, SANE, DirectShow, Webcam, MediaDevices Hardware
+breadcrumbText: Hardware
+description: Dynamic Web TWAIN SDK Documentation Hardware Page
 ---
 
 # HARDWARE

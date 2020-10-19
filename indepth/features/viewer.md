@@ -1,17 +1,19 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN Features - Viewer
+keywords: Dynamic Web TWAIN, Documentation, Viewer
+breadcrumbText: Viewer
+description: Dynamic Web TWAIN SDK Documentation Viewer Page
 ---
 
-# VIEWER
+# VIEWER (THIS GUIDE IS UNFINISHED)
 
 `DWT` comes with a `Viewer` component to help visualize the data in the buffer. To make things easy, the `Viewer` has within itself a built-in `Image Editor` UI.
 
 ## Bind the Viewer
 
-As mentioned in [creating the WebTwain instance]({{site.indepth}}initialize.html#creating-the-webtwain-instance), a new `WebTwain` instance (or a new `DWT` object) usually comes with a ready-bound viewer which is an instance of the `Viewer` component. Only when you use [ `Dynamsoft.WebTwainEnv.CreateDWTObjectEx` ]({{site.indepth}}initialize.html#dynamsoftwebtwainenvcreatedwtobjectex) for the instantiation will you be able to get a `WebTwain` instance that doesn't have a viewer. In this case, you can still call the method [ `BindViewer()` ]({{site.info}}api/WebTwain_Viewer.html#bindviewer) to create and bind a `Viewer` instance.
+As mentioned in [creating the WebTwain instance]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance), a new `WebTwain` instance (or a new `DWT` object) usually comes with a ready-bound viewer which is an instance of the `Viewer` component. Only when you use [ `Dynamsoft.WebTwainEnv.CreateDWTObjectEx` ]({{site.indepth}}features/initialize.html#dynamsoftwebtwainenvcreatedwtobjectex) for the instantiation will you be able to get a `WebTwain` instance that doesn't have a viewer. In this case, you can still call the method [ `BindViewer()` ]({{site.info}}api/WebTwain_Viewer.html#bindviewer) to create and bind a `Viewer` instance.
 
 ## Customize the Viewer
 
@@ -64,12 +66,19 @@ Yes, you can use the following to change the colors of the viewer.
 You can use the `Viewer` in the following ways
 
 ### Navigate through all images
+
 ### Show one or multiple images in one view
+
 ### Fit one image to the view
+
 ### Show the image in its actual size
+
 ### Zoom in to see more details of an image
-  * How to use Ctrl + Wheel to do this
+
+  + How to use Ctrl + Wheel to do this
+
 ### Highlight a specified region on the image (OverlayRectangle) -- deprecated, can ignore this one?
+
 ### Select an area
 
 ## Unbind the Viewer

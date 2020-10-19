@@ -1,8 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN API Reference - Acquire APIs
+keywords: Dynamic Web TWAIN, Documentation, API Reference, Acquire APIs
+breadcrumbText: API Reference
+description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 ---
 
 # WebTwain Scan

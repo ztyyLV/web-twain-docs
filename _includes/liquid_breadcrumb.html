@@ -1,5 +1,5 @@
 {%- assign level_ary = page.url | split: '/' -%}
-<li><a class="bluelink" href = "{{ site.docHomePage }}">DWT Docs</a></li>
+<li><a class="bluelink" href = "{{ site.docHomePage }}">Dynamic Web TWAIN</a></li>
 {%- for cur_level in level_ary -%}
     {%- assign breadcrumbUrl = page.url | split: cur_level | first | strip -%}
     {%- if breadcrumbUrl == "/" or breadcrumbUrl == "" -%}

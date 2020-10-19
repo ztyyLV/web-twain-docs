@@ -1,11 +1,13 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN Development - MVC Integration
+keywords: Dynamic Web TWAIN, Documentation, Development, MVC Integration
+breadcrumbText: MVC Integration
+description: Dynamic Web TWAIN SDK Documentation MVC Integration Page
 ---
 
-# MVC
+# MVC (UNFINISHED)
 
 How to integrate with MVC and things to note
 
