@@ -6,3 +6,9 @@ keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: Troubleshooting
 description: Dynamic Web TWAIN SDK Documentation Troubleshooting Index Page
 ---
+
+# TROUBLESHOOTING
+
+## [How to debug]({{site.indepth}}troubleshooting/debug.html)
+
+## [Handle Errors]({{site.indepth}}troubleshooting/handle-errors.html)

@@ -101,7 +101,7 @@ Your application may have its own installer which installs other related compone
 
 ### You want to rebrand the installer
 
-The official Dynamsoft Service installer is digitally signed by Dynamsoft Certificates and it also shows multiple labels belonging to Dynamsoft. To rebrand it, you would need a white-label version of it. This usually involves the [Professional Service]({{site.indepth}}development/Pro-service.html#customization-service). Contact  [Dynamsoft Support Team]({{site.about}}getsupport.html) for more information.
+The official Dynamsoft Service installer is digitally signed by Dynamsoft Certificates and it also shows multiple labels belonging to Dynamsoft. To rebrand it, you would need a white-label version of it. This usually involves the [Professional Service]({{site.indepth}}development/Pro-service.html#customization-service). Contact [Dynamsoft Support Team]({{site.about}}getsupport.html) for more information.
 
 ## About Dynamsoft Service
 
@@ -264,7 +264,7 @@ The image data
 
 ### Q: How to change the certificate
 
-A: To replace the default certificate, the steps are
+**A**: To replace the default certificate, the steps are
 
 * Generate a certificate for 127.0.0.1
 * Install that certificate
@@ -275,7 +275,7 @@ A: To replace the default certificate, the steps are
 
 ### Q: How to configure the service
 
-A: Generally, we configure the service in the file `DSConfiguration.ini`
+**A**: Generally, we configure the service in the file `DSConfiguration.ini`
 
 ``` javaScript
 [DS]
@@ -295,7 +295,7 @@ LogLevel = 1 // Whether to output detailed information for debugging purposes
 
 ### Q: How to restart the service
 
-A: 
+**A**: 
 
 * On Windows, find the service in the "Local Services". Stop and Start it.
 * On macOS, find and kill the service in "Activity Monitor" and it'll start itself.
@@ -303,7 +303,7 @@ A:
 
 ### Q: Why am I asked to install the service after it is installed
 
-A: There are a few possible causes
+**A**: There are a few possible causes
 
 * The Dynamsoft Service is not installed properly.
 * The Dynamsoft Service is installed correctly but not started.
