@@ -8,7 +8,7 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
 
 # Dynamic Web TWAIN Documentation  
 
-* [ABOUT]({{site.about}}About.html)
+* [ABOUT]({{site.about}}index.html)
 
    - [Features]({{site.about}}Features.html)
    - [Resources]({{site.about}}Resources.html)
@@ -16,14 +16,14 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
    - [FAQs]({{site.about}}FAQs.html)
    - [Support]({{site.about}}Getsupport.html)
 
-* [GETTING STARTED]({{site.getstarted}}Starting.html)
+* [GETTING STARTED]({{site.getstarted}}index.html)
 
    - [HelloWorld]({{site.getstarted}}Helloworld.html)
    - [Hardware]({{site.getstarted}}Hardware.html)
    - [Platform]({{site.getstarted}}Platform.html)
    - [FileTypes]({{site.getstarted}}Filetype.html)
 
-* [TECHNIQUES]({{site.indepth}}features/Tech-index.html)
+* [TECHNIQUES]({{site.indepth}}features/index.html)
 
    - [Initialize]({{site.indepth}}features/Initialize.html)
    - [Input]({{site.indepth}}features/Input.html)
@@ -36,7 +36,7 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
    - [OCR]({{site.indepth}}features/OCR.html)
    - [Handle PDF]({{site.indepth}}features/PDF.html)
 
-* [DEVELOPMENT]({{site.indepth}}development/Dev-index.html)
+* [DEVELOPMENT]({{site.indepth}}development/index.html)
 
    - [Angular Integration]({{site.indepth}}development/Angular.html)
    - [React Integration]({{site.indepth}}development/React.html)
@@ -48,13 +48,13 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
    - [About ActiveX]({{site.indepth}}development/ActiveX.html)
    - [Other Topics]({{site.indepth}}development/Topics.html)
 
-* [DEPLOYMENT]({{site.indepth}}deployment/Deploy-index.html)
+* [DEPLOYMENT]({{site.indepth}}deployment/index.html)
 
    - [Server Setup]({{site.indepth}}deployment/Server.html)
    - [Service Setup]({{site.indepth}}deployment/Service.html)
    - [Scenarios]({{site.indepth}}deployment/Scenarios.html)
 
-* [TROUBLESHOOTING]({{site.indepth}}troubleshooting/Debug-index.html)
+* [TROUBLESHOOTING]({{site.indepth}}troubleshooting/index.html)
 
    - [How to Debug]({{site.indepth}}troubleshooting/Debug.html)
    - [Handle Errors]({{site.indepth}}troubleshooting/Handle-Errors.html)
@@ -72,7 +72,7 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
    - [Addon]({{site.info}}schedule/Addon.html)
    - [Known bugs]({{site.info}}schedule/Bugs.html)
 
-* [API REFERENCE]({{site.info}}api/API-index.html)
+* [API REFERENCE]({{site.info}}api/index.html)
 
    - [Dynamsoft_WebTwainEnv]({{site.info}}api/Dynamsoft_WebTwainEnv.html)
    - [Dynamsoft_Enum]({{site.info}}api/Dynamsoft_Enum.html)
