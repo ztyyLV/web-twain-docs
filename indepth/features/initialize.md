@@ -27,42 +27,19 @@ When using `DWT` on [desktop]({{site.getstarted}}platform.html#browsers-on-deskt
 
 If a user who hasn't installed the Dynamsoft Service accesses the web page (which has `DWT` ) for the first time, they will be prompted to install it. This is a built-in behaviour of the library. The prompt will display the download link, and once the installer is downloaded, the installation process will take just a few seconds.
 
-> The prompt comes up when you try to [create a `WebTwain` instance](#creating-the-webtwain-instance) in service mode.
+> The prompt comes up when you try to [create a `WebTwain` instance](#creating-the-webtwain-instance) in service mode. The same prompt will appear no matter whether the client OS is Windows, macOS or Linux. But the file you download differs on different Systems. On Windows and macOS, the users can double click the downloaded installer to install the SDK. On Linux, however, the users will need to run either one of the following command to install it
+> Debian / Ubuntu: 
+> ```
+> dpkg -i DynamsoftServiceSetup.deb
+> ```
+> Fedora
+> ```
+> rpm -ivh DynamsoftServiceSetup.rpm
+> ```
 
 ![Initialization]({{site.assets}}imgs/Initialization-1.png)
 
-#### About the Dynamsoft Service
-
-The Dynamsoft Service uses `localhost` and the ports **18622, 18625, 18623, and 18626** for connection. The latter two ports are used when there is an SSL encryption, and the earlier two when otherwise. These ports can be configured in the *DSConfiguration.ini* file located in:
-`C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64)\DSConfiguration.ini` (Windows as an example)
-
-By default, there are always three Dynamsoft Service processes running. All of them are called `Dynamsoft Service` and use the same file `DynamsoftService.exe` . However, they are started with different arguments.
-
-The main process starts without any argument as follows:
-
-``` cmd
-C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\DynamsoftService.exe
-```
-
-Then the monitor process which is meant to monitor the main process and automatically start it in case it crashes starts like this:
-
-``` cmd
-C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\DynamsoftService.exe -asmonitor Global\Dynamsoft_1.5.0_352325843_stop_service_event Global\Dynamsoft_1.5.0_352325828_certcheck_event
-```
-
- 
-The last always-running process is meant to support the SSL certificate specifically for the Firefox browser:
-
-``` 
-"-scan" "\\.\pipe\dynamsoftscan_15.0_70056_60" "0" "Global\ss352604281_61_70056" "0" "C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\dwt_trial_15.0.0.0625.dll"
-```
-
-Service mode *needs* to be used if you wish to [use a connected physical scanner]({{site.indepth}}features/input.html#scan-from-a-local-scanner). It is this Dynamsoft Service that handles all communication between the browser client and the scanner driver. As mentioned previously, Service mode is used by default if the user is on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices).
-
-> NOTE:
-> * On Windows, the service runs in the "Local System" account
-> * On macOS, the service runs in the "current user" account
-> * On Linux, the service runs in the "root" account 
+Once the installation is done, you can click 'Reconnect to the service' or refresh the page to start using the SDK.
 
 ### WASM Mode
 
@@ -433,9 +410,7 @@ For more information, check out [how to enable remote scan]({{site.indepth}}feat
     Includes global methods, properties to help with `WebTwain` initialization and instantiation, etc. as shown in previous context.
 
 * `Lib`
-
     Includes information like environment detection results ( `Dynamsoft.Lib.env` ) and global methods like `showMask()` , `hideMask()` , etc.
 
 * `Enumerations`
-
     Example: [ `Dynamsoft.EnumDWT_PixelType` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_pixeltype)
