@@ -1,10 +1,11 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN Handle Errors
+keywords: Dynamic Web TWAIN, Documentation, Handle Errors
+breadcrumbText: Handle Errors
+description: Dynamic Web TWAIN SDK Documentation Handle Errors Page
 ---
-
 
 # Dynamic Web TWAIN Troubleshooting - Connection Errors
 ## License errors

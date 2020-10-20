@@ -1,8 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN Debug
+keywords: Dynamic Web TWAIN, Documentation, Debug
+breadcrumbText: Debug
+description: Dynamic Web TWAIN SDK Documentation Debug Page
 ---
 
 # Dynamic Web TWAIN Advanced Troubleshooting - Logs & Dump Files

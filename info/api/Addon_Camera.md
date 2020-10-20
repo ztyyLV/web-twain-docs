@@ -3,7 +3,7 @@ layout: default-layout
 needAutoGenerateSidebar: true
 title: Dynamic Web TWAIN API Reference - Camera Addon APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Camera Addon APIs
-breadcrumbText: API Reference
+breadcrumbText: Camera Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference Camera Addon APIs Page
 ---
 

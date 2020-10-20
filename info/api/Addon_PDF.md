@@ -3,7 +3,7 @@ layout: default-layout
 needAutoGenerateSidebar: true
 title: Dynamic Web TWAIN API Reference - Global APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Global APIs
-breadcrumbText: API Reference
+breadcrumbText: PDF Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference Global APIs Page
 ---
 

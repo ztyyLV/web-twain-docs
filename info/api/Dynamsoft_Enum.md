@@ -3,7 +3,7 @@ layout: default-layout
 needAutoGenerateSidebar: true
 title: Dynamic Web TWAIN API Reference - Enumerations
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Enumerations
-breadcrumbText: API Reference
+breadcrumbText: Enumerations
 description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 ---
 

@@ -3,7 +3,7 @@ layout: default-layout
 needAutoGenerateSidebar: true
 title: Dynamic Web TWAIN API Reference - IO APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, IO APIs
-breadcrumbText: API Reference
+breadcrumbText: IO
 description: Dynamic Web TWAIN SDK Documentation API Reference IO APIs Page
 ---
 

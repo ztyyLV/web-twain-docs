@@ -3,8 +3,8 @@ layout: default-layout
 needAutoGenerateSidebar: true
 title: Dynamic Web TWAIN Schedule
 keywords: Dynamic Web TWAIN, Documentation, Schedule, Index
-breadcrumbText: API Reference
-description: Dynamic Web TWAIN SDK Documentation API Reference Schedule Index Page
+breadcrumbText: Schedule
+description: Dynamic Web TWAIN SDK Documentation Schedule Index Page
 ---
 
 # Product Schedule

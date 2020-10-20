@@ -3,7 +3,7 @@ layout: default-layout
 needAutoGenerateSidebar: true
 title: Dynamic Web TWAIN API Reference - BarcodeReader Addon APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, BarcodeReader Addon APIs
-breadcrumbText: API Reference
+breadcrumbText: Barcode Reader Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference BarcodeReader Addon APIs Page
 ---
 

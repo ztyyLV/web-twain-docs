@@ -1,10 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Tech Index
-keywords: Dynamic Web TWAIN, Documentation, Tech Index
-breadcrumbText: Tech Index
-description: Dynamic Web TWAIN SDK Documentation Tech Index Page
+title: Dynamic Web TWAIN Features Index
+keywords: Dynamic Web TWAIN, Documentation, Features Index
+breadcrumbText: Features
+description: Dynamic Web TWAIN SDK Documentation Features Index Page
 ---
 
 # TECHNIQUES

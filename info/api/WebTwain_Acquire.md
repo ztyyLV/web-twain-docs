@@ -3,7 +3,7 @@ layout: default-layout
 needAutoGenerateSidebar: true
 title: Dynamic Web TWAIN API Reference - Acquire APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Acquire APIs
-breadcrumbText: API Reference
+breadcrumbText: Acquire
 description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 ---
 

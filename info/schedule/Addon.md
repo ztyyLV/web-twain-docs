@@ -1,8 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN Schedule - Addon Release
+keywords: Dynamic Web TWAIN, Documentation, Schedule, Addon Release
+breadcrumbText: Addons
+description: Dynamic Web TWAIN SDK Documentation Schedule - Addon Release Page
 ---
 
 # DWT Core and Addon
