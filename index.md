@@ -61,7 +61,7 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
 <!--
 * [GOVERNANCE]({{site.info}}Governance.html)
 -->
-* [RELEASES]({{site.info}}schedule/Schedule.html)
+* [RELEASES]({{site.info}}schedule/index.html)
 
    - [Stable]({{site.info}}schedule/Released.html)
    - [Beta]({{site.info}}schedule/Beta.html)
