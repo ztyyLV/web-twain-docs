@@ -160,7 +160,7 @@ No changes in version 16.1.
 * [HTML5] Changing the default SSL certificates is now officially supported.
 * [HTML5] Changed the property `LogLevel` so that when it's set to `1\0` , it's equivalent to setting `LogLevel` to `14\1` in the file `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\DSConfiguration.ini`
 * [HTML5] Local caching is made smoother by introducing a new process to do the caching when the threshold is reached. As a result, it is significantly faster when loading a great many files.
-* [HTML5 | macOS] When using ICA(Image Capture Architecture) sources, info that was written to system log is now written to `wtss.log` .
+* [HTML5 on macOS] When using ICA(Image Capture Architecture) sources, info that was written to system log is now written to `wtss.log` .
 * [Upload Module] Now the module can only upload files/images that are whitelisted (check NOTE below)
 
 > Note on how whitelisting is done
@@ -184,17 +184,17 @@ No changes in version 16.1.
 * [HTML5] Tidied up the Dynamsoft Service installer by removing redundant files.
 * [HTML5] Unified image decoding capabilities for JPEG and PNG on Windows, macOS and Linux.
 * [HTML5] Improved the speed of PDF decoding by loading the file as a whole instead of per page.
-* [HTML5 | Win] Improved Windows buffer management so that its capacity is only limited by the size of disk space on the machine.
-* [HTML5 | macOS] Improved macOS installers for better user experience.
-* [ActiveX | Win] Aligned PDF rasterizer in ActiveX so that it shares the same feature set with the HTML5 edition.
+* [HTML5 on Windows] Improved Windows buffer management so that its capacity is only limited by the size of disk space on the machine.
+* [HTML5 on macOS] Improved macOS installers for better user experience.
+* [ActiveX] Aligned PDF rasterizer in ActiveX so that it shares the same feature set with the HTML5 edition.
 
 ### FIXED
 
 * [HTML5] Fixed a bug with the API `CreateTextFont()` where the text takes up extra space when it is rotated by 90 degrees.
 * [HTML5] Fixed a bug where printing results in unnecessary extra blank pages in Firefox or IE11.
 * [HTML5] Fixed a bug where a missing filename parameter results in upload failure.
-* [HTML5 | Win] Fixed a bug where the library attempts to download an incorrect installer when the Barcode Reader add-on is used.
-* [HTML5 | Win] Fixed a bug with the API `GenerateURLForUploadData()` so that it returns an URL that shows the correct SDK version.
+* [HTML5 on Windows] Fixed a bug where the library attempts to download an incorrect installer when the Barcode Reader add-on is used.
+* [HTML5 on Windows] Fixed a bug with the API `GenerateURLForUploadData()` so that it returns an URL that shows the correct SDK version.
 * [All] Fixed a bug where 8-bit image data can't be compressed as a JPEG-TIFF.
 * [All] Fixed a bug with the event `OnTopImageInTheViewChanged()` where it doesn't get triggered if images are acquired into an empty buffer.
 
@@ -221,30 +221,30 @@ No changes in version 16.1.
 
 ### NEW
 
-* [HTML5 | Windows] Added a new method `startScan()` which accepts a JSON object that specifies all the scan parameters. This makes it simpler and even faster to initiate a scan job. At the same time, you can specify how you want the scanned data to be processed by adding extra output parameters in the same JSON object.
-* [HTML5 | Windows] Added a new event `OnPostTransferAync` as the asynchronous counterpart to the existing synchronous event `OnPostTransfer` . Information about the transferred image is returned in the event listener.
-* [HTML5 | Windows] Added a new PDF core DLL as the default engine for PDF encoding & decoding. This new PDF DLL has added support for JPEG2000 and JBIG2 compression types.
-* [HTML5 | Windows] Added a new method `PDF.Write.Setup()` which accepts a JSON object that contains all the parameters needed for creating PDF files.
-* [HTML5 | Mac] Added a new file `libDynamicImg.dylib` to the macOS edition which provides functionalities equal to those provided by the file `DynamicImage.dll` on Windows. Essentially, this file offers better image encoding and decoding.
+* [HTML5 on Windows] Added a new method `startScan()` which accepts a JSON object that specifies all the scan parameters. This makes it simpler and even faster to initiate a scan job. At the same time, you can specify how you want the scanned data to be processed by adding extra output parameters in the same JSON object.
+* [HTML5 on Windows] Added a new event `OnPostTransferAync` as the asynchronous counterpart to the existing synchronous event `OnPostTransfer` . Information about the transferred image is returned in the event listener.
+* [HTML5 on Windows] Added a new PDF core DLL as the default engine for PDF encoding & decoding. This new PDF DLL has added support for JPEG2000 and JBIG2 compression types.
+* [HTML5 on Windows] Added a new method `PDF.Write.Setup()` which accepts a JSON object that contains all the parameters needed for creating PDF files.
+* [HTML5 on macOS] Added a new file `libDynamicImg.dylib` to the macOS edition which provides functionalities equal to those provided by the file `DynamicImage.dll` on Windows. Essentially, this file offers better image encoding and decoding.
 * [HTML5] Added a pair of methods `IndexToImageID()` and `ImageIDToIndex()` which converts the index of an image to its image id or vice versa. The id of an image is an unique number that can be used to specify the image.
 * [HTML5] Added a new event `OnIndexChangeDragDropDone` which is triggered when you drag and drop images to resort them in the viewer. The event returns the from and to indices for the operation.
 
 ### IMPROVED
 
 * [HTML5] Improved the method `AcquireImage()` by adding two more options `IfGetImageInfo` & `IfGetExtImageInfo` to its parameter `optionalDeviceConfig` which are `true` by default and means extra image info will be returned with each transferred image.
-* [HTML5 | Windows] Improved the method `SetFileXferInfo()` so that you can specify a naming pattern for the transferred images when the transfer mode is Disk File.
+* [HTML5 on Windows] Improved the method `SetFileXferInfo()` so that you can specify a naming pattern for the transferred images when the transfer mode is Disk File.
 * [HTML5] Improved the performance of Dynamsoft Service by allowing two time-consuming operations to occur concurrently. The affected methods are `ConvertToBlob()` , `ConvertToBase64()` , `GenerateURLForUploadedData()` as well as a few HTTP Upload methods.
 * [HTML5] Improved service connecting efficiency by removing optional ports and use the same ports no matter it's 64bit service or 32bit. Also, during initialization, JavaScript will attempt to connect to the core scan module directly instead of connecting to the service first.
 * [HTML5] Improved the functions `ConvertToBase64()` , `ConvertToBlob()` , `GenerateURLForUploadData()` , `HTTPUpload()` , `HTTPUploadAllThroughPostAsMultiPageTIFF()` , `HTTPUploadAllThroughPostAsPDF()` , `HTTPUploadThroughPost()` , `HTTPUploadThroughPostAsMultiPagePDF()` , `HTTPUploadThroughPostAsMultiPageTIFF()` , `HTTPUploadThroughPostEx()` so that the current indices of the images which were operated on in these methods are returned in the callback functions. This is due to the fact that the indices might have changed during these time-consuming operations.
 
 ### CHANGED
 
-* [HTML5 | Windows] 64bit service has been made the default option on 64bit machines.
+* [HTML5 on Windows] 64bit service has been made the default option on 64bit machines.
 
 ### FIXED
 
-* [HTML5 | Windows] Fixed a bug where it takes too much time to load a network file in RDS-mode Chrome.
-* [HTML5 | Windows] Fixed a bug where an unwanted black line may appear as the right edge of saved TIFF files.
+* [HTML5 on Windows] Fixed a bug where it takes too much time to load a network file in RDS-mode Chrome.
+* [HTML5 on Windows] Fixed a bug where an unwanted black line may appear as the right edge of saved TIFF files.
 
 ## `14.3.1` (01/15/2019)
 
@@ -255,8 +255,8 @@ No changes in version 16.1.
 
 ### IMPROVED
 
-* [HTML5 | Windows] Improved the TIFF compression algorithm when it's set to JPEG so that the resulting file size is significantly reduced.
-* [ActiveX & HTML5 | Windows] Included the Webcam and Barcode reader libraries in the service installer for easier distribution.
+* [HTML5 on Windows] Improved the TIFF compression algorithm when it's set to JPEG so that the resulting file size is significantly reduced.
+* [ActiveX & HTML5 on Windows] Included the Webcam and Barcode reader libraries in the service installer for easier distribution.
 * [HTML5] Improved the built-in image viewer to be more responsive when navigating through images.
 
 ### CHANGED
@@ -265,8 +265,8 @@ No changes in version 16.1.
 
 ### FIXED
 
-* [HTML5 | Windows] Fixed a bug where the method `LoadImageFromBase64Binary()` may fail to decode a string.
-* [HTML5 | Windows] Fixed a bug where the service may crash during string conversion.
+* [HTML5 on Windows] Fixed a bug where the method `LoadImageFromBase64Binary()` may fail to decode a string.
+* [HTML5 on Windows] Fixed a bug where the service may crash during string conversion.
 * [File Uploader] Fixed a bug where the upload module may fail to open 4 threads for uploading.
 
 ## `14.3` (11/20/2018)
@@ -301,7 +301,7 @@ No changes in version 16.1.
 
 ### IMPROVED
 
-* [ActiveX| Windows] Improved the `SelectSource()` method so that it can also be used asynchronously.
+* [ActiveX] Improved the `SelectSource()` method so that it can also be used asynchronously.
 * [File Uploader] Updated the upload module so that the information returned from the server can be accessed in the callback functions of an upload job.
 * [File Uploader] Added the version number of the library to the name of the library so that different versions of the library can co-exist.
 
@@ -312,10 +312,10 @@ No changes in version 16.1.
 * [HTML5] Fixed a bug with the image editor where it no longer adapts to the size change of the browser window after you pressed the scan button in its toolbar.
 * [HTML5] Fixed a bug that some files would fail to load when you drag and drop multiple TIFF files to load in Dynamic Web TWAIN.
 * [HTML5] Fixed a bug where loading a file from a path that is composed of Unicode characters would fail.
-* [HTML5 | Windows] Fixed a bug where the multi-user service doesn't start under the Enhanced Mode.
-* [HTML5 | macOS] Fixed a bug on macOS where the built-in Select-Source dialog appears to be too wide.
-* [HTML5 | macOS] Fixed a bug on macOS where `Undefined` shows up as available sources.
-* [HTML5 | macOS] Fixed a bug on macOS where you can't press Ctrl to select multiple zones on an image. Instead, you need to use the meta Key.
+* [HTML5 on Windows] Fixed a bug where the multi-user service doesn't start under the Enhanced Mode.
+* [HTML5 on macOS] Fixed a bug on macOS where the built-in Select-Source dialog appears to be too wide.
+* [HTML5 on macOS] Fixed a bug on macOS where `Undefined` shows up as available sources.
+* [HTML5 on macOS] Fixed a bug on macOS where you can't press Ctrl to select multiple zones on an image. Instead, you need to use the meta Key.
 
 ### CHANGED
 
@@ -326,10 +326,10 @@ No changes in version 16.1.
 
 ### NEW
 
-* [HTML5 | Windows] Added a new upload module to handle upload jobs which can carry out upload jobs behind the scene even after the browser is closed.
-* [HTML5 | Windows] Added a new API `GenerateURLForUploadData()` to generate a URL which will be used by the upload module to fetch the file/data to upload.
-* [HTML5 | Windows] Added a 64-bit service, 64-bit scan module, and 64-bit PDF Rasterizer. However, the 32-bit service and modules are still installed by default.
-* [HTML5 | Windows] Added Enhanced Mode to the service to optimize the performance for environments like Citrix. When enabled, the service can handle multiple client connections much better.
+* [HTML5 on Windows] Added a new upload module to handle upload jobs which can carry out upload jobs behind the scene even after the browser is closed.
+* [HTML5 on Windows] Added a new API `GenerateURLForUploadData()` to generate a URL which will be used by the upload module to fetch the file/data to upload.
+* [HTML5 on Windows] Added a 64-bit service, 64-bit scan module, and 64-bit PDF Rasterizer. However, the 32-bit service and modules are still installed by default.
+* [HTML5 on Windows] Added Enhanced Mode to the service to optimize the performance for environments like Citrix. When enabled, the service can handle multiple client connections much better.
 * [HTML5] Added a JS-based `SelectSource()` dialog to replace the system's default dialog.
 * [HTML5] Added a feature to drag and drop one or multiple images in the viewer to rearrange them.
 * [HTML5] Added a feature to load images when they are dropped onto the viewer from the local disk. When dropping in-between 2 images in the viewer, the new images will be inserted between them, otherwise, the new images will be appended.
@@ -343,8 +343,8 @@ No changes in version 16.1.
 ### IMPROVED
 
 * [All Editions] Rearranged the `/Resources/` folder in the installation directory which contains all the JavaScript library files and files for distribution. Removed the deprecated plug-in completely.
-* [HTML5 | Windows] Improved the file transfer mode to be able to transfer multiple files in one scan session.
-* [HTML5 | Windows] Added Unicode support to make it possible to access files which has special characters from non-English languages in its path or name.
+* [HTML5 on Windows] Improved the file transfer mode to be able to transfer multiple files in one scan session.
+* [HTML5 on Windows] Added Unicode support to make it possible to access files which has special characters from non-English languages in its path or name.
 * [HTML5] When the viewer is set to the view mode of 1 * 1 or -1 * -1, users can now select multiple areas on the image by drawing rectangles while pressing the CTRL button. These selected areas can be moved around too.
 * [HTML5] Improved the event `OnImageAreaSelected` so that when it's triggered, it will return the 1-based index of the rectangle which represents a selected area on the image. The event is triggered when a new area is selected or a selected area is moved.
 * [HTML5] The HTML5 license can now be used to restrict the usage of the SDK in certain browsers.
@@ -353,8 +353,8 @@ No changes in version 16.1.
 ### CHANGED
 
 * [All Editions] Removed intellisense files but still available upon request.
-* [HTML5 | Windows] The service is now installed with a `.msi` by default instead of a `.exe` .
-* [HTML5 | macOS] Changed the API `ImageCaptureDriverType` which now is set to 4 by default and the only allowed values are 0 (TWAIN), 3 (ICA) and 4 (TWAIN & ICA).
+* [HTML5 on Windows] The service is now installed with a `.msi` by default instead of a `.exe` .
+* [HTML5 on macOS] Changed the API `ImageCaptureDriverType` which now is set to 4 by default and the only allowed values are 0 (TWAIN), 3 (ICA) and 4 (TWAIN & ICA).
 * [HTML5] All the required images in the SDK are hard-coded into JavaScript code.
 * [HTML5] The non-production server license will now come with a prompt of license notice.
 * [HTML5] Changed the background color for images when they are selected or when the mouse hovers over one of them. This only works when the view mode is n * n. By comparison, in old versions, the background stays white.
@@ -370,7 +370,7 @@ No changes in version 16.1.
 
 ### IMPROVED
 
-* [HTML5 | Windows & Linux] Optimized the scanner module for better compatibility with certain scanner models.
+* [HTML5 on Windows & Linux] Optimized the scanner module for better compatibility with certain scanner models.
 * [All Editions] Improved the JS library so that it works better with Angular 5.
 
 ## `13.4` (03/12/2018)

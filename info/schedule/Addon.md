@@ -32,9 +32,9 @@ This addon now works on iOS, iPadOS & Android too.
 
 #### IMPROVED
 
-* [HTML5 | Windows] Changed the old DLL names to reflect the fact that they only work as the rasterizer.
-* [HTML5 | Windows] Removed the old PDF. Download method.
-* [HTML5 | Windows] Removed license limitation on the method IsTextBasedPDF so that it can always be used regardless of whether a license is in place.
+* [HTML5 on Windows] Changed the old DLL names to reflect the fact that they only work as the rasterizer.
+* [HTML5 on Windows] Removed the old PDF. Download method.
+* [HTML5 on Windows] Removed license limitation on the method IsTextBasedPDF so that it can always be used regardless of whether a license is in place.
 
 ### `10.3.0.0712` (9/06/2018)
 

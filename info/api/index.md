@@ -22,14 +22,13 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 #### Methods
 
+<!--* [GetImageBitDepthAsync()]({{site.info}}api/WebTwain_Buffer.html#getimagebitdepthasync)-->
+
 * [ClearImageTags()]({{site.info}}api/WebTwain_Buffer.html#clearimagetags) 
 * [FilterImagesByTag()]({{site.info}}api/WebTwain_Buffer.html#filterimagesbytag)
 * [SetDefaultTag()]({{site.info}}api/WebTwain_Buffer.html#setdefaulttag) 
 * [TagImages()]({{site.info}}api/WebTwain_Buffer.html#tagimages)
 * [GetImageBitDepth()]({{site.info}}api/WebTwain_Buffer.html#getimagebitdepth)
-
-<!--* [GetImageBitDepthAsync()]({{site.info}}api/WebTwain_Buffer.html#getimagebitdepthasync)-->
-
 * [GetImageSize()]({{site.info}}api/WebTwain_Buffer.html#getimagesize)
 * [GetImageSizeWithSpecifiedType()]({{site.info}}api/WebTwain_Buffer.html#getimagesizewithspecifiedtype) 
 * [GetSelectedImagesSize()]({{site.info}}api/WebTwain_Buffer.html#getselectedimagessize)
@@ -51,11 +50,9 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [SwitchImage()]({{site.info}}api/WebTwain_Buffer.html#switchimage)
 * [RemoveImage()]({{site.info}}api/WebTwain_Buffer.html#removeimage) 
 * [RemoveAllImages()]({{site.info}}api/WebTwain_Buffer.html#removeallimages)
-
-<!--* [RemoveAllImagesAsync()]({{site.info}}api/WebTwain_Buffer.html#removeallimagesasync)-->
-
 * [RemoveAllSelectedImages()]({{site.info}}api/WebTwain_Buffer.html#removeallselectedimages)
 
+<!--* [RemoveAllImagesAsync()]({{site.info}}api/WebTwain_Buffer.html#removeallimagesasync)-->
 <!--* [RemoveAllSelectedImagesAsync()]({{site.info}}api/WebTwain_Buffer.html#removeallselectedimagesasync)-->
 
 #### Properties
@@ -89,37 +86,26 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [CopyToClipboard()]({{site.info}}api/WebTwain_Edit.html#copytoclipboard) 
 * [Erase()]({{site.info}}api/WebTwain_Edit.html#erase)
 * [Flip()]({{site.info}}api/WebTwain_Edit.html#flip)
-
-<!--* [FlipAsync()]({{site.info}}api/WebTwain_Edit.html#flipasync)-->
-
 * [Mirror()]({{site.info}}api/WebTwain_Edit.html#mirror)
-
-<!--* [MirrorAsync()]({{site.info}}api/WebTwain_Edit.html#mirrorasync)-->
-
 * [Rotate()]({{site.info}}api/WebTwain_Edit.html#rotate) 
-
-<!--* [RotateAsync()]({{site.info}}api/WebTwain_Edit.html#rotate) -->
-
 * [RotateEx()]({{site.info}}api/WebTwain_Edit.html#rotateex)
 * [RotateLeft()]({{site.info}}api/WebTwain_Edit.html#rotateleft) 
-
-<!--* [RotateLeftAsync()]({{site.info}}api/WebTwain_Edit.html#rotateleft) -->
-
 * [RotateRight()]({{site.info}}api/WebTwain_Edit.html#rotateright)
-
-<!--* [RotateRightAsync()]({{site.info}}api/WebTwain_Edit.html#rotateright)-->
-
 * [ChangeBitDepth()]({{site.info}}api/WebTwain_Edit.html#changebitdepth) 
 * [SetDPI()]({{site.info}}api/WebTwain_Edit.html#setdpe)
 * [ConvertToBW()]({{site.info}}api/WebTwain_Edit.html#converttobw) 
 * [ConvertToGrayScale()]({{site.info}}api/WebTwain_Edit.html#converttograyscale)
-
-<!--* [ConvertToGrayScaleAsync()]({{site.info}}api/WebTwain_Edit.html#converttograyscaleasync)-->
-
 * [ChangeImageSize()]({{site.info}}api/WebTwain_Edit.html#changeimagesize) 
 * [Invert()]({{site.info}}api/WebTwain_Edit.html#invert)
 * [SetImageWidth()]({{site.info}}api/WebTwain_Edit.html#setimagewidth) 
 * [ShowImageEditor()]({{site.info}}api/WebTwain_Edit.html#showimageeditor)
+
+<!--* [FlipAsync()]({{site.info}}api/WebTwain_Edit.html#flipasync)-->
+<!--* [MirrorAsync()]({{site.info}}api/WebTwain_Edit.html#mirrorasync)-->
+<!--* [RotateAsync()]({{site.info}}api/WebTwain_Edit.html#rotate) -->
+<!--* [RotateLeftAsync()]({{site.info}}api/WebTwain_Edit.html#rotateleft) -->
+<!--* [RotateRightAsync()]({{site.info}}api/WebTwain_Edit.html#rotateright)-->
+<!--* [ConvertToGrayScaleAsync()]({{site.info}}api/WebTwain_Edit.html#converttograyscaleasync)-->
 
 #### Properties
 
@@ -237,15 +223,14 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [LoadImageFromBase64Binary()]({{site.info}}api/WebTwain_IO.html#loadimagefrombase64binary)
 * [LoadImageFromBinary()]({{site.info}}api/WebTwain_IO.html#loadimagefrombinary)
 * [LoadDibFromClipboard()]({{site.info}}api/WebTwain_IO.html#loaddibfromclipboard)
-
-<!--* [LoadDibFromClipboardAsync()]({{site.info}}api/WebTwain_IO.html#loaddibfromclipboardasync)-->
-
 * [FTPDownload()]({{site.info}}api/WebTwain_IO.html#ftpdownload)
 * [FTPDownloadEx()]({{site.info}}api/WebTwain_IO.html#ftpdownloadex)
 * [HTTPDownload()]({{site.info}}api/WebTwain_IO.html#httpdownload)
 * [HTTPDownloadEx()]({{site.info}}api/WebTwain_IO.html#httpdownloadex)
 * [HTTPDownloadThroughPost()]({{site.info}}api/WebTwain_IO.html#httpdownloadthroughpost)
 * [HTTPDownloadDirectly()]({{site.info}}api/WebTwain_IO.html#httpdownloaddirectly)
+
+<!--* [LoadDibFromClipboardAsync()]({{site.info}}api/WebTwain_IO.html#loaddibfromclipboardasync)-->
 
 ### Output
 
