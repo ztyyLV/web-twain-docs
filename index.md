@@ -52,15 +52,15 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
 
    - [Server Setup]({{site.indepth}}deployment/Server.html)
    - [Service Setup]({{site.indepth}}deployment/Service.html)
-   - [Scenarios]({{site.indepth}}deployment/Scenarios.html)
+  <!-- - [Scenarios]({{site.indepth}}deployment/Scenarios.html)-->
 
 * [TROUBLESHOOTING]({{site.indepth}}troubleshooting/index.html)
 
    - [How to Debug]({{site.indepth}}troubleshooting/Debug.html)
    - [Handle Errors]({{site.indepth}}troubleshooting/Handle-Errors.html)
-<!--
-* [GOVERNANCE]({{site.info}}Governance.html)
--->
+
+<!--* [GOVERNANCE]({{site.info}}Governance.html)-->
+
 * [RELEASES]({{site.info}}schedule/index.html)
 
    - [Stable]({{site.info}}schedule/Released.html)
@@ -70,7 +70,7 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
    - [To Consider]({{site.info}}schedule/Ideas.html)
    - [Deprecated]({{site.info}}schedule/Deprecated.html)
    - [Addon]({{site.info}}schedule/Addon.html)
-   - [Known bugs]({{site.info}}schedule/Bugs.html)
+   <!--- [Known bugs]({{site.info}}schedule/Bugs.html)-->
 
 * [API REFERENCE]({{site.info}}api/index.html)
 
