@@ -64,17 +64,6 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page
 * [OnIndexChangeDragDropDone](#onindexchangedragdropdone)
 * [OnTopImageInTheViewChanged](#ontopimageintheviewchanged)
 
-> [Deprecation] The following APIs are deprecated.
-
-**Deprecated Methods**
-
-* [GetSelectedImageIndex()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Runtime-Info.html#GetSelectedImageIndex) 
-* [SetSelectedImageIndex](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#SetSelectedImageIndex)
-
-**Deprecated Properties**
-
-* [SelectedImagesCount](https://www.dynamsoft.com/docs/dwt15.3.1/API/Runtime-Info.html#SelectedImagesCount)
-
 ---
 
 ## IndexToImageID

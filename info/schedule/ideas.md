@@ -20,3 +20,5 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Features To Consider P
 ## Renovated and more robust OCR Basic engine
 
 ## Support more file formats
+
+## Image Processing Features

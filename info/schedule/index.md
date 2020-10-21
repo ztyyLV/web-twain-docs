@@ -23,4 +23,8 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Index Page
 
 ## [Addon Release]({{site.info}}schedule/addon.html)
 
+<!--
+
 ## [Known Bugs]({{site.info}}schedule/bugs.html)
+
+-->

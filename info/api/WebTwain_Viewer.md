@@ -71,13 +71,6 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 * [video-closed](#vidoe-closed)
 * [video-error](#vidoe-error)
 
-> [Deprecation] The following APIs are deprecated
-
-**Methods**
-
-* [SetViewMode()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Display-UI.html#SetViewMode) 
-* [SetSelectedImageArea()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#SetSelectedImageArea)
-
 ---
 
 ## BindViewer

@@ -7,12 +7,14 @@ breadcrumbText: API Reference
 description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 ---
 
+> Some old APIs are deprecated, check out [Deprecated Features and APIs]({{site.info}}schedule/deprecated.html)
+
 # API List
 
 ## Global
 
-* [Dynamsoft.WebTwainEnv]({{site.info}}api/Dynamsoft_WebTwainEnv.html) 
-* [Dynamsoft.Enum]({{site.info}}api/Dynamsoft_Enum.html) 
+* [Dynamsoft. WebTwainEnv]({{site.info}}api/Dynamsoft_WebTwainEnv.html) 
+* [Dynamsoft. Enum]({{site.info}}api/Dynamsoft_Enum.html) 
 
 ## WebTwain
 
@@ -25,7 +27,9 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [SetDefaultTag()]({{site.info}}api/WebTwain_Buffer.html#setdefaulttag) 
 * [TagImages()]({{site.info}}api/WebTwain_Buffer.html#tagimages)
 * [GetImageBitDepth()]({{site.info}}api/WebTwain_Buffer.html#getimagebitdepth)
+
 <!--* [GetImageBitDepthAsync()]({{site.info}}api/WebTwain_Buffer.html#getimagebitdepthasync)-->
+
 * [GetImageSize()]({{site.info}}api/WebTwain_Buffer.html#getimagesize)
 * [GetImageSizeWithSpecifiedType()]({{site.info}}api/WebTwain_Buffer.html#getimagesizewithspecifiedtype) 
 * [GetSelectedImagesSize()]({{site.info}}api/WebTwain_Buffer.html#getselectedimagessize)
@@ -47,8 +51,11 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [SwitchImage()]({{site.info}}api/WebTwain_Buffer.html#switchimage)
 * [RemoveImage()]({{site.info}}api/WebTwain_Buffer.html#removeimage) 
 * [RemoveAllImages()]({{site.info}}api/WebTwain_Buffer.html#removeallimages)
+
 <!--* [RemoveAllImagesAsync()]({{site.info}}api/WebTwain_Buffer.html#removeallimagesasync)-->
+
 * [RemoveAllSelectedImages()]({{site.info}}api/WebTwain_Buffer.html#removeallselectedimages)
+
 <!--* [RemoveAllSelectedImagesAsync()]({{site.info}}api/WebTwain_Buffer.html#removeallselectedimagesasync)-->
 
 #### Properties
@@ -71,17 +78,6 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [OnIndexChangeDragDropDone]({{site.info}}api/WebTwain_Buffer.html#onindexchangedragdropdone)
 * [OnTopImageInTheViewChanged]({{site.info}}api/WebTwain_Buffer.html#ontopimageintheviewchanged)
 
-> [Deprecation] The following APIs are deprecated.
-
-#### Deprecated Methods
-
-* [GetSelectedImageIndex()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Runtime-Info.html#GetSelectedImageIndex) 
-* [SetSelectedImageIndex](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#SetSelectedImageIndex)
-
-#### Deprecated Properties
-
-* [SelectedImagesCount](https://www.dynamsoft.com/docs/dwt15.3.1/API/Runtime-Info.html#SelectedImagesCount)
-
 ### Edit
 
 #### Methods
@@ -93,21 +89,33 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [CopyToClipboard()]({{site.info}}api/WebTwain_Edit.html#copytoclipboard) 
 * [Erase()]({{site.info}}api/WebTwain_Edit.html#erase)
 * [Flip()]({{site.info}}api/WebTwain_Edit.html#flip)
+
 <!--* [FlipAsync()]({{site.info}}api/WebTwain_Edit.html#flipasync)-->
+
 * [Mirror()]({{site.info}}api/WebTwain_Edit.html#mirror)
+
 <!--* [MirrorAsync()]({{site.info}}api/WebTwain_Edit.html#mirrorasync)-->
+
 * [Rotate()]({{site.info}}api/WebTwain_Edit.html#rotate) 
+
 <!--* [RotateAsync()]({{site.info}}api/WebTwain_Edit.html#rotate) -->
+
 * [RotateEx()]({{site.info}}api/WebTwain_Edit.html#rotateex)
 * [RotateLeft()]({{site.info}}api/WebTwain_Edit.html#rotateleft) 
+
 <!--* [RotateLeftAsync()]({{site.info}}api/WebTwain_Edit.html#rotateleft) -->
+
 * [RotateRight()]({{site.info}}api/WebTwain_Edit.html#rotateright)
+
 <!--* [RotateRightAsync()]({{site.info}}api/WebTwain_Edit.html#rotateright)-->
+
 * [ChangeBitDepth()]({{site.info}}api/WebTwain_Edit.html#changebitdepth) 
 * [SetDPI()]({{site.info}}api/WebTwain_Edit.html#setdpe)
 * [ConvertToBW()]({{site.info}}api/WebTwain_Edit.html#converttobw) 
 * [ConvertToGrayScale()]({{site.info}}api/WebTwain_Edit.html#converttograyscale)
+
 <!--* [ConvertToGrayScaleAsync()]({{site.info}}api/WebTwain_Edit.html#converttograyscaleasync)-->
+
 * [ChangeImageSize()]({{site.info}}api/WebTwain_Edit.html#changeimagesize) 
 * [Invert()]({{site.info}}api/WebTwain_Edit.html#invert)
 * [SetImageWidth()]({{site.info}}api/WebTwain_Edit.html#setimagewidth) 
@@ -116,14 +124,6 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 #### Properties
 
 * [BackgroundFillColor]({{site.info}}api/WebTwain_Edit.html#backgroundfillcolor)
-
-> [Deprecation] The following APIs are deprecated
-
-#### Deprecated Methods
-
-* [AddText()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#AddText) 
-* [CreateTextFont()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#CreateTextFont)
-* [OverlayRectangle()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#OverlayRectangle)
 
 ### Scan
 
@@ -228,45 +228,6 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 * [OnSourceUIClose]({{site.info}}api/WebTwain_Acquire.html#onsourceuiclose)
 
-> [Deprecation] The following APIs are deprecated
-
-#### Deprecated Methods
-
-* [CapGet()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGet) 
-* [CapGetHelp()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetHelp)
-* [CapGetCurrent()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetCurrent) 
-* [CapGetDefault()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetDefault)
-* [CapGetFrameBottom()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetFrameBottom) 
-* [CapGetFrameLeft()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetFrameLeft)
-* [CapGetFrameRight()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetFrameRight) 
-* [CapGetFrameTop()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetFrameTop)
-* [CapGetLabel()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetLabel) 
-* [CapGetLabels()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetLabels)
-* [CapSet()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapSet) 
-* [CapReset()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapReset)
-* [CapSetFrame()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapSetFrame) 
-* [CapIfSupported()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapIfSupported)
-* [GetCapItems()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#GetCapItems) 
-* [GetCapItemsString()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#GetCapItemsString)
-* [SetCapItems()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#SetCapItems) 
-* [SetCapItemsString()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#SetCapItemsString)
-
-#### Deprecated Properties
-
-* [Capability](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#Capability) 
-* [CapNumItems](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapNumItems)
-* [CapMaxValue](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapMaxValue) 
-* [CapMinValue](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapMinValue)
-* [CapCurrentValue](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapCurrentValue) 
-* [CapCurrentIndex](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapCurrentIndex)
-* [CapDefaultValue](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapDefaultValue) 
-* [CapDefaultIndex](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapDefaultIndex)
-* [CapType](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapType) 
-* [CapValueType](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapValueType)
-* [CapStepSize](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapStepSize)
-* [CapValue](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapValue) 
-* [CapValueString](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapValueString)
-
 ### Input
 
 #### Methods
@@ -276,7 +237,9 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [LoadImageFromBase64Binary()]({{site.info}}api/WebTwain_IO.html#loadimagefrombase64binary)
 * [LoadImageFromBinary()]({{site.info}}api/WebTwain_IO.html#loadimagefrombinary)
 * [LoadDibFromClipboard()]({{site.info}}api/WebTwain_IO.html#loaddibfromclipboard)
+
 <!--* [LoadDibFromClipboardAsync()]({{site.info}}api/WebTwain_IO.html#loaddibfromclipboardasync)-->
+
 * [FTPDownload()]({{site.info}}api/WebTwain_IO.html#ftpdownload)
 * [FTPDownloadEx()]({{site.info}}api/WebTwain_IO.html#ftpdownloadex)
 * [HTTPDownload()]({{site.info}}api/WebTwain_IO.html#httpdownload)
@@ -353,26 +316,6 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [OnPostLoad]({{site.info}}api/WebTwain_IO.html#onpostload)
 * [OnInternetTransferPercentage]({{site.info}}api/WebTwain_IO.html#oninternettransferpercentage)
 
-> [Deprecation] The following APIs are deprecated
-
-#### Deprecated Methods
-
-* [SaveSelectedImagesToBase64Binary()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Load-Save.html#SaveSelectedImagesToBase64Binary)
-
-#### Deprecated Properties
-
-* [IfOpenImageWithGDIPlus](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#IfOpenImageWithGDIPlus)
-* [PDFAuthor](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFAuthor) 
-* [PDFCompressionType](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFCompressionType)
-* [PDFCreationDate](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFCreationDate) 
-* [PDFCreator](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFCreator)
-* [PDFKeywords](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFKeywords) 
-* [PDFModifiedDate](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFModifiedDate)
-* [PDFProducer](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFProducer) 
-* [PDFSubject](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFSubject)
-* [PDFTitle](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFTitle) 
-* [PDFVersion](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFVersion)
-
 ### Util
 
 #### Methods
@@ -429,7 +372,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [OnMouseMove]({{site.info}}api/WebTwain_Viewer.html#onmousemove)   
 * [OnMouseRightClick]({{site.info}}api/WebTwain_Viewer.html#onmouserightclick)
 
-> For the WebTwain.Viewer interface
+> For the WebTwain. Viewer interface
 
 #### Methods
 
@@ -456,13 +399,6 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 * [video-closed]({{site.info}}api/WebTwain_Viewer.html#vidoe-closed)
 * [video-error]({{site.info}}api/WebTwain_Viewer.html#vidoe-error)
-
-> [Deprecation] The following APIs are deprecated
-
-#### Deprecated Methods
-
-* [SetViewMode()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Display-UI.html#SetViewMode) 
-* [SetSelectedImageArea()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#SetSelectedImageArea)
 
 ## Addon
 
@@ -520,7 +456,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [SetConvertMode()]({{site.info}}api/Addon_PDF.html#setconvertmode)
 * [SetPassword()]({{site.info}}api/Addon_PDF.html#setpassword)
 * [SetResolution()]({{site.info}}api/Addon_PDF.html#setresolution)
-* [Write.Setup()]({{site.info}}api/Addon_PDF.html#writesetup)
+* [Write. Setup()]({{site.info}}api/Addon_PDF.html#writesetup)
 
 ### Camera
 
@@ -567,7 +503,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [SetVideoRotateMode()]({{site.info}}api/Addon_Webcam.html#setvideorotatemode)    
 * [StopVideo()]({{site.info}}api/Addon_Webcam.html#stopvideo)
 
-## [Dynamsoft.FileUploader](#dynamsoftfileuploader)
+## [Dynamsoft. FileUploader](#dynamsoftfileuploader)
 
 #### Methods
 

@@ -42,16 +42,6 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Edit APIs Page
 
 * [BackgroundFillColor](#backgroundfillcolor)
 
-> [Deprecation] The following APIs are deprecated.
->
-> [Alternative] Annotation feature to be added in a later version.
-
-## Methods
-
-* [AddText()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#AddText) 
-* [CreateTextFont()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#CreateTextFont)
-* [OverlayRectangle()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#OverlayRectangle)
-
 ---
 
 ## ShowImageEditor
