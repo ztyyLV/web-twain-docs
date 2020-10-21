@@ -7,4 +7,10 @@ breadcrumbText: Proposed
 description: Dynamic Web TWAIN SDK Documentation Schedule Features Proposed Page
 ---
 
-# Features to be developed
+# FEATURES TO BE IMPLEMENTED IN A LATER RELEASE
+
+## Add TWAIN Direct Support
+
+## Add Watermarks
+
+## Add Annotations

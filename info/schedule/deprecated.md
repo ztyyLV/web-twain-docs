@@ -7,4 +7,4 @@ breadcrumbText: Deprecated
 description: Dynamic Web TWAIN SDK Documentation Deprecated Features Page
 ---
 
-# All deprecated features & APIs
+# All Deprecated Features & APIs

@@ -13,23 +13,65 @@ description: Dynamic Web TWAIN SDK Documentation Handle Errors Page
 
 ### Invalid License
 
-### The current product key does not match the domain](#Error-The-current-product-key-does-not-match-the-domain)
+* Symptom
+
+You get an error message that says "The current product key does not support xxx..." or "The current product key is invalid because ...".
+
+* Cause
+
+You are trying to use a unlicensed feature of `DWT` or use it on a unlicensed `Platform` or `Browser` .
+
+* Resolution
+
+Make sure you have the correct license. If you have doubts, you can contact [Dynamsoft Support]({{site.about}}getsupport.html).
+
+### The current product key does not match the domain
+
+* Symptom
+
+When you fail to use `DWT` , you may get this error.
+
+* Cause
+
+To protect your license, you can bind it to your domain. When you do this, you must make sure your application is deployed to the bound domain, otherwise you will receive the error.
+
+* Resolution
+
+Make sure you deployed the application to the domain bound in your license or add the domain to your license bindings.
 
 ### Your trial license has expired
 
+* Symptom
+
+You see the following pop-up
+
+![ProductKey-Expired]({{site.assets}}imgs/ProductKey-Expired.png)
+
+* Cause
+
+The trial license has expired.
+
+* Resolution
+
+Follow the instructions on that pop-up which are
+
+  + Request a new trial license [here](https://www.dynamsoft.com/customer/license/trialLicense)
+  + Refer to [this article]({{site.indepth}}development/upgrade.html#update-the-license-key) to update the ProductKey
+  + Do a hard refresh or clear cache in your browser to make sure the new ProductKey is used
+
 ### You have exceeded the number of OCR attempts allowed by the current license
 
-When you use OCRPro add-on of Dynamic Web TWAIN, you may receive the following error message returned by the member method GetErrorString() of the OCRResult class.
+* Symptom
 
-Cause:
+When you use the OCRPro addon, you may receive this error message returned by the member method GetErrorString() of the OCRResult class.
+
+* Cause
 
 It's a license issue. The OCRPro licenses are yearly licenses and each license has a limitation on the number of pages allowed to be OCR'ed. The SDK will throw this error when the limitation is reached.
 
-Solution:
+* Solution
 
-Please have the website administrator (or the web service provider) contact us at support[at]dynamsoft.com to renew the OCR licenses.
-
-If you are the developer of the site, you can contact us directly.
+The license quota has been used up and more quota needs to be purchased.
 
 ## Common errors
 
@@ -158,6 +200,7 @@ When you upload images via HTTP Put, you may get this error.
 
 * Solution
   + Check the write permission at the server.
+
     - Start Internet Information Services (IIS).
     - Click Web Sites.
     - Right-click the specified work folder, select Properties.

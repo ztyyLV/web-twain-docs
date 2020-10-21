@@ -7,8 +7,16 @@ breadcrumbText: Features To Consider
 description: Dynamic Web TWAIN SDK Documentation Schedule Features To Consider Page
 ---
 
-# Fancy features, ideas. Nothing concreate. let the imagination fly
+# FEATURES TO BE CONSIDERED IN A LATER RELEASE
 
+## Parse and View Office files
 
+## Digital signatures
 
-https://developer.dynamsoft.com/dwt/kb/2014
+## Form Parsing and recognizing
+
+## MRC in PDF encoding
+
+## Renovated and more robust OCR Basic engine
+
+## Support more file formats
