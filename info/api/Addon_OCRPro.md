@@ -11,7 +11,6 @@ description: Dynamic Web TWAIN SDK Documentation API Reference OCRPro Addon APIs
 
 For Server Side OCR, check out [Server-Side OCR](#server-side)
 
-
 **Methods**
 
 * [Download()](#download) 
