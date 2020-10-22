@@ -1227,3 +1227,68 @@ interface ViewerConfig {
     theme ? : string // Example: 'basic'
 }
 ```
+
+> The following APIs are under development for version 16.2
+
+## width
+
+**Syntax**
+
+``` typescript
+/**
+ * Return or set the width of the viewer.
+ */ 
+Viewer.width: number | string;
+```
+
+**Usage Notes**
+
+If a number is assigned, it means that number of pixels (px). If a string is assigned, it is either a fixed size like "500px" or a dynamic size like "50%" which follows standard CSS rules.
+ 
+**Example**
+
+``` javascript
+DWObject.Viewer.width = 270;
+DWObject.Viewer.width = "270px";
+DWObject.Viewer.width = "100%";
+```
+
+## height
+
+**Syntax**
+
+``` typescript
+/**
+ * Return or set the height of the viewer.
+ */ 
+Viewer.height: number | string;
+```
+
+**Usage Notes**
+
+If a number is assigned, it means that number of pixels (px). If a string is assigned, it is either a fixed size like "500px" or a dynamic size like "50%" which follows standard CSS rules.
+
+**Example**
+
+``` javascript
+DWObject.Viewer.height = 350;
+DWObject.Viewer.height = "350px";
+DWObject.Viewer.height = "100%";
+```
+
+## idPostfix
+
+**Syntax**
+
+``` typescript
+/**
+ * Return the postfix of the Ids of the elements in the viewer.
+ */ 
+readonly Viewer.idPostfix: string;
+```
+
+**Example**
+
+``` javascript
+var myViewerIdPostfix = DWObject.Viewer.idPostfix;
+```
