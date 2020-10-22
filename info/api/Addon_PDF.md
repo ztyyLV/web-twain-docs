@@ -1,10 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN API Reference - Global APIs
-keywords: Dynamic Web TWAIN, Documentation, API Reference, Global APIs
+title: Dynamic Web TWAIN API Reference - PDF Addon APIs
+keywords: Dynamic Web TWAIN, Documentation, API Reference, PDF Addon APIs
 breadcrumbText: PDF Addon
-description: Dynamic Web TWAIN SDK Documentation API Reference Global APIs Page
+description: Dynamic Web TWAIN SDK Documentation API Reference PDF Addon APIs Page
 ---
 
 # `WebTwain.Addon.PDF`
