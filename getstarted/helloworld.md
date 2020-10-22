@@ -15,7 +15,7 @@ The following steps show you how to create your first web-based scanning applica
 
 ## Start a Web Application
 
-Create an `helloworld.html` anywhere and copy the `Resources` folder to the same location. You can typically find this folder in `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK {Version Number}\`
+Create a `helloworld.html` anywhere and copy the `Resources` folder to the same location. You can typically find this folder in `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK {Version Number}\`
 * Resources
 
     
@@ -161,7 +161,7 @@ function AcquireImage() {
 
 ![Build-the-Hello-World-Scan-Page-3]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-3.png)
 
-    > If you see a license notice, please make sure you have a valid trial license. Contact [Dynamsoft Support]({{site.about}}getsupport.html) if you need help.
+> If you see a license notice, please make sure you have a valid trial license. Contact [Dynamsoft Support]({{site.about}}getsupport.html) if you need help.
 
 * Press the button
 
@@ -169,7 +169,7 @@ function AcquireImage() {
 
 ![Build-the-Hello-World-Scan-Page-4]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-4.png)
 
-    > Only TWAIN / ICA / SANE compliant devices are listed in the Select Source dialog. If your connected scanner doesn't show up in the list, please make sure the proper driver is installed. If you are using Windows and don’t have a real scanner at hand, you can install the [Virtual Scanner](https://download.dynamsoft.com/TWAIN/twainds.win32.installer.2.1.3.msi) – a scanner simulator which is developed by the [TWAIN Working Group](https://www.twain.org/) for testing purposes.
+> Only TWAIN / ICA / SANE compliant devices are listed in the Select Source dialog. If your connected scanner doesn't show up in the list, please make sure the proper driver is installed. If you are using Windows and don’t have a real scanner at hand, you can install the [Virtual Scanner](https://download.dynamsoft.com/TWAIN/twainds.win32.installer.2.1.3.msi) – a scanner simulator which is developed by the [TWAIN Working Group](https://www.twain.org/) for testing purposes.
 
 * After scan
 
@@ -191,7 +191,7 @@ In step 4 above, we added code for mobile-compliance. However, in order to try i
 
 ## Upload the document as a pdf via HTTP Post
 
-In almost all our user cases, the scanned documents need to be uploaded to a server. So as the last step in creating the hello world application, the following shows how to implment the upload feature.
+In almost all our user cases, the scanned documents need to be uploaded to a server. So as the last step in creating the hello world application, the following shows how to implement the upload feature.
 
 ### Add a button in HTML
 
@@ -243,7 +243,7 @@ function UploadAsPDF() {
 
 > `RemoteFile` is the default field name for the uploaded file. So we use it to extract the file from the Post Request. This field name can be changed with the API [HttpFieldNameOfUploadedImage]({{site.info}}api/WebTwain_ IO.html#httpfieldnameofuploadedimage).
 
-Create a `saveUploadedPDF.aspx` file in the same location of `helloworld.html` and write the following script in it.
+Create a `saveUploadedPDF.aspx` file in the same location as your `helloworld.html` and write the following script in it.
 
 ``` csharp
 <%@ Page Language="C#" %>
