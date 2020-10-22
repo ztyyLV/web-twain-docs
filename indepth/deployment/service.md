@@ -35,11 +35,13 @@ Once `DWT` has been integrated into your application and you have properly deplo
 
 ##### Q: What if I am installing over an old version
 
-**A**: If an old version already exist, since it's unknown which version it is. It's recommended that the user uninstalls the old version before installing the new one. Check out [how to uninstall](#how-to-uninstall-dwt). Check out more [here]({{site.indepth}}development/upgrade.html#service-mode).
+**A**: If an old version already exist, since it's unknown which version it is. It's recommended that the user uninstalls the old version before installing the new one. Read more on [how to uninstall](#how-to-uninstall-dwt). 
+
+Check out [service mode update]({{site.indepth}}development/upgrade.html#service-mode).
 
 ##### Q: Can I install Dynamsoft Service for all my clients
 
-**A**: Yes. In a controlled environment, Dynamic Web TWAIN can be pushed to all clients in one go just like other similar programs. [Group Policy](https://docs.microsoft.com/en-us/troubleshoot/windows-server/group-policy/use-group-policy-to-install-software) is one such technology.
+**A**: Yes. In a controlled environment, `DWT` can be pushed to all clients in one go just like other similar programs. [Group Policy](https://docs.microsoft.com/en-us/troubleshoot/windows-server/group-policy/use-group-policy-to-install-software) is one such technology.
 
 ##### Q: Can I install Dynamsoft Service silently
 
@@ -101,14 +103,14 @@ Your application may have its own installer which installs other related compone
 
 ### You want to rebrand the installer
 
-The official Dynamsoft Service installer is digitally signed by Dynamsoft Certificates and it also shows multiple labels belonging to Dynamsoft. To rebrand it, you would need a white-label version of it. This usually involves the [Professional Service]({{site.indepth}}development/Pro-service.html#customization-service). Contact [Dynamsoft Support Team]({{site.about}}getsupport.html) for more information.
+The official Dynamsoft Service installer is digitally signed by Dynamsoft Certificates and it also shows multiple labels belonging to Dynamsoft. To rebrand it, you would need a white-label version of it. This usually involves the [Customization Service]({{site.indepth}}development/Pro-service.html#customization-service). Contact [Dynamsoft Support Team]({{site.about}}getsupport.html) for more information.
 
 ## About Dynamsoft Service
 
-The Dynamsoft Service uses `localhost` and the ports **18622, 18625, 18623, and 18626** for connection. The latter two ports are used when there is an SSL encryption, and the earlier two when otherwise. These ports can be configured in the *DSConfiguration.ini* file located in:
+The Dynamsoft Service uses `localhost` and the ports **18622, 18625, 18623, and 18626** for connection. The latter two ports are used when there is an SSL encryption, and the earlier two when otherwise. These ports can be configured in the `DSConfiguration.ini` file located in:
 `C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64)\DSConfiguration.ini` (Windows as an example)
 
-By default, there are always three Dynamsoft Service processes running. All of them are called `Dynamsoft Service` and use the same file `DynamsoftService.exe` . However, they are started with different arguments.
+By default, there are always three Dynamsoft Service processes running. All of them are called "Dynamsoft Service" and use the same file `DynamsoftService.exe` . However, they are started with different arguments.
 
 The main process starts without any argument as follows:
 
@@ -229,7 +231,7 @@ https://127.0.0.1:18623/fa/VersionInfo?ts=1603161807908
 }
 ```
 
-#### Remove all images
+#### Perform image removal
 
 * Request
 
@@ -258,7 +260,7 @@ https://127.0.0.1:18623/dwt/dwt_16100728/img?id=414778098&index=5&width=585&heig
 
 * Response in case of success
 
-The image data
+  The image data.
 
 ## Questions
 
@@ -312,7 +314,7 @@ LogLevel = 1 // Whether to output detailed information for debugging purposes
 * The service is blocked by plugins you have installed in the browser. (e.g. NoScript)
 * If you are accessing an HTTPS site on a Linux machine.
 
-The respective fix is listed below
+The respective fixes are listed below
 
 * Check the path `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16` and make sure you have [the correct files](#related-files-and-folders).
 * Check `Local Services` and make sure Dynamsoft Service is listed and Running.

@@ -7,13 +7,13 @@ breadcrumbText: Viewer
 description: Dynamic Web TWAIN SDK Documentation Viewer Page
 ---
 
-# Viewer (THIS GUIDE IS UNFINISHED)
+# Viewer [Due to major changes in v16.2, this guide is not yet complete]
 
 `DWT` comes with a `Viewer` component to help visualize the data in the buffer. To make things easy, the `Viewer` has within itself a built-in `Image Editor` UI.
 
 ## Bind the Viewer
 
-As mentioned in [creating the WebTwain instance]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance), a new `WebTwain` instance (or a new `DWT` object) usually comes with a ready-bound viewer which is an instance of the `Viewer` component. Only when you use [ `Dynamsoft.WebTwainEnv.CreateDWTObjectEx` ]({{site.indepth}}features/initialize.html#dynamsoftwebtwainenvcreatedwtobjectex) for the instantiation will you be able to get a `WebTwain` instance that doesn't have a viewer. In this case, you can still call the method [ `BindViewer()` ]({{site.info}}api/WebTwain_Viewer.html#bindviewer) to create and bind a `Viewer` instance.
+As mentioned in [creating the WebTwain instance]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance), a new `WebTwain` instance (or a new `DWT` object) usually comes with a ready-bound viewer which is an instance of the `Viewer` component. Only when you use [ `Dynamsoft.WebTwainEnv.CreateDWTObjectEx()` ]({{site.indepth}}features/initialize.html#dynamsoftwebtwainenvcreatedwtobjectex) for the instantiation will you be able to get a `WebTwain` instance that doesn't come with a viewer. In this case, you can still call the method [ `BindViewer()` ]({{site.info}}api/WebTwain_Viewer.html#bindviewer) to create and bind a `Viewer` instance.
 
 ## Customize the Viewer
 

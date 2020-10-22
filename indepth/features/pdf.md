@@ -59,7 +59,7 @@ A: `PDFR` is only required for text-based PDFs, to find out whether a file is te
 
 #### Q: When is it effective
 
-A: Once `PDFR` has been configured, it will automatically detect if a file needs to be rasterized and if so, it will convert it to an image(s) with the set resolution(If no resolution is set, the default is 200). This happens when you call any of the following methods
+A: Once `PDFR` has been configured, it will automatically detect if a file needs to be rasterized and if so, it will convert it to an image(s) with the set resolution(if no resolution is set, the default is 200). This happens when you call any of the following methods
 
 > `PDFR` also works when you drag and drop the file onto the viewer to load it
 

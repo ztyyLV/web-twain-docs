@@ -15,7 +15,7 @@ However, we realize that some customers may require more advanced support from D
 
 ## Virtual Developer Service
 
-Although most of our customers have their own development teams (some are developers themselves) and can build their applications with the help of `DWT` documentation, there are still some customers who come to us for ready-made solutions. In other words, they would rather get a sample application that already has the required features than study the details of the SDK itself. In view of this, Dynamsoft provides a professional service called "Virtual Developer" (VDS). The idea is that Dynamsoft designate a team to help with the integration of `DWT` into customers applications, from requirements analysis to successful deployment.
+Although most of our customers have their own development teams (some are developers themselves) and can build their applications with the help of `DWT` documentation, there are still some customers who come to us for ready-made solutions. In other words, they would rather get a sample application that already has the required features than study the details of the SDK itself. In view of this, Dynamsoft provides a professional service called "Virtual Developer Service" (VDS). The idea is that Dynamsoft designate a team to help with the integration of `DWT` into customers applications, from requirements analysis to successful deployment.
 
 The following is how VDS works
 
@@ -31,7 +31,7 @@ The following is how VDS works
 
 ## Customization Service
 
-Dynamsoft provides many public samples and code snippets free of cost to all customers. The code in these materials can be customized at will. However, the [resources files]({{site.about}}faqs.html#what-are-the-resources-files) are provided "as is" and should not be changed unless otherwise mentioned in this documentation. If you want to make unmentioned changes to any of these files in the documentation, you must first consult [Dynamsoft Support]({{site.about}}getsupport.html) to know whether or not it can be done and whether or not it might involve the Dynamsoft Team. If it involves considerable extra efforts from Dynamsoft, the paid Customization Service (CS) may apply.
+Dynamsoft provides many public samples and code snippets free of cost to all customers. The code in these materials can be customized at will. However, the [resources files]({{site.about}}faqs.html#what-are-the-resources-files) are provided "as is" and should not be changed unless otherwise mentioned in this documentation. If you want to make unmentioned changes to any of these files in the documentation, you must first consult [Dynamsoft Support]({{site.about}}getsupport.html) to know whether or not it can be done and whether or not it might involve the Dynamsoft Team. If it involves considerable extra efforts from Dynamsoft, the "Customization Service" (CS) may apply.
 
 The difference between VDS and CS is that the latter involves changes to the `DWT` SDK itself and is considered much more complicated. Other than that, the steps are the same as VDS.
 
