@@ -9,7 +9,7 @@ description: Dynamic Web TWAIN SDK Documentation Resources Page
 
 # Resources
 
-## WHERE TO GET DYNAMIC WEB TWAIN
+## Where to get Dynamic Web TWAIN
 
 * [Official installer](https://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx)
 
@@ -31,14 +31,14 @@ description: Dynamic Web TWAIN SDK Documentation Resources Page
 
 > In our repository, we've shared many samples and other projects related to `DWT`. Some of which may be experimental. To try out these samples, a trial license is required. To get a license, please visit our [customer portal](https://www.dynamsoft.com/customer/license/trialLicense).
 
-## USEFUL LINKS
+## Useful Links
 
 * [Official Demo 1](https://demo.dynamsoft.com/dwt/online_demo_scan.aspx)
 * [Official Demo 2](https://demo3.dynamsoft.com/DWTOnlineDemo/online_demo.html)
 * [Price / Online Store](https://www.dynamsoft.com/Secure/imaging-web-application-buyit.aspx#)
 * [Online Videos](https://www.youtube.com/user/Dynamsoft)
 
-## BLOGS 
+## Blogs 
 
 * [Code Pool](https://www.dynamsoft.com/codepool/?s=twain)
 * [Company Blog](https://www.dynamsoft.com/blog/?x=0&y=0&s=twain)
