@@ -7,7 +7,7 @@ breadcrumbText: Hardware
 description: Dynamic Web TWAIN SDK Documentation Hardware Page
 ---
 
-# HARDWARE
+# Hardware
 
 A major feature of `DWT` is to interact with imaging devices like scanners, cameras, etc. The following shows the devices that are supported.
 

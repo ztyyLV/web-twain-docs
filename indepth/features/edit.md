@@ -7,7 +7,7 @@ breadcrumbText: Edit
 description: Dynamic Web TWAIN SDK Documentation Edit Page
 ---
 
-# EDIT
+# Edit
 
 `DWT` offers a variety image editing features to help give you the final result that you are looking for. In this section, we will explore those features and demonstrate how to use them.
 

@@ -7,7 +7,7 @@ breadcrumbText: Other Topics
 description: Dynamic Web TWAIN SDK Documentation Other Topics Page
 ---
 
-# TOPICS
+# Topics
 
 ## How to automatically deskew an image
 

@@ -7,7 +7,7 @@ breadcrumbText: Initialization
 description: Dynamic Web TWAIN SDK Documentation Initialization Page
 ---
 
-# INITIALIZATION
+# Initialize
 
 Initializing `DWT` takes a few simple steps, as you have seen in the ["Getting Started"]({{site.getstarted}}helloworld.html)chapter. The following guide will dive deeper into how `DWT` is intialized once the page loads.
 
@@ -29,11 +29,16 @@ If a user who hasn't installed the Dynamsoft Service accesses the web page (whic
 
 > The prompt comes up when you try to [create a `WebTwain` instance](#creating-the-webtwain-instance) in service mode. The same prompt will appear no matter whether the client OS is Windows, macOS or Linux. But the file you download differs on different Systems. On Windows and macOS, the users can double click the downloaded installer to install the SDK. On Linux, however, the users will need to run either one of the following command to install it
 > Debian / Ubuntu: 
-> ```
+>  
+
+``` 
 > dpkg -i DynamsoftServiceSetup.deb
 > ```
+
 > Fedora
-> ```
+>  
+
+``` 
 > rpm -ivh DynamsoftServiceSetup.rpm
 > ```
 

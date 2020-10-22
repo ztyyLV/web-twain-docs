@@ -7,7 +7,7 @@ breadcrumbText: Resources
 description: Dynamic Web TWAIN SDK Documentation Resources Page
 ---
 
-# RESOURCES
+# Resources
 
 ## HOW TO GET DWT
 

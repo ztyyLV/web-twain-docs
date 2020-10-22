@@ -7,11 +7,11 @@ breadcrumbText: Stable
 description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 ---
 
-# RELEASES
+# Releases
 
 ## `16.1.1` (08/13/2020)
 
-### CHANGED BEHAVIORS
+### Changed Behaviours
 
 * Whether to load the `WASM` for the Camera module is now optional (used to be mandatory in `16.1` ) and is disabled by default.
 
@@ -19,7 +19,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 ## `16.1` (08/04/2020)
 
-### NEW FEATURES
+### New Features
 
 * Added method `SetProductKeyAsync()` which sets the product key asynchronously. Previously, the property ProductKey was used for both setting and reading the key. The same behavior is kept in 16.1 but the recommendation now is to use the method `SetProductKeyAsync()` to set it and use the property `ProductKey` to read it.
 
@@ -35,15 +35,15 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 > NOTE: on desktop, this feature requires a webcam/camera addon license.
 
-### EXTRA FEATURES
+### Entra Features
 
 * Added a feature to run Dynamsoft Service with the account "Local Service". By default, it is still "Local System". Contact Dynamsoft to learn more.
 
-### BETA FEATURES
+### Beta Feature
 
 * 16.1 now supports acquiring images from a remote scanner which is connected to a machine which is connected via HTTP. This feature is designed to enable document scanning on mobile devices.
 
-### BETTER PERFORMANCE
+### Better Performance
 
 * Improved the speed to initialize the library under WASM mode by splitting one WebAssembly file into multiple files and loading them in the background.
 * Improved memory usage by sharing the same heap among multiple WebAssembly workers.
@@ -51,13 +51,13 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 * Improved data transferring efficiency by using pointers instead of strings.
 * Improved performance by saving compiled WebAssembly code into the working process for later use.
 
-### CHANGED BEHAVIORS
+### Changed Behaviours
 
 * This version is backward compatible with version 16.0. This means once you have installed the Dynamsoft Service for version 16.1, an application running version 16.0 also works without the need to install the Service for version 16.0.
 * The method `LoadImageEx()` now supports mobile platforms as well.
 * Dynamsoft Service directory is now named with its major version in it. For example, `/DynamsoftServicex64/` is now `/DynamsoftServicex64_16/` . Also ActiveX related files are put into a different directory called `/WebTWAINActiveX/` .
 
-### BUG FIXES
+### Bug Fixes
 
 * Fixed a bug where images fail to show in the viewer in IE 10.
 * Fixed a bug in Chrome where the print UI invoked by the API `Print()` disappears immediately after showing up.
@@ -65,17 +65,17 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 * Fixed a bug with consecutive cropping operations with the API `Crop()` .
 * Fixed a bug with `WebTwain` instances created by the API `Dynamsoft.WebTwainEnv.CreateDWTObjectEx()` so that their UI binding works correctly.
 
-### DEPRECATIONS
+### Deprecations
 
 No deprecation in version 16.1.
 
-### CHANGES ABOUT THE ACTIVEX EDITION
+### Changes to the ActiveX Edition
 
 No changes in version 16.1.
 
 ## `16.0` (06/16/2020)
 
-### FEATURES TO THE CORE MODULE
+### Features to the Core Module
 
 * Added a new mobile edition that enables document capturing via mobile cameras and other document manipulation functionalities. Most of the existing methods and properties are made compliant with this new edition.
 * Added WASM based document manipulation functionalities which enable the use of all features of Dynamic Web TWAIN except for document scanning without installing the Dynamsoft Service.
@@ -98,13 +98,13 @@ No changes in version 16.1.
 * Added property `SelectedImagesIndices` to return the indices of selected images. This property replaces the old API `GetSelectedImageIndex()` .
 * Added Viewer-specific APIs: `setViewMode()` , `updateUISettings()` , `setButtonClass()` , `setSelectedImageArea()` , `zoomIn()` , `zoomOut()` , `bindCustomElement()` , `showCustomElement()` , `hideCustomElement()` , `toggleCustomElement()` . These methods should be called like this: `DWObject.Viewer.zoomIn()` .
 
-### UPDATED ADD-ON FEATURES
+### Updated Add-on Features
 
 * Added PDF Rasterizer mobile edition.
 * Extended the PDF Rasterizer on desktop to the WASM mode.
 * Replaced the old barcode reader add-on with a new add-on which now supports both Local-Service mode and WASM mode of the desktop editions as well as the mobile edition.
 
-### BETTER PERFORMANCE
+### Better Performance
 
 * In favor of the WASM mode, image transferring now uses JPEG more often than PNG. Previously, there was only the Local-Service mode and only PNG was used.
 * The following methods are made asynchronous (while still synchronous-compliant):
@@ -114,12 +114,12 @@ No changes in version 16.1.
 >  
 > These APIs must be called asynchronously in the WASM mode.
 
-### CHANGED BEHAVIORS
+### Changed Behaviours
 
 * The methods `HTTPDownload()` and `HTTPDownloadEx()` no longer has the "Content-Type" header in their HTTP Get requests.
 * The method `GetSourceNames(true)` now returns more information which includes "DriverType" and "DeviceInfo".
 
-### DEPRECATIONS
+### Deprecations
 
 * Deprecated `SetSelectedImageIndex()` , `GetSelectedImageIndex()` and `SelectedImagesCount` in favor of the new method `SelectImages()` .
 * Deprecated `IfOpenImageWithGDIPlus` in favor of the built-in imaging decoder.
@@ -127,18 +127,18 @@ No changes in version 16.1.
 
 `CapGet()` , `CapGetHelp()` , `CapGetCurrent()` , `CapGetDefault()` , `CapGetFrameBottom()` , `CapGetFrameLeft()` , `CapGetFrameRight()` , `CapGetFrameTop()` , `CapGetLabel()` , `CapGetLabels()` , `CapSet()` , `CapReset()` , `CapSetFrame()` , `CapIfSupported()` , `GetCapItems()` , `GetCapItemsString()` , `SetCapItems()` , `SetCapItemsString()` , `Capability` , `CapNumItems` , `CapMaxValue` , `CapMinValue` , `CapCurrentValue` , `CapCurrentIndex` , `CapDefaultValue` , `CapDefaultIndex` , `CapType` , `CapValueType` , `CapDescription` , `CapStepSize` , `CapValue` , `CapValueString`
 
-### CHANGES ABOUT THE ACTIVEX EDITION
+### Changes to the ActiveX Edition
 
 * Added method `SelectImages()` .
 * Added property `SelectedImagesIndices` .
 
 ## `15.3.1` (03/05/2020)
 
-### IMPROVED
+### Improved
 
 * [HTML5] When reinstalling the Dynamsoft service, the service configuration file `DSConfiguration.ini` will now be replaced directly.
 
-### FIXED
+### Fixed
 
 * [HTML5] Fixed a bug where the scanner stops responding when you cancel the scan multiple times.
 * [HTML5] Fixed a bug where the scanner stops responding when the library tries to retrieve extended information that contains magnetic data.
@@ -146,7 +146,7 @@ No changes in version 16.1.
 
 ## `15.3` (01/07/2020)
 
-### NEW
+### New
 
 * [HTML5] Added a new configuration `extendedImageInfoQueryLevel` for the method `AcquireImage()` that allows setting up how the library queries extended image info items. In version 15.2, the default level would result in scanning failure or serious performance issues with some scanners.
 * [HTML5] Added a new method `GetSourceNames(bool bIncludeDetails)` that returns the list of available data sources as a string array. On Windows, when `bIncludeDetails` is set to `true` , this method returns more details about the sources including its protocol versions, manufacturer and whether it's the default/current source, etc.
@@ -154,7 +154,7 @@ No changes in version 16.1.
 * [HTML5] Added a new method `ConvertToBW(number imageIndex)` that converts a specific image to Black & White.
 * [HTML5] Added a new method `Invert(number imageIndex)` that inverts a specific image.
 
-### IMPROVED
+### Improved
 
 * [HTML5] Further improved security by deleting the methods `FTPUploadDirectly()` , `FTPDownloadDirectly()` , `FileExist()` and changing the methods `HTTPUploadThroughPostDirectly()` , `HTTPDownloadDirectly()` to only work on whitelisted images/files (check NOTE below).
 * [HTML5] Changing the default SSL certificates is now officially supported.
@@ -168,18 +168,18 @@ No changes in version 16.1.
 > Dynamsoft Service keeps a whitelist of all images in buffer as well as images saved by the Service. The whitelist lives on until the current service process is destroyed.
 > Each Dynamic Web TWAIN object keeps a whitelist of file paths that are retrieved in the callback `OnGetFilePath` for the method `ShowFileDialog()` .
 
-### FIXED
+### Fixed
 
 [HTML5] Fixed a bug where Dynamsoft Service gets stuck when you try to perform concurrent operations on the same image(s) like uploading and converting them at the same time.
 [HTML5] Fixed a bug where Dynamsoft Service crashes when the callback OnBitmapChanged is called recursively.
 
 ## `15.2` (09/19/2019)
 
-### NEW
+### New
 
 * [HTML5] Added the capability to add tags to images. The tags can then be used to filter the images. The new APIs are `TagImages()` , `ClearImageTags()` , `SetDefaultTag()` and `FilterImagesByTag()` .
 
-### IMPROVED
+### Improved
 
 * [HTML5] Tidied up the Dynamsoft Service installer by removing redundant files.
 * [HTML5] Unified image decoding capabilities for JPEG and PNG on Windows, macOS and Linux.
@@ -188,7 +188,7 @@ No changes in version 16.1.
 * [HTML5 on macOS] Improved macOS installers for better user experience.
 * [ActiveX] Aligned PDF rasterizer in ActiveX so that it shares the same feature set with the HTML5 edition.
 
-### FIXED
+### Fixed
 
 * [HTML5] Fixed a bug with the API `CreateTextFont()` where the text takes up extra space when it is rotated by 90 degrees.
 * [HTML5] Fixed a bug where printing results in unnecessary extra blank pages in Firefox or IE11.
@@ -200,26 +200,26 @@ No changes in version 16.1.
 
 ## `15.1` (08/13/2019)
 
-### NEW
+### New
 
 * [macOS] Added 64bit support to macOS.
 * [macOS & Linux] Expanded the event `OnPostTransferAsync` from Windows to macOS & Linux. The method serves as the asynchronous counterpart to the existing synchronous event `OnPostTransfer` . Information about the transferred image is returned in the event listener.
 * [macOS & Linux] Expanded the method `startScan()` from Windows to macOS & Linux. The method accepts a JSON object that specifies all the scan parameters. This makes it simpler and even faster to initiate a scan job. At the same time, you can specify how you want the scanned data to be processed by adding extra output parameters in the same JSON object.
 
-### IMPROVED
+### Improved
 
 * [Win] Improved the methods `ConvertToBlob()` , `ConvertToBase64()` and image loading methods so that they can handle much bigger files.
 * [Linux] Improved the image encode/decode functionalities on Linux so that it can encode/decode files just like Windows.
 * [macOS & Linux] Expanded PDF related capabilities to macOS and Linux so that all 3 platforms share the same features.
 * [macOS & Linux] Improved the PDF decode engine so that it can load more PDF files without invoking the PDF rasterizer.
 
-### FIXED
+### Fixed
 
 * [Win] Fixed a bug where some scanners can only scan with document feeder but not the flatbed.
 
 ## `15.0` (06/27/2019)
 
-### NEW
+### New
 
 * [HTML5 on Windows] Added a new method `startScan()` which accepts a JSON object that specifies all the scan parameters. This makes it simpler and even faster to initiate a scan job. At the same time, you can specify how you want the scanned data to be processed by adding extra output parameters in the same JSON object.
 * [HTML5 on Windows] Added a new event `OnPostTransferAync` as the asynchronous counterpart to the existing synchronous event `OnPostTransfer` . Information about the transferred image is returned in the event listener.
@@ -229,7 +229,7 @@ No changes in version 16.1.
 * [HTML5] Added a pair of methods `IndexToImageID()` and `ImageIDToIndex()` which converts the index of an image to its image id or vice versa. The id of an image is an unique number that can be used to specify the image.
 * [HTML5] Added a new event `OnIndexChangeDragDropDone` which is triggered when you drag and drop images to resort them in the viewer. The event returns the from and to indices for the operation.
 
-### IMPROVED
+### Improved
 
 * [HTML5] Improved the method `AcquireImage()` by adding two more options `IfGetImageInfo` & `IfGetExtImageInfo` to its parameter `optionalDeviceConfig` which are `true` by default and means extra image info will be returned with each transferred image.
 * [HTML5 on Windows] Improved the method `SetFileXferInfo()` so that you can specify a naming pattern for the transferred images when the transfer mode is Disk File.
@@ -237,33 +237,33 @@ No changes in version 16.1.
 * [HTML5] Improved service connecting efficiency by removing optional ports and use the same ports no matter it's 64bit service or 32bit. Also, during initialization, JavaScript will attempt to connect to the core scan module directly instead of connecting to the service first.
 * [HTML5] Improved the functions `ConvertToBase64()` , `ConvertToBlob()` , `GenerateURLForUploadData()` , `HTTPUpload()` , `HTTPUploadAllThroughPostAsMultiPageTIFF()` , `HTTPUploadAllThroughPostAsPDF()` , `HTTPUploadThroughPost()` , `HTTPUploadThroughPostAsMultiPagePDF()` , `HTTPUploadThroughPostAsMultiPageTIFF()` , `HTTPUploadThroughPostEx()` so that the current indices of the images which were operated on in these methods are returned in the callback functions. This is due to the fact that the indices might have changed during these time-consuming operations.
 
-### CHANGED
+### Changed
 
 * [HTML5 on Windows] 64bit service has been made the default option on 64bit machines.
 
-### FIXED
+### Fixed
 
 * [HTML5 on Windows] Fixed a bug where it takes too much time to load a network file in RDS-mode Chrome.
 * [HTML5 on Windows] Fixed a bug where an unwanted black line may appear as the right edge of saved TIFF files.
 
 ## `14.3.1` (01/15/2019)
 
-### NEW
+### New
 
 * [ActiveX] Added method `GetImagePartURL()` to work with the Barcode Reader.
 * [HTML5] Added a few global settings which may speed up the initialization process of the SDK. The settings are `IfCheckDCP` , `IfCheckDWT` , `IfDisableDefaultSettings` and `IsLicensePromptFriendly` .
 
-### IMPROVED
+### Improved
 
 * [HTML5 on Windows] Improved the TIFF compression algorithm when it's set to JPEG so that the resulting file size is significantly reduced.
 * [ActiveX & HTML5 on Windows] Included the Webcam and Barcode reader libraries in the service installer for easier distribution.
 * [HTML5] Improved the built-in image viewer to be more responsive when navigating through images.
 
-### CHANGED
+### Changed
 
 * [All Editions] Changed the Hex Code for representing a color from `#BBGGRR` to `#RRGGBB` for all methods that may require a color as one of its parameters.
 
-### FIXED
+### Fixed
 
 * [HTML5 on Windows] Fixed a bug where the method `LoadImageFromBase64Binary()` may fail to decode a string.
 * [HTML5 on Windows] Fixed a bug where the service may crash during string conversion.
@@ -271,11 +271,11 @@ No changes in version 16.1.
 
 ## `14.3` (11/20/2018)
 
-### IMPROVED
+### Improved
 
 * [All Editions] Unified the installation prompt for all editions.
 
-### FIXED
+### Fixed
 
 * [HTML5] Fixed a bug where images to print appear shrunken when rotated.
 * [HTML5] Fixed a bug where the method `CancelAllUpload()` only cancels one job.
@@ -283,29 +283,29 @@ No changes in version 16.1.
 
 ## `14.2` (10/16/2018)
 
-### IMPROVED
+### Improved
 
 * [All Editions] Simplified the installation process of the SDK by putting multiple installers together. From this version on, you can get the Dynamsoft Service, Dynamic Web TWAIN and its PDF Rasterizer addon installed with one installer.
 * [HTML5] Improved the method `ConvertToBlob()` so that it can be called multiple times in a row.
 * [File Uploader] Added a property `FormField` to allow adding extra fields when uploading.
 
-### FIXED
+### Fixed
 
 * [HTML5] Fixed a bug with the file `DynamicSocket.dll` to avoid service crash.
 
-### CHANGED
+### Changed
 
 * Removed Dynamsoft Camera SDK related files.
 
 ## `14.1` (09/06/2018)
 
-### IMPROVED
+### Improved
 
 * [ActiveX] Improved the `SelectSource()` method so that it can also be used asynchronously.
 * [File Uploader] Updated the upload module so that the information returned from the server can be accessed in the callback functions of an upload job.
 * [File Uploader] Added the version number of the library to the name of the library so that different versions of the library can co-exist.
 
-### FIXED
+### Fixed
 
 * [HTML5] Fixed a bug with the event `OnInternetTransferPercentage` which doesn't fire when `IfShowCancelDialogWhenImageTransfer` is set to `false` .
 * [HTML5] Fixed a bug with the image editor where it stops responding after you scan or load new images without saving the currently modified image.
@@ -317,14 +317,14 @@ No changes in version 16.1.
 * [HTML5 on macOS] Fixed a bug on macOS where `Undefined` shows up as available sources.
 * [HTML5 on macOS] Fixed a bug on macOS where you can't press Ctrl to select multiple zones on an image. Instead, you need to use the meta Key.
 
-### CHANGED
+### Changed
 
 * [File Uploader] Changed `GenerateURLForUploadData()` to be an asynchronous method.
 * [File Uploader] Changed the module so that the encrypted files which are in the cache waiting to be uploaded will be cleared when the upload fails or when it is cancelled
 
 ## `14.0` (07/17/2018)
 
-### NEW
+### New
 
 * [HTML5 on Windows] Added a new upload module to handle upload jobs which can carry out upload jobs behind the scene even after the browser is closed.
 * [HTML5 on Windows] Added a new API `GenerateURLForUploadData()` to generate a URL which will be used by the upload module to fetch the file/data to upload.
@@ -340,7 +340,7 @@ No changes in version 16.1.
 * [HTML5] Added configurations in `dynamsoft.webtwain.config.js` that enables setting the display language for built-in prompts and image editor, etc. The default language is English.
 * [HTML5] Added configurations in `dynamsoft.webtwain.config.js` to show/hide certain buttons on the image editor.
 
-### IMPROVED
+### Improved
 
 * [All Editions] Rearranged the `/Resources/` folder in the installation directory which contains all the JavaScript library files and files for distribution. Removed the deprecated plug-in completely.
 * [HTML5 on Windows] Improved the file transfer mode to be able to transfer multiple files in one scan session.
@@ -350,7 +350,7 @@ No changes in version 16.1.
 * [HTML5] The HTML5 license can now be used to restrict the usage of the SDK in certain browsers.
 * [ActiveX] Updated the license verification module to be compatible with that of the HTML5 edition.
 
-### CHANGED
+### Changed
 
 * [All Editions] Removed intellisense files but still available upon request.
 * [HTML5 on Windows] The service is now installed with a `.msi` by default instead of a `.exe` .
@@ -364,32 +364,32 @@ No changes in version 16.1.
 
 ## `13.4.1` (04/16/2018)
 
-### NEW
+### New
 
 * [All Editions] Dynamic Web TWAIN is officially published to NPM.
 
-### IMPROVED
+### Improved
 
 * [HTML5 on Windows & Linux] Optimized the scanner module for better compatibility with certain scanner models.
 * [All Editions] Improved the JS library so that it works better with Angular 5.
 
 ## `13.4` (03/12/2018)
 
-### IMPROVED
+### Improved
 
 * [HTML5] Optimized the installation process so that users who are not able to download Dynamic Web TWAIN module as a ZIP can now download it as an MSI file to install.
 
-### CHANGED
+### Changed
 
 * Updated the SDK installer to make it possible to download and install other Dynamsoft SDKs together with Dynamic Web TWAIN during the installation process.
 
-### FIXED
+### Fixed
 
 [HTML5] Fixed a bug where you see the progress bar displayed on the page for no reason when you use Dynamic Web TWAIN with other libraries or frameworks like the popular BootStrap.
 
 ## `13.3` (01/16/2018)
 
-### IMPROVED
+### Improved
 
 * [Add-on] Replaced the PDF Rasterizer add-on with a new technology which made it possible to use the rasterizer on macOS as well as Linux besides Windows.
 * [HTML5] Optimized the memory usage by Dynamsoft Service and the JavaScript library so that users can scan and process even more pages.
@@ -401,13 +401,13 @@ No changes in version 16.1.
 * [HTML5] Improved the method `OverlayRectangle()` so that the image is moved automatically to make sure the newly added overlay is placed in the center of the viewer. This only works when the image is larger than the viewer.
 * [HTML5] Added a "readme" file in the `/Resources/` folder to explain what each file is for in that folder.
 
-### CHANGED
+### Changed
 
 * [HTML5] Changed the installing process especially for users who need to use the SDK in a domain network.
 * [ActiveX] Changed the default value for `IfAllowLocalCache` to `true` .
 * [Add-on] The convert mode `CM_AUTO` is removed for the method `PDF.SetConvertMode()` .
 
-### FIXED
+### Fixed
 
 * [All Editions] Fixed a bug where the uploaded PDF files might be corrupted if the upload was interrupted during the process due to insufficient physical memory.
 * [HTML5] Fixed a bug where an error is thrown even after a TIFF file is loaded successfully.
@@ -424,11 +424,11 @@ No changes in version 16.1.
 
 ## `13.1` (08/22/2017)
 
-### NEW
+### New
 
 * [HTML5 Only] Added the `ConvertToBlob()` API to return the Blob of specified indices in the designated file type.
 
-### IMPROVED
+### Improved
 
 * [HTML5 Only] Improved the `SetHTTPFormField()` API to be able to set Blobs in HTTP Forms aside from strings.
 * [HTML5 Only] Improved the `HTTPUpload()` API to be able to upload binary data set by `SetHTTPFormField()` .
@@ -436,7 +436,7 @@ No changes in version 16.1.
 * [HTML5 Only] Added prefix to all names used in CSS to avoid possible conflict.
 * [HTML5 Only] Much improved performance for the communication between browsers and the service.
 
-### FIXED
+### Fixed
 
 * Fixed a bug where you can't initialize the SDK with the method `Dynamsoft.WebTwainEnv.Load()` on the page without first `Dynamsoft.WebTwainEnv.Unload()` it.
 * Fixed a bug where the `HTTPUpload()` API doesn't work if it's done asynchronously in a loop.
@@ -448,7 +448,7 @@ No changes in version 16.1.
 
 ## `13.0` (06/20/2017)
 
-### IMPROVED
+### Improved
 
 * [HTML5 Only] Replaced Dynamic Web TWAIN service with the unified Dynamsoft Service.
 * [HTML5 Only] Replaced the barcode add-on and the webcam add-on with Dynamsoft Barcode Reader SDK and Dynamsoft Camera SDK.
@@ -456,11 +456,11 @@ No changes in version 16.1.
 * [HTML5 Only] The method `LoadImageFromBase64Binary()` can now be called asynchronously.
 * [HTML5 Only] Much improved performance for the communication between browsers and the service.
 
-### CHANGED
+### Changed
 
 * [HTML5 Only] Changed the default behavior of the authorization prompts to "always hide".
 
-### FIXED
+### Fixed
 
 * Fixed a bug where cropping an image doesn't use the new coordinates when the image has been scrolled.
 * Fixed a bug where you see an unnecessary error 'TypeMismatchError' when loading a multi-page TIFF/PDF.
@@ -480,30 +480,30 @@ No changes in version 16.1.
 
 ## `12.2` (01/10/2017)
 
-### IMPROVED
+### Improved
 
 * [HTML5 Only] Improved the SSL certificate by updating the signature algorithm to SHA256
 * [HTML5 Only] Improved the Web TWAIN service to handle the new certificate
 
-### FIXED
+### Fixed
 
 * Fixed a bug where scanning might fail if the user doesn't register the event `OnPostTransfer`
 * Fixed a bug where `Dynamsoft.WebTwainEnv.CreateDWTObject()` still tries to connect to non-SSL ports even when the page is running in HTTPS
 
 ## `12.1` (11/03/2016)
 
-### NEW
+### New
 
 * Added the Linux Edition to support Firefox and Chrome on 64bit Linux OS.
 * [HTML5 Only] Added a new method `SetUploadSegment()` which can be used to set the threshold for segmented upload as well as size of each segment.
 
-### IMPROVED
+### Improved
 
 * [HTML5 Only] Improved the method `Dynamsoft.WebTwainEnv.CreateDWTObject()` to allow listening on multiple IPs.
 * [HTML5 Only] Improved the OCR pro license to allow using multiple licenses.
 * Improved how the SDK works in Edge. Now you can run local pages directly in Edge.
 
-### FIXED
+### Fixed
 
 * Fixed a bug where `CurrentImageIndexInBuffer` and `HowManyImagesInBuffer` return wrong values in the callback for the event `OnPostLoad` .
 * Fixed errors with license error messages.
@@ -512,7 +512,7 @@ No changes in version 16.1.
 
 ## `12.0` (09/22/2016)
 
-### NEW
+### New
 
 * [HTML5 Only] Added a new method `HTTPUpload()` which supports uploading files as binary as well as base64 string. The method also supports segmented upload when handling big files.
 * [HTML5 Only] Added a new method `ConvertToBase64()` which supports converting one or more images to a base64 string.
@@ -522,7 +522,7 @@ No changes in version 16.1.
 * [HTML5 Only] Added a new security feature called Dynamsoft Authentication which requires more user interaction when dealing with local files or devices.
 * Added MSI installers for both ActiveX and HTML5 editions.
 
-### IMPROVED
+### Improved
 
 * Improved the method `ChangeImageSize()` by adding a new mechanism for the new option "Best Quality".
 * Improved the way license verification is done and optimized the error messages for license issues.
@@ -530,7 +530,7 @@ No changes in version 16.1.
 * Improved the image editor's zooming feature by allowing it to zoom centered by the position of the mouse.
 * Improved the way uploading is done by adding a MD5 to every upload Post request.
 
-### FIXED
+### Fixed
 
 * Fixed a bug where `MagData` doesn't work during scanning.
 * Fixed a bug with the Mac edition where TIFF files are loaded with inverted colors.
@@ -540,12 +540,12 @@ No changes in version 16.1.
 
 ## `11.3.2` (07/05/2016)
 
-### NEW
+### New
 
 * Added the feature to automatically create a dump file for debugging purposes when the scanning service crashes
 * Added official support for OCR Professional
 
-### IMPROVED
+### Improved
 
 * Optimized the scanning performance by reducing unnecessary web socket messages
 * Optimized the compatibility of the accompanying JS files so that they can work with different versions of scanning services
@@ -554,18 +554,18 @@ No changes in version 16.1.
 
 ## `11.3` (03/01/2016)
 
-### NEW
+### New
 
 * Added `IsTextBasedPDF()` API to the PDF rasterizer to determine whether a PDF is text-based.
 * Added support for reading binary barcode and returning the result as a base64 string.
 
-### IMPROVED
+### Improved
 
 * Updated barcode reader library to v4.1.0.112 which uses improved positioning algorithm that can better identify and locate DataMatrix barcodes.
 * Improved the event `OnPostLoad` so that it gets triggered for the methods `HTTPDownload(Ex)` , `FTPDownload(Ex)` as well as `LoadImageFromBase64Binary()` .
 * [HTML5 edition only] Improved the API `AcquireImage()` . Now you can set two callback functions to this method to check its status.
 
-### FIXED
+### Fixed
 
 * Fixed bugs related to asynchronous APIs such as the bug where the image index is not updated properly for the first and second images.
 * Fixed a bug where the error message for cancelling the "Open File Dialog" says "fail to open file dialog box". Now it correctly says that "User cancelled the operation".
@@ -577,20 +577,20 @@ No changes in version 16.1.
 
 ## `11.2` (11/24/2015)
 
-### NEW
+### New
 
 * Added PDF Rasterizer Add-on to convert text PDF files to images. This way, text PDF files can be successfully displayed in the viewer.
 * Added DataMatrix Reader add-on to read data matrix code from an image.
 * Added PDF 417 reader add-on to read PDF 417 code from an image.
 * Added `CloseWorkingProcess()` method to close the current HTML5 scanning process.
 
-### IMPROVED
+### Improved
 
 * Improved `Print()` method to support printing images via Windows' native print program.
 * Improved the upload mechanism to indicate a successful upload if the returned string from server side only contains invisible characters.
 * Improved the performance of scanning by optimizing the scanning process.
 
-### FIXED
+### Fixed
 
 * Fixed a bug where scanner source can't be displayed when multiple scanning pages are opened in a browser on Mac.
 * Fixed a bug where the HTML/JS samples in the product installation folder failed to run locally in Edge browser unless the demos are deployed to an HTTP Server.
@@ -608,7 +608,7 @@ No changes in version 16.1.
 
 ## `11.0` (07/23/2015)
 
-### NEW
+### New
 
 * [Mac Edition] Added HTML5 support for Safari v7+, Chrome v27+ and Firefox v27+ on Mac OS X 10.6 or later.
 * [HTML5 Edition] Added HTML5 support for Internet Explorer 10 and 11.
@@ -616,14 +616,14 @@ No changes in version 16.1.
 * [Webcam Add-on] Added `SetVideoRotateMode()` method to rotate the video preview stream.
 * [HTML5 Edition] Added `OnWebTwainPreExecuteCallback` , `OnWebTwainPostExecuteCallback` events and `ShowCustomMask()` , `HideCustomMask()` methods in `dynamsoft.webtwain.install.js` to display or hide the Dynamsoft's progress overlay during scanning.
 
-### IMPROVED
+### Improved
 
 * [Barcode Add-on] Improved 1D Barcode Reader Add-on to support reading CodeBar, Code_93, EAN_8, EAN_13, ITF, UPC_A, UPC_E.
 * [HTML5 Edition] Improved performance of built-in image viewer when viewing images in 1 * 1 view mode.
 * [HTML5 Edition] The method Print now supports printing multiple pages.
 * Improved security by limiting the access of Dynamsoft Scanning Service to registered domain(s) or IP(s) for a particular website.
 
-### FIXED
+### Fixed
 
 * [HTML5 Edition] Fixed a bug where users are continuously prompt to install Dynamic Web TWAIN on Firefox when accessing a secure website on a different Windows user account.
 * [ActiveX Edition] Fixed a bug where the system's save-file dialog does not appear when saving images in IE11 on Windows 8.1.
@@ -636,7 +636,7 @@ No changes in version 16.1.
 
 ## `10.2` (03/24/2015)
 
-### NEW
+### New
 
 * [All Editions for Windows] Added Webcam Add-on to support image capturing from Webcams using Microsoft DirectShow API. The related APIs are:
   + `Addon.Webcam.CaptureImage()`
@@ -659,7 +659,7 @@ No changes in version 16.1.
 * [HTML5 Edition] Added the view mode n*-1 to allow horizontal thumbnails.
 * [HTML5 Edition] Added the property `ShowPageNumber` to allow hiding or showing of the number labels at the top-left corner of the images in the viewer.
 
-### IMPROVED
+### Improved
 
 * [HTML5 Edition] Greatly improved the performance of the built-in image viewer and editor by rewriting it.
 * [HTML5 Edition] Reduced CPU/Memory consumption when handling very big images.
@@ -673,7 +673,7 @@ No changes in version 16.1.
 * Separated the old Plug-in edition from the HTML5 edition for easier deployment and better performance. The previous Chrome&Firefox Edition is now divided into 2 editions: Plugin Edition and HTML5 Edition.
 * `IfShowFileDialog` and `IfDisableSourceAfterAcquire` are set to `true` by default in the JS Client.
 
-### FIXED
+### Fixed
 
 * Fixed the bug in the Barcode Reader add-on where barcode location fails for 200 DPI.
 * [HTML5 Edition] Fixed the bug where the event `OnImageAreaSelected` is triggered when the mouse enters or leaves the image editor.
@@ -688,16 +688,16 @@ No changes in version 16.1.
 
 ## `10.1.1` (12/23/2014)
 
-### NEW
+### New
 
 * Added `Dynamsoft.WebTwainEnv.AutoLoad` property to enable or disable automatic loading of Dynamic Web TWAIN.
 * Added dynamic loading and unloading methods `Dynamsoft.WebTwainEnv.Load()` and `Dynamsoft.WebTwainEnv.Unload()` .
 
-### IMPROVED
+### Improved
 
 * Improved the initiation process for Dynamic Web TWAIN so that you don't need to worry about the order of `dynamsoft.webtwain.initiate.js` and `dynamsoft.webtwain.config.js` .
 
-### FIXED
+### Fixed
 
 * Fixed a bug where the event `OnImageAreaSelected` gets fired multiple times when you draw a rectangle on the image.
 
@@ -705,14 +705,14 @@ No changes in version 16.1.
 
 Dynamsoft's Dynamic Web TWAIN V10.1 SDK Upgrades Include JavaScript IntelliSense, 1D Barcoding.
 
-### NEW
+### New
 
 * Added 1D Barcode Reader Add-on to support reading Code39 and Code128.
 * Added JavaScript IntelliSense to help you write code faster and with fewer errors. You can use IntelliSense in Visual Studio 2010 or above and Eclipse 4.2 or above.
 * Added `BufferMemoryLimit` property to set how much physical memory is allowed for storing images. Once the limit is reached, images will be cached on the hard disk. Cached image data will be automatically deleted when the scan page is closed.
 * Added enumerated constants to make your code more readable.
 
-### IMPROVED
+### Improved
 
 * Greatly improved user experience by providing well-arranged API document and simplifying all sample code.
 * Dynamic Web TWAIN v10.1 now supports Internet Explorer (IE) 6 and 7. In v10.0 and v10.0.1, IE 6 and 7 were not supported.
@@ -722,7 +722,7 @@ Dynamsoft's Dynamic Web TWAIN V10.1 SDK Upgrades Include JavaScript IntelliSense
   + Improved page size setting of the `Print()` method, 
   + Supported `SetSelectedImageArea()` method and `OverlayRectangle()` method.
 
-### FIXED
+### Fixed
 
 * Fixed a bug where the property `TIFFCompressionType` does not work properly.
 * Fixed a bug where clipboard related APIs did not work in the HTML5 version.
@@ -732,18 +732,18 @@ Dynamsoft's Dynamic Web TWAIN V10.1 SDK Upgrades Include JavaScript IntelliSense
 
 Dynamsoft's Dynamic Web TWAIN V10.0.1 SDK introduced improvements to the Chrome & Firefox Edition. The ActiveX and Mac Editions remained the same (these components remain as v10.0).
 
-### NEW
+### New
 
 * Enhanced robustness of WebSocket connection: The new version will automatically try re-building the connection in case it is inadvertently closed due to network problems.
 * Better support for Chrome 38, such as downloading large files using the `HttpDownload()` method.
 
-### IMPROVED
+### Improved
 
 * When a user visits the scan page for the first time the new version takes 1~2 seconds to detect whether the client-side browser has Dynamic Web TWAIN installed. With v10.0, it took around 7 seconds before the installation prompt.
 * With the file updated to `dynamsoft.webtwain.config.js` you can freely move the Resources folder to any directory you like.
 * More detailed log files.
 
-### FIXED
+### Fixed
 
 In v10.0.1 there is no limit to the size of an Http Request. In v10.0, the WebSocket connection could have failed to be built if the size of Http Header exceeds 1kB, which led to a recurring prompt for installation.
 
@@ -756,17 +756,17 @@ In v10.0.1 there is no limit to the size of an Http Request. In v10.0, the WebSo
 
 ## `10.0` (09/16/2014) - Based on 10.0 Preview
 
-### NEW
+### New
 
 * Added HTML5 Image Viewer to the Chrome&Firefox Edition.
 * Added progress bar when loading, saving, uploading & downloading multiple images.
 
-### IMPROVED
+### Improved
 
 * Faster and more stable image acquisition.
 * Improved samples in the installer.
 
-### FIXED
+### Fixed
 
 * Fixed the bug where image acquisition service sometimes stops during multiple operations.
 * Fixed the bug where `HTTPDownloadDirectly()` fail to download files.

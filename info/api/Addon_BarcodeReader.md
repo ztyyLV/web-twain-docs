@@ -7,7 +7,7 @@ breadcrumbText: Barcode Reader Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference BarcodeReader Addon APIs Page
 ---
 
-# WebTwain.Addon.BarcodeReader
+# `WebTwain.Addon.BarcodeReader`
 
 **Methods**
 

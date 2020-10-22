@@ -7,7 +7,7 @@ breadcrumbText: Professional Service
 description: Dynamic Web TWAIN SDK Documentation Professional Service Page
 ---
 
-# PROFESSIONAL SERVICE
+# Professional Service
 
 Dynamsoft is devoted to making products as user-friendly as possible. In most cases, developers should be able to get started with the `DWT` library in a very short time and integrate it into the workflow of their applications successfully within a matter of days. The developers can get in touch with the [Dynamsoft Support Team]({{site.about}}getsupport.html) during the whole process.
 

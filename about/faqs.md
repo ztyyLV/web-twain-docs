@@ -7,7 +7,7 @@ breadcrumbText: FAQs
 description: Dynamic Web TWAIN SDK Documentation FAQs Page
 ---
 
-# FREQUENTLY ASKED QUESTIONS
+# Frequently Asked Questions
 
 ## For what purposes can I use DWT
 

@@ -7,7 +7,7 @@ breadcrumbText: Troubleshooting
 description: Dynamic Web TWAIN SDK Documentation Troubleshooting Index Page
 ---
 
-# TROUBLESHOOTING
+# Troubleshooting
 
 ## [How to debug]({{site.indepth}}troubleshooting/debug.html)
 

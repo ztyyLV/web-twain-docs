@@ -8,7 +8,7 @@ description: Dynamic Web TWAIN SDK Documentation Support Page
 ---
 
 
-# HOW TO GET SUPPORT
+# How to get support
 
 If you encounter any issues or have any suggestions while using the library, please don't hesitate to contact us. We can be reached in a few different ways
 

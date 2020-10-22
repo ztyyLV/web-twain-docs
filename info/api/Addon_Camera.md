@@ -7,7 +7,7 @@ breadcrumbText: Camera Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference Camera Addon APIs Page
 ---
 
-# WebTwain.Addon.Camera
+# `WebTwain.Addon.Camera`
 
 > Dynamsoft provides a built-in feature to handle camera capturing, prospective adjusting, etc. Check out the APIs [showVideo()]({{site.info}}api/WebTwain_Viewer.html#showvideo) and [closeVideo()]({{site.info}}api/WebTwain_Viewer.html#closevideo).
 

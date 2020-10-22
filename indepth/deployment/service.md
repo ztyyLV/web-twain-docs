@@ -7,7 +7,7 @@ breadcrumbText: Dynamsoft Service
 description: Dynamic Web TWAIN SDK Documentation Dynamsoft Service Page
 ---
 
-# DYNAMSOFT SERVICE
+# Dynamsoft Service
 
 > This article is meant exclusively for the [Service mode]({{site.indepth}}features/initialize.html#service-mode) of `DWT` .
 

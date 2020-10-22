@@ -7,7 +7,7 @@ breadcrumbText: Deployment
 description: Dynamic Web TWAIN SDK Documentation Index Page
 ---
 
-# DEPLOYMENT
+# Deployment
 
 ## [Set up the server]({{site.indepth}}deployment/server.html)
 

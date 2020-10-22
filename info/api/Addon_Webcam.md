@@ -7,7 +7,7 @@ breadcrumbText: Webcam Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference Webcam Addon APIs Page
 ---
 
-# WebTwain.Addon.Webcam
+# `WebTwain.Addon.Webcam`
 
 **Methods**
 

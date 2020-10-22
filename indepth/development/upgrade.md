@@ -7,7 +7,7 @@ breadcrumbText: Upgrade Guide
 description: Dynamic Web TWAIN SDK Documentation Upgrade Guide Page
 ---
 
-# UPGRADE
+# Upgrade
 
 Dynamsoft tries to improve `DWT` constantly and release one major version and 2 to 4 minor versions each year. The recommendation for our customers is to always keep your application up-to-date with our latest release. In this section, we'll talk about how to upgrade your application.
 

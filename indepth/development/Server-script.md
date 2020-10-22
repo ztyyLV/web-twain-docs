@@ -7,7 +7,7 @@ breadcrumbText: Server Scripts
 description: Dynamic Web TWAIN SDK Documentation Server Scripts Page
 ---
 
-# SERVER SIDE SCRIPTING
+# Server-side Scripting
 
 `DWT` is a 100% client-side library. However, it does need to interact with the server when doing operations like **Upgrade**, **Download**, **Server-side OCR**, etc. While the scripts are scattered in the documentation, we'll try to cover some important ones in this article.
 
@@ -815,9 +815,9 @@ if (res_getData.next()){
 
 ### License Checker for OCRPro
 
-When performing a [client-side OCR operation]({{site.indepth}}features/ocr.html#use-ocrb-on-the-client-side) with `OCRPro`, the engine sends HTTP POST requests to the server for license tracking. The following code snippet shows how the requests are redirected to the class `LicenseCheckerServer`.
+When performing a [client-side OCR operation]({{site.indepth}}features/ocr.html#use-ocrb-on-the-client-side) with `OCRPro` , the engine sends HTTP POST requests to the server for license tracking. The following code snippet shows how the requests are redirected to the class `LicenseCheckerServer` .
 
-> The class `LicenseCheckerServer` is defined in the files `CheckLicense.dll` and `LicenseReader.dll`. If you don't have these files in your application, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) or download them from [here](https://tst.dynamsoft.com/public/download/ocr/OCRProx64-v16.zip).
+> The class `LicenseCheckerServer` is defined in the files `CheckLicense.dll` and `LicenseReader.dll` . If you don't have these files in your application, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) or download them from [here](https://tst.dynamsoft.com/public/download/ocr/OCRProx64-v16.zip).
 
 ``` csharp
 using System;

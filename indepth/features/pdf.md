@@ -7,7 +7,7 @@ breadcrumbText: Handle PDF
 description: Dynamic Web TWAIN SDK Documentation Handle PDF Page
 ---
 
-# PDF HANDLING 
+# PDF Handling 
 
 PDF is one of the most popular file types on the market which is why it is the only non-image file type `DWT` supports at present. Like other file types, `DWT` 'input' and 'output' PDFs.
 

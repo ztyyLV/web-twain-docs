@@ -7,9 +7,9 @@ breadcrumbText: License
 description: Dynamic Web TWAIN SDK Documentation License Page
 ---
 
-# DWT LICENSE
+# License
 
-## TERMS
+## Terms
 
 The official [DWT License Agreement](https://www.dynamsoft.com/Products/WebTwain_license.aspx).
 

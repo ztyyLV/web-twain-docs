@@ -7,7 +7,7 @@ breadcrumbText: Enumerations
 description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 ---
 
-# Enums
+# Enumerations
 
 ## Dynamsoft.EnumDWT_PixelType
 

@@ -7,7 +7,7 @@ breadcrumbText: Viewer
 description: Dynamic Web TWAIN SDK Documentation Viewer Page
 ---
 
-# VIEWER (THIS GUIDE IS UNFINISHED)
+# Viewer (THIS GUIDE IS UNFINISHED)
 
 `DWT` comes with a `Viewer` component to help visualize the data in the buffer. To make things easy, the `Viewer` has within itself a built-in `Image Editor` UI.
 

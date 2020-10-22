@@ -8,7 +8,7 @@ description: Dynamic Web TWAIN SDK Documentation GetStarted Page
 ---
 
 
-# GETTING STARTED
+# Getting Started
 
 * Follow [this guide]({{site.getstarted}}Helloworld.html) to learn about `DWT` by creating your first web scanning application
 * Check out the [Hardware]({{site.getstarted}}Hardware.html) that you can utilize in your application with the help of `DWT`

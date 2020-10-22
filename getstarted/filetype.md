@@ -7,7 +7,7 @@ breadcrumbText: File Types
 description: Dynamic Web TWAIN SDK Documentation File Types Page
 ---
 
-# FILE TYPES
+# File Types
 
 `DWT` supports the following file types.
 

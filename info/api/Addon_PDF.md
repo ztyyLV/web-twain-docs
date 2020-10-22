@@ -7,7 +7,7 @@ breadcrumbText: PDF Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference Global APIs Page
 ---
 
-# WebTwain.Addon.PDF
+# `WebTwain.Addon.PDF`
 
 **Methods**
 

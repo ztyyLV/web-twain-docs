@@ -7,7 +7,7 @@ breadcrumbText: Output
 description: Dynamic Web TWAIN SDK Documentation Output Page
 ---
 
-# OUTPUT
+# Output
 
 Different ways to export data from the `DWT` buffer.
 

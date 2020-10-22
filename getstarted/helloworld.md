@@ -7,7 +7,7 @@ breadcrumbText: Hello World
 description: Dynamic Web TWAIN SDK Documentation Hello World Page
 ---
 
-# BUILD THE HELLO WORLD PAGE
+# Build the HelloWorld Page
 
 > Before you start, please make sure you’ve downloaded and installed the latest version of Dynamic Web TWAIN. If you haven’t done so, you can get the 30-day free trial [here](https://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx).
 

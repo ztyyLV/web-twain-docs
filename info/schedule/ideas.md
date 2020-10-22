@@ -7,7 +7,7 @@ breadcrumbText: Features To Consider
 description: Dynamic Web TWAIN SDK Documentation Schedule Features To Consider Page
 ---
 
-# FEATURES TO BE CONSIDERED IN A LATER RELEASE
+# Features to be considered
 
 ## Parse and View Office files
 

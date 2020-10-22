@@ -7,7 +7,7 @@ breadcrumbText: File Uploader
 description: Dynamic Web TWAIN SDK Documentation API Reference Uploader APIs Page
 ---
 
-# Dynamsoft.FileUploader
+# `Dynamsoft.FileUploader`
 
 **Methods**
 

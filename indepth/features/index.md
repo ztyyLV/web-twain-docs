@@ -7,7 +7,7 @@ breadcrumbText: Features
 description: Dynamic Web TWAIN SDK Documentation Features Index Page
 ---
 
-# TECHNIQUES
+# Tech Features
 
 All the features that `DWT` has are discussed in detail in the following chapters.
 

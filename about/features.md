@@ -7,10 +7,9 @@ breadcrumbText: Features & Benefits
 description: Dynamic Web TWAIN SDK Documentation Features Page
 ---
 
+# Features & Benefits
 
-# FEATURES & BENEFITS 
-
-## CROSS PLATFORM
+## Cross Platform
 
 DWT supports all major browsers on all major operating systems. As of version 16.1.1, the support range is as follows
 
@@ -31,23 +30,23 @@ DWT supports all major browsers on all major operating systems. As of version 16
   + Safari 7+
 
 > NOTE
-> 
+>  
 > For better performance, the following are recommended
 > * OS
->   - Windows 7 & 10
->   - macOS 10.13 ~ 10.15
->   - Linux (Ubuntu 18.04, Debian 9, Fedora 32)
->   - iOS 13 & iPadOS 13
->   - Android 10 & 11
+> - Windows 7 & 10
+> - macOS 10.13 ~ 10.15
+> - Linux (Ubuntu 18.04, Debian 9, Fedora 32)
+> - iOS 13 & iPadOS 13
+> - Android 10 & 11
 > * Browser
->   - Chrome 80+
->   - Firefox 70+
->   - Edge Anaheim
->   - Safari 13
+> - Chrome 80+
+> - Firefox 70+
+> - Edge Anaheim
+> - Safari 13
 
 Check out more on [platforms]({{site.getstarted}}platform.html).
 
-## CAPTURE AND PROCESS
+## Capture and Process
 
 DWT makes the following tasks easy
 
@@ -60,15 +59,16 @@ DWT makes the following tasks easy
 * Read barcodes [>>Read More<<]({{site.indepth}}features/barcode.html)
 * OCR [>>Read More<<]({{site.indepth}}features/ocr.html)
 
-## FRAMEWORK SUPPORT
+## Framework Support
 
 DWT integrates seamlessly with the following
 
 * [ANGULAR]({{site.indepth}}development/angular.html)
 * [REACT]({{site.indepth}}development/react.html)
 * [VUE]({{site.indepth}}development/vue.html)
-* [ASP. NET MVC]({{site.indepth}}development/mvc.html)
 
-## SEE ALSO
+<!--* [ASP. NET MVC]({{site.indepth}}development/mvc.html)-->
+
+## See Also
 
 [DWT Features](https://www.dynamsoft.com/Products/WebTWAIN_Features.aspx)

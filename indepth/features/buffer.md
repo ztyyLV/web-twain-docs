@@ -7,7 +7,7 @@ breadcrumbText: Buffer
 description: Dynamic Web TWAIN SDK Documentation Buffer Page
 ---
 
-# BUFFER
+# Buffer Manage
 
 `DWT` collects all the input files and stores them in a buffer. This section of the guide will explore the different aspects of the buffer, including its features and abilities as well as its limits. First, let's explore the limits of the buffer and how to use the local cache:
 

@@ -7,7 +7,7 @@ breadcrumbText: Development
 description: Dynamic Web TWAIN SDK Documentation Development Index Page
 ---
 
-# DEVELOPMENT
+# Development
 
 Popular frameworks and frequently asked development questions are covered in these articles.
 

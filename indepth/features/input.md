@@ -7,7 +7,7 @@ breadcrumbText: Input
 description: Dynamic Web TWAIN SDK Documentation Input Page
 ---
 
-# INPUT
+# Input
 
 Different ways to get data into `DWT` buffer.
 

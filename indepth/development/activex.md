@@ -7,7 +7,7 @@ breadcrumbText: About AcitveX
 description: Dynamic Web TWAIN SDK Documentation About AcitveX Page
 ---
 
-# ABOUT ACTIVEX
+# About ACTIVEX
 
 **ActiveX** is a software framework created by Microsoft which goes back to the year 1996. It is widely used in Internet Explorer (IE) browser. However, because Microsoft has announced plans to completely abandon older browsers, the technology is now considered deprecated.
 
