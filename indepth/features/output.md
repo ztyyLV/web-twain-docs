@@ -49,7 +49,7 @@ function upload(indices, type) {
     }
 }
 /**
- * Return the extention string of the specified image type.
+ * Return the extension string of the specified image type.
  * @param type The image type (number).
  */
 function getExtension(type) {
@@ -174,7 +174,7 @@ function uploadSeparateFiles(indices, type) {
 
 ##### Q: Can I change the fields of the HTTP form
 
-**A**: Yes, you can use the method [ `SetHTTPFormField()` ]({{site.info}}api/WebTwain_IO.html#sethttpformfield) to add extra fields to the field. In a [previous question](#q-can-i-upload-multiple-images-as-separate-files-in-one-go), the method is used to add files to the form. But you can also use the method to add extra text information to the form as shown below
+**A**: Yes, you can use the method [ `SetHTTPFormField()` ]({{site.info}}api/WebTwain_IO.html#sethttpformfield) to add extra fields to the form. In a [previous question](#q-can-i-upload-multiple-images-as-separate-files-in-one-go), the method is used to add files to the form. But you can also use the method to add extra text information to the form as shown below
 
 ``` javascript
 // Clear old fields before adding new ones
@@ -233,7 +233,7 @@ For segmented upload, the server-side script is quite different. Check out how i
 
 ##### Q: What are all the APIs `DWT` provides for HTTP upload
 
-**A**: Apart from the recommended `HTTPUpload()` method and those already mentioned above, `DWT` provides 8 more methods and a few other properties for making a HTTP upload. They are listed below
+**A**: Apart from the recommended `HTTPUpload()` method and those already mentioned above, `DWT` provides 8 more methods and a few other properties for making an HTTP upload. They are listed below
 
 * [ `HTTPUploadThroughPutEx()` ]({{site.info}}api/WebTwain_IO.html#httpuploadthroughputex)
 * [ `HTTPUploadThroughPost()` ]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpost)
@@ -460,7 +460,7 @@ DWObject.SaveAllAsPDF("D:\\Sample.pdf",
 
 > Supported on [WASM browsers]({{site.getstarted}}platform.html#wasm-browsers).
 
-In [WASM browsers]({{site.getstarted}}platform.html#wasm-browsers), `DWT` runs its entire operations within the browser. So saving locally becomses downloading and [ `IfShowFileDialog` ]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) is not effective.
+In [WASM browsers]({{site.getstarted}}platform.html#wasm-browsers), `DWT` runs its entire operations within the browser. So saving locally becomes downloading and [ `IfShowFileDialog` ]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) is not effective.
 
 ``` javascript
 // The following line only works on desktop but it 
