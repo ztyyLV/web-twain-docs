@@ -9,17 +9,17 @@ description: Dynamic Web TWAIN SDK Documentation UI Page
 
 # UI Elements
 
-In this section, we'll explore the UI Elements that are built in the `DWT` library for user interactions.
+In this section, we'll explore the UI Elements that are built into the `DWT` library for user interactions.
 
 ## Installation Dialog
 
 ![UI 1]({{site.assets}}imgs/UI-1.png)
 
-This dialog comes up when running `DWT` in [service mode]({{site.indepth}}features/initialize.html#service-mode) under one of the following conditions
+This dialog comes up when running `DWT` in [service mode]({{site.indepth}}features/initialize.html#service-mode) under one of the following conditions:
 
 * The Dynamsoft Service is not installed
 * The Dynamsoft Service is not running
-* Fail to connect to the Dynamsoft Service
+* A failure to connect to the Dynamsoft Service
 
 ### How to customize
 
@@ -35,7 +35,7 @@ This dialog is opened by one of the following functions
 > For [macOS clients]({{site.getstarted}}platform.html#browsers-on-macos) 
 
 * `OnRemoteWebTwainNotFoundCallback`
-> For any client that [connect to a remote Dynamsoft Service]({{site.indepth}}features/input.html#how-to-enable-remote-scan)
+> For any client that [connects to a remote Dynamsoft Service]({{site.indepth}}features/input.html#how-to-enable-remote-scan)
 
 All four of these functions eventually call the global API `Dynamsoft.WebTwainEnv.ShowDialog()` to show the installation dialog. You can use your own method to show the necessary information so that your users know how to proceed. For example
 
@@ -64,11 +64,11 @@ Dynamsoft.WebTwainEnv.Load();
 
 ## Indicators
 
-### Loader bar and backdrop
+### Loading bar and backdrop
 
 ![UI 2]({{site.assets}}imgs/UI-2.png)
 
-This loader bar and backrop shows up when creating a `WebTwain` instance or when you try to scan. The functions `Dynamsoft.WebTwainEnv.OnWebTwainPreExecute()` and `Dynamsoft.WebTwainEnv.OnWebTwainPostExecute()` are called before and after the process. You can customize the behavior like this
+This loading bar and backrop shows up when creating a `WebTwain` instance or when you try to scan. The functions `Dynamsoft.WebTwainEnv.OnWebTwainPreExecute()` and `Dynamsoft.WebTwainEnv.OnWebTwainPostExecute()` are called before and after the process. You can customize the behavior like this
 
 ``` javascript
 Dynamsoft.WebTwainEnv.OnWebTwainPreExecute = function() {
@@ -83,7 +83,7 @@ Dynamsoft.WebTwainEnv.OnWebTwainPostExecute = function() {
 
 On the other hand, you can also call the functions `Dynamsoft.WebTwainEnv.OnWebTwainPreExecute()` and `Dynamsoft.WebTwainEnv.OnWebTwainPostExecute()` to show and hide the loader bar and backdrop when you need it in your own workflow.
 
-If you just want to change the loader bar, you can use the method `Dynamsoft.WebTwainEnv.SetLoaderBar()` .
+If you just want to change the loading bar, you can use the method `Dynamsoft.WebTwainEnv.SetLoaderBar()` .
 
 ### Progress bar
 

@@ -50,13 +50,13 @@ Check out more on [platforms]({{site.getstarted}}platform.html).
 
 DWT makes the following tasks easy
 
-* Scan documents [>>Read More<<]({{site.indepth}}features/input.html#scan)
-* Take pictures from cameras [>>Read More<<]({{site.indepth}}features/input.html#capture)
-* Load or download existing documents [>>Read More<<]({{site.indepth}}features/input.html#load)
-* Edit images [>>Read More<<]({{site.indepth}}features/edit.html)
-* Save documents locally [>>Read More<<]({{site.indepth}}features/output.html#save)
-* Upload documents to the server [>>Read More<<]({{site.indepth}}features/output.html#upload)
-* Read barcodes [>>Read More<<]({{site.indepth}}features/barcode.html)
+* Scanning documents [>>Read More<<]({{site.indepth}}features/input.html#scan)
+* Taking pictures from cameras [>>Read More<<]({{site.indepth}}features/input.html#capture)
+* Loading or downloading existing documents [>>Read More<<]({{site.indepth}}features/input.html#load)
+* Editing images [>>Read More<<]({{site.indepth}}features/edit.html)
+* Saving documents locally [>>Read More<<]({{site.indepth}}features/output.html#save)
+* Uploading documents to the server [>>Read More<<]({{site.indepth}}features/output.html#upload)
+* Reading barcodes [>>Read More<<]({{site.indepth}}features/barcode.html)
 * OCR [>>Read More<<]({{site.indepth}}features/ocr.html)
 
 ## Framework Support
