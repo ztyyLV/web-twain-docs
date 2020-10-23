@@ -85,7 +85,7 @@ If you don't have a TWAIN scanner at hand to test the library. You can download 
 
 `WIA` refers to [Windows Image Acquisition](https://docs.microsoft.com/en-us/windows/win32/wia/-wia-startpage) which is the still image acquisition platform in the Windows family that enables imaging/graphics applications to interact with imaging hardware and standardizes the interaction between different applications and scanners. 
 
-`WIA` devices can be used by `TWAIN` applications like the Dynamic Web TWAIN library through a so-called `TWAIN compatibility layer` . This means `WIA` is not supported natively, therefore, when a device supports both `TWAIN` and `WIA` , `TWAIN` is the better option.
+`WIA` devices can be used by `TWAIN` applications like the Dynamic Web TWAIN library through a so-called `TWAIN compatibility layer`. This means `WIA` is not supported natively, therefore, when a device supports both `TWAIN` and `WIA`, `TWAIN` is the better option.
 
 By comparison, `WIA` can only control a very limited set of general capabilities of the devices while `TWAIN` can control all standard and even custom capabilities of the devices. Another thing is that, `TWAIN` has three transfer modes (Native, Memory, File) while `WIA` only has two (Memory, File).
 
