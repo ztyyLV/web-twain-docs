@@ -29,7 +29,7 @@ A major feature of `DWT` is to interact with imaging devices like scanners, came
 
 ### Is my scanner TWAIN compliant
 
-After you have installed the drivre for your scanner, you can refer to the following ways to verify whether your scanner is TWAIN compliant
+After you have installed the driver for your scanner, you can refer to the following ways to verify whether your scanner is TWAIN compliant
 
 * [Recommended & Easiest] Take advantage of our official demo page
 
