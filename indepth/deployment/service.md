@@ -1,3 +1,4 @@
+
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
@@ -11,7 +12,7 @@ description: Dynamic Web TWAIN SDK Documentation Dynamsoft Service Page
 
 > This article is meant exclusively for the [Service mode]({{site.indepth}}features/initialize.html#service-mode) of `DWT` .
 
-Dynamsoft Service is the core piece of `DWT` when it runs in [Service mode]({{site.indepth}}features/initialize.html#service-mode). It handles the communication between the hardware (scanner, webcam, etc.) and the browser, manages the image buffer and coordinates data between different modules. When we say "install `DWT` ", we are actually saying "install Dynamsoft Service" because the service installation includes the installation of all the major modules of `DWT` .
+Dynamsoft Service is the core piece of `DWT` when running in [Service mode]({{site.indepth}}features/initialize.html#service-mode). It handles the communication between the hardware (scanner, webcam, etc.) and the browser, manages the image buffer, and coordinates data between different modules. There are two different contexts where installing the SDK applies: a development context or a client/end-user context. For the latter, installing the SDK just entails installing the Dynamsoft Service component since the service installation includes the installation of all the major modules of `DWT` .
 
 ## How to install DWT
 
@@ -25,7 +26,7 @@ Once `DWT` has been integrated into your application and you have properly deplo
 
 #### Questions
 
-##### Q: Does installation require administrator rights
+##### Q: Does installation require administrator rights?
 
 **A**: Yes, the installer is a `.msi` file which requires administrator rights. If your organization doesn't allow end users to have admin rights, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) to get a special "Personal Installer" that doesn't require admin rights.
 
@@ -33,17 +34,17 @@ Once `DWT` has been integrated into your application and you have properly deplo
 >  
 > Once Dynamsoft Service is installed with admin rights, every user on that machine can use it. On the other hand, if it is installed with a "Personal Installer", only that specific user can use it.
 
-##### Q: What if I am installing over an old version
+##### Q: What if I am installing over a previous version of the software?
 
-**A**: If an old version already exist, since it's unknown which version it is. It's recommended that the user uninstalls the old version before installing the new one. Read more on [how to uninstall](#how-to-uninstall-dwt). 
+**A**: If an old version already exists, it is recommended that the user uninstalls the old version before installing the new one. Read more on [how to uninstall the Dynamsoft Service](#how-to-uninstall-dwt). 
 
 Check out [service mode update]({{site.indepth}}development/upgrade.html#service-mode).
 
-##### Q: Can I install Dynamsoft Service for all my clients
+##### Q: Can I install Dynamsoft Service for all my clients?
 
-**A**: Yes. In a controlled environment, `DWT` can be pushed to all clients in one go just like other similar programs. [Group Policy](https://docs.microsoft.com/en-us/troubleshoot/windows-server/group-policy/use-group-policy-to-install-software) is one such technology.
+**A**: Yes. In a controlled environment, `DWT` can be distributed to all clients in one go just like other similar programs. [Group Policy](https://docs.microsoft.com/en-us/troubleshoot/windows-server/group-policy/use-group-policy-to-install-software) is one such technology.
 
-##### Q: Can I install Dynamsoft Service silently
+##### Q: Can I install Dynamsoft Service silently?
 
 **A**: Yes. The following are the commands for this purpose
 
@@ -80,7 +81,7 @@ sudo rpm -i path/to/DynamsoftServiceSetup.rpm
 
 ### On Windows
 
-* Remove Dynamsoft Service through Control Panel, if you see anything named like "Dynamsoft " or "Dynamic Web TWAIN ", remove them as well
+* Remove Dynamsoft Service through Control Panel, if you see anything named along the lines of "Dynamsoft " or "Dynamic Web TWAIN ", remove them as well
 * Remove the folders `C:\Windows\SysWOW64\Dynamsoft\DynamsoftService` and `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64(version)`
 
 ### On macOS
@@ -91,11 +92,11 @@ sudo rpm -i path/to/DynamsoftServiceSetup.rpm
 ### On Linux
 
 * Run the file `uninstall.sh` . The file can be found in `opt/dynamsoft/DynamsoftService`
-* Remoe the folder `opt/dynamsoft/DynamsoftService`
+* Remove the folder `opt/dynamsoft/DynamsoftService`
 
 ## Customize the installer
 
-In the following cases, you might not want to use the official installers of Dynamsoft Service.
+There are some cases where you might not want to use the official installers of Dynamsoft Service.
 
 ### Your application has its own installer
 
@@ -108,9 +109,9 @@ The official Dynamsoft Service installer is digitally signed by Dynamsoft Certif
 ## About Dynamsoft Service
 
 The Dynamsoft Service uses `localhost` and the ports **18622, 18625, 18623, and 18626** for connection. The latter two ports are used when there is an SSL encryption, and the earlier two when otherwise. These ports can be configured in the `DSConfiguration.ini` file located in:
-`C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64)\DSConfiguration.ini` (Windows as an example)
+`C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64)\DSConfiguration.ini` (Windows)
 
-By default, there are always three Dynamsoft Service processes running. All of them are called "Dynamsoft Service" and use the same file `DynamsoftService.exe` . However, they are started with different arguments.
+By default, there are always three Dynamsoft Service processes running. All of them are called "Dynamsoft Service" and use the same file `DynamsoftService.exe` . However, they are initiated with different arguments.
 
 The main process starts without any argument as follows:
 
@@ -118,20 +119,19 @@ The main process starts without any argument as follows:
 C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\DynamsoftService.exe
 ```
 
-Then the monitor process which is meant to monitor the main process and automatically start it in case it crashes starts like this:
+Then there is a monitor process which is meant to monitor the main process and automatically start it in case it crashes. This one starts like this:
 
 ``` cmd
 C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\DynamsoftService.exe -asmonitor Global\Dynamsoft_1.5.0_352325843_stop_service_event Global\Dynamsoft_1.5.0_352325828_certcheck_event
 ```
 
- 
 The last always-running process is meant to support the SSL certificate specifically for the Firefox browser:
 
 ``` 
 "-scan" "\\.\pipe\dynamsoftscan_15.0_70056_60" "0" "Global\ss352604281_61_70056" "0" "C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\dwt_trial_15.0.0.0625.dll"
 ```
 
-Service mode *needs* to be used if you wish to [use a connected physical scanner]({{site.indepth}}features/input.html#scan-from-a-local-scanner). It is this Dynamsoft Service that handles all communication between the browser client and the scanner driver. As mentioned previously, Service mode is used by default if the user is on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices).
+Service mode **needs** to be used if you wish to [use a connected physical scanner]({{site.indepth}}features/input.html#scan-from-a-local-scanner). It is this Dynamsoft Service that handles all communication between the browser client and the scanner driver. As mentioned previously, Service mode is used by default if the user is on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices).
 
 > NOTE:
 > * On Windows, the service runs in the "Local System" account
@@ -264,7 +264,7 @@ https://127.0.0.1:18623/dwt/dwt_16100728/img?id=414778098&index=5&width=585&heig
 
 ## Questions
 
-### Q: How to change the certificate
+### Q: How to change the certificate of the service?
 
 **A**: To replace the default certificate, the steps are
 
@@ -275,7 +275,7 @@ https://127.0.0.1:18623/dwt/dwt_16100728/img?id=414778098&index=5&width=585&heig
 * Replace the old keys in `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16\cert`
 * Restart the service
 
-### Q: How to configure the service
+### Q: How to set the configuration of the service?
 
 **A**: Generally, we configure the service in the file `DSConfiguration.ini`
 
@@ -295,7 +295,7 @@ SSLPort_mp_1 = 18623 // SSL Port of the core scanning module
 LogLevel = 1 // Whether to output detailed information for debugging purposes
 ```
 
-### Q: How to restart the service
+### Q: How to restart the service?
 
 **A**: 
 
@@ -303,7 +303,7 @@ LogLevel = 1 // Whether to output detailed information for debugging purposes
 * On macOS, find and kill the service in "Activity Monitor" and it'll start itself.
 * On Linux, find and kill the service in "System monitor" and it'll start itself.
 
-### Q: Why am I asked to install the service after it is installed
+### Q: Why am I asked to install the service after it is installed?
 
 **A**: There are a few possible causes
 
