@@ -13,7 +13,7 @@ Different ways to export data from the `DWT` buffer.
 
 ## Upload
 
-The most common usage of `DWT` is to scan documents and upload them to the server via `HTTP` and `FTP` . The library has quite a few APIs to make this happen. Read on to learn more.
+The most common usage of `DWT` is to scan documents and upload them to the server via `HTTP` and `FTP` . The library has a number of APIs to make this happen. Read on to learn more.
 
 ### HTTP with Built-in APIs
 
@@ -78,7 +78,7 @@ function getExtension(type) {
 
 **A**: `DWT` does the uploading in a few steps
 
-* Grab the image(s) specified by `indices` ; 
+1. Grab the image(s) specified by `indices` ; 
 * Encode the image(s) in the specified type which results in a binary file; 
 * [Optional] Convert the file into a base64 string; 
 * Create an HTTP Form and perform an asynchronous HTTP (Ajax) request to send the form to the specified `url` ; 
@@ -166,11 +166,11 @@ function uploadSeparateFiles(indices, type) {
 
 ##### Q: How to specify the images to upload
 
-**A**: Use the 2nd parameter `indices` to specify the images by their indices. Note that even if you upload just one file, you still needs to supply an array of it's index. For example: `[0]` .
+**A**: Use the 2nd parameter `indices` to specify the images by their indices. Note that even if you upload just one image, you still needs to supply an array with its index. For example: `[0]` .
 
 ##### Q: Can I change the header of the HTTP form
 
-**A**: Yes, you can use the method [ `SetHTTPHeader()` ]({{site.info}}api/WebTwain_IO.html#sethttpheader) to add or change the header(s). It's recommended that you don't change the default fields including but not limited to `Accept` , `Connection` , `Cookie` , etc.
+**A**: Yes, you can use the method [ `SetHTTPHeader()` ]({{site.info}}api/WebTwain_IO.html#sethttpheader) to add or change the header(s). It's recommended that you don't change the default fields including, but not limited to, `Accept` , `Connection` , `Cookie` , etc.
 
 ##### Q: Can I change the fields of the HTTP form
 
@@ -202,13 +202,13 @@ onServerReturnedSomething: (
     response: string) => void
 ```
 
-The 1st callback `onEmptyResponse` is triggered when the server returns nothing. Generally, if errors occurred on the server, the server would return some information to indicate what went wrong. Therefore, if nothing is returned, you can treat it as a successful upload.
+The 1st callback `onEmptyResponse` is triggered when the server returns no response string. Generally, if errors occurred on the server, the server would return some information to indicate what went wrong. Therefore, if nothing is returned, you can treat it as a successful upload.
 
-Of course, in your own server-side script to accept and process the HTTP Post request, you know whether the upload is successful and can make it more obvious by returning some custom information to indicate that. In this case, the 2nd callback `onServerReturnedSomething` is triggered on purpose and you can read the argument `response` which contains what is returned by the server.
+Of course, in your own server-side script to accept and process the HTTP Post request, you know whether the upload is successful and can make it more obvious by returning some custom information to indicate that. In this case, the 2nd callback `onServerReturnedSomething` will be triggered on purpose and you will need to read the argument `response` which contains what is returned by the server.
 
 > NOTE 
 >  
-> When the callback `onServerReturnedSomething` is triggered, you'll always get an `errorCode` and an `errorString` but you can choose to ignore them if it's triggered on purpose.
+> When the callback `onServerReturnedSomething` is triggered, you will always get an `errorCode` and an `errorString` but you can choose to ignore them if it's triggered on purpose.
 
 `DWT` also provides an API called [ `HTTPPostResponseString` ]({{site.info}}api/WebTwain_IO.html#httppostresponsestring) which contains `response` but can be read outside of the upload method.
 
@@ -222,7 +222,7 @@ Of course, in your own server-side script to accept and process the HTTP Post re
 
 ##### Q: Can I upload a big file in segments
 
-**A**: Yes, when the file to upload is huge, you can use the method [ `SetUploadSegment()` ]({{site.info}}api/WebTwain_IO.html#setuploadsegment) to configure a segmented upload operation
+**A**: Yes, when the file to upload is quite large, you can use the method [ `SetUploadSegment()` ]({{site.info}}api/WebTwain_IO.html#setuploadsegment) to configure a segmented upload operation
 
 ``` javascript
 // For a file bigger than 1 MB, upload it in 500-KB segments 
@@ -250,11 +250,11 @@ For segmented upload, the server-side script is quite different. Check out how i
 
 ### HTTP with the File Uploader
 
-The file uploader is an independent component that is dedicated to file uploading. It can be used seamlessly with `DWT` . 
+The File Uploader is an independent component that is dedicated to file uploading. It can be used seamlessly with `DWT` . 
 
-#### How is upload done with the File Uploader
+#### How is upload done using the File Uploader
 
-* `DWT` prepares the file to upload with the method [ `GenerateURLForUploadData()` ]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)
+1. `DWT` will prepare the file to upload with the method [ `GenerateURLForUploadData()` ]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)
 * Create a File Uploader instance with the method [ `Init()` ]({{site.info}}api/Dynamsoft_FileUploader.html#init)
 * Create an upload job with [ `CreateJob()` ]({{site.info}}api/Dynamsoft_FileUploader.html#createjob)
   + Define the target URL ( `ServerUrl` )
@@ -405,7 +405,7 @@ DWObject.FTPUpload(
 
 ## Save
 
-Dynamsoft offers several methods to save your images to an absolute file path. Depending on what your exact needs are, you can choose from any of the following methods:
+`DWT` offers several methods to save your images to an absolute file path. Depending on what your exact needs are, you can choose from any of the following methods:
 
 * [ `SaveAsBMP()` ]({{site.info}}api/WebTwain_IO.html#saveasbmp)
 * [ `SaveAsJPEG()` ]({{site.info}}api/WebTwain_IO.html#saveasjpeg)
@@ -442,7 +442,7 @@ DWObject.SaveAllAsPDF("Sample.pdf",
 
 If you don't want to show any dialog and you know for sure where you want the files saved, you can save with absolute paths while setting [ `IfShowFileDialog` ]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `false` .
 
-> When using an absolute path, you must make sure the current user has the proper permission to save to that path. Otherwise it'll fail.
+> When using an absolute path, you must make sure the current user has the proper permission to save to that path. Otherwise the save will fail.
 
 ``` javascript
 DWObject.IfShowFileDialog = false;
@@ -460,7 +460,7 @@ DWObject.SaveAllAsPDF("D:\\Sample.pdf",
 
 > Supported on [WASM browsers]({{site.getstarted}}platform.html#wasm-browsers).
 
-In [WASM browsers]({{site.getstarted}}platform.html#wasm-browsers), `DWT` runs its entire operations within the browser. So saving locally becomses downloading and [ `IfShowFileDialog` ]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) is not effective.
+In [WASM browsers]({{site.getstarted}}platform.html#wasm-browsers), `DWT` runs its entire operations within the browser. So saving locally triggers will instead download the file and [ `IfShowFileDialog` ]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) will have no effect.
 
 ``` javascript
 // The following line only works on desktop but it 
@@ -561,9 +561,9 @@ DWObject.ConvertToBase64(
 **A**: There are a few things that you can try to reduce the size of a resulting file
 
 * Scan in grayscale or black & white instead of RGB; 
-* Convert the images to grayscale or black & white before the output, read more [here]({{site.indepth}}features/edit.html#working-with-pixels-and-bit-depth); 
+* Convert the images to grayscale or black & white before the save or upload call. Read more [here]({{site.indepth}}features/edit.html#working-with-pixels-and-bit-depth); 
 * Scan in a lower resolution; 
-* Convert the images to a lower resolution, read more [here]({{site.indepth}}features/edit.html#working-with-pixels-and-bit-depth); 
+* Convert the images to a lower resolution (DPI). Read more [here]({{site.indepth}}features/edit.html#working-with-pixels-and-bit-depth); 
 * [Optional] If the resulting file is in the JPEG format (.jpg) or is a TIF or PDF that is encoded by the JPEG standard, you can set [ `JPEGQuality` ]({{site.info}}api/WebTwain_IO.html#jpegquality) to a lower value.
 
 ### Q: How can I customize a resulting TIFF file
@@ -576,4 +576,4 @@ DWObject.ConvertToBase64(
 
 ### Q: Can I hide the progress bar
 
-**A**: Yes, check out more [here]({{site.indepth}}features/ui.html#progress-bar) for more information.
+**A**: Yes, please see [this page]({{site.indepth}}features/ui.html#progress-bar) for more information.
