@@ -21,7 +21,7 @@ A major feature of `DWT` is to interact with imaging devices like scanners, came
 
 * TWAIN is an application programming interfaces (API) and communication protocol that regulate communication between software and digital imaging devices, such as image scanners and digital cameras. 
 
-* TWAIN is supported on Microsoft Windows, Linux and macOS X. However, based on our experience and the experience of many of our customers, TWAIN only works well on Windows. On Linux, [ `SANE` ](#sane-scanners) is the better and preferred alternative; on macOS, [ `ICA` ](#ica-scanners) is the better and preferred alternative.
+* TWAIN is supported on Microsoft Windows, Linux and macOS. However, based on our experience and the experience of many of our customers, TWAIN only works well on Windows. On Linux, [ `SANE` ](#sane-scanners) is the better and preferred alternative; on macOS, [ `ICA` ](#ica-scanners) is the better and preferred alternative.
 
 * TWAIN is being actively maintained by the non-profit [TWAIN Working Group](https://www.twain.org/). Members of the group include many scanner vendors and imaging software vendors including FUJITSU, Panasonic, Epson, HP, ExactCODE, LEADTOOLS, and of course Dynamsoft.
 
