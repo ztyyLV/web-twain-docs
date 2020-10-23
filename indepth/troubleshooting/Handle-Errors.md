@@ -19,7 +19,7 @@ You get an error message that says "The current product key does not support xxx
 
 * Cause
 
-You are trying to use a unlicensed feature of `DWT` or use it on a unlicensed `Platform` or `Browser` .
+You are trying to use an unlicensed feature of `DWT` or use it on an unlicensed `Platform` or `Browser` .
 
 * Resolution
 
@@ -206,7 +206,7 @@ When you upload images via HTTP Put, you may get this error.
     - Right-click the specified work folder, select Properties.
     - Select the Write option at the Directory tab.
 
-  + If you are using Tomcat, the `doPut()` will check to see if the `readonly` property has been changed to `false` . If it has not, the HTTP Put operation is not allowed. Please go to {Tomcat installation directory} -> conf -> web.xml, find the default servlet configuration (org.apache.catalina.servlets. DefaultServlet) and change the `readonly` property to `true` .
+  + If you are using Tomcat, the `doPut()` will check to see if the `readonly` property has been changed to `false`. If it has not, the HTTP Put operation is not allowed. Please go to {Tomcat installation directory} -> conf -> web.xml, find the default servlet configuration (org.apache.catalina.servlets. DefaultServlet) and change the `readonly` property to `true` .
 
 ``` xml
 <init-param>
@@ -255,7 +255,7 @@ XMLHttpRequest cannot load xxxxx. No 'Access-Control-Allow-Origin' header is pre
 
 * Cause
 
-You are uploading or downloading to/from a web server which is in a different domain than your current website and that web server doesn't allow accessing from a different domain.
+You are uploading or downloading to/from a web server which is in a different domain than your current website and that web server doesn't allow access from a different domain.
 
 * Solution
 
@@ -278,11 +278,11 @@ Try uploading to the same domain or update the server side configuration to allo
 >  
 > After updating the server configuration file, you'll need to restart the server (i.e. IIS).
 >  
-> If you are downloading a file, you might need to clear browser cache because a cached file will not be requested again from the server, thus still no 'Access-Control-Allow-Origin' header will be presented.
+> If you are downloading a file, you might need to clear the browser cache because a cached file will not be requested again from the server, thus still no 'Access-Control-Allow-Origin' header will be presented.
 >  
 > If you are using Windows Authentication, you may need to change the default setting of `withCredentials` in the `dynamsoft.webtwain.initiate.js` file. To do that, open the JS file, find `withCredentials:false` and change it to `withCredentials:true` .
 
-### Source is connected to maximum supported number of applications
+### Source is connected to the maximum supported number of applications
 
 * Symptom
 
@@ -335,7 +335,7 @@ When you fail to upload images, you may get this error
 
 * Cause
 
-`dwt-md5` is a default built-in header in `DWT` . It is used for each uploading process to test the integrity of data. Since this is not a standard header, the browser will send an OPTIONS preflight request before the original request is sent to verify that this header is allowed. If not, the browser will return the above error.
+`dwt-md5` is a default built-in header in `DWT`. It is used for each uploading process to test the integrity of data. Since this is not a standard header, the browser will send an OPTIONS preflight request before the original request is sent to verify that this header is allowed. If not, the browser will return the above error.
 
 * Solution
 
