@@ -175,7 +175,7 @@ There are 3 ways to verify
 
 ![Hardware-Scanners-Cameras-4]({{site.assets}}imgs/Hardware-Scanners-Cameras-4.png)
 
-`DirectShow Cameras` refer to the cameras which can be accessed via the [Microsoft DirectShow architecture ](https://docs.microsoft.com/en-us/windows/win32/directshow/introduction-to-directshow). These cameras are either built into desktops / laptops or connected via USB.
+`DirectShow Cameras` refer to the cameras which can be accessed via the [Microsoft DirectShow architecture](https://docs.microsoft.com/en-us/windows/win32/directshow/introduction-to-directshow). These cameras are either built into desktops / laptops or connected via USB.
 
 ### Is my camera DirectShow compliant
 
