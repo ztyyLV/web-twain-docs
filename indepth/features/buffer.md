@@ -23,7 +23,7 @@ In order to control the size of the data, `DWT` can limit the number of images a
 
 > This section applies to [desktop browsers]({{site.getstarted}}platform.html#browsers-on-desktop-devices) running in [service mode]({{site.indepth}}features/initialize.html#service-mode).
 
-The data `DWT` deals with are images which take up lots of space as they are stored raw in **DIB** format. For example, one A4 paper scanned in 300 DPI takes around 24MB in memory which means 2GB of physical memory can only store no more than 85 of these images. As more images are processed, more memory gets used which may pose a threat to other programs on the machine. In view of this, the disk cache function was added. After enabling this function, most images will be temporarily cached on the disk, while keeping some active images in the memory to maintain high performance.
+The data `DWT` deals with are images which take up lots of space as they are stored raw in **DIB** format. For example, one A4 paper scanned in 300 DPI takes around 24MB in memory which means 2GB of physical memory can only store no more than 85 of these images. As more images are processed, more memory gets used which may pose a threat to other programs on the machine. Due to this, the disk cache function was added. After enabling disk caching, most images will be temporarily cached on the disk, while keeping some active images in the memory to maintain high performance.
 
 The disk caching feature is enabled by default and can be disabled by setting [ `IfAllowLocalCache` ]({{site.info}}api/WebTwain_Buffer.html#ifallowlocalcache) to `false` .
 
@@ -59,7 +59,7 @@ DWObject.MoveImage(0, 2);
 DWObject.SwitchImage(0, 2);
 ```
 
-* Lastly, use one of the following methods to remove one or multiple images from the buffer:
+* Lastly, you can use one of the following methods to remove one or multiple images from the buffer:
 
 ``` javascript
 // Removes a single image specified by index
@@ -111,7 +111,7 @@ The following is only supported in [desktop browsers]({{site.getstarted}}platfor
 
 ## Status Reporting
 
-Now that we've covered the general image info like the size and dimensions, let's address some of the less intuitive but still useful pieces of information that our buffer can offer:
+Now that we've covered the general image info like  size and dimensions, let's address some of the less intuitive but still useful pieces of information that our buffer can offer:
 
 * To get the total number of images in the buffer, use [ `HowManyImagesInBuffer` ]({{site.info}}api/WebTwain_Buffer.html#howmanyimagesinbuffer)
 
