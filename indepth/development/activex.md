@@ -9,7 +9,7 @@ description: Dynamic Web TWAIN SDK Documentation About AcitveX Page
 
 # About ActiveX
 
-**ActiveX** is a software framework created by Microsoft widely used in Internet Explorer (IE). However, Microsoft has announced plans to end suppport for older browsers completely and has now deprecated this technology.
+**ActiveX** is a software framework created by Microsoft widely used in Internet Explorer (IE). However, Microsoft has announced plans to end support for older browsers completely and has now deprecated this technology.
 
 ## DWT & ActiveX
 
@@ -17,7 +17,7 @@ Although `DWT` is built upon modern technologies like `WebSocket`, `HTML5`, `Web
 
 ## The Future of ActiveX
 
-Microsoft officially announced end of support for IE 10 and older on `January 12th, 2016`. While IE 11 continues to be supported on Windows 7, 8.1, and 10, Microsoft is gradually deprecating it too.
+Microsoft officially announced the end of support for IE 10 and older on `January 12th, 2016`. While IE 11 continues to be supported on Windows 7, 8.1, and 10, Microsoft is gradually deprecating it too.
 
 That said, since many enterprise applications still and will continue to rely on IE 11 for some time yet, the browser will continue receiving security updates and technical support for the lifecycle of the version of Windows on which it is installed. Windows 10 is among these versions of Windows on which IE 11 is installed, and there is no evidence that Microsoft will release a newer version of Windows soon. Therefore, it is safe to assume that IE 11 will continue to exist for quite some time. Read more [here](https://docs.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge).
 
@@ -31,7 +31,7 @@ Dynamsoft has a substantial customer base and their benefits are our biggest con
 
 Simultaneously, the ActiveX edition of `DWT` will also be slowly phased out by Dynamsoft, just like IE by Microsoft. On the one hand, IE is reaching its end of life. On the other hand, outdated technologies are incompatible with updated Web standards, which hinders `DWT` development.
 
-If you check our [release notes]({{site.info}}schedule/released.html), you can find that most of our development has been done to the HTML5-based edtions of `DWT`. For ActiveX, the strategy is as follows:
+If you check our [release notes]({{site.info}}schedule/released.html), you can find that most of our development has been done to the HTML5-based editions of `DWT`. For ActiveX, the strategy is as follows:
 
 * It'll continue to be a part of the Windows edition
 * No new features will be added
