@@ -9,45 +9,49 @@ description: Dynamic Web TWAIN SDK Documentation Hardware Page
 
 # Hardware
 
-A major feature of `DWT` is to interact with imaging devices like scanners, cameras, etc. The following shows the devices that are supported.
+Dynamic Web TWAIN's main feature is interacting with imaging devices like scanners and cameras. In this section, we'll look at the supported devices.
 
-## TWAIN scanners
+- [TWAIN Scanners](#twain-scanners)
+- [ICA Scanners](#ica-scanners)
+- [SANE Scanners](#sane-scanners)
+
+## TWAIN Scanners
 
 ![Hardware-Scanners-Cameras-1]({{site.assets}}imgs/Hardware-Scanners-Cameras-1.png)
 
-`TWAIN Scanners` refer to image scanners which have drivers that follow the TWAIN standard.
+`TWAIN Scanners` refer to image scanners that have drivers following the TWAIN standard.
 
 ### Facts about TWAIN
 
-* TWAIN is an application programming interfaces (API) and communication protocol that regulate communication between software and digital imaging devices, such as image scanners and digital cameras. 
+* TWAIN is an application programming interface (API) and communication protocol that regulate communication between software and digital imaging devices, such as image scanners and digital cameras. 
 
-* TWAIN is supported on Microsoft Windows, Linux and macOS X. However, based on our experience and the experience of many of our customers, TWAIN only works well on Windows. On Linux, [ `SANE` ](#sane-scanners) is the better and preferred alternative; on macOS, [ `ICA` ](#ica-scanners) is the better and preferred alternative.
+* TWAIN is supported on Microsoft Windows, Linux, and macOS X. However, based on our experience and the experience of many customers, TWAIN only works well on Windows. On Linux, [SANE](#sane-scanners) is the better and preferred alternative; on macOS, [ICA](#ica-scanners) is the better and preferred alternative.
 
-* TWAIN is being actively maintained by the non-profit [TWAIN Working Group](https://www.twain.org/). Members of the group include many scanner vendors and imaging software vendors including FUJITSU, Panasonic, Epson, HP, ExactCODE, LEADTOOLS, and of course Dynamsoft.
+* TWAIN is actively maintained by the non-profit [TWAIN Working Group](https://www.twain.org/). Members of the group consists of scanner vendors and imaging software vendors, including FUJITSU, Panasonic, Epson, HP, ExactCODE, LEADTOOLS, and of course, Dynamsoft.
 
-* TWAIN is [the most commonly used protocol](https://www.twain.org/why-twain/) for image capturing and processing. Almost all scanners on the market come with a TWAIN driver and are supported by TWAIN Applications like `DWT` .
+* TWAIN is [the most commonly used protocol](https://www.twain.org/why-twain/) for image capturing and processing. Almost all scanners on the market come with a TWAIN driver and are supported by TWAIN applications like `DWT` .
 
-### Is my scanner TWAIN compliant
+### Is my Scanner TWAIN Compliant?
 
-After you have installed the drivre for your scanner, you can refer to the following ways to verify whether your scanner is TWAIN compliant
+After you have installed the driver for your scanner, you can refer to the following methods to verify whether your scanner is TWAIN compliant.
 
 * [Recommended & Easiest] Take advantage of our official demo page
 
   + Open the [demo page](https://demo.dynamsoft.com/dwt/online_demo_scan.aspx) on [Windows]({{site.getstarted}}platform.html#browsers-on-windows)
 
-  > If you haven't installed the library, a dialog will show up for you to download and install it.
+  > If you haven't installed DWT, a dialog will show up asking you to download and install it.
 
-  + Make sure the scanner driver shows up in the scanner list
+  + Make sure the scanner driver shows up in the scanner dropdown list
 
 ![Hardware-Scanners-Cameras-5]({{site.assets}}imgs/Hardware-Scanners-Cameras-5.png)
 
-  + Try scanning to make sure it works correctly without any errors
+  + If the scanner appears in the dropdown, try scanning to make sure it works correctly without any errors. Errors will appear in the message box under the viewer. 
 
 * [Recommended] Use the tool called `Twacker` which is developed by the [TWAIN Working Group](http://www.twain.org/)
 
   + Download and install
 
-    > In most cases, please dowload the 32-bit one
+    > In most cases, please dowload the 32-bit version
 
     - [32-bit](http://download.dynamsoft.com/tool/Twack_32.msi)
     - [64-bit](http://download.dynamsoft.com/tool/Twack_64.msi)
@@ -60,19 +64,19 @@ After you have installed the drivre for your scanner, you can refer to the follo
 
 ![Hardware-Scanners-Cameras-7]({{site.assets}}imgs/Hardware-Scanners-Cameras-7.png)
 
-  > If your device is not listed, please check if the driver is installed. Or, you can try running `Twacker` as "Admin" to see if it shows up.
+  > If your device is not listed, please check if the driver is installed. Or, try running `Twacker` as admin to see if it shows up.
 
   + Choose the settings and try scanning
 
 ![Hardware-Scanners-Cameras-8]({{site.assets}}imgs/Hardware-Scanners-Cameras-8.png)
 
-  > If the scanning is successful without any errors, then your device should be TWAIN compliant. You can also try other commands and see how it works. If your scanner doesn’t work with `TWACKER` , please check your scanner model online and make sure you have installed the (latest) TWAIN driver from its vendor.
+  > If scanning is successful without any errors, then your device should be TWAIN compliant. You can also try other commands to see how it works. If your scanner doesn’t work with `TWACKER` , please check your scanner model online and make sure you have installed the (latest) TWAIN driver from its manufacturer.
 
 ![Hardware-Scanners-Cameras-9]({{site.assets}}imgs/Hardware-Scanners-Cameras-9.png)
 
 * Refer to the official [twain-certified-drivers](http://resource.twain.org/twain-certified-drivers/). 
 
-> This list is maintained by hardware vendors and could be incomplete which means you might not find your device there. In this case, try the two ways above instead.
+> This list is maintained by hardware vendors and may be incomplete. In this case, try the two ways above instead.
 
 ### No Scanner to test
 
@@ -83,35 +87,35 @@ If you don't have a TWAIN scanner at hand to test the library. You can download 
 
 ### TWAIN and WIA
 
-`WIA` refers to [Windows Image Acquisition](https://docs.microsoft.com/en-us/windows/win32/wia/-wia-startpage) which is the still image acquisition platform in the Windows family that enables imaging/graphics applications to interact with imaging hardware and standardizes the interaction between different applications and scanners. 
+`WIA` refers to [Windows Image Acquisition](https://docs.microsoft.com/en-us/windows/win32/wia/-wia-startpage), which is the still image acquisition platform in the Windows family that enables imaging/graphics applications to interact with imaging hardware and standardizes the interaction between different applications and scanners. 
 
-`WIA` devices can be used by `TWAIN` applications like the Dynamic Web TWAIN library through a so-called `TWAIN compatibility layer` . This means `WIA` is not supported natively, therefore, when a device supports both `TWAIN` and `WIA` , `TWAIN` is the better option.
+`WIA` devices can be used by `TWAIN` applications like the Dynamic Web TWAIN library through a `TWAIN compatibility layer`. This means `WIA` is not supported natively; therefore, when a device supports both `TWAIN` and `WIA` , `TWAIN` is the better option.
 
-By comparison, `WIA` can only control a very limited set of general capabilities of the devices while `TWAIN` can control all standard and even custom capabilities of the devices. Another thing is that, `TWAIN` has three transfer modes (Native, Memory, File) while `WIA` only has two (Memory, File).
+By comparison, `WIA` can only control a very limited set of general capabilities of the devices while `TWAIN` can control all standard and even custom capabilities of the devices. Another thing is that `TWAIN` has three transfer modes (Native, Memory, File), while `WIA` only has two (Memory, File).
 
 ## ICA Scanners
 
 ![Hardware-Scanners-Cameras-2]({{site.assets}}imgs/Hardware-Scanners-Cameras-2.png)
 
-`ICA Scanners` refer to image scanners which have drivers that have been designed in accordance with the [ImageCaptureCore Framework](https://developer.apple.com/documentation/imagecapturecore).
+`ICA Scanners` refer to image scanners that have drivers designed in accordance with the [ImageCaptureCore Framework](https://developer.apple.com/documentation/imagecapturecore).
 
 ### Facts about ICA
 
-* ICA is a framework from Apple which is designed to "Browse for media devices and control them programmatically from your app."
+* ICA is a framework from Apple designed to "Browse for media devices and control them programmatically from your app."
 
 * ICA is supported on macOS X.
 
-### Is my scanner ICA compliant
+### Is my Scanner ICA Compliant?
 
-There are 3 ways to verify
+There are 3 ways to verify whether your scanner is ICA compliant. 
 
 * [Recommended & Easiest] Take advantage of our official demo page
 
   + Open the [demo page](https://demo.dynamsoft.com/dwt/online_demo_scan.aspx) on [macOS]({{site.getstarted}}platform.html#browsers-on-macos)
 
-  > If you haven't installed the library, a dialog will show up for you to download and install
+  > If you haven't installed DWT, a dialog will show up for you to download and install it.
 
-  + Make sure the scanner driver shows up in the scanner list
+  + Make sure the scanner driver shows up in the scanner list.
 
 ![Hardware-Scanners-Cameras-5]({{site.assets}}imgs/Hardware-Scanners-Cameras-5.png)
 
@@ -119,11 +123,11 @@ There are 3 ways to verify
 
 * [Recommended] Try the scanner with the ImageCapture app on macOS. 
 
-  + Find the Image Capture App
+  + Find the Image Capture application
 
 ![Hardware-Scanners-Cameras-12.png]({{site.assets}}imgs/Hardware-Scanners-Cameras-12.png)
 
-  + Open the app
+  + Open the application
 
 ![Hardware-Scanners-Cameras-13.png]({{site.assets}}imgs/Hardware-Scanners-Cameras-13.png)
 
@@ -131,15 +135,15 @@ There are 3 ways to verify
 
 ![Hardware-Scanners-Cameras-14.png]({{site.assets}}imgs/Hardware-Scanners-Cameras-14.png)
 
-  For more info, please check out the [official guide](https://support.apple.com/en-ca/guide/image-capture/imgcp1004/mac)
+  For more info, please check out the [official guide](https://support.apple.com/en-ca/guide/image-capture/imgcp1004/mac).
 
-* Check out the [official list](https://support.apple.com/en-us/HT201465)
+* Check out the [official list](https://support.apple.com/en-us/HT201465) of supported ICA scanners on MacOS. 
 
 ## SANE Scanners
 
 ![Hardware-Scanners-Cameras-3]({{site.assets}}imgs/Hardware-Scanners-Cameras-3.png)
 
-`SANE Scanners` refer to image scanners which have drivers that have been designed in accordance with the [SANE API](http://www.sane-project.org/).
+`SANE Scanners` refer to image scanners that have drivers designed in accordance with the [SANE API](http://www.sane-project.org/).
 
 ### Facts about SANE
 
@@ -149,15 +153,15 @@ There are 3 ways to verify
 
 * As of version 16.1.1, Dynamic Web TWAIN supports SANE v1.0.25.
 
-### Is my scanner SANE compliant
+### Is my Scanner SANE Compliant?
 
-There are 3 ways to verify
+There are 3 ways to verify whether your scanner is SANE compliant.
 
 * [Recommended & Easiest] Take advantage of our official demo page
 
   + Open the [demo page](https://demo.dynamsoft.com/dwt/online_demo_scan.aspx) on [Linux]({{site.getstarted}}platform.html#browsers-on-linux)
 
-  > If you haven't installed the library, a dialog will show up for you to download and install
+  > If you haven't installed the SDK, a dialog will show up for you to download and install it.
 
   + Make sure the scanner driver shows up in the scanner list
 
@@ -165,25 +169,25 @@ There are 3 ways to verify
 
   + Try scanning to make sure it works correctly without any errors
 
-* [Recommended] Try the scanner with the XSane app on macOS. Check out the [official guide](http://www.fifi.org/doc/xsane/html/sane-xsane-doc.html)
+* [Recommended] Try the scanner with the XSane app on Linux. Check out the [official guide](http://www.fifi.org/doc/xsane/html/sane-xsane-doc.html)
 
 > [More info>>]({{site.assets}}docs/Scanning_with_XSane.pdf)
 
-* Check out the [official list](http://www.sane-project.org/sane-backends-1.0.25.html)
+* Check out the [official list](http://www.sane-project.org/sane-backends-1.0.25.html) of supported scanners. 
 
 ## DirectShow Cameras
 
 ![Hardware-Scanners-Cameras-4]({{site.assets}}imgs/Hardware-Scanners-Cameras-4.png)
 
-`DirectShow Cameras` refer to the cameras which can be accessed via the [Microsoft DirectShow architecture ](https://docs.microsoft.com/en-us/windows/win32/directshow/introduction-to-directshow). These cameras are either built into desktops / laptops or connected via USB.
+`DirectShow Cameras` refers to cameras which can be accessed via the [Microsoft DirectShow architecture](https://docs.microsoft.com/en-us/windows/win32/directshow/introduction-to-directshow). These cameras are either built into desktops/laptops or connected via USB.
 
-### Is my camera DirectShow compliant
+### Is my Camera DirectShow Compliant?
 
 * [Recommended] Take advantage of our official demo page
 
   + Open the [demo page](https://demo.dynamsoft.com/DWT/Webcam/online_demo_scan_Webcam.aspx) on [Windows]({{site.getstarted}}platform.html#browsers-on-windows)
 
-  > If you haven't installed the library, a dialog will show up for you to download and install 
+  > If you haven't installed the SDK, a dialog will show up for you to download and install it.
 
   + Make sure the camera shows up in the device list
 
@@ -191,15 +195,15 @@ There are 3 ways to verify
 
   + Try showing the video stream and try capturing a frame to see if it works without any errors
 
-* Try the camera with the [Amcap app](https://tst.dynamsoft.com/public/download/tools/amcap.zip) and see if it works correctly  
+* Try the camera with the [Amcap app](https://tst.dynamsoft.com/public/download/tools/amcap.zip) and see if it works correctly.
 
 ## MediaDevices Cameras
 
-`MediaDevices Cameras` refer to the cameras which can be accessed via the [MediaDevices interface](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices). These cameras are either built into desktops / laptops / mobile devices (phones, pads, etc.) or connected vai USB.
+`MediaDevices Cameras` refers to the cameras accessible via the [MediaDevices interface](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices). These cameras are either built into desktops/laptops/mobile devices, including phones and tablets, or connected via USB.
 
 > `DirectShow Cameras` and `MediaDevices Cameras` could refer to the same devices which can be accessed either way.
 
-### Is my camera MediaDevices compliant
+### Is my Camera MediaDevices Compliant?
 
 * [Recommended] Take advantage of our official demo page
 
@@ -209,17 +213,17 @@ There are 3 ways to verify
 
 ![Hardware-Scanners-Cameras-11]({{site.assets}}imgs/Hardware-Scanners-Cameras-11.png)
 
-  + Try showing the video stream and try capturing a frame to see if it works without any errors
+  + Try showing the video stream and capturing a frame to see if it works without any errors
 
-## QA
+## FAQs
 
 ### How to exclude WIA sources in the source list
 
 > Applicable to Windows only
 
-There are two ways to achive this
+There are two ways to achive this:
 
-* Set `IfUseTwainDSM` to true
+* Set `IfUseTwainDSM` to `true`
 
 ``` javascript
 DWObject.IfUseTwainDSM = true;
@@ -236,7 +240,7 @@ for (var i = 0; i < sources.length; i++) {
 }
 ```
 
-If you are still having issues with a device after reading the above information. You can 
+If you are still having issues with a device after reading the above information. You can.. 
 
-  + Check out [hardware issue]({{site.indepth}}troubleshooting/scanners-hardware.html)
+  + Check out [hardware issue]({{site.indepth}}troubleshooting/scanners-hardware.html) troubleshooting page,
   + Or contact [Dynamsoft Support]({{site.about}}getsupport.html)
