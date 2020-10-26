@@ -9,7 +9,7 @@ description: Dynamic Web TWAIN SDK Documentation Server Scripts Page
 
 # Server-side Scripting
 
-`DWT` is a 100% client-side library. However, it does need to interact with the server when doing operations like **Upgrade**, **Download**, **Server-side OCR**, etc. While the scripts are scattered in the documentation, we'll try to cover some important ones in this article.
+`DWT` is a 100% client-side library. However, it does need to interact with the server when doing operations like **Upload**, **Download**, **Server-side OCR**, etc. While the scripts are scattered in the documentation, we'll try to cover some important ones in this article.
 
 ## How to process uploaded files
 
@@ -489,7 +489,7 @@ while (iter.hasNext()) {
 }
 ```
 
-### Upload via CodeFusion
+### Upload via ColdFusion
 
 ``` html
 <cfset uploadFolderPath=GetDirectoryFromPath(GetCurrentTemplatePath()) />
