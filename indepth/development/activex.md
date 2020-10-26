@@ -7,35 +7,35 @@ breadcrumbText: About AcitveX
 description: Dynamic Web TWAIN SDK Documentation About AcitveX Page
 ---
 
-# About ACTIVEX
+# About ActiveX
 
-**ActiveX** is a software framework created by Microsoft which goes back to the year 1996. It is widely used in Internet Explorer (IE) browser. However, because Microsoft has announced plans to completely abandon older browsers, the technology is now considered deprecated.
+**ActiveX** is a software framework created by Microsoft widely used in Internet Explorer (IE). However, Microsoft has announced plans to end suppport for older browsers completely and has now deprecated this technology.
 
 ## DWT & ActiveX
 
-Although `DWT` is now built upon modern technologies like `WebSocket` , `HTML5` , `WebAssemby` , it was born as one of many ActiveX controls in 2003 and this ActiveX edition of `DWT` continued to dominate for 11 years. Therefore, we have nothing but gratitude towards the ActiveX framework. Even today, the ActiveX edition is still part of `DWT` although it is used just by a small number of customers who want to stick with IE 8 or 9.
+Although `DWT` is built upon modern technologies like `WebSocket`, `HTML5`, `WebAssemby`, it was born as one of many ActiveX controls in 2003. The ActiveX edition of `DWT` continued to dominate for 11 years. ActveX is still part of `DWT` though only used by a small number of customers who want to stick with IE 8 or 9.
 
-## The future of ActiveX
+## The Future of ActiveX
 
-Microsoft officially announed that support for IE 10 and older had ended on `January, 12th, 2016` . While IE 11 continues to be supported on Windows 7, 8.1, and 10 right now, Microsoft is gradually deprecating it too as more and more Microsoft products stop working on it.
+Microsoft officially announced end of support for IE 10 and older on `January 12th, 2016`. While IE 11 continues to be supported on Windows 7, 8.1, and 10, Microsoft is gradually deprecating it too.
 
-That said, due to the fact that many enterprise applications still and will continue to rely on IE 11 for some time yet, the browser will continue receiving security updates and technical support for the lifecycle of the version of Windows on which it is installed. Windows 10 is among these versions of Windows on which IE 11 is installed and there is no evidence that Microsoft is going to release a newer version of Windows soon, therfore, it is safe to assume that IE 11 will continue to exist for quite some time. Read more [here](https://docs.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge).
+That said, since many enterprise applications still and will continue to rely on IE 11 for some time yet, the browser will continue receiving security updates and technical support for the lifecycle of the version of Windows on which it is installed. Windows 10 is among these versions of Windows on which IE 11 is installed, and there is no evidence that Microsoft will release a newer version of Windows soon. Therefore, it is safe to assume that IE 11 will continue to exist for quite some time. Read more [here](https://docs.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge).
 
 The fate of the ActiveX framework depends on the fate of IE 11. As long as IE 11 is still hanging around, ActiveX will continue to be supported.
 
-> Microsoft Edge offers so-called **Internet Explorer mode** but ActiveX is not supported on Edge even when it runs in this mode.
+> Microsoft Edge offers **Internet Explorer mode**, but ActiveX is not supported on Edge even when it runs in this mode.
 
-## The future of the ActiveX Edition of DWT
+## The Future of ActiveX Edition in DWT
 
-Dynamsoft has a very large customer base and their benefits are our biggest concern. While most of our customers have opted to use the modern browsers like Chrome, Firefox or Safari, a few of them are subject to the requirments of their enterprise applications and must use IE 8 or 9 (most cases are imitated by IE 11) in which case only the ActiveX edition of `DWT` can be used. Because of this, Dynamsoft has kept its support of the ActiveX edition as part of the Windows edition until now and will continue to do so as long as IE continues to be supported by Microsoft.
+Dynamsoft has a substantial customer base and their benefits are our biggest concern. While most of our customers have opted to use the modern browsers like Chrome, Firefox or Safari, a few of them must use IE 8 or 9 of which most cases are imitated by IE 11. In these cases, only the ActiveX edition of `DWT` can be used. Dynamsoft has kept its support of the ActiveX edition as part of the Windows edition until now and will continue to do so as long as IE continues to be supported by Microsoft.
 
-At the same time, the ActiveX edition of `DWT` is also being slowly phased out by Dynamsoft just like IE by Microsoft. On the one hand, IE is reaching its end of life. On the other hand, outdated technologies are incompatible with updated Web standards, which hinders the development of `DWT` .
+Simultaneously, the ActiveX edition of `DWT` will also be slowly phased out by Dynamsoft, just like IE by Microsoft. On the one hand, IE is reaching its end of life. On the other hand, outdated technologies are incompatible with updated Web standards, which hinders `DWT` development.
 
-If you check out our [release notes]({{site.info}}schedule/released.html), you can find that most of our development has been done to the HTML5-based edtions of `DWT` . For ActiveX, the strategy is
+If you check our [release notes]({{site.info}}schedule/released.html), you can find that most of our development has been done to the HTML5-based edtions of `DWT`. For ActiveX, the strategy is as follows:
 
-* It'll continue to be part of the Windows edition
-* No new features will be added to it
+* It'll continue to be a part of the Windows edition
+* No new features will be added
 * If a major bug is found, Dynamsoft will fix it
-* If there is a major feature conflict between two editions, the preference is to change the ActiveX or tag its behaviour as deprecated
+* If there is a major feature conflict between two editions, the preference is to upgrade the ActiveX version or tag its behaviour as deprecated
 
 We encourage customers who are still using the ActiveX edition of `DWT` to consider moving to another edition as soon as possible.

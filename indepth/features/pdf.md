@@ -1,3 +1,4 @@
+
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
@@ -9,7 +10,7 @@ description: Dynamic Web TWAIN SDK Documentation Handle PDF Page
 
 # PDF Handling 
 
-PDF is one of the most popular file types on the market which is why it is the only non-image file type `DWT` supports at present. Like other file types, `DWT` 'input' and 'output' PDFs.
+PDFs are widely used in many and various industries, and presently are the only non-image file type that `DWT` supports. In this next section, we will address all the input and output operations that allow the user to properly handle PDF files.
 
 ## Environment
 
@@ -17,9 +18,9 @@ PDF is one of the most popular file types on the market which is why it is the o
 
 * [Service mode]({{site.indepth}}features/initialize.html#service-mode) and [WASM mode]({{site.indepth}}features/initialize.html#wasm-mode).
 
-## Include the PDF addon 
+## Including the PDF addon 
 
-To include the PDF addon is to reference the necessary JavaScript file which is included in the [resources files]({{site.about}}faqs.html#what-are-the-resources-files).
+To include the PDF addon, simply add a reference to the corresponding JavaScript file, included in the [resources folder]({{site.about}}faqs.html#what-are-the-resources-files).
 
 > If you are using the [dwt package](https://www.npmjs.com/package/dwt), the barcode reader is already included in the main JavaScript file ( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ) which means you can skip this step.
 
@@ -27,9 +28,9 @@ To include the PDF addon is to reference the necessary JavaScript file which is 
 <script src="dynamsoft.webtwain.addon.pdf.js"></script>
 ```
 
-## INPUT
+## Input
 
-When inputting PDF files, `DWT` tries to extract images from them. That's why `DWT` can handle pure image-based PDFs well. However, most existing PDF files contain much more than just images. In this case, we need to make use of the PDF Rasterizer ( `PDFR` for short) which is part of the PDF addon.
+When loading in a PDF file, `DWT` tries to extract images from that file, which is why the SDK can handle image-based PDF documents by default. However, most existing PDF files contain much more than just images. In this case, we need to make use of the PDF Rasterizer (`PDFR` for short), the main component of the PDF addon.
 
 > How PDFR works: As the name suggests, `PDFR` rasterizes a PDF file page by page much like a scanner. You set a resolution and you get the resulting images in that resolution after the rasterization. 
 
@@ -53,11 +54,11 @@ The method [ `SetConvertMode()` ]({{site.info}}api/Addon_PDF.html#setconvertmode
 
 ### Questions
 
-#### Q: When shall I use PDFR
+#### Q: When shall I use PDFR?
 
 A: `PDFR` is only required for text-based PDFs, to find out whether a file is text-based. Use the method [ `IsTextBasedPDF()` ]({{site.info}}api/Addon_PDF.html#istextbasedpdf) .
 
-#### Q: When is it effective
+#### Q: When is it effective?
 
 A: Once `PDFR` has been configured, it will automatically detect if a file needs to be rasterized and if so, it will convert it to an image(s) with the set resolution(if no resolution is set, the default is 200). This happens when you call any of the following methods
 
@@ -80,7 +81,7 @@ A: Once `PDFR` has been configured, it will automatically detect if a file needs
 * [ `GetConvertMode()` ]({{site.info}}api/Addon_PDF.html#getconvertmode): This method returns the current convert mode.
 * [ `SetPassword()` ]({{site.info}}api/Addon_PDF.html#setpassword): This method sets a password which is used to open encrypted PDF file(s).
 
-## OUTPUT
+## Output
 
 `DWT` can output one or multiple images in the buffer as image-based PDF file(s). This feature is built into the core module and no addon is required as was covered in the [output]({{site.indepth}}features/output.html) section.
 
