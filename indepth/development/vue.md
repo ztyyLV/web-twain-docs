@@ -17,7 +17,7 @@ Make sure you have [node](https://nodejs.org/), [yarn](https://yarnpkg.com/cli/i
 
 ## Create the sample project
 
-### Create an bootstrapped raw Vue application
+### Create a bootstrapped raw Vue application
 
 ``` cmd
 vue create dwt-vue
@@ -158,13 +158,12 @@ If you have installed `DWT` and have configured a valid `ProductKey` . You will 
 
 #### On mobile
 
-You should be able to open a file or catpure an image.
+You should be able to open a file or capture an image.
 
 ## Official Samples
 
 Check out the following two sample projects:
 
 * [dwt-vue-simple](https://github.com/dynamsoft-dwt/dwt-vue-simple)
-<!--
-* [dwt-vue-advanced](https://github.com/dynamsoft-dwt/dwt-vue-advanced)
--->
+
+<!--* [dwt-vue-advanced](https://github.com/dynamsoft-dwt/dwt-vue-advanced)-->

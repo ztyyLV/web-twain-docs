@@ -221,7 +221,7 @@ interface Container {
 
 `WebTwainId` and `ContainerId` are both optional but one must exist as the identifier for that `WebTwain` instance.
 
-`Width` and `Height` determines the initial viewer size of the instance.
+`Width` and `Height` determine the initial viewer size of the instance.
 
 When instantiating with `Dynamsoft.WebTwainEnv.Load` , `ContainerId` , `Width` and `Height` are required. `DWT` will try to locate an HTML element with the id defined by `ContainerId` and use `Width` and `Height` as the viewer size.
 

@@ -117,7 +117,7 @@ The following versions are supported
   + Chrome 68.* ~ 79.* (no video streaming)
   + Chrome 80.* ~ 85.* (no video streaming) `Recommended`
   + Firefox 61.* ~ 69.* (no video streaming)
-  + Firefox 70.* ~ 80.* `Recommended`
+  + Firefox 70.* ~ 80.* (no video streaming) `Recommended`
   + Safari 7.* ~ 12.*
   + Safari 13.* ~ 14.* `Recommended`
 
