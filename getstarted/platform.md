@@ -9,7 +9,7 @@ description: Dynamic Web TWAIN SDK Documentation Platform Page
 
 # Platforms
 
-`DWT` is designed to be cross-platform which means it can work on all major browsers across all major operating systems. The following shows more details.
+`DWT` is designed to be cross-platform, thus, `DWT` works in all major browsers across all major operating systems.
 
 ## Browsers on desktop devices
 
