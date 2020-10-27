@@ -99,7 +99,7 @@ DWObject.Addon.BarcodeReader.decode(imageIndex)
 
 Most of the time, you simply need to use the default decode method to read most of the barcode images out there. However, you may encounter some barcodes that fail to be read and sometimes you might want to limit which barcode types the reader should pick up, and more.
 
-The runtime settings of the add-on give you access to a wide array of customizable parameters, all of which you can check out with the method [ `getRuntimeSettings()` ]({{site.info}}api/Addon_BarcodeReader.html#getruntimesettings) and change with the method [ `updateRuntimeSettings()` ]({{site.info}}api/Addon_BarcodeReader.html#updateruntimesettings). Now to demonstrate a few typical customization scenarios:
+The runtime settings of the add-on gives you access to a wide array of customizable parameters, all of which you can check out with the method [ `getRuntimeSettings()` ]({{site.info}}api/Addon_BarcodeReader.html#getruntimesettings) and change with the method [ `updateRuntimeSettings()` ]({{site.info}}api/Addon_BarcodeReader.html#updateruntimesettings). Now to demonstrate a few typical customization scenarios:
 
 ### Specify the Barcode Type(s) to Read
 
@@ -336,7 +336,7 @@ ReadBarcode(0);
 
 ### As document classifier
 
-The following code reads all barcodes from all images and put images which have the same barcode into one document. Images without any barcode are put into another separate document.
+The following code reads all barcodes from all images and puts images which have the same barcode into one document. Images without any barcodes are put into another separate document.
 
 ``` javascript
 // `aryIndices` consists of multiple arrays each of which represents a document
