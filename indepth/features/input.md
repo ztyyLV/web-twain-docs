@@ -323,7 +323,7 @@ DWObject.LoadImage("YOUR-FILE-PATH", onSuccess, onFailure);
 
 ### Download
 
-> `Download` is another type of `Load`. The only difference is the file to load needs to be transferred to the local device via the network first. `DWT` takes care of the whole process and supports both `HTTP` and `FTP`.
+> `Download` is another type of `Load`. The only difference between a `Download` with what's written above is that the file to load needs to be transferred to the local device via the network first. `DWT` takes care of the whole process and supports both `HTTP` and `FTP`.
 
 #### `HTTP` or `HTTPS`
 

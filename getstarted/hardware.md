@@ -35,6 +35,7 @@ Dynamic Web TWAIN's main feature is interacting with imaging devices like scanne
 
 After you have installed the driver for your scanner, you can refer to the following methods to verify whether your scanner is TWAIN compliant.
 
+
 * [Recommended & Easiest] Take advantage of our official demo page
 
   + Open the [demo page](https://demo.dynamsoft.com/dwt/online_demo_scan.aspx) on [Windows]({{site.getstarted}}platform.html#browsers-on-windows)
@@ -179,7 +180,7 @@ There are 3 ways to verify whether your scanner is SANE compliant.
 
 ![Hardware-Scanners-Cameras-4]({{site.assets}}imgs/Hardware-Scanners-Cameras-4.png)
 
-`DirectShow Cameras` refers to cameras which can be accessed via the [Microsoft DirectShow architecture](https://docs.microsoft.com/en-us/windows/win32/directshow/introduction-to-directshow). These cameras are either built into desktops/laptops or connected via USB.
+`DirectShow Cameras` refer to the cameras which can be accessed via the [Microsoft DirectShow architecture](https://docs.microsoft.com/en-us/windows/win32/directshow/introduction-to-directshow). These cameras are either built into desktops / laptops or connected via USB.
 
 ### Is my Camera DirectShow Compliant?
 
