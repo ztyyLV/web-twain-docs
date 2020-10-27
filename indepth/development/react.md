@@ -9,15 +9,15 @@ description: Dynamic Web TWAIN SDK Documentation React Integration Page
 
 # Use DWT with React
 
-[React](https://reactjs.org/) is a JavaScript library specifically meant for creating interactive UIs. Check out the following on how to implement `DWT` into a React application.
+[React](https://reactjs.org/) is a JavaScript library meant explicitly for creating interactive UIs. Follow this guide to learn how to implement `DWT` in a React application.
 
 ## Preparation
 
 Make sure you have [node](https://nodejs.org/) and [yarn](https://yarnpkg.com/cli/install) installed. `node 14.4.0` and `yarn 1.22.4` are used in the example below.
 
-## Create the sample project
+## Create the Sample Project
 
-### Create a bootstrapped raw React application
+### Create a Bootstrapped Raw React Application
 
 ``` cmd
 npx create-react-app dwt-react
@@ -35,9 +35,9 @@ yarn add ncp
 
 > `ncp` is used to copy static resources files.
 
-## Configure the project
+## Configure the Project
 
-Open `package.json` and change `scripts` like this.
+Open `package.json` and change `scripts` like this:
 
 ``` json
 "scripts": {
@@ -48,17 +48,17 @@ Open `package.json` and change `scripts` like this.
 },
 ```
 
-> The change ensures the static files required to run `DWT` are copied over to the built resulting project.
+> The change ensures the static files required to run `DWT` are copied over to the built project.
 
-## Start to implement
+## Implementation
 
-### Generate a component
+### Generate a Component
 
-Under `/src/` , create a new JavaScript file and name it `dwt.js` .
+Under `/src/`, create a new JavaScript file and name it `dwt.js`.
 
-### Edit the component
+### Edit the Component
 
-* Copy the following to `dwt.js` .
+* Copy the following to the newly created `dwt.js`.
 
 ``` typescript
 import React from 'react';
@@ -104,9 +104,9 @@ export default class DWT extends React.Component {
 > * `containerId` specifies the DIV to create `DWT` viewer in which is defined in the `template`.
 > * `OnWebTwainReady` is the callback triggered when the initialization succeeds.
 > * `ProductKey` must be set to a valid trial or full key.
-> * `ResourcesPath` is set to the location of the static files mentioned in [Configure the project](#configure-the-project).
+> * `ResourcesPath` points to the location of the static files mentioned in [Configure the project](#configure-the-project).
 
-### Add the component to `App.js`
+### Add the Component to `App.js`
 
 ``` javascript
 import React from 'react';
@@ -120,13 +120,13 @@ function App() {
 export default App;
 ```
 
-### Try running the project
+### Run the Application
 
 ``` cmd
 yarn start
 ```
 
-> If you have installed `DWT` and have configured a valid `ProductKey` . You will have a working page to scan documents from your scanner now. Otherwise, you should see instructions on the page that guide you to install the library. [More info>>]({{site.indepth}}features/initialize.html#installation-of-the-dynamsoft-service).
+> If you have installed `DWT` and have configured a valid `ProductKey`, you will have a working page to scan documents from your scanner now. Otherwise, you should see instructions on the page that guide you to install the library. [More info>>]({{site.indepth}}features/initialize.html#installation-of-the-dynamsoft-service).
 
 ## Official Samples
 

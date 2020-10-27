@@ -1,3 +1,4 @@
+
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
@@ -7,7 +8,7 @@ breadcrumbText: Handle Errors
 description: Dynamic Web TWAIN SDK Documentation Handle Errors Page
 ---
 
-# Handle Errors
+# Handling Errors
 
 ## License Errors
 
@@ -19,17 +20,17 @@ You get an error message that says "The current product key does not support xxx
 
 * Cause
 
-You are trying to use a unlicensed feature of `DWT` or use it on a unlicensed `Platform` or `Browser` .
+You are trying to use an unlicensed feature of `DWT` or use it on an unlicensed `Platform` or `Browser` .
 
 * Resolution
 
-Make sure you have the correct license. If you have doubts, you can contact [Dynamsoft Support]({{site.about}}getsupport.html).
+Make sure you have the correct license set in the proper configuration. If you have doubts or questions, you can contact [Dynamsoft Support]({{site.about}}getsupport.html).
 
 ### The current product key does not match the domain
 
 * Symptom
 
-When you fail to use `DWT` , you may get this error.
+When you visit a `DWT` application , you may be met wit this error message.
 
 * Cause
 
@@ -37,7 +38,7 @@ To protect your license, you can bind it to your domain. When you do this, you m
 
 * Resolution
 
-Make sure you deployed the application to the domain bound in your license or add the domain to your license bindings.
+Make sure you deployed the application to the domain bound to your license or add the domainyou would like to your license bindings by contacting [Dynamsoft Support]({{site.about}}getsupport.html).
 
 ### Your trial license has expired
 
@@ -67,11 +68,11 @@ When you use the OCRPro addon, you may receive this error message returned by th
 
 * Cause
 
-It's a license issue. The OCRPro licenses are yearly licenses and each license has a limitation on the number of pages allowed to be OCR'ed. The SDK will throw this error when the limitation is reached.
+It is a license issue. The OCRPro licenses are yearly licenses and each license has a limitation on the number of pages allowed to be OCR'ed. The SDK will throw this error when the limitation is reached.
 
 * Solution
 
-The license quota has been used up and more quota needs to be purchased.
+The license quota has been used up and extra quota needs to be purchased. Contact [Dynamsoft Support]({{site.about}}getsupport.html) for any assistance.
 
 ## Common errors
 
@@ -79,15 +80,15 @@ The license quota has been used up and more quota needs to be purchased.
 
 * Symptom
 
-When you try scanning an image with Dynamic Web TWAIN, you may receive the error message General failure in the ErrorString property.
+When you try scanning an image with Dynamic Web TWAIN, you may receive the error message "General failure" in the ErrorString property.
 
 * Cause
 
-The problem occurs when the source (scanner) is NOT disabled completely after a scanning session or the source is currently unavailable.
+The problem occurs when the source (scanner) is *not* disabled completely after a scanning session or the source is currently unavailable.
 
 * Resolution
 
-You can set [IfDisableSourceAfterAcquire]({{site.info}}api/WebTwain_Acquire.html#ifdisablesourceafteracquire) to `true` .
+You can set [IfDisableSourceAfterAcquire]({{site.info}}api/WebTwain_Acquire.html#ifdisablesourceafteracquire) to `true` . It must be set before the call to [SelectSource]({{site.info}}api/WebTwain_Acquire.html#selectsource)
 
 ``` javascript
 function AcquireImage() {
@@ -112,9 +113,8 @@ The problem may occur when a connection with the server is not available.
   + Check if the HTTP port you set in your code coincides with the port number you set on your web server. You can use the [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport) property to set the port number.
   + Make sure the address of the server is available. To check this, you can ping the address from a client machine.
 
-> Note
->  
-> Both the machine name and the IP address of the server can be used for the HTTP Upload method.
+> Note:
+> Both the machine name and the IP address of the server can be used for the HTTPUpload method.
 
 ### HTTP process error
 
@@ -125,68 +125,63 @@ When you upload images using any of the HTTPUploadThroughPost*** methods, you ma
 * Cause
   + The write permission is not granted to the specified directory on the web server.
   + The action page is incorrect or returns something from the web server.
-  + The port for uploading is not right.
+  + The port specified for uploading is the incorrect one.
   + The size of the images you are trying to upload is beyond the maximum allowed size set by the server.
 
 * Solution
   + Make sure the users who are uploading have permission to write images to the specified directory on the web server. (For example, give "Write" permission to the Authenticated Users.)
   + Check the response string returned from the HTTP server to figure out the cause of the process error. You can get this string by using the [HTTPPostResponseString]({{site.info}}api/WebTwain_IO.html#httppostresponsestring) property.
-  + Set the port with the property [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport).
+  + Set the port to the correct one using [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport). We recommend you get the Port and Server values this way:
+  
+	``` javascript
+		var strHTTPServer = location.hostname;
+		DWObject.HTTPPort = location.port == "" ? 80 : location.port;
+	```
+	+ If you have set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true, you must set a secure port for the HTTPPort property. For example, 
 
-  > For example: If the URL for the scan page is "http://localhost:3253/....", you should set the port to 3253.
+	``` javascript
+	DWObject.IfSSL = true;
+	DWObject.HTTPPort = 443;
+	```
+> For example: If the URL for the scan page is "http://localhost:3253/....", you should set the port to 3253.
 
-We recommend you get the Port and Server value this way:
+* Checking the server-side configuration is also useful in this scenario
+	+ Please reset the maximum transferable data size. If you are using `ASP.NET` , you can change the value in the following line in the `Web.Config` file.
 
-``` javascript
-var strHTTPServer = location.hostname;
-DWObject.HTTPPort = location.port == "" ? 80 : location.port;
-```
+		``` xml
+		<httpRuntime maxRequestLength="1000000"/> // In kilobytes
+		```
 
-If you have set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true, you must set a secure port for the HTTPPort property. For example, 
+		This line may also be required
 
-``` javascript
-DWObject.IfSSL = true;
-DWObject.HTTPPort = 443;
-```
+		``` xml
+		<requestLimits maxAllowedContentLength="300000000" /> // In bytes
+		```
 
-  + Please reset the maximum transferable data size
+		The following is an example config file
 
-If you are using `ASP.NET` , you can change the value in the following line in the `Web.Config` file.
+		``` xml
+		<?xml version="1.0" encoding="UTF-8"?>
+		<configuration>
+		    <system.web>
+		        <httpRuntime executionTimeout="3000"  maxRequestLength="102400"/>
+		        <compilation debug="true" />
+		    </system.web>
+		    <system.webServer>
+		        <security>
+		            <requestFiltering>
+		                <requestLimits maxAllowedContentLength="300000000" />
+		            </requestFiltering>
+		        </security>
+		    </system.webServer>
+		</configuration>
+		```
 
-``` xml
-<httpRuntime maxRequestLength="1000000"/> // In kilobytes
-```
+		If you are using `PHP` , you can change the value in the following line in the `php.ini` file:
 
-This line may also be required
-
-``` xml
-<requestLimits maxAllowedContentLength="300000000" /> // In bytes
-```
-
-The following is an example config file
-
-``` xml
-<?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-    <system.web>
-        <httpRuntime executionTimeout="3000"  maxRequestLength="102400"/>
-        <compilation debug="true" />
-    </system.web>
-    <system.webServer>
-        <security>
-            <requestFiltering>
-                <requestLimits maxAllowedContentLength="300000000" />
-            </requestFiltering>
-        </security>
-    </system.webServer>
-</configuration>
-```
-
-If you are using `PHP` , you can change the value in the following line in the `php.ini` file:
-
-``` shell
-upload_max_filesize = 2M
-```
+		``` shell
+		upload_max_filesize = 2M
+		```
 
 ### HTTP request error
 
@@ -206,7 +201,7 @@ When you upload images via HTTP Put, you may get this error.
     - Right-click the specified work folder, select Properties.
     - Select the Write option at the Directory tab.
 
-  + If you are using Tomcat, the `doPut()` will check to see if the `readonly` property has been changed to `false` . If it has not, the HTTP Put operation is not allowed. Please go to {Tomcat installation directory} -> conf -> web.xml, find the default servlet configuration (org.apache.catalina.servlets. DefaultServlet) and change the `readonly` property to `true` .
+  + If you are using Tomcat, the `doPut()` will check to see if the `readonly` property has been changed to `false`. If it has not, the HTTP Put operation is not allowed. Please go to {Tomcat installation directory} -> conf -> web.xml, find the default servlet configuration (org.apache.catalina.servlets. DefaultServlet) and change the `readonly` property to `true` .
 
 ``` xml
 <init-param>
@@ -219,7 +214,7 @@ When you upload images via HTTP Put, you may get this error.
 
 * Symptom
 
-When you save or upload an image as a JPEG file, you may receive the error.\
+When you save or upload an image as a JPEG file, you may receive the error.
 
 * Cause
 
@@ -247,83 +242,82 @@ if ( /*If save in JPEG*/ ) {
 
 * Symptom
 
-You get the error
+	You get the error
 
-``` shell
-XMLHttpRequest cannot load xxxxx. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://xxxxxxx' is therefore not allowed access.
-```
+	``` shell
+	XMLHttpRequest cannot load xxxxx. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://xxxxxxx' is therefore not allowed access.
+	```
 
 * Cause
 
-You are uploading or downloading to/from a web server which is in a different domain than your current website and that web server doesn't allow accessing from a different domain.
+	You are uploading or downloading to/from a web server which is in a different domain than your current website and that web server doesn't allow accessing from a different domain.
 
 * Solution
 
-Try uploading to the same domain or update the server side configuration to allow cross domain requests. If you are using IIS, you can refer to the following configuration.
+	Try uploading to the same domain or update the server side configuration to allow cross domain requests. If you are using IIS, you can refer to the following configuration.
 
-``` xml
-<system.webServer>
-    <httpProtocol>
-            <customHeaders>
-            <add name="Access-Control-Allow-Origin" value="*" />
-            <add name="Access-Control-Allow-Methods" value="OPTIONS, POST, GET, PUT" />
-            <add name="Access-Control-Allow-Headers" value="x-requested-with" />
-            <add name="Access-Control-Allow-Credentials" value="true" />
-        </customHeaders>
-    </httpProtocol>
-</system.webServer>
-```
+	``` xml
+	<system.webServer>
+	    <httpProtocol>
+	            <customHeaders>
+	            <add name="Access-Control-Allow-Origin" value="*" />
+	            <add name="Access-Control-Allow-Methods" value="OPTIONS, POST, GET, PUT" />
+	            <add name="Access-Control-Allow-Headers" value="x-requested-with" />
+	            <add name="Access-Control-Allow-Credentials" value="true" />
+	        </customHeaders>
+	    </httpProtocol>
+	</system.webServer>
+	```
 
 > Note
 >  
 > After updating the server configuration file, you'll need to restart the server (i.e. IIS).
 >  
-> If you are downloading a file, you might need to clear browser cache because a cached file will not be requested again from the server, thus still no 'Access-Control-Allow-Origin' header will be presented.
+> If you are downloading a file, you might need to clear the browser cache because a cached file will not be requested again from the server, thus still no 'Access-Control-Allow-Origin' header will be presented.
 >  
 > If you are using Windows Authentication, you may need to change the default setting of `withCredentials` in the `dynamsoft.webtwain.initiate.js` file. To do that, open the JS file, find `withCredentials:false` and change it to `withCredentials:true` .
 
-### Source is connected to maximum supported number of applications
+### Source is connected to the maximum supported number of applications
 
 * Symptom
 
-When you try to acquire images, you may get this error.
+	When you try to acquire images, you may get this error.
 
 * Cause
 
-The problem may occur when the source is NOT disabled completely after a transfer ends or is used by other applications.
+	The problem may occur when the source is **not** disabled completely after a transfer ends or is used by other applications.
 
 * Resolution
   + Check whether another application is using the source. If yes, close it and try again.
   + Set [IfDisableSourceAfterAcquire]({{site.info}}api/WebTwain_Acquire.html#ifdisablesourceafteracquire) to `true` and use [CloseSource()]({{site.info}}api/WebTwain_Acquire.html#closesource) to make sure that the source is closed after a scanning session.
 
-``` javascript
-function btnScan_onclick() {
-    DWObject.RegisterEvent("OnPostAllTransfers", function() {
-        DWObject.CloseSource();
-    });
-    DWObject.SelectSource();
-    DWObject.CloseSource(); //close source before open
-    DWObject.OpenSource();
-    DWObject.IfDisableSourceAfterAcquire = true; //close source after acquiring
-    DWObject.AcquireImage();
-}
-```
-
-  + Reboot your device.
+	``` javascript
+	function btnScan_onclick() {
+	    DWObject.RegisterEvent("OnPostAllTransfers", function() {
+	        DWObject.CloseSource();
+	    });
+	    DWObject.SelectSource();
+	    DWObject.CloseSource(); //close source before open
+	    DWObject.OpenSource();
+	    DWObject.IfDisableSourceAfterAcquire = true; //close source after acquiring
+	    DWObject.AcquireImage();
+	}
+	```  
+	Reboot your device.
 
 ### Sequence error
 
 * Symptom
 
-When you fail to acquire images from your scanner, you may get this error.
+	When you fail to acquire images from your scanner, you may get this error.
 
 * Cause
 
-The problem happens when the process does not occur in a correct TWAIN sequence.
+	The problem happens when the process does not occur in the correct TWAIN sequence.
 
 * Resolution
 
-Check if you followed the acquisition sequence to get images from your device. For example, some methods and properties, like the [PixelType]({{site.info}}api/WebTwain_Acquire.html#pixeltype) property, can only be used after calling the [OpenSource()]({{site.info}}api/WebTwain_Acquire.html#opensource) method. Please check the TWAIN State Transition Diagram below for more information
+	Check if you followed the acquisition sequence to get images from your device. For example, some methods and properties, like the [PixelType]({{site.info}}api/WebTwain_Acquire.html#pixeltype) property, can only be used after calling the [OpenSource()]({{site.info}}api/WebTwain_Acquire.html#opensource) method. Please check the TWAIN State Transition Diagram below for more information
 
 ![TWAIN State Transition]({{site.assets}}imgs/TWAIN-State-Transition.png)
 
@@ -331,28 +325,28 @@ Check if you followed the acquisition sequence to get images from your device. F
 
 * Symptom
 
-When you fail to upload images, you may get this error
+	When you fail to upload images, you may get this error
 
 * Cause
 
-`dwt-md5` is a default built-in header in `DWT` . It is used for each uploading process to test the integrity of data. Since this is not a standard header, the browser will send an OPTIONS preflight request before the original request is sent to verify that this header is allowed. If not, the browser will return the above error.
+	`dwt-md5` is a default built-in header in `DWT` . It is used for each uploading process to test the integrity of data. Since this is not a standard header, the browser will send an OPTIONS preflight request before the original request is sent to verify that this header is allowed. If not, the browser will return the above error.
 
 * Solution
 
-Update your server-side configuration file as per your environment. If you are using IIS, you can refer to the following configuration.
+	Update your server-side configuration file as per your environment. If you are using IIS, you can refer to the following configuration.
 
-``` xml
-<system.webServer>
-    <httpProtocol>
-        <customHeaders>
-            <add name="Access-Control-Allow-Origin" value="*" />
-            <add name="Access-Control-Allow-Methods" value="OPTIONS, POST, GET, PUT" />
-            <add name="Access-Control-Allow-Headers" value="x-requested-with, dwt-md5" />
-            <add name="Access-Control-Allow-Credentials" value="true" />
-        </customHeaders>
-    </httpProtocol>
-</system.webServer>
-```
+	``` xml
+	<system.webServer>
+	    <httpProtocol>
+	        <customHeaders>
+	            <add name="Access-Control-Allow-Origin" value="*" />
+	            <add name="Access-Control-Allow-Methods" value="OPTIONS, POST, GET, PUT" />
+	            <add name="Access-Control-Allow-Headers" value="x-requested-with, dwt-md5" />
+	            <add name="Access-Control-Allow-Credentials" value="true" />
+	        </customHeaders>
+	    </httpProtocol>
+	</system.webServer>
+	```
 
 > Note
 >  

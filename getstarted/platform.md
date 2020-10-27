@@ -9,7 +9,7 @@ description: Dynamic Web TWAIN SDK Documentation Platform Page
 
 # Platforms
 
-`DWT` is designed to be cross-platform which means it can work on all major browsers across all major operating systems. The following shows more details.
+`DWT` is designed to be cross-platform, thus, `DWT` works in all major browsers across all major operating systems.
 
 ## Browsers on desktop devices
 
@@ -117,7 +117,7 @@ The following versions are supported
   + Chrome 68.* ~ 79.* (no video streaming)
   + Chrome 80.* ~ 85.* (no video streaming) `Recommended`
   + Firefox 61.* ~ 69.* (no video streaming)
-  + Firefox 70.* ~ 80.* `Recommended`
+  + Firefox 70.* ~ 80.* (no video streaming) `Recommended`
   + Safari 7.* ~ 12.*
   + Safari 13.* ~ 14.* `Recommended`
 
