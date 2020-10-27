@@ -33,16 +33,16 @@ DWT supports all major browsers on all major operating systems. As of version 16
 >  
 > For better performance, the following are recommended
 > * OS
-> - Windows 7 & 10
-> - macOS 10.13 ~ 10.15
-> - Linux (Ubuntu 18.04, Debian 9, Fedora 32)
-> - iOS 13 & iPadOS 13
-> - Android 10 & 11
+>   + Windows 7 & 10
+>   + macOS 10.13 ~ 10.15
+>   + Linux (Ubuntu 18.04, Debian 9, Fedora 32)
+>   + iOS 13 & iPadOS 13
+>   + Android 10 & 11
 > * Browser
-> - Chrome 80+
-> - Firefox 70+
-> - Edge Anaheim
-> - Safari 13
+>   + Chrome 80+
+>   + Firefox 70+
+>   + Edge Anaheim
+>   + Safari 13
 
 Check out more on [platforms]({{site.getstarted}}platform.html).
 
