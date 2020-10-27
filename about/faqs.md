@@ -112,7 +112,11 @@ Resources files help you include `DWT` in your application. The following shows 
 
     - DynamsoftServiceSetup.deb
 
-    > For Linux
+    > For Linux (Debian)
+
+    - DynamsoftServiceSetup.rpm
+
+    > For Linux (Redhat)
 
     - DynamsoftServiceSetup.msi
 
@@ -121,10 +125,6 @@ Resources files help you include `DWT` in your application. The following shows 
     - DynamsoftServiceSetup.pkg
 
     > For macOS
-
-    - DynamsoftServiceSetup.rpm
-
-    > For Linux
 
     - LICENSE
   + src
@@ -156,4 +156,4 @@ The following two files are present in the [dwt package](https://github.com/dyna
 
 * dynamsoft.webtwain.min.mjs
 
-> This file is like dynamsoft.webtwain.min.js but is built by the ECMAScript 5 (es5) standard. It's used by applications (Angular, React, Vue, etc.) that import the `dwt` package as an module.
+> This file is like dynamsoft.webtwain.min.js but is built by the ECMAScript 6 (ES6) standard. It's used by applications (Angular, React, Vue, etc.) that import the `dwt` package as a module.

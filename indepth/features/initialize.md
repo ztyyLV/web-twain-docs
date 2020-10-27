@@ -31,11 +31,11 @@ If a user who hasn't installed the Dynamsoft Service accesses the web page (whic
 >
 > Debian / Ubuntu: 
 > ``` 
-> dpkg -i DynamsoftServiceSetup.deb
+> sudo dpkg -i DynamsoftServiceSetup.deb
 > ```
 > Fedora
 > ``` 
-> rpm -ivh DynamsoftServiceSetup.rpm
+> sudo rpm -ivh DynamsoftServiceSetup.rpm
 > ```
 
 ![Initialization]({{site.assets}}imgs/Initialization-1.png)
@@ -93,7 +93,7 @@ This file is used for basic configuration of `DWT` . Here is where you configure
 
 #### Q: Why do I see `dynamsoft.webtwain.min.js` and `dynamsoft.webtwain.min.mjs` instead of the 2 files above
 
-**A**: The two files are present in the official [npm package `dwt` ](https://github.com/dynamsoft-dwt/web-twain-package) . For simplicity, in each of these files Dynamsoft has included all necessary JavaScript code which includes both files mentioned above plus `dynamsoft.webtwain.install.js` and all extra components (add-ons). The ".js" file is a simple combination of the code while the ".mjs" file is built as an ES6 Module that is used in applications based on `Angular` , `React` and `Vue` , etc.
+**A**: The two files are present in the official [npm package `dwt` ](https://github.com/dynamsoft-dwt/web-twain-package) . For simplicity, in each of these files Dynamsoft has included all necessary JavaScript code which includes both files mentioned above plus `dynamsoft.webtwain.install.js` and all extra components (add-ons). The ".js" file is a simple combination of the code while the ".mjs" file is built as an ECMAScript 6 (ES6) Module that is used in applications based on `Angular` , `React` and `Vue` , etc.
 
 In a regular application, referencing `dynamsoft.webtwain.min.js` alone would be more than enough than referencing `dynamsoft.webtwain.config.js` and `dynamsoft.webtwain.initiate.js` . 
 
@@ -149,7 +149,7 @@ The first five files in the above list contain functionalities for image IO (dec
 
 #### Questions
 
-##### Q: Are all 7 files mentioned above used exclusivly in WASM mode
+##### Q: Are all 7 files mentioned above used exclusively in WASM mode
 
 **A**: No, the library will use the WASM files even in service mode when one of the following conditions is met
 

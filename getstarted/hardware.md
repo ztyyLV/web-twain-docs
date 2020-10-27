@@ -9,11 +9,13 @@ description: Dynamic Web TWAIN SDK Documentation Hardware Page
 
 # Hardware
 
-Dynamic Web TWAIN's main feature is interacting with imaging devices like scanners and cameras. In this section, we'll look at the supported devices.
+`DWT`'s main feature is interacting with imaging devices like scanners and cameras. In this section, we'll look at the supported devices.
 
 - [TWAIN Scanners](#twain-scanners)
 - [ICA Scanners](#ica-scanners)
 - [SANE Scanners](#sane-scanners)
+- [DirectShow Cameras](#directshow-cameras)
+- [MediaDevices Cameras](#mediadevices-cameras)
 
 ## TWAIN Scanners
 
@@ -90,7 +92,7 @@ If you don't have a TWAIN scanner at hand to test the library. You can download 
 
 `WIA` refers to [Windows Image Acquisition](https://docs.microsoft.com/en-us/windows/win32/wia/-wia-startpage), which is the still image acquisition platform in the Windows family that enables imaging/graphics applications to interact with imaging hardware and standardizes the interaction between different applications and scanners. 
 
-`WIA` devices can be used by `TWAIN` applications like the Dynamic Web TWAIN library through a `TWAIN compatibility layer`. This means `WIA` is not supported natively; therefore, when a device supports both `TWAIN` and `WIA` , `TWAIN` is the better option.
+`WIA` devices can be used by `TWAIN` applications like `DWT` through a `TWAIN compatibility layer`. This means `WIA` is not supported natively; therefore, when a device supports both `TWAIN` and `WIA` , `TWAIN` is the better option.
 
 By comparison, `WIA` can only control a very limited set of general capabilities of the devices while `TWAIN` can control all standard and even custom capabilities of the devices. Another thing is that `TWAIN` has three transfer modes (Native, Memory, File), while `WIA` only has two (Memory, File).
 
@@ -152,7 +154,7 @@ There are 3 ways to verify whether your scanner is ICA compliant.
 
 * SANE is supported on multiple Linux distributions.
 
-* As of version 16.1.1, Dynamic Web TWAIN supports SANE v1.0.25.
+* As of version 16.1.1, `DWT` supports SANE v1.0.25.
 
 ### Is my Scanner SANE Compliant?
 
@@ -222,7 +224,7 @@ There are 3 ways to verify whether your scanner is SANE compliant.
 
 > Applicable to Windows only
 
-There are two ways to achive this:
+There are two ways to achieve this:
 
 * Set `IfUseTwainDSM` to `true`
 
