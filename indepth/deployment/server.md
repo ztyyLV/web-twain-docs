@@ -50,13 +50,4 @@ When you set `ResourcesPath` wrong, static files such as `dynamsoft.webtwain.ins
 
 In some cases, you might not be able to *calculate* the correct relative path for these files and wishes to use an absolute path instead such as "https://www.dynamsoft.com/dwt/demo/resources/". This is supported but keep in mind that if you want to use the new [Camera module]({{site.indepth}}features/Input.html#use-mediadevices-cameras) or run `DWT` in the [WASM mode]({{site.indepth}}features/initialize.html#wasm-mode), you must make sure the absolute path stays in the same domain to avoid cross-origin issues.
 
-<!-->
 
-    - Mention multiple servers
-
-https://developer.dynamsoft.com/dwt/kb/2005
-
-https://www.dynamsoft.com/docs/dwt/KB/Deploy-Dist.html#environment
-
-https://developer.dynamsoft.com/dwt/kb/2057
--->
