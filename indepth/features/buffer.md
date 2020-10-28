@@ -162,6 +162,6 @@ The buffer also provides a few event callbacks that take place under specific co
 
 * [ `OnTopImageInTheViewChanged` ]({{site.info}}api/WebTwain_Buffer.html#ontopimageintheviewchanged) This event is triggered when the first **visible** image in the viewer changes.
 
-* [ `OnIndexChangeDragDropDone` ]({{site.info}}api/WebTwain_Buffer.html#onindexchangedragdropdone) This event is triggered when you drag and drop images in the viewer to change their postions.
+* [ `OnIndexChangeDragDropDone` ]({{site.info}}api/WebTwain_Buffer.html#onindexchangedragdropdone) This event is triggered when you drag and drop images in the viewer to change their positions.
 
 <!-- An event to fire when selection change -->
