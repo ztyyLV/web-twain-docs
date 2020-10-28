@@ -102,17 +102,17 @@ description: Dynamic Web TWAIN SDK Documentation Platform Page
 
 ## ActiveX browsers
 
-ActiveX browsers refer to Internet Explorer 8 and 9. They are not included in the above lists.
+ActiveX browsers refers to Internet Explorer 8 and 9. They are not included in the above lists.
 
 ## Browsers on mobile devices
 
 ### Browsers on iOS & iPadOS
 
-The following versions are supported
-
+* The following versions are supported
   + iOS 12.*
   + iOS 13.* `Recommended`
   + iPadOS 13.* `Recommended`
+
 * The following browsers are supported
   + Chrome 68.* ~ 79.* (no video streaming)
   + Chrome 80.* ~ 85.* (no video streaming) `Recommended`
@@ -123,11 +123,11 @@ The following versions are supported
 
 ### Browsers on Android
 
-The following versions are supported
-
+* The following versions are supported
   + Android 8.0 Oreo
   + Android 9 Pie `Recommended`
   + Android 10 `Recommended`
+
 * The following browsers are supported
   + Chrome 68.* ~ 79.*
   + Chrome 80.* ~ 85.* `Recommended`
