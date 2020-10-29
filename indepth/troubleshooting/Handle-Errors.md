@@ -29,7 +29,7 @@ Make sure you have the correct license set in the proper configuration. If you h
 
 * Symptom
 
-When you visit a `DWT` application , you may be met wit this error message.
+When you visit a `DWT` application , you may be met with this error message.
 
 * Cause
 
@@ -37,7 +37,7 @@ To protect your license, you can bind it to your domain. When you do this, you m
 
 * Resolution
 
-Make sure you deployed the application to the domain bound to your license or add the domainyou would like to your license bindings by contacting [Dynamsoft Support]({{site.about}}getsupport.html).
+Make sure you deployed the application to the domain bound to your license or add the domain to your license bindings by contacting [Dynamsoft Support]({{site.about}}getsupport.html).
 
 ### Your trial license has expired
 

@@ -127,7 +127,7 @@ Similar to existing desktop functionality but the performance is not as good.
 
 #### Uploading
 
-Similiar to existing desktop browser functionality but is limited to only one API [ `HTTPUpload()` ]({{site.info}}api/WebTwain_IO.html#httpupload).
+Similar to existing desktop browser functionality but is limited to only one API [ `HTTPUpload()` ]({{site.info}}api/WebTwain_IO.html#httpupload).
 
 #### Viewing
 

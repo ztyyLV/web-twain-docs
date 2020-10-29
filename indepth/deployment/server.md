@@ -31,7 +31,6 @@ Once you have finished integrating `DWT` in your application, you can deploy it 
 
 If you need to use any of the following features, you must enable HTTPS on the server.
 
-* Run `DWT` in the [WASM mode]({{site.indepth}}features/initialize.html#wasm-mode)
 * Use the new [Camera module]({{site.indepth}}features/Input.html#use-mediadevices-cameras)
 * Upload or Download via SSL
 * Any other features that require a secure connection
