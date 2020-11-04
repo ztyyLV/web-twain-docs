@@ -3,11 +3,11 @@ layout: default-layout
 needAutoGenerateSidebar: true
 title: Dynamic Web TWAIN Schedule - Stable Release
 keywords: Dynamic Web TWAIN, Documentation, Schedule, Stable Release
-breadcrumbText: Stable
+breadcrumbText: Stable Releases
 description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 ---
 
-# Releases
+# Stable Releases
 
 ## `16.1.1` (08/13/2020)
 
