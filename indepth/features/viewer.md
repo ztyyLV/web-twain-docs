@@ -53,13 +53,15 @@ DWObject.UpdateViewer({
 
 ### Questions
 
-#### Can I change the language used on the viewer
+#### Q: How to display the thumbnail viewer?
 
-Yes. >>>>>>>>>>>
+#### Q: Can I change the language used on the viewer?
 
-#### Can I change the colors of the viewer
+A: Yes.
 
-Yes, you can use the following to change the colors of the viewer.
+#### Q: Can I change the colors of the viewer?
+
+A: Yes, you can use the following to change the colors of the viewer.
 
 ## Use the Viewer
 
@@ -112,6 +114,7 @@ Accessing the image editor is simple, all you need to do is call the ShowImageEd
 Calling the method by default will have the image editor occupy the entire image. However, you can customize that by assigning the image editor a specific 'div' element in code, specified by the input parameter(s).
 
 ``` 
+
 DWObject.ShowImageEditor(); // displays image editor in full screen
 DWObject.ShowImageEditor("divID", <width in px>, <height in px>); // limit the image editor to a section of the page
 ```

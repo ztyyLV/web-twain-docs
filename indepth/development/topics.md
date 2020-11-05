@@ -52,13 +52,53 @@ DWObject.RegisterEvent("OnPostTransferAsync", function(info) {
     deskew(DWObject.ImageIDToIndex(info.imageId));
 });
 ```
+
+## How to insert images to a specified index
+
+By default, when you scan or load images, they are appended to the end of the image array in buffer. However, in some business scenarios, the user might want to insert these new images to a specified index. Unfortunately, `DWT` doesn't provide a native method for that. The following code snippet shows how it can be done
+
+### Insert when acquiring
+
+``` javascript
+function acquireToIndex(index) {
+
+    DWObject.IfAppendImage = false;
+    DWObject.CurrentImageIndexInBuffer = index;
+    DWObject.RegisterEvent('OnPostTransfer', function() {
+        DWObject.CurrentImageIndexInBuffer++;
+    });
+    DWObject.RegisterEvent('OnPostAllTransfers', function() {
+        DWObject.IfAppendImage = true;
+    });
+    DWObject.AcquireImage();
+
+}
+```
+
+### Insert when loading
+
+``` javascript
+function loadToIndex(index) {
+
+    var oldCount = DWObject.HowManyImagesInBuffer;
+    DWObject.RegisterEvent('OnPostLoad', function() {
+        var newCount = DWObject.HowManyImagesInBuffer;
+        for (var j = 0; j < newCount - oldCount; j++)
+            DWObject.MoveImage(oldCount + j, index + j);
+    });
+    DWObject.LoadImageEx('', 5);
+
+}
+```
+
 <!--
+
 ## How to achieve automation
 
 * Event-driving workflow
 * Next-gen API like `startScan`
-https://www.dynamsoft.com/docs/dwt/KB/Dev-Customize.html
 
+https://www.dynamsoft.com/docs/dwt/KB/Dev-Customize.html
 
 https://developer.dynamsoft.com/dwt/kb/2797
 
