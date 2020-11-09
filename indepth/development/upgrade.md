@@ -105,7 +105,7 @@ Once upgraded, the old WASM files will continue to exist in the browser as cache
 
 ### Expand your application to mobile platforms
 
-If you are upgrading to version 16 for mobile functionality (basically, `DWT` in [wasm mode]({{site.indepth}}features/initialize.html#wasm-mode)), there are some considerations to be made. As mobile support is one of the newest offerings from Dynamsoft, not all of the old `DWT` features are fully available at present. That said, we are constantly working on increasing the supported mobile feature set, so we recommend reviewing our [release notes]({{site.info}}schedule/released.html), and if you have any doubts, contact [Dynamsoft Support]({{site.about}}getsupport.html).
+If you are upgrading to version 16 for mobile functionality (basically, `DWT` in [wasm mode]({{site.indepth}}features/initialize.html#wasm-mode)), there are some considerations to be made. As mobile support is one of the newest offerings from Dynamsoft, not all of the old `DWT` features are fully available at present. That said, we are constantly working on increasing the supported mobile feature set, so we recommend reviewing our [release notes]({{site.info}}schedule/stable.html), and if you have any doubts, contact [Dynamsoft Support]({{site.about}}getsupport.html).
 
 As an example for how some existing `DWT` features will work on [mobile platforms]({{site.getstarted}}platform.html#browsers-on-mobile-devices), see below: 
 

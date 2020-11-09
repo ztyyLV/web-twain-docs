@@ -31,7 +31,7 @@ Dynamsoft has a substantial customer base and their benefits are our biggest con
 
 Simultaneously, the ActiveX edition of `DWT` will also be slowly phased out by Dynamsoft, just like IE by Microsoft. On the one hand, IE is reaching its end of life. On the other hand, outdated technologies are incompatible with updated Web standards, which hinders `DWT` development.
 
-If you check our [release notes]({{site.info}}schedule/released.html), you can find that most of our development has been done to the HTML5-based editions of `DWT`. For ActiveX, the strategy is as follows:
+If you check our [release notes]({{site.info}}schedule/stable.html), you can find that most of our development has been done to the HTML5-based editions of `DWT`. For ActiveX, the strategy is as follows:
 
 * It'll continue to be a part of the Windows edition
 * No new features will be added

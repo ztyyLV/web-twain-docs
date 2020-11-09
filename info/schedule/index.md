@@ -9,7 +9,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Index Page
 
 # Product Schedule
 
-## [Stable]({{site.info}}schedule/released.html)
+## [Stable]({{site.info}}schedule/stable.html)
 
 ## [Beta]({{site.info}}schedule/beta.html)
 
