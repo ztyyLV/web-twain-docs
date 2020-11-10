@@ -1,6 +1,8 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
+noTitleIndex: true
+noTitleIndex: true
 title: Dynamic Web TWAIN Schedule - Deprecated Features
 keywords: Dynamic Web TWAIN, Documentation, Schedule, Deprecated Features
 breadcrumbText: Deprecated

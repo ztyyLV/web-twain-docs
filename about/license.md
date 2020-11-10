@@ -1,6 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
+noTitleIndex: true
 title: Dynamic Web TWAIN License
 keywords: Dynamic Web TWAIN, Documentation, License
 breadcrumbText: License
