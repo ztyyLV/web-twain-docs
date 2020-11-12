@@ -1,7 +1,8 @@
 repositoryUrl: https://github.com/Dynamsoft/web-twain-docs/master
 
 docFullPath: https://www.dynamsoft.com/web-twain/docs
-
+productUrl: https://www.dynamsoft.com/Products/WebTWAIN_Overview.aspx
+productName: Dynamic Web TWAIN
 docHomePage: /web-twain/docs/
 dynamsoft_logo: /web-twain/docs/assets/img-icon/dynamsoft-logo.png
 dwt_logo: /web-twain/docs/assets/img-icon/dwt-logo.png
