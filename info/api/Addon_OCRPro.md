@@ -1,14 +1,15 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN API Reference - OCRPro Addon APIs
+keywords: Dynamic Web TWAIN, Documentation, API Reference, OCRPro Addon APIs
+breadcrumbText: OCRPro Addon
+description: Dynamic Web TWAIN SDK Documentation API Reference OCRPro Addon APIs Page
 ---
 
-# WebTwain.Addon.OCRPro
+# `WebTwain.Addon.OCRPro`
 
 For Server Side OCR, check out [Server-Side OCR](#server-side)
-
 
 **Methods**
 

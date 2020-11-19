@@ -1,8 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN API Reference - Acquire APIs
+keywords: Dynamic Web TWAIN, Documentation, API Reference, Acquire APIs
+breadcrumbText: Acquire
+description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 ---
 
 # WebTwain Scan
@@ -117,46 +119,6 @@ title: "TOADD"
 **Events**
 
 * [OnSourceUIClose](#onsourceuiclose)
-
-> [Deprecation] The following APIs are deprecated.
-> [Alternative] Use getCapabilities() and setCapabilities() instead.
-
-**Methods**
-
-* [CapGet()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGet) 
-* [CapGetHelp()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetHelp)
-* [CapGetCurrent()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetCurrent) 
-* [CapGetDefault()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetDefault)
-* [CapGetFrameBottom()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetFrameBottom) 
-* [CapGetFrameLeft()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetFrameLeft)
-* [CapGetFrameRight()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetFrameRight) 
-* [CapGetFrameTop()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetFrameTop)
-* [CapGetLabel()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetLabel) 
-* [CapGetLabels()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetLabels)
-* [CapSet()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapSet) 
-* [CapReset()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapReset)
-* [CapSetFrame()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapSetFrame) 
-* [CapIfSupported()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapIfSupported)
-* [GetCapItems()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#GetCapItems) 
-* [GetCapItemsString()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#GetCapItemsString)
-* [SetCapItems()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#SetCapItems) 
-* [SetCapItemsString()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#SetCapItemsString)
-
-**Properties**
-
-* [Capability](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#Capability) 
-* [CapNumItems](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapNumItems)
-* [CapMaxValue](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapMaxValue) 
-* [CapMinValue](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapMinValue)
-* [CapCurrentValue](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapCurrentValue) 
-* [CapCurrentIndex](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapCurrentIndex)
-* [CapDefaultValue](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapDefaultValue) 
-* [CapDefaultIndex](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapDefaultIndex)
-* [CapType](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapType) 
-* [CapValueType](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapValueType)
-* [CapStepSize](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapStepSize)
-* [CapValue](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapValue) 
-* [CapValueString](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapValueString)
 
 ---
 

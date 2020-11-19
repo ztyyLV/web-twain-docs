@@ -1,292 +1,173 @@
+---
+layout: default-layout
+needAutoGenerateSidebar: true
+title: Dynamic Web TWAIN Debug
+keywords: Dynamic Web TWAIN, Documentation, Debug
+breadcrumbText: Debug
+description: Dynamic Web TWAIN SDK Documentation Debug Page
+---
 
+# Debugging
 
-# Dynamic Web TWAIN Advanced Troubleshooting - Logs & Dump Files
+## Enable and Collect Verbose Logs
 
-[How to Enable and Collect Verbose Logs](#How-to-Enable-and-Collect-Verbose-Logs) 
-  * [HTML5 Edition on Windows](#HTML5-Edition-on-Windows) 
-  * [Mac Edition](#Mac-Edition)
-  * [ActiveX Edition](#ActiveX-Edition)
-  * [Linux Edition](#Linux-Edition)  
+Here is how
 
-[How to Create a Dump File](#How-to-Create-a-Dump-File)
-  * [v11.3.2 and Later](#v11.3.2-and-Later)
-  * [11.3 and Earlier](#11.3-and-Earlier)  
+* Remove any old log files from `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16\log`
+* Set [ `LogLevel` ]({{site.info}}api/WebTwain_Util.html#loglevel) to 1 in your code. This property should be set as soon as the `WebTwain` instance is created. For example, in the event `Dynamsoft_OnReady`
 
-
-## How to Enable and Collect Verbose Logs
-
-The property [`LogLevel`](/info/api/WebTwain_Util.md#loglevel) is used to catch detailed information when necessary. The property returns or sets the log level for debugging purpose.
-
-```
-Data type: Short
-
-Syntax: ObjectName.LogLevel
-
-Possible values:
-
-0 – The default value for LogLevel.  
-1 – More output information will be provided for debugging purpose
+``` javascript
+function Dynamsoft_OnReady() {
+    DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+    DWObject.LogLevel = 1;
+}
 ```
 
-NOTE:
+> NOTE
+>  
+> Changing the property will affect all clients. To collect logs for only one client machine, just add the line `LogLevel=14` to `DSConfiguration.ini` on that specific machine. Check out more [here]({{site.indepth}}deployment/service.html#q-how-to-configure-the-service)
 
-+ Don't forget to disable debug mode after you have collected the logs. Application performance will be affected if verbose logging is enabled. 
+* Reproduce the issue
 
-### HTML5 Edition on Windows
+* Zip the log files in `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16\log` and share with [Dynamsoft Support Team]({{site.about}}getsupport.html) via email.
 
-1. Start by deleting the old log files located at:
+On macOS, the log files are in `Go > Applications > Dynamsoft > DynamsoftServicex64_16 > {installed version No.} > log`
 
-    v10~v12: *C:\Windows\SysWOW64\Dynamsoft\DynamicWebTwain\ForChrome\log*
+On Linux, the log files are in `/opt/dynamsoft/DynamsoftServicex64_16/log`
 
-    v13+: *C:\Windows\SysWOW64\Dynamsoft\DynamsoftService\log*
+## Collect the Dump Files
 
-    **v15+**: *C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\log*
+In the case that the Dynamsoft Service crashes, the dump files can be found in the following location
 
-    For version 11.x or older, log files also would appear in
-*C:\Users\{USERNAME}\AppData\LocalLow\Dynamsoft\\*
-    
-2. Set `Loglevel` to enable debug mode
+Windows: `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16\dump` .
+macOS: `Go > Applications > Dynamsoft > DynamsoftServicex64_16 > {installed version No.} > dump` .
+Linux: `/opt/dynamsoft/DynamsoftServicex64_16/dump` .
 
-    **Option A**: Set `LogLevel` to enable debug mode for all end users:
+Afterwards, please send the dump files to [Dynamsoft Support Team]({{site.about}}getsupport.html) and describe the issue to get assistance.
 
-    Change the source code.  Set the `LogLevel` to 1 in the initialization function of Web TWAIN control, like Dynamsoft_OnReady.
+## How to Read Log
 
-    ```javascript
-    function Dynamsoft_OnReady() {
-        DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
-        DWObject.LogLevel = 1;
-    }
-    ```
+### Q: What are these log files for?
 
-    **Option B**: Set `LogLevel` to enable debug mode on specific client machines (don't forget to [restart Dynamic Web TWAIN service](https://developer.dynamsoft.com/dwt/kb/how-to-get-support/dynamic-web-twain-how-to-restart-dynamic-web-twain-service) after the change):
+**A**:
 
-    On client-side, for versions below v15.3, change Log level from 6 to 14 in `DWTConfiguration.ini` or `DSConfiguration.ini` at
+* dss.log --> For Dynamsoft Service
+* nw.log --> Details about the network traffic
+* wts.log --> For the client part of Dynamic Web TWAIN HTMl5 edition
+* wtss.log --> For the server part of Dynamic Web TWAIN HTMl5 edition
 
-    v10~v12: *C:\Windows\SysWOW64\Dynamsoft\DynamicWebTwain\ForChrome\DWTConfiguration.ini*
+### Q: What info do we see if Dynamic Web TWAIN SDK is not doing anything?
 
-    v13+: *C:\Windows\SysWOW64\Dynamsoft\DynamsoftService\DSConfiguration.ini*
+**A**:
 
-    From v15.3, change Log level from 1 to 14 in `DSConfiguration.ini` at
+There is a regular polling going on every 30 seconds, in the log, it looks like this
 
-    **v15+**: *C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\DSConfiguration.ini*
-    
-3. Reproduce the issue that you encountered
+Client-side:
 
-4. Collect the log files in the directories below
+``` 
+[Process:  1716 Thread: 17652] [05/23/2018 17:43:45.075] [Debug-0]: CClientProxy:: Send begin task=DefaultSourceName seq=18975 status=8 event=11
+[Process:  1716 Thread: 17652] [05/23/2018 17:43:45.090] [Debug-0]: CClientProxy:: Send end 0
+[Process:  1716 Thread: 17652] [05/23/2018 17:44:15.150] [Debug-0]: CClientProxy:: Send begin task=DefaultSourceName seq=18976 status=8 event=11
+[Process:  1716 Thread: 17652] [05/23/2018 17:44:15.156] [Debug-0]: CClientProxy:: Send end 0
+```
 
-    v10~v12: *C:\Windows\SysWOW64\Dynamsoft\DynamicWebTwain\\**ForChrome**\log*
+Server-side:
 
-    v13+: *C:\Windows\SysWOW64\Dynamsoft\DynamsoftService\log*
+``` 
+[Process:  5364 Thread:  7536] [05/23/2018 18:01:20.930] [Debug-0]: CTwainServer::receive1 task=DefaultSourceName seq=18478 status=8 event=11
+```
 
-    **v15+**: *C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\log*
+### Q: What does a command to the service look like?
 
-    For version 11.* or older, log file also would appear in
-    *C:\Users\{USER NAME}\AppData\LocalLow\Dynamsoft\\*
+**A**: It looks like the following with "id" used to identify which client sent the command and "method" being the action that is being carried out
 
-5. Zip the log files and sent them to [support@dynamsoft.com](mailto:support@dynamsoft.com). Our team will review the logs and get back to you with next steps. 
+``` 
+cmd = [{
+"id" : "467653534", 
+"method" : "GetImageByIndex", 
+"parameter" : [ 0, 581, 511 ]
+}].
+```
 
-NOTE:
+### Q: What basic information can we get from the log?
 
-1. For 32-bit Windows machines, the *ForChrome* folder is under *C:\Windows\system32\Dynamsoft\DynamicWebTwain\\* 
+**A**: 
 
-2. For Windows 10 OS, enabling the debug mode will slow down the performance of the scan page. To avoid the slowness in this situation, you can add the `webtwainservice.exe` to the exclusion list of Windows Defender.
+* The Operating system
 
-    ```
-    Add the webtwainservice.exe to Settings > Update &Security > Windows Defender > Exclusions > Processes
-    ```
+``` 
+Windows info: 6.2.9200 Pack: 0.0 Other: PID=2 Type=1 Mask=256
+```
 
+* The version of Dynamsoft Web TWAIN (wts.log)
 
-### Mac Edition
+``` 
+Activex Version info:32c0048, Dynamic Web TWAIN 14.0 Trial, 14, 0, 0, 0618, x64:0
+```
 
-1. Start by deleting the old log files located at the below directory.
+* The version of Dynamosft Service (dss.log)
 
-    v11~v12: Select *Go > Applications > Dynamsoft > WebTwain > {installed version No.} > log*
+``` 
+Current version info: Dynamsoft Service 1, 4, 0, 0618.
+```
 
-    v13+: Select *Go > Applications > Dynamsoft > DynamsoftService > {installed version No.} > log*
+* The current LogLevel
 
-    **v15+**: Select *Go > Applications > Dynamsoft > DynamsoftServicex64 > {installed version No.} > log*
+``` 
+Log Level = 14, 0.
+```
 
-2. Set `Loglevel` to enable debug mode
+* Websocket listening ports
 
-    **Option A**: Set `LogLevel` to enable debug mode for all end users:
-
-    Change the source code.  Set the `LogLevel` to 1 in the initialization function of Web TWAIN control, like Dynamsoft_OnReady.
-
-    ```javascript
-    function Dynamsoft_OnReady() {
-        DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
-        DWObject.LogLevel = 1;
-    }
-    ```
-
-    **Option B**: Set `LogLevel` to enable debug mode on specific client machines (don't forget to [restart Dynamic Web TWAIN service](https://developer.dynamsoft.com/dwt/kb/how-to-get-support/dynamic-web-twain-how-to-restart-dynamic-web-twain-service) after the change):
-
-    On client-side, for..
-    
-    v11~v12, change log level from 6 to 14 in `DWTConfiguration.ini` Select *Go > Applications > Dynamsoft > WebTwain > {installed version No.} > DWTConfiguration.ini*
-
-    v13+, change log level from 6 to 14 in `DSConfiguration.ini` Select *Go > Applications > Dynamsoft > DynamsoftService > {installed version No.} > DSConfiguration.ini*
-
-    *v15.3+*, change log level from 1 to 14 in `DSConfiguration.ini` Select *Go > Applications > Dynamsoft > DynamsoftServicex64 > {installed version No.} > DSConfiguration.ini*
-
-3. Reproduce the issue that you encountered
-
-4. Collect the log files in the directories below
-
-    v11~v12: Select *Go > Applications > Dynamsoft > WebTwain > {installed version No.} > log*
-
-    v13+: Select *Go > Applications > Dynamsoft > DynamsoftService > {installed version No.} > log*
-
-    **v15+**: Select *Go > Go to Folder…*, a prompt will appear: type */var/log* in the box and you’ll find `system.log` file.
-    
-5. Zip the log files and sent them to [support@dynamsoft.com](mailto:support@dynamsoft.com). Our team will review the logs and get back to you with next steps.
-
-
-### ActiveX Edition
-
-For any version before v14.3.1:
-
-1. Download DebugView [here](http://technet.microsoft.com/en-us/sysinternals/bb896647), and unzip it locally.
-
-2. Set `LogLevel` to enable debug mode for all end users:
-
-    ```javascript
-    function Dynamsoft_OnReady() {
-        DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
-        DWObject.LogLevel = 1;
-    }
-    ```
-
-3. Run `Dbgview.exe`.
-
-4. Reproduce the issue you encountered with the ActiveX Edition. DebugView will record detailed information during the process, as shown below.
-
-    ![Dbgview](http://www.dynamsoft.com/download/Support/KB/images/KB658001.png)
-
-5. Please click on Save to save the log file and send it to [support@dynamsoft.com](mailto:support@dynamsoft.com). Our team will review the logs and get back to you with next steps.
-
-From v14.3.1+
-
-Check the steps under [HTML5 Edition on Windows](#HTML5-Edition-on-Windows).
-
-
-### Linux Edition
-
-1. Start by deleting the old log files located at the below directory.
-
-    v12.x: */opt/dynamsoft/WebTwainService/log*
-
-    v13+: */opt/dynamsoft/DynamsoftService/log*
-
-    **v15.3+**: */opt/dynamsoft/DynamsoftServicex64/log*
-
-2. Set `Loglevel` to enable debug mode
-
-    **Option A**: Set `LogLevel` to enable debug mode for all end users:
-
-    Change the source code.  Set the `LogLevel` to 1 in the initialization function of Web TWAIN control, like Dynamsoft_OnReady.
-
-    ```javascript
-    function Dynamsoft_OnReady() {
-        DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
-        DWObject.LogLevel = 1;
-    }
-    ```
-
-    **Option B**: Set `LogLevel` to enable debug mode on specific client machines (don't forget to [restart Dynamic Web TWAIN service](https://developer.dynamsoft.com/dwt/kb/how-to-get-support/dynamic-web-twain-how-to-restart-dynamic-web-twain-service) after the change):
-
-    On client-side, for..
-    
-    v11~v12, change log level from 6 to 14 in `DWTConfiguration.ini` in */opt/dynamsoft/WebTwainService* directory
-
-    v13+, change log level from 6 to 14 in `DSConfiguration.ini` in */opt/dynamsoft/DynamsoftService* directory
-
-    **v15.3+**, change log level from 1 to 14 in `DSConfiguration.ini` in */opt/dynamsoft/DynamsoftServicex64* directory
-
-3. Reproduce the issue that you encountered
-
-4. Collect the log files in the directories below
-
-    v12.x: */opt/dynamsoft/WebTwainService/log*
-
-    v13+: */opt/dynamsoft/DynamsoftService/log*
-
-    **v15.3**: */opt/dynamsoft/DynamsoftServicex64/log*
-
-5. Zip the log files and sent them to [support@dynamsoft.com](mailto:support@dynamsoft.com). Our team will review the logs and get back to you with next steps.
-
-
-## How to Create a Dump File
-
-This section shows you how to troubleshoot with dump files when the scanning application crashes, stops responding, or freezes.
-
-### v11.3.2 and Later
-
-As of v11.3.2, when the HTML5 Edition of Dynamic Web TWAIN SDK detects a service crash, a dump file will be generated automatically in the **dump** folder. If you need Dynamsoft team to help troubleshoot such an issue, please follow the steps below:
-
-1. Navigate to the following path on the client machine
-
-    *C:\Windows\SysWOW64\Dynamsoft\DynamicWebTwain\ForChrome\dump*; or 
-
-    *C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64)\dump*
-
-2. Zip the log files and sent them to [support@dynamsoft.com](mailto:support@dynamsoft.com). Our team will review the logs and get back to you with next steps.
-
- 
-
-NOTE:
-
-+ Please also elaborate the issue in the email as detailed as you can. The info will be very helpful for troubleshooting.
-
-+ The HTML5 Edition covers IE 10/11, Microsoft Edge, Chrome 27+ and Firefox 27+ on Windows. **If the issue occurred on other browsers on Windows, please refer to [v11.3 and Earlier](#v11.3-and-Earlier).**
-
-### v11.3 and Earlier
-
-To create dump files for the HTML5 Edition of Dynamic Web TWAIN, please follow the steps below.
-
-1. Install [Win debug tool](http://tst.dynamsoft.com/public/Download/Tools/dbg_x86.msi)
-
-    The installation directory of Win debug tool is *C:\Program Files (x86)\Debugging Tools for Windows (x86)*.
-
-2. Run CMD as administrator, and type the following command statements.
-
-    ```
-    > cd C:\Program Files (x86)\Debugging Tools for Windows (x86)
-
-    C:\Program Files (x86)\Debugging Tools for Windows (x86)>adplus.exe -quiet -crash -pn webtwainservice.exe -o D:\Users
-    ```
-
-    The following are some options in ADPlus:
-
-    - `-quiet`: Runs it in quiet mode (to suppress dialog boxes).
-    - `-crash`: Monitors a process in crash mode.
-    - `-pn`: Specifies the target service.
-    - `-o`: output directory: Specifies the dump file output directory, for example *D:\Users*.
-    
-
-3. Reproduce the issue and generate the dump file.
-
-    The dump file is normally quite large. So it is always recommended to compress the dump file before you send it to our support team.
- 
-4. Compress and zip the log files and sent them to [support@dynamsoft.com](mailto:support@dynamsoft.com). Our team will review the logs and get back to you with next steps.
-
-    For troubleshooting, please provide us these .dmp files that contain **\_mini\_** in the filename.
-
- 
-
-Reference:
-
-On Windows Vista, 7, server 2008 and later, please check this article from Microsoft:
-[http://support.microsoft.com/kb/931673](http://support.microsoft.com/kb/931673)
-
-On Windows XP, server 2003, please check this article from Microsoft:
-[http://support.microsoft.com/kb/241215](http://support.microsoft.com/kb/241215)
-
-https://developer.dynamsoft.com/dwt/kb/2658
-
-https://www.dynamsoft.com/docs/dwt/KB/TroubleShooting.html#getmoreinfofortroubleshooting
-
-https://www.dynamsoft.com/docs/dwt/KB/TroubleShooting.html#websocketconnection
-
-https://developer.dynamsoft.com/dwt/kb/2799
-
+``` 
+[Debug-0]: dwt_command, Websocket connection initialized.
+[Info-0]: Create websocket context succeed at default 127.0.0.1:18625, use_ssl = false!
+[Info-0]: Start websocket service succeed. port = [18625], use_ssl = false.
+[Process: 16784 Thread: 15400] [05/23/2018 17:56:44.554] [Info-0]: Websocket Listening starts at port = 18625, use_ssl = false
+[Debug-0]: Get the port number and try creating websocket listening.
+[Debug-0]: dwt_command, Websocket connection initialized.
+[Info-0]: Create websocket context succeed at default 127.0.0.1:18626, use_ssl = true!
+[Info-0]: Add https service succeed! Succeed port = 18626, use_ssl = true.
+[Process: 16784 Thread: 10740] [05/23/2018 17:56:46.794] [Info-0]: Websocket Listening starts at port = 18626, use_ssl = true
+[Debug-0]: Get http service parameter
+[Debug-0]: Get the port number and try creating websocket listening.
+[Info-0]: Add http service succeed! Succeed port = 18622, use_ssl = false.
+[Debug-0]: dwt_command, Websocket connection initialized.
+[Info-0]: Create websocket context succeed at default 127.0.0.1:18622, use_ssl = false!
+[Info-0]: Start websocket service succeed. port = [18622], use_ssl = false.
+[Process: 16784 Thread:  9508] [05/23/2018 17:56:48.071] [Info-0]: Websocket Listening starts at port = 18622, use_ssl = false
+```
+
+* Requesting origin
+
+``` 
+origin:http://127.0.0.1:100
+```
+
+* Sequence in which commands are being called
+
+* How a command worked
+
+``` 
+result json = [{
+    "description" : "User cancelled the operation.",
+    "exception" : -1032,
+    "id" : "667465648",
+    "method" : "SelectSource",
+    "result" : [ false ],
+    "cmdId" : ""
+}].
+```
+
+## WebSocket Connection Issue
+
+`DWT` uses WebSocket connection to communicate with the Dynamsoft Service. Each `WebTwain` instance creates its own Websocket connection. That means if you have multiple `WebTwain` instances, your browser will be maintaining multiple WebSocket connections. At the same time, if you are not proactively closing a connection, then the connection may take some time to close even after you have closed the scan page.
+
+The browser would be tasked with maintaining multiple Websocket connections at some point and not all browsers are designed to handle that. While modern browsers like Chrome, Firefox, etc. can handle tens or even more than a hundred WebSocket connections, IE can handle just 6 by default. Therefore, you may be surprised to find that IE reports the Dynamsoft Service is not installed even when you were just using it! And that report is due to the failure to create a 7th WebsSocket connection at that point.
+
+Though it's not ideal, IE does provide a solution which is to configure the WebSocket connection limit in the Local Group Policy Editor as shown below
+
+* Press the Windows Key + R key to open the Run dialog
+* Type `gpedit.msc` and press Enter to open the Local Group Policy Editor
+* Navigate to `Administrative Templates` > `Windows Components` > `Internet Explorer` > `Security Features` > `AJAX`
+* Double click in the corresponding feature "Maximum number of connections per server" to enable the feature and change the default number to a larger number

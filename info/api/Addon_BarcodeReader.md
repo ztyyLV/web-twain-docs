@@ -1,11 +1,13 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN API Reference - BarcodeReader Addon APIs
+keywords: Dynamic Web TWAIN, Documentation, API Reference, BarcodeReader Addon APIs
+breadcrumbText: Barcode Reader Addon
+description: Dynamic Web TWAIN SDK Documentation API Reference BarcodeReader Addon APIs Page
 ---
 
-# WebTwain.Addon.BarcodeReader
+# `WebTwain.Addon.BarcodeReader`
 
 **Methods**
 

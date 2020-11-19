@@ -1,8 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN API Reference - Edit APIs
+keywords: Dynamic Web TWAIN, Documentation, API Reference, Edit APIs
+breadcrumbText: Edit
+description: Dynamic Web TWAIN SDK Documentation API Reference Edit APIs Page
 ---
 
 # WebTwain Edit
@@ -39,16 +41,6 @@ title: "TOADD"
 **Properties**
 
 * [BackgroundFillColor](#backgroundfillcolor)
-
-> [Deprecation] The following APIs are deprecated.
->
-> [Alternative] Annotation feature to be added in a later version.
-
-## Methods
-
-* [AddText()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#AddText) 
-* [CreateTextFont()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#CreateTextFont)
-* [OverlayRectangle()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#OverlayRectangle)
 
 ---
 

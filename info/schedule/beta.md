@@ -1,8 +1,13 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+noTitleIndex: true
+title: Dynamic Web TWAIN Schedule - Beta Release
+keywords: Dynamic Web TWAIN, Documentation, Schedule, Beta Release
+breadcrumbText: Beta
+description: Dynamic Web TWAIN SDK Documentation Schedule - Beta Release Page
 ---
 
-# Here we list a beta version and features included
+# Beta Releases
+
+Currently there is no beta releases available.

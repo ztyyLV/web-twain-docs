@@ -1,5 +1,8 @@
 repositoryUrl: https://github.com/Dynamsoft/web-twain-docs/master
-
+firstLevelUrl: /web-twain
+docFullPath: https://www.dynamsoft.com/web-twain/docs
+productUrl: https://www.dynamsoft.com/Products/WebTWAIN_Overview.aspx
+productName: Dynamic Web TWAIN
 docHomePage: /web-twain/docs/
 dynamsoft_logo: /web-twain/docs/assets/img-icon/dynamsoft-logo.png
 dwt_logo: /web-twain/docs/assets/img-icon/dwt-logo.png
@@ -12,4 +15,16 @@ about: /web-twain/docs/about/
 getstarted: /web-twain/docs/getstarted/
 indepth: /web-twain/docs/indepth/
 info: /web-twain/docs/info/
+
+dynamsoft_logo: /web-twain/docs/assets/img-icon/dynamsoft-logo.png
+dbr_logo: /web-twain/docs/assets/img-icon/dbr-logo.png
+edit_icon: /web-twain/docs/assets/img-icon/edit-icon.png
+smile_icon: /web-twain/docs/assets/img-icon/icon-smile.png
+sad_icon: /web-twain/docs/assets/img-icon/icon-sad.png
+dbr_icon: /web-twain/docs/assets/img-icon/icon-dbr.svg
+dwt_icon: /web-twain/docs/assets/img-icon/icon-dwt.svg
+dnt_icon: /web-twain/docs/assets/img-icon/icon-dnt.svg
+
+baseurl: /web-twain/docs/
+
 theme: jekyll-theme-cayman

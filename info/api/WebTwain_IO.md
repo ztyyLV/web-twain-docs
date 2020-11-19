@@ -1,8 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN API Reference - IO APIs
+keywords: Dynamic Web TWAIN, Documentation, API Reference, IO APIs
+breadcrumbText: IO
+description: Dynamic Web TWAIN SDK Documentation API Reference IO APIs Page
 ---
 
 # WebTwain IO
@@ -85,7 +87,7 @@ title: "TOADD"
 * [IfShowFileDialog](#ifshowfiledialog) 
 * [IfShowCancelDialogWhenImageTransfer](#ifshowcanceldialogwhenimagetransfer)
 * [IfShowProgressBar](#ifshowprogressbar) 
-* [JPEGQuality]()
+* [JPEGQuality](#jpegquality)
 * [IfTiffMultiPage](#iftiffmultipage) 
 * [TIFFCompressionType]()
 * [MaxUploadImageSize](#maxuploadimagesize)
@@ -96,30 +98,6 @@ title: "TOADD"
 * [OnGetFilePath](#ongetfilepath)
 * [OnPostLoad](#onpostload)
 * [OnInternetTransferPercentage](#oninternettransferpercentage)
-
-> [Deprecation] The following APIs are deprecated.
->
-> [Alternative] New methods like ConvertToBase64(), PDF. Write. Setup()
-
-**Methods**
-
-* [SaveSelectedImagesToBase64Binary()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Load-Save.html#SaveSelectedImagesToBase64Binary) 
-* SetCookie()
-
-**Properties**
-
-* [IfOpenImageWithGDIPlus](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#IfOpenImageWithGDIPlus)
-* [PDFAuthor](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFAuthor) 
-* [PDFCompressionType](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFCompressionType)
-* [PDFCreationDate](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFCreationDate) 
-* [PDFCreator](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFCreator)
-* [PDFKeywords](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFKeywords) 
-* [PDFModifiedDate](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFModifiedDate)
-* [PDFProducer](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFProducer) 
-* [PDFSubject](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFSubject)
-* [PDFTitle](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFTitle) 
-* [PDFVersion](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFVersion)
-* MaxInternetTransferThreads
 
 ---
 

@@ -1,11 +1,13 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN API Reference - Camera Addon APIs
+keywords: Dynamic Web TWAIN, Documentation, API Reference, Camera Addon APIs
+breadcrumbText: Camera Addon
+description: Dynamic Web TWAIN SDK Documentation API Reference Camera Addon APIs Page
 ---
 
-# WebTwain.Addon.Camera
+# `WebTwain.Addon.Camera`
 
 > Dynamsoft provides a built-in feature to handle camera capturing, prospective adjusting, etc. Check out the APIs [showVideo()]({{site.info}}api/WebTwain_Viewer.html#showvideo) and [closeVideo()]({{site.info}}api/WebTwain_Viewer.html#closevideo).
 

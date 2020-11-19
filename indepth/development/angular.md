@@ -1,8 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN Development - Angular Integration
+keywords: Dynamic Web TWAIN, Documentation, Development, Angular Integration
+breadcrumbText: Angular Integration
+description: Dynamic Web TWAIN SDK Documentation Angular Integration Page
 ---
 
 # Use DWT with Angular
@@ -56,14 +58,14 @@ ng generate component dwt
 
 ### Edit the component
 
-* In `dwt.component.html` , add a button and a `HTMLDIVElement` .
+* In `dwt.component.html` add a button and a `HTMLDIVElement` .
 
 ``` html
 <button (click)="acquireImage()">Acquire Images</button>
 <div id="dwtcontrolContainer"></div>
 ```
 
-* In `dwt.component.ts` , add code to initialize `DWT` .
+* In `dwt.component.ts` add code to initialize `DWT` .
 
 ``` typescript
 import Dynamsoft from 'dwt';
@@ -88,7 +90,7 @@ ngOnInit(): void {
 ```
 
 > Note:
-> * `containerId` specifies the `HTMLDIVElement` to create `DWT` viewer in. It is defined in step one.
+> * `containerId` specifies the `HTMLDIVElement` to create `DWT` viewer in.
 > * `OnWebTwainReady` is the callback triggered when the initialization succeeds.
 > * `ProductKey` must be set to a valid trial or full key.
 > * `ResourcesPath` is set to the location of the static files mentioned in [Configure the project](#configure-the-project).
@@ -130,7 +132,7 @@ Edit the file `app.component.html` to contain nothing but the following
 ng serve -o
 ```
 
-> If you have installed `DWT` and have configured a valid `ProductKey` . You will have a working page to scan documents from your scanner now. Otherwise, you should see instructions on the page that guide you to install the library. [More info>>]({{site.indepth}}initialize.html#installation-of-the-dynamsoft-service).
+> If you have installed `DWT` and have configured a valid `ProductKey` . You will have a working page to scan documents from your scanner now. Otherwise, you should see instructions on the page that guide you to install the library. [More info>>]({{site.indepth}}features/initialize.html#installation-of-the-dynamsoft-service).
 
 ## Official Samples
 

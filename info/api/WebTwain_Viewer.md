@@ -1,12 +1,13 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN API Reference - Viewer APIs
+keywords: Dynamic Web TWAIN, Documentation, API Reference, Viewer APIs
+breadcrumbText: Viewer
+description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 ---
 
-# WebTwain. Viewer
-
+# `WebTwain.Viewer`
 > For WebTwain instances
 
 **Methods**
@@ -68,13 +69,6 @@ title: "TOADD"
 
 * [video-closed](#vidoe-closed)
 * [video-error](#vidoe-error)
-
-> [Deprecation] The following APIs are deprecated
-
-**Methods**
-
-* [SetViewMode()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Display-UI.html#SetViewMode) 
-* [SetSelectedImageArea()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#SetSelectedImageArea)
 
 ---
 
@@ -1232,4 +1226,69 @@ interface ViewerConfig {
         presetMode ? : string // Example: 'basic'
     theme ? : string // Example: 'basic'
 }
+```
+
+> The following APIs are under development for version 16.2
+
+## width
+
+**Syntax**
+
+``` typescript
+/**
+ * Return or set the width of the viewer.
+ */ 
+Viewer.width: number | string;
+```
+
+**Usage Notes**
+
+If a number is assigned, it means that number of pixels (px). If a string is assigned, it is either a fixed size like "500px" or a dynamic size like "50%" which follows standard CSS rules.
+ 
+**Example**
+
+``` javascript
+DWObject.Viewer.width = 270;
+DWObject.Viewer.width = "270px";
+DWObject.Viewer.width = "100%";
+```
+
+## height
+
+**Syntax**
+
+``` typescript
+/**
+ * Return or set the height of the viewer.
+ */ 
+Viewer.height: number | string;
+```
+
+**Usage Notes**
+
+If a number is assigned, it means that number of pixels (px). If a string is assigned, it is either a fixed size like "500px" or a dynamic size like "50%" which follows standard CSS rules.
+
+**Example**
+
+``` javascript
+DWObject.Viewer.height = 350;
+DWObject.Viewer.height = "350px";
+DWObject.Viewer.height = "100%";
+```
+
+## idPostfix
+
+**Syntax**
+
+``` typescript
+/**
+ * Return the postfix of the Ids of the elements in the viewer.
+ */ 
+readonly Viewer.idPostfix: string;
+```
+
+**Example**
+
+``` javascript
+var myViewerIdPostfix = DWObject.Viewer.idPostfix;
 ```

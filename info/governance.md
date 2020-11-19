@@ -5,6 +5,6 @@ description: "TOADD"
 title: "TOADD"
 ---
 
-# GOVERNANCE
+# Governance
 
 How we make sure the product is secure and such.

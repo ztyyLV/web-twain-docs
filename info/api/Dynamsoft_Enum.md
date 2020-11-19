@@ -1,11 +1,13 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN API Reference - Enumerations
+keywords: Dynamic Web TWAIN, Documentation, API Reference, Enumerations
+breadcrumbText: Enumerations
+description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 ---
 
-# Enums
+# `Enumerations`
 
 ## Dynamsoft.EnumDWT_PixelType
 
@@ -1037,7 +1039,7 @@ title: "TOADD"
 |-1030 | Can not open Source Manager "TWain_32.dll" is missing or is in use by another application |
 |-1031 | Sequence error. The operation can not be performed upon the current Source Manager or Source state |
 |-1032 | User cancelled the operation |
-|-1033 | Invalid index |
+|-1033 | Invalid Enumerations |
 |-1034 | Invalid value |
 |-1035 | There is no image |
 |-1036 | Error reading file |
@@ -1069,18 +1071,18 @@ title: "TOADD"
 |-2307 | The width or height you entered is invalid |
 |-2308 | The local dynamsoft service has been stopped |
 |-2309 | The LocalFile is emtpy in the Function |
-|-2310 | The index is out of range |
+|-2310 | The Enumerations is out of range |
 |-2311 | The RemoteFile is emtpy in Barcode Download Function |
 |-2312 | The file length is emtpy |
 |-2313 | The size of the images you are about to upload has exceeded the allowed size |
 |-2314 | The parameter cannot be empty |
-|-2315 | The index is out of range |
+|-2315 | The Enumerations is out of range |
 |-2316 | The RemoteFile is emtpy in Webcam Download Function |
 |-2317 | The RemoteFile is emtpy in Pdf Download Function |
 |-2318 | Invalid destination file |
 |-2319 | Invalid source file |
 |-2320 | Invalid file |
-|-2321 | The index is out of range |
+|-2321 | The Enumerations is out of range |
 |-2322 | The left or top or right or bottom you entered is invalid |
 |-2323 | The OCR output format is not supported |
 |-2324 | The OCR page set mode is not supported |
@@ -1118,8 +1120,8 @@ title: "TOADD"
 |-2356 | The header name cannot be undefined |
 |-2357 | The header name you entered is invalid |
 |-2358 | The type of the parameter indices must be an Array |
-|-2359 | The index is out of range |
-|-2360 | The index is null or undefined |
+|-2359 | The Enumerations is out of range |
+|-2360 | The Enumerations is null or undefined |
 |-2361 | You cannot convert more than one image to base64 string when the format is BMP, JPG or PNG |
 |-2362 | Convert to base64 failed |
 |-2367 | Invalid value for the parameter segmentUploadThreshold |

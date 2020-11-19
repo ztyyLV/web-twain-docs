@@ -1,12 +1,24 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN Schedule - Features To Consider
+keywords: Dynamic Web TWAIN, Documentation, Schedule, Features To Consider
+breadcrumbText: Features To Consider
+description: Dynamic Web TWAIN SDK Documentation Schedule Features To Consider Page
 ---
 
-# Fancy features, ideas. Nothing concreate. let the imagination fly
+# Features to be considered
 
+## Parse and View Office files
 
+## Digital signatures
 
-https://developer.dynamsoft.com/dwt/kb/2014
+## Form Parsing and recognizing
+
+## MRC in PDF encoding
+
+## Renovated and more robust OCR Basic engine
+
+## Support more file formats
+
+## Image Processing Features

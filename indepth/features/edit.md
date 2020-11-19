@@ -1,21 +1,23 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-description: "TOADD"
-title: "TOADD"
+title: Dynamic Web TWAIN Features - Edit
+keywords: Dynamic Web TWAIN, Documentation, Edit
+breadcrumbText: Edit
+description: Dynamic Web TWAIN SDK Documentation Edit Page
 ---
 
-# EDIT
+# Edit
 
-`DWT` offers a variety image editing features to help give you the final result that you are looking for. In this section, we will explore those features and demonstrate how to use them.
+`DWT` offers a variety of image editing features to help give you the final result you are looking for. In this section, we will explore those features and demonstrate how to use them.
 
-> All the methods on this page can be found [here]({{site.info}}api/WebTwain_Edit.html)
+> All the methods on this page can be found in our [API reference]({{site.info}}api/WebTwain_Edit.html).
 
 ## Edit options
 
 ### Rotating, Flipping, and Mirroring
 
-`DWT` gives you methods to rotate an image right or left by 90 degrees or by the angle that you specify as an input parameter. Here is an overview of the rotate methods that we have available:
+`DWT` provides methods to rotate an image right or left by 90 degrees or by the angle you specify as an input parameter. Here is an overview of the available rotate methods:
 
 ``` javascript
 DWObject.Rotate() // rotates the specified image by the specified angle (up to 360 degrees)
@@ -28,18 +30,18 @@ DWObject.Mirror() // mirrors the specified image horizontally
 
 ### Cutting, Cropping, and Copying
 
-`DWT` can cut and copy images, where they will be saved to the clipboard to be used later. It also has the ability to crop the image directly or save the cropped edit in the clipboard. Here is an overview of the methods:
+`DWT` can cut and copy images to the clipboard to be used later. It also has the ability to crop the image directly or save the cropped image to the clipboard. Here is an overview of the methods:
 
 ``` javascript
-DWObject.Crop() // Crops a rectangular area from the specified image using the specified coordinates.
+DWObject.Crop() // Crops a rectangular area from the specified image using the specified coordinates
 DWObject.CropToClipboard() // Crops a rectangular area from the specified image using the input coordinates and saves to the clipboard 
-DWObject.CutFrameToClipboard() // Cuts a rectangular area from the specified image using the specified coordinates to the clipboard of the operating system.
-DWObject.CutToClipboard() // Cuts the specified image to the clipboard of the operating system.
-DWObject.CopyToClipboard() // Copies the specified image to the clipboard of the operating system.
+DWObject.CutFrameToClipboard() // Cuts a rectangular area from the specified image using the specified coordinates to the clipboard of the operating system
+DWObject.CutToClipboard() // Cuts the specified image to the clipboard of the operating system
+DWObject.CopyToClipboard() // Copies the specified image to the clipboard of the operating system
 DWObject.Erase() // Erases a rectangular area from the specified image using the input coordinates
 ```
 
-Several of these methods require input coordinates to define the frame in question. `DWT` provides a way in which you can visually define those coordinates to make the process as easy for the user as possible. Feel free to check out [select an area]({{site.indepth}}viewer.html#select-an-area).
+Several of these methods require input coordinates to define the frame in question. `DWT` provides a way to visually define those coordinates to make the process as easy for the user as possible. Check out [select an area]({{site.indepth}}features/viewer.html#select-an-area).
 
 ### Resizing an image
 
@@ -47,7 +49,7 @@ Several of these methods require input coordinates to define the frame in questi
 
 ``` javascript
 DWObject.ChangeImageSize() // changes the size of the specified image by altering the height and width
-DWObject.SetImageWidth() // Changes the width of the specified image by adding a margin or removing part of the image.
+DWObject.SetImageWidth() // Changes the width of the specified image by adding a margin or removing part of the image
 ```
 
 ### Working with pixels and bit depth
@@ -57,7 +59,7 @@ You can also change the colour and resolution of an image by altering its pixel 
 ``` javascript
 DWObject.ChangeBitDepth() // Changes the pixel type of the image by altering the bit depth
 DWObject.SetDPI() // Changes the DPI (dots per inch) of the specified image depending on the input resolution parameters
-DWObject.ConvertToBW() // Converts the specified image to a black-and-white image.
-DWObject.ConvertToGrayScale() // Converts the specified image to a grayscale image.
-DWObject.Invert() // Inverts the colour of the pixels on the specified image.
+DWObject.ConvertToBW() // Converts the specified image to a black-and-white image
+DWObject.ConvertToGrayScale() // Converts the specified image to a grayscale image
+DWObject.Invert() // Inverts the colour of the pixels on the specified image
 ```
