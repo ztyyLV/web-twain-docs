@@ -65,7 +65,7 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
 
    - [Stable]({{site.info}}schedule/stable.html)
    - [Beta]({{site.info}}schedule/beta.html)
-   - [Developping]({{site.info}}schedule/developping.html)
+   - [Developping]({{site.info}}schedule/developing.html)
    - [Proposed]({{site.info}}schedule/proposed.html)
    - [To Consider]({{site.info}}schedule/ideas.html)
    - [Deprecated]({{site.info}}schedule/deprecated.html)

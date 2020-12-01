@@ -264,7 +264,7 @@ Create a `saveUploadedPDF.aspx` file in the same location as your `helloworld.ht
 
 Now we can use the page to scan or acquire, then upload the images as a PDF document!
 
-## Review the complete code
+## Review the code
 
 ``` html
 <html>
