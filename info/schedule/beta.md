@@ -10,4 +10,4 @@ description: Dynamic Web TWAIN SDK Documentation Schedule - Beta Release Page
 
 # Beta Releases
 
-Currently there is no beta releases available.
+Currently there is no beta release available.
