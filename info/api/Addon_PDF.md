@@ -82,7 +82,7 @@ IsTextBasedPDF(path: string): boolean;
 ``` typescript
 /**
  * Set the convert mode.
- * @param mode Specify the mode.
+ * @param mode Specify the mode. The default value is 3 (Dynamsoft.EnumDWT_ConvertMode.CM_AUTO)
  */
 SetConvertMode(mode: Dynamsoft.EnumDWT_ConvertMode | number): boolean;
 ```
