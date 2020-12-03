@@ -8,6 +8,6 @@ breadcrumbText: Beta
 description: Dynamic Web TWAIN SDK Documentation Schedule - Beta Release Page
 ---
 
-# Beta Releases
+# Beta Releases - test branch
 
 Currently there is no beta release available.
