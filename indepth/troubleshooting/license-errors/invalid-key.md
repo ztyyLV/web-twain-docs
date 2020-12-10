@@ -1,3 +1,13 @@
+---
+layout: default-layout
+needAutoGenerateSidebar: true
+title: Dynamic Web TWAIN Troubleshooting Invalid Product Key
+keywords: Dynamic Web TWAIN, Documentation, Troubleshooting, License Errors
+breadcrumbText: Invalid Product Key
+description: Dynamic Web TWAIN SDK Documentation Troubleshooting License Errors Page
+---
+
+
 # Handling Errors
 
 ## Invalid product key
