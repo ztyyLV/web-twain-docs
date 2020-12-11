@@ -1,3 +1,12 @@
+---
+layout: default-layout
+needAutoGenerateSidebar: true
+title: Dynamic Web TWAIN Troubleshooting A Connection With The Server Could Not Be Established
+keywords: Dynamic Web TWAIN, Documentation, Troubleshooting, License Errors, Invalid Product Key
+breadcrumbText: Invalid Product Key
+description: Dynamic Web TWAIN SDK Documentation Troubleshooting License Errors Invalid Product Key Page
+---
+
 # Handling Errors
 
 ## A connection with the server could not be established

@@ -1,3 +1,13 @@
+---
+layout: default-layout
+needAutoGenerateSidebar: true
+title: Dynamic Web TWAIN Troubleshooting Your Trial License Has Expired
+keywords: Dynamic Web TWAIN, Documentation, Troubleshooting, License Errors, License Expired
+breadcrumbText: License Expired
+description: Dynamic Web TWAIN SDK Documentation Troubleshooting License Errors License Expired Page
+---
+
+
 # Handling Errors
 
 ## Your trial product key has expired

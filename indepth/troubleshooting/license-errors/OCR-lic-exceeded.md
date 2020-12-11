@@ -1,3 +1,12 @@
+---
+layout: default-layout
+needAutoGenerateSidebar: true
+title: Dynamic Web TWAIN Troubleshooting You Have Exceeded The Number Of OCR Attempts Allowed By The Current License
+keywords: Dynamic Web TWAIN, Documentation, Troubleshooting, License Errors, OCR License Exceeded
+breadcrumbText: OCR License Exceeded
+description: Dynamic Web TWAIN SDK Documentation Troubleshooting License Errors OCR License Exceeded Page
+---
+
 # Handling Errors
 
 ## You have exceeded the number of OCR attempts allowed by the current license

@@ -1,3 +1,13 @@
+---
+layout: default-layout
+needAutoGenerateSidebar: true
+title: Dynamic Web TWAIN Troubleshooting The Current Product Key Does Not Match The Domain
+keywords: Dynamic Web TWAIN, Documentation, Troubleshooting, License Errors, Domain Does Not Match
+breadcrumbText: Domain Doesn't Match
+description: Dynamic Web TWAIN SDK Documentation Troubleshooting License Errors Domain Doesn't Match Page
+---
+
+
 # Handling Errors
 
 ## The current product key does not match the domain
