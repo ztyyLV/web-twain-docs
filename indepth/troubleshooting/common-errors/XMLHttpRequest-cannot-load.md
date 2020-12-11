@@ -1,3 +1,12 @@
+---
+layout: default-layout
+needAutoGenerateSidebar: true
+title: Dynamic Web TWAIN Troubleshooting XMLHttpRequest Cannot Load XXX
+keywords: Dynamic Web TWAIN, Documentation, Troubleshooting, Common Errors, XMLHttpRequest Cannot Load XXX
+breadcrumbText: XMLHttpRequest Cannot Load
+description: Dynamic Web TWAIN SDK Documentation Troubleshooting Common Errors XMLHttpRequest Cannot Load XXX
+---
+
 # Handling Errors
 
 ## XMLHttpRequest cannot load XXX

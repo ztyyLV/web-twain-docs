@@ -1,3 +1,12 @@
+---
+layout: default-layout
+needAutoGenerateSidebar: true
+title: Dynamic Web TWAIN Troubleshooting General Failure 
+keywords: Dynamic Web TWAIN, Documentation, Troubleshooting, Common Errors, General Failure
+breadcrumbText: General Failure
+description: Dynamic Web TWAIN SDK Documentation Troubleshooting Common Errors General Failure Page
+---
+
 # Handling Errors
 
 ## General failure

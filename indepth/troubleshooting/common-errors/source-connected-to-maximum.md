@@ -1,3 +1,12 @@
+---
+layout: default-layout
+needAutoGenerateSidebar: true
+title: Dynamic Web TWAIN Troubleshooting Source Is Connected To The Maximum Supported Number Of Applications
+keywords: Dynamic Web TWAIN, Documentation, Troubleshooting, Common Errors, Source Connected To Maximum
+breadcrumbText: Source Connected To Maximum
+description: Dynamic Web TWAIN SDK Documentation Troubleshooting Common Errors Source Connected To Maximum Page
+---
+
 # Handling Errors
 
 ## Source is connected to the maximum supported number of applications

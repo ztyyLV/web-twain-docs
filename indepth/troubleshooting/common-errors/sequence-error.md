@@ -1,3 +1,12 @@
+---
+layout: default-layout
+needAutoGenerateSidebar: true
+title: Dynamic Web TWAIN Troubleshooting Sequence Error
+keywords: Dynamic Web TWAIN, Documentation, Troubleshooting, Common Errors, Sequence Error
+breadcrumbText: Sequence Error
+description: Dynamic Web TWAIN SDK Documentation Troubleshooting Common Errors Sequence Error Page
+---
+
 # Handling Errors
 
 ## Sequence error

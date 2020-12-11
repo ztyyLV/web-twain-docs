@@ -1,3 +1,13 @@
+---
+layout: default-layout
+needAutoGenerateSidebar: true
+title: Dynamic Web TWAIN Troubleshooting HTTP Process Error
+keywords: Dynamic Web TWAIN, Documentation, Troubleshooting, Common Errors, HTTP Process Error
+breadcrumbText: HTTP Process Error
+description: Dynamic Web TWAIN SDK Documentation Troubleshooting Common Errors HTTP Process Error Page
+---
+
+
 # Handling Errors
 
 ## HTTP process error

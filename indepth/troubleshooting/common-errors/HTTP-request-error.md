@@ -1,3 +1,12 @@
+---
+layout: default-layout
+needAutoGenerateSidebar: true
+title: Dynamic Web TWAIN Troubleshooting HTTP Request Error
+keywords: Dynamic Web TWAIN, Documentation, Troubleshooting, Common Errors, HTTP Request Error
+breadcrumbText: HTTP Request Error
+description: Dynamic Web TWAIN SDK Documentation Troubleshooting Common Errors HTTP Request Error Page
+---
+
 # Handling Errors
 
 ## HTTP request error
