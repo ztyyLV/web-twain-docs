@@ -2,16 +2,16 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Troubleshooting A Connection With The Server Could Not Be Established
-keywords: Dynamic Web TWAIN, Documentation, Troubleshooting, Common Errors, Connection Couldn't Be Established
-breadcrumbText: Connection Couldn't Be Established
-description: Dynamic Web TWAIN SDK Documentation Troubleshooting Common Errors Connection Couldn't Be Established Page
+title: Dynamic Web TWAIN Troubleshooting Activating The WebTwain Instance Prompt Doesn't Disappear 
+keywords: Dynamic Web TWAIN, Documentation, Troubleshooting, Common Errors, Activating The WebTwain Instance Prompt Doesn't Disappear 
+breadcrumbText: Activating The WebTwain Instance
+description: Dynamic Web TWAIN SDK Documentation Troubleshooting Activating The WebTwain Instance Prompt Doesn't Disappear  Page
 ---
 
 # Handling Errors
 
 
-## Activating the WebTwain instance doesn't disappear 
+## 'Activating the WebTwain instance' prompt doesn't disappear 
 
 * Symptom
 
