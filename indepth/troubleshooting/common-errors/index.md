@@ -27,5 +27,6 @@ description: Dynamic Web TWAIN SDK Documentation Troubleshooting Common Errors I
 
 ## [Request header field dwt-md5 is not allowed by Access-Control-Allow-Headers in preflight response]({{site.indepth}}troubleshooting/common-errors/dwt-md5-is-not-allowed.html)
 
+## ['Activating the WebTwain instance' prompt doesn't disappear]({{site.indepth}}troubleshooting/common-errors/activating-the-WebTwain-instance.html)
 
 
