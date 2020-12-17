@@ -56,8 +56,8 @@ After you have installed the driver for your scanner, you can refer to the follo
 
     > In most cases, please dowload the 32-bit version
 
-    - [32-bit](http://download.dynamsoft.com/tool/Twack_32.msi)
-    - [64-bit](http://download.dynamsoft.com/tool/Twack_64.msi)
+    - [32-bit](https://download.dynamsoft.com/tool/Twack_32.msi)
+    - [64-bit](https://download.dynamsoft.com/tool/Twack_64.msi)
 
   + Open the program
 
