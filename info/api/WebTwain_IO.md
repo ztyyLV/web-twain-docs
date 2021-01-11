@@ -1595,7 +1595,7 @@ ClearTiffCustomTag(): boolean;
 
 ``` javascript
 /**
- * Clear the content of all custom tiff tags.
+ * Sets a custom tiff tag (up to 32 tags). The string to be set in a tag can be base64 encoded.
  * @param id The id of the custom tag.
  * @param content The content of the tag.
  * @param useBase64Encoding Whether the content is encoded.
