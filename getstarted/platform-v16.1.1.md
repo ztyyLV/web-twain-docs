@@ -102,7 +102,7 @@ description: Dynamic Web TWAIN SDK Documentation Platform Page
 
 ## ActiveX browsers
 
-ActiveX browsers refers to Internet Explorer 9 ~ 11. They are not included in the above lists. By default, IE 10 ~ 11 runs in HTML5 mode. Setting the global API `Dynamsoft.WebTwainEnv.IfUseActiveXForIE10Plus` to true can turn ActiveX mode on in IE 10 ~ 11.
+ActiveX browsers refers to Internet Explorer 8 and 9. They are not included in the above lists.
 
 ## Browsers on mobile devices
 
