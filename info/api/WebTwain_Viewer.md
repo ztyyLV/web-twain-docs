@@ -17,10 +17,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 * [createImageEditor()](#createimageeditor)
 * [createThumbnailViewer()](#createthumbnailviewer)
 * [first()](#first)
-* [fitWindow()](#fitwindow)
-
-<!--* [getUISettings](#getuisettings)-->
-
+* [fitWindow()](#fitwindow)<!--* [getUISettings](#getuisettings)-->
 * [gotoPage()](#gotopage)
 * [hide()](#hide)
 * [last()](#last)
@@ -28,16 +25,11 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 * [off()](#off)
 * [on()](#on)
 * [previous()](#previous)
-* [render()](#render)
-
-<!--* [resetUISettings](#resetuisettings)-->
-
-* [setButtonClass()](#setbuttonclass)
-* [setSelectedAreas()](#setselectedAreas)
+* [render()](#render)<!--* [resetUISettings](#resetuisettings)* [setButtonClass()](#setbuttonclass)-->
+* [setSelectedAreas()](#setselectedareas)
 * [setViewMode()](#setviewmode) 
 * [show()](#show)
 * [unbind()](#unbind)
-
 <!--* [updateUISettings](#updateuisettings)-->
 
 **Properties**
