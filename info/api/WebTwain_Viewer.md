@@ -30,6 +30,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 * [setViewMode()](#setviewmode) 
 * [show()](#show)
 * [unbind()](#unbind)
+
 <!--* [updateUISettings](#updateuisettings)-->
 
 **Properties**
@@ -42,7 +43,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 * [height](#height)
 * [idPostfix](#idpostfix)
 * [ifAutoScroll](#ifautoscroll)
-* [innerBorder](#innerBorder)
+* [innerBorder](#innerborder)
 * [pageMargin](#pagemargin)
 * [selectedAreaBorderColor](#selectedareabordercolor)
 * [selectedPageBackground](#selectedpagebackground)
@@ -1012,6 +1013,26 @@ readonly idPostfix: string;
 
 ``` javascript
 var myViewerIdPostfix = DWObject.Viewer.idPostfix;
+```
+
+---
+
+## ifAutoScroll
+
+**Syntax**
+
+``` typescript
+/**
+ * Return or set whether to scroll the viewer automatically when new pages are imported.
+ * Default: true;
+ */
+ifAutoScroll: string; 
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.ifAutoScroll = false;
 ```
 
 ---
