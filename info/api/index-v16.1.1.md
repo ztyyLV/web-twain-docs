@@ -13,8 +13,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 ## Global
 
-* [`Dynamsoft.WebTwainEnv`]({{site.info}}api/Dynamsoft_WebTwainEnv.html) 
-* [`Dynamsoft.Enum`]({{site.info}}api/Dynamsoft_Enum.html) 
+* [Dynamsoft.WebTwainEnv]({{site.info}}api/Dynamsoft_WebTwainEnv.html) 
+* [Dynamsoft.Enum]({{site.info}}api/Dynamsoft_Enum.html) 
 
 ## WebTwain
 
@@ -97,7 +97,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [ConvertToGrayScale()]({{site.info}}api/WebTwain_Edit.html#converttograyscale)
 * [ChangeImageSize()]({{site.info}}api/WebTwain_Edit.html#changeimagesize) 
 * [Invert()]({{site.info}}api/WebTwain_Edit.html#invert)
-* [SetImageWidth()]({{site.info}}api/WebTwain_Edit.html#setimagewidth)
+* [SetImageWidth()]({{site.info}}api/WebTwain_Edit.html#setimagewidth) 
+* [ShowImageEditor()]({{site.info}}api/WebTwain_Edit.html#showimageeditor)
 
 <!--* [FlipAsync()]({{site.info}}api/WebTwain_Edit.html#flipasync)-->
 <!--* [MirrorAsync()]({{site.info}}api/WebTwain_Edit.html#mirrorasync)-->
@@ -324,61 +325,65 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 ### Viewer
 
+> For WebTwain instances
+
 #### Methods
 
-* [bind()]({{site.info}}api/WebTwain_Viewer.html#bind)
-* [clearSelectedAreas()]({{site.info}}api/WebTwain_Viewer.html#clearselectedareas)
-* [createCustomElement()]({{site.info}}api/WebTwain_Viewer.html#createcustomelement)
-* [createImageEditor()]({{site.info}}api/WebTwain_Viewer.html#createimageeditor)
-* [createThumbnailViewer()]({{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer)
-* [first()]({{site.info}}api/WebTwain_Viewer.html#first)
-* [fitWindow()]({{site.info}}api/WebTwain_Viewer.html#fitwindow)
-* [gotoPage()]({{site.info}}api/WebTwain_Viewer.html#gotopage)
-* [hide()]({{site.info}}api/WebTwain_Viewer.html#hide)
-* [last()]({{site.info}}api/WebTwain_Viewer.html#last)
-* [next()]({{site.info}}api/WebTwain_Viewer.html#next)
-* [off()]({{site.info}}api/WebTwain_Viewer.html#off)
-* [on()]({{site.info}}api/WebTwain_Viewer.html#on)
-* [previous()]({{site.info}}api/WebTwain_Viewer.html#previous)
-* [render()]({{site.info}}api/WebTwain_Viewer.html#render)
-* [setButtonClass()]({{site.info}}api/WebTwain_Viewer.html#setbuttonclass)
-* [setSelectedAreas()]({{site.info}}api/WebTwain_Viewer.html#setselectedAreas)
-* [setViewMode()]({{site.info}}api/WebTwain_Viewer.html#setviewmode) 
-* [show()]({{site.info}}api/WebTwain_Viewer.html#show)
-* [unbind()]({{site.info}}api/WebTwain_Viewer.html#unbind)
+* [BindViewer()]({{site.info}}api/WebTwain_Viewer.html#bindviewer)
+* [UnbindViewer()]({{site.info}}api/WebTwain_Viewer.html#unbindviewer)
+* [UpdateViewer()]({{site.info}}api/WebTwain_Viewer.html#updateviewer)
 
 #### Properties
 
-* [acceptDrop]({{site.info}}api/WebTwain_Viewer.html#acceptdrop)
-* [allowSlide]({{site.info}}api/WebTwain_Viewer.html#allowslide)
-* [background]({{site.info}}api/WebTwain_Viewer.html#background)
-* [border]({{site.info}}api/WebTwain_Viewer.html#border)
-* [cursor]({{site.info}}api/WebTwain_Viewer.html#cursor)
-* [height]({{site.info}}api/WebTwain_Viewer.html#height)
-* [idPostfix]({{site.info}}api/WebTwain_Viewer.html#idpostfix)
-* [ifAutoScroll]({{site.info}}api/WebTwain_Viewer.html#ifautoscroll)
-* [innerBorder]({{site.info}}api/WebTwain_Viewer.html#innerBorder)
-* [pageMargin]({{site.info}}api/WebTwain_Viewer.html#pagemargin)
-* [selectedAreaBorderColor]({{site.info}}api/WebTwain_Viewer.html#selectedareabordercolor)
-* [selectedPageBackground]({{site.info}}api/WebTwain_Viewer.html#selectedpagebackground)
-* [selectedPageBorder]({{site.info}}api/WebTwain_Viewer.html#selectedpageborder)
-* [selectionRectAspectRatio]({{site.info}}api/WebTwain_Viewer.html#selectionrectaspectratio)
-* [showPageNumber]({{site.info}}api/WebTwain_Viewer.html#showpagenumber)
-* [singlePageMode]({{site.info}}api/WebTwain_Viewer.html#singlepagemode)
-* [width]({{site.info}}api/WebTwain_Viewer.html#width)
-* [zoom]({{site.info}}api/WebTwain_Viewer.html#zoom)
+* [BackgroundColor]({{site.info}}api/WebTwain_Viewer.html#backgroundcolor) 
+* [SelectionImageBorderColor]({{site.info}}api/WebTwain_Viewer.html#selectionimagebordercolor)
+* [FitWindowType]({{site.info}}api/WebTwain_Viewer.html#fitwindowtype)  
+* [IfFitWindow]({{site.info}}api/WebTwain_Viewer.html#iffitwindow)
+* [Height]({{site.info}}api/WebTwain_Viewer.html#height)  
+* [Width]({{site.info}}api/WebTwain_Viewer.html#width)
+* [IfAutoScroll]({{site.info}}api/WebTwain_Viewer.html#ifautoscroll)    
+* [ShowPageNumber]({{site.info}}api/WebTwain_Viewer.html#showpagenumber)
+* [MouseX]({{site.info}}api/WebTwain_Viewer.html#mousex)  
+* [MouseY]({{site.info}}api/WebTwain_Viewer.html#mousey)
+* [ImageMargin]({{site.info}}api/WebTwain_Viewer.html#imagemargin)  
+* [MouseShape]({{site.info}}api/WebTwain_Viewer.html#mouseshape)
+* [SelectionRectAspectRatio]({{site.info}}api/WebTwain_Buffer.html#selectionrectaspectratio)
+* [Zoom]({{site.info}}api/WebTwain_Viewer.html#zoom)
 
 #### Events
 
-* [click]({{site.info}}api/WebTwain_Viewer.html#click)
-* [contextmenu]({{site.info}}api/WebTwain_Viewer.html#contextmenu)
-* [dblclick]({{site.info}}api/WebTwain_Viewer.html#dblclick)
-* [mousemove]({{site.info}}api/WebTwain_Viewer.html#mousemove)
-* [pageAreaSelected]({{site.info}}api/WebTwain_Viewer.html#pageareaselected)
-* [pageAreaUnselected]({{site.info}}api/WebTwain_Viewer.html#pageareaunselected)
-* [pageRendered]({{site.info}}api/WebTwain_Viewer.html#pagerendered)
-* [resize]({{site.info}}api/WebTwain_Viewer.html#resize)
-* [topPageChanged]({{site.info}}api/WebTwain_Viewer.html#toppagechanged)
+* [OnMouseClick]({{site.info}}api/WebTwain_Viewer.html#onmouseclick) 
+* [OnMouseDoubleClick]({{site.info}}api/WebTwain_Viewer.html#onmousedoubleclick)
+* [OnMouseMove]({{site.info}}api/WebTwain_Viewer.html#onmousemove)   
+* [OnMouseRightClick]({{site.info}}api/WebTwain_Viewer.html#onmouserightclick)
+
+> For the WebTwain. Viewer interface
+
+#### Methods
+
+* [setViewMode()]({{site.info}}api/WebTwain_Viewer.html#setviewmode) 
+* [updateUISettings()]({{site.info}}api/WebTwain_Viewer.html#updateuisettings)
+* [setButtonClass()]({{site.info}}api/WebTwain_Viewer.html#setbuttonclass)  
+* [setSelectedImageArea()]({{site.info}}api/WebTwain_Viewer.html#setselectedimagearea)
+* [zoomIn()]({{site.info}}api/WebTwain_Viewer.html#zoomin) 
+* [zoomOut()]({{site.info}}api/WebTwain_Viewer.html#zoomout)
+* [bindCustomElement]({{site.info}}api/WebTwain_Viewer.html#bindcustomelement) 
+* [showCustomElement]({{site.info}}api/WebTwain_Viewer.html#showcustomelement)
+* [hideCustomElement]({{site.info}}api/WebTwain_Viewer.html#hidecustomelement) 
+* [toggleCustomElement]({{site.info}}api/WebTwain_Viewer.html#togglecustomelement)
+* [showVideo()]({{site.info}}api/WebTwain_Viewer.html#showvideo)
+* [closeVideo()]({{site.info}}api/WebTwain_Viewer.html#closevideo)
+* [on()]({{site.info}}api/WebTwain_Viewer.html#on)
+
+#### Properties
+
+* [bOnlyShowThumbnailsView]({{site.info}}api/WebTwain_Viewer.html#bonlyshowthumbnailsview)
+* [cursorOverThumbnailsView]({{site.info}}api/WebTwain_Viewer.html#cursoroverthumbnailsview)
+
+#### Events
+
+* [video-closed]({{site.info}}api/WebTwain_Viewer.html#vidoe-closed)
+* [video-error]({{site.info}}api/WebTwain_Viewer.html#vidoe-error)
 
 ## Addon
 
@@ -455,8 +460,6 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [stop()]({{site.info}}api/Addon_Camera.html#stop)
 * [getStatus()]({{site.info}}api/Addon_Camera.html#getstatus)
 * [capture()]({{site.info}}api/Addon_Camera.html#capture)
-* [showVideo()]({{site.info}}api/Addon_Camera.html#showvideo)
-* [closeVideo()]({{site.info}}api/Addon_Camera.html#closevideo)
 
 ### Webcam
 

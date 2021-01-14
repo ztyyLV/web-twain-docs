@@ -156,8 +156,7 @@ AcquireImage(
 
 interface DeviceConfiguration {
     /**
-     * Whether to show the built-in User Interface from the device vendor.
-     * In v16.2+, it can also control whether to use the UI remotely.
+     * Whether to show the built-in User Interface from the device vendor
      */
     IfShowUI?: boolean;
     /**
@@ -191,17 +190,7 @@ interface DeviceConfiguration {
     /**
      * How much extended information is retrieved. Only valid when {IfGetExtImageInfo} is true.
      */
-    extendedImageInfoQueryLevel?: number;
-    /**
-     * Whether to scan from a remote computer.
-     * (Added in 16.2)
-     */
-    RemoteScan:boolean;
-    /**
-     * Specify a source by its index.
-     * (Added in 16.2)
-     */
-    SelectSourceByIndex: number;
+    extendedImageInfoQueryLevel?: number
 }
 ```
 
@@ -292,10 +281,6 @@ If it's set to 1, the following will also be retrieved (if available):
 | TWEI_PRINTERTEXT | 0x124A |
 
 If it's set to 2, then besides what's mentioned in the two tables above, the Dynamci Web TWAIN library will also try to query the scanner for its own custom extended image info.
-
-* Remote Scan
-
-  When [scanning remotely]({{site.indepth}}feature/input.html#scan-from-a-remote-scanner), if the method is called without any parameter, [ `IfShowUI` ](#ifshowui) must be set to `false` .
 
 **Example**
 
@@ -574,9 +559,8 @@ SelectSource(
 
 **Usage notes**
 
-* It's recommended to use this API asynchronously by pass arguments to the parameters `successCallback` and `failureCallback` .
-* On `Windows` and `Windows` only, you can call this method with no arguments so that it runs synchronously and return a boolean value.
-* When [scanning remotely]({{site.indepth}}feature/input.html#scan-from-a-remote-scanner), this method must be called asynchronously. 
+It's recommended to use this API asynchronously by pass arguments to the parameters `successCallback` and `failureCallback` .
+On `Windows` and `Windows` only, you can call this method with no arguments so that it runs synchronously and return a boolean value.
 
 **Example**
 
@@ -1225,7 +1209,6 @@ SetFileXferInfo(
 Make sure the format you set is supported by the data source.
 
 Example argument for the parameter `fileName`
-
 * "C:\\webtwain.jpg": The next scanned image will be compressed as a JPEG file named `webtwain` and transferred to "C:\\".
 * "C:\\webtwain" + <> + ".jpg": The scanned images will result in "C:\\webtwain1.jpg", "C:\\webtwain2.jpg", "C:\\webtwain3.jpg", etc.
 * "C:\\webtwain" + <%06d> + ".jpg": The scanned images will result in "C:\\webtwain000001.jpg", "C:\\webtwain000002.jpg", "C:\\webtwain000003.jpg", etc.
@@ -1302,7 +1285,6 @@ DWObject.AcquireImage();
 **Syntax**
 
 ``` 
-
 /**
  * Return or set the pixel bit depth for the current value of `PixelType` .
  */
@@ -1322,7 +1304,6 @@ By default, the bit depth is 1 for `TWPT_BW` , 8 for `TWPT_GRAY` and 24 for `TWP
 **Syntax**
 
 ``` 
-
 /**
  * Return or set whether newly acquired images are inserted or appended.
  */
@@ -1342,7 +1323,6 @@ If it's set to `false` , the images will be inserted before the current image. T
 **Syntax**
 
 ``` 
-
 /**
  * Return or set whether to close the user interface after all images have been acquired.
  */
@@ -1360,7 +1340,6 @@ This property only makes sense when `IfShowUI` is set to `true` .
 **Syntax**
 
 ``` 
-
 /**
  * Return or set whether to enable duplex scanning (in other words, whether to scan both sides of the paper).
  */
@@ -1380,7 +1359,6 @@ Not all scanners support duplex scanning. To confirm, check the user manual of t
 **Syntax**
 
 ``` 
-
 /**
  * Return or set whether a data source's Automatic Document Feeder (ADF) is enabled for scanning.
  */
@@ -1400,7 +1378,6 @@ If the property is set to `true` , the data source will try acquiring images fro
 **Syntax**
 
 ``` 
-
 /**
  * Return or set whether the data source displays the user interface when scanning.
  */
@@ -1418,7 +1395,6 @@ If the property is set to `true` , the data source will display its user interfa
 **Syntax**
 
 ``` 
-
 /**
  * Return or set the driver type which determines the type of sources to use.
  */
@@ -2250,7 +2226,7 @@ RegisterEvent('OnPreTransfer',function(){...});
 In the callback function of this event, you can 
 
 * Check `PendingXFERs` for the number of pending transfers. 
-* Check the information about the transferred image including `ImageLayoutDocumentNumber` ,   `ImageLayoutFrameLeft` ,   `ImageLayoutFrameTop` ,   `ImageLayoutFrameRight` ,   `ImageLayoutFrameBottom` ,   `ImageLayoutPageNumber` ,   `ImageLayoutFrameNumber` , etc.
+* Check the information about the transferred image including `ImageLayoutDocumentNumber` , `ImageLayoutFrameLeft` , `ImageLayoutFrameTop` , `ImageLayoutFrameRight` , `ImageLayoutFrameBottom` , `ImageLayoutPageNumber` , `ImageLayoutFrameNumber` , etc.
 * Call `CancelAllPendingTransfers()` to cancel all the rest of the transfers.
 
 ---

@@ -13,16 +13,16 @@ For Server Side OCR, check out [Server-Side OCR](#server-side)
 
 **Methods**
 
-* [Download()](#download) 
-* [IsModuleInstalled()](#ismoduleinstalled)
-* [Recognize()](#recognize) 
-* [RecognizeFile()](#recognizefile)
-* [RecognizeRect()](#recognizerect) 
-* [RecognizeSelectedImages()](#recognizeselectedimages)
+* [`Download()`](#download) 
+* [`IsModuleInstalled()`](#ismoduleinstalled)
+* [`Recognize()`](#recognize) 
+* [`RecognizeFile()`](#recognizefile)
+* [`RecognizeRect()`](#recognizerect) 
+* [`RecognizeSelectedImages()`](#recognizeselectedimages)
 
 **Properties**
 
-* [Settings](#settings)
+* [`Settings`](#settings)
 
 ---
 
@@ -363,7 +363,7 @@ Dynamsoft.WebTwain.Addon.OCRPro.NewSettings: Settings;
 The OCR Professional engine runs as a service. The workflow is like this
 
 1. The image(s) is uploaded to the server and saved on the disk.
-2. The path(s) of the saved image(s) is sent to the OCR pro service as part of the [OCRPro.ServerSide.Request](#ocrproserversiderequest).
+2. The path(s) of the saved image(s) is sent to the OCR pro service as part of the [`OCRPro.ServerSide.Request`](#ocrproserversiderequest).
 3. The service returns the OCR result in a HTTP Response.
 
 The following demonstrates the structures of the OCR Request and the Response.
@@ -403,7 +403,7 @@ The following demonstrates the structures of the OCR Request and the Response.
 |:-|:-|
 | **productKey** | The product key which is generated from an OCR license. |
 | **inputFile**	| Specify the files to be OCR'd. This is an array of strings which are absolute paths of the files. The supported formats are BMP, JPG, TIF, PDF, PNG, JBIG2, JPEG2000, PCX, etc. Please note the use of '\\\\' instead of just '\\'. |
-| **outputFile** | Specify where the output file is saved. If the input includes more than one file, all of them will be merged into one file. Otherwise, the result will only be returned in the [OCRPro. ServerSide. Response](#ocrproserversideresponse). |
+| **outputFile** | Specify where the output file is saved. If the input includes more than one file, all of them will be merged into one file. Otherwise, the result will only be returned in the [OCRPro.ServerSide.Response`](#ocrproserversideresponse). |
 | **zones** | Specify which zones are to be OCR'd on an image. There can be multiple zones but it works only when the `recognitionMethod` is `Page` . The coordinates are in the sequence of `[[left, top, right, bottom]]` .|
 | **settings** | Configure the OCR. |
 | **.recognitionModule** | Specify which module is to be used for this OCR. Allowed values are: `mostaccurate` , `fastest` , `balanced` and `auto` . `auto` is the default value which means the library will choose one of the 3 modules automatically. |
@@ -465,13 +465,13 @@ The following demonstrates the structures of the OCR Request and the Response.
 
 |API	|Description	|
 |:-|:-|
-|**inputFile**	|Check out [OCRPro. ServerSide. Request](#ocrproserversiderequest) for more info.|
-|**settings**		|Check out [OCRPro. ServerSide. Request](#ocrproserversiderequest) for more info.|
-|**outputFile**	|Check out [OCRPro. ServerSide. Request](#ocrproserversiderequest) for more info.|
+|**inputFile**	|Check out [OCRPro. ServerSide. Request`](#ocrproserversiderequest) for more info.|
+|**settings**		|Check out [OCRPro. ServerSide. Request`](#ocrproserversiderequest) for more info.|
+|**outputFile**	|Check out [OCRPro. ServerSide. Request`](#ocrproserversiderequest) for more info.|
 |**ocrTotalCount**|Return  the number of pages allowed to be OCR'd by the current license.|
 |**alreadyOCRCount**		|Return the number of pages already OCR'd.|
 |**code**		|Return the error code for the OCR. If it's not `0` , check `errorList` for more details.|
 |**message**		|Return the overall error message.|
 |**errorList**|Return the detailed error messages for each of the OCR'd files.|
-|**resultFile**|Return the result file encoded as a base64 string. It only works when [OCRPro. ServerSide. Request](#ocrproserversiderequest) doesn't specify an output file path.|
+|**resultFile**|Return the result file encoded as a base64 string. It only works when [OCRPro. ServerSide. Request`](#ocrproserversiderequest) doesn't specify an output file path.|
 |**resultDetail**|Return detailed OCR result down to each found letter in JSON format. This is only valid when the `recognitionMethod` is set to `Page` .|
