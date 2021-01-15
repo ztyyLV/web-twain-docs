@@ -100,6 +100,7 @@ ImageIDToIndex(imageId: number): number;
 **Usage notes**
 
 An `imageId` is unique and won't change as long as the Dynamsoft Service process is running. It's a better way to keep track of an image than the `index` which changes easily.
+
 ---
 
 ## RenameTag
