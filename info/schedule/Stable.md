@@ -50,7 +50,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
   + Check out [how to enable remote scan]({{site.indepth}}features/input.html#how-to-enable-remote-scan).
 
 * Improved the tagging mechanism
-  + Added a new method [`RenameTag()`]({{site.info}}aip/WebTwain_Buffer.html#renametag) to rename an existing tag.
+  + Added a new method [`RenameTag()`]({{site.info}}api/WebTwain_Buffer.html#renametag) to rename an existing tag.
   + Added a new method [`ClearFilter()`]({{site.info}}api/WebTwain_Buffer.html#clearfilter) to stop filtering images by tag.
   + The method [`FilterImagesByTag()`]({{site.info}}api/WebTwain_Buffer.html#filterimagesbytag) shows all images if no parameter is passed or shows no image at all if the tag value passed doesn't exist or there is no images under that tag.
 
