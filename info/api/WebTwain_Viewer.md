@@ -279,7 +279,7 @@ var editorSettings = {
             'rotateright': 'Rotate Right',
             'deskew': 'Deskew',
             'crop': 'Crop Selected Area',
-            'erase': 'Erase Selected Area',
+            'cut': 'Cut Selected Area',
             'changeimagesize': 'Change Image Size',
             'flip': 'Flip Image',
             'mirror': 'Mirror Image',
@@ -482,7 +482,7 @@ var thumbnailViewerSettings = {
     columns: 1,
     rows: 3,
     scrollDirection: 'vertical', // 'horizontal'
-    margin: 10,
+    pageMargin: 10,
     background: "rgb(255, 255, 255)",
     border: '',
     allowKeyboardControl: true,
@@ -492,10 +492,10 @@ var thumbnailViewerSettings = {
     pageBackground: "transparent",
     pageBorder: "1px solid rgb(238, 238, 238)",
     hoverBackground: "rgb(239, 246, 253)",
-    hoverBorder: "1px solid rgb(238, 238, 238)",
+    hoverPageBorder: "1px solid rgb(238, 238, 238)",
     placeholderBackground: "rgb(251, 236, 136)",
-    selectedImageBorder: "1px solid rgb(125,162,206)",
-    selectedImageBackground: "rgb(199, 222, 252)"
+    selectedPageBorder: "1px solid rgb(125,162,206)",
+    selectedPageBackground: "rgb(199, 222, 252)"
 }​​​​​​​;
 
 var thumbnail = DWObject.Viewer.createThumbnailViewer(thumbnailViewerSettings);
@@ -947,9 +947,9 @@ The allowed values are:
 | Value | Description |
 |:-|:-|
 | `default` | The shape is ![default]({{site.assets}}imgs/default.gif).|
-| `crosshair` | The shape is ![crosshair]({{site.assets}}imgs/default.gif), you can select one or multiple area(s) on the page. |
-| `pointer` | The shape is ![pointer]({{site.assets}}imgs/default.gif). If the displayed page is bigger than the viewer, the page can be moved.|
-| `zoom-in` | The shape is ![zoom-in]({{site.assets}}imgs/default.gif), supports click the page to zoom in. Only works if the view mode of the viewer is set to -1 by -1.|
+| `crosshair` | The shape is ![crosshair]({{site.assets}}imgs/crosshair.gif), you can select one or multiple area(s) on the page. |
+| `pointer` | The shape is ![pointer]({{site.assets}}imgs/pointer.gif). If the displayed page is bigger than the viewer, the page can be moved.|
+| `zoom-in` | The shape is ![zoom-in]({{site.assets}}imgs/zoom-in.gif), supports click the page to zoom in. Only works if the view mode of the viewer is set to -1 by -1.|
 
 If there are selected areas on the page, changing the `cursor` property will clear them.
 
