@@ -104,8 +104,6 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 * Check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html#viewer-related-api-changes-in-versoin-16.2).
 
-* Also check out [SHA-1 signatures Deprecation]({{site.info}}schedule/deprecated.html#sha-1-signatures).
-
 ### Bug Fixes
 
 * Fixed a bug where if you create a `WebTwain` instance under WASM-mode and then destroy it and create another `WebTwain` instance under Service-mode, you will be prompted to install the Dynamsoft Service even if it is already installed.
@@ -136,6 +134,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 ### Changes to the ActiveX Edition
 
+* Internet Explorer 8 is no longer supported.
 * Fixed a bug where when saving an image as TIFF, the same image gets duplicated in the buffer.
 
 ## `16.1.1` (08/13/2020)

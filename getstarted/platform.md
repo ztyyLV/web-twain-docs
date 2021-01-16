@@ -26,9 +26,9 @@ description: Dynamic Web TWAIN SDK Documentation Platform Page
 
 * The following browsers are supported
   + Chrome 68.* ~ 79.*
-  + Chrome 80.* ~ 85.* `Recommended`
+  + Chrome 80 + `Recommended`
   + Firefox 61.* ~ 69.*
-  + Firefox 70.* ~ 80.* `Recommended`
+  + Firefox 70 + `Recommended`
   + Microsoft Edge Spartan
   + Microsoft Edge Anaheim `Recommended`
   + Internet Explorer 10 ~ 11

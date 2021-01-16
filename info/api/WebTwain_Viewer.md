@@ -310,7 +310,7 @@ var editorSettings = {
             'rotateright': true,
             'deskew': true,
             'crop': true,
-            'erase': true,
+            'cut': true,
             'changeimagesize': true,
             'flip': true,
             'mirror': true,
@@ -471,6 +471,7 @@ interface ThumbnailViewer {
 ``` javascript
 // Use default settings
 var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer();
+objThumbnailViewer.background = "rgb(0,0,255)";
 objThumbnailViewer.show();
 ```
 
@@ -1155,6 +1156,10 @@ selectionRectAspectRatio: number | string;
 DWObject.Viewer.selectionRectAspectRatio = 0.5;
 ```
 
+**Usage Notes**
+
+This API is only effective when drawing manually (it won't work if the selection is done with the API [`setSelectedAreas()`](#setselectedareas)).
+
 ---
 
 ## showPageNumber
@@ -1193,12 +1198,14 @@ singlePageMode: boolean;
 **Example**
 
 ``` javascript
-DWObject.Viewer.singlePageMode = true;
+var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer();
+objThumbnailViewer.show();
+DWObject.Viewer.singlePageMode = false;
 ```
 
 **Usage notes**
 
-The default value is `false` . Setting it to `true` is equivalent to setting the view mode to -1 by -1.
+The default value is `false` . If the thumbnail viewer is not shown, setting `singlePageMode` to `true` is equivalent to setting the view mode to -1 by -1. But if the thumbnail viewer is shown, `singlePageMode` will be changed to `true` automatically.
 
 ---
 
@@ -1267,11 +1274,12 @@ The zoom factor is only effective when the view mode is -1 * -1. Allowed values 
  * Built-in callbacks that are triggered when the mouse clicks | right-clicks | double-clicks| on a page or moves over it.
  * @param eventName Specify the event.
  * @param callback Specify the callback.
- * @argument event The viewer-specific event object.
+ * @argument dwtEvent The viewer-specific event object.
+ * @argument domEvent The original mouse event object.
  */
 on(
     eventName: string, 
-    callback: (event: ViewerEvent) => void
+    callback: (dwtEvent: ViewerEvent, domEvent: MouseEvent) => void
 ): void;
 
 interface ViewerEvent{ 
@@ -1291,20 +1299,20 @@ interface ViewerEvent{
 **Example**
 
 ``` javascript
-DWObject.Viewer.on('click', function(index) {
-    console.log(index);
+DWObject.Viewer.on('click', function(dwtEvent, domEvent) {
+    console.log(dwtEvent, domEvent);
 });
 
-DWObject.Viewer.on('dblclick', function(index) {
-    console.log(index);
+DWObject.Viewer.on('dblclick', function(dwtEvent, domEvent) {
+    console.log(dwtEvent, domEvent);
 });
 
-DWObject.Viewer.on('contextmenu', function(index) {
-    console.log(index);
+DWObject.Viewer.on('contextmenu', function(dwtEvent, domEvent) {
+    console.log(dwtEvent, domEvent);
 });
 
-DWObject.Viewer.on('mousemove', function(index) {
-    console.log(index);
+DWObject.Viewer.on('mousemove', function(dwtEvent, domEvent) {
+    console.log(dwtEvent, domEvent);
 });
 ```
 
@@ -1420,8 +1428,9 @@ on('resize',
 
 ``` javascript
 DWObject.Viewer.on("resize", function(width, height) {
-    console.log(width);
+    console.log(width, height);
 });
+DWObject.Viewer.width += 100;
 ```
 
 ---
@@ -1450,4 +1459,4 @@ DWObject.Viewer.on("topPageChanged", function(index) {
 
 **Usage Notes**
 
-The page margin is only effective when the view mode is not -1 * -1 (in other words, [ `singlePageMode` ](#singlepagemode) is `false` ).
+This event is only effective when the view mode is not -1 * -1 (in other words, [ `singlePageMode` ](#singlepagemode) is `false` ).

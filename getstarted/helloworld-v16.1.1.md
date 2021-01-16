@@ -79,14 +79,15 @@ Change the function `AcquireImage()` like this
 function AcquireImage() {
     if (DWObject) {
         if (Dynamsoft.Lib.env.bMobile) {
-            DWObject.LoadImageEx('', 5,
-                function() {
-                    console.log('success');
-                },
-                function(errCode, error) {
-                    alert(error);
-                }
-            );
+            DWObject.Viewer.showVideo()
+                .then(
+                    function() {
+                        console.log('success');
+                    },
+                    function(error) {
+                        alert(error);
+                    }
+                )
         } else {
             DWObject.SelectSource(
                 function() {
@@ -125,14 +126,15 @@ function AcquireImage() {
         function AcquireImage() {
             if (DWObject) {
                 if (Dynamsoft.Lib.env.bMobile) {
-                    DWObject.LoadImageEx('', 5,
-                        function() {
-                            console.log('success');
-                        },
-                        function(errCode, error) {
-                            alert(error);
-                        }
-                    );
+                    DWObject.Viewer.showVideo()
+                        .then(
+                            function() {
+                                console.log('success');
+                            },
+                            function(error) {
+                                alert(error);
+                            }
+                        )
                 } else {
                     DWObject.SelectSource(function() {
                             DWObject.OpenSource();
@@ -286,14 +288,15 @@ Now we can use the page to scan or acquire, then upload the images as a PDF docu
         function AcquireImage() {
             if (DWObject) {
                 if (Dynamsoft.Lib.env.bMobile) {
-                    DWObject.LoadImageEx('', 5,
-                        function() {
-                            console.log('success');
-                        },
-                        function(errCode, error) {
-                            alert(error);
-                        }
-                    );
+                    DWObject.Viewer.showVideo()
+                        .then(
+                            function() {
+                                console.log('success');
+                            },
+                            function(error) {
+                                alert(error);
+                            }
+                        );
                 } else {
                     DWObject.SelectSource(function() {
                             DWObject.OpenSource();

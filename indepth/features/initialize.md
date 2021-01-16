@@ -30,18 +30,11 @@ If a user who hasn't installed the Dynamsoft Service accesses the web page (whic
 > The prompt comes up when you try to [create a `WebTwain` instance](#creating-the-webtwain-instance) in service mode. The same prompt will appear regardless of whether the client OS is Windows, macOS or Linux However the file you download changes based on your operating system. On Windows and macOS, the users can double click the downloaded installer to install the SDK. On Linux, however, the users will need to run one of the following commands to install it
 >
 > Debian / Ubuntu: 
->  
-
-``` 
-
+>  ``` 
 > sudo dpkg -i DynamsoftServiceSetup.deb
 > ```
-
 > Fedora
->  
-
-``` 
-
+> ``` 
 > sudo rpm -ivh DynamsoftServiceSetup.rpm
 > ```
 
@@ -205,6 +198,7 @@ Dynamsoft.WebTwainEnv.OnWebTwainReady = function() {
 Snippet two
 
 ``` javascript
+Dynamsoft.WebTwainEnv.RegisterEvent('OnWebTwainReady', Dynamsoft_OnReady);
 function Dynamsoft_OnReady() {
     DWObject = Dynamsoft.WebTwainEnv.GetWebTwain("dwtcontrolContainer");
 }

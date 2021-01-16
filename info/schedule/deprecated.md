@@ -10,11 +10,13 @@ description: Dynamic Web TWAIN SDK Documentation Deprecated Features Page
 
 # All Deprecated Features & APIs
 
-## New deprecations in 16.2 
+## Future deprecation planned
 
 ### SHA-1 signatures
 
-To comply with Windows security updates, we have deprecated SHA-1 signatures in this version. The impact is described below (we take 64bit Windows 7 as an example in below screenshots).
+To comply with Windows security updates, we will deprecate SHA-1 signatures in a future version. The impact is described below (we take 64bit Windows 7 as an example in below screenshots).
+
+*If the deprecation is implemented:*
 
 * When you try to install the Dynamsoft Service, you will get the following two error for "Unknown Publisher".
 
@@ -32,9 +34,11 @@ The prompts are one-time, once you accept the "risk", the software will install 
 
 The recommended fix is to patch the operating system, you can find the patch [here](http://www.catalog.update.microsoft.com/search.aspx?q=kb4474419).
 
-### API deprecations
+## New deprecations in 16.2 
 
-Check out the [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html#viewer-related-api-changes-in-versoin-16.2).
+* Internet Explorer 8 is no longer supported.
+
+* Check out the [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html#viewer-related-api-changes-in-versoin-16.2).
 
 ## As of version 16.1.1.
 
