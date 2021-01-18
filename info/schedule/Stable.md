@@ -42,7 +42,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 * Made the viewer more independent and robust. Related APIs are redesigned.
   + Added a new global property [`Dynamsoft.WebTwainEnv.UseDefaultViewer`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#usedefaultviewer) to control whether the built-in viewer is used.
-  + Check out the [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html#viewer-related-api-changes-in-versoin-16.2).
+  + Check out the [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html#viewer-related-api-changes-in-version-162).
 
 * Scanning remotely now supports showing the Manufacturer's User Interface.
   + Only when the remote machine is Windows.
