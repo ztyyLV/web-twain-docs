@@ -26,7 +26,7 @@ DWT supports all major browsers on all major operating systems. As of version 16
   + [Chrome v68+](https://www.google.com/chrome/)
   + [Firefox v61+](https://www.mozilla.org/en-US/firefox/)
   + Edge
-  + Internet Explorer 9+
+  + Internet Explorer 8+
   + Safari 7+
 
 > NOTE

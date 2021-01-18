@@ -18,40 +18,55 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Edit APIs Page
 * [CopyToClipboard()](#copytoclipboard) 
 * [Erase()](#erase)
 * [Flip()](#flip)
-
 <!--* [FlipAsync()](#flipasync)-->
-
 * [Mirror()](#mirror)
-
 <!--* [MirrorAsync()](#mirrorasync)-->
-
 * [Rotate()](#rotate) 
-
 <!--* [RotateAsync()](#rotate) -->
-
 * [RotateEx()](#rotateex)
 * [RotateLeft()](#rotateleft) 
-
 <!--* [RotateLeftAsync()](#rotateleft) -->
-
 * [RotateRight()](#rotateright)
-
 <!--* [RotateRightAsync()](#rotateright)-->
-
 * [ChangeBitDepth()](#changebitdepth) 
 * [SetDPI()](#setdpe)
 * [ConvertToBW()](#converttobw) 
 * [ConvertToGrayScale()](#converttograyscale)
-
 <!--* [ConvertToGrayScaleAsync()](#converttograyscaleasync)-->
-
 * [ChangeImageSize()](#changeimagesize) 
 * [Invert()](#invert)
-* [SetImageWidth()](#setimagewidth)
+* [SetImageWidth()](#setimagewidth) 
+* [ShowImageEditor()](#showimageeditor)
 
 **Properties**
 
 * [BackgroundFillColor](#backgroundfillcolor)
+
+---
+
+## ShowImageEditor
+
+**Syntax**
+
+``` typescript
+/**
+ * Show the built-in image editor. If called without any arguments while the editor is open, it'll close the editor.
+ * @param divId Specify a div element to hold the editor.
+ * @param width Specify the width of the editor.
+ * @param height Specify the height of the editor.
+ */
+ShowImageEditor(
+    divId?: string,
+    width?: number,
+    height?: number
+): boolean;
+```
+
+**Usage notes**
+
+If you call the method without any parameter, the editor will take up the full screen. If you'd like to show the editor in a div element, you need to specify all 3 parameters.
+
+If you call the method again, the editor will be closed.
 
 ---
 
@@ -143,7 +158,7 @@ SetDPI(
 
 **Usage notes**
 
-Check out [ `Dynamsoft.EnumDWT_InterpolationMethod` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_interpolationmethod).
+Check out [`Dynamsoft.EnumDWT_InterpolationMethod`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_interpolationmethod).
 
 ---
 
@@ -197,7 +212,6 @@ ConvertToGrayScale(
 
 ---
 <!--
-
 ## ConvertToGrayScaleAsync
 
 **Syntax**
@@ -291,7 +305,6 @@ Flip(
 
 ---
 <!--
-
 ## FlipAsync
 
 **Syntax**
@@ -333,7 +346,6 @@ Mirror(
 
 ---
 <!--
-
 ## MirrorAsync
 
 **Syntax**
@@ -374,7 +386,6 @@ RotateLeft(
 
 ---
 <!--
-
 ## RotateLeftAsync
 
 **Syntax**
@@ -416,7 +427,6 @@ RotateRight(
 
 ---
 <!--
-
 ## RotateRightAsync
 
 **Syntax**
@@ -461,7 +471,6 @@ Rotate(
 
 ---
 <!--
-
 ## RotateAsync
 
 **Syntax**
@@ -513,7 +522,7 @@ RotateEx(
 
 **Usage notes**
 
-Check out [ `Dynamsoft.EnumDWT_InterpolationMethod` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_interpolationmethod).
+Check out [`Dynamsoft.EnumDWT_InterpolationMethod`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_interpolationmethod).
 
 ---
 
@@ -597,7 +606,6 @@ CopyToClipboard(index: number): boolean;
 
 ---
 <!--
-
 ## CopyToClipboardAsync
 
 **Syntax**

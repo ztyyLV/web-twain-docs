@@ -26,19 +26,15 @@ This dialog comes up when running `DWT` in [service mode]({{site.indepth}}featur
 This dialog is opened by one of the following functions
 
 * `OnWebTwainNotFoundOnWindowsCallback`
-
 > For [Windows clients]({{site.getstarted}}platform.html#browsers-on-windows) 
 
 * `OnWebTwainNotFoundOnLinuxCallback`
-
 > For [Linux clients]({{site.getstarted}}platform.html#browsers-on-linux) 
 
 * `OnWebTwainNotFoundOnMacCallback`
-
 > For [macOS clients]({{site.getstarted}}platform.html#browsers-on-macos) 
 
 * `OnRemoteWebTwainNotFoundCallback`
-
 > For any client that [connects to a remote Dynamsoft Service]({{site.indepth}}features/input.html#how-to-enable-remote-scan)
 
 All four of these functions eventually call the global API `Dynamsoft.WebTwainEnv.ShowDialog()` to show the installation dialog. You can use your own method to show the necessary information so that your users know how to proceed. For example
@@ -87,7 +83,7 @@ Dynamsoft.WebTwainEnv.OnWebTwainPostExecute = function() {
 
 On the other hand, you can also call the functions `Dynamsoft.WebTwainEnv.OnWebTwainPreExecute()` and `Dynamsoft.WebTwainEnv.OnWebTwainPostExecute()` to show and hide the loader bar and backdrop when you need it in your own workflow.
 
-If you just want to change the loading bar, you can use the `Dynamsoft.WebTwainEnv.CustomizableDisplayInfo.loaderBarSource` .
+If you just want to change the loading bar, you can use the method `Dynamsoft.WebTwainEnv.SetLoaderBar()` .
 
 ### Progress bar
 
@@ -132,7 +128,7 @@ DWObject.SetLanguage(Dynamsoft.EnumDWT_Language.Spanish);
 
 ### Error Messages
 
-`DWT` has many built-in error messages as shown [here]({{site.info}}api/appendix.html#error-list). Each `ErrorString` has its own `ErrorCode` . To change the language of the message, you can read the `ErrorCode` and output the error string you have customized. For example
+`DWT` has many built-in error messages as shown [here]({{site.info}}api/Dynamsoft_Enum.html#error-list). Each `ErrorString` has its own `ErrorCode` . To change the language of the message, you can read the `ErrorCode` and output the error string you have customized. For example
 
 ``` javascript
 if (DWObject.ErrorCode === -2359) {
