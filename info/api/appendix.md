@@ -137,7 +137,7 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 * New APIs in v16.2 replace old APIs in v16.1-, all old APIs are deleted.
 
 | v16.2 | v16.1- |
-|-:|-:|
+|:-|:-|
 | [ `Addon.Camera.showVideo()` ]({{site.info}}api/Addon_Camera.html#showvideo) | `Viewer.showVideo()` |
 | [ `Addon.Camera.closeVideo()` ]({{site.info}}api/Addon_Camera.html#closevideo) | `Viewer.closeVideo()` |
 | [ `Addon.Camera.off()` ]({{site.info}}api/Addon_Camera.html#off) | `Viewer.off()` |
@@ -149,7 +149,7 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 * New APIs in v16.2 replace old APIs in v16.1-, all old APIs are deprecated.
 
 | v16.2 | v16.1- |
-|-:|-:|
+|:-|:-|
 | [ `Viewer.background` ]({{site.info}}api/WebTwain_Viewer.html#background) | `BackgroundColor` |
 | [ `Viewer.bind()` ]({{site.info}}api/WebTwain_Viewer.html#bind) , [ `Viewer.show()` ]({{site.info}}api/WebTwain_Viewer.html#show) , [ `Viewer.hide()` ]({{site.info}}api/WebTwain_Viewer.html#hide) | `BindViewer()` |
 | [ `Viewer.cursor` ]({{site.info}}api/WebTwain_Viewer.html#cursor) | `MouseShape` |
