@@ -102,7 +102,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 #### Others
 
-* Check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html#viewer-related-api-changes-in-versoin-16.2).
+* Check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html#viewer-related-api-changes-in-version-16.2).
 
 ### Bug Fixes
 
