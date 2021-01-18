@@ -38,7 +38,7 @@ The recommended fix is to patch the operating system, you can find the patch [he
 
 * Internet Explorer 8 is no longer supported.
 
-* Check out the [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html#viewer-related-api-changes-in-versoin-16.2).
+* Check out the [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html#viewer-related-api-changes-in-version-162).
 
 ## As of version 16.1.1.
 
