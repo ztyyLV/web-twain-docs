@@ -70,8 +70,6 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 #### Events
 
 * [OnBitmapChanged]({{site.info}}api/WebTwain_Buffer.html#onbitmapchanged)
-* [OnImageAreaSelected]({{site.info}}api/WebTwain_Buffer.html#onimageareaselected)
-* [OnImageAreaDeSelected]({{site.info}}api/WebTwain_Buffer.html#onimageareadeselected)
 * [OnIndexChangeDragDropDone]({{site.info}}api/WebTwain_Buffer.html#onindexchangedragdropdone)
 * [OnTopImageInTheViewChanged]({{site.info}}api/WebTwain_Buffer.html#ontopimageintheviewchanged)
 
