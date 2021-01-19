@@ -1323,31 +1323,33 @@ The zoom factor is only effective when the view mode is -1 * -1. Allowed values 
 
 ---
 
-## click
+## Events 
 
-## contextmenu
+### click
 
-## dblclick
+### contextmenu
 
-## mousemove
+### dblclick
 
-## mousedown
+### mousemove
 
-## mouseup
+### mousedown
 
-## mouseout
+### mouseup
 
-## mouseover
+### mouseout
 
-## keydown
+### mouseover
 
-## keyup
+### keydown
+
+### keyup
 
 **Syntax**
 
 ``` typescript
 /** 
- * Built-in callbacks that are triggered when the mouse clicks | right-clicks | double-clicks| on a page or moves over it.
+ * Built-in callbacks that are triggered for a certain mouse event or keyboard event on a page.
  * @param eventName Specify the event.
  * @param callback Specify the callback.
  * @argument dwtEvent The viewer-specific event object.
@@ -1422,7 +1424,7 @@ The events `mouseout`, `mouseover`, `keydown` and `keyup` are only triggered on 
 
 ---
 
-## pageAreaSelected
+### pageAreaSelected
 
 **Syntax**
 
@@ -1462,7 +1464,7 @@ DWObject.Viewer.off('pageAreaSelected');
 
 ---
 
-## pageAreaUnselected
+### pageAreaUnselected
 
 **Syntax**
 
@@ -1488,7 +1490,7 @@ DWObject.Viewer.off('pageAreaUnselected');
 
 ---
 
-## pageRendered
+### pageRendered
 
 **Syntax**
 
@@ -1513,7 +1515,7 @@ DWObject.Viewer.render();
 
 ---
 
-## resize
+### resize
 
 **Syntax**
 
@@ -1539,7 +1541,7 @@ DWObject.Viewer.width += 100;
 
 ---
 
-## topPageChanged
+### topPageChanged
 
 **Syntax**
 
