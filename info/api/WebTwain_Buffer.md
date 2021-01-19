@@ -729,23 +729,34 @@ RegisterEvent('OnBufferChanged',
 ): boolean;
 
 interface BufferChangeInfo {
-    // the action type which includes 'add', 'remove', 'modify', 'shift' and 'filter'
+    /**
+     * Action type includes 'add', 'remove', 'modify', 'shift' and 'filter'
+     */
     action: string;
+    /**
+     * The image id (not the index) of the current page.
+     */
     currentId: number;
+    /**
+     * All image ids.
+     */
     imageIds: number[];
+    /**
+     * All selected image ids.
+     */
     selectedIds: number[];
 }
 ```
 
 **Usage notes**
 
-Operation types include 
+Action types include 
 
-1: new image(s) were added at the tail
-2: new image(s) were inserted before the current index
-3: image(s) are deleted
-4: image(s) are modified
-5: indices of images changed
+* `add`: New pages are added to the buffer.
+* `remove`: The existing pages are removed.
+* `modify`: The existing pages are modified.
+* `shift`: The existing pages are reordered.
+* `filter`: The existing pages are filtered by a tag.
 
 ---
 
@@ -772,11 +783,11 @@ RegisterEvent('OnBitmapChanged',
 
 Operation types include 
 
-1: new image(s) were added at the tail
-2: new image(s) were inserted before the current index
-3: image(s) are deleted
-4: image(s) are modified
-5: indices of images changed
+* new image(s) were added at the tail
+* new image(s) were inserted before the current index
+* image(s) are deleted
+* image(s) are modified
+* indices of images changed
 
 ---
 
