@@ -649,9 +649,8 @@ SelectSourceByIndexAsync(index: number): Promise<boolean>;
 
 ``` javascript
 DWObject.SelectSourceByIndexAsync(0)
-    .then(() =>
-        return DWObject.OpenSourceAsync())
-    .then(() => retyrb DWObject.AcquireImage());
+    .then(() =>{return DWObject.OpenSourceAsync()})
+    .then(() =>{return DWObject.AcquireImage()});
 ```
 
 ---
@@ -2146,9 +2145,8 @@ DWObject.RegisterEvent('OnPostAllTransfers',
 ``` typescript
 /**
  * This event is triggered after each page has been scanned and transferred.
- * @argument outputInfo Detailed information about the image that just got transferred.
  */ 
-RegisterEvent('OnPostTransfer',function(outputInfo: OutputInfo) {});
+RegisterEvent('OnPostTransfer',function() {});
 ```
 
 **Example**
@@ -2384,7 +2382,7 @@ interface Capabilities {
     /**
      * Whether to "ignore" or "fail" the request if an exception occurs. This is an overall setting that is inherited by all capabilities. 
      */
-    exceptition: string;
+    exception: string;
     /**
      * Specifies how to set capabilities
      */

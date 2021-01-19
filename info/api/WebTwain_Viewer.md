@@ -60,6 +60,12 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 * [contextmenu](#contextmenu)
 * [dblclick](#dblclick)
 * [mousemove](#mousemove)
+* [mousedown](#mousedown)
+* [mouseup](#mouseup)
+* [mouseout](#mouseout)
+* [mouseover](#mouseover)
+* [keydown](#keydown)
+* [keyup](#keyup)
 * [pageAreaSelected](#pageareaselected)
 * [pageAreaUnselected](#pageareaunselected)
 * [pageRendered](#pagerendered)
@@ -378,6 +384,23 @@ interface ThumbnailViewer {
      */
     dispose(): boolean;
     /**
+     * Change the view mode of the thumbnail viewer.
+     * @param viewMode Specify the new mode.
+     */
+    updateViewMode(viewMode: ViewMode): void;
+    /**
+     * Bind a listner to the specified event. You can bind one or multiple listners to the same event.
+     * @param eventName Specify the event name.
+     * @param callback Specify the listner.
+     */
+    on(eventName: string, callback: (event: ThumbnailViewerEvent | KeyboardEvent, domEvent?: MouseEvent) => void): void; 
+    /**
+     * Unbind event listener(s) from the specified viewer event.
+     * @param eventName Specify the event.
+     * @param callback Specify the listener to remove
+     */
+    off(eventName: string, callback?: () => void): void; 
+    /**
      * Whether to allow keyboard control. Default: true.
      */
     allowKeyboardControl: boolean;
@@ -462,6 +485,29 @@ interface ThumbnailViewer {
      */
     size: number | string;
 };
+interface ThumbnailViewerEvent {
+    // The index of the current page.
+    index: number;
+    // The x-coordinate of the browser page.
+    pageX: number; 
+    // The y-coordinate of the browser page.
+    pageY: number; 
+};
+interface ViewMode {
+    /**
+     * Specify the number of images per row.
+     */
+    columns: number;
+    /**
+     * Specify the number of images per column.
+     */
+    rows: number;    
+    /**
+     * Set or return whether the pages are arranged vertically or horizontally.
+     * Default: "vertical". Allowed values are "vertical" and "horizontal".
+     */
+    scrollDirection: string;
+}
 ```
 
 **Example**
@@ -505,7 +551,25 @@ thumbnail.show();
 
 **Usage notes**
 
-Scrolling the scroll bar on Thumbnail does not trigger the topchanged event by default.
+The following table shows the events available to a ThumbnailViewer object.
+
+| Event Name | Arguments | Description |
+|:-|:-|:-|
+| `click` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the clicked |
+| `dblclick` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when double clicked |
+| `contextMenu` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when right clicked |
+| `mousemove` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse moved over |
+| `mousedown` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is pressed |
+| `mouseup` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is released |
+| `topPageChanged` | index: number | Triggered when the top page currently displayed changes |
+| `resize` | width：number, height：number | Triggered when width & height of the ThumbnailViewer object changes. |
+| `pageRendered` | index: number | Triggered when a page is rendered. |
+| `mouseout` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is out, only for desktop browsers |
+| `mouseover` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is out, only for desktop browsers |
+| `keydown` | keyboardEvent: KeyboardEvent | Triggered when a key is pressed, only for desktop browsers |
+| `keyup` | keyboardEvent: KeyboardEvent | Triggered when a key is released, only for desktop browsers |
+
+By default, scrolling the scroll bar on Thumbnail does not trigger the `topchanged` event.
 
 Only one ThumbnailViewer object can be created. If you try creating it again, you will get the error 'A ThumbnailViewer already exists.' and the existing ThumbnailViewer object will be returned.
 
@@ -1267,6 +1331,18 @@ The zoom factor is only effective when the view mode is -1 * -1. Allowed values 
 
 ## mousemove
 
+## mousedown
+
+## mouseup
+
+## mouseout
+
+## mouseover
+
+## keydown
+
+## keyup
+
 **Syntax**
 
 ``` typescript
@@ -1279,7 +1355,7 @@ The zoom factor is only effective when the view mode is -1 * -1. Allowed values 
  */
 on(
     eventName: string, 
-    callback: (dwtEvent: ViewerEvent, domEvent: MouseEvent) => void
+    callback: (event: ViewerEvent | KeyboardEvent, domEvent: MouseEvent) => void
 ): void;
 
 interface ViewerEvent{ 
@@ -1314,7 +1390,35 @@ DWObject.Viewer.on('contextmenu', function(dwtEvent, domEvent) {
 DWObject.Viewer.on('mousemove', function(dwtEvent, domEvent) {
     console.log(dwtEvent, domEvent);
 });
+
+DWObject.Viewer.on('mousedown', function(dwtEvent, domEvent) {
+    console.log(dwtEvent, domEvent);
+});
+
+DWObject.Viewer.on('mouseup', function(dwtEvent, domEvent) {
+    console.log(dwtEvent, domEvent);
+});
+
+DWObject.Viewer.on('mouseout', function(dwtEvent, domEvent) {
+    console.log(dwtEvent, domEvent);
+});
+
+DWObject.Viewer.on('mouseover', function(dwtEvent, domEvent) {
+    console.log(dwtEvent, domEvent);
+});
+
+DWObject.Viewer.on('keydown', function(keyboardEvent) {
+    console.log(keyboardEvent);
+});
+
+DWObject.Viewer.on('keyup', function(keyboardEvent) {
+    console.log(keyboardEvent);
+});
 ```
+
+**Usgae notes**
+
+The events `mouseout`, `mouseover`, `keydown` and `keyup` are only triggered on desktop browsers.
 
 ---
 
