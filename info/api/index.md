@@ -373,6 +373,12 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [contextmenu]({{site.info}}api/WebTwain_Viewer.html#contextmenu)
 * [dblclick]({{site.info}}api/WebTwain_Viewer.html#dblclick)
 * [mousemove]({{site.info}}api/WebTwain_Viewer.html#mousemove)
+* [mousedown]({{site.info}}api/WebTwain_Viewer.html#mousedown)
+* [mouseup]({{site.info}}api/WebTwain_Viewer.html#mouseup)
+* [mouseout]({{site.info}}api/WebTwain_Viewer.html#mouseout)
+* [mouseover]({{site.info}}api/WebTwain_Viewer.html#mouseover)
+* [keydown]({{site.info}}api/WebTwain_Viewer.html#keydown)
+* [keyup]({{site.info}}api/WebTwain_Viewer.html#keyup)
 * [pageAreaSelected]({{site.info}}api/WebTwain_Viewer.html#pageareaselected)
 * [pageAreaUnselected]({{site.info}}api/WebTwain_Viewer.html#pageareaunselected)
 * [pageRendered]({{site.info}}api/WebTwain_Viewer.html#pagerendered)
@@ -484,7 +490,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [SetVideoRotateMode()]({{site.info}}api/Addon_Webcam.html#setvideorotatemode)    
 * [StopVideo()]({{site.info}}api/Addon_Webcam.html#stopvideo)
 
-## [Dynamsoft. FileUploader](#dynamsoftfileuploader)
+## [`Dynamsoft.FileUploader`](#dynamsoftfileuploader)
 
 #### Methods
 
