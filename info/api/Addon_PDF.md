@@ -11,7 +11,6 @@ description: Dynamic Web TWAIN SDK Documentation API Reference PDF Addon APIs Pa
 
 **Methods**
 
-* [`ConvertToImage()`](#converttoimage)
 * [`GetConvertMode()`](#getconvertmode)
 * [`IsModuleInstalled()`](#ismoduleinstalled)
 * [`IsTextBasedPDF()`](#istextbasedpdf)
@@ -19,32 +18,6 @@ description: Dynamic Web TWAIN SDK Documentation API Reference PDF Addon APIs Pa
 * [`SetPassword()`](#setpassword)
 * [`SetResolution()`](#setresolution)
 * [`Write.Setup()`](#writesetup)
-
----
-
-## ConvertToImage
-
-**Syntax**
-
-``` typescript
-/**
- * Convert the specified PDF file to image(s).
- * @param path The path of the PDF file.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
-ConvertToImage(
-    path: string,
-    resolution: number,
-    successCallback: () => void,
-    failureCallback: (
-        errorCode: number,
-        errorString: string
-    ) => void
-): void;
-```
 
 ---
 

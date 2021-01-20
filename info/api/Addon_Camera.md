@@ -9,25 +9,25 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Camera Addon APIs
 
 # `WebTwain.Addon.Camera`
 
-> Dynamsoft provides a built-in feature to handle camera capturing, prospective adjusting, etc. Check out the APIs [showVideo()]({{site.info}}api/WebTwain_Viewer.html#showvideo) and [closeVideo()]({{site.info}}api/WebTwain_Viewer.html#closevideo).
+> Dynamsoft provides a built-in feature to handle camera capturing, prospective adjusting, etc. Check out the APIs [`showVideo()`](#showvideo) and [`closeVideo()`](#closevideo). Please NOTE that these two APIs should not be mixed with other more specific APIs like [`play()`](#play), [`pause()`](#pause) and [`stop()`](#stop), etc.
 
 **Methods**
 
-* [getSourceList()](#getsourcelist) 
-* [selectSource()](#selectsource)
-* [getCurrentSource()](#getcurrentsource)
-* [closeSource()](#closesource)
-* [getResolution()](#getresolution)
-* [setResolution()](#setresolution)
-* [getCurrentResolution()](#getcurrentresolution)
-* [play()](#play)
-* [pause()](#pause)
-* [resume()](#resume)
-* [stop()](#stop)
-* [getStatus()](#getstatus)
-* [capture()](#capture)
-* [showVideo()](#showvideo)
-* [closeVideo()](#closevideo)
+* [`getSourceList()`](#getsourcelist) 
+* [`selectSource()`](#selectsource)
+* [`getCurrentSource()`](#getcurrentsource)
+* [`closeSource()`](#closesource)
+* [`getResolution()`](#getresolution)
+* [`setResolution()`](#setresolution)
+* [`getCurrentResolution()`](#getcurrentresolution)
+* [`play()`](#play)
+* [`pause()`](#pause)
+* [`resume()`](#resume)
+* [`stop()`](#stop)
+* [`getStatus()`](#getstatus)
+* [`capture()`](#capture)
+* [`showVideo()`](#showvideo)
+* [`closeVideo()`](#closevideo)
 
 ---
 

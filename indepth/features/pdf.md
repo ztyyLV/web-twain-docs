@@ -76,7 +76,6 @@ A: Once `PDFR` has been configured, it will automatically detect if a file needs
 
 ### Other methods
 
-* [ `ConvertToImage()` ]({{site.info}}api/Addon_PDF.html#converttoimage): This method proactively converts a PDF into images.
 * [ `GetConvertMode()` ]({{site.info}}api/Addon_PDF.html#getconvertmode): This method returns the current convert mode.
 * [ `SetPassword()` ]({{site.info}}api/Addon_PDF.html#setpassword): This method sets a password which is used to open encrypted PDF file(s).
 
