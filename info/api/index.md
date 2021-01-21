@@ -168,8 +168,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [`SetCustomDSDataEx()`]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdataex)
 * [`SetFileXferInfo()`]({{site.info}}api/WebTwain_Acquire.html#setfilexferinfo) 
 * [`SetImageLayout()`]({{site.info}}api/WebTwain_Acquire.html#setimagelayout)
-* [`getCapabilities`]({{site.info}}api/WebTwain_Acquire.html#getcapabilities)   
-* [`setCapabilities`]({{site.info}}api/WebTwain_Acquire.html#setcapabilities)
+* [`getCapabilities()`]({{site.info}}api/WebTwain_Acquire.html#getcapabilities)   
+* [`setCapabilities()`]({{site.info}}api/WebTwain_Acquire.html#setcapabilities)
 
 #### Properties
 
