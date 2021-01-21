@@ -31,7 +31,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 * [DisableSource()](#disablesource)
 * [CloseSource()](#closesource)
 * [CloseSourceAsync()](#closesourceasync)
-* [CloseWorkingProcess](#closeworkingprocess)
+* [CloseWorkingProcess()](#closeworkingprocess)
 
 **Properties**
 
@@ -52,6 +52,13 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 * [OnPreAllTransfers](#onprealltransfers)
 * [OnPreTransfer](#onpretransfer)
 
+> The following APIs are compatible with TWAIN and ICA
+
+**Methods**
+
+* [getCapabilities()](#getcapabilities) 
+* [setCapabilities()](#setcapabilities)
+
 > The following APIs are compatible with TWAIN (mostly Windows, but could also be macOS)
 
 **Methods**
@@ -70,8 +77,6 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 * [SetCustomDSDataEx()](#setcustomdsdataex)
 * [SetFileXferInfo()](#setfilexferinfo) 
 * [SetImageLayout()](#setimagelayout)
-* [getCapabilities](#getcapabilities) 
-* [setCapabilities](#setcapabilities)
 
 **Properties**
 
