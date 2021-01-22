@@ -33,6 +33,7 @@ npm install dwt
 ``` cmd
 npm install @types/dwt
 ```
+Note: For 16.2+, the types are now included in the dwt NPM package under `dwt\dist\types`
 
 ## Configure the project
 
