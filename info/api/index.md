@@ -287,7 +287,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) 
 * [`IfShowCancelDialogWhenImageTransfer`]({{site.info}}api/WebTwain_IO.html#ifshowcanceldialogwhenimagetransfer)
 * [`IfShowProgressBar`]({{site.info}}api/WebTwain_IO.html#ifshowprogressbar)  
-* [`JPEGQuality]()
+* [`JPEGQuality`]({{site.info}}api/WebTwain_IO.html#jpegquality)
 * [`IfTiffMultiPage`]({{site.info}}api/WebTwain_IO.html#iftiffmultipage)   
 * [`TIFFCompressionType`]({{site.info}}api/WebTwain_IO.html#tiffcompressiontype)
 * [`MaxUploadImageSize`]({{site.info}}api/WebTwain_IO.html#maxuploadimagesize)
