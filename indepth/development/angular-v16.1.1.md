@@ -26,8 +26,14 @@ ng new dwt-angular
 ### **CD** to the root directory of the application and install the dependencies
 
 ``` cmd
+// version 16.1 + recommended
 npm install dwt
 ```
+
+``` cmd
+npm install @types/dwt
+```
+Note: For 16.2+, the types are now included in the dwt NPM package under `dwt\dist\types`
 
 ## Configure the project
 
