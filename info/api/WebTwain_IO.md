@@ -10,7 +10,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference IO APIs Page
 
 # WebTwain IO
 
-## Input
+Input
 
 **Methods**
 
@@ -29,7 +29,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference IO APIs Page
 * [HTTPDownloadThroughPost()](#httpdownloadthroughpost)
 * [HTTPDownloadDirectly()](#httpdownloaddirectly)
 
-## Output
+Output
 
 **Methods**
 
@@ -60,7 +60,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference IO APIs Page
 * [SaveAllAsMultiPageTIFF()](#saveallasmultipagetiff)
 * [SaveAllAsPDF()](#saveallaspdf)
 
-## Others
+Others
 
 **Methods**
 
