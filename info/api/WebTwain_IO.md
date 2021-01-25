@@ -1,6 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
+noTitleIndex: true
 title: Dynamic Web TWAIN API Reference - IO APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, IO APIs
 breadcrumbText: IO
