@@ -103,7 +103,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 #### Others
 
-* Check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html?ver=latest#viewer-related-api-changes-in-version-16.2).
+* Check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html?ver=latest#viewer-related-api-changes-in-version-162).
 
 ### Bug Fixes
 
@@ -131,7 +131,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 ### Deprecations
 
-* Check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html?ver=latest#viewer-related-api-changes-in-versoin-16.2).
+* Check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html?ver=latest#viewer-related-api-changes-in-versoin-162).
 
 ### Changes to the ActiveX Edition
 
