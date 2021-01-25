@@ -61,7 +61,6 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 * Improved the methods [getCapabilities]({{site.info}}api/WebTwain_Acquire.html#getcapabilities) and [setCapabilities]({{site.info}}api/WebTwain_Acquire.html#setcapabilities) so that they work for ICA drivers on macOS too.
 
 * The Barcode Reader add-on is upgraded from 7.4.0.0428 to 7.6.0.0112.
-
 * Improved the display quality of the viewer in single-image mode (-1 * -1).
 
 ### Changed Behaviours
@@ -104,7 +103,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 #### Others
 
-* Check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html#viewer-related-api-changes-in-version-16.2).
+* Check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html?ver=latest#viewer-related-api-changes-in-version-16.2).
 
 ### Bug Fixes
 
@@ -132,7 +131,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 ### Deprecations
 
-* Check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html#viewer-related-api-changes-in-versoin-16.2).
+* Check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html?ver=latest#viewer-related-api-changes-in-versoin-16.2).
 
 ### Changes to the ActiveX Edition
 
