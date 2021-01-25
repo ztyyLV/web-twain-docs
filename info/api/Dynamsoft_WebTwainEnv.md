@@ -193,11 +193,11 @@ Specify the text on dialogs.
 
 #### `loaderBarSource`
 
-Specify the source of the loader bar.
+Specify the source of the loader bar image. Check out more on [HTMLImageElement.src](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/src).
 
 #### `loaderBarClassName`
 
-Specify the class name of the DIV element that contains the loader bar.
+Specify the class name of the DIV element that contains the loader bar. With this class, you can customize the loader bar even further with CSS.
 
 ### `WasmConfig`
 
