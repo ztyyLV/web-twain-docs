@@ -129,6 +129,8 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 * Fixed a bug where if you set the `display` attribute of the viewer to `none`, it becomes black.
 
+* Fixed a bug where global keyboard or mouse events registered to the Dynamsoft Viewer were not released correctly.
+
 ### Deprecations
 
 * Check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html?ver=latest#viewer-related-api-changes-in-versoin-162).
