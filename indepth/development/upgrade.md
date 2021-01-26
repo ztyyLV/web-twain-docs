@@ -35,6 +35,8 @@ Read more about [resources files]({{site.about}}faqs.html#what-are-the-resources
 
 Generally, you can [use the official installer]({{site.about}}resources.html#how-to-get-dwt) to install the new verion.
 
+<a href="https://www.dynamsoft.com/web-twain/downloads" class="downloadBtn fr textUpperCase">Download SDK</a>
+
 #### Replace the resources files
 
 If you haven't renamed the official folder, the resources files should reside in a folder named "Resources". In this step, copy the new resources files and replace the old ones. The new files are typically found in the following location after the installation
