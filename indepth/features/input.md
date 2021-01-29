@@ -495,8 +495,8 @@ sources.find(function(name, index) {
 
 #### On Windows desktop where the scanner is physically connected
 
-1. Install `Dynamsoft Service`.
-2. Configure the Service by adding the following line to the file `DSConfiguration.ini` .
+* Install `Dynamsoft Service`.
+* Configure the Service by adding the following line to the file `DSConfiguration.ini` .
 
 ``` 
 Server=192.168.8.221
@@ -504,11 +504,11 @@ Server=192.168.8.221
   > We are assuminge the IP of this desktop is `192.168.8.221`
   > From v16.2, you can do the same on this page http://127.0.0.1:18625/admin/
 
-3. Find the service `Dynamsoft Service` in Windows services list and restart it.
+* Find the service `Dynamsoft Service` in Windows services list and restart it.
 
 #### In your application
 
-4. Create a WebTwain instance to connect to that service.
+* Create a WebTwain instance to connect to that service.
 
 > Learn more [here]({{site.indepth}}features/initialize.html#dynamsoftwebtwainenvcreatedwtobject)
 
@@ -525,7 +525,7 @@ Dynamsoft.WebTwainEnv.CreateDWTObjectEx(
 );
 ```
 
-5. Use this `WebTwain` instance, `DWObject`, to scan documents from the scanner connected to the desktop (192.168.8.221).
+* Use this `WebTwain` instance, `DWObject`, to scan documents from the scanner connected to the desktop (192.168.8.221).
 
 > As this `WebTwain` instance is interacting with a Dynamsoft Service running remotely, it's recommended to only use it for scanning (other features may not work correctly).
 
