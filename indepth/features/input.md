@@ -541,7 +541,7 @@ DWObject.SelectSource(function() {
 
 * Create a `WebTwain` instance to connect to that service and list all available scanners.
 
-    > Learn more [here]({{site.indepth}}features/initialize.html#dynamsoftwebtwainenvcreatedwtobjectex)
+    > Learn more [here]({{site.indepth}}features/initialize.html?ver=latest#-dynamsoftwebtwainenvcreatedwtobjectex-)
 
     ```html
     <select id="source"></select>
