@@ -15,7 +15,7 @@ description: Dynamic Web TWAIN SDK Documentation Viewer Page
 
 As mentioned in [creating the WebTwain instance]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance), a new `WebTwain` instance (or a new `DWT` object) usually comes with a ready-bound viewer which is an instance of the `Viewer` component. This viewer uses the default settings and normally is enough to handle the data visualization.
 
-However, if you want to customize the viewer, you can use [ `Dynamsoft.WebTwainEnv.CreateDWTObjectEx()` ]({{site.indepth}}features/initialize.html#dynamsoftwebtwainenvcreatedwtobjectex) to create a `WebTwain` instance that doesn't come with a viewer and then bind and customize the viewer before showing it with the APIs [ `bind()` ]({{site.info}}api/WebTwain_Viewer.html#bind) and [ `show()` ]({{site.info}}api/WebTwain_Viewer.html#show). For example, the following code shows a viewer with thumbnails
+However, if you want to customize the viewer, you can use [ `Dynamsoft.WebTwainEnv.CreateDWTObjectEx()` ]({{site.indepth}}features/initialize.html?ver=latest#-dynamsoftwebtwainenvcreatedwtobjectex-) to create a `WebTwain` instance that doesn't come with a viewer and then bind and customize the viewer before showing it with the APIs [ `bind()` ]({{site.info}}api/WebTwain_Viewer.html#bind) and [ `show()` ]({{site.info}}api/WebTwain_Viewer.html#show). For example, the following code shows a viewer with thumbnails
 
 ``` javascript
 var DWObject = null;
