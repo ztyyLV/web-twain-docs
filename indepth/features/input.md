@@ -532,7 +532,7 @@ DWObject.SelectSource(function() {
     ``` 
     Server=192.168.8.221
     ```
-    > We are assuminge the IP of this desktop is `192.168.8.221` and that the firewall will allow requests on the ports `18622` and `18623`.
+    > We are assuming the IP of this desktop is `192.168.8.221` and that the firewall will allow requests on the ports `18622` and `18623`.
     > From v16.2, you can do the same on this page http://127.0.0.1:18625/admin/
 
 * Find the service `Dynamsoft Service` in Windows services list and restart it.
