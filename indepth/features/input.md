@@ -49,12 +49,12 @@ For more information, check [How to use a TWAIN-Direct scanner](#how-to-use-a-tw
 
 **A**: `DWT` provides two ways to set up a scan operation.
 
-1. Change one setting at a time. Below are a few APIs, for example
+* Change one setting at a time. Below are a few APIs, for example
   + [PageSize]({{site.info}}api/WebTwain_Acquire.html#pagesize) 
   + [PixelType]({{site.info}}api/WebTwain_Acquire.html#pixeltype)
   + [Resolution]({{site.info}}api/WebTwain_Acquire.html#resolution) 
   + [SourceCount]({{site.info}}api/WebTwain_Acquire.html#sourcecount)
-2. Change all settings at once. Use one of the two APIs below to achieve this.
+* Change all settings at once. Use one of the two APIs below to achieve this.
   + [AcquireImage()]({{site.info}}api/WebTwain_Acquire.html#acquireimage)
   + [startScan()]({{site.info}}api/WebTwain_Acquire.html#startscan)
 
@@ -159,17 +159,17 @@ DWObject.setCapabilities({
 
 **A**: The TWAIN specification defines more than 150 standard capabilities for TWAIN applications and sources to choose from. However, some scanner vendors provide advanced and model-specific capabilities which are not included in the specification. We call them custom capabilities. The following steps show how to use them:
 
-1. Install the [TWAIN Sample App](http://www.dynamsoft.com/download/support/twainapp.win32.installer.msi).
+* Install the [TWAIN Sample App](http://www.dynamsoft.com/download/support/twainapp.win32.installer.msi).
 
-2. Use the TWAIN Sample App to open the source and then check what the hexadecimal value of the custom capability is.
+* Use the TWAIN Sample App to open the source and then check what the hexadecimal value of the custom capability is.
 
 ![Indepth-input-1]({{site.assets}}imgs/Indepth-input-1.png)
 
-3. Double click and check the available values.
+* Double click and check the available values.
 
 ![Indepth-input-2]({{site.assets}}imgs/Indepth-input-2.png)
 
-4. Use this custom capability.
+* Use this custom capability.
 
 ``` javascript
 DWObject.SelectSource(function() {
