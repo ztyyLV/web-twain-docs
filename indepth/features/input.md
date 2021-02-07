@@ -604,23 +604,23 @@ DWObject.SelectSource(function() {
 * Use the first `WebTwain` instance, `DWServiceObject`, to scan documents.
 
     ```javascript
-    	function AcquireImage(){
-		var OnAcquireImageSuccess, OnAcquireImageFailure = function () {
-			DWServiceObject.CloseSource();
-		};
-		var deviceConfiguration = {
-			SelectSourceByIndex: 0,
-			IfShowUI: true,
-			PixelType:Dynamsoft.EnumDWT_PixelType.TWPT_RGB,
-			Resolution: 300,
-			IfFeederEnabled: false,
-			IfDuplexEnabled: false,
-			IfDisableSourceAfterAcquire: true,
-			RemoteScan: true,
-			ShowRemoteScanUI: true
-		};
-		deviceConfiguration.SelectSourceByIndex = document.getElementById("source").selectedIndex;
-		DWServiceObject.AcquireImage(deviceConfiguration, OnAcquireImageSuccess, OnAcquireImageFailure);
+    function AcquireImage(){
+	var OnAcquireImageSuccess, OnAcquireImageFailure = function () {
+	    DWServiceObject.CloseSource();
+	};
+	var deviceConfiguration = {
+	    SelectSourceByIndex: 0,
+	    IfShowUI: true,
+	    PixelType:Dynamsoft.EnumDWT_PixelType.TWPT_RGB,
+	    Resolution: 300,
+	    IfFeederEnabled: false,
+	    IfDuplexEnabled: false,
+	    IfDisableSourceAfterAcquire: true,
+	    RemoteScan: true,
+	    ShowRemoteScanUI: true
+	};
+	deviceConfiguration.SelectSourceByIndex = document.getElementById("source").selectedIndex;
+	DWServiceObject.AcquireImage(deviceConfiguration, OnAcquireImageSuccess, OnAcquireImageFailure);
     }
     ```
 
