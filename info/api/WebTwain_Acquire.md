@@ -197,12 +197,12 @@ interface DeviceConfiguration {
      */
     extendedImageInfoQueryLevel?: number;
     /**
-     * Whether to scan from a remote computer.
+     * Whether to simulate the manufacturer's UI inside the client-side browser (only effective when IfShowUI is true).
      * (Added in 16.2)
      */
     RemoteScan?:boolean;
     /**
-     * Whether to simulate the manufacturer's UI inside the client-side browser (only effective when IfShowUI is true).
+     * Whether to simulate the manufacturer's UI inside the client-side browser (only effective when IfShowUI and RemoteScan are both true and the WebTwain instance doing the scan has no viewer of its own).
      * (Added in 16.2)
      */
     ShowRemoteScanUI?:boolean;
