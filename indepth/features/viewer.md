@@ -135,7 +135,7 @@ var editorSettings = {
     /*element: document.getElementById("imageEditor"),
     width: 600,
     height: 400,*/
-    border: '1px solid rgb(204, 204, 204);',
+    border: '1px solid rgb(204, 204, 204)',
     topMenuBorder: '',
     innerBorder: '',
     background: "rgb(255, 255, 255)",
