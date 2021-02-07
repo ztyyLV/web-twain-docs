@@ -144,7 +144,12 @@ var editorSettings = {
         titles: {},
         visibility: {}
     },
-    dialogText: {}
+    dialogText: {
+        dlgRotateAnyAngle: ['Angle :', 'Interpolation:', 'Keep size', '  OK  ', 'Cancel'],
+        dlgChangeImageSize: ['New Height :', 'New Width :', 'Interpolation method:', '  OK  ', 'Cancel'],
+        saveChangedImage: ['You have changed the image, do you want to keep the change(s)?', '  Yes  ', '  No  '],
+        selectSource: ['Select Source:', 'Select', 'Cancel', 'There is no source available']
+    }
 };
 var imageEditor = DWObject.Viewer.createImageEditor(editorSettings);
 imageEditor.show();
