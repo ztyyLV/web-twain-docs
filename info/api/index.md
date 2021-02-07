@@ -25,7 +25,9 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 <!--* [`GetImageBitDepthAsync()`]({{site.info}}api/WebTwain_Buffer.html#getimagebitdepthasync)-->
 
 * [`ClearImageTags()`]({{site.info}}api/WebTwain_Buffer.html#clearimagetags) 
+* [`RenameTag()`]({{site.info}}api/WebTwain_Buffer.html#renametag) 
 * [`FilterImagesByTag()`]({{site.info}}api/WebTwain_Buffer.html#filterimagesbytag)
+* [`ClearFilter()`]({{site.info}}api/WebTwain_Buffer.html#clearfilter)
 * [`SetDefaultTag()`]({{site.info}}api/WebTwain_Buffer.html#setdefaulttag) 
 * [`TagImages()`]({{site.info}}api/WebTwain_Buffer.html#tagimages)
 * [`GetImageBitDepth()`]({{site.info}}api/WebTwain_Buffer.html#getimagebitdepth)
