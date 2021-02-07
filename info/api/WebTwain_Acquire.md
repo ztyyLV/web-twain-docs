@@ -162,7 +162,6 @@ AcquireImage(
 interface DeviceConfiguration {
     /**
      * Whether to show the built-in User Interface from the device vendor.
-     * In v16.2+, it can also control whether to use the UI remotely.
      */
     IfShowUI?: boolean;
     /**
@@ -201,12 +200,17 @@ interface DeviceConfiguration {
      * Whether to scan from a remote computer.
      * (Added in 16.2)
      */
-    RemoteScan:boolean;
+    RemoteScan?:boolean;
+    /**
+     * Whether to simulate the manufacturer's UI inside the client-side browser (only effective when IfShowUI is true).
+     * (Added in 16.2)
+     */
+    ShowRemoteScanUI?:boolean;
     /**
      * Specify a source by its index.
      * (Added in 16.2)
      */
-    SelectSourceByIndex: number;
+    SelectSourceByIndex?: number;
 }
 ```
 
