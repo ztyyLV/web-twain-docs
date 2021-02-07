@@ -239,10 +239,14 @@ function PlayVideo(bShow) {
         // DEVICE-ID must be correct
         // e.g.: "592bbc7c0f951657d8dc6dc3af8bdd76cde89b78184a8475f70eb012a4040a54"
         DWObject.Addon.Camera.selectSource("DEVICE-ID");
-        DWObject.Addon.Camera.play()
             .then(function() {
-                videoPlaying = true;
-            });
+                DWObject.Addon.Camera.play()
+                    .then(function() {
+                        videoPlaying = true;
+                    }
+                );
+            }
+        );
     }
 }
 
