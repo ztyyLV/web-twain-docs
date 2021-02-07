@@ -207,7 +207,7 @@ interface CustomElement {
 
 ``` javascript
 var myElement = document.createElement("div");
-myElement.style = "width:100px;height:200px;background:red;";
+myElement.style = "width:100px;height:200px;background:red";
 var customElement = DWObject.Viewer.createCustomElement(myElement, "right", false);
 customElement.show();
 ```
@@ -268,7 +268,7 @@ var editorSettings = {
     element: document.getElementById("imageEditor"),
     width: 600,
     height: 400,*/
-    border: '1px solid rgb(204, 204, 204);',
+    border: '1px solid rgb(204, 204, 204)',
     topMenuBorder: '',
     innerBorder: '',
     background: "rgb(255, 255, 255)",
