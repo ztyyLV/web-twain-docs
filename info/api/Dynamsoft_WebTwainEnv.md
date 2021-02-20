@@ -163,6 +163,10 @@ Registers an environmental event. Typically the event is `OnWebTwainReady` which
 
 Destroys all `WebTwain` instances and cuts off the connection to the Dynamsoft Service.
 
+### `RemoveAllAuthorizations()`
+
+Removes the specific authorizations made by end users on a client machine. Only effective when the security feature is enabled for local files, scanners or cameras.
+
 ### `UseDefaultViewer`
 
 Whether to use the built-in viewer. If it is set to `false` , the file `dynamsoft.viewer.js` is not loaded at all and there is no way to add it back later. Therefore, only set it to `false` when you absolutely won't need the viewer or will be building your own viewer.
