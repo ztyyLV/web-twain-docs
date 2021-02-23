@@ -362,9 +362,9 @@ Dynamsoft.WebTwain.Addon.OCRPro.NewSettings: Settings;
 
 The OCR Professional engine runs as a service. The workflow is like this
 
-1. The image(s) is uploaded to the server and saved on the disk.
-2. The path(s) of the saved image(s) is sent to the OCR pro service as part of the [`OCRPro.ServerSide.Request`](#ocrproserversiderequest).
-3. The service returns the OCR result in a HTTP Response.
+* The image(s) is uploaded to the server and saved on the disk.
+* The path(s) of the saved image(s) is sent to the OCR pro service as part of the [`OCRPro.ServerSide.Request`](#ocrproserversiderequest).
+* The service returns the OCR result in a HTTP Response.
 
 The following demonstrates the structures of the OCR Request and the Response.
 
