@@ -1340,10 +1340,6 @@ ConvertToBlob(
 ): void;
 ```
 
-**Usage notes**
-
-`getData()` returns the blob string without the data URI scheme. For example, "/9j/4AAQSkZJRgABA...". If you want to use the string, you probably need to add the scheme. For example, "data:image/png; base64, /9j/4AAQSkZJRgABA...".
-
 **Example**
 
 ``` javascript
