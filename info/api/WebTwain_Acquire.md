@@ -1388,7 +1388,7 @@ Not all scanners support duplex scanning. To confirm, check the user manual of t
 **Syntax**
 
 ``` 
-/**
+/** 
  * Return or set whether a data source's Automatic Document Feeder (ADF) is enabled for scanning.
  */
 IfFeederEnabled: boolean;
