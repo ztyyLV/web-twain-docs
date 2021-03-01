@@ -1309,7 +1309,7 @@ DWObject.AcquireImage();
 
 **Syntax**
 
-``` 
+``` typescript
 
 /**
  * Return or set the pixel bit depth for the current value of `PixelType` .
@@ -1329,7 +1329,7 @@ By default, the bit depth is 1 for `TWPT_BW` , 8 for `TWPT_GRAY` and 24 for `TWP
 
 **Syntax**
 
-``` 
+``` typescript
 
 /**
  * Return or set whether newly acquired images are inserted or appended.
@@ -1367,7 +1367,7 @@ This property only makes sense when `IfShowUI` is set to `true` .
 
 **Syntax**
 
-``` 
+``` typescript
 
 /**
  * Return or set whether to enable duplex scanning (in other words, whether to scan both sides of the paper).
@@ -1387,7 +1387,8 @@ Not all scanners support duplex scanning. To confirm, check the user manual of t
 
 **Syntax**
 
-``` 
+``` typescript
+
 /** 
  * Return or set whether a data source's Automatic Document Feeder (ADF) is enabled for scanning.
  */
@@ -1406,7 +1407,7 @@ If the property is set to `true` , the data source will try acquiring images fro
 
 **Syntax**
 
-``` 
+``` typescript
 
 /**
  * Return or set whether the data source displays the user interface when scanning.
@@ -1424,7 +1425,7 @@ If the property is set to `true` , the data source will display its user interfa
 
 **Syntax**
 
-``` 
+``` typescript
 
 /**
  * Return or set the driver type which determines the type of sources to use.
