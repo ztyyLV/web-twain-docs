@@ -10,7 +10,7 @@ description: Dynamic Web TWAIN SDK Documentation Troubleshooting Common Errors T
 
 # Common Errors
 
-## The Handle Is In The Wrong State For The Requested Operation
+## The handle is in the wrong state for the requested operation
 
 <strong>Symptom: </strong>
 
