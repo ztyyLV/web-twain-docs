@@ -29,4 +29,8 @@ description: Dynamic Web TWAIN SDK Documentation Troubleshooting Common Errors I
 
 ## ['Activating the WebTwain instance' prompt doesn't disappear]({{site.indepth}}troubleshooting/common-errors/activating-the-WebTwain-instance.html)
 
+## [How to disable end-user Authorization]({{site.indepth}}troubleshooting/common-errors/how-to-disable-end-user-authorization.html)
 
+## [The handle is in the wrong state for the requested operation]({{site.indepth}}troubleshooting/common-errors/the-handle-is-in-the-wrong-state-for-the-requested-operation.html)
+
+## [The connection with the server was terminated abnormally]({{site.indepth}}troubleshooting/common-errors/the-connection-with-the-server-was-terminated-abnormally.html)
