@@ -9,7 +9,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Edit APIs Page
 
 # WebTwain Edit
 
-## Methods
+**Methods**
 
 * [Crop()](#crop) 
 * [CropToClipboard()](#croptoclipboard)
