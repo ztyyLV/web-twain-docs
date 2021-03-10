@@ -209,7 +209,11 @@ There are multiple files and folders in the service directory. We'll take the Wi
 
 ### What does it do
 
-Dynamsoft Service sets up a local HTTP service that accepts requests from JavaScript code running in the browser and performs operations accordingly. The following are a few examples
+Dynamsoft Service sets up a local HTTP service that accepts requests from JavaScript code running in the browser and performs operations accordingly. The following are a few examples.
+
+> NOTE
+> 
+> These requests are handled by the JavaScript client of the library. Please do not try to make similar requests in your own code without consulting [Dynamsoft Support]({{site.about}}getsupport.html).
 
 #### Return availability
 
