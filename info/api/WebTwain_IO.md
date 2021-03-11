@@ -1732,7 +1732,7 @@ IfShowCancelDialogWhenImageTransfer: boolean;
 
 ``` javascript
 /**
- * Return or set whether to show the progressbar. 
+ * Return or set whether the progress bar is/should be displayed during encoding or decoding. It works for any image encoding/decoding related methods. For example: LoadImage, LoadImageEx, ConvertToBlob, etc.
  */
 IfShowProgressBar: boolean;
 ```
