@@ -230,7 +230,7 @@ SetPageSetMode(mode: Dynamsoft.EnumDWT_OCRPageSetMode | number): boolean;
 
 The default `language` is `eng` which indicates English. To use a certain language, you must first have its language data locally, if it's not available yet, you can download it using the method [`DownloadLangData()`](#downloadlangdata).
 
-The default `format` is `OCROF_PDFIMAGEOVERTEXT` which indicats an Image-over-Text PDF.
+The default `format` is `OCROF_PDFIMAGEOVERTEXT` which indicates an Image-over-Text PDF.
 
 The default `mode` is `PSM_AUTO` which indicates automatic page segmentation.
 
