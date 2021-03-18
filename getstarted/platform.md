@@ -15,7 +15,7 @@ description: Dynamic Web TWAIN SDK Documentation Platform Page
 
 ### Browsers on Windows
 
-* The following versions of Windows are supported
+* The following versions of Windows (x86-64) are supported
   + 7
   + 8 & 8.1
   + 10 `Recommended`
@@ -35,7 +35,7 @@ description: Dynamic Web TWAIN SDK Documentation Platform Page
 
 ### Browsers on macOS
 
-* The following versions of macOS are supported
+* The following versions of macOS (x86-64, ARM64) are supported
   + Mac OS X 10.6 Snow Leopard (10.6.8+)
   + Mac OS X 10.7 Lion
   + OS X 10.8 Mountain Lion
@@ -56,7 +56,7 @@ description: Dynamic Web TWAIN SDK Documentation Platform Page
 
 ### Browsers on Linux
 
-* The following distributions of Linux are supported
+* The following distributions of Linux (x64, ARM64) are supported
   + Ubuntu 12.04 LTS (Precise Pangolin)
   + Ubuntu 12.10 (Quantal Quetzal)
   + Ubuntu 13.04 (Raring Ringtail)
