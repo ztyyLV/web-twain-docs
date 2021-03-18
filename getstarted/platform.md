@@ -26,9 +26,9 @@ description: Dynamic Web TWAIN SDK Documentation Platform Page
 
 * The following browsers are supported
   + Chrome 68.* ~ 79.*
-  + Chrome 80 + `Recommended`
+  + Chrome 80.* + `Recommended`
   + Firefox 61.* ~ 69.*
-  + Firefox 70 + `Recommended`
+  + Firefox 70.* + `Recommended`
   + Microsoft Edge Spartan
   + Microsoft Edge Anaheim `Recommended`
   + Internet Explorer 10 ~ 11
@@ -48,11 +48,11 @@ description: Dynamic Web TWAIN SDK Documentation Platform Page
   + macOS 10.15 Catalina `Recommended`
 * The following browsers are supported
   + Chrome 68.* ~ 79.*
-  + Chrome 80.* ~ 85.* `Recommended`
+  + Chrome 80.* + `Recommended`
   + Firefox 61.* ~ 69.*
-  + Firefox 70.* ~ 80.* `Recommended`
+  + Firefox 70.* + `Recommended`
   + Safari 7.* ~ 12.*
-  + Safari 13.* ~ 14.* `Recommended`
+  + Safari 13.* + `Recommended`
 
 ### Browsers on Linux
 
@@ -96,9 +96,9 @@ description: Dynamic Web TWAIN SDK Documentation Platform Page
 
 * The following browsers are supported
   + Chrome 68.* ~ 79.*
-  + Chrome 80.* ~ 85.* `Recommended`
+  + Chrome 80.* + `Recommended`
   + Firefox 61.* ~ 69.*
-  + Firefox 70.* ~ 80.* `Recommended`
+  + Firefox 70.* + `Recommended`
 
 ## ActiveX browsers
 
