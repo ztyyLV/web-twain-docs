@@ -190,6 +190,9 @@ RecognizeSelectedImages(
 ``` typescript
 
 interface Rect {
+    /**
+     * In pixels
+     */
     left: number;
     right: number;
     top: number;
@@ -281,7 +284,7 @@ interface Letter {
      */
     GetText(): number;
     /**
-     * Return the coordinates for the rectangle that contains the specified letter. The coordinates are in the sequence of "left,top,right,bottom" like "121,125,123,143".
+     * Return the coordinates in pixels for the rectangle that contains the specified letter. The coordinates are in the sequence of "left,top,right,bottom" like "121,125,123,143".
      */
     GetLetterRect(): string;
 }
