@@ -304,10 +304,10 @@ RecognizeFile(path: string,
 /**
  * Perform OCR on the specified rectangular area on the image.
  * @param index Specify the image.
- * @param left Specify the rectangle (leftmost coordinate).
- * @param top Specify the rectangle (topmost coordinate).
- * @param right Specify the rectangle (rightmost coordinate).
- * @param bottom Specify the rectangle (bottommost coordinate).
+ * @param left Specify the rectangle (leftmost coordinate in pixels).
+ * @param top Specify the rectangle (topmost coordinate in pixels).
+ * @param right Specify the rectangle (rightmost coordinate in pixels).
+ * @param bottom Specify the rectangle (bottommost coordinate in pixels).
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
  * @argument imageId The imageId of the image which can be used to find the index.
@@ -431,7 +431,7 @@ interface Line {
      */
     GetWordCount(): number;
     /**
-     * Return the coordinates for the rectangle that contains the specified line. The coordinates are in the sequence of "left,top,right,bottom" like "121,125,892,143".
+     * Return the coordinates for the rectangle that contains the specified line. The coordinates (in pixels) are in the sequence of "left,top,right,bottom" like "121,125,892,143".
      */
     GetLineRect(): string;
     /**
