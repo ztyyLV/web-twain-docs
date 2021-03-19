@@ -2082,7 +2082,7 @@ TWSX_NATIVE and TWSX_MEMORY are required by all TWAIN data sources while TWSX_FI
 
 ``` typescript
 /**
- * Return or set the unit of measure for all quantities.     
+ * Return or set the unit of measure for all quantities. Note that this setting is only effective for TWAIN (hardware) related operations. 
  */
 Unit: Dynamsoft.EnumDWT_UnitType | number;
 ```
