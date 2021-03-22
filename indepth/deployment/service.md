@@ -144,11 +144,11 @@ There are multiple files and folders in the service directory. We'll take the Wi
 #### For the Service
 
 * `\cache\` : Data cached on the disk. Check out [Disk Caching]({{site.indepth}}features/buffer.html#disk-caching).
-* `\cert\` : The certificates used for SSL connection. Check out [How to change the certificates](#q-how-to-change-the-certificates).
+* `\cert\` : The certificates used for SSL connection. Check out [How to change the certificates](#q-how-to-change-the-certificate-of-the-service).
 * `\dump\` : Dump files in case the service crashes.
 * `\log\` : Log files for debugging purposes.
 * `\upload\` : Temporary location for image data to be uploaded by the file uploader.
-* `DSConfiguration.ini` : Service configuration file. Check out [How to configure the service](#q-how-to-configure-the-service).
+* `DSConfiguration.ini` : Service configuration file. Check out [How to configure the service](#q-how-to-set-the-configuration-of-the-service).
 * `DWASManager_16000428.dll` : The service manager. The name of the file may vary among different versions.
 * `DynamsoftService.exe` : The service.
 * `DynamicSocket.dll` : For socket connections.
