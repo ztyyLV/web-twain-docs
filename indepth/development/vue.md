@@ -9,21 +9,21 @@ description: Dynamic Web TWAIN SDK Documentation Vue Integration Page
 
 # Use DWT with Vue
 
-[Vue](https://vuejs.org/) is a progressive framework for building user interfaces. Check out the following on how to implement `DWT` into a Vue application.
+[Vue](https://vuejs.org/) is a progressive framework for building user interfaces. Check out the following guide on how to integrate `DWT` into a Vue application.
 
 ## Preparation
 
-Make sure you have [node](https://nodejs.org/), [yarn](https://yarnpkg.com/cli/install) and [Vue CLI](https://cli.vuejs.org/) installed. `node 14.4.0` , `yarn 1.22.4` and `@vue/cli 4.46` are used in the example below.
+Make sure you have [node](https://nodejs.org/), [yarn](https://yarnpkg.com/cli/install), and [Vue CLI](https://cli.vuejs.org/) installed. `node 14.4.0` , `yarn 1.22.4`, and `@vue/cli 4.46` are used in the example below.
 
 ## Create the sample project
 
-### Create an bootstrapped raw Vue application
+### Create a bootstrapped raw Vue application
 
 ``` cmd
 vue create dwt-vue
 ```
 
-### CD to the root directory of the application and install the `dwt` and `ncp` package
+### Navigate to the root directory of the application and install the `dwt` and `ncp` package
 
 ``` cmd
 yarn add dwt
@@ -37,7 +37,7 @@ yarn add ncp
 
 ## Configure the project
 
-Open `package.json` and change `scripts` like this.
+Open `package.json` and change `scripts` as seen below:
 
 ``` json
 "scripts": {
@@ -47,7 +47,7 @@ Open `package.json` and change `scripts` like this.
 },
 ```
 
-> The change ensures the static files required to run `DWT` are copied over to the built resulting project.
+> The change ensures the static files required to run `DWT` are copied over to the resulting built project.
 
 ## Start to implement
 
@@ -141,8 +141,8 @@ Change the file `/src/components/HelloWorld.vue` to match the following `templat
 ```
 
 > Note:
-> * `containerId` specifies the DIV to create `DWT` viewer in which is defined in the `template`.
-> * `OnWebTwainReady` is the callback triggered when the initialization succeeds.
+> * `containerId` specifies the DIV to create `DWT` viewer, which is defined in the `template`.
+> * `OnWebTwainReady` is the callback triggered when `DWT` initialization succeeds.
 > * `ProductKey` must be set to a valid trial or full key.
 > * `ResourcesPath` is set to the location of the static files mentioned in [Configure the project](#configure-the-project).
 
@@ -154,17 +154,16 @@ yarn serve
 
 #### On desktop
 
-If you have installed `DWT` and have configured a valid `ProductKey` . You will have a working page to scan documents from your scanner now. Otherwise, you should see instructions on the page that guide you to install the library. [More info>>]({{site.indepth}}features/initialize.html#installation-of-the-dynamsoft-service).
+If you have installed `DWT` and have configured a valid `ProductKey` . You will have a working page to scan documents from your scanner now. Otherwise, you should see instructions on [this page]({{site.indepth}}features/initialize.html#installation-of-the-dynamsoft-service) that guides you on installing the library.
 
 #### On mobile
 
-You should be able to open a file or catpure an image.
+You should be able to open a file or capture an image.
 
 ## Official Samples
 
 Check out the following two sample projects:
 
 * [dwt-vue-simple](https://github.com/dynamsoft-dwt/dwt-vue-simple)
-<!--
-* [dwt-vue-advanced](https://github.com/dynamsoft-dwt/dwt-vue-advanced)
--->
+
+<!--* [dwt-vue-advanced](https://github.com/dynamsoft-dwt/dwt-vue-advanced)-->

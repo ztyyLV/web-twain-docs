@@ -1,6 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
+noTitleIndex: true
 title: Dynamic Web TWAIN Schedule - Known Bugs
 keywords: Dynamic Web TWAIN, Documentation, Schedule, Known Bugs
 breadcrumbText: Known Bugs

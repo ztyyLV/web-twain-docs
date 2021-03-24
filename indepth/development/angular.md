@@ -26,12 +26,7 @@ ng new dwt-angular
 ### **CD** to the root directory of the application and install the dependencies
 
 ``` cmd
-// version 16.1 + recommended
 npm install dwt
-```
-
-``` cmd
-npm install @types/dwt
 ```
 
 ## Configure the project
@@ -58,14 +53,14 @@ ng generate component dwt
 
 ### Edit the component
 
-* In `dwt.component.html` , add a button and a `HTMLDIVElement` .
+* In `dwt.component.html` add a button and a `HTMLDIVElement` .
 
 ``` html
 <button (click)="acquireImage()">Acquire Images</button>
 <div id="dwtcontrolContainer"></div>
 ```
 
-* In `dwt.component.ts` , add code to initialize `DWT` .
+* In `dwt.component.ts` add code to initialize `DWT` .
 
 ``` typescript
 import Dynamsoft from 'dwt';

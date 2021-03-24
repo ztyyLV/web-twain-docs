@@ -17,7 +17,7 @@ description: Dynamic Web TWAIN SDK Documentation Resources Page
 
 * [NPM package](https://www.npmjs.com/package/dwt)
 
-> All the files in the [DWT package](https://github.com/dynamsoft-dwt/web-twain-package) will help you include `DWT` in your web application both as a regular library and as a module. To try our SDK and included samples, a trial license is required. To get a license, please visit our [customer portal](https://www.dynamsoft.com/customer/license/trialLicense).
+> All the files in the [DWT package](https://github.com/dynamsoft-dwt/web-twain-package) will help you include `DWT` in your web application both as a regular library and as a module. To try our SDK and included samples, a [trial license](#how-do-i-get-a-trial-license) is required.
 
 * [YARN package](https://yarnpkg.com/package/dwt)
 
@@ -25,11 +25,15 @@ description: Dynamic Web TWAIN SDK Documentation Resources Page
 
 * [Official samples](https://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx)
 
-> We have many prebuilt samples to demonstrate common user scenarios. All samples contain the [resource files]({{site.about}}faqs.html#what-are-the-resources-files) required in your application. If a sample is hosted on the Dynamsoft website (not Github), then the sample comes with a 30-day free trial license as well. Otherwise, please visit our [customer portal](https://www.dynamsoft.com/customer/license/trialLicense) to obtain a new trial license.
+> We have many prebuilt samples to demonstrate common user scenarios. All samples contain the [resource files]({{site.about}}faqs.html#what-are-the-resources-files) required in your application. If a sample is hosted on the Dynamsoft website (not Github), then the sample comes with a 30-day free trial license as well. Otherwise, you can [get a trial license](#how-do-i-get-a-trial-license).
 
 * [Github repo](https://github.com/dynamsoft-dwt)
 
-> In our repository, we've shared many samples and other projects related to `DWT`. Some of which may be experimental. To try out these samples, a trial license is required. To get a license, please visit our [customer portal](https://www.dynamsoft.com/customer/license/trialLicense).
+> In our repository, we've shared many samples and other projects related to `DWT` . Some of which may be experimental. To try out these samples, a [trial license](#how-do-i-get-a-trial-license) is required.
+
+## How do I get a trial License
+
+Please visit our [customer portal](https://www.dynamsoft.com/customer/license/trialLicense) to request for a trial license.
 
 ## Useful Links
 

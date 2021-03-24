@@ -27,11 +27,19 @@ Once you have finished integrating `DWT` in your application, you can deploy it 
 | `.deb` | `application/x-debian-package` | [Browsers on Linux]({{site.getstarted}}Platform.html#browsers-on-linux) |
 | `.rpm` | `application/x-redhat-package-manager` | [Browsers on Linux]({{site.getstarted}}Platform.html#browsers-on-linux) |
 
+### How to set the MIME type
+
+Different servers are configured differently. Here are some popular ones:
+
+NGINX: [ `mime.types` ](https://www.nginx.com/resources/wiki/start/topics/examples/full/#mime-types)
+IIS: [ `Web.config` ](https://docs.microsoft.com/en-us/iis/configuration/system.webserver/staticcontent/mimemap#how-to-add-a-mime-type-to-a-web-site-or-application)
+Java™ EE web app: [ `web.xml` ](https://docs.oracle.com/cd/E24329_01/web.1211/e21049/web_xml.htm#WBAPP533)
+Node.js: [ `npm mime` ](https://www.npmjs.com/package/mime-types)
+
 ## Enable HTTPS
 
 If you need to use any of the following features, you must enable HTTPS on the server.
 
-* Run `DWT` in the [WASM mode]({{site.indepth}}features/initialize.html#wasm-mode)
 * Use the new [Camera module]({{site.indepth}}features/Input.html#use-mediadevices-cameras)
 * Upload or Download via SSL
 * Any other features that require a secure connection
@@ -49,5 +57,3 @@ When you set `ResourcesPath` wrong, static files such as `dynamsoft.webtwain.ins
 ### Using an absolute path
 
 In some cases, you might not be able to *calculate* the correct relative path for these files and wishes to use an absolute path instead such as "https://www.dynamsoft.com/dwt/demo/resources/". This is supported but keep in mind that if you want to use the new [Camera module]({{site.indepth}}features/Input.html#use-mediadevices-cameras) or run `DWT` in the [WASM mode]({{site.indepth}}features/initialize.html#wasm-mode), you must make sure the absolute path stays in the same domain to avoid cross-origin issues.
-
-

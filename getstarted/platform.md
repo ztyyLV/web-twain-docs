@@ -9,13 +9,13 @@ description: Dynamic Web TWAIN SDK Documentation Platform Page
 
 # Platforms
 
-`DWT` is designed to be cross-platform which means it can work on all major browsers across all major operating systems. The following shows more details.
+`DWT` is designed to be cross-platform, thus, `DWT` works in all major browsers across all major operating systems.
 
 ## Browsers on desktop devices
 
 ### Browsers on Windows
 
-* The following versions of Windows are supported
+* The following versions of Windows (x86-64) are supported
   + 7
   + 8 & 8.1
   + 10 `Recommended`
@@ -26,16 +26,16 @@ description: Dynamic Web TWAIN SDK Documentation Platform Page
 
 * The following browsers are supported
   + Chrome 68.* ~ 79.*
-  + Chrome 80.* ~ 85.* `Recommended`
+  + Chrome 80.* + `Recommended`
   + Firefox 61.* ~ 69.*
-  + Firefox 70.* ~ 80.* `Recommended`
+  + Firefox 70.* + `Recommended`
   + Microsoft Edge Spartan
   + Microsoft Edge Anaheim `Recommended`
   + Internet Explorer 10 ~ 11
 
 ### Browsers on macOS
 
-* The following versions of macOS are supported
+* The following versions of macOS (x86-64, ARM64) are supported
   + Mac OS X 10.6 Snow Leopard (10.6.8+)
   + Mac OS X 10.7 Lion
   + OS X 10.8 Mountain Lion
@@ -48,15 +48,15 @@ description: Dynamic Web TWAIN SDK Documentation Platform Page
   + macOS 10.15 Catalina `Recommended`
 * The following browsers are supported
   + Chrome 68.* ~ 79.*
-  + Chrome 80.* ~ 85.* `Recommended`
+  + Chrome 80.* + `Recommended`
   + Firefox 61.* ~ 69.*
-  + Firefox 70.* ~ 80.* `Recommended`
+  + Firefox 70.* + `Recommended`
   + Safari 7.* ~ 12.*
-  + Safari 13.* ~ 14.* `Recommended`
+  + Safari 13.* + `Recommended`
 
 ### Browsers on Linux
 
-* The following distributions of Linux are supported
+* The following distributions of Linux (x64, ARM64) are supported
   + Ubuntu 12.04 LTS (Precise Pangolin)
   + Ubuntu 12.10 (Quantal Quetzal)
   + Ubuntu 13.04 (Raring Ringtail)
@@ -96,38 +96,38 @@ description: Dynamic Web TWAIN SDK Documentation Platform Page
 
 * The following browsers are supported
   + Chrome 68.* ~ 79.*
-  + Chrome 80.* ~ 85.* `Recommended`
+  + Chrome 80.* + `Recommended`
   + Firefox 61.* ~ 69.*
-  + Firefox 70.* ~ 80.* `Recommended`
+  + Firefox 70.* + `Recommended`
 
 ## ActiveX browsers
 
-ActiveX browsers refer to Internet Explorer 8 and 9. They are not included in the above lists.
+ActiveX browsers refers to Internet Explorer 9 ~ 11. They are not included in the above lists. By default, IE 10 ~ 11 runs in HTML5 mode. Setting the global API `Dynamsoft.WebTwainEnv.IfUseActiveXForIE10Plus` to true can turn ActiveX mode on in IE 10 ~ 11.
 
 ## Browsers on mobile devices
 
 ### Browsers on iOS & iPadOS
 
-The following versions are supported
-
+* The following versions are supported
   + iOS 12.*
   + iOS 13.* `Recommended`
   + iPadOS 13.* `Recommended`
+
 * The following browsers are supported
   + Chrome 68.* ~ 79.* (no video streaming)
   + Chrome 80.* ~ 85.* (no video streaming) `Recommended`
   + Firefox 61.* ~ 69.* (no video streaming)
-  + Firefox 70.* ~ 80.* `Recommended`
+  + Firefox 70.* ~ 80.* (no video streaming) `Recommended`
   + Safari 7.* ~ 12.*
   + Safari 13.* ~ 14.* `Recommended`
 
 ### Browsers on Android
 
-The following versions are supported
-
+* The following versions are supported
   + Android 8.0 Oreo
   + Android 9 Pie `Recommended`
   + Android 10 `Recommended`
+
 * The following browsers are supported
   + Chrome 68.* ~ 79.*
   + Chrome 80.* ~ 85.* `Recommended`

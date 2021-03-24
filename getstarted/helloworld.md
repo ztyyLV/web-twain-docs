@@ -9,7 +9,7 @@ description: Dynamic Web TWAIN SDK Documentation Hello World Page
 
 # Build the HelloWorld Page
 
-> Before you start, please make sure you’ve downloaded and installed the latest version of Dynamic Web TWAIN. If you haven’t done so, you can get the 30-day free trial [here](https://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx).
+> Before you start, please make sure you’ve downloaded and installed the latest version of `DWT`. If you haven’t done so, you can get the 30-day free trial installer [here](https://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx).
 
 The following steps show you how to create your first web-based scanning application in a few minutes!
 
@@ -45,7 +45,7 @@ Embed the script of the library and add an element on the page.
 
 ## Write code to scan
 
-Add a scan button and the miminum code.
+Add a scan button and the minimum code.
 
 ``` html
 <input type="button" value="Scan" onclick="AcquireImage();" />
@@ -79,15 +79,14 @@ Change the function `AcquireImage()` like this
 function AcquireImage() {
     if (DWObject) {
         if (Dynamsoft.Lib.env.bMobile) {
-            DWObject.Viewer.showVideo()
-                .then(
-                    function() {
-                        console.log('success');
-                    },
-                    function(error) {
-                        alert(error);
-                    }
-                )
+            DWObject.LoadImageEx('', 5,
+                function() {
+                    console.log('success');
+                },
+                function(errCode, error) {
+                    alert(error);
+                }
+            );
         } else {
             DWObject.SelectSource(
                 function() {
@@ -126,15 +125,14 @@ function AcquireImage() {
         function AcquireImage() {
             if (DWObject) {
                 if (Dynamsoft.Lib.env.bMobile) {
-                    DWObject.Viewer.showVideo()
-                        .then(
-                            function() {
-                                console.log('success');
-                            },
-                            function(error) {
-                                alert(error);
-                            }
-                        )
+                    DWObject.LoadImageEx('', 5,
+                        function() {
+                            console.log('success');
+                        },
+                        function(errCode, error) {
+                            alert(error);
+                        }
+                    );
                 } else {
                     DWObject.SelectSource(function() {
                             DWObject.OpenSource();
@@ -264,7 +262,7 @@ Create a `saveUploadedPDF.aspx` file in the same location as your `helloworld.ht
 
 Now we can use the page to scan or acquire, then upload the images as a PDF document!
 
-## Review the complete code
+## Review the code
 
 ``` html
 <html>
@@ -288,15 +286,14 @@ Now we can use the page to scan or acquire, then upload the images as a PDF docu
         function AcquireImage() {
             if (DWObject) {
                 if (Dynamsoft.Lib.env.bMobile) {
-                    DWObject.Viewer.showVideo()
-                        .then(
-                            function() {
-                                console.log('success');
-                            },
-                            function(error) {
-                                alert(error);
-                            }
-                        );
+                    DWObject.LoadImageEx('', 5,
+                        function() {
+                            console.log('success');
+                        },
+                        function(errCode, error) {
+                            alert(error);
+                        }
+                    );
                 } else {
                     DWObject.SelectSource(function() {
                             DWObject.OpenSource();

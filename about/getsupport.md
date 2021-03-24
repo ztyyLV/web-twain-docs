@@ -10,8 +10,7 @@ description: Dynamic Web TWAIN SDK Documentation Support Page
 
 # How to get support
 
-If you encounter any issues or have any suggestions while using the library, please don't hesitate to contact us. We can be reached in a few different ways
-
+If you encounter any issues or have any suggestions while using the library, please don't hesitate to contact us. Feel free to contact us through one of the following methods
 ## Email
 
   + [Tech](mailto:support@dynamsoft.com)
@@ -33,7 +32,6 @@ If you encounter any issues or have any suggestions while using the library, ple
 
 <!--Begin Comm100 Live Chat Code-->
 <div style="background-repeat: no-repeat; background-position: 0px 0px; margin:0; padding:0px 0px 0px 0px; ">
-
     <div id="comm100-button-5000110"></div>
     <script type="text/javascript">
         var Comm100API = Comm100API || new Object;
@@ -61,6 +59,5 @@ If you encounter any issues or have any suggestions while using the library, ple
             }
         }, 5000)
     </script>
-
 </div>
 <!--End Comm100 Live Chat Code-->

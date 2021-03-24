@@ -11,41 +11,20 @@ description: Dynamic Web TWAIN SDK Documentation API Reference PDF Addon APIs Pa
 
 **Methods**
 
-* [ConvertToImage](#converttoimage)
-* [GetConvertMode](#getconvertmode)
-* [IsModuleInstalled](#ismoduleinstalled)
-* [IsTextBasedPDF()](#istextbasedpdf)
-* [SetConvertMode()](#setconvertmode)
-* [SetPassword()](#setpassword)
-* [SetResolution()](#setresolution)
-* [Write.Setup()](#writesetup)
+* [`GetConvertMode()`](#getconvertmode)
+* [`IsModuleInstalled()`](#ismoduleinstalled)
+* [`IsTextBasedPDF()`](#istextbasedpdf)
+* [`SetConvertMode()`](#setconvertmode)
+* [`SetPassword()`](#setpassword)
+* [`SetResolution()`](#setresolution)
+* [`Write.Setup()`](#writesetup)
 
 ---
-## ConvertToImage
-**Syntax**
-``` typescript
-/**
- * Convert the specified PDF file to image(s).
- * @param path The path of the PDF file.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
-ConvertToImage(
-    path: string,
-    resolution: number,
-    successCallback: () => void,
-    failureCallback: (
-        errorCode: number,
-        errorString: string
-    ) => void
-): void;
-```
 
----
 ## GetConvertMode
+
 **Syntax**
+
 ``` typescript
 /**
  * Return the convert mode.
@@ -54,17 +33,24 @@ GetConvertMode(): number;
 ```
 
 ---
+
 ## IsModuleInstalled
+
 **Syntax**
+
 ``` typescript
 /**
+
 * Return whether the PDF module has been installed.
+
 */
 IsModuleInstalled(): boolean;
 ```
 
 ---
+
 ## IsTextBasedPDF
+
 **Syntax**
 
 ``` typescript
@@ -76,19 +62,23 @@ IsTextBasedPDF(path: string): boolean;
 ```
 
 ---
+
 ## SetConvertMode
+
 **Syntax**
 
 ``` typescript
 /**
  * Set the convert mode.
- * @param mode Specify the mode.
+ * @param mode Specify the mode. The default value is 3 (Dynamsoft.EnumDWT_ConvertMode.CM_AUTO)
  */
 SetConvertMode(mode: Dynamsoft.EnumDWT_ConvertMode | number): boolean;
 ```
 
 ---
+
 ## SetPassword
+
 **Syntax**
 
 ``` typescript
@@ -100,7 +90,9 @@ SetPassword(password: string): boolean;
 ```
 
 ---
+
 ## SetResolution
+
 **Syntax**
 
 ``` typescript
@@ -115,15 +107,16 @@ SetResolution(resolution: number): boolean;
 
 There are three conversion modes
 
-- CM_RENDERALL (1): All the content in the target PDF file will be rasterized.
-- CM_IMAGEONLY (2): The PDF Rasterizer is turned off. This is the default mode.
-- CM_AUTO (3): The library automatically detect whether a file needs to be rasterized or not and then process the file accordingly.
+* CM_RENDERALL (1): All the content in the target PDF file will be rasterized.
+* CM_IMAGEONLY (2): The PDF Rasterizer is turned off. This is the default mode.
+* CM_AUTO (3): The library automatically detect whether a file needs to be rasterized or not and then process the file accordingly.
 
 The default resolution for the conversion is 200. We recommend that you set a value smaller than 300, otherwise it might slow down the program or cause the process to fail. 
 
 ---
 
-## Write.Setup()
+## Write. Setup()
+
 **Syntax**
 
 ``` typescript
@@ -189,4 +182,4 @@ interface PDFWSettings {
 
 **Usage notes**
 
-Use this method before you create a PDF with methods such as `HTTPUpload()` and `SaveAsPDF()`;
+Use this method before you create a PDF with methods such as  `HTTPUpload()`  and  `SaveAsPDF()` ; 

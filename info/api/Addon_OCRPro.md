@@ -13,16 +13,16 @@ For Server Side OCR, check out [Server-Side OCR](#server-side)
 
 **Methods**
 
-* [Download()](#download) 
-* [IsModuleInstalled()](#ismoduleinstalled)
-* [Recognize()](#recognize) 
-* [RecognizeFile()](#recognizefile)
-* [RecognizeRect()](#recognizerect) 
-* [RecognizeSelectedImages()](#recognizeselectedimages)
+* [`Download()`](#download) 
+* [`IsModuleInstalled()`](#ismoduleinstalled)
+* [`Recognize()`](#recognize) 
+* [`RecognizeFile()`](#recognizefile)
+* [`RecognizeRect()`](#recognizerect) 
+* [`RecognizeSelectedImages()`](#recognizeselectedimages)
 
 **Properties**
 
-* [Settings](#settings)
+* [`Settings`](#settings)
 
 ---
 
@@ -50,6 +50,7 @@ Download(
 ```
 
 ---
+
 ## IsModuleInstalled
 
 **Syntax**
@@ -189,6 +190,9 @@ RecognizeSelectedImages(
 ``` typescript
 
 interface Rect {
+    /**
+     * In pixels
+     */
     left: number;
     right: number;
     top: number;
@@ -280,7 +284,7 @@ interface Letter {
      */
     GetText(): number;
     /**
-     * Return the coordinates for the rectangle that contains the specified letter. The coordinates are in the sequence of "left,top,right,bottom" like "121,125,123,143".
+     * Return the coordinates in pixels for the rectangle that contains the specified letter. The coordinates are in the sequence of "left,top,right,bottom" like "121,125,123,143".
      */
     GetLetterRect(): string;
 }
@@ -347,6 +351,7 @@ interface Redaction {
 **Usage notes**
 
 A Settings object can be created with the following method.
+
 ``` typescript
 /**
  * Create a new "Settings" object.
@@ -360,116 +365,117 @@ Dynamsoft.WebTwain.Addon.OCRPro.NewSettings: Settings;
 
 The OCR Professional engine runs as a service. The workflow is like this
 
-1. The image(s) is uploaded to the server and saved on the disk.
-2. The path(s) of the saved image(s) is sent to the OCR pro service as part of the [OCRPro.ServerSide.Request](#ocrproserversiderequest).
-3. The service returns the OCR result in a HTTP Response.
+* The image(s) is uploaded to the server and saved on the disk.
+* The path(s) of the saved image(s) is sent to the OCR pro service as part of the [`OCRPro.ServerSide.Request`](#ocrproserversiderequest).
+* The service returns the OCR result in a HTTP Response.
 
 The following demonstrates the structures of the OCR Request and the Response.
 
-### OCRPro.ServerSide.Request
+### OCRPro. ServerSide. Request
 
-```javascript
+``` javascript
 {
     productKey: "***",
     inputFile: ["d:\\input\\test.tif"],
     outputFile: " d:\\temp\\ocrresult.pdf",
-    zones: [[100, 100, 200, 300]],    
-    settings:
-    {
-        recognitionModule: "auto", /*optional*/
+    zones: [
+        [100, 100, 200, 300]
+    ],
+    settings: {
+        recognitionModule: "auto",
+        /*optional*/
         languages: "eng,arabic",
         recognitionMethod: "File",
-        threadCount: "2", /*optional*/
+        threadCount: "2",
+        /*optional*/
         outputFormat: "IOTPDF",
-        pdfVersion: "1.7", /*optional*/
-        pdfAVersion: "pdf/a-2a", /*optional*/
-        redaction:
-            {
+        pdfVersion: "1.7",
+        /*optional*/
+        pdfAVersion: "pdf/a-2a",
+        /*optional*/
+        redaction: {
             "findText": "TWAIN",
             "findTextFlags": 1,
             "findTextAction": 0
-            }
+        }
     }
 }
 ```
+
 
 | API | Description |
 |:-|:-|
 | **productKey** | The product key which is generated from an OCR license. |
 | **inputFile**	| Specify the files to be OCR'd. This is an array of strings which are absolute paths of the files. The supported formats are BMP, JPG, TIF, PDF, PNG, JBIG2, JPEG2000, PCX, etc. Please note the use of '\\\\' instead of just '\\'. |
-| **outputFile** | Specify where the output file is saved. If the input includes more than one file, all of them will be merged into one file. Otherwise, the result will only be returned in the [OCRPro.ServerSide.Response](#ocrproserversideresponse). |
-| **zones** | Specify which zones are to be OCR'd on an image. There can be multiple zones but it works only when the  `recognitionMethod` is `Page`. The coordinates are in the sequence of `[[left, top, right, bottom]]`.|
+| **outputFile** | Specify where the output file is saved. If the input includes more than one file, all of them will be merged into one file. Otherwise, the result will only be returned in the [`OCRPro.ServerSide.Response`](#ocrproserversideresponse). |
+| **zones** | Specify which zones are to be OCR'd on an image. There can be multiple zones but it works only when the `recognitionMethod` is `Page` . The coordinates are in the sequence of `[[left, top, right, bottom]]` .|
 | **settings** | Configure the OCR. |
-| **.recognitionModule** | Specify which module is to be used for this OCR. Allowed values are: `mostaccurate`, `fastest`, `balanced` and `auto`. `auto` is the default value which means the library will choose one of the 3 modules automatically. |
-| **.languages** |Specify the language for this OCR. For example, English: "eng", Arabic :"arabic". You can also set multiple languages like this "eng,arabic". |
+| **.recognitionModule** | Specify which module is to be used for this OCR. Allowed values are: `mostaccurate` , `fastest` , `balanced` and `auto` . `auto` is the default value which means the library will choose one of the 3 modules automatically. |
+| **.languages** |Specify the language for this OCR. For example, English: "eng", Arabic :"arabic". You can also set multiple languages like this "eng, arabic". |
 | **.recognitionMethod** | Specify how the OCR is done. There are two methods: `Page` is the default value and it means the OCR is performed per page, the other method is `File` which means the OCR is performed per file. The method `File` is faster and it supports multiple threads. But only the method `Page` supports zonal OCR and returning detailed. |
-| **.threadCount** | Specify the maximum number of threads to be used OCRing. The default value is -1 which means all possible threads will be used. This setting is only valid when `recognitionMethod` is set to `File`. |
-| **.outputFormat** | Specify the output format. Allowed values are `TXTS`, `TXTCSV`, `TXTF`, `XML`, `IOTPDF`, `IOTPDF_MRC` |
-| **.pdfVersion** | Specify the version of the PDF file if the `outputFormat` is set to either `IOTPDF` or `IOTPDF_MRC`. The version number allowed ranges from 1.0 to 1.7 and by default it is 1.5. |
-| **.pdfAVersion** | Specify the version of the PDF/A file if the `outputFormat` is set to either `IOTPDF` or `IOTPDF_MRC`. The version number allowed are `pdf/a-1a`, `pdf/a-1b`, `pdf/a-2a`, `pdf/a-2b`, `pdf/a-2u`, `pdf/a-3a `, `pdf/a-3b`, `pdf/a-3u`.	|
+| **.threadCount** | Specify the maximum number of threads to be used OCRing. The default value is -1 which means all possible threads will be used. This setting is only valid when `recognitionMethod` is set to `File` . |
+| **.outputFormat** | Specify the output format. Allowed values are `TXTS` , `TXTCSV` , `TXTF` , `XML` , `IOTPDF` , `IOTPDF_MRC` |
+| **.pdfVersion** | Specify the version of the PDF file if the `outputFormat` is set to either `IOTPDF` or `IOTPDF_MRC` . The version number allowed ranges from 1.0 to 1.7 and by default it is 1.5. |
+| **.pdfAVersion** | Specify the version of the PDF/A file if the `outputFormat` is set to either `IOTPDF` or `IOTPDF_MRC` . The version number allowed are `pdf/a-1a` , `pdf/a-1b` , `pdf/a-2a` , `pdf/a-2b` , `pdf/a-2u` , `pdf/a-3a ` , `pdf/a-3b` , `pdf/a-3u` .	|
 | **.redaction** | Specify how the redaction is done. |
 | **..findText** | A string to specify what to find. |
 | **..findTextFlags** | Specify how the text is found. The allowed values are 1 (WHOLEWORD), 2 (MATCHCASE) amd 4 (FUZZYMATCH). |
 | **..findTextAction** | Specify how redaction is done. The allowed values are 0 (HIGHLIGHT), 1 (STRIKEOUT) and 2 (MARKFORREDACT). |
 
+### OCRPro. ServerSide. Response
 
-### OCRPro.ServerSide.Response
-
-```javascript
+``` javascript
 {
     "Request": {
         inputFile: ["d:\\input\\test.tif"],
-        settings: {...},
+        settings: {
+            ...
+        },
         outputFile: ...
     }
     ocrTotalCount: 300000,
     alreadyOCRCount: 80,
     code: 0,
     message: "Recognize succeeded.",
-    errorList: 
-        [
-            {
-                "input": "d:\\input\\test.tif",
-                "message": "Image file format error.",
-                "page": "1"
-            }
-        ]
-    resultFile: "***", 
-    resultZoneDetail : 
-        [
-            ["zone1 words", "zone2 words", "zone3 words"], // page 1
-            ["zone1 words", "zone2 words"], // page 2
-            ["zone1 words", "zone2 words"] // page 3
+    errorList: [{
+        "input": "d:\\input\\test.tif",
+        "message": "Image file format error.",
+        "page": "1"
+    }]
+    resultFile: "***",
+    resultZoneDetail: [
+        ["zone1 words", "zone2 words", "zone3 words"], // page 1
+        ["zone1 words", "zone2 words"], // page 2
+        ["zone1 words", "zone2 words"] // page 3
+    ],
+    resultDetail: [
+        [ //page 0
+            { //letter 0
+                "letter": "Aa",
+                "boundary": [0, 0, 18, 18]
+            },
+            { //letter 1
+                ...
+            },
+            ...
         ],
-    resultDetail:
-        [
-            [//page 0
-                {//letter 0
-                    "letter": "Aa",
-                    "boundary": [0,0,18,18]
-                },
-                {//letter 1
-                    ...
-                },
-                ...
-            ],
-            [//page 1
-                ...
-            ],
-            ...    
-        ]  
-}  
+        [ //page 1
+            ...
+        ],
+        ...
+    ]
+}
 ```
 
 |API	|Description	|
 |:-|:-|
-|**inputFile**	|Check out [OCRPro.ServerSide.Request](#ocrproserversiderequest) for more info.|
-|**settings**		|Check out [OCRPro.ServerSide.Request](#ocrproserversiderequest) for more info.|
-|**outputFile**	|Check out [OCRPro.ServerSide.Request](#ocrproserversiderequest) for more info.|
+|**inputFile**	|Check out [OCRPro. ServerSide. Request`](#ocrproserversiderequest) for more info.|
+|**settings**		|Check out [OCRPro. ServerSide. Request`](#ocrproserversiderequest) for more info.|
+|**outputFile**	|Check out [OCRPro. ServerSide. Request`](#ocrproserversiderequest) for more info.|
 |**ocrTotalCount**|Return  the number of pages allowed to be OCR'd by the current license.|
 |**alreadyOCRCount**		|Return the number of pages already OCR'd.|
-|**code**		|Return the error code for the OCR. If it's not `0`, check `errorList` for more details.|
+|**code**		|Return the error code for the OCR. If it's not `0` , check `errorList` for more details.|
 |**message**		|Return the overall error message.|
 |**errorList**|Return the detailed error messages for each of the OCR'd files.|
-|**resultFile**|Return the result file encoded as a base64 string. It only works when [OCRPro.ServerSide.Request](#ocrproserversiderequest) doesn't specify an output file path.|
-|**resultDetail**|Return detailed OCR result down to each found letter in JSON format. This is only valid when the `recognitionMethod` is set to `Page`.|
+|**resultFile**|Return the result file encoded as a base64 string. It only works when [OCRPro. ServerSide. Request`](#ocrproserversiderequest) doesn't specify an output file path.|
+|**resultDetail**|Return detailed OCR result down to each found letter in JSON format. This is only valid when the `recognitionMethod` is set to `Page` .|

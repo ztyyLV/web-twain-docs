@@ -8,6 +8,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Global APIs Page
 ---
 
 # `Dynamsoft.WebTwainEnv`
+
 > Global properties and functions.
 
 ``` typescript
@@ -62,6 +63,23 @@ interface Dynamsoft.WebTwainEnv {
     OnWebTwainPreExecute: function () {};
     OnWebTwainReady: function () {};
     OnWebTwainWillInit: function () {};
+    UseDefaultViewer: boolean;
+    CustomizableDisplayInfo: CustomizableDisplayInfo;
+    WasmConfig: WasmConfig;
+}
+interface CustomizableDisplayInfo {
+  // Specify the source of the loader bar.
+  loaderBarSource: string;
+  loaderBarClassName: string;
+}
+interface WasmConfig {
+  maxHeapSize: number;
+  fetchOptions: fetchOptions;
+}
+interface fetchOptions {
+  headers: HeadersInit;
+  mode: RequestMode;
+  credentials: RequestCredentials;
 }
 ```
 
@@ -82,72 +100,125 @@ interface Container {
 
 ### `IfAddMD5InUploadHeader`
 
-  
 Whether or not an md5 header `dwt-md5` should be included in HTTP upload requests. Note that this header is not a standard header and may be deemed invalid on some web servers.
   
 The default value is `false` .
 
 ### `ProductKey`
 
-  
-  Sets or returns the product key for the library. A product key is required to enables certain modules of the library.
-  
+Sets or returns the product key for the library. A product key is required to enables certain modules of the library.
 
 ### `ResourcesPath`
 
-  
-  Sets or returns where the library looks for resources files including service installers, CSS, etc.
+Sets or returns where the library looks for resources files including service installers, CSS, etc.
   
 
 ### `UseLocalService`
 
-  Sets or returns whether to use the service or use WASM only. This property can be changed at runtime (but not recommended) and affects `WebTwain` instances created after the change.
+Sets or returns whether to use the service or use WASM only. This property can be changed at runtime (but not recommended) and affects `WebTwain` instances created after the change.
 
-  The default value is `true` .
+The default value is `true` .
 
 ## Functions
 
 ### `CreateDWTObject()`
 
-  Creates a new `WebTwain` instance that listens to the specified host & ports. An UI element specified by the parameter `ContainerId` which is typically a <div> is required. The library will generate a UI and bind it to this element.
-  
+Creates a new `WebTwain` instance that listens to the specified host & ports. An UI element specified by the parameter `ContainerId` which is typically a <div> is required. The library will generate a UI and bind it to this element.
 
 ### `CreateDWTObjectEx()`
 
-  Creates a new UI-less `WebTwain` instance. This instance will be uniquely identified by the parameter `WebTwainId` .
+Creates a new UI-less `WebTwain` instance. This instance will be uniquely identified by the parameter `WebTwainId` .
 
 ``` typescript
-  interface DWTInitialConfig {
-
-      WebTwainId: string,
-          Host ? : string,
-          Port ? : string,
-          PortSSL ? : string
-
-  }
+interface DWTInitialConfig {
+  WebTwainId: string;
+  Host ? : string;
+  Port ? : string;
+  PortSSL ? : string;
+  UseLocalService?: boolean;
+}
 ```
 
 ### `DeleteDWTObject()`
 
-  Delete the `WebTwain` instance specified by `Id` which can either be a `ContainerId` or a `WebTwainId` .
+Delete the `WebTwain` instance specified by `Id` which can either be a `ContainerId` or a `WebTwainId` .
 
 ### `GetWebTwain()`
 
-  Gets an `WebTwain` instance by its `ContainerId` .
+Gets an `WebTwain` instance by its `ContainerId` .
 
 ### `GetWebTwainEx()`
 
-  Gets an `WebTwain` instance by its `WebTwainId` .
-  
+Gets an `WebTwain` instance by its `WebTwainId` .
 
 ### `Load()`
 
-  Initiates the library. If there are predefined `Containers` , one `WebTwain` instance will be created for each `Container` .
+Initiates the library. If there are predefined `Containers` , one `WebTwain` instance will be created for each `Container` .
 
 ### `RegisterEvent()`
 
-  Registers an environmental event. Typically the event is `OnWebTwainReady` which is triggered when the initialization completes.
+Registers an environmental event. Typically the event is `OnWebTwainReady` which is triggered when the initialization completes.
 
 ### `Unload()`
 
-  Destroys all `WebTwain` instances and cuts off the connection to the Dynamsoft Service.
+Destroys all `WebTwain` instances and cuts off the connection to the Dynamsoft Service.
+
+### `RemoveAllAuthorizations()`
+
+Removes the specific authorizations made by end users on a client machine. Only effective when the security feature is enabled for local files, scanners or cameras.
+
+### `UseDefaultViewer`
+
+Whether to use the built-in viewer. If it is set to `false` , the file `dynamsoft.viewer.js` is not loaded at all and there is no way to add it back later. Therefore, only set it to `false` when you absolutely won't need the viewer or will be building your own viewer.
+
+### `CustomizableDisplayInfo`
+
+Use this API to customize the UI.
+
+#### `errorMessages`
+
+Specify the error messages.
+
+#### `generalMessages`
+
+Specify general messages.
+
+#### `customProgressText`
+
+Specify text on progress bars.
+
+#### `buttons`
+
+Specify the titles and whether to show one or multiple buttons on the image editor.
+
+#### `dialogText`
+
+Specify the text on dialogs.
+
+#### `loaderBarSource`
+
+Specify the source of the loader bar image. Check out more on [HTMLImageElement.src](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/src).
+
+#### `loaderBarClassName`
+
+Specify the class name of the DIV element that contains the loader bar. With this class, you can customize the loader bar even further with CSS.
+
+### `WasmConfig`
+
+#### `maxHeapSize`
+
+Specify the maximum memory allowed to be used by the library when it's in WASM-mode. By default, it's 200 (MB).
+
+#### `fetchOptions`
+
+* `headers`
+
+A Headers object, an object literal, or an array of two-item arrays to set request's headers. Check out [HeadersInit](https://microsoft.github.io/PowerBI-JavaScript/modules/_node_modules_typedoc_node_modules_typescript_lib_lib_dom_d_.html#headersinit).
+
+* `mode`
+
+A string to indicate whether the request will use CORS, or will be restricted to same-origin URLs. Sets request's mode. Check out [RequestMode](https://microsoft.github.io/PowerBI-JavaScript/modules/_node_modules_typedoc_node_modules_typescript_lib_lib_dom_d_.html#requestmode).
+
+* `credentials`
+
+A string indicating whether credentials will be sent with the request always, never, or only when sent to a same-origin URL. Sets request's credentials. Check out [RequestCredentials](https://microsoft.github.io/PowerBI-JavaScript/modules/_node_modules_typedoc_node_modules_typescript_lib_lib_dom_d_.html#requestcredentials).

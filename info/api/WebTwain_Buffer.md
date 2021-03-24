@@ -11,8 +11,10 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page
 
 **Methods**
 
-* [ClearImageTags()](#clearimagetags) 
+* [ClearImageTags()](#clearimagetags)
+* [RenameTag()](#renametag)
 * [FilterImagesByTag()](#filterimagesbytag)
+* [ClearFilter()](#clearfilter)
 * [SetDefaultTag()](#setdefaulttag) 
 * [TagImages()](#tagimages)
 * [GetImageBitDepth()](#getimagebitdepth)
@@ -60,6 +62,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page
 
 **Events**
 
+* [OnBufferChanged](#onbufferchanged)
 * [OnBitmapChanged](#onbitmapchanged)
 * [OnIndexChangeDragDropDone](#onindexchangedragdropdone)
 * [OnTopImageInTheViewChanged](#ontopimageintheviewchanged)
@@ -98,6 +101,23 @@ ImageIDToIndex(imageId: number): number;
 
 An `imageId` is unique and won't change as long as the Dynamsoft Service process is running. It's a better way to keep track of an image than the `index` which changes easily.
 
+---
+
+## RenameTag
+
+**Syntax**
+
+``` typescript
+/**
+ * Rename a tag.
+ * @param oldName Specify the tag to change.
+ * @param newName Specify the new tag name.
+ */
+RenameTag(oldName:string, newName:string): boolean;
+```
+
+---
+
 ## ClearImageTags
 
 **Syntax**
@@ -122,6 +142,19 @@ ClearImageTags(index: number): boolean;
  * @param tag The tag used as the filter. If nothing or an empty string is used, the filter is cleared.
  */
 FilterImagesByTag(tag: string): boolean;
+```
+
+---
+
+## ClearFilter
+
+**Syntax**
+
+``` typescript
+/**
+ * Stop filtering images by tag.
+ */
+ClearFilter(): boolean;
 ```
 
 ---
@@ -682,6 +715,51 @@ IfAllowLocalCache: boolean;
 
 ---
 
+## OnBufferChanged
+
+**Syntax**
+
+``` typescript
+/**
+ * An enhanced callback triggered when a change occurs in the buffer.
+ * @argument bufferChangeInfo Details about the buffer change.
+ */
+RegisterEvent('OnBufferChanged',
+    function (bufferChangeInfo: BufferChangeInfo) {}
+): boolean;
+
+interface BufferChangeInfo {
+    /**
+     * Action type includes 'add', 'remove', 'modify', 'shift' and 'filter'
+     */
+    action: string;
+    /**
+     * The image id (not the index) of the current page.
+     */
+    currentId: number;
+    /**
+     * All image ids.
+     */
+    imageIds: number[];
+    /**
+     * All selected image ids.
+     */
+    selectedIds: number[];
+}
+```
+
+**Usage notes**
+
+Action types include 
+
+* `add`: New pages are added to the buffer.
+* `remove`: The existing pages are removed.
+* `modify`: The existing pages are modified.
+* `shift`: The existing pages are reordered.
+* `filter`: The existing pages are filtered by a tag.
+
+---
+
 ## OnBitmapChanged
 
 **Syntax**
@@ -705,11 +783,11 @@ RegisterEvent('OnBitmapChanged',
 
 Operation types include 
 
-1: new image(s) were added at the tail
-2: new image(s) were inserted before the current index
-3: image(s) are deleted
-4: image(s) are modified
-5: indices of images changed
+* new image(s) were added at the tail
+* new image(s) were inserted before the current index
+* image(s) are deleted
+* image(s) are modified
+* indices of images changed
 
 ---
 

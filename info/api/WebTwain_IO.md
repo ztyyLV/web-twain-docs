@@ -1,6 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
+noTitleIndex: true
 title: Dynamic Web TWAIN API Reference - IO APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, IO APIs
 breadcrumbText: IO
@@ -9,7 +10,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference IO APIs Page
 
 # WebTwain IO
 
-## Input
+Input
 
 **Methods**
 
@@ -28,7 +29,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference IO APIs Page
 * [HTTPDownloadThroughPost()](#httpdownloadthroughpost)
 * [HTTPDownloadDirectly()](#httpdownloaddirectly)
 
-## Output
+Output
 
 **Methods**
 
@@ -59,7 +60,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference IO APIs Page
 * [SaveAllAsMultiPageTIFF()](#saveallasmultipagetiff)
 * [SaveAllAsPDF()](#saveallaspdf)
 
-## Others
+Others
 
 **Methods**
 
@@ -1339,10 +1340,6 @@ ConvertToBlob(
 ): void;
 ```
 
-**Usage notes**
-
-`getData()` returns the pure base64 string without the data URI scheme. For example, "/9j/4AAQSkZJRgABA...". If you want to use the string, you probably need to add the scheme. For example, "data:image/png; base64, /9j/4AAQSkZJRgABA...".
-
 **Example**
 
 ``` javascript
@@ -1595,7 +1592,7 @@ ClearTiffCustomTag(): boolean;
 
 ``` javascript
 /**
- * Clear the content of all custom tiff tags.
+ * Sets a custom tiff tag (up to 32 tags). The string to be set in a tag can be base64 encoded.
  * @param id The id of the custom tag.
  * @param content The content of the tag.
  * @param useBase64Encoding Whether the content is encoded.
@@ -1735,7 +1732,7 @@ IfShowCancelDialogWhenImageTransfer: boolean;
 
 ``` javascript
 /**
- * Return or set whether to show the progressbar. 
+ * Return or set whether the progress bar is/should be displayed during encoding or decoding. It works for any image encoding/decoding related methods. For example: LoadImage, LoadImageEx, ConvertToBlob, etc.
  */
 IfShowProgressBar: boolean;
 ```

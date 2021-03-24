@@ -1,6 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
+noTitleIndex: true
 title: Dynamic Web TWAIN Schedule - Addon Release
 keywords: Dynamic Web TWAIN, Documentation, Schedule, Addon Release
 breadcrumbText: Addons
@@ -13,6 +14,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule - Addon Release Page
 
 | Version | Service | Core | PDFR | Barcode | Camera | OCRB | OCRPro| Uploader | 
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| v16.2 | 1.6.2.0112 | 16.2.0.0112 | 11.1.0.112 | 7.6.0.0112 | 15.0.0.0625 | 10.0.0.0618 | 1.2.0.0806 | 1.6.0.0428 |
 | v16.1.1 | 1.6.1.0728 | 16.1.0.0728 | 11.0.0.0428 | 7.4.0.0428 | 15.0.0.0625 | 10.0.0.0618 | 1.2.0.0806 | 1.6.0.0428 |
 | v15.3.1 | 1.5.3.0107 | 15.3.0.0116 | 10.3.3.0924 | 7.3.0.0107 | 15.0.0.0625 | 10.0.0.0618 | 1.2.0.0806 | 1.4.0.0107 |
 | v14.3.1 | 1.4.1.0115 | 14.3.1.0115 | 10.3.0.0712 | 6.4.1.0115 | 14.3.1.0115 | 10.0.0.0618 | 1.2.0.0806 | 1.2.1.0115 |

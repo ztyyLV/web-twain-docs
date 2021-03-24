@@ -7,26 +7,7 @@
     <div class="headWrapper">
         {%- include page_header.html -%}
     </div>
-    <div class="subHeadWrapper">
-        <div class="subHeader container">
-            <div class="row">
-                <ul class="subHeaderMenuUl col-xs-12 clearfix">
-                    <li class="title"><a class="f18 fontOswald" href="https://www.dynamsoft.com/Products/WebTWAIN_Overview.aspx">Dynamic Web Twain</a> <span class="fc9">|</span> Developer's Center</li>
-                    <li class="on"><a class="orangelink" href = "{{ site.docHomePage }}">Documentation</a></li>
-                    <li><a class="whitelink hide-xs" href="https://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx">Code Gallery</a></li>
-                    <li><a class="whitelink hide-xs" href="https://developer.dynamsoft.com/dwt">Resources</a></li>
-                    <li class="fr" style="margin-right: 0; padding: 0;"><a class="btn d-btn bgOrange hide-sm hide-xs" href="https://www.dynamsoft.com/web-twain/downloads">Download 30-Day Free Trial</a></li>
-                </ul>
-            </div>
-            <div class="row mobileSubHeaderMenu">
-                <ul class="col-xs-12 show-xs">
-                    <li><a class="orangelink" href = "{{ site.docHomePage }}">Documentation</a></li>
-                    <li><a class="whitelink" href="https://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx">Code Gallery</a></li>
-                    <li><a class="whitelink" href="https://developer.dynamsoft.com/dwt">Resources</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    {%- include dwtNav.html -%}
     <div class="sideBarIcon"><i class="fa fa-list" style="margin-right: 5px;"></i> Table of contents</div>
     <div class="container">
         <div class="row">
@@ -74,14 +55,21 @@
         </div>
     </div>
 
+    <div class="history list">
+        <div class="container">
+            <div class="col-xs-12">
+                {%- include liquid_autoGenerateHistoryList.html -%}
+                {%- include version-list.html -%}
+            </div>
+        </div>
+    </div>
+  
     <div id="footerWrapper">
         {%- include page_footer.html -%}
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
-        integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-    <script>anchors.add();</script>
-
+    <script type="text/javascript">anchors.add();</script>
+    <script type="text/javascript">UrlReplace();</script>
     {%- if page.needAutoGenerateSidebar -%}
     <script>
         FullTreeMenuList(true);
@@ -93,101 +81,92 @@
     {%- endif -%}
 
     <script type="text/javascript">
-        $('#sideBarCnt').css({'width': $('.sideBar').width() + 'px'})
-        $('.container .head').css({'width': $('.docContainer').width() + 'px'})
-
-        $(window).resize(function() {
-            $('#sideBarCnt').css({'width': $('.sideBar').width() + 'px'})
-            $('.container .head').css({'width': $('.docContainer').width() + 'px'})
-            realFunc()
-        })
-        
-        window.addEventListener('scroll', realFunc);
-
-        function realFunc(){
-            var sd = $(window).scrollTop();
-            var dcheight = $('.docContainer').height() + 65 - sd
-            if (breakpoint() == 'lg') {
-                if (sd > 65 && dcheight>0) {
-                    if (!$('.subHeadWrapper').hasClass('shw-fixed')) {
-                        $('.subHeadWrapper').addClass('shw-fixed')
-                        $('.docContainer').addClass('dc-fixed')
-                        $('#sideBarCnt').addClass('ftm-fixed')
-                        $('.rightSideMenu').addClass('rsm-fixed')
-                        $('#docHead').addClass('ch-fixed')
-                    }
-                    if (dcheight > document.body.clientHeight) {
-                        $('#sideBarCnt.ftm-fixed').css({'height': 'calc(100vh - 170px)'})
-                        $('.rightSideMenu.rsm-fixed').css({'height': 'calc(100vh - 170px)'})
-                    } else {
-                        $('#sideBarCnt.ftm-fixed').css({'height': (dcheight - 40) + 'px'})
-                        $('.rightSideMenu.rsm-fixed').css({'height': (dcheight - 40) + 'px'})
-                    }
-                    $('.markdown-body').css({'margin-top': (100 + $('.container .head').height()) + 'px'})
-                } else {
-                    $('.subHeadWrapper').removeClass('shw-fixed')
-                    $('.docContainer').removeClass('dc-fixed')
-                    $('#sideBarCnt').removeClass('ftm-fixed')
-                    $('.rightSideMenu').removeClass('rsm-fixed')
-                    $('.container .head').removeClass('ch-fixed')
-                    $('.markdown-body').css({'margin-top': '40px'})
-                }
-            }
-            if (breakpoint() == 'md') {
-                if (sd > 65 && dcheight > 0) {
-                    if (!$('.subHeadWrapper').hasClass('shw-fixed')) {
-                        $('.subHeadWrapper').addClass('shw-fixed')
-                        $('.docContainer').addClass('dc-fixed')
-                        $('#sideBarCnt').addClass('ftm-fixed')
-                        $('#docHead').addClass('ch-fixed')
-                    }
-                    $('.markdown-body').css({'margin-top': (100 + $('.container .head').height()) + 'px'})
-                } else {
-                    $('.subHeadWrapper').removeClass('shw-fixed')
-                    $('.docContainer').removeClass('dc-fixed')
-                    $('#sideBarCnt').removeClass('ftm-fixed')
-                    $('#docHead').removeClass('ch-fixed')
-                    $('.markdown-body').css({'margin-top': '40px'})
-                }
-            }
-        }
-
-        $('.sideBarIcon').click(function() {
-            $(".sideBar").toggleClass('hide-sm');
-            $(".sideBar").toggleClass('hide-xs');
-            setTimeout(function() {
-                console.log('sidebar' + $('.sideBar').width())
-                $('#sideBarCnt').css({'width': $('.sideBar').width() + 'px'})
-            }, 100)
-        })
-
-        let timeInt = setInterval(function() {
-            var container = $('#sideBarCnt'), scrollTo = $('#sideBarCnt .activeLink');
-            console.log(scrollTo)
-            if (scrollTo.length>0) {
-                container.scrollTop(
-                    scrollTo.offset().top - container.offset().top + container.scrollTop()
-                );
-                clearInterval(timeInt)
-            }
-        }, 500)
-    
-        function onSearchFinish(e) {
-            var evt = window.event || e;
-            if (evt.keyCode == 13) {
-
-            }
-        }
-
         $('#txtSearch').keydown(function(e) { 
             if (e.keyCode == 13) {
                 window.location.href = '/web-twain/docs/search.html?q=' + $('#txtSearch').val()
             }
         })
-
     </script>
 
     {%- include livehelp.html -%}
+
+      <!-- Google Code for Remarketing Tag -->
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 1070358440;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+  </script>
+  <script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+  </script>
+  <noscript>
+    <div style="display:inline;">
+      <img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1070358440/?value=0&amp;guid=ON&amp;script=0"/>
+    </div>
+  </noscript>
+
+  <!-- Linkedin Insight Tag code for www.dynamsoft.com -->
+    <script type="text/javascript">
+        _linkedin_partner_id = "2567778";
+        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+        window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+        </script><script type="text/javascript">
+        (function(){var s = document.getElementsByTagName("script")[0];
+        var b = document.createElement("script");
+        b.type = "text/javascript";b.async = true;
+        b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+        s.parentNode.insertBefore(b, s);})();
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=2567778&fmt=gif" />
+    </noscript>
+
+  <!-- Google Tag Manager -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-538F83"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-538F83');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Marketo Asynchronous Tracking Code for www.dynamsoft.com -->
+  <script type="text/javascript">
+    (function() {
+    var didInit = false;
+    function initMunchkin() {
+      if(didInit === false) {
+        didInit = true;
+        Munchkin.init('465-JJI-384', { asyncOnly: true });
+      }
+    }
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = 'https://munchkin.marketo.net/munchkin.js';
+    s.onreadystatechange = function() {
+      if (this.readyState == 'complete' || this.readyState == 'loaded') {
+        initMunchkin();
+      }
+    };
+    s.onload = initMunchkin;
+    document.getElementsByTagName('head')[0].appendChild(s);
+    })();
+  </script>
+  
+  <!-- Marketo RTP tag --> 
+  <script type='text/javascript'>
+    (function(c,h,a,f,i,e){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    c[a].a=i;c[a].e=e;var g=h.createElement("script");g.async=true;g.type="text/javascript";
+    g.src=f+'?aid='+i;var b=h.getElementsByTagName("script")[0];b.parentNode.insertBefore(g,b);
+    })(window,document,"rtp","https://sjrtp-cdn.marketo.com/rtp-api/v1/rtp.js","dynamsoftinc");
+
+    rtp('send','view');
+    rtp('get', 'campaign',true);
+  </script>
+  <!-- End of Marketo RTP tag -->
 </body>
 
 </html>

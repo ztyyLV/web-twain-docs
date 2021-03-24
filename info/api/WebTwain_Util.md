@@ -11,6 +11,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Utility APIs Page
 
 **Methods**
 
+* [isUsingActiveX()](#isusingactivex)
 * [RegisterEvent()](#registerevent) 
 * [UnregisterEvent()](#unregisterevent)
 * [SetProductKeyAsync()](#setproductkeyasync)
@@ -28,6 +29,19 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Utility APIs Page
 * [VersionInfo](#versioninfo)
 * [ProductKey](#productkey)
 * [UseLocalService](#uselocalservice)
+
+---
+
+## isUsingActiveX
+
+**Syntax**
+
+``` typescript
+/**
+ * Return whether the WebTwain object is running the ActiveX edition.
+ */
+isUsingActiveX(): boolean;
+```
 
 ---
 
