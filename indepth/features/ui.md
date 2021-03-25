@@ -70,7 +70,7 @@ Dynamsoft.WebTwainEnv.Load();
 
 ### Loading bar and backdrop
 
-![UI 2]({{site.assets}}imgs/UI-2-new.png)
+![UI 2]({{site.assets}}imgs/UI-2.png)
 
 This loading bar and backdrop shows up when creating a `WebTwain` instance or when you try to scan. The functions `Dynamsoft.WebTwainEnv.OnWebTwainPreExecute()` and `Dynamsoft.WebTwainEnv.OnWebTwainPostExecute()` are called before and after the process. You can customize the behavior like this
 
