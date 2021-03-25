@@ -266,6 +266,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | IT_ALL | 5 |
 | IT_MULTIPAGE_PDF | 7 |
 | IT_MULTIPAGE_TIF | 8 |
+ 
+Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType of [startScan]({{site.info}}api/WebTwain__Acquire.html##startscan)
 
 ## `Dynamsoft.EnumDWT_PDFCompressionType `
 
