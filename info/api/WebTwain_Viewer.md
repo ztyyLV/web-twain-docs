@@ -1418,7 +1418,7 @@ DWObject.Viewer.on('keyup', function(keyboardEvent) {
 });
 ```
 
-**Usgae notes**
+**Usage notes**
 
 The events `mouseout`, `mouseover`, `keydown` and `keyup` are only triggered on desktop browsers.
 
