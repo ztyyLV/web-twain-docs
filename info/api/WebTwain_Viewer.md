@@ -1147,7 +1147,7 @@ The page margin is only effective when the view mode is not -1 * -1 (in other wo
 
 ``` typescript
 /**
- * Set the border color of the selected area 
+ * Set the border color of the selected area. Also applies to the selection box on the video opened by the method `showVideo`.
  */
 selectedAreaBorderColor: string; 
 ```

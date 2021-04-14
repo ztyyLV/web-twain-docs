@@ -1808,7 +1808,7 @@ Print(useOSPrintWindow ? : boolean): boolean;
 
 ---
 
-## Print
+## PrintEx
 
 **Syntax**
 

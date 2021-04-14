@@ -13,9 +13,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 ## Global
 
-* [`Dynamsoft.DWT`]({{site.info}}api/Dynamsoft_WebTwainEnv-17.0.html) 
-* [`Dynamsoft.DWT.Enum`]({{site.info}}api/Dynamsoft_Enum-17.0.html) 
-* [`Dynamsoft.DWT`]({{site.info}}api/Dynamsoft_license-17.0.html) 
+* [`Dynamsoft.DWT`]({{site.info}}api/Dynamsoft_WebTwainEnv.html) 
+* [`Dynamsoft.DWT.Enum`]({{site.info}}api/Dynamsoft_Enum.html) 
 
 ## WebTwain
 
@@ -27,6 +26,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 * [`ClearImageTags()`]({{site.info}}api/WebTwain_Buffer.html#clearimagetags) 
 * [`RenameTag()`]({{site.info}}api/WebTwain_Buffer.html#renametag) 
+* [`RemoveTag()`]({{site.info}}api/WebTwain_Buffer.html#removetag) 
+* [`GetTagList()`]({{site.info}}api/WebTwain_Buffer.html#gettaglist) 
 * [`FilterImagesByTag()`]({{site.info}}api/WebTwain_Buffer.html#filterimagesbytag)
 * [`ClearFilter()`]({{site.info}}api/WebTwain_Buffer.html#clearfilter)
 * [`SetDefaultTag()`]({{site.info}}api/WebTwain_Buffer.html#setdefaulttag) 
@@ -276,6 +277,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [`SetUploadSegment()`]({{site.info}}api/WebTwain_IO.html#setuploadsegment)
 * [`ShowFileDialog()`]({{site.info}}api/WebTwain_IO.html#showfiledialog) 
 * [`Print()`]({{site.info}}api/WebTwain_IO.html#print)
+* [`PrintEx()`]({{site.info}}api/WebTwain_IO.html#printex)
 
 #### Properties
 
@@ -369,6 +371,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [`singlePageMode`]({{site.info}}api/WebTwain_Viewer.html#singlepagemode)
 * [`width`]({{site.info}}api/WebTwain_Viewer.html#width)
 * [`zoom`]({{site.info}}api/WebTwain_Viewer.html#zoom)
+* [`autoChangeIndex`]({{site.info}}api/WebTwain_Viewer.html#autochangeindex)
 
 #### Events
 
@@ -386,7 +389,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [`pageAreaUnselected`]({{site.info}}api/WebTwain_Viewer.html#pageareaunselected)
 * [`pageRendered`]({{site.info}}api/WebTwain_Viewer.html#pagerendered)
 * [`resize`]({{site.info}}api/WebTwain_Viewer.html#resize)
-* [`topPageChanged`]({{site.info}}api/WebTwain_Viewer.html#toppagechanged)
+<!--* [`topPageChanged`]({{site.info}}api/WebTwain_Viewer.html#toppagechanged)-->
 
 ## Addon
 
