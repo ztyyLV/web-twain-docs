@@ -53,7 +53,7 @@ Add a scan button and the minimum code.
     var DWObject;
 
     function Dynamsoft_OnReady() {
-        DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer');
+        DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
     }
 
     function AcquireImage() {
@@ -119,7 +119,7 @@ function AcquireImage() {
         var DWObject;
 
         function Dynamsoft_OnReady() {
-            DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer');
+            DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
         }
 
         function AcquireImage() {
@@ -280,7 +280,7 @@ Now we can use the page to scan or acquire, then upload the images as a PDF docu
         var DWObject;
 
         function Dynamsoft_OnReady() {
-            DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer');
+            DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
         }
 
         function AcquireImage() {

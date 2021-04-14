@@ -409,7 +409,7 @@ GetImageSize(index: number, width: number, height: number): number;
  * @param index Specify the image.
  * @param type Sepcify the expected file type.
  */ 
-GetImageSizeWithSpecifiedType(index: number, type: Dynamsoft.EnumDWT_ImageType | number): number;
+GetImageSizeWithSpecifiedType(index: number, type: Dynamsoft.DWT.EnumDWT_ImageType | number): number;
 ```
 
 ---
@@ -423,7 +423,7 @@ GetImageSizeWithSpecifiedType(index: number, type: Dynamsoft.EnumDWT_ImageType |
  * Calculate the size in bytes of all selected images assuming an expected file type.
  * @param type Sepcify the expected file type.
  */
-GetSelectedImagesSize(type: Dynamsoft.EnumDWT_ImageType | number): number;
+GetSelectedImagesSize(type: Dynamsoft.DWT.EnumDWT_ImageType | number): number;
 ```
 
 **Usage notes**

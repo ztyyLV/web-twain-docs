@@ -1238,7 +1238,7 @@ Example argument for the parameter `fileName`
 * "C:\\webtwain" + <> + ".jpg": The scanned images will result in "C:\\webtwain1.jpg", "C:\\webtwain2.jpg", "C:\\webtwain3.jpg", etc.
 * "C:\\webtwain" + <%06d> + ".jpg": The scanned images will result in "C:\\webtwain000001.jpg", "C:\\webtwain000002.jpg", "C:\\webtwain000003.jpg", etc.
 
-Check out the available formats [Dynamsoft. EnumDWT_FileFormat]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_fileformat).
+Check out the available formats [Dynamsoft.DWT.EnumDWT_FileFormat]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_fileformat).
 
 **Example**
 
@@ -1248,7 +1248,7 @@ DWObject.TransferMode = Dynamsoft.DWT.EnumDWT_TransferMode.TWSX_FILE;
 if (DWObject.TransferMode === Dynamsoft.DWT.EnumDWT_TransferMode.TWSX_FILE) {
     if (DWObject.SetFileXferInfo(
             "C:\\Temp\\WebTWAIN<%06d>.bmp",
-            EnumDWT_FileFormat.TWFF_BMP
+            DWT.EnumDWT_FileFormat.TWFF_BMP
         )) {
         DWObject.IfShowUI = true;
         DWObject.AcquireImage();
