@@ -63,10 +63,10 @@ interface Dynamsoft.DWT {
     OnWebTwainReady: function () {};
     OnWebTwainWillInit: function () {};
 }
-```
-</br>
+
 
 > License Server properties
+
 ## licenseServer
 
 **Syntax**
