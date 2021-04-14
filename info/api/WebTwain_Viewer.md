@@ -1338,7 +1338,7 @@ The zoom factor is only effective when the view mode is -1 * -1. Allowed values 
 
 ``` typescript
 /**
- * Set whether to select the index in the upper left corner of the viewer when scrolling. The default value is false. 
+ * Set whether to make sure the first image in the viewer is always selected when scrolling through multiple images. The default value is false. 
  */
 autoChangeIndex : boolean
 ```

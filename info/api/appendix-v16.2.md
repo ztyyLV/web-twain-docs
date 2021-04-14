@@ -130,29 +130,6 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2372 | You cannot convert to binary more than one image when the format is BMP, JPG or PNG |
 |<= -3000 | See ErrorString property for details |
 
-## License Tracking Server Error List 
-
-| Error Code | Error Message |
-|:-|:-|
-| -20100 | The standby LTS refuses to provide service while the main LTS is working. |
-| -20100 | LTS refuses to provide service while under construction. |
-| -20101 | The handshake code you are using does not exist on the License Tracking Server. |
-| -20102 | Session password is incorrect. |
-| -20103 | AppDomain for handshake is not matched. |
-| -20104 | No item matched. Please check your handshake and client settings. |
-| -20105 | License item does not exist. |
-| -20106 | Product is not matched. |
-| -20107 | Version mismatch. |
-| -20108 | DeploymentType is not matched. |
-| -20109 | Edition is not matched. |
-| -20111 | License has expired. |
-| -20111 | License for this ip has expired. |
-| -20112 | License has not yet taken effect. |
-| -20113 | This license item "+item.getLicenseItemId()+" has been invalid. |
-| -20114 | AppDomain for licenseItem is not matched. |
-| -20115 | ChargeWay for licenseItem is not matched. |
-| -20120 | License has exceeded its limit. |
-| -20151 | Cloned device detected. |
 
 ## Viewer related API changes in version 17.0
 
@@ -163,12 +140,12 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 | [ `Viewer.autoChangeIndex` ]({{site.info}}api/Addon_Viewer.html#autoChangeIndex) | `Viewer.topPageChanged()` |
 
 * The following APIs are new in v17.0
-  + [ `RemoveTag` ]({{site.info}}api/WebTwain_Buffer.html#removetag)
-  + [ `GetTagList` ]({{site.info}}api/WebTwain_Buffer.html#gettaglist)
-  + [ `DWT.licenseServer` ]({{site.info}}api/WebTwain_License.html#licenseServer)
-  + [ `DWT.handshakeCode` ]({{site.info}}api/WebTwain_License.html#handshakeCode)
-  + [ `DWT.sessionPassword` ]({{site.info}}api/WebTwain_License.html#sessionPassword)
-  + [ `DWT.licenseException` ]({{site.info}}api/WebTwain_License.html#licenseException)
+  + [ `.RemoveTag` ]({{site.info}}api/WebTwain_Buffer.html#removetag)
+  + [ `.GetTagList` ]({{site.info}}api/WebTwain_Buffer.html#gettaglist)
+  + [ `.DWT.licenseServer` ]({{site.info}}api/WebTwain_License.html#licenseServer)
+  + [ `.DWT.handshakeCode` ]({{site.info}}api/WebTwain_License.html#handshakeCode)
+  + [ `.DWT.sessionPassword` ]({{site.info}}api/WebTwain_License.html#sessionPassword)
+  + [ `.DWT.licenseException` ]({{site.info}}api/WebTwain_License.html#licenseException)
 
 ## Viewer related API changes in version 16.2
 
@@ -202,6 +179,7 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 | [ `Viewer.on("mousemove", callback)` ]({{site.info}}api/WebTwain_Viewer.html#mousemove) | `RegisterEvent("OnMouseMove", callback)` |
 | [ `Viewer.on("pageAreaSelected", callback)` ]({{site.info}}api/WebTwain_Viewer.html#pageareaselected) | `RegisterEvent("OnImageAreaSelected", callback)` |
 | [ `Viewer.on("pageAreaUnselected", callback)` ]({{site.info}}api/WebTwain_Viewer.html#pageareaunselected) | `RegisterEvent("OnImageAreaDeSelected", callback)` |
+| [ `Viewer.on("topPageChanged", callback)` ]({{site.info}}api/WebTwain_Viewer.html#toppagechanged) | `RegisterEvent("OnTopImageInTheViewChanged", callback)` |
 | [ `Viewer.pageMargin` ]({{site.info}}api/WebTwain_Viewer.html#pagemargin) | `ImageMargin` |
 | [ `Viewer.selectedPageBorder` ]({{site.info}}api/WebTwain_Viewer.html#selectedpageborder) | `SelectionImageBorderColor` |
 | [ `Viewer.selectionRectAspectRatio` ]({{site.info}}api/WebTwain_Viewer.html#selectionrectaspectratio) | `SelectionRectAspectRatio` |

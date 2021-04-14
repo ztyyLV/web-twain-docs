@@ -1602,7 +1602,7 @@ DataSourceStatus: number;
 
 ``` typescript
 /**
- * Return the name of the default source.
+ * Return the name of the last used source. 
  */
 DefaultSourceName: string;
 ```

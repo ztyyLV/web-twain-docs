@@ -161,7 +161,7 @@ The first five files in the above list contain functionalities for image IO (dec
 **A**: No, the library will use the WASM files even in service mode when one of the following conditions is met
 
 * The APIs for the [ `WebTwain.Addon.Camera` ]({{site.info}}api/Addon_Camera.html) component are called. 
-* The APIs [ `WebTwain.Viewer.showVideo()` ]({{site.info}}api/WebTwain_Viewer.html#showvideo) or [ `WebTwain.Viewer.closeVideo()` ]({{site.info}}api/WebTwain_Viewer.html#closevideo) are called.
+* The APIs [ `WebTwain.Viewer.showVideo()` ]({{site.info}}api/Addon_Camera.html#showvideo) or [ `WebTwain.Viewer.closeVideo()` ]({{site.info}}api/Addon_Camera.html#closevideo) are called.
 
 ## Creating the WebTwain instance
 
