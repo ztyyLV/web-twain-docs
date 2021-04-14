@@ -70,9 +70,9 @@ IsTextBasedPDF(path: string): boolean;
 ``` typescript
 /**
  * Set the convert mode.
- * @param mode Specify the mode. The default value is 3 (Dynamsoft.EnumDWT_ConvertMode.CM_AUTO)
+ * @param mode Specify the mode. The default value is 3 (Dynamsoft.DWT.EnumDWT_ConvertMode.CM_AUTO)
  */
-SetConvertMode(mode: Dynamsoft.EnumDWT_ConvertMode | number): boolean;
+SetConvertMode(mode: Dynamsoft.DWT.EnumDWT_ConvertMode | number): boolean;
 ```
 
 ---
@@ -134,7 +134,7 @@ interface PDFWSettings {
     /**
      * Specify the compression type.
      */
-    compression: Dynamsoft.EnumDWT_PDFCompressionType | number;
+    compression: Dynamsoft.DWT.EnumDWT_PDFCompressionType | number;
     /**
      * Specify the creator.
      */
