@@ -65,6 +65,8 @@ interface Dynamsoft.DWT {
 }
 ```
 
+
+
 > License Server properties
 
 ## licenseServer
