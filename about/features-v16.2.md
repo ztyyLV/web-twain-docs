@@ -18,8 +18,6 @@ DWT supports all major browsers on all major operating systems. As of version 16
   + Windows 7/8/10/2008/2012/2016
   + macOS 10.6.8+
   + Linux (Ubuntu 12.0.4+, Debian 8+, Fedora 24+, mint 18.3+)
-  + 64-bit ARM based computers
-  + 64-bit MIPS based computers
   + iOS 12+ & iPadOS 12+
   + Android 8+
 
@@ -28,7 +26,7 @@ DWT supports all major browsers on all major operating systems. As of version 16
   + [Chrome v68+](https://www.google.com/chrome/)
   + [Firefox v61+](https://www.mozilla.org/en-US/firefox/)
   + Edge
-  + Internet Explorer 8+
+  + Internet Explorer 9+
   + Safari 7+
 
 > NOTE

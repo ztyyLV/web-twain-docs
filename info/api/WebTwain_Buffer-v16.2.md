@@ -13,8 +13,6 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page
 
 * [ClearImageTags()](#clearimagetags)
 * [RenameTag()](#renametag)
-* [RemoveTag()](#removetag)
-* [GetTagList()](#gettaglist)
 * [FilterImagesByTag()](#filterimagesbytag)
 * [ClearFilter()](#clearfilter)
 * [SetDefaultTag()](#setdefaulttag) 
@@ -116,50 +114,6 @@ An `imageId` is unique and won't change as long as the Dynamsoft Service process
  * @param newName Specify the new tag name.
  */
 RenameTag(oldName:string, newName:string): boolean;
-```
-
----
-
-## RemoveTag
-
-**Syntax**
-
-``` typescript
-/**
- * Remove the specified tag from one or more images(if not specified, remove from all). 
- * @param tagName Specify the new tag name.
- * @param indices Specify the index.
- */
-RemoveTag(tagName: string, indices?: number[]):boolean 
-```
-
-**Usage Notes**
-If the index is null, it will remove the tag you specified. If the index is not null, it will remove the specified tag on the image you selected.
-
----
-
-## GetTagList
-
-**Syntax**
-
-``` typescript
-/**
- * Return the status of all current tags. 
- */
-GetTagList():Json 
-
-Json： 
-[ 
-   { 
-        name: ‘TagA’,  
-         imageIds:’ ’ 
-   }, 
-   { 
-        name: ‘TagB’,  
-         imageIds:[239514082, 239514083] 
-   }, 
-] 
- 
 ```
 
 ---

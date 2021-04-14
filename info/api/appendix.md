@@ -130,6 +130,23 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2372 | You cannot convert to binary more than one image when the format is BMP, JPG or PNG |
 |<= -3000 | See ErrorString property for details |
 
+
+## Viewer related API changes in version 17.0
+
+* New APIs in v17.0 replace old APIs in v16.2-, all old APIs are deprecated.
+
+| v17.0 | v16.2- |
+|:-|:-|
+| [ `Viewer.autoChangeIndex` ]({{site.info}}api/Addon_Viewer.html#autoChangeIndex) | `Viewer.topPageChanged()` |
+
+* The following APIs are new in v17.0
+  + [ `.RemoveTag` ]({{site.info}}api/WebTwain_Buffer.html#removetag)
+  + [ `.GetTagList` ]({{site.info}}api/WebTwain_Buffer.html#gettaglist)
+  + [ `.DWT.licenseServer` ]({{site.info}}api/WebTwain_License.html#licenseServer)
+  + [ `.DWT.handshakeCode` ]({{site.info}}api/WebTwain_License.html#handshakeCode)
+  + [ `.DWT.sessionPassword` ]({{site.info}}api/WebTwain_License.html#sessionPassword)
+  + [ `.DWT.licenseException` ]({{site.info}}api/WebTwain_License.html#licenseException)
+
 ## Viewer related API changes in version 16.2
 
 ### For the Camera add-on

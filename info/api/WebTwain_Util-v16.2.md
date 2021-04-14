@@ -103,7 +103,7 @@ SetProductKeyAsync(
  * @param language Specify the language.
  */
 SetLanguage(
-    language: Dynamsoft.DWT.EnumDWT_Language | number
+    language: Dynamsoft.EnumDWT_Language | number
 ): boolean;
 ```
 
@@ -130,11 +130,11 @@ The language set with this method is only for the built-in security dialogs whic
  */
 GenerateURLForUploadData(
     indices: number[],
-    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
+    type: Dynamsoft.EnumDWT_ImageType | number,
     successCallback: (
         resultURL: string,
         indices: number[],
-        type: Dynamsoft.DWT.EnumDWT_ImageType | number
+        type: Dynamsoft.EnumDWT_ImageType | number
     ) => void,
     failureCallback: (
         errorCode: number,

@@ -92,7 +92,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [RotateLeft()]({{site.info}}api/WebTwain_Edit.html#rotateleft) 
 * [RotateRight()]({{site.info}}api/WebTwain_Edit.html#rotateright)
 * [ChangeBitDepth()]({{site.info}}api/WebTwain_Edit.html#changebitdepth) 
-* [SetDPI()]({{site.info}}api/WebTwain_Edit.html#setdpe)
+* [SetDPI()]({{site.info}}api/WebTwain_Edit.html#setdpi)
 * [ConvertToBW()]({{site.info}}api/WebTwain_Edit.html#converttobw) 
 * [ConvertToGrayScale()]({{site.info}}api/WebTwain_Edit.html#converttograyscale)
 * [ChangeImageSize()]({{site.info}}api/WebTwain_Edit.html#changeimagesize) 

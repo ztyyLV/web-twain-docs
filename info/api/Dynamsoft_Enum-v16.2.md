@@ -9,7 +9,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 
 # `Enumerations`
 
-## `Dynamsoft.DWT.EnumDWT_PixelType`
+## `Dynamsoft.EnumDWT_PixelType`
 
 | Label | Value|
 |:-|:-|
@@ -27,7 +27,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWPT_SCRGB | 11 |
 | TWPT_INFRARED | 16 |
 
-## `Dynamsoft.DWT.EnumDWT_BorderStyle `
+## `Dynamsoft.EnumDWT_BorderStyle `
 
 | Label | Value|
 |:-|:-|
@@ -35,7 +35,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWBS_SINGLEFLAT | 1 |
 | TWBS_SINGLE3D | 2 |
 
-## `Dynamsoft.DWT.EnumDWT_MessageType `
+## `Dynamsoft.EnumDWT_MessageType `
 
 | Label | Value|
 |:-|:-|
@@ -45,7 +45,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWQC_GETCURRENT | 8 |
 | TWQC_RESET | 16 |
 
-## `Dynamsoft.DWT.EnumDWT_Cap`
+## `Dynamsoft.EnumDWT_Cap`
 
 | Label | Value|
 |:-|:-|
@@ -191,7 +191,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | ICAP_IMAGEMERGEHEIGHTTHRESHOLD | 4445 |
 | ICAP_SUPPORTEDEXTIMAGEINFO | 4446 |
 
-## `Dynamsoft.DWT.EnumDWT_CapType`
+## `Dynamsoft.EnumDWT_CapType`
 
 | Label | Value|
 |:-|:-|
@@ -201,7 +201,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWON_ONEVALUE | 5 |
 | TWON_RANGE | 6 |
 
-## `Dynamsoft.DWT.EnumDWT_TransferMode `
+## `Dynamsoft.EnumDWT_TransferMode `
 
 | Label | Value|
 |:-|:-|
@@ -209,7 +209,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWSX_FILE | 1 |
 | TWSX_MEMORY | 2 |
 
-## `Dynamsoft.DWT.EnumDWT_FileFormat `
+## `Dynamsoft.EnumDWT_FileFormat `
 
 | Label | Value| Description |
 |:-|:-|:-|
@@ -230,7 +230,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWFF_PDFA | 15 | A file format from Adobe PDF/A, Version 1 (TWAIN Spec 2.0) |
 | TWFF_PDFA2 | 16 | A file format from Adobe PDF/A, Version 2 (TWAIN Spec 2.1) 、
 
-## `Dynamsoft.DWT.EnumDWT_TIFFCompressionType `
+## `Dynamsoft.EnumDWT_TIFFCompressionType `
 
 | Label | Value|
 |:-|:-|
@@ -245,7 +245,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TIFF_JPEG | 7 |
 | TIFF_PACKBITS | 32773 |
 
-## `Dynamsoft.DWT.EnumDWT_InterpolationMethod `
+## `Dynamsoft.EnumDWT_InterpolationMethod `
 
 | Label | Value|
 |:-|:-|
@@ -254,7 +254,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | IM_BICUBIC | 3 |
 | IM_BESTQUALITY | 5 |
 
-## `Dynamsoft.DWT.EnumDWT_ImageType `
+## `Dynamsoft.EnumDWT_ImageType `
 
 | Label | Value|
 |:-|:-|
@@ -269,7 +269,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
  
 Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType of [startScan]({{site.info}}api/WebTwain__Acquire.html##startscan)
 
-## `Dynamsoft.DWT.EnumDWT_PDFCompressionType `
+## `Dynamsoft.EnumDWT_PDFCompressionType `
 
 | Label | Value|
 |:-|:-|
@@ -280,7 +280,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | PDF_JP2000 | 6 |
 | PDF_JBig2 | 7 |
 
-## `Dynamsoft.DWT.EnumDWT_ShowMode `
+## `Dynamsoft.EnumDWT_ShowMode `
 
 | Label | Value|
 |:-|:-|
@@ -290,7 +290,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | SW_CLOSE | 3 |
 | SW_IFLIVE | 4 |
 
-## `Dynamsoft.DWT.EnumDWT_CapValueType `
+## `Dynamsoft.EnumDWT_CapValueType `
 
 | Label | Value|
 |:-|:-|
@@ -308,7 +308,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | TWTY_STR128 | 11 |
 | TWTY_STR255 | 12 |
 
-## `Dynamsoft.DWT.EnumDWT_UnitType `
+## `Dynamsoft.EnumDWT_UnitType `
 
 | Label | Value|
 |:-|:-|
@@ -320,7 +320,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | TWUN_PIXELS | 5 |
 | TWUN_MILLIMETERS | 6 |
 
-## `Dynamsoft.DWT.EnumDWT_ConvertMode`
+## `Dynamsoft.EnumDWT_ConvertMode`
 
 | Label | Value|
 |:-|:-|
@@ -328,7 +328,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | CM_IMAGEONLY | 2 |
 | CM_AUTO | 3 |
 
-## `Dynamsoft.DWT.EnumDWT_DUPLEX`
+## `Dynamsoft.EnumDWT_DUPLEX`
 
 | Label | Value|
 |:-|:-|
@@ -336,7 +336,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | TWDX_1PASSDUPLEX | 1 |
 | TWDX_2PASSDUPLEX | 2 |
 
-## `Dynamsoft.DWT.EnumDWT_CapLanguage`
+## `Dynamsoft.EnumDWT_CapLanguage`
 
 | Label | Value|
 |:-|:-|
@@ -470,7 +470,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | TWLG_URDU | 112 |
 | TWLG_VIETNAMESE | 113 |
 
-## `Dynamsoft.DWT.EnumDWT_CapSupportedSizes`
+## `Dynamsoft.EnumDWT_CapSupportedSizes`
 
 | Label | Value|
 |:-|:-|
@@ -534,7 +534,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | TWSS_BUSINESSCARD | 53 |
 | TWSS_MAXSIZE | 54 |
 
-## `Dynamsoft.DWT.EnumDWT_CapFeederAlignment`
+## `Dynamsoft.EnumDWT_CapFeederAlignment`
 
 | Label | Value|
 |:-|:-|
@@ -543,14 +543,14 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | TWFA_CENTER | 2 |
 | TWFA_RIGHT | 3 |
 
-## `Dynamsoft.DWT.EnumDWT_CapFeederOrder`
+## `Dynamsoft.EnumDWT_CapFeederOrder`
 
 | Label | Value|
 |:-|:-|
 | TWFO_FIRSTPAGEFIRST | 0 |
 | TWFO_LASTPAGEFIRST | 1 |
 
-## `Dynamsoft.DWT.EnumDWT_CapPrinter`
+## `Dynamsoft.EnumDWT_CapPrinter`
 
 | Label | Value|
 |:-|:-|
@@ -563,7 +563,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | TWPR_ENDORSERBOTTOMBEFORE | 6 |
 | TWPR_ENDORSERBOTTOMAFTER | 7 |
 
-## `Dynamsoft.DWT.EnumDWT_CapPrinterMode`
+## `Dynamsoft.EnumDWT_CapPrinterMode`
 
 | Label | Value|
 |:-|:-|
@@ -571,7 +571,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | TWPM_MULTISTRING | 1 |
 | TWPM_COMPOUNDSTRING | 2 |
 
-## `Dynamsoft.DWT.EnumDWT_CapBitdepthReduction`
+## `Dynamsoft.EnumDWT_CapBitdepthReduction`
 
 | Label | Value|
 |:-|:-|
@@ -580,14 +580,14 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | TWBR_CUSTHALFTONE | 2 |
 | TWBR_DIFFUSION | 3 |
 
-## `Dynamsoft.DWT.EnumDWT_CapBitOrder`
+## `Dynamsoft.EnumDWT_CapBitOrder`
 
 | Label | Value|
 |:-|:-|
 | TWBO_LSBFIRST | 0 |
 | TWBO_MSBFIRST | 1 |
 
-## `Dynamsoft.DWT.EnumDWT_CapFilterType`
+## `Dynamsoft.EnumDWT_CapFilterType`
 
 | Label | Value|
 |:-|:-|
@@ -601,7 +601,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | TWFT_YELLOW | 7 |
 | TWFT_BLACK | 8 |
 
-## `Dynamsoft.DWT.EnumDWT_CapFlash`
+## `Dynamsoft.EnumDWT_CapFlash`
 
 | Label | Value|
 |:-|:-|
@@ -611,14 +611,14 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | TWFL_AUTO | 3 |
 | TWFL_REDEYE | 4 |
 
-## `Dynamsoft.DWT.EnumDWT_CapFlipRotation`
+## `Dynamsoft.EnumDWT_CapFlipRotation`
 
 | Label | Value|
 |:-|:-|
 | TWFR_BOOK | 0 |
 | TWFR_FANFOLD | 1 |
 
-## `Dynamsoft.DWT.EnumDWT_CapImageFilter`
+## `Dynamsoft.EnumDWT_CapImageFilter`
 
 | Label | Value|
 |:-|:-|
@@ -630,14 +630,14 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | TWIF_TEXT | 3 |
 | TWIF_FINELINE | 4 |
 
-## `Dynamsoft.DWT.EnumDWT_CapLightPath`
+## `Dynamsoft.EnumDWT_CapLightPath`
 
 | Label | Value|
 |:-|:-|
 | TWLP_REFLECTIVE | 0 |
 | TWLP_TRANSMISSIVE | 1 |
 
-## `Dynamsoft.DWT.EnumDWT_CapLightSource`
+## `Dynamsoft.EnumDWT_CapLightSource`
 
 | Label | Value|
 |:-|:-|
@@ -649,7 +649,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | TWLS_UV | 5 |
 | TWLS_IR | 6 |
 
-## `Dynamsoft.DWT.EnumDWT_MagType`
+## `Dynamsoft.EnumDWT_MagType`
 
 | Label | Value|
 |:-|:-|
@@ -657,7 +657,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | TWMD_RAW | 1 |
 | TWMD_INVALID | 2 |
 
-## `Dynamsoft.DWT.EnumDWT_CapNoiseFilter`
+## `Dynamsoft.EnumDWT_CapNoiseFilter`
 
 | Label | Value|
 |:-|:-|
@@ -666,7 +666,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | TWNF_LONEPIXEL | 2 |
 | TWNF_MAJORITYRULE | 3 |
 
-## `Dynamsoft.DWT.EnumDWT_CapORientation`
+## `Dynamsoft.EnumDWT_CapORientation`
 
 | Label | Value|
 |:-|:-|
@@ -680,7 +680,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | TWOR_AUTOTEXT | 5 |
 | TWOR_AUTOPICTURE | 6 |
 
-## `Dynamsoft.DWT.EnumDWT_CapOverscan`
+## `Dynamsoft.EnumDWT_CapOverscan`
 
 | Label | Value|
 |:-|:-|
@@ -690,21 +690,21 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | TWOV_LEFTRIGHT | 3 |
 | TWOV_ALL | 4 |
 
-## `Dynamsoft.DWT.EnumDWT_CapPixelFlavor`
+## `Dynamsoft.EnumDWT_CapPixelFlavor`
 
 | Label | Value|
 |:-|:-|
 | TWPF_CHOCOLATE | 0 |
 | TWPF_VANILLA | 1 |
 
-## `Dynamsoft.DWT.EnumDWT_CapPlanarChunky`
+## `Dynamsoft.EnumDWT_CapPlanarChunky`
 
 | Label | Value|
 |:-|:-|
 | TWPC_CHUNKY | 0 |
 | TWPC_PLANAR | 1 |
 
-## `Dynamsoft.DWT.EnumDWT_DataSourceStatus`
+## `Dynamsoft.EnumDWT_DataSourceStatus`
 
 | Label | Value|
 |:-|:-|
@@ -713,7 +713,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | TWDSS_ENABLED | 2 |
 | TWDSS_ACQUIRING | 3 |
 
-## `Dynamsoft.DWT.EnumDWT_FitWindowType`
+## `Dynamsoft.EnumDWT_FitWindowType`
 
 | Label | Value|
 |:-|:-|
@@ -721,7 +721,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | enumFitWindowHeight | 1 |
 | enumFitWindowWidth | 2 |
 
-## `Dynamsoft.DWT.EnumDWT_PlatformType`
+## `Dynamsoft.EnumDWT_PlatformType`
 
 | Label | Value|
 |:-|:-|
@@ -729,14 +729,14 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | enumMac | 1 |
 | enumLinux | 2 |
 
-## `Dynamsoft.DWT.EnumDWT_UploadDataFormat`
+## `Dynamsoft.EnumDWT_UploadDataFormat`
 
 | Label | Value|
 |:-|:-|
 | Binary | 0 |
 | Base64 | 1 |
 
-## `Dynamsoft.DWT.EnumDWT_MouseShape`
+## `Dynamsoft.EnumDWT_MouseShape`
 
 | Label | Value|
 |:-|:-|
@@ -750,7 +750,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | Resize | 7 |
 | Move | 8 |
 
-## `Dynamsoft.DWT.EnumDWT_Language`
+## `Dynamsoft.EnumDWT_Language`
 
 | Label | Value|
 |:-|:-|
@@ -764,7 +764,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | Russian | 7 |
 | Chinese | 8 |
 
-## `Dynamsoft.DWT.EnumDWT_InitMsg`
+## `Dynamsoft.EnumDWT_InitMsg`
 
 | Label | Value|
 |:-|:-|
@@ -774,7 +774,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | DownloadError | 4 |
 | DownloadNotRestartError | 5 |
 
-## `Dynamsoft.DWT.EnumDWT_Driver`
+## `Dynamsoft.EnumDWT_Driver`
 
 | Label | Value|
 |:-|:-|
@@ -785,14 +785,14 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | TWAIN_AND_TWAIN64 | 4 |
 | TWAIN64 | 5 |
 
-## `Dynamsoft.DWT.EnumDWT_OCRDownloadType`
+## `Dynamsoft.EnumDWT_OCRDownloadType`
 
 | Label | Value|
 |:-|:-|
 | OCRDT_Dll | 0 |
 | OCRDT_LANGUAGE | 1 |
 
-## `Dynamsoft.DWT.EnumDWT_OCRLanguage`
+## `Dynamsoft.EnumDWT_OCRLanguage`
 
 | Label | Language | Value|
 |:-|:-|:-|
@@ -824,7 +824,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | OCRL_URD | Urdu | urd |
 | OCRL_VIE | Vietnamese | vie |
 
-## `Dynamsoft.DWT.EnumDWT_OCROutputFormat`
+## `Dynamsoft.EnumDWT_OCROutputFormat`
 
 | Label | Value | Description|
 |:-|:-|:-|
@@ -834,7 +834,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | OCROF_PDFPLAINTEXT_PDFX | 3 | Outputs the OCR text results to a PDF/A. Any images from the original scanned image are lost. |
 | OCROF_PDFIMAGEOVERTEXT_PDFX | 4 | Outputs the OCR text results to a PDF/A, with the original scanned image printed overtop. |
 
-## `Dynamsoft.DWT.EnumDWT_OCRPageSetMode`
+## `Dynamsoft.EnumDWT_OCRPageSetMode`
 
 | Label | Value| Description |
 |:-|:-|:-|
@@ -850,7 +850,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | PSM_CIRCLE_WORD | 9 | Treat the image as a single word in a circle. |
 | PSM_SINGLE_CHAR | 10 | Treat the image as a single character. |
 
-## `Dynamsoft.DWT.EnumDWT_OCRProRecognitionModule`
+## `Dynamsoft.EnumDWT_OCRProRecognitionModule`
 
 | Label | Value|
 |:-|:-|
@@ -859,7 +859,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | OCRPM_BALANCED | BALANCED |
 | OCRPM_FASTEST | FASTEST |
 
-## `Dynamsoft.DWT.EnumDWT_OCRProOutputFormat`
+## `Dynamsoft.EnumDWT_OCRProOutputFormat`
 
 | Label | Value|
 |:-|:-|
@@ -870,7 +870,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | OCRPFT_IOTPDF | IOTPDF |
 | OCRPFT_IOTPDF_MRC | IOTPDF_MRC |
 
-## `Dynamsoft.DWT.EnumDWT_OCRProPDFVersion`
+## `Dynamsoft.EnumDWT_OCRProPDFVersion`
 
 | Label | Value|
 |:-|:-|
@@ -883,7 +883,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | OCRPPDFV_6 | 1.6 |
 | OCRPPDFV_7 | 1.7 |
 
-## `Dynamsoft.DWT.EnumDWT_OCRProPDFAVersion`
+## `Dynamsoft.EnumDWT_OCRProPDFAVersion`
 
 | Label | Value|
 |:-|:-|
@@ -896,14 +896,14 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | OCRPPDFAV_3B | pdf/a-3b |
 | OCRPPDFAV_3U | pdf/a-3u |
 
-## `Dynamsoft.DWT.EnumDWT_OCRProType`
+## `Dynamsoft.EnumDWT_OCRProType`
 
 | Label | Value|
 |:-|:-|
 | OCRDT_File | 0 |
 | OCRDT_Index | 1 |
 
-## `Dynamsoft.DWT.EnumDWT_OCRFindTextFlags`
+## `Dynamsoft.EnumDWT_OCRFindTextFlags`
 
 | Label | Value|
 |:-|:-|
@@ -911,7 +911,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | OCRFT_MATCHCASE | 2 |
 | OCRFT_FUZZYMATCH | 4 |
 
-## `Dynamsoft.DWT.EnumDWT_OCRFindTextAction`
+## `Dynamsoft.EnumDWT_OCRFindTextAction`
 
 | Label | Value|
 |:-|:-|
@@ -919,7 +919,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | OCRFT_STRIKEOUT | 1 |
 | OCRFT_MARKFORREDACT | 2 |
 
-## `Dynamsoft.DWT.EnumDWT_CameraControlProperty`
+## `Dynamsoft.EnumDWT_CameraControlProperty`
 
 | Label | Value | Description |
 |:-|:-|:-|
@@ -931,7 +931,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | CCP_IRIS | 5 | Specify the iris in units of fstop* 10. |
 | CCP_FOCUS | 6 | Specify the focus in millimeters which is the distance to the optimally focused target. The range and default value are specific to the device. |
 
-## `Dynamsoft.DWT.EnumDWT_VideoProperty`
+## `Dynamsoft.EnumDWT_VideoProperty`
 
 | Label | Value | Description |
 |:-|:-|:-|
@@ -946,7 +946,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | VP_BACKLIGHTCOMPENSATION | 8 | Specify the backlight compensation setting. It's either 0 (off) or 1 (on). |
 | VP_GAIN | 9 | Specify the gain adjustment. Zero is normal. Positive values are brighter and negative values are darker. The range of values depends on the device. |
 
-## `Dynamsoft.DWT.EnumDWT_VideoRotateMode`
+## `Dynamsoft.EnumDWT_VideoRotateMode`
 
 | Label | Value | Description |
 |:-|:-|:-|

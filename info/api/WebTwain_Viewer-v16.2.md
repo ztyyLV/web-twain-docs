@@ -53,7 +53,6 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 * [singlePageMode](#singlepagemode)
 * [width](#width)
 * [zoom](#zoom)
-* [autoChangeIndex](#autochangeindex)
 
 **Events**
 
@@ -71,9 +70,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 * [pageAreaUnselected](#pageareaunselected)
 * [pageRendered](#pagerendered)
 * [resize](#resize)
-<!--** [topPageChanged](#toppagechanged)-->
-
-
+* [topPageChanged](#toppagechanged)
 
 > The following APIs are deprecated as of v16.2, check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html#viewer-related-api-changes-in-versoin-16.2).
 
@@ -99,7 +96,6 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 * `MouseShape`
 * `SelectionRectAspectRatio`
 * `Zoom`
-
 
 **Events**
 
@@ -488,11 +484,6 @@ interface ThumbnailViewer {
      * Default: "30%".
      */
     size: number | string;
-    /**
-     * Set whether to select the index in the upper left corner of the viewer when scrolling. 
-     * Default: false.
-     */
-    autoChangeIndex: boolean;
 };
 interface ThumbnailViewerEvent {
     // The index of the current page.
@@ -570,7 +561,7 @@ The following table shows the events available to a ThumbnailViewer object.
 | `mousemove` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse moved over |
 | `mousedown` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is pressed |
 | `mouseup` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is released |
-<!--**| `topPageChanged` | index: number | Triggered when the top page currently displayed changes |-->
+| `topPageChanged` | index: number | Triggered when the top page currently displayed changes |
 | `resize` | width：number, height：number | Triggered when width & height of the ThumbnailViewer object changes. |
 | `pageRendered` | index: number | Triggered when a page is rendered. |
 | `mouseout` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is out, only for desktop browsers |
@@ -1332,28 +1323,6 @@ The zoom factor is only effective when the view mode is -1 * -1. Allowed values 
 
 ---
 
-### autoChangeIndex
-
-**Syntax**
-
-``` typescript
-/**
- * Set whether to select the index in the upper left corner of the viewer when scrolling. The default value is false. 
- */
-autoChangeIndex : boolean
-```
-
-**Example**
-
-``` javascript
-DWObject.Viewer.Viewer.autoChangeIndex=true;
-```
-
-**Usage Notes**
-When set to true, the index in the upper left corner of the viewer will be selected when scrolling.
-
----
-
 ## Events 
 
 ### click
@@ -1572,7 +1541,7 @@ DWObject.Viewer.width += 100;
 
 ---
 
-<!--**### topPageChanged
+### topPageChanged
 
 **Syntax**
 
@@ -1597,5 +1566,3 @@ DWObject.Viewer.on("topPageChanged", function(index) {
 **Usage Notes**
 
 This event is only effective when the view mode is not -1 * -1 (in other words, [ `singlePageMode` ](#singlepagemode) is `false` ).
--->
-
