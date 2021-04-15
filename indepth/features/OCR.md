@@ -348,7 +348,7 @@ Server side OCR has no restriction on what OS or application is running on the c
 
 For `OCRPro` , only Windows can be used as the server OS. For `OCRB` , the server can run either `Windows` or `Linux` .
 
-### Use OCRPro on the Server Side
+<!-- ### Use OCRPro on the Server Side
 
 The following shows how to set up the environment for server-side `OCRPro` .
 
@@ -514,7 +514,7 @@ For more information on the resulting object, check out [OCRPro Response]({{site
 ##### Online demo for OCRPro on the Server side
 
 * CSharp: [Scan-Documents-and-Do-Server-side-OCR-Pro](https://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx?SampleID=148)
-* Java: [Scan-Documents-and-Do-Server-side-OCR-Pro-Java](https://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx?SampleID=213)
+* Java: [Scan-Documents-and-Do-Server-side-OCR-Pro-Java](https://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx?SampleID=213) -->
 
 ### Use OCRB on the Server Side
 
