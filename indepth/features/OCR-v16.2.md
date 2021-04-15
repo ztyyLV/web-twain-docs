@@ -17,7 +17,7 @@ For simple OCR of relatively clear images, `OCRB` will suffice. It supports 27 l
 
 As the name implies, `OCRPro` is faster, more robust and comes with built-in image pre-processing. It currently supports 119 languages and is the recommended option for any large-scale enterprise grade solution. [Here is a full list of all the languages supported by OCRPro](https://www.dynamsoft.com/Products/ocr-pro-languages.aspx).
 
-For a quick comparison, you can use [this sample application](https://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx?SampleID=210) to test the performance of both engines side by side.
+For a quick comparison, you can use [this sample application](https://www.dynamsoft.com/web-twain/resources/code-gallery/?SampleID=210) to test the performance of both engines side by side.
 
 OCR can be performed both on the client side and on the server side.
 
@@ -125,7 +125,7 @@ function DoOCR() {
 
 ##### Online demo for OCRB
 
-[Scan-Documents-and-Do-Client-side-OCR-Basic](https://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx?SampleID=133)
+[Scan-Documents-and-Do-Client-side-OCR-Basic](https://www.dynamsoft.com/web-twain/resources/code-gallery/?SampleID=133)
 
 ### Use OCRPro on the Client Side
 
@@ -247,7 +247,7 @@ settings.Redaction.FindTextAction = Dynamsoft.EnumDWT_OCRFindTextAction.OCRFT_ST
 
 ##### Online demo for OCRPro
 
-[Scan-Documents-and-Do-Client-side-OCR-Pro](https://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx?SampleID=149)
+[Scan-Documents-and-Do-Client-side-OCR-Pro](https://www.dynamsoft.com/web-twain/resources/code-gallery/?SampleID=149)
 
 ### Questions
 

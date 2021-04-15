@@ -17,9 +17,9 @@ For simple OCR of relatively clear images, `OCRB` will suffice. It supports 27 l
 
 As the name implies, `OCRPro` is faster, more robust and comes with built-in image pre-processing. It currently supports 119 languages and is the recommended option for any large-scale enterprise grade solution. [Here is a full list of all the languages supported by OCRPro](https://www.dynamsoft.com/Products/ocr-pro-languages.aspx).
 
-For a quick comparison, you can use [this sample application](https://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx?SampleID=210) to test the performance of both engines side by side.
+For a quick comparison, you can use [this sample application](https://www.dynamsoft.com/web-twain/resources/code-gallery/?SampleID=210) to test the performance of both engines side by side.
 
-OCR can be performed both on the client side and on the server side.
+OCR can be performed both on the client side and on the server side. But Server-side OCR pro is no longer supported in v17.0.
 
 ## Client side OCR
 
@@ -74,7 +74,7 @@ downloadOCRB(true);
 
 The code asks `DWT` to download `OCRB` from the URL `Dynamsoft.DWT.ResourcesPath + '/addon/OCRx64.zip'` and the language data from the URL `Dynamsoft.DWT.ResourcesPath + '/addon/OCRBasicLanguages/English.zip'` . Both zip files need to be placed on the server where you placed the [resources files]({{site.about}}faqs.html#what-are-the-resources-files). As mentioned above, if you can't find these files, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) or get it from [64bit-OCRB-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRBasicx64-v16.zip).
 
-Once the installation is done, you should be able to find the following files under `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16\DynamicOCR` .
+Once the installation is done, you should be able to find the following files under `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\DynamicOCR` .
 
 * `DynamicOCRx64_10.0.0.0618.dll` : The version number may vary.
 * `DynamicOCR\eng.traineddata` : This is for English, other language(s) may have different name(s).
@@ -125,7 +125,7 @@ function DoOCR() {
 
 ##### Online demo for OCRB
 
-[Scan-Documents-and-Do-Client-side-OCR-Basic](https://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx?SampleID=133)
+[Scan-Documents-and-Do-Client-side-OCR-Basic](https://www.dynamsoft.com/web-twain/resources/code-gallery/?SampleID=133)
 
 ### Use OCRPro on the Client Side
 
@@ -161,7 +161,7 @@ downloadOCRPro();
 
 The code asks `DWT` to download `OCRPro` from the URL `Dynamsoft.DWT.ResourcesPath + '/addon/OCRProx64.zip'` . This zip file needs to be placed on the server where you placed the [resources files]({{site.about}}faqs.html#what-are-the-resources-files). As mentioned above, if you can't find these files, you can get them from [64bit-OCRPro-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRProx64-v16.zip).
 
-Once the installation is done, you should be able to find the following under `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16`
+Once the installation is done, you should be able to find the following under `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17`
 * `DynamicOCRProx64_1.2.0.0806.dll` : The version number may vary.
 * `OCRProResource\{hundreds of files}` : There are a few hundred files under this directory `OCRProResource` .
 
@@ -247,7 +247,7 @@ settings.Redaction.FindTextAction = Dynamsoft.DWT.EnumDWT_OCRFindTextAction.OCRF
 
 ##### Online demo for OCRPro
 
-[Scan-Documents-and-Do-Client-side-OCR-Pro](https://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx?SampleID=149)
+[Scan-Documents-and-Do-Client-side-OCR-Pro](https://www.dynamsoft.com/web-twain/resources/code-gallery/?SampleID=149)
 
 ### Questions
 
