@@ -48,9 +48,9 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 #### Moved 
 
-* The original namespace Dynamsoft. WebTwainEnv is renamed to Dynamsoft.DWT. 
+* The original namespace `Dynamsoft.WebTwainEnv` is renamed to `Dynamsoft.DWT`. 
 
-* All enumerations are moved under Dynamsoft.DWT. For example, Dynamsoft.DWT.EnumDWT_PixelType and EnumDWT_PixelType works in version 16.2 and lower but now it must be written as Dynamsoft.DWT.EnumDWT_PixelType. 
+* All enumerations are moved under `Dynamsoft.DWT`. For example, `Dynamsoft.EnumDWT_PixelType` and `EnumDWT_PixelType` works in version 16.2 and lower but now it must be written as `Dynamsoft.DWT.EnumDWT_PixelType`.  
 
 #### Others 
 
@@ -73,7 +73,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
   + Added definition for [`UseLocalService`]({{site.info}}api/WebTwain_Util.html#uselocalservice), [`RemoveTag()`]({{site.info}}api/WebTwain_Buffer.html#removetag)and [`GetTagList()`]({{site.info}}api/WebTwain_Buffer.html#gettaglist). 
   + Removed old definitions based on version 12, 13 and 14. 
   + Renamed namespace WebTwainEnv to DWT. 
-  + Moved enumerations under Dynamsoft.DWT. 
+  + Moved enumerations under Dynamsoft.WebTwainEnv. 
 
 ## `16.2` (01/18/2021)
 
@@ -92,10 +92,10 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 * Added a configuration page to update the host or ports of the Dynamsoft Service. By default, this page can be accessed by the URL http://127.0.0.1:18625/admin/.
 
-* The default loader bar can now be customized with the API [`Dynamsoft.DWT.CustomizableDisplayInfo.loaderBarSource`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#loaderbarsource). 
+* The default loader bar can now be customized with the API [`Dynamsoft.WebTwainEnv.CustomizableDisplayInfo.loaderBarSource`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#loaderbarsource). 
   + Only effective when set before the page finishes loading (i.e. before [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event)).
 
-* Added a new global property [`Dynamsoft.DWT.IfAlwaysFocusOnPopupWindow`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifalwaysfocusonpopupwindow) to control whether to set focus on scanner-related windows opened by the Dynamsoft Service when the browser tab on which the SDK is running is active. In the past, these windows will be on top no matter which browser tab is active.
+* Added a new global property [`Dynamsoft.WebTwainEnv.IfAlwaysFocusOnPopupWindow`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifalwaysfocusonpopupwindow) to control whether to set focus on scanner-related windows opened by the Dynamsoft Service when the browser tab on which the SDK is running is active. In the past, these windows will be on top no matter which browser tab is active.
 
 * [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) is officially supported.
 
@@ -106,7 +106,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 ### Improved Features
 
 * Made the viewer more independent and robust. Related APIs are redesigned.
-  + Added a new global property [`Dynamsoft.DWT.UseDefaultViewer`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#usedefaultviewer) to control whether the built-in viewer is used.
+  + Added a new global property [`Dynamsoft.WebTwainEnv.UseDefaultViewer`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#usedefaultviewer) to control whether the built-in viewer is used.
   + Check out the [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html?ver=latest#viewer-related-api-changes-in-version-162).
 
 * Scanning remotely now supports showing the Manufacturer's User Interface.
@@ -188,7 +188,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 * Fixed a bug where if the Dynamsoft Service is not installed and a `WebTwain` instance is created using the method `CreateDWTObject()` or `CreateDWTObjectEx()`, the connection to the service is not attempted automatically as expected (a page refreshing is required).
 
-* Fixed a bug with the API `Dynamsoft.DWT.CustomizableDisplayInfo` so that it now works again.
+* Fixed a bug with the API `Dynamsoft.WebTwainEnv.CustomizableDisplayInfo` so that it now works again.
 
 * Fixed a bug where removed images remain in the viewer.
 
@@ -259,9 +259,9 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 * Fixed a bug where images fail to show in the viewer in IE 10.
 * Fixed a bug in Chrome where the print UI invoked by the API `Print()` disappears immediately after showing up.
-* Fixed a bug with the API `Dynamsoft.DWT.Host` which is now effective.
+* Fixed a bug with the API `Dynamsoft.WebTwainEnv.Host` which is now effective.
 * Fixed a bug with consecutive cropping operations with the API `Crop()` .
-* Fixed a bug with `WebTwain` instances created by the API `Dynamsoft.DWT.CreateDWTObjectEx()` so that their UI binding works correctly.
+* Fixed a bug with `WebTwain` instances created by the API `Dynamsoft.WebTwainEnv.CreateDWTObjectEx()` so that their UI binding works correctly.
 
 ### Deprecations
 
@@ -277,13 +277,13 @@ No changes in version 16.1.
 
 * Added a new mobile edition that enables document capturing via mobile cameras and other document manipulation functionalities. Most of the existing methods and properties are made compliant with this new edition.
 * Added WASM based document manipulation functionalities which enable the use of all features of Dynamic Web TWAIN except for document scanning without installing the Dynamsoft Service.
-* Added setting `Dynamsoft.DWT.UseLocalService` to switch the working mode of the library between Local-Service mode and WASM mode. Only valid on desktop operating systems.
+* Added setting `Dynamsoft.WebTwainEnv.UseLocalService` to switch the working mode of the library between Local-Service mode and WASM mode. Only valid on desktop operating systems.
 * Replaced the built-in image viewer including the built-in image editor with the Dynamsoft Viewer.
 * The creation of a `WebTwain` instance is now independent from the UI. In version 16.0, you can create a `WebTwain` instance in 4 ways
-  + Specify a `Container` that has a `ContainerId` and assign it to `Dynamsoft.DWT.Containers` . A `ContainerId` is essentially the id of an `HTMLDivElement` element which is required for generating a built-in Dynamsoft Viewer. Then call the method `Dynamsoft.DWT.GetWebTwain()` with `ContainerId` as the argument to get the instance.
-  + Call the method `Dynamsoft.DWT.CreateDWTObject()` to create an instance with built-in Dynamsoft Viewer.
-  + Specify a `Container` that has a `WebTwainId` but no `ContainerId` and assign it to `Dynamsoft.DWT.Containers` . A `WebTwainId` is just a string to uniquely specify the instance. Then call the new method `Dynamsoft.DWT.GetWebTwainEx()` with `WebTwainId` as the argument to get the instance.
-  + Call the method `Dynamsoft.DWT.CreateDWTObjectEx()` to create an instance without a built-in Dynamsoft Viewer.
+  + Specify a `Container` that has a `ContainerId` and assign it to `Dynamsoft.WebTwainEnv.Containers` . A `ContainerId` is essentially the id of an `HTMLDivElement` element which is required for generating a built-in Dynamsoft Viewer. Then call the method `Dynamsoft.WebTwainEnv.GetWebTwain()` with `ContainerId` as the argument to get the instance.
+  + Call the method `Dynamsoft.WebTwainEnv.CreateDWTObject()` to create an instance with built-in Dynamsoft Viewer.
+  + Specify a `Container` that has a `WebTwainId` but no `ContainerId` and assign it to `Dynamsoft.WebTwainEnv.Containers` . A `WebTwainId` is just a string to uniquely specify the instance. Then call the new method `Dynamsoft.WebTwainEnv.GetWebTwainEx()` with `WebTwainId` as the argument to get the instance.
+  + Call the method `Dynamsoft.WebTwainEnv.CreateDWTObjectEx()` to create an instance without a built-in Dynamsoft Viewer.
 
 > Note
 >  
@@ -618,7 +618,7 @@ No changes in version 16.1.
 * [HTML5] Fixed a memory leak where the scanning service didn't release memory after transferring image data to web browsers. Note: this bug started in version 13.0.
 * [HTML5] Fixed a bug where sometimes the web twain service didn't get shut down properly
 * [ActiveX] Fixed a bug where a base64 string ended with "==" could not be decoded by using the `SetCustomDSDataEx()` method
-* [ActiveX] Fixed a bug where the `Dynamsoft.DWT.Load()` method didn't work after calling the `Dynamsoft.DWT.Unload()` method
+* [ActiveX] Fixed a bug where the `Dynamsoft.WebTwainEnv.Load()` method didn't work after calling the `Dynamsoft.WebTwainEnv.Unload()` method
 * [ActiveX] Fixed a bug where the `TransferMode` property didn't work properly
 
 ## `13.1` (08/22/2017)
@@ -637,7 +637,7 @@ No changes in version 16.1.
 
 ### Fixed
 
-* Fixed a bug where you can't initialize the SDK with the method `Dynamsoft.DWT.Load()` on the page without first `Dynamsoft.DWT.Unload()` it.
+* Fixed a bug where you can't initialize the SDK with the method `Dynamsoft.WebTwainEnv.Load()` on the page without first `Dynamsoft.WebTwainEnv.Unload()` it.
 * Fixed a bug where the `HTTPUpload()` API doesn't work if it's done asynchronously in a loop.
 * Fixed a bug where you get an error when setting the size of the viewer by percentage.
 
@@ -687,7 +687,7 @@ No changes in version 16.1.
 ### Fixed
 
 * Fixed a bug where scanning might fail if the user doesn't register the event `OnPostTransfer`
-* Fixed a bug where `Dynamsoft.DWT.CreateDWTObject()` still tries to connect to non-SSL ports even when the page is running in HTTPS
+* Fixed a bug where `Dynamsoft.WebTwainEnv.CreateDWTObject()` still tries to connect to non-SSL ports even when the page is running in HTTPS
 
 ## `12.1` (11/03/2016)
 
@@ -698,7 +698,7 @@ No changes in version 16.1.
 
 ### Improved
 
-* [HTML5 Only] Improved the method `Dynamsoft.DWT.CreateDWTObject()` to allow listening on multiple IPs.
+* [HTML5 Only] Improved the method `Dynamsoft.WebTwainEnv.CreateDWTObject()` to allow listening on multiple IPs.
 * [HTML5 Only] Improved the OCR pro license to allow using multiple licenses.
 * Improved how the SDK works in Edge. Now you can run local pages directly in Edge.
 
@@ -725,7 +725,7 @@ No changes in version 16.1.
 
 * Improved the method `ChangeImageSize()` by adding a new mechanism for the new option "Best Quality".
 * Improved the way license verification is done and optimized the error messages for license issues.
-* Improved the way a `WebTwain` instance is created by adding global methods like `Dynamsoft.DWT.CreateDWTObject()` and `Dynamsoft.DWT.DeleteDWTObject()` .
+* Improved the way a `WebTwain` instance is created by adding global methods like `Dynamsoft.WebTwainEnv.CreateDWTObject()` and `Dynamsoft.WebTwainEnv.DeleteDWTObject()` .
 * Improved the image editor's zooming feature by allowing it to zoom centered by the position of the mouse.
 * Improved the way uploading is done by adding a MD5 to every upload Post request.
 
@@ -877,7 +877,7 @@ No changes in version 16.1.
 * Fixed the bug in the Barcode Reader add-on where barcode location fails for 200 DPI.
 * [HTML5 Edition] Fixed the bug where the event `OnImageAreaSelected` is triggered when the mouse enters or leaves the image editor.
 * [HTML5 Edition] Fixed the bug where the event `OnImageAreaSelected` is triggered multiple times when selecting the area in the image editor.
-* [HTML5 Edition] Fixed the bug where the initialization of the SDK fails if `Dynamsoft.DWT.Load()` is called more than once.
+* [HTML5 Edition] Fixed the bug where the initialization of the SDK fails if `Dynamsoft.WebTwainEnv.Load()` is called more than once.
 * [HTML5 Edition] Fixed the bug where the SDK sends unnecessary WebSocket requests when loading images.
 * Fixed the bug with the method `ChangeBitDepth()` where the processed image appears to be covered in a grey mask.
 * Fixed the bug with the method `ConvertToGrayScale()` where calling this method on a 1-bit image turns it black.
@@ -889,8 +889,8 @@ No changes in version 16.1.
 
 ### New
 
-* Added `Dynamsoft.DWT.AutoLoad` property to enable or disable automatic loading of Dynamic Web TWAIN.
-* Added dynamic loading and unloading methods `Dynamsoft.DWT.Load()` and `Dynamsoft.DWT.Unload()` .
+* Added `Dynamsoft.WebTwainEnv.AutoLoad` property to enable or disable automatic loading of Dynamic Web TWAIN.
+* Added dynamic loading and unloading methods `Dynamsoft.WebTwainEnv.Load()` and `Dynamsoft.WebTwainEnv.Unload()` .
 
 ### Improved
 
