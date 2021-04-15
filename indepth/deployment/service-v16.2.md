@@ -275,7 +275,7 @@ https://127.0.0.1:18623/dwt/dwt_16100728/img?id=414778098&index=5&width=585&heig
 * Install that certificate
 * Use that certificate to generate public /private keys (pem)
 * Rename these two keys to `server.pem` , (public) `server_key.pem` (private)
-* Replace the old keys in `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\cert`
+* Replace the old keys in `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16\cert`
 * Restart the service
 
 ### Q: How to set the configuration of the service?
