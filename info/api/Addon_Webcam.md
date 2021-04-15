@@ -203,7 +203,7 @@ When you close the camera, the video stream will stop at the last frame.
  * @param property Specify the property.
  */
 GetCameraControlPropertySetting(
-    property: EnumDWT_CameraControlProperty | number
+    property: Dynamsoft.DWT.EnumDWT_CameraControlProperty | number
 ): CameraControlProperty;
 ```
 
