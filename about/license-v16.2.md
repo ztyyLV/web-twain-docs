@@ -23,4 +23,4 @@ View the [Dynamic Web TWAIN License Agreement](https://www.dynamsoft.com/Product
 
 ### Q: How do I set my DWT license?
 
-**A**: The `DWT` license is set using the global API `Dynamsoft.DWT.ProductKey`. For more information, please refer to [Update the License Key]({{site.indepth}}development/upgrade.html?ver=latest#update-the-product-key).
+**A**: The `DWT` license is set using the global API `Dynamsoft.WebTwainEnv.ProductKey`. For more information, please refer to [Update the License Key]({{site.indepth}}development/upgrade.html?ver=latest#update-the-product-key).

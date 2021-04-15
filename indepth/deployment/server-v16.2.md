@@ -48,7 +48,7 @@ For how to enable HTTPS, please check out the manual of your webserver.
 
 ## Set ResourcesPath
 
-The global API [ `Dynamsoft.DWT.ResourcesPath` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#resourcespath) sets a relative or absolute path that tells `DWT` where to look for the resources files at runtime. Its default value is `Resources` which means all these files are put in a directory called *Resources* that is in the same location as the web page on which `DWT` is running. This is the simplest situation possible, in most cases, it's a lot more complicated and you must make sure the correct value is set.
+The global API [ `Dynamsoft.WebTwainEnv.ResourcesPath` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#resourcespath) sets a relative or absolute path that tells `DWT` where to look for the resources files at runtime. Its default value is `Resources` which means all these files are put in a directory called *Resources* that is in the same location as the web page on which `DWT` is running. This is the simplest situation possible, in most cases, it's a lot more complicated and you must make sure the correct value is set.
 
 ### How to know ResourcesPath is wrong
 

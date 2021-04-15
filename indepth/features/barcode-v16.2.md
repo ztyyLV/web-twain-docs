@@ -58,15 +58,15 @@ Note that the barcode reading does take a bit of time, so it'll help to add an i
 function readBarcodes(imageIndex) {
     if (DWObject) {
         // Add an indicator
-        Dynamsoft.DWT.OnWebTwainPreExecute();
+        Dynamsoft.WebTwainEnv.OnWebTwainPreExecute();
         DWObject.Addon.BarcodeReader.decode(imageIndex)
             .then(function(textResults) {
                 // Remove the indicator
-                Dynamsoft.DWT.WebTwainEnv.OnWebTwainPostExecute();
+                Dynamsoft.WebTwainEnv.WebTwainEnv.OnWebTwainPostExecute();
                 console.log(textResults)
             }, function(error) {
                 // Remove the indicator
-                Dynamsoft.DWT.OnWebTwainPostExecute();
+                Dynamsoft.WebTwainEnv.OnWebTwainPostExecute();
                 console.log(error)
             });
     } else {
@@ -80,17 +80,17 @@ function readBarcodes(imageIndex) {
 Check the structure of the resulting object [here]({{site.info}}api/Addon_BarcodeReader.html#decode). The following code prints out the text contained in the barcode(s)
 
 ``` javascript
-Dynamsoft.DWT.OnWebTwainPreExecute();
+Dynamsoft.WebTwainEnv.OnWebTwainPreExecute();
 DWObject.Addon.BarcodeReader.decode(imageIndex)
     .then(function(textResults) {
         // Remove the indicator
-        Dynamsoft.DWT.OnWebTwainPostExecute();
+        Dynamsoft.WebTwainEnv.OnWebTwainPostExecute();
         for (var i = 0; i < textResults.length; i++) {
             console.log(textResults[i].BarcodeText);
         }
     }, function(error) {
         // Remove the indicator
-        Dynamsoft.DWT.OnWebTwainPostExecute();
+        Dynamsoft.WebTwainEnv.OnWebTwainPostExecute();
         console.log(error)
     });
 ```
@@ -117,20 +117,20 @@ DWObject.Addon.BarcodeReader.getRuntimeSettings()
     })
     .then(function(runtimeSettings) {
         // Add an indicator
-        Dynamsoft.DWT.WebTwainEnv.OnWebTwainPreExecute();
+        Dynamsoft.WebTwainEnv.WebTwainEnv.OnWebTwainPreExecute();
         return DWObject.Addon.BarcodeReader.decode(imageIndex);
     }, function(error) {
         console.log(error);
     })
     .then(function(textResults) {
         // Remove the indicator
-        Dynamsoft.DWT.WebTwainEnv.OnWebTwainPostExecute();
+        Dynamsoft.WebTwainEnv.WebTwainEnv.OnWebTwainPostExecute();
         for (var i = 0; i < textResults.length; i++) {
             console.log(textResults[i].BarcodeText);
         }
     }, function(error) {
         // Remove the indicator
-        Dynamsoft.DWT.WebTwainEnv.OnWebTwainPostExecute();
+        Dynamsoft.WebTwainEnv.WebTwainEnv.OnWebTwainPostExecute();
         console.log(error)
     });
 ```

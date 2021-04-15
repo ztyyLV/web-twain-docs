@@ -130,7 +130,7 @@ bind(
 
 ``` javascript
 var DWObject = null;
-Dynamsoft.WebTwainEnv.CreateDWTObjectEx({
+Dynamsoft.DWT.CreateDWTObjectEx({
         WebTwainId: 'dwtcontrol'
     },
     function(obj) {

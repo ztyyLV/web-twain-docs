@@ -18,7 +18,7 @@ Here is how
 
 ``` javascript
 function Dynamsoft_OnReady() {
-    DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer');
+    DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
     DWObject.LogLevel = 1;
 }
 ```

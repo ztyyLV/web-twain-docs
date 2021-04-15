@@ -126,7 +126,7 @@ The following shows how to use the second pair in JavaScript.
 ``` javascript
 DWObject.getCapabilities(function(result) {
     for (var i = 0; i < result.length; i++) {
-        if (result[i].capability.value === Dynamsoft.EnumDWT_Cap.ICAP_SUPPORTEDSIZES)
+        if (result[i].capability.value === Dynamsoft.DWT.EnumDWT_Cap.ICAP_SUPPORTEDSIZES)
             sizes = result[i].values;
     }
     console.log(sizes);
@@ -141,7 +141,7 @@ DWObject.getCapabilities(function(result) {
 DWObject.setCapabilities({
         exception: "ignore",
         capabilities: [{
-            capability: Dynamsoft.EnumDWT_Cap.ICAP_SUPPORTEDSIZES,
+            capability: Dynamsoft.DWT.EnumDWT_Cap.ICAP_SUPPORTEDSIZES,
             curValue: 1, // 1 means 'A4' in our case
             exception: "fail"
         }]
@@ -292,8 +292,8 @@ var onFailure = function(errorCode, errorString) {
 DWObject.IfShowFileDialog = true;
 // PDF Rasterizer Addon is used here to ensure PDF support
 DWObject.Addon.PDF.SetResolution(200);
-DWObject.Addon.PDF.SetConvertMode(Dynamsoft.EnumDWT_ConvertMode.CM_RENDERALL);
-DWObject.LoadImageEx("", Dynamsoft.EnumDWT_ImageType.IT_ALL, onSuccess, onFailure);
+DWObject.Addon.PDF.SetConvertMode(Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL);
+DWObject.LoadImageEx("", Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL, onSuccess, onFailure);
 ```
 
 ### Open an existing file using its absolute path
@@ -310,7 +310,7 @@ var onFailure = function(errorCode, errorString) {
 DWObject.IfShowFileDialog = false;
 // PDF Addon is used here to ensure PDF support
 DWObject.Addon.PDF.SetResolution(200);
-DWObject.Addon.PDF.SetConvertMode(Dynamsoft.EnumDWT_ConvertMode.CM_RENDERALL);
+DWObject.Addon.PDF.SetConvertMode(Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL);
 /* "YOUR-FILE-PATH" - example path
  * Windows: 
  *   Local: "D:\\Files\\sample.pdf"
@@ -366,7 +366,7 @@ var onFailure = function(errorCode, errorString) {
     console.log(errorString);
 };
 DWObject.HTTPPort = 300;
-DWObject.HTTPDownloadEx("localhost", "/getFile.aspx", Dynamsoft.EnumDWT_ImageType.IT_TIF, onSuccess, onFailure);
+DWObject.HTTPDownloadEx("localhost", "/getFile.aspx", Dynamsoft.DWT.EnumDWT_ImageType.IT_TIF, onSuccess, onFailure);
 ```
 
 Server-side script
@@ -416,7 +416,7 @@ var onFailure = function(errorCode, errorString) {
 DWObject.FTPPort = 21;
 DWObject.FTPUserName = "FTPUser";
 DWObject.FTPPassword = "SomePassword";
-DWObject.FTPDownloadEx("192.168.8.20", "/files/sample.pdf", Dynamsoft.EnumDWT_ImageType.IT_PDF, onSuccess, onFailure);
+DWObject.FTPDownloadEx("192.168.8.20", "/files/sample.pdf", Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF, onSuccess, onFailure);
 ```
 
 ### Load files in binary or base64 string format 
@@ -442,7 +442,7 @@ function loadFileFromBinary() {
     if (DWObject) {
         DWObject.ConvertToBlob(
             [0],
-            Dynamsoft.EnumDWT_ImageType.IT_PDF,
+            Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
             function(result) {
                 DWObject.LoadImageFromBinary(
                     result, onSuccess, onFailure);
@@ -461,11 +461,11 @@ function loadFileFromBase64() {
     if (DWObject) {
         DWObject.ConvertToBase64(
             [0],
-            Dynamsoft.EnumDWT_ImageType.IT_PDF,
+            Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
             function(result) {
                 DWObject.LoadImageFromBase64Binary(
                     result.getData(0, result.getLength()),
-                    Dynamsoft.EnumDWT_ImageType.IT_PDF,
+                    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
                     onSuccess, onFailure);
             }, onFailure);
     }
@@ -509,7 +509,7 @@ sources.find(function(name, index) {
 DWObject.SelectSource(function() {
     DWObject.OpenSource();
     DWObject.IfShowUI = false;
-    DWObject.PageSize = Dynamsoft.EnumDWT_CapSupportedSizes.TWSS_USLEGAL;
+    DWObject.PageSize = Dynamsoft.DWT.EnumDWT_CapSupportedSizes.TWSS_USLEGAL;
     DWObject.AcquireImage();
 });
 ```
@@ -561,7 +561,7 @@ DWObject.SelectSource(function() {
             PortSSL: '18623', 
             UseLocalService:'true'
         };
-        Dynamsoft.WebTwainEnv.CreateDWTObjectEx(
+        Dynamsoft.DWT.CreateDWTObjectEx(
             dwtConfig, 
             function (dwt) {
                 DWServiceObject = dwt;
@@ -593,11 +593,11 @@ DWObject.SelectSource(function() {
 
     ```javascript
     var DWObject;
-    Dynamsoft.WebTwainEnv.Containers = [{ContainerId: "dwtcontrolContainer", Width: "585px", Height: "513px"}];
-    Dynamsoft.WebTwainEnv.ProductKey = "YOUR-PRODUCT-KEY";
-    Dynamsoft.WebTwainEnv.UseLocalService = false; //Create the `WebTwain` instance in WASM mode as it doesn't need to scan documents
+    Dynamsoft.DWT.Containers = [{ContainerId: "dwtcontrolContainer", Width: "585px", Height: "513px"}];
+    Dynamsoft.DWT.ProductKey = "YOUR-PRODUCT-KEY";
+    Dynamsoft.DWT.UseLocalService = false; //Create the `WebTwain` instance in WASM mode as it doesn't need to scan documents
     function Dynamsoft_OnReady() {
-        DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+        DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer');
     }
     ```
 
@@ -611,7 +611,7 @@ DWObject.SelectSource(function() {
 	var deviceConfiguration = {
 	    SelectSourceByIndex: 0,
 	    IfShowUI: true,
-	    PixelType:Dynamsoft.EnumDWT_PixelType.TWPT_RGB,
+	    PixelType:Dynamsoft.DWT.EnumDWT_PixelType.TWPT_RGB,
 	    Resolution: 300,
 	    IfFeederEnabled: false,
 	    IfDuplexEnabled: false,
@@ -630,7 +630,7 @@ DWObject.SelectSource(function() {
     DWServiceObject.RegisterEvent('OnPostTransferAsync', function(outputInfo){
         DWServiceObject.ConvertToBlob(
             [DWServiceObject.ImageIDToIndex(outputInfo.imageId)], 
-            Dynamsoft.EnumDWT_ImageType.IT_PNG, 
+            Dynamsoft.DWT.EnumDWT_ImageType.IT_PNG, 
             function (result, indices, type) {
                 DWObject.LoadImageFromBinary(
                     result,         
@@ -660,14 +660,14 @@ The following is the complete code, note that we are referencing the library fro
 <script type="text/javascript">
 var DWObject;
 window.onload = function() {
-    Dynamsoft.WebTwainEnv.Containers = [{ContainerId: "dwtcontrolContainer", Width: "585px", Height: "513px"}];
-    Dynamsoft.WebTwainEnv.ProductKey = "YOUR_PRODUCT_KEY";
-    Dynamsoft.WebTwainEnv.UseLocalService = false; //Create the `WebTwain` instance in WASM mode as it doesn't need to scan documents
-    Dynamsoft.WebTwainEnv.ResourcesPath = "https://unpkg.com/dwt@16.2.4/dist";
-    Dynamsoft.WebTwainEnv.Load();
+    Dynamsoft.DWT.Containers = [{ContainerId: "dwtcontrolContainer", Width: "585px", Height: "513px"}];
+    Dynamsoft.DWT.ProductKey = "YOUR_PRODUCT_KEY";
+    Dynamsoft.DWT.UseLocalService = false; //Create the `WebTwain` instance in WASM mode as it doesn't need to scan documents
+    Dynamsoft.DWT.ResourcesPath = "https://unpkg.com/dwt@16.2.4/dist";
+    Dynamsoft.DWT.Load();
 };
 function Dynamsoft_OnReady() {
-    DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+    DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer');
     createDWTForScan();
 }
 var host = "192.168.8.221", DWServiceObject;
@@ -679,7 +679,7 @@ function createDWTForScan(){
         PortSSL: '18623', 
         UseLocalService:'true'
     };
-    Dynamsoft.WebTwainEnv.CreateDWTObjectEx(
+    Dynamsoft.DWT.CreateDWTObjectEx(
         dwtConfig, 
         function (dwt) {
             DWServiceObject = dwt;
@@ -696,7 +696,7 @@ function createDWTForScan(){
             DWServiceObject.RegisterEvent('OnPostTransferAsync', function(outputInfo){
                 DWServiceObject.ConvertToBlob(
                     [DWServiceObject.ImageIDToIndex(outputInfo.imageId)], 
-                    Dynamsoft.EnumDWT_ImageType.IT_PNG, 
+                    Dynamsoft.DWT.EnumDWT_ImageType.IT_PNG, 
                     function (result, indices, type) {
                         DWObject.LoadImageFromBinary(
                             result,         
@@ -727,7 +727,7 @@ function AcquireImage(){
     var deviceConfiguration = {
         SelectSourceByIndex: 0,
         IfShowUI: true,
-        PixelType:Dynamsoft.EnumDWT_PixelType.TWPT_RGB,
+        PixelType:Dynamsoft.DWT.EnumDWT_PixelType.TWPT_RGB,
         Resolution: 300,
         IfFeederEnabled: false,
         IfDuplexEnabled: false,

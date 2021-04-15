@@ -72,13 +72,13 @@ yarn add @types/dwt
 
 ## Update the Product Key
 
-The Product Key needs to be updated when your current license is no longer valid (expired, for example) or when you upgrade across major versions. The Product Key is set using the global API `Dynamsoft.DWT.ProductKey` and the change is only effective before [creating `WebTwain` instances]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance). 
+The Product Key needs to be updated when your current license is no longer valid (expired, for example) or when you upgrade across major versions. The Product Key is set using the global API `Dynamsoft.WebTwainEnv.ProductKey` and the change is only effective before [creating `WebTwain` instances]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance). 
 
 In most cases, you can just make the change in the file `dynamsoft.webtwain.config.js` .
 
 ``` javascript
 // If you have multiple license keys, just separate them with semicolons.
-Dynamsoft.DWT.ProductKey = 't0076lQAAAGNcO61He******; t0076lQAAAGNcO61He******';
+Dynamsoft.WebTwainEnv.ProductKey = 't0076lQAAAGNcO61He******; t0076lQAAAGNcO61He******';
 ```
 
 If it is set elsewhere, you need to find it and replace it. For example, if you are making use of the [dwt package](https://www.npmjs.com/package/dwt) ( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ), the file `dynamsoft.webtwain.config.js` doesn't exist and you should already have the above line of code in your own JavaScript where you can update the license when needed.

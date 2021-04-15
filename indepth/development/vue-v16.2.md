@@ -80,23 +80,23 @@ Change the file `/src/components/HelloWorld.vue` to match the following `templat
             };
         },
         mounted() {
-            this.bWASM = Dynamsoft.Lib.env.bMobile || Dynamsoft.DWT.UseLocalService;
-            Dynamsoft.DWT.ResourcesPath = "dwt-resources";
-            Dynamsoft.DWT.ProductKey = 'YOUR-PRODUCT-KEY';
-            Dynamsoft.DWT.Containers = [{
+            this.bWASM = Dynamsoft.Lib.env.bMobile || Dynamsoft.WebTwainEnv.UseLocalService;
+            Dynamsoft.WebTwainEnv.ResourcesPath = "dwt-resources";
+            Dynamsoft.WebTwainEnv.ProductKey = 'YOUR-PRODUCT-KEY';
+            Dynamsoft.WebTwainEnv.Containers = [{
                 WebTwainId: "dwtObject",
                 ContainerId: this.containerId,
                 Width: "100%",
                 Height: "400px",
             }, ];
-            Dynamsoft.DWT.RegisterEvent("OnWebTwainReady", () => {
+            Dynamsoft.WebTwainEnv.RegisterEvent("OnWebTwainReady", () => {
                 this.Dynamsoft_OnReady();
             });
-            Dynamsoft.DWT.Load();
+            Dynamsoft.WebTwainEnv.Load();
         },
         methods: {
             Dynamsoft_OnReady() {
-                this.DWObject = Dynamsoft.DWT.GetWebTwain(this.containerId);
+                this.DWObject = Dynamsoft.WebTwainEnv.GetWebTwain(this.containerId);
                 if (this.bWASM) {
                     this.DWObject.MouseShape = true;
                 } else {
@@ -109,7 +109,7 @@ Change the file `/src/components/HelloWorld.vue` to match the following `templat
                 }
             },
             acquireImage() {
-                if (!this.DWObject) this.DWObject = Dynamsoft.DWT.GetWebTwain();
+                if (!this.DWObject) this.DWObject = Dynamsoft.WebTwainEnv.GetWebTwain();
                 if (this.bWASM) {
                     alert("Scanning is not supported under the WASM mode!");
                 } else if (
@@ -130,10 +130,10 @@ Change the file `/src/components/HelloWorld.vue` to match the following `templat
                 }
             },
             openImage() {
-                if (!this.DWObject) this.DWObject = Dynamsoft.DWT.GetWebTwain();
+                if (!this.DWObject) this.DWObject = Dynamsoft.WebTwainEnv.GetWebTwain();
                 this.DWObject.IfShowFileDialog = true;
-                this.DWObject.Addon.PDF.SetConvertMode(Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL);
-                this.DWObject.LoadImageEx("", Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL, () => {}, () => {});
+                this.DWObject.Addon.PDF.SetConvertMode(Dynamsoft.EnumDWT_ConvertMode.CM_RENDERALL);
+                this.DWObject.LoadImageEx("", Dynamsoft.EnumDWT_ImageType.IT_ALL, () => {}, () => {});
             },
         },
     };

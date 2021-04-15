@@ -220,8 +220,8 @@ function UploadAsPDF() {
         DWObject.HTTPUpload(
             url,
             indices,
-            Dynamsoft.EnumDWT_ImageType.IT_PDF,
-            Dynamsoft.EnumDWT_UploadDataFormat.Binary,
+            Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
+            Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary,
             "HelloWorld.pdf",
             function() {
                 //The server response is empty!
@@ -324,8 +324,8 @@ Now we can use the page to scan or acquire, then upload the images as a PDF docu
                 DWObject.HTTPUpload(
                     url,
                     indices,
-                    Dynamsoft.EnumDWT_ImageType.IT_PDF,
-                    Dynamsoft.EnumDWT_UploadDataFormat.Binary,
+                    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
+                    Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary,
                     "HelloWorld.pdf",
                     function() {
                         //The server response is empty!

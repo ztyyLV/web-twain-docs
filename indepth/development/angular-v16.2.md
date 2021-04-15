@@ -69,18 +69,18 @@ import Dynamsoft from 'dwt';
 ``` typescript
 containerId = "dwtcontrolContainer";
 ngOnInit(): void {
-    Dynamsoft.DWT.Containers = [{
+    Dynamsoft.WebTwainEnv.Containers = [{
         WebTwainId: 'dwtObject',
         ContainerId: this.containerId,
         Width: '300px',
         Height: '400px'
     }];
-    Dynamsoft.DWT.RegisterEvent('OnWebTwainReady', () => {
+    Dynamsoft.WebTwainEnv.RegisterEvent('OnWebTwainReady', () => {
         this.Dynamsoft_OnReady();
     });
-    Dynamsoft.DWT.ProductKey = 'YOUR-PRODUCT-KEY';
-    Dynamsoft.DWT.ResourcesPath = 'assets/dwt-resources';
-    Dynamsoft.DWT.Load();
+    Dynamsoft.WebTwainEnv.ProductKey = 'YOUR-PRODUCT-KEY';
+    Dynamsoft.WebTwainEnv.ResourcesPath = 'assets/dwt-resources';
+    Dynamsoft.WebTwainEnv.Load();
 }
 ```
 
@@ -92,7 +92,7 @@ ngOnInit(): void {
 
 * Get a handler of the `WebTwain` instance.
 
-Use the method [ `Dynamsoft.DWT.GetWebTwain()` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#getwebtwain) to get a handler of the created `WebTwain` instance.
+Use the method [ `Dynamsoft.WebTwainEnv.GetWebTwain()` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#getwebtwain) to get a handler of the created `WebTwain` instance.
 
 ``` typescript
 import { WebTwain } from 'dwt/WebTwain';
@@ -101,7 +101,7 @@ import { WebTwain } from 'dwt/WebTwain';
 ``` typescript
 DWObject: WebTwain = null;
 Dynamsoft_OnReady() {
-    this.DWObject = Dynamsoft.DWT.GetWebTwain(this.containerId);
+    this.DWObject = Dynamsoft.WebTwainEnv.GetWebTwain(this.containerId);
 }
 ```
 
