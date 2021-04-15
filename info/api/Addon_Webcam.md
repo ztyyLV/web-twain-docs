@@ -279,7 +279,7 @@ interface CameraControlPropertyExtra {
 
 **Usage notes**
 
-Check out [ `Dynamsoft. EnumDWT_CameraControlProperty` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_cameracontrolproperty).
+Check out [ `Dynamsoft.DWT.EnumDWT_CameraControlProperty` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_cameracontrolproperty).
 
 ---
 
@@ -515,7 +515,7 @@ SetVideoRotateMode(
 
 **Usage notes**
 
-Check out [ `Dynamsoft.DWT.EnumDWT_VideoRotateMode` ](Dynamsoft. Enum.md#dynamsoftenumdwt_videorotatemode).
+Check out [ `Dynamsoft.DWT.EnumDWT_VideoRotateMode` ](Dynamsoft.DWT.Enum.md#dynamsoftenumdwt_videorotatemode).
 
 ---
 
