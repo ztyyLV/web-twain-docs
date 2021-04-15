@@ -520,7 +520,7 @@ DWObject.SelectSource(function() {
 DWObject.SelectSource(function() {
     DWObject.OpenSource();
     DWObject.IfShowUI = false;
-    DWObject.Unit = EnumDWT_UnitType.TWUN_INCHES;
+    DWObject.Unit = Dynamsoft.DWT.EnumDWT_UnitType.TWUN_INCHES;
     DWObject.SetImageLayout(0, 0, 5, 5);
     DWObject.AcquireImage();
 });

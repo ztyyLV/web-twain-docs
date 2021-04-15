@@ -104,8 +104,8 @@ DWObject.IfShowUI = false;
 //*Use the property
 DWObject.IfAutoDiscardBlankpages = true;
 //*Use capability negotiation
-DWObject.Capability = Dynamsoft.DWT.EnumDWT_Cap.ICAP_AUTODISCARDBLANKPAGES;
-DWObject.CapType = Dynamsoft.DWT.EnumDWT_CapType.TWON_ONEVALUE;
+DWObject.Capability = EnumDWT_Cap.ICAP_AUTODISCARDBLANKPAGES;
+DWObject.CapType = EnumDWT_CapType.TWON_ONEVALUE;
 DWObject.CapValue = -1;//Auto
 if(DWObject.CapSet){
    alert("Successful!");

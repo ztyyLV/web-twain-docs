@@ -161,7 +161,7 @@ The first five files in the above list contain functionalities for image IO (dec
 **A**: No, the library will use the WASM files even in service mode when one of the following conditions is met
 
 * The APIs for the [ `WebTwain.Addon.Camera` ]({{site.info}}api/Addon_Camera.html) component are called. 
-* The APIs [ `WebTwain.Viewer.showVideo()` ]({{site.info}}api/Addon_Camera.html#showvideo) or [ `WebTwain.Viewer.closeVideo()` ]({{site.info}}api/Addon_Camera.html#closevideo) are called.
+* The APIs [ `WebTwain.Camera.showVideo()` ]({{site.info}}api/Addon_Camera.html#showvideo) or [ `WebTwain.Camera.closeVideo()` ]({{site.info}}api/Addon_Camera.html#closevideo) are called.
 
 ## Creating the WebTwain instance
 
@@ -417,7 +417,7 @@ For more information, check out [how to enable remote scan]({{site.indepth}}feat
 
 `Dynamsoft` is the top-level namespace. `DWT` and other Dynamsoft libraries are all defined under `Dynamsoft` . For `DWT` , the major members of this namespace are
 
-* [ `WebTwainEnv` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html)
+* [ `DWT` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html)
 
     Includes global methods, properties to help with `WebTwain` initialization and instantiation, etc. as shown in previous context.
 

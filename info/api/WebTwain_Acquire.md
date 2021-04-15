@@ -1248,7 +1248,7 @@ DWObject.TransferMode = Dynamsoft.DWT.EnumDWT_TransferMode.TWSX_FILE;
 if (DWObject.TransferMode === Dynamsoft.DWT.EnumDWT_TransferMode.TWSX_FILE) {
     if (DWObject.SetFileXferInfo(
             "C:\\Temp\\WebTWAIN<%06d>.bmp",
-            DWT.EnumDWT_FileFormat.TWFF_BMP
+            Dynamsoft.DWT.EnumDWT_FileFormat.TWFF_BMP
         )) {
         DWObject.IfShowUI = true;
         DWObject.AcquireImage();
