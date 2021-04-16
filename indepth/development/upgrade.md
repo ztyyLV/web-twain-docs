@@ -16,7 +16,7 @@ If you are upgrading from an old version to V17.0, be attention that the origina
 
 For example, `Dynamsoft.EnumDWT_PixelType` and `EnumDWT_PixelType` works in version 16.2 and lower but in V17.0 it <strong> must</strong> be written as `Dynamsoft.DWT.EnumDWT_PixelType`. 
 
-See more Breaking Changes in V17.0 [here]({{site.about}}/schedule/stable.html) 
+See more Breaking Changes in V17.0 [here]({{site.about}}schedule/stable.html) 
 
 
 ## Update the resources files
