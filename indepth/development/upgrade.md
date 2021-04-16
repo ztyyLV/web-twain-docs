@@ -9,19 +9,16 @@ description: Dynamic Web TWAIN SDK Documentation Upgrade Guide Page
 
 # Upgrade
 
-Dynamsoft improves `DWT` constantly through one major version and 2 to 4 minor versions each year. The recommendation for our customers is to always keep your application up-to-date with our latest release. In this section, we'll talk about how to upgrade your application.
+This upgarde section talks about how to upgrade Dynamic Web TWAIN to the latest version.
 
-The following three steps are required to upgrade your application to use a newer version of `DWT` . Two of the steps would be done by the **application developer** on the server-side. The 3rd step would be done by **users** or **system administrators** on the client side.
+> If you are upgrading from an old version to V17.0, be attention that the original namespace Dynamsoft.WebTwainEnv is renamed to Dynamsoft.DWT & All enumerations are moved under Dynamsoft.DWT. 
+For example, Dynamsoft.EnumDWT_PixelType and EnumDWT_PixelType works in version 16.2 and lower but in V17.0 it must be written as Dynamsoft.DWT.EnumDWT_PixelType. 
+See more Breaking Changed in V17.0 [here]({{site.about}}/schedule/stable.html)
 
-1. Update the server-side resources for `DWT`
-2. Replace your old product key with the newer one
-3. Ensure client machines have uninstalled the old version of the service in preparation to install the newer version
-
-> If you are upgrading from a very old version (over 2 major versions apart like from v12 to v15), more steps may be needed. Please contact [Dynamsoft Support]({{site.about}}getsupport.html) for more information.
 
 ## Update the resources files
 
-Read more about [resources files]({{site.about}}faqs.html#what-are-the-resources-files).
+The resources files refer to the Resources folder in the installtion directory, C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK 17.0. For more details, you can check [here]({{site.about}}faqs.html#what-are-the-resources-files).
 
 ### Regular Web application
 
