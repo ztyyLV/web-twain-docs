@@ -13,11 +13,11 @@ This upgarde section talks about how to upgrade Dynamic Web TWAIN to the latest 
 
 #### IMPORTANT
 
-Please be aware of the following namespace change introducing since 17.0.
+Please be aware of the following namespace changes introducing since v17.0.
 
 | v17.0 |v16.2- |
 |:-|:-|
-|`Dynamsoft.DWT` |`Dynamsoft.WebTwainEnv`|
+|Dynamsoft.<strong>DWT</strong> |Dynamsoft.WebTwainEnv|
 |`Dynamsoft.DWT.EnumDWT_` |`Dynamsoft.EnumDWT_`|
 
 
