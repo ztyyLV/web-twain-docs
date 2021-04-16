@@ -11,7 +11,7 @@ description: Dynamic Web TWAIN SDK Documentation Upgrade Guide Page
 
 This upgarde section talks about how to upgrade Dynamic Web TWAIN to the latest version. 
 
-#### IMPORTANT!!!:
+#### IMPORTANT
 
 Please be aware of the following namespace change introducing since 17.0.
 
