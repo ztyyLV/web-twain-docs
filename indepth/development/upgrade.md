@@ -9,14 +9,16 @@ description: Dynamic Web TWAIN SDK Documentation Upgrade Guide Page
 
 # Upgrade
 
-
-
 This upgarde section talks about how to upgrade Dynamic Web TWAIN to the latest version. 
 
-#### Notices:
-If you are upgrading from an old version to V17.0, be attention that the original namespace `Dynamsoft.WebTwainEnv` is renamed to `Dynamsoft.DWT` & All enumerations are moved under `Dynamsoft.DWT`. 
+#### IMPORTANT!!!:
 
-For example, `Dynamsoft.EnumDWT_PixelType` and `EnumDWT_PixelType` works in version 16.2 and lower but in V17.0 it <strong> must</strong> be written as `Dynamsoft.DWT.EnumDWT_PixelType`. 
+Please be aware of the following namespace change introducing since 17.0.
+
+| v17.0 |v16.2- |
+|:-|:-|
+|`Dynamsoft.DWT` |`Dynamsoft.WebTwainEnv`|
+|`Dynamsoft.DWT.EnumDWT_` |`Dynamsoft.EnumDWT_`|
 
 See more Breaking Changes in V17.0 [here]({{site.about}}schedule/stable.html) 
 
