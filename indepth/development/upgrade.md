@@ -20,6 +20,7 @@ Please be aware of the following namespace change introducing since 17.0.
 |`Dynamsoft.DWT` |`Dynamsoft.WebTwainEnv`|
 |`Dynamsoft.DWT.EnumDWT_` |`Dynamsoft.EnumDWT_`|
 
+
 See more Breaking Changes in V17.0 [here]({{site.about}}schedule/stable.html) 
 
 
