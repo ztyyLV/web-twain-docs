@@ -7,7 +7,7 @@ breadcrumbText: Vue Integration
 description: Dynamic Web TWAIN SDK Documentation Vue Integration Page
 ---
 
-# Use DWT with Vue
+# Use DWT with Vue1
 
 [Vue](https://vuejs.org/) is a progressive framework for building user interfaces. Check out the following guide on how to integrate `DWT` into a Vue application.
 
