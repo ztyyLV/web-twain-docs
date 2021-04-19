@@ -9,7 +9,7 @@ description: Dynamic Web TWAIN SDK Documentation Upgrade Guide Page
 
 # Upgrade
 
-This upgarde section talks about how to upgrade Dynamic Web TWAIN to the latest version. 
+This upgrade section talks about how to upgrade Dynamic Web TWAIN to the latest version. 
 
 #### IMPORTANT
 
