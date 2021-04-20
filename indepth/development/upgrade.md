@@ -13,7 +13,7 @@ This upgrade section talks about how to upgrade Dynamic Web TWAIN to the latest 
 
 #### IMPORTANT
 
-Please be aware of the following namespace changes introducing since v17.0.
+Please be aware of the following namespace changes introduced in version 17.0.
 
 | v17.0 |v16.2- |
 |:-|:-|
@@ -26,7 +26,7 @@ See more Breaking Changes in V17.0 [here]({{site.about}}schedule/stable.html)
 
 ## Update the resources files
 
-The resources files refer to the Resources folder in the installtion directory, C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK 17.0. For more details, you can check [here]({{site.about}}faqs.html#what-are-the-resources-files).
+The resources files refer to the Resources folder in the installation directory, C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK 17.0. For more details, you can check [here]({{site.about}}faqs.html#what-are-the-resources-files).
 
 ### Regular Web application 
 
@@ -38,7 +38,7 @@ The resources files refer to the Resources folder in the installtion directory, 
 
 #### Install the new version
 
-Generally, you can [use the official installer]({{site.about}}resources.html#how-to-get-dwt) to install the new verion.
+You can [use the official installer]({{site.about}}resources.html#how-to-get-dwt) to install the new verion.
 
 <a href="https://www.dynamsoft.com/web-twain/downloads" class="downloadBtn fr textUpperCase">Download SDK</a>
 
@@ -92,9 +92,9 @@ If it is set elsewhere, you need to find it and replace it. For example, if you 
 
 ### Service mode
 
-From 16.*, `DWT` is designed to be backward compatible (unfortunately, just as far back as 16.0). The compatibility is done in two ways
+ Starting in version 16.*, `DWT` is designed to be backward compatible (unfortunately, just as far back as 16.0). The compatibility is done in two ways
 
-* For minor versions like 16.1 to 16.2, if the newer version of `DWT` has been installed on a desktop, websites utilizing both the newer version and the older version can work without reinstalling of `DWT`
+* For minor versions like 16.1 to 16.2, if the newer version of `DWT` has been installed on a desktop, websites utilizing both the newer version and the older version can work without reinstallation of `DWT`
 * For major versions like 16.* to 17.*, the newer version will be installed to a different directory which can coexist with the older version. The user can choose to uninstall the old version if necessary
 
 That means, once you, as the maintainer, have finished upgrading your application to a newer `DWT` on the server side, the clients could face one of two situations
@@ -112,7 +112,7 @@ Once upgraded, the old WASM files will continue to exist in the browser as cache
 
 ### Expand your application to mobile platforms
 
-If you are upgrading to version 16 for mobile functionality (basically, `DWT` in [wasm mode]({{site.indepth}}features/initialize.html#wasm-mode)), there are some considerations to be made. As mobile support is one of the newest offerings from Dynamsoft, not all of the old `DWT` features are fully available at present. That said, we are constantly working on increasing the supported mobile feature set, so we recommend reviewing our [release notes]({{site.info}}schedule/stable.html), and if you have any doubts, contact [Dynamsoft Support]({{site.about}}getsupport.html).
+If you are upgrading to version 17 for mobile functionality (basically, `DWT` in [wasm mode]({{site.indepth}}features/initialize.html#wasm-mode)), there are some considerations to be made. As mobile support is one of the newest offerings from Dynamsoft, not all of the old `DWT` features are fully available at present. That said, we are constantly working on increasing the supported mobile feature set, so we recommend reviewing our [release notes]({{site.info}}schedule/stable.html), and if you have any questions, contact [Dynamsoft Support]({{site.about}}getsupport.html).
 
 As an example for how some existing `DWT` features will work on [mobile platforms]({{site.getstarted}}platform.html#browsers-on-mobile-devices), see below: 
 
