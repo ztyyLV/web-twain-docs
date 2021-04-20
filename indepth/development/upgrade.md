@@ -21,7 +21,7 @@ Please be aware of the following namespace changes introduced in version 17.0.
 |`Dynamsoft.DWT.EnumDWT_` |`Dynamsoft.EnumDWT_`|
 
 
-See more Breaking Changes in V17.0 [here]({{site.about}}info/schedule/stable.html) 
+See more Breaking Changes in V17.0 [here]({{site.info}}schedule/stable.html) 
 
 
 ## Update the resources files
