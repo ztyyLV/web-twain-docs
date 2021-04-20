@@ -58,15 +58,15 @@ Note that the barcode reading does take a bit of time, so it'll help to add an i
 function readBarcodes(imageIndex) {
     if (DWObject) {
         // Add an indicator
-        Dynamsoft.WebTwainEnv.OnWebTwainPreExecute();
+        Dynamsoft.DWT.OnWebTwainPreExecute();
         DWObject.Addon.BarcodeReader.decode(imageIndex)
             .then(function(textResults) {
                 // Remove the indicator
-                Dynamsoft.WebTwainEnv.OnWebTwainPostExecute();
+                Dynamsoft.DWT.WebTwainEnv.OnWebTwainPostExecute();
                 console.log(textResults)
             }, function(error) {
                 // Remove the indicator
-                Dynamsoft.WebTwainEnv.OnWebTwainPostExecute();
+                Dynamsoft.DWT.OnWebTwainPostExecute();
                 console.log(error)
             });
     } else {
@@ -80,17 +80,17 @@ function readBarcodes(imageIndex) {
 Check the structure of the resulting object [here]({{site.info}}api/Addon_BarcodeReader.html#decode). The following code prints out the text contained in the barcode(s)
 
 ``` javascript
-Dynamsoft.WebTwainEnv.OnWebTwainPreExecute();
+Dynamsoft.DWT.OnWebTwainPreExecute();
 DWObject.Addon.BarcodeReader.decode(imageIndex)
     .then(function(textResults) {
         // Remove the indicator
-        Dynamsoft.WebTwainEnv.OnWebTwainPostExecute();
+        Dynamsoft.DWT.OnWebTwainPostExecute();
         for (var i = 0; i < textResults.length; i++) {
             console.log(textResults[i].BarcodeText);
         }
     }, function(error) {
         // Remove the indicator
-        Dynamsoft.WebTwainEnv.OnWebTwainPostExecute();
+        Dynamsoft.DWT.OnWebTwainPostExecute();
         console.log(error)
     });
 ```
@@ -110,27 +110,27 @@ If your license only covers a subset of the full list or you want to read specif
 ``` javascript
 DWObject.Addon.BarcodeReader.getRuntimeSettings()
     .then(function(runtimeSettings) {
-        runtimeSettings.barcodeFormatIds = Dynamsoft.EnumBarcodeFormat.BF_ONED;
+        runtimeSettings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED;
         return DWObject.Addon.BarcodeReader.updateRuntimeSettings(runtimeSettings);
     }, function(error) {
         console.log(error);
     })
     .then(function(runtimeSettings) {
         // Add an indicator
-        Dynamsoft.WebTwainEnv.OnWebTwainPreExecute();
+        Dynamsoft.DWT.WebTwainEnv.OnWebTwainPreExecute();
         return DWObject.Addon.BarcodeReader.decode(imageIndex);
     }, function(error) {
         console.log(error);
     })
     .then(function(textResults) {
         // Remove the indicator
-        Dynamsoft.WebTwainEnv.OnWebTwainPostExecute();
+        Dynamsoft.DWT.WebTwainEnv.OnWebTwainPostExecute();
         for (var i = 0; i < textResults.length; i++) {
             console.log(textResults[i].BarcodeText);
         }
     }, function(error) {
         // Remove the indicator
-        Dynamsoft.WebTwainEnv.OnWebTwainPostExecute();
+        Dynamsoft.DWT.WebTwainEnv.OnWebTwainPostExecute();
         console.log(error)
     });
 ```

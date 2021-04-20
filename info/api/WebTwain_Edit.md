@@ -99,7 +99,7 @@ ChangeImageSize(
     index: number,
     width: number,
     height: number,
-    method: Dynamsoft.EnumDWT_InterpolationMethod | number,
+    method: Dynamsoft.DWT.EnumDWT_InterpolationMethod | number,
     successCallback?: () => void,
     failureCallback?: (
         errorCode: number,
@@ -132,7 +132,7 @@ SetDPI(
     xResolution: number,
     yResolution: number,
     resample: boolean,
-    method: Dynamsoft.EnumDWT_InterpolationMethod | number,
+    method: Dynamsoft.DWT.EnumDWT_InterpolationMethod | number,
     successCallback?: () => void,
     failureCallback?: (
         errorCode: number,
@@ -143,7 +143,7 @@ SetDPI(
 
 **Usage notes**
 
-Check out [ `Dynamsoft.EnumDWT_InterpolationMethod` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_interpolationmethod).
+Check out [ `Dynamsoft.DWT.EnumDWT_InterpolationMethod` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_interpolationmethod).
 
 ---
 
@@ -502,7 +502,7 @@ RotateEx(
     index: number,
     angle: number,
     keepSize: boolean,
-    method: Dynamsoft.EnumDWT_InterpolationMethod | number,
+    method: Dynamsoft.DWT.EnumDWT_InterpolationMethod | number,
     successCallback?: () => void,
     failureCallback?: (
         errorCode: number,
@@ -513,7 +513,7 @@ RotateEx(
 
 **Usage notes**
 
-Check out [ `Dynamsoft.EnumDWT_InterpolationMethod` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_interpolationmethod).
+Check out [ `Dynamsoft.DWT.EnumDWT_InterpolationMethod` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_interpolationmethod).
 
 ---
 

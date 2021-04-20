@@ -9,21 +9,26 @@ description: Dynamic Web TWAIN SDK Documentation Upgrade Guide Page
 
 # Upgrade
 
-Dynamsoft improves `DWT` constantly through one major version and 2 to 4 minor versions each year. The recommendation for our customers is to always keep your application up-to-date with our latest release. In this section, we'll talk about how to upgrade your application.
+This upgrade section talks about how to upgrade Dynamic Web TWAIN to the latest version. 
 
-The following three steps are required to upgrade your application to use a newer version of `DWT` . Two of the steps would be done by the **application developer** on the server-side. The 3rd step would be done by **users** or **system administrators** on the client side.
+#### IMPORTANT
 
-1. Update the server-side resources for `DWT`
-2. Replace your old product key with the newer one
-3. Ensure client machines have uninstalled the old version of the service in preparation to install the newer version
+Please be aware of the following namespace changes introducing since v17.0.
 
-> If you are upgrading from a very old version (over 2 major versions apart like from v12 to v15), more steps may be needed. Please contact [Dynamsoft Support]({{site.about}}getsupport.html) for more information.
+| v17.0 |v16.2- |
+|:-|:-|
+|`Dynamsoft.DWT` |`Dynamsoft.WebTwainEnv`|
+|`Dynamsoft.DWT.EnumDWT_` |`Dynamsoft.EnumDWT_`|
+
+
+See more Breaking Changes in V17.0 [here]({{site.about}}schedule/stable.html) 
+
 
 ## Update the resources files
 
-Read more about [resources files]({{site.about}}faqs.html#what-are-the-resources-files).
+The resources files refer to the Resources folder in the installtion directory, C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK 17.0. For more details, you can check [here]({{site.about}}faqs.html#what-are-the-resources-files).
 
-### Regular Web application
+### Regular Web application 
 
 #### Uninstall the old version
 
@@ -72,13 +77,13 @@ yarn add @types/dwt
 
 ## Update the Product Key
 
-The Product Key needs to be updated when your current license is no longer valid (expired, for example) or when you upgrade across major versions. The Product Key is set using the global API `Dynamsoft.WebTwainEnv.ProductKey` and the change is only effective before [creating `WebTwain` instances]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance). 
+The Product Key needs to be updated when your current license is no longer valid (expired, for example) or when you upgrade across major versions. The Product Key is set using the global API `Dynamsoft.DWT.ProductKey` and the change is only effective before [creating `WebTwain` instances]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance). 
 
 In most cases, you can just make the change in the file `dynamsoft.webtwain.config.js` .
 
 ``` javascript
 // If you have multiple license keys, just separate them with semicolons.
-Dynamsoft.WebTwainEnv.ProductKey = 't0076lQAAAGNcO61He******; t0076lQAAAGNcO61He******';
+Dynamsoft.DWT.ProductKey = 't0076lQAAAGNcO61He******; t0076lQAAAGNcO61He******';
 ```
 
 If it is set elsewhere, you need to find it and replace it. For example, if you are making use of the [dwt package](https://www.npmjs.com/package/dwt) ( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ), the file `dynamsoft.webtwain.config.js` doesn't exist and you should already have the above line of code in your own JavaScript where you can update the license when needed.

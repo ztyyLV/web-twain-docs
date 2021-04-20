@@ -17,9 +17,9 @@ For simple OCR of relatively clear images, `OCRB` will suffice. It supports 27 l
 
 As the name implies, `OCRPro` is faster, more robust and comes with built-in image pre-processing. It currently supports 119 languages and is the recommended option for any large-scale enterprise grade solution. [Here is a full list of all the languages supported by OCRPro](https://www.dynamsoft.com/Products/ocr-pro-languages.aspx).
 
-For a quick comparison, you can use [this sample application](https://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx?SampleID=210) to test the performance of both engines side by side.
+For a quick comparison, you can use [this sample application](https://www.dynamsoft.com/web-twain/resources/code-gallery/?SampleID=210) to test the performance of both engines side by side.
 
-OCR can be performed both on the client side and on the server side.
+OCR can be performed both on the client side and on the server side. But Server-side OCR pro is no longer supported in v17.0.
 
 ## Client side OCR
 
@@ -47,8 +47,8 @@ To include this addon is to reference the necessary JavaScript file `dynamsoft.w
 
 ``` javascript
 function downloadOCRB(bDownloadDLL) {
-    var strOCRPath = Dynamsoft.WebTwainEnv.ResourcesPath + '/addon/OCRx64.zip',
-        strOCRLangPath = Dynamsoft.WebTwainEnv.ResourcesPath + '/addon/OCRBasicLanguages/English.zip';
+    var strOCRPath = Dynamsoft.DWT.ResourcesPath + '/addon/OCRx64.zip',
+        strOCRLangPath = Dynamsoft.DWT.ResourcesPath + '/addon/OCRBasicLanguages/English.zip';
     if (bDownloadDLL) {
         DWObject.Addon.OCR.Download(
             strOCRPath,
@@ -72,9 +72,9 @@ function downloadOCRB(bDownloadDLL) {
 downloadOCRB(true);
 ```
 
-The code asks `DWT` to download `OCRB` from the URL `Dynamsoft.WebTwainEnv.ResourcesPath + '/addon/OCRx64.zip'` and the language data from the URL `Dynamsoft.WebTwainEnv.ResourcesPath + '/addon/OCRBasicLanguages/English.zip'` . Both zip files need to be placed on the server where you placed the [resources files]({{site.about}}faqs.html#what-are-the-resources-files). As mentioned above, if you can't find these files, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) or get it from [64bit-OCRB-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRBasicx64-v16.zip).
+The code asks `DWT` to download `OCRB` from the URL `Dynamsoft.DWT.ResourcesPath + '/addon/OCRx64.zip'` and the language data from the URL `Dynamsoft.DWT.ResourcesPath + '/addon/OCRBasicLanguages/English.zip'` . Both zip files need to be placed on the server where you placed the [resources files]({{site.about}}faqs.html#what-are-the-resources-files). As mentioned above, if you can't find these files, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) or get it from [64bit-OCRB-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRBasicx64-v16.zip).
 
-Once the installation is done, you should be able to find the following files under `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16\DynamicOCR` .
+Once the installation is done, you should be able to find the following files under `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\DynamicOCR` .
 
 * `DynamicOCRx64_10.0.0.0618.dll` : The version number may vary.
 * `DynamicOCR\eng.traineddata` : This is for English, other language(s) may have different name(s).
@@ -90,10 +90,10 @@ function DoOCR() {
             alert("Please scan or load an image first.");
             return;
         }
-        if (Dynamsoft.EnumDWT_OCROutputFormat === undefined)
-            Dynamsoft.EnumDWT_OCROutputFormat = EnumDWT_OCROutputFormat;
+        if (Dynamsoft.DWT.EnumDWT_OCROutputFormat === undefined)
+            Dynamsoft.DWT.EnumDWT_OCROutputFormat = EnumDWT_OCROutputFormat;
         DWObject.Addon.OCR.SetLanguage('eng');
-        DWObject.Addon.OCR.SetOutputFormat(Dynamsoft.EnumDWT_OCROutputFormat.OCROF_TEXT);
+        DWObject.Addon.OCR.SetOutputFormat(Dynamsoft.DWT.EnumDWT_OCROutputFormat.OCROF_TEXT);
         DWObject.Addon.OCR.Recognize(
             DWObject.CurrentImageIndexInBuffer,
             function(sImageIndex, result) {
@@ -125,7 +125,7 @@ function DoOCR() {
 
 ##### Online demo for OCRB
 
-[Scan-Documents-and-Do-Client-side-OCR-Basic](https://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx?SampleID=133)
+[Scan-Documents-and-Do-Client-side-OCR-Basic](https://www.dynamsoft.com/web-twain/resources/code-gallery/?SampleID=133)
 
 ### Use OCRPro on the Client Side
 
@@ -147,7 +147,7 @@ To include this addon is to reference the necessary JavaScript file `dynamsoft.w
 
 ``` javascript
 function downloadOCRPro() {
-    var strOCRPath = Dynamsoft.WebTwainEnv.ResourcesPath + '/addon/OCRProx64.zip';
+    var strOCRPath = Dynamsoft.DWT.ResourcesPath + '/addon/OCRProx64.zip';
     DWObject.Addon.OCRPro.Download(
         strOCRPath,
         function() {},
@@ -159,9 +159,9 @@ function downloadOCRPro() {
 downloadOCRPro();
 ```
 
-The code asks `DWT` to download `OCRPro` from the URL `Dynamsoft.WebTwainEnv.ResourcesPath + '/addon/OCRProx64.zip'` . This zip file needs to be placed on the server where you placed the [resources files]({{site.about}}faqs.html#what-are-the-resources-files). As mentioned above, if you can't find these files, you can get them from [64bit-OCRPro-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRProx64-v16.zip).
+The code asks `DWT` to download `OCRPro` from the URL `Dynamsoft.DWT.ResourcesPath + '/addon/OCRProx64.zip'` . This zip file needs to be placed on the server where you placed the [resources files]({{site.about}}faqs.html#what-are-the-resources-files). As mentioned above, if you can't find these files, you can get them from [64bit-OCRPro-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRProx64-v16.zip).
 
-Once the installation is done, you should be able to find the following under `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16`
+Once the installation is done, you should be able to find the following under `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17`
 * `DynamicOCRProx64_1.2.0.0806.dll` : The version number may vary.
 * `OCRProResource\{hundreds of files}` : There are a few hundred files under this directory `OCRProResource` .
 
@@ -230,13 +230,13 @@ function DoOCR() {
 var settings = Dynamsoft.WebTwain.Addon.OCRPro.NewSettings();
 settings.Languages = "eng";
 settings.LicenseChecker = "LicenseChecker.aspx";
-settings.OutputFormat = Dynamsoft.EnumDWT_OCRProOutputFormat.OCRPFT_IOTPDF;
-settings.PDFAVersion = Dynamsoft.EnumDWT_OCRProPDFAVersion.OCRPPDFAV_1A;
-settings.PDFVersion = Dynamsoft.EnumDWT_OCRProPDFVersion.OCRPPDFV_5;
-settings.RecognitionModule = Dynamsoft.EnumDWT_OCRProRecognitionModule.OCRPM_FASTEST;
+settings.OutputFormat = Dynamsoft.DWT.EnumDWT_OCRProOutputFormat.OCRPFT_IOTPDF;
+settings.PDFAVersion = Dynamsoft.DWT.EnumDWT_OCRProPDFAVersion.OCRPPDFAV_1A;
+settings.PDFVersion = Dynamsoft.DWT.EnumDWT_OCRProPDFVersion.OCRPPDFV_5;
+settings.RecognitionModule = Dynamsoft.DWT.EnumDWT_OCRProRecognitionModule.OCRPM_FASTEST;
 settings.Redaction.FindText = "TWAIN";
-settings.Redaction.FindTextFlags = Dynamsoft.EnumDWT_OCRFindTextFlags.OCRFT_WHOLEWORD;
-settings.Redaction.FindTextAction = Dynamsoft.EnumDWT_OCRFindTextAction.OCRFT_STRIKEOUT;
+settings.Redaction.FindTextFlags = Dynamsoft.DWT.EnumDWT_OCRFindTextFlags.OCRFT_WHOLEWORD;
+settings.Redaction.FindTextAction = Dynamsoft.DWT.EnumDWT_OCRFindTextAction.OCRFT_STRIKEOUT;
 ```
 
 ##### Other methods for OCRPro
@@ -247,7 +247,7 @@ settings.Redaction.FindTextAction = Dynamsoft.EnumDWT_OCRFindTextAction.OCRFT_ST
 
 ##### Online demo for OCRPro
 
-[Scan-Documents-and-Do-Client-side-OCR-Pro](https://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx?SampleID=149)
+[Scan-Documents-and-Do-Client-side-OCR-Pro](https://www.dynamsoft.com/web-twain/resources/code-gallery/?SampleID=149)
 
 ### Questions
 
@@ -348,7 +348,7 @@ Server side OCR has no restriction on what OS or application is running on the c
 
 For `OCRPro` , only Windows can be used as the server OS. For `OCRB` , the server can run either `Windows` or `Linux` .
 
-### Use OCRPro on the Server Side
+<!-- ### Use OCRPro on the Server Side
 
 The following shows how to set up the environment for server-side `OCRPro` .
 
@@ -514,7 +514,7 @@ For more information on the resulting object, check out [OCRPro Response]({{site
 ##### Online demo for OCRPro on the Server side
 
 * CSharp: [Scan-Documents-and-Do-Server-side-OCR-Pro](https://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx?SampleID=148)
-* Java: [Scan-Documents-and-Do-Server-side-OCR-Pro-Java](https://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx?SampleID=213)
+* Java: [Scan-Documents-and-Do-Server-side-OCR-Pro-Java](https://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx?SampleID=213) -->
 
 ### Use OCRB on the Server Side
 
@@ -560,8 +560,8 @@ function DoOCR(index) {
         DWObject.HTTPUpload(
             url,
             [index],
-            Dynamsoft.EnumDWT_ImageType.IT_PDF,
-            Dynamsoft.EnumDWT_UploadDataFormat.Binary,
+            Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
+            Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary,
             "sampleFile.pdf",
             function() {
                 console.log('upload success with no returned info');

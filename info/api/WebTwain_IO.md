@@ -72,6 +72,7 @@ Others
 * [SetUploadSegment()](#setuploadsegment)
 * [ShowFileDialog()](#showfiledialog) 
 * [Print()](#print)
+* [PrintEx()](#print)
 
 **Properties**
 
@@ -169,7 +170,7 @@ DWObject.LoadImage(
  */
 LoadImageEx(
     fileName: string,
-    type: Dynamsoft.EnumDWT_ImageType | number,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback ? : () => void,
     failureCallback ? : (
         errorCode: number,
@@ -179,14 +180,14 @@ LoadImageEx(
 
 **Usage notes**
 
-On mobile devices, `Dynamsoft.EnumDWT_ImageType.IT_All` means "JPG, PNG, TIF" while it means "BMP, JPG, PNG, TIF, PDF" on desktop.
+On mobile devices, `Dynamsoft.DWT.EnumDWT_ImageType.IT_All` means "JPG, PNG, TIF" while it means "BMP, JPG, PNG, TIF, PDF" on desktop.
 
 **Example**
 
 ``` javascript
 DWObject.LoadImageEx(
     "C:\\DWT.jpg",
-    Dynamsoft.EnumDWT_ImageType.IT_JPG,
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_JPG,
     function() {
         console.log('success');
     },
@@ -213,7 +214,7 @@ DWObject.LoadImageEx(
  */
 LoadImageFromBase64Binary(
     imageData: string,
-    imageType: Dynamsoft.EnumDWT_ImageType,
+    imageType: Dynamsoft.DWT.EnumDWT_ImageType,
     successCallback ? : () => void,
     failureCallback ? : (
         errorCode: number,
@@ -226,7 +227,7 @@ LoadImageFromBase64Binary(
 ``` javascript
 DWObject.ConvertToBase64(
     [0, 1, 2],
-    Dynamsoft.EnumDWT_ImageType.IT_PDF,
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
     function(result, indices, type) {
         DWObject.LoadImageFromBase64Binary(
             result.getData(0, result.getLength()),
@@ -274,7 +275,7 @@ LoadImageFromBinary(
 ``` javascript
 DWObject.ConvertToBlob(
     [0, 1, 2],
-    Dynamsoft.EnumDWT_ImageType.IT_PDF,
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
     function(result, indices, type) {
         DWObject.LoadImageFromBinary(
             result,
@@ -426,7 +427,7 @@ FTPDownload(
 FTPDownloadEx(
     host: string,
     path: string,
-    type: Dynamsoft.EnumDWT_ImageType | number,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback: () => void,
     failureCallBack: (
         errorCode: number,
@@ -484,7 +485,7 @@ FTPUploadEx(
     host: string,
     index: number,
     path: string,
-    type: Dynamsoft.EnumDWT_ImageType | number,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback: () => void,
     failureCallback: (
         errorCode: number,
@@ -589,7 +590,7 @@ FTPUploadAsMultiPagePDF(
 FTPUploadAsMultiPageTIFF(
     host: string,
     path: string,
-    type: Dynamsoft.EnumDWT_ImageType | number,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback: () => void,
     failureCallback: (
         errorCode: number,
@@ -721,7 +722,7 @@ HTTPDownload(
 HTTPDownloadEx(
     host: string,
     path: string,
-    type: Dynamsoft.EnumDWT_ImageType | number,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback: () => void,
     failureCallback: (
         errorCode: number,
@@ -750,7 +751,7 @@ HTTPDownloadEx(
 HTTPDownloadThroughPost(
     host: string,
     path: string,
-    type: Dynamsoft.EnumDWT_ImageType | number,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     onEmptyResponse: () => void,
     onServerReturnedSomething: (
         errorCode: number,
@@ -835,8 +836,8 @@ DWObject.ShowFileDialog(true, "MSI|*.msi", 0, ".msi", "", true, false, 1);
 HTTPUpload(
     URL: string,
     indices: number[],
-    type: Dynamsoft.EnumDWT_ImageType | number,
-    dataFormat: Dynamsoft.EnumDWT_UploadDataFormat | number,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
+    dataFormat: Dynamsoft.DWT.EnumDWT_UploadDataFormat | number,
     fileName: string,
     onEmptyResponse: () => void,
     onServerReturnedSomething: (
@@ -847,8 +848,8 @@ HTTPUpload(
 HTTPUpload(
     URL: string,
     indices: number[],
-    type: Dynamsoft.EnumDWT_ImageType | number,
-    dataFormat: Dynamsoft.EnumDWT_UploadDataFormat | number,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
+    dataFormat: Dynamsoft.DWT.EnumDWT_UploadDataFormat | number,
     onEmptyResponse: () => void,
     onServerReturnedSomething: (
         errorCode: number,
@@ -887,7 +888,7 @@ HTTPUploadThroughPutEx(
     host: string,
     index: number,
     path: string,
-    type: Dynamsoft.EnumDWT_ImageType | number,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback: () => void,
     failureCallback: (
         errorCode: number,
@@ -953,7 +954,7 @@ HTTPUploadThroughPostEx(
     index: number,
     target: string,
     fileName: string,
-    type: Dynamsoft.EnumDWT_ImageType | number,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     onEmptyResponse: () => void,
     onServerReturnedSomething: (
         errorCode: number,
@@ -1261,7 +1262,7 @@ RegisterEvent('OnInternetTransferPercentage',
  */
 ConvertToBase64(
     indices: number[],
-    type: Dynamsoft.EnumDWT_ImageType | number,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback: (
         result: Base64Result,
         indices: number[],
@@ -1298,7 +1299,7 @@ interface Base64Result {
 ``` javascript
 DWObject.ConvertToBase64(
     [0, 1, 2],
-    Dynamsoft.EnumDWT_ImageType.IT_PDF,
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
     function(result, indices, type) {
         console.log(result.getData(0, result.getLength()));
     },
@@ -1329,7 +1330,7 @@ DWObject.ConvertToBase64(
  */
 ConvertToBlob(
     indices: number[],
-    type: Dynamsoft.EnumDWT_ImageType | number,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback: (
         result: Blob,
         indices: number[],
@@ -1345,7 +1346,7 @@ ConvertToBlob(
 ``` javascript
 DWObject.ConvertToBlob(
     [0, 1, 2],
-    Dynamsoft.EnumDWT_ImageType.IT_PDF,
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
     function(result, indices, type) {
         console.log(result.size);
     },
@@ -1807,6 +1808,20 @@ Print(useOSPrintWindow ? : boolean): boolean;
 
 ---
 
+## PrintEx
+
+**Syntax**
+
+``` javascript
+/**
+ * Print selected image(s).
+ * @param indices Specify the image.
+ */
+PrintEx(indices: number[]): void;
+```
+
+---
+
 ## JPEGQuality
 
 **Syntax**
@@ -1842,5 +1857,5 @@ IfTiffMultiPage: boolean;
 /**
  * Return or set the compression type for TIFF files.
  */
-TIFFCompressionType: Dynamsoft.EnumDWT_TIFFCompressionType | number;
+TIFFCompressionType: Dynamsoft.DWT.EnumDWT_TIFFCompressionType | number;
 ```

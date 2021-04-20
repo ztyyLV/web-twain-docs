@@ -161,7 +161,7 @@ The first five files in the above list contain functionalities for image IO (dec
 **A**: No, the library will use the WASM files even in service mode when one of the following conditions is met
 
 * The APIs for the [ `WebTwain.Addon.Camera` ]({{site.info}}api/Addon_Camera.html) component are called. 
-* The APIs [ `WebTwain.Viewer.showVideo()` ]({{site.info}}api/WebTwain_Viewer.html#showvideo) or [ `WebTwain.Viewer.closeVideo()` ]({{site.info}}api/WebTwain_Viewer.html#closevideo) are called.
+* The APIs [ `WebTwain.Camera.showVideo()` ]({{site.info}}api/Addon_Camera.html#showvideo) or [ `WebTwain.Camera.closeVideo()` ]({{site.info}}api/Addon_Camera.html#closevideo) are called.
 
 ## Creating the WebTwain instance
 
@@ -171,36 +171,36 @@ The leading player of `DWT` is the `WebTwain` "class". Almost all methods and pr
 
 Read on to learn the three methods to instantiate `DWT` .
 
-### [ `Dynamsoft.WebTwainEnv.Load` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#load)
+### [ `Dynamsoft.DWT.Load` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#load)
 
 This is the default method to create `WebTwain` instances. 
 
 #### Questions
 
-##### Q: Is it necessary to call `Dynamsoft.WebTwainEnv.Load` manually
+##### Q: Is it necessary to call `Dynamsoft.DWT.Load` manually
 
-**A**: No. It needs to be called only if `Dynamsoft.WebTwainEnv.AutoLoad` is set to `false` . If `AutoLoad` is `true` , `Load` will be called automatically as soon as the running environment is ready.
+**A**: No. It needs to be called only if `Dynamsoft.DWT.AutoLoad` is set to `false` . If `AutoLoad` is `true` , `Load` will be called automatically as soon as the running environment is ready.
 
-`Dynamsoft.WebTwainEnv.AutoLoad` is defined in the file `dynamsoft.webtwain.config.js` but can be called anywhere before the actual loading begins. It is set to `true` by default.
+`Dynamsoft.DWT.AutoLoad` is defined in the file `dynamsoft.webtwain.config.js` but can be called anywhere before the actual loading begins. It is set to `true` by default.
 
 ##### Q: Where can I get the handler(s) of the instance(s)
 
-**A**: When `Load` is called, `DWT` tries to create the `WebTwain` instances. Once it's done, `DWT` triggers the built-in callback `Dynamsoft.WebTwainEnv.OnWebTwainReady` in which the method [ `Dynamsoft.WebTwainEnv.GetWebTwain` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#getwebtwain) can be used to get the handler(s) of the instance(s). For simplicity, the `OnWebTwainReady` callback points to a global function called `Dynamsoft_OnReady` . The following snippets are equivalent
+**A**: When `Load` is called, `DWT` tries to create the `WebTwain` instances. Once it's done, `DWT` triggers the built-in callback `Dynamsoft.DWT.OnWebTwainReady` in which the method [ `Dynamsoft.DWT.GetWebTwain` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#getwebtwain) can be used to get the handler(s) of the instance(s). For simplicity, the `OnWebTwainReady` callback points to a global function called `Dynamsoft_OnReady` . The following snippets are equivalent
 
 Snippet one
 
 ``` javascript
-Dynamsoft.WebTwainEnv.OnWebTwainReady = function() {
-    DWObject = Dynamsoft.WebTwainEnv.GetWebTwain("dwtcontrolContainer");
+Dynamsoft.DWT.OnWebTwainReady = function() {
+    DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
 }
 ```
 
 Snippet two
 
 ``` javascript
-Dynamsoft.WebTwainEnv.RegisterEvent('OnWebTwainReady', Dynamsoft_OnReady);
+Dynamsoft.DWT.RegisterEvent('OnWebTwainReady', Dynamsoft_OnReady);
 function Dynamsoft_OnReady() {
-    DWObject = Dynamsoft.WebTwainEnv.GetWebTwain("dwtcontrolContainer");
+    DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
 }
 ```
 
@@ -209,7 +209,7 @@ function Dynamsoft_OnReady() {
 **A**: The instances are defined by this line in `dynamsoft.webtwain.config.js`
 
 ``` javascript
-Dynamsoft.WebTwainEnv.Containers = [{
+Dynamsoft.DWT.Containers = [{
     ContainerId: 'dwtcontrolContainer',
     Width: '585px',
     Height: '513px'
@@ -231,12 +231,12 @@ interface Container {
 
 `Width` and `Height` determine the initial viewer size of the instance.
 
-When instantiating with `Dynamsoft.WebTwainEnv.Load` , `ContainerId` , `Width` and `Height` are required. `DWT` will try to locate an HTML element with the id defined by `ContainerId` and use `Width` and `Height` as the viewer size.
+When instantiating with `Dynamsoft.DWT.Load` , `ContainerId` , `Width` and `Height` are required. `DWT` will try to locate an HTML element with the id defined by `ContainerId` and use `Width` and `Height` as the viewer size.
 
 To create multiple instances, simply provide multiple `Containers` , for example, the following creates two `WebTwain` instances
 
 ``` javascript
-Dynamsoft.WebTwainEnv.Containers = [{
+Dynamsoft.DWT.Containers = [{
     ContainerId: 'dwtcontrolContainer1',
     Width: '585px',
     Height: '513px'
@@ -247,7 +247,7 @@ Dynamsoft.WebTwainEnv.Containers = [{
 }];
 ```
 
-### [ `Dynamsoft.WebTwainEnv.CreateDWTObject` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#createdwtobject)
+### [ `Dynamsoft.DWT.CreateDWTObject` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#createdwtobject)
 
 This method manually creates a `WebTwain` instance with a default built-in viewer.
 
@@ -263,7 +263,7 @@ This method manually creates a `WebTwain` instance with a default built-in viewe
 
 ##### Q: How do I use this method to create `WebTwain` instances without using [Load](#dynamsoftwebtwainenvload)
 
-**A**: [Load](#dynamsoftwebtwainenvload) is called automatically if `Dynamsoft.WebTwainEnv.AutoLoad` is set to `true` . Therefore, to ignore [Load](#dynamsoftwebtwainenvload), `Dynamsoft.WebTwainEnv.AutoLoad` must be set to `false` .
+**A**: [Load](#dynamsoftwebtwainenvload) is called automatically if `Dynamsoft.DWT.AutoLoad` is set to `true` . Therefore, to ignore [Load](#dynamsoftwebtwainenvload), `Dynamsoft.DWT.AutoLoad` must be set to `false` .
 
 ##### Q: How do I use `CreateDWTObject`
 
@@ -289,10 +289,10 @@ CreateDWTObject(
 ): void;
 ```
 
-The following would be equivalent to using [Load](#dynamsoftwebtwainenvload) with the configuration `Dynamsoft.WebTwainEnv.Containers = [{ContainerId: 'dwtcontrolContainer', Width: '585px', Height: '513px'}`
+The following would be equivalent to using [Load](#dynamsoftwebtwainenvload) with the configuration `Dynamsoft.DWT.Containers = [{ContainerId: 'dwtcontrolContainer', Width: '585px', Height: '513px'}`
 
 ``` javascript
-Dynamsoft.WebTwainEnv.CreateDWTObject(
+Dynamsoft.DWT.CreateDWTObject(
     'dwtcontrolContainer',
     function(obj) {
         obj.Width = 585;
@@ -306,11 +306,11 @@ Dynamsoft.WebTwainEnv.CreateDWTObject(
 
 The method can also do something that [Load](#dynamsoftwebtwainenvload) can't. The following code creates a `WebTwain` instance that connects to the Dynamsoft Service running on another machine with the IP 192.168.8.221 and ports 18622 and 18623 (SSL)
 
-> NOTE that [ `Dynamsoft.WebTwainEnv.UseLocalService` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#uselocalservice) must be `true` for this usage.
+> NOTE that [ `Dynamsoft.DWT.UseLocalService` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#uselocalservice) must be `true` for this usage.
 
 ``` javascript
-Dynamsoft.WebTwainEnv.UseLocalService = true;
-Dynamsoft.WebTwainEnv.CreateDWTObject(
+Dynamsoft.DWT.UseLocalService = true;
+Dynamsoft.DWT.CreateDWTObject(
     'dwtcontrolContainer',
     "192.168.8.221",
     "18622", "18623"
@@ -323,7 +323,7 @@ Dynamsoft.WebTwainEnv.CreateDWTObject(
 
 For more information, check out [how to enable remote scan]({{site.indepth}}features/input.html#how-to-enable-remote-scan).
 
-### [ `Dynamsoft.WebTwainEnv.CreateDWTObjectEx` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#createdwtobjectex)
+### [ `Dynamsoft.DWT.CreateDWTObjectEx` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#createdwtobjectex)
 
 This method manually creates a `WebTwain` instance without a default built-in viewer.
 
@@ -368,13 +368,13 @@ interface DWTInitialConfig {
 
 Compared with [ `CreateDWTObject` ](#dynamsoftwebtwainenvcreatedwtobject), `CreateDWTObjectEx` requires a `WebTwainId` instead of a `ContainerId` .
 
-The following would be equivalent to using [Load](#dynamsoftwebtwainenvload) with the configuration `Dynamsoft.WebTwainEnv.Containers = [{ContainerId: 'dwtcontrolContainer', Width: '585px', Height: '513px'}`
+The following would be equivalent to using [Load](#dynamsoftwebtwainenvload) with the configuration `Dynamsoft.DWT.Containers = [{ContainerId: 'dwtcontrolContainer', Width: '585px', Height: '513px'}`
 
 > NOTE that the created instance doesn't have a built-in viewer but instead used the method [ `bind()` ]({{site.info}}api/WebTwain_Viewer.html#bind) to add a viewer.
 
 ``` javascript
 var DWObject = null;
-Dynamsoft.WebTwainEnv.CreateDWTObjectEx({
+Dynamsoft.DWT.CreateDWTObjectEx({
         WebTwainId: 'dwtcontrol'
     },
     function(obj) {
@@ -392,11 +392,11 @@ Dynamsoft.WebTwainEnv.CreateDWTObjectEx({
 
 Similar to [ `CreateDWTObject` ](#dynamsoftwebtwainenvcreatedwtobject), `CreateDWTObjectEx` can also connect to the Dynamsoft Service running on another machine
 
-> NOTE that `Dynamsoft.WebTwainEnv.UseLocalService` must be `true` for this usage.
+> NOTE that `Dynamsoft.DWT.UseLocalService` must be `true` for this usage.
 
 ``` javascript
-Dynamsoft.WebTwainEnv.UseLocalService = true;
-Dynamsoft.WebTwainEnv.CreateDWTObjectEx({
+Dynamsoft.DWT.UseLocalService = true;
+Dynamsoft.DWT.CreateDWTObjectEx({
         WebTwainId: 'dwtcontrolContainer1',
         Host: "192.168.8.221",
         Port: "18622",
@@ -417,7 +417,7 @@ For more information, check out [how to enable remote scan]({{site.indepth}}feat
 
 `Dynamsoft` is the top-level namespace. `DWT` and other Dynamsoft libraries are all defined under `Dynamsoft` . For `DWT` , the major members of this namespace are
 
-* [ `WebTwainEnv` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html)
+* [ `DWT` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html)
 
     Includes global methods, properties to help with `WebTwain` initialization and instantiation, etc. as shown in previous context.
 
@@ -427,4 +427,4 @@ For more information, check out [how to enable remote scan]({{site.indepth}}feat
 
 * `Enumerations`
 
-    Example: [ `Dynamsoft.EnumDWT_PixelType` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_pixeltype)
+    Example: [ `Dynamsoft.DWT.EnumDWT_PixelType` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_pixeltype)

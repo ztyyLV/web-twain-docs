@@ -275,7 +275,7 @@ https://127.0.0.1:18623/dwt/dwt_16100728/img?id=414778098&index=5&width=585&heig
 * Install that certificate
 * Use that certificate to generate public /private keys (pem)
 * Rename these two keys to `server.pem` , (public) `server_key.pem` (private)
-* Replace the old keys in `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16\cert`
+* Replace the old keys in `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\cert`
 * Restart the service
 
 ### Q: How to set the configuration of the service?
@@ -319,7 +319,7 @@ LogLevel = 1 // Whether to output detailed information for debugging purposes
 
 The respective fixes are listed below
 
-* Check the path `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16` and make sure you have [the correct files](#related-files-and-folders).
+* Check the path `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17` and make sure you have [the correct files](#related-files-and-folders).
 * Check `Local Services` and make sure Dynamsoft Service is listed and Running.
 * Disable the proxy server to confirm it's the cause. Once confirmed, try to reconfigure the proxy to make sure it doesn't redirect requests sent to '127.0.0.1'
 * Check your anti-virus software or any other software that can block local ports and make sure the ports 18622, 18623, 18625 and 18626 are not blocked.

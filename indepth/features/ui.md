@@ -41,7 +41,7 @@ This dialog is opened by one of the following functions
 
 > For any client that [connects to a remote Dynamsoft Service]({{site.indepth}}features/input.html#how-to-enable-remote-scan)
 
-All four of these functions eventually call the global API `Dynamsoft.WebTwainEnv.ShowDialog()` to show the installation dialog. You can use your own method to show the necessary information so that your users know how to proceed. For example
+All four of these functions eventually call the global API `Dynamsoft.DWT.ShowDialog()` to show the installation dialog. You can use your own method to show the necessary information so that your users know how to proceed. For example
 
 ``` javascript
 function OnWebTwainNotFoundOnWindowsCallback(ProductName, InstallerUrl, bHTML5, bIE, bSafari, bSSL, strIEVersion) {
@@ -63,7 +63,7 @@ If you are using `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` , t
 window.OnWebTwainNotFoundOnWindowsCallback = function(ProductName, InstallerUrl, bHTML5, bIE, bSafari, bSSL, strIEVersion) {
     alert(ProductName + " is not installed, please download and install it from " + InstallerUrl);
 }
-Dynamsoft.WebTwainEnv.Load();
+Dynamsoft.DWT.Load();
 ```
 
 ## Indicators
@@ -72,22 +72,22 @@ Dynamsoft.WebTwainEnv.Load();
 
 ![UI 2]({{site.assets}}imgs/UI-2-new.png)
 
-This loading bar and backdrop shows up when creating a `WebTwain` instance or when you try to scan. The functions `Dynamsoft.WebTwainEnv.OnWebTwainPreExecute()` and `Dynamsoft.WebTwainEnv.OnWebTwainPostExecute()` are called before and after the process. You can customize the behavior like this
+This loading bar and backdrop shows up when creating a `WebTwain` instance or when you try to scan. The functions `Dynamsoft.DWT.OnWebTwainPreExecute()` and `Dynamsoft.DWT.OnWebTwainPostExecute()` are called before and after the process. You can customize the behavior like this
 
 ``` javascript
-Dynamsoft.WebTwainEnv.OnWebTwainPreExecute = function() {
+Dynamsoft.DWT.OnWebTwainPreExecute = function() {
     // Show your own progress indicator
     console.log('An operation starts!');
 };
-Dynamsoft.WebTwainEnv.OnWebTwainPostExecute = function() {
+Dynamsoft.DWT.OnWebTwainPostExecute = function() {
     // Hide the progress indicator
     console.log('An operation ends!');
 };
 ```
 
-On the other hand, you can also call the functions `Dynamsoft.WebTwainEnv.OnWebTwainPreExecute()` and `Dynamsoft.WebTwainEnv.OnWebTwainPostExecute()` to show and hide the loader bar and backdrop when you need it in your own workflow.
+On the other hand, you can also call the functions `Dynamsoft.DWT.OnWebTwainPreExecute()` and `Dynamsoft.DWT.OnWebTwainPostExecute()` to show and hide the loader bar and backdrop when you need it in your own workflow.
 
-If you just want to change the loading bar, you can use the `Dynamsoft.WebTwainEnv.CustomizableDisplayInfo.loaderBarSource` .
+If you just want to change the loading bar, you can use the `Dynamsoft.DWT.CustomizableDisplayInfo.loaderBarSource` .
 
 ### Progress bar
 
@@ -125,7 +125,7 @@ If you have enabled the security dialogs, you may see the following dialog when 
 You can change the language with the method [ `SetLanguage()` ]({{site.info}}api/WebTwain_Util.html#setlanguage). The following sets the language to Spanish
 
 ``` javascript
-DWObject.SetLanguage(Dynamsoft.EnumDWT_Language.Spanish);
+DWObject.SetLanguage(Dynamsoft.DWT.EnumDWT_Language.Spanish);
 ```
 
 ![UI-6]({{site.assets}}imgs/UI-6.png)

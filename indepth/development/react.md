@@ -71,21 +71,21 @@ export default class DWT extends React.Component {
     DWObject = null;
     containerId = 'dwtcontrolContainer';
     componentDidMount() {
-        Dynamsoft.WebTwainEnv.RegisterEvent('OnWebTwainReady', () => {
+        Dynamsoft.DWT.RegisterEvent('OnWebTwainReady', () => {
             this.Dynamsoft_OnReady()
         });
-        Dynamsoft.WebTwainEnv.ProductKey = 'YOUR-PRODUCT-KEY';
-        Dynamsoft.WebTwainEnv.ResourcesPath = "dwt-resources";
-        Dynamsoft.WebTwainEnv.Containers = [{
+        Dynamsoft.DWT.ProductKey = 'YOUR-PRODUCT-KEY';
+        Dynamsoft.DWT.ResourcesPath = "dwt-resources";
+        Dynamsoft.DWT.Containers = [{
             WebTwainId: 'dwtObject',
             ContainerId: this.containerId,
             Width: '300px',
             Height: '400px'
         }];
-        Dynamsoft.WebTwainEnv.Load();
+        Dynamsoft.DWT.Load();
     }
     Dynamsoft_OnReady() {
-        this.DWObject = Dynamsoft.WebTwainEnv.GetWebTwain(this.containerId);
+        this.DWObject = Dynamsoft.DWT.GetWebTwain(this.containerId);
     }
     acquireImage() {
         this.DWObject.AcquireImage();

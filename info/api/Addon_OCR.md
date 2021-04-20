@@ -195,7 +195,7 @@ The font set with `SetUnicodeFontName()` is only used when `SetIfUseDetectedFont
  * Configure the OCR operation.
  * @param language Specify the target language.
  */
-SetLanguage(language: Dynamsoft.EnumDWT_OCRLanguage | number): boolean;
+SetLanguage(language: Dynamsoft.DWT.EnumDWT_OCRLanguage | number): boolean;
 ```
 
 ---
@@ -209,7 +209,7 @@ SetLanguage(language: Dynamsoft.EnumDWT_OCRLanguage | number): boolean;
  * Configure the OCR operation.
  * @param format Specify the output format.
  */
-SetOutputFormat(format: Dynamsoft.EnumDWT_OCROutputFormat | number): boolean;
+SetOutputFormat(format: Dynamsoft.DWT.EnumDWT_OCROutputFormat | number): boolean;
 ```
 
 ---
@@ -223,7 +223,7 @@ SetOutputFormat(format: Dynamsoft.EnumDWT_OCROutputFormat | number): boolean;
  * Configure the OCR operation.
  * @param mode Specify the OCR page layout analysis mode.
  */
-SetPageSetMode(mode: Dynamsoft.EnumDWT_OCRPageSetMode | number): boolean;
+SetPageSetMode(mode: Dynamsoft.DWT.EnumDWT_OCRPageSetMode | number): boolean;
 ```
 
 **Usage notes**

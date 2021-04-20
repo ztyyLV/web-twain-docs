@@ -45,8 +45,8 @@ var onFailure = function(errorCode, errorString) {
 DWObject.IfShowFileDialog = true;
 // PDF Addon is used here to ensure PDF support
 DWObject.Addon.PDF.SetResolution(200);
-DWObject.Addon.PDF.SetConvertMode(Dynamsoft.EnumDWT_ConvertMode.CM_RENDERALL);
-DWObject.LoadImageEx("", Dynamsoft.EnumDWT_ImageType.IT_ALL, onSuccess, onFailure);
+DWObject.Addon.PDF.SetConvertMode(Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL);
+DWObject.LoadImageEx("", Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL, onSuccess, onFailure);
 ```
 
 The method [ `SetConvertMode()` ]({{site.info}}api/Addon_PDF.html#setconvertmode) decides how `PDFR` works and [ `SetResolution()` ]({{site.info}}api/Addon_PDF.html#setresolution) specifies the resolution. These two methods configure `PDFR` to detect and, if necessary, rasterize any PDF file that comes thereafter.
@@ -88,7 +88,7 @@ However, some advanced features are only possible with the help of the PDF addon
 ``` javascript
 DWObject.Addon.PDF.Write.Setup({
     author: "Dynamsoft-Support-Team",
-    compression: Dynamsoft.EnumDWT_PDFCompressionType.PDF_JP2000,
+    compression: Dynamsoft.DWT.EnumDWT_PDFCompressionType.PDF_JP2000,
     creator: "DWT",
     creationDate: "D:20200930",
     keyWords: "TWAIN, DWT, Dynamsoft",

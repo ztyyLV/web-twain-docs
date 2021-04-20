@@ -53,7 +53,7 @@ Add a scan button and the minimum code.
     var DWObject;
 
     function Dynamsoft_OnReady() {
-        DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+        DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer');
     }
 
     function AcquireImage() {
@@ -119,7 +119,7 @@ function AcquireImage() {
         var DWObject;
 
         function Dynamsoft_OnReady() {
-            DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+            DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer');
         }
 
         function AcquireImage() {
@@ -220,8 +220,8 @@ function UploadAsPDF() {
         DWObject.HTTPUpload(
             url,
             indices,
-            Dynamsoft.EnumDWT_ImageType.IT_PDF,
-            Dynamsoft.EnumDWT_UploadDataFormat.Binary,
+            Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
+            Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary,
             "HelloWorld.pdf",
             function() {
                 //The server response is empty!
@@ -280,7 +280,7 @@ Now we can use the page to scan or acquire, then upload the images as a PDF docu
         var DWObject;
 
         function Dynamsoft_OnReady() {
-            DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+            DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer');
         }
 
         function AcquireImage() {
@@ -324,8 +324,8 @@ Now we can use the page to scan or acquire, then upload the images as a PDF docu
                 DWObject.HTTPUpload(
                     url,
                     indices,
-                    Dynamsoft.EnumDWT_ImageType.IT_PDF,
-                    Dynamsoft.EnumDWT_UploadDataFormat.Binary,
+                    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
+                    Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary,
                     "HelloWorld.pdf",
                     function() {
                         //The server response is empty!

@@ -167,7 +167,7 @@ interface DeviceConfiguration {
     /**
      * How a pixel is represented. Basically it means whether to scan in color, grey or black & white
      */
-    PixelType?: Dynamsoft.EnumDWT_PixelType;
+    PixelType?: Dynamsoft.DWT.EnumDWT_PixelType;
     /**
      * How detailed is the acquisition. Measured by dots per pixel (DPI)
      */
@@ -313,7 +313,7 @@ If it's set to 2, then besides what's mentioned in the two tables above, the Dyn
 ``` javascript
 var deviceConfiguration = {
     IfShowUI: false,
-    PixelType: Dynamsoft.EnumDWT_PixelType.TWPT_RGB,
+    PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_RGB,
     Resolution: 300,
     IfFeederEnabled: true,
     IfDuplexEnabled: false,
@@ -335,7 +335,7 @@ function AcquireImage1() {
     DWObject.SelectSource(function() {
         DWObject.OpenSource();
         DWObject.IfShowUI = false;
-        DWObject.PixelType = Dynamsoft.EnumDWT_PixelType.TWPT_RGB;
+        DWObject.PixelType = Dynamsoft.DWT.EnumDWT_PixelType.TWPT_RGB;
         DWObject.Resolution = 300;
         DWObject.IfFeederEnabled = true;
         DWObject.IfDuplexEnabled = false;
@@ -355,7 +355,7 @@ function AcquireImage3() {
     DWObject.SelectSource(function() {
         DWObject.OpenSource();
         DWObject.IfShowUI = false;
-        DWObject.PixelType = Dynamsoft.EnumDWT_PixelType.TWPT_RGB;
+        DWObject.PixelType = Dynamsoft.DWT.EnumDWT_PixelType.TWPT_RGB;
         DWObject.Resolution = 300;
         DWObject.IfFeederEnabled = true;
         DWObject.IfDuplexEnabled = false;
@@ -725,7 +725,7 @@ interface ScanSetup {
   /**
    * The TWAIN transfer mode.
    */
-  transferMode?: Dynamsoft.EnumDWT_TransferMode | number,
+  transferMode?: Dynamsoft.DWT.EnumDWT_TransferMode | number,
   /**
    * Set how the transfer is done.
    */
@@ -738,7 +738,7 @@ interface ScanSetup {
     /**
      * Specify the file format.
      */
-    fileFormat?: Dynamsoft.EnumDWT_FileFormat | number,
+    fileFormat?: Dynamsoft.DWT.EnumDWT_FileFormat | number,
     /**
      * Specify the quality of JPEG files.
      */
@@ -746,7 +746,7 @@ interface ScanSetup {
     /**
      * Specify the compression type of the file.
      */
-    compressionType?: Dynamsoft.EnumDWT_CompressionType | number
+    compressionType?: Dynamsoft.DWT.EnumDWT_CompressionType | number
   }
   /**
    * Set where the scanned images are inserted.
@@ -767,7 +767,7 @@ interface ScanSetup {
     /**
      * Specify the pixel type.
      */
-    pixelType?: Dynamsoft.EnumDWT_PixelType | number,
+    pixelType?: Dynamsoft.DWT.EnumDWT_PixelType | number,
     /**
      * Specify the resolution.
      */
@@ -793,11 +793,11 @@ interface ScanSetup {
     /**
      * Specify the page size.
      */
-    pageSize?: Dynamsoft.EnumDWT_CapSupportedSizes | number,
+    pageSize?: Dynamsoft.DWT.EnumDWT_CapSupportedSizes | number,
     /**
      * Specify the unit.
      */
-    unit?: Dynamsoft.EnumDWT_UnitType | number,
+    unit?: Dynamsoft.DWT.EnumDWT_UnitType | number,
     /**
      * Specify a layout to scan, if present, it'll override pageSize.
      */
@@ -810,7 +810,7 @@ interface ScanSetup {
     /**
      * Specify the pixel flavor.
      */
-    pixelFlavor?: Dynamsoft.EnumDWT_CapPixelFlavor | number,
+    pixelFlavor?: Dynamsoft.DWT.EnumDWT_CapPixelFlavor | number,
     /**
      * Specify Brightness.
      */
@@ -855,7 +855,7 @@ interface ScanSetup {
     /**
      * Set the output format.
      */
-    format?: Dynamsoft.EnumDWT_ImageType | number,
+    format?: Dynamsoft.DWT.EnumDWT_ImageType | number,
     /**
      * Specify how many times the library will try the output.
      */
@@ -886,7 +886,7 @@ interface ScanSetup {
      */
     pdfSetup?: {
       author?: string,
-      compression?: Dynamsoft.EnumDWT_PDFCompressionType | number,
+      compression?: Dynamsoft.DWT.EnumDWT_PDFCompressionType | number,
       creator?: string,
       /**
        * Example: 'D:20181231'
@@ -908,7 +908,7 @@ interface ScanSetup {
      */
     tiffSetup?: {
       quality?: number,
-      compression?: Dynamsoft.EnumDWT_TIFFCompressionType | number,
+      compression?: Dynamsoft.DWT.EnumDWT_TIFFCompressionType | number,
       /**
        * Specify Tiff custom tags.
        */
@@ -1224,7 +1224,7 @@ Typically the data source data string is created by the method [GetCustomDSDataE
  */
 SetFileXferInfo(
     fileName: string,
-    fileFormat: Dynamsoft.EnumDWT_FileFormat | number
+    fileFormat: Dynamsoft.DWT.EnumDWT_FileFormat | number
 ): boolean;
 ```
 
@@ -1238,17 +1238,17 @@ Example argument for the parameter `fileName`
 * "C:\\webtwain" + <> + ".jpg": The scanned images will result in "C:\\webtwain1.jpg", "C:\\webtwain2.jpg", "C:\\webtwain3.jpg", etc.
 * "C:\\webtwain" + <%06d> + ".jpg": The scanned images will result in "C:\\webtwain000001.jpg", "C:\\webtwain000002.jpg", "C:\\webtwain000003.jpg", etc.
 
-Check out the available formats [Dynamsoft. EnumDWT_FileFormat]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_fileformat).
+Check out the available formats [Dynamsoft.DWT.EnumDWT_FileFormat]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_fileformat).
 
 **Example**
 
 ``` javascript
 DWObject.OpenSource();
-DWObject.TransferMode = Dynamsoft.EnumDWT_TransferMode.TWSX_FILE;
-if (DWObject.TransferMode === Dynamsoft.EnumDWT_TransferMode.TWSX_FILE) {
+DWObject.TransferMode = Dynamsoft.DWT.EnumDWT_TransferMode.TWSX_FILE;
+if (DWObject.TransferMode === Dynamsoft.DWT.EnumDWT_TransferMode.TWSX_FILE) {
     if (DWObject.SetFileXferInfo(
             "C:\\Temp\\WebTWAIN<%06d>.bmp",
-            EnumDWT_FileFormat.TWFF_BMP
+            Dynamsoft.DWT.EnumDWT_FileFormat.TWFF_BMP
         )) {
         DWObject.IfShowUI = true;
         DWObject.AcquireImage();
@@ -1298,7 +1298,7 @@ The TWAIN Working Group has suggested the following behavior
 DWObject.SelectSource();
 DWObject.OpenSource();
 DWObject.IfShowUI = false;
-DWObject.Unit = Dynamsoft.EnumDWT_UnitType.TWUN_PIXELS;
+DWObject.Unit = Dynamsoft.DWT.EnumDWT_UnitType.TWUN_PIXELS;
 DWObject.SetImageLayout(50, 50, 100, 100);
 DWObject.AcquireImage();
 ```
@@ -1430,7 +1430,7 @@ If the property is set to `true` , the data source will display its user interfa
 /**
  * Return or set the driver type which determines the type of sources to use.
  */
-ImageCaptureDriverType: Dynamsoft.EnumDWT_Driver | number;
+ImageCaptureDriverType: Dynamsoft.DWT.EnumDWT_Driver | number;
 ```
 
 **Usage notes**
@@ -1458,7 +1458,7 @@ The allowed values for `EnumDWT_Driver` are
 /**
  * Return or set the page size the data source uses to acquire images.
  */
-PageSize: Dynamsoft.EnumDWT_CapSupportedSizes | number;
+PageSize: Dynamsoft.DWT.EnumDWT_CapSupportedSizes | number;
 ```
 
 ---
@@ -1471,7 +1471,7 @@ PageSize: Dynamsoft.EnumDWT_CapSupportedSizes | number;
 /**
  * Return or set the pixel type used when acquiring images. 
  */
-PixelType: Dynamsoft.EnumDWT_PixelType | number;
+PixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 ```
 
 ---
@@ -1602,7 +1602,7 @@ DataSourceStatus: number;
 
 ``` typescript
 /**
- * Return the name of the default source.
+ * Return the name of the last used source. 
  */
 DefaultSourceName: string;
 ```
@@ -1617,7 +1617,7 @@ DefaultSourceName: string;
 /**
  * Return whether the source supports duplex. If yes, it further returns the level of duplex the data source supports.
  */
-readonly Duplex: Dynamsoft.EnumDWT_DUPLEX | number;
+readonly Duplex: Dynamsoft.DWT.EnumDWT_DUPLEX | number;
 ```
 
 **Usage notes**
@@ -1975,7 +1975,7 @@ readonly ImageYResolution: number;
 /**
  * Return the pixel type of the current image.
  */
-readonly ImagePixelType: Dynamsoft.EnumDWT_PixelType | number;
+readonly ImagePixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 ```
 
 ---
@@ -2001,7 +2001,7 @@ readonly MagData: string;
 /**
  * Return the type of the magnetic data if the data source supports magnetic data recognition.
  */
-readonly MagType: Dynamsoft.EnumDWT_MagType | number;
+readonly MagType: Dynamsoft.DWT.EnumDWT_MagType | number;
 ```
 
 **Usage notes**
@@ -2061,7 +2061,7 @@ Available values:
 /**
  * Return or set the data source's transfer mode.
  */
-TransferMode: Dynamsoft.EnumDWT_TransferMode | number;
+TransferMode: Dynamsoft.DWT.EnumDWT_TransferMode | number;
 ```
 
 **Usage notes**
@@ -2084,7 +2084,7 @@ TWSX_NATIVE and TWSX_MEMORY are required by all TWAIN data sources while TWSX_FI
 /**
  * Return or set the unit of measure for all quantities. Note that this setting is only effective for TWAIN (hardware) related operations. 
  */
-Unit: Dynamsoft.EnumDWT_UnitType | number;
+Unit: Dynamsoft.DWT.EnumDWT_UnitType | number;
 ```
 
 **Usage notes**
@@ -2351,7 +2351,7 @@ interface ValueAndLabel {
     /**
      * Numeric representation of the item
      */
-    value: Dynamsoft.EnumDWT_Cap | Dynamsoft.EnumDWT_CapType | Dynamsoft.EnumDWT_CapValueType | number;
+    value: Dynamsoft.DWT.EnumDWT_Cap | Dynamsoft.DWT.EnumDWT_CapType | Dynamsoft.DWT.EnumDWT_CapValueType | number;
     /**
      * Label or name of the item
      */    
@@ -2363,9 +2363,9 @@ interface ValueAndLabel {
 
 Check out the Enumerations
 
-* [ `Dynamsoft.EnumDWT_Cap` ]({{site.info}}api/Dynamsoft_Enum.html#enumdwt_cap)
-* [ `Dynamsoft.EnumDWT_CapType` ]({{site.info}}api/Dynamsoft_Enum.html#enumdwt_captype)
-* [ `Dynamsoft.EnumDWT_CapValueType` ]({{site.info}}api/Dynamsoft_Enum.html#enumdwt_capvaluetype)
+* [ `Dynamsoft.DWT.EnumDWT_Cap` ]({{site.info}}api/Dynamsoft_Enum.html#enumdwt_cap)
+* [ `Dynamsoft.DWT.EnumDWT_CapType` ]({{site.info}}api/Dynamsoft_Enum.html#enumdwt_captype)
+* [ `Dynamsoft.DWT.EnumDWT_CapValueType` ]({{site.info}}api/Dynamsoft_Enum.html#enumdwt_capvaluetype)
 
 ---
 
@@ -2402,7 +2402,7 @@ interface CapabilitySetup {
     /**
      * Specify a capability
      */
-    capability: Dynamsoft.EnumDWT_Cap | number;
+    capability: Dynamsoft.DWT.EnumDWT_Cap | number;
     /**
      * The value to set to the capability or the value of the capability after setting.
      */

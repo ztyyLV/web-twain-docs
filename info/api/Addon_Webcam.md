@@ -203,7 +203,7 @@ When you close the camera, the video stream will stop at the last frame.
  * @param property Specify the property.
  */
 GetCameraControlPropertySetting(
-    property: EnumDWT_CameraControlProperty | number
+    property: Dynamsoft.DWT.EnumDWT_CameraControlProperty | number
 ): CameraControlProperty;
 ```
 
@@ -219,7 +219,7 @@ GetCameraControlPropertySetting(
  * @param property Specify the property.
  */
 GetCameraControlPropertyMoreSetting(
-    property: Dynamsoft.EnumDWT_CameraControlProperty | number
+    property: Dynamsoft.DWT.EnumDWT_CameraControlProperty | number
 ): CameraControlPropertyExtra;
 ```
 
@@ -237,7 +237,7 @@ GetCameraControlPropertyMoreSetting(
  * @param auto Specify whether the propery should change automatically.
  */
 SetCameraControlPropertySetting(
-    property: Dynamsoft.EnumDWT_CameraControlProperty | number,
+    property: Dynamsoft.DWT.EnumDWT_CameraControlProperty | number,
     value: number,
     auto: boolean
 ): boolean;
@@ -279,7 +279,7 @@ interface CameraControlPropertyExtra {
 
 **Usage notes**
 
-Check out [ `Dynamsoft. EnumDWT_CameraControlProperty` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_cameracontrolproperty).
+Check out [ `Dynamsoft.DWT.EnumDWT_CameraControlProperty` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_cameracontrolproperty).
 
 ---
 
@@ -293,7 +293,7 @@ Check out [ `Dynamsoft. EnumDWT_CameraControlProperty` ]({{site.info}}api/Dynams
  * @param property Specify the property.
  */
 GetVideoPropertySetting(
-    property: Dynamsoft.EnumDWT_VideoProperty | number
+    property: Dynamsoft.DWT.EnumDWT_VideoProperty | number
 ): VideoControlProperty;
 ```
 
@@ -309,7 +309,7 @@ GetVideoPropertySetting(
  * @param property Specify the property.
  */
 GetVideoPropertyMoreSetting(
-    property: Dynamsoft.EnumDWT_VideoProperty | number
+    property: Dynamsoft.DWT.EnumDWT_VideoProperty | number
 ): VideoControlPropertyExtra;
 ```
 
@@ -327,7 +327,7 @@ GetVideoPropertyMoreSetting(
  * @param auto Specify whether the propery should change automatically.
  */
 SetVideoPropertySetting(
-    property: Dynamsoft.EnumDWT_VideoProperty | number,
+    property: Dynamsoft.DWT.EnumDWT_VideoProperty | number,
     value: number,
     auto: boolean
 ): boolean;
@@ -369,7 +369,7 @@ interface VideoControlPropertyExtra {
 
 **Usage notes**
 
-Check out [ `Dynamsoft.EnumDWT_VideoProperty` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_videoproperty).
+Check out [ `Dynamsoft.DWT.EnumDWT_VideoProperty` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_videoproperty).
 
 ---
 
@@ -509,13 +509,13 @@ interface Resolution {
  * @param mode Specify the rotate mode
  */
 SetVideoRotateMode(
-    mode: Dynamsoft.EnumDWT_VideoRotateMode | number
+    mode: Dynamsoft.DWT.EnumDWT_VideoRotateMode | number
 ): boolean;
 ```
 
 **Usage notes**
 
-Check out [ `Dynamsoft.EnumDWT_VideoRotateMode` ](Dynamsoft. Enum.md#dynamsoftenumdwt_videorotatemode).
+Check out [ `Dynamsoft.DWT.EnumDWT_VideoRotateMode` ](Dynamsoft.DWT.Enum.md#dynamsoftenumdwt_videorotatemode).
 
 ---
 
