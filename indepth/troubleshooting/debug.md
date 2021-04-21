@@ -13,7 +13,12 @@ description: Dynamic Web TWAIN SDK Documentation Debug Page
 
 Here is how
 
-* Remove any old log files from `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16\log`
+* Remove any old log files from 
+
+    * Windows `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16\log`
+    * macOS, `Go > Applications > Dynamsoft > DynamsoftServicex64_16 > {installed version No.} > log`
+    * Linux, `/opt/dynamsoft/DynamsoftServicex64_16/log`
+
 * Set [ `LogLevel` ]({{site.info}}api/WebTwain_Util.html#loglevel) to 1 in your code. This property should be set as soon as the `WebTwain` instance is created. For example, in the event `Dynamsoft_OnReady`
 
 ``` javascript

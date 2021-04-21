@@ -12,6 +12,11 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Global APIs Page
 
 ``` typescript
 interface Dynamsoft.DWT {
+    readonly licenseServer: string [];
+    readonly handshakeCode: string;
+    readonly sessionPassword: string;
+    readonly licenseException: string;
+    
     readonly ActiveXVersion: string;
     readonly JSVersion: string;
     readonly PdfVersion: string;

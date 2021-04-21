@@ -536,6 +536,7 @@ DWObject.SelectSource(function() {
     ``` 
     Server=192.168.8.221
     ```
+    > The file `DSConfiguration.ini` is located under C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16\.
     > We are assuming the IP of this desktop is `192.168.8.221` and that the firewall will allow requests on the ports `18622` and `18623`.
     > From v16.2, you can do the same on this page http://127.0.0.1:18625/admin/
 

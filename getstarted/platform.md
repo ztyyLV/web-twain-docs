@@ -56,7 +56,7 @@ description: Dynamic Web TWAIN SDK Documentation Platform Page
 
 ### Browsers on Linux
 
-* The following distributions of Linux (x64, ARM64) are supported
+* The following distributions of Linux (x64, ARM64, MIPS64) are supported
   + Ubuntu 12.04 LTS (Precise Pangolin)
   + Ubuntu 12.10 (Quantal Quetzal)
   + Ubuntu 13.04 (Raring Ringtail)

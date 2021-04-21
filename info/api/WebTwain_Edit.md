@@ -39,7 +39,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Edit APIs Page
 <!--* [RotateRightAsync()](#rotateright)-->
 
 * [ChangeBitDepth()](#changebitdepth) 
-* [SetDPI()](#setdpe)
+* [SetDPI()](#setdpi)
 * [ConvertToBW()](#converttobw) 
 * [ConvertToGrayScale()](#converttograyscale)
 
