@@ -34,9 +34,11 @@
             </div>
             <div class="docContainer col-xs-12 col-md-9">
                 <div id="docHead" class = "head row hide-xs hide-sm">
+                    {%- if page.url contains '-v' -%}
                     <div class="col-xs-12 col-md-12">
                         <div class="DWT17Note">This is the <span style="font-weight: bold">documentation for the latest version (v17.0) of Dynamic Web TWAIN</span>. If you are using an older version, please switch the doc version at the bottom of the page.</div>
                     </div>
+                    {%- endif -%}
                     {%- include main-page-head.html -%}
                 </div>
                 <div class="main row">
