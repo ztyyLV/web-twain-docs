@@ -10,6 +10,20 @@ description: Dynamic Web TWAIN SDK Documentation License Page
 
 # License
 
+In V17.0, You can also set the full license through [Dynamsoft License 2.0](https://www.dynamsoft.com/license-tracking/docs/about/terms.html#license-20) 
+
+The License Tracking Server, or `LTS` for short, is a proprietary software developed by Dynamsoft to track license usage. See more about [What is a LTS](https://www.dynamsoft.com/license-tracking/docs/selfhosting/managelts.html?ver=latest)
+
+Please note that `LTS` license and ProductKey cannot be used together. And you need to connect to `LTS` to track license usage. We provide 2 ways to host `LTS`, one is [Dynamsoft-hosting](https://www.dynamsoft.com/license-tracking/docs/dshosting/index.html?ver=latest) and the other is [Self-hosting](https://www.dynamsoft.com/license-tracking/docs/selfhosting/index.html?ver=latest). 
+
+All license usage data is submitted to the `LTS` hosted by Dynamsoft. You can
+
+* [View activated license items](https://www.dynamsoft.com/license-tracking/docs/common/licenseitems.html)
+* [View the license usage statistics](https://www.dynamsoft.com/license-tracking/docs/common/statistics.html)
+* [Get notified about license status](https://www.dynamsoft.com/license-tracking/docs/common/usagealerts.html)
+
+> Read more about [the mechanism](https://www.dynamsoft.com/license-tracking/docs/common/mechanism.html) behind license tracking.
+
 ## Terms
 
 
