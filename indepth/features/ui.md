@@ -60,7 +60,7 @@ If you are not using `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs`
 If you are using `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` , the file `dynamsoft.webtwain.install.js` doesn't exist. In this case, you must make the changes before you [create a WebTwain instance]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance) . For example
 
 ``` javascript
-window.OnWebTwainNotFoundOnWindowsCallback = function(ProductName, InstallerUrl, bHTML5, bIE, bSafari, bSSL, strIEVersion) {
+Dynamsoft.OnWebTwainNotFoundOnWindowsCallback = function(ProductName, InstallerUrl, bHTML5, bIE, bSafari, bSSL, strIEVersion) {
     alert(ProductName + " is not installed, please download and install it from " + InstallerUrl);
 }
 Dynamsoft.DWT.Load();
