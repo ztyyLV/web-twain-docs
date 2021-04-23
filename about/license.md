@@ -10,11 +10,40 @@ description: Dynamic Web TWAIN SDK Documentation License Page
 
 # License
 
-In V17.0, You can also set the full license through [Dynamsoft License 2.0](https://www.dynamsoft.com/license-tracking/docs/about/terms.html#license-20) 
+Dynamic Web TWAIN has the following licensing options:
 
-The License Tracking Server, or `LTS` for short, is a proprietary software developed by Dynamsoft to track license usage. See more about [What is a LTS](https://www.dynamsoft.com/license-tracking/docs/selfhosting/managelts.html?ver=latest)
+[Per Browser Client](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_browser_client)
 
-Please note that `LTS` license and ProductKey cannot be used together. And you need to connect to `LTS` to track license usage. We provide 2 ways to host `LTS`, one is [Dynamsoft-hosting](https://www.dynamsoft.com/license-tracking/docs/dshosting/index.html?ver=latest) and the other is [Self-hosting](https://www.dynamsoft.com/license-tracking/docs/selfhosting/index.html?ver=latest). 
+[Per Server License](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_server)
+
+### Per Browser Client
+
+For [Per Browser Client](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_browser_client) license, you need to use [handshakeCode]({{site.info}}api/Dynamsoft_WebTwainEnv.html#handshakecode) to set.
+
+``` javascript
+Dynamsoft.DWT.handshakeCode = "DynamsoftID-CustomCode";
+Dynamsoft.DWT.Load();
+```
+
+Please note that this licensing mode is only supported from `DWT` 17.0 and needs to be used with License Tracking Server (`LTS` for short). See more about [What is a LTS](https://www.dynamsoft.com/license-tracking/docs/selfhosting/managelts.html?ver=latest)
+
+LTS supports two deployment methods: [Dynamsoft-hosting](https://www.dynamsoft.com/license-tracking/docs/dshosting/index.html?ver=latest) and [Self-hosting](https://www.dynamsoft.com/license-tracking/docs/selfhosting/index.html?ver=latest). See [How secure is the License Tracking Server](https://www.dynamsoft.com/license-tracking/docs/about/licensefaq.html?ver=latest#how-secure-is-the-license-tracking-server)
+
+### Per Server License
+
+For [Per Browser Client](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_browser_client) license, you need to use [ProductKey]({{site.info}}api/Dynamsoft_Util.html#productkey) to set.
+
+In most cases, you can just make the change in the file `dynamsoft.webtwain.config.js` .
+
+``` javascript
+// If you have multiple license keys, just separate them with semicolons.
+Dynamsoft.DWT.ProductKey = 't0076lQAAAGNcO61He******; t0076lQAAAGNcO61He******';
+```
+
+If it is set elsewhere, you need to find it and replace it. For example, if you are making use of the [dwt package](https://www.npmjs.com/package/dwt) ( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ), the file `dynamsoft.webtwain.config.js` doesn't exist and you should already have the above line of code in your own JavaScript where you can update the license when needed.
+
+## Notes:
+Please note that `LTS` license and ProductKey cannot be used together. And you need to connect to `LTS` to track license usage. 
 
 All license usage data is submitted to the `LTS` hosted by Dynamsoft. You can
 
@@ -26,7 +55,6 @@ All license usage data is submitted to the `LTS` hosted by Dynamsoft. You can
 
 ## Terms
 
-
 View the [Dynamic Web TWAIN License Agreement](https://www.dynamsoft.com/Products/WebTwain_license.aspx).
 
 ## Questions
@@ -37,4 +65,4 @@ View the [Dynamic Web TWAIN License Agreement](https://www.dynamsoft.com/Product
 
 ### Q: How do I set my DWT license?
 
-**A**: The `DWT` license is set using the global API `Dynamsoft.DWT.ProductKey`. For more information, please refer to [Update the License Key]({{site.indepth}}development/upgrade.html?ver=latest#update-the-product-key).
+**A**: The `DWT` license is set using the global API `Dynamsoft.DWT.ProductKey` or `Dynamsoft.DWT.handshakeCode`. For more information, please refer to [Update the License Key]({{site.indepth}}development/upgrade.html?ver=latest#update-the-product-key).
