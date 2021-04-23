@@ -12,9 +12,9 @@ description: Dynamic Web TWAIN SDK Documentation License Page
 
 Dynamic Web TWAIN has the following licensing options:
 
-[Per Browser Client](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_browser_client)
+## [Per Browser Client](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_browser_client)
 
-[Per Server License](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_server)
+## [Per Server License](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_server)
 
 ### Per Browser Client
 
