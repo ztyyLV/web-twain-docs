@@ -38,7 +38,7 @@ Dynamsoft.DWT.ProductKey = 't0076lQAAAGNcO61He******; t0076lQAAAGNcO61He******';
 If it is set elsewhere, you need to find it and replace it. For example, if you are making use of the [dwt package](https://www.npmjs.com/package/dwt) ( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ), the file `dynamsoft.webtwain.config.js` doesn't exist and you should already have the above line of code in your own JavaScript where you can update the license when needed.
 
 ## Notes:
-Please note that `LTS` license and ProductKey cannot be used together. And you need to connect to `LTS` to track license usage. 
+Please note that `LTS` license handshakeCode and ProductKey cannot be used together. And you need to connect to `LTS` to track license usage. 
 
 All license usage data is submitted to the `LTS` hosted by Dynamsoft. You can
 
