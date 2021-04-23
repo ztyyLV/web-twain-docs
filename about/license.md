@@ -12,11 +12,7 @@ description: Dynamic Web TWAIN SDK Documentation License Page
 
 Dynamic Web TWAIN has the following licensing options:
 
-## [Per Browser Client](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_browser_client)
-
-## [Per Server License](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_server)
-
-### Per Browser Client
+### [Per Browser Client](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_browser_client)
 
 For [Per Browser Client](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_browser_client) license, you need to use [handshakeCode]({{site.info}}api/Dynamsoft_WebTwainEnv.html#handshakecode) to set.
 
@@ -29,7 +25,7 @@ Please note that this licensing mode is only supported from `DWT` 17.0 and needs
 
 LTS supports two deployment methods: [Dynamsoft-hosting](https://www.dynamsoft.com/license-tracking/docs/dshosting/index.html?ver=latest) and [Self-hosting](https://www.dynamsoft.com/license-tracking/docs/selfhosting/index.html?ver=latest). See [How secure is the License Tracking Server](https://www.dynamsoft.com/license-tracking/docs/about/licensefaq.html?ver=latest#how-secure-is-the-license-tracking-server)
 
-### Per Server License
+### [Per Server License](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_server)
 
 For [Per Browser Client](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_browser_client) license, you need to use [ProductKey]({{site.info}}api/Dynamsoft_Util.html#productkey) to set.
 
