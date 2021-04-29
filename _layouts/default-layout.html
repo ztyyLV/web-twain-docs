@@ -4,7 +4,8 @@
 {%- include head.html -%}
 
 <style>
-    .DWT17Note {padding: 15px 20px 15px 20px;background: #e5f5ff;border: 1px solid #c7dbe8;color: #4788b3;margin-bottom: 20px;}
+    .DWT17Note {position: relative; padding: 15px 20px 15px 20px;background: #e5f5ff;border: 1px solid #c7dbe8;color: #4788b3;margin-bottom: 20px;}
+    .DWT17Note i { position: absolute; right: 10px; top: 8px; font-size: 20px; cursor: pointer; }
 </style>
 
 <body>
@@ -37,7 +38,7 @@
                     {%- if page.url contains '-v' || page.url contains 'ver=1' -%}
                     {%- else -%}
                     <div id="DWT17Note" class="col-xs-12 col-md-12">
-                        <div class="DWT17Note">This is the <span style="font-weight: bold">documentation for the latest version (v17.0) of Dynamic Web TWAIN</span>. If you are using an older version, please switch the doc version at the bottom of the page.</div>
+                        <div class="DWT17Note"><i class="fa fa-close"></i>This is the <span style="font-weight: bold">documentation for the latest version (v17.0) of Dynamic Web TWAIN</span>. If you are using an older version, please switch the doc version at the bottom of the page.</div>
                     </div>
                     {%- endif -%}
                     {%- include main-page-head.html -%}
@@ -97,6 +98,14 @@
         })
 
         if($('.currentVersion').html() != 'latest version') {
+            NoteHide()
+        }
+
+        $('#DWT17Note i').on('click', function() {
+            NoteHide()
+        })
+
+        function NoteHide() {
             $('#DWT17Note').hide()
             $('.docContainer .markdown-body').css({'margin-top': ($('#docHead').outerHeight() + 0) + 'px'});
             if ($(window).outerWidth() > 1680) {
