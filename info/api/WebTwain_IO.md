@@ -1707,10 +1707,13 @@ SetUploadSegment(
 ``` javascript
 /**
  * Return or set whether to show open/save file dialog when saving images in the buffer or loading images from a local directory.
- * @Note Supported in Service mode only.
  */
 IfShowFileDialog: boolean;
 ```
+
+**Usage notes**
+
+Supported in Service mode only.
 
 ---
 
@@ -1755,7 +1758,6 @@ IfShowProgressBar: boolean;
  * @param allowMultiSelect Whether or not multiple files can be selected at the same time. Only valid in an open-file dialog.
  * @param showOverwritePrompt Whether or not a prompt shows up when saving a file may overwrite an existing file.
  * @param flag If set to 0, bAllowMultiSelect and bShowOverwritePrompt will be effective. Otherwise, these two parameters are ignored.
- * @Note Supported in Service mode only.
  */
 ShowFileDialog(
     isSave: boolean,
@@ -1770,6 +1772,8 @@ ShowFileDialog(
 ```
 
 **Usage notes**
+
+Supported in Service mode only.
 
 The `filter` pattern string consists of a combination(s) of valid file extensions with asterisk (\*). For example: `JPG, PNG and TIF | *.jpg;*png;*.tif` . On macOS, the string is different. For example `JPG, PNG , TIF` . To show all files, use `All Files | *.*` .  Do not include spaces in the pattern string.
 
