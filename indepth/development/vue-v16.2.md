@@ -162,7 +162,7 @@ You should be able to open a file or capture an image.
 
 ## Official Samples
 
-Check out the following two sample projects:
+Check out the following sample project:
 
 * [dwt-vue-simple](https://github.com/dynamsoft-dwt/dwt-vue-simple)
 
