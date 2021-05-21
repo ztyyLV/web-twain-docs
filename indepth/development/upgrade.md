@@ -95,7 +95,7 @@ Dynamsoft.DWT.handshakeCode = "DynamsoftID-CustomCode";
 Dynamsoft.DWT.Load();
 ```
 
-Please note that this licensing mode is only supported from `DWT` 17.0 and needs to be used with License Tracking Server (`LTS` for short). See more about [What is a LTS](https://www.dynamsoft.com/license-tracking/docs/selfhosting/managelts.html?ver=latest)
+Please note that this licensing model is only supported from `DWT` 17.0 and needs to be used with License Tracking Server (`LTS` for short). See more about [What is a LTS](https://www.dynamsoft.com/license-tracking/docs/selfhosting/managelts.html?ver=latest)
 
 ## Update `DWT` on the client-side
 

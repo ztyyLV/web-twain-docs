@@ -50,7 +50,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 * The original namespace `Dynamsoft.WebTwainEnv` is renamed to `Dynamsoft.DWT`. 
 
-* All enumerations are moved under `Dynamsoft.DWT`. For example, `Dynamsoft.EnumDWT_PixelType` and `EnumDWT_PixelType` works in version 16.2 and lower but now it must be written as `Dynamsoft.DWT.EnumDWT_PixelType`.  
+* All enumerations are moved under `Dynamsoft.DWT`. For example, `Dynamsoft.EnumDWT_PixelType` and `EnumDWT_PixelType` work in version 16.2 and lower but now it must be written as `Dynamsoft.DWT.EnumDWT_PixelType`.  
 
 #### Others 
 

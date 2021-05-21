@@ -15,9 +15,9 @@ Here is how
 
 * Remove any old log files from 
 
-    * Windows `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16\log`
-    * macOS, `Go > Applications > Dynamsoft > DynamsoftServicex64_16 > {installed version No.} > log`
-    * Linux, `/opt/dynamsoft/DynamsoftServicex64_16/log`
+    * Windows `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\log`
+    * macOS, `Go > Applications > Dynamsoft > DynamsoftServicex64_176 > {installed version No.} > log`
+    * Linux, `/opt/dynamsoft/DynamsoftServicex64_17/log`
 
 * Set [ `LogLevel` ]({{site.info}}api/WebTwain_Util.html#loglevel) to 1 in your code. This property should be set as soon as the `WebTwain` instance is created. For example, in the event `Dynamsoft_OnReady`
 
@@ -34,19 +34,19 @@ function Dynamsoft_OnReady() {
 
 * Reproduce the issue
 
-* Zip the log files in `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16\log` and share with [Dynamsoft Support Team]({{site.about}}getsupport.html) via email.
+* Zip the log files in `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\log` and share with [Dynamsoft Support Team]({{site.about}}getsupport.html) via email.
 
-On macOS, the log files are in `Go > Applications > Dynamsoft > DynamsoftServicex64_16 > {installed version No.} > log`
+On macOS, the log files are in `Go > Applications > Dynamsoft > DynamsoftServicex64_17 > {installed version No.} > log`
 
-On Linux, the log files are in `/opt/dynamsoft/DynamsoftServicex64_16/log`
+On Linux, the log files are in `/opt/dynamsoft/DynamsoftServicex64_17/log`
 
 ## Collect the Dump Files
 
 In the case that the Dynamsoft Service crashes, the dump files can be found in the following location
 
-Windows: `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16\dump` .
-macOS: `Go > Applications > Dynamsoft > DynamsoftServicex64_16 > {installed version No.} > dump` .
-Linux: `/opt/dynamsoft/DynamsoftServicex64_16/dump` .
+Windows: `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\dump` .
+macOS: `Go > Applications > Dynamsoft > DynamsoftServicex64_17 > {installed version No.} > dump` .
+Linux: `/opt/dynamsoft/DynamsoftServicex64_17/dump` .
 
 Afterwards, please send the dump files to [Dynamsoft Support Team]({{site.about}}getsupport.html) and describe the issue to get assistance.
 

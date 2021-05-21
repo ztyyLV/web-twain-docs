@@ -12,13 +12,12 @@ description: Dynamic Web TWAIN SDK Documentation License Page
 
 Dynamic Web TWAIN has the following licensing options:
 
-### [Per Browser Client](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_browser_client)
+### [Per Browser Client](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_browser_client)/ [Per Page](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_page)
 
-For [Per Browser Client](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_browser_client) license, you need to use [handshakeCode]({{site.info}}api/Dynamsoft_WebTwainEnv.html#handshakecode) to set.
+For Per Browser Client/ Per Page license, you need to use [handshakeCode]({{site.info}}api/Dynamsoft_WebTwainEnv.html#handshakecode) to set.
 
 ``` javascript
 Dynamsoft.DWT.handshakeCode = "DynamsoftID-CustomCode";
-Dynamsoft.DWT.Load();
 ```
 
 Please note that this licensing mode is only supported from `DWT` 17.0 and needs to be used with License Tracking Server (`LTS` for short). See more about [What is a LTS](https://www.dynamsoft.com/license-tracking/docs/selfhosting/managelts.html?ver=latest)
@@ -27,7 +26,7 @@ LTS supports two deployment methods: [Dynamsoft-hosting](https://www.dynamsoft.c
 
 ### [Per Server License](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_server)
 
-For [Per Browser Client](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_browser_client) license, you need to use [ProductKey]({{site.info}}api/Dynamsoft_Util.html#productkey) to set.
+For [Per Server License](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_browser_client) license, you need to use [ProductKey]({{site.info}}api/Dynamsoft_Util.html#productkey) to set.
 
 In most cases, you can just make the change in the file `dynamsoft.webtwain.config.js` .
 
@@ -38,8 +37,12 @@ Dynamsoft.DWT.ProductKey = 't0076lQAAAGNcO61He******; t0076lQAAAGNcO61He******';
 
 If it is set elsewhere, you need to find it and replace it. For example, if you are making use of the [dwt package](https://www.npmjs.com/package/dwt) ( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ), the file `dynamsoft.webtwain.config.js` doesn't exist and you should already have the above line of code in your own JavaScript where you can update the license when needed.
 
+### Other Licenses
+
+The license setting way is the same as Per Server License, please refer to the above Per Server License section.
+
 ## Notes:
-Please note that `LTS` license and ProductKey cannot be used together. And you need to connect to `LTS` to track license usage. 
+Please note that `LTS` license handshakeCode and ProductKey cannot be used together. And you need to connect to `LTS` to track license usage. 
 
 All license usage data is submitted to the `LTS` hosted by Dynamsoft. You can
 
