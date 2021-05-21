@@ -28,6 +28,18 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 <!--* [`GetImageBitDepthAsync()`]({{site.info}}api/WebTwain_Buffer.html#getimagebitdepthasync)-->
 
+
+| |
+|:-|:-|:-|
+|[`Dynamsoft.DWT`]({{site.info}}api/Dynamsoft_WebTwainEnv.html) | [`Dynamsoft.DWT.Enum`]({{site.info}}api/Dynamsoft_Enum.html)  |[`ClearImageTags()`]({{site.info}}api/WebTwain_Buffer.html#clearimagetags) |
+|[`Dynamsoft.DWT`]({{site.info}}api/Dynamsoft_WebTwainEnv.html) | [`Dynamsoft.DWT.Enum`]({{site.info}}api/Dynamsoft_Enum.html)  |[`ClearImageTags()`]({{site.info}}api/WebTwain_Buffer.html#clearimagetags) |
+|[`Dynamsoft.DWT`]({{site.info}}api/Dynamsoft_WebTwainEnv.html) | [`Dynamsoft.DWT.Enum`]({{site.info}}api/Dynamsoft_Enum.html)  |[`ClearImageTags()`]({{site.info}}api/WebTwain_Buffer.html#clearimagetags) |
+|[`Dynamsoft.DWT`]({{site.info}}api/Dynamsoft_WebTwainEnv.html) | [`Dynamsoft.DWT.Enum`]({{site.info}}api/Dynamsoft_Enum.html)  |[`ClearImageTags()`]({{site.info}}api/WebTwain_Buffer.html#clearimagetags) |
+|[`Dynamsoft.DWT`]({{site.info}}api/Dynamsoft_WebTwainEnv.html) | [`Dynamsoft.DWT.Enum`]({{site.info}}api/Dynamsoft_Enum.html)  |[`ClearImageTags()`]({{site.info}}api/WebTwain_Buffer.html#clearimagetags) |
+
+
+
+
 * [`ClearImageTags()`]({{site.info}}api/WebTwain_Buffer.html#clearimagetags) 
 * [`RenameTag()`]({{site.info}}api/WebTwain_Buffer.html#renametag) 
 * [`RemoveTag()`]({{site.info}}api/WebTwain_Buffer.html#removetag) 
