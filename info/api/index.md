@@ -37,8 +37,6 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 |[`SelectAllImages()`]({{site.info}}api/WebTwain_Buffer.html#selectallimages)|[`MoveImage()`]({{site.info}}api/WebTwain_Buffer.html#moveimage) | [`SwitchImage()`]({{site.info}}api/WebTwain_Buffer.html#switchimage)| [`RemoveImage()`]({{site.info}}api/WebTwain_Buffer.html#removeimage) |
 | [`RemoveAllImages()`]({{site.info}}api/WebTwain_Buffer.html#removeallimages)|[`RemoveAllSelectedImages()`]({{site.info}}api/WebTwain_Buffer.html#removeallselectedimages) |
 
-
-
 <!--
 * [`ClearImageTags()`]({{site.info}}api/WebTwain_Buffer.html#clearimagetags) 
 * [`RenameTag()`]({{site.info}}api/WebTwain_Buffer.html#renametag) 
@@ -84,12 +82,12 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 #### Properties
 
 | |
-|:-|:-|:-|
-|||||
+|:-|:-|
+|[`BlankImageCurrentStdDev`]({{site.info}}api/WebTwain_Buffer.html#blanimagecurrentstddev) |[`BlankImageMaxStdDev`]({{site.info}}api/WebTwain_Buffer.html#blankimagemaxstddev) |[`BlankImageThreshold`]({{site.info}}api/WebTwain_Buffer.html#blankimagethreshold)| [`BufferMemoryLimit`]({{site.info}}api/WebTwain_Buffer.html#buffermemorylimit)|
+|[`CurrentImageIndexInBuffer`]({{site.info}}api/WebTwain_Buffer.html#currentimageindexinbuffer) |[`HowManyImagesInBuffer`]({{site.info}}api/WebTwain_Buffer.html#howmanyimagesinbuffer)| [`IfAllowLocalCache`]({{site.info}}api/WebTwain_Buffer.html#ifallowlocalcache) | [`SelectedImagesIndices`]({{site.info}}api/WebTwain_Buffer.html#selectedimagesindices)|
+|[`MaxImagesInBuffer`]({{site.info}}api/WebTwain_Buffer.html#maximagesinbuffer)|
 
-
-
-
+<!--
 
 * [`BlankImageCurrentStdDev`]({{site.info}}api/WebTwain_Buffer.html#blanimagecurrentstddev)   
 * [`BlankImageMaxStdDev`]({{site.info}}api/WebTwain_Buffer.html#blankimagemaxstddev)
@@ -99,14 +97,13 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [`HowManyImagesInBuffer`]({{site.info}}api/WebTwain_Buffer.html#howmanyimagesinbuffer)
 * [`IfAllowLocalCache`]({{site.info}}api/WebTwain_Buffer.html#ifallowlocalcache)   
 * [`SelectedImagesIndices`]({{site.info}}api/WebTwain_Buffer.html#selectedimagesindices)
-* [`MaxImagesInBuffer`]({{site.info}}api/WebTwain_Buffer.html#maximagesinbuffer)
+* [`MaxImagesInBuffer`]({{site.info}}api/WebTwain_Buffer.html#maximagesinbuffer) -->
 
 #### Events
 
-* [`OnBufferChanged`]({{site.info}}api/WebTwain_Buffer.html#onbufferchanged)
-* [`OnBitmapChanged`]({{site.info}}api/WebTwain_Buffer.html#onbitmapchanged)
-* [`OnIndexChangeDragDropDone`]({{site.info}}api/WebTwain_Buffer.html#onindexchangedragdropdone)
-* [`OnTopImageInTheViewChanged`]({{site.info}}api/WebTwain_Buffer.html#ontopimageintheviewchanged)
+| |
+|:-|:-|
+| [`OnBufferChanged`]({{site.info}}api/WebTwain_Buffer.html#onbufferchanged) |[`OnBitmapChanged`]({{site.info}}api/WebTwain_Buffer.html#onbitmapchanged) | [`OnIndexChangeDragDropDone`]({{site.info}}api/WebTwain_Buffer.html#onindexchangedragdropdone)| [`OnTopImageInTheViewChanged`]({{site.info}}api/WebTwain_Buffer.html#ontopimageintheviewchanged)|
 
 ### Edit
 
