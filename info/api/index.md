@@ -27,7 +27,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 
 | |
-|:-|:-|:-|:-|
+|:-|:-|
 |[`ClearImageTags()`]({{site.info}}api/WebTwain_Buffer.html#clearimagetags) | [`RenameTag()`]({{site.info}}api/WebTwain_Buffer.html#renametag) |[`RemoveTag()`]({{site.info}}api/WebTwain_Buffer.html#removetag) |[`GetTagList()`]({{site.info}}api/WebTwain_Buffer.html#gettaglist) |
 |[`FilterImagesByTag()`]({{site.info}}api/WebTwain_Buffer.html#filterimagesbytag)|[`ClearFilter()`]({{site.info}}api/WebTwain_Buffer.html#clearfilter) | [`SetDefaultTag()`]({{site.info}}api/WebTwain_Buffer.html#setdefaulttag) | [`TagImages()`]({{site.info}}api/WebTwain_Buffer.html#tagimages)| 
 |[`GetImageBitDepth()`]({{site.info}}api/WebTwain_Buffer.html#getimagebitdepth)| [`GetImageSize()`]({{site.info}}api/WebTwain_Buffer.html#getimagesize)| [`GetImageSizeWithSpecifiedType()`]({{site.info}}api/WebTwain_Buffer.html#getimagesizewithspecifiedtype)|[`GetSelectedImagesSize()`]({{site.info}}api/WebTwain_Buffer.html#getselectedimagessize) |
