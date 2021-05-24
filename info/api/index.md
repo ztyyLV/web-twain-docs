@@ -86,7 +86,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 | |
 |:-|:-|:-|
-
+|||||
 
 
 
