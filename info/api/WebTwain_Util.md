@@ -164,6 +164,8 @@ readonly ErrorCode: number;
 
 The `ErrorCode` and `ErrorString` always reflect the result of the last API call. So make sure you read them in time.
 
+Check [error list]({{site.info}}api/appendix.html).
+
 ---
 
 ## ErrorString
@@ -181,6 +183,7 @@ readonly ErrorString: string;
 
 The `ErrorCode` and `ErrorString` always reflect the result of the last API call. So make sure you read them in time.
 
+Check [error list]({{site.info}}api/appendix.html).
 ---
 
 ## LogLevel
