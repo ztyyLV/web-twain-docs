@@ -333,6 +333,17 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 #### Methods
 
+| |
+|:-|:-|
+| [`ConvertToBase64()`]({{site.info}}api/WebTwain_IO.html#converttobase64)|[`ConvertToBlob()`]({{site.info}}api/WebTwain_IO.html#converttoblob)| [`FTPUpload()`]({{site.info}}api/WebTwain_IO.html#ftpupload)|[`FTPUploadEx()`]({{site.info}}api/WebTwain_IO.html#ftpuploadex)|
+|[`FTPUploadAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadallasmultipagetiff)|[`FTPUploadAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadallaspdf)|[`FTPUploadAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadasmultipagepdf)| [`FTPUploadAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadasmultipagetiff)|
+|[`HTTPUpload()`]({{site.info}}api/WebTwain_IO.html#httpupload)| [`HTTPUploadThroughPutEx()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughputex)| [`HTTPUploadThroughPost()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpost)| [`HTTPUploadThroughPostEx()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostex)|
+| [`HTTPUploadAllThroughPostAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#httpuploadallthroughpostasmultipagetiff)| [`HTTPUploadAllThroughPostAsPDF()`]({{site.info}}api/WebTwain_IO.html#httpuploadallthroughpostaspdf)| [`HTTPUploadThroughPostAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostasmultipagepdf)| [`HTTPUploadThroughPostAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostasmultipagetiff)|
+|[`HTTPUploadThroughPostDirectly()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostdirectly)|[`SaveAsBMP()`]({{site.info}}api/WebTwain_IO.html#saveasbmp)| [`SaveAsJPEG()`]({{site.info}}api/WebTwain_IO.html#saveasjpeg)| [`SaveAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveaspdf)|
+|[`SaveAsPNG()`]({{site.info}}api/WebTwain_IO.html#saveaspng)| [`SaveAsTIFF()`]({{site.info}}api/WebTwain_IO.html#saveastiff)| [`SaveSelectedImagesAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagepdf)|[`SaveSelectedImagesAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagetiff)|
+| [`SaveAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveallasmultipagetiff)|[`SaveAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveallaspdf)|
+
+<!--
 * [`ConvertToBase64()`]({{site.info}}api/WebTwain_IO.html#converttobase64)
 * [`ConvertToBlob()`]({{site.info}}api/WebTwain_IO.html#converttoblob)
 * [`FTPUpload()`]({{site.info}}api/WebTwain_IO.html#ftpupload)
@@ -358,12 +369,19 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [`SaveSelectedImagesAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagepdf)
 * [`SaveSelectedImagesAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagetiff)
 * [`SaveAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveallasmultipagetiff)
-* [`SaveAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveallaspdf)
+* [`SaveAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveallaspdf) -->
 
 ### Others
 
 #### Methods
 
+| |
+|:-|:-|
+|[`ClearTiffCustomTag()`]({{site.info}}api/WebTwain_IO.html#cleartiffcustomtag) |[`SetTiffCustomTag()`]({{site.info}}api/WebTwain_IO.html#settiffcustomtag)|[`ClearAllHTTPFormField()`]({{site.info}}api/WebTwain_IO.html#clearallhttpformfield) |[`SetHTTPFormField()`]({{site.info}}api/WebTwain_IO.html#sethttpformfield)| 
+| [`SetHTTPHeader()`]({{site.info}}api/WebTwain_IO.html#sethttpheader)| [`SetUploadSegment()`]({{site.info}}api/WebTwain_IO.html#setuploadsegment)|[`ShowFileDialog()`]({{site.info}}api/WebTwain_IO.html#showfiledialog) | [`Print()`]({{site.info}}api/WebTwain_IO.html#print)|
+|[`PrintEx()`]({{site.info}}api/WebTwain_IO.html#printex)|
+
+<!--
 * [`ClearTiffCustomTag()`]({{site.info}}api/WebTwain_IO.html#cleartiffcustomtag)    
 * [`SetTiffCustomTag()`]({{site.info}}api/WebTwain_IO.html#settiffcustomtag)
 * [`ClearAllHTTPFormField()`]({{site.info}}api/WebTwain_IO.html#clearallhttpformfield) 
@@ -373,6 +391,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [`ShowFileDialog()`]({{site.info}}api/WebTwain_IO.html#showfiledialog) 
 * [`Print()`]({{site.info}}api/WebTwain_IO.html#print)
 * [`PrintEx()`]({{site.info}}api/WebTwain_IO.html#printex)
+-->
 
 #### Properties
 
