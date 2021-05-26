@@ -111,8 +111,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 | |
 |:-|:-|
-|[`Crop()`]({{site.info}}api/WebTwain_Edit.html#crop)|[`CropToClipboard()`]({{site.info}}api/WebTwain_Edit.html#croptoclipboard)
-| [`CutFrameToClipboard()`]({{site.info}}api/WebTwain_Edit.html#cutframetoclipboard) |[`CutToClipboard()`]({{site.info}}api/WebTwain_Edit.html#cuttoclipboard)|
+|[`Crop()`]({{site.info}}api/WebTwain_Edit.html#crop)|[`CropToClipboard()`]({{site.info}}api/WebTwain_Edit.html#croptoclipboard)| [`CutFrameToClipboard()`]({{site.info}}api/WebTwain_Edit.html#cutframetoclipboard) |[`CutToClipboard()`]({{site.info}}api/WebTwain_Edit.html#cuttoclipboard)|
 |[`CopyToClipboard()`]({{site.info}}api/WebTwain_Edit.html#copytoclipboard) |[`Erase()`]({{site.info}}api/WebTwain_Edit.html#erase) |[`Flip()`]({{site.info}}api/WebTwain_Edit.html#flip)|[`Mirror()`]({{site.info}}api/WebTwain_Edit.html#mirror)|
 | [`Rotate()`]({{site.info}}api/WebTwain_Edit.html#rotate) |[`RotateEx()`]({{site.info}}api/WebTwain_Edit.html#rotateex)| [`RotateLeft()`]({{site.info}}api/WebTwain_Edit.html#rotateleft) | [`RotateRight()`]({{site.info}}api/WebTwain_Edit.html#rotateright)|
 | [`ChangeBitDepth()`]({{site.info}}api/WebTwain_Edit.html#changebitdepth) | [`SetDPI()`]({{site.info}}api/WebTwain_Edit.html#setdpi)|[`ConvertToBW()`]({{site.info}}api/WebTwain_Edit.html#converttobw) |[`ConvertToGrayScale()`]({{site.info}}api/WebTwain_Edit.html#converttograyscale)|
@@ -194,8 +193,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 | |
 |:-|:-|
 |[`CurrentSourceName`]({{site.info}}api/WebTwain_Acquire.html#currentsourcename) |[`IfDisableSourceAfterAcquire`]({{site.info}}api/WebTwain_Acquire.html#ifdisablesourceafteracquire) |[`IfDuplexEnabled`]({{site.info}}api/WebTwain_Acquire.html#ifduplexenabled) |[`IfFeederEnabled`]({{site.info}}api/WebTwain_Acquire.html#iffeederenabled)|
-| [`PageSize`]({{site.info}}api/WebTwain_Acquire.html#pagesize) |[`PixelType`]({{site.info}}api/WebTwain_Acquire.html#pixeltype) |
-[`Resolution`]({{site.info}}api/WebTwain_Acquire.html#resolution) |
+| [`PageSize`]({{site.info}}api/WebTwain_Acquire.html#pagesize) |[`PixelType`]({{site.info}}api/WebTwain_Acquire.html#pixeltype) |[`Resolution`]({{site.info}}api/WebTwain_Acquire.html#resolution) |
 [`SourceCount`]({{site.info}}api/WebTwain_Acquire.html#sourcecount)|
 
 <!--
@@ -315,6 +313,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 |[`LoadImage()`]({{site.info}}api/WebTwain_IO.html#loadimage)| [`LoadImageEx()`]({{site.info}}api/WebTwain_IO.html#loadimageex)|[`LoadImageFromBase64Binary()`]({{site.info}}api/WebTwain_IO.html#loadimagefrombase64binary)| [`LoadImageFromBinary()`]({{site.info}}api/WebTwain_IO.html#loadimagefrombinary)|
 |[`LoadDibFromClipboard()`]({{site.info}}api/WebTwain_IO.html#loaddibfromclipboard)| [`FTPDownload()`]({{site.info}}api/WebTwain_IO.html#ftpdownload)| [`FTPDownloadEx()`]({{site.info}}api/WebTwain_IO.html#ftpdownloadex)| [`HTTPDownload()`]({{site.info}}api/WebTwain_IO.html#httpdownload)|
 | [`HTTPDownloadEx()`]({{site.info}}api/WebTwain_IO.html#httpdownloadex)|[`HTTPDownloadThroughPost()`]({{site.info}}api/WebTwain_IO.html#httpdownloadthroughpost)|[`HTTPDownloadDirectly()`]({{site.info}}api/WebTwain_IO.html#httpdownloaddirectly)|
+
 <!--
 * [`LoadImage()`]({{site.info}}api/WebTwain_IO.html#loadimage)
 * [`LoadImageEx()`]({{site.info}}api/WebTwain_IO.html#loadimageex)
