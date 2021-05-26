@@ -109,6 +109,17 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 #### Methods
 
+| |
+|:-|:-|
+|[`Crop()`]({{site.info}}api/WebTwain_Edit.html#crop)|
+[`CropToClipboard()`]({{site.info}}api/WebTwain_Edit.html#croptoclipboard)
+| [`CutFrameToClipboard()`]({{site.info}}api/WebTwain_Edit.html#cutframetoclipboard) |[`CutToClipboard()`]({{site.info}}api/WebTwain_Edit.html#cuttoclipboard) |
+|[`CopyToClipboard()`]({{site.info}}api/WebTwain_Edit.html#copytoclipboard) |[`Erase()`]({{site.info}}api/WebTwain_Edit.html#erase) |[`Flip()`]({{site.info}}api/WebTwain_Edit.html#flip)|[`Mirror()`]({{site.info}}api/WebTwain_Edit.html#mirror)|
+| [`Rotate()`]({{site.info}}api/WebTwain_Edit.html#rotate) |[`RotateEx()`]({{site.info}}api/WebTwain_Edit.html#rotateex)| [`RotateLeft()`]({{site.info}}api/WebTwain_Edit.html#rotateleft) | [`RotateRight()`]({{site.info}}api/WebTwain_Edit.html#rotateright)|
+| [`ChangeBitDepth()`]({{site.info}}api/WebTwain_Edit.html#changebitdepth) | [`SetDPI()`]({{site.info}}api/WebTwain_Edit.html#setdpi)|[`ConvertToBW()`]({{site.info}}api/WebTwain_Edit.html#converttobw) |[`ConvertToGrayScale()`]({{site.info}}api/WebTwain_Edit.html#converttograyscale)|
+|[`ChangeImageSize()`]({{site.info}}api/WebTwain_Edit.html#changeimagesize) | [`Invert()`]({{site.info}}api/WebTwain_Edit.html#invert)|[`SetImageWidth()`]({{site.info}}api/WebTwain_Edit.html#setimagewidth)|
+
+<!--
 * [`Crop()`]({{site.info}}api/WebTwain_Edit.html#crop) 
 * [`CropToClipboard()`]({{site.info}}api/WebTwain_Edit.html#croptoclipboard)
 * [`CutFrameToClipboard()`]({{site.info}}api/WebTwain_Edit.html#cutframetoclipboard) 
@@ -128,7 +139,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [`ChangeImageSize()`]({{site.info}}api/WebTwain_Edit.html#changeimagesize) 
 * [`Invert()`]({{site.info}}api/WebTwain_Edit.html#invert)
 * [`SetImageWidth()`]({{site.info}}api/WebTwain_Edit.html#setimagewidth)
-
+-->
 <!--* [`FlipAsync()`]({{site.info}}api/WebTwain_Edit.html#flipasync)-->
 <!--* [`MirrorAsync()`]({{site.info}}api/WebTwain_Edit.html#mirrorasync)-->
 <!--* [`RotateAsync()`]({{site.info}}api/WebTwain_Edit.html#rotate) -->
@@ -138,12 +149,22 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 #### Properties
 
-* [`BackgroundFillColor`]({{site.info}}api/WebTwain_Edit.html#backgroundfillcolor)
+| |
+|:-|:-|
+|[`BackgroundFillColor`]({{site.info}}api/WebTwain_Edit.html#backgroundfillcolor) |
+
+<!--
+* [`BackgroundFillColor`]({{site.info}}api/WebTwain_Edit.html#backgroundfillcolor) -->
 
 ### Scan
 
 #### Methods
 
+| |
+|:-|:-|
+
+
+<!--
 * [`GetSourceNameItems()`]({{site.info}}api/WebTwain_Acquire.html#getsourcenameitems) 
 * [`GetSourceNames()`]({{site.info}}api/WebTwain_Acquire.html#getsourcenames)
 * [`GetSourceNamesAsync()`]({{site.info}}api/WebTwain_Acquire.html#getsourcenamesasync)
@@ -162,7 +183,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [`DisableSource()`]({{site.info}}api/WebTwain_Acquire.html#disablesource)
 * [`CloseSource()`]({{site.info}}api/WebTwain_Acquire.html#closesource)
 * [`CloseSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#closesourceasync)
-* [`CloseWorkingProcess()`]({{site.info}}api/WebTwain_Acquire.html#closeworkingprocess)
+* [`CloseWorkingProcess()`]({{site.info}}api/WebTwain_Acquire.html#closeworkingprocess) -->
 
 #### Properties
 
