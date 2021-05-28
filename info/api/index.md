@@ -653,8 +653,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 | |
 |:-|:-|
-|[`getSourceList()`]({{site.info}}api/Addon_Camera.html#getsourcelist) | [`selectSource()`]({{site.info}}api/Addon_Camera.html#selectsource)|[`getCurrentSource()`]({{site.info}}api/Addon_Camera.html#getcurrentsource)
-|[`closeSource()`]({{site.info}}api/Addon_Camera.html#closesource)|
+|[`getSourceList()`]({{site.info}}api/Addon_Camera.html#getsourcelist) | [`selectSource()`]({{site.info}}api/Addon_Camera.html#selectsource)|[`getCurrentSource()`]({{site.info}}api/Addon_Camera.html#getcurrentsource)|[`closeSource()`]({{site.info}}api/Addon_Camera.html#closesource)|
 |[`getResolution()`]({{site.info}}api/Addon_Camera.html#getresolution)| [`setResolution()`]({{site.info}}api/Addon_Camera.html#setresolution)| [`getCurrentResolution()`]({{site.info}}api/Addon_Camera.html#getcurrentresolution)| [`play()`]({{site.info}}api/Addon_Camera.html#play)|
 |[`pause()`]({{site.info}}api/Addon_Camera.html#pause)| [`resume()`]({{site.info}}api/Addon_Camera.html#resume)| [`stop()`]({{site.info}}api/Addon_Camera.html#stop)|[`getStatus()`]({{site.info}}api/Addon_Camera.html#getstatus)|
 |[`capture()`]({{site.info}}api/Addon_Camera.html#capture)| [`showVideo()`]({{site.info}}api/Addon_Camera.html#showvideo)| [`closeVideo()`]({{site.info}}api/Addon_Camera.html#closevideo)|
@@ -678,5 +677,5 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 | |
 |:-|:-|
-| [`Init()`]({{site.info}}api/Dynamsoft_FileUploader.html#init)|[`CreateJob()`]({{site.info}}api/Dynamsoft_FileUploader.html#createjob)|[`Run()`]({{site.info}}api/Dynamsoft_FileUploader.html#run)|[`Cancel()`]({{site.info}}api/Dynamsoft_FileUploader.html#cancel)|
-| [`CancelAllUpload()`]({{site.info}}api/Dynamsoft_FileUploader.html#cancelallupload)|
+| [`Init()`]({{site.info}}api/Dynamsoft_FileUploader.html#init)|[`CreateJob()`]({{site.info}}api/Dynamsoft_FileUploader.html#createjob)|[`Run()`]({{site.info}}api/Dynamsoft_FileUploader.html#run)|
+|[`Cancel()`]({{site.info}}api/Dynamsoft_FileUploader.html#cancel)| [`CancelAllUpload()`]({{site.info}}api/Dynamsoft_FileUploader.html#cancelallupload)|
