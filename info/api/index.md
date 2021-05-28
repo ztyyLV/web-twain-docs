@@ -220,33 +220,25 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [`OnPreAllTransfers`]({{site.info}}api/WebTwain_Acquire.html#onprealltransfers)
 * [`OnPreTransfer`]({{site.info}}api/WebTwain_Acquire.html#onpretransfer)
 -->
-> The following APIs are compatible with TWAIN (mostly Windows, but could also be macOS)
+> The following APIs are compatible with TWAIN and ICA
 
-#### Methods
+**Methods**
 
 | |
 |:-|:-|
-|[`CancelAllPendingTransfers()`]({{site.info}}api/WebTwain_Acquire.html#cancelallpendingtransfers) | [`CloseSourceManager()`]({{site.info}}api/WebTwain_Acquire.html#closesourcemanager)| [`FeedPage()`]({{site.info}}api/WebTwain_Acquire.html#feedpage) |[`GetCustomDSData()`]({{site.info}}api/WebTwain_Acquire.html#getcustomdsdata)|
-|[`GetCustomDSDataEx()`]({{site.info}}api/WebTwain_Acquire.html#getcustomdsdataex) | [`OpenSourceManager()`]({{site.info}}api/WebTwain_Acquire.html#opensourcemanager)| [`ResetImageLayout()`]({{site.info}}api/WebTwain_Acquire.html#resetimagelayout) |[`RewindPage()`]({{site.info}}api/WebTwain_Acquire.html#rewindpage)|
-|[`SetCustomDSData()`]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdata) |[`SetCustomDSDataEx()`]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdataex)|[`SetFileXferInfo()`]({{site.info}}api/WebTwain_Acquire.html#setfilexferinfo)|[`SetImageLayout()`]({{site.info}}api/WebTwain_Acquire.html#setimagelayout)|
-|[`getCapabilities()`]({{site.info}}api/WebTwain_Acquire.html#getcapabilities) |[`setCapabilities()`]({{site.info}}api/WebTwain_Acquire.html#setcapabilities)|
+|[getCapabilities()](#getcapabilities) | [setCapabilities()](#setcapabilities)|
 
-<!--
-* [`CancelAllPendingTransfers()`]({{site.info}}api/WebTwain_Acquire.html#cancelallpendingtransfers) 
-* [`CloseSourceManager()`]({{site.info}}api/WebTwain_Acquire.html#closesourcemanager)
-* [`FeedPage()`]({{site.info}}api/WebTwain_Acquire.html#feedpage)   
-* [`GetCustomDSData()`]({{site.info}}api/WebTwain_Acquire.html#getcustomdsdata)
-* [`GetCustomDSDataEx()`]({{site.info}}api/WebTwain_Acquire.html#getcustomdsdataex)   
-* [`OpenSourceManager()`]({{site.info}}api/WebTwain_Acquire.html#opensourcemanager)
-* [`ResetImageLayout()`]({{site.info}}api/WebTwain_Acquire.html#resetimagelayout)  
-* [`RewindPage()`]({{site.info}}api/WebTwain_Acquire.html#rewindpage)
-* [`SetCustomDSData()`]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdata) 
-* [`SetCustomDSDataEx()`]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdataex)
-* [`SetFileXferInfo()`]({{site.info}}api/WebTwain_Acquire.html#setfilexferinfo) 
-* [`SetImageLayout()`]({{site.info}}api/WebTwain_Acquire.html#setimagelayout)
-* [`getCapabilities()`]({{site.info}}api/WebTwain_Acquire.html#getcapabilities)   
-* [`setCapabilities()`]({{site.info}}api/WebTwain_Acquire.html#setcapabilities)
--->
+> The following APIs are compatible with TWAIN (mostly Windows, but could also be macOS)
+
+**Methods**
+
+| |
+|:-|:-|
+| [OpenSourceManager()](#opensourcemanager)| [OpenSourceManagerAsync()](#opensourcemanagerasync)  |  [CloseSourceManager()](#closesourcemanager) | [CloseSourceManagerAsync()](#closesourcemanagerasync)|
+| [GetCustomDSData()](#getcustomdsdata)| [GetCustomDSDataEx()](#getcustomdsdataex) | [CancelAllPendingTransfers()](#cancelallpendingtransfers) | [FeedPage()](#feedpage) |
+|[ResetImageLayout()](#resetimagelayout) | [RewindPage()](#rewindpage)| [SetCustomDSData()](#setcustomdsdata) | [SetCustomDSDataEx()](#setcustomdsdataex)|
+| [SetFileXferInfo()](#setfilexferinfo) | [SetImageLayout()](#setimagelayout)|
+
 #### Properties
 
 | |
