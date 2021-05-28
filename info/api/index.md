@@ -620,8 +620,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 | |
 |:-|:-|
-|[`Download()`]({{site.info}}api/Addon_OCRPro.html#download) | [`IsModuleInstalled()`]({{site.info}}api/Addon_OCRPro.html#ismoduleinstalled)|[`Recognize()`]({{site.info}}api/Addon_OCRPro.html#recognize) |[`RecognizeFile()`]({{site.info}}api/Addon_OCRPro.html#recognizefile)| 
-|[`RecognizeRect()`]({{site.info}}api/Addon_OCRPro.html#recognizerect) | [`RecognizeSelectedImages()`]({{site.info}}api/Addon_OCRPro.html#recognizeselectedimages)|
+|[`Download()`]({{site.info}}api/Addon_OCRPro.html#download) | [`IsModuleInstalled()`]({{site.info}}api/Addon_OCRPro.html#ismoduleinstalled)|[`Recognize()`]({{site.info}}api/Addon_OCRPro.html#recognize) |
+|[`RecognizeFile()`]({{site.info}}api/Addon_OCRPro.html#recognizefile)| [`RecognizeRect()`]({{site.info}}api/Addon_OCRPro.html#recognizerect) | [`RecognizeSelectedImages()`]({{site.info}}api/Addon_OCRPro.html#recognizeselectedimages)|
 
 <!--
 * [`Download()`]({{site.info}}api/Addon_OCRPro.html#download) 
@@ -644,8 +644,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 | |
 |:-|:-|
-|[`IsTextBasedPDF()`]({{site.info}}api/Addon_PDF.html#istextbasedpdf)| [`SetConvertMode()`]({{site.info}}api/Addon_PDF.html#setconvertmode)|[`SetPassword()`]({{site.info}}api/Addon_PDF.html#setpassword)|[`SetResolution()`]({{site.info}}api/Addon_PDF.html#setresolution)|
-| [`Write.Setup()`]({{site.info}}api/Addon_PDF.html#writesetup)|
+|[`IsTextBasedPDF()`]({{site.info}}api/Addon_PDF.html#istextbasedpdf)| [`SetConvertMode()`]({{site.info}}api/Addon_PDF.html#setconvertmode)|[`SetPassword()`]({{site.info}}api/Addon_PDF.html#setpassword)|
+|[`SetResolution()`]({{site.info}}api/Addon_PDF.html#setresolution)|[`Write.Setup()`]({{site.info}}api/Addon_PDF.html#writesetup)|
 
 ### Camera
 
