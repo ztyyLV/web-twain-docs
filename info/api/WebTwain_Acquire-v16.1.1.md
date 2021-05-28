@@ -2124,7 +2124,7 @@ DWObject.RegisterEvent('OnPostAllTransfers',
  * This event is triggered after each page has been scanned and transferred.
  * @argument outputInfo Detailed information about the image that just got transferred.
  */ 
-RegisterEvent('OnPostTransfer',function(outputInfo: OutputInfo) {});
+RegisterEvent('OnPostTransfer',function() {});
 ```
 
 **Example**
