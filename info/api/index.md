@@ -396,6 +396,14 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 #### Properties
 
+| |
+|:-|:-|
+|[`FTPPassword`]({{site.info}}api/WebTwain_IO.html#ftppassword) |[`FTPPort`]({{site.info}}api/WebTwain_IO.html#ftpport)| [`FTPUserName`]({{site.info}}api/WebTwain_IO.html#ftpusername) |[`IfPASVMode`]({{site.info}}api/WebTwain_IO.html#ifpasvmode)|
+|[`HttpFieldNameOfUploadedImage`]({{site.info}}api/WebTwain_IO.html#httpfieldnameofuploadedimage) | [`HTTPPort`]({{site.info}}api/WebTwain_IO.html#httpport)|[`IfSSL`]({{site.info}}api/WebTwain_IO.html#ifssl)  |[`HTTPPostResponseString`]({{site.info}}api/WebTwain_IO.html#httppostresponsestring)|
+|[`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) |[`IfShowCancelDialogWhenImageTransfer`]({{site.info}}api/WebTwain_IO.html#ifshowcanceldialogwhenimagetransfer)| [`IfShowProgressBar`]({{site.info}}api/WebTwain_IO.html#ifshowprogressbar)  | [`JPEGQuality`]({{site.info}}api/WebTwain_IO.html#jpegquality)|
+|[`IfTiffMultiPage`]({{site.info}}api/WebTwain_IO.html#iftiffmultipage) | [`TIFFCompressionType`]({{site.info}}api/WebTwain_IO.html#tiffcompressiontype)| [`MaxUploadImageSize`]({{site.info}}api/WebTwain_IO.html#maxuploadimagesize)|[`IfAppendImage`]({{site.info}}api/WebTwain_IO.html#ifappendimage)|
+
+<!--
 * [`FTPPassword`]({{site.info}}api/WebTwain_IO.html#ftppassword)  
 * [`FTPPort`]({{site.info}}api/WebTwain_IO.html#ftpport)
 * [`FTPUserName`]({{site.info}}api/WebTwain_IO.html#ftpusername)  
@@ -411,26 +419,44 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [`IfTiffMultiPage`]({{site.info}}api/WebTwain_IO.html#iftiffmultipage)   
 * [`TIFFCompressionType`]({{site.info}}api/WebTwain_IO.html#tiffcompressiontype)
 * [`MaxUploadImageSize`]({{site.info}}api/WebTwain_IO.html#maxuploadimagesize)
-* [`IfAppendImage`]({{site.info}}api/WebTwain_IO.html#ifappendimage)
+* [`IfAppendImage`]({{site.info}}api/WebTwain_IO.html#ifappendimage) -->
 
 #### Events
 
+| |
+|:-|:-|
+|[`OnGetFilePath`]({{site.info}}api/WebTwain_IO.html#ongetfilepath)|[`OnPostLoad`]({{site.info}}api/WebTwain_IO.html#onpostload)| [`OnInternetTransferPercentage`]({{site.info}}api/WebTwain_IO.html#oninternettransferpercentage)|
+
+<!--
 * [`OnGetFilePath`]({{site.info}}api/WebTwain_IO.html#ongetfilepath)
 * [`OnPostLoad`]({{site.info}}api/WebTwain_IO.html#onpostload)
-* [`OnInternetTransferPercentage`]({{site.info}}api/WebTwain_IO.html#oninternettransferpercentage)
+* [`OnInternetTransferPercentage`]({{site.info}}api/WebTwain_IO.html#oninternettransferpercentage) -->
 
 ### Util
 
 #### Methods
 
+| |
+|:-|:-|
+|[`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)| [`SetProductKeyAsync()`]({{site.info}}api/WebTwain_Util.html#setproductkeyasync)| [`SetLanguage()`]({{site.info}}api/WebTwain_Util.html#setlanguage)|
+|[`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)|
+
+<!--
 * [`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) 
 * [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)
 * [`SetProductKeyAsync()`]({{site.info}}api/WebTwain_Util.html#setproductkeyasync)
 * [`SetLanguage()`]({{site.info}}api/WebTwain_Util.html#setlanguage)
-* [`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)
+* [`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)-->
 
 #### Properties
 
+| |
+|:-|:-|
+|[`ErrorCode`]({{site.info}}api/WebTwain_Util.html#errorcode)| [`ErrorString`]({{site.info}}api/WebTwain_Util.html#errorstring) | [`LogLevel`]({{site.info}}api/WebTwain_Util.html#loglevel)| [`Manufacturer`]({{site.info}}api/WebTwain_Util.html#manufacturer)|
+|[`ProductFamily`]({{site.info}}api/WebTwain_Util.html#productfamily)| [`ProductName`]({{site.info}}api/WebTwain_Util.html#productname)| [`VersionInfo`]({{site.info}}api/WebTwain_Util.html#versioninfo)| [`ProductKey`]({{site.info}}api/WebTwain_Util.html#productkey)|
+|[`UseLocalService`]({{site.info}}api/WebTwain_Util.html#uselocalservice)|
+
+<!--
 * [`ErrorCode`]({{site.info}}api/WebTwain_Util.html#errorcode)
 * [`ErrorString`]({{site.info}}api/WebTwain_Util.html#errorstring)
 * [`LogLevel`]({{site.info}}api/WebTwain_Util.html#loglevel)
@@ -440,11 +466,21 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [`VersionInfo`]({{site.info}}api/WebTwain_Util.html#versioninfo)
 * [`ProductKey`]({{site.info}}api/WebTwain_Util.html#productkey)
 * [`UseLocalService`]({{site.info}}api/WebTwain_Util.html#uselocalservice)
+-->
 
 ### Viewer
 
 #### Methods
 
+| |
+|:-|:-|
+|[`bind()`]({{site.info}}api/WebTwain_Viewer.html#bind)| [`clearSelectedAreas()`]({{site.info}}api/WebTwain_Viewer.html#clearselectedareas)| [`createCustomElement()`]({{site.info}}api/WebTwain_Viewer.html#createcustomelement)| [`createImageEditor()`]({{site.info}}api/WebTwain_Viewer.html#createimageeditor)|
+| [`createThumbnailViewer()`]({{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer)| [`first()`]({{site.info}}api/WebTwain_Viewer.html#first)|[`fitWindow()`]({{site.info}}api/WebTwain_Viewer.html#fitwindow)|[`gotoPage()`]({{site.info}}api/WebTwain_Viewer.html#gotopage)|
+| [`hide()`]({{site.info}}api/WebTwain_Viewer.html#hide)| [`last()`]({{site.info}}api/WebTwain_Viewer.html#last)| [`next()`]({{site.info}}api/WebTwain_Viewer.html#next)|[`off()`]({{site.info}}api/WebTwain_Viewer.html#off)|
+|[`on()`]({{site.info}}api/WebTwain_Viewer.html#on)| [`previous()`]({{site.info}}api/WebTwain_Viewer.html#previous)| [`render()`]({{site.info}}api/WebTwain_Viewer.html#render)| [`setButtonClass()`]({{site.info}}api/WebTwain_Viewer.html#setbuttonclass)|
+| [`setSelectedAreas()`]({{site.info}}api/WebTwain_Viewer.html#setselectedAreas)| [`setViewMode()`]({{site.info}}api/WebTwain_Viewer.html#setviewmode) | [`show()`]({{site.info}}api/WebTwain_Viewer.html#show)| [`unbind()`]({{site.info}}api/WebTwain_Viewer.html#unbind)|
+
+<!--
 * [`bind()`]({{site.info}}api/WebTwain_Viewer.html#bind)
 * [`clearSelectedAreas()`]({{site.info}}api/WebTwain_Viewer.html#clearselectedareas)
 * [`createCustomElement()`]({{site.info}}api/WebTwain_Viewer.html#createcustomelement)
@@ -465,9 +501,19 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [`setViewMode()`]({{site.info}}api/WebTwain_Viewer.html#setviewmode) 
 * [`show()`]({{site.info}}api/WebTwain_Viewer.html#show)
 * [`unbind()`]({{site.info}}api/WebTwain_Viewer.html#unbind)
+-->
 
 #### Properties
 
+| |
+|:-|:-|
+|[`acceptDrop`]({{site.info}}api/WebTwain_Viewer.html#acceptdrop)| [`allowSlide`]({{site.info}}api/WebTwain_Viewer.html#allowslide)|[`background`]({{site.info}}api/WebTwain_Viewer.html#background)|[`border`]({{site.info}}api/WebTwain_Viewer.html#border)|
+| [`cursor`]({{site.info}}api/WebTwain_Viewer.html#cursor)| [`height`]({{site.info}}api/WebTwain_Viewer.html#height)|[`idPostfix`]({{site.info}}api/WebTwain_Viewer.html#idpostfix)|[`ifAutoScroll`]({{site.info}}api/WebTwain_Viewer.html#ifautoscroll)|
+|[`innerBorder`]({{site.info}}api/WebTwain_Viewer.html#innerBorder)| [`pageMargin`]({{site.info}}api/WebTwain_Viewer.html#pagemargin)|[`selectedAreaBorderColor`]({{site.info}}api/WebTwain_Viewer.html#selectedareabordercolor)|[`selectedPageBackground`]({{site.info}}api/WebTwain_Viewer.html#selectedpagebackground)|
+|[`selectedPageBorder`]({{site.info}}api/WebTwain_Viewer.html#selectedpageborder)| [`selectionRectAspectRatio`]({{site.info}}api/WebTwain_Viewer.html#selectionrectaspectratio)|[`showPageNumber`]({{site.info}}api/WebTwain_Viewer.html#showpagenumber)|[`singlePageMode`]({{site.info}}api/WebTwain_Viewer.html#singlepagemode)|
+|[`width`]({{site.info}}api/WebTwain_Viewer.html#width)| [`zoom`]({{site.info}}api/WebTwain_Viewer.html#zoom)| [`autoChangeIndex`]({{site.info}}api/WebTwain_Viewer.html#autochangeindex)|
+
+<!--
 * [`acceptDrop`]({{site.info}}api/WebTwain_Viewer.html#acceptdrop)
 * [`allowSlide`]({{site.info}}api/WebTwain_Viewer.html#allowslide)
 * [`background`]({{site.info}}api/WebTwain_Viewer.html#background)
@@ -488,8 +534,19 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [`zoom`]({{site.info}}api/WebTwain_Viewer.html#zoom)
 * [`autoChangeIndex`]({{site.info}}api/WebTwain_Viewer.html#autochangeindex)
 
+-->
+
 #### Events
 
+| |
+|:-|:-|
+|[`click`]({{site.info}}api/WebTwain_Viewer.html#click)| [`contextmenu`]({{site.info}}api/WebTwain_Viewer.html#contextmenu)| [`dblclick`]({{site.info}}api/WebTwain_Viewer.html#dblclick)|[`mousemove`]({{site.info}}api/WebTwain_Viewer.html#mousemove)|
+| [`mousedown`]({{site.info}}api/WebTwain_Viewer.html#mousedown)| [`mouseup`]({{site.info}}api/WebTwain_Viewer.html#mouseup)| [`mouseout`]({{site.info}}api/WebTwain_Viewer.html#mouseout)|[`mouseover`]({{site.info}}api/WebTwain_Viewer.html#mouseover)|
+|[`keydown`]({{site.info}}api/WebTwain_Viewer.html#keydown)| [`keyup`]({{site.info}}api/WebTwain_Viewer.html#keyup)|[`pageAreaSelected`]({{site.info}}api/WebTwain_Viewer.html#pageareaselected)| [`pageAreaUnselected`]({{site.info}}api/WebTwain_Viewer.html#pageareaunselected)|
+|[`pageRendered`]({{site.info}}api/WebTwain_Viewer.html#pagerendered)| [`resize`]({{site.info}}api/WebTwain_Viewer.html#resize)|
+
+
+<!--
 * [`click`]({{site.info}}api/WebTwain_Viewer.html#click)
 * [`contextmenu`]({{site.info}}api/WebTwain_Viewer.html#contextmenu)
 * [`dblclick`]({{site.info}}api/WebTwain_Viewer.html#dblclick)
@@ -504,6 +561,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [`pageAreaUnselected`]({{site.info}}api/WebTwain_Viewer.html#pageareaunselected)
 * [`pageRendered`]({{site.info}}api/WebTwain_Viewer.html#pagerendered)
 * [`resize`]({{site.info}}api/WebTwain_Viewer.html#resize)
+-->
 <!--* [`topPageChanged`]({{site.info}}api/WebTwain_Viewer.html#toppagechanged)-->
 
 ## Addon
@@ -512,16 +570,32 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 #### Methods
 
+| |
+|:-|:-|
+|[`decode()`]({{site.info}}api/Addon_BarcodeReader.html#decode)| [`getRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#getruntimesettings)|[`updateRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#updateruntimesettings)|[`resetRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#resetruntimesettings)|
+| [`initRuntimeSettingsWithString()`]({{site.info}}api/Addon_BarcodeReader.html#initruntimesettingswithstring)|
+
+
+<!-- 
 * [`decode()`]({{site.info}}api/Addon_BarcodeReader.html#decode)
 * [`getRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#getruntimesettings)
 * [`updateRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#updateruntimesettings)
 * [`resetRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#resetruntimesettings)
 * [`initRuntimeSettingsWithString()`]({{site.info}}api/Addon_BarcodeReader.html#initruntimesettingswithstring)
+-->
 
 ### OCR
 
 #### Methods
 
+| |
+|:-|:-|
+|[`Download()`]({{site.info}}api/Addon_OCR.html#download)  | [`DownloadLangData()`]({{site.info}}api/Addon_OCR.html#downloadlangdata)| [`IsModuleInstalled()`]({{site.info}}api/Addon_OCR.html#ismoduleinstalled) |[`SetLanguage()`]({{site.info}}api/Addon_OCR.html#setlanguage)|
+|[`SetOutputFormat()`]({{site.info}}api/Addon_OCR.html#setoutputformat) | [`SetPageSetMode()`]({{site.info}}api/Addon_OCR.html#setpagesetmode)| [`GetIfUseDetectedFont()`]({{site.info}}api/Addon_OCR.html#getifusedetectedfont) |[`SetIfUseDetectedFont()`]({{site.info}}api/Addon_OCR.html#setifusedetectedfont)|
+| [`GetUnicodeFontName()`]({{site.info}}api/Addon_OCR.html#getunicodefontname) | [`SetUnicodeFontName()`]({{site.info}}api/Addon_OCR.html#setunicodefontname)|[`GetMinFontSizeforMoreAccurateResult()`]({{site.info}}api/Addon_OCR.html#getminfontsizeformoreaccurateresult) | [`SetMinFontSizeforMoreAccurateResult()`]({{site.info}}api/Addon_OCR.html#setminfontsizeformoreaccurateresult)|
+| [`Recognize()`]({{site.info}}api/Addon_OCR.html#recognize) | [`RecognizeFile()`]({{site.info}}api/Addon_OCR.html#recognizefile)|[`RecognizeRect()`]({{site.info}}api/Addon_OCR.html#recognizerect) | [`RecognizeSelectedImages()`]({{site.info}}api/Addon_OCR.html#recognizeselectedimages)|
+
+<!-- 
 * [`Download()`]({{site.info}}api/Addon_OCR.html#download)  
 * [`DownloadLangData()`]({{site.info}}api/Addon_OCR.html#downloadlangdata)
 * [`IsModuleInstalled()`]({{site.info}}api/Addon_OCR.html#ismoduleinstalled)   
@@ -538,85 +612,71 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 * [`RecognizeFile()`]({{site.info}}api/Addon_OCR.html#recognizefile)
 * [`RecognizeRect()`]({{site.info}}api/Addon_OCR.html#recognizerect) 
 * [`RecognizeSelectedImages()`]({{site.info}}api/Addon_OCR.html#recognizeselectedimages)
+-->
 
 ### OCRPro
 
 #### Methods
 
+| |
+|:-|:-|
+|[`Download()`]({{site.info}}api/Addon_OCRPro.html#download) | [`IsModuleInstalled()`]({{site.info}}api/Addon_OCRPro.html#ismoduleinstalled)|[`Recognize()`]({{site.info}}api/Addon_OCRPro.html#recognize) |[`RecognizeFile()`]({{site.info}}api/Addon_OCRPro.html#recognizefile)| 
+|[`RecognizeRect()`]({{site.info}}api/Addon_OCRPro.html#recognizerect) | [`RecognizeSelectedImages()`]({{site.info}}api/Addon_OCRPro.html#recognizeselectedimages)|
+
+<!--
 * [`Download()`]({{site.info}}api/Addon_OCRPro.html#download) 
 * [`IsModuleInstalled()`]({{site.info}}api/Addon_OCRPro.html#ismoduleinstalled)
 * [`Recognize()`]({{site.info}}api/Addon_OCRPro.html#recognize)  
 * [`RecognizeFile()`]({{site.info}}api/Addon_OCRPro.html#recognizefile)
 * [`RecognizeRect()`]({{site.info}}api/Addon_OCRPro.html#recognizerect) 
 * [`RecognizeSelectedImages()`]({{site.info}}api/Addon_OCRPro.html#recognizeselectedimages)
+-->
 
 #### Properties
 
-* [`Settings`]({{site.info}}api/Addon_OCRPro.html#settings)
+| |
+|:-|:-|
+|[`Settings`]({{site.info}}api/Addon_OCRPro.html#settings)|
 
 ### PDF
 
 #### Methods
 
-* [`IsTextBasedPDF()`]({{site.info}}api/Addon_PDF.html#istextbasedpdf)
-* [`SetConvertMode()`]({{site.info}}api/Addon_PDF.html#setconvertmode)
-* [`SetPassword()`]({{site.info}}api/Addon_PDF.html#setpassword)
-* [`SetResolution()`]({{site.info}}api/Addon_PDF.html#setresolution)
-* [`Write.Setup()`]({{site.info}}api/Addon_PDF.html#writesetup)
+| |
+|:-|:-|
+|[`IsTextBasedPDF()`]({{site.info}}api/Addon_PDF.html#istextbasedpdf)| [`SetConvertMode()`]({{site.info}}api/Addon_PDF.html#setconvertmode)|[`SetPassword()`]({{site.info}}api/Addon_PDF.html#setpassword)|[`SetResolution()`]({{site.info}}api/Addon_PDF.html#setresolution)|
+| [`Write.Setup()`]({{site.info}}api/Addon_PDF.html#writesetup)|
 
 ### Camera
 
 #### Methods
 
-* [`getSourceList()`]({{site.info}}api/Addon_Camera.html#getsourcelist) 
-* [`selectSource()`]({{site.info}}api/Addon_Camera.html#selectsource)
-* [`getCurrentSource()`]({{site.info}}api/Addon_Camera.html#getcurrentsource)
-* [`closeSource()`]({{site.info}}api/Addon_Camera.html#closesource)
-* [`getResolution()`]({{site.info}}api/Addon_Camera.html#getresolution)
-* [`setResolution()`]({{site.info}}api/Addon_Camera.html#setresolution)
-* [`getCurrentResolution()`]({{site.info}}api/Addon_Camera.html#getcurrentresolution)
-* [`play()`]({{site.info}}api/Addon_Camera.html#play)
-* [`pause()`]({{site.info}}api/Addon_Camera.html#pause)
-* [`resume()`]({{site.info}}api/Addon_Camera.html#resume)
-* [`stop()`]({{site.info}}api/Addon_Camera.html#stop)
-* [`getStatus()`]({{site.info}}api/Addon_Camera.html#getstatus)
-* [`capture()`]({{site.info}}api/Addon_Camera.html#capture)
-* [`showVideo()`]({{site.info}}api/Addon_Camera.html#showvideo)
-* [`closeVideo()`]({{site.info}}api/Addon_Camera.html#closevideo)
+| |
+|:-|:-|
+|[`getSourceList()`]({{site.info}}api/Addon_Camera.html#getsourcelist) | [`selectSource()`]({{site.info}}api/Addon_Camera.html#selectsource)|[`getCurrentSource()`]({{site.info}}api/Addon_Camera.html#getcurrentsource)
+|[`closeSource()`]({{site.info}}api/Addon_Camera.html#closesource)|
+|[`getResolution()`]({{site.info}}api/Addon_Camera.html#getresolution)| [`setResolution()`]({{site.info}}api/Addon_Camera.html#setresolution)| [`getCurrentResolution()`]({{site.info}}api/Addon_Camera.html#getcurrentresolution)| [`play()`]({{site.info}}api/Addon_Camera.html#play)|
+|[`pause()`]({{site.info}}api/Addon_Camera.html#pause)| [`resume()`]({{site.info}}api/Addon_Camera.html#resume)| [`stop()`]({{site.info}}api/Addon_Camera.html#stop)|[`getStatus()`]({{site.info}}api/Addon_Camera.html#getstatus)|
+|[`capture()`]({{site.info}}api/Addon_Camera.html#capture)| [`showVideo()`]({{site.info}}api/Addon_Camera.html#showvideo)| [`closeVideo()`]({{site.info}}api/Addon_Camera.html#closevideo)|
 
 ### Webcam
 
 #### Methods
 
-* [`CaptureImage()`]({{site.info}}api/Addon_Webcam.html#captureimage) 
-* [`CloseSource()`]({{site.info}}api/Addon_Webcam.html#closesource)
-* [`GetCameraControlPropertySetting()`]({{site.info}}api/Addon_Webcam.html#getcameracontrolpropertysetting) 
-* [`GetCameraControlPropertyMoreSetting()`]({{site.info}}api/Addon_Webcam.html#getcameracontrolpropertymoresetting)
-* [`GetVideoPropertySetting()`]({{site.info}}api/Addon_Webcam.html#getvideopropertysetting) 
-* [`GetVideoPropertyMoreSetting()`]({{site.info}}api/Addon_Webcam.html#getvideopropertymoresetting)
-* [`SetCameraControlPropertySetting()`]({{site.info}}api/Addon_Webcam.html#setcameracontrolpropertysetting)
-* [`SetVideoPropertySetting()`]({{site.info}}api/Addon_Webcam.html#setvideopropertysetting)
-* [`GetFrameRate()`]({{site.info}}api/Addon_Webcam.html#getframerate) 
-* [`SetFrameRate()`]({{site.info}}api/Addon_Webcam.html#setframerate)
-* [`GetMediaType()`]({{site.info}}api/Addon_Webcam.html#getmediatype) 
-* [`SetMediaType()`]({{site.info}}api/Addon_Webcam.html#setmediatype)
-* [`GetResolution()`]({{site.info}}api/Addon_Webcam.html#getresolution) 
-* [`SetResolution()`]({{site.info}}api/Addon_Webcam.html#setresolution)
-* [`GetFramePartURL()`]({{site.info}}api/Addon_Webcam.html#getframeparturl) 
-* [`GetFrameURL()`]({{site.info}}api/Addon_Webcam.html#getframeurl)
-* [`GetSourceList()`]({{site.info}}api/Addon_Webcam.html#getsourcelist)  
-* [`SelectSource()`]({{site.info}}api/Addon_Webcam.html#selectsource)
-* [`PauseVideo()`]({{site.info}}api/Addon_Webcam.html#pausevideo) 
-* [`PlayVideo()`]({{site.info}}api/Addon_Webcam.html#playvideo)
-* [`SetVideoRotateMode()`]({{site.info}}api/Addon_Webcam.html#setvideorotatemode)    
-* [`StopVideo()`]({{site.info}}api/Addon_Webcam.html#stopvideo)
+| |
+|:-|:-|
+|[`CaptureImage()`]({{site.info}}api/Addon_Webcam.html#captureimage) | [`CloseSource()`]({{site.info}}api/Addon_Webcam.html#closesource)| [`GetCameraControlPropertySetting()`]({{site.info}}api/Addon_Webcam.html#getcameracontrolpropertysetting) | [`GetCameraControlPropertyMoreSetting()`]({{site.info}}api/Addon_Webcam.html#getcameracontrolpropertymoresetting)|
+|[`GetVideoPropertySetting()`]({{site.info}}api/Addon_Webcam.html#getvideopropertysetting)|[`GetVideoPropertyMoreSetting()`]({{site.info}}api/Addon_Webcam.html#getvideopropertymoresetting)| [`SetCameraControlPropertySetting()`]({{site.info}}api/Addon_Webcam.html#setcameracontrolpropertysetting)| [`SetVideoPropertySetting()`]({{site.info}}api/Addon_Webcam.html#setvideopropertysetting)|
+|[`GetFrameRate()`]({{site.info}}api/Addon_Webcam.html#getframerate) | [`SetFrameRate()`]({{site.info}}api/Addon_Webcam.html#setframerate)| [`GetMediaType()`]({{site.info}}api/Addon_Webcam.html#getmediatype) | [`SetMediaType()`]({{site.info}}api/Addon_Webcam.html#setmediatype)|
+|[`GetResolution()`]({{site.info}}api/Addon_Webcam.html#getresolution) | [`SetResolution()`]({{site.info}}api/Addon_Webcam.html#setresolution)| [`GetFramePartURL()`]({{site.info}}api/Addon_Webcam.html#getframeparturl) | [`GetFrameURL()`]({{site.info}}api/Addon_Webcam.html#getframeurl)|
+|[`GetSourceList()`]({{site.info}}api/Addon_Webcam.html#getsourcelist) | [`SelectSource()`]({{site.info}}api/Addon_Webcam.html#selectsource)|[`PauseVideo()`]({{site.info}}api/Addon_Webcam.html#pausevideo) |[`PlayVideo()`]({{site.info}}api/Addon_Webcam.html#playvideo)|
+|[`SetVideoRotateMode()`]({{site.info}}api/Addon_Webcam.html#setvideorotatemode) | [`StopVideo()`]({{site.info}}api/Addon_Webcam.html#stopvideo)|
 
 ## [`Dynamsoft.FileUploader`](#dynamsoftfileuploader)
 
 #### Methods
 
-* [`Init()`]({{site.info}}api/Dynamsoft_FileUploader.html#init)
-* [`CreateJob()`]({{site.info}}api/Dynamsoft_FileUploader.html#createjob)
-* [`Run()`]({{site.info}}api/Dynamsoft_FileUploader.html#run)
-* [`Cancel()`]({{site.info}}api/Dynamsoft_FileUploader.html#cancel)
-* [`CancelAllUpload()`]({{site.info}}api/Dynamsoft_FileUploader.html#cancelallupload)
+| |
+|:-|:-|
+| [`Init()`]({{site.info}}api/Dynamsoft_FileUploader.html#init)|[`CreateJob()`]({{site.info}}api/Dynamsoft_FileUploader.html#createjob)|[`Run()`]({{site.info}}api/Dynamsoft_FileUploader.html#run)|[`Cancel()`]({{site.info}}api/Dynamsoft_FileUploader.html#cancel)|
+| [`CancelAllUpload()`]({{site.info}}api/Dynamsoft_FileUploader.html#cancelallupload)|
