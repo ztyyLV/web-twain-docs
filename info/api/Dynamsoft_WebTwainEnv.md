@@ -234,14 +234,6 @@ The default value is `false` .
 ### `Unload()`
 
   Destroys all `WebTwain` instances and cuts off the connection to the Dynamsoft Service.
-  
-### `RegisterEvent()`
-
-Registers an environmental event. Typically the event is `OnWebTwainReady` which is triggered when the initialization completes.
-
-### `Unload()`
-
-Destroys all `WebTwain` instances and cuts off the connection to the Dynamsoft Service.
 
 ### `RemoveAllAuthorizations()`
 
