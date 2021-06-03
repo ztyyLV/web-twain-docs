@@ -13,8 +13,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 ## Global
 
-* [Dynamsoft.WebTwainEnv]({{site.info}}api/Dynamsoft_WebTwainEnv.html) 
-* [Dynamsoft.Enum]({{site.info}}api/Dynamsoft_Enum.html) 
+* [Dynamsoft.WebTwainEnv]({{site.info}}api/Dynamsoft_WebTwainEnv-v16.1.1.html) 
+* [Dynamsoft.Enum]({{site.info}}api/Dynamsoft_Enum-v16.1.1.html) 
 
 ## WebTwain
 
