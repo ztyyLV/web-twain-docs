@@ -11,13 +11,10 @@ description: Dynamic Web TWAIN SDK Documentation API Reference PDF Addon APIs Pa
 
 **Methods**
 
-* [`GetConvertMode()`](#getconvertmode)
-* [`IsModuleInstalled()`](#ismoduleinstalled)
-* [`IsTextBasedPDF()`](#istextbasedpdf)
-* [`SetConvertMode()`](#setconvertmode)
-* [`SetPassword()`](#setpassword)
-* [`SetResolution()`](#setresolution)
-* [`Write.Setup()`](#write.setup)
+| |
+|:-|:-|
+|[`IsTextBasedPDF()`](#istextbasedpdf)| [`SetConvertMode()`](#setconvertmode)|[`SetPassword()`](#setpassword)|
+|[`SetResolution()`](#setresolution)|[`Write.Setup()`](#writesetup)|
 
 ---
 
