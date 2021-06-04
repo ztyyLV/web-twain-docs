@@ -492,8 +492,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 #### Methods
 
-* [Init()]({{site.info}}api/Dynamsoft_FileUploader.html#init)
-* [CreateJob()]({{site.info}}api/Dynamsoft_FileUploader.html#createjob)
-* [Run()]({{site.info}}api/Dynamsoft_FileUploader.html#run)
-* [Cancel()]({{site.info}}api/Dynamsoft_FileUploader.html#cancel)
-* [CancelAllUpload()]({{site.info}}api/Dynamsoft_FileUploader.html#cancelallupload)
+* [Init()]({{site.info}}api/Dynamsoft_FileUploader-v16.2.html#init)
+* [CreateJob()]({{site.info}}api/Dynamsoft_FileUploader-v16.2.html#createjob)
+* [Run()]({{site.info}}api/Dynamsoft_FileUploader.html-v16.2#run)
+* [Cancel()]({{site.info}}api/Dynamsoft_FileUploader.html-v16.2#cancel)
+* [CancelAllUpload()]({{site.info}}api/Dynamsoft_FileUploader-v16.2.html#cancelallupload)
