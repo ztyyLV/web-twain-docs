@@ -222,7 +222,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 -->
 > The following APIs are compatible with TWAIN and ICA
 
-**Methods**
+#### Methods
 
 | |
 |:-|:-|
@@ -230,7 +230,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 > The following APIs are compatible with TWAIN (mostly Windows, but could also be macOS)
 
-**Methods**
+#### Methods
 
 | |
 |:-|:-|
@@ -663,7 +663,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 |[`GetSourceList()`]({{site.info}}api/Addon_Webcam.html#getsourcelist) | [`SelectSource()`]({{site.info}}api/Addon_Webcam.html#selectsource)|[`PauseVideo()`]({{site.info}}api/Addon_Webcam.html#pausevideo) |[`PlayVideo()`]({{site.info}}api/Addon_Webcam.html#playvideo)|
 |[`SetVideoRotateMode()`]({{site.info}}api/Addon_Webcam.html#setvideorotatemode) | [`StopVideo()`]({{site.info}}api/Addon_Webcam.html#stopvideo)|
 
-## [`Dynamsoft.FileUploader`](#dynamsoftfileuploader)
+### Dynamsoft.FileUploader
 
 #### Methods
 
