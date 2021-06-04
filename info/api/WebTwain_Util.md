@@ -13,8 +13,9 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Utility APIs Page
 
 | |
 |:-|:-|
-|[`RegisterEvent()`](#registerevent) | [`UnregisterEvent()`](#unregisterevent)| [`SetProductKeyAsync()`](#setproductkeyasync)| [`SetLanguage()`](#setlanguage)|
-|[`GenerateURLForUploadData()`](#generateurlforuploaddata)|
+|[`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)| [`SetProductKeyAsync()`]({{site.info}}api/WebTwain_Util.html#setproductkeyasync)| 
+|[`SetLanguage()`]({{site.info}}api/WebTwain_Util.html#setlanguage)|[`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)|
+
 
 **Properties**
 

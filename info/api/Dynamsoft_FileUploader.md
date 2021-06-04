@@ -13,8 +13,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Uploader APIs Pag
 
 | |
 |:-|:-|
-| [`Init()`]#init)|[`CreateJob()`]#createjob)|[`Run()`]#run)|
-|[`Cancel()`]#cancel)| [`CancelAllUpload()`]#cancelallupload)|
+| [`Init()`](#init)|[`CreateJob()`](#createjob)|[`Run()`](#run)|
+|[`Cancel()`](#cancel)| [`CancelAllUpload()`](#cancelallupload)|
 
 
 ---

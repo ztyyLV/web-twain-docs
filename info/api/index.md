@@ -210,8 +210,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 | |
 |:-|:-|
-|[`OnPostAllTransfers`]({{site.info}}api/WebTwain_Acquire.html#onpostalltransfers) | [`OnPostTransfer`]({{site.info}}api/WebTwain_Acquire.html#onposttransfer)| [`OnPostTransferAsync`]({{site.info}}api/WebTwain_Acquire.html#onposttransferasync) | [`OnPreAllTransfers`]({{site.info}}api/WebTwain_Acquire.html#onprealltransfers)|
-|[`OnPreTransfer`]({{site.info}}api/WebTwain_Acquire.html#onpretransfer)|
+|[`OnPostAllTransfers`]({{site.info}}api/WebTwain_Acquire.html#onpostalltransfers) | [`OnPostTransfer`]({{site.info}}api/WebTwain_Acquire.html#onposttransfer)| [`OnPostTransferAsync`]({{site.info}}api/WebTwain_Acquire.html#onposttransferasync) | 
+|[`OnPreAllTransfers`]({{site.info}}api/WebTwain_Acquire.html#onprealltransfers)|[`OnPreTransfer`]({{site.info}}api/WebTwain_Acquire.html#onpretransfer)|
 
 <!--
 * [`OnPostAllTransfers`]({{site.info}}api/WebTwain_Acquire.html#onpostalltransfers)   
@@ -226,7 +226,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 | |
 |:-|:-|
-|[getCapabilities()](#getcapabilities) | [setCapabilities()](#setcapabilities)|
+|[getCapabilities()]({{site.info}}api/WebTwain_Acquire.html#getcapabilities) | [setCapabilities()]({{site.info}}api/WebTwain_Acquire.html##setcapabilities)|
 
 > The following APIs are compatible with TWAIN (mostly Windows, but could also be macOS)
 
@@ -234,10 +234,10 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 | |
 |:-|:-|
-| [OpenSourceManager()](#opensourcemanager)| [OpenSourceManagerAsync()](#opensourcemanagerasync)  |  [CloseSourceManager()](#closesourcemanager) | [CloseSourceManagerAsync()](#closesourcemanagerasync)|
-| [GetCustomDSData()](#getcustomdsdata)| [GetCustomDSDataEx()](#getcustomdsdataex) | [CancelAllPendingTransfers()](#cancelallpendingtransfers) | [FeedPage()](#feedpage) |
-|[ResetImageLayout()](#resetimagelayout) | [RewindPage()](#rewindpage)| [SetCustomDSData()](#setcustomdsdata) | [SetCustomDSDataEx()](#setcustomdsdataex)|
-| [SetFileXferInfo()](#setfilexferinfo) | [SetImageLayout()](#setimagelayout)|
+| [OpenSourceManager()]({{site.info}}api/WebTwain_Acquire.html#opensourcemanager)| [OpenSourceManagerAsync()]({{site.info}}api/WebTwain_Acquire.html#opensourcemanagerasync) | [CloseSourceManager()]({{site.info}}api/WebTwain_Acquire.html#closesourcemanager) | [CloseSourceManagerAsync()]({{site.info}}api/WebTwain_Acquire.html#closesourcemanagerasync)|
+| [GetCustomDSData()]({{site.info}}api/WebTwain_Acquire.html#getcustomdsdata)| [GetCustomDSDataEx()]({{site.info}}api/WebTwain_Acquire.html#getcustomdsdataex) | [CancelAllPendingTransfers()]({{site.info}}api/WebTwain_Acquire.html#cancelallpendingtransfers) | [FeedPage()]({{site.info}}api/WebTwain_Acquire.html#feedpage) |
+|[ResetImageLayout()]({{site.info}}api/WebTwain_Acquire.html#resetimagelayout) | [RewindPage()]({{site.info}}api/WebTwain_Acquire.html#rewindpage)| [SetCustomDSData()]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdata) | [SetCustomDSDataEx()]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdataex)|
+| [SetFileXferInfo()]({{site.info}}api/WebTwain_Acquire.html#setfilexferinfo) | [SetImageLayout()]({{site.info}}api/WebTwain_Acquire.html#setimagelayout)|
 
 #### Properties
 
@@ -430,8 +430,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 | |
 |:-|:-|
-|[`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)| [`SetProductKeyAsync()`]({{site.info}}api/WebTwain_Util.html#setproductkeyasync)| [`SetLanguage()`]({{site.info}}api/WebTwain_Util.html#setlanguage)|
-|[`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)|
+|[`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)| [`SetProductKeyAsync()`]({{site.info}}api/WebTwain_Util.html#setproductkeyasync)| 
+|[`SetLanguage()`]({{site.info}}api/WebTwain_Util.html#setlanguage)|[`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)|
 
 <!--
 * [`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) 
@@ -564,8 +564,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 | |
 |:-|:-|
-|[`decode()`]({{site.info}}api/Addon_BarcodeReader.html#decode)| [`getRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#getruntimesettings)|[`updateRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#updateruntimesettings)|[`resetRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#resetruntimesettings)|
-| [`initRuntimeSettingsWithString()`]({{site.info}}api/Addon_BarcodeReader.html#initruntimesettingswithstring)|
+|[`decode()`]({{site.info}}api/Addon_BarcodeReader.html#decode)| [`getRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#getruntimesettings)|[`updateRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#updateruntimesettings)|
+|[`resetRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#resetruntimesettings)| [`initRuntimeSettingsWithString()`]({{site.info}}api/Addon_BarcodeReader.html#initruntimesettingswithstring)|
 
 
 <!-- 

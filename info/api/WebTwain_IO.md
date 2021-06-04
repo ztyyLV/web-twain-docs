@@ -34,6 +34,9 @@ Output
 |[`SaveAsJPEG()`](#saveasjpeg)| [`SaveAsPDF()`](#saveaspdf)|[`SaveAsPNG()`](#saveaspng)| 
 |[`SaveAsTIFF()`](#saveastiff)| [`SaveSelectedImagesAsMultiPagePDF()`](#saveselectedimagesasmultipagepdf)|[`SaveSelectedImagesAsMultiPageTIFF()`](#saveselectedimagesasmultipagetiff)|
 | [`SaveAllAsMultiPageTIFF()`](#saveallasmultipagetiff)|[`SaveAllAsPDF()`](#saveallaspdf)|
+
+---
+
 Others
 
 ---

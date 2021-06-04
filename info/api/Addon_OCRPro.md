@@ -20,7 +20,9 @@ For Server Side OCR, check out [Server-Side OCR](#server-side)
 
 **Properties**
 
-* [`Settings`](#settings)
+| |
+|:-|:-|
+|[`Settings`](#settings)|
 
 ---
 

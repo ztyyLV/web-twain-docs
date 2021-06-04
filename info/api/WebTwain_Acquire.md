@@ -32,8 +32,9 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 
 | |
 |:-|:-|
-|[`OnPostAllTransfers`](#onpostalltransfers) | [`OnPostTransfer`](#onposttransfer)| [`OnPostTransferAsync`](#onposttransferasync) | [`OnPreAllTransfers`](#onprealltransfers)|
-|[`OnPreTransfer`](#onpretransfer)|
+|[`OnPostAllTransfers`](#onpostalltransfers) | [`OnPostTransfer`](#onposttransfer)| [`OnPostTransferAsync`](#onposttransferasync) | 
+|[`OnPreAllTransfers`](#onprealltransfers)|[`OnPreTransfer`](#onpretransfer)|
+
 
 > The following APIs are compatible with TWAIN and ICA
 
@@ -55,6 +56,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 | [SetFileXferInfo()](#setfilexferinfo) | [SetImageLayout()](#setimagelayout)|
 
 **Properties**
+
 | |
 |:-|:-|
 | [`BitDepth`](#bitdepth) | [`Brightness`](#brightness)|[`Contrast`](#contrast) | [`DataSourceStatus`](#datasourcestatus)| 
@@ -66,6 +68,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 | [`ImageLayoutFrameTop`](#imagelayoutframetop)| [`ImageLayoutPageNumber`](#imagelayoutpagenumber) | [`ImagePixelType`](#imagepixeltype)| [`MagData`](#magdata) |
 |[`MagType`](#magtype)|[`PendingXfers`](#pendingxfers) | [`PixelFlavor`](#pixelflavor)| [`TransferMode`](#transfermode) |
 | [`Unit`](#unit)|[`XferCount`](#xfercount)|
+
 
 **Events**
 

@@ -18,6 +18,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 | [`hide()`](#hide)| [`last()`](#last)| [`next()`](#next)|[`off()`](#off)|
 |[`on()`](#on)| [`previous()`](#previous)| [`render()`](#render)| [`setButtonClass()`](#setbuttonclass)|
 | [`setSelectedAreas()`](#setselectedAreas)| [`setViewMode()`](#setviewmode) | [`show()`](#show)| [`unbind()`](#unbind)|
+
+
 <!--* [updateUISettings](#updateuisettings)-->
 
 **Properties**
@@ -57,9 +59,9 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 | |
 |:-|:-|
 |`BackgroundColor`| `SelectionImageBorderColor`| `FitWindowType`| `IfFitWindow`|
-| `Height`| `Width`| `IfAutoScroll`|`ShowPageNumber`|`MouseX`|
-| `MouseY`| `ImageMargin`| `MouseShape`| `SelectionRectAspectRatio`|
-| `Zoom`|
+| `Height`| `Width`| `IfAutoScroll`|`ShowPageNumber`|
+|`MouseX`| `MouseY`| `ImageMargin`| `MouseShape`| 
+|`SelectionRectAspectRatio`| `Zoom`|
 
 
 **Events**
