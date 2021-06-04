@@ -14,92 +14,52 @@ Input
 
 **Methods**
 
-* [LoadImage()](#loadimage)
-* [LoadImageEx()](#loadimageex)
-* [LoadImageFromBase64Binary()](#loadimagefrombase64binary)
-* [LoadImageFromBinary()](#loadimagefrombinary)
-* [LoadDibFromClipboard()](#loaddibfromclipboard)
-
-<!--* [LoadDibFromClipboardAsync()](#loaddibfromclipboardasync)-->
-
-* [FTPDownload()](#ftpdownload)
-* [FTPDownloadEx()](#ftpdownloadex)
-* [HTTPDownload()](#httpdownload)
-* [HTTPDownloadEx()](#httpdownloadex)
-* [HTTPDownloadThroughPost()](#httpdownloadthroughpost)
-* [HTTPDownloadDirectly()](#httpdownloaddirectly)
+| |
+|:-|:-|
+|[`LoadImage()`](#loadimage)| [`LoadImageEx()`](#loadimageex)|[`LoadImageFromBase64Binary()`](#loadimagefrombase64binary)| [`LoadImageFromBinary()`](#loadimagefrombinary)|
+|[`LoadDibFromClipboard()`](#loaddibfromclipboard)| [`FTPDownload()`](#ftpdownload)| [`FTPDownloadEx()`](#ftpdownloadex)| [`HTTPDownload()`](#httpdownload)|
+| [`HTTPDownloadEx()`](#httpdownloadex)|[`HTTPDownloadThroughPost()`](#httpdownloadthroughpost)|[`HTTPDownloadDirectly()`](#httpdownloaddirectly)|
 
 Output
 
 **Methods**
-
-* [ConvertToBase64()](#converttobase64)
-* [ConvertToBlob()](#converttoblob)
-* [FTPUpload()](#ftpupload)
-* [FTPUploadEx()](#ftpuploadex)
-* [FTPUploadAllAsMultiPageTIFF()](#ftpuploadallasmultipagetiff)
-* [FTPUploadAllAsPDF()](#ftpuploadallaspdf)
-* [FTPUploadAsMultiPagePDF()](#ftpuploadasmultipagepdf)
-* [FTPUploadAsMultiPageTIFF()](#ftpuploadasmultipagetiff)
-* [HTTPUpload()](#httpupload)
-* [HTTPUploadThroughPutEx()](#httpuploadthroughputex)
-* [HTTPUploadThroughPost()](#httpuploadthroughpost)
-* [HTTPUploadThroughPostEx()](#httpuploadthroughpostex)
-* [HTTPUploadAllThroughPostAsMultiPageTIFF()](#httpuploadallthroughpostasmultipagetiff)
-* [HTTPUploadAllThroughPostAsPDF()](#httpuploadallthroughpostaspdf)
-* [HTTPUploadThroughPostAsMultiPagePDF()](#httpuploadthroughpostasmultipagepdf)
-* [HTTPUploadThroughPostAsMultiPageTIFF()](#httpuploadthroughpostasmultipagetiff)
-* [HTTPUploadThroughPostDirectly()](#httpuploadthroughpostdirectly)
-* [SaveAsBMP()](#saveasbmp)
-* [SaveAsJPEG()](#saveasjpeg)
-* [SaveAsPDF()](#saveaspdf)
-* [SaveAsPNG()](#saveaspng)
-* [SaveAsTIFF()](#saveastiff)
-* [SaveSelectedImagesAsMultiPagePDF()](#saveselectedimagesasmultipagepdf)
-* [SaveSelectedImagesAsMultiPageTIFF()](#saveselectedimagesasmultipagetiff)
-* [SaveAllAsMultiPageTIFF()](#saveallasmultipagetiff)
-* [SaveAllAsPDF()](#saveallaspdf)
-
+| |
+|:-|:-|
+| [`ConvertToBase64()`](#converttobase64)|[`ConvertToBlob()`](#converttoblob)|[`FTPUpload()`](#ftpupload)|
+|[`FTPUploadEx()`](#ftpuploadex)|[`FTPUploadAllAsMultiPageTIFF()`](#ftpuploadallasmultipagetiff)|[`FTPUploadAllAsPDF()`](#ftpuploadallaspdf)|
+|[`FTPUploadAsMultiPagePDF()`](#ftpuploadasmultipagepdf)| [`FTPUploadAsMultiPageTIFF()`](#ftpuploadasmultipagetiff)|[`HTTPUpload()`](#httpupload)| 
+|[`HTTPUploadThroughPutEx()`](#httpuploadthroughputex)| [`HTTPUploadThroughPost()`](#httpuploadthroughpost)| [`HTTPUploadThroughPostEx()`](#httpuploadthroughpostex)|
+| [`HTTPUploadAllThroughPostAsMultiPageTIFF()`](#httpuploadallthroughpostasmultipagetiff)| [`HTTPUploadAllThroughPostAsPDF()`](#httpuploadallthroughpostaspdf)| [`HTTPUploadThroughPostAsMultiPagePDF()`](#httpuploadthroughpostasmultipagepdf)|
+|[`HTTPUploadThroughPostAsMultiPageTIFF()`](#httpuploadthroughpostasmultipagetiff)|[`HTTPUploadThroughPostDirectly()`](#httpuploadthroughpostdirectly)|[`SaveAsBMP()`](#saveasbmp)| 
+|[`SaveAsJPEG()`](#saveasjpeg)| [`SaveAsPDF()`](#saveaspdf)|[`SaveAsPNG()`](#saveaspng)| 
+|[`SaveAsTIFF()`](#saveastiff)| [`SaveSelectedImagesAsMultiPagePDF()`](#saveselectedimagesasmultipagepdf)|[`SaveSelectedImagesAsMultiPageTIFF()`](#saveselectedimagesasmultipagetiff)|
+| [`SaveAllAsMultiPageTIFF()`](#saveallasmultipagetiff)|[`SaveAllAsPDF()`](#saveallaspdf)|
 Others
+
+---
 
 **Methods**
 
-* [ClearTiffCustomTag()](#cleartiffcustomtag) 
-* [SetTiffCustomTag()](#settiffcustomtag)
-* [ClearAllHTTPFormField()](#clearallhttpformfield) 
-* [SetHTTPFormField()](#sethttpformfield)
-* [SetHTTPHeader()](#sethttpheader) 
-* [SetUploadSegment()](#setuploadsegment)
-* [ShowFileDialog()](#showfiledialog) 
-* [Print()](#print)
-* [PrintEx()](#print)
+| |
+|:-|:-|
+|[`ClearTiffCustomTag()`](#cleartiffcustomtag) |[`SetTiffCustomTag()`](#settiffcustomtag)|[`ClearAllHTTPFormField()`](#clearallhttpformfield) |[`SetHTTPFormField()`](#sethttpformfield)| 
+| [`SetHTTPHeader()`](#sethttpheader)| [`SetUploadSegment()`](#setuploadsegment)|[`ShowFileDialog()`](#showfiledialog) | [`Print()`](#print)|
+|[`PrintEx()`](#printex)|
 
 **Properties**
 
-* [FTPPassword](#ftppassword) 
-* [FTPPort](#ftpport)
-* [FTPUserName](#ftpusername) 
-* [HTTPPassword](#httppassword)
-* [HTTPUserName](#httpusername) 
-* [IfPASVMode](#ifpasvmode)
-* [HttpFieldNameOfUploadedImage](#httpfieldnameofuploadedimage) 
-* [HTTPPort](#httpport)
-* [IfSSL](#ifssl)
-* [HTTPPostResponseString](#httppostresponsestring)
-* [IfShowFileDialog](#ifshowfiledialog) 
-* [IfShowCancelDialogWhenImageTransfer](#ifshowcanceldialogwhenimagetransfer)
-* [IfShowProgressBar](#ifshowprogressbar) 
-* [JPEGQuality](#jpegquality)
-* [IfTiffMultiPage](#iftiffmultipage) 
-* [TIFFCompressionType]()
-* [MaxUploadImageSize](#maxuploadimagesize)
-* [IfAppendImage](#ifappendimage)
+| |
+|:-|:-|
+|[`FTPPassword`](#ftppassword) |[`FTPPort`](#ftpport)| [`FTPUserName`](#ftpusername) |[`IfPASVMode`](#ifpasvmode)|
+|[`HttpFieldNameOfUploadedImage`](#httpfieldnameofuploadedimage) | [`HTTPPort`](#httpport)|[`IfSSL`](#ifssl)  |[`HTTPPostResponseString`](#httppostresponsestring)|
+|[`IfShowFileDialog`](#ifshowfiledialog) |[`IfShowCancelDialogWhenImageTransfer`](#ifshowcanceldialogwhenimagetransfer)| [`IfShowProgressBar`](#ifshowprogressbar)  | [`JPEGQuality`](#jpegquality)|
+|[`IfTiffMultiPage`](#iftiffmultipage) | [`TIFFCompressionType`](#tiffcompressiontype)| [`MaxUploadImageSize`](#maxuploadimagesize)|[`IfAppendImage`](#ifappendimage)|
 
 **Events**
 
-* [OnGetFilePath](#ongetfilepath)
-* [OnPostLoad](#onpostload)
-* [OnInternetTransferPercentage](#oninternettransferpercentage)
+| |
+|:-|:-|
+|[`OnGetFilePath`](#ongetfilepath)|[`OnPostLoad`](#onpostload)| [`OnInternetTransferPercentage`](#oninternettransferpercentage)|
 
 ---
 

@@ -11,66 +11,34 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 
 **Methods**
 
-* [bind()](#bind)
-* [clearSelectedAreas()](#clearselectedareas)
-* [createCustomElement()](#createcustomelement)
-* [createImageEditor()](#createimageeditor)
-* [createThumbnailViewer()](#createthumbnailviewer)
-* [first()](#first)
-* [fitWindow()](#fitwindow)<!--* [getUISettings](#getuisettings)-->
-* [gotoPage()](#gotopage)
-* [hide()](#hide)
-* [last()](#last)
-* [next()](#next)
-* [off()](#off)
-* [on()](#on)
-* [previous()](#previous)
-* [render()](#render)<!--* [resetUISettings](#resetuisettings)* [setButtonClass()](#setbuttonclass)-->
-* [setSelectedAreas()](#setselectedareas)
-* [setViewMode()](#setviewmode) 
-* [show()](#show)
-* [unbind()](#unbind)
-
+| |
+|:-|:-|
+|[`bind()`](#bind)| [`clearSelectedAreas()`](#clearselectedareas)| [`createCustomElement()`](#createcustomelement)| [`createImageEditor()`](#createimageeditor)|
+| [`createThumbnailViewer()`](#createthumbnailviewer)| [`first()`](#first)|[`fitWindow()`](#fitwindow)|[`gotoPage()`](#gotopage)|
+| [`hide()`](#hide)| [`last()`](#last)| [`next()`](#next)|[`off()`](#off)|
+|[`on()`](#on)| [`previous()`](#previous)| [`render()`](#render)| [`setButtonClass()`](#setbuttonclass)|
+| [`setSelectedAreas()`](#setselectedAreas)| [`setViewMode()`](#setviewmode) | [`show()`](#show)| [`unbind()`](#unbind)|
 <!--* [updateUISettings](#updateuisettings)-->
 
 **Properties**
 
-* [acceptDrop](#acceptdrop)
-* [allowSlide](#allowslide)
-* [background](#background)
-* [border](#border)
-* [cursor](#cursor)
-* [height](#height)
-* [idPostfix](#idpostfix)
-* [ifAutoScroll](#ifautoscroll)
-* [innerBorder](#innerborder)
-* [pageMargin](#pagemargin)
-* [selectedAreaBorderColor](#selectedareabordercolor)
-* [selectedPageBackground](#selectedpagebackground)
-* [selectedPageBorder](#selectedpageborder)
-* [selectionRectAspectRatio](#selectionrectaspectratio)
-* [showPageNumber](#showpagenumber)
-* [singlePageMode](#singlepagemode)
-* [width](#width)
-* [zoom](#zoom)
-* [autoChangeIndex](#autochangeindex)
+| |
+|:-|:-|
+|[`acceptDrop`](#acceptdrop)| [`allowSlide`](#allowslide)|[`background`](#background)|[`border`](#border)|
+| [`cursor`](#cursor)| [`height`](#height)|[`idPostfix`](#idpostfix)|[`ifAutoScroll`](#ifautoscroll)|
+|[`innerBorder`](#innerBorder)| [`pageMargin`](#pagemargin)|[`selectedAreaBorderColor`](#selectedareabordercolor)|[`selectedPageBackground`](#selectedpagebackground)|
+|[`selectedPageBorder`](#selectedpageborder)| [`selectionRectAspectRatio`](#selectionrectaspectratio)|[`showPageNumber`](#showpagenumber)|[`singlePageMode`](#singlepagemode)|
+|[`width`](#width)| [`zoom`](#zoom)| [`autoChangeIndex`](#autochangeindex)|
 
 **Events**
 
-* [click](#click)
-* [contextmenu](#contextmenu)
-* [dblclick](#dblclick)
-* [mousemove](#mousemove)
-* [mousedown](#mousedown)
-* [mouseup](#mouseup)
-* [mouseout](#mouseout)
-* [mouseover](#mouseover)
-* [keydown](#keydown)
-* [keyup](#keyup)
-* [pageAreaSelected](#pageareaselected)
-* [pageAreaUnselected](#pageareaunselected)
-* [pageRendered](#pagerendered)
-* [resize](#resize)
+| |
+|:-|:-|
+|[`click`](#click)| [`contextmenu`](#contextmenu)| [`dblclick`](#dblclick)|[`mousemove`](#mousemove)|
+| [`mousedown`](#mousedown)| [`mouseup`](#mouseup)| [`mouseout`](#mouseout)|[`mouseover`](#mouseover)|
+|[`keydown`](#keydown)| [`keyup`](#keyup)|[`pageAreaSelected`](#pageareaselected)| [`pageAreaUnselected`](#pageareaunselected)|
+|[`pageRendered`](#pagerendered)| [`resize`](#resize)|
+
 <!--** [topPageChanged](#toppagechanged)-->
 
 
@@ -79,36 +47,27 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 
 **Methods**
 
-* `BindViewer()`
-* `UnbindView()`
-* `UpdateViewer()`
+| |
+|:-|:-|
+| `BindViewer()`| `UnbindView()`|
+| `UpdateViewer()`|
 
 **Properties**
 
-* `BackgroundColor`
-* `SelectionImageBorderColor`
-* `FitWindowType`
-* `IfFitWindow`
-* `Height`
-* `Width`
-* `IfAutoScroll`
-* `ShowPageNumber`
-* `MouseX`
-* `MouseY`
-* `ImageMargin`
-* `MouseShape`
-* `SelectionRectAspectRatio`
-* `Zoom`
+| |
+|:-|:-|
+|`BackgroundColor`| `SelectionImageBorderColor`| `FitWindowType`| `IfFitWindow`|
+| `Height`| `Width`| `IfAutoScroll`|`ShowPageNumber`|`MouseX`|
+| `MouseY`| `ImageMargin`| `MouseShape`| `SelectionRectAspectRatio`|
+| `Zoom`|
 
 
 **Events**
 
-* `OnMouseClick`
-* `OnMouseDoubleClick`
-* `OnMouseMove`
-* `OnMouseRightClick`
-* `OnImageAreaSelected`
-* `OnImageAreaDeSelected`
+| |
+|:-|:-|
+| `OnMouseClick`| `OnMouseDoubleClick`| `OnMouseMove`|
+| `OnMouseRightClick`| `OnImageAreaSelected`| `OnImageAreaDeSelected`|
 
 ---
 

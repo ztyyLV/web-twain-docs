@@ -11,24 +11,18 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Utility APIs Page
 
 **Methods**
 
-* [isUsingActiveX()](#isusingactivex)
-* [RegisterEvent()](#registerevent) 
-* [UnregisterEvent()](#unregisterevent)
-* [SetProductKeyAsync()](#setproductkeyasync)
-* [SetLanguage()](#setlanguage)
-* [GenerateURLForUploadData()](#generateurlforuploaddata)
+| |
+|:-|:-|
+|[`RegisterEvent()`](#registerevent) | [`UnregisterEvent()`](#unregisterevent)| [`SetProductKeyAsync()`](#setproductkeyasync)| [`SetLanguage()`](#setlanguage)|
+|[`GenerateURLForUploadData()`](#generateurlforuploaddata)|
 
 **Properties**
 
-* [ErrorCode](#errorcode)
-* [ErrorString](#errorstring)
-* [LogLevel](#loglevel)
-* [Manufacturer](#manufacturer)
-* [ProductFamily](#productfamily)
-* [ProductName](#productname)
-* [VersionInfo](#versioninfo)
-* [ProductKey](#productkey)
-* [UseLocalService](#uselocalservice)
+| |
+|:-|:-|
+|[`ErrorCode`](#errorcode)| [`ErrorString`](#errorstring) | [`LogLevel`](#loglevel)| [`Manufacturer`](#manufacturer)|
+|[`ProductFamily`](#productfamily)| [`ProductName`](#productname)| [`VersionInfo`](#versioninfo)| [`ProductKey`](#productkey)|
+|[`UseLocalService`](#uselocalservice)|
 
 ---
 

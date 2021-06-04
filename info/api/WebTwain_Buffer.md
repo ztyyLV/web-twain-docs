@@ -11,63 +11,38 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page
 
 **Methods**
 
-* [ClearImageTags()](#clearimagetags)
-* [RenameTag()](#renametag)
-* [RemoveTag()](#removetag)
-* [GetTagList()](#gettaglist)
-* [FilterImagesByTag()](#filterimagesbytag)
-* [ClearFilter()](#clearfilter)
-* [SetDefaultTag()](#setdefaulttag) 
-* [TagImages()](#tagimages)
-* [GetImageBitDepth()](#getimagebitdepth)
+| |
+|:-|:-|
+|[`ClearImageTags()`](#clearimagetags) | [`RenameTag()`](#renametag) |[`RemoveTag()`](#removetag) |[`GetTagList()`](#gettaglist) |
+|[`FilterImagesByTag()`](#filterimagesbytag)|[`ClearFilter()`](#clearfilter) | [`SetDefaultTag()`](#setdefaulttag) | [`TagImages()`](#tagimages)| 
+|[`GetImageBitDepth()`](#getimagebitdepth)| [`GetImageSize()`](#getimagesize)| [`GetImageSizeWithSpecifiedType()`](#getimagesizewithspecifiedtype)|[`GetSelectedImagesSize()`](#getselectedimagessize) |
+|[`GetImageHeight()`](#getimageheight) |[`GetImageWidth()`](#getimagewidth) | [`GetImagePartURL()`](#getimageparturl) |[`GetImageURL()`](#getimageurl)|
+|[`GetImageXResolution()`](#getimagexresolution) |[`GetImageYResolution()`](#getimageyresolution) |[`GetSkewAngle()`](#getskewangle) | [`GetSkewAngleEx()`](#getskewangleex)|
+|[`ImageIDToIndex()`](#imageidtoindex) | [`IndexToImageID()`](#indextoimageid)| [`IsBlankImage()`](#isblankimage) | [`IsBlankImageExpress()`](#isblankimageexpress)|  
+|[`SelectAllImages()`](#selectallimages)|[`MoveImage()`](#moveimage) | [`SwitchImage()`](#switchimage)| [`RemoveImage()`](#removeimage) |
+| [`RemoveAllImages()`](#removeallimages)|[`RemoveAllSelectedImages()`](#removeallselectedimages) |
 
 <!--* [GetImageBitDepthAsync()](#getimagebitdepthasync)-->
 
-* [GetImageSize()](#getimagesize)
-* [GetImageSizeWithSpecifiedType()](#getimagesizewithspecifiedtype) 
-* [GetSelectedImagesSize()](#getselectedimagessize)
-* [GetImageHeight()](#getimageheight) 
-* [GetImageWidth()](#getimagewidth)
-* [GetImagePartURL()](#getimageparturl) 
-* [GetImageURL()](#getimageurl)
-* [GetImageXResolution()](#getimagexresolution) 
-* [GetImageYResolution()](#getimageyresolution)
-* [GetSkewAngle()](#getskewangle) 
-* [GetSkewAngleEx()](#getskewangleex)
-* [ImageIDToIndex()](#imageidtoindex) 
-* [IndexToImageID()](#indextoimageid)
-* [IsBlankImage()](#isblankimage) 
-* [IsBlankImageExpress()](#isblankimageexpress)
-* [SelectAllImages()](#selectallimages) 
-* [SelectImages()](#selectimages)
-* [MoveImage()](#moveimage) 
-* [SwitchImage()](#switchimage)
-* [RemoveImage()](#removeimage) 
-* [RemoveAllImages()](#removeallimages)
 
 <!--* [RemoveAllImagesAsync()](#removeallimagesasync)-->
 
-* [RemoveAllSelectedImages()](#removeallselectedimages)
 
 <!--* [RemoveAllSelectedImagesAsync()](#removeallselectedimagesasync)-->
 
 **Properties**
 
-* [BlankImageCurrentStdDev](#blanimagecurrentstddev)
-* [BlankImageMaxStdDev](#blankimagemaxstddev)
-* [BufferMemoryLimit](#buffermemorylimit)
-* [CurrentImageIndexInBuffer](#currentimageindexinbuffer) 
-* [HowManyImagesInBuffer](#howmanyimagesinbuffer)
-* [IfAllowLocalCache](#ifallowlocalcache) 
-* [SelectedImagesIndices](#selectedimagesindices)
-* [MaxImagesInBuffer](#maximagesinbuffer)
+| |
+|:-|:-|
+|[`BlankImageCurrentStdDev`](#blanimagecurrentstddev) |[`BlankImageMaxStdDev`](#blankimagemaxstddev) |[`BlankImageThreshold`](#blankimagethreshold)| [`BufferMemoryLimit`](#buffermemorylimit)|
+|[`CurrentImageIndexInBuffer`](#currentimageindexinbuffer) |[`HowManyImagesInBuffer`](#howmanyimagesinbuffer)| [`IfAllowLocalCache`](#ifallowlocalcache) | [`SelectedImagesIndices`](#selectedimagesindices)|
+|[`MaxImagesInBuffer`](#maximagesinbuffer)|
 
 **Events**
 
-* [OnBufferChanged](#onbufferchanged)
-* [OnBitmapChanged](#onbitmapchanged)
-* [OnIndexChangeDragDropDone](#onindexchangedragdropdone)
-* [OnTopImageInTheViewChanged](#ontopimageintheviewchanged)
+| |
+|:-|:-|
+| [`OnBufferChanged`](#onbufferchanged) |[`OnBitmapChanged`](#onbitmapchanged) | [`OnIndexChangeDragDropDone`](#onindexchangedragdropdone)| [`OnTopImageInTheViewChanged`](#ontopimageintheviewchanged)|
 
 ---
 

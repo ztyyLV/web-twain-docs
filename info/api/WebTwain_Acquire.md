@@ -15,25 +15,25 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 
 | |
 |:-|:-|
-|[`GetSourceNameItems()`]({{site.info}}api/WebTwain_Acquire.html#getsourcenameitems) | [`GetSourceNames()`]({{site.info}}api/WebTwain_Acquire.html#getsourcenames)| [`GetSourceNamesAsync()`]({{site.info}}api/WebTwain_Acquire.html#getsourcenamesasync) |[`GetDeviceType()`]({{site.info}}api/WebTwain_Acquire.html#getdevicetype)|
-|[`SelectSource()`]({{site.info}}api/WebTwain_Acquire.html#selectsource)| [`SelectSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#selectsourceasync)| [`SelectSourceByIndex()`]({{site.info}}api/WebTwain_Acquire.html#selectsourcebyindex) |[`SelectSourceByIndexAsync()`]({{site.info}}api/WebTwain_Acquire.html#selectsourcebyindexasync) |
-|[`SetOpenSourceTimeout()`]({{site.info}}api/WebTwain_Acquire.html#setopensourcetimeout) |[`OpenSource()`]({{site.info}}api/WebTwain_Acquire.html#opensource) |[`OpenSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#opensourceasync)| [`EnableSourceUI()`]({{site.info}}api/WebTwain_Acquire.html#enablesourceui)|
-|[`EnableSource()`]({{site.info}}api/WebTwain_Acquire.html#enablesource) |[`AcquireImage()`]({{site.info}}api/WebTwain_Acquire.html#acquireimage) | [`startScan()`]({{site.info}}api/WebTwain_Acquire.html#startscan) | [`DisableSource()`]({{site.info}}api/WebTwain_Acquire.html#disablesource)|
-|[`CloseSource()`]({{site.info}}api/WebTwain_Acquire.html#closesource) |[`CloseSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#closesourceasync)| [`CloseWorkingProcess()`]({{site.info}}api/WebTwain_Acquire.html#closeworkingprocess)|
+|[`GetSourceNameItems()`](#getsourcenameitems) | [`GetSourceNames()`](#getsourcenames)| [`GetSourceNamesAsync()`](#getsourcenamesasync) |[`GetDeviceType()`](#getdevicetype)|
+|[`SelectSource()`](#selectsource)| [`SelectSourceAsync()`](#selectsourceasync)| [`SelectSourceByIndex()`](#selectsourcebyindex) |[`SelectSourceByIndexAsync()`](#selectsourcebyindexasync) |
+|[`SetOpenSourceTimeout()`](#setopensourcetimeout) |[`OpenSource()`](#opensource) |[`OpenSourceAsync()`](#opensourceasync)| [`EnableSourceUI()`](#enablesourceui)|
+|[`EnableSource()`](#enablesource) |[`AcquireImage()`](#acquireimage) | [`startScan()`](#startscan) | [`DisableSource()`](#disablesource)|
+|[`CloseSource()`](#closesource) |[`CloseSourceAsync()`](#closesourceasync)| [`CloseWorkingProcess()`](#closeworkingprocess)|
 
 **Properties**
 
 | |
 |:-|:-|
-|[`CurrentSourceName`]({{site.info}}api/WebTwain_Acquire.html#currentsourcename) |[`IfDisableSourceAfterAcquire`]({{site.info}}api/WebTwain_Acquire.html#ifdisablesourceafteracquire) |[`IfDuplexEnabled`]({{site.info}}api/WebTwain_Acquire.html#ifduplexenabled) |[`IfFeederEnabled`]({{site.info}}api/WebTwain_Acquire.html#iffeederenabled)|
-| [`PageSize`]({{site.info}}api/WebTwain_Acquire.html#pagesize) |[`PixelType`]({{site.info}}api/WebTwain_Acquire.html#pixeltype) |[`Resolution`]({{site.info}}api/WebTwain_Acquire.html#resolution) |[`SourceCount`]({{site.info}}api/WebTwain_Acquire.html#sourcecount)|
+|[`CurrentSourceName`](#currentsourcename) |[`IfDisableSourceAfterAcquire`](#ifdisablesourceafteracquire) |[`IfDuplexEnabled`](#ifduplexenabled) |[`IfFeederEnabled`](#iffeederenabled)|
+| [`PageSize`](#pagesize) |[`PixelType`](#pixeltype) |[`Resolution`](#resolution) |[`SourceCount`](#sourcecount)|
 
 **Events**
 
 | |
 |:-|:-|
-|[`OnPostAllTransfers`]({{site.info}}api/WebTwain_Acquire.html#onpostalltransfers) | [`OnPostTransfer`]({{site.info}}api/WebTwain_Acquire.html#onposttransfer)| [`OnPostTransferAsync`]({{site.info}}api/WebTwain_Acquire.html#onposttransferasync) | [`OnPreAllTransfers`]({{site.info}}api/WebTwain_Acquire.html#onprealltransfers)|
-|[`OnPreTransfer`]({{site.info}}api/WebTwain_Acquire.html#onpretransfer)|
+|[`OnPostAllTransfers`](#onpostalltransfers) | [`OnPostTransfer`](#onposttransfer)| [`OnPostTransferAsync`](#onposttransferasync) | [`OnPreAllTransfers`](#onprealltransfers)|
+|[`OnPreTransfer`](#onpretransfer)|
 
 > The following APIs are compatible with TWAIN and ICA
 
@@ -57,21 +57,21 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 **Properties**
 | |
 |:-|:-|
-| [`BitDepth`]({{site.info}}api/WebTwain_Acquire.html#bitdepth) | [`Brightness`]({{site.info}}api/WebTwain_Acquire.html#brightness)|[`Contrast`]({{site.info}}api/WebTwain_Acquire.html#contrast) | [`DataSourceStatus`]({{site.info}}api/WebTwain_Acquire.html#datasourcestatus)| 
-|[`DefaultSourceName`]({{site.info}}api/WebTwain_Acquire.html#defaultsourcename) | [`Duplex`]({{site.info}}api/WebTwain_Acquire.html#duplex)| [`IfAutoBright`]({{site.info}}api/WebTwain_Acquire.html#ifautobright) | [`IfAutoDiscardBlankpages`]({{site.info}}api/WebTwain_Acquire.html#ifautodiscardblankpages)|
-|[`IfAutoFeed`]({{site.info}}api/WebTwain_Acquire.html#ifautofeed) | [`IfAutomaticBorderDetection`]({{site.info}}api/WebTwain_Acquire.html#ifautomaticborderdetection)|[`IfAutomaticDeskew`]({{site.info}}api/WebTwain_Acquire.html#ifautomaticdeskew) |[`IfAutoScan`]({{site.info}}api/WebTwain_Acquire.html#ifautoscan)|
-| [`IfFeederLoaded`]({{site.info}}api/WebTwain_Acquire.html#iffeederloaded) |[`IfPaperDetectable`]({{site.info}}api/WebTwain_Acquire.html#ifpaperdetectable)| [`IfShowIndicator`]({{site.info}}api/WebTwain_Acquire.html#ifshowindicator) | [`IfShowUI`]({{site.info}}api/WebTwain_Acquire.html#ifshowui)|
-| [`IfUIControllable`]({{site.info}}api/WebTwain_Acquire.html#ifuicontrollable) |[`IfUseTwainDSM`]({{site.info}}api/WebTwain_Acquire.html#ifusetwaindsm)|[`ImageCaptureDriverType`]({{site.info}}api/WebTwain_Acquire.html#imagecapturedrivertype)| [`ImageLayoutDocumentNumber`]({{site.info}}api/WebTwain_Acquire.html#imagelayoutdocumentnumber) |
-|[`ImageLayoutFrameBottom`]({{site.info}}api/WebTwain_Acquire.html#imagelayoutframebottom)| [`ImageLayoutFrameLeft`]({{site.info}}api/WebTwain_Acquire.html#imagelayoutframeleft) |[`ImageLayoutFrameNumber`]({{site.info}}api/WebTwain_Acquire.html#imagelayoutframenumber)| [`ImageLayoutFrameRight`]({{site.info}}api/WebTwain_Acquire.html#imagelayoutframeright) |
-| [`ImageLayoutFrameTop`]({{site.info}}api/WebTwain_Acquire.html#imagelayoutframetop)| [`ImageLayoutPageNumber`]({{site.info}}api/WebTwain_Acquire.html#imagelayoutpagenumber) | [`ImagePixelType`]({{site.info}}api/WebTwain_Acquire.html#imagepixeltype)| [`MagData`]({{site.info}}api/WebTwain_Acquire.html#magdata) |
-|[`MagType`]({{site.info}}api/WebTwain_Acquire.html#magtype)|[`PendingXfers`]({{site.info}}api/WebTwain_Acquire.html#pendingxfers) | [`PixelFlavor`]({{site.info}}api/WebTwain_Acquire.html#pixelflavor)| [`TransferMode`]({{site.info}}api/WebTwain_Acquire.html#transfermode) |
-| [`Unit`]({{site.info}}api/WebTwain_Acquire.html#unit)|[`XferCount`]({{site.info}}api/WebTwain_Acquire.html#xfercount)|
+| [`BitDepth`](#bitdepth) | [`Brightness`](#brightness)|[`Contrast`](#contrast) | [`DataSourceStatus`](#datasourcestatus)| 
+|[`DefaultSourceName`](#defaultsourcename) | [`Duplex`](#duplex)| [`IfAutoBright`](#ifautobright) | [`IfAutoDiscardBlankpages`](#ifautodiscardblankpages)|
+|[`IfAutoFeed`](#ifautofeed) | [`IfAutomaticBorderDetection`](#ifautomaticborderdetection)|[`IfAutomaticDeskew`](#ifautomaticdeskew) |[`IfAutoScan`](#ifautoscan)|
+| [`IfFeederLoaded`](#iffeederloaded) |[`IfPaperDetectable`](#ifpaperdetectable)| [`IfShowIndicator`](#ifshowindicator) | [`IfShowUI`](#ifshowui)|
+| [`IfUIControllable`](#ifuicontrollable) |[`IfUseTwainDSM`](#ifusetwaindsm)|[`ImageCaptureDriverType`](#imagecapturedrivertype)| [`ImageLayoutDocumentNumber`](#imagelayoutdocumentnumber) |
+|[`ImageLayoutFrameBottom`](#imagelayoutframebottom)| [`ImageLayoutFrameLeft`](#imagelayoutframeleft) |[`ImageLayoutFrameNumber`](#imagelayoutframenumber)| [`ImageLayoutFrameRight`](#imagelayoutframeright) |
+| [`ImageLayoutFrameTop`](#imagelayoutframetop)| [`ImageLayoutPageNumber`](#imagelayoutpagenumber) | [`ImagePixelType`](#imagepixeltype)| [`MagData`](#magdata) |
+|[`MagType`](#magtype)|[`PendingXfers`](#pendingxfers) | [`PixelFlavor`](#pixelflavor)| [`TransferMode`](#transfermode) |
+| [`Unit`](#unit)|[`XferCount`](#xfercount)|
 
 **Events**
 
 | |
 |:-|:-|
-| [`OnSourceUIClose`]({{site.info}}api/WebTwain_Acquire.html#onsourceuiclose)|
+| [`OnSourceUIClose`](#onsourceuiclose)|
 
 ---
 

@@ -11,6 +11,15 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Edit APIs Page
 
 **Methods**
 
+| |
+|:-|:-|
+|[`Crop()`](#crop)|[`CropToClipboard()`](#croptoclipboard)| [`CutFrameToClipboard()`](#cutframetoclipboard) |[`CutToClipboard()`](#cuttoclipboard)|
+|[`CopyToClipboard()`](#copytoclipboard) |[`Erase()`](#erase) |[`Flip()`](#flip)|[`Mirror()`](#mirror)|
+| [`Rotate()`](#rotate) |[`RotateEx()`](#rotateex)| [`RotateLeft()`](#rotateleft) | [`RotateRight()`](#rotateright)|
+| [`ChangeBitDepth()`](#changebitdepth) | [`SetDPI()`](#setdpi)|[`ConvertToBW()`](#converttobw) |[`ConvertToGrayScale()`](#converttograyscale)|
+|[`ChangeImageSize()`](#changeimagesize) | [`Invert()`](#invert)|[`SetImageWidth()`](#setimagewidth)|
+
+<!--
 * [Crop()](#crop) 
 * [CropToClipboard()](#croptoclipboard)
 * [CutFrameToClipboard()](#cutframetoclipboard) 
@@ -19,41 +28,40 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Edit APIs Page
 * [Erase()](#erase)
 * [Flip()](#flip)
 
-<!--* [FlipAsync()](#flipasync)-->
+<!--* [FlipAsync()](#flipasync)
 
 * [Mirror()](#mirror)
 
-<!--* [MirrorAsync()](#mirrorasync)-->
+<!--* [MirrorAsync()](#mirrorasync)
 
 * [Rotate()](#rotate) 
 
-<!--* [RotateAsync()](#rotate) -->
+<!--* [RotateAsync()](#rotate) 
 
 * [RotateEx()](#rotateex)
 * [RotateLeft()](#rotateleft) 
 
-<!--* [RotateLeftAsync()](#rotateleft) -->
+<!--* [RotateLeftAsync()](#rotateleft) 
 
 * [RotateRight()](#rotateright)
 
-<!--* [RotateRightAsync()](#rotateright)-->
+<!--* [RotateRightAsync()](#rotateright)
 
 * [ChangeBitDepth()](#changebitdepth) 
 * [SetDPI()](#setdpi)
 * [ConvertToBW()](#converttobw) 
 * [ConvertToGrayScale()](#converttograyscale)
 
-<!--* [ConvertToGrayScaleAsync()](#converttograyscaleasync)-->
-
+<!--* [ConvertToGrayScaleAsync()](#converttograyscaleasync)
 * [ChangeImageSize()](#changeimagesize) 
 * [Invert()](#invert)
-* [SetImageWidth()](#setimagewidth)
+* [SetImageWidth()](#setimagewidth) -->
 
 **Properties**
 
-* [BackgroundFillColor](#backgroundfillcolor)
-
----
+| |
+|:-|:-|
+|[`BackgroundFillColor`](#backgroundfillcolor) |
 
 ## ChangeBitDepth
 
