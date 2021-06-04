@@ -23,23 +23,21 @@ Input
 Output
 
 **Methods**
+
 | |
 |:-|:-|
-| [`ConvertToBase64()`](#converttobase64)|[`ConvertToBlob()`](#converttoblob)|[`FTPUpload()`](#ftpupload)|
-|[`FTPUploadEx()`](#ftpuploadex)|[`FTPUploadAllAsMultiPageTIFF()`](#ftpuploadallasmultipagetiff)|[`FTPUploadAllAsPDF()`](#ftpuploadallaspdf)|
-|[`FTPUploadAsMultiPagePDF()`](#ftpuploadasmultipagepdf)| [`FTPUploadAsMultiPageTIFF()`](#ftpuploadasmultipagetiff)|[`HTTPUpload()`](#httpupload)| 
-|[`HTTPUploadThroughPutEx()`](#httpuploadthroughputex)| [`HTTPUploadThroughPost()`](#httpuploadthroughpost)| [`HTTPUploadThroughPostEx()`](#httpuploadthroughpostex)|
-| [`HTTPUploadAllThroughPostAsMultiPageTIFF()`](#httpuploadallthroughpostasmultipagetiff)| [`HTTPUploadAllThroughPostAsPDF()`](#httpuploadallthroughpostaspdf)| [`HTTPUploadThroughPostAsMultiPagePDF()`](#httpuploadthroughpostasmultipagepdf)|
-|[`HTTPUploadThroughPostAsMultiPageTIFF()`](#httpuploadthroughpostasmultipagetiff)|[`HTTPUploadThroughPostDirectly()`](#httpuploadthroughpostdirectly)|[`SaveAsBMP()`](#saveasbmp)| 
-|[`SaveAsJPEG()`](#saveasjpeg)| [`SaveAsPDF()`](#saveaspdf)|[`SaveAsPNG()`](#saveaspng)| 
-|[`SaveAsTIFF()`](#saveastiff)| [`SaveSelectedImagesAsMultiPagePDF()`](#saveselectedimagesasmultipagepdf)|[`SaveSelectedImagesAsMultiPageTIFF()`](#saveselectedimagesasmultipagetiff)|
-| [`SaveAllAsMultiPageTIFF()`](#saveallasmultipagetiff)|[`SaveAllAsPDF()`](#saveallaspdf)|
+| [`ConvertToBase64()`]({{site.info}}api/WebTwain_IO.html#converttobase64)|[`ConvertToBlob()`]({{site.info}}api/WebTwain_IO.html#converttoblob)|[`FTPUpload()`]({{site.info}}api/WebTwain_IO.html#ftpupload)|
+|[`FTPUploadEx()`]({{site.info}}api/WebTwain_IO.html#ftpuploadex)|[`FTPUploadAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadallasmultipagetiff)|[`FTPUploadAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadallaspdf)|
+|[`FTPUploadAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadasmultipagepdf)| [`FTPUploadAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadasmultipagetiff)|[`HTTPUpload()`]({{site.info}}api/WebTwain_IO.html#httpupload)| 
+|[`HTTPUploadThroughPutEx()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughputex)| [`HTTPUploadThroughPost()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpost)| [`HTTPUploadThroughPostEx()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostex)|
+| [`HTTPUploadAllThroughPostAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#httpuploadallthroughpostasmultipagetiff)| [`HTTPUploadAllThroughPostAsPDF()`]({{site.info}}api/WebTwain_IO.html#httpuploadallthroughpostaspdf)| [`HTTPUploadThroughPostAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostasmultipagepdf)|
+|[`HTTPUploadThroughPostAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostasmultipagetiff)|[`HTTPUploadThroughPostDirectly()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostdirectly)|[`SaveAsBMP()`]({{site.info}}api/WebTwain_IO.html#saveasbmp)| 
+|[`SaveAsJPEG()`]({{site.info}}api/WebTwain_IO.html#saveasjpeg)| [`SaveAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveaspdf)|[`SaveAsPNG()`]({{site.info}}api/WebTwain_IO.html#saveaspng)| 
+|[`SaveAsTIFF()`]({{site.info}}api/WebTwain_IO.html#saveastiff)| [`SaveSelectedImagesAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagepdf)|[`SaveSelectedImagesAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagetiff)|
+| [`SaveAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveallasmultipagetiff)|[`SaveAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveallaspdf)|
 
----
 
 Others
-
----
 
 **Methods**
 
