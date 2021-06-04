@@ -11,11 +11,10 @@ description: Dynamic Web TWAIN SDK Documentation API Reference BarcodeReader Add
 
 **Methods**
 
-* [decode()](#decode)
-* [getRuntimeSettings()](#getruntimesettings)
-* [updateRuntimeSettings()](#updateruntimesettings)
-* [resetRuntimeSettings()](#resetruntimesettings)
-* [initRuntimeSettingsWithString()](#initruntimesettingswithstring)
+| |
+|:-|:-|
+|[`decode()`]({{site.info}}api/Addon_BarcodeReader.html#decode)| [`getRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#getruntimesettings)|[`updateRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#updateruntimesettings)|
+|[`resetRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#resetruntimesettings)| [`initRuntimeSettingsWithString()`]({{site.info}}api/Addon_BarcodeReader.html#initruntimesettingswithstring)|
 
 ---
 
