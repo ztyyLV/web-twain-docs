@@ -17,7 +17,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference PDF Addon APIs Pa
 * [`SetConvertMode()`](#setconvertmode)
 * [`SetPassword()`](#setpassword)
 * [`SetResolution()`](#setresolution)
-* [`Write.Setup()`](#writesetup)
+* [`Write.Setup()`](#write.setup)
 
 ---
 
