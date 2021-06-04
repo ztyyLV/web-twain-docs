@@ -96,7 +96,7 @@ The recommended fix is to patch the operating system, you can find the patch [he
 
 ### Related to Input and Output
 
-> [Alternative] Use new methods like [ConvertToBase64()](({{site.info}}api/WebTwain_IO.html#converttobase64), [ `PDF.Write.Setup()` ](({{site.info}}api/Addon_PDF.html#writesetup)
+> [Alternative] Use new methods like [ConvertToBase64()]({{site.info}}api/WebTwain_IO.html#converttobase64), [ `PDF.Write.Setup()` ]({{site.info}}api/Addon_PDF.html#writesetup)
 
 * [SaveSelectedImagesToBase64Binary()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Load-Save.html#SaveSelectedImagesToBase64Binary) 
 * SetCookie()
