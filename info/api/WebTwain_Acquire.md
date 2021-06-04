@@ -13,117 +13,69 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 
 **Methods**
 
-* [GetSourceNameItems()](#getsourcenameitems) 
-* [GetSourceNames()](#getsourcenames)
-* [GetSourceNamesAsync()](#getsourcenamesasync)
-* [GetDeviceType()](#getdevicetype)
-* [SelectSource()](#selectsource)
-* [SelectSourceAsync()](#selectsourceasync)
-* [SelectSourceByIndex()](#selectsourcebyindex) 
-* [SelectSourceByIndexAsync()](#selectsourcebyindexasync) 
-* [SetOpenSourceTimeout()](#setopensourcetimeout)
-* [OpenSource()](#opensource)
-* [OpenSourceAsync()](#opensourceasync)
-* [EnableSourceUI()](#enablesourceui)
-* [EnableSource()](#enablesource)
-* [AcquireImage()](#acquireimage)
-* [startScan()](#startscan)
-* [DisableSource()](#disablesource)
-* [CloseSource()](#closesource)
-* [CloseSourceAsync()](#closesourceasync)
-* [CloseWorkingProcess()](#closeworkingprocess)
+| |
+|:-|:-|
+|[`GetSourceNameItems()`](#getsourcenameitems) | [`GetSourceNames()`](#getsourcenames)| [`GetSourceNamesAsync()`](#getsourcenamesasync) |[`GetDeviceType()`](#getdevicetype)|
+|[`SelectSource()`](#selectsource)| [`SelectSourceAsync()`](#selectsourceasync)| [`SelectSourceByIndex()`](#selectsourcebyindex) |[`SelectSourceByIndexAsync()`](#selectsourcebyindexasync) |
+|[`SetOpenSourceTimeout()`](#setopensourcetimeout) |[`OpenSource()`](#opensource) |[`OpenSourceAsync()`](#opensourceasync)| [`EnableSourceUI()`](#enablesourceui)|
+|[`EnableSource()`](#enablesource) |[`AcquireImage()`](#acquireimage) | [`startScan()`](#startscan) | [`DisableSource()`](#disablesource)|
+|[`CloseSource()`](#closesource) |[`CloseSourceAsync()`](#closesourceasync)| [`CloseWorkingProcess()`](#closeworkingprocess)|
 
 **Properties**
 
-* [CurrentSourceName](#currentsourcename) 
-* [IfDisableSourceAfterAcquire](#ifdisablesourceafteracquire)
-* [IfDuplexEnabled](#ifduplexenabled) 
-* [IfFeederEnabled](#iffeederenabled)
-* [PageSize](#pagesize) 
-* [PixelType](#pixeltype)
-* [Resolution](#resolution) 
-* [SourceCount](#sourcecount)
+| |
+|:-|:-|
+|[`CurrentSourceName`](#currentsourcename) |[`IfDisableSourceAfterAcquire`](#ifdisablesourceafteracquire) |[`IfDuplexEnabled`](#ifduplexenabled) |[`IfFeederEnabled`](#iffeederenabled)|
+| [`PageSize`](#pagesize) |[`PixelType`](#pixeltype) |[`Resolution`](#resolution) |[`SourceCount`](#sourcecount)|
 
 **Events**
 
-* [OnPostAllTransfers](#onpostalltransfers) 
-* [OnPostTransfer](#onposttransfer)
-* [OnPostTransferAsync](#onposttransferasync) 
-* [OnPreAllTransfers](#onprealltransfers)
-* [OnPreTransfer](#onpretransfer)
+| |
+|:-|:-|
+|[`OnPostAllTransfers`](#onpostalltransfers) | [`OnPostTransfer`](#onposttransfer)| [`OnPostTransferAsync`](#onposttransferasync) | 
+|[`OnPreAllTransfers`](#onprealltransfers)|[`OnPreTransfer`](#onpretransfer)|
+
 
 > The following APIs are compatible with TWAIN and ICA
 
 **Methods**
 
-* [getCapabilities()](#getcapabilities) 
-* [setCapabilities()](#setcapabilities)
+| |
+|:-|:-|
+|[`getCapabilities()`](#getcapabilities) | [`setCapabilities()`](#setcapabilities)|
 
 > The following APIs are compatible with TWAIN (mostly Windows, but could also be macOS)
 
 **Methods**
 
-* [OpenSourceManager()](#opensourcemanager)
-* [OpenSourceManagerAsync()](#opensourcemanagerasync)  
-* [CloseSourceManager()](#closesourcemanager)
-* [CloseSourceManagerAsync()](#closesourcemanagerasync)
-* [GetCustomDSData()](#getcustomdsdata)
-* [GetCustomDSDataEx()](#getcustomdsdataex) 
-* [CancelAllPendingTransfers()](#cancelallpendingtransfers)
-* [FeedPage()](#feedpage) 
-* [ResetImageLayout()](#resetimagelayout) 
-* [RewindPage()](#rewindpage)
-* [SetCustomDSData()](#setcustomdsdata) 
-* [SetCustomDSDataEx()](#setcustomdsdataex)
-* [SetFileXferInfo()](#setfilexferinfo) 
-* [SetImageLayout()](#setimagelayout)
+| |
+|:-|:-|
+| [`OpenSourceManager()`]({{site.info}}api/WebTwain_Acquire.html#opensourcemanager)| [`OpenSourceManagerAsync()`]({{site.info}}api/WebTwain_Acquire.html#opensourcemanagerasync) | [`CloseSourceManager()`]({{site.info}}api/WebTwain_Acquire.html#closesourcemanager) | [`CloseSourceManagerAsync()`]({{site.info}}api/WebTwain_Acquire.html#closesourcemanagerasync)|
+| [`GetCustomDSData()`]({{site.info}}api/WebTwain_Acquire.html#getcustomdsdata)| [`GetCustomDSDataEx()`]({{site.info}}api/WebTwain_Acquire.html#getcustomdsdataex) | [`CancelAllPendingTransfers()`]({{site.info}}api/WebTwain_Acquire.html#cancelallpendingtransfers) | [`FeedPage()`]({{site.info}}api/WebTwain_Acquire.html#feedpage) |
+|[`ResetImageLayout()`]({{site.info}}api/WebTwain_Acquire.html#resetimagelayout) | [`RewindPage()`]({{site.info}}api/WebTwain_Acquire.html#rewindpage)| [`SetCustomDSData()`]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdata) | [`SetCustomDSDataEx()`]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdataex)|
+| [`SetFileXferInfo()`]({{site.info}}api/WebTwain_Acquire.html#setfilexferinfo) | [`SetImageLayout()`]({{site.info}}api/WebTwain_Acquire.html#setimagelayout)|
+
 
 **Properties**
 
-* [BitDepth ](#bitdepth) 
-* [BlankImageThreshold](#blankimagethreshold) 
-* [Brightness](#brightness)
-* [Contrast](#contrast) 
-* [DataSourceStatus](#datasourcestatus)
-* [DefaultSourceName](#defaultsourcename) 
-* [Duplex](#duplex)
-* [IfAutoBright](#ifautobright) 
-* [IfAutoDiscardBlankpages](#ifautodiscardblankpages)
-* [IfAutoFeed](#ifautofeed)
-* [IfAutomaticBorderDetection](#ifautomaticborderdetection)
-* [IfAutomaticDeskew](#ifautomaticdeskew) 
-* [IfAutoScan](#ifautoscan)
-* [IfFeederLoaded](#iffeederloaded) 
-* [IfPaperDetectable](#ifpaperdetectable)
-* [IfShowIndicator](#ifshowindicator) 
-* [IfShowUI](#ifshowui)
-* [IfUIControllable](#ifuicontrollable) 
-* [IfUseTwainDSM](#ifusetwaindsm)
-* [ImageCaptureDriverType](#imagecapturedrivertype)
-* [ImageLayoutDocumentNumber](#imagelayoutdocumentnumber) 
-* [ImageLayoutFrameBottom](#imagelayoutframebottom)
-* [ImageLayoutFrameLeft](#imagelayoutframeleft) 
-* [ImageLayoutFrameNumber](#imagelayoutframenumber)
-* [ImageLayoutFrameRight](#imagelayoutframeright) 
-* [ImageLayoutFrameTop](#imagelayoutframetop)
-* [ImageLayoutPageNumber](#imagelayoutpagenumber) 
-* [ImagePixelType](#imagepixeltype)
-* [ImageBitsPerPixel](#imagebitsperpixel) 
-* [ImageLength](#imagelength)
-* [ImageWidth](#imagewidth) 
-* [ImageXResolution](#imagexresolution)
-* [ImageYResolution](#imageyresolution) 
-* [XferCount](#xfercount)
-* [MagData](#magdata) 
-* [MagType](#magtype)
-* [PendingXfers](#pendingxfers) 
-* [PixelFlavor](#pixelflavor)
-* [TransferMode](#transfermode) 
-* [Unit](#unit)
+| |
+|:-|:-|
+| [`BitDepth`](#bitdepth) | [`Brightness`](#brightness)|[`Contrast`](#contrast) | [`DataSourceStatus`](#datasourcestatus)| 
+|[`DefaultSourceName`](#defaultsourcename) | [`Duplex`](#duplex)| [`IfAutoBright`](#ifautobright) | [`IfAutoDiscardBlankpages`](#ifautodiscardblankpages)|
+|[`IfAutoFeed`](#ifautofeed) | [`IfAutomaticBorderDetection`](#ifautomaticborderdetection)|[`IfAutomaticDeskew`](#ifautomaticdeskew) |[`IfAutoScan`](#ifautoscan)|
+| [`IfFeederLoaded`](#iffeederloaded) |[`IfPaperDetectable`](#ifpaperdetectable)| [`IfShowIndicator`](#ifshowindicator) | [`IfShowUI`](#ifshowui)|
+| [`IfUIControllable`](#ifuicontrollable) |[`IfUseTwainDSM`](#ifusetwaindsm)|[`ImageCaptureDriverType`](#imagecapturedrivertype)| [`ImageLayoutDocumentNumber`](#imagelayoutdocumentnumber) |
+|[`ImageLayoutFrameBottom`](#imagelayoutframebottom)| [`ImageLayoutFrameLeft`](#imagelayoutframeleft) |[`ImageLayoutFrameNumber`](#imagelayoutframenumber)| [`ImageLayoutFrameRight`](#imagelayoutframeright) |
+| [`ImageLayoutFrameTop`](#imagelayoutframetop)| [`ImageLayoutPageNumber`](#imagelayoutpagenumber) | [`ImagePixelType`](#imagepixeltype)| [`MagData`](#magdata) |
+|[`MagType`](#magtype)|[`PendingXfers`](#pendingxfers) | [`PixelFlavor`](#pixelflavor)| [`TransferMode`](#transfermode) |
+| [`Unit`](#unit)|[`XferCount`](#xfercount)|
+
 
 **Events**
 
-* [OnSourceUIClose](#onsourceuiclose)
+| |
+|:-|:-|
+| [`OnSourceUIClose`](#onsourceuiclose)|
 
 ---
 
