@@ -11,24 +11,19 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Utility APIs Page
 
 **Methods**
 
-* [isUsingActiveX()](#isusingactivex)
-* [RegisterEvent()](#registerevent) 
-* [UnregisterEvent()](#unregisterevent)
-* [SetProductKeyAsync()](#setproductkeyasync)
-* [SetLanguage()](#setlanguage)
-* [GenerateURLForUploadData()](#generateurlforuploaddata)
+| |
+|:-|:-|
+|[`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)| [`SetProductKeyAsync()`]({{site.info}}api/WebTwain_Util.html#setproductkeyasync)| 
+|[`SetLanguage()`]({{site.info}}api/WebTwain_Util.html#setlanguage)|[`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)|
+
 
 **Properties**
 
-* [ErrorCode](#errorcode)
-* [ErrorString](#errorstring)
-* [LogLevel](#loglevel)
-* [Manufacturer](#manufacturer)
-* [ProductFamily](#productfamily)
-* [ProductName](#productname)
-* [VersionInfo](#versioninfo)
-* [ProductKey](#productkey)
-* [UseLocalService](#uselocalservice)
+| |
+|:-|:-|
+|[`ErrorCode`](#errorcode)| [`ErrorString`](#errorstring) | [`LogLevel`](#loglevel)| [`Manufacturer`](#manufacturer)|
+|[`ProductFamily`](#productfamily)| [`ProductName`](#productname)| [`VersionInfo`](#versioninfo)| [`ProductKey`](#productkey)|
+|[`UseLocalService`](#uselocalservice)|
 
 ---
 
@@ -164,8 +159,6 @@ readonly ErrorCode: number;
 
 The `ErrorCode` and `ErrorString` always reflect the result of the last API call. So make sure you read them in time.
 
-Check [error list]({{site.info}}api/appendix.html).
-
 ---
 
 ## ErrorString
@@ -182,8 +175,6 @@ readonly ErrorString: string;
 **Usage notes**
 
 The `ErrorCode` and `ErrorString` always reflect the result of the last API call. So make sure you read them in time.
-
-Check [error list]({{site.info}}api/appendix.html).
 
 ---
 
