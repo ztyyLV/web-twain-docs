@@ -49,8 +49,8 @@
                 <div id="docHead" class = "head row hide-xs hide-sm">
                     {%- if page.url contains '-v' || page.url contains 'ver=1' -%}
                     {%- else -%}
-                    <div id="DWT17Note" class="col-xs-12 col-md-12">
-                        <div class="DWT17Note"><i class="fa fa-close"></i>This is the <span style="font-weight: bold">documentation for the latest version (v17.0) of Dynamic Web TWAIN</span>. If you are using an older version, please switch the doc version at the bottom of the page.</div>
+                    <div id="DWT17Note" style="display: none;" class="col-xs-12 col-md-12">
+                        <div class="DWT17Note"><i class="fa fa-close"></i>This is the <span style="font-weight: bold">documentation for the latest version (v17.0) of Dynamic Web TWAIN</span>. If you are using an older version, please switch the doc version above the table of contents on the left.</div>
                     </div>
                     {%- endif -%}
                     {%- include main-page-head.html -%}
@@ -103,40 +103,38 @@
     {%- endif -%}
 
     <script type="text/javascript">
+        function getCookie(name) {
+            var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+            return (arr = document.cookie.match(reg)) ? unescape(arr[2]) : null;
+        }
+
+        function setCookie(name, value, minutes) {
+            if (minutes == undefined) {
+                minutes = 24 * 60 - 1;
+            }
+            var exp = new Date();
+            exp.setTime(exp.getTime() + minutes * 60 * 1000);
+            document.cookie = name + "=" + (value) + ";expires=" + exp.toGMTString() + ";path=/";
+        }
+
         window.addEventListener('scroll', dwtScrollListener);
 
         function dwtScrollListener() {
             if (breakpoint() == 'lg') {
                 var sd = $(window).scrollTop();
                 if (sd >= $('#overall-header').height()) {
-                    NoteHide()
+                    if($('.currentVersion').html() == 'latest version' &&  getCookie('NoAlertNote') != 'true') {
+                        $('#DWT17Note').hide()
+                        markdownHChange()
+                    }
                     realFunc1()
                 } else {
-                    $('#DWT17Note').show()
-                    realFunc1()
-                    if ($(window).outerWidth() > 1680) {
-                        if (breakpoint() == 'lg') {
-                            $('.markdown-body h2').css({'padding-top': $('#docHead').outerHeight() + 110 + 'px'})
-                            $('.markdown-body h2').css({'margin-top': -$('#docHead').outerHeight() - 80 + 'px'})
-                            $('.markdown-body h3').css({'padding-top': $('#docHead').outerHeight() + 110 + 'px'})
-                            $('.markdown-body h3').css({'margin-top': -$('#docHead').outerHeight() - 110 + 'px'})
-                            $('.markdown-body h4').css({'padding-top': $('#docHead').outerHeight() + 110 + 'px'})
-                            $('.markdown-body h4').css({'margin-top': -$('#docHead').outerHeight() - 110 + 'px'})
-                            $('.markdown-body h5').css({'padding-top': $('#docHead').outerHeight() + 110 + 'px'})
-                            $('.markdown-body h5').css({'margin-top': -$('#docHead').outerHeight() - 110 + 'px'})
-                        }
-                    } else {
-                        if (breakpoint() == 'lg') {
-                            $('.markdown-body h2').css({'padding-top': $('#docHead').outerHeight() + 90 + 'px'})
-                            $('.markdown-body h2').css({'margin-top': -$('#docHead').outerHeight() - 60 + 'px'})
-                            $('.markdown-body h3').css({'padding-top': $('#docHead').outerHeight() + 90 + 'px'})
-                            $('.markdown-body h3').css({'margin-top': -$('#docHead').outerHeight() - 90 + 'px'})
-                            $('.markdown-body h4').css({'padding-top': $('#docHead').outerHeight() + 90 + 'px'})
-                            $('.markdown-body h4').css({'margin-top': -$('#docHead').outerHeight() - 90 + 'px'})
-                            $('.markdown-body h5').css({'padding-top': $('#docHead').outerHeight() + 90 + 'px'})
-                            $('.markdown-body h5').css({'margin-top': -$('#docHead').outerHeight() - 90 + 'px'})
-                        }
+                    if($('.currentVersion').html() == 'latest version' &&  getCookie('NoAlertNote') != 'true') {
+                        $('#DWT17Note').show()
+                        markdownHChange()
                     }
+                    realFunc1()
+                    
                 }
             } else {
                 $('.subHeadWrapper').css({'top': 'unset'});
@@ -152,16 +150,18 @@
             }
         })
 
-        if($('.currentVersion').html() != 'latest version') {
-            NoteHide()
+        if($('.currentVersion').html() == 'latest version' &&  getCookie('NoAlertNote') != 'true') {
+            $('#DWT17Note').show()
+            markdownHChange()
         }
 
         $('#DWT17Note i').on('click', function() {
-            NoteHide()
+            setCookie('NoAlertNote', 'true')
+            $('#DWT17Note').hide()
+            markdownHChange()
         })
 
-        function NoteHide() {
-            $('#DWT17Note').hide()
+        function markdownHChange() {
             $('.docContainer .markdown-body').css({'margin-top': ($('#docHead').outerHeight() + 0) + 'px'});
             if ($(window).outerWidth() > 1680) {
                 if (breakpoint() == 'lg') {
