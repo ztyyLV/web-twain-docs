@@ -2315,9 +2315,9 @@ interface ValueAndLabel {
 
 Check out the Enumerations
 
-* [ `Dynamsoft.DWT.EnumDWT_Cap` ]({{site.info}}api/Dynamsoft_Enum.html#enumdwt_cap)
-* [ `Dynamsoft.DWT.EnumDWT_CapType` ]({{site.info}}api/Dynamsoft_Enum.html#enumdwt_captype)
-* [ `Dynamsoft.DWT.EnumDWT_CapValueType` ]({{site.info}}api/Dynamsoft_Enum.html#enumdwt_capvaluetype)
+* [ `Dynamsoft.DWT.EnumDWT_Cap` ]({{site.info}}api/Dynamsoft_Enum.html#enumdwt_cap-)
+* [ `Dynamsoft.DWT.EnumDWT_CapType` ]({{site.info}}api/Dynamsoft_Enum.html#enumdwt_captype-)
+* [ `Dynamsoft.DWT.EnumDWT_CapValueType` ]({{site.info}}api/Dynamsoft_Enum.html#enumdwt_capvaluetype-)
 
 ---
 
