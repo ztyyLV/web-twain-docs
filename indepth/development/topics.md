@@ -153,12 +153,12 @@ Modify as below:
 3. Same change needs to be done in dynamsoft.webtwain.config.js file. Add/uncomment the following line, then change 'Resources' (to 'New folder/ResourcesTest' as in this case):
 
 ``` javascript
-Dynamsoft.WebTwainEnv.ResourcesPath = 'Resources';
+Dynamsoft.DWT.ResourcesPath = 'Resources';
 ``` 
 Modify as below:
 
 ``` javascript
-Dynamsoft.WebTwainEnv.ResourcesPath = 'Newfolder/ResourcesTest';
+Dynamsoft.DWT.ResourcesPath = 'Newfolder/ResourcesTest';
 ``` 
 
 <!--
