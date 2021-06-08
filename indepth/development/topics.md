@@ -141,8 +141,7 @@ NOTE: In many cases, the scanned blank image may come with some noises which wou
 <script src="Scripts/DWTSample_BasicScan.js"></script>
 <script src="Resources/dynamsoft.webtwain.config.js"></script>
 ``` 
-
-    Modify as below:
+Modify as below:
 
 ``` javascript
 <script src="Newfolder/ResourcesTest/dynamsoft.webtwain.initiate.js"></script>
@@ -156,7 +155,7 @@ NOTE: In many cases, the scanned blank image may come with some noises which wou
 ``` javascript
 Dynamsoft.WebTwainEnv.ResourcesPath = 'Resources';
 ``` 
-    Modify as below:
+Modify as below:
 
 ``` javascript
 Dynamsoft.WebTwainEnv.ResourcesPath = 'Newfolder/ResourcesTest';
