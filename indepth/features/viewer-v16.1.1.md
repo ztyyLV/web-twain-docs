@@ -114,15 +114,22 @@ The Image Editor can be opened by the API [ `ShowImageEditor()` ]({{site.info}}a
 
 #### Q: Is the Image Editor compatible across all platforms?
 
-A: The Image Editor is availabe on all platforms where `DWT` is supported. However, while it is built into the browser page in most cases, it runs as a separate programme if `DWT` ActiveX edition is used.
-<!--
+A: Yes, the Image Editor is availabe on all platforms where `DWT` is supported. However, while it is built into the browser page in most cases, it is invoked by a different API and runs as a separate programme if `DWT` ActiveX edition is used. Contact [Dynamsoft Support]({{site.about}}getsupport.html) to learn more.
 
-#### Q: Can I change the language of the Editor
+#### Q: Can I change the language of the Editor?
 
-#### Q: Can I remove or add buttons on the toolbar of the Editor
+A: Yes, as shown in the sample code above, you can use the parameters `titles` and `dialogText` to specify the language used in the editor
 
-#### Q: Can I specify where and how big the Editor is
+#### Q: Can I remove or add buttons on the toolbar of the Editor?
 
-#### Q: Can I change the colors of the Editor
+A: While you can use `visibility` (as shown in the sample code above) to remove a default button(s), currently you cannot add a custom button yet.
 
--->
+#### Q: Can I specify where and how big the Editor is?
+
+A: Yes, as shown in the sample code above, you can use the parameter `element` to specify where the editor is created and then use `width` and `height` to specify its size.
+
+#### Q: Can I change the colors of the Editor?
+
+A: Yes, as shown in the sample code above, the parameters `border` , `topMenuBorder` , `innerBorder` and
+`background` can be used to specify the style including color of the editor.
+
