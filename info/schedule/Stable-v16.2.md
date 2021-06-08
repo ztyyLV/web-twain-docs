@@ -168,7 +168,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 > NOTE: on desktop, this feature requires a webcam/camera addon license.
 
-### Entra Features
+### Extra Features
 
 * Added a feature to run Dynamsoft Service with the account "Local Service". By default, it is still "Local System". Contact Dynamsoft to learn more.
 
