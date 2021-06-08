@@ -97,7 +97,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 * Added a new global property [`Dynamsoft.WebTwainEnv.IfAlwaysFocusOnPopupWindow`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifalwaysfocusonpopupwindow) to control whether to set focus on scanner-related windows opened by the Dynamsoft Service when the browser tab on which the SDK is running is active. In the past, these windows will be on top no matter which browser tab is active.
 
-* [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) is officially supported.
+* [Shadow DOM](https://www.dynamsoft.com/codepool/polymer-shadow-dom-web-document-scan.html) is officially supported.
 
 * Added support for ARM-based macOS.
 
