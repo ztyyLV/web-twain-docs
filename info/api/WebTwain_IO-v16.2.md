@@ -89,7 +89,8 @@ Others
 * [IfShowCancelDialogWhenImageTransfer](#ifshowcanceldialogwhenimagetransfer)
 * [IfShowProgressBar](#ifshowprogressbar) 
 * [JPEGQuality](#jpegquality)
-* [IfTiffMultiPage](#iftiffmultipage) 
+* [
+](#iftiffmultipage) 
 * [TIFFCompressionType]()
 * [MaxUploadImageSize](#maxuploadimagesize)
 * [IfAppendImage](#ifappendimage)
@@ -1831,6 +1832,12 @@ JPEGQuality: number;
  */
 IfTiffMultiPage: boolean;
 ```
+
+**Usage notes**
+
+When you save a new image in the same name of an existing TIFF file
+If this property is true, the new image will be added to the existing file
+If this property is false, the new image will replace the existing file
 
 ---
 
