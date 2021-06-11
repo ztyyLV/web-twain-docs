@@ -447,63 +447,6 @@ If width or height is set to -1, you get the original image, otherwise you get t
 
 ---
 
-## CurrentImageIndexInBuffer
-
-**Syntax**
-
-``` typescript
-/**
- * Return the index of the current image in the buffer or 
- * Set the image specified by index as the current image.
- */
-CurrentImageIndexInBuffer: number;
-```
-
----
-
-## HowManyImagesInBuffer
-
-**Syntax**
-
-``` typescript
-/**
- * Return how many images are held in the buffer
- */
-readonly HowManyImagesInBuffer: number;
-```
-
----
-
-## MaxImagesInBuffer
-
-**Syntax**
-
-``` typescript
-/**
- * Return or set how many images can be held in the buffer.
- */ 
-MaxImagesInBuffer: number;
-```
-
-**Usage notes**
-
-When acquiring images and the number of images goes beyond the value set to `MaxImagesInBuffer` , new images will replace old images starting from the 1st one.
-
----
-
-## SelectedImagesIndices
-
-**Syntax**
-
-``` typescript
-/**
- * Return the indices of the selected images.
- */
-readonly SelectedImagesIndices: number[];
-```
-
----
-
 ## SelectAllImages
 
 **Syntax**
@@ -631,6 +574,63 @@ RemoveAllSelectedImagesAsync(): Promise<boolean>;
 ```
 
 ----->
+
+
+## CurrentImageIndexInBuffer
+
+**Syntax**
+
+``` typescript
+/**
+ * Return the index of the current image in the buffer or 
+ * Set the image specified by index as the current image.
+ */
+CurrentImageIndexInBuffer: number;
+```
+
+---
+
+## HowManyImagesInBuffer
+
+**Syntax**
+
+``` typescript
+/**
+ * Return how many images are held in the buffer
+ */
+readonly HowManyImagesInBuffer: number;
+```
+
+---
+
+## MaxImagesInBuffer
+
+**Syntax**
+
+``` typescript
+/**
+ * Return or set how many images can be held in the buffer.
+ */ 
+MaxImagesInBuffer: number;
+```
+
+**Usage notes**
+
+When acquiring images and the number of images goes beyond the value set to `MaxImagesInBuffer` , new images will replace old images starting from the 1st one.
+
+---
+
+## SelectedImagesIndices
+
+**Syntax**
+
+``` typescript
+/**
+ * Return the indices of the selected images.
+ */
+readonly SelectedImagesIndices: number[];
+```
+---
 
 ## SelectionRectAspectRatio
 
