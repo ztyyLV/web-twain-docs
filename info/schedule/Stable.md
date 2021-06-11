@@ -10,6 +10,33 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 # Stable Releases
 
+## 17.1 (06/15/2021)
+
+### New Features 
+
+*	Added property <strong> organizationID </strong> which can be used to fetch license(s) belonging to the specified organization from the License Tracking Server. With this property, the licensing of the library is smoother from trial to full and it is much easier to manage a license change without code updates.
+
+### Improved Features 
+
+*	The built-in viewer can now display thumbnails faster.
+
+*	Installers for ARM x64 and MIPS x64 are now included in the package by default.
+
+*	Separated the library into two distinctive modes: Desktop Service and WebAssembly for easier understanding and usage.
+
+### Major Bug Fixes
+
+*	Fixed a bug where the image fails to be displayed after it gets cropped and saved in the built-in ImageEditor.
+
+*	Fixed a bug where images meant to be saved on the hard disk end up in the image buffer on macOS.
+
+*	Fixed a bug where erasing part of an image will change its original display mode to be 'centered'.
+
+### Changes to the ActiveX Edition
+
+*	Fixed a bug where the barcode reader addon fails to initiate on IE 10.
+
+
 ## 17.0 (04/20/2021) 
 
 ### New Features 
