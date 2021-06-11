@@ -48,7 +48,7 @@ Open `package.json` and change `scripts` like this:
 },
 ```
 
-> The change ensures the static files required to run `DWT` are copied over to the built project.
+> Note: The change ensures the static files required to run `DWT` are copied over to the built project.
 
 ## Implementation
 
@@ -60,7 +60,7 @@ Under `/src/`, create a new JavaScript file and name it `dwt.js`.
 
 * Copy the following to the newly created `dwt.js`.
 
-``` typescript
+``` js
 import React from 'react';
 import Dynamsoft from 'dwt';
 
@@ -126,7 +126,7 @@ export default App;
 yarn start
 ```
 
-> If you have installed `DWT` and have configured a valid `ProductKey`, you will have a working page to scan documents from your scanner now. Otherwise, you should see instructions on the page that guide you to install the library. [More info>>]({{site.indepth}}features/initialize.html#installation-of-the-dynamsoft-service).
+> Note: If you have installed `DWT` and have configured a valid `ProductKey`, you will have a working page to scan documents from your scanner now. Otherwise, you should see instructions on the page that guide you to install the library. [More info>>]({{site.indepth}}features/initialize.html#installation-of-the-dynamsoft-service)
 
 ## Official Samples
 
