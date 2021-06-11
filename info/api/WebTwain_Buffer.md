@@ -34,7 +34,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page
 
 | |
 |:-|:-|
-|[`BlankImageCurrentStdDev`](#blanimagecurrentstddev) |[`BlankImageMaxStdDev`](#blankimagemaxstddev) |[`BlankImageThreshold`](#blankimagethreshold)| [`BufferMemoryLimit`](#buffermemorylimit)|
+|[`BlankImageCurrentStdDev`](#blanimagecurrentstddev) |[`BlankImageMaxStdDev`](#blankimagemaxstddev) |[`BlankImageThreshold`](#blankimagethreshold)| [`
+`](#buffermemorylimit)|
 |[`CurrentImageIndexInBuffer`](#currentimageindexinbuffer) |[`HowManyImagesInBuffer`](#howmanyimagesinbuffer)| [`IfAllowLocalCache`](#ifallowlocalcache) | [`SelectedImagesIndices`](#selectedimagesindices)|
 |[`MaxImagesInBuffer`](#maximagesinbuffer)|
 
@@ -682,6 +683,13 @@ BlankImageMaxStdDev: number;
  */
 BufferMemoryLimit: number;
 ```
+
+**Usage notes**
+
+Set this property only when you have a very small physical memory (< 2GB) or a very big one (>4GB). The more memory is allowed, the better the performance will be.
+The default value is set to 800 (MB), anything beyond 800MB gets compressed, encrypted and cached on the local disk.
+
+All cached data is encrypted and can only be read by Dynamic Web TWAIN and it will be destroyed when it is no longer used.
 
 ---
 
