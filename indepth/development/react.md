@@ -60,7 +60,7 @@ Under `/src/`, create a new JavaScript file and name it `dwt.js`.
 
 * Copy the following to the newly created `dwt.js`.
 
-``` js
+``` typescript
 import React from 'react';
 import Dynamsoft from 'dwt';
 
