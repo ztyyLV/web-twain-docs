@@ -42,7 +42,6 @@ WebTWAIN.HTTPPort = location.port==""?80:location.port;
 
 ``` javascript
 <httpRuntime maxRequestLength="1000000"/>; //You can change the value by yourself.
-  
 ```
 
 * If you are using PHP, you can change the value at the following line in the php.ini file
