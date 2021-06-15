@@ -121,26 +121,27 @@
 
         function dwtScrollListener() {
             if (breakpoint() == 'lg') {
-                var sd = $(window).scrollTop();
-                if (sd >= $('#overall-header').height()) {
+                var sd1 = $(window).scrollTop();
+                if (sd1 >= $('#overall-header').height()) {
                     if($('.currentVersion').html() == 'latest version' &&  getCookie('NoAlertNote') != 'true') {
                         $('#DWT17Note').hide()
                         markdownHChange()
                     }
-                    realFunc1()
+                    // realFunc1()
                 } else {
                     if($('.currentVersion').html() == 'latest version' &&  getCookie('NoAlertNote') != 'true') {
                         $('#DWT17Note').show()
                         markdownHChange()
                     }
-                    realFunc1()
+                    // realFunc1()
                 }
-            } else {
-                $('.subHeadWrapper').css({'top': 'unset'});
-                $('.productMenu').css({'top': 'unset'});
-                $('#docHead').css({'top': 'unset'});
-                $('.sideBar').css({'padding-top': '20px!important'});
-            }
+            } 
+            //else {
+                //$('.subHeadWrapper').css({'top': 'unset'});
+               // $('.productMenu').css({'top': 'unset'});
+                //$('#docHead').css({'top': 'unset'});
+                //$('.sideBar').css({'padding-top': '20px!important'});
+            //}
         }
 
         $('#txtSearch').keydown(function(e) { 
