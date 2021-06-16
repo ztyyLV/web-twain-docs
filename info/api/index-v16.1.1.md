@@ -218,17 +218,17 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 #### Methods
 
-* [LoadImage()]({{site.info}}api/WebTwain_IO-v16.1.1.html#loadimage)
-* [LoadImageEx()]({{site.info}}api/WebTwain_IO-v16.1.1.html#loadimageex)
-* [LoadImageFromBase64Binary()]({{site.info}}api/WebTwain_IO-v16.1.1.html#loadimagefrombase64binary)
-* [LoadImageFromBinary()]({{site.info}}api/WebTwain_IO-v16.1.1.html#loadimagefrombinary)
-* [LoadDibFromClipboard()]({{site.info}}api/WebTwain_IO-v16.1.1.html#loaddibfromclipboard)
-* [FTPDownload()]({{site.info}}api/WebTwain_IO-v16.1.1.html#ftpdownload)
-* [FTPDownloadEx()]({{site.info}}api/WebTwain_IO-v16.1.1.html#ftpdownloadex)
-* [HTTPDownload()]({{site.info}}api/WebTwain_IO-v16.1.1.html#httpdownload)
-* [HTTPDownloadEx()]({{site.info}}api/WebTwain_IO-v16.1.1.html#httpdownloadex)
-* [HTTPDownloadThroughPost()]({{site.info}}api/WebTwain_IO-v16.1.1.html#httpdownloadthroughpost)
-* [HTTPDownloadDirectly()]({{site.info}}api/WebTwain_IO-v16.1.1.html#httpdownloaddirectly)
+* [LoadImage()]({{site.info}}api/WebTwain_IO-v16.2.html#loadimage)
+* [LoadImageEx()]({{site.info}}api/WebTwain_IO-v16.2.html#loadimageex)
+* [LoadImageFromBase64Binary()]({{site.info}}api/WebTwain_IO-v16.2.html#loadimagefrombase64binary)
+* [LoadImageFromBinary()]({{site.info}}api/WebTwain_IO-v16.2.html#loadimagefrombinary)
+* [LoadDibFromClipboard()]({{site.info}}api/WebTwain_IO-v16.2.html#loaddibfromclipboard)
+* [FTPDownload()]({{site.info}}api/WebTwain_IO-v16.2.html#ftpdownload)
+* [FTPDownloadEx()]({{site.info}}api/WebTwain_IO-v16.2.html#ftpdownloadex)
+* [HTTPDownload()]({{site.info}}api/WebTwain_IO-v16.2.html#httpdownload)
+* [HTTPDownloadEx()]({{site.info}}api/WebTwain_IO-v16.2.html#httpdownloadex)
+* [HTTPDownloadThroughPost()]({{site.info}}api/WebTwain_IO-v16.2.html#httpdownloadthroughpost)
+* [HTTPDownloadDirectly()]({{site.info}}api/WebTwain_IO-v16.2.html#httpdownloaddirectly)
 
 <!--* [LoadDibFromClipboardAsync()]({{site.info}}api/WebTwain_IO-v16.1.1.html#loaddibfromclipboardasync)-->
 
