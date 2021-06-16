@@ -196,7 +196,7 @@ DWObject.ConvertToBase64(
     function(result, indices, type) {
         DWObject.LoadImageFromBase64Binary(
             result.getData(0, result.getLength()),
-            type,
+            Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
             function() {
                 console.log('success');
             },
