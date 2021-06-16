@@ -6,7 +6,7 @@
 <style>
     .DWT17Note {position: relative; padding: 15px 20px 15px 20px;background: #e5f5ff;border: 1px solid #c7dbe8;color: #4788b3;margin-bottom: 20px;}
     .DWT17Note i { position: absolute; right: 10px; top: 8px; font-size: 20px; cursor: pointer; }
-
+    .rightSideMenu.hasNote { margin-top: 168px; }
     @media (min-width: 1200px) and (max-width: 1679.98px) {
         .col-md-3 {
             width: 21%;
@@ -125,11 +125,13 @@
                 if (sd >= $('#overall-header').height()) {
                     if($('.currentVersion').html() == 'latest version' &&  getCookie('NoAlertNote') != 'true') {
                         $('#DWT17Note').hide()
+                        $('.rightSideMenu').removeClass('hasNote')
                         // markdownHChange2()
                     }
                 } else {
                     if($('.currentVersion').html() == 'latest version' &&  getCookie('NoAlertNote') != 'true') {
                         $('#DWT17Note').show()
+                        $('.rightSideMenu').addClass('hasNote')
                         // markdownHChange2()
                     }
                 }
@@ -144,12 +146,14 @@
 
         if($('.currentVersion').html() == 'latest version' &&  getCookie('NoAlertNote') != 'true') {
             $('#DWT17Note').show()
+            $('.rightSideMenu').addClass('hasNote')
             markdownHChange()
         }
 
         $('#DWT17Note i').on('click', function() {
             setCookie('NoAlertNote', 'true')
             $('#DWT17Note').hide()
+            $('.rightSideMenu').removeClass('hasNote')
             markdownHChange()
         })
 
@@ -177,60 +181,6 @@
                     $('.markdown-body h5').css({'padding-top': $('#docHead').outerHeight() + 90 + 'px'})
                     $('.markdown-body h5').css({'margin-top': -$('#docHead').outerHeight() - 90 + 'px'})
                 }
-            }
-        }
-
-        function realFunc1() {
-            if (breakpoint() == 'lg') {
-                var subHeight = 0;
-                if ($('.subHeadWrapper').length > 0) {
-                    subHeight = $('.subHeadWrapper').height();
-                } else {
-                    subHeight = $('.productMenu').height();
-                }
-                var menuHeight = $('#overall-header').height() + subHeight;
-                var sd = $(window).scrollTop();
-                var dcHeight = $('.docContainer').height() + menuHeight - sd;
-                var clientHeight = document.body.clientHeight;
-                if (sd >= $('#overall-header').height()) {
-                    // head and sidebar fixed
-                    if ($('.subHeadWrapper').length > 0) {
-                        $('.subHeadWrapper').css({'top': '0px'});
-                        $('#docHead').css({'top': ($('.subHeadWrapper').height() + 1) + 'px'});
-                        $('.history').css({'top': '119px'})
-                    } else if ($('.productMenu').length > 0)  {
-                        $('.productMenu').css({'top': '0px'});
-                        $('#docHead').css({'top': ($('.productMenu').height()) + 'px'});
-                        $('.history').css({'top': '119px'})
-                    } else {
-                        $('#docHead').css({'top': '0px'});
-                        $('.history').css({'top': '30px'})
-                    }
-                    $('.sideBar #sideBarCnt').addClass('sidebar-fixed');
-                    $('.rightSideMenu').addClass('rsm-fixed');
-                } else {
-                    // head and sidebar fixed
-                    if ($('.subHeadWrapper').length > 0) {
-                        $('.subHeadWrapper').css({'top': ($('#overall-header').height()-sd) + 'px'});
-                        $('.sideBar').css({'padding-top': $('.subHeadWrapper').height() + 42 + 'px!important'});
-                        $('.history').css({'top': ($('#overall-header').height() + $('.subHeadWrapper').height() + 30 +  - sd) + 'px'})
-                    } else if ($('.productMenu').length > 0) {
-                        $('.productMenu').css({'top': ($('#overall-header').height()-sd) + 'px'});
-                        $('.sideBar').css({'padding-top': $('.productMenu').height() + 42 + 'px!important'});
-                        $('.history').css({'top': ($('#overall-header').height() + $('.productMenu').height() + 30 +  - sd) + 'px'})
-                    } else {
-                        $('.sideBar').css({'padding-top':  + '42px!important'});
-                        $('.history').css({'top': ($('#overall-header').height() + 30 +  - sd) + 'px'})
-                    }
-                    $('#docHead').css({'top': (menuHeight-sd)+1 + 'px'});
-                    $('.sideBar #sideBarCnt').removeClass('sidebar-fixed');
-                    $('.rightSideMenu').removeClass('rsm-fixed');
-                }
-            } else {
-                $('.subHeadWrapper').css({'top': 'unset'});
-                $('.productMenu').css({'top': 'unset'});
-                $('#docHead').css({'top': 'unset'});
-                $('.sideBar').css({'padding-top': '20px!important'});
             }
         }
     </script>
