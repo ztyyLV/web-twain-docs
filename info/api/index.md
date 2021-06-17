@@ -83,7 +83,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 | |
 |:-|:-|
-|[`BlankImageCurrentStdDev`]({{site.info}}api/WebTwain_Buffer.html#blanimagecurrentstddev) |[`BlankImageMaxStdDev`]({{site.info}}api/WebTwain_Buffer.html#blankimagemaxstddev) |[`BlankImageThreshold`]({{site.info}}api/WebTwain_Buffer.html#blankimagethreshold)| [`BufferMemoryLimit`]({{site.info}}api/WebTwain_Buffer.html#buffermemorylimit)|
+|[`BlankImageCurrentStdDev`]({{site.info}}api/WebTwain_Buffer.html#blankimagecurrentstddev) |[`BlankImageMaxStdDev`]({{site.info}}api/WebTwain_Buffer.html#blankimagemaxstddev) |[`BlankImageThreshold`]({{site.info}}api/WebTwain_Buffer.html#blankimagethreshold)| [`BufferMemoryLimit`]({{site.info}}api/WebTwain_Buffer.html#buffermemorylimit)|
 |[`CurrentImageIndexInBuffer`]({{site.info}}api/WebTwain_Buffer.html#currentimageindexinbuffer) |[`HowManyImagesInBuffer`]({{site.info}}api/WebTwain_Buffer.html#howmanyimagesinbuffer)| [`IfAllowLocalCache`]({{site.info}}api/WebTwain_Buffer.html#ifallowlocalcache) | [`SelectedImagesIndices`]({{site.info}}api/WebTwain_Buffer.html#selectedimagesindices)|
 |[`MaxImagesInBuffer`]({{site.info}}api/WebTwain_Buffer.html#maximagesinbuffer)|
 
