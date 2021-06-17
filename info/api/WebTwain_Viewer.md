@@ -28,7 +28,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 |:-|:-|
 |[`acceptDrop`](#acceptdrop)| [`allowSlide`](#allowslide)|[`background`](#background)|[`border`](#border)|
 | [`cursor`](#cursor)| [`height`](#height)|[`idPostfix`](#idpostfix)|[`ifAutoScroll`](#ifautoscroll)|
-|[`innerBorder`](#innerBorder)| [`pageMargin`](#pagemargin)|[`selectedAreaBorderColor`](#selectedareabordercolor)|[`selectedPageBackground`](#selectedpagebackground)|
+|[`innerBorder`](#innerborder)| [`pageMargin`](#pagemargin)|[`selectedAreaBorderColor`](#selectedareabordercolor)|[`selectedPageBackground`](#selectedpagebackground)|
 |[`selectedPageBorder`](#selectedpageborder)| [`selectionRectAspectRatio`](#selectionrectaspectratio)|[`showPageNumber`](#showpagenumber)|[`singlePageMode`](#singlepagemode)|
 |[`width`](#width)| [`zoom`](#zoom)| [`autoChangeIndex`](#autochangeindex)|
 
