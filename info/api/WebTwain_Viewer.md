@@ -1116,12 +1116,12 @@ selectedAreaBorderColor: string;
 **Example**
 
 ``` javascript
-DWObject.Viewer.selectedAreaBorderColor = 'rgb(255, 0, 0)';
+DWObject.Viewer.selectedAreaBorderColor = 'rgba(0, 0, 0, 1)';
 ```
 
 **Usage notes**
 
-The default value is "rgb(42, 29, 43)".
+The default value is "rgba(0, 0, 0, 1)".
 
 ---
 
