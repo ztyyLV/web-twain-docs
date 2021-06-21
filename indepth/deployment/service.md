@@ -21,7 +21,7 @@ Refer to [how to get dwt]({{site.about}}resources.html#how-to-get-dwt) to downlo
 
 ### For production
 
-Once `DWT` has been integrated into your application and you have properly deployed your application on the server. Your clients will get prompted to install `DWT` the first time they access your application. For more information on the process, check out [installation of the Dynamsoft Service]({{site.indepth}}features/initialize.html#installation-of-the-dynamsoft-service).
+Once `DWT` has been integrated into your application and you have properly deployed your application on the server. Your clients will get prompted to install `Dynamsoft Service` the first time they access your application. For more information on the process, check out [installation of the Dynamsoft Service]({{site.indepth}}features/initialize.html#installation-of-the-dynamsoft-service).
 
 #### Questions
 
@@ -144,11 +144,11 @@ There are multiple files and folders in the service directory. We'll take the Wi
 #### For the Service
 
 * `\cache\` : Data cached on the disk. Check out [Disk Caching]({{site.indepth}}features/buffer.html#disk-caching).
-* `\cert\` : The certificates used for SSL connection. Check out [How to change the certificates](#q-how-to-change-the-certificates).
+* `\cert\` : The certificates used for SSL connection. Check out [How to change the certificates](#q-how-to-change-the-certificate-of-the-service).
 * `\dump\` : Dump files in case the service crashes.
 * `\log\` : Log files for debugging purposes.
 * `\upload\` : Temporary location for image data to be uploaded by the file uploader.
-* `DSConfiguration.ini` : Service configuration file. Check out [How to configure the service](#q-how-to-configure-the-service).
+* `DSConfiguration.ini` : Service configuration file. Check out [How to configure the service](#q-how-to-set-the-configuration-of-the-service).
 * `DWASManager_16000428.dll` : The service manager. The name of the file may vary among different versions.
 * `DynamsoftService.exe` : The service.
 * `DynamicSocket.dll` : For socket connections.
@@ -209,7 +209,11 @@ There are multiple files and folders in the service directory. We'll take the Wi
 
 ### What does it do
 
-Dynamsoft Service sets up a local HTTP service that accepts requests from JavaScript code running in the browser and performs operations accordingly. The following are a few examples
+Dynamsoft Service sets up a local HTTP service that accepts requests from JavaScript code running in the browser and performs operations accordingly. The following are a few examples.
+
+> NOTE
+> 
+> These requests are handled by the JavaScript client of the library. Please do not try to make similar requests in your own code without consulting [Dynamsoft Support]({{site.about}}getsupport.html).
 
 #### Return availability
 
@@ -271,7 +275,7 @@ https://127.0.0.1:18623/dwt/dwt_16100728/img?id=414778098&index=5&width=585&heig
 * Install that certificate
 * Use that certificate to generate public /private keys (pem)
 * Rename these two keys to `server.pem` , (public) `server_key.pem` (private)
-* Replace the old keys in `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16\cert`
+* Replace the old keys in `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\cert`
 * Restart the service
 
 ### Q: How to set the configuration of the service?
@@ -315,7 +319,7 @@ LogLevel = 1 // Whether to output detailed information for debugging purposes
 
 The respective fixes are listed below
 
-* Check the path `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16` and make sure you have [the correct files](#related-files-and-folders).
+* Check the path `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17` and make sure you have [the correct files](#related-files-and-folders).
 * Check `Local Services` and make sure Dynamsoft Service is listed and Running.
 * Disable the proxy server to confirm it's the cause. Once confirmed, try to reconfigure the proxy to make sure it doesn't redirect requests sent to '127.0.0.1'
 * Check your anti-virus software or any other software that can block local ports and make sure the ports 18622, 18623, 18625 and 18626 are not blocked.

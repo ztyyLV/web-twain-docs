@@ -1,6 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
+noTitleIndex: true
 title: Dynamic Web TWAIN API Reference - IO APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, IO APIs
 breadcrumbText: IO
@@ -9,95 +10,57 @@ description: Dynamic Web TWAIN SDK Documentation API Reference IO APIs Page
 
 # WebTwain IO
 
-## Input
+Input
 
 **Methods**
 
-* [LoadImage()](#loadimage)
-* [LoadImageEx()](#loadimageex)
-* [LoadImageFromBase64Binary()](#loadimagefrombase64binary)
-* [LoadImageFromBinary()](#loadimagefrombinary)
-* [LoadDibFromClipboard()](#loaddibfromclipboard)
+| |
+|:-|:-|
+|[`LoadImage()`](#loadimage)| [`LoadImageEx()`](#loadimageex)|[`LoadImageFromBase64Binary()`](#loadimagefrombase64binary)| [`LoadImageFromBinary()`](#loadimagefrombinary)|
+|[`LoadDibFromClipboard()`](#loaddibfromclipboard)| [`FTPDownload()`](#ftpdownload)| [`FTPDownloadEx()`](#ftpdownloadex)| [`HTTPDownload()`](#httpdownload)|
+| [`HTTPDownloadEx()`](#httpdownloadex)|[`HTTPDownloadThroughPost()`](#httpdownloadthroughpost)|[`HTTPDownloadDirectly()`](#httpdownloaddirectly)|
 
-<!--* [LoadDibFromClipboardAsync()](#loaddibfromclipboardasync)-->
-
-* [FTPDownload()](#ftpdownload)
-* [FTPDownloadEx()](#ftpdownloadex)
-* [HTTPDownload()](#httpdownload)
-* [HTTPDownloadEx()](#httpdownloadex)
-* [HTTPDownloadThroughPost()](#httpdownloadthroughpost)
-* [HTTPDownloadDirectly()](#httpdownloaddirectly)
-
-## Output
+Output
 
 **Methods**
 
-* [ConvertToBase64()](#converttobase64)
-* [ConvertToBlob()](#converttoblob)
-* [FTPUpload()](#ftpupload)
-* [FTPUploadEx()](#ftpuploadex)
-* [FTPUploadAllAsMultiPageTIFF()](#ftpuploadallasmultipagetiff)
-* [FTPUploadAllAsPDF()](#ftpuploadallaspdf)
-* [FTPUploadAsMultiPagePDF()](#ftpuploadasmultipagepdf)
-* [FTPUploadAsMultiPageTIFF()](#ftpuploadasmultipagetiff)
-* [HTTPUpload()](#httpupload)
-* [HTTPUploadThroughPutEx()](#httpuploadthroughputex)
-* [HTTPUploadThroughPost()](#httpuploadthroughpost)
-* [HTTPUploadThroughPostEx()](#httpuploadthroughpostex)
-* [HTTPUploadAllThroughPostAsMultiPageTIFF()](#httpuploadallthroughpostasmultipagetiff)
-* [HTTPUploadAllThroughPostAsPDF()](#httpuploadallthroughpostaspdf)
-* [HTTPUploadThroughPostAsMultiPagePDF()](#httpuploadthroughpostasmultipagepdf)
-* [HTTPUploadThroughPostAsMultiPageTIFF()](#httpuploadthroughpostasmultipagetiff)
-* [HTTPUploadThroughPostDirectly()](#httpuploadthroughpostdirectly)
-* [SaveAsBMP()](#saveasbmp)
-* [SaveAsJPEG()](#saveasjpeg)
-* [SaveAsPDF()](#saveaspdf)
-* [SaveAsPNG()](#saveaspng)
-* [SaveAsTIFF()](#saveastiff)
-* [SaveSelectedImagesAsMultiPagePDF()](#saveselectedimagesasmultipagepdf)
-* [SaveSelectedImagesAsMultiPageTIFF()](#saveselectedimagesasmultipagetiff)
-* [SaveAllAsMultiPageTIFF()](#saveallasmultipagetiff)
-* [SaveAllAsPDF()](#saveallaspdf)
+| |
+|:-|:-|
+| [`ConvertToBase64()`]({{site.info}}api/WebTwain_IO.html#converttobase64)|[`ConvertToBlob()`]({{site.info}}api/WebTwain_IO.html#converttoblob)|[`FTPUpload()`]({{site.info}}api/WebTwain_IO.html#ftpupload)|
+|[`FTPUploadEx()`]({{site.info}}api/WebTwain_IO.html#ftpuploadex)|[`FTPUploadAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadallasmultipagetiff)|[`FTPUploadAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadallaspdf)|
+|[`FTPUploadAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadasmultipagepdf)| [`FTPUploadAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadasmultipagetiff)|[`HTTPUpload()`]({{site.info}}api/WebTwain_IO.html#httpupload)| 
+|[`HTTPUploadThroughPutEx()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughputex)| [`HTTPUploadThroughPost()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpost)| [`HTTPUploadThroughPostEx()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostex)|
+| [`HTTPUploadAllThroughPostAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#httpuploadallthroughpostasmultipagetiff)| [`HTTPUploadAllThroughPostAsPDF()`]({{site.info}}api/WebTwain_IO.html#httpuploadallthroughpostaspdf)| [`HTTPUploadThroughPostAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostasmultipagepdf)|
+|[`HTTPUploadThroughPostAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostasmultipagetiff)|[`HTTPUploadThroughPostDirectly()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostdirectly)|[`SaveAsBMP()`]({{site.info}}api/WebTwain_IO.html#saveasbmp)| 
+|[`SaveAsJPEG()`]({{site.info}}api/WebTwain_IO.html#saveasjpeg)| [`SaveAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveaspdf)|[`SaveAsPNG()`]({{site.info}}api/WebTwain_IO.html#saveaspng)| 
+|[`SaveAsTIFF()`]({{site.info}}api/WebTwain_IO.html#saveastiff)| [`SaveSelectedImagesAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagepdf)|[`SaveSelectedImagesAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagetiff)|
+| [`SaveAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveallasmultipagetiff)|[`SaveAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveallaspdf)|
 
-## Others
+
+Others
 
 **Methods**
 
-* [ClearTiffCustomTag()](#cleartiffcustomtag) 
-* [SetTiffCustomTag()](#settiffcustomtag)
-* [ClearAllHTTPFormField()](#clearallhttpformfield) 
-* [SetHTTPFormField()](#sethttpformfield)
-* [SetHTTPHeader()](#sethttpheader) 
-* [SetUploadSegment()](#setuploadsegment)
-* [ShowFileDialog()](#showfiledialog) 
-* [Print()](#print)
+| |
+|:-|:-|
+|[`ClearTiffCustomTag()`](#cleartiffcustomtag) |[`SetTiffCustomTag()`](#settiffcustomtag)|[`ClearAllHTTPFormField()`](#clearallhttpformfield) |[`SetHTTPFormField()`](#sethttpformfield)| 
+| [`SetHTTPHeader()`](#sethttpheader)| [`SetUploadSegment()`](#setuploadsegment)|[`ShowFileDialog()`](#showfiledialog) | [`Print()`](#print)|
+|[`PrintEx()`](#printex)|
 
 **Properties**
 
-* [FTPPassword](#ftppassword) 
-* [FTPPort](#ftpport)
-* [FTPUserName](#ftpusername) 
-* [HTTPPassword](#httppassword)
-* [HTTPUserName](#httpusername) 
-* [IfPASVMode](#ifpasvmode)
-* [HttpFieldNameOfUploadedImage](#httpfieldnameofuploadedimage) 
-* [HTTPPort](#httpport)
-* [IfSSL](#ifssl)
-* [HTTPPostResponseString](#httppostresponsestring)
-* [IfShowFileDialog](#ifshowfiledialog) 
-* [IfShowCancelDialogWhenImageTransfer](#ifshowcanceldialogwhenimagetransfer)
-* [IfShowProgressBar](#ifshowprogressbar) 
-* [JPEGQuality](#jpegquality)
-* [IfTiffMultiPage](#iftiffmultipage) 
-* [TIFFCompressionType]()
-* [MaxUploadImageSize](#maxuploadimagesize)
-* [IfAppendImage](#ifappendimage)
+| |
+|:-|:-|
+|[`FTPPassword`](#ftppassword) |[`FTPPort`](#ftpport)| [`FTPUserName`](#ftpusername) |[`IfPASVMode`](#ifpasvmode)|
+|[`HttpFieldNameOfUploadedImage`](#httpfieldnameofuploadedimage) | [`HTTPPort`](#httpport)|[`IfSSL`](#ifssl)  |[`HTTPPostResponseString`](#httppostresponsestring)|
+|[`IfShowFileDialog`](#ifshowfiledialog) |[`IfShowCancelDialogWhenImageTransfer`](#ifshowcanceldialogwhenimagetransfer)| [`IfShowProgressBar`](#ifshowprogressbar)  | [`JPEGQuality`](#jpegquality)|
+|[`IfTiffMultiPage`](#iftiffmultipage) | [`TIFFCompressionType`](#tiffcompressiontype)| [`MaxUploadImageSize`](#maxuploadimagesize)|[`IfAppendImage`](#ifappendimage)|
 
 **Events**
 
-* [OnGetFilePath](#ongetfilepath)
-* [OnPostLoad](#onpostload)
-* [OnInternetTransferPercentage](#oninternettransferpercentage)
+| |
+|:-|:-|
+|[`OnGetFilePath`](#ongetfilepath)|[`OnPostLoad`](#onpostload)| [`OnInternetTransferPercentage`](#oninternettransferpercentage)|
 
 ---
 
@@ -111,6 +74,10 @@ description: Dynamic Web TWAIN SDK Documentation API Reference IO APIs Page
  */
 IfAppendImage: boolean;
 ```
+
+**Usage notes**
+
+The default value is true which means the newly acquired images will be appended after the last image in buffer. If it's set to false, the images will be inserted before the current image. An important thing to note here is that, by design, the current image is always the last acquired one which means the images acquired after `IfAppendImage` is set to false will be displayed/kept in reverse order. To make sure the order is as the pages are scanned while `IfAppendImage` is false, the easiest way is to increase `CurrentImageIndexInBuffer` by 1 in the event `OnPostTransfer`.
 
 ---
 
@@ -168,7 +135,7 @@ DWObject.LoadImage(
  */
 LoadImageEx(
     fileName: string,
-    type: Dynamsoft.EnumDWT_ImageType | number,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback ? : () => void,
     failureCallback ? : (
         errorCode: number,
@@ -178,14 +145,14 @@ LoadImageEx(
 
 **Usage notes**
 
-On mobile devices, `Dynamsoft.EnumDWT_ImageType.IT_All` means "JPG, PNG, TIF" while it means "BMP, JPG, PNG, TIF, PDF" on desktop.
+On mobile devices, `Dynamsoft.DWT.EnumDWT_ImageType.IT_All` means "JPG, PNG, TIF" while it means "BMP, JPG, PNG, TIF, PDF" on desktop.
 
 **Example**
 
 ``` javascript
 DWObject.LoadImageEx(
     "C:\\DWT.jpg",
-    Dynamsoft.EnumDWT_ImageType.IT_JPG,
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_JPG,
     function() {
         console.log('success');
     },
@@ -212,7 +179,7 @@ DWObject.LoadImageEx(
  */
 LoadImageFromBase64Binary(
     imageData: string,
-    imageType: Dynamsoft.EnumDWT_ImageType,
+    imageType: Dynamsoft.DWT.EnumDWT_ImageType,
     successCallback ? : () => void,
     failureCallback ? : (
         errorCode: number,
@@ -225,11 +192,11 @@ LoadImageFromBase64Binary(
 ``` javascript
 DWObject.ConvertToBase64(
     [0, 1, 2],
-    Dynamsoft.EnumDWT_ImageType.IT_PDF,
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
     function(result, indices, type) {
         DWObject.LoadImageFromBase64Binary(
             result.getData(0, result.getLength()),
-            type,
+            Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
             function() {
                 console.log('success');
             },
@@ -273,7 +240,7 @@ LoadImageFromBinary(
 ``` javascript
 DWObject.ConvertToBlob(
     [0, 1, 2],
-    Dynamsoft.EnumDWT_ImageType.IT_PDF,
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
     function(result, indices, type) {
         DWObject.LoadImageFromBinary(
             result,
@@ -425,7 +392,7 @@ FTPDownload(
 FTPDownloadEx(
     host: string,
     path: string,
-    type: Dynamsoft.EnumDWT_ImageType | number,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback: () => void,
     failureCallBack: (
         errorCode: number,
@@ -483,7 +450,7 @@ FTPUploadEx(
     host: string,
     index: number,
     path: string,
-    type: Dynamsoft.EnumDWT_ImageType | number,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback: () => void,
     failureCallback: (
         errorCode: number,
@@ -588,7 +555,7 @@ FTPUploadAsMultiPagePDF(
 FTPUploadAsMultiPageTIFF(
     host: string,
     path: string,
-    type: Dynamsoft.EnumDWT_ImageType | number,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback: () => void,
     failureCallback: (
         errorCode: number,
@@ -720,7 +687,7 @@ HTTPDownload(
 HTTPDownloadEx(
     host: string,
     path: string,
-    type: Dynamsoft.EnumDWT_ImageType | number,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback: () => void,
     failureCallback: (
         errorCode: number,
@@ -749,7 +716,7 @@ HTTPDownloadEx(
 HTTPDownloadThroughPost(
     host: string,
     path: string,
-    type: Dynamsoft.EnumDWT_ImageType | number,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     onEmptyResponse: () => void,
     onServerReturnedSomething: (
         errorCode: number,
@@ -834,8 +801,8 @@ DWObject.ShowFileDialog(true, "MSI|*.msi", 0, ".msi", "", true, false, 1);
 HTTPUpload(
     URL: string,
     indices: number[],
-    type: Dynamsoft.EnumDWT_ImageType | number,
-    dataFormat: Dynamsoft.EnumDWT_UploadDataFormat | number,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
+    dataFormat: Dynamsoft.DWT.EnumDWT_UploadDataFormat | number,
     fileName: string,
     onEmptyResponse: () => void,
     onServerReturnedSomething: (
@@ -846,8 +813,8 @@ HTTPUpload(
 HTTPUpload(
     URL: string,
     indices: number[],
-    type: Dynamsoft.EnumDWT_ImageType | number,
-    dataFormat: Dynamsoft.EnumDWT_UploadDataFormat | number,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
+    dataFormat: Dynamsoft.DWT.EnumDWT_UploadDataFormat | number,
     onEmptyResponse: () => void,
     onServerReturnedSomething: (
         errorCode: number,
@@ -886,7 +853,7 @@ HTTPUploadThroughPutEx(
     host: string,
     index: number,
     path: string,
-    type: Dynamsoft.EnumDWT_ImageType | number,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback: () => void,
     failureCallback: (
         errorCode: number,
@@ -952,7 +919,7 @@ HTTPUploadThroughPostEx(
     index: number,
     target: string,
     fileName: string,
-    type: Dynamsoft.EnumDWT_ImageType | number,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     onEmptyResponse: () => void,
     onServerReturnedSomething: (
         errorCode: number,
@@ -1260,7 +1227,7 @@ RegisterEvent('OnInternetTransferPercentage',
  */
 ConvertToBase64(
     indices: number[],
-    type: Dynamsoft.EnumDWT_ImageType | number,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback: (
         result: Base64Result,
         indices: number[],
@@ -1297,7 +1264,7 @@ interface Base64Result {
 ``` javascript
 DWObject.ConvertToBase64(
     [0, 1, 2],
-    Dynamsoft.EnumDWT_ImageType.IT_PDF,
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
     function(result, indices, type) {
         console.log(result.getData(0, result.getLength()));
     },
@@ -1328,7 +1295,7 @@ DWObject.ConvertToBase64(
  */
 ConvertToBlob(
     indices: number[],
-    type: Dynamsoft.EnumDWT_ImageType | number,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback: (
         result: Blob,
         indices: number[],
@@ -1339,16 +1306,12 @@ ConvertToBlob(
 ): void;
 ```
 
-**Usage notes**
-
-`getData()` returns the pure base64 string without the data URI scheme. For example, "/9j/4AAQSkZJRgABA...". If you want to use the string, you probably need to add the scheme. For example, "data:image/png; base64, /9j/4AAQSkZJRgABA...".
-
 **Example**
 
 ``` javascript
 DWObject.ConvertToBlob(
     [0, 1, 2],
-    Dynamsoft.EnumDWT_ImageType.IT_PDF,
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
     function(result, indices, type) {
         console.log(result.size);
     },
@@ -1543,7 +1506,6 @@ SaveSelectedImagesAsMultiPagePDF(
     failureCallback ? : (errorCode: number, errorString: string) => void
 ): void | boolean;
 ```
-
 ---
 
 ## SaveSelectedImagesAsMultiPageTIFF
@@ -1595,7 +1557,7 @@ ClearTiffCustomTag(): boolean;
 
 ``` javascript
 /**
- * Clear the content of all custom tiff tags.
+ * Sets a custom tiff tag (up to 32 tags). The string to be set in a tag can be base64 encoded.
  * @param id The id of the custom tag.
  * @param content The content of the tag.
  * @param useBase64Encoding Whether the content is encoded.
@@ -1709,10 +1671,13 @@ SetUploadSegment(
 ``` javascript
 /**
  * Return or set whether to show open/save file dialog when saving images in the buffer or loading images from a local directory.
- * @Note Supported in Service mode only.
  */
 IfShowFileDialog: boolean;
 ```
+
+**Usage notes**
+
+Supported in Service mode only.
 
 ---
 
@@ -1735,7 +1700,7 @@ IfShowCancelDialogWhenImageTransfer: boolean;
 
 ``` javascript
 /**
- * Return or set whether to show the progressbar. 
+ * Return or set whether the progress bar is/should be displayed during encoding or decoding. It works for any image encoding/decoding related methods. For example: LoadImage, LoadImageEx, ConvertToBlob, etc.
  */
 IfShowProgressBar: boolean;
 ```
@@ -1757,7 +1722,6 @@ IfShowProgressBar: boolean;
  * @param allowMultiSelect Whether or not multiple files can be selected at the same time. Only valid in an open-file dialog.
  * @param showOverwritePrompt Whether or not a prompt shows up when saving a file may overwrite an existing file.
  * @param flag If set to 0, bAllowMultiSelect and bShowOverwritePrompt will be effective. Otherwise, these two parameters are ignored.
- * @Note Supported in Service mode only.
  */
 ShowFileDialog(
     isSave: boolean,
@@ -1772,6 +1736,8 @@ ShowFileDialog(
 ```
 
 **Usage notes**
+
+Supported in Service mode only.
 
 The `filter` pattern string consists of a combination(s) of valid file extensions with asterisk (\*). For example: `JPG, PNG and TIF | *.jpg;*png;*.tif` . On macOS, the string is different. For example `JPG, PNG , TIF` . To show all files, use `All Files | *.*` .  Do not include spaces in the pattern string.
 
@@ -1810,6 +1776,20 @@ Print(useOSPrintWindow ? : boolean): boolean;
 
 ---
 
+## PrintEx
+
+**Syntax**
+
+``` javascript
+/**
+ * Print selected image(s).
+ * @param indices Specify the image.
+ */
+PrintEx(indices: number[]): void;
+```
+
+---
+
 ## JPEGQuality
 
 **Syntax**
@@ -1835,6 +1815,12 @@ JPEGQuality: number;
 IfTiffMultiPage: boolean;
 ```
 
+**Usage notes**
+
+When you save a new image in the same name of an existing TIFF file
+If this property is true, the new image will be added to the existing file
+If this property is false, the new image will replace the existing file
+
 ---
 
 ## TIFFCompressionType
@@ -1845,5 +1831,5 @@ IfTiffMultiPage: boolean;
 /**
  * Return or set the compression type for TIFF files.
  */
-TIFFCompressionType: Dynamsoft.EnumDWT_TIFFCompressionType | number;
+TIFFCompressionType: Dynamsoft.DWT.EnumDWT_TIFFCompressionType | number;
 ```

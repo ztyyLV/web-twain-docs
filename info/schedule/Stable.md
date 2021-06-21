@@ -10,6 +10,228 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 # Stable Releases
 
+## 17.1 (06/15/2021)
+
+### New Features 
+
+*	Added property [`organizationID`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#organizationid) which can be used to fetch license(s) belonging to the specified organization from the License Tracking Server. With this property, the licensing of the library is smoother from trial to full and it is much easier to manage a license change without code updates.
+
+### Improved Features 
+
+*	The built-in viewer can now display thumbnails faster.
+
+*	Installers for ARM x64 and MIPS x64 are now included in the package by default.
+
+*	Separated the library into two distinctive modes: Desktop Service and WebAssembly for easier understanding and usage.
+
+### Major Bug Fixes
+
+*	Fixed a bug where the image fails to be displayed after it gets cropped and saved in the built-in ImageEditor.
+
+*	Fixed a bug where images meant to be saved on the hard disk end up in the image buffer on macOS.
+
+*	Fixed a bug where erasing part of an image will change its original display mode to be 'centered'.
+
+### Changes to the ActiveX Edition
+
+*	Fixed a bug where the barcode reader addon fails to initiate on IE 10.
+
+
+## 17.0 (04/20/2021) 
+
+### New Features 
+
+* Added support for 64-bit ARM based computers. [Video](https://www.youtube.com/watch?v=mBnaseU2xtc) 
+
+* Added support for 64-bit MIPS based computers.  
+
+* Added support for trackable license types such as “Per Browser Client”. This new license mechanism is incompatible with the traditional product key. The related APIs are licenseServer, handshakeCode, sessionPassword, licenseException. 
+
+* Added method [`RemoveTag()`]({{site.info}}api/WebTwain_Buffer.html#removetag) to remove a specified tag from one or multiple images. 
+
+* Added method [`GetTagList()`]({{site.info}}api/WebTwain_Buffer.html#gettaglist) to return the status of all current tags. 
+
+* Added method [`PrintEx()`]({{site.info}}api/WebTwain_IO.html#printex) to support selective printing.  
+
+* Added property [`autoChangeIndex`]({{site.info}}api/WebTwain_Viewer.html#autoChangeIndex) which, when set to true, will make sure the first image in the viewer is always selected when scrolling through multiple images. 
+
+### Improved Features 
+
+* The built-in viewer now consumes less memory than before. 
+
+* Scanning via ICA now supports the transfer modes File and Memory. 
+
+* Upgraded the encryption algorithm for locally cached images from 64-bit Blowfish to AES-256-GCM encryption. 
+
+* [`DefaultSourceName`]({{site.info}}api/WebTwain_Acquire.html#defaultsourcename) now refers to the last used source. 
+
+* Updated Barcode Reader library to version 8.2.1. Check out release notes for [Barcode Reader JavaScript SDK - 8.2.1.](https://www.dynamsoft.com/barcode-reader/programming/javascript/release-notes/js-8.html?ver=latest#821-03292021)
+
+###  Changed Behaviours 
+
+* The property Viewer.selectedAreaBorderColor now also applies to the selection box on the video opened by the method [`showVideo`]({{site.info}}api/Addon_Camera.html#showVideo).
+
+### Breaking changes 
+
+#### Moved 
+
+* The original namespace `Dynamsoft.WebTwainEnv` is renamed to `Dynamsoft.DWT`. 
+
+* All enumerations are moved under `Dynamsoft.DWT`. For example, `Dynamsoft.EnumDWT_PixelType` and `EnumDWT_PixelType` work in version 16.2 and lower but now it must be written as `Dynamsoft.DWT.EnumDWT_PixelType`.  
+
+#### Others 
+
+* Server-side OCR pro is no longer supported in this version. 
+
+* When OCR Pro is used on the client side, it requires a trackable license. The traditional product key no longer works. 
+
+### Bug Fixes 
+
+* Fixed a bug where the method [`CloseSourceManager()`]({{site.info}}api/WebTwain_Acquire.html#closesourcemanager) gets called too many times and slows down scanning when you use SelectSourceByIndex() for source selection. 
+
+* Fixed a bug where you get an incorrect name with the API [`CurrentSourceName`]({{site.info}}api/WebTwain_Acquire.html#currentsourcename)  or [`DefaultSourceName`]({{site.info}}api/WebTwain_Acquire.html#defaultsourcename) . 
+
+### Notice 
+
+* The package @types/dwt is no longer maintained, the type definitions are included by default in the dwt package since version 16.2. 
+
+#### [NPM related](https://www.npmjs.com/package/dwt) 
+* Add changes to Types 
+  + Added definition for [`UseLocalService`]({{site.info}}api/WebTwain_Util.html#uselocalservice), [`RemoveTag()`]({{site.info}}api/WebTwain_Buffer.html#removetag)and [`GetTagList()`]({{site.info}}api/WebTwain_Buffer.html#gettaglist). 
+  + Removed old definitions based on version 12, 13 and 14. 
+  + Renamed namespace WebTwainEnv to DWT. 
+  + Moved enumerations under Dynamsoft.WebTwainEnv. 
+
+## `16.2` (01/18/2021)
+
+### New Features
+
+* Connection with the Dynamsoft Service is now maintained after the computer awake from sleep or hibernation.
+  + Only on Windows or macOS.
+
+* Added a new event [`OnBufferChanged`]({{site.info}}api/WebTwain_Buffer.html#onbufferchanged) which is triggered when the buffer changes like
+  + New pages enter the buffer.
+  + Existing pages are removed.
+  + Existing pages are modified.
+  + Existing pages are shifted.
+  + Existing pages are filtered by a specified tag.
+  + Page selection changes.
+
+* Added a configuration page to update the host or ports of the Dynamsoft Service. By default, this page can be accessed by the URL http://127.0.0.1:18625/admin/.
+
+* The default loader bar can now be customized with the API [`Dynamsoft.WebTwainEnv.CustomizableDisplayInfo.loaderBarSource`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#loaderbarsource). 
+  + Only effective when set before the page finishes loading (i.e. before [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event)).
+
+* Added a new global property [`Dynamsoft.WebTwainEnv.IfAlwaysFocusOnPopupWindow`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifalwaysfocusonpopupwindow) to control whether to set focus on scanner-related windows opened by the Dynamsoft Service when the browser tab on which the SDK is running is active. In the past, these windows will be on top no matter which browser tab is active.
+
+* [Shadow DOM](https://www.dynamsoft.com/codepool/polymer-shadow-dom-web-document-scan.html) is officially supported.
+
+* Added support for ARM-based macOS.
+
+* Added support for 64-bit Raspberry Pi.
+
+### Improved Features
+
+* Made the viewer more independent and robust. Related APIs are redesigned.
+  + Added a new global property [`Dynamsoft.WebTwainEnv.UseDefaultViewer`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#usedefaultviewer) to control whether the built-in viewer is used.
+  + Check out the [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html?ver=latest#viewer-related-api-changes-in-version-162).
+
+* Scanning remotely now supports showing the Manufacturer's User Interface.
+  + Only when the remote machine is Windows.
+  + To show the UI, use [`AcquireImage()`]({{site.info}}api/WebTwain_Acquire.html#acquireimage) with the parameter `deviceConfiguration` instead of the API [`IfShowUI`]({{site.info}}api/WebTwain_Acquire.html#ifshowui).
+  + Check out [how to enable remote scan]({{site.indepth}}features/input.html#how-to-enable-remote-scan).
+
+* Improved the tagging mechanism
+  + Added a new method [`RenameTag()`]({{site.info}}api/WebTwain_Buffer.html#renametag) to rename an existing tag.
+  + Added a new method [`ClearFilter()`]({{site.info}}api/WebTwain_Buffer.html#clearfilter) to stop filtering images by tag.
+  + The method [`FilterImagesByTag()`]({{site.info}}api/WebTwain_Buffer.html#filterimagesbytag) shows all images if no parameter is passed or shows no image at all if the tag value passed doesn't exist or there is no images under that tag.
+
+* Updated the signatures for the files on macOS so that TWAIN drivers can be populated correctly.
+
+* Added global configuration options for the WASM-mode which includes [`maxHeapSize`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#maxheapsize) and [`fetchOptions`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#fetchoptions).
+
+* Improved the methods [getCapabilities]({{site.info}}api/WebTwain_Acquire.html#getcapabilities) and [setCapabilities]({{site.info}}api/WebTwain_Acquire.html#setcapabilities) so that they work for ICA drivers on macOS too.
+
+* The Barcode Reader add-on is upgraded from 7.4.0.0428 to 7.6.0.0112.
+* Improved the display quality of the viewer in single-image mode (-1 * -1).
+
+### Changed Behaviours
+
+* When the view changes from single-image mode to multi-image mode, the cursor used to be changed to "hand" which means you can drag and drop images, in v16.2, the cursor will stay unchanged. In other words, if the cursor was "crosshair" in single-image mode, it'll continue to be "crosshair" in multi-image mode which means you can continue to draw rectangles on these images (NOTE that you can only draw on the *current* image). You can use the property [Viewer.cursor]({{site.info}}api/WebTwain_Viewer.html#cursor) to change the cursor in this case.
+
+* The properties [`Width`]({{site.info}}api/WebTwain_Viewer.html#width) and [`Height`]({{site.info}}api/WebTwain_Viewer.html#height) will always return the actual number of pixels even if you set them with a percentage like "50%".
+
+* The properties `BackgroundColor` and `SelectionImageBorderColor` will always return a string that represents the style (colour, border, etc.) even if you set them with numbers. For example,  `BackgroundColor` returns "#000032" if you set it to "50" and `SelectionImageBorderColor` returns "1px solid #000032" when you set it to "50". Also, these two properties are deprecated and should be replaced by [`Viewer.background`]({{site.info}}api/WebTwain_Viewer.html#background) and [`Viewer.selectedPageBorder`]({{site.info}}api/WebTwain_Viewer.html#selectedpageborder).
+
+* The properties `IfFitWindow` and `FitWindowType` are now write-only as their actual values may not be correct when you read them. As these properties are deprecated, use [`fitWindow()`]({{site.info}}api/WebTwain_Viewer.html#fitwindow) instead.
+
+* Added a 3rd parameter `fill` to the method [`play()`]({{site.info}}api/Addon_Camera.html#play) which determines whether the video should fill the whole viewer and have a part of the video hidden. In v16.1.1-, the default behavior is to fill the whole viewer and in v16.2, it'll put the video within the viewer and possibly leave some margin.
+
+* On macOS, the default transfer mode for TWAIN drivers is changed from "native" to "memory".
+
+* The "Cut" ("Erase") button in the image editor now cuts the selected area to the clipboard instead of just erasing the area.
+
+* The "Stretch" button is deleted from the image editor.
+
+* The type declaration files are now included in the [`dwt` package](https://www.npmjs.com/package/dwt). From version 16.2 on, these files are no longer maintained on [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped).
+
+### Breaking changes
+
+#### Moved
+
+* The methods `showVideo()` and `closeVideo()` are moved from the interface `Viewer` to `Addon.Camera`.
+
+* The method [`showVideo()`]({{site.info}}api/Addon_Camera.html#showvideo) has added two more parameters `mode` and `fill` and the video starts in the new default `picture` mode. To get the old behavior, use the `document` mode.
+
+#### Deleted
+
+* The property `SelectedImagesCount` and the method `GetSelectedImageIndex()` are deleted. Use [`SelectedImagesIndices`]({{site.info}}api/WebTwain_Buffer.html#selectedimagesindices) instead.
+
+* The method `SetSelectedImageIndex()` is deleted. Use [`SelectImages()`]({{site.info}}api/WebTwain_Buffer.html#selectimages) instead.
+
+* The method `UpdateViewer()` is deleted. There is no alternative method.
+
+* The second parameter for the method `BindViewer()` is deleted and it has only one parameter to specify the HTML element now. Therefore, you cannot use this method to create a thumbnail viewer anymore. Use the new method [`createThumbnailViewer()`]({{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer) instead.
+
+#### Others
+
+* Check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html?ver=latest#viewer-related-api-changes-in-version-162).
+
+### Bug Fixes
+
+* Fixed a bug where if you create a `WebTwain` instance under WASM-mode and then destroy it and create another `WebTwain` instance under Service-mode, you will be prompted to install the Dynamsoft Service even if it is already installed.
+
+* Fixed a bug with the scanner model "Canon DR-M260" (200 series) where the manufacturer's UI hangs or disappears once it is shown.
+
+* Fixed a bug on macOS where 1-bit TIFF files become inverted once they are transferred via the system clipboard.
+
+* Fixed a bug where changing the UI of the image editor will affect the main viewer.
+
+* Fixed a bug where the method [`updateRuntimeSettings`]({{site.info}}api/Addon_BarcodeReader.html#updateruntimesettings) will overwrite all settings you set with the method [`initRuntimeSettingsWithString`]({{site.info}}api/Addon_BarcodeReader.html#initruntimesettingswithstring).
+
+* Fixed a bug where the wrong PDF library is referenced when the SDK switches to the Service-mode from WASM-mode.
+
+* Fixed a bug on mobile devices where once an image is cut, its metadata is lost and can no longer be printed (it appears blank when being printed).
+
+* Fixed a bug where if the Dynamsoft Service is not installed and a `WebTwain` instance is created using the method `CreateDWTObject()` or `CreateDWTObjectEx()`, the connection to the service is not attempted automatically as expected (a page refreshing is required).
+
+* Fixed a bug with the API `Dynamsoft.WebTwainEnv.CustomizableDisplayInfo` so that it now works again.
+
+* Fixed a bug where removed images remain in the viewer.
+
+* Fixed a bug where if you set the `display` attribute of the viewer to `none`, it becomes black.
+
+* Fixed a bug where global keyboard or mouse events registered to the Dynamsoft Viewer were not released correctly.
+
+### Deprecations
+
+* Check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html?ver=latest#viewer-related-api-changes-in-versoin-162).
+
+### Changes to the ActiveX Edition
+
+* Internet Explorer 8 is no longer supported.
+* Fixed a bug where when saving an image as TIFF, the same image gets duplicated in the buffer.
+
 ## `16.1.1` (08/13/2020)
 
 ### Changed Behaviours
@@ -24,19 +246,21 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 * Added method `SetProductKeyAsync()` which sets the product key asynchronously. Previously, the property ProductKey was used for both setting and reading the key. The same behavior is kept in 16.1 but the recommendation now is to use the method `SetProductKeyAsync()` to set it and use the property `ProductKey` to read it.
 
-* Added methods `GetSourceNamesAsync()` , `SelectSourceAsync(),`  `SelectSourceByIndexAsync()` , `OpenSourceAsync()` , `CloseSourceAsync()` , `OpenSourceManagerAsync()` , `CloseSourceManagerAsync()` , as asynchronous complements to their existing synchronous methods.
+* Added methods `GetSourceNamesAsync()`,      `SelectSourceAsync()`,     `SelectSourceByIndexAsync()`,     `OpenSourceAsync()`,       `CloseSourceAsync()`,     `OpenSourceManagerAsync()`,     `CloseSourceManagerAsync()` , as asynchronous complements to their existing synchronous methods.
 
 * Support showing both 64-bit TWAIN drivers and 32-bit TWAIN drivers at the same time.
 
 > NOTE: This driver type does not work if we call `SelectSource()` synchronously (without callbacks).
 
-* Added APIs under `Addon.Camera` as a complement to the existing APIs under `Addon.Webcam` . These APIs include `getSourceList()` , `selectSource()` , `getCurrentSource()` , `closeSource()` , `getResolution()` , `setResolution()` , `getCurrentResolution()` , `play()` , `pause()` , `resume()` , `stop()` , `getStatus()` and `capture()` . Unlike the old APIs under `Addon.Webcam` which are good only on Windows, the new APIs are good on Windows, macOS, Linux as well as iOS & Android.
+* Added APIs under `Addon.Camera` as a complement to the existing APIs under `Addon.Webcam` . These APIs include `getSourceList()` ,      `selectSource()` ,      `getCurrentSource()` ,      `closeSource()` ,      `getResolution()` ,      `setResolution()` ,      `getCurrentResolution()` , `play()` ,      `pause()` ,      `resume()` ,      `stop()` ,      `getStatus()` and `capture()` . Unlike the old APIs under `Addon.Webcam` which are good only on Windows, the new APIs are good on Windows, macOS, Linux as well as iOS & Android.
 
-* Added built-in video processing feature which enables video streaming, edge detection, perspective adjustment, capturing, etc. Related APIs include `showVideo()` , `closeVideo()` and two callbacks `video-closed` and `video-error` .
+* Added a perperty `UseLocalService` to return whether a `WebTwain` instance is running in the Local-Service mode or WASM mode.
+
+* Added built-in video processing feature which enables video streaming, edge detection, perspective adjustment, capturing, etc. Related APIs include `showVideo()`,  `closeVideo()` and two callbacks `video-closed` and `video-error` .
 
 > NOTE: on desktop, this feature requires a webcam/camera addon license.
 
-### Entra Features
+### Extra Features
 
 * Added a feature to run Dynamsoft Service with the account "Local Service". By default, it is still "Local System". Contact Dynamsoft to learn more.
 
@@ -56,7 +280,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 * This version is backward compatible with version 16.0. This means once you have installed the Dynamsoft Service for version 16.1, an application running version 16.0 also works without the need to install the Service for version 16.0.
 * The method `LoadImageEx()` now supports mobile platforms as well.
-* Dynamsoft Service directory is now named with its major version in it. For example, `/DynamsoftServicex64/` is now `/DynamsoftServicex64_16/` . Also ActiveX related files are put into a different directory called `/WebTWAINActiveX/` .
+* Dynamsoft Service directory is now named with its major version in it. For example,      `/DynamsoftServicex64/` is now `/DynamsoftServicex64_16/` . Also ActiveX related files are put into a different directory called `/WebTWAINActiveX/` .
 
 ### Bug Fixes
 
@@ -97,7 +321,7 @@ No changes in version 16.1.
 * Added method `EnableSourceUI()` to enable TWAIN configuration without scanning.
 * Added method `SelectImages()` to select one or multiple images programmatically. This method replaces the old APIs `SetSelectedImageIndex()` and `SelectedImagesCount` .
 * Added property `SelectedImagesIndices` to return the indices of selected images. This property replaces the old API `GetSelectedImageIndex()` .
-* Added Viewer-specific APIs: `setViewMode()` , `updateUISettings()` , `setButtonClass()` , `setSelectedImageArea()` , `zoomIn()` , `zoomOut()` , `bindCustomElement()` , `showCustomElement()` , `hideCustomElement()` , `toggleCustomElement()` . These methods should be called like this: `DWObject.Viewer.zoomIn()` .
+* Added Viewer-specific APIs: `setViewMode()` ,      `updateUISettings()` ,      `setButtonClass()` ,      `setSelectedImageArea()` ,      `zoomIn()` ,      `zoomOut()` ,      `bindCustomElement()` ,      `showCustomElement()` ,      `hideCustomElement()` ,      `toggleCustomElement()` . These methods should be called like this: `DWObject.Viewer.zoomIn()` .
 
 ### Updated Add-on Features
 
@@ -111,6 +335,7 @@ No changes in version 16.1.
 * The following methods are made asynchronous (while still synchronous-compliant):
 
 `ChangeImageSize()` , `ConvertToBW()` , `ConvertToGrayScale()` , `Crop()` , `Erase()` , `FilterImageByTag()` , `Flip()` , `GetSelectedImageSize()` , `GetSkewAngle()` , `Invert()` , `Mirror()` , `Rotate()` , `RotateEx()` , `RotateLeft()` , `RotateRight()` , `SetDPI()` , `SetImageWidth()`
+
 > NOTE
 >  
 > These APIs must be called asynchronously in the WASM mode.
@@ -122,7 +347,7 @@ No changes in version 16.1.
 
 ### Deprecations
 
-* Deprecated `SetSelectedImageIndex()` , `GetSelectedImageIndex()` and `SelectedImagesCount` in favor of the new method `SelectImages()` .
+* Deprecated `SetSelectedImageIndex()`,  `GetSelectedImageIndex()` and `SelectedImagesCount` in favor of the new method `SelectImages()` .
 * Deprecated `IfOpenImageWithGDIPlus` in favor of the built-in imaging decoder.
 * Deprecated the following APIs in favor of the new methods `getCapabilities()` and `setCapabilities()` :
 
@@ -157,7 +382,7 @@ No changes in version 16.1.
 
 ### Improved
 
-* [HTML5] Further improved security by deleting the methods `FTPUploadDirectly()` , `FTPDownloadDirectly()` , `FileExist()` and changing the methods `HTTPUploadThroughPostDirectly()` , `HTTPDownloadDirectly()` to only work on whitelisted images/files (check NOTE below).
+* [HTML5] Further improved security by deleting the methods `FTPUploadDirectly()` ,      `FTPDownloadDirectly()` ,      `FileExist()` and changing the methods `HTTPUploadThroughPostDirectly()` ,      `HTTPDownloadDirectly()` to only work on whitelisted images/files (check NOTE below).
 * [HTML5] Changing the default SSL certificates is now officially supported.
 * [HTML5] Changed the property `LogLevel` so that when it's set to `1\0` , it's equivalent to setting `LogLevel` to `14\1` in the file `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\DSConfiguration.ini`
 * [HTML5] Local caching is made smoother by introducing a new process to do the caching when the threshold is reached. As a result, it is significantly faster when loading a great many files.
@@ -178,7 +403,7 @@ No changes in version 16.1.
 
 ### New
 
-* [HTML5] Added the capability to add tags to images. The tags can then be used to filter the images. The new APIs are `TagImages()` , `ClearImageTags()` , `SetDefaultTag()` and `FilterImagesByTag()` .
+* [HTML5] Added the capability to add tags to images. The tags can then be used to filter the images. The new APIs are `TagImages()` ,      `ClearImageTags()` ,      `SetDefaultTag()` and `FilterImagesByTag()` .
 
 ### Improved
 
@@ -209,7 +434,7 @@ No changes in version 16.1.
 
 ### Improved
 
-* [Win] Improved the methods `ConvertToBlob()` , `ConvertToBase64()` and image loading methods so that they can handle much bigger files.
+* [Win] Improved the methods `ConvertToBlob()` ,      `ConvertToBase64()` and image loading methods so that they can handle much bigger files.
 * [Linux] Improved the image encode/decode functionalities on Linux so that it can encode/decode files just like Windows.
 * [macOS & Linux] Expanded PDF related capabilities to macOS and Linux so that all 3 platforms share the same features.
 * [macOS & Linux] Improved the PDF decode engine so that it can load more PDF files without invoking the PDF rasterizer.
@@ -234,9 +459,9 @@ No changes in version 16.1.
 
 * [HTML5] Improved the method `AcquireImage()` by adding two more options `IfGetImageInfo` & `IfGetExtImageInfo` to its parameter `optionalDeviceConfig` which are `true` by default and means extra image info will be returned with each transferred image.
 * [HTML5 on Windows] Improved the method `SetFileXferInfo()` so that you can specify a naming pattern for the transferred images when the transfer mode is Disk File.
-* [HTML5] Improved the performance of Dynamsoft Service by allowing two time-consuming operations to occur concurrently. The affected methods are `ConvertToBlob()` , `ConvertToBase64()` , `GenerateURLForUploadedData()` as well as a few HTTP Upload methods.
+* [HTML5] Improved the performance of Dynamsoft Service by allowing two time-consuming operations to occur concurrently. The affected methods are `ConvertToBlob()` ,      `ConvertToBase64()` ,      `GenerateURLForUploadedData()` as well as a few HTTP Upload methods.
 * [HTML5] Improved service connecting efficiency by removing optional ports and use the same ports no matter it's 64bit service or 32bit. Also, during initialization, JavaScript will attempt to connect to the core scan module directly instead of connecting to the service first.
-* [HTML5] Improved the functions `ConvertToBase64()` , `ConvertToBlob()` , `GenerateURLForUploadData()` , `HTTPUpload()` , `HTTPUploadAllThroughPostAsMultiPageTIFF()` , `HTTPUploadAllThroughPostAsPDF()` , `HTTPUploadThroughPost()` , `HTTPUploadThroughPostAsMultiPagePDF()` , `HTTPUploadThroughPostAsMultiPageTIFF()` , `HTTPUploadThroughPostEx()` so that the current indices of the images which were operated on in these methods are returned in the callback functions. This is due to the fact that the indices might have changed during these time-consuming operations.
+* [HTML5] Improved the functions `ConvertToBase64()`,     `ConvertToBlob()`,  `GenerateURLForUploadData()` ,      `HTTPUpload()` ,      `HTTPUploadAllThroughPostAsMultiPageTIFF()` ,      `HTTPUploadAllThroughPostAsPDF()` ,      `HTTPUploadThroughPost()` ,      `HTTPUploadThroughPostAsMultiPagePDF()` ,      `HTTPUploadThroughPostAsMultiPageTIFF()` ,      `HTTPUploadThroughPostEx()` so that the current indices of the images which were operated on in these methods are returned in the callback functions. This is due to the fact that the indices might have changed during these time-consuming operations.
 
 ### Changed
 
@@ -252,7 +477,7 @@ No changes in version 16.1.
 ### New
 
 * [ActiveX] Added method `GetImagePartURL()` to work with the Barcode Reader.
-* [HTML5] Added a few global settings which may speed up the initialization process of the SDK. The settings are `IfCheckDCP` , `IfCheckDWT` , `IfDisableDefaultSettings` and `IsLicensePromptFriendly` .
+* [HTML5] Added a few global settings which may speed up the initialization process of the SDK. The settings are `IfCheckDCP` ,      `IfCheckDWT` ,      `IfDisableDefaultSettings` and `IsLicensePromptFriendly` .
 
 ### Improved
 
@@ -361,7 +586,7 @@ No changes in version 16.1.
 * [HTML5] Changed the background color for images when they are selected or when the mouse hovers over one of them. This only works when the view mode is n * n. By comparison, in old versions, the background stays white.
 * [HTML5] Changed the background color for the image editor.
 * [HTML5] Changed the theme of the SDK including the progress bar color, waiting spinner, etc.
-* [HTML5] Changed the events `OnMouseClick` , `OnMouseDoubleClick` and `OnMouseRightClick` to be triggered when the mouse is up. In old versions, they were triggered when the mouse is down.
+* [HTML5] Changed the events `OnMouseClick` ,      `OnMouseDoubleClick` and `OnMouseRightClick` to be triggered when the mouse is up. In old versions, they were triggered when the mouse is down.
 
 ## `13.4.1` (04/16/2018)
 
@@ -563,7 +788,7 @@ No changes in version 16.1.
 ### Improved
 
 * Updated barcode reader library to v4.1.0.112 which uses improved positioning algorithm that can better identify and locate DataMatrix barcodes.
-* Improved the event `OnPostLoad` so that it gets triggered for the methods `HTTPDownload(Ex)` , `FTPDownload(Ex)` as well as `LoadImageFromBase64Binary()` .
+* Improved the event `OnPostLoad` so that it gets triggered for the methods `HTTPDownload(Ex)` ,      `FTPDownload(Ex)` as well as `LoadImageFromBase64Binary()` .
 * [HTML5 edition only] Improved the API `AcquireImage()` . Now you can set two callback functions to this method to check its status.
 
 ### Fixed
@@ -615,7 +840,7 @@ No changes in version 16.1.
 * [HTML5 Edition] Added HTML5 support for Internet Explorer 10 and 11.
 * Added `SetOpenSourceTimeout()` method to check `ErrorString` property when `SelectSource()` method fails after a specified number of milliseconds. This prevents the scan page from being unresponsive when the selected device is not connected.
 * [Webcam Add-on] Added `SetVideoRotateMode()` method to rotate the video preview stream.
-* [HTML5 Edition] Added `OnWebTwainPreExecuteCallback` , `OnWebTwainPostExecuteCallback` events and `ShowCustomMask()` , `HideCustomMask()` methods in `dynamsoft.webtwain.install.js` to display or hide the Dynamsoft's progress overlay during scanning.
+* [HTML5 Edition] Added `OnWebTwainPreExecuteCallback` ,      `OnWebTwainPostExecuteCallback` events and `ShowCustomMask()` ,      `HideCustomMask()` methods in `dynamsoft.webtwain.install.js` to display or hide the Dynamsoft's progress overlay during scanning.
 
 ### Improved
 
@@ -778,7 +1003,7 @@ In v10.0.1 there is no limit to the size of an Http Request. In v10.0, the WebSo
 * New HTML5 WebSocket SDK to enable TWAIN scanning in Chrome and Firefox 27+ on Windows.
 * Added Disk Caching mechanism. This feature enables high volume document scanning which was limited by the physical memory size.
 * Added JPEG compression type to TIFF encoding/decoding. You can reduce the size of TIFF files significantly by using the JPEG compression.
-* Much improved image editing features like `ChangeBitDepth()` , `GrayScale()` , etc.
+* Much improved image editing features like `ChangeBitDepth()` ,      `GrayScale()` , etc.
 
 ## `9.3 Preview` (06/10/2014)
 
@@ -831,7 +1056,7 @@ In v10.0.1 there is no limit to the size of an Http Request. In v10.0, the WebSo
 
 * Improved the image decoder for ActiveX x86 edition. Dynamic Web TWAIN will use GDI+ to decode the image if gdiplus.dll is available in the operating system.
 * Added the support for simple annotation. Now you can add a text on the image.
-* Added `FTPUploadDirectly()` , `HTTPUploadThroughPostDirectly()` and `HTTPUploadThroughPutDirectly()` methods to upload all types of local files without encoding/decoding.
+* Added `FTPUploadDirectly()`,  `HTTPUploadThroughPostDirectly()` and `HTTPUploadThroughPutDirectly()` methods to upload all types of local files without encoding/decoding.
 * Added `HTTPDownloadDirectly()` and `FTPDownloadDirectly()` methods to download files to local without encoding/decoding.
 * Improved the performance of image rotate method.
 * Standardized the naming convention for the properties and methods in ActiveX edition.
@@ -881,7 +1106,7 @@ In v10.0.1 there is no limit to the size of an Http Request. In v10.0, the WebSo
 * Added `SaveSelectedImagesToBase64Binary()` to save selected images to base64 binary.
 * Added `LoadImageFromBase64Binary()` to load images from a base64 byte array.
 * Added support for fitting the selected image to the width or height of the window with the property `FitWindowType` .
-* Added support for getting general info of a scanned image including image width/height and bit depth with the methods `GetImageBitDepth()` , `GetImageWidth()` and `GetImageHeight()` .
+* Added support for getting general info of a scanned image including image width/height and bit depth with the methods `GetImageBitDepth()` ,      `GetImageWidth()` and `GetImageHeight()` .
 * Further improved the print feature with the property `IfShowPrintUI` to set whether to display the user interface of the printer.
 * Support more models of Canon scanners.
 
@@ -894,8 +1119,8 @@ In v10.0.1 there is no limit to the size of an Http Request. In v10.0, the WebSo
 * Added session/cookie support for Plug-in Edition.
 * Added removing selected images.
 * `MaxImagesInBuffer` : In both the trial and full versions of Dynamic Web TWAIN, the maximum value you can set to the property has been raised from 1024 to 4096.
-* Added methods: `SetCookie()` , `BindSSLCert()` , `BindSSLCertEx()` , `OverlayRectangle()` , `RemoveAllSelectedImages()` .
-* Added properties: `MouseX` , `MouseY` .
+* Added methods: `SetCookie()` ,      `BindSSLCert()` ,      `BindSSLCertEx()`,  `OverlayRectangle()` ,      `RemoveAllSelectedImages()` .
+* Added properties: `MouseX` ,      `MouseY` .
 
 ## `6.0` (05/18/2010)
 
@@ -914,8 +1139,8 @@ In v10.0.1 there is no limit to the size of an Http Request. In v10.0, the WebSo
 * Added clearing the specified area of an image and filling the area with a color.
 * `MaxImagesInBuffer` : In the trial version of Dynamic Web TWAIN, the maximum value you can set to the property has been raised from 4 to 1024.
 * Optimized `HTTPPostResponseString` in Plug-in Edition: You can use `HTTPPostResponseString` property to get much more detailed info returned from the web server.
-* Added methods: `CutFrameToClipboard()` , `Erase()` , `FTPUploadSelectedImagesAsMultiPagePDF()` , `FTPUploadSelectedImagesAsMultiPageTIFF()` , `GetBarcodeInfo()` , `GetBarcodeText()` , `HTTPUploadSelectedImagesThroughPostAsMultiPagePDF()` , `HTTPUploadSelectedImagesThroughPostAsMultiPageTIFF()` , `HTTPUploadSelectedImagesThroughPutAsMultiPagePDF()` , `HTTPUploadSelectedImagesThroughPutAsMultiPageTIFF()` , `LoadImageFromBytes()` , `MoveImage()` , `Print()` , `Rotate()` , `SaveSelectedImagesAsMultiPagePDF()` , `SaveSelectedImagesAsMultiPageTIFF()` , `SaveSelectedImagesToBytes()` , `GetSelectedImageSize()` .
-* Added properties: `AllowMultiSelect` , `BackgroundColor` , `BackgroundFillColor` , `BarcodeCount` , `HttpFieldNameOfUploadedImage` , `IfPASVMode` , `SelectedImageIndex` , `SelectedImagesCount` , `SelectionImageBorderColor` , `VScrollBar` .
+* Added methods: `CutFrameToClipboard()`,  `Erase()` ,      `FTPUploadSelectedImagesAsMultiPagePDF()` ,      `FTPUploadSelectedImagesAsMultiPageTIFF()` ,      `GetBarcodeInfo()` ,      `GetBarcodeText()` ,      `HTTPUploadSelectedImagesThroughPostAsMultiPagePDF()` ,      `HTTPUploadSelectedImagesThroughPostAsMultiPageTIFF()` ,      `HTTPUploadSelectedImagesThroughPutAsMultiPagePDF()` ,      `HTTPUploadSelectedImagesThroughPutAsMultiPageTIFF()` ,      `LoadImageFromBytes()` ,      `MoveImage()`,     `Print()`,  `Rotate()` ,      `SaveSelectedImagesAsMultiPagePDF()` ,      `SaveSelectedImagesAsMultiPageTIFF()` ,      `SaveSelectedImagesToBytes()`,  `GetSelectedImageSize()` .
+* Added properties: `AllowMultiSelect`,  `BackgroundColor` ,      `BackgroundFillColor` ,      `BarcodeCount` ,      `HttpFieldNameOfUploadedImage` ,      `IfPASVMode` ,      `SelectedImageIndex`,     `SelectedImagesCount`,  `SelectionImageBorderColor` ,      `VScrollBar` .
 * Added event: `OnInternetTransferPercentageEx`
 
 ## `5.2` (07/14/2009)
@@ -927,7 +1152,7 @@ In v10.0.1 there is no limit to the size of an Http Request. In v10.0, the WebSo
 * Added zoom in/zoom out features.
 * Added a new feature in `ShowImageEditor()` : If the `IfFitWindow` property is set to `true` , the image will fit the size of window when the Image Editor prompts; otherwise the image will be displayed in its full size.
 * Added method: `IsBlankImage()` .
-* Added properties: `BlankImageMaxStdDev` , `BlankImageThreshold` , `Zoom` , `EnableInteractiveZoom` .
+* Added properties: `BlankImageMaxStdDev` ,      `BlankImageThreshold` ,      `Zoom` ,      `EnableInteractiveZoom` .
 * Added capability: `ICAP_EXTIMAGEINFO` .
 
 ## `5.1.1` (09/09/2008)
@@ -945,9 +1170,9 @@ In v10.0.1 there is no limit to the size of an Http Request. In v10.0, the WebSo
 * New feature added in `SetViewMode()` : when the view mode is set to -1 by -1, Dynamic Web TWAIN only shows the current image. No scroll bar is provided to navigate to other images.
 * New feature added in `IfFitWindow` : when the value of this property is `false` , the image will be displayed in its full size and scroll bars will be shown if necessary(the width or height of the image is bigger than the control size).
 * New feature added in `MouseShape` : when the value of this property is set to `true` , the cursor is set as a hand. If the width or height of the image is bigger than the control size, scroll bars will be shown and you can drag the image to adjust its position in the control. When the value of the property is set to `false` , the cursor is set as an arrow. You can select an area on the control directly.
-* Added methods: `GetImageSizeWithSpecifiedType()` , `SwitchImage()` .
+* Added methods: `GetImageSizeWithSpecifiedType()` ,      `SwitchImage()` .
 * Added property: `IfAppendImage` .
-* Added events: `OnMouseDoubleClick` , `OnMouseRightClick` , `OnImageAreaSelected` , `OnImageAreaDeSelected` , `OnTopImageInTheViewChanged` .
+* Added events: `OnMouseDoubleClick`,     `OnMouseRightClick`,  `OnImageAreaSelected` ,      `OnImageAreaDeSelected` ,      `OnTopImageInTheViewChanged` .
 
 ## `5.0.1` (12/04/2007)
 
@@ -963,9 +1188,9 @@ In v10.0.1 there is no limit to the size of an Http Request. In v10.0, the WebSo
 * Image upload progress bar and cancel option added. You can use the built-in progress bar or your own progress bar for the upload. Cancel option is also provided.
 * Download from HTTP stream support added. You do not need to create temp files at server side for download.
 * More user interaction features added. Several mouse events are added.
-* Added methods: `SetViewMode()` , `GetViewMode()` , `SaveAsPDF()` , `SaveAllAsPDF()` , `FTPUploadAllAsPDF()` , `HTTPUploadAllThroughPostAsPDF()` , `HTTPUploadAllThroughPutAsPDF()` , `LoadImageEx()` , `FTPDownloadEx()` , `FTPUploadEx()` , `HTTPDownloadEx()` , `HTTPUploadThroughPostEx()` , `HTTPUploadThroughPutEx()` , `SetHTTPFormField()` , `ClearAllHTTPFormFiled()` .
-* Added properties: `ImageMargin` , `MouseShape` , `PDFCompressionType` , `PDFAuthor` , `PDFCreationDate` , `PDFCreator` , `PDFKeywords` , `PDFModifiedDate` , `PDFProducer` , `PDFSubject` , `PDFTitle` , `IfShowCancelDialogWhenImageTransfer` .
-* Added events: `OnMouseClick` , `OnMouseMove` , `OnInternetTransferPercentage` .
+* Added methods: `SetViewMode()` ,      `GetViewMode()`,  `SaveAsPDF()` ,      `SaveAllAsPDF()` ,      `FTPUploadAllAsPDF()` ,      `HTTPUploadAllThroughPostAsPDF()` ,      `HTTPUploadAllThroughPutAsPDF()`,  `LoadImageEx()` ,      `FTPDownloadEx()` ,      `FTPUploadEx()`,  `HTTPDownloadEx()` ,      `HTTPUploadThroughPostEx()` ,      `HTTPUploadThroughPutEx()`,  `SetHTTPFormField()` ,      `ClearAllHTTPFormFiled()` .
+* Added properties: `ImageMargin`,  `MouseShape` ,      `PDFCompressionType` ,      `PDFAuthor` ,      `PDFCreationDate` ,      `PDFCreator` ,      `PDFKeywords` ,      `PDFModifiedDate` ,      `PDFProducer` ,      `PDFSubject` ,      `PDFTitle`,  `IfShowCancelDialogWhenImageTransfer` .
+* Added events: `OnMouseClick` ,      `OnMouseMove`,  `OnInternetTransferPercentage` .
 
 ## `4.2.1` (04/28/2006)
 
@@ -979,9 +1204,9 @@ In v10.0.1 there is no limit to the size of an Http Request. In v10.0, the WebSo
 ## `4.1` (09/08/2005)
 
 * Image Editor added which can be used for image editing and viewing. Supports basic image editing features including Rotate, Crop, Mirror, Flip and ChangeImageSize.
-* Related methods: `RotateLeft()` , `RotateRight()` , `Mirror()` , `Crop()` , `CropToClipboard()` , `GetImageSize()` , `ChangeImageSize()` , `ShowImageEditor()` .
-* Related properties: `ImageEditorWindowTitle` , `ImageEditorIfReadonly` , `ImageEditorIfEnableEnumerator` .
-* Other methods added: `LoadDibFromClipboard()` , `GetDefaultImageLayout()` , `GetImageLayout()` , `ResetImageLayout()` , `SetImageLayout()` .
+* Related methods: `RotateLeft()`,     `RotateRight()`,     `Mirror()`,  `Crop()` ,      `CropToClipboard()` ,      `GetImageSize()` ,      `ChangeImageSize()`,  `ShowImageEditor()` .
+* Related properties: `ImageEditorWindowTitle` ,      `ImageEditorIfReadonly` ,      `ImageEditorIfEnableEnumerator` .
+* Other methods added: `LoadDibFromClipboard()` ,      `GetDefaultImageLayout()` ,      `GetImageLayout()` ,      `ResetImageLayout()` ,      `SetImageLayout()` .
 
 ## `4.0` (05/31/2005)
 
@@ -990,27 +1215,27 @@ In v10.0.1 there is no limit to the size of an Http Request. In v10.0, the WebSo
 * RLE, G3, G4, LZW, PackBits TIFF compression supported.
 * Local multi-image buffer added: you can view and manage multiple acquired images locally before uploading them to web server.
 * Multi-page TIFF upload/download supported.
-* Added methods: `SaveAllAsMultiPageTIFF()` , `SaveAsPNG()` , `RemoveAllImages()` , `RemoveImage(),`  `FTPUpload()` , `FTPDownload()` , `HTTPUploadThroughPost()` , `HTTPUploadThroughPut()` , `HTTPDownload()` , `FTPUploadAllAsMultiPageTIFF()` , `HTTPUploadAllThroughPostAsMultiPageTIFF()` , `HTTPUploadAllThroughPutAsMultiPageTIFF()`
-* Added properties: `MaxImagesInBuffer` , `HowManyImagesInBuffer` , `CurrentImageIndexInBuffer` , `TIFFCompressionType` , `IfFitWindow` .
-* `SaveAsBMP()` , `SaveAsJPEG()` and `SaveAsTIFF()` methods modified. They now save images of specified indexes in buffer.
+* Added methods: `SaveAllAsMultiPageTIFF()` ,      `SaveAsPNG()` ,      `RemoveAllImages()` ,      `RemoveImage(),`  `FTPUpload()` ,      `FTPDownload()` ,      `HTTPUploadThroughPost()` ,      `HTTPUploadThroughPut()`,  `HTTPDownload()` ,      `FTPUploadAllAsMultiPageTIFF()` ,      `HTTPUploadAllThroughPostAsMultiPageTIFF()` ,      `HTTPUploadAllThroughPutAsMultiPageTIFF()`
+* Added properties: `MaxImagesInBuffer`,     `HowManyImagesInBuffer`,     `CurrentImageIndexInBuffer`,     `TIFFCompressionType`,  `IfFitWindow` .
+* `SaveAsBMP()` ,      `SaveAsJPEG()` and `SaveAsTIFF()` methods modified. They now save images of specified indexes in buffer.
 * `CopyToClipboard()` method modified. It copies the image of a specified index in buffer.
 * `CutToClipboard()` method modified. It cuts the image of a specified index in buffer.
 * The behavior of `hDib` property changed. It returns the Handle of the DIB of a specified index in buffer.
 * The behavior of `Picture` property changed. It returns the `Picture` object of the image of a specified index in buffer.
-* `FTPUploadAsBMP()` , `FTPUploadAsJPEG()` , `FTPUploadAsTIFF()` methods replaced by `FTPUPload()` method.
+* `FTPUploadAsBMP()` ,      `FTPUploadAsJPEG()` ,      `FTPUploadAsTIFF()` methods replaced by `FTPUPload()` method.
 * `FTPDownloadBMP()` and `FTPDownloadJPEG()` methods replaced by `FTPDownload()` method.
-* `HTTPUploadAsBMPThroughPost()` , `HTTPUploadAsJPEGThroughPost()` and `HTTPUploadAsTIFFThroughPost()` methods replaced by `HTTPUploadThroughPost()` method.
-* `HTTPUploadAsBMPThroughPut()` , `HTTPUploadAsJPEGThroughPut()` and `HTTPUploadAsTIFFThroughPut()` methods replaced by `HTTPUploadThroughPut()` method.
+* `HTTPUploadAsBMPThroughPost()` ,      `HTTPUploadAsJPEGThroughPost()` and `HTTPUploadAsTIFFThroughPost()` methods replaced by `HTTPUploadThroughPost()` method.
+* `HTTPUploadAsBMPThroughPut()` ,      `HTTPUploadAsJPEGThroughPut()` and `HTTPUploadAsTIFFThroughPut()` methods replaced by `HTTPUploadThroughPut()` method.
 * `HTTPDownloadBMP()` and `HTTPDownloadJPEG()` methods replaced by `HTTPDownload()` method.
 * `LoadBMP()` and `LoadJPEG()` methods replaced by `LoadImage()` method.
 
 ## `3.0.3` (03/15/2005)
 
-* `HTTPPostResponseString` property added. Response string from the HTTP server will be available in `HTTPPostResponseString` property if an error occurs for `HTTPUploadAsBMPThroughPost()` , `HTTPUploadAsJPEGThroughPost()` and `HTTPUploadAsTIFFThroughPost()` methods.
+* `HTTPPostResponseString` property added. Response string from the HTTP server will be available in `HTTPPostResponseString` property if an error occurs for `HTTPUploadAsBMPThroughPost()` ,      `HTTPUploadAsJPEGThroughPost()` and `HTTPUploadAsTIFFThroughPost()` methods.
 
 ## `3.0.2` (03/07/2005)
 
-* `HTTPUploadAsBMPThroughPost()` , `HTTPUploadAsJPEGThroughPost()` and `HTTPUploadAsTIFFThroughPost()` methods memory access violation bug fixed.
+* `HTTPUploadAsBMPThroughPost()` ,      `HTTPUploadAsJPEGThroughPost()` and `HTTPUploadAsTIFFThroughPost()` methods memory access violation bug fixed.
 
 ## `3.0` (01/18/2005)
 
@@ -1018,8 +1243,8 @@ In v10.0.1 there is no limit to the size of an Http Request. In v10.0, the WebSo
 * HTTP Upload now supports HTTP Post command.
 * Many high level properties and methods added.
 * Method `EnableSource(Boolean IfShowUI)` changed to `EnableSource()` , method `HTTPUploadAsBMP()` changed to `HTTPUploadAsBMPThroughPut()` , method `HTTPUploadAsJPEG()` changed to `HTTPUploadAsJPEGThroughPut()` .
-* Added methods: `FeedPage()` , `FTPUploadAsTIFF()` , `RewindPage()` , `HTTPUploadAsBMPThroughPost()` , `HTTPUploadAsJPEGThroughPost()` , `HTTPUploadAsTIFFThroughPost()` , `HTTPUploadAsTIFFThroughPut()` , `SaveAsTIFF()` .
-* Added properties: `BitDepth` , `Brightness` , `Contrast` , `DataSourceStatus` , `Duplex` , `IfAutoBright` , `IfAutoFeed` , `IfAutoScan` , `IfDeviceOnline` , `IfDisableSourceAfterAcquire` , `IfDuplexEnabled` , `IfFeederEnabled` , `IfModalUI` , `IfPaperDetectable` , `IfShowIndicator` , `IfShowUI` , `IfThrowException` , `IfTiffMultiPage` , `IfUIControllable` , `PageSize` , `PixelFlavor` , `PixelType` , `Resolution` , `Unit` , `XferCount` 	 	 	 
+* Added methods: `FeedPage()` ,      `FTPUploadAsTIFF()` ,      `RewindPage()`,  `HTTPUploadAsBMPThroughPost()` ,      `HTTPUploadAsJPEGThroughPost()`,     `HTTPUploadAsTIFFThroughPost()`,     `HTTPUploadAsTIFFThroughPut()`,  `SaveAsTIFF()` .
+* Added properties: `BitDepth` ,      `Brightness` ,      `Contrast` ,      `DataSourceStatus` ,      `Duplex` ,      `IfAutoBright` ,      `IfAutoFeed` ,      `IfAutoScan`,     `IfDeviceOnline`,  `IfDisableSourceAfterAcquire` ,      `IfDuplexEnabled` ,      `IfFeederEnabled` ,      `IfModalUI` ,      `IfPaperDetectable` ,      `IfShowIndicator` , `IfShowUI` ,      `IfThrowException` ,      `IfTiffMultiPage` ,      `IfUIControllable` ,      `PageSize` ,      `PixelFlavor` ,      `PixelType` ,      `Resolution` ,      `Unit` ,      `XferCount` 	 	 	 
 
 ## `2.0.1` (12/21/2004)
 
@@ -1035,8 +1260,8 @@ In v10.0.1 there is no limit to the size of an Http Request. In v10.0, the WebSo
 * Supports Disk File image transfer mode.
 * Totally rewritten with pure Windows API and assembly language.
 * Built-In TWAIN session wizard.
-* `CapSetFrame()` , `CapGetFrameLeft()` , `CapGetFrameTop()` , `CapGetFrameRight()` , `CapGetFrameBottom()` added for the negotiation of `ICAP_FRAMES` capability.
-* `OnPreAllTransfers` , `OnPostAllTransfers` , `OnTransferCancelled` , `OnTransferError` events added.
+* `CapSetFrame()`,     `CapGetFrameLeft()`,     `CapGetFrameTop()`,     `CapGetFrameRight()`,  `CapGetFrameBottom()` added for the negotiation of `ICAP_FRAMES` capability.
+* `OnPreAllTransfers` ,      `OnPostAllTransfers` ,      `OnTransferCancelled` ,      `OnTransferError` events added.
 
 ## `1.0.2` (03/15/2004)
 

@@ -49,12 +49,12 @@ For more information, check [How to use a TWAIN-Direct scanner](#how-to-use-a-tw
 
 **A**: `DWT` provides two ways to set up a scan operation.
 
-1. Change one setting at a time. Below are a few APIs, for example
+* Change one setting at a time. Below are a few APIs, for example
   + [PageSize]({{site.info}}api/WebTwain_Acquire.html#pagesize) 
   + [PixelType]({{site.info}}api/WebTwain_Acquire.html#pixeltype)
   + [Resolution]({{site.info}}api/WebTwain_Acquire.html#resolution) 
   + [SourceCount]({{site.info}}api/WebTwain_Acquire.html#sourcecount)
-2. Change all settings at once. Use one of the two APIs below to achieve this.
+* Change all settings at once. Use one of the two APIs below to achieve this.
   + [AcquireImage()]({{site.info}}api/WebTwain_Acquire.html#acquireimage)
   + [startScan()]({{site.info}}api/WebTwain_Acquire.html#startscan)
 
@@ -126,7 +126,7 @@ The following shows how to use the second pair in JavaScript.
 ``` javascript
 DWObject.getCapabilities(function(result) {
     for (var i = 0; i < result.length; i++) {
-        if (result[i].capability.value === Dynamsoft.EnumDWT_Cap.ICAP_SUPPORTEDSIZES)
+        if (result[i].capability.value === Dynamsoft.DWT.EnumDWT_Cap.ICAP_SUPPORTEDSIZES)
             sizes = result[i].values;
     }
     console.log(sizes);
@@ -141,7 +141,7 @@ DWObject.getCapabilities(function(result) {
 DWObject.setCapabilities({
         exception: "ignore",
         capabilities: [{
-            capability: Dynamsoft.EnumDWT_Cap.ICAP_SUPPORTEDSIZES,
+            capability: Dynamsoft.DWT.EnumDWT_Cap.ICAP_SUPPORTEDSIZES,
             curValue: 1, // 1 means 'A4' in our case
             exception: "fail"
         }]
@@ -159,17 +159,17 @@ DWObject.setCapabilities({
 
 **A**: The TWAIN specification defines more than 150 standard capabilities for TWAIN applications and sources to choose from. However, some scanner vendors provide advanced and model-specific capabilities which are not included in the specification. We call them custom capabilities. The following steps show how to use them:
 
-1. Install the [TWAIN Sample App](http://www.dynamsoft.com/download/support/twainapp.win32.installer.msi).
+* Install the [TWAIN Sample App](http://www.dynamsoft.com/download/support/twainapp.win32.installer.msi).
 
-2. Use the TWAIN Sample App to open the source and then check what the hexadecimal value of the custom capability is.
+* Use the TWAIN Sample App to open the source and then check what the hexadecimal value of the custom capability is.
 
 ![Indepth-input-1]({{site.assets}}imgs/Indepth-input-1.png)
 
-3. Double click and check the available values.
+* Double click and check the available values.
 
 ![Indepth-input-2]({{site.assets}}imgs/Indepth-input-2.png)
 
-4. Use this custom capability.
+* Use this custom capability.
 
 ``` javascript
 DWObject.SelectSource(function() {
@@ -239,10 +239,14 @@ function PlayVideo(bShow) {
         // DEVICE-ID must be correct
         // e.g.: "592bbc7c0f951657d8dc6dc3af8bdd76cde89b78184a8475f70eb012a4040a54"
         DWObject.Addon.Camera.selectSource("DEVICE-ID");
-        DWObject.Addon.Camera.play()
             .then(function() {
-                videoPlaying = true;
-            });
+                DWObject.Addon.Camera.play()
+                    .then(function() {
+                        videoPlaying = true;
+                    }
+                );
+            }
+        );
     }
 }
 
@@ -288,8 +292,8 @@ var onFailure = function(errorCode, errorString) {
 DWObject.IfShowFileDialog = true;
 // PDF Rasterizer Addon is used here to ensure PDF support
 DWObject.Addon.PDF.SetResolution(200);
-DWObject.Addon.PDF.SetConvertMode(Dynamsoft.EnumDWT_ConvertMode.CM_RENDERALL);
-DWObject.LoadImageEx("", Dynamsoft.EnumDWT_ImageType.IT_ALL, onSuccess, onFailure);
+DWObject.Addon.PDF.SetConvertMode(Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL);
+DWObject.LoadImageEx("", Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL, onSuccess, onFailure);
 ```
 
 ### Open an existing file using its absolute path
@@ -306,7 +310,7 @@ var onFailure = function(errorCode, errorString) {
 DWObject.IfShowFileDialog = false;
 // PDF Addon is used here to ensure PDF support
 DWObject.Addon.PDF.SetResolution(200);
-DWObject.Addon.PDF.SetConvertMode(Dynamsoft.EnumDWT_ConvertMode.CM_RENDERALL);
+DWObject.Addon.PDF.SetConvertMode(Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL);
 /* "YOUR-FILE-PATH" - example path
  * Windows: 
  *   Local: "D:\\Files\\sample.pdf"
@@ -362,7 +366,7 @@ var onFailure = function(errorCode, errorString) {
     console.log(errorString);
 };
 DWObject.HTTPPort = 300;
-DWObject.HTTPDownloadEx("localhost", "/getFile.aspx", Dynamsoft.EnumDWT_ImageType.IT_TIF, onSuccess, onFailure);
+DWObject.HTTPDownloadEx("localhost", "/getFile.aspx", Dynamsoft.DWT.EnumDWT_ImageType.IT_TIF, onSuccess, onFailure);
 ```
 
 Server-side script
@@ -412,7 +416,7 @@ var onFailure = function(errorCode, errorString) {
 DWObject.FTPPort = 21;
 DWObject.FTPUserName = "FTPUser";
 DWObject.FTPPassword = "SomePassword";
-DWObject.FTPDownloadEx("192.168.8.20", "/files/sample.pdf", Dynamsoft.EnumDWT_ImageType.IT_PDF, onSuccess, onFailure);
+DWObject.FTPDownloadEx("192.168.8.20", "/files/sample.pdf", Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF, onSuccess, onFailure);
 ```
 
 ### Load files in binary or base64 string format 
@@ -438,7 +442,7 @@ function loadFileFromBinary() {
     if (DWObject) {
         DWObject.ConvertToBlob(
             [0],
-            Dynamsoft.EnumDWT_ImageType.IT_PDF,
+            Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
             function(result) {
                 DWObject.LoadImageFromBinary(
                     result, onSuccess, onFailure);
@@ -457,11 +461,11 @@ function loadFileFromBase64() {
     if (DWObject) {
         DWObject.ConvertToBase64(
             [0],
-            Dynamsoft.EnumDWT_ImageType.IT_PDF,
+            Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
             function(result) {
                 DWObject.LoadImageFromBase64Binary(
                     result.getData(0, result.getLength()),
-                    Dynamsoft.EnumDWT_ImageType.IT_PDF,
+                    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
                     onSuccess, onFailure);
             }, onFailure);
     }
@@ -491,41 +495,6 @@ sources.find(function(name, index) {
 })
 ```
 
-### How to enable remote scan
-
-#### On Windows desktop where the scanner is physically connected
-
-1. Install `Dynamsoft Service`
-2. Configure the Service by finding the file `DSConfiguration.ini` and adding the following line
-
-``` 
-Server=192.168.8.221
-```
-  > We are assuminge the IP of this desktop is `192.168.8.221`
-
-3. Find the service `Dynamsoft Service` in Windows services list and restart it.
-
-#### In your application
-
-4. Create a WebTwain instance to connect to that service
-
-> Learn more [here]({{site.indepth}}features/initialize.html#dynamsoftwebtwainenvcreatedwtobject)
-
-``` javascript
-Dynamsoft.WebTwainEnv.CreateDWTObject(
-    "dwtcontrolContainer",
-    "192.168.8.221", 18622, 18623,
-    function(dwtObject) {
-        DWObject = dwtObject;
-    },
-    function(errorString) {
-        console.log(errorString);
-    }
-);
-```
-
-1. Use this WebTwain instance, `DWObject`, to scan documents from the scanner connected to the desktop (192.168.8.221)
-
 <!--
 
 ### How to use a TWAIN-Direct scanner
@@ -540,7 +509,7 @@ Dynamsoft.WebTwainEnv.CreateDWTObject(
 DWObject.SelectSource(function() {
     DWObject.OpenSource();
     DWObject.IfShowUI = false;
-    DWObject.PageSize = Dynamsoft.EnumDWT_CapSupportedSizes.TWSS_USLEGAL;
+    DWObject.PageSize = Dynamsoft.DWT.EnumDWT_CapSupportedSizes.TWSS_USLEGAL;
     DWObject.AcquireImage();
 });
 ```
@@ -551,8 +520,224 @@ DWObject.SelectSource(function() {
 DWObject.SelectSource(function() {
     DWObject.OpenSource();
     DWObject.IfShowUI = false;
-    DWObject.Unit = EnumDWT_UnitType.TWUN_INCHES;
+    DWObject.Unit = Dynamsoft.DWT.EnumDWT_UnitType.TWUN_INCHES;
     DWObject.SetImageLayout(0, 0, 5, 5);
     DWObject.AcquireImage();
 });
+```
+
+### How to enable remote scan
+
+#### On Windows desktop where the scanner is physically connected
+
+* Install `Dynamsoft Service`.
+* Configure the Service by adding the following line to the file `DSConfiguration.ini` .
+
+    ``` 
+    Server=192.168.8.221
+    ```
+    > The file `DSConfiguration.ini` is located under C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16\.
+    > We are assuming the IP of this desktop is `192.168.8.221` and that the firewall will allow requests on the ports `18622` and `18623`.
+    > From v16.2, you can do the same on this page http://127.0.0.1:18625/admin/
+
+* Find the service `Dynamsoft Service` in Windows services list and restart it.
+
+#### In your application
+
+* Create a `WebTwain` instance to connect to that service and list all available scanners.
+
+    > Learn more [here]({{site.indepth}}features/initialize.html?ver=latest#-dynamsoftwebtwainenvcreatedwtobjectex-)
+
+    ```html
+    <select id="source"></select>
+    ```
+
+    ``` javascript
+    var host = "192.168.8.221", DWServiceObject;
+    function createDWTForScan(){
+        var dwtConfig = {
+            WebTwainId:"remoteScan",
+            Host: host, 
+            Port: '18622', 
+            PortSSL: '18623', 
+            UseLocalService:'true'
+        };
+        Dynamsoft.DWT.CreateDWTObjectEx(
+            dwtConfig, 
+            function (dwt) {
+                DWServiceObject = dwt;
+                console.log('service connected!');
+                // List the available scanners
+                DWServiceObject.GetSourceNamesAsync().then(function(devices) {
+                    for (var i = 0; i < devices.length; i++)
+                        document.getElementById("source").options.add(new Option(devices[i], i));
+                    }, 
+                    function (error){
+                        console.log(error)
+                    }
+                );
+            }, 
+            function (error){
+                console.log(error)
+            }
+        );
+    }
+    ```
+
+* Create another `WebTwain` instance to show and process the scanned documents.
+    
+    > As the `WebTwain` instance created in the last step is interacting with a Dynamsoft Service running remotely, it's recommended to only use it for scanning. Therefore, we create another `WebTwain` instance that receives the scanned data for further processing.
+
+    ```html
+    <div id="dwtcontrolContainer"></div>
+    ```
+
+    ```javascript
+    var DWObject;
+    Dynamsoft.DWT.Containers = [{ContainerId: "dwtcontrolContainer", Width: "585px", Height: "513px"}];
+    Dynamsoft.DWT.ProductKey = "YOUR-PRODUCT-KEY";
+    Dynamsoft.DWT.UseLocalService = false; //Create the `WebTwain` instance in WASM mode as it doesn't need to scan documents
+    function Dynamsoft_OnReady() {
+        DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer');
+    }
+    ```
+
+* Use the first `WebTwain` instance, `DWServiceObject`, to scan documents.
+
+    ```javascript
+    function AcquireImage(){
+	var OnAcquireImageSuccess, OnAcquireImageFailure = function () {
+	    DWServiceObject.CloseSource();
+	};
+	var deviceConfiguration = {
+	    SelectSourceByIndex: 0,
+	    IfShowUI: true,
+	    PixelType:Dynamsoft.DWT.EnumDWT_PixelType.TWPT_RGB,
+	    Resolution: 300,
+	    IfFeederEnabled: false,
+	    IfDuplexEnabled: false,
+	    IfDisableSourceAfterAcquire: true,
+	    RemoteScan: true,
+	    ShowRemoteScanUI: true
+	};
+	deviceConfiguration.SelectSourceByIndex = document.getElementById("source").selectedIndex;
+	DWServiceObject.AcquireImage(deviceConfiguration, OnAcquireImageSuccess, OnAcquireImageFailure);
+    }
+    ```
+
+    > We transfer the scanned documents to the second `WebTwain` instance, `DWObject`, in the event `OnPostTransferAsync`.
+
+    ```javascript
+    DWServiceObject.RegisterEvent('OnPostTransferAsync', function(outputInfo){
+        DWServiceObject.ConvertToBlob(
+            [DWServiceObject.ImageIDToIndex(outputInfo.imageId)], 
+            Dynamsoft.DWT.EnumDWT_ImageType.IT_PNG, 
+            function (result, indices, type) {
+                DWObject.LoadImageFromBinary(
+                    result,         
+                    function () {
+                        console.log('LoadImageFromBinary success');
+                        DWServiceObject.RemoveImage(DWServiceObject.ImageIDToIndex(outputInfo.imageId));
+                    },
+                    function (errorCode, errorString) {
+                        console.log(errorString);
+                    }
+                );
+            },
+            function (errorCode, errorString) {
+                console.log(errorString);
+            }
+        );
+    });
+    ```
+
+The following is the complete code, note that we are referencing the library from the CDN "unpkg" for simplicity.
+
+```html
+<script type="text/javascript" src="https://unpkg.com/dwt@16.2.4/dist/dynamsoft.webtwain.min.js"></script>
+<select id="source"></select>
+<input type="button" value="Scan" onclick="AcquireImage();" />
+<div id="dwtcontrolContainer"></div>
+<script type="text/javascript">
+var DWObject;
+window.onload = function() {
+    Dynamsoft.DWT.Containers = [{ContainerId: "dwtcontrolContainer", Width: "585px", Height: "513px"}];
+    Dynamsoft.DWT.ProductKey = "YOUR_PRODUCT_KEY";
+    Dynamsoft.DWT.UseLocalService = false; //Create the `WebTwain` instance in WASM mode as it doesn't need to scan documents
+    Dynamsoft.DWT.ResourcesPath = "https://unpkg.com/dwt@16.2.4/dist";
+    Dynamsoft.DWT.Load();
+};
+function Dynamsoft_OnReady() {
+    DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer');
+    createDWTForScan();
+}
+var host = "192.168.8.221", DWServiceObject;
+function createDWTForScan(){
+    var dwtConfig = {
+        WebTwainId:"remoteScan",
+        Host: host, 
+        Port: '18622', 
+        PortSSL: '18623', 
+        UseLocalService:'true'
+    };
+    Dynamsoft.DWT.CreateDWTObjectEx(
+        dwtConfig, 
+        function (dwt) {
+            DWServiceObject = dwt;
+            console.log('service connected!');
+            DWServiceObject.GetSourceNamesAsync().then(function(devices) {
+                for (var i = 0; i < devices.length; i++)
+                    document.getElementById("source").options.add(new Option(devices[i], i));
+                }, 
+                function (error){
+                    console.log(error)
+                }
+            );
+                        
+            DWServiceObject.RegisterEvent('OnPostTransferAsync', function(outputInfo){
+                DWServiceObject.ConvertToBlob(
+                    [DWServiceObject.ImageIDToIndex(outputInfo.imageId)], 
+                    Dynamsoft.DWT.EnumDWT_ImageType.IT_PNG, 
+                    function (result, indices, type) {
+                        DWObject.LoadImageFromBinary(
+                            result,         
+                            function () {
+                                console.log('LoadImageFromBinary success');
+                                DWServiceObject.RemoveImage(DWServiceObject.ImageIDToIndex(outputInfo.imageId));
+                            },
+                            function (errorCode, errorString) {
+                                console.log(errorString);
+                            }
+                        );
+                    },
+                    function (errorCode, errorString) {
+                        console.log(errorString);
+                    }
+                );
+            });
+        }, 
+        function (error){
+            console.log(error)
+        }
+    );
+}
+function AcquireImage(){
+    var OnAcquireImageSuccess, OnAcquireImageFailure = function () {
+        DWServiceObject.CloseSource();
+    };
+    var deviceConfiguration = {
+        SelectSourceByIndex: 0,
+        IfShowUI: true,
+        PixelType:Dynamsoft.DWT.EnumDWT_PixelType.TWPT_RGB,
+        Resolution: 300,
+        IfFeederEnabled: false,
+        IfDuplexEnabled: false,
+        IfDisableSourceAfterAcquire: true,
+        RemoteScan: true,
+        ShowRemoteScanUI: true
+    };
+    deviceConfiguration.SelectSourceByIndex = document.getElementById("source").selectedIndex;
+    DWServiceObject.AcquireImage(deviceConfiguration, OnAcquireImageSuccess, OnAcquireImageFailure);
+}
+</script>
 ```

@@ -37,7 +37,7 @@ function upload(indices, type) {
             url,
             indices,
             type,
-            Dynamsoft.EnumDWT_UploadDataFormat.Binary,
+            Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary,
             fileName,
             function() {
                 console.log('Success');
@@ -162,7 +162,7 @@ function uploadSeparateFiles(indices, type) {
 
 ##### Q: Can I upload the file as a base64 string
 
-**A**: Yes, the 4th parameter of the method `HTTPUpload()` is `dataFormat` and it has two allowed values which are `Dynamsoft.EnumDWT_UploadDataFormat.Binary` and `Dynamsoft.EnumDWT_UploadDataFormat.Base64` . The code snippet uses the former but you can feel free to use the latter to upload the file as a base64 string.
+**A**: Yes, the 4th parameter of the method `HTTPUpload()` is `dataFormat` and it has two allowed values which are `Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary` and `Dynamsoft.DWT.EnumDWT_UploadDataFormat.Base64` . The code snippet uses the former but you can feel free to use the latter to upload the file as a base64 string.
 
 ##### Q: How to specify the images to upload
 
@@ -523,7 +523,7 @@ To do this, use the method [ `ConvertToBlob()` ]({{site.info}}api/WebTwain_IO.ht
 ``` javascript
 DWObject.ConvertToBlob(
     [0, 1, 2],
-    Dynamsoft.EnumDWT_ImageType.IT_PDF,
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
     function(result, indices, type) {
         console.log(result.size);
     },
@@ -540,7 +540,7 @@ To do this, use the method [ `ConvertToBase64()` ]({{site.info}}api/WebTwain_IO.
 ``` javascript
 DWObject.ConvertToBase64(
     [0, 1, 2],
-    Dynamsoft.EnumDWT_ImageType.IT_PDF,
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
     function(result, indices, type) {
         console.log(result.getData(0, result.getLength()));
     },

@@ -13,22 +13,12 @@ For Server Side OCR, check out [Server-Side OCR](#server-side).
 
 **Methods**
 
-* [Download()](#download) 
-* [DownloadLangData()](#downloadlangdata)
-* [IsModuleInstalled()](#ismoduleinstalled) 
-* [SetLanguage()](#setlanguage)
-* [SetOutputFormat()](#setoutputformat) 
-* [SetPageSetMode()](#setpagesetmode)
-* [GetIfUseDetectedFont()](#getifusedetectedfont) 
-* [SetIfUseDetectedFont()](#setifusedetectedfont)
-* [GetUnicodeFontName()](#getunicodefontname) 
-* [SetUnicodeFontName()](#setunicodefontname)
-* [GetMinFontSizeforMoreAccurateResult()](#getminfontsizeformoreaccurateresult) 
-* [SetMinFontSizeforMoreAccurateResult()](#setminfontsizeformoreaccurateresult)
-* [Recognize()](#recognize) 
-* [RecognizeFile()](#recognizefile)
-* [RecognizeRect()](#recognizerect) 
-* [RecognizeSelectedImages()](#recognizeselectedimages)
+| |
+|:-|:-|
+|[`Download()`](#download)  | [`DownloadLangData()`](#downloadlangdata)| [`IsModuleInstalled()`](#ismoduleinstalled) |[`SetLanguage()`](#setlanguage)|
+|[`SetOutputFormat()`](#setoutputformat) | [`SetPageSetMode()`](#setpagesetmode)| [`GetIfUseDetectedFont()`](#getifusedetectedfont) |[`SetIfUseDetectedFont()`](#setifusedetectedfont)|
+| [`GetUnicodeFontName()`](#getunicodefontname) | [`SetUnicodeFontName()`](#setunicodefontname)|[`GetMinFontSizeforMoreAccurateResult()`](#getminfontsizeformoreaccurateresult) | [`SetMinFontSizeforMoreAccurateResult()`](#setminfontsizeformoreaccurateresult)|
+| [`Recognize()`](#recognize) | [`RecognizeFile()`](#recognizefile)|[`RecognizeRect()`](#recognizerect) | [`RecognizeSelectedImages()`](#recognizeselectedimages)|
 
 ---
 
@@ -56,6 +46,7 @@ Download(
 ```
 
 ---
+
 ## IsModuleInstalled
 
 **Syntax**
@@ -106,6 +97,7 @@ GetIfUseDetectedFont(): boolean;
 ```
 
 ---
+
 ## SetIfUseDetectedFont
 
 **Syntax**
@@ -117,7 +109,6 @@ GetIfUseDetectedFont(): boolean;
  */
 SetIfUseDetectedFont(value: boolean): boolean;
 ```
-
 
 ## GetMinFontSizeforMoreAccurateResult
 
@@ -131,6 +122,7 @@ GetMinFontSizeforMoreAccurateResult(): number;
 ```
 
 ---
+
 ## SetMinFontSizeforMoreAccurateResult
 
 **Syntax**
@@ -161,6 +153,7 @@ GetUnicodeFontName(): string;
 ```
 
 ---
+
 ## SetUnicodeFontName
 
 **Syntax**
@@ -175,11 +168,11 @@ SetUnicodeFontName(name: string): boolean;
 
 **Usage notes**
 
-The `name` parameter in `SetUnicodeFontName()` should be the name (without the `.font` extension) of an existing Windows font in the directory (`C:\Windows\Fonts`).
+The `name` parameter in `SetUnicodeFontName()` should be the name (without the `.font` extension) of an existing Windows font in the directory ( `C:\Windows\Fonts` ).
 
 The definition of a "unicode" font is loose. Any font can be provided here, however it needs to support the characters of the language to be used. Some fonts may support only some languages, but certain fonts such as `ArialUni` supports all common languages.
 
-The font set with `SetUnicodeFontName()` is only used when `SetIfUseDetectedFont()` was called with `false` as the argument for `value`. In other words, the set font will only be used if the engine doesn't use the detected fonts.
+The font set with `SetUnicodeFontName()` is only used when `SetIfUseDetectedFont()` was called with `false` as the argument for `value` . In other words, the set font will only be used if the engine doesn't use the detected fonts.
 
 ---
 
@@ -192,10 +185,11 @@ The font set with `SetUnicodeFontName()` is only used when `SetIfUseDetectedFont
  * Configure the OCR operation.
  * @param language Specify the target language.
  */
-SetLanguage(language: Dynamsoft.EnumDWT_OCRLanguage | number): boolean;
+SetLanguage(language: Dynamsoft.DWT.EnumDWT_OCRLanguage | number): boolean;
 ```
 
 ---
+
 ## SetOutputFormat
 
 **Syntax**
@@ -205,10 +199,11 @@ SetLanguage(language: Dynamsoft.EnumDWT_OCRLanguage | number): boolean;
  * Configure the OCR operation.
  * @param format Specify the output format.
  */
-SetOutputFormat(format: Dynamsoft.EnumDWT_OCROutputFormat | number): boolean;
+SetOutputFormat(format: Dynamsoft.DWT.EnumDWT_OCROutputFormat | number): boolean;
 ```
 
 ---
+
 ## SetPageSetMode
 
 **Syntax**
@@ -218,14 +213,14 @@ SetOutputFormat(format: Dynamsoft.EnumDWT_OCROutputFormat | number): boolean;
  * Configure the OCR operation.
  * @param mode Specify the OCR page layout analysis mode.
  */
-SetPageSetMode(mode: Dynamsoft.EnumDWT_OCRPageSetMode | number): boolean;
+SetPageSetMode(mode: Dynamsoft.DWT.EnumDWT_OCRPageSetMode | number): boolean;
 ```
 
 **Usage notes**
 
-The default `language` is `eng` which indicates English. To use a certain language, you must first have its language data locally, if it's not available yet, you can download it using the method [DownloadLangData()](#downloadlangdata).
+The default `language` is `eng` which indicates English. To use a certain language, you must first have its language data locally, if it's not available yet, you can download it using the method [`DownloadLangData()`](#downloadlangdata).
 
-The default `format` is `OCROF_PDFIMAGEOVERTEXT` which indicats an Image-over-Text PDF.
+The default `format` is `OCROF_PDFIMAGEOVERTEXT` which indicates an Image-over-Text PDF.
 
 The default `mode` is `PSM_AUTO` which indicates automatic page segmentation.
 
@@ -260,6 +255,7 @@ Recognize(
 ```
 
 ---
+
 ## RecognizeFile
 
 **Syntax**
@@ -289,6 +285,7 @@ RecognizeFile(path: string,
 ```
 
 ---
+
 ## RecognizeRect
 
 **Syntax**
@@ -297,10 +294,10 @@ RecognizeFile(path: string,
 /**
  * Perform OCR on the specified rectangular area on the image.
  * @param index Specify the image.
- * @param left Specify the rectangle (leftmost coordinate).
- * @param top Specify the rectangle (topmost coordinate).
- * @param right Specify the rectangle (rightmost coordinate).
- * @param bottom Specify the rectangle (bottommost coordinate).
+ * @param left Specify the rectangle (leftmost coordinate in pixels).
+ * @param top Specify the rectangle (topmost coordinate in pixels).
+ * @param right Specify the rectangle (rightmost coordinate in pixels).
+ * @param bottom Specify the rectangle (bottommost coordinate in pixels).
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
  * @argument imageId The imageId of the image which can be used to find the index.
@@ -330,6 +327,7 @@ RecognizeRect(
 ```
 
 ---
+
 ## RecognizeSelectedImages
 
 **Syntax**
@@ -423,7 +421,7 @@ interface Line {
      */
     GetWordCount(): number;
     /**
-     * Return the coordinates for the rectangle that contains the specified line. The coordinates are in the sequence of "left,top,right,bottom" like "121,125,892,143".
+     * Return the coordinates for the rectangle that contains the specified line. The coordinates (in pixels) are in the sequence of "left,top,right,bottom" like "121,125,892,143".
      */
     GetLineRect(): string;
     /**
@@ -458,26 +456,26 @@ The following are the `JAVA APIs` of the server-side OCR engine.
 
 |API	|Description	|
 |:-|:-|
-|`void`	**`setProductKey(String strProductKey)`**	|Set the ProductKey of the OCR engine.	|
-|`String`	**`getOCRDllPath()`**	|Return the path of the OCR engine.	|
-|`void`	**`setOCRDllPath(String strOCRDllPath)`**	|Set the path of the OCR engine.	|
-|`String`	**`getOCRLanguage()`**	|Return the target language.	|
-|`void`	**`setOCRLanguage(String strOCRLanguage)`**	|Set the target language for the OCR.	|
-|`int`	**`getOCRMinFontSizeDoMoreOCR()`**		|Return the font size which determines whether the engine should perform OCR again on areas with bigger font size.	|
-|`void`	**`setOCRMinFontSizeDoMoreOCR(int iMinFontSizeDoMoreOCR)`**	|The engine will perform OCR again on areas where the font size is bigger than what's set by this API.	|
-|`int`	**`getOCRPageSetMode()`**		|Return the mode used to analyze the OCR input.	|
-|`void`	**`setOCRPageSetMode(int iOCRPageSetMode)`**	|Set how pages are determined when analyzing the OCR input.	|
-|`int`	**`getOCRPdfFontSize()`**		|Return the font size for the output PDF file.	|
-|`void`	**`setOCRPdfFontSize(int iPdfFontSize)`**	|Set the font size for the output PDF file.	|
-|`int`	**`getOCRResultFormat()`**		|Return the result format for the OCR.	|
-|`void`	**`setOCRResultFormat(int iOCRResultFormat)`**	|Set the result format for the OCR.	|
-|`String`	**`getOCRTessDataPath()`**		|Return the path of the language packages.	|
-|`void`	**`setOCRTessDataPath(String strOCRTessDataPath)`**	|Set the path of the language packages.	|
-|`String`	**`getOCRUnicodeFontName()`**		|Return the detected OCR font name.	|
-|`void`	**`setOCRUnicodeFontName(String strOCRUnicodeFontName)`**	|Set a font to be used by OCR when `isOCRUseDetectedFont` returns `false`.	|
-|`boolean`	**`isOCRNumbericOnly()`**		|Return whether the OCR engine only OCR's numbers.	|
-|`void`	**`setOCRIsNumbericOnly(boolean bNumbericOnly)`**	| Set whether the OCR engine should only OCR numbers. |
-|`boolean`	**`isOCRUseDetectedFont()`**		|Return whether the PDF output uses the font detected by the OCR engine.	|
-|`void`	**`setOCRUseDetectedFont(boolean bUseDetectedFont)`**	|Set whether the PDF output uses the font detected by the OCR engine or the default/provided one.	|
-|`byte` `array`	**`ocrFile(String strImagePath, out byte array aryOCRResult)`**	|Start to OCR an image on the disk.  `aryOCRResult` returns details of the OCR result which you can get by calling `getValue()` on it.	|
-|`byte` `array`	**`ocrImage(byte array aryImageBuffer, out byte array aryOCRResult)`**	|Start to OCR an image in the buffer.  `aryOCRResult` returns details of the OCR result which you can get by calling `getValue()` on it.	|
+| `void` 	**`setProductKey(String strProductKey)`**	|Set the ProductKey of the OCR engine.	|
+| `String` 	**`getOCRDllPath()`**	|Return the path of the OCR engine.	|
+| `void` 	**`setOCRDllPath(String strOCRDllPath)`**	|Set the path of the OCR engine.	|
+| `String` 	**`getOCRLanguage()`**	|Return the target language.	|
+| `void` 	**`setOCRLanguage(String strOCRLanguage)`**	|Set the target language for the OCR.	|
+| `int` 	**`getOCRMinFontSizeDoMoreOCR()`**		|Return the font size which determines whether the engine should perform OCR again on areas with bigger font size.	|
+| `void` 	**`setOCRMinFontSizeDoMoreOCR(int iMinFontSizeDoMoreOCR)`**	|The engine will perform OCR again on areas where the font size is bigger than what's set by this API.	|
+| `int` 	**`getOCRPageSetMode()`**		|Return the mode used to analyze the OCR input.	|
+| `void` 	**`setOCRPageSetMode(int iOCRPageSetMode)`**	|Set how pages are determined when analyzing the OCR input.	|
+| `int` 	**`getOCRPdfFontSize()`**		|Return the font size for the output PDF file.	|
+| `void` 	**`setOCRPdfFontSize(int iPdfFontSize)`**	|Set the font size for the output PDF file.	|
+| `int` 	**`getOCRResultFormat()`**		|Return the result format for the OCR.	|
+| `void` 	**`setOCRResultFormat(int iOCRResultFormat)`**	|Set the result format for the OCR.	|
+| `String` 	**`getOCRTessDataPath()`**		|Return the path of the language packages.	|
+| `void` 	**`setOCRTessDataPath(String strOCRTessDataPath)`**	|Set the path of the language packages.	|
+| `String` 	**`getOCRUnicodeFontName()`**		|Return the detected OCR font name.	|
+| `void` 	**`setOCRUnicodeFontName(String strOCRUnicodeFontName)`**	|Set a font to be used by OCR when  `isOCRUseDetectedFont`  returns  `false` .	|
+| `boolean` 	**`isOCRNumbericOnly()`**		|Return whether the OCR engine only OCR's numbers.	|
+| `void` 	**`setOCRIsNumbericOnly(boolean bNumbericOnly)`**	| Set whether the OCR engine should only OCR numbers. |
+| `boolean` 	**`isOCRUseDetectedFont()`**		|Return whether the PDF output uses the font detected by the OCR engine.	|
+| `void` 	**`setOCRUseDetectedFont(boolean bUseDetectedFont)`**	|Set whether the PDF output uses the font detected by the OCR engine or the default/provided one.	|
+| `byte`  `array` 	**`ocrFile(String strImagePath, out byte array aryOCRResult)`**	|Start to OCR an image on the disk.   `aryOCRResult`  returns details of the OCR result which you can get by calling  `getValue()`  on it.	|
+| `byte`  `array` 	**`ocrImage(byte array aryImageBuffer, out byte array aryOCRResult)`**	|Start to OCR an image in the buffer.  `aryOCRResult`  returns details of the OCR result which you can get by calling  `getValue()`  on it.	|

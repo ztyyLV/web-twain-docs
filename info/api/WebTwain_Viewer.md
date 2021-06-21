@@ -8,554 +8,817 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 ---
 
 # `WebTwain.Viewer`
-> For WebTwain instances
 
 **Methods**
 
-* [BindViewer()](#bindviewer)
-* [UnbindView()](#unbindviewer)
-* [UpdateViewer()](#updateviewer)
+| |
+|:-|:-|
+|[`bind()`](#bind)| [`clearSelectedAreas()`](#clearselectedareas)| [`createCustomElement()`](#createcustomelement)| [`createImageEditor()`](#createimageeditor)|
+| [`createThumbnailViewer()`](#createthumbnailviewer)| [`first()`](#first)|[`fitWindow()`](#fitwindow)|[`gotoPage()`](#gotopage)|
+| [`hide()`](#hide)| [`last()`](#last)| [`next()`](#next)|[`off()`](#off)|
+|[`on()`](#on)| [`previous()`](#previous)| [`render()`](#render)| [`setButtonClass()`](#setbuttonclass)|
+| [`setSelectedAreas()`](#setselectedAreas)| [`setViewMode()`](#setviewmode) | [`show()`](#show)| [`unbind()`](#unbind)|
+
+
+<!--* [updateUISettings](#updateuisettings)-->
 
 **Properties**
 
-* [BackgroundColor](#backgroundcolor) 
-* [SelectionImageBorderColor](#selectionimagebordercolor)
-* [FitWindowType](#fitwindowtype) 
-* [IfFitWindow](#iffitwindow)
-* [Height](#height) 
-* [Width](#width)
-* [IfAutoScroll](#ifautoscroll) 
-* [ShowPageNumber](#showpagenumber)
-* [MouseX](#mousex)
-* [MouseY](#mousey)
-* [ImageMargin](#imagemargin) 
-* [MouseShape](#mouseshape)
-* [SelectionRectAspectRatio](#selectionrectaspectratio) 
-* [Zoom](#zoom)
+| |
+|:-|:-|
+|[`acceptDrop`](#acceptdrop)| [`allowSlide`](#allowslide)|[`background`](#background)|[`border`](#border)|
+| [`cursor`](#cursor)| [`height`](#height)|[`idPostfix`](#idpostfix)|[`ifAutoScroll`](#ifautoscroll)|
+|[`innerBorder`](#innerborder)| [`pageMargin`](#pagemargin)|[`selectedAreaBorderColor`](#selectedareabordercolor)|[`selectedPageBackground`](#selectedpagebackground)|
+|[`selectedPageBorder`](#selectedpageborder)| [`selectionRectAspectRatio`](#selectionrectaspectratio)|[`showPageNumber`](#showpagenumber)|[`singlePageMode`](#singlepagemode)|
+|[`width`](#width)| [`zoom`](#zoom)| [`autoChangeIndex`](#autochangeindex)|
 
 **Events**
 
-* [OnMouseClick](#onmouseclick) 
-* [OnMouseDoubleClick](#onmousedoubleclick)
-* [OnMouseMove](#onmousemove) 
-* [OnMouseRightClick](#onmouserightclick)
-* [OnImageAreaSelected](#onimageareaselected)
-* [OnImageAreaDeSelected](#onimageareadeselected)
+| |
+|:-|:-|
+|[`click`](#click)| [`contextmenu`](#contextmenu)| [`dblclick`](#dblclick)|[`mousemove`](#mousemove)|
+| [`mousedown`](#mousedown)| [`mouseup`](#mouseup)| [`mouseout`](#mouseout)|[`mouseover`](#mouseover)|
+|[`keydown`](#keydown)| [`keyup`](#keyup)|[`pageAreaSelected`](#pageareaselected)| [`pageAreaUnselected`](#pageareaunselected)|
+|[`pageRendered`](#pagerendered)| [`resize`](#resize)|
 
-> For the WebTwain. Viewer interface
+<!--** [topPageChanged](#toppagechanged)-->
+
+
+
+> The following APIs are deprecated as of v16.2, check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html#viewer-related-api-changes-in-versoin-16.2).
 
 **Methods**
 
-* [setViewMode()](#setviewmode) 
-* [updateUISettings()](#updateuisettings)
-* [setButtonClass()](#setbuttonclass) 
-* [setSelectedImageArea()](#setselectedimagearea)
-* [zoomIn()](#zoomin) 
-* [zoomOut()](#zoomout)
-* [bindCustomElement](#bindcustomelement) 
-* [showCustomElement](#showcustomelement)
-* [hideCustomElement](#hidecustomelement)
-* [toggleCustomElement](#togglecustomelement)
-* [showVideo()](#showvideo)
-* [closeVideo()](#closevideo)
-* [on()](#on)
+| |
+|:-|:-|
+| `BindViewer()`| `UnbindView()`|
+| `UpdateViewer()`|
 
 **Properties**
 
-* [bOnlyShowThumbnailsView](#bonlyshowthumbnailsview)
-* [cursorOverThumbnailsView](#cursoroverthumbnailsview)
+| |
+|:-|:-|
+|`BackgroundColor`| `SelectionImageBorderColor`| `FitWindowType`| `IfFitWindow`|
+| `Height`| `Width`| `IfAutoScroll`|`ShowPageNumber`|
+|`MouseX`| `MouseY`| `ImageMargin`| `MouseShape`| 
+|`SelectionRectAspectRatio`| `Zoom`|
+
 
 **Events**
 
-* [video-closed](#vidoe-closed)
-* [video-error](#vidoe-error)
+| |
+|:-|:-|
+| `OnMouseClick`| `OnMouseDoubleClick`| `OnMouseMove`|
+| `OnMouseRightClick`| `OnImageAreaSelected`| `OnImageAreaDeSelected`|
 
 ---
 
-## BindViewer
+## bind
 
 **Syntax**
 
 ``` typescript
 /**
  * Create a Dynamsoft Viewer instance and bind it to the WebTwain instance.
- * @param elementId Specify an HTML element to create the viewer.
- * @param config Configuration of the viewer.
+ * @param element Specify an HTML element to create the viewer.
  */
-BindViewer(
-    elementId: string,
-    config ? : BasicViewerConfig
-): boolean;
-
-interface BasicViewerConfig {
-    /**
-     * Specify the size of the viewer.
-     */
-    Height: number | string;
-    Width: number | string;
-    /**
-     * Set up the content view.
-     */
-    view: ContentView;
-}
-
-interface ContentView {
-    /**
-     * Whether to show the content view or not.
-     * If set to false, then only thumbnails view is shown.
-     */
-    bShow: boolean;
-    /**
-     * Specify the width of the major content view.
-     */
-    Width: number | string;
-}
-```
-
----
-
-## UpdateViewer
-
-**Syntax**
-
-``` typescript
-/**
- * Update the viewer with the new configuration.
- * @param config Configuration of the viewer.
- */
-UpdateViewer(config: BasicViewerConfig): boolean;
-
-interface BasicViewerConfig {
-    /**
-     * Specify the size of the viewer.
-     */
-    Height: number | string;
-    Width: number | string;
-    /**
-     * Set up the content view.
-     */
-    view: ContentView;
-}
-
-interface ContentView {
-    /**
-     * Whether to show the content view or not.
-     * If set to false, then only thumbnails view is shown.
-     */
-    bShow: boolean;
-    /**
-     * Specify the width of the major content view.
-     */
-    Width: number | string;
-}
-```
-
----
-
-## UnbindViewer
-
-**Syntax**
-
-``` typescript
-/**
- * Unbind and destroy the viewer.
- */
-UnbindViewer(): boolean;
+bind(
+  element: boolean;
+): void;
 ```
 
 **Example**
 
 ``` javascript
-/**
- * Create a viewer in the div with the Id 'dwtcontrolContainer'. Use default settings.
- */
-DWObject.BindViewer('dwtcontrolContainer');
-```
-
-Example configurations of the viewer, note that both hardcoded numbers (of pixels) and percentages can be used to specify the size of the viewer.
-
-``` javascript
-DWObject.UpdateViewer({
-    Height: 600, // 600 pixels high
-    Width: 500, // 500 pixels wide
-    view: {
-        bShow: true, // Show the content view
-        Width: 300 // The content view is 300 pixels wide
-    }
-});
-```
-
-``` javascript
-DWObject.UpdateViewer({
-    Height: "60%", // 60% height of the parent element
-    Width: "50%", // 50% width of the parent element
-    view: {
-        bShow: true, // Show the content view
-        Width: "80%" // 80% width of the viewer
-    }
-});
-```
-
----
-
-## BackgroundColor
-
-**Syntax**
-
-``` typescript
-/**
- * Return or set the background colour | image of the viewer.
- */
-BackgroundColor: number | string;
-```
-
-**Usage notes**
-
-The number that represents the number comes in the form of 0xRRGGBB. For example, the following code sets the background to pure Green.
-
-``` javascript
-DWObject.BackgroundColor = 0x00ff00;
-```
-
-You can also set an image as the background by its URL. For example
-
-``` javascript
-DWObject.BackgroundColor = "url(https://demo.dynamsoft.com/dwt/Images/icon-dwt.svg)";
-```
-
----
-
-## SelectionImageBorderColor
-
-**Syntax**
-
-``` typescript
-/**
- * Return or set the border colour for selected image(s).
- */
-SelectionImageBorderColor: number;
-```
-
-**Usage notes**
-
-By default the colour is white (0xffffff). The byte-ordering of the 24-bit RGB value is **RRGGBB**. RR represents red, GG represents green and BB represents blue.
-
----
-
-## FitWindowType
-
-**Syntax**
-
-``` typescript
-/**
- * Return or set how the image is fit in the viewer.
- */
-FitWindowType: number;
-```
-
-**Usage notes**
-
-This API only works if the view mode of the viewer is set to -1 by -1.
-
-The allowed values of `FitWindowType` are
-
-* `0` : Default value, try to fit the image both horizontally and vertically.
-* `1` : Fit the image vertically.
-* `2` : Fit the image horizontally.
-
----
-
-## IfFitWindow
-
-**Syntax**
-
-``` typescript
-/**
- * Return or set whether to fit the current image to the viewer window.
- */
-IfFitWindow: boolean;
-```
-
-**Usage notes**
-
-This API only works if the view mode of the viewer is set to -1 by -1.
-
-The default value of `IfFitWindow` is true.
-
----
-
-## Height
-
-**Syntax**
-
-``` typescript
-/**
- * Return or set the height of the viewer.
- */
-Height: number | string;
-```
-
----
-
-## Width
-
-**Syntax**
-
-``` typescript
-/**
- * Return or set the width of the viewer.
- */
-Width: number | string;
-```
-
-**Usage notes**
-
-Example values
-
-* `number`
-
-``` javascript
-DWObject.Height = 600; // 600 pixels high
-DWObject.Width = 500; // 500 pixels wide
-```
-
-* `string`
-
-``` javascript
-DWObject.Height = "600px"; // 600 pixels high
-DWObject.Width = "500px"; // 500 pixels wide
-```
-
-Or
-
-``` javascript
-DWObject.Height = "50%"; // 50% of the parent element's height
-DWObject.Width = "50%"; // 50% of the parent element's width
-```
-
----
-
-## MouseX
-
-**Syntax**
-
-``` typescript
-/**
- * Return the horizontal coordinate of the mouse.
- */
-readonly MouseX: number;
-```
-
----
-
-## MouseY
-
-**Syntax**
-
-``` typescript
-/**
- * Return the vertical coordinate of the mouse.
- */
-readonly MouseY: number;
-```
-
-**Usage notes**
-
-The coordinates are meaured in pixels and is based on the original size of the image.
-
-**Example**
-
-``` javascript
-DWObject.RegisterEvent('OnMouseMove',
-    function() {
-        console.log("X: " + DWObject.MouseX + " Y: " + DWObject.MouseY);
+var DWObject = null;
+Dynamsoft.DWT.CreateDWTObjectEx({
+        WebTwainId: 'dwtcontrol'
+    },
+    function(obj) {
+        DWObject = obj;
+        DWObject.Viewer.bind(document.getElementById('dwtcontrolContainer'));
+        DWObject.Viewer.height = 600;
+        DWObject.Viewer.width = 800;
+        var thumbnailViewer = DWObject.Viewer.createThumbnailViewer();
+        thumbnailViewer.show();
+        DWObject.Viewer.show();
+    },
+    function(err) {
+        console.log(err);
     }
 );
 ```
 
+**Usage notes**
+
+Replace the previous `BindViewer` method.
+
 ---
 
-## SelectionRectAspectRatio
+## clearSelectedAreas
 
 **Syntax**
 
 ``` typescript
 /**
- * Change the position of an image in the buffer.
- * @param from Specify the original position by index.
- * @param to Specify the target position by index.
+ * Clear the selected area(s) on the current page.
  */
-SelectionRectAspectRatio: number;
+clearSelectedAreas(): void;
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.clearSelectedAreas();
 ```
 
 ---
 
-## MouseShape
+## createCustomElement
 
 **Syntax**
 
 ``` typescript
 /**
- * Return or set the shape of the cursor.
+ * Add a custom page DIV element and specify its position and display order.
+ * Generate an independent CustomElement object. 
+ * @param element Specify the HTMLDivElement.
+ * @param location Define where to place the custom element. The allowed values are "left" and "right", and the default value is "right".
+ * @param bCover The default value is `false`, that is, the created CustomElement is displayed according to the set area. If set to true, the main viewer will be covered by the CustomElement.
  */
-MouseShape: boolean;
+createCustomElement(
+    element: HTMLDivElement, 
+    location?: string, 
+    bCover?: boolean
+): CustomElement;
+
+interface CustomElement {
+    /**
+     * Show the custome element.
+     */
+    show(): boolean;
+    /**
+     * Hide the custome element.
+     */
+    hide(): boolean;
+    /**
+     * Remove the custome element.
+     */
+    dispose(): boolean;
+};
+```
+
+**Example**
+
+``` javascript
+var myElement = document.createElement("div");
+myElement.style = "width:100px;height:200px;background:red";
+var customElement = DWObject.Viewer.createCustomElement(myElement, "right", false);
+customElement.show();
 ```
 
 **Usage notes**
 
-Unlike [cursorOverThumbnailsView](#cursoroverthumbnailsview), this property set the shape of the cursor that's effective both on the thumbnails view and the content view.
+Only one CustomElement object can be created. If you try creating another one, you'll get the error 'A CustomElement already exists.', and the existing CustomElement object will be returned.
+
+If the width defined by the CustomElement object exceeds the width of the main viewer, the width of the main viewer is used.
+
+The method [ `unbind()` ](#unbind) will dispose all created CustomElement objects, ThumbnailViewer objects and ImageEditor objects.
+
+---
+
+## createImageEditor
+
+**Syntax**
+
+``` typescript
+/** 
+ * Generate an independent ImageEditor object.
+ * @param editorSettings Configure the object.
+ */
+createImageEditor(
+    editorSettings?: EditorSettings
+): ImageEditor;
+
+interface ImageEditor {
+    /**
+     * Show the ImageEditor object.
+     */
+    show(): boolean;
+    /**
+     * Hide the ImageEditor object.
+     */
+    hide(): boolean;
+    /**
+     * Remove the ImageEditor object.
+     */
+    dispose(): boolean;
+};
+```
+
+**Example**
+
+> The example code shows 2 ways to use the API `createImageEditor()`
+
+``` javascript
+// Use default settings
+var imageEditor = DWObject.Viewer.createImageEditor();
+imageEditor.show();
+```
+
+``` javascript
+// Customize the editor
+var editorSettings = {
+    /* Show the editor within the DIV 'imageEditor'
+    element: document.getElementById("imageEditor"),
+    width: 600,
+    height: 400,*/
+    border: '1px solid rgb(204, 204, 204)',
+    topMenuBorder: '',
+    innerBorder: '',
+    background: "rgb(255, 255, 255)",
+    promptToSaveChange: true,
+    buttons: {
+        titles: {
+            'previous': 'Previous Image',
+            'next': 'Next Image',
+            'print': 'Print Image',
+            'scan': 'Scan Documents',
+            'load': 'Load Local Images',
+            'rotateleft': 'Rotate Left',
+            'rotate': 'Rotate',
+            'rotateright': 'Rotate Right',
+            'deskew': 'Deskew',
+            'crop': 'Crop Selected Area',
+            'cut': 'Cut Selected Area',
+            'changeimagesize': 'Change Image Size',
+            'flip': 'Flip Image',
+            'mirror': 'Mirror Image',
+            'zoomin': 'Zoom In',
+            'originalsize': 'Show Original Size',
+            'zoomout': 'Zoom Out',
+            'stretch': 'Stretch Mode',
+            'fit': 'Fit Window',
+            'fitw': 'Fit Horizontally',
+            'fith': 'Fit Vertically',
+            'hand': 'Hand Mode',
+            'rectselect': 'Select Mode',
+            'zoom': 'Click to Zoom In',
+            'restore': 'Restore Original Image',
+            'save': 'Save Changes',
+            'close': 'Close the Editor',
+            'removeall': 'Remove All Images',
+            'removeselected': 'Remove All Selected Images'
+        },
+        visibility: {
+            'scan': true,
+            'load': true,
+            'print': true,
+            'removeall': true,
+            'removeselected': true,
+            'rotateleft': true,
+            'rotate': true,
+            'rotateright': true,
+            'deskew': true,
+            'crop': true,
+            'cut': true,
+            'changeimagesize': true,
+            'flip': true,
+            'mirror': true,
+            'zoomin': true,
+            'originalsize': true,
+            'zoomout': true,
+            'stretch': true,
+            'fit': true,
+            'fitw': true,
+            'fith': true,
+            'hand': true,
+            'rectselect': true,
+            'zoom': true,
+            'restore': true,
+            'save': true,
+            'close': true
+        }
+    },
+    dialogText: {
+        dlgRotateAnyAngle: ['Angle :', 'Interpolation:', 'Keep size', '  OK  ', 'Cancel'],
+        dlgChangeImageSize: ['New Height :', 'New Width :', 'Interpolation method:', '  OK  ', 'Cancel'],
+        saveChangedImage: ['You have changed the image, do you want to keep the change(s)?', '  Yes  ', '  No  '],
+        selectSource: ['Select Source:', 'Select', 'Cancel', 'There is no source available']
+    }
+};
+
+var imageEditor = DWObject.Viewer.createImageEditor(editorSettings);
+imageEditor.show();
+```
+
+**Usage notes**
+
+Replace the previous `ShowImageEditor()` method.
+
+Only one ImageEditor object can be created. If you try creating it again, you'll get the error 'An ImageEditor already exists.' and the existing ImageEditor object will be returned.
+
+The method [ `unbind()` ](#unbind) will dispose all created CustomElement objects, ThumbnailViewer objects and ImageEditor objects.
+
+---
+
+## createThumbnailViewer
+
+**Syntax**
+
+``` typescript
+/**
+ * Generate a independent ThumbnailViewer object.
+ * @param thumbnailViewerSettings Configure the ThumbnailViewer object
+ */
+createThumbnailViewer(
+    thumbnailViewerSettings?: thumbnailViewerSettings
+): ThumbnailViewer;
+
+interface ThumbnailViewer {
+    /**
+     * Show the ThumbnailViewer object.
+     */
+    show(): boolean;
+    /**
+     * Hide the ThumbnailViewer object.
+     */
+    hide(): boolean;
+    /**
+     * Remove the ThumbnailViewer object.
+     */
+    dispose(): boolean;
+    /**
+     * Change the view mode of the thumbnail viewer.
+     * @param viewMode Specify the new mode.
+     */
+    updateViewMode(viewMode: ViewMode): void;
+    /**
+     * Bind a listner to the specified event. You can bind one or multiple listners to the same event.
+     * @param eventName Specify the event name.
+     * @param callback Specify the listner.
+     */
+    on(eventName: string, callback: (event: ThumbnailViewerEvent | KeyboardEvent, domEvent?: MouseEvent) => void): void; 
+    /**
+     * Unbind event listener(s) from the specified viewer event.
+     * @param eventName Specify the event.
+     * @param callback Specify the listener to remove
+     */
+    off(eventName: string, callback?: () => void): void; 
+    /**
+     * Whether to allow keyboard control. Default: true.
+     */
+    allowKeyboardControl: boolean;
+    /**
+     * Whether to allow page dragging to reorder the pages.
+     * Default: true.
+     */
+    allowPageDragging: boolean;
+    /**
+     * Whether to allow resizing of the thumbnail viewer. 
+     * Default: false.
+     */
+    allowResizing: boolean;
+    /**
+     * Set or return the CSS rule for the background of the thumbnail viewer.
+     * Default: "rgb(255, 255, 255)".
+     */
+    background: string;
+    /**
+     * Set or return the CSS rule for the border of the thumbnail viewer.
+     * Default: "".
+     */
+    border: string;
+    /**
+     * Set or return the CSS rule for the background of the page the mouse hovers over in the thumbnail viewer.
+     * Default: "rgb(239, 246, 253)".
+     */
+    hoverPageBackground: string;
+    /**
+     * Set or return the CSS rule for the border of the page the mouse hovers over in the thumbnail viewer.
+     * Default: "1px solid rgb(238, 238, 238)".
+     */
+    hoverPageBorder: string;
+    /**
+     * Set or return the location of the thumbnail viewer. Allowed values are "left", "right", "top", "bottom".
+     * Default: "left".
+     */
+    location: string;
+    /**
+     * Set or return the CSS rule for the background of a normal page in the thumbnail viewer.
+     * Default: "transparent".
+     */
+    pageBackground: string;
+    /**
+     * Set or return the CSS rule for the border of a normal page in the thumbnail viewer.
+     * Default: "1px solid rgb(238, 238, 238)".
+     */
+    pageBorder: string;
+    /**
+     * Set or return the margin between two adjacent images and the margin between an image and the border of the thumbnail viewer. The value can either be in pixels or percentage.
+     * Default: 10.
+     */
+    pageMargin: number | string;
+    /**
+     * Set or return the CSS rule for the background of the placeholder which appears when you drag page(s) to reorder them in the thumbnail viewer.
+     * Default: "rgb(251, 236, 136)".
+     */
+    placeholderBackground: string;
+    /**
+     * Set or return whether the pages are arranged vertically or horizontally.
+     * Default: "vertical". Allowed values are "vertical" and "horizontal".
+     */
+    scrollDirection: string;
+    /**
+     * Set or return the CSS rule for the background of the selected page(s) in the thumbnail viewer.
+     * Default: "rgb(199, 222, 252)".
+     */
+    selectedPageBackground: string;
+    /**
+     * Set or return the CSS rule for the border of the selected page(s) in the thumbnail viewer.
+     * Default: "1px solid rgb(125,162,206)".
+     */
+    selectedPageBorder: string;
+    /**
+     * Set or return whether page numbers are shown.
+     * Default: false.
+     */
+    showPageNumber: boolean;
+    /**
+     * Set or return the size of the thumbnail viewer. The value can either be in pixels or percentage (based on the width or height of the entire viewer).
+     * Default: "30%".
+     */
+    size: number | string;
+    /**
+     * Set whether to select the index in the upper left corner of the viewer when scrolling. 
+     * Default: false.
+     */
+    autoChangeIndex: boolean;
+};
+interface ThumbnailViewerEvent {
+    // The index of the current page.
+    index: number;
+    // The x-coordinate of the browser page.
+    pageX: number; 
+    // The y-coordinate of the browser page.
+    pageY: number; 
+};
+interface ViewMode {
+    /**
+     * Specify the number of images per row.
+     */
+    columns: number;
+    /**
+     * Specify the number of images per column.
+     */
+    rows: number;    
+    /**
+     * Set or return whether the pages are arranged vertically or horizontally.
+     * Default: "vertical". Allowed values are "vertical" and "horizontal".
+     */
+    scrollDirection: string;
+}
+```
+
+**Example**
+
+> The example code shows 2 ways to use the API `createThumbnailViewer()`
+
+``` javascript
+// Use default settings
+var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer();
+objThumbnailViewer.background = "rgb(0,0,255)";
+objThumbnailViewer.show();
+```
+
+``` javascript
+// Customize the thumbnail viewer
+var thumbnailViewerSettings = {
+    location: 'left',
+    size: '30%',
+    columns: 1,
+    rows: 3,
+    scrollDirection: 'vertical', // 'horizontal'
+    pageMargin: 10,
+    background: "rgb(255, 255, 255)",
+    border: '',
+    allowKeyboardControl: true,
+    allowPageDragging: true,
+    allowResizing: false,
+    showPageNumber: false,
+    pageBackground: "transparent",
+    pageBorder: "1px solid rgb(238, 238, 238)",
+    hoverBackground: "rgb(239, 246, 253)",
+    hoverPageBorder: "1px solid rgb(238, 238, 238)",
+    placeholderBackground: "rgb(251, 236, 136)",
+    selectedPageBorder: "1px solid rgb(125,162,206)",
+    selectedPageBackground: "rgb(199, 222, 252)"
+}​​​​​​​;
+
+var thumbnail = DWObject.Viewer.createThumbnailViewer(thumbnailViewerSettings);
+thumbnail.show();
+```
+
+**Usage notes**
+
+The following table shows the events available to a ThumbnailViewer object.
+
+| Event Name | Arguments | Description |
+|:-|:-|:-|
+| `click` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the clicked |
+| `dblclick` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when double clicked |
+| `contextMenu` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when right clicked |
+| `mousemove` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse moved over |
+| `mousedown` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is pressed |
+| `mouseup` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is released |
+<!--**| `topPageChanged` | index: number | Triggered when the top page currently displayed changes |-->
+| `resize` | width：number, height：number | Triggered when width & height of the ThumbnailViewer object changes. |
+| `pageRendered` | index: number | Triggered when a page is rendered. |
+| `mouseout` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is out, only for desktop browsers |
+| `mouseover` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is out, only for desktop browsers |
+| `keydown` | keyboardEvent: KeyboardEvent | Triggered when a key is pressed, only for desktop browsers |
+| `keyup` | keyboardEvent: KeyboardEvent | Triggered when a key is released, only for desktop browsers |
+
+By default, scrolling the scroll bar on Thumbnail does not trigger the `topchanged` event.
+
+Only one ThumbnailViewer object can be created. If you try creating it again, you will get the error 'A ThumbnailViewer already exists.' and the existing ThumbnailViewer object will be returned.
+
+The method [ `unbind()` ](#unbind) will dispose all created CustomElement objects, ThumbnailViewer objects and ImageEditor objects.
+
+---
+
+## first
+
+**Syntax**
+
+``` typescript
+/** 
+ * Show the first page and return the index which should be 0. If there is no page in the viewer, -1 is returned.
+ */
+first():number; 
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.first();
+```
+
+---
+
+## fitWindow
+
+**Syntax**
+
+``` typescript
+/**
+ * Set how the page is fit in the viewer.
+ * @param type Specify how to fit. Allowed values are "width" and "height"
+ */
+fitWindow(
+    type?: string
+): void
+```
+
+**Example**
+
+``` javascript
+ DWObject.Viewer.fitWindow();
+```
+
+**Usage notes**
+
+This API only works if the view mode of the viewer is set to -1 by -1 ([ `singlePageMode` ](#singlepagemode) is true).
 
 The allowed values are
 
-* `true` : The default value. The shape is "hand".
-* `false` : The shape is "crosshair" and you can drag to select an area on the image.
+width: Fit the page vertically.
+height: Fit the page horizontally.
+
+If no parameter is provided, it tries to fit the whole page within the viewer.
+
+---
+
+## gotoPage
+
+**Syntax**
+
+``` typescript
+/**
+ * Show the specified page and return its index.
+ * @param index Specify the page.
+ */
+gotoPage(
+    index: number
+): number;
+```
 
 **Example**
 
 ``` javascript
-DWObject.MouseShape = false;
+DWObject.Viewer.gotoPage(0);
 ```
 
 ---
 
-## IfAutoScroll
+## hide
 
 **Syntax**
 
 ``` typescript
 /**
- * Return or set whether the thumbnails view scrolls when new images come in.
+ * Hide the viewer.
  */
-IfAutoScroll: boolean;
+hide(): boolean;
 ```
-
-**Usage notes**
-
-By default, the property is `true` which means the thumbnails view will scroll to show the latest acquire/loaded images.
-
-Set it to `false` if you want the view to keep showing the same images even as more images are acquire/loaded.
 
 **Example**
 
 ``` javascript
-DWObject.IfAutoScroll = false;
+DWObject.Viewer.hide();
 ```
 
 ---
 
-## ShowPageNumber
+## last
+
+**Syntax**
+
+``` typescript
+/** 
+ * Show the last page and return its index. If there is no page in the viewer, -1 is returned.
+ */
+last():number; 
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.last();
+```
+
+---
+
+## next
 
 **Syntax**
 
 ``` typescript
 /**
- * Return or set whether to show the page numbers.
+ * Show the next page and return its index. If there is no page in the viewer, -1 is returned.
  */
-ShowPageNumber: boolean;
+next(): number; 
+```
+
+**Example**
+
+``` javascript
+DWObject.SelectImages([3]); //Select the 4th page.
+var currentIndex = DWObject.Viewer.next(); // return 4 which represents the 5th page.
+```
+
+---
+
+## off
+
+**Syntax**
+
+``` typescript
+/**
+ * Unbind event listener(s) from the specified viewer event.
+ * @param eventName Specify the event.
+ * @param callback Specify the listener to remove
+ */
+Viewer.off(
+    eventName: string, 
+    callback?: () => void
+): void; 
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.off('pageAreaSelected');
 ```
 
 **Usage notes**
 
-The page number indicates the order of the images.
-
-When the viewmode is -1 * -1, page numbers will be hidden.
+If no listener is specified, all listeners will be removed.
 
 ---
 
-## ImageMargin
+## on
 
 **Syntax**
 
 ``` typescript
 /**
- * Return or set the margin between images (in pixels).
+ * Bind a listner to the specified event. You can bind one or multiple listners to the same event.
+ * @param eventName Specify the event name.
+ * @param callback Specify the listner.
  */
-ImageMargin: number;
+Viewer.on(
+    eventName: string, 
+    callback: (event: ViewerEvent) => void
+): void; 
+```
+
+**Example**
+
+``` javascript
+var callback = function(sImageIndex, rect) {
+    console.log(sImageIndex);
+};
+DWObject.Viewer.on('pageAreaSelected', callback);
+```
+
+---
+
+## previous
+
+**Syntax**
+
+``` typescript
+/**
+ * Show the previous page and return its index. If there is no page in the viewer, -1 is returned.
+ */
+previous(): number; 
+```
+
+**Example**
+
+``` javascript
+DWObject.SelectImages([3]); //Select the 4th page.
+var currentIndex = DWObject.Viewer.previous(); // return 2 which represents the 3rd page.
+```
+
+---
+
+## render
+
+**Syntax**
+
+``` typescript
+/**
+ * Refresh the viewer.
+ */
+render(): boolean; 
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.on("pageRendered", function(index) {
+    console.log(index)
+});
+
+DWObject.Viewer.render(); //It will trigger the pageRendered event
+```
+
+---
+
+## setSelectedAreas 
+
+**Syntax**
+
+``` typescript
+/**
+ * Set one or more rectangular area(s) on the current page.
+ * @param areas Specify the rectangular area(s).
+ */
+setSelectedAreas(
+    areas: Area[]
+): void;
+
+interface Area {
+    left: number,
+    top: number,
+    right: number,
+    bottom: number,
+};
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.setSelectedAreas([{
+    left: 0,
+    top: 0,
+    right: 100,
+    bottom: 100
+}, {
+    left: 200,
+    top: 200,
+    right: 400,
+    bottom: 500
+}]);
 ```
 
 **Usage notes**
 
-The image margin is only effective when the view mode is not 1 * 1 nor -1 * -1.
+The coordinates are based on the size of the original page (instead of the size of the viewer).
 
----
-
-## Zoom
-
-**Syntax**
-
-``` typescript
-/**
- * Return or set the zoom factor.
- */
-Zoom: number;
-```
-
-**Usage notes**
-
-The zoom factor is only effective when the view mode is -1 * -1. 
-
-When you set the property and the view mode is -1 * -1, the view will zoom in or out.
-
----
-
-## OnMouseClick
-
-## OnMouseDoubleClick
-
-## OnMouseMove
-
-## OnMouseRightClick
-
-**Syntax**
-
-``` typescript
-/**
- * A built-in callback triggered when the mouse click | double-click | right-click on an image or move over it.
- * @argument index Specify the image.
- */
-RegisterEvent('OnMouseClick', function(index: number) {}): boolean;
-RegisterEvent('OnMouseDoubleClick', function(index: number) {}): boolean;
-RegisterEvent('OnMouseRightClick', function(index: number) {}): boolean;
-RegisterEvent('OnMouseMove', function(index: number) {}): boolean;
-```
-
----
-
-## OnImageAreaSelected
-
-**Syntax**
-
-``` typescript
-/**
- * A built-in callback triggered when a rectangle is selected on an image in the buffer.
- * @argument index Specify the image.
- * @argument left, top, right, bottom: Return the coordinates of the rectangle.
- * @argument rectangleIndex The index of the rectangle
- */
-RegisterEvent('OnImageAreaSelected',
-    function (index: number,
-        left: number, top: number,
-        right: number, bottom: number,
-        rectangleIndex: number
-    ) {}
-): boolean;
-```
-
----
-
-## OnImageAreaDeSelected
-
-**Syntax**
-
-``` typescript
-/**
- * A built-in callback triggered when selected rectangles are cleared.
- * @argument index Specify the image.
- */
-RegisterEvent('OnImageAreaDeSelected',
-    function (index: number) {}
-): boolean; 
-```
+This method only works when [ `cursor` ](#cursor) is set to "crosshair".
 
 ---
 
@@ -575,683 +838,179 @@ setViewMode(
 ): boolean;
 ```
 
+**Example**
+
+``` javascript
+DWObject.Viewer.setViewMode(2, 2);
+```
+
+**Usage notes**
+
+Setting the view mode as -1 by -1 is equivalent to setting [ `singlePageMode` ](#singlepagemode) to true.
+
 ---
 
-## setSelectedImageArea
+## show
 
 **Syntax**
 
 ``` typescript
 /**
- * Select a rectangular area on the specified image.
- * @param left Specify the rectangle (leftmost coordinate).
- * @param top Specify the rectangle (topmost coordinate).
- * @param width Specify the rectangle (the width).
- * @param height Specify the rectangle (the height).
+ * Show the viewer.
  */
-setSelectedImageArea(
-    left: number,
-    top: number,
-    width: number,
-    height: number
-): boolean;
+show(): boolean; 
 ```
-
-**Usage notes**
-
-The coordinates are based on the size of the original image (instead of the size of the viewer).
 
 **Example**
 
 ``` javascript
-DWObject.Viewer.setSelectedImageArea(50, 50, 200, 200);
+DWObject.Viewer.show();
 ```
 
 ---
 
-## setButtonClass
+## unbind
 
 **Syntax**
 
 ``` typescript
 /**
- * Set the CSS class name of the specified button.
- * @param name Specify the button.
- * @param className Specify the CSS class name.
+ * Unbind and destroy the viewer.
  */
-setButtonClass(
-    name: string,
-    className: string
-): boolean;
+unbind(): boolean; 
 ```
-
-**Usage notes**
-
-Use this method to fine-tune the buttons in the viewer with CSS.
 
 **Example**
 
 ``` javascript
-DWObject.Viewer.setButtonClass("crop", "CropClass");
-```
-
----
-
-## zoomIn
-
-**Syntax**
-
-``` typescript
-/**
- * Zoom in by 6/5.
- */
-zoomIn(): boolean;
-```
-
----
-
-## zoomOut
-
-**Syntax**
-
-``` typescript
-/**
- * Zoom out by 5/6.
- */
-zoomOut(): boolean;
-```
-
----
-
-## bindCustomElement
-
-**Syntax**
-
-``` typescript
-/**
- * Bind a custom element to the viewer to add extra features.
- * @param Id Specify the element by its Id.
- * @param priority Specify the importance of the element.
- * @param fullScreen Whether to show the element full-screen.
- */
-bindCustomElement(
-    Id: string,
-    priority: number,
-    fullScreen: boolean
-): boolean;
+DWObject.Viewer.unbindViewer();
 ```
 
 **Usage notes**
 
-You can put any information in the custom element. Once bound, it'll be managed by the viewer.
+Replace the previous `UnbindViewer` method.
 
 ---
 
-## unBindCustomElement
+## acceptDrop
 
 **Syntax**
 
 ``` typescript
 /**
- * Unbind a custom element from the viewer.
- * @param Id Specify the element by its Id.
+ * Set whether to load files dropped over the viewer area.
+ * The default value is true.
  */
-unBindCustomElement(
-    Id: string
-): boolean;
+acceptDrop: boolean; 
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.acceptDrop = true;
 ```
 
 ---
 
-## showCustomElement
-
-**Syntax**
+## allowSlide
 
 ``` typescript
 /**
- * Show the custom element.
- * @param name Specify the element by its Id.
+ * Set whether to allow image navigation by swiping left or right on the viewer.
+ * The default value is true.
  */
-showCustomElement(Id: string): boolean;
+.allowSlide: boolean; 
 ```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.allowSlide = true;  
+```
+
+**Usage notes**
+
+This API only works if the view mode of the viewer is set to -1 by -1.
 
 ---
 
-## hideCustomElement
+## background
 
 **Syntax**
 
 ``` typescript
 /**
- * Hide the custom element.
- * @param name Specify the element by its Id.
+ * Return or set the background of the viewer. 
  */
-hideCustomElement(Id: string): boolean;
+background: string;
 ```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.background = 'rgb(255, 255, 255)';
+```
+
+**Usage notes**
+
+Replace the previous `BackgroundColor` method. Now you can specify the backgournd by CSS which may be a single color or even an image. Read more on the [background shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/background).
 
 ---
 
-## toggleCustomElement
+## border
 
 **Syntax**
 
 ``` typescript
 /**
- * Show or hide the custom element.
- * @param name Specify the element by its Id.
+ * Return or set the border of the viewer.
  */
-toggleCustomElement(Id: string): boolean;
+border: string; 
 ```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.border = '2px solid rgb(204, 204, 204)';
+```
+
+**Usage notes**
+
+The default value is "1px solid rgb(204, 204, 204)". Now you can specify the border by CSS. Read more on the [border shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/border).
 
 ---
 
-## showVideo
+## cursor
 
 **Syntax**
 
 ``` typescript
 /**
- * Start streaming video from the current camera in the viewer.
- * @param deviceId Specify a camera.
- * @param resolution Specify the initial resolution.
+ * Return or set the shape of the cursor.
  */
-showVideo(deviceId?: string,
-    resolution?: Resolution
-): Promise<Resolution>;
+cursor: string; 
 ```
 
----
+**Example**
 
-## closeVideo
-
-**Syntax**
-
-``` typescript
-/**
- * Close the camera and hide the video streaming UI.
- */
-closeVideo(): void;
-```
-
----
-
-## on
-
-**Syntax**
-
-``` typescript
-/**
- * Specify an event listener for the specified built-in viewer event.
- * @param name Specify the event
- * @param callback The event listener
- */
-on(name: string, callback: () => void): boolean;
-```
-
----
-
-## video-closed
-
-**Syntax**
-
-``` typescript
-/**
- * This event is triggered when the video is closed.
- */
-on("video-closed", callback: () => void): boolean;
-```
-
----
-
-## video-error
-
-**Syntax**
-
-``` typescript
-/**
- * This event is triggered when the video playing operation. throws out an error.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
-on("video-error", callback: (errorCode, errorString) => void): boolean;
-```
-
----
-
-## bOnlyShowThumbnailsView
-
-**Syntax**
-
-``` typescript
-/**
- * Whether to only show the thumbnails view.
- */
-bOnlyShowThumbnailsView: boolean;
-```
-
----
-
-## cursorOverThumbnailsView
-
-**Syntax**
-
-``` typescript
-/**
- * Set the shape of the cursor over the thumbnails view.
- */
-cursorOverThumbnailsView: string;
-```
-
----
-
-## updateUISettings
-
-**Syntax**
-
-``` typescript
-/**
- * Update the viewer with detailed configuration.
- * @param config Specify the detailed configuration.
- */
-updateUISettings(config: IViewerConfig): boolean;
-
-interface ViewerConfig {
-    /**
-     * Specify which components are shown.
-     */
-    component ? : {
-        header ? : boolean;
-        topMenu ? : boolean;
-        asideMenu ? : boolean;
-        bottomMenu ? : boolean;
-    };
-    group ? : {
-            global ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'header'
-                sequence ? : number
-            },
-            tabName ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'header'
-                sequence ? : number
-            },
-            viewerCorner ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'header'
-                sequence ? : number
-            },
-            viewMenuBlock ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'topMenu'
-                sequence ? : number
-            },
-            viewMenu ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'topMenu'
-                sequence ? : number
-            },
-            topMenuRight ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'topMenu'
-                sequence ? : number
-            },
-            pager ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'bottomMenu'
-                sequence ? : number
-            },
-            viewChange ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'header'
-                sequence ? : number
-            }
-        },
-        buttons ? : {
-            // loadImage button
-            loadImage ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'viewerCorner'
-                iconClass ? : string, // Example: 'icon-file'
-                sequence ? : number,
-                onButtonClick ? : string // Example: onLoadImage'
-            },
-            currentTab ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'tabName',
-                sequence ? : number
-            },
-            // panelChange button (thumbnail, dir tree, tags)
-            panelChange ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'global'
-                iconClass ? : string, // Example: 'icon-list'
-                sequence ? : number,
-                onButtonClick ? : string // Example: onPanelChange'
-            },
-            // readDirection change button (vertical ,horizontal)
-            readDirection ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'global'
-                iconClass ? : string, // Example: 'icon-readType'
-                sequence ? : number,
-                onButtonClick ? : string // Example: onReadDirection'
-            },
-            // readDirection change button (vertical ,horizontal)
-            blank1 ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'global'
-                sequence ? : number
-            },
-            // flip button
-            flip ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'viewMenu'
-                iconClass ? : string, // Example: 'icon-flip'
-                sequence ? : number,
-                onButtonClick ? : string // Example: onFlip'
-            },
-            // mirror button
-            mirror ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'viewMenu'
-                iconClass ? : string, // Example: 'icon-mirror'
-                sequence ? : number,
-                onButtonClick ? : string // Example: onMirror'
-            },
-            // rotate button
-            rotate ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'viewMenu'
-                iconClass ? : string, // Example: 'icon-rotateLeft'
-                sequence ? : number,
-                onButtonClick ? : string // Example: onRotate'
-            },
-            // rotateAll button
-            rotateAll ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'viewMenu'
-                iconClass ? : string, // Example: 'icon-rotateAll'
-                sequence ? : number,
-                onButtonClick ? : string // Example: onRotateAll'
-            },
-            // crop button
-            crop ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'viewMenu'
-                iconClass ? : string, // Example: 'icon-crop'
-                sequence ? : 5,
-                onButtonClick ? : string // Example: onCrop'
-            },
-            // wipe button
-            wipe ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'viewMenu'
-                iconClass ? : string, // Example: 'icon-wipe'
-                sequence ? : 6,
-                onButtonClick ? : string // Example: onWipe'
-            },
-            // undo button
-            undo ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'viewMenu'
-                iconClass ? : string, // Example: 'icon-undo'
-                sequence ? : 7,
-                onButtonClick ? : string // Example: onUndo'
-            },
-            // redo button
-            redo ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'viewMenu'
-                iconClass ? : string, // Example: 'icon-redo'
-                sequence ? : 8,
-                onButtonClick ? : string // Example: onRedo'
-            },
-            // magnifyCanvas button
-            zoomIn ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'viewMenu'
-                iconClass ? : string, // Example: 'icon-magnifyImage'
-                sequence ? : 9,
-                onButtonClick ? : string // Example: onZoomIn'
-            },
-            // shrinkCanvas button
-            zoomOut ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'viewMenu'
-                iconClass ? : string, // Example: 'icon-shrinkImage'
-                sequence ? : 10,
-                onButtonClick ? : string // Example: onZoomOut'
-            },
-            // reset button
-            reset ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'viewMenu'
-                iconClass ? : string, // Example: 'icon-reset'
-                sequence ? : 11,
-                onButtonClick ? : string // Example: onReset'
-            },
-            // remove button
-            remove ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'topMenuRight'
-                iconClass ? : string, // Example: 'icon-delete'
-                sequence ? : number,
-                onButtonClick ? : string // Example: onRemove'
-            },
-            // print button
-            print ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'topMenuRight'
-                iconClass ? : string, // Example: 'icon-print'
-                sequence ? : number,
-                onButtonClick ? : string // Example: onPrint'
-            },
-            // save button
-            save ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'topMenuRight'
-                iconClass ? : string, // Example: 'icon-save'
-                sequence ? : number,
-                onButtonClick ? : string // Example: onSave'
-            },
-            // firstPage button
-            firstPage ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'pager'
-                iconClass ? : string, // Example: 'icon-pageStart'
-                sequence ? : number,
-                onButtonClick ? : string // Example: onFirstPage'
-
-            },
-            // previousPage button
-            previousPage ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'pager'
-                iconClass ? : string, // Example: 'icon-pagePre'
-                sequence ? : number,
-                onButtonClick ? : string // Example: onPreviousPage'
-            },
-            //pagination show
-            pagination ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'pager'
-            },
-            // nextPage button
-            nextPage ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'pager'
-                iconClass ? : string, // Example: 'icon-pageNext'
-                sequence ? : number,
-                onButtonClick ? : string // Example: onNextPage'
-            },
-            // lastPage button
-            lastPage ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'pager'
-                iconClass ? : string, // Example: 'icon-pageEnd'
-                sequence ? : 5,
-                onButtonClick ? : string // Example: onLastPage'
-            },
-            // autoFit button
-            autoFit ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'viewChange'
-                iconClass ? : string, // Example: 'icon-autoFit'
-                sequence ? : number,
-                onButtonClick ? : string // Example: onAutoFit'
-            },
-            // fitHeight button
-            fitHeight ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'viewChange'
-                iconClass ? : string, // Example: 'icon-fitHeight'
-                sequence ? : number,
-                onButtonClick ? : string // Example: onFitHeight'
-            },
-            // fitWidth button
-            fitWidth ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'viewChange'
-                iconClass ? : string, // Example: 'icon-fitWidth'
-                sequence ? : number,
-                onButtonClick ? : string // Example: onFitWidth'
-            },
-            // fullScreenToWebPage button
-            fullPage ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'viewChange'
-                iconClass ? : string, // Example: 'icon-fullWeb'
-                sequence ? : number,
-                onButtonClick ? : string // Example: onFullPage'
-            },
-            // fullScreenToDevice
-            fullScreen ? : {
-                visibility ? : boolean,
-                location ? : string, // Example: 'viewChange'
-                iconClass ? : string, // Example: 'icon-fullDevice'
-                sequence ? : number,
-                onButtonClick ? : string // Example: onFullScreen'
-            }
-        },
-        tipsConfig ? : {
-            loadImage ? : string, // Example 'loadImage'
-            panelChange ? : string, // Example 'panelChange'
-            readDirection ? : string, // Example 'readDirection'
-            flip ? : string, // Example 'flip'
-            mirror ? : string, // Example 'mirror'
-            rotate ? : string, // Example 'rotate'
-            rotateAll ? : string, // Example 'rotateAll'
-            crop ? : string, // Example 'crop'
-            wipe ? : string, // Example 'wipe'
-            undo ? : string, // Example 'undo'
-            redo ? : string, // Example 'redo'
-            zoomIn ? : string, // Example 'zoomIn'
-            zoomOut ? : string, // Example 'zoomOut'
-            reset ? : string, // Example 'reset'
-            remove ? : string, // Example 'remove'
-            print ? : string, // Example 'print'
-            save ? : string, // Example 'save'
-            firstPage ? : string, // Example 'firstPage'
-            previousPage ? : string, // Example 'previousPage'
-            pagination ? : string, // Example 'pagination'
-            nextPage ? : string, // Example 'nextPage'
-            lastPage ? : string, // Example 'lastPage'
-            autoFit ? : string, // Example 'fitWindow'
-            fitHeight ? : string, // Example 'fitHeight'
-            fitWidth ? : string, // Example 'fitWidth'
-            fullPage ? : string, // Example 'fullPage'
-            fullScreen ? : string, // Example 'fullScreen'
-        },
-        content ? : {
-            visibility ? : boolean,
-            besides ? : {
-                visibility ? : boolean,
-                sequence ? : number
-            },
-            viewPort ? : {
-                visibility ? : boolean,
-                sequence ? : number
-            },
-            allImage ? : {
-                visibility ? : boolean,
-                displayName ? : string // Example: 'All Images'
-            }
-        },
-        thumbnail ? : {
-            visibility ? : boolean,
-            iconClass ? : string // Example: 'icon-thumbnail'
-            selectedBorderColor ? : string // Example: 'red'
-            selectedBackgroundColor ? : string // Example: 'rgb(127, 133, 251)'
-            imageBackgroundColor ? : string // Example: 'transparent'
-            imageBorderColor ? : string // Example: 'gray'
-            hoverBackgroundColor ? : string // Example: '#c4faf8'
-            hoverBorderColor ? : string // Example: 'yellow'
-            blockBackgroundColor ? : string // Example: 'pink'
-            backgroundColor ? : string // Example: 'rgba(67, 66, 70, 1)'
-            imageSpace ? : number, // Example: 10
-            showPageNumber ? : boolean,
-            showThumbnailControl ? : boolean,
-            mouseShape ? : string // Example: 'pointer'
-        },
-        tree ? : {
-            visibility ? : boolean,
-            iconClass ? : string // Example: 'icon-tree',
-            selectedColor ? : string // Example: '#0000ff',
-            goToThumbnail ? : boolean
-        },
-        tag ? : {
-            visibility ? : boolean,
-            iconClass ? : string // Example: 'icon-tags',
-            selectedColor ? : string // Example: '#0000ff',
-            goToThumbnail ? : boolean,
-            displayMode ? : string // Example: ''// icon or text
-        },
-        cropStyle ? : {
-            ratios ? : any, // Example [[1, 1], [3, 2], [4, 3], [5, 4], [7, 5], [16, 9]],
-            cropMask ? : boolean,
-            cropBar ? : boolean
-        },
-        buttonResize ? : {
-            ifResize ? : boolean,
-            maxSize ? : number, // Example: 26,
-            minSize ? : number, // Example: 14
-        },
-        skinColor ? : {
-            topMenuBackground ? : string // Example: '#000000'
-            asideBackground ? : string // Example: '#ffffff'
-            canvasBackground ? : string // Example: 'rgba(67,66,70,1)'
-            bottomMenuBackground ? : string // Example: '#000000'
-        },
-        presetMode ? : string // Example: 'basic'
-    theme ? : string // Example: 'basic'
-}
-```
-
-> The following APIs are under development for version 16.2
-
-## width
-
-**Syntax**
-
-``` typescript
-/**
- * Return or set the width of the viewer.
- */ 
-Viewer.width: number | string;
+``` javascript
+DWObject.Viewer.cursor = 'crosshair';
 ```
 
 **Usage Notes**
 
-If a number is assigned, it means that number of pixels (px). If a string is assigned, it is either a fixed size like "500px" or a dynamic size like "50%" which follows standard CSS rules.
- 
-**Example**
+The allowed values are:
 
-``` javascript
-DWObject.Viewer.width = 270;
-DWObject.Viewer.width = "270px";
-DWObject.Viewer.width = "100%";
-```
+| Value | Description |
+|:-|:-|
+| `default` | The shape is ![default]({{site.assets}}imgs/default.gif).|
+| `crosshair` | The shape is ![crosshair]({{site.assets}}imgs/crosshair.gif)(default setting), you can select one or multiple area(s) on the page. |
+| `pointer` | The shape is ![pointer]({{site.assets}}imgs/pointer.gif). If the displayed page is bigger than the viewer, the page can be moved.|
+| `zoom-in` | The shape is ![zoom-in]({{site.assets}}imgs/zoom-in.gif), supports click the page to zoom in. Only works if the view mode of the viewer is set to -1 by -1.|
+
+If there are selected areas on the page, changing the `cursor` property will clear them.
+
+---
 
 ## height
 
@@ -1261,12 +1020,8 @@ DWObject.Viewer.width = "100%";
 /**
  * Return or set the height of the viewer.
  */ 
-Viewer.height: number | string;
+height: number | string;
 ```
-
-**Usage Notes**
-
-If a number is assigned, it means that number of pixels (px). If a string is assigned, it is either a fixed size like "500px" or a dynamic size like "50%" which follows standard CSS rules.
 
 **Example**
 
@@ -1276,6 +1031,14 @@ DWObject.Viewer.height = "350px";
 DWObject.Viewer.height = "100%";
 ```
 
+**Usage Notes**
+
+If a number is assigned, it means that number of pixels (px). If a string is assigned, it is either a fixed size like "500px" or a dynamic size like "50%" which follows standard CSS rules.
+
+When reading the property, the value is always in pixels no matter what value was set to it.
+
+---
+
 ## idPostfix
 
 **Syntax**
@@ -1284,7 +1047,7 @@ DWObject.Viewer.height = "100%";
 /**
  * Return the postfix of the Ids of the elements in the viewer.
  */ 
-readonly Viewer.idPostfix: string;
+readonly idPostfix: string;
 ```
 
 **Example**
@@ -1292,3 +1055,530 @@ readonly Viewer.idPostfix: string;
 ``` javascript
 var myViewerIdPostfix = DWObject.Viewer.idPostfix;
 ```
+
+---
+
+## ifAutoScroll
+
+**Syntax**
+
+``` typescript
+/**
+ * Return or set whether to scroll the viewer automatically when new pages are imported.
+ * Default: true;
+ */
+ifAutoScroll: string; 
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.ifAutoScroll = false;
+```
+
+---
+
+## innerBorder
+
+**Syntax**
+
+``` typescript
+/**
+ * Return or set the inner border of the viewer.
+ */
+innerBorder: string; 
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.innerBorder = '1px solid rgb(204, 204, 204)';
+```
+
+**Usage notes**
+
+The default value is "1px solid rgb(125, 162, 206)". Now you can specify the border by CSS. Read more on the [border shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/border).
+
+---
+
+## pageMargin
+
+**Syntax**
+
+``` typescript
+/**
+ * Return or set the margin between images.
+ */
+pageMargin: number | string; 
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.pageMargin = 10;
+```
+
+**Usage Notes**
+
+The page margin is only effective when the view mode is not -1 * -1 (in other words, [ `singlePageMode` ](#singlepagemode) is `false` ).
+
+---
+
+## selectedAreaBorderColor
+
+**Syntax**
+
+``` typescript
+/**
+ * Set the border color of the selected area. Also applies to the selection box on the video opened by the method `showVideo`.
+ */
+selectedAreaBorderColor: string; 
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.selectedAreaBorderColor = 'rgba(0, 0, 0, 1)';
+```
+
+**Usage notes**
+
+The default value is "rgba(0, 0, 0, 1)".
+
+---
+
+## selectedPageBackground
+
+**Syntax**
+
+``` typescript
+/**
+ * Set the selected page background color of the Thumbnail viewer.
+ */
+selectedPageBackground: string; 
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.selectedPageBackground = "rgb(255, 0, 0)";
+```
+
+**Usage notes**
+
+The default value is "rgb(199, 222, 252)". You can specify the backgournd by CSS which may be a single color or even an image. Read more on the [background shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/background).
+
+---
+
+## selectedPageBorder
+
+**Syntax**
+
+``` typescript
+/**
+ * Return or set the border style for selected page(s).
+ */
+selectedPageBorder: string; 
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.selectedPageBorder = "3px solid rgb(125,162,206)";
+```
+
+**Usage Notes**
+
+This API is only effective when the view mode is not -1 * -1 (in other words, [ `singlePageMode` ](#singlepagemode) is `false` ).
+
+The default value is "1px solid rgb(125, 162, 206)". Now you can specify the border by CSS. Read more on the [border shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/border).
+
+---
+
+## selectionRectAspectRatio
+
+**Syntax**
+
+``` typescript
+/**
+ * Specify an aspect ratio to be used when selecting an rectangular area on a page.
+ */
+selectionRectAspectRatio: number | string; 
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.selectionRectAspectRatio = 0.5;
+```
+
+**Usage Notes**
+
+This API is only effective when drawing manually (it won't work if the selection is done with the API [`setSelectedAreas()`](#setselectedareas)).
+
+---
+
+## showPageNumber
+
+**Syntax**
+
+``` typescript
+/**
+ * Return or set whether to show the page numbers.
+ */
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.showPageNumber = true;
+```
+
+**Usage notes**
+
+The default value is `false` which means the page nubmers are hidden. The page numbers indicate the order of the pages. When the viewmode is -1 * -1 (in other words, [ `singlePageMode` ](#singlepagemode) is `true` ), page numbers will be hidden.
+
+---
+
+## singlePageMode
+
+**Syntax**
+
+``` typescript
+/**
+ * Set whether to use single page mode. 
+ */
+singlePageMode: boolean; 
+```
+
+**Example**
+
+``` javascript
+var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer();
+objThumbnailViewer.show();
+DWObject.Viewer.singlePageMode = false;
+```
+
+**Usage notes**
+
+The default value is `false` . If the thumbnail viewer is not shown, setting `singlePageMode` to `true` is equivalent to setting the view mode to -1 by -1. But if the thumbnail viewer is shown, `singlePageMode` will be changed to `true` automatically.
+
+---
+
+## width
+
+**Syntax**
+
+``` typescript
+/**
+ * Return or set the width of the viewer.
+ */ 
+width: number | string;
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.width = 270;
+DWObject.Viewer.width = "270px";
+DWObject.Viewer.width = "100%";
+```
+
+**Usage Notes**
+
+If a number is assigned, it means that number of pixels (px). If a string is assigned, it is either a fixed size like "500px" or a dynamic size like "50%" which follows standard CSS rules.
+ 
+When reading the property, the value is always in pixels no matter what value was set to it.
+
+---
+
+## zoom
+
+**Syntax**
+
+``` typescript
+/**
+ * Return or set the zoom factor, and then the current page will be enlarged or reduced.
+ */
+zoom: number;
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.zoom = 2.0;
+```
+
+**Usage Notes**
+
+The zoom factor is only effective when the view mode is -1 * -1. Allowed values is from 0.02 to 65.
+
+---
+
+### autoChangeIndex
+
+**Syntax**
+
+``` typescript
+/**
+ * Set whether to make sure the first image in the viewer is always selected when scrolling through multiple images. The default value is false. 
+ */
+autoChangeIndex : boolean
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.Viewer.autoChangeIndex=true;
+```
+
+**Usage Notes**
+When set to true, the index in the upper left corner of the viewer will be selected when scrolling.
+
+---
+
+## Events 
+
+### click
+
+### contextmenu
+
+### dblclick
+
+### mousemove
+
+### mousedown
+
+### mouseup
+
+### mouseout
+
+### mouseover
+
+### keydown
+
+### keyup
+
+**Syntax**
+
+``` typescript
+/** 
+ * Built-in callbacks that are triggered for a certain mouse event or keyboard event on a page.
+ * @param eventName Specify the event.
+ * @param callback Specify the callback.
+ * @argument dwtEvent The viewer-specific event object.
+ * @argument domEvent The original mouse event object.
+ */
+on(
+    eventName: string, 
+    callback: (event: ViewerEvent | KeyboardEvent, domEvent: MouseEvent) => void
+): void;
+
+interface ViewerEvent{ 
+    // The index of the current page.
+    index: number; 
+    //The x-coordinate of the upper-left corner of the page. 
+    imageX: number; 
+    //The y-coordinate of the upper-left corner of the page.
+    imageY: number; 
+    // The x-coordinate of the browser page.
+    pageX: number; 
+    // The y-coordinate of the browser page.
+    pageY: number; 
+};
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.on('click', function(dwtEvent, domEvent) {
+    console.log(dwtEvent, domEvent);
+});
+
+DWObject.Viewer.on('dblclick', function(dwtEvent, domEvent) {
+    console.log(dwtEvent, domEvent);
+});
+
+DWObject.Viewer.on('contextmenu', function(dwtEvent, domEvent) {
+    console.log(dwtEvent, domEvent);
+});
+
+DWObject.Viewer.on('mousemove', function(dwtEvent, domEvent) {
+    console.log(dwtEvent, domEvent);
+});
+
+DWObject.Viewer.on('mousedown', function(dwtEvent, domEvent) {
+    console.log(dwtEvent, domEvent);
+});
+
+DWObject.Viewer.on('mouseup', function(dwtEvent, domEvent) {
+    console.log(dwtEvent, domEvent);
+});
+
+DWObject.Viewer.on('mouseout', function(dwtEvent, domEvent) {
+    console.log(dwtEvent, domEvent);
+});
+
+DWObject.Viewer.on('mouseover', function(dwtEvent, domEvent) {
+    console.log(dwtEvent, domEvent);
+});
+
+DWObject.Viewer.on('keydown', function(keyboardEvent) {
+    console.log(keyboardEvent);
+});
+
+DWObject.Viewer.on('keyup', function(keyboardEvent) {
+    console.log(keyboardEvent);
+});
+```
+
+**Usage notes**
+
+The events `mouseout`, `mouseover`, `keydown` and `keyup` are only triggered on desktop browsers.
+
+---
+
+### pageAreaSelected
+
+**Syntax**
+
+``` typescript
+/**
+ * This event is triggered when user selects an area (draws a rectangle) or move a selected area on the current page.
+ * @argument index The index of the current page.
+ * @argument rect Some attribute values of the selected area.
+ */
+on('pageAreaSelected', 
+    (index: number, rect: rect)=> void
+): void; 
+
+interface rect{ 
+    // The index of the selected area. The index is 0-based. This is useful when you have multiple selected areas on one page.
+    areaIndex: number;
+    // The x-coordinate of the upper-left corner of the area.
+    x: number;
+    // The y-coordinate of the upper-left corner of the area.
+    y: number;
+    // The width of the selected area.
+    width: number;
+    // The height of the selected area.
+    height: number;
+};
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.on('pageAreaSelected', function(sImageIndex, rect) {
+    console.log(sImageIndex)
+});
+
+DWObject.Viewer.off('pageAreaSelected');
+```
+
+---
+
+### pageAreaUnselected
+
+**Syntax**
+
+``` typescript
+/**
+ * This event is triggered when selected area(s) get cleared (when the user clicks outside of the drawn rectangle).
+ * @argument index The index of the current page.
+ */
+on('pageAreaUnselected', 
+    (index: number) => void
+): void; 
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.on('pageAreaUnselected', function(sImageIndex) {
+    console.log('The selected areas on the page with index ' + sImageIndex + ' have been cleared');
+});
+
+DWObject.Viewer.off('pageAreaUnselected');
+```
+
+---
+
+### pageRendered
+
+**Syntax**
+
+``` typescript
+/**
+ * This event is triggered when a page is rendered.
+ * @argument index The index of the current page.
+ */
+on('pageRendered', 
+    (index: number) => void
+): void; 
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.on("pageRendered", function(index) {
+    console.log(index);
+});
+DWObject.Viewer.render();
+```
+
+---
+
+### resize
+
+**Syntax**
+
+``` typescript
+/**
+ * This event is triggered when width & height of the viewer has been changed.
+ * @argument width The new width of the viewer.
+ * @argument height The new height of the viewer.
+ */
+on('resize', 
+    (width：number, height：number) => void
+): void; 
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.on("resize", function(width, height) {
+    console.log(width, height);
+});
+DWObject.Viewer.width += 100;
+```
+
+---
+
+<!--**### topPageChanged
+
+**Syntax**
+
+``` typescript
+/**
+ * This event is triggered when the top page currently displayed in the viewer changes.
+ * @argument index The index of the current page.
+ */
+on('topPageChanged', 
+     (index: number) => void
+): void; 
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.on("topPageChanged", function(index) {
+    console.log(index);
+});
+```
+
+**Usage Notes**
+
+This event is only effective when the view mode is not -1 * -1 (in other words, [ `singlePageMode` ](#singlepagemode) is `false` ).
+-->
+

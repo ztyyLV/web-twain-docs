@@ -53,7 +53,7 @@ Add a scan button and the minimum code.
     var DWObject;
 
     function Dynamsoft_OnReady() {
-        DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+        DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer');
     }
 
     function AcquireImage() {
@@ -79,15 +79,14 @@ Change the function `AcquireImage()` like this
 function AcquireImage() {
     if (DWObject) {
         if (Dynamsoft.Lib.env.bMobile) {
-            DWObject.Viewer.showVideo()
-                .then(
-                    function() {
-                        console.log('success');
-                    },
-                    function(error) {
-                        alert(error);
-                    }
-                )
+            DWObject.LoadImageEx('', 5,
+                function() {
+                    console.log('success');
+                },
+                function(errCode, error) {
+                    alert(error);
+                }
+            );
         } else {
             DWObject.SelectSource(
                 function() {
@@ -120,21 +119,20 @@ function AcquireImage() {
         var DWObject;
 
         function Dynamsoft_OnReady() {
-            DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+            DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer');
         }
 
         function AcquireImage() {
             if (DWObject) {
                 if (Dynamsoft.Lib.env.bMobile) {
-                    DWObject.Viewer.showVideo()
-                        .then(
-                            function() {
-                                console.log('success');
-                            },
-                            function(error) {
-                                alert(error);
-                            }
-                        )
+                    DWObject.LoadImageEx('', 5,
+                        function() {
+                            console.log('success');
+                        },
+                        function(errCode, error) {
+                            alert(error);
+                        }
+                    );
                 } else {
                     DWObject.SelectSource(function() {
                             DWObject.OpenSource();
@@ -222,8 +220,8 @@ function UploadAsPDF() {
         DWObject.HTTPUpload(
             url,
             indices,
-            Dynamsoft.EnumDWT_ImageType.IT_PDF,
-            Dynamsoft.EnumDWT_UploadDataFormat.Binary,
+            Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
+            Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary,
             "HelloWorld.pdf",
             function() {
                 //The server response is empty!
@@ -264,7 +262,7 @@ Create a `saveUploadedPDF.aspx` file in the same location as your `helloworld.ht
 
 Now we can use the page to scan or acquire, then upload the images as a PDF document!
 
-## Review the complete code
+## Review the code
 
 ``` html
 <html>
@@ -282,21 +280,20 @@ Now we can use the page to scan or acquire, then upload the images as a PDF docu
         var DWObject;
 
         function Dynamsoft_OnReady() {
-            DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+            DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer');
         }
 
         function AcquireImage() {
             if (DWObject) {
                 if (Dynamsoft.Lib.env.bMobile) {
-                    DWObject.Viewer.showVideo()
-                        .then(
-                            function() {
-                                console.log('success');
-                            },
-                            function(error) {
-                                alert(error);
-                            }
-                        );
+                    DWObject.LoadImageEx('', 5,
+                        function() {
+                            console.log('success');
+                        },
+                        function(errCode, error) {
+                            alert(error);
+                        }
+                    );
                 } else {
                     DWObject.SelectSource(function() {
                             DWObject.OpenSource();
@@ -327,8 +324,8 @@ Now we can use the page to scan or acquire, then upload the images as a PDF docu
                 DWObject.HTTPUpload(
                     url,
                     indices,
-                    Dynamsoft.EnumDWT_ImageType.IT_PDF,
-                    Dynamsoft.EnumDWT_UploadDataFormat.Binary,
+                    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
+                    Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary,
                     "HelloWorld.pdf",
                     function() {
                         //The server response is empty!

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-needAutoGenerateSidebar: true
+needAutoGenerateSidebar: false
 title: Dynamic Web TWAIN Schedule - Features Proposed
 keywords: Dynamic Web TWAIN, Documentation, Schedule, Features Proposed
 breadcrumbText: Proposed

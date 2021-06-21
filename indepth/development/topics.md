@@ -91,6 +91,76 @@ function loadToIndex(index) {
 }
 ```
 
+### How to detect and discard blank pages automatically?
+
+If the TWAIN driver of your device supports discarding blank pages, you can use the driver's built-in feature.
+1. You can set the [ `IfShowUI` ]({{site.info}}api/WebTwain_Acquire.html#ifshowui) property to true to display the User Interface (UI) of the source and you can check the option there (it normally reads 'discard blank')
+2. If you don't want to show the user interface of the source, you can set [ `IfAutoDiscardBlankpages` ]({{site.info}}api/WebTwain_Acquire.html#ifautodiscardblankpages) to true or negotiate the ICAP_AUTODISCARDBLANKPAGES capability in code to discard blank page automatically. Please NOTE that this property or capability only works if the scanner itself supports the feature (on the hardware level).
+
+``` javascript
+DWObject.SelectSource();
+DWObject.OpenSource;
+DWObject.IfShowUI = false;
+//*Use the property
+DWObject.IfAutoDiscardBlankpages = true;
+//*Use capability negotiation
+DWObject.Capability = Dynamsoft.DWT.EnumDWT_Cap.ICAP_AUTODISCARDBLANKPAGES;
+DWObject.CapType = Dynamsoft.DWT.EnumDWT_CapType.TWON_ONEVALUE;
+DWObject.CapValue = -1;//Auto
+if(DWObject.CapSet){
+   alert("Successful!");
+}
+DWObject.AcquireImage();
+```
+
+If the scanner itself doesn't support discarding blank pages, you can also use the [ `IsBlankImageExpress` ]({{site.info}}api/WebTwain_Buffer.html#isblankimageexpress) method to do this as a workaround. To detect and discard blank pages automatically, you can do it in the [ `OnPostTransfer` ]({{site.info}}api/WebTwain_Acquire.html#onposttransfer)  event which fires after each transfer.
+
+``` javascript
+function DWObject_OnPostTransfer() {
+DWObject.BlankImageMaxStdDev = 20;
+if (DWObject.IsBlankImageExpress(DWObject.CurrentImageIndexInBuffer)) {
+   DWObject.RemoveImage(DWObject.CurrentImageIndexInBuffer);
+   }
+}
+```
+
+NOTE: In many cases, the scanned blank image may come with some noises which would affect the result returned by IsBlankImageExpress. To improve the result, you may adjust the value of [ `BlankImageMaxStdDev` ]({{site.info}}api/WebTwain_Buffer.html#blankimagemaxstddev) Property. The default value is 1 (0 means single-color image). Thus, by increasing the value a little bit (e.g. to 20), noises on images are ignored so a blank image can be detected faster.
+
+### How to change the location or to rename the ‘Resources’ folder with Dynamic Web TWAIN
+
+<strong>Scenario: </strong> For customers who are using Dynamic Web TWAIN, to change the location of the 'Resources' folder, or to rename it, please following the steps below:
+
+<strong>Steps:</strong> Say the original Resources folder is at '<strong>../{Project Directory}/Resources</strong>', and you want to change it to '<strong>../{Project Directory}/Newfolder/ResourcesTest</strong>'.
+
+1. Please make sure the structure inside 'Resources' folder stay unchanged.
+2. Change the relative path in your page where you reference to the js files, for example:
+
+``` javascript
+<script src="Resources/dynamsoft.webtwain.initiate.js"></script>
+// or your own operation js file
+<script src="Scripts/DWTSample_BasicScan.js"></script>
+<script src="Resources/dynamsoft.webtwain.config.js"></script>
+``` 
+Modify as below:
+
+``` javascript
+<script src="Newfolder/ResourcesTest/dynamsoft.webtwain.initiate.js"></script>
+// or your own operation js file
+<script src="Scripts/DWTSample_BasicScan.js"></script>
+<script src="Newfolder/ResourcesTest/dynamsoft.webtwain.config.js"></script>
+``` 
+
+3. Same change needs to be done in dynamsoft.webtwain.config.js file. Add/uncomment the following line, then change 'Resources' (to 'New folder/ResourcesTest' as in this case):
+
+``` javascript
+Dynamsoft.DWT.ResourcesPath = 'Resources';
+``` 
+Modify as below:
+
+``` javascript
+Dynamsoft.DWT.ResourcesPath = 'Newfolder/ResourcesTest';
+``` 
+
 <!--
 
 ## How to achieve automation

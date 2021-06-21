@@ -11,28 +11,15 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Webcam Addon APIs
 
 **Methods**
 
-* [CaptureImage()](#captureimage) 
-* [CloseSource()](#closesource)
-* [GetCameraControlPropertySetting()](#getcameracontrolpropertysetting) 
-* [GetCameraControlPropertyMoreSetting()](#getcameracontrolpropertymoresetting)
-* [GetVideoPropertySetting()](#getvideopropertysetting) 
-* [GetVideoPropertyMoreSetting()](#getvideopropertymoresetting)
-* [SetCameraControlPropertySetting()](#setcameracontrolpropertysetting) 
-* [SetVideoPropertySetting()](#setvideopropertysetting)
-* [GetFrameRate()](#getframerate) 
-* [SetFrameRate()](#setframerate)
-* [GetMediaType()](#getmediatype) 
-* [SetMediaType()](#setmediatype)
-* [GetResolution()](#getresolution) 
-* [SetResolution()](#setresolution)
-* [GetFramePartURL()](#getframeparturl) 
-* [GetFrameURL()](#getframeurl)
-* [GetSourceList()](#getsourcelist) 
-* [SelectSource()](#selectsource)
-* [PauseVideo()](#pausevideo)
-* [PlayVideo()](#playvideo)
-* [SetVideoRotateMode()](#setvideorotatemode) 
-* [StopVideo()](#stopvideo)
+| |
+|:-|:-|
+|[`CaptureImage()`](#captureimage) | [`CloseSource()`](#closesource)| [`GetCameraControlPropertySetting()`](#getcameracontrolpropertysetting) | [`GetCameraControlPropertyMoreSetting()`](#getcameracontrolpropertymoresetting)|
+|[`GetVideoPropertySetting()`](#getvideopropertysetting)|[`GetVideoPropertyMoreSetting()`](#getvideopropertymoresetting)| [`SetCameraControlPropertySetting()`](#setcameracontrolpropertysetting)| [`SetVideoPropertySetting()`](#setvideopropertysetting)|
+|[`GetFrameRate()`](#getframerate) | [`SetFrameRate()`](#setframerate)| [`GetMediaType()`](#getmediatype) | [`SetMediaType()`](#setmediatype)|
+|[`GetResolution()`](#getresolution) | [`SetResolution()`](#setresolution)| [`GetFramePartURL()`](#getframeparturl) | [`GetFrameURL()`](#getframeurl)|
+|[`GetSourceList()`](#getsourcelist) | [`SelectSource()`](#selectsource)|[`PauseVideo()`](#pausevideo) |[`PlayVideo()`](#playvideo)|
+|[`SetVideoRotateMode()`](#setvideorotatemode) | [`StopVideo()`](#stopvideo)|
+
 
 ## CaptureImage
 
@@ -58,6 +45,7 @@ CaptureImage(
 ---
 
 ## GetSourceList
+
 **Syntax**
 
 ``` typescript
@@ -68,8 +56,11 @@ GetSourceList(): string[];
 ```
 
 ---
+
 ## SelectSource
+
 **Syntax**
+
 ``` typescript
 /**
  * Select a camera to use.
@@ -79,7 +70,9 @@ SelectSource(name: string): boolean;
 ```
 
 ---
+
 ## CloseSource
+
 **Syntax**
 
 ``` typescript
@@ -90,7 +83,9 @@ CloseSource(): boolean;
 ```
 
 ---
+
 ## GetSourceList
+
 **Syntax**
 
 ``` typescript
@@ -101,7 +96,9 @@ GetSourceList(): string[];
 ```
 
 ---
+
 ## SelectSource
+
 **Syntax**
 
 ``` typescript
@@ -113,7 +110,9 @@ SelectSource(name: string): boolean;
 ```
 
 ---
+
 ## CloseSource
+
 **Syntax**
 
 ``` typescript
@@ -148,7 +147,9 @@ PlayVideo(
 ```
 
 ---
+
 ## PauseVideo
+
 **Syntax**
 
 ``` typescript
@@ -159,7 +160,9 @@ PauseVideo(): boolean;
 ```
 
 ---
+
 ## StopVideo
+
 **Syntax**
 
 ``` typescript
@@ -178,6 +181,7 @@ When you close the camera, the video stream will stop at the last frame.
 ---
 
 ## GetCameraControlPropertySetting
+
 **Syntax**
 
 ``` typescript
@@ -186,12 +190,14 @@ When you close the camera, the video stream will stop at the last frame.
  * @param property Specify the property.
  */
 GetCameraControlPropertySetting(
-    property: EnumDWT_CameraControlProperty | number
+    property: Dynamsoft.DWT.EnumDWT_CameraControlProperty | number
 ): CameraControlProperty;
 ```
 
 ---
+
 ## GetCameraControlPropertyMoreSetting
+
 **Syntax**
 
 ``` typescript
@@ -200,11 +206,12 @@ GetCameraControlPropertySetting(
  * @param property Specify the property.
  */
 GetCameraControlPropertyMoreSetting(
-    property: Dynamsoft.EnumDWT_CameraControlProperty | number
+    property: Dynamsoft.DWT.EnumDWT_CameraControlProperty | number
 ): CameraControlPropertyExtra;
 ```
 
 ---
+
 ## SetCameraControlPropertySetting
 
 **Syntax**
@@ -217,7 +224,7 @@ GetCameraControlPropertyMoreSetting(
  * @param auto Specify whether the propery should change automatically.
  */
 SetCameraControlPropertySetting(
-    property: Dynamsoft.EnumDWT_CameraControlProperty | number,
+    property: Dynamsoft.DWT.EnumDWT_CameraControlProperty | number,
     value: number,
     auto: boolean
 ): boolean;
@@ -259,7 +266,7 @@ interface CameraControlPropertyExtra {
 
 **Usage notes**
 
-Check out [Dynamsoft.EnumDWT_CameraControlProperty]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_cameracontrolproperty).
+Check out [ `Dynamsoft.DWT.EnumDWT_CameraControlProperty` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_cameracontrolproperty).
 
 ---
 
@@ -273,12 +280,14 @@ Check out [Dynamsoft.EnumDWT_CameraControlProperty]({{site.info}}api/Dynamsoft_E
  * @param property Specify the property.
  */
 GetVideoPropertySetting(
-    property: Dynamsoft.EnumDWT_VideoProperty | number
+    property: Dynamsoft.DWT.EnumDWT_VideoProperty | number
 ): VideoControlProperty;
 ```
 
 ---
+
 ## GetVideoPropertyMoreSetting
+
 **Syntax**
 
 ``` typescript
@@ -287,12 +296,14 @@ GetVideoPropertySetting(
  * @param property Specify the property.
  */
 GetVideoPropertyMoreSetting(
-    property: Dynamsoft.EnumDWT_VideoProperty | number
+    property: Dynamsoft.DWT.EnumDWT_VideoProperty | number
 ): VideoControlPropertyExtra;
 ```
 
 ---
+
 ## SetVideoPropertySetting
+
 **Syntax**
 
 ``` typescript
@@ -303,7 +314,7 @@ GetVideoPropertyMoreSetting(
  * @param auto Specify whether the propery should change automatically.
  */
 SetVideoPropertySetting(
-    property: Dynamsoft.EnumDWT_VideoProperty | number,
+    property: Dynamsoft.DWT.EnumDWT_VideoProperty | number,
     value: number,
     auto: boolean
 ): boolean;
@@ -345,11 +356,12 @@ interface VideoControlPropertyExtra {
 
 **Usage notes**
 
-Check out [`Dynamsoft.EnumDWT_VideoProperty`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_videoproperty).
+Check out [ `Dynamsoft.DWT.EnumDWT_VideoProperty` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_videoproperty).
 
 ---
 
 ## GetFrameRate
+
 **Syntax**
 
 ``` typescript
@@ -360,8 +372,11 @@ GetFrameRate(): FrameRate;
 ```
 
 ---
+
 ## GetMediaType
+
 **Syntax**
+
 ``` typescript
 /**
  * Return the media types supported by the current camera.
@@ -370,7 +385,9 @@ GetMediaType(): MediaType;
 ```
 
 ---
+
 ## GetResolution
+
 **Syntax**
 
 ``` typescript
@@ -381,7 +398,9 @@ GetResolution(): Resolution;
 ```
 
 ---
+
 ## SetFrameRate
+
 **Syntax**
 
 ``` typescript
@@ -393,7 +412,9 @@ SetFrameRate(rate: number): boolean;
 ```
 
 ---
+
 ## SetMediaType
+
 **Syntax**
 
 ``` typescript
@@ -405,7 +426,9 @@ SetMediaType(type: string): boolean;
 ```
 
 ---
+
 ## SetResolution
+
 **Syntax**
 
 ``` typescript
@@ -462,7 +485,9 @@ interface Resolution {
 ```
 
 ---
+
 ## SetVideoRotateMode
+
 **Syntax**
 
 ``` typescript
@@ -471,13 +496,13 @@ interface Resolution {
  * @param mode Specify the rotate mode
  */
 SetVideoRotateMode(
-    mode: Dynamsoft.EnumDWT_VideoRotateMode | number
+    mode: Dynamsoft.DWT.EnumDWT_VideoRotateMode | number
 ): boolean;
 ```
 
 **Usage notes**
 
-Check out [`Dynamsoft.EnumDWT_VideoRotateMode`](Dynamsoft.Enum.md#dynamsoftenumdwt_videorotatemode).
+Check out [ `Dynamsoft.DWT.EnumDWT_VideoRotateMode` ](Dynamsoft.DWT.Enum.md#dynamsoftenumdwt_videorotatemode).
 
 ---
 
@@ -493,8 +518,11 @@ GetFrameURL(): string;
 ```
 
 ---
+
 ## GetFramePartURL
+
 **Syntax**
+
 ``` typescript
 /**
  * Return the internal URL (dwt://) for the latest frame.
@@ -506,4 +534,4 @@ GetFramePartURL(): string;
 
 `GetFrameURL()` returns a public URL that can be used to access the frame directly by any applicatoin capable of HTTP requests that runs on the same machine. For example: 'https://127.0.0.1:18623/dwt/dwt_16000428/img?id=853407158&index=-1&width=-1&height=-1&webcam=80&t=1590481406860'.
 
-`GetFramePartURL()` returns an internal URL that only Dynamsoft libraries such as the Barcode Reader add-on can read. For example: `dwt://dwt_16000428/img?id=853407158&index=-1&width=-1&height=-1&webcam=80&t=1590481403659`.
+`GetFramePartURL()` returns an internal URL that only Dynamsoft libraries such as the Barcode Reader add-on can read. For example: `dwt://dwt_16000428/img?id=853407158&index=-1&width=-1&height=-1&webcam=80&t=1590481403659` .

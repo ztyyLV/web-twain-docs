@@ -10,9 +10,39 @@ description: Dynamic Web TWAIN SDK Documentation Deprecated Features Page
 
 # All Deprecated Features & APIs
 
-The following features and APIs are deprecated as of version 16.1.1.
+## Future deprecation planned
 
-## Related to TWAIN Capability Negotiation
+### SHA-1 signatures
+
+To comply with Windows security updates, we will deprecate SHA-1 signatures in a future version. The impact is described below (we take 64bit Windows 7 as an example in below screenshots).
+
+*If the deprecation is implemented:*
+
+* When you try to install the Dynamsoft Service, you will get the following two error for "Unknown Publisher".
+
+![Deprecation-1]({{site.assets}}imgs/Deprecation-1.png)
+
+![Deprecation-2]({{site.assets}}imgs/Deprecation-2.png)
+
+* When you run the ActiveX Edition in IE, you will get a prompt to allow its execution.
+
+![Deprecation-3]({{site.assets}}imgs/Deprecation-3.png)
+
+For more information, check out [Preparing for the deprecation of SHA-1 signatures](https://docs.microsoft.com/en-us/sysinternals/announce/sha1deprecation) from Microsoft.
+
+The prompts are one-time, once you accept the "risk", the software will install and run as usual.
+
+The recommended fix is to patch the operating system, you can find the patch [here](http://www.catalog.update.microsoft.com/search.aspx?q=kb4474419).
+
+## New deprecations in 16.2 
+
+* Internet Explorer 8 is no longer supported.
+
+* Check out the [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html#viewer-related-api-changes-in-version-162).
+
+## As of version 16.1.1.
+
+### Related to TWAIN Capability Negotiation
 
 > [Alternative] Use [getCapabilities()]({{site.info}}api/WebTwain_Acquire.html#getcapabilities) and [setCapabilities()]({{site.info}}api/WebTwain_Acquire.html#setcapabilities) instead.
 
@@ -48,7 +78,7 @@ The following features and APIs are deprecated as of version 16.1.1.
 * [CapValue](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapValue) 
 * [CapValueString](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapValueString)
 
-## Related to Buffer Management
+### Related to Buffer Management
 
 > [Alternative] Use [SelectedImagesIndices]({{site.info}}api/WebTwain_Buffer.html#selectedimagesindices), [SelectAllImages()]({{site.info}}api/WebTwain_Buffer.html#selectallimages) and [SelectImages()]({{site.info}}api/WebTwain_Buffer.html#selectimages) instead.
 
@@ -56,7 +86,7 @@ The following features and APIs are deprecated as of version 16.1.1.
 * [SetSelectedImageIndex](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#SetSelectedImageIndex)
 * [SelectedImagesCount](https://www.dynamsoft.com/docs/dwt15.3.1/API/Runtime-Info.html#SelectedImagesCount)
 
-## Related to Image Editing
+### Related to Image Editing
 
 > [Alternative] Annotation feature to be added in a later version.
 
@@ -64,9 +94,9 @@ The following features and APIs are deprecated as of version 16.1.1.
 * [CreateTextFont()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#CreateTextFont)
 * [OverlayRectangle()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#OverlayRectangle)
 
-## Related to Input and Output
+### Related to Input and Output
 
-> [Alternative] Use new methods like [ConvertToBase64()](({{site.info}}api/WebTwain_IO.html#converttobase64), [ `PDF.Write.Setup()` ](({{site.info}}api/Addon_PDF.html#writesetup)
+> [Alternative] Use new methods like [ConvertToBase64()]({{site.info}}api/WebTwain_IO.html#converttobase64), [PDF.Write.Setup()]({{site.info}}api/Addon_PDF.html#writesetup)
 
 * [SaveSelectedImagesToBase64Binary()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Load-Save.html#SaveSelectedImagesToBase64Binary) 
 * SetCookie()
@@ -83,7 +113,7 @@ The following features and APIs are deprecated as of version 16.1.1.
 * [PDFVersion](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFVersion)
 * MaxInternetTransferThreads
 
-## Related to Viewer
+### Related to Viewer
 
 > [Alternative] Use methods like [Viewer.setViewMode()]({{site.info}}api/WebTwain_Viewer.html#setviewmode), [Viewer.setViewMode()]({{site.info}}api/WebTwain_Viewer.html#setviewmode)
 

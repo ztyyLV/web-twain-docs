@@ -9,7 +9,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 
 # `Enumerations`
 
-## Dynamsoft.EnumDWT_PixelType
+## `Dynamsoft.DWT.EnumDWT_PixelType`
 
 | Label | Value|
 |:-|:-|
@@ -27,7 +27,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWPT_SCRGB | 11 |
 | TWPT_INFRARED | 16 |
 
-## Dynamsoft.EnumDWT_BorderStyle 
+## `Dynamsoft.DWT.EnumDWT_BorderStyle `
 
 | Label | Value|
 |:-|:-|
@@ -35,7 +35,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWBS_SINGLEFLAT | 1 |
 | TWBS_SINGLE3D | 2 |
 
-## Dynamsoft.EnumDWT_MessageType 
+## `Dynamsoft.DWT.EnumDWT_MessageType `
 
 | Label | Value|
 |:-|:-|
@@ -45,8 +45,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWQC_GETCURRENT | 8 |
 | TWQC_RESET | 16 |
 
-
-## Dynamsoft.EnumDWT_Cap
+## `Dynamsoft.DWT.EnumDWT_Cap`
 
 | Label | Value|
 |:-|:-|
@@ -192,8 +191,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | ICAP_IMAGEMERGEHEIGHTTHRESHOLD | 4445 |
 | ICAP_SUPPORTEDEXTIMAGEINFO | 4446 |
 
-
-## Dynamsoft.EnumDWT_CapType 
+## `Dynamsoft.DWT.EnumDWT_CapType`
 
 | Label | Value|
 |:-|:-|
@@ -203,8 +201,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWON_ONEVALUE | 5 |
 | TWON_RANGE | 6 |
 
-
-## Dynamsoft.EnumDWT_TransferMode 
+## `Dynamsoft.DWT.EnumDWT_TransferMode `
 
 | Label | Value|
 |:-|:-|
@@ -212,8 +209,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWSX_FILE | 1 |
 | TWSX_MEMORY | 2 |
 
-
-## Dynamsoft.EnumDWT_FileFormat 
+## `Dynamsoft.DWT.EnumDWT_FileFormat `
 
 | Label | Value| Description |
 |:-|:-|:-|
@@ -234,8 +230,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWFF_PDFA | 15 | A file format from Adobe PDF/A, Version 1 (TWAIN Spec 2.0) |
 | TWFF_PDFA2 | 16 | A file format from Adobe PDF/A, Version 2 (TWAIN Spec 2.1) 、
 
-
-## Dynamsoft.EnumDWT_TIFFCompressionType 
+## `Dynamsoft.DWT.EnumDWT_TIFFCompressionType `
 
 | Label | Value|
 |:-|:-|
@@ -250,8 +245,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TIFF_JPEG | 7 |
 | TIFF_PACKBITS | 32773 |
 
-
-## Dynamsoft.EnumDWT_InterpolationMethod 
+## `Dynamsoft.DWT.EnumDWT_InterpolationMethod `
 
 | Label | Value|
 |:-|:-|
@@ -260,8 +254,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | IM_BICUBIC | 3 |
 | IM_BESTQUALITY | 5 |
 
-
-## Dynamsoft.EnumDWT_ImageType 
+## `Dynamsoft.DWT.EnumDWT_ImageType `
 
 | Label | Value|
 |:-|:-|
@@ -273,9 +266,10 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | IT_ALL | 5 |
 | IT_MULTIPAGE_PDF | 7 |
 | IT_MULTIPAGE_TIF | 8 |
+ 
+Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType of [startScan]({{site.info}}api/WebTwain__Acquire.html##startscan)
 
-
-## Dynamsoft.EnumDWT_PDFCompressionType 
+## `Dynamsoft.DWT.EnumDWT_PDFCompressionType `
 
 | Label | Value|
 |:-|:-|
@@ -286,8 +280,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | PDF_JP2000 | 6 |
 | PDF_JBig2 | 7 |
 
-
-## Dynamsoft.EnumDWT_ShowMode 
+## `Dynamsoft.DWT.EnumDWT_ShowMode `
 
 | Label | Value|
 |:-|:-|
@@ -297,8 +290,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | SW_CLOSE | 3 |
 | SW_IFLIVE | 4 |
 
-
-## Dynamsoft.EnumDWT_CapValueType 
+## `Dynamsoft.DWT.EnumDWT_CapValueType `
 
 | Label | Value|
 |:-|:-|
@@ -316,8 +308,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWTY_STR128 | 11 |
 | TWTY_STR255 | 12 |
 
-
-## Dynamsoft.EnumDWT_UnitType 
+## `Dynamsoft.DWT.EnumDWT_UnitType `
 
 | Label | Value|
 |:-|:-|
@@ -329,8 +320,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWUN_PIXELS | 5 |
 | TWUN_MILLIMETERS | 6 |
 
-
-## Dynamsoft.EnumDWT_ConvertMode 
+## `Dynamsoft.DWT.EnumDWT_ConvertMode`
 
 | Label | Value|
 |:-|:-|
@@ -338,8 +328,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | CM_IMAGEONLY | 2 |
 | CM_AUTO | 3 |
 
-
-## Dynamsoft.EnumDWT_DUPLEX 
+## `Dynamsoft.DWT.EnumDWT_DUPLEX`
 
 | Label | Value|
 |:-|:-|
@@ -347,8 +336,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWDX_1PASSDUPLEX | 1 |
 | TWDX_2PASSDUPLEX | 2 |
 
-
-## Dynamsoft.EnumDWT_CapLanguage 
+## `Dynamsoft.DWT.EnumDWT_CapLanguage`
 
 | Label | Value|
 |:-|:-|
@@ -482,8 +470,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWLG_URDU | 112 |
 | TWLG_VIETNAMESE | 113 |
 
-
-## Dynamsoft.EnumDWT_CapSupportedSizes 
+## `Dynamsoft.DWT.EnumDWT_CapSupportedSizes`
 
 | Label | Value|
 |:-|:-|
@@ -547,8 +534,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWSS_BUSINESSCARD | 53 |
 | TWSS_MAXSIZE | 54 |
 
-
-## Dynamsoft.EnumDWT_CapFeederAlignment 
+## `Dynamsoft.DWT.EnumDWT_CapFeederAlignment`
 
 | Label | Value|
 |:-|:-|
@@ -557,16 +543,14 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWFA_CENTER | 2 |
 | TWFA_RIGHT | 3 |
 
-
-## Dynamsoft.EnumDWT_CapFeederOrder 
+## `Dynamsoft.DWT.EnumDWT_CapFeederOrder`
 
 | Label | Value|
 |:-|:-|
 | TWFO_FIRSTPAGEFIRST | 0 |
 | TWFO_LASTPAGEFIRST | 1 |
 
-
-## Dynamsoft.EnumDWT_CapPrinter 
+## `Dynamsoft.DWT.EnumDWT_CapPrinter`
 
 | Label | Value|
 |:-|:-|
@@ -579,8 +563,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWPR_ENDORSERBOTTOMBEFORE | 6 |
 | TWPR_ENDORSERBOTTOMAFTER | 7 |
 
-
-## Dynamsoft.EnumDWT_CapPrinterMode 
+## `Dynamsoft.DWT.EnumDWT_CapPrinterMode`
 
 | Label | Value|
 |:-|:-|
@@ -588,8 +571,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWPM_MULTISTRING | 1 |
 | TWPM_COMPOUNDSTRING | 2 |
 
-
-## Dynamsoft.EnumDWT_CapBitdepthReduction 
+## `Dynamsoft.DWT.EnumDWT_CapBitdepthReduction`
 
 | Label | Value|
 |:-|:-|
@@ -598,16 +580,14 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWBR_CUSTHALFTONE | 2 |
 | TWBR_DIFFUSION | 3 |
 
-
-## Dynamsoft.EnumDWT_CapBitOrder 
+## `Dynamsoft.DWT.EnumDWT_CapBitOrder`
 
 | Label | Value|
 |:-|:-|
 | TWBO_LSBFIRST | 0 |
 | TWBO_MSBFIRST | 1 |
 
-
-## Dynamsoft.EnumDWT_CapFilterType 
+## `Dynamsoft.DWT.EnumDWT_CapFilterType`
 
 | Label | Value|
 |:-|:-|
@@ -621,8 +601,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWFT_YELLOW | 7 |
 | TWFT_BLACK | 8 |
 
-
-## Dynamsoft.EnumDWT_CapFlash 
+## `Dynamsoft.DWT.EnumDWT_CapFlash`
 
 | Label | Value|
 |:-|:-|
@@ -632,16 +611,14 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWFL_AUTO | 3 |
 | TWFL_REDEYE | 4 |
 
-
-## Dynamsoft.EnumDWT_CapFlipRotation 
+## `Dynamsoft.DWT.EnumDWT_CapFlipRotation`
 
 | Label | Value|
 |:-|:-|
 | TWFR_BOOK | 0 |
 | TWFR_FANFOLD | 1 |
 
-
-## Dynamsoft.EnumDWT_CapImageFilter 
+## `Dynamsoft.DWT.EnumDWT_CapImageFilter`
 
 | Label | Value|
 |:-|:-|
@@ -653,16 +630,14 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWIF_TEXT | 3 |
 | TWIF_FINELINE | 4 |
 
-
-## Dynamsoft.EnumDWT_CapLightPath 
+## `Dynamsoft.DWT.EnumDWT_CapLightPath`
 
 | Label | Value|
 |:-|:-|
 | TWLP_REFLECTIVE | 0 |
 | TWLP_TRANSMISSIVE | 1 |
 
-
-## Dynamsoft.EnumDWT_CapLightSource 
+## `Dynamsoft.DWT.EnumDWT_CapLightSource`
 
 | Label | Value|
 |:-|:-|
@@ -674,8 +649,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWLS_UV | 5 |
 | TWLS_IR | 6 |
 
-
-## Dynamsoft.EnumDWT_MagType 
+## `Dynamsoft.DWT.EnumDWT_MagType`
 
 | Label | Value|
 |:-|:-|
@@ -683,8 +657,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWMD_RAW | 1 |
 | TWMD_INVALID | 2 |
 
-
-## Dynamsoft.EnumDWT_CapNoiseFilter 
+## `Dynamsoft.DWT.EnumDWT_CapNoiseFilter`
 
 | Label | Value|
 |:-|:-|
@@ -693,8 +666,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWNF_LONEPIXEL | 2 |
 | TWNF_MAJORITYRULE | 3 |
 
-
-## Dynamsoft.EnumDWT_CapORientation 
+## `Dynamsoft.DWT.EnumDWT_CapORientation`
 
 | Label | Value|
 |:-|:-|
@@ -708,8 +680,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWOR_AUTOTEXT | 5 |
 | TWOR_AUTOPICTURE | 6 |
 
-
-## Dynamsoft.EnumDWT_CapOverscan 
+## `Dynamsoft.DWT.EnumDWT_CapOverscan`
 
 | Label | Value|
 |:-|:-|
@@ -719,24 +690,21 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWOV_LEFTRIGHT | 3 |
 | TWOV_ALL | 4 |
 
-
-## Dynamsoft.EnumDWT_CapPixelFlavor 
+## `Dynamsoft.DWT.EnumDWT_CapPixelFlavor`
 
 | Label | Value|
 |:-|:-|
 | TWPF_CHOCOLATE | 0 |
 | TWPF_VANILLA | 1 |
 
-
-## Dynamsoft.EnumDWT_CapPlanarChunky 
+## `Dynamsoft.DWT.EnumDWT_CapPlanarChunky`
 
 | Label | Value|
 |:-|:-|
 | TWPC_CHUNKY | 0 |
 | TWPC_PLANAR | 1 |
 
-
-## Dynamsoft.EnumDWT_DataSourceStatus 
+## `Dynamsoft.DWT.EnumDWT_DataSourceStatus`
 
 | Label | Value|
 |:-|:-|
@@ -745,8 +713,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWDSS_ENABLED | 2 |
 | TWDSS_ACQUIRING | 3 |
 
-
-## Dynamsoft.EnumDWT_FitWindowType 
+## `Dynamsoft.DWT.EnumDWT_FitWindowType`
 
 | Label | Value|
 |:-|:-|
@@ -754,8 +721,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | enumFitWindowHeight | 1 |
 | enumFitWindowWidth | 2 |
 
-
-## Dynamsoft.EnumDWT_PlatformType 
+## `Dynamsoft.DWT.EnumDWT_PlatformType`
 
 | Label | Value|
 |:-|:-|
@@ -763,16 +729,14 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | enumMac | 1 |
 | enumLinux | 2 |
 
-
-## Dynamsoft.EnumDWT_UploadDataFormat 
+## `Dynamsoft.DWT.EnumDWT_UploadDataFormat`
 
 | Label | Value|
 |:-|:-|
 | Binary | 0 |
 | Base64 | 1 |
 
-
-## Dynamsoft.EnumDWT_MouseShape 
+## `Dynamsoft.DWT.EnumDWT_MouseShape`
 
 | Label | Value|
 |:-|:-|
@@ -786,8 +750,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | Resize | 7 |
 | Move | 8 |
 
-
-## Dynamsoft.EnumDWT_Language 
+## `Dynamsoft.DWT.EnumDWT_Language`
 
 | Label | Value|
 |:-|:-|
@@ -801,8 +764,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | Russian | 7 |
 | Chinese | 8 |
 
-
-## Dynamsoft.EnumDWT_InitMsg 
+## `Dynamsoft.DWT.EnumDWT_InitMsg`
 
 | Label | Value|
 |:-|:-|
@@ -812,8 +774,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | DownloadError | 4 |
 | DownloadNotRestartError | 5 |
 
-
-## Dynamsoft.EnumDWT_Driver 
+## `Dynamsoft.DWT.EnumDWT_Driver`
 
 | Label | Value|
 |:-|:-|
@@ -824,16 +785,14 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWAIN_AND_TWAIN64 | 4 |
 | TWAIN64 | 5 |
 
-
-## Dynamsoft.EnumDWT_OCRDownloadType 
+## `Dynamsoft.DWT.EnumDWT_OCRDownloadType`
 
 | Label | Value|
 |:-|:-|
 | OCRDT_Dll | 0 |
 | OCRDT_LANGUAGE | 1 |
 
-
-## Dynamsoft.EnumDWT_OCRLanguage
+## `Dynamsoft.DWT.EnumDWT_OCRLanguage`
 
 | Label | Language | Value|
 |:-|:-|:-|
@@ -865,8 +824,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | OCRL_URD | Urdu | urd |
 | OCRL_VIE | Vietnamese | vie |
 
-
-## Dynamsoft.EnumDWT_OCROutputFormat 
+## `Dynamsoft.DWT.EnumDWT_OCROutputFormat`
 
 | Label | Value | Description|
 |:-|:-|:-|
@@ -876,9 +834,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | OCROF_PDFPLAINTEXT_PDFX | 3 | Outputs the OCR text results to a PDF/A. Any images from the original scanned image are lost. |
 | OCROF_PDFIMAGEOVERTEXT_PDFX | 4 | Outputs the OCR text results to a PDF/A, with the original scanned image printed overtop. |
 
-
-## Dynamsoft.EnumDWT_OCRPageSetMode
-
+## `Dynamsoft.DWT.EnumDWT_OCRPageSetMode`
 
 | Label | Value| Description |
 |:-|:-|:-|
@@ -894,8 +850,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | PSM_CIRCLE_WORD | 9 | Treat the image as a single word in a circle. |
 | PSM_SINGLE_CHAR | 10 | Treat the image as a single character. |
 
-
-## Dynamsoft.EnumDWT_OCRProRecognitionModule 
+## `Dynamsoft.DWT.EnumDWT_OCRProRecognitionModule`
 
 | Label | Value|
 |:-|:-|
@@ -904,8 +859,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | OCRPM_BALANCED | BALANCED |
 | OCRPM_FASTEST | FASTEST |
 
-
-## Dynamsoft.EnumDWT_OCRProOutputFormat 
+## `Dynamsoft.DWT.EnumDWT_OCRProOutputFormat`
 
 | Label | Value|
 |:-|:-|
@@ -916,8 +870,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | OCRPFT_IOTPDF | IOTPDF |
 | OCRPFT_IOTPDF_MRC | IOTPDF_MRC |
 
-
-## Dynamsoft.EnumDWT_OCRProPDFVersion 
+## `Dynamsoft.DWT.EnumDWT_OCRProPDFVersion`
 
 | Label | Value|
 |:-|:-|
@@ -930,8 +883,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | OCRPPDFV_6 | 1.6 |
 | OCRPPDFV_7 | 1.7 |
 
-
-## Dynamsoft.EnumDWT_OCRProPDFAVersion 
+## `Dynamsoft.DWT.EnumDWT_OCRProPDFAVersion`
 
 | Label | Value|
 |:-|:-|
@@ -944,16 +896,14 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | OCRPPDFAV_3B | pdf/a-3b |
 | OCRPPDFAV_3U | pdf/a-3u |
 
-
-## Dynamsoft.EnumDWT_OCRProType 
+## `Dynamsoft.DWT.EnumDWT_OCRProType`
 
 | Label | Value|
 |:-|:-|
 | OCRDT_File | 0 |
 | OCRDT_Index | 1 |
 
-
-## Dynamsoft.EnumDWT_OCRFindTextFlags 
+## `Dynamsoft.DWT.EnumDWT_OCRFindTextFlags`
 
 | Label | Value|
 |:-|:-|
@@ -961,8 +911,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | OCRFT_MATCHCASE | 2 |
 | OCRFT_FUZZYMATCH | 4 |
 
-
-## Dynamsoft.EnumDWT_OCRFindTextAction
+## `Dynamsoft.DWT.EnumDWT_OCRFindTextAction`
 
 | Label | Value|
 |:-|:-|
@@ -970,7 +919,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | OCRFT_STRIKEOUT | 1 |
 | OCRFT_MARKFORREDACT | 2 |
 
-## Dynamsoft.EnumDWT_CameraControlProperty
+## `Dynamsoft.DWT.EnumDWT_CameraControlProperty`
 
 | Label | Value | Description |
 |:-|:-|:-|
@@ -982,16 +931,14 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | CCP_IRIS | 5 | Specify the iris in units of fstop* 10. |
 | CCP_FOCUS | 6 | Specify the focus in millimeters which is the distance to the optimally focused target. The range and default value are specific to the device. |
 
-
-## Dynamsoft.EnumDWT_VideoProperty
-
+## `Dynamsoft.DWT.EnumDWT_VideoProperty`
 
 | Label | Value | Description |
 |:-|:-|:-|
-| VP_BRIGHTNESS | 0 | Specify the brightness. For NTSC, the value is expressed in IRE units * 100. For non-NTSC sources, the units are arbitrary, with zero representing blanking and 10,000 representing pure white. Values range from –10,000 to 10,000. |
-| VP_CONTRAST | 1 | Specify the contrast which is expressed as the gain factor * 100. Values range from zero to 10,000. |
-| VP_HUE | 2 | Specify the hue which is expressed in degrees * 100. Values range from -180,000 to 180,000 (-180 to +180 degrees). |
-| VP_SATURATION | 3 | Specify the saturation. Values range from 0 to 10,000. |
+| VP_BRIGHTNESS | 0 | Specify the brightness. For NTSC, the value is expressed in IRE units * 100. For non-NTSC sources, the units are arbitrary, with zero representing blanking and 10, 000 representing pure white. Values range from –10, 000 to 10, 000. |
+| VP_CONTRAST | 1 | Specify the contrast which is expressed as the gain factor * 100. Values range from zero to 10, 000. |
+| VP_HUE | 2 | Specify the hue which is expressed in degrees * 100. Values range from -180, 000 to 180, 000 (-180 to +180 degrees). |
+| VP_SATURATION | 3 | Specify the saturation. Values range from 0 to 10, 000. |
 | VP_SHARPNESS | 4 | Specify the sharpness. Values range from 0 to 100. |
 | VP_GAMMA | 5 | Specify the gamma which is expressed as gamma * 100. Values range from 1 to 500. |
 | VP_COLORENABLE | 6 | Specify the color-enable setting. It's either 0 (off) or 1 (on). |
@@ -999,7 +946,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | VP_BACKLIGHTCOMPENSATION | 8 | Specify the backlight compensation setting. It's either 0 (off) or 1 (on). |
 | VP_GAIN | 9 | Specify the gain adjustment. Zero is normal. Positive values are brighter and negative values are darker. The range of values depends on the device. |
 
-## Dynamsoft.EnumDWT_VideoRotateMode 
+## `Dynamsoft.DWT.EnumDWT_VideoRotateMode`
 
 | Label | Value | Description |
 |:-|:-|:-|
@@ -1009,124 +956,3 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | VRM_270_DEGREES_CLOCKWISE | 3 | 270 degrees Clockwise |
 | VRM_FLIP_VERTICAL | 4 | Flip |
 | VRM_FLIP_HORIZONTAL | 5 | Mirror |
-
-## Error List
-
-|Code |String|
-|:-|:-|
-|0 | Successful |
-|-1001 | General failure |
-|-1002 | Not enough memory to perform operation |
-|-1003 | Source Manager unable to find the specified Source |
-|-1004 | Source is connected to maximum supported number of applications |
-|-1005 | Source or Source Manager reported an error to the user and handled the error |
-|-1006 | Capability not supported by Source or operation is not supported on capability, or capability had dependencies on other capabilities and cannot be operated upon at this time |
-|-1009 | Unrecognized operation triplet |
-|-1010 | Data parameter out of supported range |
-|-1011 | Operation out of expected sequence |
-|-1012 | Unknown destination in DSM_Entry |
-|-1013 | Capability not supported by source |
-|-1014 | Operation not supported by capability |
-|-1015 | Capability has dependency on other capability and cannot be operated upon at this time |
-|-1016 | File System operation is denied (file is protected) |
-|-1017 | Operation failed because file already exists |
-|-1018 | File not found |
-|-1019 | Operation failed because directory is not empty |
-|-1020 | The feeder is jammed |
-|-1021 | The feeder detected multiple pages |
-|-1022 | Error writing file |
-|-1023 | The device went offline prior to or during this operation |
-|-1030 | Can not open Source Manager "TWain_32.dll" is missing or is in use by another application |
-|-1031 | Sequence error. The operation can not be performed upon the current Source Manager or Source state |
-|-1032 | User cancelled the operation |
-|-1033 | Invalid Enumerations |
-|-1034 | Invalid value |
-|-1035 | There is no image |
-|-1036 | Error reading file |
-|-1070 | BMP file or format error |
-|-1071 | JPEG file or format error |
-|-1073 | Only 24-bit true color and 8-bit gray-scaled images are supported for JPEG compression |
-|-1080 | General TIFF error |
-|-1081 | TIFF format error or not supported |
-|-1090 | BMP format error or not supported |
-|-1100 | PNG format error or not supported |
-|-1110 | Unrecognized file extension |
-|-1200 | PDF format error or not supported |
-|-2000 | Can not initiate the internet session |
-|-2001 | HTTP request error |
-|-2002 | HTTP server error |
-|-2003 | HTTP process error |
-|-2004 | FTP download file is too large |
-|-2007 | The system is busy, some operations are not completed. Please try later |
-|-2207 | The dynamsoft service installed on your computer is outdated and no longer works with the JavaScript code on the website |
-|-2208 | The connection with the local dynamsoft service encountered a problem and has been reset |
-|-2209 | The HTML5 (Chrome&Firefox) edition does not support this method or property |
-|-2300 | Http upload error: the HTTP Server cannot empty |
-|-2301 | Network error |
-|-2302 | The result format is invalid |
-|-2303 | Upload cancelled |
-|-2304 | Http download error: the url is invalid |
-|-2305 | User cancelled the operation |
-|-2306 | Upload Error: the upload file cannot be empty |
-|-2307 | The width or height you entered is invalid |
-|-2308 | The local dynamsoft service has been stopped |
-|-2309 | The LocalFile is emtpy in the Function |
-|-2310 | The Enumerations is out of range |
-|-2311 | The RemoteFile is emtpy in Barcode Download Function |
-|-2312 | The file length is emtpy |
-|-2313 | The size of the images you are about to upload has exceeded the allowed size |
-|-2314 | The parameter cannot be empty |
-|-2315 | The Enumerations is out of range |
-|-2316 | The RemoteFile is emtpy in Webcam Download Function |
-|-2317 | The RemoteFile is emtpy in Pdf Download Function |
-|-2318 | Invalid destination file |
-|-2319 | Invalid source file |
-|-2320 | Invalid file |
-|-2321 | The Enumerations is out of range |
-|-2322 | The left or top or right or bottom you entered is invalid |
-|-2323 | The OCR output format is not supported |
-|-2324 | The OCR page set mode is not supported |
-|-2325 | The current product key is empty or invalid, please contact the site administrator |
-|-2326 | The current product key has expired, please contact the site administrator |
-|-2327 | The current product key does not support Chrome, please contact the site administrator |
-|-2328 | The current product key does not support Firefox, please contact the site administrator |
-|-2329 | The current product key does not support IE, please contact the site administrator |
-|-2330 | The current product key does not support Edge, please contact the site administrator |
-|-2331 | The current product key is a trial version key but your local dynamsoft service is in full version, please uninstall your local version first and access this page again to install the correct version. If the issue persists, please contact the site administrator |
-|-2332 | The current product key is a full version key but your local dynamsoft service is in trial version, please uninstall your local version first and access this page again to install the correct version. If the issue persists, please contact the site administrator |
-|-2333 | The current product key is missing the core license, please contact the site administrator |
-|-2334 | The current product key does not include a license for reading 1D barcode, please contact the site administrator |
-|-2335 | The current product key does not include a license for reading QRcode barcode, please contact the site administrator |
-|-2336 | The current product key does not include a license for reading PDF417 barcode, please contact the site administrator |
-|-2337 | The current product key does not include a license for reading DataMatrix barcode, please contact the site administrator |
-|-2338 | The current product key does not support Webcam, please contact the site administrator |
-|-2339 | The current product key does not support pdf rasterizer, please contact the site administrator |
-|-2340 | The current product key does not support OCR, please contact the site administrator |
-|-2341 | The current product key does not support OCR pro, please contact the site administrator |
-|-2342 | The domain of your current site does not match the domain bound in the current product key, please contact the site administrator |
-|-2343 | The current product key does not support your browser, please contact the site administrator |
-|-2344 | The current product key does not support Windows OS, please contact the site administrator |
-|-2345 | The current product key does not support MAC OS, please contact the site administrator |
-|-2346 | The current product key does not support Linux OS, please contact the site administrator |
-|-2347 | The current product key does not support your OS, please contact the site administrator |
-|-2348 | The current product key is invalid because it's generated with the licenses of a different major version |
-|-2349 | The current product key does not include a license for reading barcode, please contact the site administrator |
-|-2350 | The indices cannot be empty |
-|-2351 | You cannot upload more than one image when the format is BMP, JPG or PNG |
-|-2352 | The indices are out of range |
-|-2353 | The header name being used is a protected keyword and is not allowed |
-|-2354 | The header name cannot be empty |
-|-2355 | The header name cannot be null |
-|-2356 | The header name cannot be undefined |
-|-2357 | The header name you entered is invalid |
-|-2358 | The type of the parameter indices must be an Array |
-|-2359 | The Enumerations is out of range |
-|-2360 | The Enumerations is null or undefined |
-|-2361 | You cannot convert more than one image to base64 string when the format is BMP, JPG or PNG |
-|-2362 | Convert to base64 failed |
-|-2367 | Invalid value for the parameter segmentUploadThreshold |
-|-2368 | Invalid value for the parameter moduleSize |
-|-2369 | The module for Dynamic Web TWAIN has failed to download |
-|-2370 | The current product key is invalid, please contact the site administrator |
-|-2372 | You cannot convert to binary more than one image when the format is BMP, JPG or PNG |
-|<= -3000 | See ErrorString property for details |

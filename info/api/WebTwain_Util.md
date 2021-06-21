@@ -11,23 +11,32 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Utility APIs Page
 
 **Methods**
 
-* [RegisterEvent()](#registerevent) 
-* [UnregisterEvent()](#unregisterevent)
-* [SetProductKeyAsync()](#setproductkeyasync)
-* [SetLanguage()](#setlanguage)
-* [GenerateURLForUploadData()](#generateurlforuploaddata)
+| |
+|:-|:-|
+|[`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)| [`SetProductKeyAsync()`]({{site.info}}api/WebTwain_Util.html#setproductkeyasync)| 
+|[`SetLanguage()`]({{site.info}}api/WebTwain_Util.html#setlanguage)|[`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)|
+
 
 **Properties**
 
-* [ErrorCode](#errorcode)
-* [ErrorString](#errorstring)
-* [LogLevel](#loglevel)
-* [Manufacturer](#manufacturer)
-* [ProductFamily](#productfamily)
-* [ProductName](#productname)
-* [VersionInfo](#versioninfo)
-* [ProductKey](#productkey)
-* [UseLocalService](#uselocalservice)
+| |
+|:-|:-|
+|[`ErrorCode`](#errorcode)| [`ErrorString`](#errorstring) | [`LogLevel`](#loglevel)| [`Manufacturer`](#manufacturer)|
+|[`ProductFamily`](#productfamily)| [`ProductName`](#productname)| [`VersionInfo`](#versioninfo)| [`ProductKey`](#productkey)|
+|[`UseLocalService`](#uselocalservice)|
+
+---
+
+## isUsingActiveX
+
+**Syntax**
+
+``` typescript
+/**
+ * Return whether the WebTwain object is running the ActiveX edition.
+ */
+isUsingActiveX(): boolean;
+```
 
 ---
 
@@ -89,7 +98,7 @@ SetProductKeyAsync(
  * @param language Specify the language.
  */
 SetLanguage(
-    language: Dynamsoft.EnumDWT_Language | number
+    language: Dynamsoft.DWT.EnumDWT_Language | number
 ): boolean;
 ```
 
@@ -116,11 +125,11 @@ The language set with this method is only for the built-in security dialogs whic
  */
 GenerateURLForUploadData(
     indices: number[],
-    type: Dynamsoft.EnumDWT_ImageType | number,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback: (
         resultURL: string,
         indices: number[],
-        type: Dynamsoft.EnumDWT_ImageType | number
+        type: Dynamsoft.DWT.EnumDWT_ImageType | number
     ) => void,
     failureCallback: (
         errorCode: number,
@@ -182,9 +191,9 @@ LogLevel: number;
 
 **Usage notes**
 
-The logs for the Dynamic Web TWAIN library are saved in the directory `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\log\` . By default, `LogLevel` is 0 and nothing is recorded. When it is set to 1, all debugging information is recorded.
+The logs for the Dynamic Web TWAIN library are saved in the directory `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\log\` . By default, `LogLevel` is 0 and nothing is recorded. When it is set to 1, all debugging information is recorded.
 
-Setting `LogLevel` to 1/0 is equivalent to setting `LogLevel` to 14/1 in the file `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\DSConfiguration.ini` .
+Setting `LogLevel` to 1/0 is equivalent to setting `LogLevel` to 14/1 in the file `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\DSConfiguration.ini` .
 
 ---
 

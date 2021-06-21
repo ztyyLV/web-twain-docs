@@ -26,18 +26,22 @@ This dialog comes up when running `DWT` in [service mode]({{site.indepth}}featur
 This dialog is opened by one of the following functions
 
 * `OnWebTwainNotFoundOnWindowsCallback`
+
 > For [Windows clients]({{site.getstarted}}platform.html#browsers-on-windows) 
 
 * `OnWebTwainNotFoundOnLinuxCallback`
+
 > For [Linux clients]({{site.getstarted}}platform.html#browsers-on-linux) 
 
 * `OnWebTwainNotFoundOnMacCallback`
+
 > For [macOS clients]({{site.getstarted}}platform.html#browsers-on-macos) 
 
 * `OnRemoteWebTwainNotFoundCallback`
+
 > For any client that [connects to a remote Dynamsoft Service]({{site.indepth}}features/input.html#how-to-enable-remote-scan)
 
-All four of these functions eventually call the global API `Dynamsoft.WebTwainEnv.ShowDialog()` to show the installation dialog. You can use your own method to show the necessary information so that your users know how to proceed. For example
+All four of these functions eventually call the global API `Dynamsoft.DWT.ShowDialog()` to show the installation dialog. You can use your own method to show the necessary information so that your users know how to proceed. For example
 
 ``` javascript
 function OnWebTwainNotFoundOnWindowsCallback(ProductName, InstallerUrl, bHTML5, bIE, bSafari, bSSL, strIEVersion) {
@@ -56,34 +60,34 @@ If you are not using `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs`
 If you are using `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` , the file `dynamsoft.webtwain.install.js` doesn't exist. In this case, you must make the changes before you [create a WebTwain instance]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance) . For example
 
 ``` javascript
-window.OnWebTwainNotFoundOnWindowsCallback = function(ProductName, InstallerUrl, bHTML5, bIE, bSafari, bSSL, strIEVersion) {
+Dynamsoft.OnWebTwainNotFoundOnWindowsCallback = function(ProductName, InstallerUrl, bHTML5, bIE, bSafari, bSSL, strIEVersion) {
     alert(ProductName + " is not installed, please download and install it from " + InstallerUrl);
 }
-Dynamsoft.WebTwainEnv.Load();
+Dynamsoft.DWT.Load();
 ```
 
 ## Indicators
 
 ### Loading bar and backdrop
 
-![UI 2]({{site.assets}}imgs/UI-2.png)
+![UI 2]({{site.assets}}imgs/UI-2-new.png)
 
-This loading bar and backdrop shows up when creating a `WebTwain` instance or when you try to scan. The functions `Dynamsoft.WebTwainEnv.OnWebTwainPreExecute()` and `Dynamsoft.WebTwainEnv.OnWebTwainPostExecute()` are called before and after the process. You can customize the behavior like this
+This loading bar and backdrop shows up when creating a `WebTwain` instance or when you try to scan. The functions `Dynamsoft.DWT.OnWebTwainPreExecute()` and `Dynamsoft.DWT.OnWebTwainPostExecute()` are called before and after the process. You can customize the behavior like this
 
 ``` javascript
-Dynamsoft.WebTwainEnv.OnWebTwainPreExecute = function() {
+Dynamsoft.DWT.OnWebTwainPreExecute = function() {
     // Show your own progress indicator
     console.log('An operation starts!');
 };
-Dynamsoft.WebTwainEnv.OnWebTwainPostExecute = function() {
+Dynamsoft.DWT.OnWebTwainPostExecute = function() {
     // Hide the progress indicator
     console.log('An operation ends!');
 };
 ```
 
-On the other hand, you can also call the functions `Dynamsoft.WebTwainEnv.OnWebTwainPreExecute()` and `Dynamsoft.WebTwainEnv.OnWebTwainPostExecute()` to show and hide the loader bar and backdrop when you need it in your own workflow.
+On the other hand, you can also call the functions `Dynamsoft.DWT.OnWebTwainPreExecute()` and `Dynamsoft.DWT.OnWebTwainPostExecute()` to show and hide the loader bar and backdrop when you need it in your own workflow.
 
-If you just want to change the loading bar, you can use the method `Dynamsoft.WebTwainEnv.SetLoaderBar()` .
+If you just want to change the loading bar, you can use the `Dynamsoft.DWT.CustomizableDisplayInfo.loaderBarSource` .
 
 ### Progress bar
 
@@ -121,14 +125,14 @@ If you have enabled the security dialogs, you may see the following dialog when 
 You can change the language with the method [ `SetLanguage()` ]({{site.info}}api/WebTwain_Util.html#setlanguage). The following sets the language to Spanish
 
 ``` javascript
-DWObject.SetLanguage(Dynamsoft.EnumDWT_Language.Spanish);
+DWObject.SetLanguage(Dynamsoft.DWT.EnumDWT_Language.Spanish);
 ```
 
 ![UI-6]({{site.assets}}imgs/UI-6.png)
 
 ### Error Messages
 
-`DWT` has many built-in error messages as shown [here]({{site.info}}api/Dynamsoft_Enum.html#error-list). Each `ErrorString` has its own `ErrorCode` . To change the language of the message, you can read the `ErrorCode` and output the error string you have customized. For example
+`DWT` has many built-in error messages as shown [here]({{site.info}}api/appendix.html#error-list). Each `ErrorString` has its own `ErrorCode` . To change the language of the message, you can read the `ErrorCode` and output the error string you have customized. For example
 
 ``` javascript
 if (DWObject.ErrorCode === -2359) {

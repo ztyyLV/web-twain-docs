@@ -11,7 +11,7 @@ description: Dynamic Web TWAIN SDK Documentation Server Deployment Page
 
 Once you have finished integrating `DWT` in your application, you can deploy it on your server to test it. As far as `DWT` is concerned, all related files are to be served as static files which makes the deployment very easy.
 
-> If you are using the OCR feature on the server side, please refer to [Use OCRPro on the Server Side]({{site.indepth}}features/OCR.html#use-ocrpro-on-the-server-side) or [Use OCRB on the Server Side]({{site.indepth}}features/OCR.html#use-ocrb-on-the-server-side).
+> If you are using the OCR feature on the server side, please refer to [Use OCRB on the Server Side]({{site.indepth}}features/OCR.html#use-ocrb-on-the-server-side).
 
 ## Make sure the static files can be served correctly
 
@@ -48,7 +48,7 @@ For how to enable HTTPS, please check out the manual of your webserver.
 
 ## Set ResourcesPath
 
-The global API [ `Dynamsoft.WebTwainEnv.ResourcesPath` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#resourcespath) sets a relative or absolute path that tells `DWT` where to look for the resources files at runtime. Its default value is `Resources` which means all these files are put in a directory called *Resources* that is in the same location as the web page on which `DWT` is running. This is the simplest situation possible, in most cases, it's a lot more complicated and you must make sure the correct value is set.
+The global API [ `Dynamsoft.DWT.ResourcesPath` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#resourcespath) sets a relative or absolute path that tells `DWT` where to look for the resources files at runtime. Its default value is `Resources` which means all these files are put in a directory called *Resources* that is in the same location as the web page on which `DWT` is running. This is the simplest situation possible, in most cases, it's a lot more complicated and you must make sure the correct value is set.
 
 ### How to know ResourcesPath is wrong
 

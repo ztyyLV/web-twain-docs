@@ -11,58 +11,38 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page
 
 **Methods**
 
-* [ClearImageTags()](#clearimagetags) 
-* [FilterImagesByTag()](#filterimagesbytag)
-* [SetDefaultTag()](#setdefaulttag) 
-* [TagImages()](#tagimages)
-* [GetImageBitDepth()](#getimagebitdepth)
+| |
+|:-|:-|
+|[`ClearImageTags()`](#clearimagetags) | [`RenameTag()`](#renametag) |[`RemoveTag()`](#removetag) |[`GetTagList()`](#gettaglist) |
+|[`FilterImagesByTag()`](#filterimagesbytag)|[`ClearFilter()`](#clearfilter) | [`SetDefaultTag()`](#setdefaulttag) | [`TagImages()`](#tagimages)| 
+|[`GetImageBitDepth()`](#getimagebitdepth)| [`GetImageSize()`](#getimagesize)| [`GetImageSizeWithSpecifiedType()`](#getimagesizewithspecifiedtype)|[`GetSelectedImagesSize()`](#getselectedimagessize) |
+|[`GetImageHeight()`](#getimageheight) |[`GetImageWidth()`](#getimagewidth) | [`GetImagePartURL()`](#getimageparturl) |[`GetImageURL()`](#getimageurl)|
+|[`GetImageXResolution()`](#getimagexresolution) |[`GetImageYResolution()`](#getimageyresolution) |[`GetSkewAngle()`](#getskewangle) | [`GetSkewAngleEx()`](#getskewangleex)|
+|[`ImageIDToIndex()`](#imageidtoindex) | [`IndexToImageID()`](#indextoimageid)| [`IsBlankImage()`](#isblankimage) | [`IsBlankImageExpress()`](#isblankimageexpress)|  
+|[`SelectAllImages()`](#selectallimages)|[`MoveImage()`](#moveimage) | [`SwitchImage()`](#switchimage)| [`RemoveImage()`](#removeimage) |
+| [`RemoveAllImages()`](#removeallimages)|[`RemoveAllSelectedImages()`](#removeallselectedimages) |[`SelectImages()`](#selectimages)|
 
 <!--* [GetImageBitDepthAsync()](#getimagebitdepthasync)-->
 
-* [GetImageSize()](#getimagesize)
-* [GetImageSizeWithSpecifiedType()](#getimagesizewithspecifiedtype) 
-* [GetSelectedImagesSize()](#getselectedimagessize)
-* [GetImageHeight()](#getimageheight) 
-* [GetImageWidth()](#getimagewidth)
-* [GetImagePartURL()](#getimageparturl) 
-* [GetImageURL()](#getimageurl)
-* [GetImageXResolution()](#getimagexresolution) 
-* [GetImageYResolution()](#getimageyresolution)
-* [GetSkewAngle()](#getskewangle) 
-* [GetSkewAngleEx()](#getskewangleex)
-* [ImageIDToIndex()](#imageidtoindex) 
-* [IndexToImageID()](#indextoimageid)
-* [IsBlankImage()](#isblankimage) 
-* [IsBlankImageExpress()](#isblankimageexpress)
-* [SelectAllImages()](#selectallimages) 
-* [SelectImages()](#selectimages)
-* [MoveImage()](#moveimage) 
-* [SwitchImage()](#switchimage)
-* [RemoveImage()](#removeimage) 
-* [RemoveAllImages()](#removeallimages)
 
 <!--* [RemoveAllImagesAsync()](#removeallimagesasync)-->
 
-* [RemoveAllSelectedImages()](#removeallselectedimages)
 
 <!--* [RemoveAllSelectedImagesAsync()](#removeallselectedimagesasync)-->
 
 **Properties**
 
-* [BlankImageCurrentStdDev](#blanimagecurrentstddev)
-* [BlankImageMaxStdDev](#blankimagemaxstddev)
-* [BufferMemoryLimit](#buffermemorylimit)
-* [CurrentImageIndexInBuffer](#currentimageindexinbuffer) 
-* [HowManyImagesInBuffer](#howmanyimagesinbuffer)
-* [IfAllowLocalCache](#ifallowlocalcache) 
-* [SelectedImagesIndices](#selectedimagesindices)
-* [MaxImagesInBuffer](#maximagesinbuffer)
+| |
+|:-|:-|
+|[`BlankImageCurrentStdDev`](#blankimagecurrentstddev) |[`BlankImageMaxStdDev`](#blankimagemaxstddev) |[`BlankImageThreshold`](#blankimagethreshold)| [`BufferMemoryLimit`](#buffermemorylimit)|
+|[`CurrentImageIndexInBuffer`](#currentimageindexinbuffer) |[`HowManyImagesInBuffer`](#howmanyimagesinbuffer)| [`IfAllowLocalCache`](#ifallowlocalcache) | [`SelectedImagesIndices`](#selectedimagesindices)|
+|[`MaxImagesInBuffer`](#maximagesinbuffer)|
 
 **Events**
 
-* [OnBitmapChanged](#onbitmapchanged)
-* [OnIndexChangeDragDropDone](#onindexchangedragdropdone)
-* [OnTopImageInTheViewChanged](#ontopimageintheviewchanged)
+| |
+|:-|:-|
+| [`OnBufferChanged`](#onbufferchanged) |[`OnBitmapChanged`](#onbitmapchanged) | [`OnIndexChangeDragDropDone`](#onindexchangedragdropdone)| [`OnTopImageInTheViewChanged`](#ontopimageintheviewchanged)|
 
 ---
 
@@ -98,6 +78,67 @@ ImageIDToIndex(imageId: number): number;
 
 An `imageId` is unique and won't change as long as the Dynamsoft Service process is running. It's a better way to keep track of an image than the `index` which changes easily.
 
+---
+
+## RenameTag
+
+**Syntax**
+
+``` typescript
+/**
+ * Rename a tag.
+ * @param oldName Specify the tag to change.
+ * @param newName Specify the new tag name.
+ */
+RenameTag(oldName:string, newName:string): boolean;
+```
+
+---
+
+## RemoveTag
+
+**Syntax**
+
+``` typescript
+/**
+ * Remove the specified tag from one or more images(if not specified, remove from all). 
+ * @param tagName Specify the new tag name.
+ * @param indices Specify the index.
+ */
+RemoveTag(tagName: string, indices?: number[]):boolean 
+```
+
+**Usage Notes**
+If the index is null, it will remove the tag you specified. If the index is not null, it will remove the specified tag on the image you selected.
+
+---
+
+## GetTagList
+
+**Syntax**
+
+``` typescript
+/**
+ * Return the status of all current tags. 
+ */
+GetTagList():Json 
+
+Json： 
+[ 
+   { 
+        name: ‘TagA’,  
+         imageIds:’ ’ 
+   }, 
+   { 
+        name: ‘TagB’,  
+         imageIds:[239514082, 239514083] 
+   }, 
+] 
+ 
+```
+
+---
+
 ## ClearImageTags
 
 **Syntax**
@@ -122,6 +163,19 @@ ClearImageTags(index: number): boolean;
  * @param tag The tag used as the filter. If nothing or an empty string is used, the filter is cleared.
  */
 FilterImagesByTag(tag: string): boolean;
+```
+
+---
+
+## ClearFilter
+
+**Syntax**
+
+``` typescript
+/**
+ * Stop filtering images by tag.
+ */
+ClearFilter(): boolean;
 ```
 
 ---
@@ -330,7 +384,7 @@ GetImageSize(index: number, width: number, height: number): number;
  * @param index Specify the image.
  * @param type Sepcify the expected file type.
  */ 
-GetImageSizeWithSpecifiedType(index: number, type: Dynamsoft.EnumDWT_ImageType | number): number;
+GetImageSizeWithSpecifiedType(index: number, type: Dynamsoft.DWT.EnumDWT_ImageType | number): number;
 ```
 
 ---
@@ -344,7 +398,7 @@ GetImageSizeWithSpecifiedType(index: number, type: Dynamsoft.EnumDWT_ImageType |
  * Calculate the size in bytes of all selected images assuming an expected file type.
  * @param type Sepcify the expected file type.
  */
-GetSelectedImagesSize(type: Dynamsoft.EnumDWT_ImageType | number): number;
+GetSelectedImagesSize(type: Dynamsoft.DWT.EnumDWT_ImageType | number): number;
 ```
 
 **Usage notes**
@@ -390,63 +444,6 @@ GetImageURL(index: number, width?: number, height?: number): string;
 **Usage notes**
 
 If width or height is set to -1, you get the original image, otherwise you get the image with specified width or height while keeping the same aspect ratio.
-
----
-
-## CurrentImageIndexInBuffer
-
-**Syntax**
-
-``` typescript
-/**
- * Return the index of the current image in the buffer or 
- * Set the image specified by index as the current image.
- */
-CurrentImageIndexInBuffer: number;
-```
-
----
-
-## HowManyImagesInBuffer
-
-**Syntax**
-
-``` typescript
-/**
- * Return how many images are held in the buffer
- */
-readonly HowManyImagesInBuffer: number;
-```
-
----
-
-## MaxImagesInBuffer
-
-**Syntax**
-
-``` typescript
-/**
- * Return or set how many images can be held in the buffer.
- */ 
-MaxImagesInBuffer: number;
-```
-
-**Usage notes**
-
-When acquiring images and the number of images goes beyond the value set to `MaxImagesInBuffer` , new images will replace old images starting from the 1st one.
-
----
-
-## SelectedImagesIndices
-
-**Syntax**
-
-``` typescript
-/**
- * Return the indices of the selected images.
- */
-readonly SelectedImagesIndices: number[];
-```
 
 ---
 
@@ -578,6 +575,63 @@ RemoveAllSelectedImagesAsync(): Promise<boolean>;
 
 ----->
 
+
+## CurrentImageIndexInBuffer
+
+**Syntax**
+
+``` typescript
+/**
+ * Return the index of the current image in the buffer or 
+ * Set the image specified by index as the current image.
+ */
+CurrentImageIndexInBuffer: number;
+```
+
+---
+
+## HowManyImagesInBuffer
+
+**Syntax**
+
+``` typescript
+/**
+ * Return how many images are held in the buffer
+ */
+readonly HowManyImagesInBuffer: number;
+```
+
+---
+
+## MaxImagesInBuffer
+
+**Syntax**
+
+``` typescript
+/**
+ * Return or set how many images can be held in the buffer.
+ */ 
+MaxImagesInBuffer: number;
+```
+
+**Usage notes**
+
+When acquiring images and the number of images goes beyond the value set to `MaxImagesInBuffer` , new images will replace old images starting from the 1st one.
+
+---
+
+## SelectedImagesIndices
+
+**Syntax**
+
+``` typescript
+/**
+ * Return the indices of the selected images.
+ */
+readonly SelectedImagesIndices: number[];
+```
+---
+
 ## SelectionRectAspectRatio
 
 **Syntax**
@@ -617,6 +671,24 @@ BlankImageMaxStdDev: number;
 
 ---
 
+## BlankImageThreshold
+
+**Syntax**
+
+``` typescript
+/**
+ * Returns or sets the dividing line between black and white.
+ */
+BlankImageThreshold: number;
+```
+
+**Usage notes**
+
+[0, 255] is the interval of allowed values, inclusive. The default value is 128.
+This property is only valid after IsBlankImageExpress is called.
+
+---
+
 ## BufferMemoryLimit
 
 **Syntax**
@@ -628,6 +700,13 @@ BlankImageMaxStdDev: number;
  */
 BufferMemoryLimit: number;
 ```
+
+**Usage notes**
+
+Set this property only when you have a very small physical memory (< 2GB) or a very big one (>4GB). The more memory is allowed, the better the performance will be.
+The default value is set to 800 (MB), anything beyond 800MB gets compressed, encrypted and cached on the local disk.
+
+All cached data is encrypted and can only be read by Dynamic Web TWAIN and it will be destroyed when it is no longer used.
 
 ---
 
@@ -682,6 +761,51 @@ IfAllowLocalCache: boolean;
 
 ---
 
+## OnBufferChanged
+
+**Syntax**
+
+``` typescript
+/**
+ * An enhanced callback triggered when a change occurs in the buffer.
+ * @argument bufferChangeInfo Details about the buffer change.
+ */
+RegisterEvent('OnBufferChanged',
+    function (bufferChangeInfo: BufferChangeInfo) {}
+): boolean;
+
+interface BufferChangeInfo {
+    /**
+     * Action type includes 'add', 'remove', 'modify', 'shift' and 'filter'
+     */
+    action: string;
+    /**
+     * The image id (not the index) of the current page.
+     */
+    currentId: number;
+    /**
+     * All image ids.
+     */
+    imageIds: number[];
+    /**
+     * All selected image ids.
+     */
+    selectedIds: number[];
+}
+```
+
+**Usage notes**
+
+Action types include 
+
+* `add`: New pages are added to the buffer.
+* `remove`: The existing pages are removed.
+* `modify`: The existing pages are modified.
+* `shift`: The existing pages are reordered.
+* `filter`: The existing pages are filtered by a tag.
+
+---
+
 ## OnBitmapChanged
 
 **Syntax**
@@ -705,11 +829,11 @@ RegisterEvent('OnBitmapChanged',
 
 Operation types include 
 
-1: new image(s) were added at the tail
-2: new image(s) were inserted before the current index
-3: image(s) are deleted
-4: image(s) are modified
-5: indices of images changed
+* new image(s) were added at the tail
+* new image(s) were inserted before the current index
+* image(s) are deleted
+* image(s) are modified
+* indices of images changed
 
 ---
 

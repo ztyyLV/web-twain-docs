@@ -9,21 +9,28 @@ description: Dynamic Web TWAIN SDK Documentation Upgrade Guide Page
 
 # Upgrade
 
-Dynamsoft improves `DWT` constantly through one major version and 2 to 4 minor versions each year. The recommendation for our customers is to always keep your application up-to-date with our latest release. In this section, we'll talk about how to upgrade your application.
+This upgrade section talks about how to upgrade Dynamic Web TWAIN to the latest version. 
 
-The following three steps are required to upgrade your application to use a newer version of `DWT` . Two of the steps would be done by the **application developer** on the server-side. The 3rd step would be done by **users** or **system administrators** on the client side.
+#### IMPORTANT
 
-1. Update the server-side resources for `DWT`
-2. Replace your old product key with the newer one
-3. Ensure client machines have uninstalled the old version of the service in preparation to install the newer version
+Please be aware of the following namespace changes introduced in version 17.0.
 
-> If you are upgrading from a very old version (over 2 major versions apart like from v12 to v15), more steps may be needed. Please contact [Dynamsoft Support]({{site.about}}getsupport.html) for more information.
+| v17.0+ |v16.2- |
+|:-|:-|
+|`Dynamsoft.DWT` |`Dynamsoft.WebTwainEnv`|
+|`Dynamsoft.DWT.EnumDWT_` |`Dynamsoft.EnumDWT_`|
+|`Dynamsoft.DBR.EnumBarcodeFormat` |`Dynamsoft.EnumBarcodeFormat`|
+
+More barcode enumeration can be found <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/enum/EnumBarcodeColourMode.html?ver=latest" target="_blank">here</a>
+
+See more Breaking Changes in V17.0 [here]({{site.info}}schedule/stable.html) 
+
 
 ## Update the resources files
 
-Read more about [resources files]({{site.about}}faqs.html#what-are-the-resources-files).
+The resources files refer to the Resources folder in the installation directory, C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK 17.0. For more details, you can check [here]({{site.about}}faqs.html#what-are-the-resources-files).
 
-### Regular Web application
+### Regular Web application 
 
 #### Uninstall the old version
 
@@ -33,7 +40,9 @@ Read more about [resources files]({{site.about}}faqs.html#what-are-the-resources
 
 #### Install the new version
 
-Generally, you can [use the official installer]({{site.about}}resources.html#how-to-get-dwt) to install the new verion.
+You can [use the official installer]({{site.about}}resources.html#how-to-get-dwt) to install the new verion.
+
+<a href="https://www.dynamsoft.com/web-twain/downloads" class="downloadBtn fr textUpperCase">Download SDK</a>
 
 #### Replace the resources files
 
@@ -70,24 +79,33 @@ yarn add @types/dwt
 
 ## Update the Product Key
 
-The Product Key needs to be updated when your current license is no longer valid (expired, for example) or when you upgrade across major versions. The Product Key is set using the global API `Dynamsoft.WebTwainEnv.ProductKey` and the change is only effective before [creating `WebTwain` instances]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance). 
+The Product Key needs to be updated when your current license is no longer valid (expired, for example) or when you upgrade across major versions. The Product Key is set using the global API `Dynamsoft.DWT.ProductKey` and the change is only effective before [creating `WebTwain` instances]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance). 
 
 In most cases, you can just make the change in the file `dynamsoft.webtwain.config.js` .
 
 ``` javascript
 // If you have multiple license keys, just separate them with semicolons.
-Dynamsoft.WebTwainEnv.ProductKey = 't0076lQAAAGNcO61He******; t0076lQAAAGNcO61He******';
+Dynamsoft.DWT.ProductKey = 't0076lQAAAGNcO61He******; t0076lQAAAGNcO61He******';
 ```
 
 If it is set elsewhere, you need to find it and replace it. For example, if you are making use of the [dwt package](https://www.npmjs.com/package/dwt) ( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ), the file `dynamsoft.webtwain.config.js` doesn't exist and you should already have the above line of code in your own JavaScript where you can update the license when needed.
+
+But if you are using [Per Browser Client](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_browser_client) license,  you need to use [handshakeCode]({{site.info}}api/Dynamsoft_WebTwainEnv.html#handshakecode) to set.
+
+``` javascript
+Dynamsoft.DWT.handshakeCode = "DynamsoftID-CustomCode";
+Dynamsoft.DWT.Load();
+```
+
+Please note that this licensing model is only supported from `DWT` 17.0 and needs to be used with License Tracking Server (`LTS` for short). See more about [What is a LTS](https://www.dynamsoft.com/license-tracking/docs/selfhosting/managelts.html?ver=latest)
 
 ## Update `DWT` on the client-side
 
 ### Service mode
 
-From 16.*, `DWT` is designed to be backward compatible (unfortunately, just as far back as 16.0). The compatibility is done in two ways
+ Starting in version 16.*, `DWT` is designed to be backward compatible (unfortunately, just as far back as 16.0). The compatibility is done in two ways
 
-* For minor versions like 16.1 to 16.2, if the newer version of `DWT` has been installed on a desktop, websites utilizing both the newer version and the older version can work without reinstalling of `DWT`
+* For minor versions like 16.1 to 16.2, if the newer version of `DWT` has been installed on a desktop, websites utilizing both the newer version and the older version can work without reinstallation of `DWT`
 * For major versions like 16.* to 17.*, the newer version will be installed to a different directory which can coexist with the older version. The user can choose to uninstall the old version if necessary
 
 That means, once you, as the maintainer, have finished upgrading your application to a newer `DWT` on the server side, the clients could face one of two situations
@@ -105,7 +123,7 @@ Once upgraded, the old WASM files will continue to exist in the browser as cache
 
 ### Expand your application to mobile platforms
 
-If you are upgrading to version 16 for mobile functionality (basically, `DWT` in [wasm mode]({{site.indepth}}features/initialize.html#wasm-mode)), there are some considerations to be made. As mobile support is one of the newest offerings from Dynamsoft, not all of the old `DWT` features are fully available at present. That said, we are constantly working on increasing the supported mobile feature set, so we recommend reviewing our [release notes]({{site.info}}schedule/stable.html), and if you have any doubts, contact [Dynamsoft Support]({{site.about}}getsupport.html).
+If you are upgrading to version 17 for mobile functionality (basically, `DWT` in [wasm mode]({{site.indepth}}features/initialize.html#wasm-mode)), there are some considerations to be made. As mobile support is one of the newest offerings from Dynamsoft, not all of the old `DWT` features are fully available at present. That said, we are constantly working on increasing the supported mobile feature set, so we recommend reviewing our [release notes]({{site.info}}schedule/stable.html), and if you have any questions, contact [Dynamsoft Support]({{site.about}}getsupport.html).
 
 As an example for how some existing `DWT` features will work on [mobile platforms]({{site.getstarted}}platform.html#browsers-on-mobile-devices), see below: 
 
