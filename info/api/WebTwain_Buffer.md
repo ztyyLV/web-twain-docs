@@ -20,7 +20,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page
 |[`GetImageXResolution()`](#getimagexresolution) |[`GetImageYResolution()`](#getimageyresolution) |[`GetSkewAngle()`](#getskewangle) | [`GetSkewAngleEx()`](#getskewangleex)|
 |[`ImageIDToIndex()`](#imageidtoindex) | [`IndexToImageID()`](#indextoimageid)| [`IsBlankImage()`](#isblankimage) | [`IsBlankImageExpress()`](#isblankimageexpress)|  
 |[`SelectAllImages()`](#selectallimages)|[`MoveImage()`](#moveimage) | [`SwitchImage()`](#switchimage)| [`RemoveImage()`](#removeimage) |
-| [`RemoveAllImages()`](#removeallimages)|[`RemoveAllSelectedImages()`](#removeallselectedimages) |
+| [`RemoveAllImages()`](#removeallimages)|[`RemoveAllSelectedImages()`](#removeallselectedimages) |[`SelectImages()`](#selectimages)|
 
 <!--* [GetImageBitDepthAsync()](#getimagebitdepthasync)-->
 
@@ -34,7 +34,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page
 
 | |
 |:-|:-|
-|[`BlankImageCurrentStdDev`](#blanimagecurrentstddev) |[`BlankImageMaxStdDev`](#blankimagemaxstddev) |[`BlankImageThreshold`](#blankimagethreshold)| [`BufferMemoryLimit`](#buffermemorylimit)|
+|[`BlankImageCurrentStdDev`](#blankimagecurrentstddev) |[`BlankImageMaxStdDev`](#blankimagemaxstddev) |[`BlankImageThreshold`](#blankimagethreshold)| [`BufferMemoryLimit`](#buffermemorylimit)|
 |[`CurrentImageIndexInBuffer`](#currentimageindexinbuffer) |[`HowManyImagesInBuffer`](#howmanyimagesinbuffer)| [`IfAllowLocalCache`](#ifallowlocalcache) | [`SelectedImagesIndices`](#selectedimagesindices)|
 |[`MaxImagesInBuffer`](#maximagesinbuffer)|
 
@@ -447,63 +447,6 @@ If width or height is set to -1, you get the original image, otherwise you get t
 
 ---
 
-## CurrentImageIndexInBuffer
-
-**Syntax**
-
-``` typescript
-/**
- * Return the index of the current image in the buffer or 
- * Set the image specified by index as the current image.
- */
-CurrentImageIndexInBuffer: number;
-```
-
----
-
-## HowManyImagesInBuffer
-
-**Syntax**
-
-``` typescript
-/**
- * Return how many images are held in the buffer
- */
-readonly HowManyImagesInBuffer: number;
-```
-
----
-
-## MaxImagesInBuffer
-
-**Syntax**
-
-``` typescript
-/**
- * Return or set how many images can be held in the buffer.
- */ 
-MaxImagesInBuffer: number;
-```
-
-**Usage notes**
-
-When acquiring images and the number of images goes beyond the value set to `MaxImagesInBuffer` , new images will replace old images starting from the 1st one.
-
----
-
-## SelectedImagesIndices
-
-**Syntax**
-
-``` typescript
-/**
- * Return the indices of the selected images.
- */
-readonly SelectedImagesIndices: number[];
-```
-
----
-
 ## SelectAllImages
 
 **Syntax**
@@ -632,6 +575,63 @@ RemoveAllSelectedImagesAsync(): Promise<boolean>;
 
 ----->
 
+
+## CurrentImageIndexInBuffer
+
+**Syntax**
+
+``` typescript
+/**
+ * Return the index of the current image in the buffer or 
+ * Set the image specified by index as the current image.
+ */
+CurrentImageIndexInBuffer: number;
+```
+
+---
+
+## HowManyImagesInBuffer
+
+**Syntax**
+
+``` typescript
+/**
+ * Return how many images are held in the buffer
+ */
+readonly HowManyImagesInBuffer: number;
+```
+
+---
+
+## MaxImagesInBuffer
+
+**Syntax**
+
+``` typescript
+/**
+ * Return or set how many images can be held in the buffer.
+ */ 
+MaxImagesInBuffer: number;
+```
+
+**Usage notes**
+
+When acquiring images and the number of images goes beyond the value set to `MaxImagesInBuffer` , new images will replace old images starting from the 1st one.
+
+---
+
+## SelectedImagesIndices
+
+**Syntax**
+
+``` typescript
+/**
+ * Return the indices of the selected images.
+ */
+readonly SelectedImagesIndices: number[];
+```
+---
+
 ## SelectionRectAspectRatio
 
 **Syntax**
@@ -671,6 +671,24 @@ BlankImageMaxStdDev: number;
 
 ---
 
+## BlankImageThreshold
+
+**Syntax**
+
+``` typescript
+/**
+ * Returns or sets the dividing line between black and white.
+ */
+BlankImageThreshold: number;
+```
+
+**Usage notes**
+
+[0, 255] is the interval of allowed values, inclusive. The default value is 128.
+This property is only valid after IsBlankImageExpress is called.
+
+---
+
 ## BufferMemoryLimit
 
 **Syntax**
@@ -682,6 +700,13 @@ BlankImageMaxStdDev: number;
  */
 BufferMemoryLimit: number;
 ```
+
+**Usage notes**
+
+Set this property only when you have a very small physical memory (< 2GB) or a very big one (>4GB). The more memory is allowed, the better the performance will be.
+The default value is set to 800 (MB), anything beyond 800MB gets compressed, encrypted and cached on the local disk.
+
+All cached data is encrypted and can only be read by Dynamic Web TWAIN and it will be destroyed when it is no longer used.
 
 ---
 

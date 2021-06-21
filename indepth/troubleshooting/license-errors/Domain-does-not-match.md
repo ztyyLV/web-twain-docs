@@ -11,7 +11,7 @@ description: Dynamic Web TWAIN SDK Documentation Troubleshooting License Errors 
 
 # Handling Errors
 
-## The current product key does not match the domain
+## The current license key does not match the domain
 
 * Symptom
 

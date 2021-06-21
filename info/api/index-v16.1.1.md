@@ -13,8 +13,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 ## Global
 
-* [Dynamsoft.WebTwainEnv]({{site.info}}api/Dynamsoft_WebTwainEnv.html) 
-* [Dynamsoft.Enum]({{site.info}}api/Dynamsoft_Enum.html) 
+* [Dynamsoft.WebTwainEnv]({{site.info}}api/Dynamsoft_WebTwainEnv-v16.1.1.html) 
+* [Dynamsoft.Enum]({{site.info}}api/Dynamsoft_Enum-v16.1.1.html) 
 
 ## WebTwain
 
@@ -218,17 +218,17 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 #### Methods
 
-* [LoadImage()]({{site.info}}api/WebTwain_IO-v16.1.1.html#loadimage)
-* [LoadImageEx()]({{site.info}}api/WebTwain_IO-v16.1.1.html#loadimageex)
-* [LoadImageFromBase64Binary()]({{site.info}}api/WebTwain_IO-v16.1.1.html#loadimagefrombase64binary)
-* [LoadImageFromBinary()]({{site.info}}api/WebTwain_IO-v16.1.1.html#loadimagefrombinary)
-* [LoadDibFromClipboard()]({{site.info}}api/WebTwain_IO-v16.1.1.html#loaddibfromclipboard)
-* [FTPDownload()]({{site.info}}api/WebTwain_IO-v16.1.1.html#ftpdownload)
-* [FTPDownloadEx()]({{site.info}}api/WebTwain_IO-v16.1.1.html#ftpdownloadex)
-* [HTTPDownload()]({{site.info}}api/WebTwain_IO-v16.1.1.html#httpdownload)
-* [HTTPDownloadEx()]({{site.info}}api/WebTwain_IO-v16.1.1.html#httpdownloadex)
-* [HTTPDownloadThroughPost()]({{site.info}}api/WebTwain_IO-v16.1.1.html#httpdownloadthroughpost)
-* [HTTPDownloadDirectly()]({{site.info}}api/WebTwain_IO-v16.1.1.html#httpdownloaddirectly)
+* [LoadImage()]({{site.info}}api/WebTwain_IO-v16.2.html#loadimage)
+* [LoadImageEx()]({{site.info}}api/WebTwain_IO-v16.2.html#loadimageex)
+* [LoadImageFromBase64Binary()]({{site.info}}api/WebTwain_IO-v16.2.html#loadimagefrombase64binary)
+* [LoadImageFromBinary()]({{site.info}}api/WebTwain_IO-v16.2.html#loadimagefrombinary)
+* [LoadDibFromClipboard()]({{site.info}}api/WebTwain_IO-v16.2.html#loaddibfromclipboard)
+* [FTPDownload()]({{site.info}}api/WebTwain_IO-v16.2.html#ftpdownload)
+* [FTPDownloadEx()]({{site.info}}api/WebTwain_IO-v16.2.html#ftpdownloadex)
+* [HTTPDownload()]({{site.info}}api/WebTwain_IO-v16.2.html#httpdownload)
+* [HTTPDownloadEx()]({{site.info}}api/WebTwain_IO-v16.2.html#httpdownloadex)
+* [HTTPDownloadThroughPost()]({{site.info}}api/WebTwain_IO-v16.2.html#httpdownloadthroughpost)
+* [HTTPDownloadDirectly()]({{site.info}}api/WebTwain_IO-v16.2.html#httpdownloaddirectly)
 
 <!--* [LoadDibFromClipboardAsync()]({{site.info}}api/WebTwain_IO-v16.1.1.html#loaddibfromclipboardasync)-->
 
@@ -492,8 +492,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 #### Methods
 
-* [Init()]({{site.info}}api/Dynamsoft_FileUploader.html#init)
-* [CreateJob()]({{site.info}}api/Dynamsoft_FileUploader.html#createjob)
-* [Run()]({{site.info}}api/Dynamsoft_FileUploader.html#run)
-* [Cancel()]({{site.info}}api/Dynamsoft_FileUploader.html#cancel)
-* [CancelAllUpload()]({{site.info}}api/Dynamsoft_FileUploader.html#cancelallupload)
+* [Init()]({{site.info}}api/Dynamsoft_FileUploader-v16.2.html#init)
+* [CreateJob()]({{site.info}}api/Dynamsoft_FileUploader-v16.2.html#createjob)
+* [Run()]({{site.info}}api/Dynamsoft_FileUploader.html-v16.2#run)
+* [Cancel()]({{site.info}}api/Dynamsoft_FileUploader.html-v16.2#cancel)
+* [CancelAllUpload()]({{site.info}}api/Dynamsoft_FileUploader-v16.2.html#cancelallupload)

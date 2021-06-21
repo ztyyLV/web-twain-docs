@@ -10,6 +10,33 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 # Stable Releases
 
+## 17.1 (06/15/2021)
+
+### New Features 
+
+*	Added property [`organizationID`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#organizationid) which can be used to fetch license(s) belonging to the specified organization from the License Tracking Server. With this property, the licensing of the library is smoother from trial to full and it is much easier to manage a license change without code updates.
+
+### Improved Features 
+
+*	The built-in viewer can now display thumbnails faster.
+
+*	Installers for ARM x64 and MIPS x64 are now included in the package by default.
+
+*	Separated the library into two distinctive modes: Desktop Service and WebAssembly for easier understanding and usage.
+
+### Major Bug Fixes
+
+*	Fixed a bug where the image fails to be displayed after it gets cropped and saved in the built-in ImageEditor.
+
+*	Fixed a bug where images meant to be saved on the hard disk end up in the image buffer on macOS.
+
+*	Fixed a bug where erasing part of an image will change its original display mode to be 'centered'.
+
+### Changes to the ActiveX Edition
+
+*	Fixed a bug where the barcode reader addon fails to initiate on IE 10.
+
+
 ## 17.0 (04/20/2021) 
 
 ### New Features 
@@ -97,7 +124,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 * Added a new global property [`Dynamsoft.WebTwainEnv.IfAlwaysFocusOnPopupWindow`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifalwaysfocusonpopupwindow) to control whether to set focus on scanner-related windows opened by the Dynamsoft Service when the browser tab on which the SDK is running is active. In the past, these windows will be on top no matter which browser tab is active.
 
-* [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) is officially supported.
+* [Shadow DOM](https://www.dynamsoft.com/codepool/polymer-shadow-dom-web-document-scan.html) is officially supported.
 
 * Added support for ARM-based macOS.
 
@@ -233,7 +260,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 > NOTE: on desktop, this feature requires a webcam/camera addon license.
 
-### Entra Features
+### Extra Features
 
 * Added a feature to run Dynamsoft Service with the account "Local Service". By default, it is still "Local System". Contact Dynamsoft to learn more.
 

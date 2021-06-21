@@ -1213,7 +1213,7 @@ Example argument for the parameter `fileName`
 * "C:\\webtwain" + <> + ".jpg": The scanned images will result in "C:\\webtwain1.jpg", "C:\\webtwain2.jpg", "C:\\webtwain3.jpg", etc.
 * "C:\\webtwain" + <%06d> + ".jpg": The scanned images will result in "C:\\webtwain000001.jpg", "C:\\webtwain000002.jpg", "C:\\webtwain000003.jpg", etc.
 
-Check out the available formats [Dynamsoft. EnumDWT_FileFormat]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_fileformat).
+Check out the available formats [Dynamsoft. EnumDWT_FileFormat]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_fileformat-).
 
 **Example**
 
@@ -2124,7 +2124,7 @@ DWObject.RegisterEvent('OnPostAllTransfers',
  * This event is triggered after each page has been scanned and transferred.
  * @argument outputInfo Detailed information about the image that just got transferred.
  */ 
-RegisterEvent('OnPostTransfer',function(outputInfo: OutputInfo) {});
+RegisterEvent('OnPostTransfer',function() {});
 ```
 
 **Example**

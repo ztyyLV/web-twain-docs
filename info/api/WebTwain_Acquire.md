@@ -42,7 +42,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 
 | |
 |:-|:-|
-|[getCapabilities()](#getcapabilities) | [setCapabilities()](#setcapabilities)|
+|[`getCapabilities()`](#getcapabilities) | [`setCapabilities()`](#setcapabilities)|
 
 > The following APIs are compatible with TWAIN (mostly Windows, but could also be macOS)
 
@@ -50,10 +50,11 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 
 | |
 |:-|:-|
-| [OpenSourceManager()](#opensourcemanager)| [OpenSourceManagerAsync()](#opensourcemanagerasync)  |  [CloseSourceManager()](#closesourcemanager) | [CloseSourceManagerAsync()](#closesourcemanagerasync)|
-| [GetCustomDSData()](#getcustomdsdata)| [GetCustomDSDataEx()](#getcustomdsdataex) | [CancelAllPendingTransfers()](#cancelallpendingtransfers) | [FeedPage()](#feedpage) |
-|[ResetImageLayout()](#resetimagelayout) | [RewindPage()](#rewindpage)| [SetCustomDSData()](#setcustomdsdata) | [SetCustomDSDataEx()](#setcustomdsdataex)|
-| [SetFileXferInfo()](#setfilexferinfo) | [SetImageLayout()](#setimagelayout)|
+| [`OpenSourceManager()`]({{site.info}}api/WebTwain_Acquire.html#opensourcemanager)| [`OpenSourceManagerAsync()`]({{site.info}}api/WebTwain_Acquire.html#opensourcemanagerasync) | [`CloseSourceManager()`]({{site.info}}api/WebTwain_Acquire.html#closesourcemanager) | [`CloseSourceManagerAsync()`]({{site.info}}api/WebTwain_Acquire.html#closesourcemanagerasync)|
+| [`GetCustomDSData()`]({{site.info}}api/WebTwain_Acquire.html#getcustomdsdata)| [`GetCustomDSDataEx()`]({{site.info}}api/WebTwain_Acquire.html#getcustomdsdataex) | [`CancelAllPendingTransfers()`]({{site.info}}api/WebTwain_Acquire.html#cancelallpendingtransfers) | [`FeedPage()`]({{site.info}}api/WebTwain_Acquire.html#feedpage) |
+|[`ResetImageLayout()`]({{site.info}}api/WebTwain_Acquire.html#resetimagelayout) | [`RewindPage()`]({{site.info}}api/WebTwain_Acquire.html#rewindpage)| [`SetCustomDSData()`]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdata) | [`SetCustomDSDataEx()`]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdataex)|
+| [`SetFileXferInfo()`]({{site.info}}api/WebTwain_Acquire.html#setfilexferinfo) | [`SetImageLayout()`]({{site.info}}api/WebTwain_Acquire.html#setimagelayout)|
+
 
 **Properties**
 
@@ -1189,7 +1190,7 @@ Example argument for the parameter `fileName`
 * "C:\\webtwain" + <> + ".jpg": The scanned images will result in "C:\\webtwain1.jpg", "C:\\webtwain2.jpg", "C:\\webtwain3.jpg", etc.
 * "C:\\webtwain" + <%06d> + ".jpg": The scanned images will result in "C:\\webtwain000001.jpg", "C:\\webtwain000002.jpg", "C:\\webtwain000003.jpg", etc.
 
-Check out the available formats [Dynamsoft.DWT.EnumDWT_FileFormat]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_fileformat).
+Check out the available formats [Dynamsoft.DWT.EnumDWT_FileFormat]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_fileformat-).
 
 **Example**
 
@@ -2314,9 +2315,9 @@ interface ValueAndLabel {
 
 Check out the Enumerations
 
-* [ `Dynamsoft.DWT.EnumDWT_Cap` ]({{site.info}}api/Dynamsoft_Enum.html#enumdwt_cap)
-* [ `Dynamsoft.DWT.EnumDWT_CapType` ]({{site.info}}api/Dynamsoft_Enum.html#enumdwt_captype)
-* [ `Dynamsoft.DWT.EnumDWT_CapValueType` ]({{site.info}}api/Dynamsoft_Enum.html#enumdwt_capvaluetype)
+* [ `Dynamsoft.DWT.EnumDWT_Cap` ]({{site.info}}api/Dynamsoft_Enum.html#enumdwt_cap-)
+* [ `Dynamsoft.DWT.EnumDWT_CapType` ]({{site.info}}api/Dynamsoft_Enum.html#enumdwt_captype-)
+* [ `Dynamsoft.DWT.EnumDWT_CapValueType` ]({{site.info}}api/Dynamsoft_Enum.html#enumdwt_capvaluetype-)
 
 ---
 

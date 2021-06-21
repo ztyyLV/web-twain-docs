@@ -51,7 +51,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page
 
 **Properties**
 
-* [BlankImageCurrentStdDev](#blanimagecurrentstddev)
+* [BlankImageCurrentStdDev](#blankimagecurrentstddev)
 * [BlankImageMaxStdDev](#blankimagemaxstddev)
 * [BufferMemoryLimit](#buffermemorylimit)
 * [CurrentImageIndexInBuffer](#currentimageindexinbuffer) 
@@ -647,6 +647,24 @@ readonly BlankImageCurrentStdDev: number;
  */
 BlankImageMaxStdDev: number;
 ```
+
+---
+
+## BlankImageThreshold
+
+**Syntax**
+
+``` typescript
+/**
+ * Returns or sets the dividing line between black and white.
+ */
+BlankImageThreshold: number;
+```
+
+**Usage notes**
+
+[0, 255] is the interval of allowed values, inclusive. The default value is 128.
+This property is only valid after IsBlankImageExpress is called.
 
 ---
 

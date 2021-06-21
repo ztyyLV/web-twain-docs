@@ -15,8 +15,8 @@ For Server Side OCR, check out [Server-Side OCR](#server-side)
 
 | |
 |:-|:-|
-|[`Download()`](#download) | [`IsModuleInstalled()`](#ismoduleinstalled)|[`Recognize()`](#recognize) |
-|[`RecognizeFile()`](#recognizefile)| [`RecognizeRect()`](#recognizerect) | [`RecognizeSelectedImages()`](#recognizeselectedimages)|
+|[`Download()`](#download)|[`IsModuleInstalled()`](#ismoduleinstalled)|[`Recognize()`](#recognize)|
+|[`RecognizeFile()`](#recognizefile)|[`RecognizeRect()`](#recognizerect)|[`RecognizeSelectedImages()`](#recognizeselectedimages)|
 
 **Properties**
 

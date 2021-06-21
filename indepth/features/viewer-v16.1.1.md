@@ -114,15 +114,13 @@ The Image Editor can be opened by the API [ `ShowImageEditor()` ]({{site.info}}a
 
 #### Q: Is the Image Editor compatible across all platforms?
 
-A: The Image Editor is availabe on all platforms where `DWT` is supported. However, while it is built into the browser page in most cases, it runs as a separate programme if `DWT` ActiveX edition is used.
-<!-->
+A: The Image Editor is availabe on all platforms where DWT is supported. However, while it is built into the browser page in most cases, it runs as a separate programme if DWT ActiveX edition is used. 
 
-#### Q: Can I change the language of the Editor
+<!–
 
-#### Q: Can I remove or add buttons on the toolbar of the Editor
+Q: Can I change the language of the Editor
+Q: Can I remove or add buttons on the toolbar of the Editor
+Q: Can I specify where and how big the Editor is
+Q: Can I change the colors of the Editor
+–>
 
-#### Q: Can I specify where and how big the Editor is
-
-#### Q: Can I change the colors of the Editor
-
--->

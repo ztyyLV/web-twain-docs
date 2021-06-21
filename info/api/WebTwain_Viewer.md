@@ -28,7 +28,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 |:-|:-|
 |[`acceptDrop`](#acceptdrop)| [`allowSlide`](#allowslide)|[`background`](#background)|[`border`](#border)|
 | [`cursor`](#cursor)| [`height`](#height)|[`idPostfix`](#idpostfix)|[`ifAutoScroll`](#ifautoscroll)|
-|[`innerBorder`](#innerBorder)| [`pageMargin`](#pagemargin)|[`selectedAreaBorderColor`](#selectedareabordercolor)|[`selectedPageBackground`](#selectedpagebackground)|
+|[`innerBorder`](#innerborder)| [`pageMargin`](#pagemargin)|[`selectedAreaBorderColor`](#selectedareabordercolor)|[`selectedPageBackground`](#selectedpagebackground)|
 |[`selectedPageBorder`](#selectedpageborder)| [`selectionRectAspectRatio`](#selectionrectaspectratio)|[`showPageNumber`](#showpagenumber)|[`singlePageMode`](#singlepagemode)|
 |[`width`](#width)| [`zoom`](#zoom)| [`autoChangeIndex`](#autochangeindex)|
 
@@ -912,6 +912,28 @@ DWObject.Viewer.acceptDrop = true;
 
 ---
 
+## allowSlide
+
+``` typescript
+/**
+ * Set whether to allow image navigation by swiping left or right on the viewer.
+ * The default value is true.
+ */
+.allowSlide: boolean; 
+```
+
+**Example**
+
+``` javascript
+DWObject.Viewer.allowSlide = true;  
+```
+
+**Usage notes**
+
+This API only works if the view mode of the viewer is set to -1 by -1.
+
+---
+
 ## background
 
 **Syntax**
@@ -1116,12 +1138,12 @@ selectedAreaBorderColor: string;
 **Example**
 
 ``` javascript
-DWObject.Viewer.selectedAreaBorderColor = 'rgb(255, 0, 0)';
+DWObject.Viewer.selectedAreaBorderColor = 'rgba(0, 0, 0, 1)';
 ```
 
 **Usage notes**
 
-The default value is "rgb(42, 29, 43)".
+The default value is "rgba(0, 0, 0, 1)".
 
 ---
 

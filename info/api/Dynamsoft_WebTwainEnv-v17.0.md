@@ -13,7 +13,6 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Global APIs Page
 ``` typescript
 interface Dynamsoft.DWT {
     readonly licenseServer: string [];
-    readonly organizationID: string;
     readonly handshakeCode: string;
     readonly sessionPassword: string;
     readonly licenseException: string;
@@ -94,27 +93,6 @@ Dynamsoft.DWT.licenseServer = ["https://your.mainServer.com", "https://your.back
 **Usage notes**
 
 Gets or sets the URL of the license tracking server used to authenticate the license (handshakeCode) and track barcode reading usage. When set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification. A self hosting option is available. Learn more about [License Tracking Server 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html?ver=latest). 
-
-
-## organizationID
-
-**Syntax**
-
-``` typescript
-/**
- * Get or set the organization ID. 
- */
-organizationID: string;
-```
-
-**Example**
-``` javascript
-Dynamsoft.DWT.organizationID = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
-```
-
-**Usage notes**
-
-Check out more on [how to specify the Organization ID](https://www.dynamsoft.com/license-tracking/docs/common/mechanism.html?ver=latest#specify-the-organization-id)
 
 ## handshakeCode
 

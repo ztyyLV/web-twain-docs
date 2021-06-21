@@ -35,7 +35,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 |[`GetImageXResolution()`]({{site.info}}api/WebTwain_Buffer.html#getimagexresolution) |[`GetImageYResolution()`]({{site.info}}api/WebTwain_Buffer.html#getimageyresolution) |[`GetSkewAngle()`]({{site.info}}api/WebTwain_Buffer.html#getskewangle) | [`GetSkewAngleEx()`]({{site.info}}api/WebTwain_Buffer.html#getskewangleex)|
 |[`ImageIDToIndex()`]({{site.info}}api/WebTwain_Buffer.html#imageidtoindex) | [`IndexToImageID()`]({{site.info}}api/WebTwain_Buffer.html#indextoimageid)| [`IsBlankImage()`]({{site.info}}api/WebTwain_Buffer.html#isblankimage) | [`IsBlankImageExpress()`]({{site.info}}api/WebTwain_Buffer.html#isblankimageexpress)|  
 |[`SelectAllImages()`]({{site.info}}api/WebTwain_Buffer.html#selectallimages)|[`MoveImage()`]({{site.info}}api/WebTwain_Buffer.html#moveimage) | [`SwitchImage()`]({{site.info}}api/WebTwain_Buffer.html#switchimage)| [`RemoveImage()`]({{site.info}}api/WebTwain_Buffer.html#removeimage) |
-| [`RemoveAllImages()`]({{site.info}}api/WebTwain_Buffer.html#removeallimages)|[`RemoveAllSelectedImages()`]({{site.info}}api/WebTwain_Buffer.html#removeallselectedimages) |
+| [`RemoveAllImages()`]({{site.info}}api/WebTwain_Buffer.html#removeallimages)|[`RemoveAllSelectedImages()`]({{site.info}}api/WebTwain_Buffer.html#removeallselectedimages) |[`SelectImages()`](#selectimages)|
 
 <!--
 * [`ClearImageTags()`]({{site.info}}api/WebTwain_Buffer.html#clearimagetags) 
@@ -83,7 +83,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 | |
 |:-|:-|
-|[`BlankImageCurrentStdDev`]({{site.info}}api/WebTwain_Buffer.html#blanimagecurrentstddev) |[`BlankImageMaxStdDev`]({{site.info}}api/WebTwain_Buffer.html#blankimagemaxstddev) |[`BlankImageThreshold`]({{site.info}}api/WebTwain_Buffer.html#blankimagethreshold)| [`BufferMemoryLimit`]({{site.info}}api/WebTwain_Buffer.html#buffermemorylimit)|
+|[`BlankImageCurrentStdDev`]({{site.info}}api/WebTwain_Buffer.html#blankimagecurrentstddev) |[`BlankImageMaxStdDev`]({{site.info}}api/WebTwain_Buffer.html#blankimagemaxstddev) |[`BlankImageThreshold`]({{site.info}}api/WebTwain_Buffer.html#blankimagethreshold)| [`BufferMemoryLimit`]({{site.info}}api/WebTwain_Buffer.html#buffermemorylimit)|
 |[`CurrentImageIndexInBuffer`]({{site.info}}api/WebTwain_Buffer.html#currentimageindexinbuffer) |[`HowManyImagesInBuffer`]({{site.info}}api/WebTwain_Buffer.html#howmanyimagesinbuffer)| [`IfAllowLocalCache`]({{site.info}}api/WebTwain_Buffer.html#ifallowlocalcache) | [`SelectedImagesIndices`]({{site.info}}api/WebTwain_Buffer.html#selectedimagesindices)|
 |[`MaxImagesInBuffer`]({{site.info}}api/WebTwain_Buffer.html#maximagesinbuffer)|
 
@@ -226,7 +226,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 | |
 |:-|:-|
-|[getCapabilities()]({{site.info}}api/WebTwain_Acquire.html#getcapabilities) | [setCapabilities()]({{site.info}}api/WebTwain_Acquire.html##setcapabilities)|
+|[`getCapabilities()`]({{site.info}}api/WebTwain_Acquire.html#getcapabilities) | [`setCapabilities()`]({{site.info}}api/WebTwain_Acquire.html##setcapabilities)|
 
 > The following APIs are compatible with TWAIN (mostly Windows, but could also be macOS)
 
@@ -234,10 +234,10 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 | |
 |:-|:-|
-| [OpenSourceManager()]({{site.info}}api/WebTwain_Acquire.html#opensourcemanager)| [OpenSourceManagerAsync()]({{site.info}}api/WebTwain_Acquire.html#opensourcemanagerasync) | [CloseSourceManager()]({{site.info}}api/WebTwain_Acquire.html#closesourcemanager) | [CloseSourceManagerAsync()]({{site.info}}api/WebTwain_Acquire.html#closesourcemanagerasync)|
-| [GetCustomDSData()]({{site.info}}api/WebTwain_Acquire.html#getcustomdsdata)| [GetCustomDSDataEx()]({{site.info}}api/WebTwain_Acquire.html#getcustomdsdataex) | [CancelAllPendingTransfers()]({{site.info}}api/WebTwain_Acquire.html#cancelallpendingtransfers) | [FeedPage()]({{site.info}}api/WebTwain_Acquire.html#feedpage) |
-|[ResetImageLayout()]({{site.info}}api/WebTwain_Acquire.html#resetimagelayout) | [RewindPage()]({{site.info}}api/WebTwain_Acquire.html#rewindpage)| [SetCustomDSData()]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdata) | [SetCustomDSDataEx()]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdataex)|
-| [SetFileXferInfo()]({{site.info}}api/WebTwain_Acquire.html#setfilexferinfo) | [SetImageLayout()]({{site.info}}api/WebTwain_Acquire.html#setimagelayout)|
+| [`OpenSourceManager()`]({{site.info}}api/WebTwain_Acquire.html#opensourcemanager)| [`OpenSourceManagerAsync()`]({{site.info}}api/WebTwain_Acquire.html#opensourcemanagerasync) | [`CloseSourceManager()`]({{site.info}}api/WebTwain_Acquire.html#closesourcemanager) | [`CloseSourceManagerAsync()`]({{site.info}}api/WebTwain_Acquire.html#closesourcemanagerasync)|
+| [`GetCustomDSData()`]({{site.info}}api/WebTwain_Acquire.html#getcustomdsdata)| [`GetCustomDSDataEx()`]({{site.info}}api/WebTwain_Acquire.html#getcustomdsdataex) | [`CancelAllPendingTransfers()`]({{site.info}}api/WebTwain_Acquire.html#cancelallpendingtransfers) | [`FeedPage()`]({{site.info}}api/WebTwain_Acquire.html#feedpage) |
+|[`ResetImageLayout()`]({{site.info}}api/WebTwain_Acquire.html#resetimagelayout) | [`RewindPage()`]({{site.info}}api/WebTwain_Acquire.html#rewindpage)| [`SetCustomDSData()`]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdata) | [`SetCustomDSDataEx()`]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdataex)|
+| [`SetFileXferInfo()`]({{site.info}}api/WebTwain_Acquire.html#setfilexferinfo) | [`SetImageLayout()`]({{site.info}}api/WebTwain_Acquire.html#setimagelayout)|
 
 #### Properties
 

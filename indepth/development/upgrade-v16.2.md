@@ -17,8 +17,6 @@ The following three steps are required to upgrade your application to use a newe
 2. Replace your old product key with the newer one
 3. Ensure client machines have uninstalled the old version of the service in preparation to install the newer version
 
-> If you are upgrading from a very old version (over 2 major versions apart like from v12 to v15), more steps may be needed. Please contact [Dynamsoft Support]({{site.about}}getsupport.html) for more information.
-
 ## Update the resources files
 
 Read more about [resources files]({{site.about}}faqs.html#what-are-the-resources-files).
