@@ -91,7 +91,7 @@ function loadToIndex(index) {
 }
 ```
 
-### How to detect and discard blank pages automatically?
+## How to detect and discard blank pages automatically?
 
 If the TWAIN driver of your device supports discarding blank pages, you can use the driver's built-in feature.
 1. You can set the [ `IfShowUI` ]({{site.info}}api/WebTwain_Acquire.html#ifshowui) property to true to display the User Interface (UI) of the source and you can check the option there (it normally reads 'discard blank')
@@ -126,7 +126,7 @@ if (DWObject.IsBlankImageExpress(DWObject.CurrentImageIndexInBuffer)) {
 
 NOTE: In many cases, the scanned blank image may come with some noises which would affect the result returned by IsBlankImageExpress. To improve the result, you may adjust the value of [ `BlankImageMaxStdDev` ]({{site.info}}api/WebTwain_Buffer.html#blankimagemaxstddev) Property. The default value is 1 (0 means single-color image). Thus, by increasing the value a little bit (e.g. to 20), noises on images are ignored so a blank image can be detected faster.
 
-### How to change the location or to rename the ‘Resources’ folder with Dynamic Web TWAIN
+## How to change the location or to rename the ‘Resources’ folder with Dynamic Web TWAIN
 
 <strong>Scenario: </strong> For customers who are using Dynamic Web TWAIN, to change the location of the 'Resources' folder, or to rename it, please following the steps below:
 
