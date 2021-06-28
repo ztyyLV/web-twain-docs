@@ -202,18 +202,17 @@ updateRuntimeSettings(settings: RuntimeSettings): Promise < RuntimeSettings > ;
 **Example**
 
 ``` javascript
-DWObject.Addon.BarcodeReader.getRuntimeSettings('balance').then(function(settings) {
+DWObject.Addon.BarcodeReader.getRuntimeSettings('balance').then(function(settings) {    
     settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED;
     return DWObject.Addon.BarcodeReader.updateRuntimeSettings(settings);
-).then(function() {
+}).then(function() {
     DWObject.Addon.BarcodeReader.decode(0).then(function(textResult) {
-            console.log(textResult[0].barcodeText);
+            console.log(textResult);
         },
         function(ex) {
             console.log(ex.message || ex);
         });
     });
-});
 ```
 
 ---
