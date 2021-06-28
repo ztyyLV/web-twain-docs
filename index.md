@@ -6,7 +6,7 @@ breadcrumbText: HomePage
 description: Dynamic Web TWAIN SDK Documentation Homepage
 ---
 
-# Dynamic Web TWAIN Documentation  
+# Dynamic Web TWAIN Documentation   
 
 * [About]({{site.about}}index.html)
 
@@ -111,4 +111,4 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
    - [Distribution and Deployment]({{site.info}}faqs/distribution.html)
    - [Troubleshooting for end-users]({{site.info}}faqs/troubleshooting.html)
    - [Erorr List]({{site.info}}faqs/errorlist.html)
-   
+    
