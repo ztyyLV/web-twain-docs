@@ -6,7 +6,7 @@ breadcrumbText: HomePage
 description: Dynamic Web TWAIN SDK Documentation Homepage
 ---
 
-# Dynamic Web TWAIN Documentation   
+# Dynamic Web TWAIN Documentation 
 
 * [About]({{site.about}}index.html)
 
