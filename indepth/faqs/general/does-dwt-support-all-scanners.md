@@ -1,5 +1,6 @@
 ---
 layout: default-layout
+noTitleIndex: true
 needAutoGenerateSidebar: true
 title: Dynamic Web TWAIN FAQs General Does DWT Support All Scanners
 keywords: Dynamic Web TWAIN, Documentation, General
