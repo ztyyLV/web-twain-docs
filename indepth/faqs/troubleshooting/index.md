@@ -9,6 +9,6 @@ description: Dynamic Web TWAIN SDK Documentation FAQs Troubleshooting For End-us
 
 # Troubleshooting for End-users 
 
-## [How to use TWACKER to check if your device is TWAIN Compliant?]({{site.indepth}}/faqs/troubleshooting/XXXXXXXXXXXXX.html)
+## [How to use TWACKER to check if your device is TWAIN Compliant?]({{site.indepth}}faqs/troubleshooting/XXXXXXXXXXXXX.html)
 
 ## ...

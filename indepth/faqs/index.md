@@ -9,7 +9,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQs
 
 # FAQs
 
-## [General]({{site.indepth}}/general/index.html)
+## [General]({{site.indepth}}faqs/general/index.html)
 
 ## [License and Purchase]({{site.indepth}}faqs/license/index.html)
 

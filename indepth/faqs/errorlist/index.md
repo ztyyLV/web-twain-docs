@@ -9,6 +9,6 @@ description: Dynamic Web TWAIN SDK Documentation FAQs Error List
 
 # Error List
 
-## [Error message - General failure]({{site.indepth}}/faqs/errorlist/XXXXXXXXXXXXX.html)
+## [Error message - General failure]({{site.indepth}}faqs/errorlist/XXXXXXXXXXXXX.html)
 
 ## ...
