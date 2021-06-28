@@ -11,10 +11,11 @@ description: Dynamic Web TWAIN SDK Documentation API Reference BarcodeReader Add
 
 **Methods**
 
-| |
-|:-|:-|
-|[`decode()`]({{site.info}}api/Addon_BarcodeReader.html#decode)| [`getRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#getruntimesettings)|[`updateRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#updateruntimesettings)|
-|[`resetRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#resetruntimesettings)| [`initRuntimeSettingsWithString()`]({{site.info}}api/Addon_BarcodeReader.html#initruntimesettingswithstring)|
+* [decode()](#decode)
+* [getRuntimeSettings()](#getruntimesettings)
+* [updateRuntimeSettings()](#updateruntimesettings)
+* [resetRuntimeSettings()](#resetruntimesettings)
+* [initRuntimeSettingsWithString()](#initruntimesettingswithstring)
 
 ---
 
@@ -43,11 +44,11 @@ interface TextResult {
     /**
      * The barcode format.
      */
-    barcodeFormat: Dynamsoft.DBR.EnumBarcodeFormat | number;
+    barcodeFormat: Dynamsoft.EnumBarcodeFormat | number;
     /**
      * Extra barcde formats.
      */
-    barcodeFormat_2: Dynamsoft.DBR.EnumBarcodeFormat_2 | number;
+    barcodeFormat_2: Dynamsoft.EnumBarcodeFormat_2 | number;
     /**
      * Barcode formats as a string.
      */
@@ -202,17 +203,18 @@ updateRuntimeSettings(settings: RuntimeSettings): Promise < RuntimeSettings > ;
 **Example**
 
 ``` javascript
-DWObject.Addon.BarcodeReader.getRuntimeSettings('balance').then(function(settings) {    
-    settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED;
+DWObject.Addon.BarcodeReader.getRuntimeSettings('balance').then(function(settings) {
+    settings.barcodeFormatIds = Dynamsoft.EnumBarcodeFormat.BF_ONED;
     return DWObject.Addon.BarcodeReader.updateRuntimeSettings(settings);
-}).then(function() {
+).then(function() {
     DWObject.Addon.BarcodeReader.decode(0).then(function(textResult) {
-            console.log(textResult);
+            console.log(textResult[0].barcodeText);
         },
         function(ex) {
             console.log(ex.message || ex);
         });
     });
+});
 ```
 
 ---

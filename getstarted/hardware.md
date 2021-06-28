@@ -54,7 +54,7 @@ After you have installed the driver for your scanner, you can refer to the follo
 
   + Download and install
 
-    > In most cases, please dowload the 32-bit version
+    > Please download the version of TWACKER that matches your driver architecture, not your operating system architecture. In most cases, this will be 32-bit.
 
     - [32-bit](https://download.dynamsoft.com/tool/Twack_32.msi)
     - [64-bit](https://download.dynamsoft.com/tool/Twack_64.msi)

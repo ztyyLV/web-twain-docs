@@ -306,7 +306,7 @@ LogLevel = 1 // Whether to output detailed information for debugging purposes
 * On macOS, find and kill the service in "Activity Monitor" and it'll start itself.
 * On Linux, find and kill the service in "System monitor" and it'll start itself.
 
-### Q: Why am I asked to install the service after it is installed?
+### Q: Why is the browser prompting me to install Dynamsoft Service repeatedly?
 
 **A**: There are a few possible causes
 
