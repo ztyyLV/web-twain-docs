@@ -92,9 +92,9 @@ Resources is the default name of the folder that contain these files. It can be 
 
 Check out more on [dwt features]({{site.about}}features.html).
 
-## Does DWT support all scanners
+<!-- ## Does DWT support all scanners
 
-Not all scanners follow the standard protocols, therefore not all scanners are supported. A known example is the ScanSnap series. Check out more [here](https://scansnapcommunity.net/why-doesnt-scansnap-have-twain-drivers/).
+Not all scanners follow the standard protocols, therefore not all scanners are supported. A known example is the ScanSnap series. Check out more [here](https://scansnapcommunity.net/why-doesnt-scansnap-have-twain-drivers/). -->
 
 ## Are all scanners in the source list available
 
