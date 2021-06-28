@@ -104,11 +104,12 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
    - [Addon_Webcam]({{site.info}}api/Addon_Webcam.html)
    - [Dynamsoft_FileUploader]({{site.info}}api/Dynamsoft_FileUploader.html)
 
-* [FAQs]({{site.info}}faqs/index.html)
-   - [General]({{site.info}}faqs/general.html)
-   - [License and Purchase]({{site.info}}faqs/license.html)
-   - [Develop with DWT]({{site.info}}faqs/develop.html)
-   - [Distribution and Deployment]({{site.info}}faqs/distribution.html)
-   - [Troubleshooting for end-users]({{site.info}}faqs/troubleshooting.html)
-   - [Erorr List]({{site.info}}faqs/errorlist.html)
+* [FAQs]({{site.faqs}}faqs/index.html)
+
+   - [General]({{site.faqs}}faqs/general.html)
+   - [License and Purchase]({{site.faqs}}faqs/license.html)
+   - [Develop with DWT]({{site.faqs}}faqs/develop.html)
+   - [Distribution and Deployment]({{site.faqs}}faqs/distribution.html)
+   - [Troubleshooting for end-users]({{site.faqs}}faqs/troubleshooting.html)
+   - [Erorr List]({{site.faqs}}faqs/errorlist.html)
     
