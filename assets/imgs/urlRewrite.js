@@ -1,4 +1,4 @@
-RewriteUrl('/about/faqs.html#does-dwt-support-all-scanners', 'https://www.dynamsoft.com/web-twain/docs/indepth/faqs/general/does-dwt-support-all-scanners.html')
+RewriteUrl('/about/faqs.html#does-dwt-support-all-scanners', 'https://officecn.dynamsoft.com:808/web-twain/docs/indepth/faqs/general/does-dwt-support-all-scanners.html')
 
 function RewriteUrl(matchUrl, targetUrl) {
   var currentUrl = window.location.pathname
