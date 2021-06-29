@@ -15,7 +15,7 @@ function RewriteUrl(matchUrl, targetUrl) {
   }
   
   var matchHash = matchUrl.split('#').length > 1 ? '#' + matchUrl.split('#')[1] : ''
-  if (currentUrl == matchPathName && currentHash == matchHash) {
+  if (currentUrl.indexOf(matchPathName) >=0 && currentHash == matchHash) {
     window.location.href = targetUrl
   }
 }
