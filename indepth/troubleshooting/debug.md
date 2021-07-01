@@ -30,7 +30,7 @@ function Dynamsoft_OnReady() {
 
 > NOTE
 >  
-> Changing the property will affect all clients. To collect logs for only one client machine, just add the line `LogLevel=14` to `DSConfiguration.ini` on that specific machine. Check out more [here]({{site.indepth}}deployment/service.html#q-how-to-configure-the-service)
+> Changing the property will affect all clients. To collect logs for only one client machine, just add the line `LogLevel=14` to `DSConfiguration.ini` on that specific machine. Check out more [here]({{site.indepth}}deployment/service.html#q-how-to-set-the-configuration-of-the-service)
 
 * Reproduce the issue
 
