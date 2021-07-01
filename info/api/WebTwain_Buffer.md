@@ -453,7 +453,7 @@ If width or height is set to -1, you get the original image, otherwise you get t
 
 ``` typescript
 /**
- * Select all images and return the indices.
+ * Select all images and return the indices. Viewer will be scrolled to the last image.
  */
 SelectAllImages(): number[];
 ```
