@@ -3,9 +3,9 @@ layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
 title: Dynamic Web TWAIN Troubleshooting A Connection With The Server Could Not Be Established
-keywords: Dynamic Web TWAIN, Documentation, Troubleshooting, Common Errors, Connection Couldn't Be Established
-breadcrumbText: Connection Couldn't Be Established
-description: Dynamic Web TWAIN SDK Documentation Troubleshooting Common Errors Connection Couldn't Be Established Page
+keywords: Dynamic Web TWAIN, Documentation, Troubleshooting, Common Errors, Connection Could Not Be Established
+breadcrumbText: Connection Couldn Not Be Established
+description: Dynamic Web TWAIN SDK Documentation Troubleshooting Common Errors Connection Could Not Be Established Page
 ---
 
 # Handling Errors
