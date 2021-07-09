@@ -11,4 +11,4 @@ description: Dynamic Web TWAIN SDK Documentation FAQs Distribution And Deploymen
 
 ## [How to set the MIME type?]({{site.indepth}}faqs/distribution/How-to-set-the-MIME-type.html)
 
-## ...
+## [How to know ResourcesPath is wrong?]({{site.indepth}}faqs/distribution/How-to-know-ResourcesPath-is-wrong.html)
