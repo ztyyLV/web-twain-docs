@@ -53,7 +53,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQs Develop With DWT
 
 ## [How to change the location or to rename the ‘Resources’ folder with Dynamic Web TWAIN?]({{site.indepth}}faqs/develop/How-to-change-the-location-or-to-rename-the-Resources-folder-with-Dynamic-Web-TWAIN.html)
 
-## ...
+
 
 
 

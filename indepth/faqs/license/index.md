@@ -11,4 +11,3 @@ description: Dynamic Web TWAIN SDK Documentation FAQs General License And Purcha
 
 ## [Where can I do when my trial license expires?]({{site.indepth}}faqs/license/XXXXXXXXXXXXX.html)
 
-## ...

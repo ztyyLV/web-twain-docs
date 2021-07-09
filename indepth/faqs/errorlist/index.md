@@ -31,4 +31,4 @@ description: Dynamic Web TWAIN SDK Documentation FAQs Error List
 
 ## [Error message - The connection with the server was terminated abnormally]({{site.indepth}}faqs/errorlist/the-connection-with-the-server-was-terminated-abnormally.html)
 
-## ...
+

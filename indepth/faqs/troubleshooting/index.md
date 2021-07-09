@@ -35,10 +35,3 @@ description: Dynamic Web TWAIN SDK Documentation FAQs Troubleshooting For End-us
 
 ## [How to disable end-user Authorization]({{site.indepth}}faqs/troubleshooting/how-to-disable-end-user-authorization.html)
 
-## ...
-
---
-
-## [The handle is in the wrong state for the requested operation]({{site.indepth}}troubleshooting/common-errors/the-handle-is-in-the-wrong-state-for-the-requested-operation.html)
-
-## [The connection with the server was terminated abnormally]({{site.indepth}}troubleshooting/common-errors/the-connection-with-the-server-was-terminated-abnormally.html)
