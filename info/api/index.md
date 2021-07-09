@@ -4,7 +4,6 @@ needAutoGenerateSidebar: true
 title: Dynamic Web TWAIN API Reference - Index
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Index
 breadcrumbText: API Reference
-description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 ---
 
 > Some old APIs are deprecated, check out [Deprecated Features and APIs]({{site.info}}schedule/deprecated.html)
@@ -226,7 +225,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Index Page
 
 | |
 |:-|:-|
-|[`getCapabilities()`]({{site.info}}api/WebTwain_Acquire.html#getcapabilities) | [`setCapabilities()`]({{site.info}}api/WebTwain_Acquire.html##setcapabilities)|
+|[`getCapabilities()`]({{site.info}}api/WebTwain_Acquire.html#getcapabilities) | [`setCapabilities()`]({{site.info}}api/WebTwain_Acquire.html#setcapabilities)|
 
 > The following APIs are compatible with TWAIN (mostly Windows, but could also be macOS)
 
