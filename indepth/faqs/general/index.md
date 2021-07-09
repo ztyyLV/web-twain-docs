@@ -11,4 +11,5 @@ description: Dynamic Web TWAIN SDK Documentation FAQs General
 
 ## [Does DWT support all scanners?]({{site.indepth}}faqs/general/does-dwt-support-all-scanners.html)
 
+
 ## ...

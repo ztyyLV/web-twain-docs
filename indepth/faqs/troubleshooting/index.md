@@ -1,14 +1,44 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Troubleshooting For End-users 
+title: Dynamic Web TWAIN FAQs Troubleshooting For End-users
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
-breadcrumbText: Troubleshooting For End-users 
-description: Dynamic Web TWAIN SDK Documentation FAQs Troubleshooting For End-users 
+breadcrumbText: Troubleshooting For End-users
+description: Dynamic Web TWAIN SDK Documentation FAQs Troubleshooting For End-users
 ---
 
-# Troubleshooting for End-users 
+# Troubleshooting for End-users
 
-## [How to use TWACKER to check if your device is TWAIN Compliant?]({{site.indepth}}faqs/troubleshooting/XXXXXXXXXXXXX.html)
+## [How to use TWACKER to check if your device is TWAIN Compliant?]({{site.indepth}}faqs/troubleshooting/How-to-use-TWACKER-to-check-if-your-device-is-TWAIN-Compliant.html)
+
+## [Download virtual scanner for testing?]({{site.indepth}}faqs/troubleshooting/Download-virtual-scanner-for-testing.html)
+
+## [What are the differences between TWAIN and WIA?]({{site.indepth}}faqs/troubleshooting/What-are-the-differences-between-TWAIN-and-WIA.html)
+
+## [How to test if your scanner supports ICA scanning on Mac OS?]({{site.indepth}}faqs/troubleshooting/How-to-test-if-your-scanner-supports-ICA-scanning-on-Mac-OS.html)
+
+## [How to test if your device is SANE compliant?]({{site.indepth}}faqs/troubleshooting/How-to-test-if-your-device-is-SANE-compliant.html)
+
+## [How to test if your camera is DirectShow compliant?]({{site.indepth}}faqs/troubleshooting/How-to-test-if-your-camera-is-DirectShow-compliant.html)
+
+## [How to test if your camera is MediaDevices compliant?]({{site.indepth}}faqs/troubleshooting/How-to-test-if-your-camera-is-MediaDevices-compliant.html)
+
+## [How to enable and collect verbose log?]({{site.indepth}}faqs/troubleshooting/How-to-enable-and-collect-verbose-log.html)
+
+## [How to read log?]({{site.indepth}}faqs/troubleshooting/How-to-read-log.html)
+
+## [How to create dump files?]({{site.indepth}}faqs/troubleshooting/How-to-create-dump-files.html)
+
+## [WebSocket Connection Issue?]({{site.indepth}}faqs/troubleshooting/WebSocket-Connection-Issue.html)
+
+## ['Activating the WebTwain instance' prompt doesn't disappear]({{site.indepth}}faqs/troubleshooting/activating-the-WebTwain-instance-prompt-doesnt-disappear.html)
+
+## [How to disable end-user Authorization]({{site.indepth}}faqs/troubleshooting/how-to-disable-end-user-authorization.html)
 
 ## ...
+
+--
+
+## [The handle is in the wrong state for the requested operation]({{site.indepth}}troubleshooting/common-errors/the-handle-is-in-the-wrong-state-for-the-requested-operation.html)
+
+## [The connection with the server was terminated abnormally]({{site.indepth}}troubleshooting/common-errors/the-connection-with-the-server-was-terminated-abnormally.html)
