@@ -36,8 +36,6 @@ Embed the script of the library and add an element on the page.
 <script src="Resources/dynamsoft.webtwain.initiate.js"></script>
 <script src="Resources/dynamsoft.webtwain.config.js"></script>
 ```
-> Note: If you want to support mobile devices, please also embed dynamsoft.webtwain.addon.camera.js.
-> <script src="Resources/addon/dynamsoft.webtwain.addon.camera.js"> </script>
 
 ``` html
 <div id="dwtcontrolContainer"></div>
@@ -79,10 +77,18 @@ Change the function `AcquireImage()` like this
 
 ``` javascript
 function AcquireImage() {
-    if (DWObject) {
-        if (Dynamsoft.Lib.env.bMobile) {
-           DWObject.Addon.Camera.showVideo(null, { width: 1920, height: 1080 }, "document", true);
-        } else {
+   if (DWObject) {
+     if (Dynamsoft.Lib.env.bMobile) {
+         DWObject.LoadImageEx('', 5,
+           function() {
+              console.log('success');
+               },
+             function(errCode, error) {
+                alert(error);
+                        }
+                    );
+                } 
+       else {
             DWObject.SelectSource(
                 function() {
                     DWObject.OpenSource();
@@ -118,11 +124,18 @@ function AcquireImage() {
         }
 
         function AcquireImage() {
-            if (DWObject) {
-                if (Dynamsoft.Lib.env.bMobile) {
-                   DWObject.Addon.Camera.showVideo(null, { width: 1920, height: 1080 }, "document", true);
-                    );
-                } else {
+         if (DWObject) {
+         if (Dynamsoft.Lib.env.bMobile) {
+            DWObject.LoadImageEx('', 5,
+               function() {
+                 console.log('success');
+                  },
+                 function(errCode, error) {
+                   alert(error);
+            }
+          );
+         } 
+            else {
                     DWObject.SelectSource(function() {
                             DWObject.OpenSource();
                             DWObject.AcquireImage();
@@ -171,8 +184,6 @@ function AcquireImage() {
 In step 4 above, we added code for mobile-compliance. However, in order to try it out, the scan page needs to be hosted in a site that runs `HTTPS` . The reason for this is that on mobile devices, the mobile camera is used for image capturing and only a secure site can make use of the camera. The following shows how it works when it's properly deployed (iPhone X).
 
 > By default, the size of the viewer is 270 in width and 350 in height, so it'll appear to be too small. Check out [how to customize the viewer]({{site.indepth}}features/viewer.html#customize-the-viewer) for more information.
-
-![Build-the-Hello-World-Scan-Page-6]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-6.png)
 
 > Important: Not all mobile browsers allow the use of cameras. Check out [browsers on mobile devices]({{site.getstarted}}platform.html#browsers-on-mobile-devices) for more information. If you are using an unsupported browser (for example, Chrome on iOS), you may receive the error `The current browser has not implemented the MediaDevices interface` .
 
@@ -260,7 +271,6 @@ Now we can use the page to scan or acquire, then upload the images as a PDF docu
     <title>Hello World</title>
     <script src="Resources/dynamsoft.webtwain.initiate.js"> </script>
     <script src="Resources/dynamsoft.webtwain.config.js"> </script>
-    <script src="Resources/addon/dynamsoft.webtwain.addon.camera.js"> </script> // to support mobile devices 
 </head>
 
 <body>
@@ -276,7 +286,14 @@ Now we can use the page to scan or acquire, then upload the images as a PDF docu
         function AcquireImage() {
             if (DWObject) {
                 if (Dynamsoft.Lib.env.bMobile) {
-                   DWObject.Addon.Camera.showVideo(null, { width: 1920, height: 1080 }, "document", true);
+                  DWObject.LoadImageEx('', 5,
+                        function() {
+                            console.log('success');
+                        },
+                        function(errCode, error) {
+                            alert(error);
+                        }
+                    );                 
                 } else {
                     DWObject.SelectSource(function() {
                             DWObject.OpenSource();
