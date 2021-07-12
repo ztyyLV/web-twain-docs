@@ -181,7 +181,7 @@ function AcquireImage() {
 
 ## Try it out on your mobile phone
 
-In step 4 above, we added code for mobile-compliance. However, in order to try it out, the scan page needs to be hosted in a site that runs `HTTPS` . The reason for this is that on mobile devices, the mobile camera is used for image capturing and only a secure site can make use of the camera. The following shows how it works when it's properly deployed (iPhone X).
+In step 4 above, we added code for mobile-compliance. However, in order to try it out, the scan page needs to be hosted in a site that runs `HTTPS` . The reason for this is that on mobile devices, the mobile camera is used for image capturing and only a secure site can make use of the camera. 
 
 > By default, the size of the viewer is 270 in width and 350 in height, so it'll appear to be too small. Check out [how to customize the viewer]({{site.indepth}}features/viewer.html#customize-the-viewer) for more information.
 
