@@ -185,8 +185,6 @@ In step 4 above, we added code for mobile-compliance. However, in order to try i
 
 > By default, the size of the viewer is 270 in width and 350 in height, so it'll appear to be too small. Check out [how to customize the viewer]({{site.indepth}}features/viewer.html#customize-the-viewer) for more information.
 
-![Build-the-Hello-World-Scan-Page-6]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-6.png)
-
 > Important: Not all mobile browsers allow the use of cameras. Check out [browsers on mobile devices]({{site.getstarted}}platform.html#browsers-on-mobile-devices) for more information. If you are using an unsupported browser (for example, Chrome on iOS), you may receive the error `The current browser has not implemented the MediaDevices interface` .
 
 ## Upload the document as a pdf via HTTP Post
