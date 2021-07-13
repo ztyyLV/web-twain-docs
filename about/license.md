@@ -58,6 +58,6 @@ View the [Dynamic Web TWAIN License Agreement](https://www.dynamsoft.com/Product
 
 ## Questions
 
-### [Q: When is a license validated?]({{site.info}}indepth/faqs/license/when-is-a-license-validated.html)
+### [Q: When is a license validated?]({{site.indepth}}faqs/license/when-is-a-license-validated.html)
 
-### [Q: How do I set my DWT license?]({{site.info}}indepth/faqs/license/when-is-a-license-validated.html)
+### [Q: How do I set my DWT license?]({{site.indepth}}faqs/license/when-is-a-license-validated.html)
