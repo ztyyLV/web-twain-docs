@@ -43,38 +43,6 @@ A TWAIN-Direct scanner refers to a device that supports the next generation of t
 For more information, check [How to use a TWAIN-Direct scanner](#how-to-use-a-twain-direct-scanner).
 -->
 
-### FAQs
-
-#### Q: How do you configure the scan?
-
-**A**: `DWT` provides two ways to set up a scan operation.
-
-1. Change one setting at a time. Below are a few APIs, for example
-  + [PageSize]({{site.info}}api/WebTwain_Acquire.html#pagesize) 
-  + [PixelType]({{site.info}}api/WebTwain_Acquire.html#pixeltype)
-  + [Resolution]({{site.info}}api/WebTwain_Acquire.html#resolution) 
-  + [SourceCount]({{site.info}}api/WebTwain_Acquire.html#sourcecount)
-2. Change all settings at once. Use one of the two APIs below to achieve this.
-  + [AcquireImage()]({{site.info}}api/WebTwain_Acquire.html#acquireimage)
-  + [startScan()]({{site.info}}api/WebTwain_Acquire.html#startscan)
-
-#### Q: How many images can be scanned?
-
-**A**: Check out [Buffer Management]({{site.indepth}}features/buffer.html#memory-limits-and-disk-caching)
-
-#### Q: How do you use Custom DataSource Data?
-
-> This feature is only available for [TWAIN scanners]({{site.getstarted}}hardware.html#twain-scanners).
-
-**A**: Custom DataSource Data (CDD) is a feature provided by TWAIN and implemented by TWAIN sources (drivers). The idea is to save all TWAIN-related configurations in a file or a base64 string and use it later to restore the same configurations on the same device or a different device of the same model. This feature can be handy in cases like sharing the same configurations across multiple devices, or presetting a device for scanning. `DWT` provides two pairs of methods to enable this feature, which are
-
-* [ `GetCustomDSData()` ]({{site.info}}api/WebTwain_Acquire.html#getcustomdsdata) , [ `SetCustomDSData()` ]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdata)
-* [ `GetCustomDSDataEx()` ]({{site.info}}api/WebTwain_Acquire.html#getcustomdsdataex) , [ `SetCustomDSDataEx()` ]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdataex)
-
-The first pair saves or loads the data from a file, and the second from a base64 string.
-
-The following shows how to use the second pair in JavaScript.
-
 ##### Save the data
 
 ``` javascript
@@ -108,19 +76,6 @@ The following shows how to use the second pair in JavaScript.
   });
 ```
 
-#### Q: How do you use Capability Negotiation?
-
-> This feature is only available for [TWAIN scanners]({{site.getstarted}}hardware.html#twain-scanners)
-
-**A**: Capability Negotiation is the way a TWAIN application communicates with a TWAIN source. This is how `DWT` communicates with a scanner. The process looks something like this:
-
-* [DWT] Are you capable of ***?
-* [Scanner] Yes, and here is what I can do...
-* [DWT] Great, here is what I want done...
-* [Scanner] Consider it done
-
-`DWT` provides two methods, `getCapabilities()` and `setCapabilities()`, for negotiation. The following shows how to ask for supported page sizes and set it to A4 using Capability Negotiation.
-
 ##### Ask for supported sizes
 
 ``` javascript
@@ -150,46 +105,6 @@ DWObject.setCapabilities({
         console.log(result)
     },
     function(error) {
-        console.log(error);
-    }
-);
-```
-
-#### Q: How do you use a custom capability?
-
-**A**: The TWAIN specification defines more than 150 standard capabilities for TWAIN applications and sources to choose from. However, some scanner vendors provide advanced and model-specific capabilities which are not included in the specification. We call them custom capabilities. The following steps show how to use them:
-
-1. Install the [TWAIN Sample App](http://www.dynamsoft.com/download/support/twainapp.win32.installer.msi).
-
-2. Use the TWAIN Sample App to open the source and then check what the hexadecimal value of the custom capability is.
-
-![Indepth-input-1]({{site.assets}}imgs/Indepth-input-1.png)
-
-3. Double click and check the available values.
-
-![Indepth-input-2]({{site.assets}}imgs/Indepth-input-2.png)
-
-4. Use this custom capability.
-
-``` javascript
-DWObject.SelectSource(function() {
-        DWObject.OpenSource();
-        DWObject.setCapabilities({
-                exception: "ignore",
-                capabilities: [{
-                    capability: 0xA03D,
-                    curValue: 3,
-                    exception: "fail",
-                }]
-            },
-            function(capabilities) {
-                console.log(capabilities);
-            },
-            function(error) {
-                console.error(error);
-            });
-    },
-    function(code, error) {
         console.log(error);
     }
 );
@@ -474,85 +389,4 @@ function loadFileFromBase64() {
 
 ``` javascript
 DWObject.LoadDibFromClipboard()
-```
-
-## Other Topics
-
-### Select a scanner by its name
-
-Use the method `SelectSourceByIndex()` to select a scanner by its index in the source list. In some cases, you may want to select a source by its name as shown in the example below.
-
-``` javascript
-var sources = DWObject.GetSourceNames();
-sources.find(function(name, index) {
-    //"EPSON DS-530" is the name of the scanner
-    if (name === "EPSON DS-530")
-        DWObject.SelectSourceByIndex(index);
-})
-```
-
-### How to enable remote scan
-
-#### On Windows desktop where the scanner is physically connected
-
-1. Install `Dynamsoft Service`
-2. Configure the Service by finding the file `DSConfiguration.ini` and adding the following line
-
-``` 
-Server=192.168.8.221
-```
-  > We are assuminge the IP of this desktop is `192.168.8.221`
-
-3. Find the service `Dynamsoft Service` in Windows services list and restart it.
-
-#### In your application
-
-4. Create a WebTwain instance to connect to that service
-
-> Learn more [here]({{site.indepth}}features/initialize.html#dynamsoftwebtwainenvcreatedwtobject)
-
-``` javascript
-Dynamsoft.WebTwainEnv.CreateDWTObject(
-    "dwtcontrolContainer",
-    "192.168.8.221", 18622, 18623,
-    function(dwtObject) {
-        DWObject = dwtObject;
-    },
-    function(errorString) {
-        console.log(errorString);
-    }
-);
-```
-
-1. Use this WebTwain instance, `DWObject`, to scan documents from the scanner connected to the desktop (192.168.8.221)
-
-<!--
-
-### How to use a TWAIN-Direct scanner
-
--->
-
-### How to scan only a selected region
-
-#### Set `PageSize`
-
-``` javascript
-DWObject.SelectSource(function() {
-    DWObject.OpenSource();
-    DWObject.IfShowUI = false;
-    DWObject.PageSize = Dynamsoft.EnumDWT_CapSupportedSizes.TWSS_USLEGAL;
-    DWObject.AcquireImage();
-});
-```
-
-#### Set a layout with `SetImageLayout`
-
-``` javascript
-DWObject.SelectSource(function() {
-    DWObject.OpenSource();
-    DWObject.IfShowUI = false;
-    DWObject.Unit = EnumDWT_UnitType.TWUN_INCHES;
-    DWObject.SetImageLayout(0, 0, 5, 5);
-    DWObject.AcquireImage();
-});
 ```
