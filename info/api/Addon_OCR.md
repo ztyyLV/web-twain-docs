@@ -205,7 +205,7 @@ SetOutputFormat(format: Dynamsoft.DWT.EnumDWT_OCROutputFormat | number): boolean
 ---
 
 ## SetPageSetMode
-
+ 
 **Syntax**
 
 ``` typescript
