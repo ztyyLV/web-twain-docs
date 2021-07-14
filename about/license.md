@@ -56,12 +56,3 @@ All license usage data is submitted to the `LTS` hosted by Dynamsoft. You can
 
 View the [Dynamic Web TWAIN License Agreement](https://www.dynamsoft.com/Products/WebTwain_license.aspx).
 
-## Questions
-
-### Q: When is a license validated?
-
-**A**: `DWT` verifies whether there is a valid license when a [ `WebTwain` instance is created]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance). For individual modules, such as the PDF Rasterizer, or the Barcode Reader, the add-on license is validated when the respective add-on api is invoked.
-
-### Q: How do I set my DWT license?
-
-**A**: The `DWT` license is set using the global API `Dynamsoft.DWT.ProductKey` or `Dynamsoft.DWT.handshakeCode`. For more information, please refer to [Update the License Key]({{site.indepth}}development/upgrade.html?ver=latest#update-the-product-key).
