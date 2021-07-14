@@ -105,6 +105,8 @@ description: Dynamic Web TWAIN SDK Documentation FAQs Develop With DWT
 
 ## [Can I change the colors of the Editor?]({{site.indepth}}faqs/develop/Can-I-change-the-colors-of-the-Editor.html)
 
+## [How to customize the installation dialog?]({{site.indepth}}faqs/develop/How-to-customize-the-installation-dialog.html)
+
 ## [Can I OCR multiple languages at the same time?]({{site.indepth}}faqs/develop/Can-I-OCR-multiple-languages-at-the-same-time.html)
 
 ## [Can I OCR multiple zones at the same time?]({{site.indepth}}faqs/develop/Can-I-OCR-multiple-zones-at-the-same-time.html)

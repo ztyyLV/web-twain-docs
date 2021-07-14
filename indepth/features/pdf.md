@@ -51,29 +51,6 @@ DWObject.LoadImageEx("", Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL, onSuccess, onFa
 
 The method [ `SetConvertMode()` ]({{site.info}}api/Addon_PDF.html#setconvertmode) decides how `PDFR` works and [ `SetResolution()` ]({{site.info}}api/Addon_PDF.html#setresolution) specifies the resolution. These two methods configure `PDFR` to detect and, if necessary, rasterize any PDF file that comes thereafter.
 
-### Questions
-
-#### Q: When shall I use PDFR?
-
-A: `PDFR` is only required for text-based PDFs, to find out whether a file is text-based. Use the method [ `IsTextBasedPDF()` ]({{site.info}}api/Addon_PDF.html#istextbasedpdf) .
-
-#### Q: When is it effective?
-
-A: Once `PDFR` has been configured, it will automatically detect if a file needs to be rasterized and if so, it will convert it to an image(s) with the set resolution(if no resolution is set, the default is 200). This happens when you call any of the following methods
-
-> `PDFR` also works when you drag and drop the file onto the viewer to load it
-
-* [ `LoadImage()` ]({{site.info}}api/WebTwain_IO.html#loadimage)
-* [ `LoadImageEx()` ]({{site.info}}api/WebTwain_IO.html#loadimageex)
-* [ `LoadImageFromBase64Binary()` ]({{site.info}}api/WebTwain_IO.html#loadimagefrombase64binary)
-* [ `LoadImageFromBinary()` ]({{site.info}}api/WebTwain_IO.html#loadimagefrombinary)
-* [ `FTPDownload()` ]({{site.info}}api/WebTwain_IO.html#ftpdownload)
-* [ `FTPDownloadEx()` ]({{site.info}}api/WebTwain_IO.html#ftpdownloadex)
-* [ `HTTPDownload()` ]({{site.info}}api/WebTwain_IO.html#httpdownload)
-* [ `HTTPDownloadEx()` ]({{site.info}}api/WebTwain_IO.html#httpdownloadex)
-* [ `HTTPDownloadThroughPost()` ]({{site.info}}api/WebTwain_IO.html#httpdownloadthroughpost)
-* [ `HTTPDownloadDirectly()` ]({{site.info}}api/WebTwain_IO.html#httpdownloaddirectly)
-
 ### Other methods
 
 * [ `GetConvertMode()` ]({{site.info}}api/Addon_PDF.html#getconvertmode): This method returns the current convert mode.

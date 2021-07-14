@@ -58,38 +58,6 @@ DWObject.Viewer.width = 800;
 DWObject.Viewer.show();
 ```
 
-### Questions
-
-#### Q: How to display the thumbnail viewer?
-
-A: The thumbnails viewer can be customized during the creation before it's shown. Check out * [createThumbnailViewer()]({{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer) for more information.
-
-``` javascript
-var DWObject = null;
-Dynamsoft.DWT.CreateDWTObjectEx({
-        WebTwainId: 'dwtcontrol'
-    },
-    function(obj) {
-        DWObject = obj;
-        DWObject.Viewer.bind(document.getElementById('dwtcontrolContainer'));
-        DWObject.Viewer.height = 600;
-        DWObject.Viewer.width = 800;
-        var thumbnailViewer = DWObject.Viewer.createThumbnailViewer({
-            location: 'left',
-            size: '20%',
-            columns: 1,
-            rows: 4,
-            scrollDirection: 'vertical'
-        });
-        thumbnailViewer.show();
-        DWObject.Viewer.show();
-    },
-    function(err) {
-        console.log(err);
-    }
-);
-```
-
 ## Use the Viewer
 
 You can use the `Viewer` in the following ways
@@ -125,55 +93,3 @@ You can call the method [ `unbind()` ]({{site.info}}api/WebTwain_Viewer.html#unb
 ## The Image Editor
 
 The Image Editor is a built-in UI that contains the most commonly used editing functions. If you don't want to build your own specific UI, you can give it a try and see if it meets your requirements.
-
-### How to show or hide the Image Editor
-
-The following code shows how to use the image editor. Read more on [ `createImageEditor()` ]({{site.info}}api/WebTwain_Viewer.html#createimageeditor).
-
-``` javascript
-var editorSettings = {
-    /*element: document.getElementById("imageEditor"),
-    width: 600,
-    height: 400,*/
-    border: '1px solid rgb(204, 204, 204)',
-    topMenuBorder: '',
-    innerBorder: '',
-    background: "rgb(255, 255, 255)",
-    promptToSaveChange: true,
-    buttons: {
-        titles: {},
-        visibility: {}
-    },
-    dialogText: {
-        dlgRotateAnyAngle: ['Angle :', 'Interpolation:', 'Keep size', '  OK  ', 'Cancel'],
-        dlgChangeImageSize: ['New Height :', 'New Width :', 'Interpolation method:', '  OK  ', 'Cancel'],
-        saveChangedImage: ['You have changed the image, do you want to keep the change(s)?', '  Yes  ', '  No  '],
-        selectSource: ['Select Source:', 'Select', 'Cancel', 'There is no source available']
-    }
-};
-var imageEditor = DWObject.Viewer.createImageEditor(editorSettings);
-imageEditor.show();
-```
-
-### Questions
-
-#### Q: Is the Image Editor compatible across all platforms?
-
-A: Yes, the Image Editor is availabe on all platforms where `DWT` is supported. However, while it is built into the browser page in most cases, it is invoked by a different API and runs as a separate programme if `DWT` ActiveX edition is used. Contact [Dynamsoft Support]({{site.about}}getsupport.html) to learn more.
-
-#### Q: Can I change the language of the Editor?
-
-A: Yes, as shown in the sample code above, you can use the parameters `titles` and `dialogText` to specify the language used in the editor
-
-#### Q: Can I remove or add buttons on the toolbar of the Editor?
-
-A: While you can use `visibility` (as shown in the sample code above) to remove a default button(s), currently you cannot add a custom button yet.
-
-#### Q: Can I specify where and how big the Editor is?
-
-A: Yes, as shown in the sample code above, you can use the parameter `element` to specify where the editor is created and then use `width` and `height` to specify its size.
-
-#### Q: Can I change the colors of the Editor?
-
-A: Yes, as shown in the sample code above, the parameters `border` , `topMenuBorder` , `innerBorder` and
-`background` can be used to specify the style including color of the editor.

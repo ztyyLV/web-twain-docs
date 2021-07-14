@@ -33,7 +33,7 @@ for (var i = 0; i < sources.length; i++) {
 }
 ```
 
-If you are still having issues with a device after reading the above information. You can.. 
+If you are still having issues with a device after reading the above information. You can
 
   + Check out [hardware issue]({{site.indepth}}troubleshooting/scanners-hardware.html) troubleshooting page,
   + Or contact [Dynamsoft Support]({{site.about}}getsupport.html)

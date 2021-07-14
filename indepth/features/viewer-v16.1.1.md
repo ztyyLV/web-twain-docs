@@ -51,25 +51,6 @@ DWObject.UpdateViewer({
 });
 ```
 
-### Questions
-
-#### Q: How to display the thumbnail viewer?
-
-A: The thumbnail viewer is also built-in, the following code shows the thumbnail viewer on the left which takes 20% of the total width of the viewer, then the 80% on the right is occupied by the "main viewer" which shows the current image.
-
-``` javascript
-DWObject.UpdateViewer({
-    Height: "500px",
-    Width: "700px",
-    view: {
-        // Show the 2nd viewer
-        bShow: true,
-        // The 2nd viewer takes up 80% of the viewer width
-        Width: "80%"
-    }
-});
-```
-
 ## Use the Viewer
 
 You can use the `Viewer` in the following ways
@@ -109,18 +90,4 @@ The Image Editor is a built-in UI that contains the most commonly used editing f
 ### How to show or hide the Image Editor
 
 The Image Editor can be opened by the API [ `ShowImageEditor()` ]({{site.info}}api/WebTwain_Viewer.html#showimageeditor).
-
-### Questions
-
-#### Q: Is the Image Editor compatible across all platforms?
-
-A: The Image Editor is availabe on all platforms where DWT is supported. However, while it is built into the browser page in most cases, it runs as a separate programme if DWT ActiveX edition is used. 
-
-<!–
-
-Q: Can I change the language of the Editor
-Q: Can I remove or add buttons on the toolbar of the Editor
-Q: Can I specify where and how big the Editor is
-Q: Can I change the colors of the Editor
-–>
 
