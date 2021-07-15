@@ -63,7 +63,7 @@ See more: [How to test if your scanner supports ICA scanning on Mac OS?]({{site.
 
 * As of version 16.1.1, `DWT` supports SANE v1.0.25.
 
-See more: [How to test if your device is SANE compliant?]({{site.indepth}}faqs/troubleshooting/How-to-test-if-your-device-is-SANE-compliant.html)
+See more: [How to test if your device is SANE compliant?]({{site.indepth}}faqs/troubleshooting/How-to-test-if-your-device-is-SANE-compliant.html) 
 
 ## DirectShow Cameras
 
