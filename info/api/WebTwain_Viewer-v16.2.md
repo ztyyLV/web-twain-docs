@@ -913,7 +913,7 @@ unbind(): boolean;
 **Example**
 
 ``` javascript
-DWObject.Viewer.unbindViewer();
+DWObject.Viewer.unbind();
 ```
 
 **Usage notes**
