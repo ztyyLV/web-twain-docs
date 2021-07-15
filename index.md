@@ -54,7 +54,7 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
    - [Service Setup]({{site.indepth}}deployment/service.html)
   <!-- - [Scenarios]({{site.indepth}}deployment/scenarios.html)-->
 
-* [Troubleshooting]({{site.indepth}}troubleshooting/index.html)
+ <!--* [Troubleshooting]({{site.indepth}}troubleshooting/index.html)
 
    - [How to Debug]({{site.indepth}}troubleshooting/debug.html)
    - [License Errors]({{site.indepth}}troubleshooting/license-errors/index.html)  
@@ -71,7 +71,7 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
       - [XMLHttpRequest cannot load XXX]({{site.indepth}}troubleshooting/common-errors/XMLHttpRequest-cannot-load.html)
       - [Source is connected to the maximum supported number of applications]({{site.indepth}}troubleshooting/common-errors/source-connected-to-maximum.html)
       - [Sequence error]({{site.indepth}}troubleshooting/common-errors/sequence-error.html)
-      - [Request header field dwt-md5 is not allowed by Access-Control-Allow-Headers in preflight response]({{site.indepth}}troubleshooting/common-errors/dwt-md5-is-not-allowed.html)
+      - [Request header field dwt-md5 is not allowed by Access-Control-Allow-Headers in preflight response]({{site.indepth}}troubleshooting/common-errors/dwt-md5-is-not-allowed.html) -->
 
 <!--* [GOVERNANCE]({{site.info}}governance.html)-->
 
@@ -103,3 +103,13 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
    - [Addon_PDF]({{site.info}}api/Addon_PDF.html)
    - [Addon_Webcam]({{site.info}}api/Addon_Webcam.html)
    - [Dynamsoft_FileUploader]({{site.info}}api/Dynamsoft_FileUploader.html)
+
+
+* [FAQs]({{site.faqs}}faqs/index.html)
+
+   - [General]({{site.faqs}}faqs/general.html)
+   - [License and Purchase]({{site.faqs}}faqs/license.html)
+   - [Develop with DWT]({{site.faqs}}faqs/develop.html)
+   - [Distribution and Deployment]({{site.faqs}}faqs/distribution.html)
+   - [Troubleshooting for end-users]({{site.faqs}}faqs/troubleshooting.html)
+   - [Erorr List]({{site.faqs}}faqs/errorlist.html)
