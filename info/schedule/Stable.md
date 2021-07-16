@@ -14,6 +14,8 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 ### New Features 
 
+* Added support for ChromeOS. 
+
 *	Added property [`organizationID`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#organizationid) which can be used to fetch license(s) belonging to the specified organization from the License Tracking Server. With this property, the licensing of the library is smoother from trial to full and it is much easier to manage a license change without code updates.
 
 ### Improved Features 
