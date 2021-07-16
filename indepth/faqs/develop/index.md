@@ -1,13 +1,13 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop With DWT
-keywords: Dynamic Web TWAIN, Documentation, Develop
-breadcrumbText: Develop With DWT
-description: Dynamic Web TWAIN SDK Documentation FAQs Develop With DWT
+title: Dynamic Web TWAIN FAQs Development
+keywords: Dynamic Web TWAIN, Documentation, Development
+breadcrumbText: Development
+description: Dynamic Web TWAIN SDK Documentation FAQs Development
 ---
 
-# Develop with DWT
+# Development
 
 [How to install Dynamic Web TWAIN?]({{site.indepth}}faqs/develop/how-to-install-dynamic-web-twain.html)  
 [What if I am installing over a previous version of the Dynamic Web TWAIN?]({{site.indepth}}faqs/develop/what-if-i-am-installing-over-a-previous-version-of-the-dynamic-web-twain.html)  
@@ -45,7 +45,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQs Develop With DWT
 [How do I know whether the upload succeeded?]({{site.indepth}}faqs/develop/how-do-i-know-whether-the-upload-succeeded.html)  
 [Can I limit the size of the uploaded file?]({{site.indepth}}faqs/develop/can-i-limit-the-size-of-the-uploaded-file.html)  
 [Can I upload a big file in segments?]({{site.indepth}}faqs/develop/can-i-upload-a-big-file-in-segments.html)  
-[What are all the APIs DWT provides for HTTP upload?]({{site.indepth}}faqs/develop/what-are-all-the-apis-dwt-provides-for-http-upload.html)  
+[What are all the APIs Dynamic Web TWAIN provides for HTTP upload?]({{site.indepth}}faqs/develop/what-are-all-the-apis-dwt-provides-for-http-upload.html)  
 [How to reduce the size of a resulting file?]({{site.indepth}}faqs/develop/how-to-reduce-the-size-of-a-resulting-file.html)  
 [How can I customize a resulting TIFF file?]({{site.indepth}}faqs/develop/how-can-I-customize-a-resulting-TIFF-file.html)  
 [Can I hide the progress bar?]({{site.indepth}}faqs/develop/can-I-hide-the-progress-bar.html)  
