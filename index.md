@@ -81,7 +81,7 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
 
    - [General]({{site.faqs}}faqs/general.html)
    - [License and Purchase]({{site.faqs}}faqs/license.html)
-   - [Develop with DWT]({{site.faqs}}faqs/develop.html)
+   - [Development]({{site.faqs}}faqs/develop.html)
    - [Distribution and Deployment]({{site.faqs}}faqs/distribution.html)
    - [Troubleshooting for end-users]({{site.faqs}}faqs/troubleshooting.html)
    - [Erorr List]({{site.faqs}}faqs/errorlist.html)
