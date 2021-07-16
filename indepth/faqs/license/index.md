@@ -9,7 +9,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQs General License And Purcha
 
 # License And Purchase
 
-[Where can I do when my trial license expires?]({{site.indepth}}faqs/license/what-can-i-do-when-my-trial-license-expires.html)  
+[What can I do when my trial license expires?]({{site.indepth}}faqs/license/what-can-i-do-when-my-trial-license-expires.html)  
 [When is a license validated?]({{site.indepth}}faqs/license/when-is-a-license-validated.html)  
 [How do I set my DWT license]({{site.indepth}}faqs/license/how-do-i-set-my-dwt-license.html)  
 [Invalid product key]({{site.indepth}}faqs/license/invalid-product-key.html)  
