@@ -12,4 +12,4 @@ description: Dynamic Web TWAIN SDK Documentation FAQs Can I Use DWT For Free
 
 ## Can I use DWT for free? 
 
-DWT is a commercial software. Generally, Dynamsoft allows it to be used free of charge for up to 60 days with automatically generated trial licenses after which a commercial license needs to be purchased.
+Dynamic Web TWAIN is a commercial software. Generally, Dynamsoft allows it to be used free of charge for up to 60 days with automatically generated trial licenses after which a commercial license needs to be purchased.
