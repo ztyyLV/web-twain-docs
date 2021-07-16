@@ -10,7 +10,6 @@ description: Dynamic Web TWAIN SDK Documentation FAQs Develop With DWT
 # Develop with DWT
 
 [How to install Dynamic Web TWAIN?]({{site.indepth}}faqs/develop/how-to-install-dynamic-web-twain.html)  
-[Does installation require administrator rights?]({{site.indepth}}faqs/develop/does-installation-require-administrator-rights.html)  
 [What if I am installing over a previous version of the Dynamic Web TWAIN?]({{site.indepth}}faqs/develop/what-if-i-am-installing-over-a-previous-version-of-the-dynamic-web-twain.html)  
 [Can I install Dynamsoft Service for all my clients?]({{site.indepth}}faqs/develop/can-i-install-dynamsoft-service-for-all-my-clients.html)  
 [Can I install Dynamsoft Service silently?]({{site.indepth}}faqs/develop/can-i-install-dynamsoft-service-silently.html)  
