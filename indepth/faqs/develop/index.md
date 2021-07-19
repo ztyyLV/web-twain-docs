@@ -19,7 +19,6 @@ description: Dynamic Web TWAIN SDK Documentation FAQs Development
 [How to change the certificate of the Dynamsoft Service?]({{site.indepth}}faqs/develop/how-to-change-the-certificate-of-the-dynamsoft-service.html)  
 [How to set the configuration of the Dynamsoft Service?]({{site.indepth}}faqs/develop/how-to-set-the-configuration-of-the-dynamsoft-service.html)  
 [How to restart the Dynamsoft Service?]({{site.indepth}}faqs/develop/how-to-restart-the-dynamsoft-service.html)  
-[Why is the browser prompting me to install Dynamsoft Service repeatedly?]({{site.indepth}}faqs/develop/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly.html)  
 [How to exclude WIA sources in the source list?]({{site.indepth}}faqs/develop/how-to-exclude-wia-sources-in-the-source-list.html)  
 [Is it necessary to call Dynamsoft.DWT.Load manually?]({{site.indepth}}faqs/develop/is-it-necessary-to-call-dynamsoftdwtload-manually.html)  
 [Where can I get the WebTWAIN instance(s)  ?]({{site.indepth}}faqs/develop/where-can-i-get-the-webtwain-instances.html)  
