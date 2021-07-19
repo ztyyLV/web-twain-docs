@@ -8,7 +8,7 @@ breadcrumbText: Why Is The Browser Prompting Me To Install Dynamsoft Service Rep
 description: Dynamic Web TWAIN SDK Documentation FAQs Why Is The Browser Prompting Me To Install Dynamsoft Service Repeatedly
 ---
 
-# Develop
+# Distribution and Deployment
 
 ## Why is the browser prompting me to install Dynamsoft Service repeatedly? 
 
