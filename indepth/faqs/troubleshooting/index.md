@@ -10,7 +10,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQs Troubleshooting For End-us
 # Troubleshooting for End-users
 
 [How to use TWACKER to check if your device is TWAIN Compliant?]({{site.indepth}}faqs/troubleshooting/How-to-use-TWACKER-to-check-if-your-device-is-TWAIN-Compliant.html)  
-[Download virtual scanner for testing?]({{site.indepth}}faqs/troubleshooting/Download-virtual-scanner-for-testing.html)  
+[Download virtual scanner for testing]({{site.indepth}}faqs/troubleshooting/Download-virtual-scanner-for-testing.html)  
 [What are the differences between TWAIN and WIA?]({{site.indepth}}faqs/troubleshooting/What-are-the-differences-between-TWAIN-and-WIA.html)  
 [How to test if your scanner supports ICA scanning on Mac OS?]({{site.indepth}}faqs/troubleshooting/How-to-test-if-your-scanner-supports-ICA-scanning-on-Mac-OS.html)  
 [How to test if your device is SANE compliant?]({{site.indepth}}faqs/troubleshooting/How-to-test-if-your-device-is-SANE-compliant.html)  
