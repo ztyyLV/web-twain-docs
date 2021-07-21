@@ -10,7 +10,7 @@ description: Dynamic Web TWAIN SDK Documentation how to disable end-user manual 
 
 # Troubleshooting
 
-## how to disable end-user manual authorization when accessing local hardware
+## How to disable end-user manual authorization when accessing local hardware
 
 Requested by more and more customers, Dynamsoft added the feature of end-user authorization in Dynamic Web TWAIN version 12. With the feature, whenever a user tries to use a scanner or a webcam connected to the local desktop or access any local files, he or she will be prompted to allow the action.
 
