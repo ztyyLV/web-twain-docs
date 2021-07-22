@@ -815,7 +815,7 @@ Operation types include
 
 ``` typescript
 /**
- * A built-in callback triggered when the top image currently displayed in the viewer changes.
+ * A built-in callback triggered when the top index currently displayed in the viewer changes.
  * @argument index Index of the current image.
  */
 RegisterEvent('OnTopImageInTheViewChanged',
