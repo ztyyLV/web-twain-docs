@@ -10,6 +10,12 @@ description: Dynamic Web TWAIN SDK Documentation License Page
 
 # License
 
+## How do I get a trial License
+
+Please visit our [customer portal](https://www.dynamsoft.com/customer/license/trialLicense) to request for a trial license.
+
+## Full licenses
+
 Dynamic Web TWAIN has the following licensing options:
 
 ### [Per Browser Client](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_browser_client)/ [Per Page](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_page)
@@ -41,7 +47,7 @@ If it is set elsewhere, you need to find it and replace it. For example, if you 
 
 The license setting way is the same as Per Server License, please refer to the above Per Server License section.
 
-## Notes:
+#### Notes:
 Please note that `LTS` license handshakeCode and ProductKey cannot be used together. And you need to connect to `LTS` to track license usage. 
 
 All license usage data is submitted to the `LTS` hosted by Dynamsoft. You can
