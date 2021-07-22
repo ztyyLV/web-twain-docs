@@ -745,6 +745,10 @@ RegisterEvent('OnTopImageInTheViewChanged',
 ): boolean; 
 ```
 
+**Usage notes**
+
+This API does not work if the view mode of the viewer is set to -1 by -1.
+
 ---
 
 ## OnIndexChangeDragDropDone
