@@ -18,9 +18,6 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page
 * [SetDefaultTag()](#setdefaulttag) 
 * [TagImages()](#tagimages)
 * [GetImageBitDepth()](#getimagebitdepth)
-
-<!--* [GetImageBitDepthAsync()](#getimagebitdepthasync)-->
-
 * [GetImageSize()](#getimagesize)
 * [GetImageSizeWithSpecifiedType()](#getimagesizewithspecifiedtype) 
 * [GetSelectedImagesSize()](#getselectedimagessize)
@@ -42,12 +39,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page
 * [SwitchImage()](#switchimage)
 * [RemoveImage()](#removeimage) 
 * [RemoveAllImages()](#removeallimages)
-
-<!--* [RemoveAllImagesAsync()](#removeallimagesasync)-->
-
 * [RemoveAllSelectedImages()](#removeallselectedimages)
-
-<!--* [RemoveAllSelectedImagesAsync()](#removeallselectedimagesasync)-->
 
 **Properties**
 
@@ -822,6 +814,10 @@ RegisterEvent('OnTopImageInTheViewChanged',
     function (index: number) {}
 ): boolean; 
 ```
+
+**Usage notes**
+
+This API does not work if the view mode of the viewer is set to -1 by -1.
 
 ---
 
