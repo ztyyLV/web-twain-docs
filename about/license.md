@@ -18,15 +18,15 @@ Please visit our [customer portal](https://www.dynamsoft.com/customer/license/tr
 
 Dynamic Web TWAIN has the following licensing options:
 
-### [Per Browser Client](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_browser_client)/ [Per Page](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_page)
+### [Per Client Device](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_browser_client)/ [Per Page](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_page)
 
-For Per Browser Client/ Per Page license, you need to use [handshakeCode]({{site.info}}api/Dynamsoft_WebTwainEnv.html#handshakecode) to set.
+For Per Client Device/ Per Page license, you need to use [handshakeCode]({{site.info}}api/Dynamsoft_WebTwainEnv.html#handshakecode) to set.
 
 ``` javascript
 Dynamsoft.DWT.handshakeCode = "DynamsoftID-CustomCode";
 ```
 
-Please note that this licensing mode is only supported from `DWT` 17.0 and needs to be used with License Tracking Server (`LTS` for short). See more about [What is a LTS](https://www.dynamsoft.com/license-tracking/docs/selfhosting/managelts.html?ver=latest)
+Please note that this licensing mode is only supported from `DWT` 17.0 and needs to be used with Dynamsfot License Server (`DLS` for short). See more about [What is a DLS](https://www.dynamsoft.com/license-tracking/docs/selfhosting/managelts.html?ver=latest)
 
 LTS supports two deployment methods: [Dynamsoft-hosting](https://www.dynamsoft.com/license-tracking/docs/dshosting/index.html?ver=latest) and [Self-hosting](https://www.dynamsoft.com/license-tracking/docs/selfhosting/index.html?ver=latest). See [How secure is the License Tracking Server](https://www.dynamsoft.com/license-tracking/docs/about/licensefaq.html?ver=latest#how-secure-is-the-license-tracking-server)
 
@@ -48,9 +48,9 @@ If it is set elsewhere, you need to find it and replace it. For example, if you 
 The license setting way is the same as Per Server License, please refer to the above Per Server License section.
 
 #### Notes:
-Please note that `LTS` license handshakeCode and ProductKey cannot be used together. And you need to connect to `LTS` to track license usage. 
+Please note that `DLS` license handshakeCode and ProductKey cannot be used together. And you need to connect to `DLS` to track license usage. 
 
-All license usage data is submitted to the `LTS` hosted by Dynamsoft. You can
+All license usage data is submitted to the `DLS` hosted by Dynamsoft. You can
 
 * [View activated license items](https://www.dynamsoft.com/license-tracking/docs/common/licenseitems.html)
 * [View the license usage statistics](https://www.dynamsoft.com/license-tracking/docs/common/statistics.html)
