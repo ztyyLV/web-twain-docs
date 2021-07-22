@@ -10,7 +10,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference IO APIs Page
 
 # WebTwain IO
 
-Input
+## Input
 
 **Methods**
 
@@ -20,7 +20,7 @@ Input
 |[`LoadDibFromClipboard()`](#loaddibfromclipboard)| [`FTPDownload()`](#ftpdownload)| [`FTPDownloadEx()`](#ftpdownloadex)| [`HTTPDownload()`](#httpdownload)|
 | [`HTTPDownloadEx()`](#httpdownloadex)|[`HTTPDownloadThroughPost()`](#httpdownloadthroughpost)|[`HTTPDownloadDirectly()`](#httpdownloaddirectly)|
 
-Output
+## Output
 
 **Methods**
 
