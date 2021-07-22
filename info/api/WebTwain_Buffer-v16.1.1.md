@@ -16,9 +16,6 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page
 * [SetDefaultTag()](#setdefaulttag) 
 * [TagImages()](#tagimages)
 * [GetImageBitDepth()](#getimagebitdepth)
-
-<!--* [GetImageBitDepthAsync()](#getimagebitdepthasync)-->
-
 * [GetImageSize()](#getimagesize)
 * [GetImageSizeWithSpecifiedType()](#getimagesizewithspecifiedtype) 
 * [GetSelectedImagesSize()](#getselectedimagessize)
@@ -40,12 +37,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page
 * [SwitchImage()](#switchimage)
 * [RemoveImage()](#removeimage) 
 * [RemoveAllImages()](#removeallimages)
-
-<!--* [RemoveAllImagesAsync()](#removeallimagesasync)-->
-
 * [RemoveAllSelectedImages()](#removeallselectedimages)
-
-<!--* [RemoveAllSelectedImagesAsync()](#removeallselectedimagesasync)-->
 
 **Properties**
 
