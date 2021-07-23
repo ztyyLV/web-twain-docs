@@ -587,10 +587,15 @@ DWObject.SelectSource(function() {
  * @argument errorCode The error code.
  * @argument errorString The error string.
  */
-SelectSourceAsync(
-    successCallBack?: () => void,
-    failureCallBack?: (errorCode: number, errorString: string) => void
-): Promise<boolean>;
+SelectSourceAsync(): Promise<number>;
+```
+
+**Example**
+
+``` javascript
+DWObject.SelectSourceAsync().then(function(sourceIndex){console.log(sourceIndex);
+DWObject.AcquireImage()}).catch(function(e){console.log(e)});
+
 ```
 
 ---
