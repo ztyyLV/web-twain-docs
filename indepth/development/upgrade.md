@@ -98,7 +98,7 @@ Dynamsoft.DWT.organizationid = "123456"; // replace the number 123456 with YOUR-
 
 Please note that this licensing model is only supported from `DWT` 17.0 and needs to be used with Dynamsoft License Server (`DLS` for short). See more about [What is a DLS](https://www.dynamsoft.com/license-tracking/docs/selfhosting/managelts.html?ver=latest)
 
-## Update `DWT` on the client-side
+## Update `DWT` on the client-side 
 
 ### Service mode
 
