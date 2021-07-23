@@ -142,7 +142,7 @@ Learn more about [What is handshakeCode](https://www.dynamsoft.com/license-track
 
 ``` typescript
 /**
- * Gets or sets the session password of the handshake code set in license tracking server.
+ * Gets or sets the session password of the handshake code set in Dynamsoft License server.
  */
 handshakeCode: string;
 ```
@@ -153,7 +153,7 @@ Dynamsoft.DWT.sessionPassword = "MyPassw0rd";
 ```
 
 **Usage notes**
-Learn more about [session password](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#session-password) in License Tracking Server 2.0.
+Learn more about [session password](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#session-password) in Dynamsoft License server.
 
 ## licenseException
 
