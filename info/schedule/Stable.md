@@ -384,7 +384,7 @@ No changes in version 16.1.
 
 ### Improved
 
-* [HTML5] Further improved security by deleting the methods `FTPUploadDirectly()` ,      `FTPDownloadDirectly()` ,      `FileExist()` and changing the methods `HTTPUploadThroughPostDirectly()` ,      `HTTPDownloadDirectly()` to only work on whitelisted images/files (check NOTE below).
+* [HTML5] Further improved security by deleting the methods `FTPUploadDirectly()` ,      `FTPDownloadDirectly()` ,      `FileExists()` and changing the methods `HTTPUploadThroughPostDirectly()` ,      `HTTPDownloadDirectly()` to only work on whitelisted images/files (check NOTE below).
 * [HTML5] Changing the default SSL certificates is now officially supported.
 * [HTML5] Changed the property `LogLevel` so that when it's set to `1\0` , it's equivalent to setting `LogLevel` to `14\1` in the file `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\DSConfiguration.ini`
 * [HTML5] Local caching is made smoother by introducing a new process to do the caching when the threshold is reached. As a result, it is significantly faster when loading a great many files.
