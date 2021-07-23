@@ -567,6 +567,13 @@ DWObject.SelectSource(function() {
 SelectSourceAsync(): Promise<number>;
 ```
 
+**Example**
+
+``` javascript
+DWObject.SelectSourceAsync().then(function(sourceIndex){console.log(sourceIndex);
+DWObject.AcquireImage()}).catch(function(e){console.log(e)});
+```
+
 ---
 
 ## SelectSourceByIndex
