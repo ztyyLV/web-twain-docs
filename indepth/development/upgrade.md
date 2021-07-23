@@ -96,7 +96,7 @@ But if you are using [Per Client Device License](https://www.dynamsoft.com/Produ
 Dynamsoft.DWT.organizationid = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
 ```
 
-Please note that this licensing model is only supported from `DWT` 17.0 and needs to be used with Dynamsoft License Server (`DLS` for short). See more about [What is a DLS](https://www.dynamsoft.com/license-tracking/docs/selfhosting/managelts.html?ver=latest)
+Please note that this licensing model is only supported from `DWT` 17.0 and needs to be used with Dynamsoft License Server (`DLS` for short). See more about [What is a DLS](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#dynamsoft-license-server)
 
 ## Update `DWT` on the client-side 
 
