@@ -32,6 +32,6 @@ jobs:
           cd web-twain-docs && git pull && cd .. && cp -rfp ./web-twain-docs/* ./DWTDoc/
           cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DWTDoc/
           cd DWTDoc && bundle exec jekyll build --incremental
-          python3 /home/ubuntu/ftp.py /home/ubuntu/DWTDoc/_site/ ./www.dynamsoft.com/web-twain/docs/
+          python3 /home/ubuntu/ftp.py /home/ubuntu/DWTDoc/_site/ ./www.dynamsoft.com/web-twain/docs/ prod
 
           
