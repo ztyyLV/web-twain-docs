@@ -23,7 +23,7 @@ Dynamic Web TWAIN has the following licensing options:
 For Per Client Device/ Per Page license, you need to use [organizationID]({{site.info}}api/Dynamsoft_WebTwainEnv.html#organizationid) to set.
 
 ``` javascript
-Dynamsoft.DWT.organizationid = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
+Dynamsoft.DWT.organizationID = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
 ```
 
 Please note that this licensing mode is only supported from `DWT` 17.0 and needs to be used with Dynamsfot License Server (`DLS` for short). See more about [What is a DLS](https://www.dynamsoft.com/license-tracking/docs/selfhosting/managelts.html?ver=latest)
