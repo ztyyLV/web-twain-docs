@@ -59,13 +59,13 @@ function getExtension(type) {
         case 1:
             return ".jpg";
         case 2:
-        case 8:
-            return ".tif";
+         return ".tif";
         case 3:
             return ".png";
         case 4:
-        case 7:
             return ".pdf";
+        case 7:
+        case 8:
         default:
             return ".unknown";
     }
