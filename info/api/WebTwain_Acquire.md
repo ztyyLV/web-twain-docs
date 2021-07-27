@@ -2377,3 +2377,36 @@ interface CapabilitySetup {
 To make things easier, Dynamsoft designed the API with a simplified parameter `Capabilities` which only requires the minimum information for setting a capability: a number to specify the capability and the value to set to it. Underneath, Dynamsoft takes care of container type setting, value type setting as well as data validation.
 
 Pay attention to the argument you set to the overall parameter `exception` and the individual parameter `exception` for each capability. If the overall parameter is set to `fail` , the setting will abort as soon as an exception is raised while setting any of the capabilities. Otherwise, `ignore` means to carry on setting the next capability even when the previous one failed. Aside from the overall parameter, the individual `exception` is optional but takes precedence if set. In other words, you can set the overall `exception` to `ignore` and then set the individual one to `fail` for the capabilities which you think are important. This way, you get notified if these important capabilities failed to be set while other less-important ones are ignored when setting them failed.
+
+**Example**
+
+``` javascript
+DWObject.SelectSourceByIndex(0);
+DWObject.IfShowUI=false;
+DWObject.OpenSource();
+DWObject.setCapabilities({
+    exception:"ignore",
+    capabilities:
+        [
+            {
+                capability:4376, //your own capability
+                curValue:200, //your own curValue
+            },
+            {
+                capability:4377, //your own capability
+                curValue:"abc",  // your own curValue
+                exception:"fail",
+            },
+            {
+                capability:257, // your own capability
+                curValue:0,  // your own curValue
+            }
+        ]
+},function(successData){
+    DWObject.AcquireImage(function(){},function (){console.log(DWObject.ErrorString)});
+},function(errorData)
+{
+    console.error(errorData);
+    DWObject.AcquireImage(function(){},function (){console.log(DWObject.ErrorString)});
+});
+```
