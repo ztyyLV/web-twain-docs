@@ -58,7 +58,7 @@ The following features and APIs are deprecated as of version 16.1.1.
 
 ## Related to Image Editing
 
-> [Alternative] Annotation feature to be added in a later version.
+<!-- > [Alternative] Annotation feature to be added in a later version. -->
 
 * [AddText()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#AddText) 
 * [CreateTextFont()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#CreateTextFont)
