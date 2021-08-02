@@ -304,7 +304,7 @@ If it's set to 2, then besides what's mentioned in the two tables above, the Dyn
 
 * Remote Scan
 
-  When [scanning remotely]({{site.indepth}}feature/input.html#scan-from-a-remote-scanner), if the method is called without any parameter, do not forget to set [ `IfShowUI` ](#ifshowui) to `false` .
+  When [scanning remotely]({{site.indepth}}features/input.html#scan-from-a-remote-scanner), if the method is called without any parameter, do not forget to set [ `IfShowUI` ](#ifshowui) to `false` .
 
 **Example**
 
