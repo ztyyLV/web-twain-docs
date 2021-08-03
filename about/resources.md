@@ -37,10 +37,10 @@ Please visit our [customer portal](https://www.dynamsoft.com/customer/license/tr
 
 ## Useful Links
 
-* [Official Demo 1](https://demo.dynamsoft.com/dwt/online_demo_scan.aspx)
-* [Official Demo 2](https://demo3.dynamsoft.com/DWTOnlineDemo/online_demo.html)
-* [Price / Online Store](https://www.dynamsoft.com/Secure/imaging-web-application-buyit.aspx#)
-* [Online Videos](https://www.youtube.com/user/Dynamsoft)
+* <a href="https://demo.dynamsoft.com/dwt/online_demo_scan.aspx" target="_blank">Official Demo 1</a>
+* <a href="https://demo3.dynamsoft.com/dwt/online_demo_scan.aspx" target="_blank">Official Demo 2</a>
+* <a href="https://www.dynamsoft.com/Secure/imaging-web-application-buyit.aspx#" target="_blank">Price / Online Store</a>
+* <a href="https://www.youtube.com/user/Dynamsoft" target="_blank">Online Videos</a>
 
 ## Blogs 
 
