@@ -8,15 +8,15 @@
     .DWT17Note i { position: absolute; right: 10px; top: 8px; font-size: 20px; cursor: pointer; }
     .rightSideMenu.hasNote { padding-top: 168px; }
     @media (min-width: 1200px) and (max-width: 1679.98px) {
-        .col-md-3 {
+        /* .col-md-3 {
             width: 21%;
         }
         .col-md-9 {
             width: 79%;
         }
-        .markdown-body { 
+        .markdown-body {
             width: calc(100% - 212px);
-        }
+        } */
     }
 </style>
 
@@ -47,20 +47,14 @@
             </div>
             <div class="docContainer col-xs-12 col-md-9">
                 <div id="docHead" class = "head row hide-xs hide-sm">
-                    {%- if page.url contains '-v' || page.url contains 'ver=1' -%}
-                    {%- else -%}
-                    <div id="DWT17Note" style="display: none;" class="col-xs-12 col-md-12">
-                        <div class="DWT17Note"><i class="fa fa-close"></i>This is the <span style="font-weight: bold">documentation for the latest version (v17.1) of Dynamic Web TWAIN</span>. If you are using an older version, please switch the doc version above the table of contents on the left.</div>
-                    </div>
-                    {%- endif -%}
                     {%- include main-page-head.html -%}
                 </div>
                 <div class="main row">
                     <div class="content markdown-body headCounter col-xs-12 col-md-12 col-lg-9 col-xl-10">
                         {{ content }}
-                        
+
                     </div>
-                    <div class="rightSideMenu col-xs-12 col-md-12 col-lg-3 col-xl-2  hide-md hide-sm hide-xs">	
+                    <div class="rightSideMenu col-xs-12 col-md-12 col-lg-3 col-xl-2  hide-md hide-sm hide-xs">
                         <div id="feedbackFooter" style="color: #306877;">
                             <p class="fontOswald">Is this page helpful? </p>
                             <a href="javascript:void(0)" style="color: #306877;" class="recordLink smileLink" onclick="UsefulRecord(true)"><img class="icon-smile" src="{{ site.smile_icon }}" alt="Yes" />Yes</a>
@@ -85,7 +79,7 @@
             </div>
         </div>
     </div>
-  
+
     <div id="footerWrapper">
         {%- include page_footer.html -%}
     </div>
@@ -103,86 +97,13 @@
     {%- endif -%}
 
     <script type="text/javascript">
-        function getCookie(name) {
-            var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
-            return (arr = document.cookie.match(reg)) ? unescape(arr[2]) : null;
-        }
 
-        function setCookie(name, value, minutes) {
-            if (minutes == undefined) {
-                minutes = 24 * 60 - 1;
-            }
-            var exp = new Date();
-            exp.setTime(exp.getTime() + minutes * 60 * 1000);
-            document.cookie = name + "=" + (value) + ";expires=" + exp.toGMTString() + ";path=/";
-        }
-
-        window.addEventListener('scroll', dwtScrollListener2);
-
-        function dwtScrollListener2() {
-            if (breakpoint() == 'lg') {
-                var sd = $(window).scrollTop();
-                if (sd >= $('#overall-header').height()) {
-                    if($('.currentVersion').html() == 'latest version' &&  getCookie('NoAlertNote') != 'true') {
-                        $('#DWT17Note').hide()
-                        $('.rightSideMenu').removeClass('hasNote')
-                        // markdownHChange2()
-                    }
-                } else {
-                    if($('.currentVersion').html() == 'latest version' &&  getCookie('NoAlertNote') != 'true') {
-                        $('#DWT17Note').show()
-                        $('.rightSideMenu').addClass('hasNote')
-                        // markdownHChange2()
-                    }
-                }
-            }
-        }
-
-        $('#txtSearch').keydown(function(e) { 
+        $('#txtSearch').keydown(function(e) {
             if (e.keyCode == 13) {
                 window.location.href = '/web-twain/docs/search.html?q=' + $('#txtSearch').val()
             }
         })
 
-        if($('.currentVersion').html() == 'latest version' &&  getCookie('NoAlertNote') != 'true') {
-            $('#DWT17Note').show()
-            $('.rightSideMenu').addClass('hasNote')
-            markdownHChange()
-        }
-
-        $('#DWT17Note i').on('click', function() {
-            setCookie('NoAlertNote', 'true')
-            $('#DWT17Note').hide()
-            $('.rightSideMenu').removeClass('hasNote')
-            markdownHChange()
-        })
-
-        function markdownHChange() {
-            $('.docContainer .markdown-body').css({'margin-top': ($('#docHead').outerHeight() + 20) + 'px'});
-            if ($(window).outerWidth() > 1680) {
-                if (breakpoint() == 'lg') {
-                    $('.markdown-body h2').css({'padding-top': $('#docHead').outerHeight() + 110 + 'px'})
-                    $('.markdown-body h2').css({'margin-top': -$('#docHead').outerHeight() - 80 + 'px'})
-                    $('.markdown-body h3').css({'padding-top': $('#docHead').outerHeight() + 110 + 'px'})
-                    $('.markdown-body h3').css({'margin-top': -$('#docHead').outerHeight() - 110 + 'px'})
-                    $('.markdown-body h4').css({'padding-top': $('#docHead').outerHeight() + 110 + 'px'})
-                    $('.markdown-body h4').css({'margin-top': -$('#docHead').outerHeight() - 110 + 'px'})
-                    $('.markdown-body h5').css({'padding-top': $('#docHead').outerHeight() + 110 + 'px'})
-                    $('.markdown-body h5').css({'margin-top': -$('#docHead').outerHeight() - 110 + 'px'})
-                }
-            } else {
-                if (breakpoint() == 'lg') {
-                    $('.markdown-body h2').css({'padding-top': $('#docHead').outerHeight() + 90 + 'px'})
-                    $('.markdown-body h2').css({'margin-top': -$('#docHead').outerHeight() - 60 + 'px'})
-                    $('.markdown-body h3').css({'padding-top': $('#docHead').outerHeight() + 90 + 'px'})
-                    $('.markdown-body h3').css({'margin-top': -$('#docHead').outerHeight() - 90 + 'px'})
-                    $('.markdown-body h4').css({'padding-top': $('#docHead').outerHeight() + 90 + 'px'})
-                    $('.markdown-body h4').css({'margin-top': -$('#docHead').outerHeight() - 90 + 'px'})
-                    $('.markdown-body h5').css({'padding-top': $('#docHead').outerHeight() + 90 + 'px'})
-                    $('.markdown-body h5').css({'margin-top': -$('#docHead').outerHeight() - 90 + 'px'})
-                }
-            }
-        }
     </script>
 
     {%- include livehelp.html -%}
@@ -236,8 +157,8 @@
     document.getElementsByTagName('head')[0].appendChild(s);
     })();
   </script>
-  
-  <!-- Marketo RTP tag --> 
+
+  <!-- Marketo RTP tag -->
   <script type='text/javascript'>
     (function(c,h,a,f,i,e){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
     c[a].a=i;c[a].e=e;var g=h.createElement("script");g.async=true;g.type="text/javascript";
