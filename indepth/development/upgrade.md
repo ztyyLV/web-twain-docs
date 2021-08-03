@@ -96,7 +96,7 @@ But if you are using <a href="https://www.dynamsoft.com/Products/WebTWAIN_Licens
 Dynamsoft.DWT.organizationid = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
 ```
 
-Please note that this licensing model is only supported from `DWT` 17.0 and needs to be used with Dynamsoft License Server (`DLS` for short). See more about [What is a DLS](https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#dynamsoft-license-server)
+Please note that this licensing model is only supported from `DWT` 17.0 and needs to be used with Dynamsoft License Server (`DLS` for short). See more about <a href="https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#dynamsoft-license-server" target="_blank">What is a DLS</a>
 
 ## Update `DWT` on the client-side 
 
