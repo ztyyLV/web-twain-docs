@@ -11,15 +11,15 @@ description: Dynamic Web TWAIN SDK Documentation Initialization Page
 
 Initializing `DWT` takes a few simple steps, as you have seen in the ["Getting Started"]({{site.getstarted}}helloworld.html)chapter. The following guide will dive deeper into how `DWT` is intialized once the page loads.
 
-## Usage Modes
+## Usage Editions
 
 Before we dive into the details of initialization, let's take a look at the two modes in which `DWT` can operate:
 
-### Service Mode
+### Desktop Service Edition
 
-#### What is Service Mode
+#### What is Desktop Service Edition
 
-Service mode means `DWT` operates through the [Dynamsoft Service]({{site.indpeth}}deployment/Service.html) which is a quiet, background system service that handles the communication between connected devices and the browser client as well as imaging processing, encoding, decoding, etc.
+Desktop Service Edition means `DWT` operates through the [Dynamsoft Service]({{site.indpeth}}deployment/Service.html) which is a quiet, background system service that handles the communication between connected devices and the browser client as well as imaging processing, encoding, decoding, etc.
 
 When using `DWT` on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices), the user by default will be using service mode (recommended). That means, the installation of the Dynamsoft Service is mandatory.
 
@@ -42,11 +42,11 @@ If a user who hasn't installed the Dynamsoft Service accesses the web page (whic
 
 Once the installation is done, you can click 'Reconnect to the service' or refresh the page to start using the SDK.
 
-### WASM Mode
+### WebAssembly Edition
 
-#### What is WASM Mode
+#### What is WebAssembly Edition
 
-WASM mode means `DWT` operates completely within the browser with the help of `Web Worker` and `WebAssembly` . It relieves users from manually installing anything but it does require advanced features that only modern [WASM browsers]({{site.getstarted}}platform.html#wasm-browsers) provide.
+WebAssembly Edition means `DWT` operates completely within the browser with the help of `Web Worker` and `WebAssembly` . It relieves users from manually installing anything but it does require advanced features that only modern [WASM browsers]({{site.getstarted}}platform.html#wasm-browsers) provide.
 
 If a user decides to access the `DWT` application via [a mobile browser]({{site.getstarted}}platform.html#browsers-on-mobile-devices) or they don't want to install anything on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices), they can choose the WASM mode.
 
@@ -54,15 +54,15 @@ Read more on how to [expand your application to mobile platforms]({{site.indepth
 
 #### Comparison of the two modes
 
-A major difference between Service mode and WASM mode is that the latter can not access local devices, which means that it is impossible to [use local scanners]({{site.indepth}}features/input.html#scan-from-a-local-scanner).
+A major difference between Desktop Service Edition and WebAssembly Edition is that the latter can not access local devices, which means that it is impossible to [use local scanners]({{site.indepth}}features/input.html#scan-from-a-local-scanner).
 
-Also, the performance and speed of WASM mode is not as good as Service mode because it is not able to make use of as many resources.
+Also, the performance and speed of WebAssembly Edition is not as good as Service Edition because it is not able to make use of as many resources.
 
 At Dynamsoft, we tried and are still trying to make these two modes to function as closely to each other as possible. 
 
-#### How to use WASM mode on desktop
+#### How to use WebAssembly Edition on desktop
 
-As mentioned previously, [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) users will by default go with service mode, while mobile and tablet users will default to WASM mode. However, if you would like desktop users to start in WASM mode and forego the need for a service, you can set [UseLocalService]({{site.info}}api/Dynamsoft_WebTwainEnv.html#uselocalservice) to false in the initialization code.
+As mentioned previously, [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) users will by default go with Desktop Service Edition, while mobile and tablet users will default to WebAssembly Edition. However, if you would like desktop users to start in WebAssembly Edition and forego the need for a service, you can set [UseLocalService]({{site.info}}api/Dynamsoft_WebTwainEnv.html#uselocalservice) to false in the initialization code.
 
 ## Loading the Core JS Files
 
@@ -73,7 +73,6 @@ This is the first step of the initialization.
 Inside the `Resources` directory that is included with the SDK installation, you will find the following files:
 
 ``` 
-
 dynamsoft.webtwain.config.js
 dynamsoft.webtwain.initiate.js
 ```
@@ -112,12 +111,11 @@ Whether or not to include any of these components is as simple as referencing it
 
 Once the main JavaScript files are loaded in, the initialization process now moves to loading all the other supporting JS files as well as the CSS files. Depending on the mode `DWT` operates in, the supporting files vary.
 
-### Service mode files
+### Desktop Service Edition files
 
-Service mode requires the following files found inside the `Resources` folder:
+Desktop Service Edition requires the following files found inside the `Resources` folder:
 
 ``` 
-
 dynamsoft.webtwain.install.js
 src/dynamsoft.viewer.js
 src/dynamsoft.viewer.css
@@ -134,12 +132,11 @@ This file is used to configure the dialogs which show up when the Dynamsoft Serv
 
 These three files are used to build the viewer component of `DWT` , as well as define the css of the other UI elements of the library.
 
-### WASM-specific files
+### WebAssembly Edition specific files
 
-Apart from the 4 files that the service mode requires, the WASM mode also needs the following files
+Apart from the 4 files that the service mode requires, the WebAssembly Edition also needs the following files
 
 ``` 
-
 dynamsoft.imageio.js
 dynamsoft.imageio_wasm-<version number>.js
 dynamsoft.imagecore-<version number>.wasm
@@ -152,13 +149,13 @@ dynamsoft.pdfWriter-<version number>.wasm
 
 The first five files in the above list contain functionalities for image IO (decoding and encoding included). The last two files contain functionalities for PDF reading & writing.
 
-> These 7 files are loaded only when the first `WebTwain` instance in WASM mode is created.
+> These 7 files are loaded only when the first `WebTwain` instance in WebAssembly Edition is created.
 
 #### Questions
 
-##### Q: Are all 7 files mentioned above used exclusively in WASM mode
+##### Q: Are all 7 files mentioned above used exclusively in WebAssembly Edition
 
-**A**: No, the library will use the WASM files even in service mode when one of the following conditions is met
+**A**: No, the library will use the WebAssembly files even in service mode when one of the following conditions is met
 
 * The APIs for the [ `WebTwain.Addon.Camera` ]({{site.info}}api/Addon_Camera.html) component are called. 
 * The APIs [ `WebTwain.Camera.showVideo()` ]({{site.info}}api/Addon_Camera.html#showvideo) or [ `WebTwain.Camera.closeVideo()` ]({{site.info}}api/Addon_Camera.html#closevideo) are called.
