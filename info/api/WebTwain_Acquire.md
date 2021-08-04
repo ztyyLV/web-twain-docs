@@ -1399,9 +1399,9 @@ The allowed values for `EnumDWT_Driver` are
 |:-|:-|:-|
 | TWAIN | 0 | Use data sources that conforms to the TWAIN protocol |
 | ICA | 3 | Use data sources that conforms to the Image Capture Architecture |
-| SANE | 3 | Use data sources that conforms to the SANE API |
-| TWAIN_AND_ICA | 4 | Use both TWAIN and ICA data sources |
-| TWAIN_AND_TWAIN64 | 4 | Use both 32bit and 64bit TWAIN drivers |
+| SANE | 3 | Use data sources that conforms to the SANE API (Defalut value on Linux)|
+| TWAIN_AND_ICA | 4 | Use both TWAIN and ICA data sources (Defalut value on MacOS)|
+| TWAIN_AND_TWAIN64 | 4 | Use both 32bit and 64bit TWAIN drivers (Defalut value on Windows)|
 | TWAIN64 | 5 | Use 64bit TWAIN sources |
 
 ---
