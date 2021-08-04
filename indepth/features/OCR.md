@@ -19,7 +19,7 @@ As the name implies, `OCRPro` is faster, more robust and comes with built-in ima
 
 For a quick comparison, you can use [this sample application](https://www.dynamsoft.com/web-twain/resources/code-gallery/?SampleID=210) to test the performance of both engines side by side.
 
-OCR can be performed both on the client side and on the server side. But Server-side OCR pro is no longer supported in v17.0.
+OCR can be performed both on the client side and on the server side. But Server-side OCRPro is no longer supported in v17.0.
 
 ## Client side OCR
 
