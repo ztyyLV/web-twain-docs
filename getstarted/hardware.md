@@ -7,7 +7,7 @@ breadcrumbText: Hardware
 description: Dynamic Web TWAIN SDK supports various hardware: TWAIN Scanners, ICA Scanners, SANE Scanners, DirectShow Cameras, and MediaDevices Cameras.
 ---
 
-# Hardware
+# Hardware 
 
 `DWT`'s main feature is interacting with imaging devices like scanners and cameras. In this section, we'll look at the supported devices.
 
