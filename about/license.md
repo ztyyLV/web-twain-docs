@@ -32,7 +32,7 @@ LTS supports two deployment methods: [Dynamsoft-hosting](https://www.dynamsoft.c
 
 ### [Per Server License](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_server)
 
-For [Per Server License](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_browser_client) license, you need to use [ProductKey]({{site.info}}api/Dynamsoft_Util.html#productkey) to set.
+For [Per Server License](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_browser_client) license, you need to use [ProductKey]({{site.info}}api/WebTwain_Util.html#productkey) to set.
 
 In most cases, you can just make the change in the file `dynamsoft.webtwain.config.js` .
 
