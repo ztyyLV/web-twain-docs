@@ -1,10 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Scanners and Cameras |Dynamic Web TWAIN
+title: Scanners and Cameras
 keywords: Dynamic Web TWAIN, Documentation, TWAIN, ICA, SANE, DirectShow, Webcam, MediaDevices Hardware
 breadcrumbText: Hardware
-description: Dynamic Web TWAIN SDK supports various hardware: TWAIN Scanners, ICA Scanners, SANE Scanners, DirectShow Cameras, and MediaDevices Cameras.
+description: TWAIN Scanners, ICA Scanners, SANE Scanners, DirectShow Cameras, and MediaDevices Cameras.
 ---
 
 # Hardware 
