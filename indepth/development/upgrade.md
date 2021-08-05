@@ -23,7 +23,9 @@ Please be aware of the following namespace changes introduced in version 17.0.
 
 More barcode enumeration can be found <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/enum/EnumBarcodeColourMode.html?ver=latest" target="_blank">here</a>
 
-See more Breaking Changes in V17.0 <a href="{{site.info}}schedule/stable.html" target="_blank">here</a>
+Please review our <a href="{{site.info}}schedule/stable.html" target="_blank">changelog</a> for all breaking changes.
+
+Please refer to <a href="{{site.info}}scheudle/deprecated.html" target="_blank">this list</a> for all deprecated features.
 
 ## Update the resources files
 
