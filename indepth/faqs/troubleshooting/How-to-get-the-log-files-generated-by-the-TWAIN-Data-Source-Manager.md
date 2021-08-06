@@ -18,19 +18,19 @@ description: Dynamic Web TWAIN SDK Documentation FAQs How to get the log files g
 
     Right click "This PC" --> Properties 
     
-    ![TWAINDSMLog-1]({{site.assets}}img/TWAINDSMLog-1.png)
+    ![TWAINDSMLog-1]({{site.assets}}imgs/TWAINDSMLog-1.png)
 
     --> (Advanced system settings) |Advanced tab --> click on "Environment Variables"
     
-    ![TWAINDSMLog-2]({{site.assets}}img/TWAINDSMLog-2.png)
+    ![TWAINDSMLog-2]({{site.assets}}imgs/TWAINDSMLog-2.png)
     
     --> New
 
-    ![TWAINDSMLog-3]({{site.assets}}img/TWAINDSMLog-3.png)
+    ![TWAINDSMLog-3]({{site.assets}}imgs/TWAINDSMLog-3.png)
 
     --> Variable name: TWAINDSM_LOG, Variable value: D:\twain.log --> OK
 
-    ![TWAINDSMLog-4]({{site.assets}}img/TWAINDSMLog-4.png)
+    ![TWAINDSMLog-4]({{site.assets}}imgs/TWAINDSMLog-4.png)
 
 2. Run TWAIN Application.
 
