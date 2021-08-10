@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How To Uninstall Dynamic Web TWAIN
+title: How To Uninstall Dynamic Web TWAIN
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How To Uninstall Dynamic Web TWAIN
-description: Dynamic Web TWAIN SDK Documentation FAQs How To Uninstall Dynamic Web TWAIN
+description: How To Uninstall Dynamic Web TWAIN
 ---
 
-# Develop
+# Development
 
 ## How to uninstall Dynamic Web TWAIN? 
 
