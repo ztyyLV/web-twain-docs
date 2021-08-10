@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop Is It Necessary To Call Dynamsoft.DWT.Load Manually
+title: Is It Necessary To Call Dynamsoft.DWT.Load Manually
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Is It Necessary To Call Dynamsoft.DWT.Load Manually
-description: Dynamic Web TWAIN SDK Documentation FAQs Is It Necessary To Call Dynamsoft.DWT.Load Manually
+description: Is It Necessary To Call Dynamsoft.DWT.Load Manually
 ---
 
-# Develop
+# Development
 
 ## Is it necessary to call Dynamsoft.DWT.Load manually? 
 
