@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How To Change The Certificate Of The Dynamsoft Service
+title: How To Change The Certificate Of The Dynamsoft Service
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How To Change The Certificate Of The Dynamsoft Service
-description: Dynamic Web TWAIN SDK Documentation FAQs How To Change The Certificate Of The Dynamsoft Service
+description: How To Change The Certificate Of The Dynamsoft Service
 ---
 
-# Develop
+# Development
 
 ## How to change the certificate of the Dynamsoft Service? 
 
