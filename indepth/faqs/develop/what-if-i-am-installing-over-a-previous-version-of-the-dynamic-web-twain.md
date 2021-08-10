@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop What If I Am Installing Over A Previous Version Of The Dynamic Web TWAIN
+title: What If I Am Installing Over A Previous Version Of The Dynamic Web TWAIN
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: What If I Am Installing Over A Previous Version Of The Dynamic Web TWAIN
-description: Dynamic Web TWAIN SDK Documentation FAQs What If I Am Installing Over A Previous Version Of The Dynamic Web TWAIN
+description: What If I Am Installing Over A Previous Version Of The Dynamic Web TWAIN
 ---
 
-# Develop
+# Development
 
 ## What if I am installing over a previous version of the Dynamic Web TWAIN? 
 
