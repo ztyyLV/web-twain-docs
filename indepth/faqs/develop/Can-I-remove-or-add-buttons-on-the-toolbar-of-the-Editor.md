@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop Can I remove or add buttons on the toolbar of the Editor
+title: Can I remove or add buttons on the toolbar of the Editor
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Can I remove or add buttons on the toolbar of the Editor
-description: Dynamic Web TWAIN SDK Documentation FAQs Can I remove or add buttons on the toolbar of the Editor
+description: Can I remove or add buttons on the toolbar of the Editor
 ---
 
-# Develop
+# Development
 
 ## Can I remove or add buttons on the toolbar of the Editor
 
