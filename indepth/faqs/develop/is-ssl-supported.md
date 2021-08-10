@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop Is SSL Supported
+title: Is SSL Supported
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Is SSL Supported
-description: Dynamic Web TWAIN SDK Documentation FAQs Is SSL Supported
+description: Is SSL Supported
 ---
 
-# Develop
+# Development
 
 ## Is SSL Supported? 
 
