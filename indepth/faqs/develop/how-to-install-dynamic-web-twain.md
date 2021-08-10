@@ -8,7 +8,7 @@ breadcrumbText: How To Install Dynamic Web TWAIN
 description: Dynamic Web TWAIN SDK Documentation FAQs How To Install Dynamic Web TWAIN
 ---
 
-# Develop
+# Development
 
 ## How to install Dynamic Web TWAIN? 
 
