@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How To Exclude WIA Sources In The Source List
+title: How To Exclude WIA Sources In The Source List
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How To Exclude WIA Sources In The Source List
-description: Dynamic Web TWAIN SDK Documentation FAQs How To Exclude WIA Sources In The Source List
+description: How To Exclude WIA Sources In The Source List
 ---
 
-# Develop
+# Development
 
 ## How to exclude WIA sources in the source list? 
 
