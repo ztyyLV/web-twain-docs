@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How to change the location or to rename the ‘Resources’ folder with Dynamic Web TWAIN
+title: How to change the location or to rename the ‘Resources’ folder with Dynamic Web TWAIN
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How to change the location or to rename the ‘Resources’ folder with Dynamic Web TWAIN
-description: Dynamic Web TWAIN SDK Documentation FAQs How to change the location or to rename the ‘Resources’ folder with Dynamic Web TWAIN
+description: How to change the location or to rename the ‘Resources’ folder with Dynamic Web TWAIN
 ---
 
-# Develop
+# Development
 
 ## How to change the location or to rename the ‘Resources’ folder with Dynamic Web TWAIN
 
