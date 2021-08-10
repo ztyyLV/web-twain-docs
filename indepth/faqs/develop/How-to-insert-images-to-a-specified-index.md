@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How to insert images to a specified index
+title: How to insert images to a specified index
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How to insert images to a specified index
-description: Dynamic Web TWAIN SDK Documentation FAQs How to insert images to a specified index
+description: How to insert images to a specified index
 ---
 
-# Develop
+# Development
 
 ## How to insert images to a specified index
 
