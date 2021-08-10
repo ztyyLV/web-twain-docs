@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop Can I OCR multiple zones at the same time
+title: Can I OCR multiple zones at the same time
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Can I OCR multiple zones at the same time
-description: Dynamic Web TWAIN SDK Documentation FAQs Can I OCR multiple zones at the same time
+description: Can I OCR multiple zones at the same time
 ---
 
-# Develop
+# Development
 
 ## Can I OCR multiple zones at the same time
 
