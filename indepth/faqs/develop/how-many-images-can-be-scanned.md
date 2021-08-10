@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How Many Images Can Be Scanned
+title: How Many Images Can Be Scanned
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How Many Images Can Be Scanned
-description: Dynamic Web TWAIN SDK Documentation FAQs How Many Images Can Be Scanned
+description: How Many Images Can Be Scanned
 ---
 
-# Develop
+# Development
 
 ## How many images can be scanned? 
 
