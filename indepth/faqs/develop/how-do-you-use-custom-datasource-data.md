@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How Do You Use Custom DataSource Data
+title: How Do You Use Custom DataSource Data
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How Do You Use Custom DataSource Data
-description: Dynamic Web TWAIN SDK Documentation FAQs How Do You Use Custom DataSource Data
+description: How Do You Use Custom DataSource Data
 ---
 
-# Develop
+# Development
 
 ## How do you use Custom DataSource Data?
 
