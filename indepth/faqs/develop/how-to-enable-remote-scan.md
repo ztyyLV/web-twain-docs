@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How To Enable Remote Scan
+title: How To Enable Remote Scan
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How To Enable Remote Scan
-description: Dynamic Web TWAIN SDK Documentation FAQs How To Enable Remote Scan
+description: How To Enable Remote Scan
 ---
 
-# Develop
+# Development
 
 ## How To Enable Remote Scan? 
 
