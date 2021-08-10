@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How To Install Dynamic Web TWAIN
+title: How To Install Dynamic Web TWAIN
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How To Install Dynamic Web TWAIN
-description: Dynamic Web TWAIN SDK Documentation FAQs How To Install Dynamic Web TWAIN
+description: How To Install Dynamic Web TWAIN
 ---
 
 # Development
