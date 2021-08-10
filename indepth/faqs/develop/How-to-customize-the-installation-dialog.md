@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true 
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How To Customize The Installation Dialog
+title: How To Customize The Installation Dialog
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How to customize the installation dialog
-description: Dynamic Web TWAIN SDK Documentation FAQs How to customize the installation dialog
+description: How to customize the installation dialog
 ---
 
-# Develop
+# Development
 
 ## How to customize the installation dialog
 
