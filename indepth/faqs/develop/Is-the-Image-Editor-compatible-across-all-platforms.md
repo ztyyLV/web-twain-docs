@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop Is the Image Editor compatible across all platforms
+title: Is the Image Editor compatible across all platforms
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Is the Image Editor compatible across all platforms
-description: Dynamic Web TWAIN SDK Documentation FAQs Is the Image Editor compatible across all platforms
+description: Is the Image Editor compatible across all platforms
 ---
 
-# Develop
+# Development
 
 ## Is the Image Editor compatible across all platforms
 
