@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How To Scan Only A Selected Region
+title: How To Scan Only A Selected Region
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How To Scan Only A Selected Region
-description: Dynamic Web TWAIN SDK Documentation FAQs How To Scan Only A Selected Region
+description: How To Scan Only A Selected Region
 ---
 
-# Develop
+# Development
 
 ## How to scan only a selected region?
 
