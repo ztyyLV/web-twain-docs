@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop Can I Upload The File As A Base64 String
+title: Can I Upload The File As A Base64 String
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Can I Upload The File As A Base64 String
-description: Dynamic Web TWAIN SDK Documentation FAQs Can I Upload The File As A Base64 String
+description: Can I Upload The File As A Base64 String
 ---
 
-# Develop
+# Development
 
 ## Can I upload the file as a base64 string?
 
