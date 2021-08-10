@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How Can I Customize The WebTWAIN Instance(s)
+title: How Can I Customize The WebTWAIN Instance(s)
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How Can I Customize The WebTWAIN Instance(s)
-description: Dynamic Web TWAIN SDK Documentation FAQs How Can I Customize The WebTWAIN Instance(s)
+description: How Can I Customize The WebTWAIN Instance(s)
 ---
 
-# Develop
+# Development
 
 ## How can I customize the WebTWAIN instance(s)? 
 
