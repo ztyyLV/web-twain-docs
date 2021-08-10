@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop Can I Install Dynamsoft Service For All My Clients
+title: Can I Install Dynamsoft Service For All My Clients
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Can I Install Dynamsoft Service For All My Clients
-description: Dynamic Web TWAIN SDK Documentation FAQs Can I Install Dynamsoft Service For All My Clients
+description: Can I Install Dynamsoft Service For All My Clients
 ---
 
-# Develop
+# Development
 
 ## Can I install Dynamsoft Service for all my clients? 
 
