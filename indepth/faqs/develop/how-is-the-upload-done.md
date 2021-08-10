@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How Is The Upload Done
+title: How Is The Upload Done
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How Is The Upload Done
-description: Dynamic Web TWAIN SDK Documentation FAQs How Is The Upload Done
+description: How Is The Upload Done
 ---
 
-# Develop
+# Development
 
 ## How is the upload done?
 
