@@ -33,4 +33,4 @@ The respective fixes are listed below
 <li>Check your anti-virus software or any other software that can block local ports and make sure the ports 18622, 18623, 18625 and 18626 are not blocked.</li>
 <li>Disable all the plugins in the browser, refresh and try again.</li>
 <li>On your Linux client machine, visit https://127.0.0.1:18626 and https://127.0.0.1:18623 separately in Chrome and FireFox, manually add both certificates to the exception lists.</li>
-</l>
+</ol>
