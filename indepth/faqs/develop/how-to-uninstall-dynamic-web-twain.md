@@ -10,7 +10,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQs How To Uninstall Dynamic W
 
 # Develop
 
-## How To Uninstall Dynamic Web TWAIN? 
+## How to uninstall Dynamic Web TWAIN? 
 
 ### On Windows
 
