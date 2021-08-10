@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How to detect and discard blank pages automatically
+title: How to detect and discard blank pages automatically
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How to detect and discard blank pages automatically
-description: Dynamic Web TWAIN SDK Documentation FAQs How to detect and discard blank pages automatically
+description: How to detect and discard blank pages automatically
 ---
 
-# Develop
+# Development
 
 ## How to detect and discard blank pages automatically
 
