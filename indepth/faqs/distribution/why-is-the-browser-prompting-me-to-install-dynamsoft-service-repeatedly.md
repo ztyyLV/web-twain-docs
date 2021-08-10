@@ -25,7 +25,7 @@ The respective fixes are listed below
 
 1. Check the path `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17` and make sure you have [the correct files](#related-files-and-folders).
 2. Check `Local Services` and make sure Dynamsoft Service is listed and Running.
-3. On IE, go to 'Internet Options >> Security' tab, select 'Local Intranet', then click 'Sites',  check 'Include all sites that bypass the proxy server' 
+3. On IE, go to `Internet Options` --> `Security` tab, select `Local Intranet`, then click `Sites`,  check 'Include all sites that bypass the proxy server' 
 
 ![why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly-1]({{site.assets}}imgs/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly-1.png)
 ![why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly-2]({{site.assets}}imgs/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly-2.png)
