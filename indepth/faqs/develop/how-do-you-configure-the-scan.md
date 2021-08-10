@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How Do You Configure The Scan
+title: How Do You Configure The Scan
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How Do You Configure The Scan
-description: Dynamic Web TWAIN SDK Documentation FAQs How Do You Configure The Scan
+description: How Do You Configure The Scan
 ---
 
-# Develop
+# Development
 
 ## How do you configure the scan? 
 
