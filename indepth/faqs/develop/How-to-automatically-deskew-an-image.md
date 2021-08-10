@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How to automatically deskew an image
+title: How to automatically deskew an image
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How to automatically deskew an image
-description: Dynamic Web TWAIN SDK Documentation FAQs How to automatically deskew an image
+description: How to automatically deskew an image
 ---
 
-# Develop
+# Development
 
 ## How to automatically deskew an image
 
