@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How to display the thumbnail viewer
+title: How to display the thumbnail viewer
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How to display the thumbnail viewer
-description: Dynamic Web TWAIN SDK Documentation FAQs How to display the thumbnail viewer
+description: How to display the thumbnail viewer
 ---
 
-# Develop
+# Development
 
 ## How to display the thumbnail viewer
 
