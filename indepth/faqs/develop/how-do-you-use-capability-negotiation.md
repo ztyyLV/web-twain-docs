@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How Do You Use Capability Negotiation
+title: How Do You Use Capability Negotiation
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How Do You Use Capability Negotiation
-description: Dynamic Web TWAIN SDK Documentation FAQs How Do You Use Capability Negotiation
+description: How Do You Use Capability Negotiation
 ---
 
-# Develop
+# Development
 
 ## How do you use Capability Negotiation? 
 
