@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How Do You Use A Custom Capability
+title: How Do You Use A Custom Capability
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How Do You Use A Custom Capability
-description: Dynamic Web TWAIN SDK Documentation FAQs How Do You Use A Custom Capability
+description: How Do You Use A Custom Capability
 ---
 
-# Develop
+# Development
 
 ## How do you use a custom capability? 
 
