@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop Where Can I Get The WebTWAIN Instance(s)
+title: Where Can I Get The WebTWAIN Instance(s)
 keywords: Dynamic Web TWAIN, Documentation, Develop 
 breadcrumbText: Where Can I Get The WebTWAIN Instance(s)
-description: Dynamic Web TWAIN SDK Documentation FAQs Where Can I Get The WebTWAIN Instance(s)
+description: Where Can I Get The WebTWAIN Instance(s)
 ---
 
-# Develop
+# Development
 
 ## Where Can I Get The WebTWAIN Instance(s)? 
 
