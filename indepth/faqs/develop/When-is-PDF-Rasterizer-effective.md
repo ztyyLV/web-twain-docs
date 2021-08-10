@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop When is PDF Rasterizer effective
+title: When is PDF Rasterizer effective
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: When is PDF Rasterizer effective
-description: Dynamic Web TWAIN SDK Documentation FAQs When is PDF Rasterizer effective
+description: When is PDF Rasterizer effective
 ---
 
-# Develop
+# Development
 
 ## When is PDF Rasterizer effective
 
