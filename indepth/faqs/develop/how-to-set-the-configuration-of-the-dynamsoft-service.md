@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How To Set The Configuration Of The Dynamsoft Service
+title: How To Set The Configuration Of The Dynamsoft Service
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How To Set The Configuration Of The Dynamsoft Service
-description: Dynamic Web TWAIN SDK Documentation FAQs How To Set The Configuration Of The Dynamsoft Service
+description: How To Set The Configuration Of The Dynamsoft Service
 ---
 
-# Develop
+# Development
 
 ## How to set the configuration of the Dynamsoft Service? 
 
