@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop Can I Show My Own Upgrade Progress Bar
+title: Can I Show My Own Upgrade Progress Bar
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Can I Show My Own Upgrade Progress Bar
-description: Dynamic Web TWAIN SDK Documentation FAQs Can I Show My Own Upgrade Progress Bar
+description: Can I Show My Own Upgrade Progress Bar
 ---
 
-# Develop
+# Development
 
 ## Can I show my own upgrade progress bar? 
 
