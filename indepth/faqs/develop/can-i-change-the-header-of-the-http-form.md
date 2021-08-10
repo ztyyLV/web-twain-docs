@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop Can I Change The Header Of The HTTP Form
+title: Can I Change The Header Of The HTTP Form
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Can I Change The Header Of The HTTP Form
-description: Dynamic Web TWAIN SDK Documentation FAQs Can I Change The Header Of The HTTP Form
+description: Can I Change The Header Of The HTTP Form
 ---
 
-# Develop
+# Development
 
 ## Can I change the header of the HTTP form? 
 
