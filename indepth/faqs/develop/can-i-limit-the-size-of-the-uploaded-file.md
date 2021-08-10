@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop Can I Limit The Size Of The Uploaded File
+title: Can I Limit The Size Of The Uploaded File
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Can I Limit The Size Of The Uploaded File
-description: Dynamic Web TWAIN SDK Documentation FAQs Can I Limit The Size Of The Uploaded File
+description: Can I Limit The Size Of The Uploaded File
 ---
 
-# Develop
+# Development
 
 ## Can I limit the size of the uploaded file? 
 
