@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How Do I Know Whether The Upload Succeeded
+title: How Do I Know Whether The Upload Succeeded
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How Do I Know Whether The Upload Succeeded
-description: Dynamic Web TWAIN SDK Documentation FAQs How Do I Know Whether The Upload Succeeded
+description: How Do I Know Whether The Upload Succeeded
 ---
 
-# Develop
+# Development
 
 ## How do I know whether the upload succeeded? 
 
