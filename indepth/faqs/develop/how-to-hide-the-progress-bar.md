@@ -4,7 +4,7 @@ noTitleIndex: true
 needAutoGenerateSidebar: true
 title: How to hide the progress bar
 keywords: Dynamic Web TWAIN, Documentation, Develop
-breadcrumbText: How to hide the progress bar
+breadcrumbText: How to hide the progress bar 
 description: How to hide the progress bar
 ---
 
