@@ -60,7 +60,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQs Development
 [Can I OCR multiple languages at the same time?]({{site.indepth}}faqs/develop/Can-I-OCR-multiple-languages-at-the-same-time.html)  
 [Can I OCR multiple zones at the same time?]({{site.indepth}}faqs/develop/Can-I-OCR-multiple-zones-at-the-same-time.html)  
 [What is a LicenseChecker?]({{site.indepth}}faqs/develop/What-is-a-LicenseChecker.html)  
-[Comparison between OCR Basic and OCR Pro?]({{site.indepth}}faqs/develop/Comparison-between-OCR-Basic-and-OCR-Pro.html)  
+[Comparison between OCR Basic and OCR Pro]({{site.indepth}}faqs/develop/Comparison-between-OCR-Basic-and-OCR-Pro.html)  
 [How to improve the OCR accuracy?]({{site.indepth}}faqs/develop/How-to-improve-the-OCR-accuracy.html)  
 [When shall I use PDF Rasterizer?]({{site.indepth}}faqs/develop/When-shall-I-use-PDF-Rasterizer.html)  
 [When is PDF Rasterizer effective?]({{site.indepth}}faqs/develop/When-is-PDF-Rasterizer-effective.html)  
