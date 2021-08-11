@@ -81,9 +81,9 @@ The File Uploader is an independent component that is dedicated to file uploadin
 1. `DWT` will prepare the file to upload with the method [ `GenerateURLForUploadData()` ]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)
 * Create a File Uploader instance with the method [ `Init()` ]({{site.info}}api/Dynamsoft_FileUploader.html#init)
 * Create an upload job with [ `CreateJob()` ]({{site.info}}api/Dynamsoft_FileUploader.html#createjob)
-  + Define the target URL ( `ServerUrl` )
-  + Define the upload content ( `SourceValue` )
-  + [Optional] Define callback functions ( `OnUploadTransferPercentage` , `OnRunSuccess` , `OnRunFailure` )
+  + Define the target URL [ `ServerUrl` ]({{site.info}}api/Dynamsoft_FileUploader.html#serverurl)
+  + Define the upload content [ `SourceValue` ]({{site.info}}api/Dynamsoft_FileUploader.html#sourcevalue) 
+  + [Optional] Define callback functions [ `OnUploadTransferPercentage` ]({{site.info}}api/Dynamsoft_FileUploader.html#onuploadtransferpercentage) ,  [ `OnRunSuccess` ]({{site.info}}api/Dynamsoft_FileUploader.html#onrunsuccess),  [ `OnRunFailure` ]({{site.info}}api/Dynamsoft_FileUploader.html#onrunfailure)
 * Run the job
 * Wait for the confirmation from the server
 
