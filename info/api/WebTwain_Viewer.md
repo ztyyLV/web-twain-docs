@@ -1540,7 +1540,7 @@ DWObject.Viewer.render();
  * @argument height The new height of the viewer.
  */
 on('resize', 
-    (width：number, height：number) => void
+    (width: number, height: number) => void
 ): void; 
 ```
 
