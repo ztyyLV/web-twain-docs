@@ -1635,8 +1635,8 @@ SetHTTPFormField(
 ``` javascript
 /**
  * Add a custom header to the HTTP Post Form.
- * @param name The name of the field.
- * @param value The value of the field.
+ * @param name The name of the header.
+ * @param value The value of the header.
  */
 SetHTTPHeader(
     name: string,
