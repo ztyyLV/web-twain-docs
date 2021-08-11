@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Can I hide the progress bar
+title: How to hide the progress bar
 keywords: Dynamic Web TWAIN, Documentation, Develop
-breadcrumbText: Can I hide the progress bar
-description: Can I hide the progress bar
+breadcrumbText: How to hide the progress bar
+description: How to hide the progress bar
 ---
 
 # Development
