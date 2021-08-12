@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Troubleshooting How to enable and collect verbose log
+title: How to enable and collect verbose log
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: How to enable and collect verbose log
-description: Dynamic Web TWAIN SDK Documentation FAQs How to enable and collect verbose log
+description: How to enable and collect verbose log
 ---
 
 # Troubleshooting
