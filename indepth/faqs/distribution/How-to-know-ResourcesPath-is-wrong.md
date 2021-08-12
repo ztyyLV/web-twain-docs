@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Distribution and Deployment How To Know ResourcesPath Is Wrong
+title: How to know ResourcesPath is wrong
 keywords: Dynamic Web TWAIN, Documentation, Distribution and Deployment
 breadcrumbText: How to know ResourcesPath is wrong
-description: Dynamic Web TWAIN SDK Documentation FAQs How to know ResourcesPath is wrong
+description: How to know ResourcesPath is wrong
 ---
 
 # Distribution and Deployment
