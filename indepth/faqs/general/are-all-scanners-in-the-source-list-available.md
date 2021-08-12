@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs General Are All Scanners In The Source List Available
+title: Are all scanners in the source list available? 
 keywords: Dynamic Web TWAIN, Documentation, General
 breadcrumbText: Are All Scanners In The Source List Available
-description: Dynamic Web TWAIN SDK Documentation FAQs Are All Scanners In The Source List Available
+description: Are all scanners in the source list available? 
 ---
 
 # General
