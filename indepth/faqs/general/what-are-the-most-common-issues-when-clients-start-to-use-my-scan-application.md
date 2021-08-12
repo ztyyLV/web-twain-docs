@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs General What Are The Most Common Issues When Clients Start To Use My Scan Application
+title: What are the most common issues when clients start to use my scan application? 
 keywords: Dynamic Web TWAIN, Documentation, General
 breadcrumbText: What Are The Most Common Issues When Clients Start To Use My Scan Application
-description: Dynamic Web TWAIN SDK Documentation FAQs What Are The Most Common Issues When Clients Start To Use My Scan Application
+description: What are the most common issues when clients start to use my scan application? 
 ---
 
 # General
