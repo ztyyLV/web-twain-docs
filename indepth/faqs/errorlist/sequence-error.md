@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs ErrorList Sequence error
+title: Sequence error
 keywords: Dynamic Web TWAIN, Documentation, ErrorList
 breadcrumbText: Sequence error
-description: Dynamic Web TWAIN SDK Documentation Sequence error
+description: Sequence error
 ---
 
 # ErrorList
