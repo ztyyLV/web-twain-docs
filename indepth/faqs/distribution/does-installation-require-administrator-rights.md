@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Distribution and Deployment Does Installation Require Administrator Rights
+title: Does installation require administrator rights? 
 keywords: Dynamic Web TWAIN, Documentation, Distribution and Deployment
 breadcrumbText: Does Installation Require Administrator Rights
-description: Dynamic Web TWAIN SDK Documentation FAQs Does Installation Require Administrator Rights
+description: Does installation require administrator rights? 
 ---
 
 # Distribution and Deployment
