@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Troubleshooting Download virtual scanner for testing
+title: Download virtual scanner for testing
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: Download virtual scanner for testing
-description: Dynamic Web TWAIN SDK Documentation FAQs Download virtual scanner for testing
+description: Download virtual scanner for testing
 ---
 
 # Troubleshooting
