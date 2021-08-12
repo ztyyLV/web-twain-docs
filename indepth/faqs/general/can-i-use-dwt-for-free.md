@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs General Can I Use DWT For Free
+title: Can I use DWT for free? 
 keywords: Dynamic Web TWAIN, Documentation, General
 breadcrumbText: Can I Use DWT For Free
-description: Dynamic Web TWAIN SDK Documentation FAQs Can I Use DWT For Free
+description: description: Can I use DWT for free? 
 ---
 
 # General
