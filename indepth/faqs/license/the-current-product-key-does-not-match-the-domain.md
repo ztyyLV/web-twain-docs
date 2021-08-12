@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs License The Current Product Key Does Not Match The Domain
+title:  The current product key does not match the domain
 keywords: Dynamic Web TWAIN, Documentation, License
 breadcrumbText: The Current Product Key Does Not Match The Domain
-description: Dynamic Web TWAIN SDK Documentation FAQs The Current Product Key Does Not Match The Domain
+description:  The current product key does not match the domain
 ---
 
 # License
