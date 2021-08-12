@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs ErrorList HTTP process error
+title: HTTP process error
 keywords: Dynamic Web TWAIN, Documentation, ErrorList
 breadcrumbText: HTTP process error
-description: Dynamic Web TWAIN SDK Documentation HTTP process error
+description: HTTP process error
 ---
 
 # ErrorList
