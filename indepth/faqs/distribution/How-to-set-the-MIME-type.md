@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Distribution and Deployment How to set the MIME type
+title: How to set the MIME type
 keywords: Dynamic Web TWAIN, Documentation, Distribution and Deployment
 breadcrumbText: How to set the MIME type
-description: Dynamic Web TWAIN SDK Documentation FAQs How to set the MIME type
+description: How to set the MIME type
 ---
 
 # Distribution and Deployment
