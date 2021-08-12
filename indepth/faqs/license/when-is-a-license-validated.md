@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs License When Is A License Validated
+title: When is a license validated? 
 keywords: Dynamic Web TWAIN, Documentation, License
 breadcrumbText: When Is A License Validated
-description: Dynamic Web TWAIN SDK Documentation FAQs When Is A License Validated
+description: When is a license validated? 
 ---
 
 # License
