@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs ErrorList A connection with the server could not be established
+title: A connection with the server could not be established
 keywords: Dynamic Web TWAIN, Documentation, ErrorList
 breadcrumbText: A connection with the server could not be established
-description: Dynamic Web TWAIN SDK Documentation A connection with the server could not be established
+description: A connection with the server could not be established
 ---
 
 # ErrorList
