@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs ErrorList Source is connected to the maximum supported number of applications
+title: Source is connected to the maximum supported number of applications
 keywords: Dynamic Web TWAIN, Documentation, ErrorList
 breadcrumbText: Source is connected to the maximum supported number of applications
-description: Dynamic Web TWAIN SDK Documentation Source is connected to the maximum supported number of applications
+description: Source is connected to the maximum supported number of applications
 ---
 
 # ErrorList
