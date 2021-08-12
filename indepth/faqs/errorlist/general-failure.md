@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs ErrorList General failure
+title: General failure
 keywords: Dynamic Web TWAIN, Documentation, ErrorList
 breadcrumbText: General failure
-description: Dynamic Web TWAIN SDK Documentation General failure
+description: General failure
 ---
 
 # ErrorList
