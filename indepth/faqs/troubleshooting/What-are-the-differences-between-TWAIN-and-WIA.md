@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Troubleshooting What are the differences between TWAIN and WIA
+title: What are the differences between TWAIN and WIA
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: What are the differences between TWAIN and WIA
-description: Dynamic Web TWAIN SDK Documentation FAQs What are the differences between TWAIN and WIA
+description: What are the differences between TWAIN and WIA
 ---
 
 # Troubleshooting
