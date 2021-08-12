@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Distribution and Deployment Why Is The Browser Prompting Me To Install Dynamsoft Service Repeatedly
+title: Why is the browser prompting me to install Dynamsoft Service repeatedly? 
 keywords: Dynamic Web TWAIN, Documentation, Distribution and Deployment 
 breadcrumbText: Why Is The Browser Prompting Me To Install Dynamsoft Service Repeatedly
-description: Dynamic Web TWAIN SDK Documentation FAQs Why Is The Browser Prompting Me To Install Dynamsoft Service Repeatedly
+description: Why is the browser prompting me to install Dynamsoft Service repeatedly? 
 ---
 
 # Distribution and Deployment
