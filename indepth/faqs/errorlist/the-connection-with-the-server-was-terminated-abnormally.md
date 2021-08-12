@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs ErrorList The connection with the server was terminated abnormally
+title: The connection with the server was terminated abnormally
 keywords: Dynamic Web TWAIN, Documentation, ErrorList
 breadcrumbText: The connection with the server was terminated abnormally
-description: Dynamic Web TWAIN SDK Documentation The connection with the server was terminated abnormally
+description: The connection with the server was terminated abnormally
 ---
 
 # ErrorList
