@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Troubleshooting How to use TWACKER to check if your device is TWAIN Compliant
+title: How to use TWACKER to check if your device is TWAIN Compliant
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: How to use TWACKER to check if your device is TWAIN Compliant
-description: Dynamic Web TWAIN SDK Documentation FAQs How to use TWACKER to check if your device is TWAIN Compliant
+description: How to use TWACKER to check if your device is TWAIN Compliant
 ---
 
 # Troubleshooting
