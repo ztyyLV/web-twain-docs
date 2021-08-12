@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs ErrorList The handle is in the wrong state for the requested operation
+title: The handle is in the wrong state for the requested operation
 keywords: Dynamic Web TWAIN, Documentation, ErrorList
 breadcrumbText: The handle is in the wrong state for the requested operation
-description: Dynamic Web TWAIN SDK Documentation The handle is in the wrong state for the requested operation
+description: The handle is in the wrong state for the requested operation
 ---
 
 # ErrorList
