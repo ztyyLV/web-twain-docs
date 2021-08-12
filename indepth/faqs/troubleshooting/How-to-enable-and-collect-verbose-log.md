@@ -39,4 +39,4 @@ function Dynamsoft_OnReady() {
 
 On macOS, the log files are in `Go > Applications > Dynamsoft > DynamsoftServicex64_17 > {installed version No.} > log`
 
-On Linux, the log files are in `/opt/dynamsoft/DynamsoftServicex64_17/log`
+On Linux, the log files are in `/opt/dynamsoft/DynamsoftServicex64_17/log` 
