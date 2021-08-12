@@ -4,7 +4,7 @@ needAutoGenerateSidebar: true
 title: Error List
 keywords: Dynamic Web TWAIN, Documentation, Error List
 breadcrumbText: Error List
-description: Dynamic Web TWAIN SDK Documentation FAQs Error List
+description: Error List
 ---
 
 # Error List
