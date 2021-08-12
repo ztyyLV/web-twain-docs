@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs ErrorList Request header field dwt-md5 is not allowed by Access-Control-Allow-Headers in preflight response
+title: Request header field dwt-md5 is not allowed by Access-Control-Allow-Headers in preflight response
 keywords: Dynamic Web TWAIN, Documentation, ErrorList
 breadcrumbText: Request header field dwt-md5 is not allowed by Access-Control-Allow-Headers in preflight response
-description: Dynamic Web TWAIN SDK Documentation Request header field dwt-md5 is not allowed by Access-Control-Allow-Headers in preflight response
+description: Request header field dwt-md5 is not allowed by Access-Control-Allow-Headers in preflight response
 ---
 
 # ErrorList
