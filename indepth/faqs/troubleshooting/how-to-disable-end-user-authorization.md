@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Troubleshooting how to disable end-user manual authorization when accessing local hardware
+title: How to disable end-user manual authorization when accessing local hardware
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: how to disable end-user manual authorization when accessing local hardware
-description: Dynamic Web TWAIN SDK Documentation how to disable end-user manual authorization when accessing local hardware
+description: How to disable end-user manual authorization when accessing local hardware
 ---
 
 # Troubleshooting
