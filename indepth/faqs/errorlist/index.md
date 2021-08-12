@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Error List
+title: Error List
 keywords: Dynamic Web TWAIN, Documentation, Error List
 breadcrumbText: Error List
 description: Dynamic Web TWAIN SDK Documentation FAQs Error List
