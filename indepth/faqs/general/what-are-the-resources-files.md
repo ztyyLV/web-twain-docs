@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs General What Are The Resources Files
+title: What are the Resources files? 
 keywords: Dynamic Web TWAIN, Documentation, General
 breadcrumbText: What Are The Resources Files
-description: Dynamic Web TWAIN SDK Documentation FAQs What Are The Resources Files
+description: What are the Resources files? 
 ---
 
 # General
