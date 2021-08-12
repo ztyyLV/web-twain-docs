@@ -5,7 +5,7 @@ needAutoGenerateSidebar: true
 title:  The current product key does not match the domain
 keywords: Dynamic Web TWAIN, Documentation, License
 breadcrumbText: The Current Product Key Does Not Match The Domain
-description:  The current product key does not match the domain
+description: The current product key does not match the domain
 ---
 
 # License
