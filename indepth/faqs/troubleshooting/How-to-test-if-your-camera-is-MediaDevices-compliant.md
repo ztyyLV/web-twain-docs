@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Troubleshooting How to test if your camera is MediaDevices compliant
+title: How to test if your camera is MediaDevices compliant
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: How to test if your camera is MediaDevices compliant
-description: Dynamic Web TWAIN SDK Documentation FAQs How to test if your camera is MediaDevices compliant
+description: How to test if your camera is MediaDevices compliant
 ---
 
 # Troubleshooting
