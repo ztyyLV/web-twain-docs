@@ -5,7 +5,7 @@ needAutoGenerateSidebar: true
 title: How do I set my Dynamic Web TWAIN license? 
 keywords: Dynamic Web TWAIN, Documentation, License
 breadcrumbText: How Do I Set My DWT License
-description: Dynamic Web TWAIN SDK Documentation FAQs How Do I Set My DWT License
+description: How do I set my Dynamic Web TWAIN license? 
 ---
 
 # License
