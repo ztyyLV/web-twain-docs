@@ -7,11 +7,11 @@ breadcrumbText: Dynamsoft Service
 description: Dynamic Web TWAIN SDK Documentation Dynamsoft Service Page
 ---
 
-# Dynamsoft Service
+# Dynamsoft Service 
 
-> This article is meant exclusively for the [Service mode]({{site.indepth}}features/initialize.html#service-mode) of `DWT` .
+> This article is meant exclusively for the <a href="{{site.indepth}}features/initialize.html#service-mode" target="_blank">Service mode</a> of `DWT` .
 
-Dynamsoft Service is the core piece of `DWT` when running in [Service mode]({{site.indepth}}features/initialize.html#service-mode). It handles the communication between the hardware (scanner, webcam, etc.) and the browser, manages the image buffer, and coordinates data between different modules. There are two different contexts where installing the SDK applies: a development context or a client/end-user context. For the latter, installing the SDK just entails installing the Dynamsoft Service component since the service installation includes the installation of all the major modules of `DWT` .
+Dynamsoft Service is the core piece of `DWT` when running in <a href="{{site.indepth}}features/initialize.html#service-mode" target="_blank">Service mode</a>. It handles the communication between the hardware (scanner, webcam, etc.) and the browser, manages the image buffer, and coordinates data between different modules. There are two different contexts where installing the SDK applies: a development context or a client/end-user context. For the latter, installing the SDK just entails installing the Dynamsoft Service component since the service installation includes the installation of all the major modules of `DWT` .
 
 ## About Dynamsoft Service
 
@@ -38,7 +38,7 @@ The last always-running process is meant to support the SSL certificate specific
 "-scan" "\\.\pipe\dynamsoftscan_15.0_70056_60" "0" "Global\ss352604281_61_70056" "0" "C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\dwt_trial_15.0.0.0625.dll"
 ```
 
-Service mode **needs** to be used if you wish to [use a connected physical scanner]({{site.indepth}}features/input.html#scan-from-a-local-scanner). It is this Dynamsoft Service that handles all communication between the browser client and the scanner driver. As mentioned previously, Service mode is used by default if the user is on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices).
+Service mode **needs** to be used if you wish to <a href="{{site.indepth}}features/input.html#scan-from-a-local-scanner" target="_blank">use a connected physical scanner</a>. It is this Dynamsoft Service that handles all communication between the browser client and the scanner driver. As mentioned previously, Service mode is used by default if the user is on <a href="{{site.getstarted}}platform.html#browsers-on-desktop-devices" target="_blank">desktop</a>.
 
 > NOTE:
 > * On Windows, the service runs in the "Local System" account
@@ -51,12 +51,12 @@ There are multiple files and folders in the service directory. We'll take the Wi
 
 #### For the Service
 
-* `\cache\` : Data cached on the disk. Check out [Disk Caching]({{site.indepth}}features/buffer.html#disk-caching).
-* `\cert\` : The certificates used for SSL connection. Check out [How to change the certificates](#q-how-to-change-the-certificate-of-the-service).
+* `\cache\` : Data cached on the disk. Check out <a href="{{site.indepth}}features/buffer.html#disk-caching" target="_blank">Disk Caching</a>.
+* `\cert\` : The certificates used for SSL connection. Check out <a href="{{site.indepth}}faqs/develop/how-to-change-the-certificate-of-the-dynamsoft-service.html" target="_blank">How to change the certificates</a>.
 * `\dump\` : Dump files in case the service crashes.
 * `\log\` : Log files for debugging purposes.
 * `\upload\` : Temporary location for image data to be uploaded by the file uploader.
-* `DSConfiguration.ini` : Service configuration file. Check out [How to configure the service](#q-how-to-set-the-configuration-of-the-service).
+* `DSConfiguration.ini` : Service configuration file. Check out <a href="{{site.indepth}}faqs/develop/how-to-set-the-configuration-of-the-dynamsoft-service.html" target="_blank">How to configure the service</a>.
 * `DWASManager_16000428.dll` : The service manager. The name of the file may vary among different versions.
 * `DynamsoftService.exe` : The service.
 * `DynamicSocket.dll` : For socket connections.
