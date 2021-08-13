@@ -14,8 +14,17 @@ description: How To Uninstall Dynamic Web TWAIN
 
 ### On Windows
 
+1. 
 * Remove Dynamsoft Service through Control Panel, if you see anything named along the lines of "Dynamsoft " or "Dynamic Web TWAIN ", remove them as well
 * Remove the folders `C:\Windows\SysWOW64\Dynamsoft\DynamsoftService` and `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64(version)`
+
+2. Run 'Command Prompt' as **administrator**, go to C:\WINDOWS\system32, then execute the following line（Not applicable if you installed Dynamsoft Service through personal installer）:
+
+``` shell
+wmic product where name="Dynamsoft Service" call uninstall /nointeractive
+```
+
+![How-to-uninstall-the-Dynamsoft-Service-without MSI-installer.png]({{site.assets}}imgs/How-to-uninstall-the-Dynamsoft-Service-without MSI-installer.png)
 
 ### On macOS
 
