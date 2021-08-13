@@ -20,7 +20,7 @@ Being in the market for over 17 years, it has won the trust of many fortune 500 
 
 <a class="btn d-btn bgOrange hide-sm hide-xs" href="https://www.dynamsoft.com/web-twain/downloads">Download 30-Day Free Trial</a>
 
-For more info, please check out [DWT release history]({{site.info}}schedule/stable.html).
+For more info, please check out <a href="{{site.info}}schedule/stable.html" target="_blank">DWT release history</a>.
 
 ## Highlights
 
