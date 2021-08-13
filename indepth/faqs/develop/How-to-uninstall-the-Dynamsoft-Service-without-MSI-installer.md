@@ -10,7 +10,7 @@ description: How to uninstall the Dynamsoft service without MSI installer
 
 # Development
 
-## How to uninstall the Dynamsoft service without MSI installer?
+## How to uninstall the Dynamsoft Service without MSI installer?
 
 Run 'Command Prompt' as **administrator**, go to C:\WINDOWS\system32, then execute the following line:
 
