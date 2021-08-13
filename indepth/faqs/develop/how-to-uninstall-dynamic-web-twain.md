@@ -2,15 +2,15 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: How To Uninstall Dynamic Web TWAIN
+title: How to uninstall Dynamsoft Service
 keywords: Dynamic Web TWAIN, Documentation, Develop
-breadcrumbText: How To Uninstall Dynamic Web TWAIN
-description: How To Uninstall Dynamic Web TWAIN
+breadcrumbText: How to uninstall Dynamsoft Service
+description: How to uninstall Dynamsoft Service
 ---
 
 # Development
 
-## How to uninstall Dynamic Web TWAIN? 
+## How to uninstall Dynamsoft Service? 
 
 ### On Windows
 
