@@ -14,7 +14,7 @@ description: What are the Resources files?
 
 Resources files help you include Dynamic Web TWAIN in your application. The following shows the purpose of these files.
 
-> *Resources* is the default name of the folder that contain these files. It can be changed. For example, in the [dwt package](https://github.com/dynamsoft-dwt/web-twain-package), it's called *dist*.
+> *Resources* is the default name of the folder that contain these files. It can be changed. For example, in the [Dynamic Web TWAIN package](https://github.com/dynamsoft-dwt/web-twain-package), it's called *dist*.
 
 ### Default files
 
@@ -110,7 +110,7 @@ Resources files help you include Dynamic Web TWAIN in your application. The foll
 
 ### Other Resources files
 
-The following two files are present in the [dwt package](https://github.com/dynamsoft-dwt/web-twain-package).
+The following two files are present in the [Dynamic Web TWAIN package](https://github.com/dynamsoft-dwt/web-twain-package).
 
 * dynamsoft.webtwain.min.js
 
@@ -118,4 +118,4 @@ The following two files are present in the [dwt package](https://github.com/dyna
 
 * dynamsoft.webtwain.min.mjs
 
-> This file is like dynamsoft.webtwain.min.js but is built by the ECMAScript 6 (ES6) standard. It's used by applications (Angular, React, Vue, etc.) that import the `dwt` package as a module.
+> This file is like dynamsoft.webtwain.min.js but is built by the ECMAScript 6 (ES6) standard. It's used by applications (Angular, React, Vue, etc.) that import the `Dynamic Web TWAIN` package as a module.
