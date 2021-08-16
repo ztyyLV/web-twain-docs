@@ -12,7 +12,7 @@ description: What are the Resources files?
 
 ## What are the Resources files? 
 
-Resources files help you include `DWT` in your application. The following shows the purpose of these files.
+Resources files help you include Dynamic Web TWAIN in your application. The following shows the purpose of these files.
 
 > *Resources* is the default name of the folder that contain these files. It can be changed. For example, in the [dwt package](https://github.com/dynamsoft-dwt/web-twain-package), it's called *dist*.
 
