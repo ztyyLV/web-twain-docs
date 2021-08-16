@@ -30,7 +30,7 @@ A remote scanner refers to a scanner that is..
 * Not connected to the initiating device
 * Connected and accessible on a `Windows` desktop on LAN (USB or network) where `DWT` must be installed
 
-For more information, check out [how to enable remote scan](#how-to-enable-remote-scan).
+For more information, check out [how to enable remote scan]({{site.indepth}}faqs/develop/how-to-enable-remote-scan.html).
 
 <!--
 
