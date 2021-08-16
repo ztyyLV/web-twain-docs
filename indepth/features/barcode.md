@@ -52,7 +52,7 @@ function readBarcodes(imageIndex) {
 }
 ```
 
-Note that the barcode reading does take a bit of time, so it'll help to add an indicator as mentioned in [Loading Bar and Backdrop]({{site.indepth}}ui.html#loading-bar-and-backdrop)
+Note that the barcode reading does take a bit of time, so it'll help to add an indicator as mentioned in [Loading Bar and Backdrop]({{site.indepth}}ui.html?ver=latest#loading-bar-and-backdrop)
 
 ``` javascript
 function readBarcodes(imageIndex) {
