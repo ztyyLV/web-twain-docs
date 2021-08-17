@@ -48,7 +48,7 @@ If it is set elsewhere, you need to find it and replace it. For example, if you 
 The license setting way is the same as Per Server License, please refer to the above Per Server License section.
 
 #### Notes:
-Please note that `DLS` license ** organizationid and ProductKey cannot be used together**. And you need to connect to `DLS` to track license usage. 
+Please note that `DLS` license <strong>organizationid and ProductKey cannot be used together</strong>. And you need to connect to `DLS` to track license usage. 
 
 All license usage data is submitted to the `DLS` hosted by Dynamsoft. You can
 
