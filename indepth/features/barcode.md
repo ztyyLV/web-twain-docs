@@ -52,7 +52,7 @@ function readBarcodes(imageIndex) {
 }
 ```
 
-Note that the barcode reading does take a bit of time, so it'll help to add an indicator as mentioned in [Loading Bar and Backdrop]({{site.indepth}}ui.html#loading-bar-and-backdrop)
+Note that the barcode reading does take a bit of time, so it'll help to add an indicator as mentioned in [Loading Bar and Backdrop]({{site.indepth}}features/ui.html#loading-bar-and-backdrop)
 
 ``` javascript
 function readBarcodes(imageIndex) {
@@ -62,7 +62,7 @@ function readBarcodes(imageIndex) {
         DWObject.Addon.BarcodeReader.decode(imageIndex)
             .then(function(textResults) {
                 // Remove the indicator
-                Dynamsoft.DWT.WebTwainEnv.OnWebTwainPostExecute();
+                Dynamsoft.DWT.OnWebTwainPostExecute();
                 console.log(textResults)
             }, function(error) {
                 // Remove the indicator
@@ -117,20 +117,20 @@ DWObject.Addon.BarcodeReader.getRuntimeSettings()
     })
     .then(function(runtimeSettings) {
         // Add an indicator
-        Dynamsoft.DWT.WebTwainEnv.OnWebTwainPreExecute();
+        Dynamsoft.DWT.OnWebTwainPreExecute();
         return DWObject.Addon.BarcodeReader.decode(imageIndex);
     }, function(error) {
         console.log(error);
     })
     .then(function(textResults) {
         // Remove the indicator
-        Dynamsoft.DWT.WebTwainEnv.OnWebTwainPostExecute();
+        Dynamsoft.DWT.OnWebTwainPostExecute();
         for (var i = 0; i < textResults.length; i++) {
             console.log(textResults[i].BarcodeText);
         }
     }, function(error) {
         // Remove the indicator
-        Dynamsoft.DWT.WebTwainEnv.OnWebTwainPostExecute();
+        Dynamsoft.DWT.OnWebTwainPostExecute();
         console.log(error)
     });
 ```
