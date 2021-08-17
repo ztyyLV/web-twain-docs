@@ -208,7 +208,7 @@ Setting `LogLevel` to 1/0 is equivalent to setting `LogLevel` to 14/1 in the fil
 readonly Manufacturer: string;
 ```
 
-## Usage notes
+**Usage notes**
 
 `Manufacturer` , `ProductFamily` , `ProductName` and `VersionInfo` together form the identity string of the Dynamic Web TWAIN library.
 
