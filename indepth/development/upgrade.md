@@ -94,7 +94,7 @@ If it is set elsewhere, you need to find it and replace it. For example, if you 
 But if you are using <a href="https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_browser_client" target="_blank">Per Client Device License </a>,  you need to use <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#organizationid" target="_blank">organizationID</a>
 
 ``` javascript
-Dynamsoft.DWT.organizationid = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID. 
+Dynamsoft.DWT.organizationID = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID. 
 //Note: organizationID and ProductKey cannot be used together
 ```
 
