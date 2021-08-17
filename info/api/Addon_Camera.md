@@ -38,6 +38,12 @@ interface DeviceInfo{
 }
 ```
 
+**Example**
+
+``` javascript
+DWObject.Addon.Camera.getSourceList();
+```
+
 ---
 
 ## selectSource
