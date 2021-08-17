@@ -29,7 +29,7 @@ Please refer to <a href="{{site.info}}scheudle/deprecated.html" target="_blank">
 
 ## Update the resources files
 
-The resources files refer to the Resources folder in the installation directory, C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK 17.0. For more details, you can check <a href="{{site.about}}faqs.html#what-are-the-resources-files" target="_blank">here</a>
+The resources files refer to the Resources folder in the installation directory, C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK 17.0. For more details, you can check <a href="{{site.indepth}}faqs/general/what-are-the-resources-files.html" target="_blank">here</a>
 
 ### Regular Web application 
 
