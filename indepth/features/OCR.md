@@ -245,9 +245,9 @@ settings.Redaction.FindTextAction = Dynamsoft.DWT.EnumDWT_OCRFindTextAction.OCRF
 * [ `RecognizeRect()` ]({{site.info}}api/Addon_OCRPro.html#recognizerect): This method reads one or multiple rectangular area(s) on an image.
 * [ `RecognizeSelectedImages()` ]({{site.info}}api/Addon_OCRPro.html#recognizeselectedimages): This method reads multiple images at a time.
 
-##### Online demo for OCRPro
+<!-- ##### Online demo for OCRPro
 
-[Scan-Documents-and-Do-Client-side-OCR-Pro](https://www.dynamsoft.com/web-twain/resources/code-gallery/?SampleID=149)
+[Scan-Documents-and-Do-Client-side-OCR-Pro](https://www.dynamsoft.com/web-twain/resources/code-gallery/?SampleID=149) -->
 
 ## Server side OCR
 
