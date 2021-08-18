@@ -174,13 +174,13 @@ This is the default method to create `WebTwain` instances.
 
 **A**: No, only [ `CreateDWTObjectEx` ](#dynamsoftwebtwainenvcreatedwtobjectex) can do that.
 
-##### Q: Can this method be used alongside [Load](#dynamsoftwebtwainenvload)
+##### Q: Can this method be used alongside [Load](#-dynamsoftwebtwainenvload-)
 
-**A**: Yes, this method can create more `WebTwain` instances after  [Load](#dynamsoftwebtwainenvload) has created the initial one.
+**A**: Yes, this method can create more `WebTwain` instances after  [Load](#-dynamsoftwebtwainenvload-) has created the initial one.
 
-##### Q: How do I use this method to create `WebTwain` instances without using [Load](#dynamsoftwebtwainenvload)
+##### Q: How do I use this method to create `WebTwain` instances without using [Load](#-dynamsoftwebtwainenvload-)
 
-**A**: [Load](#dynamsoftwebtwainenvload) is called automatically if `Dynamsoft.WebTwainEnv.AutoLoad` is set to `true` . Therefore, to ignore [Load](#dynamsoftwebtwainenvload), `Dynamsoft.WebTwainEnv.AutoLoad` must be set to `false` .
+**A**: [Load](#-dynamsoftwebtwainenvload-) is called automatically if `Dynamsoft.WebTwainEnv.AutoLoad` is set to `true` . Therefore, to ignore [Load](#-dynamsoftwebtwainenvload-), `Dynamsoft.WebTwainEnv.AutoLoad` must be set to `false` .
 
 ##### Q: How do I use `CreateDWTObject`
 
@@ -206,7 +206,7 @@ CreateDWTObject(
 ): void;
 ```
 
-The following would be equivalent to using [Load](#dynamsoftwebtwainenvload) with the configuration `Dynamsoft.WebTwainEnv.Containers = [{ContainerId: 'dwtcontrolContainer', Width: '585px', Height: '513px'}`
+The following would be equivalent to using [Load](#-dynamsoftwebtwainenvload-) with the configuration `Dynamsoft.WebTwainEnv.Containers = [{ContainerId: 'dwtcontrolContainer', Width: '585px', Height: '513px'}`
 
 ``` javascript
 Dynamsoft.WebTwainEnv.CreateDWTObject(
@@ -221,7 +221,7 @@ Dynamsoft.WebTwainEnv.CreateDWTObject(
 );
 ```
 
-The method can also do something that [Load](#dynamsoftwebtwainenvload) can't. The following code creates a `WebTwain` instance that connects to the Dynamsoft Service running on another machine with the IP 192.168.8.221 and ports 18622 and 18623 (SSL)
+The method can also do something that [Load](#-dynamsoftwebtwainenvload-) can't. The following code creates a `WebTwain` instance that connects to the Dynamsoft Service running on another machine with the IP 192.168.8.221 and ports 18622 and 18623 (SSL)
 
 > NOTE that [ `Dynamsoft.WebTwainEnv.UseLocalService` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#uselocalservice) must be `true` for this usage.
 
@@ -246,11 +246,11 @@ This method manually creates a `WebTwain` instance without a default built-in vi
 
 #### Questions
 
-##### Q: Can this method be used alongside [Load](#dynamsoftwebtwainenvload)
+##### Q: Can this method be used alongside [Load](#-dynamsoftwebtwainenvload-)
 
 **A**: Yes, same as  [ `CreateDWTObject` ](#dynamsoftwebtwainenvcreatedwtobject).
 
-##### Q: How do I use this method to create `WebTwain` instances without using [Load](#dynamsoftwebtwainenvload)
+##### Q: How do I use this method to create `WebTwain` instances without using [Load](#-dynamsoftwebtwainenvload-)
 
 **A**: Same as  [ `CreateDWTObject` ](#dynamsoftwebtwainenvcreatedwtobject).
 
@@ -285,7 +285,7 @@ interface DWTInitialConfig {
 
 Compared with [ `CreateDWTObject` ](#dynamsoftwebtwainenvcreatedwtobject), `CreateDWTObjectEx` requires a `WebTwainId` instead of a `ContainerId` .
 
-The following would be equivalent to using [Load](#dynamsoftwebtwainenvload) with the configuration `Dynamsoft.WebTwainEnv.Containers = [{ContainerId: 'dwtcontrolContainer', Width: '585px', Height: '513px'}`
+The following would be equivalent to using [Load](#-dynamsoftwebtwainenvload-) with the configuration `Dynamsoft.WebTwainEnv.Containers = [{ContainerId: 'dwtcontrolContainer', Width: '585px', Height: '513px'}`
 > NOTE that the created instance doesn't have a built-in viewer but instead used the method [ `BindViewer()` ]({{site.info}}api/WebTwain_Viewer.html#bindviewer) to add a viewer.
 
 ``` javascript
