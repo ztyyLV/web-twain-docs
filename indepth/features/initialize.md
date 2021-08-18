@@ -164,7 +164,7 @@ The first five files in the above list contain functionalities for image IO (dec
 
 This is the last step of the initialization.
 
-The leading player of `DWT` is the `WebTwain` "class". Almost all methods and properties are defined in this "class". As [mentioned previously](#installation-of-the-dynamsoft-service), creating a `WebTwain` instance in Service mode requires a successful connection to the Dynamsoft Service. On the other hand, creating a `WebTwain` instance in WASM mode requires these [extra files](#wasm-specific-files).
+The leading player of `DWT` is the `WebTwain` "class". Almost all methods and properties are defined in this "class". As [mentioned previously](#installation-of-the-dynamsoft-service), creating a `WebTwain` instance in Service mode requires a successful connection to the Dynamsoft Service. On the other hand, creating a `WebTwain` instance in WASM mode requires these [extra files](#webassembly-edition-specific-files).
 
 Read on to learn the three methods to instantiate `DWT` .
 
