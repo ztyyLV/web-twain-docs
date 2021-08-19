@@ -10,13 +10,26 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 # Stable Releases
 
+## 17.1.1 (08/19/2021)
+
+### Improved Features 
+
+* Updated DSSCN2.exe and DSSCN2x64.exe to optimize scanner compatibility.
+* Improved the Dynamsoft Service connection performance.
+* Improved <a href="{{site.info}}api/WebTwain_IO.html#loaddibfromclipboard" target="_blank">LoadDibFromClipboard</a> to make it more stable.
+
+### Bug Fixes
+
+* Fixed a bug where operating system judged incorrectly when using Dynamic Web TWAIN with Electron.
+* Fixed a bug that drag and drop does not work when loading multiple files.
+
 ## 17.1 (06/15/2021)
 
 ### New Features 
 
-* Added support for ChromeOS. See more [here](https://www.dynamsoft.com/codepool/chrome-os-web-document-scanning.html)
+* Added support for ChromeOS. See more <a href="https://www.dynamsoft.com/codepool/chrome-os-web-document-scanning.html" target="_blank">here</a>
 
-*	Added property [`organizationID`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#organizationid) which can be used to fetch license(s) belonging to the specified organization from the License Tracking Server. With this property, the licensing of the library is smoother from trial to full and it is much easier to manage a license change without code updates.
+*	Added property <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#organizationid" target="_blank">organizationID</a> which can be used to fetch license(s) belonging to the specified organization from the License Tracking Server. With this property, the licensing of the library is smoother from trial to full and it is much easier to manage a license change without code updates.
 
 ### Improved Features 
 

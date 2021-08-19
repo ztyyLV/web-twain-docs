@@ -25,11 +25,11 @@ More barcode enumeration can be found <a href="https://www.dynamsoft.com/barcode
 
 Please review our <a href="{{site.info}}schedule/stable.html" target="_blank">changelog</a> for all breaking changes.
 
-Please refer to <a href="{{site.info}}scheudle/deprecated.html" target="_blank">this list</a> for all deprecated features.
+Please refer to <a href="{{site.info}}schedule/deprecated.html" target="_blank">this list</a> for all deprecated features.
 
 ## Update the resources files
 
-The resources files refer to the Resources folder in the installation directory, C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK 17.0. For more details, you can check <a href="{{site.about}}faqs.html#what-are-the-resources-files" target="_blank">here</a>
+The resources files refer to the Resources folder in the installation directory, C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK 17.0. For more details, you can check <a href="{{site.indepth}}faqs/general/what-are-the-resources-files.html" target="_blank">here</a>
 
 ### Regular Web application 
 
@@ -94,7 +94,8 @@ If it is set elsewhere, you need to find it and replace it. For example, if you 
 But if you are using <a href="https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_browser_client" target="_blank">Per Client Device License </a>,  you need to use <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#organizationid" target="_blank">organizationID</a>
 
 ``` javascript
-Dynamsoft.DWT.organizationid = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
+Dynamsoft.DWT.organizationID = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID. 
+//Note: organizationID and ProductKey cannot be used together
 ```
 
 Please note that this licensing model is only supported from `DWT` 17.0 and needs to be used with Dynamsoft License Server (`DLS` for short). See more about <a href="https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#dynamsoft-license-server" target="_blank">What is a DLS</a>
