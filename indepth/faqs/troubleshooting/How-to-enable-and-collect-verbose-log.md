@@ -16,9 +16,9 @@ Here is how
 
 - Remove any old log files from
 
-  - Windows `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\log` or `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\DynamsoftService\log`
-  - macOS, `Go > Applications > Dynamsoft > DynamsoftServicex64_17 > {installed version No.} > log`
-  - Linux, `/opt/dynamsoft/DynamsoftServicex64_17/log`
+  * Windows `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\log` or `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\DynamsoftService\log`
+  * macOS, `Go > Applications > Dynamsoft > DynamsoftServicex64_17 > {installed version No.} > log`
+  * Linux, `/opt/dynamsoft/DynamsoftServicex64_17/log`
 
 - Set [ `LogLevel` ]({{site.info}}api/WebTwain_Util.html#loglevel) to 1 in your code. This property should be set as soon as the `WebTwain` instance is created. For example, in the event `Dynamsoft_OnReady`
 
@@ -35,8 +35,8 @@ function Dynamsoft_OnReady() {
 
 - Reproduce the issue
 
-- Zip the log files in `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\log` or `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\DynamsoftService\log` and share with [Dynamsoft Support Team]({{site.about}}getsupport.html) via email.
+- Zip the log files and share with [Dynamsoft Support Team]({{site.about}}getsupport.html) via email.
 
-On macOS, the log files are in `Go > Applications > Dynamsoft > DynamsoftServicex64_17 > {installed version No.} > log`
-
-On Linux, the log files are in `/opt/dynamsoft/DynamsoftServicex64_17/log` 
+  * On Windows, the log files are in `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\log` or `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\DynamsoftService\log` 
+  * On macOS, the log files are in `Go > Applications > Dynamsoft > DynamsoftServicex64_17 > {installed version No.} > log`
+  * On Linux, the log files are in `/opt/dynamsoft/DynamsoftServicex64_17/log` 
