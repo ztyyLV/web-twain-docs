@@ -15,12 +15,12 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 ### Improved Features 
 
 * Updated DSSCN2.exe and DSSCN2x64.exe to optimize scanner compatibility.
-* Improved the Dynamsoft Service connection performance.
+* Improved the performance for the Dynamsoft Service connection.
 * Improved <a href="{{site.info}}api/WebTwain_IO.html#loaddibfromclipboard" target="_blank">LoadDibFromClipboard</a> to make it more stable.
 
 ### Bug Fixes
 
-* Fixed a bug where operating system judged incorrectly when using Dynamic Web TWAIN with Electron.
+* Fixed a bug where operating system incorrectly judged when using Dynamic Web TWAIN with Electron.
 * Fixed a bug that drag and drop does not work when loading multiple files.
 
 ## 17.1 (06/15/2021)
