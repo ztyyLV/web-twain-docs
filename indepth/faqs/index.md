@@ -31,7 +31,6 @@ description: Dynamic Web TWAIN SDK Documentation FAQs
 
 [How to install Dynamic Web TWAIN?]({{site.indepth}}faqs/develop/how-to-install-dynamic-web-twain.html)  
 [What if I am installing over a previous version of the Dynamic Web TWAIN?]({{site.indepth}}faqs/develop/what-if-i-am-installing-over-a-previous-version-of-the-dynamic-web-twain.html)  
-[Can I install Dynamsoft Service for all my clients?]({{site.indepth}}faqs/develop/can-i-install-dynamsoft-service-for-all-my-clients.html)  
 [Can I install Dynamsoft Service silently?]({{site.indepth}}faqs/develop/can-i-install-dynamsoft-service-silently.html)  
 [How to uninstall Dynamsoft Service?]({{site.indepth}}faqs/develop/how-to-uninstall-dynamic-web-twain.html)  
 [How to customize the Dynamsoft Service installer?]({{site.indepth}}faqs/develop/how-to-customize-the-dynamsoft-service-installer.html)  
