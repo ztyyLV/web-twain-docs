@@ -16,13 +16,13 @@ description: How To Exclude WIA Sources In The Source List
 
 There are two ways to achieve this:
 
-1. Set `IfUseTwainDSM` to `true`
+Way 1. Set `IfUseTwainDSM` to `true`
 
 ``` javascript
 DWObject.IfUseTwainDSM = true;
 ```
 
-2. Filter sources before listing them
+Way 2. Filter sources before listing them
 
 ``` javascript
 var sources = DWObject.GetSourceNames();
