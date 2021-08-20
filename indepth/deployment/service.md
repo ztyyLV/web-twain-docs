@@ -9,7 +9,7 @@ description: Dynamic Web TWAIN SDK Documentation Dynamsoft Service Page
 
 # Dynamsoft Service 
 
-> This article is meant exclusively for the <a href="{{site.indepth}}features/initialize.html#service-mode" target="_blank">Service mode</a> of `DWT` .
+> This article is meant exclusively for the <a href="{{site.indepth}}features/initialize.html#desktop-service-edition" target="_blank">Service mode</a> of `DWT` .
 
 Dynamsoft Service is the core piece of `DWT` when running in <a href="{{site.indepth}}features/initialize.html#service-mode" target="_blank">Service mode</a>. It handles the communication between the hardware (scanner, webcam, etc.) and the browser, manages the image buffer, and coordinates data between different modules. There are two different contexts where installing the SDK applies: a development context or a client/end-user context. For the latter, installing the SDK just entails installing the Dynamsoft Service component since the service installation includes the installation of all the major modules of `DWT` .
 
