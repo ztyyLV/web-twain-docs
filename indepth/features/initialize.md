@@ -19,7 +19,7 @@ Before we dive into the details of initialization, let's take a look at the two 
 
 #### What is Desktop Service Edition
 
-Desktop Service Edition means `DWT` operates through the [Dynamsoft Service]({{site.indpeth}}deployment/service.html) which is a quiet, background system service that handles the communication between connected devices and the browser client as well as imaging processing, encoding, decoding, etc.
+Desktop Service Edition means `DWT` operates through the [Dynamsoft Service]({{site.indepth}}deployment/service.html) which is a quiet, background system service that handles the communication between connected devices and the browser client as well as imaging processing, encoding, decoding, etc.
 
 When using `DWT` on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices), the user by default will be using service mode (recommended). That means, the installation of the Dynamsoft Service is mandatory.
 
