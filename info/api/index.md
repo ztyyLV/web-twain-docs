@@ -469,7 +469,7 @@ breadcrumbText: API Reference
 | [`createThumbnailViewer()`]({{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer)| [`first()`]({{site.info}}api/WebTwain_Viewer.html#first)|[`fitWindow()`]({{site.info}}api/WebTwain_Viewer.html#fitwindow)|[`gotoPage()`]({{site.info}}api/WebTwain_Viewer.html#gotopage)|
 | [`hide()`]({{site.info}}api/WebTwain_Viewer.html#hide)| [`last()`]({{site.info}}api/WebTwain_Viewer.html#last)| [`next()`]({{site.info}}api/WebTwain_Viewer.html#next)|[`off()`]({{site.info}}api/WebTwain_Viewer.html#off)|
 |[`on()`]({{site.info}}api/WebTwain_Viewer.html#on)| [`previous()`]({{site.info}}api/WebTwain_Viewer.html#previous)| [`render()`]({{site.info}}api/WebTwain_Viewer.html#render)| [`setButtonClass()`]({{site.info}}api/WebTwain_Viewer.html#setbuttonclass)|
-| [`setSelectedAreas()`]({{site.info}}api/WebTwain_Viewer.html#setselectedAreas)| [`setViewMode()`]({{site.info}}api/WebTwain_Viewer.html#setviewmode) | [`show()`]({{site.info}}api/WebTwain_Viewer.html#show)| [`unbind()`]({{site.info}}api/WebTwain_Viewer.html#unbind)|
+| [`setSelectedAreas()`]({{site.info}}api/WebTwain_Viewer.html#setselectedareas)| [`setViewMode()`]({{site.info}}api/WebTwain_Viewer.html#setviewmode) | [`show()`]({{site.info}}api/WebTwain_Viewer.html#show)| [`unbind()`]({{site.info}}api/WebTwain_Viewer.html#unbind)|
 
 <!--
 * [`bind()`]({{site.info}}api/WebTwain_Viewer.html#bind)
@@ -488,7 +488,7 @@ breadcrumbText: API Reference
 * [`previous()`]({{site.info}}api/WebTwain_Viewer.html#previous)
 * [`render()`]({{site.info}}api/WebTwain_Viewer.html#render)
 * [`setButtonClass()`]({{site.info}}api/WebTwain_Viewer.html#setbuttonclass)
-* [`setSelectedAreas()`]({{site.info}}api/WebTwain_Viewer.html#setselectedAreas)
+* [`setSelectedAreas()`]({{site.info}}api/WebTwain_Viewer.html#setselectedareas)
 * [`setViewMode()`]({{site.info}}api/WebTwain_Viewer.html#setviewmode) 
 * [`show()`]({{site.info}}api/WebTwain_Viewer.html#show)
 * [`unbind()`]({{site.info}}api/WebTwain_Viewer.html#unbind)
