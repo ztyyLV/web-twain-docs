@@ -12,7 +12,7 @@ description: How To Customize The Display Language Of Dynamic Web TWAIN
 
 ## How to customize the display language of Dynamic Web TWAIN ? 
 
-You can customize the displayed language in dynamsoft.webtwain.config.js
+You can customize the displayed language in dynamsoft.webtwain.config.js .
 
 ``` shell
 Dynamsoft.DWT.CustomizableDisplayInfo = {
@@ -109,4 +109,4 @@ Dynamsoft.DWT.CustomizableDisplayInfo = {
 };
 ```
 
-### To customize the service installation pop up [click here](https://www.dynamsoft.com/web-twain/docs/indepth/faqs/develop/How-to-customize-the-installation-dialog.html). 
+To customize the service installation pop up [click here](https://www.dynamsoft.com/web-twain/docs/indepth/faqs/develop/How-to-customize-the-installation-dialog.html). 
