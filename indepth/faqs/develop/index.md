@@ -67,11 +67,4 @@ description: Dynamic Web TWAIN SDK Documentation FAQs Development
 [How to detect and discard blank pages automatically?]({{site.indepth}}faqs/develop/How-to-detect-and-discard-blank-pages-automatically.html)  
 [How to change the location or to rename the ‘Resources’ folder with Dynamic Web TWAIN?]({{site.indepth}}faqs/develop/How-to-change-the-location-or-to-rename-the-Resources-folder-with-Dynamic-Web-TWAIN.html)  
 [How to customize the display language of Dynamic Web TWAIN?]({{site.indepth}}faqs/develop/how-to-customize-the-display-language-of-dynamic-web-twain.html)
-[How to customize the image editor?]({{site.indepth}}faqs/develop/how-to-customize-the-image-editor.html)  
-
-
-
-
-
-
-
+[How to customize the image editor?]({{site.indepth}}faqs/develop/how-to-customize-the-image-editor.html)
