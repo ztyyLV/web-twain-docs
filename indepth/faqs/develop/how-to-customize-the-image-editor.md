@@ -47,7 +47,7 @@ visibility: {
             'removeall': true
 }
 ```
-![image]({{site.assets}}imgs/hideicon.jpg)
+![image]({{site.assets}}imgs/hideicon.png)
 
 ### Can I specify where and how big the Editor is? 
 
