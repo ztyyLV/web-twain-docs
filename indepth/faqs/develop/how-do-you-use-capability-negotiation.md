@@ -12,7 +12,7 @@ description: How Do You Use Capability Negotiation
 
 ## How do you use Capability Negotiation? 
 
-> This feature is only available for [TWAIN scanners]({{site.getstarted}}hardware.html#twain-scanners)
+> This feature is only available for <a href="{{site.getstarted}}hardware.html#twain-scanners" target="_blank">TWAIN scanners</a>.
 
 **A**: Capability Negotiation is the way a TWAIN application communicates with a TWAIN source. This is how `DWT` communicates with a scanner. The process looks something like this:
 
@@ -21,7 +21,7 @@ description: How Do You Use Capability Negotiation
 * [DWT] Great, here is what I want done...
 * [Scanner] Consider it done
 
-`DWT` provides two methods, `getCapabilities()` and `setCapabilities()`, for negotiation. The following shows how to ask for supported page sizes and set it to A4 using Capability Negotiation.
+`DWT` provides two methods, <a href="{{site.info}}api/WebTwain_Acquire.html#getcapabilities" target="_blank">`getCapabilities()`</a> and <a href="{{site.info}}api/WebTwain_Acquire.html#setcapabilities" target="_blank">`setCapabilities()`</a> , for negotiation. The following shows how to ask for supported page sizes and set it to A4 using Capability Negotiation.
 
 ##### Ask for supported sizes
 
