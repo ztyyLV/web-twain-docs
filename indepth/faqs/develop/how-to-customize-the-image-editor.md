@@ -47,7 +47,7 @@ visibility: {
             'removeall': true
 }
 ```
-[image]: ({{site.assets}}imgs/hideicon.jpg)
+![image]:({{site.assets}}imgs/hideicon.jpg)
 
 ### Can I specify where and how big the Editor is? 
 
@@ -64,7 +64,7 @@ innerBorder: '',
 background: "rgb(255, 255, 255)",
 ```
 
-[image]:({{site.assets}}imgs/colorchange.png)
+![image]:({{site.assets}}imgs/colorchange.png)
 
 Complete code is as below.
 
