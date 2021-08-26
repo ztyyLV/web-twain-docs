@@ -34,6 +34,7 @@ Yes, as shown in the sample code below, you can use the parameters `titles` and 
     }
 ```
 
+
 ### Can I remove or add buttons on the toolbar of the Editor?
 
 While you can use `visibility` (as shown in the sample code below) to remove a default button(s), currently you cannot add a custom button yet.
@@ -46,6 +47,7 @@ visibility: {
             'removeall': true
 }
 ```
+[image]: {{site.assets}}imgs/hideicon.jpg
 
 ### Can I specify where and how big the Editor is? 
 
@@ -62,6 +64,7 @@ innerBorder: '',
 background: "rgb(255, 255, 255)",
 ```
 
+[image]: {{site.assets}}imgs/colorchange.png
 
 
 ``` javascript
