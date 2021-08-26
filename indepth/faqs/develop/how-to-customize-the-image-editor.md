@@ -12,6 +12,7 @@ description: How To Customize The Image Editor
 
 ## How To Customize The Image Editor? 
 
+
 ### Can I change the language of the Editor?
 
 Yes, as shown in the sample code below, you can use the parameters `titles` and `dialogText` to specify the language used in the editor
@@ -47,11 +48,16 @@ visibility: {
             'removeall': true
 }
 ```
+
+You can see in the below image printer icon is hide.
+
 ![image]({{site.assets}}imgs/hideicon.png)
 
 ### Can I specify where and how big the Editor is? 
 
+
 Yes, as shown in the sample code below, you can use the parameter `element` to specify where the editor is created and then use `width` and `height` to specify its size.
+
 
 ### Can I change the colors of the Editor?
 
