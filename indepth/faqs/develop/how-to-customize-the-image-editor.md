@@ -22,7 +22,7 @@ Yes, as shown in the sample code below, you can use the parameters `titles` and 
             'previous': 'Previous Image',
             'next': 'Next Image',
             'print': 'Print Image',
-            'scan': '扫描文件',
+            'scan': 'Scan Documents',
             'load': 'Load Local Images'
  }
 ```
