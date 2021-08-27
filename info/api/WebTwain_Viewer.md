@@ -1329,10 +1329,11 @@ autoChangeIndex : boolean
 **Example**
 
 ``` javascript
-DWObject.Viewer.Viewer.autoChangeIndex=true;
+DWObject.Viewer.autoChangeIndex=true;
 ```
 
 **Usage Notes**
+
 When set to true, the index in the upper left corner of the viewer will be selected when scrolling.
 
 ---
