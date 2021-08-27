@@ -49,7 +49,7 @@ visibility: {
 }
 ```
 
-You can see in the below image printer icon is hide.
+You can see the printer icon is hidden in the image below.
 
 ![image]({{site.assets}}imgs/hideicon.png)
 
