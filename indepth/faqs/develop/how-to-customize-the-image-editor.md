@@ -58,6 +58,11 @@ You can see the printer icon is hidden in the image below.
 
 Yes, as shown in the sample code below, you can use the parameter `element` to specify where the editor is created and then use `width` and `height` to specify its size.
 
+``` javascript
+element: document.getElementById("imageEditor"),
+width: 600,
+height: 400,
+```
 
 ### Can I change the colors of the Editor?
 
