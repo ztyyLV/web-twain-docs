@@ -34,7 +34,7 @@ breadcrumbText: API Reference
 |[`GetImageXResolution()`]({{site.info}}api/WebTwain_Buffer.html#getimagexresolution) |[`GetImageYResolution()`]({{site.info}}api/WebTwain_Buffer.html#getimageyresolution) |[`GetSkewAngle()`]({{site.info}}api/WebTwain_Buffer.html#getskewangle) | [`GetSkewAngleEx()`]({{site.info}}api/WebTwain_Buffer.html#getskewangleex)|
 |[`ImageIDToIndex()`]({{site.info}}api/WebTwain_Buffer.html#imageidtoindex) | [`IndexToImageID()`]({{site.info}}api/WebTwain_Buffer.html#indextoimageid)| [`IsBlankImage()`]({{site.info}}api/WebTwain_Buffer.html#isblankimage) | [`IsBlankImageExpress()`]({{site.info}}api/WebTwain_Buffer.html#isblankimageexpress)|  
 |[`SelectAllImages()`]({{site.info}}api/WebTwain_Buffer.html#selectallimages)|[`MoveImage()`]({{site.info}}api/WebTwain_Buffer.html#moveimage) | [`SwitchImage()`]({{site.info}}api/WebTwain_Buffer.html#switchimage)| [`RemoveImage()`]({{site.info}}api/WebTwain_Buffer.html#removeimage) |
-| [`RemoveAllImages()`]({{site.info}}api/WebTwain_Buffer.html#removeallimages)|[`RemoveAllSelectedImages()`]({{site.info}}api/WebTwain_Buffer.html#removeallselectedimages) |[`SelectImages()`](#selectimages)|
+| [`RemoveAllImages()`]({{site.info}}api/WebTwain_Buffer.html#removeallimages)|[`RemoveAllSelectedImages()`]({{site.info}}api/WebTwain_Buffer.html#removeallselectedimages) |[`SelectImages()`]({{site.info}}api/WebTwain_Buffer.html#selectimages)|
 
 <!--
 * [`ClearImageTags()`]({{site.info}}api/WebTwain_Buffer.html#clearimagetags) 
