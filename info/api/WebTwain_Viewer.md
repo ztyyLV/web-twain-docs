@@ -1097,7 +1097,7 @@ DWObject.Viewer.innerBorder = '1px solid rgb(204, 204, 204)';
 
 **Usage notes**
 
-The default value is "1px solid rgb(125, 162, 206)". Now you can specify the border by CSS. Read more on the [border shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/border).
+The default value is null. You can specify the border by CSS. Read more on the [border shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/border).
 
 ---
 
