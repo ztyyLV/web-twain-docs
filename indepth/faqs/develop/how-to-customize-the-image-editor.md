@@ -10,7 +10,7 @@ description: How To Customize The Image Editor
 
 # Development
 
-## How To Customize The Image Editor? 
+## How to customize the image editor? 
 
 
 ### Can I change the language of the Editor?
