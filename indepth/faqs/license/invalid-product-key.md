@@ -18,7 +18,7 @@ You get an error message that says "The current product key does not support xxx
 
 * Cause
 
-You are trying to use an unlicensed feature of `DWT` or use it on an unlicensed `Platform` or `Browser` .
+You are trying to use an unlicensed feature of `Dynamic Web TWAIN` or use it on an unlicensed `Platform` or `Browser` .
 
 * Resolution
 
