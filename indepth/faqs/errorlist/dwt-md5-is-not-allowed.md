@@ -18,7 +18,7 @@ description: Request header field dwt-md5 is not allowed by Access-Control-Allow
 
 - Cause
 
-  `dwt-md5` is a default built-in header in `DWT` . It is used for each uploading process to test the integrity of data. Since this is not a standard header, the browser will send an OPTIONS preflight request before the original request is sent to verify that this header is allowed. If not, the browser will return the above error.
+  `dwt-md5` is a default built-in header in `Dynamic Web TWAIN` . It is used for each uploading process to test the integrity of data. Since this is not a standard header, the browser will send an OPTIONS preflight request before the original request is sent to verify that this header is allowed. If not, the browser will return the above error.
 
 - Solution
 
