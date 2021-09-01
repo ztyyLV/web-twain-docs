@@ -12,7 +12,7 @@ description: How to insert images to a specified index
 
 ## How to insert images to a specified index
 
-By default, when you scan or load images, they are appended to the end of the image array in buffer. However, in some business scenarios, the user might want to insert these new images to a specified index. Unfortunately, `DWT` doesn't provide a native method for that. The following code snippet shows how it can be done
+By default, when you scan or load images, they are appended to the end of the image array in buffer. However, in some business scenarios, the user might want to insert these new images to a specified index. Unfortunately, `Dynamic Web TWAIN` doesn't provide a native method for that. The following code snippet shows how it can be done
 
 ### Insert when acquiring
 
