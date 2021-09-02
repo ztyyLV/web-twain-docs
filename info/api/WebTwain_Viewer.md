@@ -17,7 +17,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 | [`createThumbnailViewer()`](#createthumbnailviewer)| [`first()`](#first)|[`fitWindow()`](#fitwindow)|[`gotoPage()`](#gotopage)|
 | [`hide()`](#hide)| [`last()`](#last)| [`next()`](#next)|[`off()`](#off)|
 |[`on()`](#on)| [`previous()`](#previous)| [`render()`](#render)| [`setButtonClass()`](#setbuttonclass)|
-| [`setSelectedAreas()`](#setselectedAreas)| [`setViewMode()`](#setviewmode) | [`show()`](#show)| [`unbind()`](#unbind)|
+| [`setSelectedAreas()`](#setselectedareas)| [`setViewMode()`](#setviewmode) | [`show()`](#show)| [`unbind()`](#unbind)|
 
 
 <!--* [updateUISettings](#updateuisettings)-->
@@ -1097,7 +1097,7 @@ DWObject.Viewer.innerBorder = '1px solid rgb(204, 204, 204)';
 
 **Usage notes**
 
-The default value is "1px solid rgb(125, 162, 206)". Now you can specify the border by CSS. Read more on the [border shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/border).
+The default value is null. You can specify the border by CSS. Read more on the [border shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/border).
 
 ---
 
@@ -1329,10 +1329,11 @@ autoChangeIndex : boolean
 **Example**
 
 ``` javascript
-DWObject.Viewer.Viewer.autoChangeIndex=true;
+DWObject.Viewer.autoChangeIndex=true;
 ```
 
 **Usage Notes**
+
 When set to true, the index in the upper left corner of the viewer will be selected when scrolling.
 
 ---

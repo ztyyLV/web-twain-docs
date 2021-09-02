@@ -79,9 +79,9 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
 
 * [FAQs]({{site.faqs}}faqs/index.html)
 
-   - [General]({{site.faqs}}faqs/general.html)
-   - [License and Purchase]({{site.faqs}}faqs/license.html)
-   - [Development]({{site.faqs}}faqs/develop.html)
-   - [Distribution and Deployment]({{site.faqs}}faqs/distribution.html)
-   - [Troubleshooting for end-users]({{site.faqs}}faqs/troubleshooting.html)
-   - [Erorr List]({{site.faqs}}faqs/errorlist.html)
+   - [General]({{site.indepth}}faqs/general/index.html)
+   - [License and Purchase]({{site.indepth}}faqs/license/index.html)
+   - [Development]({{site.indepth}}faqs/develop/index.html)
+   - [Distribution and Deployment]({{site.indepth}}faqs/distribution/index.html)
+   - [Troubleshooting for end-users]({{site.indepth}}faqs/troubleshooting/index.html)
+   - [Erorr List]({{site.indepth}}faqs/errorlist/index.html)

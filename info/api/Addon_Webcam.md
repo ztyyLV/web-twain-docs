@@ -484,6 +484,12 @@ interface Resolution {
 }
 ```
 
+**Example**
+
+``` javascript
+DWObject.Addon.Webcam.SetResolution("640 x 480");
+```
+
 ---
 
 ## SetVideoRotateMode

@@ -10,7 +10,7 @@ description: How To Customize The Image Editor
 
 # Development
 
-## How To Customize The Image Editor? 
+## How to customize the image editor? 
 
 
 ### Can I change the language of the Editor?
@@ -22,7 +22,7 @@ Yes, as shown in the sample code below, you can use the parameters `titles` and 
             'previous': 'Previous Image',
             'next': 'Next Image',
             'print': 'Print Image',
-            'scan': '扫描文件',
+            'scan': 'Scan Documents',
             'load': 'Load Local Images'
  }
 ```
@@ -49,7 +49,7 @@ visibility: {
 }
 ```
 
-You can see in the below image printer icon is hide.
+You can see the print icon is hidden in the image below.
 
 ![image]({{site.assets}}imgs/hideicon.png)
 
@@ -58,6 +58,11 @@ You can see in the below image printer icon is hide.
 
 Yes, as shown in the sample code below, you can use the parameter `element` to specify where the editor is created and then use `width` and `height` to specify its size.
 
+``` javascript
+element: document.getElementById("imageEditor"),
+width: 600,
+height: 400,
+```
 
 ### Can I change the colors of the Editor?
 
