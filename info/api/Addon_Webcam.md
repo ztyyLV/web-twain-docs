@@ -1,4 +1,4 @@
-Set the specified camera property---
+---
 layout: default-layout
 needAutoGenerateSidebar: true
 title: Dynamic Web TWAIN API Reference - Webcam Addon APIs
