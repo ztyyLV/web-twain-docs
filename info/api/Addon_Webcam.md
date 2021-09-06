@@ -1,4 +1,4 @@
----
+Set the specified camera property---
 layout: default-layout
 needAutoGenerateSidebar: true
 title: Dynamic Web TWAIN API Reference - Webcam Addon APIs
@@ -266,7 +266,7 @@ interface CameraControlPropertyExtra {
 
 **Usage notes**
 
-Check out [ `Dynamsoft.DWT.EnumDWT_CameraControlProperty` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_cameracontrolproperty).
+Check out [ `Dynamsoft.DWT.EnumDWT_CameraControlProperty` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_cameracontrolproperty).
 
 ---
 
