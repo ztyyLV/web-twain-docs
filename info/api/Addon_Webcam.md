@@ -266,7 +266,7 @@ interface CameraControlPropertyExtra {
 
 **Usage notes**
 
-Check out [ `Dynamsoft.DWT.EnumDWT_CameraControlProperty` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_cameracontrolproperty).
+Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_cameracontrolproperty" target="_blank">Dynamsoft.DWT.EnumDWT_CameraControlProperty</a>.
 
 ---
 
