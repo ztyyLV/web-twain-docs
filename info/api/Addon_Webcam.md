@@ -356,8 +356,7 @@ interface VideoControlPropertyExtra {
 
 **Usage notes**
 
-Check out [ `Dynamsoft.DWT.EnumDWT_VideoProperty` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_videoproperty).
-
+Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_videoproperty" target="_blank">Dynamsoft.DWT.EnumDWT_VideoProperty</a>.
 ---
 
 ## GetFrameRate
@@ -508,7 +507,7 @@ SetVideoRotateMode(
 
 **Usage notes**
 
-Check out [ `Dynamsoft.DWT.EnumDWT_VideoRotateMode` ](Dynamsoft.DWT.Enum.md#dynamsoftenumdwt_videorotatemode).
+Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_videorotatemode" target="_blank">Dynamsoft.DWT.EnumDWT_VideoRotateMode</a>. 
 
 ---
 
