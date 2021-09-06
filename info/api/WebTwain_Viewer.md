@@ -726,10 +726,18 @@ Viewer.on(
 **Example**
 
 ``` javascript
+//bind pageAreaSelected event on the main viewer
 var callback = function(sImageIndex, rect) {
     console.log(sImageIndex);
 };
 DWObject.Viewer.on('pageAreaSelected', callback);
+
+//bind click event on the thumnail viewer 
+var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer(); objThumbnailViewer.show(); 
+objThumbnailViewer.on('click', function(dwtEvent, domEvent) {
+    console.log(dwtEvent, domEvent);
+});
+
 ```
 
 ---
