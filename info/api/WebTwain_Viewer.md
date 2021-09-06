@@ -733,7 +733,8 @@ var callback = function(sImageIndex, rect) {
 DWObject.Viewer.on('pageAreaSelected', callback);
 
 //bind click event on the thumnail viewer 
-var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer(); objThumbnailViewer.show(); 
+var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer();
+objThumbnailViewer.show(); 
 objThumbnailViewer.on('click', function(dwtEvent, domEvent) {
     console.log(dwtEvent, domEvent);
 });
