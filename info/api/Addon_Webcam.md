@@ -357,6 +357,7 @@ interface VideoControlPropertyExtra {
 **Usage notes**
 
 Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_videoproperty" target="_blank">Dynamsoft.DWT.EnumDWT_VideoProperty</a>.
+
 ---
 
 ## GetFrameRate
