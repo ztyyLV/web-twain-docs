@@ -11,7 +11,9 @@ description: Dynamic Web TWAIN SDK Documentation Dynamsoft Service Page
 
 > This article is meant exclusively for the <a href="{{site.indepth}}features/initialize.html#desktop-service-edition" target="_blank">Service mode</a> of `DWT` .
 
-Dynamsoft Service is the core piece of `DWT` when running in <a href="{{site.indepth}}features/initialize.html#desktop-service-edition" target="_blank">Service mode</a>. It handles the communication between the hardware (scanner, webcam, etc.) and the browser, manages the image buffer, and coordinates data between different modules. There are two different contexts where installing the SDK applies: a development context or a client/end-user context. For the latter, installing the SDK just entails installing the Dynamsoft Service component since the service installation includes the installation of all the major modules of `DWT` .
+Dynamsoft Service is the core piece of `DWT` when running in <a href="{{site.indepth}}features/initialize.html#desktop-service-edition" target="_blank">Service mode</a>. It handles the communication between the hardware (scanner, webcam, etc.) and the browser, manage the image buffer, and coordinates data between different modules. There are two different contexts where installing the SDK applies: a development context or a client/end-user context. For the latter, installing the SDK just entails installing the Dynamsoft Service component since the service installation includes the installation of all the major modules of `DWT`.
+
+If Dynamsoft Service is not installed, you will receive the error 'The Dynamic Web TWAIN module is not installed'.
 
 ## About Dynamsoft Service
 
@@ -120,6 +122,7 @@ Related Resources:
 * <a href="{{site.indepth}}faqs/develop/how-to-uninstall-dynamic-web-twain.html" target="_blank">How to uninstall Dynamsoft Service?</a>
 * <a href="{{site.indepth}}faqs/develop/what-does-dynamsoft-service-do.html" target="_blank">What does Dynamsoft Service do?</a>
 * <a href="{{site.indepth}}faqs/develop/how-to-install-dynamic-web-twain.html" target="_blank">How to install Dynamic Web TWAIN?</a>
+* * <a href="{{site.indepth}}faqs/distribution/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly.html" target="_blank">Why is the browser prompting me to install Dynamsoft Service repeatedly?</a>
 
 
 
