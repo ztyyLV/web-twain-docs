@@ -12,11 +12,11 @@ description: Why is the browser prompting me to install Dynamsoft Service repeat
 
 ## Why is the browser prompting me to install Dynamsoft Service repeatedly? 
 
-- Scenario
+#### Scenario
 
 The browser prompting me to install Dynamsoft Service repeatedly and keep getting the error 'The Dynamic Web TWAIN is not installed' in the console.
 
-- There are a few possible causes
+#### There are a few possible causes
 
 * The Dynamsoft Service is not installed properly.
 * The Dynamsoft Service is installed correctly but not started.
@@ -25,7 +25,7 @@ The browser prompting me to install Dynamsoft Service repeatedly and keep gettin
 * The service is blocked by plugins you have installed in the browser. (e.g. NoScript)
 * If you are accessing an HTTPS site on a Linux machine.
 
-- The respective fixes are listed below
+#### The respective fixes are listed below
 
 * Check the path `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17` or `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\DynamsoftService` and make sure you have <a href="{{site.indepth}}features/indepth/deployment/service.html#related-files-and-folders" target="_blank">the correct files</a>.
 * Check `Local Services` and make sure Dynamsoft Service is listed and Running.
