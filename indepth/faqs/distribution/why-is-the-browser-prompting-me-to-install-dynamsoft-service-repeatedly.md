@@ -14,7 +14,7 @@ description: Why is the browser prompting me to install Dynamsoft Service repeat
 
 #### Scenario
 
-The browser prompting me to install Dynamsoft Service repeatedly and keep getting the error 'The Dynamic Web TWAIN is not installed' in the console.
+The browser prompting me to install Dynamsoft Service repeatedly and keep getting the error 'The Dynamic Web TWAIN module is not installed' in the console.
 
 #### There are a few possible causes
 
