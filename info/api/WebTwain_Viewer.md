@@ -525,9 +525,9 @@ The following table shows the events available to a ThumbnailViewer object.
 
 | Event Name | Arguments | Description |
 |:-|:-|:-|
-| `click` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the clicked |
-| `dblclick` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when double clicked |
-| `contextMenu` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when right clicked |
+| `click` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is clicked |
+| `dblclick` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is double clicked |
+| `contextMenu` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is right clicked |
 | `mousemove` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse moved over |
 | `mousedown` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is pressed |
 | `mouseup` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is released |
