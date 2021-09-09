@@ -534,7 +534,7 @@ The following table shows the events available to a ThumbnailViewer object.
 | `resize` | width：number, height：number | Triggered when width & height of the ThumbnailViewer object changes. |
 | `pageRendered` | index: number | Triggered when a page is rendered. |
 | `mouseout` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is out, only for desktop browsers |
-| `mouseover` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is out, only for desktop browsers |
+| `mouseover` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when mouse is hovering, only for desktop browsers |
 | `keydown` | keyboardEvent: KeyboardEvent | Triggered when a key is pressed, only for desktop browsers |
 | `keyup` | keyboardEvent: KeyboardEvent | Triggered when a key is released, only for desktop browsers |
 
