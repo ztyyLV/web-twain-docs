@@ -531,7 +531,6 @@ The following table shows the events available to a ThumbnailViewer object.
 | `mousemove` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse moved over |
 | `mousedown` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is pressed |
 | `mouseup` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is released |
-<!--**| `topPageChanged` | index: number | Triggered when the top page currently displayed changes |-->
 | `resize` | width：number, height：number | Triggered when width & height of the ThumbnailViewer object changes. |
 | `pageRendered` | index: number | Triggered when a page is rendered. |
 | `mouseout` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is out, only for desktop browsers |
