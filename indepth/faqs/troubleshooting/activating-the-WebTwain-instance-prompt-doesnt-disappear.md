@@ -10,7 +10,7 @@ description: Activating the WebTwain instance' prompt doesn't disappear
 
 # Troubleshooting
 
-## Activating the WebTwain instance' prompt doesn't disappear
+## 'Activating the WebTwain instance' prompt doesn't disappear
 
 - Symptom
 
