@@ -11,7 +11,7 @@ description: Dynamic Web TWAIN SDK Documentation Input Page
 
 This section introduces different ways to get data into the `DWT` buffer.
 
-## Scan
+## Scanners
 
 ### Scan From a Local Scanner
 
@@ -76,7 +76,7 @@ For more information, check [How to use a TWAIN-Direct scanner](#how-to-use-a-tw
   });
 ```
 
-## Capture
+## Capture from cameras
 
 ### Use [DirectShow Cameras]({{site.getstarted}}hardware.html#directshow-cameras)
 
@@ -151,7 +151,7 @@ function CaptureImage() {
 }
 ```
 
-## Load
+## Load files
 
 Load in this context means to open files which are accessible on the file system. These files can reside on the local disk or shared on the network.
 
