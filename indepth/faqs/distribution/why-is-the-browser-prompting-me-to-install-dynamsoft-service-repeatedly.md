@@ -27,7 +27,7 @@ The browser prompting me to install Dynamsoft Service repeatedly and keep gettin
 
 #### The respective fixes are listed below
 
-* Check the path `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17` or `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\DynamsoftService` and make sure you have <a href="{{site.indepth}}features/indepth/deployment/service.html#related-files-and-folders" target="_blank">the correct files</a>.
+* Check the path `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17` or `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\DynamsoftService` and make sure you have <a href="{{site.indepth}}deployment/service.html#related-files-and-folders" target="_blank">the correct files</a>.
 * Check `Local Services` and make sure Dynamsoft Service is listed and Running.
 * On IE, go to `Internet Options` --> `Security` tab, select `Local Intranet`, then click `Sites`,  uncheck 'Include all sites that bypass the proxy server' 
  
