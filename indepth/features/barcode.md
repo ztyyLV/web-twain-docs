@@ -103,7 +103,7 @@ The runtime settings of the add-on gives you access to a wide array of customiza
 
 ### Specify the Barcode Type(s) to Read
 
-By default, the add-on will read all the supported barcode types from the image. (See the `Supported Symbologies` in the [overview page](https://www.dynamsoft.com/Products/Dynamic-Barcode-Reader.aspx) for the full list.)
+By default, the add-on will read all the supported barcode types from the image. (See the `Supported Symbologies` [here](https://www.dynamsoft.com/Products/Barcode-Types.aspx))
 
 If your license only covers a subset of the full list or you want to read specific barcode types, you can use `barcodeFormatIds` and `barcodeFormatIds2` to specify the barcode format(s). For example, to enable only 1D barcode reading, you can use the following code snippet:
 
