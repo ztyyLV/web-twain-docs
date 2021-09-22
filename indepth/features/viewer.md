@@ -13,7 +13,7 @@ description: Dynamic Web TWAIN SDK Documentation Viewer Page
 
 ## Create the Viewer
 
-### Use the Viewer That Comes with the WebTwain Instance
+### Option 1: Use the Viewer That Comes with the WebTwain Instance
 
 As mentioned in [creating the WebTwain instance]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance), a new `WebTwain` instance (or a new `DWT` object) usually comes with a ready-bound viewer which is an instance of the `Viewer` component. This viewer uses the default settings and normally is enough to handle the data visualization.
 
@@ -29,7 +29,7 @@ Dynamsoft.DWT.Containers = [{
 }]
 ```
 
-### Bind a Viewer to a Viewer-less WebTwain Instance
+### Option 2: Create a Viewer and Bind it to a Viewer-less WebTwain Instance
 
 #### Create a Viewer-less WebTwain Instance
 
