@@ -51,6 +51,8 @@ DWObject.LoadImageEx("", Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL, onSuccess, onFa
 
 The method [ `SetConvertMode()` ]({{site.info}}api/Addon_PDF.html#setconvertmode) decides how `PDFR` works and [ `SetResolution()` ]({{site.info}}api/Addon_PDF.html#setresolution) specifies the resolution. These two methods configure `PDFR` to detect and, if necessary, rasterize any PDF file that comes thereafter.
 
+See full sample <a href="https://github.com/Dynamsoft/Dynamic-Web-TWAIN/blob/master/samples/4.PDFRasterizer.html" target="_blank">here</a>
+
 ### Other methods
 
 * [ `GetConvertMode()` ]({{site.info}}api/Addon_PDF.html#getconvertmode): This method returns the current convert mode.
