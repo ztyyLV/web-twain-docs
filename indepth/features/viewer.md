@@ -17,7 +17,7 @@ description: Dynamic Web TWAIN SDK Documentation Viewer Page
 
 As mentioned in [creating the WebTwain instance]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance), a new `WebTwain` instance (or a new `DWT` object) usually comes with an already-bound viewer which is an instance of the `Viewer` component. This viewer uses the default settings and normally is enough to handle the data visualization.
 
-### Customize the Built-in Viewer
+#### Customize the Built-in Viewer
 
 The viewer is created inside a given `HTMLDivElement` specified by its `id` . 
 
