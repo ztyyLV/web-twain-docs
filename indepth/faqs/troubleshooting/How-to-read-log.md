@@ -20,6 +20,7 @@ description: How to read log
 - nw.log --> Details about the network traffic
 - wts.log --> For the client part of Dynamic Web TWAIN HTML5 edition
 - wtss.log --> For the server part of Dynamic Web TWAIN HTML5 edition
+- dsUpload.log --> For File Uploader module
 
 ### Q: What info do we see if Dynamic Web TWAIN SDK is not doing anything?
 
