@@ -17,11 +17,24 @@ description: Dynamic Web TWAIN SDK Documentation Viewer Page
 
 As mentioned in [creating the WebTwain instance]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance), a new `WebTwain` instance (or a new `DWT` object) usually comes with an already-bound viewer which is an instance of the `Viewer` component. This viewer uses the default settings and normally is enough to handle the data visualization.
 
+### Customize the Built-in Viewer
+
+The viewer is created inside a given `HTMLDivElement` specified by its `id` . 
+
+If a `WebTwain` instance is created with a built-in viewer, you can specify the initial size of the viewer during the creation. For example, the following configuration specifies a *585px by 513px* viewer to be created in the `HTMLDivElement` with the `id` "dwtcontrolContainer1".
+
+``` javascript
+Dynamsoft.DWT.Containers = [{
+    ContainerId: 'dwtcontrolContainer1',
+    Width: '585px',
+    Height: '513px'
+}]
+```
 ### Create a viewer and bind a viewer-less WebTwain Instance
 
 #### Create a Viewer-less WebTwain Instance
 
-However, if you want to customize the viewer, you can use [ `Dynamsoft.DWT.CreateDWTObjectEx()` ]({{site.indepth}}features/initialize.html?ver=latest#-dynamsoftwebtwainenvcreatedwtobjectex-) to create a `WebTwain` instance that doesn't come with a viewer.
+If you want to further customize the viewer, you can use [ `Dynamsoft.DWT.CreateDWTObjectEx()` ]({{site.indepth}}features/initialize.html?ver=latest#-dynamsoftwebtwainenvcreatedwtobjectex-) to create a `WebTwain` instance that doesn't come with a viewer.
 
 #### Bind a Viewer
 
@@ -45,20 +58,6 @@ Dynamsoft.DWT.CreateDWTObjectEx({
         console.log(err);
     }
 );
-```
-
-## Customize the Built-in Viewer
-
-The viewer is created inside a given `HTMLDivElement` specified by its `id` . 
-
-If a `WebTwain` instance is created with a built-in viewer, you can specify the initial size of the viewer during the creation. For example, the following configuration specifies a *585px by 513px* viewer to be created in the `HTMLDivElement` with the `id` "dwtcontrolContainer1".
-
-``` javascript
-Dynamsoft.DWT.Containers = [{
-    ContainerId: 'dwtcontrolContainer1',
-    Width: '585px',
-    Height: '513px'
-}]
 ```
 
 ## Use the Viewer
