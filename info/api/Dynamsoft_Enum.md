@@ -269,7 +269,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
  
 Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType of [startScan]({{site.info}}api/WebTwain_Acquire.html#startscan)
 
-## `Dynamsoft.DWT.EnumDWT_PDFCompressionType `
+## `Dynamsoft.DWT.EnumDWT_PageType `
 
 | Label | Value|
 |:-|:-|
@@ -284,7 +284,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | Page_Legal  | 8 |
 | Page_Legal_Reverse | 9 |
 
-## `Dynamsoft.DWT.EnumDWT_PageType`
+## `Dynamsoft.DWT.EnumDWT_PDFCompressionType`
 
 | Label | Value|
 |:-|:-|
