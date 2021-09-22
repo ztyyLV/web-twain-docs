@@ -273,6 +273,21 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 
 | Label | Value|
 |:-|:-|
+| Page_Default | 0 |
+| Page_Custom | 1 |
+| Page_A4 | 2 |
+| Page_A4_Reverse | 3 |
+| Page_A3  | 4 |
+| Page_A3_Reverse | 5 |
+| Page_Letter | 6 |
+| Page_Letter_Reverse | 7 |
+| Page_Legal  | 8 |
+| Page_Legal_Reverse | 9 |
+
+## `Dynamsoft.DWT.EnumDWT_PageType`
+
+| Label | Value|
+|:-|:-|
 | PDF_AUTO | 0 |
 | PDF_FAX4 | 2 |
 | PDF_LZW | 3 |
