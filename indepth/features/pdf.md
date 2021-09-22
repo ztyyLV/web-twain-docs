@@ -21,11 +21,11 @@ PDFs are widely used in many and various industries, and presently are the only 
 
 To include the PDF addon, simply add a reference to the corresponding JavaScript file, included in the [resources folder]({{site.about}}faqs.html#what-are-the-resources-files).
 
-> If you are using the [dwt package](https://www.npmjs.com/package/dwt), the pdf addon is already included in the main JavaScript file ( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ) which means you can skip this step.
-
 ``` html
-<script src="dynamsoft.webtwain.addon.pdf.js"></script>
+<script src="Resources/addon/dynamsoft.webtwain.addon.pdf.js"></script>
 ```
+
+> If you are using the [dwt package](https://www.npmjs.com/package/dwt), the pdf addon is already included in the main JavaScript file ( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ) which means you can skip this step.
 
 ## Input
 
