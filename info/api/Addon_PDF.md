@@ -189,4 +189,4 @@ interface PDFWSettings {
 
 **Usage notes**
 
-Use this method before you create a PDF with methods such as <a href="{{site.info}api/WebTwain_IO.html#httpupload" target="_blank">`HTTPUpload()`</a> and  <a href="{{site.info}api/WebTwain_IO.html#saveaspdf" target="_blank">`SaveAsPDF()`</a>   
+Use this method before you create a PDF with methods such as <a href="{{site.info}api/WebTwain_IO.html#httpupload" target="_blank">`HTTPUpload()`</a> and  <a href="{{site.info}api/WebTwain_IO.html#saveaspdf" target="_blank">`SaveAsPDF()`</a>     
