@@ -11,11 +11,33 @@ description: Dynamic Web TWAIN SDK Documentation Viewer Page
 
 `DWT` has a `Viewer` component to help visualize the data in the buffer. By default, it is created with basic settings for each `WebTwain` instance, however, it can be customized to fit different usage scenarios.
 
-## Bind the Viewer
+## Create the Viewer
+
+### Use the Viewer That Comes with the WebTwain Instance
 
 As mentioned in [creating the WebTwain instance]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance), a new `WebTwain` instance (or a new `DWT` object) usually comes with a ready-bound viewer which is an instance of the `Viewer` component. This viewer uses the default settings and normally is enough to handle the data visualization.
 
-However, if you want to customize the viewer, you can use [ `Dynamsoft.DWT.CreateDWTObjectEx()` ]({{site.indepth}}features/initialize.html?ver=latest#-dynamsoftwebtwainenvcreatedwtobjectex-) to create a `WebTwain` instance that doesn't come with a viewer and then bind and customize the viewer before showing it with the APIs [ `bind()` ]({{site.info}}api/WebTwain_Viewer.html#bind) and [ `show()` ]({{site.info}}api/WebTwain_Viewer.html#show). For example, the following code shows a viewer with thumbnails
+#### Customize the Built-in Viewer
+
+The viewer is created inside a given `HTMLDivElement` specified by its `id`. If a `WebTwain` instance is created with a built-in viewer, you can specify the initial size of the viewer during the creation. For example, the following configuration specifies a *585px by 513px* viewer to be created in the `HTMLDivElement` with the `id` "dwtcontrolContainer1".
+
+``` javascript
+Dynamsoft.DWT.Containers = [{
+    ContainerId: 'dwtcontrolContainer1',
+    Width: '585px',
+    Height: '513px'
+}]
+```
+
+### Bind a Viewer to a Viewer-less WebTwain Instance
+
+#### Create a Viewer-less WebTwain Instance
+
+However, if you want to customize the viewer, you can use [ `Dynamsoft.DWT.CreateDWTObjectEx()` ]({{site.indepth}}features/initialize.html?ver=latest#-dynamsoftwebtwainenvcreatedwtobjectex-) to create a `WebTwain` instance that doesn't come with a viewer
+
+#### Bind a Viewer
+
+ and then bind and customize the viewer before showing it with the APIs [ `bind()` ]({{site.info}}api/WebTwain_Viewer.html#bind) and [ `show()` ]({{site.info}}api/WebTwain_Viewer.html#show). For example, the following code shows a viewer with thumbnails
 
 ``` javascript
 var DWObject = null;
@@ -35,27 +57,6 @@ Dynamsoft.DWT.CreateDWTObjectEx({
         console.log(err);
     }
 );
-```
-
-## Customize the Viewer
-
-The viewer is created inside a given `HTMLDivElement` specified by its `id` . If a `WebTwain` instance is created with a built-in viewer, you can specify the initial size of the viewer during the creation. For example, the following configuration specifies a *585px by 513px* viewer to be created in the `HTMLDivElement` with the `id` "dwtcontrolContainer1".
-
-``` javascript
-Dynamsoft.DWT.Containers = [{
-    ContainerId: 'dwtcontrolContainer1',
-    Width: '585px',
-    Height: '513px'
-}]
-```
-
-If the viewer is bound after the creation of the `WebTwain` instance, the following does the same thing
-
-``` javascript
-DWObject.Viewer.bind(document.getElementById('dwtcontrolContainer'));
-DWObject.Viewer.height = 600;
-DWObject.Viewer.width = 800;
-DWObject.Viewer.show();
 ```
 
 ## Use the Viewer
