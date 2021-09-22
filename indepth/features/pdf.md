@@ -29,9 +29,15 @@ To include the PDF addon, simply add a reference to the corresponding JavaScript
 
 ## Input
 
-When loading in a PDF file, `DWT` tries to extract images from that file, which is why the SDK can handle image-based PDF documents by default. However, most existing PDF files contain much more than just images. In this case, we need to make use of the PDF Rasterizer (`PDFR` for short), the main component of the PDF addon.
+### Open an image-only PDF
 
-> How PDFR works: As the name suggests, `PDFR` rasterizes a PDF file page by page much like a scanner. You set a resolution and you get the resulting images in that resolution after the rasterization. 
+When loading in a PDF file, `DWT` tries to extract images from that file, which is why the SDK can handle image-based PDF documents by default. 
+
+### Open an searchable PDF
+
+However, most existing PDF files contain much more than just images. For image-and-text PDF files, we need to make use of the PDF Rasterizer (`PDFR` for short), the main component of the PDF addon.
+
+> How PDFR works: As the name suggests, `PDFR` rasterizes a PDF file page by page much like a scanner. You set a resolution, and you get the resulting images in that resolution after the rasterization. 
 
 The following code shows the basic usage
 
@@ -51,16 +57,22 @@ DWObject.LoadImageEx("", Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL, onSuccess, onFa
 
 The method [ `SetConvertMode()` ]({{site.info}}api/Addon_PDF.html#setconvertmode) decides how `PDFR` works and [ `SetResolution()` ]({{site.info}}api/Addon_PDF.html#setresolution) specifies the resolution. These two methods configure `PDFR` to detect and, if necessary, rasterize any PDF file that comes thereafter.
 
+#### Sample code
+
 See full sample <a href="https://github.com/Dynamsoft/Dynamic-Web-TWAIN/blob/master/samples/4.PDFRasterizer.html" target="_blank">here</a>.
 
-### Other methods
+#### Other methods
 
 * [ `GetConvertMode()` ]({{site.info}}api/Addon_PDF.html#getconvertmode): This method returns the current convert mode.
 * [ `SetPassword()` ]({{site.info}}api/Addon_PDF.html#setpassword): This method sets a password which is used to open encrypted PDF file(s).
 
-## Output
+## Output as PDF
 
-`DWT` can output one or multiple images in the buffer as image-based PDF file(s). This feature is built into the core module and no addon is required as was covered in the [output]({{site.indepth}}features/output.html) section.
+### Save images as image-based PDFs
+
+`DWT` can output one or multiple images in the buffer as image-based PDF file(s). This feature is built into the core module, and no addon is required as was covered in the [output]({{site.indepth}}features/output.html) section.
+
+### PDF save settings
 
 However, some advanced features are only possible with the help of the PDF addon. At present, that means configuring the resulting file(s) with the API [ `Write.Setup()` ]({{site.info}}api/Addon_PDF.html#writesetup) as shown below
 
