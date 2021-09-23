@@ -80,6 +80,7 @@ However, some advanced features are only possible with the help of the PDF addon
 DWObject.Addon.PDF.Write.Setup({
     author: "Dynamsoft-Support-Team",
     compression: Dynamsoft.DWT.EnumDWT_PDFCompressionType.PDF_JP2000,
+    pageType:Dynamsoft.DWT.EnumPDF_Page_A4,
     creator: "DWT",
     creationDate: "D:20200930",
     keyWords: "TWAIN, DWT, Dynamsoft",
