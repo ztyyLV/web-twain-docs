@@ -56,7 +56,17 @@ Service mode needs to be used if you wish to **<a href="{{site.indepth}}features
 > * On macOS, the service runs under the current user account
 > * On Linux, the service runs under the root account 
 
-## Related files and folders
+
+## Related Resources:
+
+* <a href="{{site.indepth}}faqs/develop/how-to-uninstall-dynamic-web-twain.html" target="_blank">How to uninstall Dynamsoft Service?</a>
+* <a href="{{site.indepth}}faqs/develop/what-does-dynamsoft-service-do.html" target="_blank">What does Dynamsoft Service do?</a>
+* <a href="{{site.indepth}}faqs/develop/how-to-install-dynamic-web-twain.html" target="_blank">How to install Dynamic Web TWAIN?</a>
+* <a href="{{site.indepth}}faqs/distribution/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly.html" target="_blank">Why is the browser prompting me to install Dynamsoft Service repeatedly?</a>
+
+## Files and folders in the service directory
+
+This section is for your information only. Feel free to skip it if you are not particularly interested in what is included in the service directory.
 
 There are multiple files and folders in the service directory. Taking Windows service (located at `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16`) as an example, the content is as follows:
 
@@ -125,15 +135,3 @@ There are multiple files and folders in the service directory. Taking Windows se
   + `libeay32.dll`
   + `ssleay32.dll`
 * `port.lock`
-
-
-## Related Resources:
-
-* <a href="{{site.indepth}}faqs/develop/how-to-uninstall-dynamic-web-twain.html" target="_blank">How to uninstall Dynamsoft Service?</a>
-* <a href="{{site.indepth}}faqs/develop/what-does-dynamsoft-service-do.html" target="_blank">What does Dynamsoft Service do?</a>
-* <a href="{{site.indepth}}faqs/develop/how-to-install-dynamic-web-twain.html" target="_blank">How to install Dynamic Web TWAIN?</a>
-* <a href="{{site.indepth}}faqs/distribution/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly.html" target="_blank">Why is the browser prompting me to install Dynamsoft Service repeatedly?</a>
-
-
-
-
