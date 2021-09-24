@@ -302,7 +302,7 @@ DWObject.SaveAllAsPDF("D:\\Sample.pdf",
 );
 ```
 
-### Save multiple files to the same loation
+### Save multiple files to the same location
 
 If you want the user to choose a file path once and then save multiple images to that location, you can do so via the [ `OnGetFilePath` ]({{site.info}}api/WebTwain_IO.html#ongetfilepath) event.
 
