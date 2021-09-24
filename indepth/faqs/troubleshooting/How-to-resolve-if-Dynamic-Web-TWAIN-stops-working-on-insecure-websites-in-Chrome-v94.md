@@ -38,8 +38,8 @@ If you need time to make the change, you may try one of the following workaround
 ask your end users to temporarily use Chrome v93 (or an older version) or a different web browser like Firefox/IE 10+/Edge
 disable the block setting. To do that, please
 
-1) visit chrome://flags/#block-insecure-private-network-requests
-2) set 'Block insecure private network requests' to Disabled
+- 1) visit chrome://flags/#block-insecure-private-network-requests
+- 2) set 'Block insecure private network requests' to Disabled
 
 ![activating-the-WebTwain-instance-1]({{site.assets}}imgs/block-insecure-private-network-request.png)
 
