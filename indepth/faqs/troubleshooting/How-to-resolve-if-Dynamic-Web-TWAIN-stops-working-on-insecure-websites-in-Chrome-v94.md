@@ -43,4 +43,4 @@ disable the block setting. To do that, please
 
 ![activating-the-WebTwain-instance-1]({{site.assets}}imgs/block-insecure-private-network-request.png)
 
-register for [Google's deprecation trials](https://developer.chrome.com/blog/origin-trials/#deprecation-trials)
+-3) register for [Google's deprecation trials](https://developer.chrome.com/blog/origin-trials/#deprecation-trials)
