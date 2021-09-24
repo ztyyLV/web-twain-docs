@@ -468,9 +468,9 @@ The following demonstrates the structures of the OCR Request and the Response.
 
 |API	|Description	|
 |:-|:-|
-|**inputFile**	|Check out [OCRPro. ServerSide. Request`](#ocrproserversiderequest) for more info.|
-|**settings**		|Check out [OCRPro. ServerSide. Request`](#ocrproserversiderequest) for more info.|
-|**outputFile**	|Check out [OCRPro. ServerSide. Request`](#ocrproserversiderequest) for more info.|
+|**inputFile**	|Check out [OCRPro. ServerSide. Request`](#ocrpro-serverside-request) for more info.|
+|**settings**		|Check out [OCRPro. ServerSide. Request`](#ocrpro-serverside-request) for more info.|
+|**outputFile**	|Check out [OCRPro. ServerSide. Request`](#ocrpro-serverside-request) for more info.|
 |**ocrTotalCount**|Return  the number of pages allowed to be OCR'd by the current license.|
 |**alreadyOCRCount**		|Return the number of pages already OCR'd.|
 |**code**		|Return the error code for the OCR. If it's not `0` , check `errorList` for more details.|
