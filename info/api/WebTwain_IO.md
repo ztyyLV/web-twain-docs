@@ -1395,6 +1395,10 @@ SaveAsPDF(
 
 ---
 
+**Usage notes**
+
+Learn about [how to config PDF save settings](./Addon_PDF.md#write-setup).
+
 ## SaveAsPNG
 
 **Syntax**
