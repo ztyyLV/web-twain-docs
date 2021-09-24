@@ -122,7 +122,7 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 
 ---
 
-## Write. Setup()
+## Write.Setup()
 
 **Syntax**
 
@@ -193,4 +193,4 @@ interface PDFWSettings {
 
 **Usage notes**
 
-Use this method before you create a PDF with methods such as <a href="{{site.info}}api/WebTwain_IO.html#httpupload" target="_blank">`HTTPUpload()`</a> and <a href="{{site.info}}api/WebTwain_IO.html#saveaspdf" target="_blank">`SaveAsPDF()`</a>     
+Use this method before you create a PDF with methods such as <a href="{{site.info}}api/WebTwain_IO.html#httpupload" target="_blank">`HTTPUpload()`</a>, <a href="{{site.info}}api/WebTwain_IO.html#saveaspdf" target="_blank">`SaveAsPDF()`</a>, and <a href="{{site.info}}api/WebTwain_IO.html#saveallaspdf" target="_blank">`SaveAllAsPDF()`</a>
