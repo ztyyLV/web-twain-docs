@@ -2,7 +2,7 @@
 layout: default-layout
 needAutoGenerateSidebar: true
 noTitleIndex: true
-title: About Dynamic Web TWAIN
+title: Document Scanning SDK | Dynamic Web TWAIN Documentation
 keywords: Dynamic Web TWAIN, TWAIN, About, Documentation
 breadcrumbText: About
 description: Dynamic Web TWAIN SDK Documentation About Page
