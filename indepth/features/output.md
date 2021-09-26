@@ -72,6 +72,40 @@ function getExtension(type) {
 }
 ```
 
+#### Questions
+
+##### Q: How is the upload done
+
+**A**: `DWT` does the uploading in a few steps
+
+1. Grab the image(s) specified by `indices` ; 
+* Encode the image(s) in the specified type which results in a binary file; 
+* [Optional] Convert the file into a base64 string; 
+* Create an HTTP Form and perform an asynchronous HTTP (Ajax) request to send the form to the specified `url` ; 
+* Wait for the confirmation from the server.
+
+The server-side script specified by `url` is very important, check out [Server-side Scripting]({{site.indepth}}development/Server-script.html) for more information.
+
+##### Q: Is SSL supported
+
+**A**: Yes, as shown in the following line, you just need to make sure the correct protocol is used
+
+``` javascript
+var protocol = Dynamsoft.Lib.detect.ssl ? "https://" : "http://"
+```
+
+##### Q: What file types are supported
+
+**A**: As shown in the above function `getExtension()` , `DWT` supports `BMP` , `JPG` , `TIF` , `PNG` and `PDF` .
+
+##### Q: Can I upload multiple images as one file
+
+**A**: Yes, the file types `TIF` and `PDF` support multi-page. Make sure you use these two types when trying to upload multiple images as one file.
+
+##### Q: Can I upload the file as a base64 string
+
+**A**: Yes, the 4th parameter of the method `HTTPUpload()` is `dataFormat` and it has two allowed values which are `Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary` and `Dynamsoft.DWT.EnumDWT_UploadDataFormat.Base64` . The code snippet uses the former but you can feel free to use the latter to upload the file as a base64 string.
+
 ### HTTP with the File Uploader
 
 The File Uploader is an independent component that is dedicated to file uploading. It can be used seamlessly with `DWT` . 
