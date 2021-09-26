@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Features
+title: Dynamic Web TWAIN Specification
 keywords: Dynamic Web TWAIN, TWAIN, Documentation, Features
 breadcrumbText: Specification
 description: Dynamic Web TWAIN SDK Specification on OS support, browser support, framework support, hardware support, and more.
