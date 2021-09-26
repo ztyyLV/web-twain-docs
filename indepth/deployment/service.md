@@ -25,6 +25,8 @@ The prompt comes up when you try to [create a `WebTwain` instance](#creating-the
 
 On **Windows and macOS**, the users can double click the downloaded installer to install the SDK. 
 
+![Initialization]({{site.assets}}imgs/Initialization-1.png)
+
 On **Linux**, the users can run one of the following commands to install it:
 
 - Debian / Ubuntu
@@ -40,8 +42,6 @@ On **Linux**, the users can run one of the following commands to install it:
   ```
 
 Once the installation is done, the users can click 'Reconnect to the service' or refresh the page to start using Dynamic Web TWAIN.
-
-![Initialization]({{site.assets}}imgs/Initialization-1.png)
   
 ## About Dynamsoft Service
 
