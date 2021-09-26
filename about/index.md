@@ -4,23 +4,36 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 title: Document Scanning SDK | Dynamic Web TWAIN Documentation
 keywords: Dynamic Web TWAIN, TWAIN, About, Documentation
-breadcrumbText: About
+breadcrumbText: About Dynamic Web TWAIN
 description: Dynamic Web TWAIN SDK Documentation About Page
 ---
 
-# About the docs
+# About Dynamic Web TWAIN
 
-These docs aim to help you learn and use the Dynamic Web TWAIN library. They will help you integrate the library into your app no matter whether you are building a workflow from scratch or optimzing an existing workflow.
+These docs aim to help you learn and use the Dynamic Web TWAIN library. They will help you integrate document scanning into your app, no matter whether you are building a workflow from scratch or optimzing an existing workflow.
 
 ## Introduction to Dynamic Web TWAIN
 
 The Dynamic Web TWAIN library (DWT for short thereafter) is a software development kit (SDK) specifically designed for adding efficient document management workflows to any kind of web apps.
 
-Being in the market for over 17 years, it has won the trust of many fortune 500 enterprises such as Lockheed Martin, IBM, Samsung, SIEMENS, McKesson and many more. 
+Being in the market for over 17 years, it has won the trust of many fortune 500 enterprises such as Lockheed Martin, IBM, Samsung, SIEMENS, McKesson, and many more. 
 
 <a class="btn d-btn bgOrange hide-sm hide-xs" href="https://www.dynamsoft.com/web-twain/downloads">Download 30-Day Free Trial</a>
 
 For more info, please check out <a href="{{site.info}}schedule/stable.html" target="_blank">DWT release history</a>.
+
+## Document Capture and Process
+
+DWT makes the following tasks easy
+
+* Scanning documents from scanners [>>Read More<<]({{site.indepth}}features/input.html#scan)
+* Taking pictures from cameras [>>Read More<<]({{site.indepth}}features/input.html#capture)
+* Loading or downloading existing documents [>>Read More<<]({{site.indepth}}features/input.html#load)
+* Editing images [>>Read More<<]({{site.indepth}}features/edit.html)
+* Saving documents locally [>>Read More<<]({{site.indepth}}features/output.html#save)
+* Uploading documents to the server [>>Read More<<]({{site.indepth}}features/output.html#upload)
+* Reading barcodes [>>Read More<<]({{site.indepth}}features/barcode.html)
+* OCR [>>Read More<<]({{site.indepth}}features/ocr.html)
 
 ## Highlights
 
