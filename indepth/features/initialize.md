@@ -25,29 +25,7 @@ When using Dynamic Web TWAIN on [desktop]({{site.getstarted}}platform.html#brows
 
 #### Installation of the Dynamsoft Service
 
-When a new user accesses a web page using Dynamic Web TWAIN SDK for the first time, he will be prompted to install the Dynamsoft Service. This is a built-in behaviour of the library. The prompt will display the download link, and once the installer is downloaded, the installation process will take just a few seconds.
-
-The prompt comes up when you try to [create a `WebTwain` instance](#creating-the-webtwain-instance) in service mode. 
-
-On **Windows and macOS**, the users can double click the downloaded installer to install the SDK. 
-
-On **Linux**, the users can run one of the following commands to install it:
-
-- Debian / Ubuntu
-
-  ```bash 
-  sudo dpkg -i DynamsoftServiceSetup.deb
-  ```
-
-- Fedora
-
-  ```bash 
-  sudo rpm -ivh DynamsoftServiceSetup.rpm
-  ```
-
-  ![Initialization]({{site.assets}}imgs/Initialization-1.png)
-
-Once the installation is done, you can click 'Reconnect to the service' or refresh the page to start using Dynamic Web TWAIN.
+[Guide on how to install the Dynamsoft Service]({{site.indepth}}deployment/service.html#dynamsoft-service-is-not-installed-dynamic-web-twain-is-not-installed)
 
 ### WebAssembly Edition
 
