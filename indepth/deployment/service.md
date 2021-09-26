@@ -17,6 +17,32 @@ Dynamsoft Service is the core piece of Dynamic Web TWAIN when running in <a href
 
 If Dynamsoft Service is not installed, you might receive the error 'The Dynamic Web TWAIN module is not installed' when accessing an application that uses Dynamic Web TWAIN.
 
+## Dynamsoft service is not installed (Dynamic Web TWAIN is not installed)
+
+On a desktop, when a new user accesses a web page using Dynamic Web TWAIN SDK for the first time, he will be prompted to install the Dynamsoft Service. This is a built-in behaviour of the library. The prompt will display the download link. Once the installer is downloaded, the installation process will take just a few seconds.
+
+The prompt comes up when you try to [create a `WebTwain` instance](#creating-the-webtwain-instance) in Service mode.
+
+On **Windows and macOS**, the users can double click the downloaded installer to install the SDK. 
+
+On **Linux**, the users can run one of the following commands to install it:
+
+- Debian / Ubuntu
+
+  ```bash 
+  sudo dpkg -i DynamsoftServiceSetup.deb
+  ```
+
+- Fedora
+
+  ```bash 
+  sudo rpm -ivh DynamsoftServiceSetup.rpm
+  ```
+
+Once the installation is done, the users can click 'Reconnect to the service' or refresh the page to start using Dynamic Web TWAIN.
+
+![Initialization]({{site.assets}}imgs/Initialization-1.png)
+  
 ## About Dynamsoft Service
 
 ### IP and ports
