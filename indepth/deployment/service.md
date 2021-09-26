@@ -47,6 +47,8 @@ By default, there are three Dynamsoft Service processes running which use the sa
   "-scan" "\\.\pipe\dynamsoftscan_15.0_70056_60" "0" "Global\ss352604281_61_70056" "0" "C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\dwt_trial_15.0.0.0625.dll"
   ```
 
+Note: you may find another process named 'Dynamsoft Scanning New Module', which is a scan module. This process will start when you access an application integrated with Dynamic Web TWAIN, and will automatically stop when you close the application. 
+
 ### Manipulates a physical scanner
 
 Service mode needs to be used if you wish to **<a href="{{site.indepth}}features/input.html#scan-from-a-local-scanner" target="_blank">use a connected physical scanner</a>**. It is this Dynamsoft Service that handles all communication between the browser client and the scanner driver. As mentioned previously, Service mode is used by default if the user is on <a href="{{site.getstarted}}platform.html#browsers-on-desktop-devices" target="_blank">desktop</a>.
