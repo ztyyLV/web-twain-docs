@@ -15,9 +15,43 @@ description: Dynamic Web TWAIN SDK Documentation Dynamsoft Service Page
 
 Dynamsoft Service is the core piece of Dynamic Web TWAIN when running in <a href="{{site.indepth}}features/initialize.html#desktop-service-edition" target="_blank">Service mode</a>. It handles the communication between hardware (scanner, webcam, etc.) and browser, manages the image buffer, and coordinates data between different modules. 
 
-If Dynamsoft Service is not installed, you might receive the error 'The Dynamic Web TWAIN module is not installed' when accessing an application that uses Dynamic Web TWAIN.
+### IP and ports
 
-## Dynamsoft service is not installed (Dynamic Web TWAIN is not installed)
+The Dynamsoft Service uses `localhost` and `18622` `18625` ports for HTTP connection and `18623` `18626` ports for HTTPS connection.  
+These ports can be configured in the `DSConfiguration.ini` file located in:
+`C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64)\DSConfiguration.ini` (Windows)
+
+> NOTE:
+
+> * On Windows, the service runs under the Local System account
+> * On macOS, the service runs under the current user account
+> * On Linux, the service runs under the root account 
+
+### Three processes
+
+By default, there are three Dynamsoft Service processes running which use the same file `DynamsoftService.exe` but initiated with different arguments:
+
+- The **main process** starts without any argument as follows:
+
+  ``` cmd
+  C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\DynamsoftService.exe
+  ```
+
+- Then there is a **monitor process** which is meant to monitor the main process and automatically start it in case it crashes. The monitor process starts like this:
+
+  ``` cmd
+  C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\DynamsoftService.exe -asmonitor Global\Dynamsoft_1.5.0_352325843_stop_service_event   Global\Dynamsoft_1.5.0_352325828_certcheck_event
+  ```
+
+- The last always-running process is meant to **support the SSL certificate specifically for the Firefox browser**:
+
+  ``` cmd
+  "-scan" "\\.\pipe\dynamsoftscan_15.0_70056_60" "0" "Global\ss352604281_61_70056" "0" "C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\dwt_trial_15.0.0.0625.dll"
+  ```
+
+> Note: you may find another process named 'Dynamsoft Scanning New Module', which is a scan module. This process will start when you access an application integrated with Dynamic Web TWAIN, and will automatically stop when you close the application. 
+  
+## Installation of Dynamsoft Service
 
 On a desktop, when a new user accesses a web page using Dynamic Web TWAIN SDK for the first time, he will be prompted to install the Dynamsoft Service. This is a built-in behaviour of the library. The prompt will display the download link. Once the installer is downloaded, the installation process will take just a few seconds.
 
@@ -42,59 +76,12 @@ On **Linux**, the users can run one of the following commands to install it:
   ```
 
 Once the installation is done, the users can click 'Reconnect to the service' or refresh the page to start using Dynamic Web TWAIN.
-  
-## About Dynamsoft Service
 
-### IP and ports
+If Dynamsoft Service is not installed, users might receive the error 'The Dynamic Web TWAIN module is not installed' when accessing an application that uses Dynamic Web TWAIN. 
 
-The Dynamsoft Service uses `localhost` and `18622` `18625` ports for HTTP connection and `18623` `18626` ports for HTTPS connection.  
-These ports can be configured in the `DSConfiguration.ini` file located in:
-`C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64)\DSConfiguration.ini` (Windows)
-
-### Three processes
-
-By default, there are three Dynamsoft Service processes running which use the same file `DynamsoftService.exe` but initiated with different arguments.
-
-- The **main process** starts without any argument as follows:
-
-  ``` cmd
-  C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\DynamsoftService.exe
-  ```
-
-- Then there is a **monitor process** which is meant to monitor the main process and automatically start it in case it crashes. The monitor process starts like this:
-
-  ``` cmd
-  C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\DynamsoftService.exe -asmonitor Global\Dynamsoft_1.5.0_352325843_stop_service_event   Global\Dynamsoft_1.5.0_352325828_certcheck_event
-  ```
-
-- The last always-running process is meant to **support the SSL certificate specifically for the Firefox browser**:
-
-  ``` 
-  "-scan" "\\.\pipe\dynamsoftscan_15.0_70056_60" "0" "Global\ss352604281_61_70056" "0" "C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\dwt_trial_15.0.0.0625.dll"
-  ```
-
-Note: you may find another process named 'Dynamsoft Scanning New Module', which is a scan module. This process will start when you access an application integrated with Dynamic Web TWAIN, and will automatically stop when you close the application. 
-
-### Manipulates a physical scanner
-
-Service mode needs to be used if you wish to **<a href="{{site.indepth}}features/input.html#scan-from-a-local-scanner" target="_blank">use a connected physical scanner</a>**. It is this Dynamsoft Service that handles all communication between the browser client and the scanner driver. As mentioned previously, Service mode is used by default if the user is on <a href="{{site.getstarted}}platform.html#browsers-on-desktop-devices" target="_blank">desktop</a>.
-
-> NOTE:
-> * On Windows, the service runs under the Local System account
-> * On macOS, the service runs under the current user account
-> * On Linux, the service runs under the root account 
-
-
-## Related Resources:
-
-* <a href="{{site.indepth}}faqs/develop/how-to-uninstall-dynamic-web-twain.html" target="_blank">How to uninstall Dynamsoft Service?</a>
-* <a href="{{site.indepth}}faqs/develop/what-does-dynamsoft-service-do.html" target="_blank">What does Dynamsoft Service do?</a>
-* <a href="{{site.indepth}}faqs/develop/how-to-install-dynamic-web-twain.html" target="_blank">How to install Dynamic Web TWAIN?</a>
-* <a href="{{site.indepth}}faqs/distribution/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly.html" target="_blank">Why is the browser prompting me to install Dynamsoft Service repeatedly?</a>
+If you see repeat prompt on installing the service, please check out [Why is the browser prompting me to install Dynamsoft Service repeatedly?](../../faqs/distribution/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly.html)
 
 ## Files and folders in the service directory
-
-This section is for your information only. Feel free to skip it if you are not particularly interested in what is included in the service directory.
 
 There are multiple files and folders in the service directory. Taking Windows service (located at `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16`) as an example, the content is as follows:
 
@@ -115,9 +102,7 @@ There are multiple files and folders in the service directory. Taking Windows se
 
 ### Components
 
-> NOTE:
->  
-> These files are named with their version number. The following uses v16.1.1 as an example.
+These files are named with their version number. The following uses v16.1.1 as an example.
 
 * Core scanning module
   + `dwt_16.1.0.0728.dll`
@@ -163,3 +148,12 @@ There are multiple files and folders in the service directory. Taking Windows se
   + `libeay32.dll`
   + `ssleay32.dll`
 * `port.lock`
+
+
+
+## Related Resources:
+
+* <a href="{{site.indepth}}faqs/develop/how-to-uninstall-dynamic-web-twain.html" target="_blank">How to uninstall Dynamsoft Service?</a>
+* <a href="{{site.indepth}}faqs/develop/what-does-dynamsoft-service-do.html" target="_blank">What does Dynamsoft Service do?</a>
+* <a href="{{site.indepth}}faqs/develop/how-to-install-dynamic-web-twain.html" target="_blank">How to install Dynamic Web TWAIN?</a>
+* <a href="{{site.indepth}}faqs/distribution/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly.html" target="_blank">Why is the browser prompting me to install Dynamsoft Service repeatedly?</a>
