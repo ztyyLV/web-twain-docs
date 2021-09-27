@@ -79,7 +79,7 @@ Once the installation is done, the users can click 'Reconnect to the service' or
 
 If Dynamsoft Service is not installed, users might receive the error 'The Dynamic Web TWAIN module is not installed' when accessing an application that uses Dynamic Web TWAIN. 
 
-If you see repeat prompt on installing the service, please check out [Why is the browser prompting me to install Dynamsoft Service repeatedly?](../../faqs/distribution/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly.html)
+If you see repeat prompt on installing the service, please check out <a href="{{site.indepth}}faqs/distribution/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly.html" target="_blank">Why is the browser prompting me to install Dynamsoft Service repeatedly?</a>
 
 ## Files and folders in the service directory
 
