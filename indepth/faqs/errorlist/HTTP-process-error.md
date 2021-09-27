@@ -29,13 +29,14 @@ When you upload images using any of the HTTPUploadThroughPost\*\*\* methods, you
   - Check the response string returned from the HTTP server to figure out the cause of the process error. You can get this string by using the [HTTPPostResponseString]({{site.info}}api/WebTwain_IO.html#httppostresponsestring) property.
   - Set the port to the correct one using [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport). We recommend you get the Port and Server values this way:
 
-        ``` javascript
+        ```javascript
         	var strHTTPServer = location.hostname;
         	DWObject.HTTPPort = location.port == "" ? 80 : location.port;
         ```
-        + If you have set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true, you must set a secure port for the HTTPPort property. For example,
+        
+       - If you have set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true, you must set a secure port for the HTTPPort property. For example, 
 
-        ``` javascript
+        ```javascript
         DWObject.IfSSL = true;
         DWObject.HTTPPort = 443;
         ```
