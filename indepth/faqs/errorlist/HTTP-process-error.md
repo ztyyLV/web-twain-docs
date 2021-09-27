@@ -35,10 +35,10 @@ When you upload images using any of the HTTPUploadThroughPost\*\*\* methods, you
   
     - If you have set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true, you must set a secure port for the HTTPPort property. For example, 
 
-  ``` javascript
-        DWObject.IfSSL = true;
-        DWObject.HTTPPort = 443;
-  ```
+   ``` javascript
+          DWObject.IfSSL = true;
+          DWObject.HTTPPort = 443;
+   ```
 
   > For example: If the URL for the scan page is "http://localhost:3253/....", you should set the port to 3253.
 
