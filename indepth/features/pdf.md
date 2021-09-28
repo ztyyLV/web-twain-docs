@@ -94,3 +94,5 @@ DWObject.Addon.PDF.Write.Setup({
 DWObject.IfShowFileDialog = true;
 DWObject.SaveAllAsPDF(' ', function() {}, function() {})
 ```
+
+Note: Only the core module license is required to use this method.
