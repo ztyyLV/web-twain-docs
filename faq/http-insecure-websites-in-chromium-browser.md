@@ -54,7 +54,7 @@ During the trial period, your insecure public website will not be affected by th
   [InsecurePrivateNetworkRequestsAllowedForUrls](https://chromeenterprise.google/policies/#InsecurePrivateNetworkRequestsAllowedForUrls)  
   For more details about managing policies for your users, see refer to google's [help center article](https://support.google.com/chrome/a/answer/9037717).  
 
-3) If you need to disable the block for an end user, there is a Chrome setting available. 
+3) If you need to disable the block for an end user, there is a Chrome setting available.  
 see the steps below  
 Step 1: visit chrome://flags/#block-insecure-private-network-requests  
 Step 2: set 'Block insecure private network requests' to Disabled  
