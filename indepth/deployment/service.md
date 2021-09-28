@@ -53,13 +53,15 @@ By default, there are three Dynamsoft Service processes running which use the sa
   
 ## Installation of Dynamsoft Service
 
+### Dynamsoft service is not installed (Dynamic Web TWAIN is not installed)
+
 On a desktop, when a new user accesses a web page using Dynamic Web TWAIN SDK for the first time, he will be prompted to install the Dynamsoft Service. This is a built-in behaviour of the library. The prompt will display the download link. Once the installer is downloaded, the installation process will take just a few seconds.
 
 The prompt comes up when you try to [create a `WebTwain` instance](#creating-the-webtwain-instance) in Service mode.
 
-On **Windows and macOS**, the users can double click the downloaded installer to install the SDK. 
-
 ![Initialization]({{site.assets}}imgs/Initialization-1.png)
+
+On **Windows and macOS**, the users can double click the downloaded installer to install the SDK. 
 
 On **Linux**, the users can run one of the following commands to install it:
 
