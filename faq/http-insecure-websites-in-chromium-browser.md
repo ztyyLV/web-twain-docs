@@ -20,8 +20,8 @@ The same issue is also seen in Microsoft Edge 94.0.992.31 - as it uses the same 
 In the browser console, you may see the following **error message**
 
 ```javascript
-    Access to XMLHttpRequest at 'http://127.0.0.1:****' from origin 'http://yourwebsiteURL' has been blocked by CORS policy: 
-    The request client is not a secure context and the resource is in more-private address space `local`.
+Access to XMLHttpRequest at 'http://127.0.0.1:****' from origin 'http://yourwebsiteURL' has been blocked by CORS policy: 
+The request client is not a secure context and the resource is in more-private address space `local`.
 ```
 
 However, the same issue doesn't exist in Chrome v93 and earlier version or other web browsers like Firefox, Internet Explorer and Safari.
