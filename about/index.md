@@ -5,12 +5,12 @@ noTitleIndex: true
 title: Document Scanning SDK | Dynamic Web TWAIN Documentation
 keywords: Dynamic Web TWAIN, TWAIN, About, Documentation
 breadcrumbText: About Dynamic Web TWAIN
-description: Dynamic Web TWAIN SDK Documentation About Page
+description: Dynamic Web TWAIN SDK Documentation. This will help you integrate document scanning into your app, no matter whether you are building a workflow from scratch or optimizing an existing workflow.
 ---
 
 # About Dynamic Web TWAIN
 
-These docs aim to help you learn and use the Dynamic Web TWAIN library. They will help you integrate document scanning into your app, no matter whether you are building a workflow from scratch or optimzing an existing workflow.
+These docs aim to help you learn and use the Dynamic Web TWAIN library. They will help you integrate document scanning into your app, no matter whether you are building a workflow from scratch or optimizing an existing workflow.
 
 ## Introduction to Dynamic Web TWAIN
 
