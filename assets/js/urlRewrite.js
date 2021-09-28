@@ -1,5 +1,5 @@
 /** RewriteUrl('old url uses relative path', 'new url uses absolute path') **/
-
+/**
 RewriteUrl('/about/faqs.html#does-dwt-support-all-scanners', 'https://www.dynamsoft.com/web-twain/docs/indepth/faqs/general/does-dwt-support-all-scanners.html')
 RewriteUrl('/about/faqs.html#are-all-scanners-in-the-source-list-available', 'https://www.dynamsoft.com/web-twain/docs/indepth/faqs/general/are-all-scanners-in-the-source-list-available.html')
 RewriteUrl('/about/faqs.html#can-i-use-dwt-for-free', 'https://www.dynamsoft.com/web-twain/docs/indepth/faqs/general/can-i-use-dwt-for-free.html')
@@ -148,7 +148,7 @@ RewriteUrl('/indepth/troubleshooting/common-errors/connection-with-the-server-wa
 
 
 --
-
+**/
 
 function RewriteUrl(matchUrl, targetUrl) {
   var currentUrl = window.location.pathname

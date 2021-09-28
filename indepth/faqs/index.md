@@ -107,6 +107,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQs
 [WebSocket Connection Issue]({{site.indepth}}faqs/troubleshooting/WebSocket-Connection-Issue.html)  
 ['Activating the WebTwain instance' prompt doesn't disappear]({{site.indepth}}faqs/troubleshooting/activating-the-WebTwain-instance-prompt-doesnt-disappear.html)  
 [How to disable end-user manual authorization when accessing local hardware?]({{site.indepth}}faqs/troubleshooting/how-to-disable-end-user-authorization.html)  
+[How to resolve if Dynamic Web TWAIN stops working on insecure websites in Chrome v94?]({{site.indepth}}faqs/troubleshooting/How-to-resolve-if-Dynamic-Web-TWAIN-stops-working-on-insecure-websites-in-Chrome-94.html)
 
 ## [Error List]({{site.indepth}}faqs/errorlist/index.html)
 
@@ -118,6 +119,5 @@ description: Dynamic Web TWAIN SDK Documentation FAQs
 [Error message - XMLHttpRequest cannot load XXX]({{site.indepth}}faqs/errorlist/XMLHttpRequest-cannot-load.html)  
 [Error message - Source is connected to the maximum supported number of applications]({{site.indepth}}faqs/errorlist/source-connected-to-maximum.html)  
 [Error message - Sequence error]({{site.indepth}}faqs/errorlist/Sequence-error.html)  
-[Error message - Request header field dwt-md5 is not allowed by Access-Control-Allow-Headers in preflight response]({{site.indepth}}faqs/errorlist/dwt-md5-is-not-allowed.html)  
-[Error message - The handle is in the wrong state for the requested operation]({{site.indepth}}faqs/errorlist/the-handle-is-in-the-wrong-state-for-the-requested-operation.html)  
+[Error message - Request header field dwt-md5 is not allowed by Access-Control-Allow-Headers in preflight response]({{site.indepth}}faqs/errorlist/dwt-md5-is-not-allowed.html) [Error message - The handle is in the wrong state for the requested operation]({{site.indepth}}faqs/errorlist/the-handle-is-in-the-wrong-state-for-the-requested-operation.html)  
 [Error message - The connection with the server was terminated abnormally]({{site.indepth}}faqs/errorlist/the-connection-with-the-server-was-terminated-abnormally.html) 
