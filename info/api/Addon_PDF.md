@@ -194,3 +194,5 @@ interface PDFWSettings {
 **Usage notes**
 
 Use this method before you create a PDF with methods such as <a href="{{site.info}}api/WebTwain_IO.html#httpupload" target="_blank">`HTTPUpload()`</a>, <a href="{{site.info}}api/WebTwain_IO.html#saveaspdf" target="_blank">`SaveAsPDF()`</a>, and <a href="{{site.info}}api/WebTwain_IO.html#saveallaspdf" target="_blank">`SaveAllAsPDF()`</a>
+
+Only the core module license is required to use this method.
