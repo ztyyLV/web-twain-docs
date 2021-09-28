@@ -17,7 +17,12 @@ description: How to resolve if Dynamic Web TWAIN doesn't work on insecure public
 Visiting a public HTTP website with Dynamic Web TWAIN SDK integrated via Chrome v94, you may get prompted to download and install the Dynamsoft Service repeatedly.
 The same issue is also seen in Microsoft Edge 94.0.992.31 - as it uses the same Chromium version 94 as the latest Chrome browser.
 
-However, the same issue doesn't exist in Chrome v93 and earlier version or other web browsers like Firefox, Internet Explorer and Edge.
+In the browser console, you may see the following **error message**
+
+    Access to XMLHttpRequest at 'http://127.0.0.1:****' from origin 'http://yourwebsiteURL' has been blocked by CORS policy: 
+    The request client is not a secure context and the resource is in more-private address space `local`.
+
+However, the same issue doesn't exist in Chrome v93 and earlier version or other web browsers like Firefox, Internet Explorer and Safari.
 
 ### Reason
 
