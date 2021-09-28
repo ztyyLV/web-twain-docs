@@ -30,3 +30,15 @@ dnt_icon: /web-twain/docs/assets/img-icon/icon-dnt.svg
 baseurl: /web-twain/docs/
 
 theme: jekyll-theme-cayman
+
+plugins:
+  - jemoji
+  - jekyll-sitemap
+  
+defaults:
+  - scope:
+      path: "Hide_Tree_Page.html"
+    values:
+      sitemap: false
+
+url: "https://www.dynamsoft.com" # sitemap root
