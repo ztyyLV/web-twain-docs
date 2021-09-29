@@ -23,5 +23,5 @@ description: Dynamic Web TWAIN SDK Documentation FAQs Troubleshooting For End-us
 [WebSocket Connection Issue]({{site.indepth}}faqs/troubleshooting/WebSocket-Connection-Issue.html)  
 ['Activating the WebTwain instance' prompt doesn't disappear]({{site.indepth}}faqs/troubleshooting/activating-the-WebTwain-instance-prompt-doesnt-disappear.html)  
 [How to disable end-user manual authorization when accessing local hardware?]({{site.indepth}}faqs/troubleshooting/how-to-disable-end-user-authorization.html)  
-[How to resolve if Dynamic Web TWAIN stops working on insecure websites in Chrome v94?]({{site.indepth}}faqs/troubleshooting/How-to-resolve-if-Dynamic-Web-TWAIN-stops-working-on-insecure-websites-in-Chrome-94.html)
+[How to resolve if Dynamic Web TWAIN stops working on insecure websites in Chrome v94?]({{site.faq}}http-insecure-websites-in-chromium-browser.html)
 
