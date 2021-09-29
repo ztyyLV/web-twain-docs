@@ -1483,9 +1483,11 @@ SaveAllAsPDF(
     failureCallback ? : (errorCode: number, errorString: string) => void
 ): void | boolean;
 ```
+
 **Usage notes**
 
 Learn about [how to config PDF save settings](./Addon_PDF.md#write-setup).
+
 ---
 
 ## SaveSelectedImagesAsMultiPagePDF
