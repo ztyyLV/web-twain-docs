@@ -243,7 +243,7 @@ If you are not sure how to change the `RuntimeSettings` , the add-on also comes 
 * `coverage` : slow but covers most barcodes
 * `balance` : between `speed` and `coverage`
 
-The following shows their differences
+<!-- The following shows their differences
 
 | Parameter | `speed` | `balance` | `coverage` | `default` |
 | :-: | :-: | :-: | :-: | :-: |
@@ -254,6 +254,7 @@ The following shows their differences
 | `textFilterModes` | `[0, 0, 0, 0, 0, 0, 0, 0]` 	 | `[2, 0, 0, 0, 0, 0, 0, 0]` 	 | `[2, 0, 0, 0, 0, 0, 0, 0]` | `[2, 0, 0, 0, 0, 0, 0, 0]` |
 | `localizationModes` | `[2, 32, 64, 0, 0, 0, 0, 0]` 	 | `[2, 4, 32, 64, 0, 0, 0, 0]` 	 | `[2, 16, 4, 8, 32, 64, 0, 0]` | `[2, 16, 4, 8, 0, 0, 0, 0]` |
 | `scaleDownThreshold` | `2300` 	| `2300` 	| `214748347` | `2300` |
+-->
 
 To use one of these modes, simply call `updateRuntimeSettings()`
 
