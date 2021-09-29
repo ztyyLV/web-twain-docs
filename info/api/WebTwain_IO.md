@@ -2,17 +2,17 @@
 layout: default-layout
 needAutoGenerateSidebar: true
 noTitleIndex: true
-title: Dynamic Web TWAIN API Reference - IO APIs
+title: Dynamic Web TWAIN API Reference - Input and Output APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, IO APIs
 breadcrumbText: IO
-description: Dynamic Web TWAIN SDK Documentation API Reference IO APIs Page
+description: Dynamic Web TWAIN SDK Documentation | API Reference | IO APIs Page
 ---
 
 # WebTwain IO
 
-## Input
+## Methods
 
-**Methods**
+### Input Methods
 
 | |
 |:-|:-|
@@ -20,9 +20,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference IO APIs Page
 |[`LoadDibFromClipboard()`](#loaddibfromclipboard)| [`FTPDownload()`](#ftpdownload)| [`FTPDownloadEx()`](#ftpdownloadex)| [`HTTPDownload()`](#httpdownload)|
 | [`HTTPDownloadEx()`](#httpdownloadex)|[`HTTPDownloadThroughPost()`](#httpdownloadthroughpost)|[`HTTPDownloadDirectly()`](#httpdownloaddirectly)|
 
-## Output
-
-**Methods**
+### Output Methods
 
 | |
 |:-|:-|
@@ -36,10 +34,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference IO APIs Page
 |[`SaveAsTIFF()`]({{site.info}}api/WebTwain_IO.html#saveastiff)| [`SaveSelectedImagesAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagepdf)|[`SaveSelectedImagesAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagetiff)|
 | [`SaveAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveallasmultipagetiff)|[`SaveAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveallaspdf)|
 
-
-Others
-
-**Methods**
+### Other Methods
 
 | |
 |:-|:-|
@@ -47,7 +42,7 @@ Others
 | [`SetHTTPHeader()`](#sethttpheader)| [`SetUploadSegment()`](#setuploadsegment)|[`ShowFileDialog()`](#showfiledialog) | [`Print()`](#print)|
 |[`PrintEx()`](#printex)|
 
-**Properties**
+## Properties
 
 | |
 |:-|:-|
@@ -56,7 +51,7 @@ Others
 |[`IfShowFileDialog`](#ifshowfiledialog) |[`IfShowCancelDialogWhenImageTransfer`](#ifshowcanceldialogwhenimagetransfer)| [`IfShowProgressBar`](#ifshowprogressbar)  | [`JPEGQuality`](#jpegquality)|
 |[`IfTiffMultiPage`](#iftiffmultipage) | [`TIFFCompressionType`](#tiffcompressiontype)| [`MaxUploadImageSize`](#maxuploadimagesize)|[`IfAppendImage`](#ifappendimage)|
 
-**Events**
+## Events
 
 | |
 |:-|:-|
@@ -1488,7 +1483,9 @@ SaveAllAsPDF(
     failureCallback ? : (errorCode: number, errorString: string) => void
 ): void | boolean;
 ```
+**Usage notes**
 
+Learn about [how to config PDF save settings](./Addon_PDF.md#write-setup).
 ---
 
 ## SaveSelectedImagesAsMultiPagePDF
@@ -1510,6 +1507,11 @@ SaveSelectedImagesAsMultiPagePDF(
     failureCallback ? : (errorCode: number, errorString: string) => void
 ): void | boolean;
 ```
+
+**Usage notes**
+
+Learn about [how to config PDF save settings](./Addon_PDF.md#write-setup).
+
 ---
 
 ## SaveSelectedImagesAsMultiPageTIFF
