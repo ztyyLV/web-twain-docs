@@ -207,7 +207,7 @@ interface DeviceConfiguration {
      */
     ShowRemoteScanUI?:boolean;
     /**
-     * Specify a source by its index.
+     * Specify a source by its index (only effective when RemoteScan is true).
      * (Added in 16.2)
      */
     SelectSourceByIndex?: number;
