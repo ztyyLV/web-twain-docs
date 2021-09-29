@@ -1397,7 +1397,7 @@ SaveAsPDF(
 
 **Usage notes**
 
-Learn about [how to config PDF save settings](./Addon_PDF.md#write-setup).
+Learn about [how to config PDF save settings](./Addon_PDF.md#writesetup).
 
 ## SaveAsPNG
 
