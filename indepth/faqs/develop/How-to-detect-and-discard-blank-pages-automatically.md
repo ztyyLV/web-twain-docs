@@ -12,7 +12,7 @@ description: How to detect and discard blank pages automatically
 
 ## How to detect and discard blank pages automatically
 
-## Method One
+### Method One
 
 If the TWAIN driver of your device supports discarding blank pages, you can use the driver's built-in feature.
 1. You can set the [ `IfShowUI` ]({{site.info}}api/WebTwain_Acquire.html#ifshowui) property to true to display the User Interface (UI) of the source and you can check the option there (it normally reads 'discard blank')
