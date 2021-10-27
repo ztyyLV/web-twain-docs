@@ -23,6 +23,8 @@ description: Dynamic Web TWAIN SDK Documentation Resources Page
 
 > Similar to using NPM, you will get all the files in the [DWT package](https://github.com/dynamsoft-dwt/web-twain-package).
 
+## Sample code
+
 * <a href="https://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx" target="_blank">Official samples</a> 
 
 > We have many prebuilt samples to demonstrate common user scenarios. All samples contain the [resource files]({{site.about}}faqs.html#what-are-the-resources-files) required in your application. If a sample is hosted on the Dynamsoft website (not Github), then the sample comes with a 30-day free trial license as well. Otherwise, you can [get a trial license](#how-do-i-get-a-trial-license).
@@ -35,10 +37,12 @@ description: Dynamic Web TWAIN SDK Documentation Resources Page
 
 Please visit our [customer portal](https://www.dynamsoft.com/customer/license/trialLicense) to request for a trial license.
 
+## Online Demo
+
+* <a href="https://demo.dynamsoft.com/dwt/online_demo_scan.aspx" target="_blank">Official Demo - See Dynamic Web TWAIN in action</a>
+
 ## Useful Links
 
-* <a href="https://demo.dynamsoft.com/dwt/online_demo_scan.aspx" target="_blank">Official Demo 1</a>
-* <a href="https://demo3.dynamsoft.com/dwt/online_demo_scan.aspx" target="_blank">Official Demo 2</a>
 * <a href="https://www.dynamsoft.com/Secure/imaging-web-application-buyit.aspx#" target="_blank">Price / Online Store</a>
 * <a href="https://www.youtube.com/user/Dynamsoft" target="_blank">Online Videos</a>
 

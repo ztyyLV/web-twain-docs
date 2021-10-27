@@ -14,7 +14,7 @@ description: The current product key does not match the domain
 
 * Symptom
 
-When you visit a `DWT` application , you may be met with this error message.
+When you visit a `Dynamic Web TWAIN` application , you may be met with this error message.
 
 * Cause
 

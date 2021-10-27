@@ -266,7 +266,7 @@ interface CameraControlPropertyExtra {
 
 **Usage notes**
 
-Check out [ `Dynamsoft.DWT.EnumDWT_CameraControlProperty` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_cameracontrolproperty).
+Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_cameracontrolproperty" target="_blank">Dynamsoft.DWT.EnumDWT_CameraControlProperty</a>.
 
 ---
 
@@ -356,7 +356,7 @@ interface VideoControlPropertyExtra {
 
 **Usage notes**
 
-Check out [ `Dynamsoft.DWT.EnumDWT_VideoProperty` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_videoproperty).
+Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_videoproperty" target="_blank">Dynamsoft.DWT.EnumDWT_VideoProperty</a>.
 
 ---
 
@@ -484,6 +484,12 @@ interface Resolution {
 }
 ```
 
+**Example**
+
+``` javascript
+DWObject.Addon.Webcam.SetResolution("640 x 480");
+```
+
 ---
 
 ## SetVideoRotateMode
@@ -502,7 +508,7 @@ SetVideoRotateMode(
 
 **Usage notes**
 
-Check out [ `Dynamsoft.DWT.EnumDWT_VideoRotateMode` ](Dynamsoft.DWT.Enum.md#dynamsoftenumdwt_videorotatemode).
+Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_videorotatemode" target="_blank">Dynamsoft.DWT.EnumDWT_VideoRotateMode</a>. 
 
 ---
 

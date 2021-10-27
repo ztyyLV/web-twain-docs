@@ -3,7 +3,7 @@ layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
 title: How to set the MIME type
-keywords: Dynamic Web TWAIN, Documentation, Distribution and Deployment
+keywords: MIME type
 breadcrumbText: How to set the MIME type
 description: How to set the MIME type
 ---

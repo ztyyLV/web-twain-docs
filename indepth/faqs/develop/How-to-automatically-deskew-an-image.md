@@ -18,14 +18,14 @@ Generally, there are two ways to automatically deskew an image.
 
 > Applicable only to compatible [TWAIN scanners]({{site.getstarted}}hardware.html#twain-scanners)
 
-There is a standard TWAIN capability called `ICAP_AUTOMATICDESKEW` which, when enabled, does the deskewing of all scanned images automatically. If your scanner supports this capability, you can enable the functionality through `DWT` using the API [ `IfAutomaticDeskew` ]({{site.info}}api/WebTwain_Acquire.html#ifautomaticdeskew)
+There is a standard TWAIN capability called `ICAP_AUTOMATICDESKEW` which, when enabled, does the deskewing of all scanned images automatically. If your scanner supports this capability, you can enable the functionality through `Dynamic Web TWAIN` using the API [ `IfAutomaticDeskew` ]({{site.info}}api/WebTwain_Acquire.html#ifautomaticdeskew)
 
 ``` javascript
 DWObject.OpenSource();
 DWObject.IfAutomaticDeskew = true;
 ```
 
-### Use DWT to deskew an image as it is scanned
+### Use Dynamic Web TWAIN to deskew an image as it is scanned
 
 > The function `deskew()` below is applicable to all platforms. The event `OnPostTransferAsync` is only triggered during scanning
 

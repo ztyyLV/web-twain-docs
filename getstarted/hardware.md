@@ -1,10 +1,10 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Scanners and Cameras
+title: TWAIN Scanners, ICA Scanners, SANE Scanners, and Cameras
 keywords: Dynamic Web TWAIN, Documentation, TWAIN, ICA, SANE, DirectShow, Webcam, MediaDevices Hardware
 breadcrumbText: Hardware
-description: TWAIN Scanners, ICA Scanners, SANE Scanners, DirectShow Cameras, and MediaDevices Cameras.
+description: Dynamic Web TWAIN supports image capture from TWAIN Scanners, ICA Scanners, SANE Scanners, DirectShow Cameras, and MediaDevices Cameras.
 ---
 
 # Hardware 
@@ -21,7 +21,7 @@ description: TWAIN Scanners, ICA Scanners, SANE Scanners, DirectShow Cameras, an
 
 ![Hardware-Scanners-Cameras-1]({{site.assets}}imgs/Hardware-Scanners-Cameras-1.png)
 
-`TWAIN Scanners` refer to image scanners that have drivers following the TWAIN standard.
+`TWAIN Scanners` refer to image scanners and document scanners that have drivers following the TWAIN standard.
 
 ### Facts about TWAIN
 
@@ -29,9 +29,9 @@ description: TWAIN Scanners, ICA Scanners, SANE Scanners, DirectShow Cameras, an
 
 * TWAIN is supported on Microsoft Windows, Linux, and macOS X. However, based on our experience and the experience of many customers, TWAIN only works well on Windows. On Linux, [SANE](#sane-scanners) is the better and preferred alternative; on macOS, [ICA](#ica-scanners) is the better and preferred alternative.
 
-* TWAIN is actively maintained by the non-profit [TWAIN Working Group](https://www.twain.org/). Members of the group consists of scanner vendors and imaging software vendors, including FUJITSU, Panasonic, Epson, HP, ExactCODE, LEADTOOLS, and of course, Dynamsoft.
+* TWAIN is actively maintained by the non-profit [TWAIN Working Group](https://www.twain.org/). Members of the group consist of scanner vendors and imaging software vendors, including FUJITSU, Panasonic, Epson, HP, ExactCODE, LEADTOOLS, and of course, Dynamsoft.
 
-* TWAIN is [the most commonly used protocol](https://www.twain.org/why-twain/) for image capturing and processing. Almost all scanners on the market come with a TWAIN driver and are supported by TWAIN applications like `DWT` .
+* TWAIN is [the most commonly used protocol](https://www.twain.org/why-twain/) for image capturing and processing. Almost all scanners on the market come with a TWAIN driver and are supported by TWAIN applications like `DWT`.
 
 See more: [How to use TWACKER to check if your device is TWAIN Compliant?]({{site.indepth}}faqs/troubleshooting/How-to-use-TWACKER-to-check-if-your-device-is-TWAIN-Compliant.html)
 

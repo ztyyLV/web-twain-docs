@@ -12,7 +12,7 @@ description: Where Can I Get The WebTWAIN Instance(s)
 
 ## Where Can I Get The WebTWAIN Instance(s)? 
 
-When `Load` is called, `DWT` tries to create the `WebTwain` instances. Once it's done, `DWT` triggers the built-in callback `Dynamsoft.DWT.OnWebTwainReady` in which the method [ `Dynamsoft.DWT.GetWebTwain` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#getwebtwain) can be used to get the handler(s) of the instance(s). For simplicity, the `OnWebTwainReady` callback points to a global function called `Dynamsoft_OnReady` . The following snippets are equivalent
+When Load` is called, `Dynamic Web TWAIN` tries to create the `WebTwain` instances. Once it's done, `Dynamic Web TWAIN` triggers the built-in callback `Dynamsoft.DWT.OnWebTwainReady` in which the method [ `Dynamsoft.DWT.GetWebTwain` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#getwebtwain) can be used to get the handler(s) of the instance(s). For simplicity, the `OnWebTwainReady` callback points to a global function called `Dynamsoft_OnReady` . The following snippets are equivalent
 
 Snippet one
 

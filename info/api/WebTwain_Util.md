@@ -225,7 +225,7 @@ readonly Manufacturer: string;
 readonly ProductFamily: string;
 ```
 
-## Usage notes
+**Usage notes**
 
 `Manufacturer` , `ProductFamily` , `ProductName` and `VersionInfo` together form the identity string of the Dynamic Web TWAIN library.
 
@@ -242,7 +242,7 @@ readonly ProductFamily: string;
 readonly ProductName: string;
 ```
 
-## Usage notes
+**Usage notes**
 
 `Manufacturer` , `ProductFamily` , `ProductName` and `VersionInfo` together form the identity string of the Dynamic Web TWAIN library.
 
@@ -259,7 +259,7 @@ readonly ProductName: string;
 readonly VersionInfo: string;
 ```
 
-## Usage notes
+**Usage notes**
 
 `Manufacturer` , `ProductFamily` , `ProductName` and `VersionInfo` together form the identity string of the Dynamic Web TWAIN library.
 

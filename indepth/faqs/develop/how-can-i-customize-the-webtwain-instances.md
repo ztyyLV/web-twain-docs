@@ -37,7 +37,7 @@ interface Container {
 
 `Width` and `Height` determine the initial viewer size of the instance.
 
-When instantiating with `Dynamsoft.DWT.Load` , `ContainerId` , `Width` and `Height` are required. `DWT` will try to locate an HTML element with the id defined by `ContainerId` and use `Width` and `Height` as the viewer size.
+When instantiating with `Dynamsoft.DWT.Load` , `ContainerId` , `Width` and `Height` are required. `Dynamic Web TWAIN` will try to locate an HTML element with the id defined by `ContainerId` and use `Width` and `Height` as the viewer size.
 
 To create multiple instances, simply provide multiple `Containers` , for example, the following creates two `WebTwain` instances
 

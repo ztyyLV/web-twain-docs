@@ -11,7 +11,6 @@ description: Dynamic Web TWAIN SDK Documentation FAQs Development
 
 [How to install Dynamic Web TWAIN?]({{site.indepth}}faqs/develop/how-to-install-dynamic-web-twain.html)  
 [What if I am installing over a previous version of the Dynamic Web TWAIN?]({{site.indepth}}faqs/develop/what-if-i-am-installing-over-a-previous-version-of-the-dynamic-web-twain.html)  
-[Can I install Dynamsoft Service for all my clients?]({{site.indepth}}faqs/develop/can-i-install-dynamsoft-service-for-all-my-clients.html)  
 [Can I install Dynamsoft Service silently?]({{site.indepth}}faqs/develop/can-i-install-dynamsoft-service-silently.html)  
 [How to uninstall Dynamic Web TWAIN?]({{site.indepth}}faqs/develop/how-to-uninstall-dynamic-web-twain.html)  
 [How to customize the Dynamsoft Service installer?]({{site.indepth}}faqs/develop/how-to-customize-the-dynamsoft-service-installer.html)  
@@ -51,10 +50,6 @@ description: Dynamic Web TWAIN SDK Documentation FAQs Development
 [How to display the thumbnail viewer?]({{site.indepth}}faqs/develop/how-to-display-the-thumbnail-viewer.html)  
 [How to show or hide the Image Editor?]({{site.indepth}}faqs/develop/How-to-show-or-hide-the-Image-Editor.html)  
 [Is the Image Editor compatible across all platforms?]({{site.indepth}}faqs/develop/Is-the-Image-Editor-compatible-across-all-platforms.html)  
-[Can I change the language of the Editor?]({{site.indepth}}faqs/develop/Can-I-change-the-language-of-the-Editor.html)  
-[Can I remove or add buttons on the toolbar of the Editor?]({{site.indepth}}faqs/develop/Can-I-remove-or-add-buttons-on-the-toolbar-of-the-Editor.html)  
-[Can I specify where and how big the Editor is?]({{site.indepth}}faqs/develop/Can-I-specify-where-and-how-big-the-Editor-is.html)  
-[Can I change the colors of the Editor?]({{site.indepth}}faqs/develop/Can-I-change-the-colors-of-the-Editor.html)  
 [How to customize the installation dialog?]({{site.indepth}}faqs/develop/How-to-customize-the-installation-dialog.html)  
 [Can I OCR multiple languages at the same time?]({{site.indepth}}faqs/develop/Can-I-OCR-multiple-languages-at-the-same-time.html)  
 [Can I OCR multiple zones at the same time?]({{site.indepth}}faqs/develop/Can-I-OCR-multiple-zones-at-the-same-time.html)  
@@ -67,6 +62,9 @@ description: Dynamic Web TWAIN SDK Documentation FAQs Development
 [How to insert images to a specified index?]({{site.indepth}}faqs/develop/How-to-insert-images-to-a-specified-index.html)  
 [How to detect and discard blank pages automatically?]({{site.indepth}}faqs/develop/How-to-detect-and-discard-blank-pages-automatically.html)  
 [How to change the location or to rename the ‘Resources’ folder with Dynamic Web TWAIN?]({{site.indepth}}faqs/develop/How-to-change-the-location-or-to-rename-the-Resources-folder-with-Dynamic-Web-TWAIN.html)  
+[How to customize the display language of Dynamic Web TWAIN?]({{site.indepth}}faqs/develop/how-to-customize-the-display-language-of-dynamic-web-twain.html)  
+[How to customize the image editor?]({{site.indepth}}faqs/develop/how-to-customize-the-image-editor.html)  
+
 
 
 

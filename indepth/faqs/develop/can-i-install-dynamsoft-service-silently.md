@@ -42,3 +42,5 @@ or
 ``` shell
 sudo rpm -i path/to/DynamsoftServiceSetup.rpm
 ```
+
+And in a controlled environment, Dynamic Web TWAIN can be distributed to all clients in one go just like other similar programs. [Group Policy](https://docs.microsoft.com/en-us/troubleshoot/windows-server/group-policy/use-group-policy-to-install-software) is one such technology.

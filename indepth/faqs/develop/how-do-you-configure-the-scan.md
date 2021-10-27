@@ -12,7 +12,7 @@ description: How Do You Configure The Scan
 
 ## How do you configure the scan? 
 
-`DWT` provides two ways to set up a scan operation.
+`Dynamic Web TWAIN` provides two ways to set up a scan operation.
 
 * Change one setting at a time. Below are a few APIs, for example
   + [PageSize]({{site.info}}api/WebTwain_Acquire.html#pagesize) 

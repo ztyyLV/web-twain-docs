@@ -2,7 +2,7 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title:How to create dump files
+title: How to create dump files
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: How to create dump files
 description: How to create dump files

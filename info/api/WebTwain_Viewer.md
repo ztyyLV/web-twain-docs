@@ -17,7 +17,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 | [`createThumbnailViewer()`](#createthumbnailviewer)| [`first()`](#first)|[`fitWindow()`](#fitwindow)|[`gotoPage()`](#gotopage)|
 | [`hide()`](#hide)| [`last()`](#last)| [`next()`](#next)|[`off()`](#off)|
 |[`on()`](#on)| [`previous()`](#previous)| [`render()`](#render)| [`setButtonClass()`](#setbuttonclass)|
-| [`setSelectedAreas()`](#setselectedAreas)| [`setViewMode()`](#setviewmode) | [`show()`](#show)| [`unbind()`](#unbind)|
+| [`setSelectedAreas()`](#setselectedareas)| [`setViewMode()`](#setviewmode) | [`show()`](#show)| [`unbind()`](#unbind)|
 
 
 <!--* [updateUISettings](#updateuisettings)-->
@@ -525,17 +525,16 @@ The following table shows the events available to a ThumbnailViewer object.
 
 | Event Name | Arguments | Description |
 |:-|:-|:-|
-| `click` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the clicked |
-| `dblclick` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when double clicked |
-| `contextMenu` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when right clicked |
+| `click` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is clicked |
+| `dblclick` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is double clicked |
+| `contextMenu` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is right clicked |
 | `mousemove` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse moved over |
 | `mousedown` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is pressed |
 | `mouseup` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is released |
-<!--**| `topPageChanged` | index: number | Triggered when the top page currently displayed changes |-->
 | `resize` | width：number, height：number | Triggered when width & height of the ThumbnailViewer object changes. |
 | `pageRendered` | index: number | Triggered when a page is rendered. |
 | `mouseout` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is out, only for desktop browsers |
-| `mouseover` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is out, only for desktop browsers |
+| `mouseover` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when mouse is hovering, only for desktop browsers |
 | `keydown` | keyboardEvent: KeyboardEvent | Triggered when a key is pressed, only for desktop browsers |
 | `keyup` | keyboardEvent: KeyboardEvent | Triggered when a key is released, only for desktop browsers |
 
@@ -726,10 +725,19 @@ Viewer.on(
 **Example**
 
 ``` javascript
+//bind pageAreaSelected event on the main viewer
 var callback = function(sImageIndex, rect) {
     console.log(sImageIndex);
 };
 DWObject.Viewer.on('pageAreaSelected', callback);
+
+//bind click event on the thumbnail viewer 
+var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer();
+objThumbnailViewer.show(); 
+objThumbnailViewer.on('click', function(dwtEvent, domEvent) {
+    console.log(dwtEvent, domEvent);
+});
+
 ```
 
 ---
@@ -1097,7 +1105,7 @@ DWObject.Viewer.innerBorder = '1px solid rgb(204, 204, 204)';
 
 **Usage notes**
 
-The default value is "1px solid rgb(125, 162, 206)". Now you can specify the border by CSS. Read more on the [border shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/border).
+The default value is null. You can specify the border by CSS. Read more on the [border shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/border).
 
 ---
 
@@ -1329,10 +1337,11 @@ autoChangeIndex : boolean
 **Example**
 
 ``` javascript
-DWObject.Viewer.Viewer.autoChangeIndex=true;
+DWObject.Viewer.autoChangeIndex=true;
 ```
 
 **Usage Notes**
+
 When set to true, the index in the upper left corner of the viewer will be selected when scrolling.
 
 ---
