@@ -1048,6 +1048,9 @@ GetDeviceType(): number;
 | 6 | Feeder-only scanner, without auto feed |
 | 7 | Webcam |
 
+
+Use this method after [OpenSource()](#opensource).
+
 ---
 
 ## GetSourceNameItems
