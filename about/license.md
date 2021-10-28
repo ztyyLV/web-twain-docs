@@ -33,7 +33,7 @@ LTS supports two deployment methods: <a href="https://www.dynamsoft.com/license-
 If you use Self-hosting, you also need to set <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#licenseserver" target="_blank">licenseServer</a> 
 
 ``` javascript
-Dynamsoft.DWT.BarcodeReader.licenseServer = ["https://your.mainServer.com"];
+Dynamsoft.DWT.licenseServer = ["https://your.mainServer.com"];
 Dynamsoft.DWT.organizationID = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
 ```
 
