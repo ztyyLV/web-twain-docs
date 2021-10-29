@@ -685,7 +685,7 @@ BlankImageThreshold: number;
 **Usage notes**
 
 [0, 255] is the interval of allowed values, inclusive. The default value is 128.
-This property is only valid after IsBlankImageExpress is called.
+This property is only valid after `IsBlankImageExpress` is called.
 
 ---
 
@@ -758,6 +758,13 @@ Both `BlankImageCurrentStdDev` and `BlankImageMaxStdDev` range from 0 to 100.
  */
 IfAllowLocalCache: boolean;
 ```
+
+**Usage notes**
+
+The default value of IfAllowLocalCache is true. When the property is true, you can scan as many images as you want as long as you have a big enough disk.
+The default threshold is set to 800 (MB), anything beyond 800MB gets compressed, encrypted and cached on the local disk.
+If neccessary, you can set the threshold using `BufferMemoryLimit` for better performance.
+All cached data is encrypted and can only be read by Dynamic Web TWAIN and it will be destroyed when it is no longer used.
 
 ---
 
