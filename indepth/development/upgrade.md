@@ -100,23 +100,23 @@ Dynamsoft.DWT.organizationID = "123456"; // replace the number 123456 with YOUR-
 
 Please note that this licensing model is only supported from `DWT` 17.0 and needs to be used with Dynamsoft License Server (`DLS` for short). See more about <a href="https://www.dynamsoft.com/license-server/docs/about/terms.html?ver=latest#dynamsoft-license-server" target="_blank">What is a DLS</a>
 
-## Update `DWT` on the client-side 
+## Update `Dynamsoft Service` on the client-side 
 
 ### Service mode
 
- Starting in version 16.*, `DWT` is designed to be backward compatible (unfortunately, just as far back as 16.0). The compatibility is done in two ways
+ Starting in version 16.*, `Dynamsoft Service` is designed to be backward compatible (unfortunately, just as far back as 16.0). The compatibility is done in two ways
 
-* For minor versions like 16.1 to 16.2, if the newer version of `DWT` has been installed on a desktop, websites utilizing both the newer version and the older version can work without reinstallation of `DWT`
+* For minor versions like 16.1 to 16.2, if the newer version of `Dynamsoft Service` has been installed on a desktop, websites utilizing both the newer version and the older version can work without reinstallation of `Dynamsoft Service`
 * For major versions like 16.* to 17.*, the newer version will be installed to a different directory which can coexist with the older version. The user can choose to uninstall the old version if necessary
 
-That means, once you, as the maintainer, have finished upgrading your application to a newer `DWT` on the server side, the clients could face one of two situations
+That means, once you, as the maintainer, have finished upgrading your application to a newer `Dynamsoft Service` on the server side, the clients could face one of two situations
 
-* If the clients have installed the same or even newer minor version of `DWT` themselves (probably from another application that uses `DWT` ), they don't need to do anything; 
-* If the clients never installed `DWT` or have an older version or a different new major version of it, they will be required to do a reinstallation of `DWT` . The process is described <a href="{{site.indepth}}deployment/service.html#how-to-install-dwt" target="_blank">here</a> 
+* If the clients have installed the same or even newer minor version of `Dynamsoft Service` themselves (probably from another application that uses `Dynamic Web TWAIN` ), they don't need to do anything; 
+* If the clients never installed `Dynamsoft Service` or have an older version or a different new major version of it, they will be required to do a reinstallation of `Dynamsoft Service`. The process is described <a href="{{site.indepth}}deployment/service.html#how-to-install-dwt" target="_blank">here</a> 
 
 ### WASM mode
 
-By comparison, if `DWT` runs only in the <a href="{{site.indepth}}features/initialize.html#wasm-mode" target="_blank">WASM mode</a>, the clients don't need to install anything themselves as the <a href="{{site.getstarted}}platform.html#wasm-browsers" target="_blank">WASM browsers</a> will take care of the upgrade process. What the clients may encounter is a slower-than-usual page load when they visit the application for the first time after the upgrade.
+By comparison, if `Dynamic Web TWAIN` runs only in the <a href="{{site.indepth}}features/initialize.html#wasm-mode" target="_blank">WASM mode</a>, the clients don't need to install anything themselves as the <a href="{{site.getstarted}}platform.html#wasm-browsers" target="_blank">WASM browsers</a> will take care of the upgrade process. What the clients may encounter is a slower-than-usual page load when they visit the application for the first time after the upgrade.
 
 Once upgraded, the old WASM files will continue to exist in the browser as cached data until it's purged by the browser or by the user.
 
