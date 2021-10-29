@@ -812,7 +812,7 @@ Action types include
 
 ``` typescript
 /**
- * A built-in callback triggered when a change occurs in the buffer.
+ * This event is triggered when the current image in buffer is changed like flipped, cropped, rotated, etc. or a new image has been acquired.
  * @argument indexString A string of the changed index(indices).
  * @argument type Operation type.
  * @argument index Index of the current image.
