@@ -341,6 +341,14 @@ RegisterEvent('OnPostLoad',
 );
 ```
 
+**Example**
+
+``` javascript
+DWObject.RegisterEvent('OnPostLoad', function(path, name, type) {
+    alert(path + '\\' + name);
+});
+```
+
 ---
 
 ## FTPDownload
