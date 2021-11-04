@@ -582,8 +582,7 @@ RemoveAllSelectedImagesAsync(): Promise<boolean>;
 
 ``` typescript
 /**
- * Return the index of the current image in the buffer or 
- * Set the image specified by index as the current image.
+ * Return the index of the current image in the buffer or set the image specified by index as the current image.
  */
 CurrentImageIndexInBuffer: number;
 ```
