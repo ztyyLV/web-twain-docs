@@ -78,7 +78,7 @@ function getExtension(type) {
 
 **A**: `DWT` does the uploading in a few steps
 
-1. Grab the image(s) specified by `indices` ; 
+* Grab the image(s) specified by `indices` ; 
 * Encode the image(s) in the specified type which results in a binary file; 
 * [Optional] Convert the file into a base64 string; 
 * Create an HTTP Form and perform an asynchronous HTTP (Ajax) request to send the form to the specified `url` ; 
