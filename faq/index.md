@@ -11,8 +11,8 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 ## SDK Download/Free Trial
 
-[Do you provide free trial versions of the Dynamic Web TWAIN SDK?]({{site.indepth}}faq/xxxxxxx.html)  
-[Is the free trial version fully functional?]({{site.indepth}}faq/xxxxxxx.html)
+<a href="xxxxxxxxxx" target="_blank">Do you provide free trial versions of the Dynamic Web TWAIN SDK?</a>  
+<a href="xxxxxxxxxx" target="_blank">Is the free trial version fully functional?</a>  
 
 ## Capture/Image Source	
 
@@ -30,9 +30,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 ## Project Deployment and End-user Installation
 
-[How to resolve if Dynamic Web TWAIN stops working on insecure websites in Chrome v94?]({{site.faq}}http-insecure-websites-in-chromium-browser.html)  
-
-
+<a href="{{site.faq}}http-insecure-websites-in-chromium-browser.html" target="_blank">How to resolve if Dynamic Web TWAIN stops working on insecure websites in Chrome v94?</a>
 
 ## Error Troubleshooting
 
