@@ -15,6 +15,8 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 ## Capture/Image Source	
 
+[]
+
 ## Image Viewer
 
 ## Image Editing
