@@ -87,7 +87,7 @@ export default {
          * ResourcesPath & ProductKey must be set in order to use the library!
          */
         Dynamsoft.DWT.ResourcesPath = "dwt-resources";
-	Dynamsoft.DWT.ProductKey = 'Your-Product-Key';
+	Dynamsoft.WebTwainEnv.ProductKey = 'YOUR-PRODUCT-KEY';
         Dynamsoft.DWT.Containers = [{
             WebTwainId: "dwtObject",
             ContainerId: this.containerId,
@@ -106,7 +106,7 @@ export default {
          */
         Dynamsoft_OnReady() {
             this.DWObject = Dynamsoft.DWT.GetWebTwain(this.containerId);
-			this.bWASM = Dynamsoft.Lib.env.bMobile || !Dynamsoft.DWT.UseLocalService;
+	    this.bWASM = Dynamsoft.Lib.env.bMobile || !Dynamsoft.DWT.UseLocalService;
             if (this.bWASM) {
                 this.DWObject.Viewer.cursor = "pointer";
             } else {
