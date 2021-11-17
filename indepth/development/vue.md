@@ -87,7 +87,7 @@ export default {
          * ResourcesPath & ProductKey must be set in order to use the library!
          */
         Dynamsoft.DWT.ResourcesPath = "dwt-resources";
-		Dynamsoft.DWT.ProductKey = 't00891wAAAKBfWo4sRRVNTyLqdC7nKomEJIfBYqfXWg5mblnP0eeJi+LsMIUdQvrBf//ocS3z8MJA47R4VdO4x24uJwlqKgkuZOa7BUQHPkFNA5hFSi6lG2qOK6I=';
+	Dynamsoft.DWT.ProductKey = 'Your-Product-Key';
         Dynamsoft.DWT.Containers = [{
             WebTwainId: "dwtObject",
             ContainerId: this.containerId,
@@ -149,7 +149,8 @@ export default {
             if (!this.DWObject) this.DWObject = Dynamsoft.DWT.GetWebTwain();
             this.DWObject.IfShowFileDialog = true;
             /**
-             * Note, this following line of code uses the PDF Rasterizer which is an extra add-on that is licensed seperately
+             * Note:
+	     * This following line of code uses the PDF Rasterizer which is an extra add-on that is licensed seperately
              */
             this.DWObject.Addon.PDF.SetConvertMode(
                 Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL
