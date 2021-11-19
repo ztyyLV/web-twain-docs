@@ -8,7 +8,7 @@ breadcrumbText: How to resolve if Dynamic Web TWAIN doesn't work on insecure pub
 description: How to resolve if Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94 
 ---
 
-# Troubleshooting
+# Project Deployment and End-user Installation
 
 ## Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94 
 
