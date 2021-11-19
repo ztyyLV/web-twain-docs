@@ -37,6 +37,26 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 ## Document Saving
 
+<a href="{{site.faq}}image-document-formats-save.html" target="_blank">What image and document formats can I save my documents as?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
 ## Security
 
 ## Addon
