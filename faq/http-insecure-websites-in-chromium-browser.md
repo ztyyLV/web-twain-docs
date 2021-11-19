@@ -60,6 +60,6 @@ During the trial period, your insecure public website will not be affected by th
 see the steps below  
 Step 1: visit chrome://flags/#block-insecure-private-network-requests  
 Step 2: set 'Block insecure private network requests' to Disabled  
-![activating-the-WebTwain-instance-1]({{site.assets}}imgs/block-insecure-private-network-request.png)
+![block-insecure-private-network-request]({{site.assets}}imgs/block-insecure-private-network-request.png)
 
 
