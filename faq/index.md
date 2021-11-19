@@ -11,7 +11,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 ## SDK Download/Free Trial
 
-<a href="{{site.faq}}extend-free-trial.html" target="_blank">How can I extend my free trial?</a>  
+<a href="{{site.faq}}extend-free-trial.md" target="_blank">How can I extend my free trial?</a>  
 <a href="{{site.faq}}download-older-version-sdk.html" target="_blank">Where can I download an older version of the Dynamic Web TWAIN SDK?</a>
 <a href="{{site.faq}}provide-free-trial-version.html" target="_blank">Do you provide free trial versions of the Dynamic Web TWAIN SDK?</a>
 <a href="{{site.faq}}run-on-arm-based-embedded-device.html" target="_blank">Can I run the scanning service on an ARM-based embedded device, such as Raspberry Pi?</a>
