@@ -79,6 +79,17 @@ This addon now works on iOS, iPadOS & Android too.
 
 A professional linear & 2D barcode reading library for recognizing barcode from any document captured from scanners, cameras or file systems.
 
+### 8.2` (04/20/2021)
+
+* Added support for MSI Code (Modified Plessey).
+* Improved the recognition accuracy for GS1 Databar.
+* Improved the localization robustness for QR Code.
+* Improved the localization for low quality 1D barcodes.
+* Improved the deblurring performance and recognition rate for DataMatrix.
+* Improved the recognition rate for Aztec.
+* Improved both the localization and decoding algorithms for Postal Codes
+
+
 ### `7.4.0.0428` (06/18/2020)
 
 * This addon has been redesigned with brand-new APIs.
