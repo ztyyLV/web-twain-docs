@@ -79,7 +79,7 @@ This addon now works on iOS, iPadOS & Android too.
 
 A professional linear & 2D barcode reading library for recognizing barcode from any document captured from scanners, cameras or file systems.
 
-### 8.2` (04/20/2021)
+### `8.2` (04/20/2021)
 
 * Added support for MSI Code (Modified Plessey).
 * Improved the recognition accuracy for GS1 Databar.
