@@ -1260,11 +1260,16 @@ singlePageMode: boolean;
 ```
 
 **Example**
+``` javascript
+// Use single page mode in the main viewer
+DWObject.Viewer.singlePageMode = true;
+```
 
 ``` javascript
+// Use single page mode in the thumnail viewer
 var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer();
 objThumbnailViewer.show();
-DWObject.Viewer.singlePageMode = false;
+DWObject.Viewer.singlePageMode = true;
 ```
 
 **Usage notes**
