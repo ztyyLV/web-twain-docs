@@ -1469,15 +1469,15 @@ on('pageAreaSelected',
 
 interface rect{ 
     // The index of the selected area. The index is 0-based. This is useful when you have multiple selected areas on one page.
-    areaIndex: number;
+    areaIndex: number;
     // The x-coordinate of the upper-left corner of the area.
-    x: number;
+    x: number;
     // The y-coordinate of the upper-left corner of the area.
-    y: number;
+    y: number;
     // The width of the selected area.
-    width: number;
+    width: number;
     // The height of the selected area.
-    height: number;
+    height: number;
 };
 ```
 
