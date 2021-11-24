@@ -280,18 +280,18 @@ closeVideo(): void;
 scanDocument(scanConfiguration?: ScanConfiguration
 ): Promise<Resolution>;
 
-interface ScanConfiguration {
-element?: HTMLDivElement,  //可以绑定element也可以绑定element的id，绑定过了，就在
-                               //element里面显示showVideo. 不绑定，则全屏显示
-scannerViewer?: {
-      deviceId?: string,   //摄像头id
-   mode?: string,  //” document”: 文档模式，”picture”: 图片模式，Default：” document”； 
-             //如果为图片模式拍照或load后就直接结束。
-                 //mode属性17.2版本先不允许设置，17.2只支持document
-       maxDocuments:int    // scanDocument显示的界面中，最多可以连续scan 与load
+interface ScanConfiguration{
+
+    element?: HTMLDivElement,  //bind the elment or elment id. After binding, show the video in the spcified element, otherwise, show the video in full screen.
+
+    scannerViewer?: {
+       deviceId?: string,  
+      
+       maxDocuments:int    // the maximum documents can be captured/loaded in to the buffer. 
+                          scanDocument显示的界面中，最多可以连续scan 与load
                          //本地 document的张数。默认值为：MaxImagesInBuffer-buffer中已经存在的图片数, 
                          //scan或load超过了这个数值，则会触发video-error事件
-       fullScreen?: boolean,   //是否video显示全屏, default: false
+       fullScreen?: boolean,  //是否video显示全屏, the default value is false.
        polygonStyle?:{          
   	    stroke: "yellow",            //default : "#fe8e14"
           strokeWidth: "2px",       //default: "1px"
