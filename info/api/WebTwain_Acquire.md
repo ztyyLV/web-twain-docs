@@ -107,6 +107,7 @@ AcquireImage(
     deviceConfiguration?: DeviceConfiguration,
     successCallBack?: () => void,
     failureCallBack?: (
+        deviceConfiguration?: DeviceConfiguration,
         errorCode: number,
         errorString: string) => void
 ): void;
