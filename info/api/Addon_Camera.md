@@ -307,9 +307,9 @@ interface ScanConfiguration{
         },
 
        autoDetect?:{  //Only applicable to video scanning.                  
-	 visibility?: boolean,         //Whether to display the automatic border detection icon. The default value is true.
-         enableAutoDetect?: boolean,   //Whether to enable automatic border detection. The default value is false.     
-         acceptedPolygonConfidence:80,  //The default value is 80.
+	  visibility?: boolean,         //Whether to display the automatic border detection icon. The default value is true.
+          enableAutoDetect?: boolean,   //Whether to enable automatic border detection. The default value is false.     
+          acceptedPolygonConfidence:80,  //The default value is 80.
         },
       
         continuousScan?:{   //Only applicable to video scanning.
