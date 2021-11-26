@@ -274,28 +274,22 @@ closeVideo(): void;
 
 ``` typescript
 /**
- * Open the camera and enable real-time border detection to capture document(s).
+ * Open the camera to capture document(s).
  * @param scanConfiguration Specify the scan configuration.
  */
 scanDocument(scanConfiguration?: ScanConfiguration
 ): Promise<Resolution>;
 
 interface ScanConfiguration{
-
-    element?: HTMLDivElement,  //bind the elment or elment id. After binding, show the video in the spcified element, otherwise, show the video in full screen.
-
+    element?: HTMLDivElement,  //bind the elment or elment id. After binding, display the video in the spcified element, otherwise, display the video in full screen.
     scannerViewer?: {
        deviceId?: string,  
-      
-       maxDocuments:int    // the maximum documents can be captured/loaded in to the buffer. 
-                          scanDocument显示的界面中，最多可以连续scan 与load
-                         //本地 document的张数。默认值为：MaxImagesInBuffer-buffer中已经存在的图片数, 
-                         //scan或load超过了这个数值，则会触发video-error事件
-       fullScreen?: boolean,  //是否video显示全屏, the default value is false.
-       polygonStyle?:{          
-  	    stroke: "yellow",            //default : "#fe8e14"
-          strokeWidth: "2px",       //default: "1px"
-          dash:string //    "solid ", "dashed"    default: "solid "
+       maxDocuments:int,       // the maximum documents can be captured/loaded in to the buffer. 
+       fullScreen?: boolean,   //whether to display the video in full screen, the default value is false.
+       polygonStyle?:{         // the sytle of the auto detect border        
+  	  stroke: "yellow",    //default : "#fe8e14"
+          strokeWidth: "2px",  //default: "1px"
+          dash:string          // the allowed value are "solid" and "dashed", the default value is "solid"
        },
 
        resolution?: {
