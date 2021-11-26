@@ -281,47 +281,40 @@ scanDocument(scanConfiguration?: ScanConfiguration
 ): Promise<Resolution>;
 
 interface ScanConfiguration{
-    element?: HTMLDivElement,  //bind the elment or elment id. After binding, display the video in the spcified element, otherwise, display the video in full screen.
+    element?: HTMLDivElement,  //Bind the elment or elment id. After binding, display the video in the spcified element, otherwise, display the video in full screen.
     scannerViewer?: {
-
        deviceId?: string,  
-       maxDocuments:int,       // the maximum documents can be captured/loaded in to the buffer. 
-       fullScreen?: boolean,   //whether to display the video in full screen, the default value is false.
+       maxDocuments:int,       //The maximum documents can be captured/loaded in to the buffer. 
+       fullScreen?: boolean,   //Whether to display the video in full screen, the default value is false.
 
-       polygonStyle?:{         // the sytle of the auto detect border        
+       polygonStyle?:{         //the sytle of the auto detect border        
   	  stroke: "yellow",    //default : "#fe8e14"
           strokeWidth: "2px",  //default: "1px"
-          dash:string          // the allowed value are "solid" and "dashed", the default value is "solid"
+          dash:string          //the allowed value are "solid" and "dashed", the default value is "solid"
        },
 
        resolution?: {
 	  visibility?: boolean,  //Whether to display the resolution icon in the upper left corner. The default value is true.
-
 	  valueList?:[ {   
-	    label: string,      // The resolution value listed in the drop-down list. For example："1920x1080"
-            value: Resolution  // The resoition you set. For example { width:1920, height:1080}
-              },{……}]
+	     label: string,     //The resolution value listed in the drop-down list. For example："1920x1080"
+             value: Resolution  //The resolution you set. For example: { width:1920, height:1080}
+               },{……}]
         },
 
-   autoScan?: { //这个属性只是对拍照有效，对本地图片的load无效
-	  visibility?: boolean,   //自动拍照图标是否可见，Default：true
-	   enableAutoScan?: boolean,   //是否自动拍照，Default：false, 
-   },
+       autoScan?: {   //Only applicable to video scanning.   
+	  visibility?: boolean,     //Whether to display the automatic scan icon. The default value is true.
+	  enableAutoScan?: boolean, //Whether to enable automatic scan. The default value is false.
+        },
 
-   autoDetect?: { //这个属性只是对拍照有效，对本地图片的load无效
-	  visibility?: boolean,   //自动检测图标是否可见，Default：true
-       enableAutoDetect?: boolean,   //是否出现自动检测，Default：false,        
-       acceptedPolygonConfidence:80,  //默认值为80
-
-           //下面两个属性是隐藏的设置，注意写文档时先不公开
-       acceptedBlurryScore:0， //默认值为0
-	    autoCaptureDelay: 1000   //默认1000ms
-    },
-
-
-        continuousScan?:{   //这个属性只是对拍照有效，对本地图片的load无效
-	   visibility?: boolean,   //连续拍照图标是否可见，Default：true
-	   enableContinuousScan?: boolean,   //是否默认连续拍照，Default：true,
+       autoDetect?: {  //Only applicable to video scanning.                        
+	 visibility?: boolean,         //Whether to display the automatic border detection icon. The default value is true.
+         enableAutoDetect?: boolean,   //Whether to enable automatic border detection. The default value is false.     
+         acceptedPolygonConfidence:80,  //The default value is 80.
+        },
+      
+        continuousScan?:{   //Only applicable to video scanning.
+	  visibility?: boolean,   //Whether to display the continuous scan icon. The default value is true.
+	  enableContinuousScan?: boolean,   //Whether to enable continuous scan. The default value is true.
     },
 
     switchCamera?: {  //默认显示的是后置摄像头
