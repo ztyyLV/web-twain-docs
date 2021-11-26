@@ -282,7 +282,7 @@ scanDocument(scanConfiguration?: ScanConfiguration
 
 interface ScanConfiguration{
     element?: HTMLDivElement,  //Bind the elment or elment id. After binding, display the video in the spcified element, otherwise, display the video in full screen.
-    scannerViewer?: {
+    scannerViewer?:{
        deviceId?: string,  
        maxDocuments:int,       //The maximum documents can be captured/loaded in to the buffer. 
        fullScreen?: boolean,   //Whether to display the video in full screen, the default value is false.
@@ -293,7 +293,7 @@ interface ScanConfiguration{
           dash:string          //the allowed value are "solid" and "dashed", the default value is "solid"
        },
 
-       resolution?: {
+       resolution?:{
 	  visibility?: boolean,  //Whether to display the resolution icon in the upper left corner. The default value is true.
 	  valueList?:[ {   
 	     label: string,     //The resolution value listed in the drop-down list. For example："1920x1080"
@@ -301,12 +301,12 @@ interface ScanConfiguration{
                },{……}]
         },
 
-       autoScan?: {   //Only applicable to video scanning.   
+       autoScan?:{   //Only applicable to video scanning.   
 	  visibility?: boolean,     //Whether to display the automatic scan icon. The default value is true.
 	  enableAutoScan?: boolean, //Whether to enable automatic scan. The default value is false.
         },
 
-       autoDetect?: {  //Only applicable to video scanning.                        
+       autoDetect?:{  //Only applicable to video scanning.                  
 	 visibility?: boolean,         //Whether to display the automatic border detection icon. The default value is true.
          enableAutoDetect?: boolean,   //Whether to enable automatic border detection. The default value is false.     
          acceptedPolygonConfidence:80,  //The default value is 80.
@@ -314,14 +314,14 @@ interface ScanConfiguration{
       
         continuousScan?:{   //Only applicable to video scanning.
 	  visibility?: boolean,   //Whether to display the continuous scan icon. The default value is true.
-	  enableContinuousScan?: boolean,   //Whether to enable continuous scan. The default value is true.
-    },
+	  enableContinuousScan?: boolean,  //Whether to enable continuous scan. The default value is true.
+        },
 
-    switchCamera?: {  //默认显示的是后置摄像头
-   visibility?: boolean,   //前后摄像头切换图标是否可见，Default：true
-    },
+        switchCamera?:{  //默认显示的是后置摄像头
+          visibility?: boolean,   //前后摄像头切换图标是否可见，Default：true
+        },
                                    
-    loadLocalFile?: {  
+        loadLocalFile?:{  
 	   visibility?: boolean,   //Load本地图片图标是否可见，Default：true
     },
 
