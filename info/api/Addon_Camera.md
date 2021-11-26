@@ -283,9 +283,11 @@ scanDocument(scanConfiguration?: ScanConfiguration
 interface ScanConfiguration{
     element?: HTMLDivElement,  //bind the elment or elment id. After binding, display the video in the spcified element, otherwise, display the video in full screen.
     scannerViewer?: {
+
        deviceId?: string,  
        maxDocuments:int,       // the maximum documents can be captured/loaded in to the buffer. 
        fullScreen?: boolean,   //whether to display the video in full screen, the default value is false.
+
        polygonStyle?:{         // the sytle of the auto detect border        
   	  stroke: "yellow",    //default : "#fe8e14"
           strokeWidth: "2px",  //default: "1px"
@@ -293,28 +295,13 @@ interface ScanConfiguration{
        },
 
        resolution?: {
-	     visibility?: boolean,   //Resolution图标是否可见，Default：true
+	  visibility?: boolean,  //Whether to display the resolution icon in the upper left corner. The default value is true.
+
 	  valueList?:[ {   
-	    label: string,  // 下拉框中的可见值for example：”1920x1080”
-           value: Resolution  //设置到camera中的真正分辨率, 类似于{ width:1920, height:1080}
-         },{……}]
-	  defaultValue?: Resolution , //根据ValueList中设置值的顺序，设置默认值。
-//如果该值不设置，默认给出四组值：
-    //“720P”：{width：1280，height：720}
-    //“1080P”：{width：1920，height：1080}
-//“2K”：{width：2560，height：1440}
-//“4K”：{width：3840，height：2160} 
-    //上面四组值，如果当前的camera不支持，Resolution就取设置值的最接近的那个，有可能后面几组值的Resolution会重复。  
-
-//如果设置defaultValue，并能在当前的camera中成功设置，如果设置的defaultValue不存在valueList中，则在最后加一个defaultValue，label显示形式为：widthxheight
-如果设置成功的defaultValue存在于valueList中，则默认选中defaultValue。
-
-    //如果设置defaultValue，并在当前的camera中设置不成功，则会取设置值的最接近的Resolution， 并会按取到的最接近的Resolution去valueList 匹配，如果匹配成功，则默认选中那个选项，否则在valueList列表的最后添加一个最接近的Resolution的值，label的格式参考上面的，并选中添加的选项（这里需要注意，选中的选项不是设置的defaultValue， 而是与defaultValue最接近的Resolution）
-//如果没设置defaultValue，只设置了valueList，则取valueList最后一个值。
-//如果valueList也没设置，则取默认值：1280x720 最接近的值（包括1280x720）
-
-默认值为value List中最后一个值。
-              },
+	    label: string,      // The resolution value listed in the drop-down list. For example："1920x1080"
+            value: Resolution  // The resoition you set. For example { width:1920, height:1080}
+              },{……}]
+        },
 
    autoScan?: { //这个属性只是对拍照有效，对本地图片的load无效
 	  visibility?: boolean,   //自动拍照图标是否可见，Default：true
@@ -437,8 +424,6 @@ function funcConfirmExit(){
 
 
 -->
-
-
 
 
 
