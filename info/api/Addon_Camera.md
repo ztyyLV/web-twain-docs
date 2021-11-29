@@ -322,7 +322,7 @@ interface ScanConfiguration{
         },
                                    
         loadLocalFile?:{  
-	   visibility?: boolean,   //Load本地图片图标是否可见，Default：true
+	   visibility?: boolean,   //Whether to display the load local file icon. The default value is true.
     },
 
  funcConfirmExitContinuousScan: funcConfirmExitContinuousScan, 
