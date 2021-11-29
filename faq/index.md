@@ -29,42 +29,117 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 ## Capture/Image Source
 
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
 ## Image Viewer
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
 
 ## Image Editing
 
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
 ## UI Customization
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
 
 ## Document Saving
 
 <a href="{{site.faq}}image-document-formats-save.html" target="_blank">What image and document formats can I save my documents as?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}http-servers-support.html" target="_blank">What type of HTTP servers do your support? Do you support other server types?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}enable-https-support.html" target="_blank">How can I enable HTTPS support?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}smallest-size-documents.html" target="_blank">How can I get the smallest size of documents in PDF, TIFF or JPEG format?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}additional-form-fields.html" target="_blank">How can I send additional form fields with images to my server or database?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}trigger-actions-server-side.html" target="_blank">How can I automatically trigger actions when images arrive on my server side?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}upload-documents-to-different-domain.html" target="_blank">Can I upload documents to a different website domain?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}response-string-from-server-on-upload.html" target="_blank">How can I get a response string from my HTTP Server if the upload succeeds or fails?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}upload-using-background-service.html" target="_blank">Can I upload documents via a background service outside the web browser?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}insert-new-pages-to-existing-document.html" target="_blank">Can I insert newly scanned pages to an existing document?</a>
+
+<a href="{{site.faq}}upload-json-files-to-server.html" target="_blank">How can I upload a JSON file to my server?</a>
+
+<a href="{{site.faq}}save-selected-images-to-server.html" target="_blank">How can I save selected images instead of all images to my server or database?</a>
 
 ## Security
 
+<a href="{{site.faq}}where-images-are-stored.html" target="_blank">Where does the Dynamic Web TWAIN SDK store images on end-user machines? Are they encrypted?</a>
+
+<a href="{{site.faq}}prompt-end-user-when-local-resources-used.html" target="_blank">Can I prompt end-user when the Dynamic Web TWAIN SDK attempts to visit any local resources (scanner, camera, or disk drive)?</a>
+
+<a href="{{site.faq}}local-cached-images-destroyed.html" target="_blank">When would the local cached images be destroyed?</a>
+
+<a href="{{site.faq}}license-key-protection.html" target="_blank">The license key is set in JavaScript. How can I protect it?</a>
+
+<a href="{{site.faq}}use-deprecated-technology.html" target="_blank">Does the Dynamic Web TWAIN SDK use any deprecated technologies like NPAPI or ActiveX?</a>
+
+<a href="{{site.faq}}securely-transfer-to-server.html" target="_blank">How can I securely transfer scanned documents to my server?</a>
+
+<a href="{{site.faq}}encrypt-all-in-pdf.html" target="_blank">Can I encrypt all documents in PDF format before uploading?</a>
+
+<a href="{{site.faq}}limit-upload-size-to-server.html" target="_blank">Can I limit the size of documents to be uploaded to my server??</a>
+
+<a href="{{site.faq}}iso-27001-compliant.html" target="_blank">Is the Dynamic Web TWAIN SDK ISO 27001 compliant?</a>
+
+<a href="{{site.faq}}gdpr-compliant.html" target="_blank">Is the Dynamic Web TWAIN SDK GDPR compliant? ?</a>
+
+<a href="{{site.faq}}hippa-compliant.html" target="_blank">Is the Dynamic Web TWAIN SDK HIPPA compliant??</a>
+
+<a href="{{site.faq}}change-dynamsoft-service-certificate.html" target="_blank">How to change the certificate of the Dynamsoft Service??</a>
+
+<a href="" target="_blank"></a>
+<a href="mailto:support@dynamsoft.com" target="_blank">support@dynamsoft.com</a>
+
 ## Addon
+
+<a href="{{site.faq}}separate-license-for-addon.html" target="_blank">Do I need a separate license for each addon?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
 
 ## Project Deployment and End-user Installation
 
 <a href="{{site.faq}}http-insecure-websites-in-chromium-browser.html" target="_blank">How to resolve if Dynamic Web TWAIN stops working on insecure websites in Chrome v94?</a>
 
 ## Error Troubleshooting
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
 
 ## Licensing and Purchase

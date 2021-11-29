@@ -16,7 +16,7 @@ description: What image and document formats can I save my documents as?
 
 Documents can be saved in BMP / JPEG / TIFF / PNG / PDF format.
 
-Notes:
+<strong>Notes</strong>:
 • To reduce the size for JPEG/PDF/TIFF format, please check here [link to Q4/Q5].
 • Black & white image data which is 1-bit cannot be saved in the JPEG format as this format supports eight-bit grayscale images and 24-bit color images (eight bits each for red, green, and blue).
 • Dynamic Web TWAIN can read and write image-based PDF files; however, to read text-based PDF files, the <a href="https://www.dynamsoft.com/web-twain/docs/indepth/features/pdf.html?ver=latest" target="_blank">PDF Rasterizer add-on</a> is required.
