@@ -301,7 +301,7 @@ interface ScanConfiguration{
                },{……}]
         },
 
-       autoScan?:{   //Only applicable to video scanning.   
+       autoScan?:{   //Automatically capture when a clear document is detected. Only applicable to video scanning. 
 	  visibility?: boolean,     //Whether to display the automatic scan icon. The default value is true.
 	  enableAutoScan?: boolean, //Whether to enable automatic scan. The default value is false.
         },
@@ -309,7 +309,7 @@ interface ScanConfiguration{
        autoDetect?:{  //Only applicable to video scanning.                  
 	  visibility?: boolean,         //Whether to display the automatic border detection icon. The default value is true.
           enableAutoDetect?: boolean,   //Whether to enable automatic border detection. The default value is false.     
-          acceptedPolygonConfidence:80,  //The default value is 80.
+          acceptedPolygonConfidence:80,  //The default value is 80. The higher the setting, the more accurate the automatic border detection.
         },
       
         continuousScan?:{   //Only applicable to video scanning.
@@ -317,8 +317,8 @@ interface ScanConfiguration{
 	  enableContinuousScan?: boolean,  //Whether to enable continuous scan. The default value is true.
         },
 
-        switchCamera?:{  //默认显示的是后置摄像头
-          visibility?: boolean,   //前后摄像头切换图标是否可见，Default：true
+        switchCamera?:{  //The default camera is the rear camera
+          visibility?: boolean,   //Whether to display the switch camera icon. The default value is true.
         },
                                    
         loadLocalFile?:{  
