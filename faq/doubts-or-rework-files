@@ -16,10 +16,27 @@ Document Saving - done
 
 Security - done
 
-Addon (Done reviewing) - 29th Nov
+Addon (Done reviewing) - done
+
+    load-pdf-files --> https://www.dynamsoft.com/web-twain/docs/indepth/faqs/develop/When-is-PDF-Rasterizer-effective.html?ver=latest
+
+    generate-pdf-files -->
 
 Project Deployment and End-user Installation - 80% reviewed
 
 error troubleshooting - same technique to be used? or in one sheet?
 
 License & Purchase - 30th Nov
+
+---
+
+commands -
+repo - https://github.com/Dynamsoft/web-twain-docs
+
+git add .
+git commit -m 'fix sth'
+git push
+
+git push --set-upstream origin nikhil
+
+- The third line of code above only needs to be called this way for the first time, then call git push is enough

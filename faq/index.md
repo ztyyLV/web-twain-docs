@@ -102,33 +102,33 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}separate-license-for-addon.html" target="_blank">Do I need a separate license for each addon?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}when-is-pdf-rasterizer-needed.html" target="_blank">When do I need PDF Rasterizer Addon? Can I load existing PDF files into the Dynamic Web TWAIN SDK without the PDF Rasterizer addon?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}load-pdf-files.html" target="_blank">How can I load PDF/A files into the Dynamic Web TWAIN SDK?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}load-specific-page-of-pdf-to-viewer.html" target="_blank">Can I load specific page numbers of a PDF file into the viewer?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}is-pdf-rasterizer-needed-to-convert-scanned-documents-to-pdf.html" target="_blank">Do I need the PDF Rasterizer addon to convert scanned documents to PDF files??</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}generate-pdf-files.html" target="_blank">How can I generate PDF/A files?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}does-barcode-addon-support-patch-code.html" target="_blank">Does your Barcode Reader addon support patch code?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}separate-documents-by-barcode.html" target="_blank">How can I separate my documents automatically by barcode?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}speed-up-barcode-reading-process.html" target="_blank">Is there any way to speed up the barcode reading process??</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}webcam-supported-by-webcam-capture-addon.html" target="_blank">What type of webcam does the Webcam Capture addon support?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}use-webassembly-to-support-webcam.html" target="_blank">Can I use the WebAssembly Edition of SDK to support webcam instead of using the Webcam Capture addon for Desktop Service Edition?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}difference-between-ocr-basic-and-pro.html" target="_blank">What’s the difference between your OCR Basic and OCR Pro SDK??</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}ocr-runs-on-client-or-server-side.html" target="_blank">Does your OCR addon run on the client side or server side??</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}camera-play-and-showvideo.html" target="_blank">What is the difference between Camera.play and Camera.showVideo??</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}difference-between-camera-and-webcam.html" target="_blank">hat is the difference between WebTwain.Addon.Camera and WebTwain.Addon.Webcam?</a>
 
 <a href="{{site.faq}}.html" target="_blank">?</a>
 
