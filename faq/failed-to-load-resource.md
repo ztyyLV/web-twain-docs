@@ -42,7 +42,7 @@ key_name=server_key.pem.ldsc
 <br>
 
  3) Go to Resources/dynamsoft.webtwain.initiate.js, and add the following line to the end of dynamsoft.webtwain.initiate.js. 
-    ```javascript 
+   ```javascript 
    dynamsoft.dcp.ip='local.dynamsoftwebtwain.com';  
    ```
 
