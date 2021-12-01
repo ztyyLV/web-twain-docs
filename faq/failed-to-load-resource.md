@@ -28,25 +28,22 @@ You are trying to access an application that integrates a version of Dynamic Web
 </ul>
 then add the following code lines in _DSConfiguration.ini  
 
-javascript
-[local.dynamsoftwebtwain.com]
-cert_name=server.pem.ldsc
-key_name=server_key.pem.ldsc
+[local.dynamsoftwebtwain.com]  
+cert_name=server.pem.ldsc  
+key_name=server_key.pem.ldsc  
 
 </li>
  
-<li>Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/newcert.zip" target="_blank">here</a> to dwoanload the new certificate and use the new _server.pem.ldsc_ & _server_key.pem.ldsc_ to replace the old one under   
+<li>Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/newcert.zip" target="_blank">here</a> to dwoanload the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under   
 
 <ul>
 <li>C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64/DynamsoftServicex64_16/DynamsoftServicex64_17)\cert\server.pem.ldsc &</li>     <li>C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64/DynamsoftServicex64_16/DynamsoftServicex64_17)\cert\server_key.pem.ldsc</li>
 </ul>
 </br>
-**Note**: the new certificate will expire on September 23th, 2022. This means you will need to update the certificate again after this certificate expires.  
+Note: the new certificate will expire on September 23th, 2022. This means you will need to update the certificate again after this certificate expires.  
 </li>
   
 <li>Go to Resources/dynamsoft.webtwain.initiate.js, and add the following line to the end of dynamsoft.webtwain.initiate.js.  
-
-
 dynamsoft.dcp.ip='local.dynamsoftwebtwain.com';
 
 </li>
