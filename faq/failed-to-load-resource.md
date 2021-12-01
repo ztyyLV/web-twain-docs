@@ -24,7 +24,8 @@ You are trying to access an application that integrates a version of Dynamic Web
 <ol>
 <li>Find _DSConfiguration.ini_. Generally, this file can be found under C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64/DynamsoftServicex64_16/DynamsoftServicex64_17), then add the following code lines in DSConfiguration.ini  
 </li>
-```JavaScript
+ 
+```javascript
 [local.dynamsoftwebtwain.com]  
 cert_name=server.pem.ldsc  
 key_name=server_key.pem.ldsc  
