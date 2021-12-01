@@ -14,7 +14,7 @@ description: Error Message - Failed to load resource
 
 ### Symptom 
 
-You get an error message that says "Failed to load resource: net::ERR_CERT_DATE_INVALID https://local.dynamsoft.com:18623/f/VersionInfo?ts=XXXXXXXXXXXX". And the browser keeps asking to install the Dynamsoft Service. 
+You get an error message that says **"Failed to load resource: net::ERR_CERT_DATE_INVALID https://local.dynamsoft.com:18623/f/VersionInfo?ts=XXXXXXXXXXXX"**. And the browser keeps asking to install the Dynamsoft Service. 
 
 ### Cause 
 
