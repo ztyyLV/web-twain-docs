@@ -22,7 +22,8 @@ You are trying to access an application that integrates a version of Dynamic Web
 
 ### Resolution 
 
- 1) Find _DSConfiguration.ini_. Generally, this file can be found under C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64/DynamsoftServicex64_16/DynamsoftServicex64_17),   
+ 1) Find _DSConfiguration.ini_.  
+ Generally, this file can be found under C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64/DynamsoftServicex64_16/DynamsoftServicex64_17),   
  then add the following code lines in DSConfiguration.ini  
 
 ```javascript
