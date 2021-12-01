@@ -23,13 +23,13 @@ You are trying to access an application that integrates a version of Dynamic Web
 ### Resolution 
 <ol>
 <li>Find _DSConfiguration.ini_. Generally, this file can be found under C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64/DynamsoftServicex64_16/DynamsoftServicex64_17), then add the following code lines in DSConfiguration.ini  
-</li>
- 
-```javascript
+
+<div>
 [local.dynamsoftwebtwain.com]  
 cert_name=server.pem.ldsc  
 key_name=server_key.pem.ldsc  
-```
+ </div>
+</li>
  
 <li>Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/newcert.zip" target="_blank">here</a> to dwoanload the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under   
 
