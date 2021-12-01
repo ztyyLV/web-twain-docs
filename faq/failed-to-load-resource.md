@@ -22,10 +22,8 @@ You are trying to access an application that integrates a version of Dynamic Web
 
 ### Resolution 
 <ol>
-<li>Find _DSConfiguration.ini_. Generally, this file can be found under  
-<ul>
-<li>C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64/DynamsoftServicex64_16/DynamsoftServicex64_17)</li>
-</ul>
+<li>Find _DSConfiguration.ini_. Generally, this file can be found under C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64/DynamsoftServicex64_16/DynamsoftServicex64_17)  
+ 
 then add the following code lines in _DSConfiguration.ini  
 
 [local.dynamsoftwebtwain.com]  
