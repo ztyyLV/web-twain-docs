@@ -10,7 +10,7 @@ description: Error Message - Failed to load resource
 
 # Error Troubleshooting
 
-## Error Message - Failed to load resource net::ERR_CERT_DATE_INVALID
+## Error Message - Failed to load resource: net::ERR_CERT_DATE_INVALID
 
 ### Symptom 
 
@@ -41,6 +41,8 @@ key_name=server_key.pem.ldsc
 **Note**: the new certificate will expire on September 23th, 2022. This means you will need to update the certificate again after this certificate expires.
 <br>
 
- 3) Go to Resources/dynamsoft.webtwain.initiate.js, and add the following line to the end of dynamsoft.webtwain.initiate.js.  
+ 3) Go to Resources/dynamsoft.webtwain.initiate.js, and add the following line to the end of dynamsoft.webtwain.initiate.js. 
+    ```javascript 
    dynamsoft.dcp.ip='local.dynamsoftwebtwain.com';  
+   ```
 
