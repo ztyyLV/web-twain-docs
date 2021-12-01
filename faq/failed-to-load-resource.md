@@ -41,7 +41,7 @@ key_name=server_key.pem.ldsc
 <li>C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64/DynamsoftServicex64_16/DynamsoftServicex64_17)\cert\server.pem.ldsc &</li>     <li>C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64/DynamsoftServicex64_16/DynamsoftServicex64_17)\cert\server_key.pem.ldsc</li>
 </ul>
 </br>
-Note: the new certificate will expire on September 23th, 2022. This means you will need to update the certificate again after this certificate expires  
+**Note**: the new certificate will expire on September 23th, 2022. This means you will need to update the certificate again after this certificate expires.  
 </li>
   
 <li>Go to Resources/dynamsoft.webtwain.initiate.js, and add the following line to the end of dynamsoft.webtwain.initiate.js.  
