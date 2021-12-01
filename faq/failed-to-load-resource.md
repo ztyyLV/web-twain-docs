@@ -21,7 +21,7 @@ You get an error message that says "Failed to load resource: net::ERR_CERT_DATE_
 You are trying to access an application that integrates a version of Dynamic Web TWAIN V15.3 ~ V17.1.1. Because in V15.3 ~ V17.1.1, we use "local.dynamsoft.com" certificate for service connection. However, this certificate has expired on November 20th, 2021. To slove this issue, the only resolution is to update the certificate. See below.
 
 ### Resolution 
-
+<div>
 1. Find DSConfiguration.ini. Generally, this file can be found under C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64/DynamsoftServicex64_16/DynamsoftServicex64_17)
 
 then add the following code lines in DSConfiguration.ini
@@ -31,12 +31,15 @@ then add the following code lines in DSConfiguration.ini
 cert_name=server.pem.ldsc
 key_name=server_key.pem.ldsc
 ```
-
-2. Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/newcert.zip" target="_blank">here</a> to dwoanload newcert.zip and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under 
+</div>
+<div>
+2. Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/newcert.zip" target="_blank">here</a> to dwoanload the new certificate () and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under 
 
 C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64/DynamsoftServicex64_16/DynamsoftServicex64_17)\cert\server.pem.ldsc & C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64/DynamsoftServicex64_16/DynamsoftServicex64_17)\cert\server_key.pem.ldsc
-
-3. Set dynamsoft.dcp.ip to 'local.dynamsoftwebtwain.com'
+</div>
+<div>
+3. Go to Resources/dynamsoft.webtwain.initiate.js, and add the following line to the end of dynamsoft.webtwain.initiate.js.
 ```javascript
 dynamsoft.dcp.ip='local.dynamsoftwebtwain.com';
 ```
+</div>
