@@ -32,8 +32,11 @@ cert_name=server.pem.ldsc
 key_name=server_key.pem.ldsc
 ```
 
-2. Click to dwoanload the server.pem.ldsc & server_key.pem.ldsc to replace the old one under 
+2. Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/newcert.zip" target="_blank">here</a> to dwoanload newcert.zip and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under 
+
 C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64/DynamsoftServicex64_16/DynamsoftServicex64_17)\cert\server.pem.ldsc & C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64/DynamsoftServicex64_16/DynamsoftServicex64_17)\cert\server_key.pem.ldsc
 
- et dynamsoft.dcp.ip to 'local.dynamsoftwebtwain.com'
+3. Set dynamsoft.dcp.ip to 'local.dynamsoftwebtwain.com'
+```javascript
 dynamsoft.dcp.ip='local.dynamsoftwebtwain.com';
+```
