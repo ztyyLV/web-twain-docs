@@ -181,18 +181,32 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 ## Licensing and Purchase
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}difference-in-service-and-webassembly-editions.html" target="_blank">What’s the difference between the Desktop Service Edition and WebAssembly Edition?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}is-internet-connectivity-required.html" target="_blank">Is internet connectivity required to use any license?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}does-per-server-allow-unlimited.html" target="_blank">Does the per-server license allow unlimited number of client devices and end users?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}which-license-purchase-needed-for-saas.html" target="_blank">What license should I purchase if I am providing SaaS?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}release-license-seats.html" target="_blank">For the per-client-device licensing model, can I release license seats taken by retired/unused devices?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}seat-taken-if-os-reinstalled.html" target="_blank">Would a client machine take one more license seat if its operating system is reinstalled?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}license-limit-reached.html" target="_blank">What if I reach the limit of the granted number of license seats?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}offer-perpetual-license.html" target="_blank">Do you offer lifetime/perpetual licenses?</a>
+
+<a href="{{site.faq}}purchase-dev-or-test-license.html" target="_blank">Do I need to purchase a license for my dev or testing environment?</a>
+
+<a href="{{site.faq}}resell-sdk.html" target="_blank">I need to resell the SDK within my application to my customers. What options do you offer?</a>
+
+<a href="{{site.faq}}flexible-to-custom-license.html" target="_blank">Are you flexible to discuss any custom licensing model?</a>
+
+<a href="{{site.faq}}local-resellers.html" target="_blank">Do you have any local resellers from whom I can purchase a license of the Dynamic Web TWAIN SDK?</a>
+
+<a href="{{site.faq}}free-upgrade.html" target="_blank">Do I get free upgrade if there is a newer version available?</a>
+
+<a href="{{site.faq}}discount-policy.html" target="_blank">What is your discount policy?</a>
+
+<a href="{{site.faq}}refund-policy.html" target="_blank">What’s your refund policy?</a>
