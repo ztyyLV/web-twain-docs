@@ -22,7 +22,7 @@ By default, we use "127.0.0.1" for service connection. However, you may use our 
 
 In this case, if you are trying to access an application that integrates a version of Dynamic Web TWAIN V15.3 ~ V17.1.1, you will get the error. Because "local.dynamsoft.com" certificate has expired on <font color=red>November 20th, 2021</font>. 
 
-To slove this issue, the only resolution is to use your own valid certificate or update our certificate. See below.
+To solve this issue, the only resolution is to use your own valid certificate or update our certificate. See below.
 
 ### Resolution 
 
