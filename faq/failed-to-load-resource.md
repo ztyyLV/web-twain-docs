@@ -18,16 +18,21 @@ You get an error message that says **"Failed to load resource: net::ERR_CERT_DAT
 
 ### Cause 
 
-By default, we use "127.0.0.1" for service connection. However, you may use our "local.dynamsoft.com" certificate by setting **dynamsoft.dcp.ip = "local.dynamsoft.com"** or **Dynamsoft.DWT.Host="local.dynamsoft.com"**. 
+By default, we use "127.0.0.1" for service connection. However, you may use our "local.dynamsoft.com" certificate by setting **Dynamsoft.WebTwainEnv.Host = "local.dynamsoft.com"** or **Dynamsoft.DWT.Host="local.dynamsoft.com"**. 
 
 In this case, if you are trying to access an application that integrates a version of Dynamic Web TWAIN V15.3 ~ V17.1.1, you will get the error. Because "local.dynamsoft.com" certificate has expired on <font color=red>November 20th, 2021</font>. 
 
-To slove this issue, the only resolution is to update the certificate or use your own valid certificate. See below.
+To slove this issue, the only resolution is to use your own valid certificate or update our certificate. See below.
 
 ### Resolution 
 
- 1) Find _DSConfiguration.ini_.  
- Generally, this file can be found under C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64/DynamsoftServicex64_16/DynamsoftServicex64_17),   
+ 1) Go to service directory, and find _DSConfiguration.ini_.  
+<ul>
+   <li>Windows: `C:\Windows\SysWOW64\Dynamsoft\DynamsoftService` and `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64(version)`</li>   
+   <li>macOS: `Go > Applications > Dynamsoft > WebTwain > {installed version No.}`</li>   
+   <li>Linux: `opt/dynamsoft/DynamsoftService`</li>
+</ul>   
+   
  then add the following code lines in DSConfiguration.ini  
 
 ```javascript
