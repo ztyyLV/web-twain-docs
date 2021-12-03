@@ -49,7 +49,7 @@ If you use your own certificate, put your own cert and key under the cert folder
 **Note**: the new certificate from Dynamsoft will expire on September 23th, 2022. This means you will need to update the certificate again after this certificate expires.
 <br>
 
- 3) Add the following line to Resources/dynamsoft.webtwain.config.js. 
+ 3) Call the following line in Resources/dynamsoft.webtwain.config.js to use the new certificate. 
    ```javascript 
   // V15.3~16.2 uses
   Dynamsoft.WebTwainEnv.Host = 'local.dynamsoftwebtwain.com';
