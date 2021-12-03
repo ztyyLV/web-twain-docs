@@ -50,9 +50,9 @@ key_name=server_key.pem.ldsc
  3) Add the following line to Resources/dynamsoft.webtwain.config.js. 
    ```javascript 
   // V15.3~16.2 uses
-  Dynamsoft.WebTwainEnv.Host = 'local.dynamsoftwebtwain.com'
+  Dynamsoft.WebTwainEnv.Host = 'local.dynamsoftwebtwain.com';
  
   // V17.0+ uses
-  Dynamsoft.DWT.Host = 'local.dynamsoftwebtwain.com'
+  Dynamsoft.DWT.Host = 'local.dynamsoftwebtwain.com';
    ```
 
