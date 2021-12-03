@@ -42,7 +42,9 @@ cert_name=server.pem.ldsc
 key_name=server_key.pem.ldsc  
 ```
 
- 2) Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/newcert.zip" target="_blank">here</a> to dwoanload the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under <a href="https://www.dynamsoft.com/web-twain/docs/indepth/deployment/service.html?ver=latest#for-the-service" target="_blank">cert</a> folder.    
+ 2) Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/newcert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under <a href="https://www.dynamsoft.com/web-twain/docs/indepth/deployment/service.html?ver=latest#for-the-service" target="_blank">cert</a> folder.
+
+If you use your own certificate, put your own cert and key under the cert folder. 
 
 **Note**: the new certificate will expire on September 23th, 2022. This means you will need to update the certificate again after this certificate expires.
 <br>
