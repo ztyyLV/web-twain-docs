@@ -95,9 +95,6 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}change-dynamsoft-service-certificate.html" target="_blank">How to change the certificate of the Dynamsoft Service??</a>
 
-<a href="" target="_blank"></a>
-<a href="mailto:support@dynamsoft.com" target="_blank">support@dynamsoft.com</a>
-
 ## Addon
 
 <a href="{{site.faq}}separate-license-for-addon.html" target="_blank">Do I need a separate license for each addon?</a>
@@ -130,16 +127,72 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}difference-between-camera-and-webcam.html" target="_blank">hat is the difference between WebTwain.Addon.Camera and WebTwain.Addon.Webcam?</a>
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
-
-<a href="{{site.faq}}.html" target="_blank">?</a>
-
 ## Project Deployment and End-user Installation
 
 <a href="{{site.faq}}http-insecure-websites-in-chromium-browser.html" target="_blank">How to resolve if Dynamic Web TWAIN stops working on insecure websites in Chrome v94?</a>
 
 ## Error Troubleshooting
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}general-troubleshooting-steps.html" target="_blank">General troubleshooting steps</a>
+
+<a href="{{site.faq}}general-failure.html" target="_blank">General failure</a>
+
+<a href="{{site.faq}}connection-couldnt-be-established.html" target="_blank">A connection with the server could not be established</a>
+
+<a href="{{site.faq}}HTTP-request-error.html" target="_blank">HTTP request error</a>
+
+<a href="{{site.faq}}HTTP-process-error.html" target="_blank">HTTP process error</a>
+
+<a href="{{site.faq}}JPEG-compression.html" target="_blank">Only 24-bit true color bmp and 8-bit gray-scaled image are supported for JPEG compression</a>
+
+<a href="{{site.faq}}XMLHttpRequest-cannot-load.html" target="_blank">XMLHttpRequest cannot load XXX</a>
+
+<a href="{{site.faq}}source-connected-to-maximum.html" target="_blank">Source is connected to the maximum supported number of applications</a>
+
+<a href="{{site.faq}}sequence-error.html" target="_blank">Sequence error</a>
+
+<a href="{{site.faq}}dwt-md5-is-not-allowed.html" target="_blank">Request header field dwt-md5 is not allowed by Access-Control-Allow-Headers in preflight response</a>
+
+<a href="{{site.faq}}the-handle-is-in-the-wrong-state-for-the-requested-operation.html" target="_blank">The handle is in the wrong state for the requested operation</a>
+
+<a href="{{site.faq}}the-connection-with-the-server-was-terminated-abnormally.html" target="_blank">The connection with the server was terminated abnormally</a>
+
+<a href="{{site.faq}}syntax-error-unexpected-token.html" target="_blank">Syntax error – Unexpected Token “<”</a>
+
+<a href="{{site.faq}}DVS-is-not-defined.html" target="_blank">Uncaught ReferenceError - DVS is not defined</a>
+
+<a href="{{site.faq}}error-message-exceeded-ocr-attempts.html" target="_blank">Error message - You have exceeded the number of OCR attempts allowed by the current license</a>
+
+<a href="{{site.faq}}error-message-current-product-key-does-not-support.html" target="_blank">Error message - The current product key does not support XXX, please contact the site administrator</a>
+
+<a href="{{site.faq}}error-message-product-key-does-not-support-current-os.html" target="_blank">Error message - The current product key does not support current OS for embed device, please contact the site administrator</a>
+
+<a href="{{site.faq}}error-message-current-product-key-is-empty-or-invalid.html" target="_blank">Error message - The current product key is empty or invalid, please contact the site administrator</a>
+
+<a href="{{site.faq}}error-message-product-key-is-missing-the-core-license.html" target="_blank">Error message - The current product key is missing the core license, please contact the site administrator</a>
+
+<a href="{{site.faq}}error-message-domain-of-site-doesnt-match-domain-bound-to-product-key.html" target="_blank">Error message - The domain of your current site does not match the domain bound in the current product key, please contact the site administrator</a>
+
+<a href="{{site.faq}}error-message-license-generated-with-license-of-major-version.html" target="_blank">Error message - The current product key is invalid because it's generated with the licenses of a different major version</a>
+
+<a href="{{site.faq}}error-message-product-key-is-not-for-full-version.html" target="_blank">Error message - The current product key is not for full/trial version, please contact the site administrator</a>
+
+<a href="{{site.faq}}error-message-product-key-expired.html" target="_blank">Error message – The current product key has expired on XXX, please contact the site administrator</a>
 
 ## Licensing and Purchase
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>
+
+<a href="{{site.faq}}.html" target="_blank">?</a>

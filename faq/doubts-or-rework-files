@@ -1,3 +1,19 @@
+\***\*\*\*\*\*\*\***\*\*\*\***\*\*\*\*\*\*\***Latest Status\***\*\*\*\*\*\*\***\*\*\***\*\*\*\*\*\*\***
+
+SDK Download/ Free Trial - done
+
+Document Saving - done
+
+Security - done
+
+Addon -done
+
+Error Troubleshooting - just 4 remaining done
+
+and License & Purchase - about to finish this..
+
+**\***Details\***\*\*\*\***
+
 SDK Download/ Free Trial - done
 
 Capture / Image Source (95% reviewing done)
@@ -24,13 +40,22 @@ Addon (Done reviewing) - done
 
 Project Deployment and End-user Installation - 80% reviewed
 
-error troubleshooting - same technique to be used? or in one sheet?
+error troubleshooting - 23rd left
 
 License & Purchase - 30th Nov
 
 ---
 
-commands -
+\***\*\*\*\*\*\*\***commands\***\*\*\*\*\***
+
+<a href="" target="_blank">
+<a href="mailto:support@dynamsoft.com" target="_blank">support@dynamsoft.com</a>
+
+[ConvertToGrayScale()]({{site.info}}api/WebTwain_Edit.html#converttograyscale).
+
+![Product key expired]({{site.assets}}imgs/product-key-expired.png)
+
+**\*\*\*\***links****\*\*\*****
 repo - https://github.com/Dynamsoft/web-twain-docs
 
 git add .
