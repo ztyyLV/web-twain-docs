@@ -36,11 +36,11 @@ To slove this issue, the only resolution is to use your own valid certificate or
  then add the following code lines in DSConfiguration.ini  
 
 ```javascript
+//if you perfer to use your own valid certificate, change the local.dynamsoftwebtwain.com to your own address. As well as cert_name and key_name. 
 [local.dynamsoftwebtwain.com]  
 cert_name=server.pem.ldsc       
 key_name=server_key.pem.ldsc  
 ```
-**Note**: if you perfer to use your own valid certificate, change the local.dynamsoftwebtwain.com to your own address. As well as cert_name and key_name. 
 
  2) Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/newcert.zip" target="_blank">here</a> to dwoanload the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under <a href="https://www.dynamsoft.com/web-twain/docs/indepth/deployment/service.html?ver=latest#for-the-service" target="_blank">cert</a> folder.    
 
