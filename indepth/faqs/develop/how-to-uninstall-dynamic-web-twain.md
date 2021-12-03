@@ -29,8 +29,8 @@ wmic product where name="Dynamsoft Service" call uninstall /nointeractive
 
 ### On macOS
 
-* Run the file `Uninstall.pkg` . The file can be found in `Go > Applications > Dynamsoft > WebTwain > {installed version No.}`
-* Remove the folder `Go > Applications > Dynamsoft > WebTwain > {installed version No.}`
+* Run the file `Uninstall.pkg` . The file can be found in `Go > Applications > Dynamsoft > DynamsoftService > {installed version No.}`
+* Remove the folder `Go > Applications > Dynamsoft > DynamsoftService > {installed version No.}`
 
 ### On Linux
 
