@@ -28,26 +28,31 @@ To slove this issue, the only resolution is to use your own valid certificate or
 
  1) Go to service directory, and find _DSConfiguration.ini_.  
 <ul>
-   <li>Windows: `C:\Windows\SysWOW64\Dynamsoft\DynamsoftService` and `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64(version)`</li>   
-   <li>macOS: `Go > Applications > Dynamsoft > WebTwain > {installed version No.}`</li>   
-   <li>Linux: `opt/dynamsoft/DynamsoftService`</li>
+   <li>Windows: C:\Windows\SysWOW64\Dynamsoft\DynamsoftService or C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64(version)</li>   
+   <li>macOS: Go > Applications > Dynamsoft > WebTwain > {installed version No.}</li>   
+   <li>Linux: opt/dynamsoft/DynamsoftService</li>
 </ul>   
    
  then add the following code lines in DSConfiguration.ini  
 
 ```javascript
-[local.dynamsoftwebtwain.com]  //if you perfer to use your own valid certificate, change the local.dynamsoftwebtwain.com to your own address. As well as cert_name and key_name
+[local.dynamsoftwebtwain.com]  
 cert_name=server.pem.ldsc       
 key_name=server_key.pem.ldsc  
 ```
+**Note**: if you perfer to use your own valid certificate, change the local.dynamsoftwebtwain.com to your own address. As well as cert_name and key_name. 
 
  2) Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/newcert.zip" target="_blank">here</a> to dwoanload the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under <a href="https://www.dynamsoft.com/web-twain/docs/indepth/deployment/service.html?ver=latest#for-the-service" target="_blank">cert</a> folder.    
 
 **Note**: the new certificate will expire on September 23th, 2022. This means you will need to update the certificate again after this certificate expires.
 <br>
 
- 3) Go to Resources/dynamsoft.webtwain.initiate.js, and add the following line to the end of dynamsoft.webtwain.initiate.js. 
+ 3) Add the following line to Resources/dynamsoft.webtwain.config.js. 
    ```javascript 
-   dynamsoft.dcp.ip='local.dynamsoftwebtwain.com';  
+  // V15.3~16.2 uses
+  Dynamsoft.WebTwainEnv.Host = 'local.dynamsoftwebtwain.com'
+ 
+  // V17.0+ uses
+  Dynamsoft.DWT.Host = 'local.dynamsoftwebtwain.com'
    ```
 
