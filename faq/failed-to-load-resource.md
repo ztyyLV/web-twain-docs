@@ -28,8 +28,8 @@ To solve this issue, the only resolution is to use your own valid certificate or
 
  1) Go to service directory, and find _DSConfiguration.ini_.  
 <ul>
-   <li>Windows: C:\Windows\SysWOW64\Dynamsoft\DynamsoftService or C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64(version)</li>   
-   <li>macOS: Go > Applications > Dynamsoft > WebTwain > {installed version No.}</li>   
+   <li>Windows: C:\Windows\SysWOW64\Dynamsoft\DynamsoftService or C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_(version)</li>   
+   <li>macOS: Go > Applications > Dynamsoft > DynamsoftService > {installed version No.}</li>   
    <li>Linux: opt/dynamsoft/DynamsoftService</li>
 </ul>   
    
