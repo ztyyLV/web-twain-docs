@@ -34,5 +34,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 ## Error Troubleshooting
 
+<a href="{{site.faq}}failed-to-load-resource.html" target="_blank">Error Message - Failed to load resource: net::ERR_CERT_DATE_INVALID</a>  
+
 ## Licensing and Purchase
 
