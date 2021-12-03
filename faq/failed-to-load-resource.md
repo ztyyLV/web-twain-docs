@@ -36,8 +36,8 @@ To slove this issue, the only resolution is to use your own valid certificate or
  then add the following code lines in DSConfiguration.ini  
 
 ```javascript
-[local.dynamsoftwebtwain.com]  
-cert_name=server.pem.ldsc  
+[local.dynamsoftwebtwain.com]  //if you perfer to use your own valid certificate, change the local.dynamsoftwebtwain.com to your own address. As well as cert_name and key_name
+cert_name=server.pem.ldsc       
 key_name=server_key.pem.ldsc  
 ```
 
