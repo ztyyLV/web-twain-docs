@@ -91,7 +91,17 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 ## UI Customization
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}is-ui-customizable.html" target="_blank">Is UI of the Dynamic Web TWAIN SDK fully customizable? What can’t be customized?</a>
+
+<a href="{{site.faq}}change-display-language.html" target="_blank">How can I change the display language of all messages from English to other?</a>
+
+<a href="{{site.faq}}change-hide-spinner.html" target="_blank">How can I change/hide the spinner which shows during document scanning?</a>
+
+<a href="{{site.faq}}hide-progress-bars.html" target="_blank">How can I change/hide the UI of progress bars when importing or uploading images?</a>
+
+<a href="{{site.faq}}customize-ui-elements-of-image-editor.html" target="_blank">Can I customize UI elements of the built-in image editor? ?</a>
+
+<a href="{{site.faq}}stop-default-scanner-popup.html" target="_blank">Can I stop the scanner from showing its default popup when there is a paper jam??</a>
 
 ## Document Saving
 
