@@ -16,7 +16,11 @@ License & Purchase - done
 
 SDK Download/ Free Trial - done
 
-Capture / Image Source (95% reviewing done)
+Capture / Image Source
+
+    what-physical-scanners-are-supported --> link
+
+    automatically-rotate-upside-down-pages -->link
 
 Image Viewer
 
@@ -54,6 +58,11 @@ License & Purchase - done
 [ConvertToGrayScale()]({{site.info}}api/WebTwain_Edit.html#converttograyscale).
 
 ![Product key expired]({{site.assets}}imgs/product-key-expired.png)
+<a href="{{site.faq}}http-insecure-websites-in-chromium-browser.html" target="_blank">
+
+```javascript
+
+```
 
 **\*\*\*\***links\***\*\*\*\*\*\***
 repo - https://github.com/Dynamsoft/web-twain-docs

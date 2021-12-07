@@ -29,7 +29,57 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 ## Capture/Image Source
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}what-physical-scanners-are-supported.html" target="_blank">What physical document scanners does the Dynamic Web TWAIN SDK support?</a>
+
+<a href="{{site.faq}}verify-if-device-is-supported.html" target="_blank">How can I verify if my physical document scanner works with the Dynamic Web TWAIN SDK?</a>
+
+<a href="{{site.faq}}setting-scan-settings-without-ui.html" target="_blank">Can I set scanning settings without using the default scanner’s UI? What pre-scanning settings do you support?</a>
+
+<a href="{{site.faq}}hide-offline-scanners-from-source-list.html" target="_blank">Can I hide offline scanner devices from the select source list?</a>
+
+<a href="{{site.faq}}hide-webcam-from-source-list.html" target="_blank">Can I hide webcam devices from the select source list? </a>
+
+<a href="{{site.faq}}difference-between-Twain-and-wia.html" target="_blank">What are the differences between TWAIN and WIA?</a>
+
+<a href="{{site.faq}}last-selected-sourcename.html" target="_blank">How can I set the last selected source as the default source for an end user?</a>
+
+<a href="{{site.faq}}limit-to-specific-scanner.html" target="_blank">How can I limit all users to use a specific scanner model?</a>
+
+<a href="{{site.faq}}remove-blank-page-automatically.html" target="_blank">Can the Dynamic Web TWAIN SDK automatically remove blank page during the document scanning process?</a>
+
+<a href="{{site.faq}}automatically-rotate-upside-down-pages.html" target="_blank">Can the Dynamic Web TWAIN SDK automatically rotate upside-down pages during the document scanning process??</a>
+
+<a href="{{site.faq}}automatically-detect-border.html" target="_blank">Can the Dynamic Web TWAIN SDK automatically detect border of the scanned document and crop it out??</a>
+
+<a href="{{site.faq}}scan-x-pages-from-automatic-document-feeder.html" target="_blank">Can I set my document scanner to scan x pages instead of all pages from the automatic document feeder (ADF)?</a>
+
+<a href="{{site.faq}}detect-paper-on-flatbed.html" target="_blank">Can the Dynamic Web TWAIN SDK detect whether paper exists on the flatbed? ?</a>
+
+<a href="{{site.faq}}list-supported-resolution-DPI.html" target="_blank">How can I get a list of supported resolution/DPI values from the document scanner?</a>
+
+<a href="{{site.faq}}custom-capability.html" target="_blank">How can I use a custom capability of my scanner hardware when there is no direct API to set it?</a>
+
+<a href="{{site.faq}}limit-on-scanned-pages.html" target="_blank">Is there a limit on the number of pages I can scan at a time? Where do you store them after scanning??</a>
+
+<a href="{{site.faq}}document-scanning-slow-than-native.html" target="_blank">Document scanning via the Dynamic Web TWAIN SDK is slower than using the native scanner application. How can I speed it up? ?</a>
+
+<a href="{{site.faq}}use-usb-webcam-to-capture.html" target="_blank">Can I use built-in or USB webcam to capture document?</a>
+
+<a href="{{site.faq}}import-existing-documents-or-images.html" target="_blank">Can I import existing images or PDF documents into the Dynamic Web TWAIN SDK?</a>
+
+<a href="{{site.faq}}download-image-from-FTP-or-HTTP-server.html" target="_blank">Can I download an image from an FTP or HTTP server into the Dynamic Web TWAIN SDK?</a>
+
+<a href="{{site.faq}}trigger-automatic-workflow-after-scanning.html" target="_blank">How can I trigger an automatic workflow right after document scanning or image importing??</a>
+
+<a href="{{site.faq}}support-capture-from-mobile-camera.html" target="_blank">Do you support capturing documents from mobile camera?</a>
+
+<a href="{{site.faq}}fingerprint-medical-imaging.html" target="_blank">Do you support fingerprint or medical imaging devices?</a>
+
+<a href="{{site.faq}}enable-remote-scan.html" target="_blank">How to enable remote scan?</a>
+
+<a href="{{site.faq}}earliest-iphone-model-supported.html" target="_blank">What is the earliest iPhone model that your SDK supports?</a>
+
+<a href="{{site.faq}}acquireimage-sync-or-async.html" target="_blank">Is the AcquireImage() method synchronous or asynchronous?</a>
 
 ## Image Viewer
 
