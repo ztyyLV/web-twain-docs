@@ -71,7 +71,7 @@ key_name=server_key.pem.ldsc
 
 If you use your own certificate, put your own cert and key under the cert folder. 
 
-**Note**: the new certificate from Dynamsoft will expire on September 23th, 2022. This means you will need to update the certificate again after this certificate expires.
+Note: the new certificate from Dynamsoft will expire on September 23th, 2022. This means you will need to update the certificate again after this certificate expires.
 <br>
 
  3) Call the following line in Resources/dynamsoft.webtwain.config.js to use the new certificate. 
