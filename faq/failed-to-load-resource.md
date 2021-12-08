@@ -40,10 +40,11 @@ Now, we purchased a new certificate for local.dyanmsoft.com, valid till <font co
 <ul>
    <li>
      Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/local.dynamsoft.com/newcert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under <a href="https://www.dynamsoft.com/web-twain/docs/indepth/deployment/service.html?ver=latest#for-the-service" target="_blank">cert</a> folder.
+      **Note**: the new certificate from Dynamsoft will expire on January 9th, 2023. This means you will need to update the certificate again after this certificate expires.
  </li>
 </ul>
 </ul>
-**Note**: the new certificate from Dynamsoft will expire on January 9th, 2023. This means you will need to update the certificate again after this certificate expires.
+
 </ul>
 <ul>   
 For v17.2 or higher versions, use the new API UpdateCert to automatic update the client side certificate with their own certificate
