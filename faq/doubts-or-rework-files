@@ -1,0 +1,80 @@
+\***\*\*\*\*\*\*\***\*\*\*\***\*\*\*\*\*\*\***Latest Status\***\*\*\*\*\*\*\***\*\*\***\*\*\*\*\*\*\***
+
+SDK Download/ Free Trial - done
+
+Capture / Image Source - done
+
+UI Customization - done
+
+Document Saving - done
+
+Security - done
+
+Addon -done
+
+Error Troubleshooting - done
+
+License & Purchase - done
+
+**\***Details\***\*\*\*\***
+
+SDK Download/ Free Trial - done
+
+Capture / Image Source - done
+
+    what-physical-scanners-are-supported --> link
+
+    automatically-rotate-upside-down-pages -->link
+
+Image Viewer
+
+Image Editing
+
+UI Customization - done
+
+Document Saving - done
+
+    upload-documents-to-different-domain.md --> link to new FAQ Error Troubleshooting#7
+
+    insert-new-pages-to-existing-document --> https://www.dynamsoft.com/web-twain/docs/indepth/faqs/develop/How-to-insert-images-to-a-specified-index.html
+
+Security - done
+
+Addon (Done reviewing) - done
+
+    load-pdf-files --> https://www.dynamsoft.com/web-twain/docs/indepth/faqs/develop/When-is-PDF-Rasterizer-effective.html?ver=latest
+
+    generate-pdf-files -->
+
+Project Deployment and End-user Installation - 80% reviewed
+
+error troubleshooting - done
+
+License & Purchase - done
+
+---
+
+\***\*\*\*\*\*\*\***commands\***\*\*\*\*\***
+
+<a href="" target="_blank">
+<a href="mailto:support@dynamsoft.com" target="_blank">support@dynamsoft.com</a>
+
+[ConvertToGrayScale()]({{site.info}}api/WebTwain_Edit.html#converttograyscale).
+
+![Product key expired]({{site.assets}}imgs/product-key-expired.png)
+<a href="{{site.faq}}http-insecure-websites-in-chromium-browser.html" target="_blank">
+
+```javascript
+
+```
+
+**\*\*\*\***links\***\*\*\*\*\*\***
+repo - https://github.com/Dynamsoft/web-twain-docs
+
+git add .
+git commit -m 'fix sth'
+git push
+
+git push --set-upstream origin nikhil
+
+- The third line of code above only needs to be called this way for the first time, then call git push is enough
