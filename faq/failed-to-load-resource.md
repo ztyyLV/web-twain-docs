@@ -30,11 +30,12 @@ Now, we purchased a new certificate for local.dyanmsoft.com, valid till <font co
 
 <ul>For v17.1.1 or older versions, choose one of the following approaches
 
-1) <a href="https://www.dynamsoft.com/web-twain/docs/about/getsupport.html" target="_blank">Contact Dynamsoft</a> for a new MSI for client-side.
+<li>1) <a href="https://www.dynamsoft.com/web-twain/docs/about/getsupport.html" target="_blank">Contact Dynamsoft</a> for a new MSI for client-side.</li>
 
-2) Upgrade to V17.2+ which comes with a valid certificate
+   <li>2) Upgrade to V17.2+ which comes with a valid certificate </li>
 
-3) If you must fix the issue on a few client machines immediately, can try manually update the following cert files on the client-side machine
+<li>3) If you must fix the issue on a few client machines immediately, can try manually update the following cert files on the client-side machine </li>
+   </ul>
 <ul>
    <li>
      Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/local.dynamsoft.com/newcert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under <a href="https://www.dynamsoft.com/web-twain/docs/indepth/deployment/service.html?ver=latest#for-the-service" target="_blank">cert</a> folder.
