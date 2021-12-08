@@ -11,9 +11,6 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 ## SDK Download/Free Trial
 
-<a href="xxxxxxxxxx" target="_blank">Do you provide free trial versions of the Dynamic Web TWAIN SDK?</a>  
-<a href="xxxxxxxxxx" target="_blank">Is the free trial version fully functional?</a>  
-
 ## Capture/Image Source	
 
 ## Image Viewer
