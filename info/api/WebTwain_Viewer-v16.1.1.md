@@ -566,8 +566,8 @@ RegisterEvent('OnImageAreaDeSelected',
 ``` typescript
 /**
  * Set the view mode of the viewer.
- * @param columns Specify the number of images per row.
- * @param rows Specify the number of images per column.
+ * @param columns Specify the number of images per column.
+ * @param rows Specify the number of images per row.
  */
 setViewMode(
     columns: number,

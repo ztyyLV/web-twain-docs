@@ -3,12 +3,12 @@ layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
 title: How to resolve Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94 
-keywords: Dynamic Web TWAIN, Troubleshooting, Chrome 94 issue, HTTP website, Edge 94 issue, 
+keywords: Dynamic Web TWAIN, Troubleshooting, Chrome 94 issue, HTTP website, Edge 94 issue
 breadcrumbText: How to resolve if Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94 
 description: How to resolve if Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94 
 ---
 
-# Troubleshooting
+# Project Deployment and End-user Installation
 
 ## Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94 
 
@@ -60,6 +60,6 @@ During the trial period, your insecure public website will not be affected by th
 see the steps below  
 Step 1: visit chrome://flags/#block-insecure-private-network-requests  
 Step 2: set 'Block insecure private network requests' to Disabled  
-![activating-the-WebTwain-instance-1]({{site.assets}}imgs/block-insecure-private-network-request.png)
+![block-insecure-private-network-request]({{site.assets}}imgs/block-insecure-private-network-request.png)
 
 

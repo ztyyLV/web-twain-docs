@@ -837,8 +837,8 @@ This method only works when [ `cursor` ](#cursor) is set to "crosshair".
 ``` typescript
 /**
  * Set the view mode of the viewer.
- * @param columns Specify the number of images per row.
- * @param rows Specify the number of images per column.
+ * @param columns Specify the number of images per column.
+ * @param rows Specify the number of images per row.
  */
 setViewMode(
     columns: number,
@@ -1262,14 +1262,20 @@ singlePageMode: boolean;
 **Example**
 
 ``` javascript
+// Use single page mode in the main viewer
+DWObject.Viewer.singlePageMode = true;
+```
+
+``` javascript
+// Use single page mode in the thumnail viewer
 var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer();
 objThumbnailViewer.show();
-DWObject.Viewer.singlePageMode = false;
+DWObject.Viewer.singlePageMode = true;
 ```
 
 **Usage notes**
 
-The default value is `false` . If the thumbnail viewer is not shown, setting `singlePageMode` to `true` is equivalent to setting the view mode to -1 by -1. But if the thumbnail viewer is shown, `singlePageMode` will be changed to `true` automatically.
+The default value is `false`. If the thumbnail viewer is not shown, setting `singlePageMode` to `true` is equivalent to setting the view mode to -1 by -1. But if the thumbnail viewer is shown, `singlePageMode` will be changed to `true` automatically.
 
 ---
 
@@ -1463,15 +1469,15 @@ on('pageAreaSelected',
 
 interface rect{ 
     // The index of the selected area. The index is 0-based. This is useful when you have multiple selected areas on one page.
-    areaIndex: number;
+    areaIndex: number;
     // The x-coordinate of the upper-left corner of the area.
-    x: number;
+    x: number;
     // The y-coordinate of the upper-left corner of the area.
-    y: number;
+    y: number;
     // The width of the selected area.
-    width: number;
+    width: number;
     // The height of the selected area.
-    height: number;
+    height: number;
 };
 ```
 

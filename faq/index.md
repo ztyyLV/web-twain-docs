@@ -81,6 +81,9 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}acquireimage-sync-or-async.html" target="_blank">Is the AcquireImage() method synchronous or asynchronous?</a>
 
+## Capture/Image Source	
+
+
 ## Image Viewer
 
 <a href="{{site.faq}}.html" target="_blank">?</a>
@@ -193,6 +196,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 ## Error Troubleshooting
 
+
 <a href="{{site.faq}}general-troubleshooting-steps.html" target="_blank">General troubleshooting steps</a>
 
 <a href="{{site.faq}}general-failure.html" target="_blank">General failure</a>
@@ -238,6 +242,8 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 <a href="{{site.faq}}error-message-product-key-is-not-for-full-version.html" target="_blank">Error message - The current product key is not for full/trial version, please contact the site administrator</a>
 
 <a href="{{site.faq}}error-message-product-key-expired.html" target="_blank">Error message – The current product key has expired on XXX, please contact the site administrator</a>
+
+
 
 ## Licensing and Purchase
 
