@@ -45,8 +45,6 @@ Now, we purchased a new certificate for local.dyanmsoft.com, valid till <font co
     **Note**: the new certificate from Dynamsoft will expire on January 9th, 2023. This means you will need to update the certificate again after this certificate expires.
 </ul>
 </ul>
-
-</ul>
 <ul>   
 For v17.2 or higher versions, use the new API UpdateCert to automatic update the client side certificate with their own certificate
 </ul>
