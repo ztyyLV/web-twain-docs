@@ -194,6 +194,9 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}http-insecure-websites-in-chromium-browser.html" target="_blank">How to resolve if Dynamic Web TWAIN stops working on insecure websites in Chrome v94?</a>
 
+<a href="{{site.faq}}how-come-would-you-need-local.dynamsoft.com.html" target="_blank">How come would you need local.dynamsoft.com instead of 127.0.0.1?</a>
+
+
 ## Error Troubleshooting
 
 
