@@ -28,7 +28,7 @@ Now, we purchased a new certificate for local.dyanmsoft.com, valid till <font co
 
 ### Resolution 
 
-For v17.1.1 or older versions, choose one of the following approaches
+<ul>For v17.1.1 or older versions, choose one of the following approaches
 
 1) <a href="https://www.dynamsoft.com/web-twain/docs/about/getsupport.html" target="_blank">Contact Dynamsoft</a> for a new MSI for client-side.
 
@@ -42,9 +42,10 @@ For v17.1.1 or older versions, choose one of the following approaches
 </ul>
 
 **Note**: the new certificate from Dynamsoft will expire on January 9th, 2023. This means you will need to update the certificate again after this certificate expires.
-
+</ul>
+<ul>   
 For v17.2 or higher versions, use the new API UpdateCert to automatic update the client side certificate with their own certificate
-
+</ul>
 
 <!--
 
