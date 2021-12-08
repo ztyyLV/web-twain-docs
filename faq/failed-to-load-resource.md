@@ -24,7 +24,7 @@ Ref: <a href="" target="_blank">How come would you need local.dynamsoft.com inst
 
 In this case, if you are trying to access an application that integrates a version of Dynamic Web TWAIN V15.3 ~ V17.1.1, you will get the error. Because "local.dynamsoft.com" certificate has expired on <font color=red>November 20th, 2021</font>. 
 
-Now, we purchased a new certificate for local.dyanmsoft.com, valid till <font color=red>January 9th, 2023</font>). 
+Now, we purchased a new certificate for local.dyanmsoft.com, valid till <font color=red>January 9th, 2023</font>. 
 
 ### Resolution 
 
