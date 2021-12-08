@@ -20,7 +20,7 @@ You get an error message that says **"Failed to load resource: net::ERR_CERT_DAT
 
 By default, we use "127.0.0.1" for service connection. However, you may use our "local.dynamsoft.com" certificate by setting **Dynamsoft.WebTwainEnv.Host = "local.dynamsoft.com"** or **Dynamsoft.DWT.Host="local.dynamsoft.com"**. 
 
-Ref: <a href="" target="_blank">How come would you need local.dynamsoft.com instead of 127.0.0.1?</a>
+Ref: <a href="" target="{{site.faq}}how-come-would-you-need-local.dynamsoft.com.html">How come would you need local.dynamsoft.com instead of 127.0.0.1?</a>
 
 In this case, if you are trying to access an application that integrates a version of Dynamic Web TWAIN V15.3 ~ V17.1.1, you will get the error. Because "local.dynamsoft.com" certificate has expired on <font color=red>November 20th, 2021</font>. 
 
