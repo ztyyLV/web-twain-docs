@@ -20,7 +20,7 @@ You get an error message that says **"Failed to load resource: net::ERR_CERT_DAT
 
 By default, we use "127.0.0.1" for service connection. However, you may use our "local.dynamsoft.com" certificate by setting **Dynamsoft.WebTwainEnv.Host = "local.dynamsoft.com"** or **Dynamsoft.DWT.Host="local.dynamsoft.com"**. 
 
-Ref: <a href="" target="_blank">How come would some customers need local.dynamsoft.com instead of 127.0.0.1?</a>
+Ref: <a href="" target="_blank">How come would you need local.dynamsoft.com instead of 127.0.0.1?</a>
 
 In this case, if you are trying to access an application that integrates a version of Dynamic Web TWAIN V15.3 ~ V17.1.1, you will get the error. Because "local.dynamsoft.com" certificate has expired on <font color=red>November 20th, 2021</font>. 
 
@@ -35,22 +35,15 @@ For v17.1.1 or older versions, choose one of the following approaches
 2) Upgrade to V17.2+ which comes with a valid certificate
 
 3) If you must fix the issue on a few client machines immediately, can try manually update the following cert files on the client-side machine
+<ul>
+   <li>
+     Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/local.dynamsoft.com/newcert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under <a href="https://www.dynamsoft.com/web-twain/docs/indepth/deployment/service.html?ver=latest#for-the-service" target="_blank">cert</a> folder.
+ </li>
+</ul>
 
-Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/local.dynamsoft.com/newcert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under <a href="https://www.dynamsoft.com/web-twain/docs/indepth/deployment/service.html?ver=latest#for-the-service" target="_blank">cert</a> folder.
+**Note**: the new certificate from Dynamsoft will expire on January 9th, 2023. This means you will need to update the certificate again after this certificate expires.
 
-If you use your own certificate, put your own cert and key under the cert folder. 
-
-**Note**: the new certificate from Dynamsoft will expire on September 23th, 2022. This means you will need to update the certificate again after this certificate expires.
-
-
-
-
-for v17.2 or higher versions, use the new API to automatic update the client side cert with their own cert
-
-
-
-
-
+For v17.2 or higher versions, use the new API UpdateCert to automatic update the client side certificate with their own certificate
 
 
 <!--
