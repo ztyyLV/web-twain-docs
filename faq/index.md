@@ -246,7 +246,6 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}error-message-product-key-expired.html" target="_blank">Error message – The current product key has expired on XXX, please contact the site administrator</a>
 
-<a href="{{site.faq}}failed-to-load-resource.html" target="_blank">Error Message - Failed to load resource: net::ERR_CERT_DATE_INVALID</a>  
 
 ## Licensing and Purchase
 
