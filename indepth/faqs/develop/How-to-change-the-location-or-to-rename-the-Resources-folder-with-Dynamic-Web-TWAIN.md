@@ -19,7 +19,7 @@ description: How to change the location or to rename the ‘Resources’ folder 
 1. Please make sure the structure inside 'Resources' folder stay unchanged.
 2. Change the relative path in your page where you reference to the js files, for example:
 
-``` javascript
+```javascript
 <script src="Resources/dynamsoft.webtwain.initiate.js"></script>
 // or your own operation js file
 <script src="Scripts/DWTSample_BasicScan.js"></script>
@@ -27,7 +27,7 @@ description: How to change the location or to rename the ‘Resources’ folder 
 ``` 
 Modify as below:
 
-``` javascript
+```javascript
 <script src="Newfolder/ResourcesTest/dynamsoft.webtwain.initiate.js"></script>
 // or your own operation js file
 <script src="Scripts/DWTSample_BasicScan.js"></script>
@@ -36,11 +36,11 @@ Modify as below:
 
 3. Same change needs to be done in dynamsoft.webtwain.config.js file. Add/uncomment the following line, then change 'Resources' (to 'New folder/ResourcesTest' as in this case):
 
-``` javascript
+```javascript
 Dynamsoft.DWT.ResourcesPath = 'Resources';
 ``` 
 Modify as below:
 
-``` javascript
+```javascript
 Dynamsoft.DWT.ResourcesPath = 'Newfolder/ResourcesTest';
 ``` 

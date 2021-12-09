@@ -121,4 +121,5 @@ description: Dynamic Web TWAIN SDK Documentation FAQs
 [Error message - Sequence error]({{site.indepth}}faqs/errorlist/Sequence-error.html)  
 [Error message - Request header field dwt-md5 is not allowed by Access-Control-Allow-Headers in preflight response]({{site.indepth}}faqs/errorlist/dwt-md5-is-not-allowed.html)  
 [Error message - The handle is in the wrong state for the requested operation]({{site.indepth}}faqs/errorlist/the-handle-is-in-the-wrong-state-for-the-requested-operation.html)   
-[Error message - The connection with the server was terminated abnormally]({{site.indepth}}faqs/errorlist/the-connection-with-the-server-was-terminated-abnormally.html) 
+[Error message - The connection with the server was terminated abnormally]({{site.indepth}}faqs/errorlist/the-connection-with-the-server-was-terminated-abnormally.html)  
+[Error Message - Failed to load resource: net::ERR_CERT_DATE_INVALID]({{site.faq}}failed-to-load-resource.html)  

@@ -107,7 +107,7 @@ Please note that this licensing model is only supported from `DWT` 17.0 and need
  Starting in version 16.*, `Dynamsoft Service` is designed to be backward compatible (unfortunately, just as far back as 16.0). The compatibility is done in two ways
 
 * For minor versions like 16.1 to 16.2, if the newer version of `Dynamsoft Service` has been installed on a desktop, websites utilizing both the newer version and the older version can work without reinstallation of `Dynamsoft Service`
-* For major versions like 16.* to 17.*, the newer version will be installed to a different directory which can coexist with the older version. The user can choose to uninstall the old version if necessary
+* For major versions like 16.* to 17.*, the newer version will be installed to a different directory which can coexist with the service directory of the old version. The user can choose to uninstall the old version if necessary
 
 That means, once you, as the maintainer, have finished upgrading your application to a newer `Dynamic Web TWAIN` on the server side, the clients could face one of two situations
 

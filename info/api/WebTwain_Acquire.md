@@ -107,6 +107,7 @@ AcquireImage(
     deviceConfiguration?: DeviceConfiguration,
     successCallBack?: () => void,
     failureCallBack?: (
+        deviceConfiguration?: DeviceConfiguration,
         errorCode: number,
         errorString: string) => void
 ): void;
@@ -535,7 +536,7 @@ SelectSource(
 
 **Usage notes**
 
-* It's recommended to use this API asynchronously by pass arguments to the parameters `successCallback` and `failureCallback` .
+* It's recommended to use this API asynchronously by pass arguments to the parameters `successCallback` and `failureCallback`.
 * On `Windows` and `Windows` only, you can call this method with no arguments so that it runs synchronously and return a boolean value.
 * When [scanning remotely]({{site.indepth}}feature/input.html#scan-from-a-remote-scanner), this method must be called asynchronously. 
 
@@ -1400,10 +1401,10 @@ The allowed values for `EnumDWT_Driver` are
 
 | Label | Value | Description |
 |:-|:-|:-|
-| TWAIN | 0 | Use data sources that conforms to the TWAIN protocol **(Defalut value on Windows)**|
+| TWAIN | 0 | Use data sources that conforms to the TWAIN protocol **(Default value on Windows)**|
 | ICA | 3 | Use data sources that conforms to the Image Capture Architecture |
-| SANE | 3 | Use data sources that conforms to the SANE API **(Defalut value on Linux)**|
-| TWAIN_AND_ICA | 4 | Use both TWAIN and ICA data sources **(Defalut value on MacOS)**|
+| SANE | 3 | Use data sources that conforms to the SANE API **(Default value on Linux)**|
+| TWAIN_AND_ICA | 4 | Use both TWAIN and ICA data sources **(Default value on MacOS)**|
 | TWAIN_AND_TWAIN64 | 4 | Use both 32bit and 64bit TWAIN drivers|
 | TWAIN64 | 5 | Use 64bit TWAIN sources |
 
