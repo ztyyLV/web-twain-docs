@@ -4,6 +4,10 @@ SDK Download/ Free Trial - done
 
 Capture / Image Source - done
 
+Image Viewer -done
+
+Image Editing - done
+
 UI Customization - done
 
 Document Saving - done
@@ -26,9 +30,9 @@ Capture / Image Source - done
 
     automatically-rotate-upside-down-pages -->link
 
-Image Viewer
+Image Viewer -done
 
-Image Editing
+Image Editing - done
 
 UI Customization - done
 
@@ -62,6 +66,7 @@ License & Purchase - done
 [ConvertToGrayScale()]({{site.info}}api/WebTwain_Edit.html#converttograyscale).
 
 ![Product key expired]({{site.assets}}imgs/product-key-expired.png)
+
 <a href="{{site.faq}}http-insecure-websites-in-chromium-browser.html" target="_blank">
 
 ```javascript
