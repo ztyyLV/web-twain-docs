@@ -87,7 +87,23 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 ## Image Editing
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}what-image-editing-operation-supported.html" target="_blank">What image editing operations does the Dynamic Web TWAIN SDK support?</a>
+
+<a href="{{site.faq}}show-default-image-editor.html" target="_blank">How can I show the default image editor tool?</a>
+
+<a href="{{site.faq}}support-image-deskew.html" target="_blank">Do you support image deskew?</a>
+
+<a href="{{site.faq}}resize-image.html" target="_blank">How can I resize all images to meet a certain size standard, e.g., A4 size?</a>
+
+<a href="{{site.faq}}add-annotation-to-image.html" target="_blank">Can I add annotation to an image? E.g., add watermark or text?</a>
+
+<a href="{{site.faq}}change-resolution-of-image.html" target="_blank">Can I change resolution/DPI of an image in the viewer?</a>
+
+<a href="{{site.faq}}convert-color-image-to-grayscale.html" target="_blank">Can I convert a color image to greyscale or black & white?</a>
+
+<a href="{{site.faq}}undo-functionality.html" target="_blank">Is there undo functionality?/a>
+
+<a href="{{site.faq}}remove-selected-images.html" target="_blank">How can I remove only the selected images?</a>
 
 ## UI Customization
 
