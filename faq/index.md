@@ -81,12 +81,39 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}acquireimage-sync-or-async.html" target="_blank">Is the AcquireImage() method synchronous or asynchronous?</a>
 
-## Capture/Image Source	
-
+## Capture/Image Source
 
 ## Image Viewer
 
-<a href="{{site.faq}}.html" target="_blank">?</a>
+<a href="{{site.faq}}image-viewer-object-defined.html" target="_blank">Where is the image viewer object defined?</a>
+
+<a href="{{site.faq}}viewer-size-auto-resize.html" target="_blank">Can the size of the image viewer auto resize when the browser window size changes?</a>
+
+<a href="{{site.faq}}create-thumbnail-viewer-to-navigate-images.html" target="_blank">How can I create the thumbnail viewer to navigate images?</a>
+
+<a href="{{site.faq}}change-background-color.html" target="_blank">How can I change the background color of the image viewer?</a>
+
+<a href="{{site.faq}}resort-images-in-viewer.html" target="_blank">How can I resort images in the viewer?</a>
+
+<a href="{{site.faq}}disable-drag-and-drop-in-images.html" target="_blank">How can I disable drag and drop images in the viewer?</a>
+
+<a href="{{site.faq}}show-multiple-images.html" target="_blank">How can I show multiple images at a time?</a>
+
+<a href="{{site.faq}}show-page-number.html" target="_blank">How can I show page number on each image?</a>
+
+<a href="{{site.faq}}resize-view-of-image.html" target="_blank">How can I resize the view of image, e.g., zoom in/out the current image?</a>
+
+<a href="{{site.faq}}mouse-click-events-supported.html" target="_blank">What mouse click events does the viewer support?</a>
+
+<a href="{{site.faq}}insert-image-after-selected-image.html" target="_blank">How can I insert an image after a selected image in the viewer?</a>
+
+<a href="{{site.faq}}protect-sensitive-information.html" target="_blank">Can I protect sensitive information of an image from being seen?</a>
+
+<a href="{{site.faq}}hide-image-viewer.html" target="_blank">Can I hide the Dynamsoft image viewer and use my own image viewer?</a>
+
+<a href="{{site.faq}}print-images-from-viewer.html" target="_blank">Can I print images from the viewer?</a>
+
+<a href="{{site.faq}}coordinates-of-selected-area.html" target="_blank">How to get the coordinates of the selected area on an image?</a>
 
 ## Image Editing
 
@@ -212,7 +239,6 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 ## Error Troubleshooting
 
-
 <a href="{{site.faq}}general-troubleshooting-steps.html" target="_blank">General troubleshooting steps</a>
 
 <a href="{{site.faq}}general-failure.html" target="_blank">General failure</a>
@@ -258,8 +284,6 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 <a href="{{site.faq}}error-message-product-key-is-not-for-full-version.html" target="_blank">Error message - The current product key is not for full/trial version, please contact the site administrator</a>
 
 <a href="{{site.faq}}error-message-product-key-expired.html" target="_blank">Error message – The current product key has expired on XXX, please contact the site administrator</a>
-
-
 
 ## Licensing and Purchase
 
