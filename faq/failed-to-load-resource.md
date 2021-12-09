@@ -20,11 +20,52 @@ You get an error message that says **"Failed to load resource: net::ERR_CERT_DAT
 
 By default, we use "127.0.0.1" for service connection. However, you may use our "local.dynamsoft.com" certificate by setting **Dynamsoft.WebTwainEnv.Host = "local.dynamsoft.com"** or **Dynamsoft.DWT.Host="local.dynamsoft.com"**. 
 
+Ref: <a href="" target="{{site.faq}}how-come-would-you-need-local.dynamsoft.com.html">How come would you need local.dynamsoft.com instead of 127.0.0.1?</a>
+
 In this case, if you are trying to access an application that integrates a version of Dynamic Web TWAIN V15.3 ~ V17.1.1, you will get the error. Because "local.dynamsoft.com" certificate has expired on <font color=red>November 20th, 2021</font>. 
 
-To solve this issue, the only resolution is to use your own valid certificate or update our certificate. See below.
+Now, we purchased a new certificate for local.dyanmsoft.com, valid till <font color=red>January 9th, 2023</font>. 
 
 ### Resolution 
+
+<ul>
+   <li> For v17.1.1 or older versions, choose one of the following approaches </li>
+   
+<ul>
+<li>1) <a href="https://www.dynamsoft.com/web-twain/docs/about/getsupport.html" target="_blank">Contact Dynamsoft</a> for a new MSI for client-side.</li>
+
+<li>2) Upgrade to V17.2+ which comes with a valid certificate </li>
+
+<li>3) If you must fix the issue on a few client machines immediately, can try manually update the following cert files on the client-side machine </li>
+
+   <ul>
+      
+   <li>
+     Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/local.dynamsoft.com/newcert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under <a href="https://www.dynamsoft.com/web-twain/docs/indepth/deployment/service.html?ver=latest#for-the-service" target="_blank">cert</a> folder. </li>
+     
+ <li>
+    **Note**: the new certificate from Dynamsoft will expire on January 9th, 2023. This means you will need to update the certificate again after this certificate expires.</li>
+   </ul>
+   
+ </ul>
+<li>   
+For v17.2 or higher versions, use the new API UpdateCert to automatic update the client side certificate with their own certificate
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 
  1) Go to service directory, and find _DSConfiguration.ini_.  
 <ul>
@@ -46,7 +87,7 @@ key_name=server_key.pem.ldsc
 
 If you use your own certificate, put your own cert and key under the cert folder. 
 
-**Note**: the new certificate from Dynamsoft will expire on September 23th, 2022. This means you will need to update the certificate again after this certificate expires.
+Note: the new certificate from Dynamsoft will expire on September 23th, 2022. This means you will need to update the certificate again after this certificate expires.
 <br>
 
  3) Call the following line in Resources/dynamsoft.webtwain.config.js to use the new certificate. 
@@ -57,4 +98,4 @@ If you use your own certificate, put your own cert and key under the cert folder
   // V17.0+ uses
   Dynamsoft.DWT.Host = 'local.dynamsoftwebtwain.com';
    ```
-
+-->

@@ -61,7 +61,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}limit-on-scanned-pages.html" target="_blank">Is there a limit on the number of pages I can scan at a time? Where do you store them after scanning??</a>
 
-<a href="{{site.faq}}document-scanning-slow-than-native.html" target="_blank">Document scanning via the Dynamic Web TWAIN SDK is slower than using the native scanner application. How can I speed it up? ?</a>
+<a href="{{site.faq}}document-scanning-slow-than-native.html" target="_blank">Document scanning via the Dynamic Web TWAIN SDK is slower than using the native scanner application. How can I speed it up?</a>
 
 <a href="{{site.faq}}use-usb-webcam-to-capture.html" target="_blank">Can I use built-in or USB webcam to capture document?</a>
 
@@ -236,6 +236,9 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 ## Project Deployment and End-user Installation
 
 <a href="{{site.faq}}http-insecure-websites-in-chromium-browser.html" target="_blank">How to resolve if Dynamic Web TWAIN stops working on insecure websites in Chrome v94?</a>
+
+<a href="{{site.faq}}how-come-would-you-need-local.dynamsoft.com.html" target="_blank">How come would you need local.dynamsoft.com instead of 127.0.0.1?</a>
+
 
 ## Error Troubleshooting
 
