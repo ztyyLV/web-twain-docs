@@ -12,8 +12,6 @@ description: How can I send additional form fields with images to my server or d
 
 ## How can I send additional form fields with images to my server or database?
 
-### Reason
-
 You can use <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_IO.html?ver=latest#sethttpformfield" target="_blank">SetHTTPFormField</a> to set meta data as form fields and use <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_IO.html?ver=latest#httpupload" target="_blank">HTTPUpload</a> to send it to the server side with the scanned document.
 
 ```javascript

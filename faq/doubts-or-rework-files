@@ -26,8 +26,6 @@ SDK Download/ Free Trial - done
 
 Capture / Image Source - done
 
-    what-physical-scanners-are-supported --> link
-
     automatically-rotate-upside-down-pages -->link
 
 Image Viewer -done
@@ -38,7 +36,8 @@ UI Customization - done
 
 Document Saving - done
 
-    upload-documents-to-different-domain.md --> link to new FAQ Error Troubleshooting#7
+    upload-json-files-to-server.md --> old one.
+
 
     insert-new-pages-to-existing-document --> https://www.dynamsoft.com/web-twain/docs/indepth/faqs/develop/How-to-insert-images-to-a-specified-index.html
 
@@ -63,7 +62,8 @@ License & Purchase - done
 <a href="" target="_blank">
 <a href="mailto:support@dynamsoft.com" target="_blank">support@dynamsoft.com</a>
 
-[ConvertToGrayScale()]({{site.info}}api/WebTwain_Edit.html#converttograyscale).
+[ConvertToGrayScale()]({{site.info}}api/WebTwain_Edit.html#converttograyscale)
+[this article]({{site.faq}}/support-image-deskew.html)
 
 ![Product key expired]({{site.assets}}imgs/product-key-expired.png)
 

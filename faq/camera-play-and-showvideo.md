@@ -12,8 +12,6 @@ description: What is the difference between Camera.play and Camera.showVideo?
 
 ## What is the difference between Camera.play and Camera.showVideo?
 
-### Reason
-
 Camera.showVideo is a built-in feature to handle camera capturing, prospective adjusting, etc. It supports two available modes: document and picture.
 
 Camera.play is a more specific API for starting streaming video from the current camera.

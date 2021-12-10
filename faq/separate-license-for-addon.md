@@ -12,8 +12,6 @@ description: Do I need a separate license for each addon?
 
 ## Do I need a separate license for each addon?
 
-### Reason
-
 Yes, you need to purchase separate license for each addon. Please refer to our pricing page: <a href="https://www.dynamsoft.com/store/dynamic-web-twain/" target="_blank">Dynamic Web Twain Pricing - Dynamsoft</a>.
 
 Multiple license keys can be separated with semicolons and included in the file dynamsoft.webtwain.config.js.

@@ -12,8 +12,6 @@ description: Does your Barcode Reader addon support patch code?
 
 ## Does your Barcode Reader addon support patch code?
 
-### Reason
-
 Yes, the add-on supports the patch code format (API <a href="https://www.dynamsoft.com/barcode-reader/parameters/enum/format-enums.html" target="_blank">EnumBarcodeFormatPATCHCODE</a>).
 Check <a href="https://www.dynamsoft.com/barcode-reader/features/#Supported-Barcode-Types" target="_blank">here</a> for all supported barcode types.
 

@@ -12,8 +12,6 @@ description: Do you provide free trial versions of the Dynamic Web TWAIN SDK
 
 ## Do you provide free trial versions of the Dynamic Web TWAIN SDK
 
-### Reason
-
 Yes. We provide free trial of the Dynamic Web TWAIN SDK.
 
 You can simply sign up at <a href="https://www.dynamsoft.com/web-twain/downloads/" target="_blank">this page</a> to get the Dynamic Web TWAIN SDK package with a 30-day free trial license included.

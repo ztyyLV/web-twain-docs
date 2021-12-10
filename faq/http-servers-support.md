@@ -12,8 +12,6 @@ description: What type of HTTP servers do your support? Do you support other ser
 
 ## What type of HTTP servers do your support? Do you support other server types?
 
-### Reason
-
 We support any web servers such Apache, NGINX, IIS, Tomcat, Node.js, etc. We also support Mail/FTP/Database servers.
 
 To upload documents via HTTP, we recommend the API <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_IO.html?ver=latest#httpupload" target="_blank">HTTPUpload()</a>. You can find more information on HTTP and FTP upload <a href="https://www.dynamsoft.com/web-twain/docs/indepth/features/output.html?ver=latest#upload" target="_blank">here</a>.

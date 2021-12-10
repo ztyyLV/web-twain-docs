@@ -14,17 +14,17 @@ description: Do you support image deskew?
 
 Yes, Dynamic Web TWAIN supports the image deskew functionality. You can enable automatic deskew using the two ways mentioned below –
 
-1. Enable the capability of a scanner
-   Note - Applicable only to TWAIN-compatible scanners
-   There is a standard TWAIN capability called ICAP_AUTOMATICDESKEW which, when enabled, does the deskewing of all scanned images automatically. If your scanner supports this capability, you can enable the functionality through Dynamic Web TWAIN using the API <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html?ver=latest#ifautomaticdeskew" target="_blank">IfAutomaticDeskew</a>
+- Enable the capability of a scanner
+  Note - Applicable only to TWAIN-compatible scanners
+  There is a standard TWAIN capability called ICAP_AUTOMATICDESKEW which, when enabled, does the deskewing of all scanned images automatically. If your scanner supports this capability, you can enable the functionality through Dynamic Web TWAIN using the API <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html?ver=latest#ifautomaticdeskew" target="_blank">IfAutomaticDeskew</a>
 
 ```javascript
 DWObject.OpenSource();
 DWObject.IfAutomaticDeskew = true;
 ```
 
-2. Use Dynamic Web TWAIN to deskew an image as it is scanned
-   The function deskew() below is applicable to all platforms. The event <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html?ver=latest#onposttransferasync" target="_blank">OnPostTransferAsync</a> is only triggered during scanning
+- Use Dynamic Web TWAIN to deskew an image as it is scanned
+  The function deskew() below is applicable to all platforms. The event <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html?ver=latest#onposttransferasync" target="_blank">OnPostTransferAsync</a> is only triggered during scanning
 
 ```javascript
 function deskew(index) {

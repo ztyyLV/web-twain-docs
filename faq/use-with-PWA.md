@@ -12,6 +12,4 @@ description: Can I use the Dynamic Web TWAIN SDK to create a PWA application?
 
 ## Can I use the Dynamic Web TWAIN SDK to create a PWA application?
 
-### Reason
-
 Dynamic Web TWAIN is a JavaScript SDK so it can be integrated to a Progressive Web Application (PWA). If you run into any issue, please send the detail to <a href="mailto:support@dynamsoft.com"> support@dynamsoft.com</a>.

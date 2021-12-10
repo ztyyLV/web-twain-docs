@@ -12,8 +12,6 @@ description: How to change the certificate of the Dynamsoft Service?
 
 ## How to change the certificate of the Dynamsoft Service?
 
-### Reason
-
 To replace the default certificates, the steps are:
 
 - Generate a certificate for `127.0.0.1`
