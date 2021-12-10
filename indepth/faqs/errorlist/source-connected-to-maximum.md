@@ -38,4 +38,4 @@ description: Source is connected to the maximum supported number of applications
   }
   ```
 
-  Reboot your device.
+  - Reboot your device.
