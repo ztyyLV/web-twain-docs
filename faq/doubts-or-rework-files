@@ -38,9 +38,6 @@ Document Saving - done
 
     upload-json-files-to-server.md --> old one.
 
-
-    insert-new-pages-to-existing-document --> https://www.dynamsoft.com/web-twain/docs/indepth/faqs/develop/How-to-insert-images-to-a-specified-index.html
-
 Security - done
 
 Addon (Done reviewing) - done
@@ -53,9 +50,13 @@ Project Deployment and End-user Installation - 80% reviewed
 
 error troubleshooting - done
 
+    general-troubleshooting-steps.html --> link combined
+
 License & Purchase - done
 
 ---
+
+we have two faqs on - how to enable remote scan) on ein image capture and one in end-user
 
 \***\*\*\*\*\*\*\***commands\***\*\*\*\*\***
 

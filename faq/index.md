@@ -237,6 +237,25 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}how-come-would-you-need-local.dynamsoft.com.html" target="_blank">How come would you need local.dynamsoft.com instead of 127.0.0.1?</a>
 
+<a href="{{site.faq}}resources-to-be-included-in-SDK.html" target="_blank">What resources of the SDK should be included in my web application?</a>
+
+<a href="{{site.faq}}change-reference-path.html" target="_blank">How can I change the reference path to the Dynamsoft’s resources in my project?</a>
+
+<a href="{{site.faq}}component-needs-to-be-installed-on-end-user-machine.html" target="_blank">Is there any component of the Dynamic Web TWAIN SDK needs to be installed on end-user machines?</a>
+
+<a href="{{site.faq}}how-to-enable-remote-scan.html" target="_blank">How to enable Remote Scan?</a>
+
+<a href="{{site.faq}}admin-right-needed-to-install.html" target="_blank">Is admin right required to install the end-user component?</a>
+
+<a href="{{site.faq}}deploy-to-all-users.html" target="_blank">Is there an easy way to deploy the end-user components to all users?</a>
+
+<a href="{{site.faq}}what-does-dynamsoft-service-do-on-end-user-machine.html" target="_blank">What does the Dynamsoft Service do on the end-user machine?</a>
+
+<a href="{{site.faq}}upgrade-to-latest-version.html" target="_blank">How do I upgrade my project to use the latest version of the Dynamic Web TWAIN SDK?</a>
+
+<a href="{{site.faq}}upgrade-end-user-installations.html" target="_blank">How do I upgrade end-user installation for all end users once I upgrade my project?</a>
+
+<a href="{{site.faq}}service-prompting-to-install-repeatedly.html" target="_blank">I have installed the Dynamsoft Service on an end-user machine but still got asked to install it repeatedly. Why?</a>
 
 ## Error Troubleshooting
 
