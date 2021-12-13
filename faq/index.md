@@ -143,7 +143,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}hide-progress-bars.html" target="_blank">How can I change/hide the UI of progress bars when importing or uploading images?</a>
 
-<a href="{{site.faq}}customize-ui-elements-of-image-editor.html" target="_blank">Can I customize UI elements of the built-in image editor? ?</a>
+<a href="{{site.faq}}customize-ui-elements-of-image-editor.html" target="_blank">Can I customize UI elements of the built-in image editor?</a>
 
 <a href="{{site.faq}}stop-default-scanner-popup.html" target="_blank">Can I stop the scanner from showing its default popup when there is a paper jam?</a>
 
@@ -256,6 +256,8 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 <a href="{{site.faq}}upgrade-end-user-installations.html" target="_blank">How do I upgrade end-user installation for all end users once I upgrade my project?</a>
 
 <a href="{{site.faq}}service-prompting-to-install-repeatedly.html" target="_blank">I have installed the Dynamsoft Service on an end-user machine but still got asked to install it repeatedly. Why?</a>
+
+<a href="{{site.faq}}use-dwt-in-citrix-env.html" target="_blank">How can I use Dynamic Web TWAIN in a Citrix environment?</a>
 
 ## Error Troubleshooting
 
