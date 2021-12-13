@@ -22,7 +22,7 @@ The problem occurs when the source (scanner) is _not_ disabled completely after 
 
 - Resolution
 
-You can call <a href="{{site.info}}api/WebTwain_Acquire.html#closesource" target="_blank">CloseSource</a> & <a href="{{site.info}}api/WebTwain_Acquire.html#closesourcemanager" target="_blank">CloseSourceManager</a> to close the soure before <a href="{{site.info}}api/WebTwain_Acquire.html#selectsource" target="_blank">SelectSource</a> 
+You can call <a href="{{site.info}}api/WebTwain_Acquire.html#closesource" target="_blank">CloseSource</a> & <a href="{{site.info}}api/WebTwain_Acquire.html#closesourcemanager" target="_blank">CloseSourceManager</a> to close the soure before <a href="{{site.info}}api/WebTwain_Acquire.html#selectsource" target="_blank">SelectSource</a>.
 
 ```javascript
 function AcquireImage() {
