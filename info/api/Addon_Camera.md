@@ -325,14 +325,13 @@ interface ScanConfiguration{
 	   visibility?: boolean,   //Whether to display the load local file icon. The default value is true.
     },
 
- funcConfirmExitContinuousScan: funcConfirmExitContinuousScan, 
-// funcConfirmExitContinuousScan为回调函数，
-//返回值为true：退出连续拍照模式，并不保留数据。 false:停留在原来界面
+      funcConfirmExitContinuousScan: funcConfirmExitContinuousScan, 
+        //funcConfirmExitContinuousScan is the callback funtion
+        //Return true：Exit continuous scan mode without saving the captured image data. Return false: Stay on the original viewer
 
-funcConfirmExit: funcConfirmExit, 
-// funcConfirmExit为回调函数，
-// 返回值为true：结束这次capture，并不保存数据。 false:停留在原来界面
-
+      funcConfirmExit: funcConfirmExit, 
+       //funcConfirmExit is the callback funtion，
+       //Return true：End this capture without saving the image data. Return false: Stay on the original viewer
 
     },
 
