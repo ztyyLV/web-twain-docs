@@ -47,9 +47,9 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}remove-blank-page-automatically.html" target="_blank">Can the Dynamic Web TWAIN SDK automatically remove blank page during the document scanning process?</a>
 
-<a href="{{site.faq}}automatically-rotate-upside-down-pages.html" target="_blank">Can the Dynamic Web TWAIN SDK automatically rotate upside-down pages during the document scanning process??</a>
+<a href="{{site.faq}}automatically-rotate-upside-down-pages.html" target="_blank">Can the Dynamic Web TWAIN SDK automatically rotate upside-down pages during the document scanning process?</a>
 
-<a href="{{site.faq}}automatically-detect-border.html" target="_blank">Can the Dynamic Web TWAIN SDK automatically detect border of the scanned document and crop it out??</a>
+<a href="{{site.faq}}automatically-detect-border.html" target="_blank">Can the Dynamic Web TWAIN SDK automatically detect border of the scanned document and crop it out?</a>
 
 <a href="{{site.faq}}scan-x-pages-from-automatic-document-feeder.html" target="_blank">Can I set my document scanner to scan x pages instead of all pages from the automatic document feeder (ADF)?</a>
 
@@ -59,7 +59,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}custom-capability.html" target="_blank">How can I use a custom capability of my scanner hardware when there is no direct API to set it?</a>
 
-<a href="{{site.faq}}limit-on-scanned-pages.html" target="_blank">Is there a limit on the number of pages I can scan at a time? Where do you store them after scanning??</a>
+<a href="{{site.faq}}limit-on-scanned-pages.html" target="_blank">Is there a limit on the number of pages I can scan at a time? Where do you store them after scanning?</a>
 
 <a href="{{site.faq}}document-scanning-slow-than-native.html" target="_blank">Document scanning via the Dynamic Web TWAIN SDK is slower than using the native scanner application. How can I speed it up?</a>
 
@@ -69,7 +69,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}download-image-from-FTP-or-HTTP-server.html" target="_blank">Can I download an image from an FTP or HTTP server into the Dynamic Web TWAIN SDK?</a>
 
-<a href="{{site.faq}}trigger-automatic-workflow-after-scanning.html" target="_blank">How can I trigger an automatic workflow right after document scanning or image importing??</a>
+<a href="{{site.faq}}trigger-automatic-workflow-after-scanning.html" target="_blank">How can I trigger an automatic workflow right after document scanning or image importing?</a>
 
 <a href="{{site.faq}}support-capture-from-mobile-camera.html" target="_blank">Do you support capturing documents from mobile camera?</a>
 
@@ -80,8 +80,6 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 <a href="{{site.faq}}earliest-iphone-model-supported.html" target="_blank">What is the earliest iPhone model that your SDK supports?</a>
 
 <a href="{{site.faq}}acquireimage-sync-or-async.html" target="_blank">Is the AcquireImage() method synchronous or asynchronous?</a>
-
-## Capture/Image Source
 
 ## Image Viewer
 
@@ -131,7 +129,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}convert-color-image-to-grayscale.html" target="_blank">Can I convert a color image to greyscale or black & white?</a>
 
-<a href="{{site.faq}}undo-functionality.html" target="_blank">Is there undo functionality?/a>
+<a href="{{site.faq}}undo-functionality.html" target="_blank">Is there undo functionality?</a>
 
 <a href="{{site.faq}}remove-selected-images.html" target="_blank">How can I remove only the selected images?</a>
 
@@ -147,7 +145,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}customize-ui-elements-of-image-editor.html" target="_blank">Can I customize UI elements of the built-in image editor? ?</a>
 
-<a href="{{site.faq}}stop-default-scanner-popup.html" target="_blank">Can I stop the scanner from showing its default popup when there is a paper jam??</a>
+<a href="{{site.faq}}stop-default-scanner-popup.html" target="_blank">Can I stop the scanner from showing its default popup when there is a paper jam?</a>
 
 ## Document Saving
 
@@ -191,15 +189,15 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}encrypt-all-in-pdf.html" target="_blank">Can I encrypt all documents in PDF format before uploading?</a>
 
-<a href="{{site.faq}}limit-upload-size-to-server.html" target="_blank">Can I limit the size of documents to be uploaded to my server??</a>
+<a href="{{site.faq}}limit-upload-size-to-server.html" target="_blank">Can I limit the size of documents to be uploaded to my server?</a>
 
 <a href="{{site.faq}}iso-27001-compliant.html" target="_blank">Is the Dynamic Web TWAIN SDK ISO 27001 compliant?</a>
 
 <a href="{{site.faq}}gdpr-compliant.html" target="_blank">Is the Dynamic Web TWAIN SDK GDPR compliant? ?</a>
 
-<a href="{{site.faq}}hippa-compliant.html" target="_blank">Is the Dynamic Web TWAIN SDK HIPPA compliant??</a>
+<a href="{{site.faq}}hippa-compliant.html" target="_blank">Is the Dynamic Web TWAIN SDK HIPPA compliant?</a>
 
-<a href="{{site.faq}}change-dynamsoft-service-certificate.html" target="_blank">How to change the certificate of the Dynamsoft Service??</a>
+<a href="{{site.faq}}change-dynamsoft-service-certificate.html" target="_blank">How to change the certificate of the Dynamsoft Service?</a>
 
 ## Addon
 
@@ -211,7 +209,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}load-specific-page-of-pdf-to-viewer.html" target="_blank">Can I load specific page numbers of a PDF file into the viewer?</a>
 
-<a href="{{site.faq}}is-pdf-rasterizer-needed-to-convert-scanned-documents-to-pdf.html" target="_blank">Do I need the PDF Rasterizer addon to convert scanned documents to PDF files??</a>
+<a href="{{site.faq}}is-pdf-rasterizer-needed-to-convert-scanned-documents-to-pdf.html" target="_blank">Do I need the PDF Rasterizer addon to convert scanned documents to PDF files?</a>
 
 <a href="{{site.faq}}generate-pdf-files.html" target="_blank">How can I generate PDF/A files?</a>
 
@@ -219,17 +217,17 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}separate-documents-by-barcode.html" target="_blank">How can I separate my documents automatically by barcode?</a>
 
-<a href="{{site.faq}}speed-up-barcode-reading-process.html" target="_blank">Is there any way to speed up the barcode reading process??</a>
+<a href="{{site.faq}}speed-up-barcode-reading-process.html" target="_blank">Is there any way to speed up the barcode reading process?</a>
 
 <a href="{{site.faq}}webcam-supported-by-webcam-capture-addon.html" target="_blank">What type of webcam does the Webcam Capture addon support?</a>
 
 <a href="{{site.faq}}use-webassembly-to-support-webcam.html" target="_blank">Can I use the WebAssembly Edition of SDK to support webcam instead of using the Webcam Capture addon for Desktop Service Edition?</a>
 
-<a href="{{site.faq}}difference-between-ocr-basic-and-pro.html" target="_blank">What’s the difference between your OCR Basic and OCR Pro SDK??</a>
+<a href="{{site.faq}}difference-between-ocr-basic-and-pro.html" target="_blank">What’s the difference between your OCR Basic and OCR Pro SDK?</a>
 
-<a href="{{site.faq}}ocr-runs-on-client-or-server-side.html" target="_blank">Does your OCR addon run on the client side or server side??</a>
+<a href="{{site.faq}}ocr-runs-on-client-or-server-side.html" target="_blank">Does your OCR addon run on the client side or server side?</a>
 
-<a href="{{site.faq}}camera-play-and-showvideo.html" target="_blank">What is the difference between Camera.play and Camera.showVideo??</a>
+<a href="{{site.faq}}camera-play-and-showvideo.html" target="_blank">What is the difference between Camera.play and Camera.showVideo?</a>
 
 <a href="{{site.faq}}difference-between-camera-and-webcam.html" target="_blank">hat is the difference between WebTwain.Addon.Camera and WebTwain.Addon.Webcam?</a>
 
@@ -239,6 +237,25 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}how-come-would-you-need-local.dynamsoft.com.html" target="_blank">How come would you need local.dynamsoft.com instead of 127.0.0.1?</a>
 
+<a href="{{site.faq}}resources-to-be-included-in-SDK.html" target="_blank">What resources of the SDK should be included in my web application?</a>
+
+<a href="{{site.faq}}change-reference-path.html" target="_blank">How can I change the reference path to the Dynamsoft’s resources in my project?</a>
+
+<a href="{{site.faq}}component-needs-to-be-installed-on-end-user-machine.html" target="_blank">Is there any component of the Dynamic Web TWAIN SDK needs to be installed on end-user machines?</a>
+
+<a href="{{site.faq}}how-to-enable-remote-scan.html" target="_blank">How to enable Remote Scan?</a>
+
+<a href="{{site.faq}}admin-right-needed-to-install.html" target="_blank">Is admin right required to install the end-user component?</a>
+
+<a href="{{site.faq}}deploy-to-all-users.html" target="_blank">Is there an easy way to deploy the end-user components to all users?</a>
+
+<a href="{{site.faq}}what-does-dynamsoft-service-do-on-end-user-machine.html" target="_blank">What does the Dynamsoft Service do on the end-user machine?</a>
+
+<a href="{{site.faq}}upgrade-to-latest-version.html" target="_blank">How do I upgrade my project to use the latest version of the Dynamic Web TWAIN SDK?</a>
+
+<a href="{{site.faq}}upgrade-end-user-installations.html" target="_blank">How do I upgrade end-user installation for all end users once I upgrade my project?</a>
+
+<a href="{{site.faq}}service-prompting-to-install-repeatedly.html" target="_blank">I have installed the Dynamsoft Service on an end-user machine but still got asked to install it repeatedly. Why?</a>
 
 ## Error Troubleshooting
 

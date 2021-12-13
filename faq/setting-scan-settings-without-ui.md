@@ -14,4 +14,4 @@ description: Can I set scanning settings without using the default scanner’s U
 
 Yes, you can set the scanner settings without using the default scanner’s UI. By setting <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html?ver=latest#ifshowui" target="_blank">IfShowUI</a> to false, the default scanner’s UI is hidden.
 
-Then you can instead set multiple settings by passing the configuration settings to the . Please refer to <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html?ver=latest#acquireimage" target="_blank">this API instruction page</a> for more detail.
+Then you can instead set multiple settings by passing the configuration settings to acquire image api. Please refer to <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html?ver=latest#acquireimage" target="_blank">this API instruction page</a> for more detail.

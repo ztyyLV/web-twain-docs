@@ -12,8 +12,6 @@ description: Is the Dynamic Web TWAIN SDK HIPPA compliant?
 
 ## Is the Dynamic Web TWAIN SDK HIPPA compliant?
 
-### Reason
-
 If you are a healthcare provider who is looking to integrate the Dynamic Web TWAIN SDK to your healthcare solution, you may wonder if integrating our SDK would have any impact to your existing HIPPA compliance. The short answer is NO.
 
 With Dynamic Web TWAIN SDK technologies, all data processing can be done within the client-side devices by using an offline license of the SDK, ensuring full compliance with any data protection laws. In other word, the HIPPA compliance of your healthcare solution won’t change by integrating our SDK. You can contact <a href="mailto:sales@dynamsoft.com" target="_blank">sales@dynamsoft.com</a> for an offline license.

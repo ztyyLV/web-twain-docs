@@ -12,8 +12,6 @@ description: Can I upload documents to a different website domain?
 
 ## Can I upload documents to a different website domain?
 
-### Reason
-
 Yes, if your web server is configured to allow cross domain requests. Please check your web server manual for instructions on how to configure it to allow cross domain requests.
 
-If your web server does not allow accessing from a different domain and you are uploading or downloading to/from a web server in a different domain than your current website, you will get a CORS error as described here: <a href="" target="_blank">XMLHttpRequest cannot load XXX (dynamsoft.com)</a>. [link to new FAQ]
+If your web server does not allow accessing from a different domain and you are uploading or downloading to/from a web server in a different domain than your current website, you will get a CORS error as described here: [XMLHttpRequest cannot load XXX ]({{site.faq}}/XMLHttpRequest-cannot-load.html)

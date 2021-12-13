@@ -12,8 +12,6 @@ description: Can I upload documents via a background service outside the web bro
 
 ## Can I upload documents via a background service outside the web browser?
 
-### Reason
-
 Yes. You can use the File Uploader to create and run an upload job.
 
 The File Uploader is an independent component that is dedicated to file uploading. It can be used seamlessly with DWT.

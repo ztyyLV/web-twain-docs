@@ -12,8 +12,6 @@ description: How can I automatically trigger actions when images arrive on my se
 
 ## How can I automatically trigger actions when images arrive on my server side?
 
-### Reason
-
 Dynamic Web TWAIN sends an HTTP POST request to the server when doing an upload. You need to write your server-side script to receive and save the uploaded files. On the server side, any scripting language can be used. The server-side script file is specified in the POST Form with the name RemoteFile by default and will be triggered to process the uploaded file.
 
 To change the default field name RemoteFile, you can use the API <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_IO.html?ver=latest#httpfieldnameofuploadedimage" target="_blank">HttpFieldNameOfUploadedImage</a>.
