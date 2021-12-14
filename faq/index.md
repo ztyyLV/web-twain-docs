@@ -75,8 +75,6 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}fingerprint-medical-imaging.html" target="_blank">Do you support fingerprint or medical imaging devices?</a>
 
-<a href="{{site.faq}}enable-remote-scan.html" target="_blank">How to enable remote scan?</a>
-
 <a href="{{site.faq}}earliest-iphone-model-supported.html" target="_blank">What is the earliest iPhone model that your SDK supports?</a>
 
 <a href="{{site.faq}}acquireimage-sync-or-async.html" target="_blank">Is the AcquireImage() method synchronous or asynchronous?</a>
