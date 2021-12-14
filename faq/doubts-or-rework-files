@@ -1,33 +1,9 @@
-\***\*\*\*\*\*\*\***\*\*\*\***\*\*\*\*\*\*\***Latest Status\***\*\*\*\*\*\*\***\*\*\***\*\*\*\*\*\*\***
-
-SDK Download/ Free Trial - done
-
-Capture / Image Source - done
-
-Image Viewer -done
-
-Image Editing - done
-
-UI Customization - done
-
-Document Saving - done
-
-Security - done
-
-Addon -done
-
-Error Troubleshooting - done
-
-License & Purchase - done
-
 **\***Details\***\*\*\*\***
 
 SDK Download/ Free Trial - done
 
 Capture / Image Source - done
 
-    automatically-rotate-upside-down-pages -->link
-
 Image Viewer -done
 
 Image Editing - done
@@ -36,27 +12,21 @@ UI Customization - done
 
 Document Saving - done
 
-    upload-json-files-to-server.md --> old one.
-
 Security - done
 
 Addon (Done reviewing) - done
 
-    load-pdf-files --> https://www.dynamsoft.com/web-twain/docs/indepth/faqs/develop/When-is-PDF-Rasterizer-effective.html?ver=latest
-
-    generate-pdf-files -->
-
-Project Deployment and End-user Installation - 80% reviewed
+Project Deployment and End-user Installation - done
 
 error troubleshooting - done
-
-    general-troubleshooting-steps.html --> link combined
 
 License & Purchase - done
 
 ---
 
 we have two faqs on - how to enable remote scan) on ein image capture and one in end-user
+how-to-enable-remote-scan.html
+enable-remote-scan.html
 
 \***\*\*\*\*\*\*\***commands\***\*\*\*\*\***
 
