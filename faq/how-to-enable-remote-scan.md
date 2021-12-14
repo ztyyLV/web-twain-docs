@@ -12,6 +12,10 @@ description: How to enable Remote Scan?
 
 ## How to enable Remote Scan?
 
+Remote Scan means directly scanning documents from a remote document scanner to a web browser client of a client machine. No installation is required on the client machine, which makes is easy for all end users to utilize the web scanning feature of the Dynamic Web TWAIN SDK.
+
+You can learn more detail about the feature via <a href="https://www.dynamsoft.com/blog/announcement/remote-scan-works-web-twain/" target="_blank">this blog</a>.
+
 #### On Windows desktop where the scanner is physically connected
 
 - Install `Dynamsoft Service`.
