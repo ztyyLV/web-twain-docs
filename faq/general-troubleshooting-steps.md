@@ -3,7 +3,7 @@ layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
 title: General troubleshooting steps
-keywords: Dynamic Web TWAIN, Error Troubleshooting, general steps
+keywords: Dynamic Web TWAIN, Error Troubleshooting, general steps, verbose
 breadcrumbText: General troubleshooting steps
 description: General troubleshooting steps
 ---
