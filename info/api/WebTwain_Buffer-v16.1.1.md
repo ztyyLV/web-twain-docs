@@ -723,16 +723,13 @@ RegisterEvent('OnBitmapChanged',
 ): boolean; 
 ```
 
-**Usage notes**
+**Example**
 
-Operation types include 
-
-* 1 - new image(s) were added at the tail
-* 2 - new image(s) were inserted before the current index
-* 3 - image(s) are deleted
-* 4 - image(s) are modified
-* 5 - indices of images changed
-
+```javascript
+DWObject.RegisterEvent('OnBitmapChanged', function(strUpdatedIndex, operationType, sCurrentIndex) {
+        console.log('Image ' + sCurrentIndex + ' has changed!');
+});
+```
 ---
 
 ## OnTopImageInTheViewChanged
