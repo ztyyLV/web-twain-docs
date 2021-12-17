@@ -34,7 +34,6 @@ Dynamsoft.DWT.UpdateCert(url, optionalAsyncSuccessFunc, optionalAsyncFailureFunc
 * Added method `ChangeBrightnessAsync` to change the image brightness. 
 * Added method `ChangeContrastAsnyc` to change the image contrast. 
 
-
 ### Improved Features 
 
 * Updated Barcode Reader library to version 8.6. Check out release notes for <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/release-notes/js-8.html?ver=latest#860-08312021" target="_blank">Barcode Reader JavaScript SDK - 8.6</a>
@@ -43,6 +42,9 @@ Dynamsoft.DWT.UpdateCert(url, optionalAsyncSuccessFunc, optionalAsyncFailureFunc
 
 
 ### Bug Fixes
+
+* 
+
 
 -->
 
