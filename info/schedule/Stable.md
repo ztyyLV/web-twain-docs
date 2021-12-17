@@ -12,22 +12,9 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 <!--
 ## 17.2
 
-
-
-DWObject.Addon.Camera.scanDocument(ScanConfiguration)
-DWObject.Viewer.createTemplate("documentScanner") //下面这些也需要介绍
 DWObjecy.Viewer.bind(document.getElementById("divCustomElement"),:DocumentScannerTemplate) - 新增用法
-DWObject.Viewer.showCheckbox //thumbnail下也增加showCheckbox的属性
 
-DWObject.GetCurrentFileName()
-DWObject.CreateFile()
-DWObject.RemoveFile()
-DWObject.OpenFile()
-DWObject.GetFileInfoList()
 
-DWObject.GetTagListByIndex()
-DWObject.ChangeBrightnessAsync(int index, int val)
-DWObject.ChangeContrastAsnyc(int index, int val)
 在install.js中增加一个接口： 
 Dynamsoft.OnSSLCertInfo(certExpiredDate); //为Date 类对象, 表示证书过期的时间
 Dynamsoft.DWT.UpdateCert(url, optionalAsyncSuccessFunc, optionalAsyncFailureFunc); //下载证书
@@ -43,10 +30,16 @@ Dynamsoft.DWT.UpdateCert(url, optionalAsyncSuccessFunc, optionalAsyncFailureFunc
 * Added method `GetFileInfoList()` to get file information.
 * Added method `scanDocument` to capture document(s).
 * Added method `createTemplate` to crearte document scanner template. 
-* Added method `showCheckbox` to show checkbox on the 
- 
+* Added method `showCheckbox` to show checkbox on image. 
+* Added method `ChangeBrightnessAsync` to change the image brightness. 
+* Added method `ChangeContrastAsnyc` to change the image contrast. 
+
 
 ### Improved Features 
+
+* Updated Barcode Reader library to version 8.6. Check out release notes for <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/release-notes/js-8.html?ver=latest#860-08312021" target="_blank">Barcode Reader JavaScript SDK - 8.6</a>
+* RENDERALL convert mode in <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Addon_PDF.html?ver=latest#setconvertmode" target="_blank">SetConvertMode</a> now supports loading images with annotations.
+* 
 
 
 ### Bug Fixes
