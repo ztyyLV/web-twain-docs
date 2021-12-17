@@ -9,6 +9,49 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 ---
 
 # Stable Releases
+<!--
+## 17.2
+
+
+
+DWObject.Addon.Camera.scanDocument(ScanConfiguration)
+DWObject.Viewer.createTemplate("documentScanner") //下面这些也需要介绍
+DWObjecy.Viewer.bind(document.getElementById("divCustomElement"),:DocumentScannerTemplate) - 新增用法
+DWObject.Viewer.showCheckbox //thumbnail下也增加showCheckbox的属性
+
+DWObject.GetCurrentFileName()
+DWObject.CreateFile()
+DWObject.RemoveFile()
+DWObject.OpenFile()
+DWObject.GetFileInfoList()
+
+DWObject.GetTagListByIndex()
+DWObject.ChangeBrightnessAsync(int index, int val)
+DWObject.ChangeContrastAsnyc(int index, int val)
+在install.js中增加一个接口： 
+Dynamsoft.OnSSLCertInfo(certExpiredDate); //为Date 类对象, 表示证书过期的时间
+Dynamsoft.DWT.UpdateCert(url, optionalAsyncSuccessFunc, optionalAsyncFailureFunc); //下载证书
+
+
+### New Features
+
+* Added method `GetTagListByIndex()` to return tag information for a specific image.
+* Added method `GetCurrentFileName()` to get the current file name.
+* Added method `CreateFile()` to create a file.
+* Added method `RemoveFile()` to remove a file. 
+* Added method `OpenFile()` to open a file.
+* Added method `GetFileInfoList()` to get file information.
+* Added method `scanDocument` to capture document(s).
+* Added method `createTemplate` to crearte document scanner template. 
+* Added method `showCheckbox` to show checkbox on the 
+ 
+
+### Improved Features 
+
+
+### Bug Fixes
+
+-->
 
 ## 17.1.1 (08/19/2021)
 
