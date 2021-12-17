@@ -785,7 +785,7 @@ Action types include
 /**
  * A built-in callback triggered when a change occurs in the buffer.
  * @argument indexString A string of the changed index(indices).
- * @argument type Operation type.
+ * @argument type Operation type. 1 means new image(s) were added at the tail, 2 means image(s) were inserted before the current index, 3 means image(s) are deleted, 4 means image(s) are modified, 5 means the indices of images changed.
  * @argument index Index of the current image.
  */
 RegisterEvent('OnBitmapChanged',
@@ -800,12 +800,11 @@ RegisterEvent('OnBitmapChanged',
 
 Operation types include 
 
-* new image(s) were added at the tail
-* new image(s) were inserted before the current index
-* image(s) are deleted
-* image(s) are modified
-* indices of images changed
-
+* 1 - new image(s) were added at the tail
+* 2 - new image(s) were inserted before the current index
+* 3 - image(s) are deleted
+* 4 - image(s) are modified
+* 5 - indices of images changed
 ---
 
 ## OnTopImageInTheViewChanged
