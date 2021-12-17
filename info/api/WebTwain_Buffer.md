@@ -820,7 +820,7 @@ Action types include
 /**
  * A built-in callback triggered when the current image in buffer is changed like flipped, cropped, rotated, etc. or a new image has been acquired.
  * @argument indexString A string of the changed index(indices).
- * @argument type Operation type. 1 means new image(s) were added at the tail, 2 means image(s) were inserted before the current index, 3 means image(s) are deleted, 4 means image(s) are modified, 5 means the indices of images changed
+ * @argument type Operation type. 1 means new image(s) were added at the tail, 2 means image(s) were inserted before the current index, 3 means image(s) are deleted, 4 means image(s) are modified, 5 means the indices of images changed.
  * @argument index Index of the current image.
  */
 RegisterEvent('OnBitmapChanged',
