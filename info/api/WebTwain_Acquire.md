@@ -913,6 +913,10 @@ interface ScanSetup {
 }
 ```
 
+**Sample**
+
+<a href="https://demo.dynamsoft.com/Samples/dwt/Make-use-of-the-API-startScan/index.html" target="_blank">Make use of the API startScan </a>
+
 ---
 
 ## CancelAllPendingTransfers
