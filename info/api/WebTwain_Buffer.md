@@ -186,7 +186,7 @@ ClearFilter(): boolean;
 
 ``` typescript
 /**
- * Set a default tag for newlay acquired images.
+ * Set a default tag for newly acquired images.
  * @param tag Specifies the tag.
  */
 SetDefaultTag(tag: string): boolean;
