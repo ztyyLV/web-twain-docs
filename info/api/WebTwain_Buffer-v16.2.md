@@ -784,17 +784,17 @@ Action types include
 ``` typescript
 /**
  * A built-in callback triggered when a change occurs in the buffer.
- * @argument indexString A string of the changed index(indices).
+ * @argument indexString Array of the changed index(indices).
  * @argument type Operation type. 
    1 means new image(s) were added at the tail, 
    2 means image(s) were inserted before the current index, 
    3 means image(s) are deleted, 
    4 means image(s) are modified, 
-   5 means the indices of images changed.
  * @argument index Index of the current image.
  */
 RegisterEvent('OnBitmapChanged',
-    function (indexString: string,
+    function (
+        indexString: number[],
         type: number,
         index: number
     ) {}
