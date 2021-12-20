@@ -30,21 +30,24 @@ Dynamsoft.DWT.UpdateCert(url, optionalAsyncSuccessFunc, optionalAsyncFailureFunc
 * Added method `GetFileInfoList()` to get file information.
 * Added method `scanDocument` to capture document(s).
 * Added method `createTemplate` to crearte document scanner template. 
-* Added method `showCheckbox` to show checkbox on image. 
+* Added method `showCheckbox` to show checkbox on image(s). 
 * Added method `ChangeBrightnessAsync` to change the image brightness. 
 * Added method `ChangeContrastAsnyc` to change the image contrast. 
+* Added method `UpdateCert` to update and download certificate. 
 
 ### Improved Features 
 
 * Updated Barcode Reader library to version 8.6. Check out release notes for <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/release-notes/js-8.html?ver=latest#860-08312021" target="_blank">Barcode Reader JavaScript SDK - 8.6</a>
 * RENDERALL convert mode in <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Addon_PDF.html?ver=latest#setconvertmode" target="_blank">SetConvertMode</a> now supports loading images with annotations.
-* 
-
+* Modified DynamicImage.dll(DynamicImagex64.dll) to improve the encoding and decoding mode of tiff.
+* Updated the order of Capability setting according to the order defined in the TWAIN document.
 
 ### Bug Fixes
 
-* 
-
+* Fixed a bug where the thumbnail viewer did not render correctly after "FilterImageByTag".
+* Fixed a bug where the image displayed in the thumbnail may be inconsistent with the canvas when switching tags through `FilterImageByTag` in the thumbnail viewer.
+* [ChromeOS]Fixed a bug where save function reported 'user canceled the operation' error in service mode.
+* Fixed a bug where multiple `Unload` and `Load` operations would cause WebTwainService to disconnect.
 
 -->
 
