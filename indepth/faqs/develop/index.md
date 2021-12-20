@@ -9,7 +9,6 @@ description: Dynamic Web TWAIN SDK Documentation FAQs Development
 
 # Development
 
-How to 
 [How to install Dynamic Web TWAIN?]({{site.indepth}}faqs/develop/how-to-install-dynamic-web-twain.html)  
 [What if I am installing over a previous version of the Dynamic Web TWAIN?]({{site.indepth}}faqs/develop/what-if-i-am-installing-over-a-previous-version-of-the-dynamic-web-twain.html)  
 [Can I install Dynamsoft Service silently?]({{site.indepth}}faqs/develop/can-i-install-dynamsoft-service-silently.html)  
