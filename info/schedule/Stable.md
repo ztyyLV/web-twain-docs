@@ -41,6 +41,7 @@ Dynamsoft.DWT.UpdateCert(url, optionalAsyncSuccessFunc, optionalAsyncFailureFunc
 * RENDERALL convert mode in <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Addon_PDF.html?ver=latest#setconvertmode" target="_blank">SetConvertMode</a> now supports loading images with annotations.
 * Modified DynamicImage.dll(DynamicImagex64.dll) to improve the encoding and decoding mode of tiff.
 * Updated the order of Capability setting according to the order defined in the TWAIN document.
+* Improved the document capture in WASM mode. 
 
 ### Bug Fixes
 
