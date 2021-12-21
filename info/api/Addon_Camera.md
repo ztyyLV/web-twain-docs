@@ -281,11 +281,11 @@ scanDocument(scanConfiguration?: ScanConfiguration
 ): Promise<Resolution>;
 
 interface ScanConfiguration{
-    element?: HTMLDivElement,  //Bind the elment or elment id. After binding, display the video in the spcified element, otherwise, display the video in full screen.
-    scannerViewer?:{
-       deviceId?: string,  
-       maxDocuments:int,       //The maximum documents can be captured/loaded in to the buffer. 
-       fullScreen?: boolean,   //Whether to display the video in full screen, the default value is false.
+       element?: HTMLDivElement,  //Bind the elment or elment id. After binding, display the video in the spcified element, otherwise, display the video in full screen.
+       scannerViewer?:{
+          deviceId?: string,  
+          maxDocuments:int,       //The maximum documents can be captured/loaded in to the buffer. 
+          fullScreen?: boolean,   //Whether to display the video in full screen, the default value is false.
 
        polygonStyle?:{         //the sytle of the auto detect border        
   	  stroke: "yellow",    //default : "#fe8e14"
@@ -335,47 +335,43 @@ interface ScanConfiguration{
 
     },
 
-filterViewer? {
-       visibility?: boolean,   //filter界面是否可见，Default：true
+    filterViewer? {
+       visibility?: boolean,   //Whether to display filter viewer. The default value is true.
 
-insert?: {  //这个属性只是针对多张的图片或文档，单张不支持
-		   //insert只能一张一张插入，拍照与Load都只能是一张，详见下面需求
-		visibility?: boolean,   //replace图标是否可见，Default：true
-		position: string  //“before” “after”, default: “before”
-},
+       insert?: {  //Insert an image  
+	  visibility?: boolean,   //Whether to display the insert icon. The default value is true.
+	  position: string  //Set whether to insert the image "before" or "after" the current image. The default value is "before".
+       },
 
-remove?: { //这个属性只是针对多张的图片或文档，单张不支持
-		visibility?: boolean,   //右上角的delete图标是否可见，Default：true
-},
+       remove?: { //Remove an image
+	  visibility?: boolean,   //Whether to display the remove icon. The default value is true.
+       },
 
-rotateLeft?: { //对图片与文档，无论单张与多张都有效。如果是图片，图片左旋转；
-              //如果是文档，则crop之后的图片与原document都会跟则左转  
-		visibility?: boolean,   //左转图标是否可见，Default：true
-},
+       rotateLeft?: { 
+          visibility?: boolean,   //Whether to display the rotate left icon. The default value is true.
+       },
   
-filter?: {  //滤镜配置
-      visibility?: boolean,   //滤镜配置图标是否可见，Default：true
-	      valueList?:[ {   //如果该值不设置，默认6个全部列出来，original排在第一位，
-                         //如果用户自己设置了该值，则按用户设置的顺序出现。
-                         //用户在如果不设置original，则会默认在第一位置加上
-	         label: string,  // 下拉框中的可见值for example：”Original”,该值可以修改为
-                             //任意值，只是用来显示
-                value: string, //真正作用的filter值，该值一定要按我们规定来来设置，否则无效, 
-			  //可以设置的值为：
-			  //blackAndWhite: 黑白  1
-			  //grayscale: 灰度  1
-			  //removeShadow: 去阴影  1
-			  //brightening: 增亮
-			  //enhancementAndSharpening: 增强并锐化
-			  // saveToner: 省墨
-			  //original : 原图	
-		  option?: {
-                   level: 1 //1,2,3  数字越大越慢，质量越好。Default：1 
+       filter?: {  
+         visibility?: boolean,   //Whether to display the filter icon. The default value is true.
+	 valueList?:[ {   //If not specified, listing all the filters in the order of original, blackAndWhite, grayscale, clean, brightening, saveToner by default. 
+                          //Support adjusting the valueList order to arrange the filter order.
+	 label: string,  //The label of the filter. For example. The filter "Original" can be modified to any word you want to describe
+         value: string,   //The filter value. The value must be set according to our specification below.
+			  //Allowed values:
+                          //original 
+			  //blackAndWhite
+			  //grayscale
+			  //clean
+			  //brightening
+			  //saveToner	
+	 option?: {
+             level: 1 //The filter level. The allowed values are 1(default value), 2, 3.
+                      //The higher the level, the better the quality, but the more time it takes.
                 }
               },{……}]
-	      defaultValue?: string,   //defaultValue值如果设置为valueList中的值，
-                              //则按用户设置的取,否则取original
-       是否出现应用到所有页面   //当连续拍照或load多张图片或文档时
+	 
+          defaultValue?: string,   //The default value of the filter you want to set. By default, original filter is selected.
+
 	},
 	exitDocumentScanAfterSave: false  //default: false, 即save之后还可以继续capture
 }， 
