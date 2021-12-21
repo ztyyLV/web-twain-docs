@@ -410,7 +410,9 @@ interface ScanConfiguration{
 
 ```
 
+**Usage notes**
 
+This API was added in V17.2.
 
 
 
