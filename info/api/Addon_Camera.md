@@ -267,7 +267,7 @@ There are two available modes: `document` and `picture` .
  */
 closeVideo(): void;
 ```
-<!--
+
 ## scanDocument
 
 **Syntax**
@@ -370,48 +370,48 @@ interface ScanConfiguration{
                 }
               },{……}]
 	 
-          defaultValue?: string,   //The default value of the filter you want to set. By default, original filter is selected.
+          defaultValue?: string,   //Filter selected by default. By default, the original filter is selected.
+	  },
+ 
+	  exitDocumentScanAfterSave: false  //The default value is false.
+          }， 
 
-	},
-	exitDocumentScanAfterSave: false  //default: false, 即save之后还可以继续capture
-}， 
-
-cropViewer?: { //裁剪配置，该属性的配置只作用于文档
-       visibility?: boolean,   //裁剪界面是否可见，Default：true
+      cropViewer?: { 
+        visibility?: boolean,   //Whether to display the crop viewer. The default value is true.
       
-       polygonStyle?:{          
-  	    stroke: "yellow",            //default : "#fe8e14"
-          strokeWidth: "2px",       //default: "1px"
-          dash:string //    "solid ", "dashed"    default: "solid "
-       },
+        polygonStyle?:{    //The polygon style in the crop viewer.      
+  	  stroke: string,       //default : "#fe8e14"
+          strokeWidth: string,     //default: "1px"
+          dash: string             //"solid ", "dashed"    default: "solid "
+        },
 
-rotateLeft?:{   
-		visibility?: boolean,   //左转图标是否可见，Default：true
-},
-rotateRight?:{   
-		visibility?: boolean,   //右转图标是否可见，Default：true
-},
-    	autoDetectBorder?:{   
-		visibility?: boolean,   //自动检测图标是否可见，Default：true
-		enableAutoDetectBorder?: boolean,   //是否默认自动检测，Default：true，
-				     //如果为false，则全图选中
-},
-}
-}
+        rotateLeft?:{   
+	  visibility?: boolean,   //Whether to display the rotate left icon. The default value is true.
+        },
 
+        rotateRight?:{   
+	  visibility?: boolean,   //Whether to display the rotate right icon. The default value is true.
+        },
 
-function funcConfirmExitContinuousScan(){
-	return true;  //true：退出连续模式，并不保留数据。 false:停留在原来界面
-}
+        autoDetectBorder?:{   
+		visibility?: boolean,   //Whether to display the automatic border detection icon. The default value is true.
+		enableAutoDetectBorder?: boolean,   //The default value is true.
+        },
+       }
+      }
 
-function funcConfirmExit(){
-	return true;  //true：结束这次capture，并不保存数据。 false:停留在原来界面
-}
+       function funcConfirmExitContinuousScan(){
+	  return true;  
+        }
+
+       function funcConfirmExit(){
+	   return true;  
+      }
 
 ```
 
 
--->
+
 
 
 
