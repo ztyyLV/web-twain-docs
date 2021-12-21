@@ -18,7 +18,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Camera Addon APIs
 |[`getSourceList()`](#getsourcelist) | [`selectSource()`](#selectsource)|[`getCurrentSource()`](#getcurrentsource)|[`closeSource()`](#closesource)|
 |[`getResolution()`](#getresolution)| [`setResolution()`](#setresolution)| [`getCurrentResolution()`](#getcurrentresolution)| [`play()`](#play)|
 |[`pause()`](#pause)| [`resume()`](#resume)| [`stop()`](#stop)|[`getStatus()`](#getstatus)|
-|[`capture()`](#capture)| [`showVideo()`](#showvideo)| [`closeVideo()`](#closevideo)||
+|[`capture()`](#capture)| [`showVideo()`](#showvideo)| [`closeVideo()`](#closevideo)|
 
 ---
 
