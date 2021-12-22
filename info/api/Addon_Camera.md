@@ -281,8 +281,8 @@ scanDocument(scanConfiguration?: ScanConfiguration
 ): Promise<Resolution>;
 
 interface ScanConfiguration{
-   element?: HTMLDivElement,  //Bind the elment or elment id. 
-                                  //After binding, display the video in the spcified element, otherwise, display the video in full screen.
+   element?: HTMLDivElement, //Bind the elment or elment id. 
+                             //After binding, display the video in the spcified element, otherwise, display the video in full screen.
    scannerViewer?:{
      deviceId?: string,  
      maxDocuments: int,       //The maximum documents can be captured/loaded in to the buffer. 
@@ -399,16 +399,16 @@ interface ScanConfiguration{
 	visibility?: boolean,   //Whether to display the automatic border detection icon. The default value is true.
 	enableAutoDetectBorder?: boolean,   //The default value is true.
        },
-       }
-     }
+      }
+    }
 
      function funcConfirmExitContinuousScan(){
 	return true;  
-        }
+     }
 
      function funcConfirmExit(){
 	return true;  
-  }
+     }
 
 ```
 
