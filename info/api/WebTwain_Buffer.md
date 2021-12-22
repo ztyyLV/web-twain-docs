@@ -20,7 +20,9 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page
 |[`GetImageXResolution()`](#getimagexresolution) |[`GetImageYResolution()`](#getimageyresolution) |[`GetSkewAngle()`](#getskewangle) | [`GetSkewAngleEx()`](#getskewangleex)|
 |[`ImageIDToIndex()`](#imageidtoindex) | [`IndexToImageID()`](#indextoimageid)| [`IsBlankImage()`](#isblankimage) | [`IsBlankImageExpress()`](#isblankimageexpress)|  
 |[`SelectAllImages()`](#selectallimages)|[`MoveImage()`](#moveimage) | [`SwitchImage()`](#switchimage)| [`RemoveImage()`](#removeimage) |
-| [`RemoveAllImages()`](#removeallimages)|[`RemoveAllSelectedImages()`](#removeallselectedimages) |[`SelectImages()`](#selectimages)|[`GetTagListByIndex()`](#gettaglistbyindex) |
+| [`RemoveAllImages()`](#removeallimages)|[`RemoveAllSelectedImages()`](#removeallselectedimages) |[`SelectImages()`](#selectimages)|[`GetTagListByIndex()`](#gettaglistbyindex)|
+| [`CreateFile()`](#createfile)|[`OpenFile()`](#openfile)|[`GetCurrentFileName()`](#getcurrentfileName)|[`RemoveFile()`](#removefile)|
+| [`GetFileInfoList()`](#getfileinfolist)|
 
 <!--* [GetImageBitDepthAsync()](#getimagebitdepthasync)-->
 
@@ -899,3 +901,135 @@ GetTagListByIndex (index: number):string[]
 **Usage notes**
 
 This API was added in V17.2.
+
+---
+
+## CreateFile
+
+**Syntax**
+
+``` typescript
+/**
+ * Create a file folder for image(s).
+ * @argument filename Specify the file name.
+ */
+CreateFile(filename:string):Boolean;　　
+```
+
+**Example**
+
+```javascript
+//the image you scanned will belong to File1.
+DWObject.CreateFile('File1');
+DWObject.OpenFile('File1'); //Need to call OpenFile after CreateFile.
+DWObject.AcquireImage(successCallback, failureCallback);
+
+function successCallback() {
+    console.log('successful');
+}
+
+function failureCallback(errorCode, errorString) {
+    alert(errorString);
+}
+```
+
+**Usage notes**
+
+This API was added in V17.2.
+
+---
+
+## OpenFile
+
+**Syntax**
+
+``` typescript
+/**
+ * Open the specified file folder.
+ * @argument filename Specify the file name.
+ */
+OpenFile(filename:string):Boolean;   
+```
+
+**Example**
+
+```javascript
+//the image you scanned will belong to File1.
+DWObject.CreateFile('File1');
+DWObject.OpenFile('File1'); //Need to call OpenFile after CreateFile.
+DWObject.AcquireImage(successCallback, failureCallback);
+
+function successCallback() {
+    console.log('successful');
+}
+
+function failureCallback(errorCode, errorString) {
+    alert(errorString);
+}
+```
+
+**Usage notes**
+
+This API was added in V17.2.
+
+---
+
+## GetCurrentFileName
+
+**Syntax**
+
+``` typescript
+/**
+ * Get the current file name. The default value is 'dynamsoft-dvs-file'.
+ */
+GetCurrentFileName():String;    
+```
+
+**Usage notes**
+
+This API was added in V17.2.
+
+---
+
+## RemoveFile
+
+**Syntax**
+
+``` typescript
+/**
+ * Remove the specified file.
+ * @argument filename Specify the file name.
+ */
+RemoveFile(filename:string):Boolean;    
+```
+
+**Usage notes**
+
+This API was added in V17.2.
+
+---
+
+## GetFileInfoList
+
+**Syntax**
+
+``` typescript
+/**
+ * Get the file info list.
+ */
+GetFileInfoList():Json
+
+Json:
+[{
+   name: “fileName”,
+   imageIds:[23122335, 25566822323]
+},
+{……}]
+
+```
+
+**Usage notes**
+
+This API was added in V17.2.
+
+---
