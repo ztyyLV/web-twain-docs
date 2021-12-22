@@ -284,8 +284,9 @@ interface ScanConfiguration{
        element?: HTMLDivElement,  //Bind the elment or elment id. After binding, display the video in the spcified element, otherwise, display the video in full screen.
        scannerViewer?:{
           deviceId?: string,  
-          maxDocuments:int,       //The maximum documents can be captured/loaded in to the buffer. 
-          fullScreen?: boolean,   //Whether to display the video in full screen, the default value is false.
+          maxDocuments: int,       //The maximum documents can be captured/loaded in to the buffer. 
+	  enableBorderDetection?: boolean,  // Whether to enable border detection. The default value is true.
+          fullScreen?: boolean,   //Whether to display the video in full screen. The default value is false.
 
        polygonStyle?:{         //the sytle of the auto detect border        
   	  stroke: "yellow",    //default : "#fe8e14"
@@ -309,7 +310,8 @@ interface ScanConfiguration{
        autoDetect?:{  //Only applicable to video scanning.                  
 	  visibility?: boolean,         //Whether to display the automatic border detection icon. The default value is true.
           enableAutoDetect?: boolean,   //Whether to enable automatic border detection. The default value is false.     
-          acceptedPolygonConfidence:80,  //The default value is 80. The higher the setting, the more accurate the automatic border detection.
+          acceptedPolygonConfidence: number,  //The default value is 80. The higher the setting, the more accurate the automatic border detection.
+	  fpsLimit: number,  //The maximum number of frames detected per second. The default value is 3.
         },
       
         continuousScan?:{   //Only applicable to video scanning.
@@ -379,7 +381,7 @@ interface ScanConfiguration{
       cropViewer?: { 
         visibility?: boolean,   //Whether to display the crop viewer. The default value is true.
       
-        polygonStyle?:{    //The polygon style in the crop viewer.      
+        polygonStyle?:{    //The polygon style in the crop viewer.       
   	  stroke: string,       //default : "#fe8e14"
           strokeWidth: string,     //default: "1px"
           dash: string             //"solid ", "dashed"    default: "solid "
