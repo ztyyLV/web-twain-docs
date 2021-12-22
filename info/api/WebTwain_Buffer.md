@@ -20,7 +20,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page
 |[`GetImageXResolution()`](#getimagexresolution) |[`GetImageYResolution()`](#getimageyresolution) |[`GetSkewAngle()`](#getskewangle) | [`GetSkewAngleEx()`](#getskewangleex)|
 |[`ImageIDToIndex()`](#imageidtoindex) | [`IndexToImageID()`](#indextoimageid)| [`IsBlankImage()`](#isblankimage) | [`IsBlankImageExpress()`](#isblankimageexpress)|  
 |[`SelectAllImages()`](#selectallimages)|[`MoveImage()`](#moveimage) | [`SwitchImage()`](#switchimage)| [`RemoveImage()`](#removeimage) |
-| [`RemoveAllImages()`](#removeallimages)|[`RemoveAllSelectedImages()`](#removeallselectedimages) |[`SelectImages()`](#selectimages)|
+| [`RemoveAllImages()`](#removeallimages)|[`RemoveAllSelectedImages()`](#removeallselectedimages) |[`SelectImages()`](#selectimages)|[`GetTagListByIndex()`](#gettaglistbyindex) |
 
 <!--* [GetImageBitDepthAsync()](#getimagebitdepthasync)-->
 
@@ -881,3 +881,21 @@ RegisterEvent('OnIndexChangeDragDropDone',
 
 Pair: [from: number, to: number];
 ```
+
+---
+
+## GetTagListByIndex
+
+**Syntax**
+
+``` typescript
+/**
+ * Return the tag of a specified image.
+ * @argument index Index of the image.
+ */
+GetTagListByIndex (index: number):string[]
+```
+
+**Usage notes**
+
+This API was added in V17.2.
