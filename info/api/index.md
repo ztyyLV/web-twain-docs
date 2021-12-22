@@ -35,6 +35,8 @@ breadcrumbText: API Reference
 |[`ImageIDToIndex()`]({{site.info}}api/WebTwain_Buffer.html#imageidtoindex) | [`IndexToImageID()`]({{site.info}}api/WebTwain_Buffer.html#indextoimageid)| [`IsBlankImage()`]({{site.info}}api/WebTwain_Buffer.html#isblankimage) | [`IsBlankImageExpress()`]({{site.info}}api/WebTwain_Buffer.html#isblankimageexpress)|  
 |[`SelectAllImages()`]({{site.info}}api/WebTwain_Buffer.html#selectallimages)|[`MoveImage()`]({{site.info}}api/WebTwain_Buffer.html#moveimage) | [`SwitchImage()`]({{site.info}}api/WebTwain_Buffer.html#switchimage)| [`RemoveImage()`]({{site.info}}api/WebTwain_Buffer.html#removeimage) |
 | [`RemoveAllImages()`]({{site.info}}api/WebTwain_Buffer.html#removeallimages)|[`RemoveAllSelectedImages()`]({{site.info}}api/WebTwain_Buffer.html#removeallselectedimages) |[`SelectImages()`]({{site.info}}api/WebTwain_Buffer.html#selectimages)|[`GetTagListByIndex()`]({{site.info}}api/WebTwain_Buffer.html#gettaglistbyindex) |
+| [`CreateFile()`]({{site.info}}api/WebTwain_Buffer.html#createfile)|[`OpenFile()`]({{site.info}}api/WebTwain_Buffer.html#openfile)|[`GetCurrentFileName()`]({{site.info}}api/WebTwain_Buffer.html#getcurrentfileName)|[`RemoveFile()`]({{site.info}}api/WebTwain_Buffer.html#removefile)|
+| [`GetFileInfoList()`]({{site.info}}api/WebTwain_Buffer.html#getfileinfolist)|
 
 <!--
 * [`ClearImageTags()`]({{site.info}}api/WebTwain_Buffer.html#clearimagetags) 
