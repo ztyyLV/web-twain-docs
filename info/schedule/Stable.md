@@ -22,7 +22,7 @@ Dynamsoft.DWT.UpdateCert(url, optionalAsyncSuccessFunc, optionalAsyncFailureFunc
 
 ### New Features
 
-* Added method `GetTagListByIndex()` to return tag information for a specific image.
+* Added method `GetTagListByIndex()` to return the tag of a specified image.
 * Added method `GetCurrentFileName()` to get the current file name.
 * Added method `CreateFile()` to create a file.
 * Added method `RemoveFile()` to remove a file. 
