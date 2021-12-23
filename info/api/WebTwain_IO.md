@@ -1785,7 +1785,7 @@ DWObject.ShowFileDialog(false, "BMP,TIF,JPG,PNG,PDF|*.bmp;*.tif;*.png;*.jpg;*.pd
 /**
  * Export all image data in the buffer to a new browser window and use the browser's built-in print feature to print the image(s).
  * @param useOSPrintWindow Whether to use the print feature of the operating system instead.
- * @Note the parameter only works in Service mode.
+ * @Note the parameter only works in Windows Service mode.
  */
 Print(useOSPrintWindow ? : boolean): boolean;
 ```
