@@ -33,7 +33,7 @@ function btnScan_onclick() {
   DWObject.SelectSource();
   DWObject.CloseSource(); //close source before open
   DWObject.OpenSource();
-  DWObject.IfDisableSourceAfterAcquire = true; //close the scanner ui after acquiring
+  DWObject.IfDisableSourceAfterAcquire = true; //close the scanner UI after acquiring
   DWObject.AcquireImage();
 }
 ```
