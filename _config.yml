@@ -1,6 +1,6 @@
-repositoryUrl: https://github.com/Dynamsoft/web-twain-docs/blob/master
+repositoryUrl: https://github.com/dynamsoft-docs/web-twain-docs/blob/master
 firstLevelUrl: /web-twain/docs
-repository: Dynamsoft/web-twain-docs
+repository: dynamsoft-docs/web-twain-docs
 docFullPath: https://www.dynamsoft.com/web-twain/docs
 productUrl: https://www.dynamsoft.com/Products/WebTWAIN_Overview.aspx
 productName: Dynamic Web TWAIN
@@ -16,6 +16,7 @@ about: /web-twain/docs/about/
 getstarted: /web-twain/docs/getstarted/
 indepth: /web-twain/docs/indepth/
 info: /web-twain/docs/info/
+faq: /web-twain/docs/faq/
 
 dynamsoft_logo: /web-twain/docs/assets/img-icon/dynamsoft-logo.png
 dbr_logo: /web-twain/docs/assets/img-icon/dbr-logo.png
@@ -29,3 +30,8 @@ dnt_icon: /web-twain/docs/assets/img-icon/icon-dnt.svg
 baseurl: /web-twain/docs/
 
 theme: jekyll-theme-cayman
+
+plugins:
+  - jemoji
+
+url: "https://www.dynamsoft.com" # sitemap root

@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Troubleshooting How to use TWACKER to check if your device is TWAIN Compliant
+title: How to use TWACKER to check if your device is TWAIN Compliant
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: How to use TWACKER to check if your device is TWAIN Compliant
-description: Dynamic Web TWAIN SDK Documentation FAQs How to use TWACKER to check if your device is TWAIN Compliant
+description: How to use TWACKER to check if your device is TWAIN Compliant
 ---
 
 # Troubleshooting
@@ -31,7 +31,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQs How to use TWACKER to chec
 
 > If your device is not listed, please check if the driver is installed. Or, try running `Twacker` as admin to see if it shows up.
 
-- Choose the settings and try scanning
+- Choose the settings and click the Acquire to start scanning
 
 ![Hardware-Scanners-Cameras-8]({{site.assets}}imgs/Hardware-Scanners-Cameras-8.png)
 

@@ -2,17 +2,17 @@
 layout: default-layout
 needAutoGenerateSidebar: true
 noTitleIndex: true
-title: Dynamic Web TWAIN API Reference - IO APIs
+title: Dynamic Web TWAIN API Reference - Input and Output APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, IO APIs
 breadcrumbText: IO
-description: Dynamic Web TWAIN SDK Documentation API Reference IO APIs Page
+description: Dynamic Web TWAIN SDK Documentation | API Reference | IO APIs Page
 ---
 
 # WebTwain IO
 
-Input
+## Methods
 
-**Methods**
+### Input Methods
 
 | |
 |:-|:-|
@@ -20,9 +20,7 @@ Input
 |[`LoadDibFromClipboard()`](#loaddibfromclipboard)| [`FTPDownload()`](#ftpdownload)| [`FTPDownloadEx()`](#ftpdownloadex)| [`HTTPDownload()`](#httpdownload)|
 | [`HTTPDownloadEx()`](#httpdownloadex)|[`HTTPDownloadThroughPost()`](#httpdownloadthroughpost)|[`HTTPDownloadDirectly()`](#httpdownloaddirectly)|
 
-Output
-
-**Methods**
+### Output Methods
 
 | |
 |:-|:-|
@@ -36,10 +34,7 @@ Output
 |[`SaveAsTIFF()`]({{site.info}}api/WebTwain_IO.html#saveastiff)| [`SaveSelectedImagesAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagepdf)|[`SaveSelectedImagesAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagetiff)|
 | [`SaveAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveallasmultipagetiff)|[`SaveAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveallaspdf)|
 
-
-Others
-
-**Methods**
+### Other Methods
 
 | |
 |:-|:-|
@@ -47,7 +42,7 @@ Others
 | [`SetHTTPHeader()`](#sethttpheader)| [`SetUploadSegment()`](#setuploadsegment)|[`ShowFileDialog()`](#showfiledialog) | [`Print()`](#print)|
 |[`PrintEx()`](#printex)|
 
-**Properties**
+## Properties
 
 | |
 |:-|:-|
@@ -56,7 +51,7 @@ Others
 |[`IfShowFileDialog`](#ifshowfiledialog) |[`IfShowCancelDialogWhenImageTransfer`](#ifshowcanceldialogwhenimagetransfer)| [`IfShowProgressBar`](#ifshowprogressbar)  | [`JPEGQuality`](#jpegquality)|
 |[`IfTiffMultiPage`](#iftiffmultipage) | [`TIFFCompressionType`](#tiffcompressiontype)| [`MaxUploadImageSize`](#maxuploadimagesize)|[`IfAppendImage`](#ifappendimage)|
 
-**Events**
+## Events
 
 | |
 |:-|:-|
@@ -344,6 +339,14 @@ RegisterEvent('OnPostLoad',
         fileName: string,
         fileType: string) {}
 );
+```
+
+**Example**
+
+``` javascript
+DWObject.RegisterEvent('OnPostLoad', function(path, name, type) {
+    alert(path + '\\' + name);
+});
 ```
 
 ---
@@ -968,7 +971,7 @@ HTTPUploadAllThroughPostAsMultiPageTIFF(
 /**
  * Upload all images in the buffer as a PDF file via a HTTP Post request.
  * @param host The HTTP Host.
- * @param target The target wherethe request is sent.
+ * @param target The target where the request is sent.
  * @param fileName The file name.
  * @param onEmptyResponse A callback function that is executed if the response is empty.
  * @param onServerReturnedSomething A callback function that is executed if the response is not empty.
@@ -1395,6 +1398,10 @@ SaveAsPDF(
 
 ---
 
+**Usage notes**
+
+Learn about [how to config PDF save settings](./Addon_PDF.md#writesetup).
+
 ## SaveAsPNG
 
 **Syntax**
@@ -1485,6 +1492,10 @@ SaveAllAsPDF(
 ): void | boolean;
 ```
 
+**Usage notes**
+
+Learn about [how to config PDF save settings](./Addon_PDF.md#write-setup).
+
 ---
 
 ## SaveSelectedImagesAsMultiPagePDF
@@ -1506,6 +1517,11 @@ SaveSelectedImagesAsMultiPagePDF(
     failureCallback ? : (errorCode: number, errorString: string) => void
 ): void | boolean;
 ```
+
+**Usage notes**
+
+Learn about [how to config PDF save settings](./Addon_PDF.md#write-setup).
+
 ---
 
 ## SaveSelectedImagesAsMultiPageTIFF
@@ -1635,8 +1651,8 @@ SetHTTPFormField(
 ``` javascript
 /**
  * Add a custom header to the HTTP Post Form.
- * @param name The name of the field.
- * @param value The value of the field.
+ * @param name The name of the header.
+ * @param value The value of the header.
  */
 SetHTTPHeader(
     name: string,
@@ -1769,7 +1785,7 @@ DWObject.ShowFileDialog(false, "BMP,TIF,JPG,PNG,PDF|*.bmp;*.tif;*.png;*.jpg;*.pd
 /**
  * Export all image data in the buffer to a new browser window and use the browser's built-in print feature to print the image(s).
  * @param useOSPrintWindow Whether to use the print feature of the operating system instead.
- * @Note the parameter only works in Service mode.
+ * @Note the parameter only works in Windows Service mode.
  */
 Print(useOSPrintWindow ? : boolean): boolean;
 ```
@@ -1817,9 +1833,9 @@ IfTiffMultiPage: boolean;
 
 **Usage notes**
 
-When you save a new image in the same name of an existing TIFF file
-If this property is true, the new image will be added to the existing file
-If this property is false, the new image will replace the existing file
+When you save a new image in the same name of an existing TIFF file  
+If this property is true, the new image will be added to the existing file  
+If this property is false, the new image will replace the existing file  
 
 ---
 
@@ -1833,3 +1849,17 @@ If this property is false, the new image will replace the existing file
  */
 TIFFCompressionType: Dynamsoft.DWT.EnumDWT_TIFFCompressionType | number;
 ```
+
+**Usage notes**
+
+When set to TIFF_AUTO (0), 1-bit images will be compressed in TIFF_T6 (4) while images with other bit depth will be compressed in TIFF_LZW (5).
+
+When set to TIFF_JPEG (7), 1-bit images will be compressed in TIFF_T6 (4), color images or grey images (8-bit or higher) in TIFF_JPEG (7) standard, and other images by TIFF_LZW (5).
+
+TIFF_T4 (3) and TIFF_FAX3 (3) are two names for the same compression type. So are TIFF_T6 (4) and TIFF_FAX4 (4).
+
+TIFF_RLE (2), TIFF_T4 (3), TIFF_FAX3 (3) and TIFF_PACKBITS (32773) only support compression of 1-bit images. TIFF_JPEG (7) supports compression of 8-bit above color images and 8-bit grey images.
+
+When TIFF_JPEG (7) is used, you can use JPEGQuality to further reduce the size of the TIFF file.
+
+

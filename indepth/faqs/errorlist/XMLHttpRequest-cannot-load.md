@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs ErrorList XMLHttpRequest cannot load XXX
+title: XMLHttpRequest cannot load XXX
 keywords: Dynamic Web TWAIN, Documentation, ErrorList
 breadcrumbText: XMLHttpRequest cannot load XXX
-description: Dynamic Web TWAIN SDK Documentation XMLHttpRequest cannot load XXX
+description: XMLHttpRequest cannot load XXX
 ---
 
 # ErrorList

@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How To Specify The Images To Upload
+title: How To Specify The Images To Upload
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How To Specify The Images To Upload
-description: Dynamic Web TWAIN SDK Documentation FAQs How To Specify The Images To Upload
+description: How To Specify The Images To Upload
 ---
 
-# Develop
+# Development
 
 ## How to specify the images to upload? 
 

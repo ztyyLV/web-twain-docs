@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How can I customize a resulting TIFF file
+title: How can I customize a resulting TIFF file
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How can I customize a resulting TIFF file
-description: Dynamic Web TWAIN SDK Documentation FAQs How can I customize a resulting TIFF file
+description: How can I customize a resulting TIFF file
 ---
 
-# Develop
+# Development
 
 ## How can I customize a resulting TIFF file
 

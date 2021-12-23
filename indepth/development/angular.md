@@ -95,7 +95,7 @@ ngOnInit(): void {
 Use the method [ `Dynamsoft.DWT.GetWebTwain()` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#getwebtwain) to get a handler of the created `WebTwain` instance.
 
 ``` typescript
-import { WebTwain } from 'dwt/WebTwain';
+import { WebTwain } from 'dwt/dist/types/WebTwain';
 ```
 
 ``` typescript

@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How To Customize The Dynamsoft Service Installer
+title: How To Customize The Dynamsoft Service Installer
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How To Customize The Dynamsoft Service Installer
-description: Dynamic Web TWAIN SDK Documentation FAQs How To Customize The Dynamsoft Service Installer
+description: How To Customize The Dynamsoft Service Installer
 ---
 
-# Develop
+# Development
 
 ## How to customize the Dynamsoft Service installer? 
 

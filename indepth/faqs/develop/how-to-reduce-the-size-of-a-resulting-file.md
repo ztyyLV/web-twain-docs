@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How to reduce the size of a resulting file
+title: How to reduce the size of a resulting file
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How to reduce the size of a resulting file
-description: Dynamic Web TWAIN SDK Documentation FAQs How to reduce the size of a resulting file
+description: How to reduce the size of a resulting file
 ---
 
-# Develop
+# Development
 
 ## How to reduce the size of a resulting file
 

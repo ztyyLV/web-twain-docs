@@ -205,7 +205,7 @@ SetOutputFormat(format: Dynamsoft.DWT.EnumDWT_OCROutputFormat | number): boolean
 ---
 
 ## SetPageSetMode
- 
+
 **Syntax**
 
 ``` typescript
@@ -335,7 +335,6 @@ RecognizeRect(
 ``` typescript
 /**
  * Perform OCR on the selected images in the buffer.
- * @param index Specify the image.
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
  * @argument result The OCR result.

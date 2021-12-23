@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How to improve the OCR accuracy
+title: How to improve the OCR accuracy
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How to improve the OCR accuracy
-description: Dynamic Web TWAIN SDK Documentation FAQs How to improve the OCR accuracy
+description: How to improve the OCR accuracy
 ---
 
-# Develop
+# Development
 
 ## How to improve the OCR accuracy
 

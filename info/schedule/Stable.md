@@ -9,12 +9,69 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 ---
 
 # Stable Releases
+<!--
+## 17.2
+
+DWObjecy.Viewer.bind(document.getElementById("divCustomElement"),:DocumentScannerTemplate) - 新增用法
+
+
+在install.js中增加一个接口： 
+Dynamsoft.OnSSLCertInfo(certExpiredDate); //为Date 类对象, 表示证书过期的时间
+Dynamsoft.DWT.UpdateCert(url, optionalAsyncSuccessFunc, optionalAsyncFailureFunc); //下载证书
+
+
+### New Features
+
+* Added method `GetTagListByIndex()` to return the tag of a specified image.
+* Added method `GetCurrentFileName()` to get the current file name.
+* Added method `CreateFile()` to create a file.
+* Added method `RemoveFile()` to remove a file. 
+* Added method `OpenFile()` to open a file.
+* Added method `GetFileInfoList()` to get file information.
+* Added method `scanDocument` to capture document(s).
+* Added method `createTemplate` to crearte document scanner template. 
+* Added method `showCheckbox` to show checkbox on image(s). 
+* Added method `ChangeBrightnessAsync` to change the image brightness. 
+* Added method `ChangeContrastAsnyc` to change the image contrast. 
+* Added method `UpdateCert` to update and download certificate. 
+
+### Improved Features 
+
+* Updated Barcode Reader library to version 8.6. Check out release notes for <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/release-notes/js-8.html?ver=latest#860-08312021" target="_blank">Barcode Reader JavaScript SDK - 8.6</a>
+* RENDERALL convert mode in <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Addon_PDF.html?ver=latest#setconvertmode" target="_blank">SetConvertMode</a> now supports loading images with annotations.
+* Modified DynamicImage.dll(DynamicImagex64.dll) to improve the encoding and decoding mode of tiff.
+* Updated the order of Capability setting according to the order defined in the TWAIN document.
+* Improved the document capture in WASM mode. 
+
+### Bug Fixes
+
+* Fixed a bug where the thumbnail viewer did not render correctly after "FilterImageByTag".
+* Fixed a bug where the image displayed in the thumbnail may be inconsistent with the canvas when switching tags through `FilterImageByTag` in the thumbnail viewer.
+* [ChromeOS]Fixed a bug where save function reported 'user canceled the operation' error in service mode.
+* Fixed a bug where multiple `Unload` and `Load` operations would cause WebTwainService to disconnect.
+
+-->
+
+## 17.1.1 (08/19/2021)
+
+### Improved Features 
+
+* Updated DSSCN2.exe and DSSCN2x64.exe to optimize scanner compatibility.
+* Improved the performance for the Dynamsoft Service connection.
+* Improved <a href="{{site.info}}api/WebTwain_IO.html#loaddibfromclipboard" target="_blank">LoadDibFromClipboard</a> to make it more stable.
+
+### Bug Fixes
+
+* Fixed a bug where operating system incorrectly judged when using Dynamic Web TWAIN with Electron.
+* Fixed a bug that drag and drop does not work when loading multiple files.
 
 ## 17.1 (06/15/2021)
 
 ### New Features 
 
-*	Added property [`organizationID`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#organizationid) which can be used to fetch license(s) belonging to the specified organization from the License Tracking Server. With this property, the licensing of the library is smoother from trial to full and it is much easier to manage a license change without code updates.
+* Added support for ChromeOS. See more <a href="https://www.dynamsoft.com/codepool/chrome-os-web-document-scanning.html" target="_blank">here</a>
+
+*	Added property <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#organizationid" target="_blank">organizationID</a> which can be used to fetch license(s) belonging to the specified organization from the License Tracking Server. With this property, the licensing of the library is smoother from trial to full and it is much easier to manage a license change without code updates.
 
 ### Improved Features 
 
@@ -382,7 +439,7 @@ No changes in version 16.1.
 
 ### Improved
 
-* [HTML5] Further improved security by deleting the methods `FTPUploadDirectly()` ,      `FTPDownloadDirectly()` ,      `FileExist()` and changing the methods `HTTPUploadThroughPostDirectly()` ,      `HTTPDownloadDirectly()` to only work on whitelisted images/files (check NOTE below).
+* [HTML5] changing the methods `HTTPUploadThroughPostDirectly()`, `HTTPDownloadDirectly()` to only work on whitelisted images/files (check NOTE below).
 * [HTML5] Changing the default SSL certificates is now officially supported.
 * [HTML5] Changed the property `LogLevel` so that when it's set to `1\0` , it's equivalent to setting `LogLevel` to `14\1` in the file `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\DSConfiguration.ini`
 * [HTML5] Local caching is made smoother by introducing a new process to do the caching when the threshold is reached. As a result, it is significantly faster when loading a great many files.
@@ -393,6 +450,10 @@ No changes in version 16.1.
 >
 > Dynamsoft Service keeps a whitelist of all images in buffer as well as images saved by the Service. The whitelist lives on until the current service process is destroyed.
 > Each Dynamic Web TWAIN object keeps a whitelist of file paths that are retrieved in the callback `OnGetFilePath` for the method `ShowFileDialog()` .
+
+### Deprecated
+
+[HTML5] Further improved security by deleting the methods `FTPUploadDirectly()` , `FTPDownloadDirectly()` , `FileExists()`. 
 
 ### Fixed
 

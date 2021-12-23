@@ -17,12 +17,6 @@ Popular frameworks and frequently asked development questions are covered in the
 
 * [Use DWT in Vue]({{site.indepth}}development/vue.html)
 
-<!--
-
-* [Use DWT in MVC ]({{site.indepth}}development/mvc.html)
-
--->
-
 * [Server-side scripts]({{site.indepth}}development/Server-script.html)
 
 * [About Professional Service]({{site.indepth}}development/Pro-service.html)
@@ -31,4 +25,4 @@ Popular frameworks and frequently asked development questions are covered in the
 
 * [About ActiveX]({{site.indepth}}development/activex.html)
 
-* [Other development topics]({{site.indepth}}development/topics.html)
+* [Support for 64-bit ARM & MIPS64]({{site.indepth}}development/armmips.html)

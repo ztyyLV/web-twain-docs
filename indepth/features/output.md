@@ -59,18 +59,52 @@ function getExtension(type) {
         case 1:
             return ".jpg";
         case 2:
-        case 8:
-            return ".tif";
+         return ".tif";
         case 3:
             return ".png";
         case 4:
-        case 7:
             return ".pdf";
+        case 7:
+        case 8:
         default:
             return ".unknown";
     }
 }
 ```
+
+#### Questions
+
+##### Q: How is the upload done
+
+**A**: `DWT` does the uploading in a few steps
+
+* Grab the image(s) specified by `indices` ; 
+* Encode the image(s) in the specified type which results in a binary file; 
+* [Optional] Convert the file into a base64 string; 
+* Create an HTTP Form and perform an asynchronous HTTP (Ajax) request to send the form to the specified `url` ; 
+* Wait for the confirmation from the server.
+
+The server-side script specified by `url` is very important, check out [Server-side Scripting]({{site.indepth}}development/Server-script.html) for more information.
+
+##### Q: Is SSL supported
+
+**A**: Yes, as shown in the following line, you just need to make sure the correct protocol is used
+
+``` javascript
+var protocol = Dynamsoft.Lib.detect.ssl ? "https://" : "http://"
+```
+
+##### Q: What file types are supported
+
+**A**: As shown in the above function `getExtension()` , `DWT` supports `BMP` , `JPG` , `TIF` , `PNG` and `PDF` .
+
+##### Q: Can I upload multiple images as one file
+
+**A**: Yes, the file types `TIF` and `PDF` support multi-page. Make sure you use these two types when trying to upload multiple images as one file.
+
+##### Q: Can I upload the file as a base64 string
+
+**A**: Yes, the 4th parameter of the method `HTTPUpload()` is `dataFormat` and it has two allowed values which are `Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary` and `Dynamsoft.DWT.EnumDWT_UploadDataFormat.Base64` . The code snippet uses the former but you can feel free to use the latter to upload the file as a base64 string.
 
 ### HTTP with the File Uploader
 
@@ -81,9 +115,9 @@ The File Uploader is an independent component that is dedicated to file uploadin
 1. `DWT` will prepare the file to upload with the method [ `GenerateURLForUploadData()` ]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)
 * Create a File Uploader instance with the method [ `Init()` ]({{site.info}}api/Dynamsoft_FileUploader.html#init)
 * Create an upload job with [ `CreateJob()` ]({{site.info}}api/Dynamsoft_FileUploader.html#createjob)
-  + Define the target URL ( `ServerUrl` )
-  + Define the upload content ( `SourceValue` )
-  + [Optional] Define callback functions ( `OnUploadTransferPercentage` , `OnRunSuccess` , `OnRunFailure` )
+  + Define the target URL [ `ServerUrl` ]({{site.info}}api/Dynamsoft_FileUploader.html#serverurl)
+  + Define the upload content [ `SourceValue` ]({{site.info}}api/Dynamsoft_FileUploader.html#sourcevalue) 
+  + [Optional] Define callback functions [ `OnUploadTransferPercentage` ]({{site.info}}api/Dynamsoft_FileUploader.html#onuploadtransferpercentage) ,  [ `OnRunSuccess` ]({{site.info}}api/Dynamsoft_FileUploader.html#onrunsuccess),  [ `OnRunFailure` ]({{site.info}}api/Dynamsoft_FileUploader.html#onrunfailure)
 * Run the job
 * Wait for the confirmation from the server
 
@@ -302,7 +336,7 @@ DWObject.SaveAllAsPDF("D:\\Sample.pdf",
 );
 ```
 
-### Save multiple files to the same loation
+### Save multiple files to the same location
 
 If you want the user to choose a file path once and then save multiple images to that location, you can do so via the [ `OnGetFilePath` ]({{site.info}}api/WebTwain_IO.html#ongetfilepath) event.
 

@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Troubleshooting How to read log
+title: How to read log
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: How to read log
-description: Dynamic Web TWAIN SDK Documentation FAQs How to read log
+description: How to read log
 ---
 
 # Troubleshooting
@@ -18,8 +18,9 @@ description: Dynamic Web TWAIN SDK Documentation FAQs How to read log
 
 - dss.log --> For Dynamsoft Service
 - nw.log --> Details about the network traffic
-- wts.log --> For the client part of Dynamic Web TWAIN HTML5 edition
-- wtss.log --> For the server part of Dynamic Web TWAIN HTML5 edition
+- wts.log --> For TWAIN module
+- wtss.log --> For scan process
+- dsUpload.log --> For File Uploader module
 
 ### Q: What info do we see if Dynamic Web TWAIN SDK is not doing anything?
 

@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop Can I Upload A Big File In Segments
+title: Can I Upload A Big File In Segments
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Can I Upload A Big File In Segments
-description: Dynamic Web TWAIN SDK Documentation FAQs Can I Upload A Big File In Segments
+description: Can I Upload A Big File In Segments
 ---
 
-# Develop
+# Development
 
 ## Can I upload a big file in segments? 
 

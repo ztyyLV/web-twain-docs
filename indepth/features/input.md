@@ -11,7 +11,7 @@ description: Dynamic Web TWAIN SDK Documentation Input Page
 
 This section introduces different ways to get data into the `DWT` buffer.
 
-## Scan
+## Scanners
 
 ### Scan From a Local Scanner
 
@@ -30,7 +30,7 @@ A remote scanner refers to a scanner that is..
 * Not connected to the initiating device
 * Connected and accessible on a `Windows` desktop on LAN (USB or network) where `DWT` must be installed
 
-For more information, check out [how to enable remote scan](#how-to-enable-remote-scan).
+For more information, check out [how to enable remote scan]({{site.indepth}}faqs/develop/how-to-enable-remote-scan.html).
 
 <!--
 
@@ -76,54 +76,7 @@ For more information, check [How to use a TWAIN-Direct scanner](#how-to-use-a-tw
   });
 ```
 
-#### Q: How do you use Capability Negotiation?
-
-> This feature is only available for [TWAIN scanners]({{site.getstarted}}hardware.html#twain-scanners)
-
-**A**: Capability Negotiation is the way a TWAIN application communicates with a TWAIN source. This is how `DWT` communicates with a scanner. The process looks something like this:
-
-* [DWT] Are you capable of ***?
-* [Scanner] Yes, and here is what I can do...
-* [DWT] Great, here is what I want done...
-* [Scanner] Consider it done
-
-`DWT` provides two methods, `getCapabilities()` and `setCapabilities()`, for negotiation. The following shows how to ask for supported page sizes and set it to A4 using Capability Negotiation.
-
-##### Ask for supported sizes
-
-``` javascript
-DWObject.getCapabilities(function(result) {
-    for (var i = 0; i < result.length; i++) {
-        if (result[i].capability.value === Dynamsoft.DWT.EnumDWT_Cap.ICAP_SUPPORTEDSIZES)
-            sizes = result[i].values;
-    }
-    console.log(sizes);
-}, function(error) {
-    console.log(error);
-});
-```
-
-##### Set page size to A4
-
-``` javascript
-DWObject.setCapabilities({
-        exception: "ignore",
-        capabilities: [{
-            capability: Dynamsoft.DWT.EnumDWT_Cap.ICAP_SUPPORTEDSIZES,
-            curValue: 1, // 1 means 'A4' in our case
-            exception: "fail"
-        }]
-    },
-    function(result) {
-        console.log(result)
-    },
-    function(error) {
-        console.log(error);
-    }
-);
-```
-
-## Capture
+## Capture from cameras
 
 ### Use [DirectShow Cameras]({{site.getstarted}}hardware.html#directshow-cameras)
 
@@ -198,7 +151,7 @@ function CaptureImage() {
 }
 ```
 
-## Load
+## Load files
 
 Load in this context means to open files which are accessible on the file system. These files can reside on the local disk or shared on the network.
 

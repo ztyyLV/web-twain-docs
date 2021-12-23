@@ -2,17 +2,17 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop Can I Upload Multiple Images As Separate Files In One Go
+title: Can I Upload Multiple Images As Separate Files In One Go
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Can I Upload Multiple Images As Separate Files In One Go
-description: Dynamic Web TWAIN SDK Documentation FAQs Can I Upload Multiple Images As Separate Files In One Go
+description: Can I Upload Multiple Images As Separate Files In One Go
 ---
 
-# Develop
+# Development
 
 ## Can I upload multiple images as separate files in one go?
 
-By design, the method `HTTPUpload()` only contains one file. But as it essentially sends an HTTP form to the server, you can attach multiple files in that form using the methods [ `ConvertToBlob()` ]({{site.info}}api/WebTwain_IO.html#converttoblob) and [ `SetHTTPFormField()` ]({{site.info}}api/WebTwain_IO.html#sethttpformfield).
+By design, the method [`HTTPUpload()`]({{site.info}}api/WebTwain_IO.html#httpupload) only contains one file. But as it essentially sends an HTTP form to the server, you can attach multiple files in that form using the methods [ `ConvertToBlob()` ]({{site.info}}api/WebTwain_IO.html#converttoblob) and [ `SetHTTPFormField()` ]({{site.info}}api/WebTwain_IO.html#sethttpformfield).
 
 Check out the following snippet on how it is done. NOTE that the method `HTTPUpload()` only has 3 parameters as it doesn't need to specify a file anymore.
 

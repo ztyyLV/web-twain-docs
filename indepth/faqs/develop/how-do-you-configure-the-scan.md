@@ -2,17 +2,17 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How Do You Configure The Scan
+title: How Do You Configure The Scan
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How Do You Configure The Scan
-description: Dynamic Web TWAIN SDK Documentation FAQs How Do You Configure The Scan
+description: How Do You Configure The Scan
 ---
 
-# Develop
+# Development
 
 ## How do you configure the scan? 
 
-: `DWT` provides two ways to set up a scan operation.
+`Dynamic Web TWAIN` provides two ways to set up a scan operation.
 
 * Change one setting at a time. Below are a few APIs, for example
   + [PageSize]({{site.info}}api/WebTwain_Acquire.html#pagesize) 

@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs ErrorList General failure
+title: General failure
 keywords: Dynamic Web TWAIN, Documentation, ErrorList
 breadcrumbText: General failure
-description: Dynamic Web TWAIN SDK Documentation General failure
+description: General failure
 ---
 
 # ErrorList
@@ -22,11 +22,12 @@ The problem occurs when the source (scanner) is _not_ disabled completely after 
 
 - Resolution
 
-You can set [IfDisableSourceAfterAcquire]({{site.info}}api/WebTwain_Acquire.html#ifdisablesourceafteracquire) to `true` . It must be set before the call to [SelectSource]({{site.info}}api/WebTwain_Acquire.html#selectsource)
+You can call <a href="{{site.info}}api/WebTwain_Acquire.html#closesource" target="_blank">CloseSource</a> & <a href="{{site.info}}api/WebTwain_Acquire.html#closesourcemanager" target="_blank">CloseSourceManager</a> to close the source before <a href="{{site.info}}api/WebTwain_Acquire.html#selectsource" target="_blank">SelectSource</a>.
 
 ```javascript
 function AcquireImage() {
-  DWObject.IfDisableSourceAfterAcquire = true;
+  DWObject.CloseSource();
+  DWObject.CloseSourceManager();
   DWObject.SelectSource();
   DWObject.OpenSource();
   DWObject.AcquireImage();

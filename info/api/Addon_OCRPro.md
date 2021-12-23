@@ -166,7 +166,6 @@ RecognizeRect(
 ``` typescript
 /**
  * Perform OCR on the selected images in the buffer.
- * @param index Specify the image.
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
  * @argument result The OCR result.
@@ -407,7 +406,7 @@ The following demonstrates the structures of the OCR Request and the Response.
 |:-|:-|
 | **productKey** | The product key which is generated from an OCR license. |
 | **inputFile**	| Specify the files to be OCR'd. This is an array of strings which are absolute paths of the files. The supported formats are BMP, JPG, TIF, PDF, PNG, JBIG2, JPEG2000, PCX, etc. Please note the use of '\\\\' instead of just '\\'. |
-| **outputFile** | Specify where the output file is saved. If the input includes more than one file, all of them will be merged into one file. Otherwise, the result will only be returned in the [`OCRPro.ServerSide.Response`](#ocrproserversideresponse). |
+| **outputFile** | Specify where the output file is saved. If the input includes more than one file, all of them will be merged into one file. Otherwise, the result will only be returned in the [`OCRPro.ServerSide.Response`](#ocrpro-serverside-request). |
 | **zones** | Specify which zones are to be OCR'd on an image. There can be multiple zones but it works only when the `recognitionMethod` is `Page` . The coordinates are in the sequence of `[[left, top, right, bottom]]` .|
 | **settings** | Configure the OCR. |
 | **.recognitionModule** | Specify which module is to be used for this OCR. Allowed values are: `mostaccurate` , `fastest` , `balanced` and `auto` . `auto` is the default value which means the library will choose one of the 3 modules automatically. |
@@ -469,13 +468,13 @@ The following demonstrates the structures of the OCR Request and the Response.
 
 |API	|Description	|
 |:-|:-|
-|**inputFile**	|Check out [OCRPro. ServerSide. Request`](#ocrproserversiderequest) for more info.|
-|**settings**		|Check out [OCRPro. ServerSide. Request`](#ocrproserversiderequest) for more info.|
-|**outputFile**	|Check out [OCRPro. ServerSide. Request`](#ocrproserversiderequest) for more info.|
+|**inputFile**	|Check out [OCRPro. ServerSide. Request`](#ocrpro-serverside-request) for more info.|
+|**settings**		|Check out [OCRPro. ServerSide. Request`](#ocrpro-serverside-request) for more info.|
+|**outputFile**	|Check out [OCRPro. ServerSide. Request`](#ocrpro-serverside-request) for more info.|
 |**ocrTotalCount**|Return  the number of pages allowed to be OCR'd by the current license.|
 |**alreadyOCRCount**		|Return the number of pages already OCR'd.|
 |**code**		|Return the error code for the OCR. If it's not `0` , check `errorList` for more details.|
 |**message**		|Return the overall error message.|
 |**errorList**|Return the detailed error messages for each of the OCR'd files.|
-|**resultFile**|Return the result file encoded as a base64 string. It only works when [OCRPro. ServerSide. Request`](#ocrproserversiderequest) doesn't specify an output file path.|
+|**resultFile**|Return the result file encoded as a base64 string. It only works when [OCRPro. ServerSide. Request`](#ocrpro-serverside-request) doesn't specify an output file path.|
 |**resultDetail**|Return detailed OCR result down to each found letter in JSON format. This is only valid when the `recognitionMethod` is set to `Page` .|

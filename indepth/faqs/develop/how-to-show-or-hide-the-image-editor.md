@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop how to show or hide the Image Editor
+title: How to show or hide the Image Editor
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: how to show or hide the Image Editor
-description: Dynamic Web TWAIN SDK Documentation FAQs how to show or hide the Image Editor
+description: How to show or hide the Image Editor
 ---
 
-# Develop
+# Development
 
 ## how to show or hide the Image Editor
 

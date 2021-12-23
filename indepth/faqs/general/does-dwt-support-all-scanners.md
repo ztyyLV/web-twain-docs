@@ -2,14 +2,14 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs General Does DWT Support All Scanners
+title: Does Dynamic Web TWAIN support all scanners? 
 keywords: Dynamic Web TWAIN, Documentation, General
 breadcrumbText: Does DWT Support All Scanners
-description: Dynamic Web TWAIN SDK Documentation FAQs Does DWT Support All Scanners
+description: Does Dynamic Web TWAIN support all scanners? 
 ---
 
 # General
 
-## Does DWT support all scanners? 
+## Does Dynamic Web TWAIN support all scanners? 
 
-Not all scanners follow the standard protocols, therefore not all scanners are supported. A known example is the ScanSnap series. Check out more [here](https://scansnapcommunity.net/why-doesnt-scansnap-have-twain-drivers/).
+Not all scanners follow the standard protocols (Windows-TWAIN, macOS-ICA, Linux-SANE), therefore not all scanners are supported. A known example is the ScanSnap series.

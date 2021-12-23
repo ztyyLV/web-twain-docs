@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Troubleshooting How to test if your device is SANE compliant
+title: How to test if your device is SANE compliant
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: How to test if your device is SANE compliant
-description: Dynamic Web TWAIN SDK Documentation FAQs How to test if your device is SANE compliant
+description: How to test if your device is SANE compliant
 ---
 
 # Troubleshooting

@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs ErrorList HTTP process error
+title: HTTP process error
 keywords: Dynamic Web TWAIN, Documentation, ErrorList
 breadcrumbText: HTTP process error
-description: Dynamic Web TWAIN SDK Documentation HTTP process error
+description: HTTP process error
 ---
 
 # ErrorList
@@ -28,19 +28,19 @@ When you upload images using any of the HTTPUploadThroughPost\*\*\* methods, you
   - Make sure the users who are uploading have permission to write images to the specified directory on the web server. (For example, give "Write" permission to the Authenticated Users.)
   - Check the response string returned from the HTTP server to figure out the cause of the process error. You can get this string by using the [HTTPPostResponseString]({{site.info}}api/WebTwain_IO.html#httppostresponsestring) property.
   - Set the port to the correct one using [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport). We recommend you get the Port and Server values this way:
-
-        ``` javascript
+  ``` javascript
         	var strHTTPServer = location.hostname;
         	DWObject.HTTPPort = location.port == "" ? 80 : location.port;
-        ```
-        + If you have set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true, you must set a secure port for the HTTPPort property. For example,
+     ```
+  
+    - If you have set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true, you must set a secure port for the HTTPPort property. For example, 
 
-        ``` javascript
-        DWObject.IfSSL = true;
-        DWObject.HTTPPort = 443;
-        ```
+   ``` javascript
+          DWObject.IfSSL = true;
+          DWObject.HTTPPort = 443;
+   ```
 
-    > For example: If the URL for the scan page is "http://localhost:3253/....", you should set the port to 3253.
+  > For example: If the URL for the scan page is "http://localhost:3253/....", you should set the port to 3253.
 
 - Checking the server-side configuration is also useful in this scenario
 

@@ -52,7 +52,7 @@ function readBarcodes(imageIndex) {
 }
 ```
 
-Note that the barcode reading does take a bit of time, so it'll help to add an indicator as mentioned in [Loading Bar and Backdrop]({{site.indepth}}ui.html#loading-bar-and-backdrop)
+Note that the barcode reading does take a bit of time, so it'll help to add an indicator as mentioned in [Loading Bar and Backdrop]({{site.indepth}}features/ui.html#loading-bar-and-backdrop)
 
 ``` javascript
 function readBarcodes(imageIndex) {
@@ -62,7 +62,7 @@ function readBarcodes(imageIndex) {
         DWObject.Addon.BarcodeReader.decode(imageIndex)
             .then(function(textResults) {
                 // Remove the indicator
-                Dynamsoft.DWT.WebTwainEnv.OnWebTwainPostExecute();
+                Dynamsoft.DWT.OnWebTwainPostExecute();
                 console.log(textResults)
             }, function(error) {
                 // Remove the indicator
@@ -103,7 +103,7 @@ The runtime settings of the add-on gives you access to a wide array of customiza
 
 ### Specify the Barcode Type(s) to Read
 
-By default, the add-on will read all the supported barcode types from the image. (See the `Supported Symbologies` in the [overview page](https://www.dynamsoft.com/Products/Dynamic-Barcode-Reader.aspx) for the full list.)
+By default, the add-on will read all the supported barcode types from the image. (See the `Supported Symbologies` [here](https://www.dynamsoft.com/Products/Barcode-Types.aspx))
 
 If your license only covers a subset of the full list or you want to read specific barcode types, you can use `barcodeFormatIds` and `barcodeFormatIds2` to specify the barcode format(s). For example, to enable only 1D barcode reading, you can use the following code snippet:
 
@@ -117,20 +117,20 @@ DWObject.Addon.BarcodeReader.getRuntimeSettings()
     })
     .then(function(runtimeSettings) {
         // Add an indicator
-        Dynamsoft.DWT.WebTwainEnv.OnWebTwainPreExecute();
+        Dynamsoft.DWT.OnWebTwainPreExecute();
         return DWObject.Addon.BarcodeReader.decode(imageIndex);
     }, function(error) {
         console.log(error);
     })
     .then(function(textResults) {
         // Remove the indicator
-        Dynamsoft.DWT.WebTwainEnv.OnWebTwainPostExecute();
+        Dynamsoft.DWT.OnWebTwainPostExecute();
         for (var i = 0; i < textResults.length; i++) {
             console.log(textResults[i].BarcodeText);
         }
     }, function(error) {
         // Remove the indicator
-        Dynamsoft.DWT.WebTwainEnv.OnWebTwainPostExecute();
+        Dynamsoft.DWT.OnWebTwainPostExecute();
         console.log(error)
     });
 ```
@@ -243,7 +243,7 @@ If you are not sure how to change the `RuntimeSettings` , the add-on also comes 
 * `coverage` : slow but covers most barcodes
 * `balance` : between `speed` and `coverage`
 
-The following shows their differences
+<!-- The following shows their differences
 
 | Parameter | `speed` | `balance` | `coverage` | `default` |
 | :-: | :-: | :-: | :-: | :-: |
@@ -254,6 +254,7 @@ The following shows their differences
 | `textFilterModes` | `[0, 0, 0, 0, 0, 0, 0, 0]` 	 | `[2, 0, 0, 0, 0, 0, 0, 0]` 	 | `[2, 0, 0, 0, 0, 0, 0, 0]` | `[2, 0, 0, 0, 0, 0, 0, 0]` |
 | `localizationModes` | `[2, 32, 64, 0, 0, 0, 0, 0]` 	 | `[2, 4, 32, 64, 0, 0, 0, 0]` 	 | `[2, 16, 4, 8, 32, 64, 0, 0]` | `[2, 16, 4, 8, 0, 0, 0, 0]` |
 | `scaleDownThreshold` | `2300` 	| `2300` 	| `214748347` | `2300` |
+-->
 
 To use one of these modes, simply call `updateRuntimeSettings()`
 

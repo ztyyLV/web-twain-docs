@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How To Select A Scanner By Its Name
+title: How To Select A Scanner By Its Name
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How To Select A Scanner By Its Name
-description: Dynamic Web TWAIN SDK Documentation FAQs How To Select A Scanner By Its Name
+description: How To Select A Scanner By Its Name
 ---
 
-# Develop
+# Development
 
 ## How to select a scanner by its name? 
 

@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop Can I Upload Multiple Images As One File
+title: Can I Upload Multiple Images As One File
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Can I Upload Multiple Images As One File
-description: Dynamic Web TWAIN SDK Documentation FAQs Can I Upload Multiple Images As One File
+description: Can I Upload Multiple Images As One File
 ---
 
-# Develop
+# Development
 
 ## Can I upload multiple images as one file?
 

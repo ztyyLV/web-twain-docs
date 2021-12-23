@@ -2,15 +2,15 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Troubleshooting Activating the WebTwain instance' prompt doesn't disappear
+title: Activating the WebTwain instance' prompt doesn't disappear
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: Activating the WebTwain instance' prompt doesn't disappear
-description: Dynamic Web TWAIN SDK Documentation Activating the WebTwain instance' prompt doesn't disappear
+description: Activating the WebTwain instance' prompt doesn't disappear
 ---
 
 # Troubleshooting
 
-## Activating the WebTwain instance' prompt doesn't disappear
+## 'Activating the WebTwain instance' prompt doesn't disappear
 
 - Symptom
 

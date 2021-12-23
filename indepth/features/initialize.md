@@ -2,67 +2,52 @@
 layout: default-layout
 needAutoGenerateSidebar: true
 title: Dynamic Web TWAIN Features - Initialization
-keywords: Dynamic Web TWAIN, Documentation, Initialization
+keywords: Dynamic Web TWAIN, Documentation, Initialization 
 breadcrumbText: Initialization
 description: Dynamic Web TWAIN SDK Documentation Initialization Page
 ---
 
 # Initialize
 
-Initializing `DWT` takes a few simple steps, as you have seen in the ["Getting Started"]({{site.getstarted}}helloworld.html)chapter. The following guide will dive deeper into how `DWT` is intialized once the page loads.
+Initializing Dynamic Web TWAIN takes a few simple steps, as you can see in the ["Getting Started"]({{site.getstarted}}helloworld.html)chapter. The following guide will dive deeper into how Dynamic Web TWAIN is intialized once the page loads.
 
-## Usage Modes
+## Usage Editions
 
-Before we dive into the details of initialization, let's take a look at the two modes in which `DWT` can operate:
+Dynamic Web TWAIN can operate in two modes: Desktop Service or WebAssembly.
 
-### Service Mode
+### Desktop Service Edition
 
-#### What is Service Mode
+#### What is Desktop Service Edition
 
-Service mode means `DWT` operates through the [Dynamsoft Service]({{site.indpeth}}deployment/Service.html) which is a quiet, background system service that handles the communication between connected devices and the browser client as well as imaging processing, encoding, decoding, etc.
+Desktop Service Edition means Dynamic Web TWAIN operates through the [Dynamsoft Service]({{site.indepth}}deployment/service.html) which is a quiet, background system service that handles the communication between connected devices and the browser client as well as imaging processing, encoding, decoding, etc.
 
-When using `DWT` on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices), the user by default will be using service mode (recommended). That means, the installation of the Dynamsoft Service is mandatory.
+When using Dynamic Web TWAIN on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices), the service mode is used by default (recommended), and the installation of the Dynamsoft Service is mandatory for this mode.
 
 #### Installation of the Dynamsoft Service
 
-If a user who hasn't installed the Dynamsoft Service accesses the web page (which has `DWT` ) for the first time, they will be prompted to install it. This is a built-in behaviour of the library. The prompt will display the download link, and once the installer is downloaded, the installation process will take just a few seconds.
+[Guide on how to install the Dynamsoft Service]({{site.indepth}}deployment/service.html#dynamsoft-service-is-not-installed-dynamic-web-twain-is-not-installed)
 
-> The prompt comes up when you try to [create a `WebTwain` instance](#creating-the-webtwain-instance) in service mode. The same prompt will appear regardless of whether the client OS is Windows, macOS or Linux However the file you download changes based on your operating system. On Windows and macOS, the users can double click the downloaded installer to install the SDK. On Linux, however, the users will need to run one of the following commands to install it
->
-> Debian / Ubuntu: 
->  ``` 
-> sudo dpkg -i DynamsoftServiceSetup.deb
-> ```
-> Fedora
-> ``` 
-> sudo rpm -ivh DynamsoftServiceSetup.rpm
-> ```
+### WebAssembly Edition
 
-![Initialization]({{site.assets}}imgs/Initialization-1.png)
+#### What is WebAssembly Edition
 
-Once the installation is done, you can click 'Reconnect to the service' or refresh the page to start using the SDK.
+WebAssembly (WASM) Edition means Dynamic Web TWAIN operates completely within the browser with the help of **Web Worker** and **WebAssembly**. It relieves users from manually installing anything. This relies on some advanced features that only modern [WASM browsers]({{site.getstarted}}platform.html#wasm-browsers) provide though.
 
-### WASM Mode
-
-#### What is WASM Mode
-
-WASM mode means `DWT` operates completely within the browser with the help of `Web Worker` and `WebAssembly` . It relieves users from manually installing anything but it does require advanced features that only modern [WASM browsers]({{site.getstarted}}platform.html#wasm-browsers) provide.
-
-If a user decides to access the `DWT` application via [a mobile browser]({{site.getstarted}}platform.html#browsers-on-mobile-devices) or they don't want to install anything on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices), they can choose the WASM mode.
+If a user decides to access the Dynamic Web TWAIN application via [a mobile browser]({{site.getstarted}}platform.html#browsers-on-mobile-devices) or they don't want to install anything on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices), they can choose the WASM mode.
 
 Read more on how to [expand your application to mobile platforms]({{site.indepth}}development/upgrade.html#expand-your-application-to-mobile-platforms).
 
-#### Comparison of the two modes
+#### How to use WebAssembly Edition on desktop
 
-A major difference between Service mode and WASM mode is that the latter can not access local devices, which means that it is impossible to [use local scanners]({{site.indepth}}features/input.html#scan-from-a-local-scanner).
+As mentioned previously, [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) users will by default go with Desktop Service Edition, while mobile and tablet users will default to WebAssembly Edition. However, if you would like desktop users to start in WebAssembly Edition and forego the need for a service, you can set [UseLocalService]({{site.info}}api/Dynamsoft_WebTwainEnv.html#uselocalservice) to `false` in the initialization code.
 
-Also, the performance and speed of WASM mode is not as good as Service mode because it is not able to make use of as many resources.
+### Comparison of the two modes
+
+A major difference between Desktop Service Edition and WebAssembly Edition is that the latter can not access local devices, which means that it is impossible to [use local scanners]({{site.indepth}}features/input.html#scan-from-a-local-scanner).
+
+Also, the performance and speed of WebAssembly Edition is not as good as Service Edition because it is not able to make use of as many resources.
 
 At Dynamsoft, we tried and are still trying to make these two modes to function as closely to each other as possible. 
-
-#### How to use WASM mode on desktop
-
-As mentioned previously, [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) users will by default go with service mode, while mobile and tablet users will default to WASM mode. However, if you would like desktop users to start in WASM mode and forego the need for a service, you can set [UseLocalService]({{site.info}}api/Dynamsoft_WebTwainEnv.html#uselocalservice) to false in the initialization code.
 
 ## Loading the Core JS Files
 
@@ -70,97 +55,87 @@ This is the first step of the initialization.
 
 ### Introduction to the core files
 
-Inside the `Resources` directory that is included with the SDK installation, you will find the following files:
+Inside the `Resources` directory that is included with the SDK installation, you will find the following two files which are the main JS files that define the configuration and operation of Dynamic Web TWAIN.
 
-``` 
+- `dynamsoft.webtwain.config.js`
+- `dynamsoft.webtwain.initiate.js`
 
-dynamsoft.webtwain.config.js
-dynamsoft.webtwain.initiate.js
-```
+Let's break down each file's purpose:
 
-These two files are the main JavaScript files that define the configuration and operation of `DWT` . Let's break down each file's purpose:
+- `dynamsoft.webtwain.initiate.js`
 
-* `dynamsoft.webtwain.initiate.js`
+  This file is the **core** of the Dynamic Web TWAIN JavaScript Library. You're not supposed to change it without consulting the [Dynamsoft Support Team]({{site.about}}Getsupport.html). 
 
-This file is the **core** of the `DWT` JavaScript Library. You're not supposed to change it without consulting the [Dynamsoft Support Team]({{site.about}}Getsupport.html). 
+- `dynamsoft.webtwain.config.js`
 
-* `dynamsoft.webtwain.config.js`
+  This file is used for basic configuration of Dynamic Web TWAIN. This is where you configure the product key, change the initial viewer size, and more.
 
-This file is used for basic configuration of `DWT` . Here is where you configure the product key, change the initial viewer size, and more.
+**Q: Does it matter which JavaScript file is referenced first**
 
-### Questions
+**A**: Generally, both `dynamsoft.webtwain.initiate.js` and `dynamsoft.webtwain.config.js` need to be referenced. In the former file, it detects whether the latter has been loaded; if not, it'll wait. Therefore, it doesn't matter which file comes first.
 
-#### Q: Does it matter which JavaScript file is referenced first
+**Q: Why do I see `dynamsoft.webtwain.min.js` and `dynamsoft.webtwain.min.mjs` instead of the 2 files above**
 
-**A**: Generally, both `dynamsoft.webtwain.initiate.js` and `dynamsoft.webtwain.config.js` need to be referenced. In the former file, it detects whether the latter has been loaded, if not, it'll wait. Therefore, it doesn't matter which file comes first.
+**A**: The two files are present in the official [npm package `dwt`](https://github.com/dynamsoft-dwt/web-twain-package). For simplicity, in each of these files Dynamsoft has included all necessary JavaScript code which includes both files mentioned above plus `dynamsoft.webtwain.install.js` and all extra components (add-ons). The `.js` file is a simple combination of the code while the `.mjs` file is built as an ECMAScript 6 (ES6) Module that is used in applications based on Angular, React, and Vue etc.
 
-#### Q: Why do I see `dynamsoft.webtwain.min.js` and `dynamsoft.webtwain.min.mjs` instead of the 2 files above
-
-**A**: The two files are present in the official [npm package `dwt` ](https://github.com/dynamsoft-dwt/web-twain-package) . For simplicity, in each of these files Dynamsoft has included all necessary JavaScript code which includes both files mentioned above plus `dynamsoft.webtwain.install.js` and all extra components (add-ons). The ".js" file is a simple combination of the code while the ".mjs" file is built as an ECMAScript 6 (ES6) Module that is used in applications based on `Angular` , `React` and `Vue` , etc.
-
-In a regular application, referencing `dynamsoft.webtwain.min.js` alone would be more than enough than referencing `dynamsoft.webtwain.config.js` and `dynamsoft.webtwain.initiate.js` . 
+In a regular application, referencing `dynamsoft.webtwain.min.js` alone would be more than enough than referencing `dynamsoft.webtwain.config.js` and `dynamsoft.webtwain.initiate.js`. 
 
 ## Loading Add-on JS files
 
-`DWT` offers a number of add-ons, including a barcode reader, a PDF rasterizer, two webcam utilizers and two OCR engines. The files for these components reside in the `addon` subfolder in the `Resources` directory. Check out more [here]({{site.about}}faqs.html#what-are-the-resources-files).
+Dynamic Web TWAIN offers a number of add-ons, including a barcode reader, a PDF rasterizer, two webcam utilizers and two OCR engines. The files for these components reside in the **addon** subfolder in the **Resources** directory. [Learn more about the resource files]({{site.about}}faqs.html#what-are-the-resources-files).
 
-Whether or not to include any of these components is as simple as referencing its respective JavaScript file. Once a JavaScript file is referenced, the member methods/properties of that component are made available in the [Dynamsoft Namespace](#the-dynamsoft-namespace) and can later be used by `WebTwain` instances.
+You can reference the respective JavaScript file to include any of these add-on components. Once a JavaScript file is referenced, the member methods/properties of that component are made available in the [Dynamsoft Namespace](#the-dynamsoft-namespace) and can later be used by the `WebTwain` instances.
 
-> As mentioned above, if you use any of the `min` file from the `dwt` package, all add-on components are included by default.
+> Note: As mentioned above, if you use any of the `min` file from the `dwt` package, all add-on components are included by default.
 
 ## Loading the supporting files
 
 Once the main JavaScript files are loaded in, the initialization process now moves to loading all the other supporting JS files as well as the CSS files. Depending on the mode `DWT` operates in, the supporting files vary.
 
-### Service mode files
+### Desktop Service Edition files
 
-Service mode requires the following files found inside the `Resources` folder:
+Desktop Service Edition requires the following files found in the **Resources** folder:
 
-``` 
+- `dynamsoft.webtwain.install.js`
+- `src/dynamsoft.viewer.js`
+- `src/dynamsoft.viewer.css`
+- `src/dynamsoft.webtwain.css`
 
-dynamsoft.webtwain.install.js
-src/dynamsoft.viewer.js
-src/dynamsoft.viewer.css
-src/dynamsoft.webtwain.css
-```
+#### `dynamsoft.webtwain.install.js`
 
-* `dynamsoft.webtwain.install.js`
+This file is used to configure the dialogs which show up when the Dynamsoft Service is not installed or needs upgrade, etc. This file is automatically loaded when the code in `dynamsoft.webtwain.initiate.js` executes. Therefore, it does not need to be referenced in the HTML page.
 
-This file is used to configure the dialogs which show up when the Dynamsoft Service is not installed or needs to be upgraded, etc. This file is automatically loaded when the code in `dynamsoft.webtwain.initiate.js` executes. Therefore, it does not need to be referenced in the HTML page.
+> Note: As mentioned above, if you use any of the `min` file from the `dwt` package, this `install` file is already included.
 
-> As mentioned above, if you use any of the `min` file from the `dwt` package, this `install` file is already included.
+#### `dynamsoft.viewer.js`, `dynamsoft.viewer.css` and `dynamsoft.webtwain.css`
 
-* `dynamsoft.viewer.js` ,  `dynamsoft.viewer.css` and `dynamsoft.webtwain.css`
+These three files are used to build the viewer component of Dynamic Web TWAIN, as well as define the CSS of the other UI elements of the library.
 
-These three files are used to build the viewer component of `DWT` , as well as define the css of the other UI elements of the library.
+### WebAssembly Edition specific files
 
-### WASM-specific files
+Apart from the 4 files that the service mode requires, the WebAssembly Edition also needs the following files:
 
-Apart from the 4 files that the service mode requires, the WASM mode also needs the following files
+for image IO (decoding and encoding included)
 
-``` 
+- `dynamsoft.imageio.js`
+- `dynamsoft.imageio_wasm-<version number>.js`
+- `dynamsoft.imagecore-<version number>.wasm`
+- `dynamsoft.imageio-<version number>.wasm`
+- `dynamsoft.imageProc-<version number>.wasm`
 
-dynamsoft.imageio.js
-dynamsoft.imageio_wasm-<version number>.js
-dynamsoft.imagecore-<version number>.wasm
-dynamsoft.imageio-<version number>.wasm
-dynamsoft.imageProc-<version number>.wasm
+for PDF reading & writing
 
-dynamsoft.pdfReader-<version number>.wasm
-dynamsoft.pdfWriter-<version number>.wasm
-```
+- `dynamsoft.pdfReader-<version number>.wasm`
+- `dynamsoft.pdfWriter-<version number>.wasm`
 
-The first five files in the above list contain functionalities for image IO (decoding and encoding included). The last two files contain functionalities for PDF reading & writing.
+> These 7 files are loaded only when the first `WebTwain` instance in WebAssembly Edition is created.
 
-> These 7 files are loaded only when the first `WebTwain` instance in WASM mode is created.
+**Q: Are all 7 files mentioned above used exclusively in WebAssembly Edition**
 
-#### Questions
+**A**: No, the library will use the WebAssembly files even in service mode when one of the following conditions is met
 
-##### Q: Are all 7 files mentioned above used exclusively in WASM mode
+* The APIs for the [ `WebTwain.Addon.Camera` ]({{site.info}}api/Addon_Camera.html) component are called.
 
-**A**: No, the library will use the WASM files even in service mode when one of the following conditions is met
-
-* The APIs for the [ `WebTwain.Addon.Camera` ]({{site.info}}api/Addon_Camera.html) component are called. 
 * The APIs [ `WebTwain.Camera.showVideo()` ]({{site.info}}api/Addon_Camera.html#showvideo) or [ `WebTwain.Camera.closeVideo()` ]({{site.info}}api/Addon_Camera.html#closevideo) are called.
 
 ## Creating the WebTwain instance
@@ -174,6 +149,82 @@ Read on to learn the three methods to instantiate `DWT` .
 ### [ `Dynamsoft.DWT.Load` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#load)
 
 This is the default method to create `WebTwain` instances. 
+
+#### Questions
+
+##### Q: Is it necessary to call `Dynamsoft.DWT.Load` manually
+
+**A**: No. It needs to be called only if `Dynamsoft.DWT.AutoLoad` is set to `false` . If `AutoLoad` is `true` , `Load` will be called automatically as soon as the running environment is ready.
+
+`Dynamsoft.DWT.AutoLoad` is defined in the file `dynamsoft.webtwain.config.js` but can be called anywhere before the actual loading begins. It is set to `true` by default.
+
+##### Q: Where can I get the handler(s) of the instance(s)
+
+**A**: When `Load` is called, `DWT` tries to create the `WebTwain` instances. Once it's done, `DWT` triggers the built-in callback `Dynamsoft.DWT.OnWebTwainReady` in which the method [ `Dynamsoft.DWT.GetWebTwain` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#getwebtwain) can be used to get the handler(s) of the instance(s). For simplicity, the `OnWebTwainReady` callback points to a global function called `Dynamsoft_OnReady` . The following snippets are equivalent
+
+Snippet one
+
+``` javascript
+Dynamsoft.DWT.OnWebTwainReady = function() {
+    DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
+}
+```
+
+Snippet two
+
+``` javascript
+Dynamsoft.DWT.RegisterEvent('OnWebTwainReady', Dynamsoft_OnReady);
+function Dynamsoft_OnReady() {
+    DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
+}
+```
+
+##### Q: How can I customize the instances
+
+**A**: The instances are defined by this line in `dynamsoft.webtwain.config.js`
+
+``` javascript
+Dynamsoft.DWT.Containers = [{
+    ContainerId: 'dwtcontrolContainer',
+    Width: '585px',
+    Height: '513px'
+}];
+```
+
+> Note that `Containers` is an array of the `Container` type
+
+``` typescript
+interface Container {
+    WebTwainId?: string;
+    ContainerId?: string;
+    Width?: string | number;
+    Height?: string | number;
+}
+```
+
+`WebTwainId` and `ContainerId` are both optional but one must exist as the identifier for that `WebTwain` instance.
+
+`Width` and `Height` determine the initial viewer size of the instance.
+
+When instantiating with `Dynamsoft.DWT.Load` , `ContainerId` , `Width` and `Height` are required. `DWT` will try to locate an HTML element with the id defined by `ContainerId` and use `Width` and `Height` as the viewer size.
+
+To create multiple instances, simply provide multiple `Containers` , for example, the following creates two `WebTwain` instances
+
+``` javascript
+Dynamsoft.DWT.Containers = [{
+    ContainerId: 'dwtcontrolContainer1',
+    Width: '585px',
+    Height: '513px'
+}, {
+    ContainerId: 'dwtcontrolContainer2',
+    Width: '585px',
+    Height: '513px'
+}];
+```
+
+### [ `Dynamsoft.DWT.CreateDWTObject` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#createdwtobject)
+
+This method manually creates a `WebTwain` instance with a default built-in viewer.
 
 #### Questions
 
@@ -337,18 +388,18 @@ For more information, check out [how to enable remote scan]({{site.indepth}}feat
 
 ## The Dynamsoft Namespace
 
-`DWT` operates under the Dynamsoft namespace. We'll briefly introduce it.
+Dynamic Web TWAIN operates under the `Dynamsoft` namespace.
 
-`Dynamsoft` is the top-level namespace. `DWT` and other Dynamsoft libraries are all defined under `Dynamsoft` . For `DWT` , the major members of this namespace are
+`Dynamsoft` is the top-level namespace. Dynamic Web TWAIN and other Dynamsoft libraries are all defined under `Dynamsoft`. For Dynamic Web TWAIN, the major members of this namespace are:
 
-* [ `DWT` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html)
+* [`DWT`]({{site.info}}api/Dynamsoft_WebTwainEnv.html)
 
     Includes global methods, properties to help with `WebTwain` initialization and instantiation, etc. as shown in previous context.
 
 * `Lib`
 
-    Includes information like environment detection results ( `Dynamsoft.Lib.env` ) and global methods like `showMask()` , `hideMask()` , etc.
+    Includes information like environment detection results (`Dynamsoft.Lib.env`) and global methods like `showMask()`, `hideMask()`, etc.
 
 * `Enumerations`
 
-    Example: [ `Dynamsoft.DWT.EnumDWT_PixelType` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_pixeltype)
+    Example: [`Dynamsoft.DWT.EnumDWT_PixelType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_pixeltype)

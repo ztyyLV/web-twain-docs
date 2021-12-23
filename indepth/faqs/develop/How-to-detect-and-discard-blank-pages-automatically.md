@@ -2,15 +2,17 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How to detect and discard blank pages automatically
+title: How to detect and discard blank pages automatically
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How to detect and discard blank pages automatically
-description: Dynamic Web TWAIN SDK Documentation FAQs How to detect and discard blank pages automatically
+description: How to detect and discard blank pages automatically
 ---
 
-# Develop
+# Development
 
 ## How to detect and discard blank pages automatically
+
+### Method One
 
 If the TWAIN driver of your device supports discarding blank pages, you can use the driver's built-in feature.
 1. You can set the [ `IfShowUI` ]({{site.info}}api/WebTwain_Acquire.html#ifshowui) property to true to display the User Interface (UI) of the source and you can check the option there (it normally reads 'discard blank')
@@ -31,6 +33,8 @@ if(DWObject.CapSet){
 }
 DWObject.AcquireImage();
 ```
+
+### Method Two
 
 If the scanner itself doesn't support discarding blank pages, you can also use the [ `IsBlankImageExpress` ]({{site.info}}api/WebTwain_Buffer.html#isblankimageexpress) method to do this as a workaround. To detect and discard blank pages automatically, you can do it in the [ `OnPostTransfer` ]({{site.info}}api/WebTwain_Acquire.html#onposttransfer)  event which fires after each transfer.
 

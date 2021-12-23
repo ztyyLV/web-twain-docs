@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop What is a LicenseChecker
+title: What is a LicenseChecker
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: What is a LicenseChecker
-description: Dynamic Web TWAIN SDK Documentation FAQs What is a LicenseChecker
+description: What is a LicenseChecker
 ---
 
-# Develop
+# Development
 
 ## What is a LicenseChecker
 

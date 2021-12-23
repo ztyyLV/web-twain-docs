@@ -130,13 +130,13 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2372 | You cannot convert to binary more than one image when the format is BMP, JPG or PNG |
 |<= -3000 | See ErrorString property for details |
 
-## License Tracking Server Error List 
+## Dynamsoft License Server Error List 
 
 | Error Code | Error Message |
 |:-|:-|
-| -20100 | The standby LTS refuses to provide service while the main LTS is working. |
-| -20100 | LTS refuses to provide service while under construction. |
-| -20101 | The handshake code you are using does not exist on the License Tracking Server. |
+| -20100 | The standby DLS refuses to provide service while the main DLS is working. |
+| -20100 | DLS refuses to provide service while under construction. |
+| -20101 | The handshake code you are using does not exist on the Dynamsoft License Server. |
 | -20102 | Session password is incorrect. |
 | -20103 | AppDomain for handshake is not matched. |
 | -20104 | No item matched. Please check your handshake and client settings. |

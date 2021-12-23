@@ -2,17 +2,17 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop What Are All The APIs DWT Provides For HTTP Upload
+title: What Are All The APIs DWT Provides For HTTP Upload
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: What Are All The APIs DWT Provides For HTTP Upload
-description: Dynamic Web TWAIN SDK Documentation FAQs What Are All The APIs DWT Provides For HTTP Upload
+description: What Are All The APIs DWT Provides For HTTP Upload
 ---
 
-# Develop
+# Development
 
-## What are all the APIs DWT provides for HTTP upload? 
+## What are all the APIs Dynamic Web TWAINprovides for HTTP upload? 
 
-Apart from the recommended `HTTPUpload()` method and those already mentioned above, `DWT` provides 8 more methods and a few other properties for making an HTTP upload. They are listed below
+Apart from the recommended `HTTPUpload()` method and those already mentioned above, `Dynamic Web TWAIN` provides 8 more methods and a few other properties for making an HTTP upload. They are listed below
 
 * [ `HTTPUploadThroughPutEx()` ]({{site.info}}api/WebTwain_IO.html#httpuploadthroughputex)
 * [ `HTTPUploadThroughPost()` ]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpost)

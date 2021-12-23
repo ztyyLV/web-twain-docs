@@ -107,6 +107,7 @@ AcquireImage(
     deviceConfiguration?: DeviceConfiguration,
     successCallBack?: () => void,
     failureCallBack?: (
+        deviceConfiguration?: DeviceConfiguration,
         errorCode: number,
         errorString: string) => void
 ): void;
@@ -256,7 +257,7 @@ If it's set to 2, then besides what's mentioned in the two tables above, the Dyn
 
 * Remote Scan
 
-  When [scanning remotely]({{site.indepth}}feature/input.html#scan-from-a-remote-scanner), if the method is called without any parameter, do not forget to set [ `IfShowUI` ](#ifshowui) to `false` .
+  When [scanning remotely]({{site.indepth}}features/input.html#scan-from-a-remote-scanner), if the method is called without any parameter, do not forget to set [ `IfShowUI` ](#ifshowui) to `false` .
 
 **Example**
 
@@ -535,7 +536,7 @@ SelectSource(
 
 **Usage notes**
 
-* It's recommended to use this API asynchronously by pass arguments to the parameters `successCallback` and `failureCallback` .
+* It's recommended to use this API asynchronously by pass arguments to the parameters `successCallback` and `failureCallback`.
 * On `Windows` and `Windows` only, you can call this method with no arguments so that it runs synchronously and return a boolean value.
 * When [scanning remotely]({{site.indepth}}feature/input.html#scan-from-a-remote-scanner), this method must be called asynchronously. 
 
@@ -564,10 +565,14 @@ DWObject.SelectSource(function() {
  * @argument errorCode The error code.
  * @argument errorString The error string.
  */
-SelectSourceAsync(
-    successCallBack?: () => void,
-    failureCallBack?: (errorCode: number, errorString: string) => void
-): Promise<boolean>;
+SelectSourceAsync(): Promise<number>;
+```
+
+**Example**
+
+``` javascript
+DWObject.SelectSourceAsync().then(function(sourceIndex){console.log(sourceIndex);
+DWObject.AcquireImage()}).catch(function(e){console.log(e)});
 ```
 
 ---
@@ -908,6 +913,10 @@ interface ScanSetup {
 }
 ```
 
+**Sample**
+
+<a href="https://demo.dynamsoft.com/Samples/dwt/Make-use-of-the-API-startScan/index.html" target="_blank">Make use of the API startScan </a>
+
 ---
 
 ## CancelAllPendingTransfers
@@ -1043,6 +1052,9 @@ GetDeviceType(): number;
 | 5 | Flatbed, feeder, without auto feed |
 | 6 | Feeder-only scanner, without auto feed |
 | 7 | Webcam |
+
+
+Use this method after [OpenSource()](#opensource).
 
 ---
 
@@ -1393,11 +1405,11 @@ The allowed values for `EnumDWT_Driver` are
 
 | Label | Value | Description |
 |:-|:-|:-|
-| TWAIN | 0 | Use data sources that conforms to the TWAIN protocol |
+| TWAIN | 0 | Use data sources that conforms to the TWAIN protocol **(Default value on Windows)**|
 | ICA | 3 | Use data sources that conforms to the Image Capture Architecture |
-| SANE | 3 | Use data sources that conforms to the SANE API |
-| TWAIN_AND_ICA | 4 | Use both TWAIN and ICA data sources |
-| TWAIN_AND_TWAIN64 | 4 | Use both 32bit and 64bit TWAIN drivers |
+| SANE | 3 | Use data sources that conforms to the SANE API **(Default value on Linux)**|
+| TWAIN_AND_ICA | 4 | Use both TWAIN and ICA data sources **(Default value on MacOS)**|
+| TWAIN_AND_TWAIN64 | 4 | Use both 32bit and 64bit TWAIN drivers|
 | TWAIN64 | 5 | Use 64bit TWAIN sources |
 
 ---
@@ -2373,3 +2385,36 @@ interface CapabilitySetup {
 To make things easier, Dynamsoft designed the API with a simplified parameter `Capabilities` which only requires the minimum information for setting a capability: a number to specify the capability and the value to set to it. Underneath, Dynamsoft takes care of container type setting, value type setting as well as data validation.
 
 Pay attention to the argument you set to the overall parameter `exception` and the individual parameter `exception` for each capability. If the overall parameter is set to `fail` , the setting will abort as soon as an exception is raised while setting any of the capabilities. Otherwise, `ignore` means to carry on setting the next capability even when the previous one failed. Aside from the overall parameter, the individual `exception` is optional but takes precedence if set. In other words, you can set the overall `exception` to `ignore` and then set the individual one to `fail` for the capabilities which you think are important. This way, you get notified if these important capabilities failed to be set while other less-important ones are ignored when setting them failed.
+
+**Example**
+
+``` javascript
+DWObject.SelectSourceByIndex(0);
+DWObject.IfShowUI=false;
+DWObject.OpenSource();
+DWObject.setCapabilities({
+    exception:"ignore",
+    capabilities:
+        [
+            {
+                capability:4376, //your own capability
+                curValue:200, //your own curValue
+            },
+            {
+                capability:4377, //your own capability
+                curValue:"abc",  // your own curValue
+                exception:"fail",
+            },
+            {
+                capability:257, // your own capability
+                curValue:0,  // your own curValue
+            }
+        ]
+},function(successData){
+    DWObject.AcquireImage(function(){},function (){console.log(DWObject.ErrorString)});
+},function(errorData)
+{
+    console.error(errorData);
+    DWObject.AcquireImage(function(){},function (){console.log(DWObject.ErrorString)});
+});
+```

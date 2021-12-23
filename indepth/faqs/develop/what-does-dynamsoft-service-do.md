@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop What Does Dynamsoft Service Do
+title:  What Does Dynamsoft Service Do
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: What Does Dynamsoft Service Do
-description: Dynamic Web TWAIN SDK Documentation FAQs What Does Dynamsoft Service Do
+description: What Does Dynamsoft Service Do
 ---
 
-# Develop
+# Development
 
 ## What does Dynamsoft Service do? 
 

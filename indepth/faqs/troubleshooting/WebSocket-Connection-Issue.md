@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Troubleshooting WebSocket Connection Issue
+title: WebSocket Connection Issue
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: WebSocket Connection Issue
-description: Dynamic Web TWAIN SDK Documentation FAQs WebSocket Connection Issue
+description: WebSocket Connection Issue
 ---
 
 # Troubleshooting

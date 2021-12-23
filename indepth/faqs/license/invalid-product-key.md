@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs License Invalid Product Key
+title: Invalid Product Key
 keywords: Dynamic Web TWAIN, Documentation, License
 breadcrumbText: Invalid Product Key
-description: Dynamic Web TWAIN SDK Documentation FAQs Invalid Product Key
+description: Invalid Product Key
 ---
 
 # License
@@ -18,7 +18,7 @@ You get an error message that says "The current product key does not support xxx
 
 * Cause
 
-You are trying to use an unlicensed feature of `DWT` or use it on an unlicensed `Platform` or `Browser` .
+You are trying to use an unlicensed feature of `Dynamic Web TWAIN` or use it on an unlicensed `Platform` or `Browser` .
 
 * Resolution
 

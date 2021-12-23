@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs ErrorList HTTP request error
+title: HTTP request error
 keywords: Dynamic Web TWAIN, Documentation, ErrorList
 breadcrumbText: HTTP request error
-description: Dynamic Web TWAIN SDK Documentation HTTP request error
+description: HTTP request error
 ---
 
 # ErrorList

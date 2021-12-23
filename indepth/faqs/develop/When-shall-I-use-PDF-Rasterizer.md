@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop When shall I use PDF Rasterizer
+title: When shall I use PDF Rasterizer
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: When shall I use PDF Rasterizer
-description: Dynamic Web TWAIN SDK Documentation FAQs When shall I use PDF Rasterizer
+description: When shall I use PDF Rasterizer
 ---
 
-# Develop
+# Development
 
 ## When shall I use PDF Rasterizer
 

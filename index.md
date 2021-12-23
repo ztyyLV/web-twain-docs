@@ -6,7 +6,7 @@ breadcrumbText: HomePage
 description: Dynamic Web TWAIN SDK Documentation Homepage
 ---
 
-# Dynamic Web TWAIN Documentation 
+# Dynamic Web TWAIN Documentation  
 
 * [About]({{site.about}}index.html)
 
@@ -46,24 +46,17 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
    - [Professional Service]({{site.indepth}}development/pro-service.html)
    - [Upgrade Guide]({{site.indepth}}development/upgrade.html)
    - [About ActiveX]({{site.indepth}}development/activeX.html)
-   - [Other Topics]({{site.indepth}}development/topics.html)
 
 * [Deployment]({{site.indepth}}deployment/index.html)
 
    - [Server Setup]({{site.indepth}}deployment/server.html)
    - [Service Setup]({{site.indepth}}deployment/service.html)
-  <!-- - [Scenarios]({{site.indepth}}deployment/scenarios.html)-->
 
 * [Schedule]({{site.info}}schedule/index.html)
 
    - [Stable]({{site.info}}schedule/stable.html)
-   - [Beta]({{site.info}}schedule/beta.html)
-   - [Developing]({{site.info}}schedule/developing.html)
-   - [Proposed]({{site.info}}schedule/proposed.html)
-   - [To Consider]({{site.info}}schedule/ideas.html)
-   - [Deprecated]({{site.info}}schedule/deprecated.html)
    - [Addon]({{site.info}}schedule/addon.html)
-   <!--- [Known bugs]({{site.info}}schedule/bugs.html)-->
+   - [Deprecated]({{site.info}}schedule/deprecated.html)
 
 * [API Reference]({{site.info}}api/index.html)
 
@@ -83,12 +76,12 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
    - [Addon_Webcam]({{site.info}}api/Addon_Webcam.html)
    - [Dynamsoft_FileUploader]({{site.info}}api/Dynamsoft_FileUploader.html)
 
+
 * [FAQs]({{site.faqs}}faqs/index.html)
 
-   - [General]({{site.faqs}}faqs/general.html)
-   - [License and Purchase]({{site.faqs}}faqs/license.html)
-   - [Develop with DWT]({{site.faqs}}faqs/develop.html)
-   - [Distribution and Deployment]({{site.faqs}}faqs/distribution.html)
-   - [Troubleshooting for end-users]({{site.faqs}}faqs/troubleshooting.html)
-   - [Erorr List]({{site.faqs}}faqs/errorlist.html)
-    
+   - [General]({{site.indepth}}faqs/general/index.html)
+   - [License and Purchase]({{site.indepth}}faqs/license/index.html)
+   - [Development]({{site.indepth}}faqs/develop/index.html)
+   - [Distribution and Deployment]({{site.indepth}}faqs/distribution/index.html)
+   - [Troubleshooting for end-users]({{site.indepth}}faqs/troubleshooting/index.html)
+   - [Erorr List]({{site.indepth}}faqs/errorlist/index.html)

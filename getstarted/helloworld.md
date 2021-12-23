@@ -200,7 +200,7 @@ In almost all our user cases, the scanned documents need to be uploaded to a ser
 
 ### Add code to do the upload
 
-The method [HTTPUpload]({{site.info}}api/WebTwain. IO.html#httpupload) is used to do the upload.
+The method [HTTPUpload]({{site.info}}api/WebTwain.IO.html#httpupload) is used to do the upload.
 
 ``` javascript
 function UploadAsPDF() {
@@ -239,7 +239,7 @@ function UploadAsPDF() {
 
 > On the server side, any script language can be used (ASP. NET, JSP, PHP, etc.). Here we are using ASP. NET (C#) as an example. Check out more [here]({{site.indepth}}development/Server-script.html#how-to-process-uploaded-files).
 
-> `RemoteFile` is the default field name for the uploaded file. So we use it to extract the file from the Post Request. This field name can be changed with the API [HttpFieldNameOfUploadedImage]({{site.info}}api/WebTwain_ IO.html#httpfieldnameofuploadedimage).
+> `RemoteFile` is the default field name for the uploaded file. So we use it to extract the file from the Post Request. This field name can be changed with the API [HttpFieldNameOfUploadedImage]({{site.info}}api/WebTwain_IO.html#httpfieldnameofuploadedimage).
 
 Create a `saveUploadedPDF.aspx` file in the same location as your `helloworld.html` and write the following script in it.
 

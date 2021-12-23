@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Troubleshooting How to test if your scanner supports ICA scanning on Mac OS
+title: How to test if your scanner supports ICA scanning on Mac OS
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: How to test if your scanner supports ICA scanning on Mac OS
-description: Dynamic Web TWAIN SDK Documentation FAQs How to test if your scanner supports ICA scanning on Mac OS
+description: How to test if your scanner supports ICA scanning on Mac OS
 ---
 
 # Troubleshooting

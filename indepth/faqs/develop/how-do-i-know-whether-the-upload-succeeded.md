@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQs Develop How Do I Know Whether The Upload Succeeded
+title: How Do I Know Whether The Upload Succeeded
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How Do I Know Whether The Upload Succeeded
-description: Dynamic Web TWAIN SDK Documentation FAQs How Do I Know Whether The Upload Succeeded
+description: How Do I Know Whether The Upload Succeeded
 ---
 
-# Develop
+# Development
 
 ## How do I know whether the upload succeeded? 
 
@@ -30,4 +30,4 @@ Of course, in your own server-side script to accept and process the HTTP Post re
 >  
 > When the callback `onServerReturnedSomething` is triggered, you will always get an `errorCode` and an `errorString` but you can choose to ignore them if it's triggered on purpose.
 
-`DWT` also provides an API called [ `HTTPPostResponseString` ]({{site.info}}api/WebTwain_IO.html#httppostresponsestring) which contains `response` but can be read outside of the upload method.
+`Dynamic Web TWAIN` also provides an API called [ `HTTPPostResponseString` ]({{site.info}}api/WebTwain_IO.html#httppostresponsestring) which contains `response` but can be read outside of the upload method.
