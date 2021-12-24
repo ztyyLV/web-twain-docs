@@ -1021,7 +1021,7 @@ GetFileInfoList():Json
 
 Json:
 [{
-   name: “fileName”,
+   name: "fileName",
    imageIds:[23122335, 25566822323]
 },
 {……}]
