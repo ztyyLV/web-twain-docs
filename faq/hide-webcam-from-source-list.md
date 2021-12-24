@@ -8,7 +8,7 @@ breadcrumbText: Can I hide webcam devices from the select source list?
 description: Can I hide webcam devices from the select source list?
 ---
 
-# Capture/ Image Source
+# Capture/Image Source
 
 ## Can I hide webcam devices from the select source list?
 
@@ -16,4 +16,4 @@ Many webcam devices may use WIA drivers. As explained in this article, WIA drive
 
 Please note that you would need to call <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html?ver=latest#opensource" target="_blank">OpenSource</a> API to open a source before you can inspect its device type. If there are any offline devices in the source name list, this process would be interrupted.
 
-Another workaround is to exclude some sources by detecting certain keywords from the source name list. E.g. you can try to exclude any source name with ‘camera’ or ‘webcam’ in its name. Please refer to this <a href="{{site.faq}}hide-offline-scanners-from-source-list.html" target="_blank">FAQ</a> for more detail.
+Another workaround is to exclude some sources by detecting certain keywords from the source name list. E.g. you can try to exclude any source names with ‘camera’ or ‘webcam’. Please refer to this <a href="{{site.faq}}hide-offline-scanners-from-source-list.html" target="_blank">FAQ</a> for more details.
