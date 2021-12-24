@@ -28,12 +28,12 @@ Dynamsoft.DWT.UpdateCert(url, optionalAsyncSuccessFunc, optionalAsyncFailureFunc
 * Added method `RemoveFile()` to remove a file. 
 * Added method `OpenFile()` to open a file.
 * Added method `GetFileInfoList()` to get file information.
-* Added method `scanDocument` to capture document(s).
-* Added method `createTemplate` to crearte document scanner template. 
-* Added method `showCheckbox` to show checkbox on image(s). 
-* Added method `ChangeBrightnessAsync` to change the image brightness. 
-* Added method `ChangeContrastAsnyc` to change the image contrast. 
-* Added method `UpdateCert` to update and download certificate. 
+* Added method `scanDocument()` to capture document(s).
+* Added method `createTemplate()` to crearte document scanner template. 
+* Added property `showCheckbox` to show checkbox on image(s). 
+* Added method `ChangeBrightnessAsync()` to change the image brightness. 
+* Added method `ChangeContrastAsnyc()` to change the image contrast. 
+* Added method `UpdateCert()` to update and download certificate. 
 
 ### Improved Features 
 
