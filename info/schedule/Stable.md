@@ -12,9 +12,6 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 <!--
 ## 17.2
 
-DWObjecy.Viewer.bind(document.getElementById("divCustomElement"),:DocumentScannerTemplate) - 新增用法
-
-
 在install.js中增加一个接口： 
 Dynamsoft.OnSSLCertInfo(certExpiredDate); //为Date 类对象, 表示证书过期的时间
 Dynamsoft.DWT.UpdateCert(url, optionalAsyncSuccessFunc, optionalAsyncFailureFunc); //下载证书
