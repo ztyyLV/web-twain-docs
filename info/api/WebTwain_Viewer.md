@@ -31,7 +31,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 | [`cursor`](#cursor)| [`height`](#height)|[`idPostfix`](#idpostfix)|[`ifAutoScroll`](#ifautoscroll)|
 |[`innerBorder`](#innerborder)| [`pageMargin`](#pagemargin)|[`selectedAreaBorderColor`](#selectedareabordercolor)|[`selectedPageBackground`](#selectedpagebackground)|
 |[`selectedPageBorder`](#selectedpageborder)| [`selectionRectAspectRatio`](#selectionrectaspectratio)|[`showPageNumber`](#showpagenumber)|[`singlePageMode`](#singlepagemode)|
-|[`width`](#width)| [`zoom`](#zoom)| [`autoChangeIndex`](#autochangeindex)|
+|[`width`](#width)| [`zoom`](#zoom)| [`autoChangeIndex`](#autochangeindex)| [`showCheckbox`](#showcheckbox)|
 
 **Events**
 
@@ -1608,7 +1608,22 @@ This API was added in V17.2.
 
 ---
 
+###  showCheckbox
 
+**Syntax**
+
+``` typescript
+/**
+ * Show checkbox on image(s).
+ */
+showCheckbox: boolean;
+```
+
+**Usage notes**
+
+This API was added in V17.2.
+
+---
 
 
 
