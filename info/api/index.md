@@ -472,6 +472,7 @@ breadcrumbText: API Reference
 | [`hide()`]({{site.info}}api/WebTwain_Viewer.html#hide)| [`last()`]({{site.info}}api/WebTwain_Viewer.html#last)| [`next()`]({{site.info}}api/WebTwain_Viewer.html#next)|[`off()`]({{site.info}}api/WebTwain_Viewer.html#off)|
 |[`on()`]({{site.info}}api/WebTwain_Viewer.html#on)| [`previous()`]({{site.info}}api/WebTwain_Viewer.html#previous)| [`render()`]({{site.info}}api/WebTwain_Viewer.html#render)| [`setButtonClass()`]({{site.info}}api/WebTwain_Viewer.html#setbuttonclass)|
 | [`setSelectedAreas()`]({{site.info}}api/WebTwain_Viewer.html#setselectedareas)| [`setViewMode()`]({{site.info}}api/WebTwain_Viewer.html#setviewmode) | [`show()`]({{site.info}}api/WebTwain_Viewer.html#show)| [`unbind()`]({{site.info}}api/WebTwain_Viewer.html#unbind)|
+|[`createTemplate()`]({{site.info}}api/WebTwain_Viewer.html#createtemplate)| 
 
 <!--
 * [`bind()`]({{site.info}}api/WebTwain_Viewer.html#bind)
