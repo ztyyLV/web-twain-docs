@@ -505,7 +505,7 @@ breadcrumbText: API Reference
 | [`cursor`]({{site.info}}api/WebTwain_Viewer.html#cursor)| [`height`]({{site.info}}api/WebTwain_Viewer.html#height)|[`idPostfix`]({{site.info}}api/WebTwain_Viewer.html#idpostfix)|[`ifAutoScroll`]({{site.info}}api/WebTwain_Viewer.html#ifautoscroll)|
 |[`innerBorder`]({{site.info}}api/WebTwain_Viewer.html#innerBorder)| [`pageMargin`]({{site.info}}api/WebTwain_Viewer.html#pagemargin)|[`selectedAreaBorderColor`]({{site.info}}api/WebTwain_Viewer.html#selectedareabordercolor)|[`selectedPageBackground`]({{site.info}}api/WebTwain_Viewer.html#selectedpagebackground)|
 |[`selectedPageBorder`]({{site.info}}api/WebTwain_Viewer.html#selectedpageborder)| [`selectionRectAspectRatio`]({{site.info}}api/WebTwain_Viewer.html#selectionrectaspectratio)|[`showPageNumber`]({{site.info}}api/WebTwain_Viewer.html#showpagenumber)|[`singlePageMode`]({{site.info}}api/WebTwain_Viewer.html#singlepagemode)|
-|[`width`]({{site.info}}api/WebTwain_Viewer.html#width)| [`zoom`]({{site.info}}api/WebTwain_Viewer.html#zoom)| [`autoChangeIndex`]({{site.info}}api/WebTwain_Viewer.html#autochangeindex)|
+|[`width`]({{site.info}}api/WebTwain_Viewer.html#width)| [`zoom`]({{site.info}}api/WebTwain_Viewer.html#zoom)| [`autoChangeIndex`]({{site.info}}api/WebTwain_Viewer.html#autochangeindex)|[`showCheckbox`]({{site.info}}api/WebTwain_Viewer.html#showcheckbox)|
 
 <!--
 * [`acceptDrop`]({{site.info}}api/WebTwain_Viewer.html#acceptdrop)
