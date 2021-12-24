@@ -376,7 +376,7 @@ interface ScanConfiguration{
 	},
  
        exitDocumentScanAfterSave: false  //The default value is false.
-    }， 
+    },
 
    cropViewer?: { 
      visibility?: boolean,   //Whether to display the crop viewer. The default value is true.
