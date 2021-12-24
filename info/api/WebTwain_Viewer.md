@@ -18,6 +18,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 | [`hide()`](#hide)| [`last()`](#last)| [`next()`](#next)|[`off()`](#off)|
 |[`on()`](#on)| [`previous()`](#previous)| [`render()`](#render)| [`setButtonClass()`](#setbuttonclass)|
 | [`setSelectedAreas()`](#setselectedareas)| [`setViewMode()`](#setviewmode) | [`show()`](#show)| [`unbind()`](#unbind)|
+| [`createTemplate()`](#createtemplate)|
 
 
 <!--* [updateUISettings](#updateuisettings)-->
@@ -1569,6 +1570,59 @@ DWObject.Viewer.width += 100;
 ```
 
 ---
+
+###  createTemplate
+
+**Syntax**
+
+``` typescript
+/**
+ * Create document scanner template.
+ * @argument templateName Currently templateName only supports "documentScanner".
+ */
+createTemplate("templateName")：DocumentScannerTemplate 
+```
+
+**Example**
+
+``` javascript
+var DWObject, template;
+Dynamsoft.DWT.CreateDWTObjectEx({
+    WebTwainId: 'a',
+    UseLocalService: false
+}, function (obj) {
+    DWObject = obj;
+    template = DWObject.Viewer.createTemplate("documentScanner");
+    DWObject.Viewer.bind (null, template);  //full screen
+    DWObject.Viewer.show();
+}, function(ec,es){console.log(es);});
+
+```
+
+**Usage notes**
+
+This API was added in V17.2.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!--**### topPageChanged
 
