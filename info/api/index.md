@@ -116,7 +116,7 @@ breadcrumbText: API Reference
 |[`CopyToClipboard()`]({{site.info}}api/WebTwain_Edit.html#copytoclipboard) |[`Erase()`]({{site.info}}api/WebTwain_Edit.html#erase) |[`Flip()`]({{site.info}}api/WebTwain_Edit.html#flip)|[`Mirror()`]({{site.info}}api/WebTwain_Edit.html#mirror)|
 | [`Rotate()`]({{site.info}}api/WebTwain_Edit.html#rotate) |[`RotateEx()`]({{site.info}}api/WebTwain_Edit.html#rotateex)| [`RotateLeft()`]({{site.info}}api/WebTwain_Edit.html#rotateleft) | [`RotateRight()`]({{site.info}}api/WebTwain_Edit.html#rotateright)|
 | [`ChangeBitDepth()`]({{site.info}}api/WebTwain_Edit.html#changebitdepth) | [`SetDPI()`]({{site.info}}api/WebTwain_Edit.html#setdpi)|[`ConvertToBW()`]({{site.info}}api/WebTwain_Edit.html#converttobw) |[`ConvertToGrayScale()`]({{site.info}}api/WebTwain_Edit.html#converttograyscale)|
-|[`ChangeImageSize()`]({{site.info}}api/WebTwain_Edit.html#changeimagesize) | [`Invert()`]({{site.info}}api/WebTwain_Edit.html#invert)|[`SetImageWidth()`]({{site.info}}api/WebTwain_Edit.html#setimagewidth)|[`ChangeBrightnessAsync()`]({{site.info}}api/WebTwain_Edit.html#changerrightnessasync)|
+|[`ChangeImageSize()`]({{site.info}}api/WebTwain_Edit.html#changeimagesize) | [`Invert()`]({{site.info}}api/WebTwain_Edit.html#invert)|[`SetImageWidth()`]({{site.info}}api/WebTwain_Edit.html#setimagewidth)|[`ChangeBrightnessAsync()`]({{site.info}}api/WebTwain_Edit.html#changebrightnessasync)|
 |[`ChangeContrastAsnyc()`]({{site.info}}api/WebTwain_Edit.html#changecontrastasnyc)|
 
 <!--
