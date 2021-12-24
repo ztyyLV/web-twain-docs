@@ -439,8 +439,8 @@ RotateRightAsync(
 ``` typescript
 /**
  * Rotate the specified image by the specified angle.
- * @param index Specify the image.
- * @param angle Specify the angle.
+ * @param index Specify the index of image in buffer.
+ * @param angle Specify the angle. Positive angle means clockwise. Negative value is counter-clockwise.
  * @param keepSize Whether to keep the original size.
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
