@@ -17,7 +17,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Edit APIs Page
 |[`CopyToClipboard()`](#copytoclipboard) |[`Erase()`](#erase) |[`Flip()`](#flip)|[`Mirror()`](#mirror)|
 | [`Rotate()`](#rotate) |[`RotateEx()`](#rotateex)| [`RotateLeft()`](#rotateleft) | [`RotateRight()`](#rotateright)|
 | [`ChangeBitDepth()`](#changebitdepth) | [`SetDPI()`](#setdpi)|[`ConvertToBW()`](#converttobw) |[`ConvertToGrayScale()`](#converttograyscale)|
-|[`ChangeImageSize()`](#changeimagesize) | [`Invert()`](#invert)|[`SetImageWidth()`](#setimagewidth)|
+|[`ChangeImageSize()`](#changeimagesize) | [`Invert()`](#invert)|[`SetImageWidth()`](#setimagewidth)|[`ChangeBrightnessAsync()`](#changerrightnessasync)|
+|[`ChangeContrastAsnyc()`](#changecontrastasnyc) | 
 
 <!--
 * [Crop()](#crop) 
@@ -447,8 +448,8 @@ RotateRightAsync(
 ``` typescript
 /**
  * Rotate the specified image by the specified angle.
- * @param index Specify the index of image in buffer.
- * @param angle Specify the angle. Positive angle means clockwise. Negative value is counter-clockwise.
+ * @param index Specify the image.
+ * @param angle Specify the angle.
  * @param keepSize Whether to keep the original size.
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
@@ -700,3 +701,45 @@ BackgroundFillColor: number;
 **Usage notes**
 
 By default the colour is white (0xffffff). The byte-ordering of the 24-bit RGB value is **RRGGBB**. RR represents red, GG represents green and BB represents blue.
+
+---
+
+## ChangeBrightnessAsync
+
+**Syntax**
+
+``` typescript
+/**
+ * Change the image brightness.
+ * @param index Specify the index of image in buffer.
+ * @param val Specify the brightness. Allowed values [-1000~1000]. Negative value means decrease the brightness.
+ */
+ChangeBrightnessAsync(index: number, val: number)
+```
+
+**Usage notes**
+
+This API was added in V17.2, supported both Service and WASM mode. 
+
+---
+
+## ChangeContrastAsnyc
+
+**Syntax**
+
+``` typescript
+/**
+ * Change the image brightness.
+ * @param index Specify the index of image in buffer.
+ * @param val Specify the contrast. Allowed values [-1000~1000]. Negative value means decrease the contrast.
+ */
+ChangeContrastAsnyc(index: number, val: number)
+```
+
+**Usage notes**
+
+This API was added in V17.2, supported both Service and WASM mode. 
+
+
+
+
