@@ -82,9 +82,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
  * Create a Dynamsoft Viewer instance and bind it to the WebTwain instance.
  * @param element Specify an HTML element to create the viewer.
  */
-bind(
-  element: boolean;
-): void;
+bind(element: HTMLDivElement): boolean;
 ```
 
 **Example**
