@@ -82,32 +82,35 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 /**
  * Create a Dynamsoft Viewer instance and bind it to the WebTwain instance.
  * @param element Specify an HTML element to create the viewer.
+ * @param documentTemplate Specify the document template.
  */
-bind(
-  element: boolean;
-): void;
+bind(element: HTMLDivElement, documentTemplate: DocumentScannerTemplate) : void;  
+
+interface DocumentScannerTemplate{
+   getCustomElement():CustomElement;  
+   
+   onAddDocumentFunc = function () {}
+   onExitFunc = function () {}
+   onSaveFunc = function () {} 
+   onUploadFunc = function () {}
+   onRemoveSelectedFunc = function () {}    
+}
 ```
 
 **Example**
 
 ``` javascript
-var DWObject = null;
+var DWObject, template;
 Dynamsoft.DWT.CreateDWTObjectEx({
-        WebTwainId: 'dwtcontrol'
-    },
-    function(obj) {
-        DWObject = obj;
-        DWObject.Viewer.bind(document.getElementById('dwtcontrolContainer'));
-        DWObject.Viewer.height = 600;
-        DWObject.Viewer.width = 800;
-        var thumbnailViewer = DWObject.Viewer.createThumbnailViewer();
-        thumbnailViewer.show();
-        DWObject.Viewer.show();
-    },
-    function(err) {
-        console.log(err);
-    }
-);
+    WebTwainId: 'a',
+    UseLocalService: false
+}, function (obj) {
+    DWObject = obj;
+    template = DWObject.Viewer.createTemplate("documentScanner");
+    DWObject.Viewer.bind (null, template);  //If the HTML element to bind is not specified, display in full screen
+    //DWObject.Viewer.bind(document.getElementById("divImageEditor"), template);
+    DWObject.Viewer.show();
+}, function(ec,es){console.log(es);});
 ```
 
 **Usage notes**
