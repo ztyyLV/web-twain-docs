@@ -913,7 +913,7 @@ This API was added in V17.2.
  * Create a file folder for image(s).
  * @argument filename Specify the file name.
  */
-CreateFile(filename:string):Boolean;　　
+CreateFile(filename:string):Boolean;
 ```
 
 **Example**
