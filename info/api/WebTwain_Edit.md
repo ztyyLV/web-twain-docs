@@ -17,7 +17,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Edit APIs Page
 |[`CopyToClipboard()`](#copytoclipboard) |[`Erase()`](#erase) |[`Flip()`](#flip)|[`Mirror()`](#mirror)|
 | [`Rotate()`](#rotate) |[`RotateEx()`](#rotateex)| [`RotateLeft()`](#rotateleft) | [`RotateRight()`](#rotateright)|
 | [`ChangeBitDepth()`](#changebitdepth) | [`SetDPI()`](#setdpi)|[`ConvertToBW()`](#converttobw) |[`ConvertToGrayScale()`](#converttograyscale)|
-|[`ChangeImageSize()`](#changeimagesize) | [`Invert()`](#invert)|[`SetImageWidth()`](#setimagewidth)|[`ChangeBrightnessAsync()`](#changerrightnessasync)|
+|[`ChangeImageSize()`](#changeimagesize) | [`Invert()`](#invert)|[`SetImageWidth()`](#setimagewidth)|[`ChangeBrightnessAsync()`](#changebrightnessasync)|
 |[`ChangeContrastAsnyc()`](#changecontrastasnyc) | 
 
 <!--
