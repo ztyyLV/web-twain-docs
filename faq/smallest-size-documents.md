@@ -2,15 +2,15 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: How can I get the smallest size of documents in PDF, TIFF or JPEG format?
+title: How can I reduce the size of documents in PDF, TIFF or JPEG format?
 keywords: Dynamic Web TWAIN, Document Saving, smallest size document
-breadcrumbText: How can I get the smallest size of documents in PDF, TIFF or JPEG format?
-description: How can I get the smallest size of documents in PDF, TIFF or JPEG format?
+breadcrumbText: How can I reduce the size of documents in PDF, TIFF or JPEG format?
+description: How can I reduce the size of documents in PDF, TIFF or JPEG format?
 ---
 
 # Document Saving
 
-## How can I get the smallest size of documents in PDF, TIFF or JPEG format?
+## How can I reduce the size of documents in PDF, TIFF or JPEG format?
 
 There are a few things that you can try to reduce the size of a resulting file
 
