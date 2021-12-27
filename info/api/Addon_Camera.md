@@ -289,10 +289,10 @@ interface ScanConfiguration{
      enableBorderDetection?: boolean,  // Whether to enable border detection. The default value is true.
      fullScreen?: boolean,   //Whether to display the video in full screen. The default value is false.
 
-   polygonStyle?:{         //the sytle of the auto detect border        
-     stroke: "yellow",    //default : "#fe8e14"
-     strokeWidth: "2px",  //default: "1px"
-     dash:string          //the allowed value are "solid" and "dashed", the default value is "solid"
+   polygonStyle?:{      //the sytle of the auto detect border.       
+     stroke: string,    //default: "#fe8e14". Only supports #16 hexadecimal.
+     strokeWidth: string,  //default: "1px"
+     dash: string          //the allowed value are "solid" and "dashed", the default value is "solid".
      },
 
    resolution?:{
