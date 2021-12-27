@@ -29,8 +29,8 @@ There are a few things that you can try to reduce the size of a resulting file
     Before saving the file,
 
     - set the compression type to the JPEG standard:
-  <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Dynamsoft_Enum.html?ver=latest#dynamsoftdwtenumdwt_pdfcompressiontype-" target="_blank">PDFCompressionType</a> = 5 (PDF_JPEG)
-  <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Dynamsoft_Enum.html?ver=latest#dynamsoftdwtenumdwt_tiffcompressiontype-" target="_blank">TIFFCompressionType</a> = 7 (TIFF_JPEG)
+  <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Dynamsoft_Enum.html?ver=latest#dynamsoftdwtenumdwt_pdfcompressiontype" target="_blank">PDFCompressionType</a> = 5 (PDF_JPEG)
+  <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Dynamsoft_Enum.html?ver=latest#dynamsoftdwtenumdwt_tiffcompressiontype" target="_blank">TIFFCompressionType</a> = 7 (TIFF_JPEG)
 
     - set the <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_IO.html?ver=latest#jpegquality" target="_blank">JPEGQuality</a> = [a lower value]
 
