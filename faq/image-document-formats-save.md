@@ -16,7 +16,7 @@ Documents can be saved in BMP / JPEG / TIFF / PNG / PDF format.
 
 <strong>Notes</strong>:
 
-- To reduce the size for JPEG/PDF/TIFF format, please check <a href="https://www.dynamsoft.com/web-twain/docs/indepth/features/pdf.html?ver=latest" target="_blank">here</a>.
+- To reduce the size for JPEG/PDF/TIFF format, please check [this article]({{site.faq}}smallest-size-documents.html).
 
 - Black & white image data which is 1-bit cannot be saved in the JPEG format as this format supports eight-bit grayscale images and 24-bit color images (eight bits each for red, green, and blue).
 
