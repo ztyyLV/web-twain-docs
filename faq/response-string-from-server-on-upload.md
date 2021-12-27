@@ -21,7 +21,7 @@ errorString: string,
 response: string) => void
 ```
 
-The 1st callback onEmptyResponse is triggered when the server returns no response string. Generally, if errors occurred on the server, the server would return some information to indicate what went wrong. Therefore, if nothing is returned, you can treat it as a successful upload.
+The 1st callback onEmptyResponse is triggered when the server returns no response string. Generally, if an error has occurred on the server, the server will return some information to indicate what went wrong. Therefore, if nothing is returned, you can treat it as a successful upload.
 
 Of course, in your own server-side script to accept and process the HTTP Post request, you know whether the upload is successful and can make it more obvious by returning some custom information to indicate that. In this case, the 2nd callback onServerReturnedSomething will be triggered on purpose and you will need to read the argument response which contains what is returned by the server.
 
