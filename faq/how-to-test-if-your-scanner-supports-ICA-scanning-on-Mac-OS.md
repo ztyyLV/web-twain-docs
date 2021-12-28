@@ -8,9 +8,9 @@ breadcrumbText: How to test if your scanner supports ICA scanning on Mac OS
 description: How to test if your scanner supports ICA scanning on Mac OS
 ---
 
-# Troubleshooting
+# Capture/Image Source
 
-## How to test if your scanner supports ICA scanning on Mac OS
+## How to test if your scanner supports ICA scanning on Mac OS?
 
 ![Hardware-Scanners-Cameras-2]({{site.assets}}imgs/Hardware-Scanners-Cameras-2.png)
 
