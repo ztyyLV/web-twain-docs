@@ -10,7 +10,7 @@ description: How to test if your device is SANE compliant
 
 # Troubleshooting
 
-## How to test if your device is SANE compliant
+## How to test if your device is SANE compliant?
 
 There are 3 ways to verify whether your scanner is SANE compliant.
 
