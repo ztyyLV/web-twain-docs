@@ -39,7 +39,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}how-to-test-if-your-camera-is-MediaDevices-compliant.html" target="_blank">How to test if your camera is MediaDevices compliant?</a>
 
-<a href="{{site.faq}}setting-scan-settings-without-ui.html" target="_blank">Can I set scanning settings without using the default scanner’s UI? What pre-scanning settings do you support?</a>
+<a href="{{site.faq}}setting-scan-settings-without-ui.html" target="_blank">Can I set scanning settings without using the default scanner's UI? What pre-scanning settings do you support?</a>
 
 <a href="{{site.faq}}hide-offline-scanners-from-source-list.html" target="_blank">Can I hide offline scanner devices from the select source list?</a>
 
@@ -51,15 +51,15 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}limit-to-specific-scanner.html" target="_blank">How can I limit all users to use a specific scanner model?</a>
 
-<a href="{{site.faq}}remove-blank-page-automatically.html" target="_blank">Can the Dynamic Web TWAIN SDK automatically remove blank page during the document scanning process?</a>
+<a href="{{site.faq}}remove-blank-page-automatically.html" target="_blank">Can the Dynamic Web TWAIN SDK automatically remove blank pages during the document scanning process?</a>
 
 <a href="{{site.faq}}automatically-rotate-upside-down-pages.html" target="_blank">Can the Dynamic Web TWAIN SDK automatically rotate upside-down pages during the document scanning process?</a>
 
-<a href="{{site.faq}}automatically-detect-border.html" target="_blank">Can the Dynamic Web TWAIN SDK automatically detect border of the scanned document and crop it out?</a>
+<a href="{{site.faq}}automatically-detect-border.html" target="_blank">Can the Dynamic Web TWAIN SDK automatically detect borders of the scanned document and crop it out?</a>
 
-<a href="{{site.faq}}scan-x-pages-from-automatic-document-feeder.html" target="_blank">Can I set my document scanner to scan x pages instead of all pages from the automatic document feeder (ADF)?</a>
+<a href="{{site.faq}}scan-x-pages-from-automatic-document-feeder.html" target="_blank">Can I set my document scanner to scan x number of pages instead of all pages from the automatic document feeder (ADF)?</a>
 
-<a href="{{site.faq}}detect-paper-on-flatbed.html" target="_blank">Can the Dynamic Web TWAIN SDK detect whether paper exists on the flatbed? ?</a>
+<a href="{{site.faq}}detect-paper-on-flatbed.html" target="_blank">Can the Dynamic Web TWAIN SDK detect whether papers exist on the flatbed?</a>
 
 <a href="{{site.faq}}list-supported-resolution-DPI.html" target="_blank">How can I get a list of supported resolution/DPI values from the document scanner?</a>
 
@@ -71,9 +71,9 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}use-usb-webcam-to-capture.html" target="_blank">Can I use built-in or USB webcam to capture document?</a>
 
-<a href="{{site.faq}}import-existing-documents-or-images.html" target="_blank">Can I import existing images or PDF documents into the Dynamic Web TWAIN SDK?</a>
+<a href="{{site.faq}}import-existing-documents-or-images.html" target="_blank">Can I import existing images or PDF documents using the Dynamic Web TWAIN SDK?</a>
 
-<a href="{{site.faq}}download-image-from-FTP-or-HTTP-server.html" target="_blank">Can I download an image from an FTP or HTTP server into the Dynamic Web TWAIN SDK?</a>
+<a href="{{site.faq}}download-image-from-FTP-or-HTTP-server.html" target="_blank">Can I download an image from a FTP or HTTP server using the Dynamic Web TWAIN SDK?</a>
 
 <a href="{{site.faq}}trigger-automatic-workflow-after-scanning.html" target="_blank">How can I trigger an automatic workflow right after document scanning or image importing?</a>
 
