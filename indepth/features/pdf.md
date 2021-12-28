@@ -29,11 +29,11 @@ To include the PDF addon, simply add a reference to the corresponding JavaScript
 
 ## Input
 
-### Open an image-only PDF
+### Open an image-only PDF file
 
 When loading in a PDF file, `DWT` tries to extract images from that file, which is why the SDK can handle image-based PDF documents by default. 
 
-### Open an searchable PDF
+### Open a searchable PDF file
 
 However, most existing PDF files contain much more than just images. For image-and-text PDF files, we need to make use of the PDF Rasterizer (`PDFR` for short), the main component of the PDF addon.
 
