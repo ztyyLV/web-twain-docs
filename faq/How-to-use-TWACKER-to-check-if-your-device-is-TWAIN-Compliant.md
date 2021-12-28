@@ -3,7 +3,7 @@ layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
 title: How to use TWACKER to check if your device is TWAIN Compliant
-keywords: Dynamic Web TWAIN, Capture/ Image Source, verify scanner, compatible
+keywords: Dynamic Web TWAIN, Capture/ Image Source, verify scanner, compatible, TWACKER, TWAIN Compliant
 breadcrumbText: How to use TWACKER to check if your device is TWAIN Compliant
 description: How to use TWACKER to check if your device is TWAIN Compliant
 ---
