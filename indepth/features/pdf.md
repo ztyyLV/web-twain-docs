@@ -49,7 +49,7 @@ var onFailure = function(errorCode, errorString) {
     console.log(errorString);
 };
 DWObject.IfShowFileDialog = true;
-// PDF Addon is used here to ensure PDF support
+// PDF Addon is used here to ensure text-based PDF support
 DWObject.Addon.PDF.SetResolution(300);
 DWObject.Addon.PDF.SetConvertMode(Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL);
 DWObject.LoadImageEx("", Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL, onSuccess, onFailure);
