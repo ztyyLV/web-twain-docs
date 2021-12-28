@@ -2,15 +2,15 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: How to change the certificate of the Dynamsoft Service?
+title: How can I change the certificate of the Dynamsoft Service?
 keywords: Dynamic Web TWAIN, Security, change certificate, service
-breadcrumbText: How to change the certificate of the Dynamsoft Service?
-description: How to change the certificate of the Dynamsoft Service?
+breadcrumbText: How can I change the certificate of the Dynamsoft Service?
+description: How can I change the certificate of the Dynamsoft Service?
 ---
 
 # Security
 
-## How to change the certificate of the Dynamsoft Service?
+## How can I change the certificate of the Dynamsoft Service?
 
 To replace the default certificates, the steps are:
 
