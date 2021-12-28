@@ -8,9 +8,9 @@ breadcrumbText: How to use TWACKER to check if your device is TWAIN Compliant
 description: How to use TWACKER to check if your device is TWAIN Compliant
 ---
 
-# Troubleshooting
+# Capture/Image Source
 
-## How to use TWACKER to check if your device is TWAIN Compliant
+## How to use TWACKER to check if your device is TWAIN Compliant?
 
 - [Recommended] Use the tool called `Twacker` which is developed by the [TWAIN Working Group](https://www.twain.org/)
 
