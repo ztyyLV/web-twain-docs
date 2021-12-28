@@ -21,8 +21,6 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}sdk-download-for-linux-and-mac.html" target="_blank">Do you also provide an SDK download for Linux and Mac developers?</a>
 
-<a href="{{site.faq}}support-development-with-angular-react-vue.html" target="_blank">Do you support development with popular frameworks like Angular, React and Vue?</a>
-
 <a href="{{site.faq}}trial-fully-functional.html" target="_blank">Is the free trial version fully functional?</a>
 
 <a href="{{site.faq}}use-with-PWA.html" target="_blank">Can I use the Dynamic Web TWAIN SDK to create a PWA application?</a>
