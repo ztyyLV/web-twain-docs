@@ -334,14 +334,14 @@ Dynamsoft.DWT.UpdateCert(url, optionalAsyncSuccessFunc, optionalAsyncFailureFunc
 
 * This version is backward compatible with version 16.0. This means once you have installed the Dynamsoft Service for version 16.1, an application running version 16.0 also works without the need to install the Service for version 16.0.
 * The method `LoadImageEx()` now supports mobile platforms as well.
-* Dynamsoft Service directory is now named with its major version in it. For example,      `/DynamsoftServicex64/` is now `/DynamsoftServicex64_16/` . Also ActiveX related files are put into a different directory called `/WebTWAINActiveX/` .
+* Dynamsoft Service directory is now named with its major version in it. For example, `/DynamsoftServicex64/` is now `/DynamsoftServicex64_16/`. Also ActiveX related files are put into a different directory called `/WebTWAINActiveX/` .
 
 ### Bug Fixes
 
 * Fixed a bug where images fail to show in the viewer in IE 10.
 * Fixed a bug in Chrome where the print UI invoked by the API `Print()` disappears immediately after showing up.
 * Fixed a bug with the API `Dynamsoft.WebTwainEnv.Host` which is now effective.
-* Fixed a bug with consecutive cropping operations with the API `Crop()` .
+* Fixed a bug with consecutive cropping operations with the API `Crop()`.
 * Fixed a bug with `WebTwain` instances created by the API `Dynamsoft.WebTwainEnv.CreateDWTObjectEx()` so that their UI binding works correctly.
 
 ### Deprecations
