@@ -12,7 +12,7 @@ description: The license key is set in JavaScript. How can I protect it?
 
 ## The license key is set in JavaScript. How can I protect it?
 
-If you are using Per Client Device or Per Page license of Dynamic Web TWAIN SDK, your keycode is either the <a href="https://www.dynamsoft.com/license-server/docs/about/terms.html#organization-id" target="_blank">organization ID</a> (which links to the <a href="https://www.dynamsoft.com/license-server/docs/about/terms.html#default-handshake-code" target="_blank">default Handshake Code</a>) or the <a href="https://www.dynamsoft.com/license-server/docs/about/terms.html#handshake-code" target="_blank">handshake code</a> or both. Therefore, you can simply protect your license by adding security settings to your handshake code in the license portal.
+If you are using Per Client Device or Per Page license of Dynamic Web TWAIN SDK, your license is either the <a href="https://www.dynamsoft.com/license-server/docs/about/terms.html#organization-id" target="_blank">organization ID</a> (which links to the <a href="https://www.dynamsoft.com/license-server/docs/about/terms.html#default-handshake-code" target="_blank">default Handshake Code</a>), the <a href="https://www.dynamsoft.com/license-server/docs/about/terms.html#handshake-code" target="_blank">handshake code</a> or both. Therefore, you can simply protect your license by adding security settings to your handshake code in the license portal.
 
 - You can set a <a href="https://www.dynamsoft.com/license-server/docs/about/terms.html#session-password" target="_blank">session password</a>.
 
