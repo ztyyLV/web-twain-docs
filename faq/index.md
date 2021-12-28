@@ -35,6 +35,10 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}how-to-test-if-your-device-is-SANE-compliant.html" target="_blank">How to test if your device is SANE compliant?</a>
 
+<a href="{{site.faq}}how-to-test-if-your-camera-is-DirectShow-compliant.html" target="_blank">How to test if your camera is DirectShow compliant?</a>
+
+<a href="{{site.faq}}how-to-test-if-your-camera-is-MediaDevices-compliant.html" target="_blank">How to test if your camera is MediaDevices compliant?</a>
+
 <a href="{{site.faq}}setting-scan-settings-without-ui.html" target="_blank">Can I set scanning settings without using the default scanner’s UI? What pre-scanning settings do you support?</a>
 
 <a href="{{site.faq}}hide-offline-scanners-from-source-list.html" target="_blank">Can I hide offline scanner devices from the select source list?</a>
