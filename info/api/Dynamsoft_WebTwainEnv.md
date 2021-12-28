@@ -178,6 +178,33 @@ Check [license error list](https://www.dynamsoft.com/license-tracking/docs/commo
 
 ## Options
 
+### `UpdateCert`
+
+**Syntax**
+
+``` typescript
+/**
+ * Update and downaload certificate (server.pem.ldsc && server_key.pem.ldsc) to DynamsoftServicex64_17\cert.
+ * @param url Url to download the new certificate. 
+ * @param successCallback A callback function that is executed if the request succeeds.
+ * @param failureCallback A callback function that is executed if the request fails.
+ * @argument errorCode The error code.
+ * @argument errorString The error string.
+ */
+UpdateCert(
+        url: string,
+        optionalAsyncSuccessFunc?: () => void,
+        optionalAsyncFailureFunc?: (
+            errorCode: number, 
+            errorString: string) => void
+    );
+```
+
+**Example**
+``` javascript
+Dynamsoft.DWT.sessionPassword = "MyPassw0rd";
+```
+
 ### `Containers`
 
 An array of `Container` definitions that specifies the UI elements for `WebTwain` instances. The `Container` interface is defined below
