@@ -12,11 +12,6 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 <!--
 ## 17.2
 
-在install.js中增加一个接口： 
-Dynamsoft.OnSSLCertInfo(certExpiredDate); //为Date 类对象, 表示证书过期的时间
-Dynamsoft.DWT.UpdateCert(url, optionalAsyncSuccessFunc, optionalAsyncFailureFunc); //下载证书
-
-
 ### New Features
 
 * Added method `GetTagListByIndex()` to return the tag of a specified image.
@@ -30,15 +25,16 @@ Dynamsoft.DWT.UpdateCert(url, optionalAsyncSuccessFunc, optionalAsyncFailureFunc
 * Added property `showCheckbox` to show checkbox on image(s). 
 * Added method `ChangeBrightnessAsync()` to change the image brightness. 
 * Added method `ChangeContrastAsnyc()` to change the image contrast. 
-* Added method `UpdateCert()` to update and download certificate. 
+* Added method `UpdateCert()` to automatically update the client certificate.
 
 ### Improved Features 
 
-* Updated Barcode Reader library to version 8.6. Check out release notes for <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/release-notes/js-8.html?ver=latest#860-08312021" target="_blank">Barcode Reader JavaScript SDK - 8.6</a>
+* Improved the <strong>document capture </strong> in WASM mode. 
 * RENDERALL convert mode in <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Addon_PDF.html?ver=latest#setconvertmode" target="_blank">SetConvertMode</a> now supports loading images with annotations.
+* Updated Barcode Reader library to version 8.6. Check out release notes for <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/release-notes/js-8.html?ver=latest#860-08312021" target="_blank">Barcode Reader JavaScript SDK - 8.6</a>
 * Modified DynamicImage.dll(DynamicImagex64.dll) to improve the encoding and decoding mode of tiff.
 * Updated the order of Capability setting according to the order defined in the TWAIN document.
-* Improved the document capture in WASM mode. 
+
 
 ### Bug Fixes
 
