@@ -33,7 +33,7 @@ description: Dynamic Web TWAIN supports image capture from TWAIN Scanners, ICA S
 
 * TWAIN is [the most commonly used protocol](https://www.twain.org/why-twain/) for image capturing and processing. Almost all scanners on the market come with a TWAIN driver and are supported by TWAIN applications like `DWT`.
 
-See more: [How to use TWACKER to check if your device is TWAIN Compliant?]({{site.faq}}how-to-use-TWACKER-to-check-if-your-device-is-TWAIN-Compliant.html)
+See more: <a href="{{site.faq}}how-to-use-TWACKER-to-check-if-your-device-is-TWAIN-Compliant.html" target="_blank">How to use TWACKER to check if your device is TWAIN Compliant?</a>
 
 ## ICA Scanners
 
@@ -47,7 +47,7 @@ See more: [How to use TWACKER to check if your device is TWAIN Compliant?]({{sit
 
 * ICA is supported on macOS X.
 
-See more: [How to test if your scanner supports ICA scanning on Mac OS?]({{site.faq}}how-to-test-if-your-scanner-supports-ICA-scanning-on-Mac-OS.html)
+See more: <a href="{{site.faq}}how-to-test-if-your-scanner-supports-ICA-scanning-on-Mac-OS.html" target="_blank">How to test if your scanner supports ICA scanning on Mac OS?</a> 
 
 ## SANE Scanners
 
@@ -63,7 +63,7 @@ See more: [How to test if your scanner supports ICA scanning on Mac OS?]({{site.
 
 * As of version 16.1.1, `DWT` supports SANE v1.0.25.
 
-See more: [How to test if your device is SANE compliant?]({{site.faq}}how-to-test-if-your-device-is-SANE-compliant.html) 
+See more: <a href="{{site.faq}}how-to-test-if-your-device-is-SANE-compliant.html" target="_blank">How to test if your device is SANE compliant?</a> 
 
 ## DirectShow Cameras
 
@@ -71,7 +71,7 @@ See more: [How to test if your device is SANE compliant?]({{site.faq}}how-to-tes
 
 `DirectShow Cameras` refer to the cameras which can be accessed via the [Microsoft DirectShow architecture](https://docs.microsoft.com/en-us/windows/win32/directshow/introduction-to-directshow). These cameras are either built into desktops / laptops or connected via USB.
 
-See more: [Is my Camera DirectShow Compliant?]({{site.indepth}}faqs/troubleshooting/How-to-test-if-your-camera-is-DirectShow-compliant.html)
+See more: <a href="{{site.faq}}how-to-test-if-your-camera-is-DirectShow-compliant.html" target="_blank">Is my Camera DirectShow Compliant?</a>  
 
 ## MediaDevices Cameras
 
@@ -79,4 +79,4 @@ See more: [Is my Camera DirectShow Compliant?]({{site.indepth}}faqs/troubleshoot
 
 > `DirectShow Cameras` and `MediaDevices Cameras` could refer to the same devices which can be accessed either way.
 
-See more: [Is my Camera MediaDevices Compliant?]({{site.indepth}}faqs/troubleshooting/How-to-test-if-your-camera-is-MediaDevices-compliant.html)
+See more:  <a href="{{site.faq}}how-to-test-if-your-camera-is-MediaDevices-compliant.html" target="_blank">Is my Camera MediaDevices Compliant?</a> 
