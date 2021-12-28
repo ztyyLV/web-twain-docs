@@ -33,7 +33,7 @@ description: Dynamic Web TWAIN supports image capture from TWAIN Scanners, ICA S
 
 * TWAIN is [the most commonly used protocol](https://www.twain.org/why-twain/) for image capturing and processing. Almost all scanners on the market come with a TWAIN driver and are supported by TWAIN applications like `DWT`.
 
-See more: [How to use TWACKER to check if your device is TWAIN Compliant?]({{site.indepth}}faq/how-to-use-TWACKER-to-check-if-your-device-is-TWAIN-Compliant.html)
+See more: [How to use TWACKER to check if your device is TWAIN Compliant?]({{site.faq}}how-to-use-TWACKER-to-check-if-your-device-is-TWAIN-Compliant.html)
 
 ## ICA Scanners
 
@@ -47,7 +47,7 @@ See more: [How to use TWACKER to check if your device is TWAIN Compliant?]({{sit
 
 * ICA is supported on macOS X.
 
-See more: [How to test if your scanner supports ICA scanning on Mac OS?]({{site.indepth}}faq/how-to-test-if-your-scanner-supports-ICA-scanning-on-Mac-OS.html)
+See more: [How to test if your scanner supports ICA scanning on Mac OS?]({{site.faq}}how-to-test-if-your-scanner-supports-ICA-scanning-on-Mac-OS.html)
 
 ## SANE Scanners
 
@@ -63,7 +63,7 @@ See more: [How to test if your scanner supports ICA scanning on Mac OS?]({{site.
 
 * As of version 16.1.1, `DWT` supports SANE v1.0.25.
 
-See more: [How to test if your device is SANE compliant?]({{site.indepth}}faqs/how-to-test-if-your-device-is-SANE-compliant.html) 
+See more: [How to test if your device is SANE compliant?]({{site.faq}}how-to-test-if-your-device-is-SANE-compliant.html) 
 
 ## DirectShow Cameras
 
