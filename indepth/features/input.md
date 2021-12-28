@@ -25,7 +25,7 @@ A local scanner refers to a scanner that is plugged in the same desktop via USB 
 
 > Supported on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and [mobile]({{site.getstarted}}platform.html#browsers-on-mobile-devices) platforms.
 
-A remote scanner refers to a scanner that is..
+A remote scanner refers to a scanner that is.
 
 * Not connected to the initiating device
 * Connected and accessible on a `Windows` desktop on LAN (USB or network) where `DWT` must be installed
