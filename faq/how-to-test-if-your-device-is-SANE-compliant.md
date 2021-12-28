@@ -8,7 +8,7 @@ breadcrumbText: How to test if your device is SANE compliant
 description: How to test if your device is SANE compliant
 ---
 
-# Troubleshooting
+# Capture/Image Source
 
 ## How to test if your device is SANE compliant?
 
