@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Where can I download an older version of the Dynamic Web TWAIN SDK
+title: Where can I download an older version of the Dynamic Web TWAIN SDK?
 keywords: Dynamic Web TWAIN, SDK Download, free trial, older version
 breadcrumbText: Where can I download an older version of the Dynamic Web TWAIN SDK?
 description: Where can I download an older version of the Dynamic Web TWAIN SDK?
 ---
 
-# SDK Download/ Free Trial
+# SDK Download/Free Trial
 
 ## Where can I download an older version of the Dynamic Web TWAIN SDK?
 
