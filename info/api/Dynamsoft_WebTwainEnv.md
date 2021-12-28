@@ -202,7 +202,13 @@ UpdateCert(
 
 **Example**
 ``` javascript
-Dynamsoft.DWT.sessionPassword = "MyPassw0rd";
+   Dynamsoft.OnSSLCertInfo = function (sslExpiredDate) {
+        console.log(sslExpiredDate);
+   Dynamsoft.DWT.UpdateCert("https://xxx.com/cert.zip", 
+        function () { console.log("OK"); }, 
+        function (errorCode, errorString) { console.log(errorString);}
+    );
+  };
 ```
 
 ### `Containers`
