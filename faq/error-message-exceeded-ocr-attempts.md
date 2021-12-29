@@ -18,8 +18,8 @@ When you use the OCRPro addon, you may receive this error message returned by th
 
 ### Cause
 
-It is a license issue. The OCRPro licenses are yearly licenses and each license has a limitation on the number of pages allowed to be OCR’ed. The SDK will throw this error when the limitation is reached.
+The license quota has been used up and extra quota needs to be purchased. The OCRPro licenses are yearly licenses and each license has a limitation on the number of pages allowed to be OCR’ed. The SDK will throw this error when the limitation is reached.
 
 ### Solution
 
-The license quota has been used up and extra quota needs to be purchased. Contact <a href="mailto:support@dynamsoft.com" target="_blank">Dynamsoft Support</a> for any assistance.
+Contact <a href="mailto:support@dynamsoft.com" target="_blank">Dynamsoft Support</a> for any assistance.
