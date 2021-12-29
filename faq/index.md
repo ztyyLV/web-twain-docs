@@ -91,11 +91,11 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}viewer-size-auto-resize.html" target="_blank">Can the size of the image viewer auto resize when the browser window size changes?</a>
 
-<a href="{{site.faq}}create-thumbnail-viewer-to-navigate-images.html" target="_blank">How can I create the thumbnail viewer to navigate images?</a>
+<a href="{{site.faq}}create-thumbnail-viewer-to-navigate-images.html" target="_blank">How can I create a thumbnail viewer to view images?</a>
 
 <a href="{{site.faq}}change-background-color.html" target="_blank">How can I change the background color of the image viewer?</a>
 
-<a href="{{site.faq}}resort-images-in-viewer.html" target="_blank">How can I resort images in the viewer?</a>
+<a href="{{site.faq}}resort-images-in-viewer.html" target="_blank">How can I reorder images in the viewer?</a>
 
 <a href="{{site.faq}}disable-drag-and-drop-in-images.html" target="_blank">How can I disable drag and drop images in the viewer?</a>
 
@@ -103,7 +103,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}show-page-number.html" target="_blank">How can I show page number on each image?</a>
 
-<a href="{{site.faq}}resize-view-of-image.html" target="_blank">How can I resize the view of image, e.g., zoom in/out the current image?</a>
+<a href="{{site.faq}}resize-view-of-image.html" target="_blank">How can I resize the view of image (e.g. zoom in/out on an image)?</a>
 
 <a href="{{site.faq}}mouse-click-events-supported.html" target="_blank">What mouse click events does the viewer support?</a>
 
