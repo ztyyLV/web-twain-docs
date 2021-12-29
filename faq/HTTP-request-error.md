@@ -14,16 +14,16 @@ description: HTTP request error
 
 ### Symptom
 
-When you upload images via HTTP Put, you may get this error.
+When attempting to upload images via HTTP Put the images fail to upload and this error is received.
 
 ### Cause
 
-- The problem may occur if the write permission is not provided on the server.
-- If you use Tomcat, because the value of the `readonly` property is `false` by default, the HTTP Put operation is not allowed.
+- The problem may occur if write permission is not provided on the server.
+- If you use Tomcat, the value of the `readonly` property is `false` by default, in this case the HTTP Put operation is not allowed.
 
 ### Solution
 
-- Check the write permission at the server.
+- Check the write permission of the server.
 
   - Start Internet Information Services (IIS).
   - Click Web Sites.
