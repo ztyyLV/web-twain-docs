@@ -12,4 +12,4 @@ description: Do you offer lifetime/perpetual licenses?
 
 ## Do you offer lifetime/perpetual licenses?
 
-Yes, we offer the lifetime/perpetual license. This comes with only one year of software maintenance service and you need to buy yearly maintenance to avail free upgrades, premium tech support and <a href="https://www.dynamsoft.com/company/annual-maintenance/" target="_blank">much more</a>..
+Yes, we offer the lifetime/perpetual license which typically comes with one year of software maintenance service. For upgrades and premium technical support you would need to renew yearly maintenance for more on the benefits of maintenance please view <a href="https://www.dynamsoft.com/company/annual-maintenance/" target="_blank">this article</a>.
