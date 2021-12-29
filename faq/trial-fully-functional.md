@@ -8,7 +8,7 @@ breadcrumbText: Is the free trial version fully functional?
 description: Is the free trial version fully functional?
 ---
 
-# SDK Download/ Free Trial
+# SDK Download/Free Trial
 
 ## Is the free trial version fully functional?
 

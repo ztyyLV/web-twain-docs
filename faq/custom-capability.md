@@ -8,7 +8,7 @@ breadcrumbText: How can I use a custom capability of my scanner hardware when th
 description: How can I use a custom capability of my scanner hardware when there is no direct API to set it?
 ---
 
-# Capture/ Image Source
+# Capture/Image Source
 
 ## How can I use a custom capability of my scanner hardware when there is no direct API to set it?
 

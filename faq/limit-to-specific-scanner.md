@@ -8,7 +8,7 @@ breadcrumbText: How can I limit all users to use a specific scanner model?
 description: How can I limit all users to use a specific scanner model?
 ---
 
-# Capture/ Image Source
+# Capture/Image Source
 
 ## How can I limit all users to use a specific scanner model?
 

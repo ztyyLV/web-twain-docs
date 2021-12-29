@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Can I run the scanning service on an ARM-based embedded device, such as Raspberry Pi
+title: Can I run the scanning service on an ARM-based embedded device, such as Raspberry Pi?
 keywords: Dynamic Web TWAIN, SDK Download, free trial, Raspberry Pi, ARM-based
 breadcrumbText: Can I run the scanning service on an ARM-based embedded device, such as Raspberry Pi?
 description: Can I run the scanning service on an ARM-based embedded device, such as Raspberry Pi?
 ---
 
-# SDK Download/ Free Trial
+# SDK Download/Free Trial
 
 ## Can I run the scanning service on an ARM-based embedded device, such as Raspberry Pi?
 

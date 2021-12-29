@@ -8,8 +8,8 @@ breadcrumbText: Is the AcquireImage() method synchronous or asynchronous?
 description: Is the AcquireImage() method synchronous or asynchronous?
 ---
 
-# Capture/ Image Source
+# Capture/Image Source
 
 ## Is the AcquireImage() method synchronous or asynchronous?
 
-<a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html?ver=latest#acquireimage" target="_blank">AcquireImage()</a> is an asynchronous method, whether it includes a callback function or not.
+<a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html?ver=latest#acquireimage" target="_blank">AcquireImage()</a> is an asynchronous method, regardless of whether it includes a callback function or not.

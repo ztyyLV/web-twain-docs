@@ -2,13 +2,13 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Do you also provide an SDK download for Linux and Mac developers
+title: Do you also provide an SDK download for Linux and Mac developers?
 keywords: Dynamic Web TWAIN, SDK Download, linux, mac
 breadcrumbText: Do you also provide an SDK download for Linux and Mac developers?
 description: Do you also provide an SDK download for Linux and Mac developers?
 ---
 
-# SDK Download/ Free Trial
+# SDK Download/Free Trial
 
 ## Do you also provide an SDK download for Linux and Mac developers?
 

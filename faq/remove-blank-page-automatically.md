@@ -2,22 +2,22 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Can the Dynamic Web TWAIN SDK automatically remove blank page during the document scanning process?
+title: Can the Dynamic Web TWAIN SDK automatically remove blank pages during the document scanning process?
 keywords: Dynamic Web TWAIN, Capture/ Image Source, detect, discard blank pages
-breadcrumbText: Can the Dynamic Web TWAIN SDK automatically remove blank page during the document scanning process?
-description: Can the Dynamic Web TWAIN SDK automatically remove blank page during the document scanning process?
+breadcrumbText: Can the Dynamic Web TWAIN SDK automatically remove blank pages during the document scanning process?
+description: Can the Dynamic Web TWAIN SDK automatically remove blank pages during the document scanning process?
 ---
 
-# Capture/ Image Source
+# Capture/Image Source
 
-## Can the Dynamic Web TWAIN SDK automatically remove blank page during the document scanning process?
+## Can the Dynamic Web TWAIN SDK automatically remove blank pages during the document scanning process?
 
 ### Method One
 
 If the TWAIN driver of your device supports discarding blank pages, you can use the driver's built-in feature.
 
-1. You can set the [ `IfShowUI` ]({{site.info}}api/WebTwain_Acquire.html#ifshowui) property to true to display the User Interface (UI) of the source and you can check the option there (it normally reads 'discard blank')
-2. If you don't want to show the user interface of the source, you can set [ `IfAutoDiscardBlankpages` ]({{site.info}}api/WebTwain_Acquire.html#ifautodiscardblankpages) to true or negotiate the ICAP_AUTODISCARDBLANKPAGES capability in code to discard blank page automatically. Please NOTE that this property or capability only works if the scanner itself supports the feature (on the hardware level).
+1. You can set the [ `IfShowUI` ]({{site.info}}api/WebTwain_Acquire.html#ifshowui) property to true to display the User Interface (UI) of the source and you can check the option there (It normally reads 'discard blank'.).
+2. If you don't want to show the user interface of the source, you can set [ `IfAutoDiscardBlankpages` ]({{site.info}}api/WebTwain_Acquire.html#ifautodiscardblankpages) to true or negotiate the ICAP_AUTODISCARDBLANKPAGES capability to discard blank pages automatically. Please NOTE that this property or capability only works if the scanner itself supports the feature (on the hardware level).
 
 ```javascript
 DWObject.SelectSource();
@@ -48,4 +48,4 @@ function DWObject_OnPostTransfer() {
 }
 ```
 
-NOTE: In many cases, the scanned blank image may come with some noises which would affect the result returned by IsBlankImageExpress. To improve the result, you may adjust the value of [ `BlankImageMaxStdDev` ]({{site.info}}api/WebTwain_Buffer.html#blankimagemaxstddev) Property. The default value is 1 (0 means single-color image). Thus, by increasing the value a little bit (e.g. to 20), noises on images are ignored so a blank image can be detected faster.
+NOTE: In many cases, the scanned blank image may come with some noises which would affect the result returned by IsBlankImageExpress. To improve the result, you may adjust the value of the [ `BlankImageMaxStdDev` ]({{site.info}}api/WebTwain_Buffer.html#blankimagemaxstddev) property. The default value is 1 (0 means single-color image). Thus, by increasing the value a little bit (e.g. to 20), noises on images are ignored so a blank image can be detected faster.

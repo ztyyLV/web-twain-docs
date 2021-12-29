@@ -12,7 +12,7 @@ description: Can I hide offline scanner devices from the select source list?
 
 ## Can I hide offline scanner devices from the select source list?
 
-Generally, the modern scanner drivers have the functionality to auto-hide themselves if they are not connected. If your scanner doesn’t hide itself when it is offline, unfortunately, there is no good way to automatically remove this offline device from showing on the source list.
+Generally, the modern scanner drivers have the functionality to auto-hide themselves if they are not connected. If your scanner doesn't hide itself when it is offline, unfortunately, there is no good way to automatically remove this offline device from showing on the source list.
 
 If your requirement is to hide some specific devices (e.g. hide all Epson scanners) from the source list, this could be achieved by using the below example:
 
