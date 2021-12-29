@@ -191,7 +191,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}securely-transfer-to-server.html" target="_blank">How can I securely transfer scanned documents to my server?</a>
 
-<a href="{{site.faq}}encrypt-all-in-pdf.html" target="_blank">Can I encrypt all documents in PDF format before uploading?</a>
+<a href="{{site.faq}}encrypt-pdf-files.html" target="_blank">Can I generate an encrypted file in PDF format?</a>
 
 <a href="{{site.faq}}limit-upload-size-to-server.html" target="_blank">Can I limit the size of documents to be uploaded to my server?</a>
 
