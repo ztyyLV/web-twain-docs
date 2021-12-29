@@ -323,9 +323,9 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}which-license-purchase-needed-for-saas.html" target="_blank">What license should I purchase if I am providing SaaS?</a>
 
-<a href="{{site.faq}}release-license-seats.html" target="_blank">For the per-client-device licensing model, can I release license seats taken by retired/unused devices?</a>
+<a href="{{site.faq}}release-license-seats.html" target="_blank">For the per-client-device licensing model, can seats taken by retired/unused devices be released from the license?</a>
 
-<a href="{{site.faq}}seat-taken-if-os-reinstalled.html" target="_blank">Would a client machine take one more license seat if its operating system is reinstalled?</a>
+<a href="{{site.faq}}seat-taken-if-os-reinstalled.html" target="_blank">Will a client machine take an additional license seat if its operating system is reinstalled?</a>
 
 <a href="{{site.faq}}license-limit-reached.html" target="_blank">What if I reach the limit of the granted number of license seats?</a>
 
@@ -335,7 +335,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}resell-sdk.html" target="_blank">I need to resell the SDK within my application to my customers. What options do you offer?</a>
 
-<a href="{{site.faq}}flexible-to-custom-license.html" target="_blank">Are you flexible to discuss any custom licensing model?</a>
+<a href="{{site.faq}}flexible-to-custom-license.html" target="_blank">Are you flexible to discuss custom licensing models?</a>
 
 <a href="{{site.faq}}local-resellers.html" target="_blank">Do you have any local resellers from whom I can purchase a license of the Dynamic Web TWAIN SDK?</a>
 
