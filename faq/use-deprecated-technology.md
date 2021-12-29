@@ -12,7 +12,7 @@ description: Does the Dynamic Web TWAIN SDK use any deprecated technologies like
 
 ## Does the Dynamic Web TWAIN SDK use any deprecated technologies like NPAPI or ActiveX?
 
-Dynamic Web TWAIN no longer uses the NPAPI technology, but has kept support of the ActiveX edition.
+Dynamic Web TWAIN no longer uses the NPAPI technology, but has kept support for the ActiveX edition.
 
 Before Chrome stopped the support for NPAPI, Dynamic Web TWAIN added HTML5 support which enables web scanning without the need for the NPAPI technology.
 

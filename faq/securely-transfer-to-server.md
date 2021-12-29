@@ -12,7 +12,7 @@ description: How can I securely transfer scanned documents to my server?
 
 ## How can I securely transfer scanned documents to my server?
 
-Dynamic Web TWAIN supports downloads/uploads documents via HTTPS.
+Dynamic Web TWAIN supports downloading/uploading documents via HTTPS.
 
 To enable HTTPS,
 

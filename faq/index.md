@@ -181,9 +181,9 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}where-images-are-stored.html" target="_blank">Where does the Dynamic Web TWAIN SDK store images on end-user machines? Are they encrypted?</a>
 
-<a href="{{site.faq}}prompt-end-user-when-local-resources-used.html" target="_blank">Can I prompt end-user when the Dynamic Web TWAIN SDK attempts to visit any local resources (scanner, camera, or disk drive)?</a>
+<a href="{{site.faq}}prompt-end-user-when-local-resources-used.html" target="_blank">Can I prompt the end-user when the Dynamic Web TWAIN SDK attempts to visit any local resources (scanner, camera, or disk drive)?</a>
 
-<a href="{{site.faq}}local-cached-images-destroyed.html" target="_blank">When would the local cached images be destroyed?</a>
+<a href="{{site.faq}}local-cached-images-destroyed.html" target="_blank">When are the locally cached images destroyed?</a>
 
 <a href="{{site.faq}}license-key-protection.html" target="_blank">The license key is set in JavaScript. How can I protect it?</a>
 
@@ -197,11 +197,11 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}iso-27001-compliant.html" target="_blank">Is the Dynamic Web TWAIN SDK ISO 27001 compliant?</a>
 
-<a href="{{site.faq}}gdpr-compliant.html" target="_blank">Is the Dynamic Web TWAIN SDK GDPR compliant? ?</a>
+<a href="{{site.faq}}gdpr-compliant.html" target="_blank">Is the Dynamic Web TWAIN SDK GDPR compliant?</a>
 
 <a href="{{site.faq}}hippa-compliant.html" target="_blank">Is the Dynamic Web TWAIN SDK HIPPA compliant?</a>
 
-<a href="{{site.faq}}change-dynamsoft-service-certificate.html" target="_blank">How to change the certificate of the Dynamsoft Service?</a>
+<a href="{{site.faq}}change-dynamsoft-service-certificate.html" target="_blank">How can I change the certificate of the Dynamsoft Service?</a>
 
 ## Addon
 
@@ -223,9 +223,9 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}speed-up-barcode-reading-process.html" target="_blank">Is there any way to speed up the barcode reading process?</a>
 
-<a href="{{site.faq}}webcam-supported-by-webcam-capture-addon.html" target="_blank">What type of webcam does the Webcam Capture addon support?</a>
+<a href="{{site.faq}}webcam-supported-by-webcam-capture-addon.html" target="_blank">What types of webcams does the Webcam Capture addon support</a>
 
-<a href="{{site.faq}}use-webassembly-to-support-webcam.html" target="_blank">Can I use the WebAssembly Edition of SDK to support webcam instead of using the Webcam Capture addon for Desktop Service Edition?</a>
+<a href="{{site.faq}}use-webassembly-to-support-webcam.html" target="_blank">Can I use the WebAssembly Edition of SDK to support webcams instead of using the Webcam Capture addon for Desktop Service Edition?</a>
 
 <a href="{{site.faq}}difference-between-ocr-basic-and-pro.html" target="_blank">What’s the difference between your OCR Basic and OCR Pro SDK?</a>
 
@@ -233,7 +233,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}camera-play-and-showvideo.html" target="_blank">What is the difference between Camera.play and Camera.showVideo?</a>
 
-<a href="{{site.faq}}difference-between-camera-and-webcam.html" target="_blank">hat is the difference between WebTwain.Addon.Camera and WebTwain.Addon.Webcam?</a>
+<a href="{{site.faq}}difference-between-camera-and-webcam.html" target="_blank">What is the difference between WebTwain.Addon.Camera and WebTwain.Addon.Webcam?</a>
 
 ## Project Deployment and End-user Installation
 
