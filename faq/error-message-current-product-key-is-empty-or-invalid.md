@@ -18,8 +18,8 @@ You get an error message that says “The current product key is empty or invali
 
 ### Cause
 
-You are trying to use an unlicensed feature of Dynamic Web TWAIN or use it on an unlicensed Platform or Browser.
+You are trying to use an unlicensed feature of Dynamic Web TWAIN or use it on an unlicensed platform or browser.
 
 ### Resolution
 
-Make sure you have the correct license set in the proper configuration. If you have doubts or questions, you can contact Dynamsoft Support.
+Make sure you have the correct license set in the proper configuration. If you have any questions please contact <a href="mailto:support@dynamsoft.com" target="_blank">Dynamsoft Support</a>.
