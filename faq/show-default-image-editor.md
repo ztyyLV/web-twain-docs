@@ -12,7 +12,7 @@ description: How can I show the default image editor tool?
 
 ## How can I show the default image editor tool?
 
-Image editor can be easily integrated by using the code sample provided below–
+Image editor can be easily integrated by using the code sample provided below.
 
 ```javascript
 // The below command will use the default settings in which it shows all buttons in toolbar and also takes up entire screen.
