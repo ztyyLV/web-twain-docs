@@ -43,18 +43,18 @@ If you are using IIS:
    To set the max request entity allowed property:
    cscript adsutil.vbs set w3svc/AspMaxRequestEntityAllowed 1000000 (You can change the value by yourself.)
 
-If you are using ASP.NET, you can change the value at the following line in the "Web.Config" file.
+If you are using ASP.NET, you can change the value on the following line in the "Web.Config" file.
 
 ```javascript
 <httpRuntime maxRequestLength="1000000" />
 //You can change the value by yourself.
 ```
 
-If you are using PHP, you can change the value at the following line in the php.ini file:
+If you are using PHP, you can change the value on the following line in the php.ini file:
 upload_max_filesize = 2M (You can change the value by yourself.)
 
-2. Please set the port number of the HTTP server in your code. You can use the [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport) property to set the port number. Click here for more information about this property.
+2. Please set the port number of the HTTP server in your code. You can use the [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport) property to set the port number.
 
-3. The problem may occur when you use "localhost" as the server name in the HTTP Upload method, when actually, you specified the address of your server using an IP address. In this case, please modify the server name to an available IP address in your code and then try again.
+3. The problem may occur when you use "localhost" as the server name in the HTTP Upload method but have specified the address of your server using an IP address. In this case, please modify the server name to an available IP address in your code and then try again.
 
 ![Defalut-Web-Site-Properties]({{site.assets}}imgs/Defalut-Web-Site-Properties.png)
