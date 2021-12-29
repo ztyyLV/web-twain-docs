@@ -199,7 +199,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}gdpr-compliant.html" target="_blank">Is the Dynamic Web TWAIN SDK GDPR compliant?</a>
 
-<a href="{{site.faq}}hippa-compliant.html" target="_blank">Is the Dynamic Web TWAIN SDK HIPPA compliant?</a>
+<a href="{{site.faq}}hipaa-compliant.html" target="_blank">Is the Dynamic Web TWAIN SDK HIPAA compliant?</a>
 
 <a href="{{site.faq}}change-dynamsoft-service-certificate.html" target="_blank">How can I change the certificate of the Dynamsoft Service?</a>
 
