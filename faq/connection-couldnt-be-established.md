@@ -14,7 +14,7 @@ description: A connection with the server could not be established
 
 ### Symptom
 
-When you upload images to your web server, you may receive the error message.
+When attempting to upload images web server the upload fails and you receive the error message.
 
 ### Cause
 
