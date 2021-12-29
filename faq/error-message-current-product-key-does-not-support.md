@@ -22,4 +22,4 @@ You are trying to use an unlicensed feature of Dynamic Web TWAIN or use it on an
 
 ### Resolution
 
-Make sure you have the correct license set in the proper configuration. If you have doubts or questions, you can contact <a href="mailto:support@dynamsoft.com" target="_blank">Dynamsoft Support</a>.
+Make sure you have the correct license set in the proper configuration. If you have any questions please contact <a href="mailto:support@dynamsoft.com" target="_blank">Dynamsoft Support</a>.
