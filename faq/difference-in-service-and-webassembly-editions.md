@@ -16,4 +16,4 @@ Desktop Service Edition means Dynamic Web TWAIN operates through the <a href="ht
 
 WebAssembly Edition means Dynamic Web TWAIN operates completely within the browser with the help of Web Worker and WebAssembly. No additional installation is required for each end user.
 
-In short, if you need to support document scanning from USB/network document scanners, you would need to use the Desktop Service edition. Otherwise, if you are looking to capture document from webcams or mobile cameras, you shall use the WebAssembly edition.
+In short, if you need to support document scanning from USB/network document scanners, you would need to use the Desktop Service edition. Otherwise, if you are looking to capture document from webcams or mobile cameras, you may use the WebAssembly edition.
