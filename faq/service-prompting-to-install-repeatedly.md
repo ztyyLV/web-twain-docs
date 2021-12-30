@@ -34,7 +34,7 @@ description: I have installed the Dynamsoft Service on an end-user machine but s
 
 2. Check `Local Services` and make sure Dynamsoft Service is listed and Running.
 
-3. On IE, go to `Internet Options` --> `Security` tab, select `Local Intranet`, then click `Sites`, uncheck 'Include all sites that bypass the proxy server'
+3. On IE, go to `Internet Options` --> `Security` tab, select `Local Intranet`, then click `Sites`, uncheck 'Include all sites that bypass the proxy server'  
    ![why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly-1]({{site.assets}}imgs/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly-1.png)
    ![why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly-2]({{site.assets}}imgs/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly-2.png)
 
