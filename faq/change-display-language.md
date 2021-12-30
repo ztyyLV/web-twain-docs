@@ -2,17 +2,17 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: How can I change the display language of all messages from English to other?
+title: How can I change the display language of all messages from English to another language?
 keywords: Dynamic Web TWAIN, UI Customization, display language, language
-breadcrumbText: How can I change the display language of all messages from English to other?
-description: How can I change the display language of all messages from English to other?
+breadcrumbText: How can I change the display language of all messages from English to another language?
+description: How can I change the display language of all messages from English to another language?
 ---
 
 # UI Customization
 
-## How can I change the display language of all messages from English to other?
+## How can I change the display language of all messages from English to another language?
 
-You can customize the displayed language in <strong>dynamsoft.webtwain.config.js</strong> by changing the values to the properties of <strong>Dynamsoft.DWT.CustomizableDisplayInfo</strong> object.
+You can customize the display language in <strong>dynamsoft.webtwain.config.js</strong> by changing the values of the properties of the <strong>Dynamsoft.DWT.CustomizableDisplayInfo</strong> object.
 
 ```javascript
 Dynamsoft.DWT.CustomizableDisplayInfo = {
@@ -130,6 +130,6 @@ Dynamsoft.DWT.CustomizableDisplayInfo = {
 };
 ```
 
-For the Dynamsoft Service installation message below, you can customize the displayed language by searching for ‘Dynamsoft.\_show_install_dialog’ in dynamsoft.webtwain.install.js, and change the displayed language accordingly.
+For the Dynamsoft Service installation message below, you can customize the display language by searching for 'Dynamsoft._show_install_dialog' in dynamsoft.webtwain.install.js, and changing the display language accordingly.
 
 ![install dialog]({{site.assets}}imgs/install-dialog.png)

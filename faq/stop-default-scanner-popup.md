@@ -12,4 +12,4 @@ description: Can I stop the scanner from showing its default popup when there is
 
 ## Can I stop the scanner from showing its default popup when there is a paper jam?
 
-Dynamic Web TWAIN cannot prevent showing the popup of the printer UI, it comes from the scanner driver. But if you want, you can catch the error code from the driver and handle it.
+Dynamic Web TWAIN cannot prevent showing the popup of the printer UI as the popup comes from the scanner driver. But if you would like, you can catch the error code from the driver and handle it.

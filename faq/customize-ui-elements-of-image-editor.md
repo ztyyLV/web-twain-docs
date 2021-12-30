@@ -12,11 +12,11 @@ description: Can I customize UI elements of the built-in image editor?
 
 ## Can I customize UI elements of the built-in image editor?
 
-Yes, you can perform various customizations on the image editor, some of such customizations are shown below as example.
+Yes, you can perform various customizations on the image editor. Some of such customizations are shown below as examples.
 
 ### Can I change the language of the Editor?
 
-Yes, as shown in the sample code below, you can use the parameters `titles` and `dialogText` to specify the language used in the editor
+Yes, as shown in the sample code below, you can use the parameters `titles` and `dialogText` to specify the language used in the editor.
 
 ```javascript
  titles: {
@@ -39,7 +39,7 @@ Yes, as shown in the sample code below, you can use the parameters `titles` and 
 
 ### Can I remove or add buttons on the toolbar of the Editor?
 
-While you can use `visibility` (as shown in the sample code below) to remove a default button(s), currently you cannot add a custom button yet.
+While you can use `visibility` (as shown in the sample code below) to remove a default button(s), currently you cannot add a custom button.
 
 ```javascript
 visibility: {
@@ -66,7 +66,7 @@ height: 400,
 
 ### Can I change the colors of the Editor?
 
-Yes, as shown in the sample code below, the parameters `border` , `topMenuBorder` , `innerBorder` and `background` can be used to specify the style including color of the editor.
+Yes, as shown in the sample code below, the parameters `border` , `topMenuBorder` , `innerBorder` and `background` can be used to specify the style, including the color of the editor.
 
 ```javascript
 border: '5px solid rgb(0,128,0)',
