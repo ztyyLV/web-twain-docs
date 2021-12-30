@@ -38,28 +38,28 @@ WebTWAIN.HTTPPort = location.port == "" ? 80 : location.port;
 
 3. Please reset the maximum transferable data size:
 
-- If you are using ASP.NET, you can change the value at the following line in the Web.Config file.
+    - If you are using ASP.NET, you can change the value at the following line in the Web.Config file.
 
-```javascript
-<httpRuntime maxRequestLength="1000000" /> //You can change the value by yourself.
-```
+    ```javascript
+    <httpRuntime maxRequestLength="1000000" /> //You can change the value by yourself.
+    ```
 
-- If you are using PHP, you can change the value at the following line in the php.ini file
+    - If you are using PHP, you can change the value at the following line in the php.ini file
 
-```javascript
-upload_max_filesize = 2M //You can change the value by yourself.
-```
+    ```javascript
+    upload_max_filesize = 2M //You can change the value by yourself.
+    ```
 
-- If you are using ASP
+    - If you are using ASP
 
-Scenario #1: using ASP on IIS 6:
+        Scenario #1: using ASP on IIS 6:
 
-1. Start -> Run, type cmd.
-2. Go to C:\Inetpub\AdminScripts by typing: cd C:\Inetpub\AdminScripts
-3. To view max request entity allowed: cscript adsutil.vbs set w3svc/AspMaxRequestEntityAllowed
+            1. Start -> Run, type cmd.
+            2. Go to C:\Inetpub\AdminScripts by typing: cd C:\Inetpub\AdminScripts
+            3. To view max request entity allowed: cscript adsutil.vbs set w3svc/AspMaxRequestEntityAllowed
 
-Scenario #2: using ASP on IIS 7:
+        Scenario #2: using ASP on IIS 7:
 
-1. Start -> Run , type InetMgr to open IIS 7 Manager
-2. {Your WebSite} -> Feature View -> ASP -> Limites Properties
-3. Set a bigger value for Maximum Requesting Entity Body Limit, like "1000000"
+            1. Start -> Run , type InetMgr to open IIS 7 Manager
+            2. {Your WebSite} -> Feature View -> ASP -> Limites Properties
+            3. Set a bigger value for Maximum Requesting Entity Body Limit, like "1000000"
