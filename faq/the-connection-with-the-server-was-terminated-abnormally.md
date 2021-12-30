@@ -31,10 +31,10 @@ When you upload images in Dynamic Web TWAIN's buffer, you may receive the follow
 2. Please make sure you specify the correct port. The default port is 80. If you are using other port, please use HTTPPort to specify it in code.
    We recommend you get the Port and Server value this way:
 
-```javascript
-strHTTPServer = location.hostname;
-WebTWAIN.HTTPPort = location.port == "" ? 80 : location.port;
-```
+    ```javascript
+    strHTTPServer = location.hostname;
+    WebTWAIN.HTTPPort = location.port == "" ? 80 : location.port;
+    ```
 
 3. Please reset the maximum transferable data size:
 
