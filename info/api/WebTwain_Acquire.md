@@ -1594,7 +1594,7 @@ readonly Duplex: Dynamsoft.DWT.EnumDWT_DUPLEX | number;
 
 1-pass means the paper gets scanned on both sides at the same time. 2-pass means the paper passes the light bar twice to get both sides scanned separately.
 
-This property does not support macOS/ICA or Linux.
+This property does not support Linux.
 
 ---
 
