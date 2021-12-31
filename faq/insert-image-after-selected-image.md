@@ -12,7 +12,7 @@ description: How can I insert an image after a selected image in the viewer?
 
 ## How can I insert an image after a selected image in the viewer?
 
-By default, when you scan or load images, they are appended to the end of the image array in buffer. However, in some business scenarios, the user might want to insert these new images to a specified index. Unfortunately, Dynamic Web Twain doesn’t provide a native method for that. The following code snippet shows how this functionality can be implemented.
+By default, when you scan or load images, they are appended to the end of the image array in buffer. However, in some business scenarios, the user may want to insert these new images to a specified index. Unfortunately, Dynamic Web Twain does not provide a native method for that. The following code snippet shows how this functionality can be implemented.
 
 <strong>1. Insert when acquiring</strong>
 
@@ -30,7 +30,7 @@ function acquireToIndex(index) {
 }
 ```
 
-<strong>2. Insert While loading</strong>
+<strong>2. Insert when loading</strong>
 
 ```javascript
 function loadToIndex(index) {

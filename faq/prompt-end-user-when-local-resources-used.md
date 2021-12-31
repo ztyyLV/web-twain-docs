@@ -26,4 +26,4 @@ If you are installing the SDK by .msi to multiple machines at a time (as the sys
 DynamicWebTWAINHTML5Edition.msi MyCustomParameter="DisableScannerAccessAuth; DisableFileAccessAuth"
 ```
 
-The same prcoess can also be used if you are installing on a single machine by CMD by a single user.
+The same process can also be used if you are installing on a single machine by CMD by a single user.

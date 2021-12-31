@@ -12,10 +12,10 @@ description: How can I show page number on each image?
 
 ## How can I show page number on each image?
 
-You can set the <a href="{{site.info}}api/WebTwain_Viewer.html#setviewmode#showpagenumber" target="_blank">showPageNumber</a> true to show the page number. 
+You can set the <a href="{{site.info}}api/WebTwain_Viewer.html#showpagenumber" target="_blank">showPageNumber</a> API to true to show the page number. 
 
 ```javascript
 DWObject.Viewer.showPageNumber = true;
 ```
 
-**Note** – When <a href="{{site.info}}api/WebTwain_Viewer.html#setviewmode" target="_blank">setViewMode</a> is set to -1 by -1 or <a href="{{site.info}}api/WebTwain_Viewer.html#setviewmodet#singlepagemode" target="_blank">singlePageMode</a> is true then this api will not work.
+**Note**: When <a href="{{site.info}}api/WebTwain_Viewer.html#setviewmode" target="_blank">setViewMode</a> is set to -1 by -1 or <a href="{{site.info}}api/WebTwain_Viewer.html#singlepagemode" target="_blank">singlePageMode</a> is true then this api will not work.

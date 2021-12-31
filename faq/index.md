@@ -91,11 +91,11 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}viewer-size-auto-resize.html" target="_blank">Can the size of the image viewer auto resize when the browser window size changes?</a>
 
-<a href="{{site.faq}}create-thumbnail-viewer-to-navigate-images.html" target="_blank">How can I create the thumbnail viewer to navigate images?</a>
+<a href="{{site.faq}}create-thumbnail-viewer-to-navigate-images.html" target="_blank">How can I create a thumbnail viewer to view images?</a>
 
 <a href="{{site.faq}}change-background-color.html" target="_blank">How can I change the background color of the image viewer?</a>
 
-<a href="{{site.faq}}resort-images-in-viewer.html" target="_blank">How can I resort images in the viewer?</a>
+<a href="{{site.faq}}resort-images-in-viewer.html" target="_blank">How can I reorder images in the viewer?</a>
 
 <a href="{{site.faq}}disable-drag-and-drop-in-images.html" target="_blank">How can I disable drag and drop images in the viewer?</a>
 
@@ -103,7 +103,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}show-page-number.html" target="_blank">How can I show page number on each image?</a>
 
-<a href="{{site.faq}}resize-view-of-image.html" target="_blank">How can I resize the view of image, e.g., zoom in/out the current image?</a>
+<a href="{{site.faq}}resize-view-of-image.html" target="_blank">How can I resize the view of image (e.g. zoom in/out on an image)?</a>
 
 <a href="{{site.faq}}mouse-click-events-supported.html" target="_blank">What mouse click events does the viewer support?</a>
 
@@ -125,27 +125,27 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}support-image-deskew.html" target="_blank">Do you support image deskew?</a>
 
-<a href="{{site.faq}}resize-image.html" target="_blank">How can I resize all images to meet a certain size standard, e.g., A4 size?</a>
+<a href="{{site.faq}}resize-image.html" target="_blank">How can I resize all images to meet a certain size standard (e.g. A4 size)</a>
 
-<a href="{{site.faq}}add-annotation-to-image.html" target="_blank">Can I add annotation to an image? E.g., add watermark or text?</a>
+<a href="{{site.faq}}add-annotation-to-image.html" target="_blank">Can I add annotation to an image (e.g. add watermark or text)?</a>
 
-<a href="{{site.faq}}change-resolution-of-image.html" target="_blank">Can I change resolution/DPI of an image in the viewer?</a>
+<a href="{{site.faq}}change-resolution-of-image.html" target="_blank">Can I change the resolution/DPI of an image in the viewer?</a>
 
-<a href="{{site.faq}}convert-color-image-to-grayscale.html" target="_blank">Can I convert a color image to greyscale or black & white?</a>
+<a href="{{site.faq}}convert-color-image-to-grayscale.html" target="_blank">Can I convert a color image to grayscale or black & white?</a>
 
-<a href="{{site.faq}}undo-functionality.html" target="_blank">Is there undo functionality?</a>
+<a href="{{site.faq}}undo-functionality.html" target="_blank">Is there an undo functionality?</a>
 
 <a href="{{site.faq}}remove-selected-images.html" target="_blank">How can I remove only the selected images?</a>
 
 ## UI Customization
 
-<a href="{{site.faq}}is-ui-customizable.html" target="_blank">Is UI of the Dynamic Web TWAIN SDK fully customizable? What can’t be customized?</a>
+<a href="{{site.faq}}is-ui-customizable.html" target="_blank">Is the UI of the Dynamic Web TWAIN SDK fully customizable? What cannot be customized?</a>
 
-<a href="{{site.faq}}change-display-language.html" target="_blank">How can I change the display language of all messages from English to other?</a>
+<a href="{{site.faq}}change-display-language.html" target="_blank">How can I change the display language of all messages from English to another language?</a>
 
 <a href="{{site.faq}}change-hide-spinner.html" target="_blank">How can I change/hide the spinner which shows during document scanning?</a>
 
-<a href="{{site.faq}}hide-progress-bars.html" target="_blank">How can I change/hide the UI of progress bars when importing or uploading images?</a>
+<a href="{{site.faq}}hide-progress-bars.html" target="_blank">How can I change/hide the UI of the progress bar when importing or uploading images?</a>
 
 <a href="{{site.faq}}customize-ui-elements-of-image-editor.html" target="_blank">Can I customize UI elements of the built-in image editor?</a>
 

@@ -12,10 +12,10 @@ description: Do you support image deskew?
 
 ## Do you support image deskew?
 
-Yes, Dynamic Web TWAIN supports the image deskew functionality. You can enable automatic deskew using the two ways mentioned below –
+Yes, Dynamic Web TWAIN supports image deskew functionality. You can enable automatic deskew using the two ways mentioned below.
 
 - Enable the capability of a scanner
-  Note - Applicable only to TWAIN-compatible scanners
+  Note: Applicable only to TWAIN-compatible scanners
   There is a standard TWAIN capability called ICAP_AUTOMATICDESKEW which, when enabled, does the deskewing of all scanned images automatically. If your scanner supports this capability, you can enable the functionality through Dynamic Web TWAIN using the API <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html?ver=latest#ifautomaticdeskew" target="_blank">IfAutomaticDeskew</a>
 
 ```javascript
