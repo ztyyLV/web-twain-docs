@@ -28,35 +28,33 @@ When you upload images in Dynamic Web TWAIN's buffer, you may receive the follow
 
 1. Please reset the maximum transferable data size:
 
-    If you are using IIS 6:
+If you are using IIS 6:
 
-    1. Start -> Run , type "cmd"
-    2. Go to "C:\Inetpub\AdminScripts" by typing: cd C:\Inetpub\AdminScripts
-    3. To view the max request entity allowed:
+1. Start -> Run , type "cmd"
+2. Go to "C:\Inetpub\AdminScripts" by typing: cd C:\Inetpub\AdminScripts
+3. To view the max request entity allowed:
    cscript adsutil.vbs get w3svc/AspMaxRequestEntityAllowed
 
-    If you are using IIS:
+If you are using IIS:
 
-    1. Start -> Run , type "InetMgr" to open IIS 7 Manager
-    2. {Your WebSite}->Feature View->ASP->Limites Properties
-    3. Set "Maximum Requesting Entity Body Limit" to a bigger value like "1000000"
-    To set the max request entity allowed property:
-    cscript adsutil.vbs set w3svc/AspMaxRequestEntityAllowed 1000000 (You can change the value by yourself.)
+1. Start -> Run , type "InetMgr" to open IIS 7 Manager
+2. {Your WebSite}->Feature View->ASP->Limites Properties
+3. Set "Maximum Requesting Entity Body Limit" to a bigger value like "1000000"
+   To set the max request entity allowed property:
+   cscript adsutil.vbs set w3svc/AspMaxRequestEntityAllowed 1000000 (You can change the value by yourself.)
 
-    If you are using ASP.NET, you can change the value at the following line in the "Web.Config" file.
+If you are using ASP.NET, you can change the value at the following line in the "Web.Config" file.
 
-    ```javascript
-    <httpRuntime maxRequestLength="1000000" />
-    //You can change the value by yourself.
-    ```
+```javascript
+<httpRuntime maxRequestLength="1000000" />
+//You can change the value by yourself.
+```
 
-    If you are using PHP, you can change the value at the following line in the php.ini file.
-    ```javascript
-    upload_max_filesize = 2M (You can change the value by yourself.)
-    ```
-    
+If you are using PHP, you can change the value at the following line in the php.ini file:
+upload_max_filesize = 2M (You can change the value by yourself.)
+
 2. Please set the port number of the HTTP server in your code. You can use the [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport) property to set the port number. Click here for more information about this property.
 
 3. The problem may occur when you use "localhost" as the server name in the HTTP Upload method, when actually, you specified the address of your server using an IP address. In this case, please modify the server name to an available IP address in your code and then try again.
 
-    ![Default-Web-Site-Properties]({{site.assets}}imgs/Default-Web-Site-Properties.png)
+ ![Default-Web-Site-Properties]({{site.assets}}imgs/Default-Web-Site-Properties.png)
