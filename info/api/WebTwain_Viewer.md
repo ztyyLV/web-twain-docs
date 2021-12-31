@@ -87,13 +87,12 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 bind(element: HTMLDivElement, documentTemplate: DocumentScannerTemplate) : void;  
 
 interface DocumentScannerTemplate{
-   getCustomElement():CustomElement;  
-   
+   getCustomElement():CustomElement; //Get CustomElement. Can display save & upload interface in CustomElement.   
    onAddDocumentFunc = function () {}
    onExitFunc = function () {}
-   onSaveFunc = function () {} 
-   onUploadFunc = function () {}
-   onRemoveSelectedFunc = function () {}    
+   onSaveFunc = function () {} //Save button click event
+   onUploadFunc = function () {}  //Upload button click event
+   onRemoveSelectedFunc = function () {}   //Remove button click event
 }
 ```
 
