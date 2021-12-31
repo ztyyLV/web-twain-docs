@@ -289,10 +289,10 @@ interface ScanConfiguration{
      enableBorderDetection?: boolean,  // Whether to enable border detection. The default value is true.
      fullScreen?: boolean,   //Whether to display the video in full screen. The default value is false.
 
-   polygonStyle?:{      //the sytle of the auto detect border.       
+   polygonStyle?:{      //The sytle of the auto detect border.       
      stroke: string,    //default: "#fe8e14". Only supports #16 hexadecimal.
-     strokeWidth: string,  //default: "1px"
-     dash: string          //the allowed value are "solid" and "dashed", the default value is "solid".
+     strokeWidth: string,  //default: "2px"
+     dash: string          //The allowed value are "solid" and "dashed", the default value is "solid".
      },
 
    resolution?:{
@@ -301,6 +301,7 @@ interface ScanConfiguration{
        label: string,    //The resolution value listed in the drop-down list. For example："1920x1080"
        value: Resolution //The resolution you set. For example: { width:1920, height:1080}
       },{……}]
+       defaultValue?: Resolution , //Set the default value according to the value set in the valueList.
     },
 
    autoScan?:{   //Automatically capture when a clear document is detected. Only applicable to video scanning. 
@@ -333,7 +334,7 @@ interface ScanConfiguration{
       //Return true：Exit continuous scan mode without saving the captured image data. Return false: Stay on the original viewer
 
    funcConfirmExit: funcConfirmExit, 
-      //funcConfirmExit is the callback funtion，
+      //funcConfirmExit is the callback funtion
       //Return true：End this capture without saving the image data. Return false: Stay on the original viewer
     },
 
@@ -382,9 +383,9 @@ interface ScanConfiguration{
      visibility?: boolean,   //Whether to display the crop viewer. The default value is true.
       
      polygonStyle?:{    //The polygon style in the crop viewer.       
-  	  stroke: string,       //default : "#fe8e14"
-          strokeWidth: string,     //default: "1px"
-          dash: string             //"solid ", "dashed"    default: "solid "
+  	  stroke: string,       //default : "#fe8e14".  Only supports #16 hexadecimal.
+          strokeWidth: string,   //default: "2px"
+          dash: string           //The allowed value are "solid" and "dashed", the default value is "solid".
     },
 
      rotateLeft?:{   
