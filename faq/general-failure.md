@@ -14,7 +14,7 @@ description: General failure
 
 - Symptom
 
-When you try scanning an image with Dynamic Web TWAIN, you may receive the error message "General failure" in the ErrorString property.
+When scanning an image with Dynamic Web TWAIN, you may receive the error message "General failure" in the ErrorString property.
 
 - Cause
 
@@ -22,7 +22,7 @@ The problem occurs when the source (scanner) is _not_ disabled completely after 
 
 - Resolution
 
-You can call <a href="{{site.info}}api/WebTwain_Acquire.html#closesource" target="_blank">CloseSource</a> & <a href="{{site.info}}api/WebTwain_Acquire.html#closesourcemanager" target="_blank">CloseSourceManager</a> to close the soure before <a href="{{site.info}}api/WebTwain_Acquire.html#selectsource" target="_blank">SelectSource</a>.
+You can reset the existing connections of the source by calling <a href="{{site.info}}api/WebTwain_Acquire.html#closesource" target="_blank">CloseSource</a> & <a href="{{site.info}}api/WebTwain_Acquire.html#closesourcemanager" target="_blank">CloseSourceManager</a> to close the sources existing connections before calling <a href="{{site.info}}api/WebTwain_Acquire.html#selectsource" target="_blank">SelectSource</a>.
 
 ```javascript
 function AcquireImage() {

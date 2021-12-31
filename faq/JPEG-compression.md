@@ -2,15 +2,15 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Only 24-bit true color bmp and 8-bit gray-scaled image are supported for JPEG compression
+title: Only 24-bit true color bmp and 8-bit gray-scaled images are supported for JPEG compression
 keywords: Dynamic Web TWAIN, Error Troubleshooting, jpeg, 24-bit, 8-bit
-breadcrumbText: Only 24-bit true color bmp and 8-bit gray-scaled image are supported for JPEG compression
-description: Only 24-bit true color bmp and 8-bit gray-scaled image are supported for JPEG compression
+breadcrumbText: Only 24-bit true color bmp and 8-bit gray-scaled images are supported for JPEG compression
+description: Only 24-bit true color bmp and 8-bit gray-scaled images are supported for JPEG compression
 ---
 
 # Error Troubleshooting
 
-## Only 24-bit true color bmp and 8-bit gray-scaled image are supported for JPEG compression
+## Only 24-bit true color bmp and 8-bit gray-scaled images are supported for JPEG compression
 
 ### Symptom
 
@@ -18,7 +18,7 @@ When you save or upload an image as a JPEG file, you may receive the error.
 
 ### Cause
 
-You are saving a Black&White image as a JPEG file but JPEG standard only allows the compression of grayscale and RGB images.
+You are saving a black and white image as a JPEG file but JPEG standard only allows the compression of grayscale and RGB images.
 
 ### Resolution
 

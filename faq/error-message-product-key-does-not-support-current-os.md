@@ -22,4 +22,4 @@ You are trying to use a product key on an unlicensed OS.
 
 ### Resolution
 
-Make sure you have the correct license set in the proper configuration. If you have doubts or questions, you can contact Dynamsoft Support.
+Make sure you have the correct license set in the proper configuration and that the license you own covers the platform you are attempting to use. If you have any questions please contact <a href="mailto:support@dynamsoft.com" target="_blank">Dynamsoft Support</a>.

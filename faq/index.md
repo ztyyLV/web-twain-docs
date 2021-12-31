@@ -241,17 +241,17 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}http-insecure-websites-in-chromium-browser.html" target="_blank">How to resolve if Dynamic Web TWAIN stops working on insecure websites in Chrome v94?</a>
 
-<a href="{{site.faq}}how-come-would-you-need-local.dynamsoft.com.html" target="_blank">How come would you need local.dynamsoft.com instead of 127.0.0.1?</a>
+<a href="{{site.faq}}how-come-would-you-need-local.dynamsoft.com.html" target="_blank">In which cases would I use local.dynamsoft.com instead of 127.0.0.1?</a>
 
 <a href="{{site.faq}}resources-to-be-included-in-SDK.html" target="_blank">What resources of the SDK should be included in my web application?</a>
 
 <a href="{{site.faq}}change-reference-path.html" target="_blank">How can I change the reference path to the Dynamsoft’s resources in my project?</a>
 
-<a href="{{site.faq}}component-needs-to-be-installed-on-end-user-machine.html" target="_blank">Is there any component of the Dynamic Web TWAIN SDK needs to be installed on end-user machines?</a>
+<a href="{{site.faq}}component-needs-to-be-installed-on-end-user-machine.html" target="_blank">Is there any component of the Dynamic Web TWAIN SDK that needs to be installed on end-user machines?</a>
 
-<a href="{{site.faq}}how-to-enable-remote-scan.html" target="_blank">How to enable Remote Scan?</a>
+<a href="{{site.faq}}how-to-enable-remote-scan.html" target="_blank">How can i enable Remote Scan?</a>
 
-<a href="{{site.faq}}admin-right-needed-to-install.html" target="_blank">Is admin right required to install the end-user component?</a>
+<a href="{{site.faq}}admin-right-needed-to-install.html" target="_blank">Are admin right required to install the end-user component?</a>
 
 <a href="{{site.faq}}deploy-to-all-users.html" target="_blank">Is there an easy way to deploy the end-user components to all users?</a>
 
@@ -259,7 +259,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}upgrade-to-latest-version.html" target="_blank">How do I upgrade my project to use the latest version of the Dynamic Web TWAIN SDK?</a>
 
-<a href="{{site.faq}}upgrade-end-user-installations.html" target="_blank">How do I upgrade end-user installation for all end users once I upgrade my project?</a>
+<a href="{{site.faq}}upgrade-end-user-installations.html" target="_blank">How do I upgrade the end-user installation for all end users once I upgrade my project?</a>
 
 <a href="{{site.faq}}service-prompting-to-install-repeatedly.html" target="_blank">I have installed the Dynamsoft Service on an end-user machine but still got asked to install it repeatedly. Why?</a>
 
@@ -277,7 +277,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}HTTP-process-error.html" target="_blank">HTTP process error</a>
 
-<a href="{{site.faq}}JPEG-compression.html" target="_blank">Only 24-bit true color bmp and 8-bit gray-scaled image are supported for JPEG compression</a>
+<a href="{{site.faq}}JPEG-compression.html" target="_blank">Only 24-bit true color bmp and 8-bit gray-scaled images are supported for JPEG compression</a>
 
 <a href="{{site.faq}}XMLHttpRequest-cannot-load.html" target="_blank">XMLHttpRequest cannot load XXX</a>
 
@@ -319,15 +319,15 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}difference-in-service-and-webassembly-editions.html" target="_blank">What’s the difference between the Desktop Service Edition and WebAssembly Edition?</a>
 
-<a href="{{site.faq}}is-internet-connectivity-required.html" target="_blank">Is internet connectivity required to use any license?</a>
+<a href="{{site.faq}}is-internet-connectivity-required.html" target="_blank">Is internet connectivity required to use all licenses?</a>
 
 <a href="{{site.faq}}does-per-server-allow-unlimited.html" target="_blank">Does the per-server license allow unlimited number of client devices and end users?</a>
 
 <a href="{{site.faq}}which-license-purchase-needed-for-saas.html" target="_blank">What license should I purchase if I am providing SaaS?</a>
 
-<a href="{{site.faq}}release-license-seats.html" target="_blank">For the per-client-device licensing model, can I release license seats taken by retired/unused devices?</a>
+<a href="{{site.faq}}release-license-seats.html" target="_blank">For the per-client-device licensing model, can seats taken by retired/unused devices be released from the license?</a>
 
-<a href="{{site.faq}}seat-taken-if-os-reinstalled.html" target="_blank">Would a client machine take one more license seat if its operating system is reinstalled?</a>
+<a href="{{site.faq}}seat-taken-if-os-reinstalled.html" target="_blank">Will a client machine take an additional license seat if its operating system is reinstalled?</a>
 
 <a href="{{site.faq}}license-limit-reached.html" target="_blank">What if I reach the limit of the granted number of license seats?</a>
 
@@ -337,7 +337,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}resell-sdk.html" target="_blank">I need to resell the SDK within my application to my customers. What options do you offer?</a>
 
-<a href="{{site.faq}}flexible-to-custom-license.html" target="_blank">Are you flexible to discuss any custom licensing model?</a>
+<a href="{{site.faq}}flexible-to-custom-license.html" target="_blank">Are you flexible to discuss custom licensing models?</a>
 
 <a href="{{site.faq}}local-resellers.html" target="_blank">Do you have any local resellers from whom I can purchase a license of the Dynamic Web TWAIN SDK?</a>
 

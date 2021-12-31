@@ -2,21 +2,21 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: How do I upgrade end-user installation for all end users once I upgrade my project?
+title: How do I upgrade the end-user installation for all end users once I upgrade my project?
 keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, upgrade
-breadcrumbText: How do I upgrade end-user installation for all end users once I upgrade my project?
-description: How do I upgrade end-user installation for all end users once I upgrade my project?
+breadcrumbText: How do I upgrade the end-user installation for all end users once I upgrade my project?
+description: How do I upgrade the end-user installation for all end users once I upgrade my project?
 ---
 
 # Project Deployment and End-user Installation
 
-## How do I upgrade end-user installation for all end users once I upgrade my project?
+## How do I upgrade the end-user installation for all end users once I upgrade my project?
 
-Once your application with the upgrade has been deployed, end-users will be prompted to install the newer version of Dynamsoft Service.
+By default once your application with the upgraded version has been deployed, end-users will be prompted to install the newer version of the Dynamsoft Service.
 
-And in a controlled environment, Dynamic Web TWAIN can be distributed to all clients in one go just like other similar programs. <a href="https://docs.microsoft.com/en-us/troubleshoot/windows-server/group-policy/use-group-policy-to-install-software" target="_blank">Group Policy</a> is one such technology.
+In a controlled environment Dynamic Web TWAIN can be distributed to all clients in one go just like other similar programs. <a href="https://docs.microsoft.com/en-us/troubleshoot/windows-server/group-policy/use-group-policy-to-install-software" target="_blank">Group Policy</a> is one such technology.
 
-You can install Dynamsoft Service silently using the following command.
+You can install Dynamsoft Service silently using the following commands:
 
 - Windows
 
@@ -47,4 +47,4 @@ sudo dpkg -i /path/to/DynamsoftServiceSetup.deb
 sudo rpm -i path/to/DynamsoftServiceSetup.rpm
 ```
 
-> Note - If you upgrade from V14, end-users may need to uninstall the previous version manually before reinstallation.
+> Note - If you are upgrading from version 14, end-users may need to uninstall the previous version manually before reinstallation.

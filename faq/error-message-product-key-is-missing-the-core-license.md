@@ -18,7 +18,7 @@ You get an error message that says “The current product key is missing the cor
 
 ### Cause
 
-You are missing Dynamic Web TWAIN core module license, most likely you only use the addon license.
+You are missing a license for the core module of Dynamic Web TWAIN, most likely only an addon license has been used.
 
 ### Resolution
 

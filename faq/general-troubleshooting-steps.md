@@ -14,11 +14,9 @@ description: General troubleshooting steps
 
 - Try our online demo and see if you can reproduce the issue.
 - Check the console or network log and report any errors.
-- Enable and collect verbose log
+- Enable and collect verbose logs (detailed below)
 
 ### How to enable and collect verbose log
-
-Here is how
 
 - Remove any old log files from
 
@@ -37,7 +35,7 @@ function Dynamsoft_OnReady() {
 
 > NOTE
 >
-> Changing the property will affect all clients. To collect logs for only one client machine, just add the line `LogLevel=14` to `DSConfiguration.ini` on that specific machine.
+> Changing this property will affect all clients. To collect logs for only one client machine, just add the line `LogLevel=14` to `DSConfiguration.ini` on that specific machine.
 
 - Reproduce the issue
 

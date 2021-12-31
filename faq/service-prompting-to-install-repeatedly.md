@@ -24,15 +24,15 @@ description: I have installed the Dynamsoft Service on an end-user machine but s
 
 5. The service is blocked by plugins you have installed in the browser. (e.g. NoScript)
 
-6. If you are accessing an HTTPS site on a Linux machine.
+6. You are accessing an HTTPS site on a Linux machine.
 
-7. If you are visiting a public HTTP website with Dynamic Web TWAIN SDK integrated via Chrome v94+ (or any Chromium v94+ based browsers)
+7. You are visiting a public HTTP website with Dynamic Web TWAIN SDK integrated via Chrome v94+ (or any Chromium v94+ based browsers)
 
 #### The respective fixes are listed below
 
 1. Check the path `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17` or `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\DynamsoftService` and make sure you have <a href="{{site.indepth}}deployment/service.html#related-files-and-folders" target="_blank">the correct files</a>.
 
-2. Check `Local Services` and make sure Dynamsoft Service is listed and Running.
+2. Check `Local Services` and make sure the Dynamsoft Service is listed and Running.
 
 3. On IE, go to `Internet Options` --> `Security` tab, select `Local Intranet`, then click `Sites`, uncheck 'Include all sites that bypass the proxy server'  
    ![why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly-1]({{site.assets}}imgs/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly-1.png)

@@ -14,7 +14,7 @@ description: The connection with the server was terminated abnormally
 
 ### Symptom
 
-When you upload images in Dynamic Web TWAIN's buffer, you may receive the following error message returned by the ErrorString property:
+When you upload images from Dynamic Web TWAIN's buffer, you may receive the following error message returned by the ErrorString property:
 
 ![terminated-abnormally]({{site.assets}}imgs/terminated-abnormally.png)
 

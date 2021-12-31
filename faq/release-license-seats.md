@@ -2,17 +2,17 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: For the per-client-device licensing model, can I release license seats taken by retired/unused devices?
+title: For the per-client-device licensing model, can seats taken by retired/unused devices be released from the license?
 keywords: Dynamic Web TWAIN, Licensing and Purchase, per-client, seats, release
-breadcrumbText: For the per-client-device licensing model, can I release license seats taken by retired/unused devices?
-description: For the per-client-device licensing model, can I release license seats taken by retired/unused devices?
+breadcrumbText: For the per-client-device licensing model, can seats taken by retired/unused devices be released from the license?
+description: For the per-client-device licensing model, can seats taken by retired/unused devices be released from the license?
 ---
 
 # Licensing and Purchase
 
-## For the per-client-device licensing model, can I release license seats taken by retired/unused devices?
+## For the per-client-device licensing model, can seats taken by retired/unused devices be released from the license?
 
-Yes. The taken license seat will be automatically released if the registered device has not used the SDK feature for 90 days.
+Yes. Occupied license seats will automatically be released if the registered device has not used the SDK feature for 90 days.
 
 <strong>Note</strong> –
 

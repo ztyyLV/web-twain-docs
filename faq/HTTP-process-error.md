@@ -14,20 +14,20 @@ description: HTTP process error
 
 ### Symptom
 
-When you upload images using any of the HTTPUploadThroughPost\*\*\* methods, you may receive the error.
+When attempting to upload images using any of the HTTPUploadThroughPost\*\*\* methods the upload fails and you receive this error.
 
 ### Cause
 
-- The write permission is not granted to the specified directory on the web server.
-- The action page is incorrect or returns something from the web server.
-- The port specified for uploading is the incorrect one.
-- The size of the images you are trying to upload is beyond the maximum allowed size set by the server.
+1. The write permission is not granted to the specified directory on the web server.
+2. The action page is incorrect or returns something from the web server.
+3. The port specified for uploading is incorrect.
+4. The size of the images you are trying to upload is larger than the maximum allowed size set by the server.
 
 ### Solution
 
-- Make sure the users who are uploading have permission to write images to the specified directory on the web server. (For example, give "Write" permission to the Authenticated Users.)
-- Check the response string returned from the HTTP server to figure out the cause of the process error. You can get this string by using the [HTTPPostResponseString]({{site.info}}api/WebTwain_IO.html#httppostresponsestring) property.
-- Set the port to the correct one using [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport). We recommend you get the Port and Server values this way:
+1. Make sure the users who are uploading have permission to write images to the specified directory on the web server. (For example, give "Write" permission to the Authenticated Users.)
+2. Check the response string returned from the HTTP server to determine the cause of the HTTP process error. You can get this string by using the [HTTPPostResponseString]({{site.info}}api/WebTwain_IO.html#httppostresponsestring) property.
+3. Set the port to the correct one using [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport). We recommend you get the Port and Server values this way:
 
 ```javascript
 var strHTTPServer = location.hostname;
@@ -43,7 +43,7 @@ DWObject.HTTPPort = 443;
 
 > For example: If the URL for the scan page is "http://localhost:3253/....", you should set the port to 3253.
 
-- Checking the server-side configuration is also useful in this scenario
+4. Check the server-side configuration
 
   - Please reset the maximum transferable data size. If you are using `ASP.NET` , you can change the value in the following line in the `Web.Config` file.
 

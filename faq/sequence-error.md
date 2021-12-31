@@ -18,7 +18,7 @@ When you fail to acquire images from your scanner, you may get this error.
 
 ### Cause
 
-The problem happens when the process does not occur in the correct TWAIN sequence.
+This problem occurs when the correct order of operations is not followed for the TWAIN sequence.
 
 ### Resolution
 
