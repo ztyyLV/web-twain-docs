@@ -18,4 +18,4 @@ When you upgrade Dynamic Web TWAIN, you may also need a reinstallation of Dynams
 
 If you do not want to install anything, there are two options.
 1. You can choose the <a href="https://www.dynamsoft.com/web-twain/docs/indepth/features/initialize.html?ver=latest#webassembly-edition" target="_blank">WebAssembly Edition</a>, but please note that the WebAssembly Edition does not support physical document scanners.
-2. You can enable Remote Scan, which scans documents from remote scanners connected to host machines. No installation is required on the client machine. Please check  <a href="https://www.dynamsoft.com/web-twain/docs/indepth/faqs/develop/how-to-enable-remote-scan.html" target="_blank">here</a> for more information on how remote scan works and how to enable it.
+2. You can enable Remote Scan, which scans documents from remote scanners connected to host machines. No installation is required on the client machine. Please check <a href="https://www.dynamsoft.com/web-twain/docs/indepth/faqs/develop/how-to-enable-remote-scan.html" target="_blank">here</a> for more information on how remote scan works and how to enable it.
