@@ -21,7 +21,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page
 |[`ImageIDToIndex()`](#imageidtoindex) | [`IndexToImageID()`](#indextoimageid)| [`IsBlankImage()`](#isblankimage) | [`IsBlankImageExpress()`](#isblankimageexpress)|  
 |[`SelectAllImages()`](#selectallimages)|[`MoveImage()`](#moveimage) | [`SwitchImage()`](#switchimage)| [`RemoveImage()`](#removeimage) |
 | [`RemoveAllImages()`](#removeallimages)|[`RemoveAllSelectedImages()`](#removeallselectedimages) |[`SelectImages()`](#selectimages)|[`GetTagListByIndex()`](#gettaglistbyindex)|
-| [`CreateFile()`](#createfile)|[`OpenFile()`](#openfile)|[`GetCurrentFileName()`](#getcurrentfileName)|[`RemoveFile()`](#removefile)|
+| [`CreateFile()`](#createfile)|[`OpenFile()`](#openfile)|[`GetCurrentFileName()`](#getcurrentfilename)|[`RemoveFile()`](#removefile)|
 | [`GetFileInfoList()`](#getfileinfolist)|
 
 <!--* [GetImageBitDepthAsync()](#getimagebitdepthasync)-->
