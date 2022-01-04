@@ -25,7 +25,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 * Added new property <a href="{{site.info}}api/WebTwain_Viewer.html#showcheckbox" target="_blank">`showCheckbox()`</a>. 
 * Added new method <a href="{{site.info}}api/WebTwain_Edit.html#changebrightnessasync" target="_blank">`ChangeBrightnessAsync()`</a>. 
 * Added new method <a href="{{site.info}}api/WebTwain_Edit.html#changecontrastasnyc" target="_blank">`ChangeContrastAsnyc()`</a>.
-* Added new method <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#updatecert" target="_blank">`UpdateCert()`</a> to automatically update the client side certificate
+* Added new method <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#updatecert" target="_blank">`UpdateCert()`</a> to automatically update the client side certificate.
 
 ### Improved Features 
 
