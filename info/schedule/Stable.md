@@ -9,7 +9,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 ---
 
 # Stable Releases
-<!--
+
 ## 17.2
 
 ### New Features
@@ -25,21 +25,20 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 * Added new property <a href="{{site.info}}api/WebTwain_Viewer.html#showcheckbox" target="_blank">`showCheckbox()`</a>. 
 * Added new method <a href="{{site.info}}api/WebTwain_Edit.html#changebrightnessasync" target="_blank">`ChangeBrightnessAsync()`</a>. 
 * Added new method <a href="{{site.info}}api/WebTwain_Edit.html#changecontrastasnyc" target="_blank">`ChangeContrastAsnyc()`</a>.
-* Added new method <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#updatecert" target="_blank">`UpdateCert()`</a>.
+* Added new method <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#updatecert" target="_blank">`UpdateCert()`</a> to automatically update the client side certificate
 
 ### Improved Features 
 
 * Improved the <strong>document capture </strong> in WASM mode. 
-* RENDERALL convert mode in <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Addon_PDF.html?ver=latest#setconvertmode" target="_blank">SetConvertMode</a> now supports loading images with annotations.
-* Updated Barcode Reader library to version 8.6. Check out release notes for <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/release-notes/js-8.html?ver=latest#860-08312021" target="_blank">Barcode Reader JavaScript SDK - 8.6</a>
-* Modified DynamicImage.dll(DynamicImagex64.dll) to improve the encoding and decoding mode of tiff.
-* Updated the order of Capability setting according to the order defined in the TWAIN document.
+* Added RENDERALL convert mode to <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Addon_PDF.html?ver=latest#setconvertmode" target="_blank">EnumDWT_ConvertMode</a> to support loading PDFs with annotations.
+* Modified DynamicImage.dll(DynamicImagex64.dll) to improve encoding and decoding mode of TIFF files.
+* Updated Barcode Reader library to version 8.6. Check out the release notes for <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/release-notes/js-8.html?ver=latest#860-08312021" target="_blank">Barcode Reader JavaScript SDK - 8.6</a>
 
 ### Bug Fixes
 
-* Fixed a bug where the thumbnail viewer did not render correctly after "FilterImageByTag".
-* Fixed a bug where the image displayed in the thumbnail may be inconsistent with the canvas when switching tags through `FilterImageByTag` in the thumbnail viewer.
-* [ChromeOS]Fixed a bug where save function reported 'user canceled the operation' error in service mode.
+* Fixed a bug where the thumbnail viewer did not render correctly after `FilterImageByTag`.
+* Fixed a bug where the image displayed in the thumbnail may be inconsistent with that on the canvas when switching tags through `FilterImageByTag`.
+* [ChromeOS Service mode] Fixed a bug where the save function failed with error' user canceled the operation'.
 * Fixed a bug where multiple `Unload` and `Load` operations would cause WebTwainService to disconnect.
 -->
 
