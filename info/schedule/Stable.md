@@ -14,18 +14,18 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 ### New Features
 
-* Added method `GetTagListByIndex()` to return the tag of a specified image.
-* Added method `GetCurrentFileName()` to get the current file name.
-* Added method `CreateFile()` to create a file.
-* Added method `RemoveFile()` to remove a file. 
-* Added method `OpenFile()` to open a file.
-* Added method `GetFileInfoList()` to get file information.
-* Added method `scanDocument()` to capture document(s).
-* Added method `createTemplate()` to create document scanner template. 
-* Added property `showCheckbox` to show checkbox on image(s). 
-* Added method `ChangeBrightnessAsync()` to change the image brightness. 
-* Added method `ChangeContrastAsnyc()` to change the image contrast. 
-* Added method `UpdateCert()` to automatically update the client certificate.
+* Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#gettaglistbyindex" target="_blank">`GetTagListByIndex()`</a>.
+* Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#getcurrentfilename" target="_blank">`GetCurrentFileName()`</a>.
+* Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#createfile" target="_blank">`CreateFile()`</a>.
+* Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#removefile" target="_blank">`RemoveFile()`</a>.
+* Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#openfile" target="_blank">`OpenFile()`</a>.
+* Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#getfileinfolist" target="_blank">`GetFileInfoList()`</a>.
+* Added new method <a href="{{site.info}}api/Addon_Camera.html#scandocument" target="_blank">`scanDocument()`</a> to capture document(s).
+* Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#createtemplate" target="_blank">`createTemplate()`</a> to create document scanner template. 
+* Added new property <a href="{{site.info}}api/WebTwain_Viewer.html#showcheckbox" target="_blank">`showCheckbox()`</a>. 
+* Added new method <a href="{{site.info}}api/WebTwain_Edit.html#changebrightnessasync" target="_blank">`ChangeBrightnessAsync()`</a>. 
+* Added new method <a href="{{site.info}}api/WebTwain_Edit.html#changecontrastasnyc" target="_blank">`ChangeContrastAsnyc()`</a>.
+* Added new method <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#updatecert" target="_blank">`UpdateCert()`</a>.
 
 ### Improved Features 
 
@@ -35,14 +35,12 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 * Modified DynamicImage.dll(DynamicImagex64.dll) to improve the encoding and decoding mode of tiff.
 * Updated the order of Capability setting according to the order defined in the TWAIN document.
 
-
 ### Bug Fixes
 
 * Fixed a bug where the thumbnail viewer did not render correctly after "FilterImageByTag".
 * Fixed a bug where the image displayed in the thumbnail may be inconsistent with the canvas when switching tags through `FilterImageByTag` in the thumbnail viewer.
 * [ChromeOS]Fixed a bug where save function reported 'user canceled the operation' error in service mode.
 * Fixed a bug where multiple `Unload` and `Load` operations would cause WebTwainService to disconnect.
-
 -->
 
 ## 17.1.1 (08/19/2021)
