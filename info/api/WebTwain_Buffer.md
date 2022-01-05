@@ -897,7 +897,7 @@ Pair: [from: number, to: number];
  * Return the tag of a specified image.
  * @argument index Index of the image.
  */
-GetTagListByIndex (index: number):string[]
+GetTagListByIndex(index: number):string[]
 ```
 
 **Availability**
@@ -905,6 +905,11 @@ GetTagListByIndex (index: number):string[]
 |:-|:-|
 |ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 |  X  |  ✓/v17.2  |  ✓/v17.2  |  ✓/v17.2  |  ✓/v17.2  |  X  |
+
+**Example**
+```javascript
+DWObject.GetTagListByIndex(0); 
+```
 
 ---
 
