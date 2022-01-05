@@ -22,7 +22,7 @@ Sometimes when you are using a scanning page built with Dynamic Web TWAIN, you w
    Especially when you are using **64-bit Internet Explorer** but you don’t have the 64-bit scanner (TWAIN) driver installed on the machine.
 
 2. The Browser doesn’t have enough permission to access the scanner driver.
-   This mostly happens on Windows 7/Vista/2008 OS where high security level is applied to Internet Explorer. It would also happen in Firefox 4+ and Safari.
+   This mostly happens on **Windows 7/Vista/2008 OS** where high security level is applied to **Internet Explorer**. It would also happen in Firefox 4+ and Safari.
 
 ### Solution
 
@@ -30,7 +30,7 @@ Sometimes when you are using a scanning page built with Dynamic Web TWAIN, you w
 
    In addition, if you are using 64-bit Internet Explorer, please make sure you have a 64-bit TWAIN driver of the scanner installed.
 
-2. For Firefox, Safari, etc., please go to C:\Windows\twain_32 and you should be able to find that your scanner driver has a sub-folder there. In order to show the scanner as an available source, you need to copy the dlls in the sub-folder and paste them to the folder C:\Windows\System32 (or C:\Windows\SysWOW64 on a 64-bit OS).
+2. **For Firefox, Safari, etc.**, please go to C:\Windows\twain_32 and you should be able to find that your scanner driver has a sub-folder there. In order to show the scanner as an available source, you need to copy the dlls in the sub-folder and paste them to the folder C:\Windows\System32 (or C:\Windows\SysWOW64 on a 64-bit OS).
 
    For Internet Explorer, you can try one of the following tricks:
      1. Add the website to the zone of trusted sites.
