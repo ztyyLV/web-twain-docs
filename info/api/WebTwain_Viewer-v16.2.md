@@ -262,10 +262,10 @@ imageEditor.show();
 ``` javascript
 // Customize the editor
 var editorSettings = {
-    /* Show the editor within the DIV 'imageEditor'
+    /* Show the editor within the DIV 'imageEditor'*/
     element: document.getElementById("imageEditor"),
     width: 600,
-    height: 400,*/
+    height: 400,
     border: '1px solid rgb(204, 204, 204)',
     topMenuBorder: '',
     innerBorder: '',
