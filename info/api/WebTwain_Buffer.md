@@ -904,7 +904,7 @@ GetTagListByIndex(index: number):string[]
 
 |:-|:-|
 |ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-|  X  |  ✓/v17.2  |  ✓/v17.2  |  ✓/v17.2  |  ✓/v17.2  |  X  |
+|  X  |  ✓ | v17.2  |  ✓ | v17.2  |  ✓ | v17.2  |  ✓ | v17.2  |  X  |
 
 **Example**
 ```javascript
