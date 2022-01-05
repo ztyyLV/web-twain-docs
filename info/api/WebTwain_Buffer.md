@@ -925,6 +925,12 @@ DWObject.GetTagListByIndex(0);
 CreateFile(filename:string):Boolean;
 ```
 
+**Availability**
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |  v17.2+  |
+
 **Example**
 
 ```javascript
@@ -941,10 +947,6 @@ function failureCallback(errorCode, errorString) {
     alert(errorString);
 }
 ```
-
-**Usage notes**
-
-This API was added in V17.2.
 
 ---
 
@@ -960,6 +962,12 @@ This API was added in V17.2.
 OpenFile(filename:string):Boolean;   
 ```
 
+**Availability**
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |  v17.2+  |
+
 **Example**
 
 ```javascript
@@ -977,10 +985,6 @@ function failureCallback(errorCode, errorString) {
 }
 ```
 
-**Usage notes**
-
-This API was added in V17.2.
-
 ---
 
 ## GetCurrentFileName
@@ -994,9 +998,11 @@ This API was added in V17.2.
 GetCurrentFileName():String;    
 ```
 
-**Usage notes**
+**Availability**
 
-This API was added in V17.2.
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |  v17.2+  |
 
 ---
 
@@ -1012,9 +1018,11 @@ This API was added in V17.2.
 RemoveFile(filename:string):Boolean;    
 ```
 
-**Usage notes**
+**Availability**
 
-This API was added in V17.2.
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |  v17.2+  |
 
 ---
 
@@ -1037,8 +1045,10 @@ Json:
 
 ```
 
-**Usage notes**
+**Availability**
 
-This API was added in V17.2.
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |  v17.2+  |
 
 ---
