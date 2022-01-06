@@ -1332,7 +1332,7 @@ The zoom factor is only effective when the view mode is -1 * -1. Allowed values 
 
 ---
 
-### autoChangeIndex
+## autoChangeIndex
 
 **Syntax**
 
@@ -1354,6 +1354,66 @@ DWObject.Viewer.autoChangeIndex=true;
 When set to true, the index in the upper left corner of the viewer will be selected when scrolling.
 
 ---
+
+###  createTemplate
+
+**Syntax**
+
+``` typescript
+/**
+ * Create document scanner template.
+ * @argument templateName Currently templateName only supports "documentScanner".
+ */
+createTemplate("templateName")：DocumentScannerTemplate 
+```
+
+**Example**
+
+``` javascript
+var DWObject, template;
+Dynamsoft.DWT.CreateDWTObjectEx({
+    WebTwainId: 'a',
+    UseLocalService: false
+}, function (obj) {
+    DWObject = obj;
+    template = DWObject.Viewer.createTemplate("documentScanner");
+    DWObject.Viewer.bind (null, template);  //full screen
+    DWObject.Viewer.show();
+}, function(ec,es){console.log(es);});
+
+```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |  not supported  |
+
+---
+
+###  showCheckbox
+
+**Syntax**
+
+``` typescript
+/**
+ * Show checkbox on image(s).
+ */
+showCheckbox: boolean;
+```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |  not supported  |
+
+---
+
 
 ## Events 
 
@@ -1570,57 +1630,6 @@ DWObject.Viewer.on("resize", function(width, height) {
 });
 DWObject.Viewer.width += 100;
 ```
-
----
-
-###  createTemplate
-
-**Syntax**
-
-``` typescript
-/**
- * Create document scanner template.
- * @argument templateName Currently templateName only supports "documentScanner".
- */
-createTemplate("templateName")：DocumentScannerTemplate 
-```
-
-**Example**
-
-``` javascript
-var DWObject, template;
-Dynamsoft.DWT.CreateDWTObjectEx({
-    WebTwainId: 'a',
-    UseLocalService: false
-}, function (obj) {
-    DWObject = obj;
-    template = DWObject.Viewer.createTemplate("documentScanner");
-    DWObject.Viewer.bind (null, template);  //full screen
-    DWObject.Viewer.show();
-}, function(ec,es){console.log(es);});
-
-```
-
-**Usage notes**
-
-This API was added in V17.2.
-
----
-
-###  showCheckbox
-
-**Syntax**
-
-``` typescript
-/**
- * Show checkbox on image(s).
- */
-showCheckbox: boolean;
-```
-
-**Usage notes**
-
-This API was added in V17.2.
 
 ---
 
