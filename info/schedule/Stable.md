@@ -9,23 +9,34 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 ---
 
 # Stable Releases
-<!--
+
 ## 17.2
 
 ### New Features
 
-* [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#gettaglistbyindex" target="_blank">`GetTagListByIndex()`</a>.
-* [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#getcurrentfilename" target="_blank">`GetCurrentFileName()`</a>.
-* [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#createfile" target="_blank">`CreateFile()`</a>.
-* [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#removefile" target="_blank">`RemoveFile()`</a>.
-* [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#openfile" target="_blank">`OpenFile()`</a>.
-* [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#getfileinfolist" target="_blank">`GetFileInfoList()`</a>.
-* [WASM] Added new method <a href="{{site.info}}api/Addon_Camera.html#scandocument" target="_blank">`scanDocument()`</a> to capture document(s).
-* [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#createtemplate" target="_blank">`createTemplate()`</a> to create document scanner template. 
-* [HTML5] Added new property <a href="{{site.info}}api/WebTwain_Viewer.html#showcheckbox" target="_blank">`showCheckbox`</a>. 
-* [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Edit.html#changebrightnessasync" target="_blank">`ChangeBrightnessAsync()`</a>. 
-* [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Edit.html#changecontrastasnyc" target="_blank">`ChangeContrastAsnyc()`</a>.
-* [HTML5] <strong>Added new method <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#updatecert" target="_blank">`UpdateCert()`</a> to automatically update the client side certificate.</strong>
+#### Buffer
+ - Organize images in a set
+   - [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#createfile" target="_blank">`CreateFile()`</a>.
+   - [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#openfile" target="_blank">`OpenFile()`</a>.
+   - [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#removefile" target="_blank">`RemoveFile()`</a>.
+   - [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#getcurrentfilename" target="_blank">`GetCurrentFileName()`</a>.
+   - [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#getfileinfolist" target="_blank">`GetFileInfoList()`</a>.
+ - [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#gettaglistbyindex" target="_blank">`GetTagListByIndex()`</a>.
+
+#### Editor
+
+- [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Edit.html#changebrightnessasync" target="_blank">`ChangeBrightnessAsync()`</a>. 
+- [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Edit.html#changecontrastasnyc" target="_blank">`ChangeContrastAsnyc()`</a>.
+
+#### Camera
+- [WASM] Added new method <a href="{{site.info}}api/Addon_Camera.html#scandocument" target="_blank">`scanDocument()`</a> to capture document(s).
+
+#### Global
+- [HTML5] <strong>Added new method <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#updatecert" target="_blank">`UpdateCert()`</a> to automatically update the client side certificate.</strong>
+
+#### Viewer
+- [HTML5] Added new property <a href="{{site.info}}api/WebTwain_Viewer.html#showcheckbox" target="_blank">`showCheckbox`</a>. 
+- [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#createtemplate" target="_blank">`createTemplate()`</a> to create document scanner template. 
 
 ### Improved Features 
 
