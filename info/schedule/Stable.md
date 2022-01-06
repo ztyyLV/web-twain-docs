@@ -9,7 +9,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 ---
 
 # Stable Releases
-
+<!--
 ## 17.2
 
 ### New Features
@@ -20,7 +20,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 * [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#removefile" target="_blank">`RemoveFile()`</a>.
 * [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#openfile" target="_blank">`OpenFile()`</a>.
 * [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#getfileinfolist" target="_blank">`GetFileInfoList()`</a>.
-* [HTML5] Added new method <a href="{{site.info}}api/Addon_Camera.html#scandocument" target="_blank">`scanDocument()`</a> to capture document(s).
+* [WASM] Added new method <a href="{{site.info}}api/Addon_Camera.html#scandocument" target="_blank">`scanDocument()`</a> to capture document(s).
 * [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#createtemplate" target="_blank">`createTemplate()`</a> to create document scanner template. 
 * [HTML5] Added new property <a href="{{site.info}}api/WebTwain_Viewer.html#showcheckbox" target="_blank">`showheckbox`</a>. 
 * [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Edit.html#changebrightnessasync" target="_blank">`ChangeBrightnessAsync()`</a>. 
@@ -30,7 +30,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 ### Improved Features 
 
 * Improved the <strong>document capture</strong> in WASM mode. 
-* Added RENDERALL convert mode to <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Addon_PDF.html?ver=latest#setconvertmode" target="_blank">EnumDWT_ConvertMode</a> to support loading PDFs with annotations.
+* Added CM_RENDERALLWITHANNOTATION convert mode to <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Addon_PDF.html?ver=latest#setconvertmode" target="_blank">EnumDWT_ConvertMode</a> to support loading PDFs with annotations.
 * Modified DynamicImage.dll(DynamicImagex64.dll) to improve encoding and decoding mode of TIFF files.
 * Updated Barcode Reader library to version 8.6. Check out the release notes for <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/release-notes/js-8.html?ver=latest#860-08312021" target="_blank">Barcode Reader JavaScript SDK - 8.6</a>
 
@@ -40,7 +40,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 * Fixed a bug that DWT object could not be initialized when using iframe in Edge.
 * Fixed a bug where multiple `Unload` and `Load` operations would cause WebTwainService to disconnect.
 * [ChromeOS Service mode] Fixed a bug where the save function failed with error' user canceled the operation'.
-
+-->
 
 ## 17.1.1 (08/19/2021)
 
