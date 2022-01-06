@@ -1451,7 +1451,7 @@ The events `mouseout`, `mouseover`, `keydown` and `keyup` are only triggered on 
 
 ---
 
-### pageAreaSelected
+## pageAreaSelected
 
 **Syntax**
 
@@ -1491,7 +1491,7 @@ DWObject.Viewer.off('pageAreaSelected');
 
 ---
 
-### pageAreaUnselected
+## pageAreaUnselected
 
 **Syntax**
 
@@ -1517,7 +1517,7 @@ DWObject.Viewer.off('pageAreaUnselected');
 
 ---
 
-### pageRendered
+## pageRendered
 
 **Syntax**
 
@@ -1542,7 +1542,7 @@ DWObject.Viewer.render();
 
 ---
 
-### resize
+## resize
 
 **Syntax**
 
