@@ -357,7 +357,7 @@ interface ScanConfiguration{
      filter?: {  
        visibility?: boolean,   //Whether to display the filter icon. The default value is true.
        valueList?:[ {   //If not specified, listing all the filters in the order of original, blackAndWhite, grayscale, clean, brightening, saveToner by default. 
-                          //Support adjusting the valueList order to arrange the filter order.
+                        //Support adjusting the valueList order to arrange the filter order.
        label: string,   //The label of the filter. For example. The filter "Original" can be modified to any word you want to describe
        value: string,   //The filter value. The value must be set according to our specification below.
 			//Allowed values:
