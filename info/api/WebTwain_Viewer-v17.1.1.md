@@ -1327,7 +1327,7 @@ The zoom factor is only effective when the view mode is -1 * -1. Allowed values 
 
 ---
 
-### autoChangeIndex
+## autoChangeIndex
 
 **Syntax**
 
