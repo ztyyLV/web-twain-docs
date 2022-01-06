@@ -84,9 +84,9 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
  * @param element Specify an HTML element to create the viewer.
  * @param documentTemplate Specify the document template.
  */
-bind(element: HTMLDivElement, documentTemplate: DocumentScannerTemplate) : void;  
+bind(element: HTMLDivElement, documentTemplate: DocumentViewerTemplate) : void;  
 
-interface DocumentScannerTemplate{
+interface DocumentViewerTemplate{
    getCustomElement():CustomElement; //Get CustomElement. Can display save & upload interface in CustomElement.   
    onAddDocumentFunc = function () {}
    onExitFunc = function () {}
