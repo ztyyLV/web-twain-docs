@@ -281,8 +281,8 @@ scanDocument(scanConfiguration?: ScanConfiguration
 ): Promise<Resolution>;
 
 interface ScanConfiguration{
-   element?: HTMLDivElement, //Bind the elment or elment id. 
-                             //After binding, display the video in the spcified element, otherwise, display the video in full screen.
+   element?: HTMLDivElement, //Bind the element or element id. 
+                             //After binding, display the video in the specified element, otherwise, display the video in full screen.
    scannerViewer?:{
      deviceId?: string,  
      maxDocuments: int,       //The maximum documents can be captured/loaded in to the buffer. 
