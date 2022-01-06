@@ -38,8 +38,9 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 * Fixed a bug where the thumbnail viewer did not render correctly after `FilterImageByTag`.
 * Fixed a bug where the image displayed in the thumbnail may be inconsistent with that on the canvas when switching tags through `FilterImageByTag`.
-* [ChromeOS Service mode] Fixed a bug where the save function failed with error' user canceled the operation'.
+* Fixed a bug that DWT object could not be initialized when using iframe in Edge.
 * Fixed a bug where multiple `Unload` and `Load` operations would cause WebTwainService to disconnect.
+* [ChromeOS Service mode] Fixed a bug where the save function failed with error' user canceled the operation'.
 -->
 
 ## 17.1.1 (08/19/2021)
