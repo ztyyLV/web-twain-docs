@@ -34,9 +34,8 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 * Modified DynamicImage.dll(DynamicImagex64.dll) to improve encoding and decoding mode of TIFF files.
 * Updated Barcode Reader library to version 8.6. Check out the release notes for <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/release-notes/js-8.html?ver=latest#860-08312021" target="_blank">Barcode Reader JavaScript SDK - 8.6</a>
 
-### Bug Fixes
+### Bug Fixed
 
-* Fixed a bug where the thumbnail viewer did not render correctly after `FilterImageByTag`.
 * Fixed a bug where the image displayed in the thumbnail may be inconsistent with that on the canvas when switching tags through `FilterImageByTag`.
 * Fixed a bug that DWT object could not be initialized when using iframe in Edge.
 * Fixed a bug where multiple `Unload` and `Load` operations would cause WebTwainService to disconnect.
