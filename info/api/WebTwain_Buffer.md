@@ -901,7 +901,7 @@ GetTagListByIndex(index: number):string[]
 ```
 
 **Availability**
-<div class=""></div>
+<div class="availability"></div>
 |:-|:-|
 |ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 |  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |  not supported  |
