@@ -22,7 +22,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 * Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#getfileinfolist" target="_blank">`GetFileInfoList()`</a>.
 * Added new method <a href="{{site.info}}api/Addon_Camera.html#scandocument" target="_blank">`scanDocument()`</a> to capture document(s).
 * Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#createtemplate" target="_blank">`createTemplate()`</a> to create document scanner template. 
-* Added new property <a href="{{site.info}}api/WebTwain_Viewer.html#showcheckbox" target="_blank">`showCheckbox()`</a>. 
+* Added new property <a href="{{site.info}}api/WebTwain_Viewer.html#showcheckbox" target="_blank">`showheckbox`</a>. 
 * Added new method <a href="{{site.info}}api/WebTwain_Edit.html#changebrightnessasync" target="_blank">`ChangeBrightnessAsync()`</a>. 
 * Added new method <a href="{{site.info}}api/WebTwain_Edit.html#changecontrastasnyc" target="_blank">`ChangeContrastAsnyc()`</a>.
 * <strong>Added new method <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#updatecert" target="_blank">`UpdateCert()`</a> to automatically update the client side certificate.</strong>
