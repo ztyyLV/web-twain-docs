@@ -1364,7 +1364,7 @@ When set to true, the index in the upper left corner of the viewer will be selec
  * Create document scanner template.
  * @argument templateName Currently templateName only supports "documentScanner".
  */
-createTemplate("templateName")：DocumentScannerTemplate 
+createTemplate("templateName")：DocumentViewerTemplate
 ```
 
 **Example**
