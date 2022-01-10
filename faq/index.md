@@ -87,6 +87,8 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}scanner-not-shown-or-not-responding-in-the browser.html" target="_blank">Why is my scanner not shown or not responding in the browser?</a>
 
+<a href="{{site.faq}}download-virtual-scanner-for-testing.html" target="_blank">Download virtual scanner for testing</a>
+
 ## Image Viewer
 
 <a href="{{site.faq}}image-viewer-object-defined.html" target="_blank">Where is the image viewer object defined?</a>
