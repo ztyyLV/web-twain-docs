@@ -51,6 +51,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 * Fixed a bug that Dynamic Web TWAIN object could not be initialized when using iframe in Edge.
 *	[HTML5 on macOS] Fixed a bug where `IfDuplexEnabled` may not work for some scanners. 
 *	[HTML5 on ChromeOS] Fixed a bug where the save function failed with error 'user canceled the operation'
+* [HTML5 on macOS & Linux] Fixed a bug where calling `LoadDibFromClipboard` does not work after calling `CropToClipboard`.
 -->
 
 ## 17.1.1 (08/19/2021)
