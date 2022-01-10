@@ -41,7 +41,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 ### Improved Features 
 
 * Improved the <strong>document capture</strong> in WASM mode. 
-* Added CM_RENDERALLWITHANNOTATION convert mode to <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Addon_PDF.html?ver=latest#setconvertmode" target="_blank">EnumDWT_ConvertMode</a> to support loading PDFs with annotations.
+* Added `CM_RENDERALLWITHANNOTATION` convert mode to <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Addon_PDF.html?ver=latest#setconvertmode" target="_blank">EnumDWT_ConvertMode</a> to support loading PDFs with annotations.
 * Modified DynamicImage.dll(DynamicImagex64.dll) to improve encoding and decoding mode of TIFF files.
 * Updated Barcode Reader library to version 8.6. Check out the release notes for <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/release-notes/js-8.html?ver=latest#860-08312021" target="_blank">Barcode Reader JavaScript SDK - 8.6</a>
 
@@ -49,8 +49,8 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 * Fixed a bug where the image displayed in the thumbnail may be inconsistent with that on the canvas when switching tags through `FilterImageByTag`.
 * Fixed a bug that Dynamic Web TWAIN object could not be initialized when using iframe in Edge.
-* Fixed a bug where multiple `Unload` and `Load` operations would cause WebTwainService to disconnect.
-* [ChromeOS Service mode] Fixed a bug where the save function failed with error' user canceled the operation'.
+*	[HTML5 on macOS] Fixed a bug where `IfDuplexEnabled` may not work for some scanners. 
+*	[HTML5 on ChromeOS] Fixed a bug where the save function failed with error 'user canceled the operation'
 -->
 
 ## 17.1.1 (08/19/2021)
