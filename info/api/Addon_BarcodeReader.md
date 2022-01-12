@@ -11,10 +11,10 @@ description: Dynamic Web TWAIN SDK Documentation API Reference BarcodeReader Add
 
 **Methods**
 
-| |
-|:-|:-|
-|[`decode()`]({{site.info}}api/Addon_BarcodeReader.html#decode)| [`getRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#getruntimesettings)|[`updateRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#updateruntimesettings)|
-|[`resetRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#resetruntimesettings)| [`initRuntimeSettingsWithString()`]({{site.info}}api/Addon_BarcodeReader.html#initruntimesettingswithstring)|
+|                                                                                            |
+| :----------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| [`decode()`]({{site.info}}api/Addon_BarcodeReader.html#decode)                             | [`getRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#getruntimesettings)                       | [`updateRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#updateruntimesettings) |
+| [`resetRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#resetruntimesettings) | [`initRuntimeSettingsWithString()`]({{site.info}}api/Addon_BarcodeReader.html#initruntimesettingswithstring) |
 
 ---
 
@@ -22,7 +22,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference BarcodeReader Add
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Read an image in the buffer and try to locate and decode barcode(s) on it.
  * @param index Specify the image to decode.
@@ -125,13 +125,21 @@ interface Result {
 }
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 ---
 
 ## getRuntimeSettings
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Get the current runtime settings.
  */
@@ -185,13 +193,21 @@ interface Region {
 }
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 ---
 
 ## updateRuntimeSettings
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Update the runtime settings with a given object or use the string "speed", "balance", or "coverage" to use our preset settings. The default setting is "coverage".
  * @param settings Specify the runtime settings.
@@ -201,19 +217,31 @@ updateRuntimeSettings(settings: RuntimeSettings): Promise < RuntimeSettings > ;
 
 **Example**
 
-``` javascript
-DWObject.Addon.BarcodeReader.getRuntimeSettings('balance').then(function(settings) {    
+```javascript
+DWObject.Addon.BarcodeReader.getRuntimeSettings("balance")
+  .then(function (settings) {
     settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED;
     return DWObject.Addon.BarcodeReader.updateRuntimeSettings(settings);
-}).then(function() {
-    DWObject.Addon.BarcodeReader.decode(0).then(function(textResult) {
-            console.log(textResult);
-        },
-        function(ex) {
-            console.log(ex.message || ex);
-        });
-    });
+  })
+  .then(function () {
+    DWObject.Addon.BarcodeReader.decode(0).then(
+      function (textResult) {
+        console.log(textResult);
+      },
+      function (ex) {
+        console.log(ex.message || ex);
+      }
+    );
+  });
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
 
@@ -221,12 +249,20 @@ DWObject.Addon.BarcodeReader.getRuntimeSettings('balance').then(function(setting
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Reset all runtime settings to default values.
  */
 resetRuntimeSettings(): Promise < RuntimeSettings > ;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
 
@@ -234,7 +270,7 @@ resetRuntimeSettings(): Promise < RuntimeSettings > ;
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Set up the barcode reader with advanced settings.
  * @param settings The runtime setting in the form of a string.
@@ -243,3 +279,11 @@ initRuntimeSettingsWithString(
     settings: string
 ): Promise < RuntimeSettings > ;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |

@@ -11,21 +11,20 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Webcam Addon APIs
 
 **Methods**
 
-| |
-|:-|:-|
-|[`CaptureImage()`](#captureimage) | [`CloseSource()`](#closesource)| [`GetCameraControlPropertySetting()`](#getcameracontrolpropertysetting) | [`GetCameraControlPropertyMoreSetting()`](#getcameracontrolpropertymoresetting)|
-|[`GetVideoPropertySetting()`](#getvideopropertysetting)|[`GetVideoPropertyMoreSetting()`](#getvideopropertymoresetting)| [`SetCameraControlPropertySetting()`](#setcameracontrolpropertysetting)| [`SetVideoPropertySetting()`](#setvideopropertysetting)|
-|[`GetFrameRate()`](#getframerate) | [`SetFrameRate()`](#setframerate)| [`GetMediaType()`](#getmediatype) | [`SetMediaType()`](#setmediatype)|
-|[`GetResolution()`](#getresolution) | [`SetResolution()`](#setresolution)| [`GetFramePartURL()`](#getframeparturl) | [`GetFrameURL()`](#getframeurl)|
-|[`GetSourceList()`](#getsourcelist) | [`SelectSource()`](#selectsource)|[`PauseVideo()`](#pausevideo) |[`PlayVideo()`](#playvideo)|
-|[`SetVideoRotateMode()`](#setvideorotatemode) | [`StopVideo()`](#stopvideo)|
-
+|                                                         |
+| :------------------------------------------------------ | :-------------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| [`CaptureImage()`](#captureimage)                       | [`CloseSource()`](#closesource)                                 | [`GetCameraControlPropertySetting()`](#getcameracontrolpropertysetting) | [`GetCameraControlPropertyMoreSetting()`](#getcameracontrolpropertymoresetting) |
+| [`GetVideoPropertySetting()`](#getvideopropertysetting) | [`GetVideoPropertyMoreSetting()`](#getvideopropertymoresetting) | [`SetCameraControlPropertySetting()`](#setcameracontrolpropertysetting) | [`SetVideoPropertySetting()`](#setvideopropertysetting)                         |
+| [`GetFrameRate()`](#getframerate)                       | [`SetFrameRate()`](#setframerate)                               | [`GetMediaType()`](#getmediatype)                                       | [`SetMediaType()`](#setmediatype)                                               |
+| [`GetResolution()`](#getresolution)                     | [`SetResolution()`](#setresolution)                             | [`GetFramePartURL()`](#getframeparturl)                                 | [`GetFrameURL()`](#getframeurl)                                                 |
+| [`GetSourceList()`](#getsourcelist)                     | [`SelectSource()`](#selectsource)                               | [`PauseVideo()`](#pausevideo)                                           | [`PlayVideo()`](#playvideo)                                                     |
+| [`SetVideoRotateMode()`](#setvideorotatemode)           | [`StopVideo()`](#stopvideo)                                     |
 
 ## CaptureImage
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Capture an image from the current camera.
  * @param successCallback A callback function that is executed if the request succeeds.
@@ -42,18 +41,34 @@ CaptureImage(
 ): void;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
+
 ---
 
 ## GetSourceList
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return a list of all available cameras.
  */
 GetSourceList(): string[];
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
 
@@ -61,7 +76,7 @@ GetSourceList(): string[];
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Select a camera to use.
  * @param name Specify the camera.
@@ -69,31 +84,55 @@ GetSourceList(): string[];
 SelectSource(name: string): boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
+
 ---
 
 ## CloseSource
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Close the current camera.
  */
 CloseSource(): boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
+
 ---
 
 ## GetSourceList
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return a list of all available cameras.
  */
 GetSourceList(): string[];
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
 
@@ -101,7 +140,7 @@ GetSourceList(): string[];
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Select a camera to use.
  * @param name Specify the camera.
@@ -109,13 +148,21 @@ GetSourceList(): string[];
 SelectSource(name: string): boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
+
 ---
 
 ## CloseSource
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Close the current camera.
  */
@@ -126,13 +173,21 @@ CloseSource(): boolean;
 
 When you close the camera, the video stream will stop at the last frame.
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
+
 ---
 
 ## PlayVideo
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Start to play the video stream from the current camera.
  * @param DWObject Specify a WebTwain instance to show the video.
@@ -146,18 +201,34 @@ PlayVideo(
 ): boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
+
 ---
 
 ## PauseVideo
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Pause the video.
  */
 PauseVideo(): boolean;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
 
@@ -165,7 +236,7 @@ PauseVideo(): boolean;
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Stop the video.
  */
@@ -178,13 +249,21 @@ When you capture a frame, it's always the actual latest frame from the camera ev
 
 When you close the camera, the video stream will stop at the last frame.
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
+
 ---
 
 ## GetCameraControlPropertySetting
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return information about the specified camera property.
  * @param property Specify the property.
@@ -194,13 +273,21 @@ GetCameraControlPropertySetting(
 ): CameraControlProperty;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
+
 ---
 
 ## GetCameraControlPropertyMoreSetting
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return detailed information about the specified camera property.
  * @param property Specify the property.
@@ -210,13 +297,21 @@ GetCameraControlPropertyMoreSetting(
 ): CameraControlPropertyExtra;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
+
 ---
 
 ## SetCameraControlPropertySetting
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Set the specified camera property.
  * @param property Specify the property.
@@ -256,7 +351,7 @@ interface CameraControlPropertyExtra {
     /**
      * Return the smallest increment by which the property can change.
      */
-    GetSteppingDelta(): number;    
+    GetSteppingDelta(): number;
     /**
      * Return whether the property is set autmatically or not.
      */
@@ -268,13 +363,21 @@ interface CameraControlPropertyExtra {
 
 Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_cameracontrolproperty" target="_blank">Dynamsoft.DWT.EnumDWT_CameraControlProperty</a>.
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
+
 ---
 
 ## GetVideoPropertySetting
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return information about the specified video property.
  * @param property Specify the property.
@@ -284,13 +387,21 @@ GetVideoPropertySetting(
 ): VideoControlProperty;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
+
 ---
 
 ## GetVideoPropertyMoreSetting
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return detailed information about the specified video property.
  * @param property Specify the property.
@@ -300,13 +411,21 @@ GetVideoPropertyMoreSetting(
 ): VideoControlPropertyExtra;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
+
 ---
 
 ## SetVideoPropertySetting
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Set the specified video property.
  * @param property Specify the property.
@@ -346,7 +465,7 @@ interface VideoControlPropertyExtra {
     /**
      * Return the smallest increment by which the property can change.
      */
-    GetSteppingDelta(): number;    
+    GetSteppingDelta(): number;
     /**
      * Return whether the property is set autmatically or not.
      */
@@ -358,18 +477,34 @@ interface VideoControlPropertyExtra {
 
 Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_videoproperty" target="_blank">Dynamsoft.DWT.EnumDWT_VideoProperty</a>.
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
+
 ---
 
 ## GetFrameRate
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return the frame rates supported by the current camera.
  */
 GetFrameRate(): FrameRate;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
 
@@ -377,12 +512,20 @@ GetFrameRate(): FrameRate;
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return the media types supported by the current camera.
  */
 GetMediaType(): MediaType;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
 
@@ -390,12 +533,20 @@ GetMediaType(): MediaType;
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return the resolutions supported by the current camera.
  */
 GetResolution(): Resolution;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
 
@@ -403,7 +554,7 @@ GetResolution(): Resolution;
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Set the frame rate.
  * @param rate Specify the frame rate.
@@ -411,13 +562,21 @@ GetResolution(): Resolution;
 SetFrameRate(rate: number): boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
+
 ---
 
 ## SetMediaType
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Set the media type.
  * @param type Sepcify the media type.
@@ -425,13 +584,21 @@ SetFrameRate(rate: number): boolean;
 SetMediaType(type: string): boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
+
 ---
 
 ## SetResolution
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Set the resolution.
  * @param resolution Specify the resolution.
@@ -486,9 +653,17 @@ interface Resolution {
 
 **Example**
 
-``` javascript
+```javascript
 DWObject.Addon.Webcam.SetResolution("640 x 480");
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
 
@@ -496,7 +671,7 @@ DWObject.Addon.Webcam.SetResolution("640 x 480");
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Rotate the video.
  * @param mode Specify the rotate mode
@@ -508,7 +683,15 @@ SetVideoRotateMode(
 
 **Usage notes**
 
-Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_videorotatemode" target="_blank">Dynamsoft.DWT.EnumDWT_VideoRotateMode</a>. 
+Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_videorotatemode" target="_blank">Dynamsoft.DWT.EnumDWT_VideoRotateMode</a>.
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
 
@@ -516,12 +699,20 @@ Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_vide
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return the URL (http(s)://) for the latest frame.
  */
 GetFrameURL(): string;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
 
@@ -529,7 +720,7 @@ GetFrameURL(): string;
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return the internal URL (dwt://) for the latest frame.
  */
@@ -541,3 +732,11 @@ GetFramePartURL(): string;
 `GetFrameURL()` returns a public URL that can be used to access the frame directly by any applicatoin capable of HTTP requests that runs on the same machine. For example: 'https://127.0.0.1:18623/dwt/dwt_16000428/img?id=853407158&index=-1&width=-1&height=-1&webcam=80&t=1590481406860'.
 
 `GetFramePartURL()` returns an internal URL that only Dynamsoft libraries such as the Barcode Reader add-on can read. For example: `dwt://dwt_16000428/img?id=853407158&index=-1&width=-1&height=-1&webcam=80&t=1590481403659` .
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
