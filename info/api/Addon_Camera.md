@@ -268,6 +268,14 @@ There are two available modes: `document` and `picture` .
 closeVideo(): void;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 <!--
 ## scanDocument
 
@@ -281,8 +289,6 @@ closeVideo(): void;
 scanDocument(scanConfiguration?: ScanConfiguration
 ): Promise<Resolution>;
 
-interface ScanConfiguration{
-<<<<<<< nikhil
     element?: HTMLDivElement,  //Bind the elment or elment id. After binding, display the video in the spcified element, otherwise, display the video in full screen.
     scannerViewer?:{
        deviceId?: string,
@@ -406,6 +412,7 @@ rotateRight?:{
 }
 }
 -->
+
 
 
 
