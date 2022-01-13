@@ -103,6 +103,7 @@ There are three conversion modes
 - CM_RENDERALL (1): All the content in the target PDF file will be rasterized.
 - CM_IMAGEONLY (2): The PDF Rasterizer is turned off. This is the default mode.
 - CM_AUTO (3): The library automatically detect whether a file needs to be rasterized or not and then process the file accordingly.
+- CM_RENDERALLWITHANNOTATION (4): Support loading PDF file with annotation. 
 
 Use this method before you import a PDF into the viewer with methods such as <a href="{{site.info}}api/WebTwain_IO.html#loadimage" target="_blank">`LoadImage()`</a> , <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`HTTPDownload()`</a> and <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`FTPDownload()`</a>.
 
