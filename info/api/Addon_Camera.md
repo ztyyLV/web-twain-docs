@@ -13,12 +13,12 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Camera Addon APIs
 
 **Methods**
 
-| |
-|:-|:-|
-|[`getSourceList()`](#getsourcelist) | [`selectSource()`](#selectsource)|[`getCurrentSource()`](#getcurrentsource)|[`closeSource()`](#closesource)|
-|[`getResolution()`](#getresolution)| [`setResolution()`](#setresolution)| [`getCurrentResolution()`](#getcurrentresolution)| [`play()`](#play)|
-|[`pause()`](#pause)| [`resume()`](#resume)| [`stop()`](#stop)|[`getStatus()`](#getstatus)|
-|[`capture()`](#capture)| [`showVideo()`](#showvideo)| [`closeVideo()`](#closevideo)|[`scanDocument()`](#scandocument)|
+|                                     |
+| :---------------------------------- | :---------------------------------- | ------------------------------------------------- | --------------------------------- |
+| [`getSourceList()`](#getsourcelist) | [`selectSource()`](#selectsource)   | [`getCurrentSource()`](#getcurrentsource)         | [`closeSource()`](#closesource)   |
+| [`getResolution()`](#getresolution) | [`setResolution()`](#setresolution) | [`getCurrentResolution()`](#getcurrentresolution) | [`play()`](#play)                 |
+| [`pause()`](#pause)                 | [`resume()`](#resume)               | [`stop()`](#stop)                                 | [`getStatus()`](#getstatus)       |
+| [`capture()`](#capture)             | [`showVideo()`](#showvideo)         | [`closeVideo()`](#closevideo)                     | [`scanDocument()`](#scandocument) |
 
 ---
 
@@ -26,7 +26,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Camera Addon APIs
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return a list of all available cameras.
  */
@@ -40,9 +40,17 @@ interface DeviceInfo{
 
 **Example**
 
-``` javascript
+```javascript
 DWObject.Addon.Camera.getSourceList();
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
 
@@ -50,7 +58,7 @@ DWObject.Addon.Camera.getSourceList();
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Select a camera to use.
  * @param deviceId Specify the camera with its deviceId.
@@ -58,18 +66,34 @@ DWObject.Addon.Camera.getSourceList();
 selectSource(deviceId: string): Promise<DeviceInfo>;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 ---
 
 ## getCurrentSource
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return the info about the current camera.
  */
 getCurrentSource():DeviceInfo;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
 
@@ -77,12 +101,20 @@ getCurrentSource():DeviceInfo;
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Close the current camera.
  */
 closeSource(): Promise<DeviceInfo>;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
 
@@ -90,7 +122,7 @@ closeSource(): Promise<DeviceInfo>;
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return the resolutions supported by the current camera.
  */
@@ -102,13 +134,21 @@ interface Resolution{
 }
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 ---
 
 ## setResolution
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Set the resolution for the current camera.
  * @param resolution Specify the resolution.
@@ -116,13 +156,21 @@ interface Resolution{
 setResolution(resolution: Resolution): Promise<Resolution>;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 ---
 
 ## getCurrentResolution
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return the resolution of the current camera.
  */
@@ -133,13 +181,21 @@ getCurrentResolution(): Promise<Resolution>;
 
 If the camera is playing, the actual resolution is returned. If the camera is not playing, the last set resolution or null is returned.
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 ---
 
 ## play
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Start streaming video from the current camera.
  * @param element Specify an HTML element to put the video stream in.
@@ -154,9 +210,17 @@ play(element?: HTMLElement,
 
 **Usage notes**
 
-If no camera is chosen, the default camera is used. 
+If no camera is chosen, the default camera is used.
 
 If the method is called without arguments or `null` is passed to `element` , the video will show in the main viewer.
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
 
@@ -164,12 +228,20 @@ If the method is called without arguments or `null` is passed to `element` , the
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Pause the video stream.
  */
 pause(): void;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
 
@@ -177,12 +249,20 @@ pause(): void;
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Resume the video stream.
  */
 resume(): void;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
 
@@ -190,12 +270,20 @@ resume(): void;
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Stop the video stream.
  */
 stop(): void;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
 
@@ -203,7 +291,7 @@ stop(): void;
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return the status of the current camera.
  */
@@ -214,18 +302,34 @@ getStatus(): string;
 
 The status string is either empty or one of the following: "playing", "paused", "stopped". An empty string means no camera is open.
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 ---
 
 ## capture
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Capture a frame from the video stream.
  */
 capture(): Promise<Blob>;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
 
@@ -233,7 +337,7 @@ capture(): Promise<Blob>;
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Start streaming video from the current camera in the viewer.
  * @param deviceId Specify a camera.
@@ -252,8 +356,16 @@ showVideo(deviceId?: string,
 
 There are two available modes: `document` and `picture` .
 
-* `picture`: border detection is turned off and supports taking images consecutively. This is the default mode.
-* `document`: border detection will be on and only supports taking one image at a time.
+- `picture`: border detection is turned off and supports taking images consecutively. This is the default mode.
+- `document`: border detection will be on and only supports taking one image at a time.
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
 
@@ -261,7 +373,7 @@ There are two available modes: `document` and `picture` .
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Close the camera and hide the video streaming UI.
  */
