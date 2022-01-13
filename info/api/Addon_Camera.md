@@ -38,19 +38,19 @@ interface DeviceInfo{
 }
 ```
 
-**Example**
-
-```javascript
-DWObject.Addon.Camera.getSourceList();
-```
-
 **Availability**
 
 <div class="availability"></div>
 
 |:-|:-|
 |ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+| not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
+
+**Example**
+
+```javascript
+DWObject.Addon.Camera.getSourceList();
+```
 
 ---
 
@@ -72,7 +72,7 @@ selectSource(deviceId: string): Promise<DeviceInfo>;
 
 |:-|:-|
 |ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+| not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ---
 
@@ -93,7 +93,7 @@ getCurrentSource():DeviceInfo;
 
 |:-|:-|
 |ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+| not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ---
 
@@ -114,7 +114,7 @@ closeSource(): Promise<DeviceInfo>;
 
 |:-|:-|
 |ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+| not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ---
 
@@ -140,7 +140,7 @@ interface Resolution{
 
 |:-|:-|
 |ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+| not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ---
 
@@ -162,7 +162,7 @@ setResolution(resolution: Resolution): Promise<Resolution>;
 
 |:-|:-|
 |ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+| not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ---
 
@@ -177,17 +177,17 @@ setResolution(resolution: Resolution): Promise<Resolution>;
 getCurrentResolution(): Promise<Resolution>;
 ```
 
-**Usage notes**
-
-If the camera is playing, the actual resolution is returned. If the camera is not playing, the last set resolution or null is returned.
-
 **Availability**
 
 <div class="availability"></div>
 
 |:-|:-|
 |ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+| not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
+
+**Usage notes**
+
+If the camera is playing, the actual resolution is returned. If the camera is not playing, the last set resolution or null is returned.
 
 ---
 
@@ -220,7 +220,7 @@ If the method is called without arguments or `null` is passed to `element` , the
 
 |:-|:-|
 |ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+| not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ---
 
@@ -241,7 +241,7 @@ pause(): void;
 
 |:-|:-|
 |ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+| not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ---
 
@@ -262,7 +262,7 @@ resume(): void;
 
 |:-|:-|
 |ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+| not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ---
 
@@ -283,7 +283,7 @@ stop(): void;
 
 |:-|:-|
 |ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+| not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ---
 
@@ -308,7 +308,7 @@ The status string is either empty or one of the following: "playing", "paused", 
 
 |:-|:-|
 |ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+| not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ---
 
@@ -329,7 +329,7 @@ capture(): Promise<Blob>;
 
 |:-|:-|
 |ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+| not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ---
 
@@ -365,7 +365,7 @@ There are two available modes: `document` and `picture` .
 
 |:-|:-|
 |ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+| not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ---
 
@@ -386,7 +386,7 @@ closeVideo(): void;
 
 |:-|:-|
 |ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+| not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ## scanDocument
 

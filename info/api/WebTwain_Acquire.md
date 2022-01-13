@@ -351,6 +351,14 @@ CloseSource(): boolean;
 CloseSourceAsync(): Promise<boolean>;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v16.1+  |   v16.1+  |  v16.1+  |   v16.1+ |  not supported  |
+
 ---
 
 ## DisableSource
@@ -435,6 +443,14 @@ OpenSource(): boolean;
 OpenSourceAsync(): Promise<boolean>;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v16.1+  |   v16.1+  |  v16.1+  |   v16.1+ |  not supported  |
+
 ---
 
 ## GetSourceNames
@@ -514,6 +530,14 @@ interface Version {
 GetSourceNamesAsync(bIncludeDetails: boolean): Promise<string[] | ISourceDetails[]>;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v16.1+  |   v16.1+  |  v16.1+  |   v16.1+ |  not supported  |
+
 ---
 
 ## SelectSource
@@ -575,6 +599,14 @@ DWObject.SelectSourceAsync().then(function(sourceIndex){console.log(sourceIndex)
 DWObject.AcquireImage()}).catch(function(e){console.log(e)});
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v16.1+  |   v16.1+  |  v16.1+  |   v16.1+ |  not supported  |
+
 ---
 
 ## SelectSourceByIndex
@@ -610,6 +642,14 @@ DWObject.AcquireImage();
  */
 SelectSourceByIndexAsync(index: number): Promise<boolean>;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v16.1+  |   v16.1+  |  v16.1+  |   v16.1+ |  not supported  |
 
 **Example**
 
@@ -960,6 +1000,14 @@ CloseSourceManager(): boolean;
 CloseSourceManagerAsync(): Promise<boolean>;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v16.1+  |   v16.1+  |  v16.1+  |   v16.1+ |  not supported  |
+
 ---
 
 ## CloseWorkingProcess
@@ -1099,6 +1147,14 @@ If application identification needs to be set, it should be set before this API.
  */
 OpenSourceManagerAsync(): Promise<boolean>;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v16.1+  |   v16.1+  |  v16.1+  |   v16.1+ |  not supported  |
 
 **Usage notes**
 

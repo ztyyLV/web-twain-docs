@@ -95,6 +95,14 @@ An `imageId` is unique and won't change as long as the Dynamsoft Service process
 RenameTag(oldName:string, newName:string): boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v16.2+  |   v16.2+   |  v16.2+  |   v16.2+ |  not supported  |
+
 ---
 
 ## RemoveTag
@@ -109,6 +117,14 @@ RenameTag(oldName:string, newName:string): boolean;
  */
 RemoveTag(tagName: string, indices?: number[]):boolean 
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v17.0+  |   v17.0+  |  v17.0+  |   v17.0+ |  not supported  |
 
 **Usage Notes**
 If the index is null, it will remove the tag you specified. If the index is not null, it will remove the specified tag on the image you selected.
@@ -138,6 +154,14 @@ Json：
 ] 
  
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v17.0+  |   v17.0+  |  v17.0+  |   v17.0+ |  not supported  |
 
 ---
 
@@ -179,6 +203,14 @@ FilterImagesByTag(tag: string): boolean;
  */
 ClearFilter(): boolean;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v16.2+  |   v16.2+  |  v16.2+  |   v16.2+ |  not supported  |
 
 ---
 
@@ -803,6 +835,14 @@ interface BufferChangeInfo {
     selectedIds: number[];
 }
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v16.2+  |   v16.2+  |  v16.2+  |   v16.2+ |  not supported  |
 
 **Usage notes**
 

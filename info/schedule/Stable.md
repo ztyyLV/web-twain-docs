@@ -112,7 +112,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 * Added method [`PrintEx()`]({{site.info}}api/WebTwain_IO.html#printex) to support selective printing.  
 
-* Added property [`autoChangeIndex`]({{site.info}}api/WebTwain_Viewer.html#autoChangeIndex) which, when set to true, will make sure the first image in the viewer is always selected when scrolling through multiple images. 
+* Added property [`autoChangeIndex`]({{site.info}}api/WebTwain_Viewer.html#autochangeindex) which, when set to true, will make sure the first image in the viewer is always selected when scrolling through multiple images. 
 
 ### Improved Features 
 

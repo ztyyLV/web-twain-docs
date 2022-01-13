@@ -1343,6 +1343,14 @@ The zoom factor is only effective when the view mode is -1 * -1. Allowed values 
 autoChangeIndex : boolean
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v17.0+  |   v17.0+  |  v17.0+  |   v17.0+ |  not supported  |
+
 **Example**
 
 ``` javascript
