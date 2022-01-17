@@ -11,21 +11,21 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Edit APIs Page
 
 **Methods**
 
-| |
-|:-|:-|
-|[`Crop()`](#crop)|[`CropToClipboard()`](#croptoclipboard)| [`CutFrameToClipboard()`](#cutframetoclipboard) |[`CutToClipboard()`](#cuttoclipboard)|
-|[`CopyToClipboard()`](#copytoclipboard) |[`Erase()`](#erase) |[`Flip()`](#flip)|[`Mirror()`](#mirror)|
-| [`Rotate()`](#rotate) |[`RotateEx()`](#rotateex)| [`RotateLeft()`](#rotateleft) | [`RotateRight()`](#rotateright)|
-| [`ChangeBitDepth()`](#changebitdepth) | [`SetDPI()`](#setdpi)|[`ConvertToBW()`](#converttobw) |[`ConvertToGrayScale()`](#converttograyscale)|
-|[`ChangeImageSize()`](#changeimagesize) | [`Invert()`](#invert)|[`SetImageWidth()`](#setimagewidth)|[`ChangeBrightnessAsync()`](#changebrightnessasync)|
-|[`ChangeContrastAsnyc()`](#changecontrastasnyc) | 
+|                                                 |
+| :---------------------------------------------- | :-------------------------------------- | ----------------------------------------------- | --------------------------------------------------- |
+| [`Crop()`](#crop)                               | [`CropToClipboard()`](#croptoclipboard) | [`CutFrameToClipboard()`](#cutframetoclipboard) | [`CutToClipboard()`](#cuttoclipboard)               |
+| [`CopyToClipboard()`](#copytoclipboard)         | [`Erase()`](#erase)                     | [`Flip()`](#flip)                               | [`Mirror()`](#mirror)                               |
+| [`Rotate()`](#rotate)                           | [`RotateEx()`](#rotateex)               | [`RotateLeft()`](#rotateleft)                   | [`RotateRight()`](#rotateright)                     |
+| [`ChangeBitDepth()`](#changebitdepth)           | [`SetDPI()`](#setdpi)                   | [`ConvertToBW()`](#converttobw)                 | [`ConvertToGrayScale()`](#converttograyscale)       |
+| [`ChangeImageSize()`](#changeimagesize)         | [`Invert()`](#invert)                   | [`SetImageWidth()`](#setimagewidth)             | [`ChangeBrightnessAsync()`](#changebrightnessasync) |
+| [`ChangeContrastAsnyc()`](#changecontrastasnyc) |
 
 <!--
-* [Crop()](#crop) 
+* [Crop()](#crop)
 * [CropToClipboard()](#croptoclipboard)
-* [CutFrameToClipboard()](#cutframetoclipboard) 
+* [CutFrameToClipboard()](#cutframetoclipboard)
 * [CutToClipboard()](#cuttoclipboard)
-* [CopyToClipboard()](#copytoclipboard) 
+* [CopyToClipboard()](#copytoclipboard)
 * [Erase()](#erase)
 * [Flip()](#flip)
 
@@ -35,40 +35,40 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Edit APIs Page
 
 <!--* [MirrorAsync()](#mirrorasync)
 
-* [Rotate()](#rotate) 
+* [Rotate()](#rotate)
 
-<!--* [RotateAsync()](#rotate) 
+<!--* [RotateAsync()](#rotate)
 
 * [RotateEx()](#rotateex)
-* [RotateLeft()](#rotateleft) 
+* [RotateLeft()](#rotateleft)
 
-<!--* [RotateLeftAsync()](#rotateleft) 
+<!--* [RotateLeftAsync()](#rotateleft)
 
 * [RotateRight()](#rotateright)
 
 <!--* [RotateRightAsync()](#rotateright)
 
-* [ChangeBitDepth()](#changebitdepth) 
+* [ChangeBitDepth()](#changebitdepth)
 * [SetDPI()](#setdpi)
-* [ConvertToBW()](#converttobw) 
+* [ConvertToBW()](#converttobw)
 * [ConvertToGrayScale()](#converttograyscale)
 
 <!--* [ConvertToGrayScaleAsync()](#converttograyscaleasync)
-* [ChangeImageSize()](#changeimagesize) 
+* [ChangeImageSize()](#changeimagesize)
 * [Invert()](#invert)
 * [SetImageWidth()](#setimagewidth) -->
 
 **Properties**
 
-| |
-|:-|:-|
-|[`BackgroundFillColor`](#backgroundfillcolor) |
+|                                               |
+| :-------------------------------------------- |
+| [`BackgroundFillColor`](#backgroundfillcolor) |
 
 ## ChangeBitDepth
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Change the bit depth of the specified image.
  * @param index Specify the image.
@@ -82,6 +82,14 @@ ChangeBitDepth(
 ): boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
+
 **Usage notes**
 
 The allowed bit depths are 1, 4, 8, 24.
@@ -92,7 +100,7 @@ The allowed bit depths are 1, 4, 8, 24.
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Change the size of the specified image.
  * @param index Specify the image.
@@ -117,13 +125,21 @@ ChangeImageSize(
 ): void | boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 ---
 
 ## SetDPI
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Change the DPI (dots per inch) of the specified image.
  * @param index Specify the image.
@@ -150,6 +166,14 @@ SetDPI(
 ): void | boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 **Usage notes**
 
 Check out [ `Dynamsoft.DWT.EnumDWT_InterpolationMethod` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_interpolationmethod).
@@ -160,7 +184,7 @@ Check out [ `Dynamsoft.DWT.EnumDWT_InterpolationMethod` ]({{site.info}}api/Dynam
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Convert the specified image to black & white.
  * @param index Specify the image.
@@ -179,13 +203,21 @@ ConvertToBW(
 ): void | boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 ---
 
 ## ConvertToGrayScale
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Convert the specified image to grayscale.
  * @param index Specify the image.
@@ -204,7 +236,16 @@ ConvertToGrayScale(
 ): void | boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 ---
+
 <!--
 
 ## ConvertToGrayScaleAsync
@@ -227,7 +268,7 @@ ConvertToGrayScaleAsync(
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Invert the colour of the pixels on the specified image.
  * @param index Specify the image.
@@ -246,13 +287,21 @@ Invert(
 ): void | boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 ---
 
 ## SetImageWidth
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Change the width of the specified image by adding a margin or removing part of the image.
  * @param index Specify the image.
@@ -273,13 +322,21 @@ SetImageWidth(
 ): void | boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 ---
 
 ## Flip
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Flip the specified image.
  * @param index Specify the image.
@@ -298,7 +355,16 @@ Flip(
 ): void | boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 ---
+
 <!--
 
 ## FlipAsync
@@ -321,7 +387,7 @@ FlipAsync(
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Mirror the specified image.
  * @param index Specify the image.
@@ -340,7 +406,16 @@ Mirror(
 ): void | boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 ---
+
 <!--
 
 ## MirrorAsync
@@ -362,7 +437,7 @@ MirrorAsync(
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Rotate the specified image 90 degrees counterclockwise.
  * @param index Specify the image.
@@ -381,7 +456,16 @@ RotateLeft(
 ): void | boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 ---
+
 <!--
 
 ## RotateLeftAsync
@@ -404,7 +488,7 @@ RotateLeftAsync(
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Rotate the specified image 90 degrees clockwise.
  * @param index Specify the image.
@@ -423,7 +507,16 @@ RotateRight(
 ): void | boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 ---
+
 <!--
 
 ## RotateRightAsync
@@ -445,7 +538,7 @@ RotateRightAsync(
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Rotate the specified image by the specified angle.
  * @param index Specify the image.
@@ -468,7 +561,16 @@ Rotate(
 ): void | boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 ---
+
 <!--
 
 ## RotateAsync
@@ -495,7 +597,7 @@ RotateAsync(
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Rotate the specified image by the specified angle.
  * @param index Specify the image.
@@ -520,6 +622,14 @@ RotateEx(
 ): void | boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 **Usage notes**
 
 Check out [ `Dynamsoft.DWT.EnumDWT_InterpolationMethod` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_interpolationmethod).
@@ -530,7 +640,7 @@ Check out [ `Dynamsoft.DWT.EnumDWT_InterpolationMethod` ]({{site.info}}api/Dynam
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Crop the specified image using the specified coordinates.
  * @param index Specify the image.
@@ -557,13 +667,21 @@ Crop(
 ): void | boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 ---
 
 ## Erase
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Erase a rectangular area from the specified image.
  * @param index Specify the image.
@@ -590,13 +708,21 @@ Erase(
 ): void | boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 ---
 
 ## CopyToClipboard
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Copy the specified image to the clipboard of the operating system.
  * @param index Specify the image.
@@ -604,7 +730,16 @@ Erase(
 CopyToClipboard(index: number): boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
+
 ---
+
 <!--
 
 ## CopyToClipboardAsync
@@ -625,7 +760,7 @@ CopyToClipboardAsync(index: number): Promise<boolean>;
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Cut the specified image to the clipboard of the operating system.
  * @param index Specify the image.
@@ -633,13 +768,21 @@ CopyToClipboardAsync(index: number): Promise<boolean>;
 CutToClipboard(index: number): boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
+
 ---
 
 ## CropToClipboard
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Crop a rectangular area from the specified image to the clipboard of the operating system.
  * @param index Specify the image.
@@ -657,13 +800,21 @@ CropToClipboard(
 ): boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
+
 ---
 
 ## CutFrameToClipboard
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Cut a rectangular area from the specified image to the clipboard of the operating system.
  * @param index Specify the image.
@@ -681,6 +832,14 @@ CutFrameToClipboard(
 ): boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
+
 **Usage notes**
 
 The empty area resulted from the crop/erase/cut will be filled with the colour set with [BackgroundFillColor](#backgroundfillcolor).
@@ -691,12 +850,20 @@ The empty area resulted from the crop/erase/cut will be filled with the colour s
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return or set the fill colour for the empty area on an image that has been cut/cropped/erased.
  */
 BackgroundFillColor: number;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 **Usage notes**
 
@@ -708,7 +875,7 @@ By default the colour is white (0xffffff). The byte-ordering of the 24-bit RGB v
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Change the image brightness.
  * @param index Specify the index of image in buffer.
@@ -723,7 +890,7 @@ ChangeBrightnessAsync(index: number, val: number)
 
 |:-|:-|
 |ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-|  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |   v17.2+  |
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
 
 ---
 
@@ -731,7 +898,7 @@ ChangeBrightnessAsync(index: number, val: number)
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Change the image brightness.
  * @param index Specify the index of image in buffer.
@@ -746,8 +913,4 @@ ChangeContrastAsnyc(index: number, val: number)
 
 |:-|:-|
 |ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-|  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |   v17.2+  |
-
-
-
-
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | v17.2+ |

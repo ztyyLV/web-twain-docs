@@ -11,19 +11,18 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Utility APIs Page
 
 **Methods**
 
-| |
-|:-|:-|
-|[`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)| [`SetProductKeyAsync()`]({{site.info}}api/WebTwain_Util.html#setproductkeyasync)| 
-|[`SetLanguage()`]({{site.info}}api/WebTwain_Util.html#setlanguage)|[`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)|
-
+|                                                                        |
+| :--------------------------------------------------------------------- | :------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| [`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)                   | [`SetProductKeyAsync()`]({{site.info}}api/WebTwain_Util.html#setproductkeyasync) |
+| [`SetLanguage()`]({{site.info}}api/WebTwain_Util.html#setlanguage)     | [`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata) |
 
 **Properties**
 
-| |
-|:-|:-|
-|[`ErrorCode`](#errorcode)| [`ErrorString`](#errorstring) | [`LogLevel`](#loglevel)| [`Manufacturer`](#manufacturer)|
-|[`ProductFamily`](#productfamily)| [`ProductName`](#productname)| [`VersionInfo`](#versioninfo)| [`ProductKey`](#productkey)|
-|[`UseLocalService`](#uselocalservice)|
+|                                       |
+| :------------------------------------ | :---------------------------- | ----------------------------- | ------------------------------- |
+| [`ErrorCode`](#errorcode)             | [`ErrorString`](#errorstring) | [`LogLevel`](#loglevel)       | [`Manufacturer`](#manufacturer) |
+| [`ProductFamily`](#productfamily)     | [`ProductName`](#productname) | [`VersionInfo`](#versioninfo) | [`ProductKey`](#productkey)     |
+| [`UseLocalService`](#uselocalservice) |
 
 ---
 
@@ -31,12 +30,20 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Utility APIs Page
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return whether the WebTwain object is running the ActiveX edition.
  */
 isUsingActiveX(): boolean;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
 
@@ -44,7 +51,7 @@ isUsingActiveX(): boolean;
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Specify an event listener for the specified built-in event.
  * @param name Specify the event
@@ -53,13 +60,21 @@ isUsingActiveX(): boolean;
 RegisterEvent(name: string, callback: () => void): boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 ---
 
 ## UnregisterEvent
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Remove an event listener from the specified built-in event.
  * @param name Specify the event
@@ -67,6 +82,14 @@ RegisterEvent(name: string, callback: () => void): boolean;
  */
 UnregisterEvent(name: string, callback: () => void): boolean;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 **Usage notes**
 
@@ -78,7 +101,7 @@ There can only be one listener for each built-in event. If you call `RegisterEve
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Set the product key.
  * @param productKey Specify the key.
@@ -94,13 +117,13 @@ SetProductKeyAsync(
 
 |:-|:-|
 |ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-|  not supported  |  v16.1+  |   v16.1+  |  v16.1+  |   v16.1+ |  not supported  |
+| not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | not supported |
 
 ## SetLanguage
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Set the language for the authorization dialogs.
  * @param language Specify the language.
@@ -120,7 +143,7 @@ The language set with this method is only for the built-in security dialogs whic
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Generate a URL to be used by a FileUpoader instance to fetch the data to upload.
  * @param indices Specify the images to upload.
@@ -146,6 +169,14 @@ GenerateURLForUploadData(
 ): void;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 **Usage notes**
 
 The language set with this method is only for the built-in security dialogs which show up when the user tries to access a scanner, a camera or a local file.
@@ -156,12 +187,20 @@ The language set with this method is only for the built-in security dialogs whic
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return the error code.
  */
 readonly ErrorCode: number;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 **Usage notes**
 
@@ -173,12 +212,20 @@ The `ErrorCode` and `ErrorString` always reflect the result of the last API call
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return the error string.
  */
 readonly ErrorString: string;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 **Usage notes**
 
@@ -190,12 +237,20 @@ The `ErrorCode` and `ErrorString` always reflect the result of the last API call
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return or set the log level for debugging.
  */
 LogLevel: number;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 **Usage notes**
 
@@ -209,12 +264,20 @@ Setting `LogLevel` to 1/0 is equivalent to setting `LogLevel` to 14/1 in the fil
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Manufacturer in the identity string of the Dynamic Web TWAIN library.
- */ 
+ */
 readonly Manufacturer: string;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 **Usage notes**
 
@@ -226,12 +289,20 @@ readonly Manufacturer: string;
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * ProductFamily in the identity string of the Dynamic Web TWAIN library.
  */
 readonly ProductFamily: string;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 **Usage notes**
 
@@ -243,12 +314,20 @@ readonly ProductFamily: string;
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * ProductName in the identity string of the Dynamic Web TWAIN library.
  */
 readonly ProductName: string;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 **Usage notes**
 
@@ -260,12 +339,20 @@ readonly ProductName: string;
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * VersionInfo in the identity string of the Dynamic Web TWAIN library.
  */
 readonly VersionInfo: string;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 **Usage notes**
 
@@ -277,12 +364,20 @@ readonly VersionInfo: string;
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return or set the ProductKey.
  */
 ProductKey: string;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 **Usage notes**
 
@@ -292,9 +387,17 @@ The ProductKey contains the license to use the Dynamic Web TWAIN library. From v
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return whether this WebTwain instance is in Local-Service mode or WASM mode.
  */
-UseLocalService:boolean; 
+UseLocalService: boolean;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
