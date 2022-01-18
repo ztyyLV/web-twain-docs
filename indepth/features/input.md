@@ -25,12 +25,12 @@ A local scanner refers to a scanner that is plugged in the same desktop via USB 
 
 > Supported on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and [mobile]({{site.getstarted}}platform.html#browsers-on-mobile-devices) platforms.
 
-A remote scanner refers to a scanner that is..
+A remote scanner refers to a scanner that is.
 
 * Not connected to the initiating device
 * Connected and accessible on a `Windows` desktop on LAN (USB or network) where `DWT` must be installed
 
-For more information, check out [how to enable remote scan]({{site.indepth}}faqs/develop/how-to-enable-remote-scan.html).
+For more information, check out <a href="https://www.dynamsoft.com/web-twain/docs/faq/how-to-enable-remote-scan.html?ver=latest" target="_blank">how to enable remote scan</a>.
 
 <!--
 
@@ -360,3 +360,13 @@ function loadFileFromBase64() {
 ``` javascript
 DWObject.LoadDibFromClipboard()
 ```
+
+### Related KBs
+
+<a href="{{site.faq}}what-physical-scanners-are-supported.html" target="_blank">What physical document scanners does the Dynamic Web TWAIN SDK support?</a>   
+<a href="{{site.faq}}how-to-use-TWACKER-to-check-if-your-device-is-TWAIN-Compliant.html" target="_blank">How to use TWACKER to check if your device is TWAIN Compliant?</a>  
+<a href="{{site.faq}}how-to-test-if-your-scanner-supports-ICA-scanning-on-Mac-OS.html" target="_blank">How to test if your scanner supports ICA scanning on Mac OS?</a>  
+<a href="{{site.faq}}how-to-test-if-your-device-is-SANE-compliant.html" target="_blank">How to test if your device is SANE compliant?</a>  
+<a href="{{site.faq}}setting-scan-settings-without-ui.html" target="_blank">Can I set scanning settings without using the default scanner’s UI? What pre-scanning settings do you support?</a>  
+<a href="{{site.faq}}hide-offline-scanners-from-source-list.html" target="_blank">Can I hide offline scanner devices from the select source list?</a>  
+<a href="{{site.faq}}hide-webcam-from-source-list.html" target="_blank">Can I hide webcam devices from the select source list? </a>  

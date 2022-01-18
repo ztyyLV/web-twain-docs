@@ -10,11 +10,11 @@ description: How to test if your camera is DirectShow compliant
 
 # Troubleshooting
 
-## How to test if your camera is DirectShow compliant
+## How to test if your camera is DirectShow compliant?
 
 - [Recommended] Take advantage of our official demo page
 
-  - Open the [demo page](https://demo.dynamsoft.com/DWT/Webcam/online_demo_scan_Webcam.aspx) on [Windows]({{site.getstarted}}platform.html#browsers-on-windows)
+  - Open the <a href="https://demo.dynamsoft.com/DWT/Webcam/online_demo_scan_Webcam.aspx" target="_blank">demo page</a> on <a href="{{site.getstarted}}platform.html#browsers-on-windows" target="_blank">Windows</a> 
 
   > If you haven't installed the SDK, a dialog will show up for you to download and install it.
 

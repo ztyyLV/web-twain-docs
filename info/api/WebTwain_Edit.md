@@ -17,7 +17,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Edit APIs Page
 |[`CopyToClipboard()`](#copytoclipboard) |[`Erase()`](#erase) |[`Flip()`](#flip)|[`Mirror()`](#mirror)|
 | [`Rotate()`](#rotate) |[`RotateEx()`](#rotateex)| [`RotateLeft()`](#rotateleft) | [`RotateRight()`](#rotateright)|
 | [`ChangeBitDepth()`](#changebitdepth) | [`SetDPI()`](#setdpi)|[`ConvertToBW()`](#converttobw) |[`ConvertToGrayScale()`](#converttograyscale)|
-|[`ChangeImageSize()`](#changeimagesize) | [`Invert()`](#invert)|[`SetImageWidth()`](#setimagewidth)|
+|[`ChangeImageSize()`](#changeimagesize) | [`Invert()`](#invert)|[`SetImageWidth()`](#setimagewidth)|[`ChangeBrightnessAsync()`](#changebrightnessasync)|
+|[`ChangeContrastAsnyc()`](#changecontrastasnyc) | 
 
 <!--
 * [Crop()](#crop) 
@@ -700,3 +701,53 @@ BackgroundFillColor: number;
 **Usage notes**
 
 By default the colour is white (0xffffff). The byte-ordering of the 24-bit RGB value is **RRGGBB**. RR represents red, GG represents green and BB represents blue.
+
+---
+
+## ChangeBrightnessAsync
+
+**Syntax**
+
+``` typescript
+/**
+ * Change the image brightness.
+ * @param index Specify the index of image in buffer.
+ * @param val Specify the brightness. Allowed values [-1000~1000]. Negative value means decrease the brightness.
+ */
+ChangeBrightnessAsync(index: number, val: number)
+```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |   v17.2+  |
+
+---
+
+## ChangeContrastAsnyc
+
+**Syntax**
+
+``` typescript
+/**
+ * Change the image brightness.
+ * @param index Specify the index of image in buffer.
+ * @param val Specify the contrast. Allowed values [-1000~1000]. Negative value means decrease the contrast.
+ */
+ChangeContrastAsnyc(index: number, val: number)
+```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |   v17.2+  |
+
+
+
+

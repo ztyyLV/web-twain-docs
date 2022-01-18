@@ -200,7 +200,7 @@ In almost all our user cases, the scanned documents need to be uploaded to a ser
 
 ### Add code to do the upload
 
-The method [HTTPUpload]({{site.info}}api/WebTwain. IO.html#httpupload) is used to do the upload.
+The method [HTTPUpload]({{site.info}}api/WebTwain.IO.html#httpupload) is used to do the upload.
 
 ``` javascript
 function UploadAsPDF() {

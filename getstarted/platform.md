@@ -19,6 +19,7 @@ description: Dynamic Web TWAIN SDK Documentation Platform Page
   + 7
   + 8 & 8.1
   + 10 `Recommended`
+  + 11
   + Server 2008
   + Server 2012
   + Server 2016

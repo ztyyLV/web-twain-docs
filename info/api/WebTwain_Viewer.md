@@ -18,6 +18,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 | [`hide()`](#hide)| [`last()`](#last)| [`next()`](#next)|[`off()`](#off)|
 |[`on()`](#on)| [`previous()`](#previous)| [`render()`](#render)| [`setButtonClass()`](#setbuttonclass)|
 | [`setSelectedAreas()`](#setselectedareas)| [`setViewMode()`](#setviewmode) | [`show()`](#show)| [`unbind()`](#unbind)|
+| [`createTemplate()`](#createtemplate)|
 
 
 <!--* [updateUISettings](#updateuisettings)-->
@@ -30,7 +31,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 | [`cursor`](#cursor)| [`height`](#height)|[`idPostfix`](#idpostfix)|[`ifAutoScroll`](#ifautoscroll)|
 |[`innerBorder`](#innerborder)| [`pageMargin`](#pagemargin)|[`selectedAreaBorderColor`](#selectedareabordercolor)|[`selectedPageBackground`](#selectedpagebackground)|
 |[`selectedPageBorder`](#selectedpageborder)| [`selectionRectAspectRatio`](#selectionrectaspectratio)|[`showPageNumber`](#showpagenumber)|[`singlePageMode`](#singlepagemode)|
-|[`width`](#width)| [`zoom`](#zoom)| [`autoChangeIndex`](#autochangeindex)|
+|[`width`](#width)| [`zoom`](#zoom)| [`autoChangeIndex`](#autochangeindex)| [`showCheckbox`](#showcheckbox)|
 
 **Events**
 
@@ -81,32 +82,34 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 /**
  * Create a Dynamsoft Viewer instance and bind it to the WebTwain instance.
  * @param element Specify an HTML element to create the viewer.
+ * @param documentTemplate Specify the document template.
  */
-bind(
-  element: boolean;
-): void;
+bind(element: HTMLDivElement, documentTemplate: DocumentViewerTemplate) : void;  
+
+interface DocumentViewerTemplate{
+   getCustomElement():CustomElement; //Get CustomElement. Can display save & upload interface in CustomElement.   
+   onAddDocumentFunc = function () {}
+   onExitFunc = function () {}
+   onSaveFunc = function () {} //Save button click event
+   onUploadFunc = function () {}  //Upload button click event
+   onRemoveSelectedFunc = function () {}   //Remove button click event
+}
 ```
 
 **Example**
 
 ``` javascript
-var DWObject = null;
+var DWObject, template;
 Dynamsoft.DWT.CreateDWTObjectEx({
-        WebTwainId: 'dwtcontrol'
-    },
-    function(obj) {
-        DWObject = obj;
-        DWObject.Viewer.bind(document.getElementById('dwtcontrolContainer'));
-        DWObject.Viewer.height = 600;
-        DWObject.Viewer.width = 800;
-        var thumbnailViewer = DWObject.Viewer.createThumbnailViewer();
-        thumbnailViewer.show();
-        DWObject.Viewer.show();
-    },
-    function(err) {
-        console.log(err);
-    }
-);
+    WebTwainId: 'a',
+    UseLocalService: false
+}, function (obj) {
+    DWObject = obj;
+    template = DWObject.Viewer.createTemplate("documentScanner");
+    DWObject.Viewer.bind (null, template);  //If the HTML element to bind is not specified, display in full screen
+    //DWObject.Viewer.bind(document.getElementById("divImageEditor"), template);
+    DWObject.Viewer.show();
+}, function(ec,es){console.log(es);});
 ```
 
 **Usage notes**
@@ -229,10 +232,10 @@ imageEditor.show();
 ``` javascript
 // Customize the editor
 var editorSettings = {
-    /* Show the editor within the DIV 'imageEditor'
+    /* Show the editor within the DIV 'imageEditor'*/
     element: document.getElementById("imageEditor"),
     width: 600,
-    height: 400,*/
+    height: 400,
     border: '1px solid rgb(204, 204, 204)',
     topMenuBorder: '',
     innerBorder: '',
@@ -837,8 +840,8 @@ This method only works when [ `cursor` ](#cursor) is set to "crosshair".
 ``` typescript
 /**
  * Set the view mode of the viewer.
- * @param columns Specify the number of images per row.
- * @param rows Specify the number of images per column.
+ * @param columns Specify the number of images per column.
+ * @param rows Specify the number of images per row.
  */
 setViewMode(
     columns: number,
@@ -1262,14 +1265,20 @@ singlePageMode: boolean;
 **Example**
 
 ``` javascript
+// Use single page mode in the main viewer
+DWObject.Viewer.singlePageMode = true;
+```
+
+``` javascript
+// Use single page mode in the thumnail viewer
 var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer();
 objThumbnailViewer.show();
-DWObject.Viewer.singlePageMode = false;
+DWObject.Viewer.singlePageMode = true;
 ```
 
 **Usage notes**
 
-The default value is `false` . If the thumbnail viewer is not shown, setting `singlePageMode` to `true` is equivalent to setting the view mode to -1 by -1. But if the thumbnail viewer is shown, `singlePageMode` will be changed to `true` automatically.
+The default value is `false`. If the thumbnail viewer is not shown, setting `singlePageMode` to `true` is equivalent to setting the view mode to -1 by -1. But if the thumbnail viewer is shown, `singlePageMode` will be changed to `true` automatically.
 
 ---
 
@@ -1323,7 +1332,7 @@ The zoom factor is only effective when the view mode is -1 * -1. Allowed values 
 
 ---
 
-### autoChangeIndex
+## autoChangeIndex
 
 **Syntax**
 
@@ -1333,6 +1342,14 @@ The zoom factor is only effective when the view mode is -1 * -1. Allowed values 
  */
 autoChangeIndex : boolean
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v17.0+  |   v17.0+  |  v17.0+  |   v17.0+ |  not supported  |
 
 **Example**
 
@@ -1345,6 +1362,66 @@ DWObject.Viewer.autoChangeIndex=true;
 When set to true, the index in the upper left corner of the viewer will be selected when scrolling.
 
 ---
+
+##  createTemplate
+
+**Syntax**
+
+``` typescript
+/**
+ * Create document scanner template.
+ * @argument templateName Currently templateName only supports "documentScanner".
+ */
+createTemplate("templateName")：DocumentViewerTemplate
+```
+
+**Example**
+
+``` javascript
+var DWObject, template;
+Dynamsoft.DWT.CreateDWTObjectEx({
+    WebTwainId: 'a',
+    UseLocalService: false
+}, function (obj) {
+    DWObject = obj;
+    template = DWObject.Viewer.createTemplate("documentScanner");
+    DWObject.Viewer.bind (null, template);  //full screen
+    DWObject.Viewer.show();
+}, function(ec,es){console.log(es);});
+
+```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |   v17.2+  |
+
+---
+
+##  showCheckbox
+
+**Syntax**
+
+``` typescript
+/**
+ * Show checkbox on image(s).
+ */
+showCheckbox: boolean;
+```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |  v17.2+  |
+
+---
+
 
 ## Events 
 
@@ -1447,7 +1524,7 @@ The events `mouseout`, `mouseover`, `keydown` and `keyup` are only triggered on 
 
 ---
 
-### pageAreaSelected
+## pageAreaSelected
 
 **Syntax**
 
@@ -1463,15 +1540,15 @@ on('pageAreaSelected',
 
 interface rect{ 
     // The index of the selected area. The index is 0-based. This is useful when you have multiple selected areas on one page.
-    areaIndex: number;
+    areaIndex: number;
     // The x-coordinate of the upper-left corner of the area.
-    x: number;
+    x: number;
     // The y-coordinate of the upper-left corner of the area.
-    y: number;
+    y: number;
     // The width of the selected area.
-    width: number;
+    width: number;
     // The height of the selected area.
-    height: number;
+    height: number;
 };
 ```
 
@@ -1487,7 +1564,7 @@ DWObject.Viewer.off('pageAreaSelected');
 
 ---
 
-### pageAreaUnselected
+## pageAreaUnselected
 
 **Syntax**
 
@@ -1513,7 +1590,7 @@ DWObject.Viewer.off('pageAreaUnselected');
 
 ---
 
-### pageRendered
+## pageRendered
 
 **Syntax**
 
@@ -1538,7 +1615,7 @@ DWObject.Viewer.render();
 
 ---
 
-### resize
+## resize
 
 **Syntax**
 

@@ -77,11 +77,16 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
    - [Dynamsoft_FileUploader]({{site.info}}api/Dynamsoft_FileUploader.html)
 
 
-* [FAQs]({{site.faqs}}faqs/index.html)
+* [FAQs]({{site.faqs}}faq/index.html)
 
-   - [General]({{site.indepth}}faqs/general/index.html)
-   - [License and Purchase]({{site.indepth}}faqs/license/index.html)
-   - [Development]({{site.indepth}}faqs/develop/index.html)
-   - [Distribution and Deployment]({{site.indepth}}faqs/distribution/index.html)
-   - [Troubleshooting for end-users]({{site.indepth}}faqs/troubleshooting/index.html)
-   - [Erorr List]({{site.indepth}}faqs/errorlist/index.html)
+   - [SDK Download/Free Trial]({{site.faq}}#sdk-downloadfree-trial)
+   - [Capture/Image Source]({{site.indepth}}#captureimage-source)
+   - [Image Viewer]({{site.faq}}#image-viewer)
+   - [Image Editing]({{site.faq}}#image-editing)
+   - [UI Customization]({{site.faq}}#ui-customization)
+   - [Document Saving]({{site.faq}}#document-saving)
+   - [Security]({{site.faq}}#security)
+   - [Addon]({{site.faq}}#addon)
+   - [Project Deployment and End-user Installation]({{site.faq}}#project-deployment-and-end-user-installation)
+   - [Error Troubleshooting]({{site.faq}}#error-troubleshooting)
+   - [Licensing and Purchase]({{site.faq}}#licensing-and-purchase)

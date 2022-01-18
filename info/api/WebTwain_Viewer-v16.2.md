@@ -117,9 +117,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
  * Create a Dynamsoft Viewer instance and bind it to the WebTwain instance.
  * @param element Specify an HTML element to create the viewer.
  */
-bind(
-  element: boolean;
-): void;
+bind(element: HTMLDivElement): boolean;
 ```
 
 **Example**
@@ -264,10 +262,10 @@ imageEditor.show();
 ``` javascript
 // Customize the editor
 var editorSettings = {
-    /* Show the editor within the DIV 'imageEditor'
+    /* Show the editor within the DIV 'imageEditor'*/
     element: document.getElementById("imageEditor"),
     width: 600,
-    height: 400,*/
+    height: 400,
     border: '1px solid rgb(204, 204, 204)',
     topMenuBorder: '',
     innerBorder: '',
@@ -859,8 +857,8 @@ This method only works when [ `cursor` ](#cursor) is set to "crosshair".
 ``` typescript
 /**
  * Set the view mode of the viewer.
- * @param columns Specify the number of images per row.
- * @param rows Specify the number of images per column.
+ * @param columns Specify the number of images per column.
+ * @param rows Specify the number of images per row.
  */
 setViewMode(
     columns: number,
@@ -1260,11 +1258,16 @@ singlePageMode: boolean;
 ```
 
 **Example**
+``` javascript
+// Use single page mode in the main viewer
+DWObject.Viewer.singlePageMode = true;
+```
 
 ``` javascript
+// Use single page mode in the thumnail viewer
 var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer();
 objThumbnailViewer.show();
-DWObject.Viewer.singlePageMode = false;
+DWObject.Viewer.singlePageMode = true;
 ```
 
 **Usage notes**

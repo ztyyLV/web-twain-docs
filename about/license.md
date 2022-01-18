@@ -26,9 +26,16 @@ For Per Client Device/ Per Page license, you need to use <a href="{{site.info}}a
 Dynamsoft.DWT.organizationID = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
 ```
 
-Please note that this licensing mode is only supported from `DWT` 17.0 and needs to be used with Dynamsfot License Server (`DLS` for short). See more about <a href="https://www.dynamsoft.com/license-tracking/docs/selfhosting/managelts.html?ver=latest" target="_blank">What is a DLS</a>
+Please note that this licensing mode is only supported from `DWT` 17.0 and needs to be used with Dynamsoft License Server (`DLS` for short). See more about <a href="https://www.dynamsoft.com/license-tracking/docs/selfhosting/managelts.html?ver=latest" target="_blank">What is a DLS</a>
 
 LTS supports two deployment methods: <a href="https://www.dynamsoft.com/license-tracking/docs/dshosting/index.html?ver=latest" target="_blank">Dynamsoft-hosting</a> and <a href="https://www.dynamsoft.com/license-tracking/docs/selfhosting/index.html?ver=latest" target="_blank">Self-hosting</a>. See <a href="https://www.dynamsoft.com/license-server/docs/about/licensefaq.html?ver=latest#how-secure-is-the-dynamsoft-license-server" target="_blank">How secure is the Dynamsoft License Server</a>
+
+If you use Self-hosting, you also need to set <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#licenseserver" target="_blank">licenseServer</a> 
+
+``` javascript
+Dynamsoft.DWT.licenseServer = ["https://your.mainServer.com"];
+Dynamsoft.DWT.organizationID = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
+```
 
 ###  <a href="https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_server" target="_blank">Per Server</a>
 

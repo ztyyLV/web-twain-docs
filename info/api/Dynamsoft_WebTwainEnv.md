@@ -69,11 +69,17 @@ interface Dynamsoft.DWT {
     OnWebTwainReady: function () {};
     OnWebTwainWillInit: function () {};
 }
+
+    /**
+     * Update and download cert to DynamsoftServicex64_17\cert 
+     */
+    UpdateCert(
+        url: string, // url to download the new certificate. 
+        optionalAsyncSuccessFunc?: function () {}, 
+        optionalAsyncFailureFunc?: function (errorCode: number, errorString: string) {}
+    );
+
 ```
-
-
-
-> License Server properties
 
 ## licenseServer
 
@@ -93,7 +99,7 @@ Dynamsoft.DWT.licenseServer = ["https://your.mainServer.com", "https://your.back
 
 **Usage notes**
 
-Gets or sets the URL of the license tracking server used to authenticate the license (handshakeCode) and track barcode reading usage. When set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification. A self hosting option is available. Learn more about [License Tracking Server 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html?ver=latest). 
+Gets or sets the URL of the License Tracking Server used to authenticate the license (handshakeCode) and track usage. When set to null (default value), it will connect to Dynamsoft's License Tracking Server for online verification. A self hosting option is available. Learn more about [License Tracking Server 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html?ver=latest). 
 
 
 ## organizationID
@@ -106,6 +112,14 @@ Gets or sets the URL of the license tracking server used to authenticate the lic
  */
 organizationID: string;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v17.1+  |   v17.1+  |  v17.1+  |   v17.1+ |  not supported  |
 
 **Example**
 ``` javascript
@@ -171,6 +185,47 @@ licenseException: string;
 Check [license error list](https://www.dynamsoft.com/license-tracking/docs/common/errorlist.html?ver=latest) 
 
 ## Options
+
+### `UpdateCert`
+
+**Syntax**
+
+``` typescript
+/**
+ * Update and downaload certificate (server.pem.ldsc && server_key.pem.ldsc) to DynamsoftServicex64_17\cert.
+ * @param url Url to download the new certificate. 
+ * @param successCallback A callback function that is executed if the request succeeds.
+ * @param failureCallback A callback function that is executed if the request fails.
+ * @argument errorCode The error code.
+ * @argument errorString The error string.
+ */
+UpdateCert(
+        url: string,
+        optionalAsyncSuccessFunc?: () => void,
+        optionalAsyncFailureFunc?: (
+            errorCode: number, 
+            errorString: string) => void
+    );
+```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  | v17.2+ |  v17.2+ | v17.2+ | v17.2+ |  not supported   |
+
+**Example**
+``` javascript
+   Dynamsoft.OnSSLCertInfo = function (sslExpiredDate) {
+        console.log(sslExpiredDate);
+   Dynamsoft.DWT.UpdateCert("https://xxx.com/cert.zip", 
+        function () { console.log("OK"); }, 
+        function (errorCode, errorString) { console.log(errorString);}
+    );
+  };
+```
 
 ### `Containers`
 

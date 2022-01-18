@@ -80,7 +80,7 @@ Change the file `/src/components/HelloWorld.vue` to match the following `templat
             };
         },
         mounted() {
-            this.bWASM = Dynamsoft.Lib.env.bMobile || Dynamsoft.WebTwainEnv.UseLocalService;
+            this.bWASM = false;
             Dynamsoft.WebTwainEnv.ResourcesPath = "dwt-resources";
             Dynamsoft.WebTwainEnv.ProductKey = 'YOUR-PRODUCT-KEY';
             Dynamsoft.WebTwainEnv.Containers = [{
@@ -97,6 +97,7 @@ Change the file `/src/components/HelloWorld.vue` to match the following `templat
         methods: {
             Dynamsoft_OnReady() {
                 this.DWObject = Dynamsoft.WebTwainEnv.GetWebTwain(this.containerId);
+                this.bWASM = Dynamsoft.Lib.env.bMobile || !Dynamsoft.WebTwainEnv.UseLocalService;
                 if (this.bWASM) {
                     this.DWObject.MouseShape = true;
                 } else {

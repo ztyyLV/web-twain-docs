@@ -30,7 +30,7 @@ A remote scanner refers to a scanner that is..
 * Not connected to the initiating device
 * Connected and accessible on a `Windows` desktop on LAN (USB or network) where `DWT` must be installed
 
-For more information, check out [how to enable remote scan](#how-to-enable-remote-scan).
+For more information, check out <a href="https://www.dynamsoft.com/web-twain/docs/faq/how-to-enable-remote-scan.html?ver=latest" target="_blank">how to enable remote scan</a>.
 
 <!--
 
@@ -390,3 +390,11 @@ function loadFileFromBase64() {
 ``` javascript
 DWObject.LoadDibFromClipboard()
 ```
+
+### Related KBs
+
+<a href="{{site.faq}}what-physical-scanners-are-supported.html" target="_blank">What physical document scanners does the Dynamic Web TWAIN SDK support?</a>  
+<a href="{{site.faq}}verify-if-device-is-supported.html" target="_blank">How can I verify if my physical document scanner works with the Dynamic Web TWAIN SDK?</a>  
+<a href="{{site.faq}}setting-scan-settings-without-ui.html" target="_blank">Can I set scanning settings without using the default scanner’s UI? What pre-scanning settings do you support?</a>  
+<a href="{{site.faq}}hide-offline-scanners-from-source-list.html" target="_blank">Can I hide offline scanner devices from the select source list?</a>  
+<a href="{{site.faq}}hide-webcam-from-source-list.html" target="_blank">Can I hide webcam devices from the select source list? </a>  

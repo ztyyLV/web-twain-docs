@@ -20,7 +20,9 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page
 |[`GetImageXResolution()`](#getimagexresolution) |[`GetImageYResolution()`](#getimageyresolution) |[`GetSkewAngle()`](#getskewangle) | [`GetSkewAngleEx()`](#getskewangleex)|
 |[`ImageIDToIndex()`](#imageidtoindex) | [`IndexToImageID()`](#indextoimageid)| [`IsBlankImage()`](#isblankimage) | [`IsBlankImageExpress()`](#isblankimageexpress)|  
 |[`SelectAllImages()`](#selectallimages)|[`MoveImage()`](#moveimage) | [`SwitchImage()`](#switchimage)| [`RemoveImage()`](#removeimage) |
-| [`RemoveAllImages()`](#removeallimages)|[`RemoveAllSelectedImages()`](#removeallselectedimages) |[`SelectImages()`](#selectimages)|
+| [`RemoveAllImages()`](#removeallimages)|[`RemoveAllSelectedImages()`](#removeallselectedimages) |[`SelectImages()`](#selectimages)|[`GetTagListByIndex()`](#gettaglistbyindex)|
+| [`CreateFile()`](#createfile)|[`OpenFile()`](#openfile)|[`GetCurrentFileName()`](#getcurrentfilename)|[`RemoveFile()`](#removefile)|
+| [`GetFileInfoList()`](#getfileinfolist)|
 
 <!--* [GetImageBitDepthAsync()](#getimagebitdepthasync)-->
 
@@ -93,6 +95,14 @@ An `imageId` is unique and won't change as long as the Dynamsoft Service process
 RenameTag(oldName:string, newName:string): boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v16.2+  |   v16.2+   |  v16.2+  |   v16.2+ |  not supported  |
+
 ---
 
 ## RemoveTag
@@ -107,6 +117,14 @@ RenameTag(oldName:string, newName:string): boolean;
  */
 RemoveTag(tagName: string, indices?: number[]):boolean 
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v17.0+  |   v17.0+  |  v17.0+  |   v17.0+ |  not supported  |
 
 **Usage Notes**
 If the index is null, it will remove the tag you specified. If the index is not null, it will remove the specified tag on the image you selected.
@@ -136,6 +154,14 @@ Json：
 ] 
  
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v17.0+  |   v17.0+  |  v17.0+  |   v17.0+ |  not supported  |
 
 ---
 
@@ -178,6 +204,14 @@ FilterImagesByTag(tag: string): boolean;
 ClearFilter(): boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v16.2+  |   v16.2+  |  v16.2+  |   v16.2+ |  not supported  |
+
 ---
 
 ## SetDefaultTag
@@ -186,7 +220,7 @@ ClearFilter(): boolean;
 
 ``` typescript
 /**
- * Set a default tag for newlay acquired images.
+ * Set a default tag for newly acquired images.
  * @param tag Specifies the tag.
  */
 SetDefaultTag(tag: string): boolean;
@@ -443,7 +477,9 @@ GetImageURL(index: number, width?: number, height?: number): string;
 
 **Usage notes**
 
-If width or height is set to -1, you get the original image, otherwise you get the image with specified width or height while keeping the same aspect ratio.
+The returned URL will be like "https://127.0.0.1:18623/dwt/dwt_17110818/img?id=795151779&index=1&t=1640936181588". 
+
+If width or height is set to -1, you get the original size of image in PNG in Service Mode，or in JPG, PNG(Black&White) in WASM mode, otherwise you get the image with specified width or height while keeping the same aspect ratio.
 
 ---
 
@@ -582,8 +618,7 @@ RemoveAllSelectedImagesAsync(): Promise<boolean>;
 
 ``` typescript
 /**
- * Return the index of the current image in the buffer or 
- * Set the image specified by index as the current image.
+ * Return the index of the current image in the buffer or set the image specified by index as the current image.
  */
 CurrentImageIndexInBuffer: number;
 ```
@@ -685,7 +720,7 @@ BlankImageThreshold: number;
 **Usage notes**
 
 [0, 255] is the interval of allowed values, inclusive. The default value is 128.
-This property is only valid after IsBlankImageExpress is called.
+This property is only valid after `IsBlankImageExpress` is called.
 
 ---
 
@@ -759,6 +794,13 @@ Both `BlankImageCurrentStdDev` and `BlankImageMaxStdDev` range from 0 to 100.
 IfAllowLocalCache: boolean;
 ```
 
+**Usage notes**
+
+The default value of IfAllowLocalCache is true. When the property is true, you can scan as many images as you want as long as you have a big enough disk.  
+The default threshold is set to 800 (MB), anything beyond 800MB gets compressed, encrypted and cached on the local disk.  
+If neccessary, you can set the threshold using `BufferMemoryLimit` for better performance.  
+All cached data is encrypted and can only be read by Dynamic Web TWAIN and it will be destroyed when it is no longer used.  
+
 ---
 
 ## OnBufferChanged
@@ -794,6 +836,14 @@ interface BufferChangeInfo {
 }
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v16.2+  |   v16.2+  |  v16.2+  |   v16.2+ |  not supported  |
+
 **Usage notes**
 
 Action types include 
@@ -812,28 +862,31 @@ Action types include
 
 ``` typescript
 /**
- * A built-in callback triggered when a change occurs in the buffer.
- * @argument indexString A string of the changed index(indices).
- * @argument type Operation type.
+ * A built-in callback triggered when the current image in buffer is changed like flipped, cropped, rotated, etc. or a new image has been acquired.
+ * @argument indexString Array of the changed index(indices).
+ * @argument type Operation type. 
+   1 means new image(s) were added at the tail, 
+   2 means image(s) were inserted before the current index, 
+   3 means image(s) are deleted, 
+   4 means image(s) are modified, 
  * @argument index Index of the current image.
  */
 RegisterEvent('OnBitmapChanged',
-    function (indexString: string,
+    function (
+        indexString: number[],
         type: number,
         index: number
     ) {}
 ): boolean; 
 ```
 
-**Usage notes**
+**Example**
 
-Operation types include 
-
-* new image(s) were added at the tail
-* new image(s) were inserted before the current index
-* image(s) are deleted
-* image(s) are modified
-* indices of images changed
+```javascript
+DWObject.RegisterEvent('OnBitmapChanged', function(strUpdatedIndex, operationType, sCurrentIndex) {
+        console.log('Image ' + sCurrentIndex + ' has changed!');
+});
+```
 
 ---
 
@@ -872,3 +925,187 @@ RegisterEvent('OnIndexChangeDragDropDone',
 
 Pair: [from: number, to: number];
 ```
+
+---
+
+## GetTagListByIndex
+
+**Syntax**
+
+``` typescript
+/**
+ * Return the tag of a specified image.
+ * @argument index Index of the image.
+ */
+GetTagListByIndex(index: number):string[]
+```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |  not supported  |
+
+**Example**
+```javascript
+DWObject.GetTagListByIndex(0); 
+```
+
+---
+
+## CreateFile
+
+**Syntax**
+
+``` typescript
+/**
+ * Create a file folder for image(s).
+ * @argument filename Specify the file name.
+ */
+CreateFile(filename:string):Boolean;
+```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |  v17.2+  |
+
+**Example**
+
+```javascript
+//the image you scanned will belong to File1.
+DWObject.CreateFile('File1');
+DWObject.OpenFile('File1'); //Need to call OpenFile after CreateFile.
+DWObject.AcquireImage(successCallback, failureCallback);
+
+function successCallback() {
+    console.log('successful');
+}
+
+function failureCallback(errorCode, errorString) {
+    alert(errorString);
+}
+```
+
+**Usage notes**
+
+1. If the documents have been sorted before scanning, you can use CreateFile, <a href="{{site.info}}api/WebTwain_Buffer.html#openfile" target="_blank">OpenFile</a> to manage each type of document.
+2. If the documents are out of order before scanning and you want to scan them in first and then sort them, use tags to manage the documents. Relevant APIs: <a href="{{site.info}}api/WebTwain_Buffer.html#setdefaulttag" target="_blank">SetDefaultTag</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#tagimages" target="_blank">TagImages</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#gettaglist" target="_blank">GetTagList</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#filterimagesbytag" target="_blank">FilterImagesByTag</a>
+
+---
+
+## OpenFile
+
+**Syntax**
+
+``` typescript
+/**
+ * Open the specified file folder.
+ * @argument filename Specify the file name.
+ */
+OpenFile(filename:string):Boolean;   
+```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |  v17.2+  |
+
+**Example**
+
+```javascript
+//the image you scanned will belong to File1.
+DWObject.CreateFile('File1');
+DWObject.OpenFile('File1'); //Need to call OpenFile after CreateFile.
+DWObject.AcquireImage(successCallback, failureCallback);
+
+function successCallback() {
+    console.log('successful');
+}
+
+function failureCallback(errorCode, errorString) {
+    alert(errorString);
+}
+```
+
+---
+
+## GetCurrentFileName
+
+**Syntax**
+
+``` typescript
+/**
+ * Get the current file name. The default value is 'dynamsoft-dvs-file'.
+ */
+GetCurrentFileName():String;    
+```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |  v17.2+  |
+
+---
+
+## RemoveFile
+
+**Syntax**
+
+``` typescript
+/**
+ * Remove the specified file.
+ * @argument filename Specify the file name.
+ */
+RemoveFile(filename:string):Boolean;    
+```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |  v17.2+  |
+
+---
+
+## GetFileInfoList
+
+**Syntax**
+
+``` typescript
+/**
+ * Get the file info list.
+ */
+GetFileInfoList():Json
+
+Json:
+[{
+   name: "fileName",
+   imageIds:[23122335, 25566822323]
+},
+{……}]
+
+```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |  v17.2+  |
+
+---

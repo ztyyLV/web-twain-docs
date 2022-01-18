@@ -34,7 +34,9 @@ breadcrumbText: API Reference
 |[`GetImageXResolution()`]({{site.info}}api/WebTwain_Buffer.html#getimagexresolution) |[`GetImageYResolution()`]({{site.info}}api/WebTwain_Buffer.html#getimageyresolution) |[`GetSkewAngle()`]({{site.info}}api/WebTwain_Buffer.html#getskewangle) | [`GetSkewAngleEx()`]({{site.info}}api/WebTwain_Buffer.html#getskewangleex)|
 |[`ImageIDToIndex()`]({{site.info}}api/WebTwain_Buffer.html#imageidtoindex) | [`IndexToImageID()`]({{site.info}}api/WebTwain_Buffer.html#indextoimageid)| [`IsBlankImage()`]({{site.info}}api/WebTwain_Buffer.html#isblankimage) | [`IsBlankImageExpress()`]({{site.info}}api/WebTwain_Buffer.html#isblankimageexpress)|  
 |[`SelectAllImages()`]({{site.info}}api/WebTwain_Buffer.html#selectallimages)|[`MoveImage()`]({{site.info}}api/WebTwain_Buffer.html#moveimage) | [`SwitchImage()`]({{site.info}}api/WebTwain_Buffer.html#switchimage)| [`RemoveImage()`]({{site.info}}api/WebTwain_Buffer.html#removeimage) |
-| [`RemoveAllImages()`]({{site.info}}api/WebTwain_Buffer.html#removeallimages)|[`RemoveAllSelectedImages()`]({{site.info}}api/WebTwain_Buffer.html#removeallselectedimages) |[`SelectImages()`]({{site.info}}api/WebTwain_Buffer.html#selectimages)|
+| [`RemoveAllImages()`]({{site.info}}api/WebTwain_Buffer.html#removeallimages)|[`RemoveAllSelectedImages()`]({{site.info}}api/WebTwain_Buffer.html#removeallselectedimages) |[`SelectImages()`]({{site.info}}api/WebTwain_Buffer.html#selectimages)|[`GetTagListByIndex()`]({{site.info}}api/WebTwain_Buffer.html#gettaglistbyindex) |
+| [`CreateFile()`]({{site.info}}api/WebTwain_Buffer.html#createfile)|[`OpenFile()`]({{site.info}}api/WebTwain_Buffer.html#openfile)|[`GetCurrentFileName()`]({{site.info}}api/WebTwain_Buffer.html#getcurrentfileName)|[`RemoveFile()`]({{site.info}}api/WebTwain_Buffer.html#removefile)|
+| [`GetFileInfoList()`]({{site.info}}api/WebTwain_Buffer.html#getfileinfolist)|
 
 <!--
 * [`ClearImageTags()`]({{site.info}}api/WebTwain_Buffer.html#clearimagetags) 
@@ -114,7 +116,8 @@ breadcrumbText: API Reference
 |[`CopyToClipboard()`]({{site.info}}api/WebTwain_Edit.html#copytoclipboard) |[`Erase()`]({{site.info}}api/WebTwain_Edit.html#erase) |[`Flip()`]({{site.info}}api/WebTwain_Edit.html#flip)|[`Mirror()`]({{site.info}}api/WebTwain_Edit.html#mirror)|
 | [`Rotate()`]({{site.info}}api/WebTwain_Edit.html#rotate) |[`RotateEx()`]({{site.info}}api/WebTwain_Edit.html#rotateex)| [`RotateLeft()`]({{site.info}}api/WebTwain_Edit.html#rotateleft) | [`RotateRight()`]({{site.info}}api/WebTwain_Edit.html#rotateright)|
 | [`ChangeBitDepth()`]({{site.info}}api/WebTwain_Edit.html#changebitdepth) | [`SetDPI()`]({{site.info}}api/WebTwain_Edit.html#setdpi)|[`ConvertToBW()`]({{site.info}}api/WebTwain_Edit.html#converttobw) |[`ConvertToGrayScale()`]({{site.info}}api/WebTwain_Edit.html#converttograyscale)|
-|[`ChangeImageSize()`]({{site.info}}api/WebTwain_Edit.html#changeimagesize) | [`Invert()`]({{site.info}}api/WebTwain_Edit.html#invert)|[`SetImageWidth()`]({{site.info}}api/WebTwain_Edit.html#setimagewidth)|
+|[`ChangeImageSize()`]({{site.info}}api/WebTwain_Edit.html#changeimagesize) | [`Invert()`]({{site.info}}api/WebTwain_Edit.html#invert)|[`SetImageWidth()`]({{site.info}}api/WebTwain_Edit.html#setimagewidth)|[`ChangeBrightnessAsync()`]({{site.info}}api/WebTwain_Edit.html#changebrightnessasync)|
+|[`ChangeContrastAsnyc()`]({{site.info}}api/WebTwain_Edit.html#changecontrastasnyc)|
 
 <!--
 * [`Crop()`]({{site.info}}api/WebTwain_Edit.html#crop) 
@@ -470,6 +473,7 @@ breadcrumbText: API Reference
 | [`hide()`]({{site.info}}api/WebTwain_Viewer.html#hide)| [`last()`]({{site.info}}api/WebTwain_Viewer.html#last)| [`next()`]({{site.info}}api/WebTwain_Viewer.html#next)|[`off()`]({{site.info}}api/WebTwain_Viewer.html#off)|
 |[`on()`]({{site.info}}api/WebTwain_Viewer.html#on)| [`previous()`]({{site.info}}api/WebTwain_Viewer.html#previous)| [`render()`]({{site.info}}api/WebTwain_Viewer.html#render)| [`setButtonClass()`]({{site.info}}api/WebTwain_Viewer.html#setbuttonclass)|
 | [`setSelectedAreas()`]({{site.info}}api/WebTwain_Viewer.html#setselectedareas)| [`setViewMode()`]({{site.info}}api/WebTwain_Viewer.html#setviewmode) | [`show()`]({{site.info}}api/WebTwain_Viewer.html#show)| [`unbind()`]({{site.info}}api/WebTwain_Viewer.html#unbind)|
+|[`createTemplate()`]({{site.info}}api/WebTwain_Viewer.html#createtemplate)| 
 
 <!--
 * [`bind()`]({{site.info}}api/WebTwain_Viewer.html#bind)
@@ -502,7 +506,7 @@ breadcrumbText: API Reference
 | [`cursor`]({{site.info}}api/WebTwain_Viewer.html#cursor)| [`height`]({{site.info}}api/WebTwain_Viewer.html#height)|[`idPostfix`]({{site.info}}api/WebTwain_Viewer.html#idpostfix)|[`ifAutoScroll`]({{site.info}}api/WebTwain_Viewer.html#ifautoscroll)|
 |[`innerBorder`]({{site.info}}api/WebTwain_Viewer.html#innerBorder)| [`pageMargin`]({{site.info}}api/WebTwain_Viewer.html#pagemargin)|[`selectedAreaBorderColor`]({{site.info}}api/WebTwain_Viewer.html#selectedareabordercolor)|[`selectedPageBackground`]({{site.info}}api/WebTwain_Viewer.html#selectedpagebackground)|
 |[`selectedPageBorder`]({{site.info}}api/WebTwain_Viewer.html#selectedpageborder)| [`selectionRectAspectRatio`]({{site.info}}api/WebTwain_Viewer.html#selectionrectaspectratio)|[`showPageNumber`]({{site.info}}api/WebTwain_Viewer.html#showpagenumber)|[`singlePageMode`]({{site.info}}api/WebTwain_Viewer.html#singlepagemode)|
-|[`width`]({{site.info}}api/WebTwain_Viewer.html#width)| [`zoom`]({{site.info}}api/WebTwain_Viewer.html#zoom)| [`autoChangeIndex`]({{site.info}}api/WebTwain_Viewer.html#autochangeindex)|
+|[`width`]({{site.info}}api/WebTwain_Viewer.html#width)| [`zoom`]({{site.info}}api/WebTwain_Viewer.html#zoom)| [`autoChangeIndex`]({{site.info}}api/WebTwain_Viewer.html#autochangeindex)|[`showCheckbox`]({{site.info}}api/WebTwain_Viewer.html#showcheckbox)|
 
 <!--
 * [`acceptDrop`]({{site.info}}api/WebTwain_Viewer.html#acceptdrop)
@@ -636,7 +640,7 @@ breadcrumbText: API Reference
 | |
 |:-|:-|
 |[`GetConvertMode()`]({{site.info}}api/Addon_PDF.html#getconvertmode)| [`IsModuleInstalled()`]({{site.info}}api/Addon_PDF.html#ismoduleinstalled) | [`IsTextBasedPDF()`]({{site.info}}api/Addon_PDF.html#istextbasedpdf)| [`SetConvertMode()`]({{site.info}}api/Addon_PDF.html#setconvertmode)|
-|[`SetPassword()`]({{site.info}}api/Addon_PDF.html#setpassword)|[`SetResolution()`]({{site.info}}api/Addon_PDF.html#setresolution)|[`Write.Setup()`]({{site.info}}api/Addon_PDF.html#write-setup)|
+|[`SetPassword()`]({{site.info}}api/Addon_PDF.html#setpassword)|[`SetResolution()`]({{site.info}}api/Addon_PDF.html#setresolution)|[`Write.Setup()`]({{site.info}}api/Addon_PDF.html#writesetup)|
 
 ### Camera
 
@@ -647,7 +651,7 @@ breadcrumbText: API Reference
 |[`getSourceList()`]({{site.info}}api/Addon_Camera.html#getsourcelist) | [`selectSource()`]({{site.info}}api/Addon_Camera.html#selectsource)|[`getCurrentSource()`]({{site.info}}api/Addon_Camera.html#getcurrentsource)|[`closeSource()`]({{site.info}}api/Addon_Camera.html#closesource)|
 |[`getResolution()`]({{site.info}}api/Addon_Camera.html#getresolution)| [`setResolution()`]({{site.info}}api/Addon_Camera.html#setresolution)| [`getCurrentResolution()`]({{site.info}}api/Addon_Camera.html#getcurrentresolution)| [`play()`]({{site.info}}api/Addon_Camera.html#play)|
 |[`pause()`]({{site.info}}api/Addon_Camera.html#pause)| [`resume()`]({{site.info}}api/Addon_Camera.html#resume)| [`stop()`]({{site.info}}api/Addon_Camera.html#stop)|[`getStatus()`]({{site.info}}api/Addon_Camera.html#getstatus)|
-|[`capture()`]({{site.info}}api/Addon_Camera.html#capture)| [`showVideo()`]({{site.info}}api/Addon_Camera.html#showvideo)| [`closeVideo()`]({{site.info}}api/Addon_Camera.html#closevideo)|
+|[`capture()`]({{site.info}}api/Addon_Camera.html#capture)| [`showVideo()`]({{site.info}}api/Addon_Camera.html#showvideo)| [`closeVideo()`]({{site.info}}api/Addon_Camera.html#closevideo)|[`scanDocument()`]({{site.info}}api/Addon_Camera.html#scandocument)|
 
 ### Webcam
 

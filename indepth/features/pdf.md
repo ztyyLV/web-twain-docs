@@ -29,11 +29,11 @@ To include the PDF addon, simply add a reference to the corresponding JavaScript
 
 ## Input
 
-### Open an image-only PDF
+### Open an image-only PDF file
 
 When loading in a PDF file, `DWT` tries to extract images from that file, which is why the SDK can handle image-based PDF documents by default. 
 
-### Open an searchable PDF
+### Open a searchable PDF file
 
 However, most existing PDF files contain much more than just images. For image-and-text PDF files, we need to make use of the PDF Rasterizer (`PDFR` for short), the main component of the PDF addon.
 
@@ -49,7 +49,7 @@ var onFailure = function(errorCode, errorString) {
     console.log(errorString);
 };
 DWObject.IfShowFileDialog = true;
-// PDF Addon is used here to ensure PDF support
+// PDF Addon is used here to ensure text-based PDF support
 DWObject.Addon.PDF.SetResolution(300);
 DWObject.Addon.PDF.SetConvertMode(Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL);
 DWObject.LoadImageEx("", Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL, onSuccess, onFailure);
@@ -94,3 +94,5 @@ DWObject.Addon.PDF.Write.Setup({
 DWObject.IfShowFileDialog = true;
 DWObject.SaveAllAsPDF(' ', function() {}, function() {})
 ```
+
+Note: Only the core module license is required to use this method.

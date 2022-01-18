@@ -2,17 +2,17 @@
 layout: default-layout
 needAutoGenerateSidebar: true
 noTitleIndex: true
-title: Dynamic Web TWAIN API Reference - IO APIs
+title: Dynamic Web TWAIN API Reference - Input and Output APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, IO APIs
 breadcrumbText: IO
-description: Dynamic Web TWAIN SDK Documentation API Reference IO APIs Page
+description: Dynamic Web TWAIN SDK Documentation | API Reference | IO APIs Page
 ---
 
 # WebTwain IO
 
-## Input
+## Methods
 
-**Methods**
+### Input Methods
 
 | |
 |:-|:-|
@@ -20,9 +20,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference IO APIs Page
 |[`LoadDibFromClipboard()`](#loaddibfromclipboard)| [`FTPDownload()`](#ftpdownload)| [`FTPDownloadEx()`](#ftpdownloadex)| [`HTTPDownload()`](#httpdownload)|
 | [`HTTPDownloadEx()`](#httpdownloadex)|[`HTTPDownloadThroughPost()`](#httpdownloadthroughpost)|[`HTTPDownloadDirectly()`](#httpdownloaddirectly)|
 
-## Output
-
-**Methods**
+### Output Methods
 
 | |
 |:-|:-|
@@ -36,10 +34,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference IO APIs Page
 |[`SaveAsTIFF()`]({{site.info}}api/WebTwain_IO.html#saveastiff)| [`SaveSelectedImagesAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagepdf)|[`SaveSelectedImagesAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagetiff)|
 | [`SaveAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveallasmultipagetiff)|[`SaveAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveallaspdf)|
 
-
-Others
-
-**Methods**
+### Other Methods
 
 | |
 |:-|:-|
@@ -47,7 +42,7 @@ Others
 | [`SetHTTPHeader()`](#sethttpheader)| [`SetUploadSegment()`](#setuploadsegment)|[`ShowFileDialog()`](#showfiledialog) | [`Print()`](#print)|
 |[`PrintEx()`](#printex)|
 
-**Properties**
+## Properties
 
 | |
 |:-|:-|
@@ -56,7 +51,7 @@ Others
 |[`IfShowFileDialog`](#ifshowfiledialog) |[`IfShowCancelDialogWhenImageTransfer`](#ifshowcanceldialogwhenimagetransfer)| [`IfShowProgressBar`](#ifshowprogressbar)  | [`JPEGQuality`](#jpegquality)|
 |[`IfTiffMultiPage`](#iftiffmultipage) | [`TIFFCompressionType`](#tiffcompressiontype)| [`MaxUploadImageSize`](#maxuploadimagesize)|[`IfAppendImage`](#ifappendimage)|
 
-**Events**
+## Events
 
 | |
 |:-|:-|
@@ -77,7 +72,11 @@ IfAppendImage: boolean;
 
 **Usage notes**
 
-The default value is true which means the newly acquired images will be appended after the last image in buffer. If it's set to false, the images will be inserted before the current image. An important thing to note here is that, by design, the current image is always the last acquired one which means the images acquired after `IfAppendImage` is set to false will be displayed/kept in reverse order. To make sure the order is as the pages are scanned while `IfAppendImage` is false, the easiest way is to increase `CurrentImageIndexInBuffer` by 1 in the event `OnPostTransfer`.
+The default value is true which means the newly acquired images will be appended after the last image in buffer. If it's set to false, the images will be inserted before the current image.  
+
+An important thing to note here is that, by design, the current image is always the last acquired one which means the images acquired after `IfAppendImage` is set to false will be displayed/kept in reverse order.  
+
+To make sure the order is as the pages are scanned while `IfAppendImage` is false, the easiest way is to increase `CurrentImageIndexInBuffer` by 1 in the event `OnPostTransfer`.
 
 ---
 
@@ -344,6 +343,14 @@ RegisterEvent('OnPostLoad',
         fileName: string,
         fileType: string) {}
 );
+```
+
+**Example**
+
+``` javascript
+DWObject.RegisterEvent('OnPostLoad', function(path, name, type) {
+    alert(path + '\\' + name);
+});
 ```
 
 ---
@@ -1397,7 +1404,7 @@ SaveAsPDF(
 
 **Usage notes**
 
-Learn about [how to config PDF save settings](./Addon_PDF.md#write-setup).
+Learn about [how to config PDF save settings](./Addon_PDF.md#writesetup).
 
 ## SaveAsPNG
 
@@ -1489,6 +1496,10 @@ SaveAllAsPDF(
 ): void | boolean;
 ```
 
+**Usage notes**
+
+Learn about [how to config PDF save settings](./Addon_PDF.md#write-setup).
+
 ---
 
 ## SaveSelectedImagesAsMultiPagePDF
@@ -1510,6 +1521,11 @@ SaveSelectedImagesAsMultiPagePDF(
     failureCallback ? : (errorCode: number, errorString: string) => void
 ): void | boolean;
 ```
+
+**Usage notes**
+
+Learn about [how to config PDF save settings](./Addon_PDF.md#write-setup).
+
 ---
 
 ## SaveSelectedImagesAsMultiPageTIFF
@@ -1773,7 +1789,7 @@ DWObject.ShowFileDialog(false, "BMP,TIF,JPG,PNG,PDF|*.bmp;*.tif;*.png;*.jpg;*.pd
 /**
  * Export all image data in the buffer to a new browser window and use the browser's built-in print feature to print the image(s).
  * @param useOSPrintWindow Whether to use the print feature of the operating system instead.
- * @Note the parameter only works in Service mode.
+ * @Note the parameter only works in Windows Service mode.
  */
 Print(useOSPrintWindow ? : boolean): boolean;
 ```
@@ -1791,6 +1807,14 @@ Print(useOSPrintWindow ? : boolean): boolean;
  */
 PrintEx(indices: number[]): void;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|  not supported  |  v17.0+  |   v17.0+  |  v17.0+  |   v17.0+ |  not supported  |
 
 ---
 
@@ -1821,9 +1845,9 @@ IfTiffMultiPage: boolean;
 
 **Usage notes**
 
-When you save a new image in the same name of an existing TIFF file
-If this property is true, the new image will be added to the existing file
-If this property is false, the new image will replace the existing file
+When you save a new image in the same name of an existing TIFF file  
+If this property is true, the new image will be added to the existing file  
+If this property is false, the new image will replace the existing file  
 
 ---
 

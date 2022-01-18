@@ -9,6 +9,50 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 ---
 
 # Stable Releases
+<!--
+## 17.2
+
+### New Features
+
+#### Buffer
+ - Organize images in a set
+   - [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#createfile" target="_blank">`CreateFile()`</a>.
+   - [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#openfile" target="_blank">`OpenFile()`</a>.
+   - [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#removefile" target="_blank">`RemoveFile()`</a>.
+   - [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#getcurrentfilename" target="_blank">`GetCurrentFileName()`</a>.
+   - [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#getfileinfolist" target="_blank">`GetFileInfoList()`</a>.
+ - [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#gettaglistbyindex" target="_blank">`GetTagListByIndex()`</a>.
+
+#### Editor
+
+- [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Edit.html#changebrightnessasync" target="_blank">`ChangeBrightnessAsync()`</a>. 
+- [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Edit.html#changecontrastasnyc" target="_blank">`ChangeContrastAsnyc()`</a>.
+
+#### Camera
+- [WASM] Added new method <a href="{{site.info}}api/Addon_Camera.html#scandocument" target="_blank">`scanDocument()`</a> to capture document(s).
+
+#### Global
+- [HTML5] <strong>Added new method <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#updatecert" target="_blank">`UpdateCert()`</a> to automatically update the client side certificate.</strong>
+
+#### Viewer
+- [HTML5] Added new property <a href="{{site.info}}api/WebTwain_Viewer.html#showcheckbox" target="_blank">`showCheckbox`</a>. 
+- [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#createtemplate" target="_blank">`createTemplate()`</a> to create document scanner template. 
+
+### Improved Features 
+
+* Improved the <strong>document capture</strong> in WASM mode. 
+* Added `CM_RENDERALLWITHANNOTATION` convert mode to <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Addon_PDF.html?ver=latest#setconvertmode" target="_blank">EnumDWT_ConvertMode</a> to support loading PDFs with annotations.
+* Modified DynamicImage.dll(DynamicImagex64.dll) to improve encoding and decoding mode of TIFF files.
+* Updated Barcode Reader library to version 8.6. Check out the release notes for <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/release-notes/js-8.html?ver=latest#860-08312021" target="_blank">Barcode Reader JavaScript SDK - 8.6</a>
+
+### Bug Fixed
+
+* Fixed a bug where the image displayed in the thumbnail may be inconsistent with that on the canvas when switching tags through `FilterImageByTag`.
+* Fixed a bug that Dynamic Web TWAIN object could not be initialized when using iframe in Edge.
+*	[HTML5 on macOS] Fixed a bug where `IfDuplexEnabled` may not work for some scanners. 
+*	[HTML5 on ChromeOS] Fixed a bug where the save function failed with error 'user canceled the operation'
+* [HTML5 on macOS & Linux] Fixed a bug where calling `LoadDibFromClipboard` does not work after calling `CropToClipboard`.
+-->
 
 ## 17.1.1 (08/19/2021)
 
@@ -68,7 +112,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 * Added method [`PrintEx()`]({{site.info}}api/WebTwain_IO.html#printex) to support selective printing.  
 
-* Added property [`autoChangeIndex`]({{site.info}}api/WebTwain_Viewer.html#autoChangeIndex) which, when set to true, will make sure the first image in the viewer is always selected when scrolling through multiple images. 
+* Added property [`autoChangeIndex`]({{site.info}}api/WebTwain_Viewer.html#autochangeindex) which, when set to true, will make sure the first image in the viewer is always selected when scrolling through multiple images. 
 
 ### Improved Features 
 
@@ -295,14 +339,14 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 * This version is backward compatible with version 16.0. This means once you have installed the Dynamsoft Service for version 16.1, an application running version 16.0 also works without the need to install the Service for version 16.0.
 * The method `LoadImageEx()` now supports mobile platforms as well.
-* Dynamsoft Service directory is now named with its major version in it. For example,      `/DynamsoftServicex64/` is now `/DynamsoftServicex64_16/` . Also ActiveX related files are put into a different directory called `/WebTWAINActiveX/` .
+* Dynamsoft Service directory is now named with its major version in it. For example, `/DynamsoftServicex64/` is now `/DynamsoftServicex64_16/`. Also ActiveX related files are put into a different directory called `/WebTWAINActiveX/` .
 
 ### Bug Fixes
 
 * Fixed a bug where images fail to show in the viewer in IE 10.
 * Fixed a bug in Chrome where the print UI invoked by the API `Print()` disappears immediately after showing up.
 * Fixed a bug with the API `Dynamsoft.WebTwainEnv.Host` which is now effective.
-* Fixed a bug with consecutive cropping operations with the API `Crop()` .
+* Fixed a bug with consecutive cropping operations with the API `Crop()`.
 * Fixed a bug with `WebTwain` instances created by the API `Dynamsoft.WebTwainEnv.CreateDWTObjectEx()` so that their UI binding works correctly.
 
 ### Deprecations

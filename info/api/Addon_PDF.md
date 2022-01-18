@@ -11,10 +11,10 @@ description: Dynamic Web TWAIN SDK Documentation API Reference PDF Addon APIs Pa
 
 **Methods**
 
-| |
-|:-|:-|
-|[`GetConvertMode()`](#getconvertmode)|[`IsModuleInstalled()`](#ismoduleinstalled)|[`IsTextBasedPDF()`](#istextbasedpdf)| [`SetConvertMode()`](#setconvertmode)|
-|[`SetPassword()`](#setpassword)|[`SetResolution()`](#setresolution)|[`Write.Setup()`](#writesetup)|
+|                                       |
+| :------------------------------------ | :------------------------------------------ | ------------------------------------- | ------------------------------------- |
+| [`GetConvertMode()`](#getconvertmode) | [`IsModuleInstalled()`](#ismoduleinstalled) | [`IsTextBasedPDF()`](#istextbasedpdf) | [`SetConvertMode()`](#setconvertmode) |
+| [`SetPassword()`](#setpassword)       | [`SetResolution()`](#setresolution)         | [`Write.Setup()`](#writesetup)        |
 
 ---
 
@@ -22,12 +22,20 @@ description: Dynamic Web TWAIN SDK Documentation API Reference PDF Addon APIs Pa
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return the convert mode.
  */
 GetConvertMode(): number;
 ```
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
 
@@ -35,7 +43,7 @@ GetConvertMode(): number;
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
 
 * Return whether the PDF module has been installed.
@@ -44,13 +52,21 @@ GetConvertMode(): number;
 IsModuleInstalled(): boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 ---
 
 ## IsTextBasedPDF
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Detect whether a local PDF file is text based or not.
  * @path Specify the path of the PDF file.
@@ -58,13 +74,21 @@ IsModuleInstalled(): boolean;
 IsTextBasedPDF(path: string): boolean;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 ---
 
 ## SetConvertMode
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Set the convert mode.
  * @param mode Specify the mode. The default value is 3 (Dynamsoft.DWT.EnumDWT_ConvertMode.CM_AUTO)
@@ -76,11 +100,20 @@ SetConvertMode(mode: Dynamsoft.DWT.EnumDWT_ConvertMode | number): boolean;
 
 There are three conversion modes
 
-* CM_RENDERALL (1): All the content in the target PDF file will be rasterized.
-* CM_IMAGEONLY (2): The PDF Rasterizer is turned off. This is the default mode.
-* CM_AUTO (3): The library automatically detect whether a file needs to be rasterized or not and then process the file accordingly.
+- CM_RENDERALL (1): All the content in the target PDF file will be rasterized.
+- CM_IMAGEONLY (2): The PDF Rasterizer is turned off. This is the default mode.
+- CM_AUTO (3): The library automatically detect whether a file needs to be rasterized or not and then process the file accordingly.
+- CM_RENDERALLWITHANNOTATION (4): Support loading PDF file with annotation. 
 
 Use this method before you import a PDF into the viewer with methods such as <a href="{{site.info}}api/WebTwain_IO.html#loadimage" target="_blank">`LoadImage()`</a> , <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`HTTPDownload()`</a> and <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`FTPDownload()`</a>.
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
 
@@ -88,7 +121,7 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Set the password for reading encrypted PDF files.
  * @param password Specify the password.
@@ -100,13 +133,21 @@ SetPassword(password: string): boolean;
 
 Use this method before you import a PDF into the viewer with methods such as <a href="{{site.info}}api/WebTwain_IO.html#loadimage" target="_blank">`LoadImage()`</a> , <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`HTTPDownload()`</a> and <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`FTPDownload()`</a>.
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+
 ---
 
 ## SetResolution
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Set the resolution for rasterizing.
  * @param resolution Specify the resolution.
@@ -116,9 +157,17 @@ SetResolution(resolution: number): boolean;
 
 **Usage notes**
 
-The default resolution for the conversion is 200. We recommend that you set a value smaller than 300, otherwise it might slow down the program or cause the process to fail.  
+The default resolution for the conversion is 200. We recommend that you set a value smaller than 300, otherwise it might slow down the program or cause the process to fail.
 
 Use this method before you import a PDF into the viewer with methods such as <a href="{{site.info}}api/WebTwain_IO.html#loadimage" target="_blank">`LoadImage()`</a> , <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`HTTPDownload()`</a> and <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`FTPDownload()`</a>.
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
 
@@ -126,7 +175,7 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Set up the PDF writing engine.
  * @param settings Configures how the PDF is generated.
@@ -194,3 +243,13 @@ interface PDFWSettings {
 **Usage notes**
 
 Use this method before you create a PDF with methods such as <a href="{{site.info}}api/WebTwain_IO.html#httpupload" target="_blank">`HTTPUpload()`</a>, <a href="{{site.info}}api/WebTwain_IO.html#saveaspdf" target="_blank">`SaveAsPDF()`</a>, and <a href="{{site.info}}api/WebTwain_IO.html#saveallaspdf" target="_blank">`SaveAllAsPDF()`</a>
+
+Only the core module license is required to use this method.
+
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |

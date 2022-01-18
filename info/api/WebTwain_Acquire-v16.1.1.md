@@ -937,6 +937,10 @@ interface ScanSetup {
 }
 ```
 
+**Sample**
+
+<a href="https://demo.dynamsoft.com/Samples/dwt/Make-use-of-the-API-startScan/index.html" target="_blank">Make use of the API startScan </a>
+
 ---
 
 ## CancelAllPendingTransfers
@@ -1602,6 +1606,8 @@ readonly Duplex: Dynamsoft.EnumDWT_DUPLEX | number;
 | TWDX_2PASSDUPLEX | 2 | 2-pass duplex |
 
 1-pass means the paper gets scanned on both sides at the same time. 2-pass means the paper passes the light bar twice to get both sides scanned separately.
+
+This property does not support macOS/ICA or Linux.
 
 ---
 
