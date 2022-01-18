@@ -356,7 +356,7 @@ CloseSourceAsync(): Promise<boolean>;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 |  not supported  |  v16.1+  |   v16.1+  |  v16.1+  |   v16.1+ |  not supported  |
 
 ---
@@ -448,7 +448,7 @@ OpenSourceAsync(): Promise<boolean>;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 |  not supported  |  v16.1+  |   v16.1+  |  v16.1+  |   v16.1+ |  not supported  |
 
 ---
@@ -535,7 +535,7 @@ GetSourceNamesAsync(bIncludeDetails: boolean): Promise<string[] | ISourceDetails
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 |  not supported  |  v16.1+  |   v16.1+  |  v16.1+  |   v16.1+ |  not supported  |
 
 ---
@@ -604,7 +604,7 @@ DWObject.AcquireImage()}).catch(function(e){console.log(e)});
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 |  not supported  |  v16.1+  |   v16.1+  |  v16.1+  |   v16.1+ |  not supported  |
 
 ---
@@ -648,7 +648,7 @@ SelectSourceByIndexAsync(index: number): Promise<boolean>;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 |  not supported  |  v16.1+  |   v16.1+  |  v16.1+  |   v16.1+ |  not supported  |
 
 **Example**
@@ -1005,7 +1005,7 @@ CloseSourceManagerAsync(): Promise<boolean>;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 |  not supported  |  v16.1+  |   v16.1+  |  v16.1+  |   v16.1+ |  not supported  |
 
 ---
@@ -1153,7 +1153,7 @@ OpenSourceManagerAsync(): Promise<boolean>;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 |  not supported  |  v16.1+  |   v16.1+  |  v16.1+  |   v16.1+ |  not supported  |
 
 **Usage notes**

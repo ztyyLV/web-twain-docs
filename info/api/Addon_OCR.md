@@ -50,7 +50,7 @@ Download(
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -71,7 +71,7 @@ IsModuleInstalled(): boolean;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -104,7 +104,7 @@ DownloadLangData(
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -125,7 +125,7 @@ GetIfUseDetectedFont(): boolean;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -147,7 +147,7 @@ SetIfUseDetectedFont(value: boolean): boolean;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ## GetMinFontSizeforMoreAccurateResult
@@ -166,7 +166,7 @@ GetMinFontSizeforMoreAccurateResult(): number;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -192,7 +192,7 @@ If the font size is set to 0, it indicates no regional accurate OCR will be perf
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -213,7 +213,7 @@ GetUnicodeFontName(): string;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -243,7 +243,7 @@ The font set with `SetUnicodeFontName()` is only used when `SetIfUseDetectedFont
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -265,7 +265,7 @@ SetLanguage(language: Dynamsoft.DWT.EnumDWT_OCRLanguage | string): boolean;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -287,7 +287,7 @@ SetOutputFormat(format: Dynamsoft.DWT.EnumDWT_OCROutputFormat | number): boolean
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -317,7 +317,7 @@ The default `mode` is `PSM_AUTO` which indicates automatic page segmentation.
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -355,7 +355,7 @@ Recognize(
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -393,7 +393,7 @@ RecognizeFile(path: string,
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -443,7 +443,7 @@ RecognizeRect(
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -572,7 +572,7 @@ interface Word {
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
