@@ -1401,6 +1401,7 @@ Dynamsoft.DWT.CreateDWTObjectEx({
     DWObject = obj;
     template = DWObject.Viewer.createTemplate("documentScanner");
     DWObject.Viewer.bind (null, template);  //full screen    
+    DWObject.Viewer.show();
 }, function(ec,es){console.log(es);});
 ```
 
