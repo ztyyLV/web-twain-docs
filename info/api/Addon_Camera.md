@@ -458,7 +458,7 @@ interface ScanConfiguration{
       //Return true：End this capture without saving the image data. Return false: Stay on the original viewer
     },
 
-   filterViewer? {
+   filterViewer?:{
      visibility?: boolean,   //Whether to display filter viewer. The default value is true.
 
      insert?: {  //Insert an image  
@@ -513,15 +513,14 @@ interface ScanConfiguration{
     },
 
      rotateRight?:{   
-       visibility?: boolean,   //Whether to display the rotate right icon. The default value is true.
+        visibility?: boolean,   //Whether to display the rotate right icon. The default value is true.
      },
 
      autoDetectBorder?:{   
 	visibility?: boolean,   //Whether to display the automatic border detection icon. The default value is true.
-	enableAutoDetectBorder?: boolean,   //The default value is true.
-       },
-      }
-    }
+     },
+  }
+}
 
      function funcConfirmExitContinuousScan(){
 	return true;  

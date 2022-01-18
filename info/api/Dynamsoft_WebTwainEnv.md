@@ -193,7 +193,7 @@ Check [license error list](https://www.dynamsoft.com/license-tracking/docs/commo
 ``` typescript
 /**
  * Update and downaload certificate (server.pem.ldsc && server_key.pem.ldsc) to DynamsoftServicex64_17\cert.
- * @param url Url to download the new certificate. 
+ * @param url Url to download the new certificate. E.g. "http://download.dynamsoft.com/cert.zip". server.pem.ldsc & server_key.pem.ldsc should be in cert.zip.
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
  * @argument errorCode The error code.
@@ -218,6 +218,7 @@ UpdateCert(
 
 **Example**
 ``` javascript
+//overwrite the following function in dynamsoft.webtwain.install.js
    Dynamsoft.OnSSLCertInfo = function (sslExpiredDate) {
         console.log(sslExpiredDate);
    Dynamsoft.DWT.UpdateCert("https://xxx.com/cert.zip", 
