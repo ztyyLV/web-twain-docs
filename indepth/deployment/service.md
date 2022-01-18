@@ -156,7 +156,7 @@ These files are named with their version number. The following uses v16.1.1 as a
 
 ## Related Resources:
 
-* <a href="{{site.indepth}}faqs/develop/how-to-uninstall-dynamic-web-twain.html" target="_blank">How to uninstall Dynamsoft Service?</a>
+* <a href="{{site.faq}}how-to-uninstall-dynamsoft-service.html" target="_blank">How to uninstall Dynamsoft Service?</a>
 * <a href="{{site.indepth}}faqs/develop/what-does-dynamsoft-service-do.html" target="_blank">What does Dynamsoft Service do?</a>
-* <a href="{{site.indepth}}faqs/develop/how-to-install-dynamic-web-twain.html" target="_blank">How to install Dynamic Web TWAIN?</a>
-* <a href="{{site.indepth}}faqs/distribution/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly.html" target="_blank">Why is the browser prompting me to install Dynamsoft Service repeatedly?</a>
+* <a href="{{site.faq}}service-prompting-to-install-repeatedly.html" target="_blank">I have installed the Dynamsoft Service on an end-user machine but still got asked to install it repeatedly. Why?</a>
+* <a href="{{site.faq}}can-i-install-dynamsoft-service-silently.html" target="_blank">Can I install Dynamsoft Service silently?</a>
