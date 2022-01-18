@@ -24,6 +24,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page
 | [`CreateFile()`](#createfile)|[`OpenFile()`](#openfile)|[`GetCurrentFileName()`](#getcurrentfilename)|[`RemoveFile()`](#removefile)|
 | [`GetFileInfoList()`](#getfileinfolist)|
 
+
 <!--* [GetImageBitDepthAsync()](#getimagebitdepthasync)-->
 
 

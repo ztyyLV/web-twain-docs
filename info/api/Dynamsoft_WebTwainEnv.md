@@ -42,6 +42,11 @@ interface Dynamsoft.DWT {
     ResourcesPath: string;
     UseLocalService: boolean;
     UseDefaultInstallUI: boolean;
+     /**
+     * Whether to use camera wasm. The default value is false. 
+     * Set this property to true if you want to use camera wasm in service mode.
+     */
+    UseCameraAddonWasm: boolean;
     
     // Functions
     CreateDWTObject(
