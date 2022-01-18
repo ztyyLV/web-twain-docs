@@ -46,7 +46,7 @@ CaptureImage(
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -67,7 +67,7 @@ GetSourceList(): string[];
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -89,7 +89,7 @@ SelectSource(name: string): boolean;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -110,7 +110,7 @@ CloseSource(): boolean;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -131,7 +131,7 @@ GetSourceList(): string[];
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -153,7 +153,7 @@ SelectSource(name: string): boolean;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -178,7 +178,7 @@ When you close the camera, the video stream will stop at the last frame.
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -206,7 +206,7 @@ PlayVideo(
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -227,7 +227,7 @@ PauseVideo(): boolean;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -254,7 +254,7 @@ When you close the camera, the video stream will stop at the last frame.
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -278,7 +278,7 @@ GetCameraControlPropertySetting(
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -302,7 +302,7 @@ GetCameraControlPropertyMoreSetting(
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -368,7 +368,7 @@ Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_came
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -392,7 +392,7 @@ GetVideoPropertySetting(
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -416,7 +416,7 @@ GetVideoPropertyMoreSetting(
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -482,7 +482,7 @@ Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_vide
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -503,7 +503,7 @@ GetFrameRate(): FrameRate;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -524,7 +524,7 @@ GetMediaType(): MediaType;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -545,7 +545,7 @@ GetResolution(): Resolution;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -567,7 +567,7 @@ SetFrameRate(rate: number): boolean;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -589,7 +589,7 @@ SetMediaType(type: string): boolean;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -662,7 +662,7 @@ DWObject.Addon.Webcam.SetResolution("640 x 480");
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -690,7 +690,7 @@ Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_vide
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -711,7 +711,7 @@ GetFrameURL(): string;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -738,5 +738,5 @@ GetFramePartURL(): string;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |

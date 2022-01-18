@@ -93,7 +93,7 @@ SetProductKeyAsync(
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 |  not supported  |  v16.1+  |   v16.1+  |  v16.1+  |   v16.1+ |  not supported  |
 
 ## SetLanguage

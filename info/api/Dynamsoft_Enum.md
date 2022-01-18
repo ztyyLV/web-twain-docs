@@ -342,6 +342,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | CM_RENDERALL | 1 |
 | CM_IMAGEONLY | 2 |
 | CM_AUTO | 3 |
+| CM_RENDERALLWITHANNOTATION| 4 |
 
 ## `Dynamsoft.DWT.EnumDWT_DUPLEX`
 

@@ -722,7 +722,7 @@ ChangeBrightnessAsync(index: number, val: number)
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 |  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |   v17.2+  |
 
 ---
@@ -733,7 +733,7 @@ ChangeBrightnessAsync(index: number, val: number)
 
 ``` typescript
 /**
- * Change the image brightness.
+ * Change the image contrast.
  * @param index Specify the index of image in buffer.
  * @param val Specify the contrast. Allowed values [-1000~1000]. Negative value means decrease the contrast.
  */
@@ -745,7 +745,7 @@ ChangeContrastAsnyc(index: number, val: number)
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 |  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |   v17.2+  |
 
 
