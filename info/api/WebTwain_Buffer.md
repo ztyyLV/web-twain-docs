@@ -101,7 +101,7 @@ RenameTag(oldName:string, newName:string): boolean;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 |  not supported  |  v16.2+  |   v16.2+   |  v16.2+  |   v16.2+ |  not supported  |
 
 ---
@@ -124,7 +124,7 @@ RemoveTag(tagName: string, indices?: number[]):boolean
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 |  not supported  |  v17.0+  |   v17.0+  |  v17.0+  |   v17.0+ |  not supported  |
 
 **Usage Notes**
@@ -161,7 +161,7 @@ Json：
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 |  not supported  |  v17.0+  |   v17.0+  |  v17.0+  |   v17.0+ |  not supported  |
 
 ---
@@ -210,7 +210,7 @@ ClearFilter(): boolean;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 |  not supported  |  v16.2+  |   v16.2+  |  v16.2+  |   v16.2+ |  not supported  |
 
 ---
@@ -842,7 +842,7 @@ interface BufferChangeInfo {
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 |  not supported  |  v16.2+  |   v16.2+  |  v16.2+  |   v16.2+ |  not supported  |
 
 **Usage notes**
@@ -946,7 +946,7 @@ GetTagListByIndex(index: number):string[]
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 |  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |  not supported  |
 
 **Example**
@@ -973,7 +973,7 @@ CreateFile(filename:string):Boolean;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 |  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |  v17.2+  |
 
 **Example**
@@ -1017,7 +1017,7 @@ OpenFile(filename:string):Boolean;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 |  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |  v17.2+  |
 
 **Example**
@@ -1055,7 +1055,7 @@ GetCurrentFileName():String;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 |  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |  v17.2+  |
 
 ---
@@ -1077,7 +1077,7 @@ RemoveFile(filename:string):Boolean;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 |  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |  v17.2+  |
 
 ---
@@ -1106,7 +1106,7 @@ Json:
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 |  not supported  |  v17.2+  |  v17.2+  | v17.2+  |  v17.2+  |  v17.2+  |
 
 ---

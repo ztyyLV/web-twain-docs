@@ -130,7 +130,7 @@ interface Result {
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
@@ -198,7 +198,7 @@ interface Region {
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
@@ -240,7 +240,7 @@ DWObject.Addon.BarcodeReader.getRuntimeSettings("balance")
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
@@ -261,7 +261,7 @@ resetRuntimeSettings(): Promise < RuntimeSettings > ;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
@@ -285,5 +285,5 @@ initRuntimeSettingsWithString(
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
