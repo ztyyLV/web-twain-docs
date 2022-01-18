@@ -467,7 +467,7 @@ interface ScanConfiguration{
        },
 
      remove?: { //Remove an image
-	visibility?: boolean,   //Whether to display the remove icon. The default value is true.
+   	 visibility?: boolean,   //Whether to display the remove icon. The default value is true.
        },
 
      rotateLeft?: { 
