@@ -1402,13 +1402,6 @@ Dynamsoft.DWT.CreateDWTObjectEx({
     template = DWObject.Viewer.createTemplate("documentScanner");
     DWObject.Viewer.bind (null, template);  //full screen    
 }, function(ec,es){console.log(es);});
-
-template.onExitFunc = function () {
-    DWObject.Viewer.show();   
-    console.error ("execute");
-    //RemoveAllFile();     
-}
-
 ```
 
 **Availability**
