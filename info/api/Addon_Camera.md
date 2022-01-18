@@ -43,7 +43,7 @@ interface DeviceInfo{
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 **Example**
@@ -71,7 +71,7 @@ selectSource(deviceId: string): Promise<DeviceInfo>;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ---
@@ -92,7 +92,7 @@ getCurrentSource():DeviceInfo;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ---
@@ -113,7 +113,7 @@ closeSource(): Promise<DeviceInfo>;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ---
@@ -139,7 +139,7 @@ interface Resolution{
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ---
@@ -161,7 +161,7 @@ setResolution(resolution: Resolution): Promise<Resolution>;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ---
@@ -182,7 +182,7 @@ getCurrentResolution(): Promise<Resolution>;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 **Usage notes**
@@ -219,7 +219,7 @@ If the method is called without arguments or `null` is passed to `element` , the
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ---
@@ -240,7 +240,7 @@ pause(): void;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ---
@@ -261,7 +261,7 @@ resume(): void;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ---
@@ -282,7 +282,7 @@ stop(): void;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ---
@@ -307,7 +307,7 @@ The status string is either empty or one of the following: "playing", "paused", 
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ---
@@ -328,7 +328,7 @@ capture(): Promise<Blob>;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ---
@@ -364,7 +364,7 @@ There are two available modes: `document` and `picture` .
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ---
@@ -385,7 +385,7 @@ closeVideo(): void;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 | not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | supported |
 
 ## scanDocument
@@ -537,7 +537,7 @@ interface ScanConfiguration{
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
 |  not supported  | not supported  |  not supported | not supported |  not supported |  v17.2+  |
 
 **Example**
