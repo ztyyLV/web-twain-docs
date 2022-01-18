@@ -123,7 +123,7 @@ organizationID: string;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 |  not supported  |  v17.1+  |   v17.1+  |  v17.1+  |   v17.1+ |  not supported  |
 
 **Example**
@@ -218,7 +218,7 @@ UpdateCert(
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 |  not supported  | v17.2+ |  v17.2+ | v17.2+ | v17.2+ |  not supported   |
 
 **Example**

@@ -54,7 +54,7 @@ Download(
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -75,7 +75,7 @@ IsModuleInstalled(): boolean;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -114,7 +114,7 @@ Recognize(
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -152,7 +152,7 @@ RecognizeFile(path: string,
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -194,7 +194,7 @@ RecognizeRect(
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -333,7 +333,7 @@ interface Letter {
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
@@ -410,7 +410,7 @@ Dynamsoft.WebTwain.Addon.OCRPro.NewSettings: Settings;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---

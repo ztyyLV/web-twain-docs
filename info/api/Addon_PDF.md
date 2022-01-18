@@ -34,7 +34,7 @@ GetConvertMode(): number;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
@@ -57,7 +57,7 @@ IsModuleInstalled(): boolean;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
@@ -79,7 +79,7 @@ IsTextBasedPDF(path: string): boolean;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
@@ -112,7 +112,7 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
@@ -138,7 +138,7 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
@@ -166,7 +166,7 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
@@ -251,5 +251,5 @@ Only the core module license is required to use this method.
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM(Mobile)|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
