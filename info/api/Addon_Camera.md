@@ -337,7 +337,7 @@ interface ScanConfiguration{
       //Return true：End this capture without saving the image data. Return false: Stay on the original viewer
     },
 
-   filterViewer? {
+   filterViewer?: {
      visibility?: boolean,   //Whether to display filter viewer. The default value is true.
 
      insert?: {  //Insert an image  
@@ -346,7 +346,7 @@ interface ScanConfiguration{
        },
 
      remove?: { //Remove an image
-	visibility?: boolean,   //Whether to display the remove icon. The default value is true.
+    	 visibility?: boolean,   //Whether to display the remove icon. The default value is true.
        },
 
      rotateLeft?: { 
@@ -373,13 +373,13 @@ interface ScanConfiguration{
         },{……}]
 	 
        defaultValue?: string,   //Filter selected by default. By default, the original filter is selected.
-	},
+	     },
  
        exitDocumentScanAfterSave: false  //The default value is false.
     }， 
 
    cropViewer?: { 
-     visibility?: boolean,   //Whether to display the crop viewer. The default value is true.
+    visibility?: boolean,   //Whether to display the crop viewer. The default value is true.
       
      polygonStyle?:{    //The polygon style in the crop viewer.       
   	  stroke: string,       //default : "#fe8e14"
@@ -387,27 +387,26 @@ interface ScanConfiguration{
           dash: string             //"solid ", "dashed"    default: "solid "
     },
 
-     rotateLeft?:{   
-	visibility?: boolean,   //Whether to display the rotate left icon. The default value is true.
+      rotateLeft?:{   
+       visibility?: boolean, //Whether to display the rotate left icon. The default value is true.
     },
 
-     rotateRight?:{   
-       visibility?: boolean,   //Whether to display the rotate right icon. The default value is true.
+      rotateRight?:{   
+       visibility?: boolean, //Whether to display the rotate right icon. The default value is true.
      },
 
      autoDetectBorder?:{   
-	visibility?: boolean,   //Whether to display the automatic border detection icon. The default value is true.
-	enableAutoDetectBorder?: boolean,   //The default value is true.
-       },
-      }
+	      visibility?: boolean, //Whether to display the automatic border detection icon. The default value is true.
+      },
     }
+  }
 
-     function funcConfirmExitContinuousScan(){
-	return true;  
+    function funcConfirmExitContinuousScan(bExistImage){
+         	return true;  
      }
 
-     function funcConfirmExit(){
-	return true;  
+    function funcConfirmExit(bExistImage){
+         	return true;  
      }
 
 ```
