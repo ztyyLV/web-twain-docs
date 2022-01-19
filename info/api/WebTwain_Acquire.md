@@ -166,11 +166,32 @@ interface DeviceConfiguration {
 
 **Availability**
 
-<div class="availability"></div>
+<table>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
+<tr>
+<th colspan="5">Desktop Service Edition</th>
+<th>WebAssembly Edition</th>
+</tr>
+
+<tr>
+<th>ActiveX</th>
+<th>H5(Windows)</th>
+<th>H5(macOS/TWAIN)</th>
+<th>H5(macOS/ICA)</th>
+<th>H5(Linux)</th>
+<th>WASM</th>
+</tr>
+
+<tr>
+<td>&check; | v1.0 </td>
+<td>&check; | v10.0 </td>
+<td>&check; | v11.0 </td>
+<td>&check; | v11.0 </td>
+<td>&check; | v12.1 </td>
+<td>not supported </td>
+</tr>
+
+</table>
 
 **Usage notes**
 
