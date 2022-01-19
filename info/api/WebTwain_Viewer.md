@@ -110,6 +110,12 @@ Dynamsoft.DWT.CreateDWTObjectEx({
     //DWObject.Viewer.bind(document.getElementById("divImageEditor"), template);
     DWObject.Viewer.show();
 }, function(ec,es){console.log(es);});
+
+template.onExitFunc = function () {
+    DWObject.Viewer.show();   
+    console.error ("execute");
+    //RemoveAllFile();     
+}
 ```
 
 **Usage notes**
@@ -1373,6 +1379,15 @@ When set to true, the index in the upper left corner of the viewer will be selec
  * @argument templateName Currently templateName only supports "documentScanner".
  */
 createTemplate("templateName")：DocumentViewerTemplate
+
+interface DocumentViewerTemplate{
+   getCustomElement():CustomElement; //Get CustomElement. Can display save & upload interface in CustomElement.   
+   onAddDocumentFunc = function () {}
+   onExitFunc = function () {}
+   onSaveFunc = function () {} //Save button click event
+   onUploadFunc = function () {}  //Upload button click event
+   onRemoveSelectedFunc = function () {}   //Remove button click event
+}
 ```
 
 **Example**
@@ -1385,10 +1400,9 @@ Dynamsoft.DWT.CreateDWTObjectEx({
 }, function (obj) {
     DWObject = obj;
     template = DWObject.Viewer.createTemplate("documentScanner");
-    DWObject.Viewer.bind (null, template);  //full screen
+    DWObject.Viewer.bind (null, template);  //full screen    
     DWObject.Viewer.show();
 }, function(ec,es){console.log(es);});
-
 ```
 
 **Availability**

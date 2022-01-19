@@ -733,7 +733,7 @@ ChangeBrightnessAsync(index: number, val: number)
 
 ``` typescript
 /**
- * Change the image brightness.
+ * Change the image contrast.
  * @param index Specify the index of image in buffer.
  * @param val Specify the contrast. Allowed values [-1000~1000]. Negative value means decrease the contrast.
  */

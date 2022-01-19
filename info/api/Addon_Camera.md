@@ -11,6 +11,12 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Camera Addon APIs
 
 > Dynamsoft provides a built-in feature to handle camera capturing, prospective adjusting, etc. Check out the APIs [`showVideo()`](#showvideo) and [`closeVideo()`](#closevideo). Please NOTE that these two APIs should not be mixed with other more specific APIs like [`play()`](#play), [`pause()`](#pause) and [`stop()`](#stop), etc.
 
+> To include the Camera addon, simply add a reference to the corresponding JavaScript file, included in the [resources folder]({{site.about}}faqs.html#what-are-the-resources-files).
+
+``` html
+<script src="Resources/addon/dynamsoft.webtwain.addon.camera.js"></script>
+```
+
 **Methods**
 
 |                                     |
@@ -405,7 +411,7 @@ interface ScanConfiguration{
                              //After binding, display the video in the specified element, otherwise, display the video in full screen.
    scannerViewer?:{
      deviceId?: string,  
-     maxDocuments: int,       //The maximum documents can be captured/loaded in to the buffer. 
+     maxDocuments: int,       //The maximum documents that can be captured/loaded in to the buffer. 
      enableBorderDetection?: boolean,  // Whether to enable border detection. The default value is true.
      fullScreen?: boolean,   //Whether to display the video in full screen. The default value is false.
 
@@ -458,7 +464,7 @@ interface ScanConfiguration{
       //Return true：End this capture without saving the image data. Return false: Stay on the original viewer
     },
 
-   filterViewer? {
+   filterViewer?:{
      visibility?: boolean,   //Whether to display filter viewer. The default value is true.
 
      insert?: {  //Insert an image  
@@ -513,15 +519,14 @@ interface ScanConfiguration{
     },
 
      rotateRight?:{   
-       visibility?: boolean,   //Whether to display the rotate right icon. The default value is true.
+        visibility?: boolean,   //Whether to display the rotate right icon. The default value is true.
      },
 
      autoDetectBorder?:{   
 	visibility?: boolean,   //Whether to display the automatic border detection icon. The default value is true.
-	enableAutoDetectBorder?: boolean,   //The default value is true.
-       },
-      }
-    }
+     },
+  }
+}
 
      function funcConfirmExitContinuousScan(){
 	return true;  
@@ -538,6 +543,7 @@ interface ScanConfiguration{
 <div class="availability"></div>
 
 |:-|:-|
+
 |ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
 |  not supported  | not supported  |  not supported | not supported |  not supported |  v17.2+  |
 
