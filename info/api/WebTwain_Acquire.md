@@ -169,26 +169,26 @@ interface DeviceConfiguration {
 <table>
 
 <tr>
-<th colspan="5">Desktop Service Edition</th>
+<th colspan="5" align="center">Desktop Service Edition</th>
 <th>WebAssembly Edition</th>
 </tr>
 
 <tr>
-<th>ActiveX</th>
-<th>H5(Windows)</th>
-<th>H5(macOS/TWAIN)</th>
-<th>H5(macOS/ICA)</th>
-<th>H5(Linux)</th>
-<th>WASM</th>
+<th align="center">ActiveX</th>
+<th align="center">H5(Windows)</th>
+<th align="center">H5(macOS/TWAIN)</th>
+<th align="center">H5(macOS/ICA)</th>
+<th align="center">H5(Linux)</th>
+<th align="center">WASM</th>
 </tr>
 
 <tr>
-<td>&check; | v1.0 </td>
-<td>&check; | v10.0 </td>
-<td>&check; | v11.0 </td>
-<td>&check; | v11.0 </td>
-<td>&check; | v12.1 </td>
-<td>not supported </td>
+<td align="center">&check; | v1.0 </td>
+<td align="center">&check; | v10.0 </td>
+<td align="center">&check; | v11.0 </td>
+<td align="center">&check; | v11.0 </td>
+<td align="center">&check; | v12.1 </td>
+<td align="center">not supported </td>
 </tr>
 
 </table>
