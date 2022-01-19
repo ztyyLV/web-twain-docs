@@ -104,14 +104,17 @@ Dynamsoft.DWT.CreateDWTObjectEx(
   function (obj) {
     DWObject = obj;
     template = DWObject.Viewer.createTemplate("documentScanner");
-    DWObject.Viewer.bind(null, template); //If the HTML element to bind is not specified, display in full screen
-    //DWObject.Viewer.bind(document.getElementById("divImageEditor"), template);
-    DWObject.Viewer.show();
-  },
-  function (ec, es) {
-    console.log(es);
-  }
-);
+    DWObject.Viewer.bind(null, template); //full screen
+    DWObject.Viewer.show(); 
+  
+    template.onExitFunc = function () {
+    DWObject.Viewer.show();   
+    console.error ("execute");
+    //RemoveAllFile();     
+}
+}, function (errorCode, errorString) {
+    console.log(errorString);
+  });
 ```
 
 **Availability**
@@ -1722,12 +1725,16 @@ Dynamsoft.DWT.CreateDWTObjectEx(
     DWObject = obj;
     template = DWObject.Viewer.createTemplate("documentScanner");
     DWObject.Viewer.bind(null, template); //full screen
-    DWObject.Viewer.show();
-  },
-  function (ec, es) {
-    console.log(es);
-  }
-);
+    DWObject.Viewer.show(); 
+  
+    template.onExitFunc = function () {
+    DWObject.Viewer.show();   
+    console.error ("execute");
+    //RemoveAllFile();     
+}
+}, function (errorCode, errorString) {
+    console.log(errorString);
+  });
 ```
 
 **Availability**
