@@ -16,7 +16,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Camera Addon APIs
 ``` html
 <script src="Resources/addon/dynamsoft.webtwain.addon.camera.js"></script>
 ```
-#### Note:
+<strong>Note:</strong>
  - Make sure you deploy the application to an webserver that
    - Runs HTTPS
    - Serves the *.wasm file with Content-Type: application/wasm.
