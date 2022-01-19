@@ -2692,6 +2692,14 @@ TWSX_NATIVE and TWSX_MEMORY are required by all TWAIN data sources while TWSX_FI
 Unit: Dynamsoft.DWT.EnumDWT_UnitType | number;
 ```
 
+**Availability**
+
+<div class="availability"></div>
+
+|:-|:-|
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
+| v5.2+ | v10.0+ | v11.0 | v11.0  | not supported | not supported |
+
 **Usage notes**
 
 Allowed values are
