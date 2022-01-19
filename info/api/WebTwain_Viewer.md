@@ -110,12 +110,6 @@ Dynamsoft.DWT.CreateDWTObjectEx({
     //DWObject.Viewer.bind(document.getElementById("divImageEditor"), template);
     DWObject.Viewer.show();
 }, function(ec,es){console.log(es);});
-
-template.onExitFunc = function () {
-    DWObject.Viewer.show();   
-    console.error ("execute");
-    //RemoveAllFile();     
-}
 ```
 
 **Usage notes**
