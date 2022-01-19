@@ -20,7 +20,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Camera Addon APIs
  - Make sure you deploy the application to an webserver that
    - Runs HTTPS
    - Serves the *.wasm file with Content-Type: application/wasm.
- - It is recommendrf to set <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#uselocalservice" target="_blank">UseLocalService</a> to false to use the Camera Addon. If it must be true, you need to set `Dynamsoft.DWT.UseCameraAddonWasm=true`.
+ - It is recommended to set <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#uselocalservice" target="_blank">UseLocalService</a> to false to use the Camera Addon. If it must be true, you need to set `Dynamsoft.DWT.UseCameraAddonWasm=true`.
 
 
 **Methods**
