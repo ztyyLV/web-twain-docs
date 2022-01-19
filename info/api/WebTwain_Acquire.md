@@ -165,21 +165,21 @@ interface DeviceConfiguration {
 ```
 
 **Availability**
-
+<div class="availability">
 <table>
 
 <tr>
-<th colspan="5" align="center">Desktop Service Edition</th>
-<th>WebAssembly Edition</th>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
 </tr>
 
 <tr>
-<th align="center">ActiveX</th>
-<th align="center">H5(Windows)</th>
-<th align="center">H5(macOS/TWAIN)</th>
-<th align="center">H5(macOS/ICA)</th>
-<th align="center">H5(Linux)</th>
-<th align="center">WASM</th>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
 </tr>
 
 <tr>
@@ -192,6 +192,7 @@ interface DeviceConfiguration {
 </tr>
 
 </table>
+</div>
 
 **Usage notes**
 
