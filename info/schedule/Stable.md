@@ -16,7 +16,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 #### Buffer
  - Organize images in a set
-   - [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#createfile" target="_blank">`CreateFile()`</a>.
+   - [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#createfile" target="_blank">`CreateFile`()</a>.
    - [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#openfile" target="_blank">`OpenFile()`</a>.
    - [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#removefile" target="_blank">`RemoveFile()`</a>.
    - [HTML5] Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#getcurrentfilename" target="_blank">`GetCurrentFileName()`</a>.
