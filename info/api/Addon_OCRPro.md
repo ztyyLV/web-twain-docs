@@ -49,14 +49,6 @@ Download(
 ): void;
 ```
 
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
-
 ---
 
 ## IsModuleInstalled
@@ -69,14 +61,6 @@ Download(
  */
 IsModuleInstalled(): boolean;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
 
@@ -109,14 +93,6 @@ Recognize(
 ): void;
 ```
 
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
-
 ---
 
 ## RecognizeFile
@@ -146,14 +122,6 @@ RecognizeFile(path: string,
     ) => void
 ): void;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
 
@@ -188,14 +156,6 @@ RecognizeRect(
     ) => void
 ): void;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
 
@@ -328,14 +288,6 @@ interface Letter {
 }
 ```
 
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
-
 ---
 
 ## Settings
@@ -404,14 +356,6 @@ A Settings object can be created with the following method.
  */
 Dynamsoft.WebTwain.Addon.OCRPro.NewSettings: Settings;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
 
 ---
 

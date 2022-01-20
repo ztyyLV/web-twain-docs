@@ -62,7 +62,7 @@ interface DeviceInfo{
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
+<td align="center">v16.1+ </td>
 </tr>
 
 </table>
@@ -112,11 +112,11 @@ selectSource(deviceId: string): Promise<DeviceInfo>;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
+<td align="center">v16.1+ </td>
 </tr>
 
 </table>
-</div> |
+</div> 
 
 ---
 
@@ -155,7 +155,7 @@ getCurrentSource():DeviceInfo;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
+<td align="center">v16.1+ </td>
 </tr>
 
 </table>
@@ -198,7 +198,7 @@ closeSource(): Promise<DeviceInfo>;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
+<td align="center">v16.1+</td>
 </tr>
 
 </table>
@@ -246,7 +246,7 @@ interface Resolution{
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
+<td align="center">v16.1+</td>
 </tr>
 
 </table>
@@ -290,7 +290,7 @@ setResolution(resolution: Resolution): Promise<Resolution>;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
+<td align="center">v16.1+</td>
 </tr>
 
 </table>
@@ -333,7 +333,7 @@ getCurrentResolution(): Promise<Resolution>;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
+<td align="center">v16.1+</td>
 </tr>
 
 </table>
@@ -386,7 +386,7 @@ play(element?: HTMLElement,
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
+<td align="center">v16.1+</td>
 </tr>
 
 </table>
@@ -435,7 +435,7 @@ pause(): void;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
+<td align="center">v16.1+</td>
 </tr>
 
 </table>
@@ -477,7 +477,7 @@ resume(): void;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
+<td align="center">v16.1+</td>
 </tr>
 
 </table>
@@ -520,7 +520,7 @@ stop(): void;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
+<td align="center">v16.1+</td>
 </tr>
 
 </table>
@@ -567,7 +567,7 @@ The status string is either empty or one of the following: "playing", "paused", 
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
+<td align="center">v16.1+</td>
 </tr>
 
 </table>
@@ -609,7 +609,7 @@ capture(): Promise<Blob>;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
+<td align="center">v16.1+</td>
 </tr>
 
 </table>
@@ -660,7 +660,7 @@ showVideo(deviceId?: string,
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
+<td align="center">v16.1+</td>
 </tr>
 
 </table>
@@ -710,7 +710,7 @@ closeVideo(): void;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
+<td align="center">v16.1+</td>
 </tr>
 
 </table>
