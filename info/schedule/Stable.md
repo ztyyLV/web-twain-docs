@@ -9,8 +9,8 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 ---
 
 # Stable Releases
-<!--
-## 17.2
+
+## 17.2 (01/20/2022)
 
 ### New Features
 
@@ -40,7 +40,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 ### Improved Features 
 
-* Improved the <strong>document capture</strong> in WASM mode. 
+* Improved the <strong>mobile document capture</strong> in WASM mode. See more <a href="https://www.dynamsoft.com/web-twain/features/mobile-web-capture-sdk/" target="_blank">here</a>. 
 * Added `CM_RENDERALLWITHANNOTATION` convert mode to <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Addon_PDF.html?ver=latest#setconvertmode" target="_blank">EnumDWT_ConvertMode</a> to support loading PDFs with annotations.
 * Modified DynamicImage.dll(DynamicImagex64.dll) to improve encoding and decoding mode of TIFF files.
 * Updated Barcode Reader library to version 8.6. Check out the release notes for <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/release-notes/js-8.html?ver=latest#860-08312021" target="_blank">Barcode Reader JavaScript SDK - 8.6</a>
@@ -51,7 +51,6 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 * Fixed a bug that Dynamic Web TWAIN object could not be initialized when using iframe in Edge.
 *	[HTML5 on macOS] Fixed a bug where `IfDuplexEnabled` may not work for some scanners. 
 * [HTML5 on macOS & Linux] Fixed a bug where calling `LoadDibFromClipboard` does not work after calling `CropToClipboard`.
--->
 
 ## 17.1.1 (08/19/2021)
 
