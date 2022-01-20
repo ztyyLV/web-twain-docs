@@ -50,7 +50,6 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 * Fixed a bug where the image displayed in the thumbnail may be inconsistent with that on the canvas when switching tags through `FilterImageByTag`.
 * Fixed a bug that Dynamic Web TWAIN object could not be initialized when using iframe in Edge.
 *	[HTML5 on macOS] Fixed a bug where `IfDuplexEnabled` may not work for some scanners. 
-*	[HTML5 on ChromeOS] Fixed a bug where the save function failed with error 'user canceled the operation'
 * [HTML5 on macOS & Linux] Fixed a bug where calling `LoadDibFromClipboard` does not work after calling `CropToClipboard`.
 -->
 
