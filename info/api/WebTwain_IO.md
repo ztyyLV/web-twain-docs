@@ -151,11 +151,11 @@ LoadImage(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v4.0+  </td>
+<td align="center">v10.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -203,12 +203,34 @@ LoadImageEx(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v5.0+  </td>
+<td align="center">v10.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">v16.1+ </td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -255,12 +277,34 @@ LoadImageFromBase64Binary(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v6.2+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">v16.1+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -311,12 +355,34 @@ LoadImageFromBinary(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.0+ </td>
+<td align="center">v16.0+ </td>
+<td align="center">v16.0+ </td>
+<td align="center">v16.0+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -382,11 +448,11 @@ LoadDibFromClipboard(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v4.1+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -442,12 +508,34 @@ RegisterEvent(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v8.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -469,12 +557,34 @@ RegisterEvent(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v6.3+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -530,10 +640,10 @@ FTPDownload(
 
 <tr>
 <td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -588,10 +698,10 @@ FTPDownloadEx(
 
 <tr>
 <td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -646,10 +756,10 @@ FTPUpload(
 
 <tr>
 <td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -706,10 +816,10 @@ FTPUploadEx(
 
 <tr>
 <td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -762,10 +872,10 @@ FTPUploadAllAsMultiPageTIFF(
 
 <tr>
 <td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -818,10 +928,10 @@ FTPUploadAllAsPDF(
 
 <tr>
 <td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -874,10 +984,10 @@ FTPUploadAsMultiPagePDF(
 
 <tr>
 <td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v6.0+ </td>
+<td align="center">v6.0+ </td>
+<td align="center">v6.0+ </td>
+<td align="center">v6.0+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -931,10 +1041,10 @@ FTPUploadAsMultiPageTIFF(
 
 <tr>
 <td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v6.0+ </td>
+<td align="center">v6.0+ </td>
+<td align="center">v6.0+ </td>
+<td align="center">v6.0+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -974,10 +1084,10 @@ FTPUserName: string;
 
 <tr>
 <td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v5.2+ </td>
+<td align="center">v5.2+ </td>
+<td align="center">v5.2+ </td>
+<td align="center">v5.2+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1017,10 +1127,10 @@ FTPPassword: string;
 
 <tr>
 <td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v5.2+ </td>
+<td align="center">v5.2+ </td>
+<td align="center">v5.2+ </td>
+<td align="center">v5.2+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1060,10 +1170,10 @@ FTPPort: number;
 
 <tr>
 <td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v5.2+ </td>
+<td align="center">v5.2+ </td>
+<td align="center">v5.2+ </td>
+<td align="center">v5.2+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1103,12 +1213,13 @@ IfPASVMode: boolean;
 
 <tr>
 <td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v6.0+ </td>
+<td align="center">v6.0+ </td>
+<td align="center">v6.0+ </td>
+<td align="center">v6.0+ </td>
 <td align="center">not supported </td>
 </tr>
+
 
 </table>
 </div>
@@ -1126,14 +1237,6 @@ IfPASVMode: boolean;
 HTTPPassword: string;
 ```
 
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
-
 ---
 
 ## HTTPUserName
@@ -1146,14 +1249,6 @@ HTTPPassword: string;
  */
 HTTPUserName: string;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 ---
 
@@ -1182,12 +1277,34 @@ HTTPDownload(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -1236,11 +1353,11 @@ HTTPDownloadEx(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">not supported </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1278,12 +1395,34 @@ HTTPDownloadThroughPost(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -1314,12 +1453,34 @@ HTTPDownloadDirectly(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v7.0+ </td>
+<td align="center">v7.0+ </td>
+<td align="center">v7.0+ </td>
+<td align="center">v7.0+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -1401,12 +1562,34 @@ HTTPUpload(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported  </td>
+<td align="center">v12.0+ </td>
+<td align="center">v12.0+ </td>
+<td align="center">v12.0+ </td>
+<td align="center">v12.0+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -1439,12 +1622,34 @@ HTTPUploadThroughPutEx(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -1498,11 +1703,11 @@ HTTPUploadThroughPost(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1562,11 +1767,11 @@ HTTPUploadThroughPostEx(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1622,11 +1827,11 @@ HTTPUploadAllThroughPostAsMultiPageTIFF(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1682,11 +1887,11 @@ HTTPUploadAllThroughPostAsPDF(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1742,11 +1947,11 @@ HTTPUploadThroughPostAsMultiPagePDF(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v6.0+ </td>
+<td align="center">v6.0+ </td>
+<td align="center">v6.0+ </td>
+<td align="center">v6.0+ </td>
+<td align="center">v6.0+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1802,11 +2007,11 @@ HTTPUploadThroughPostAsMultiPageTIFF(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v6.0+ </td>
+<td align="center">v6.0+ </td>
+<td align="center">v6.0+ </td>
+<td align="center">v6.0+ </td>
+<td align="center">v6.0+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1846,12 +2051,34 @@ HTTPUploadThroughPostDirectly(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v7.0+ </td>
+<td align="center">v7.0+ </td>
+<td align="center">v7.0+ </td>
+<td align="center">v7.0+ </td>
+<td align="center">v7.0+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -1912,13 +2139,34 @@ HttpFieldNameOfUploadedImage: string;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
 
+<tr>
+<td align="center">v6.0+ </td>
+<td align="center">v6.0+ </td>
+<td align="center">v6.0+ </td>
+<td align="center">v6.0+ </td>
+<td align="center">v6.0+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 ---
 
 ## HTTPPort
@@ -1934,12 +2182,34 @@ HTTPPort: number;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v4.2.1+ </td>
+<td align="center">v4.2.1+ </td>
+<td align="center">v4.2.1+ </td>
+<td align="center">v4.2.1+ </td>
+<td align="center">v4.2.1+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -1956,12 +2226,34 @@ IfSSL: boolean;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v5.2+ </td>
+<td align="center">v5.2+ </td>
+<td align="center">v5.2+ </td>
+<td align="center">v5.2+ </td>
+<td align="center">v5.2+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -1977,13 +2269,34 @@ readonly HTTPPostResponseString: string;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
 
+<tr>
+<td align="center">v3.0.3+ </td>
+<td align="center">v3.0.3+ </td>
+<td align="center">v3.0.3+ </td>
+<td align="center">v3.0.3+ </td>
+<td align="center">v3.0.3+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 ---
 
 ## MaxUploadImageSize
@@ -1998,12 +2311,34 @@ MaxUploadImageSize: number;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v5.2+ </td>
+<td align="center">v5.2+ </td>
+<td align="center">v5.2+ </td>
+<td align="center">v5.2+ </td>
+<td align="center">v5.2+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -2020,13 +2355,34 @@ RegisterEvent("OnInternetTransferPercentage", function (percentage: number) {});
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
 
+<tr>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 ---
 
 ## ConvertToBase64
@@ -2077,12 +2433,34 @@ interface Base64Result {
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v12.0+ </td>
+<td align="center">v12.0+ </td>
+<td align="center">v12.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">v16.0+</td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -2136,12 +2514,34 @@ ConvertToBlob(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v13.0+ </td>
+<td align="center">v13.0+ </td>
+<td align="center">v13.0+ </td>
+<td align="center">v13.0+ </td>
+<td align="center">v16.0+</td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -2183,12 +2583,34 @@ SaveAsBMP(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v4.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -2215,13 +2637,34 @@ SaveAsJPEG(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
 
+<tr>
+<td align="center">v4.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 ---
 
 ## SaveAsPDF
@@ -2247,18 +2690,40 @@ SaveAsPDF(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
 
----
+<tr>
+<td align="center">v5.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
 Learn about [how to config PDF save settings](./Addon_PDF.md#writesetup).
+
+---
 
 ## SaveAsPNG
 
@@ -2283,12 +2748,34 @@ SaveAsPNG(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v4.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -2315,12 +2802,34 @@ SaveAsTIFF(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v3.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -2345,12 +2854,34 @@ SaveAllAsMultiPageTIFF(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v4.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -2375,12 +2906,34 @@ SaveAllAsPDF(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v5.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -2409,12 +2962,34 @@ SaveSelectedImagesAsMultiPagePDF(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v6.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -2445,12 +3020,34 @@ SaveSelectedImagesAsMultiPageTIFF(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v6.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -2472,12 +3069,34 @@ ClearTiffCustomTag(): boolean;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v10.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -2500,12 +3119,34 @@ SetTiffCustomTag(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v10.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -2535,12 +3176,34 @@ ClearAllHTTPFormField(): boolean;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -2573,12 +3236,34 @@ SetHTTPFormField(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v5.0+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -2599,12 +3284,34 @@ SetHTTPHeader(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v12.0+ </td>
+<td align="center">v12.0+ </td>
+<td align="center">v12.0+ </td>
+<td align="center">v12.0+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -2644,10 +3351,10 @@ SetUploadSegment(
 
 <tr>
 <td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">v12.1+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -2686,11 +3393,11 @@ IfShowFileDialog: boolean;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v6.2+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -2734,10 +3441,10 @@ IfShowCancelDialogWhenImageTransfer: boolean;
 
 <tr>
 <td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v5.2+ </td>
+<td align="center">v5.2+ </td>
+<td align="center">v5.2+ </td>
+<td align="center">v5.2+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -2776,11 +3483,11 @@ IfShowProgressBar: boolean;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v8.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -2836,11 +3543,11 @@ ShowFileDialog(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v8.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -2906,13 +3613,34 @@ Print(useOSPrintWindow ? : boolean): boolean;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
 
+<tr>
+<td align="center">v6.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 ---
 
 ## PrintEx
@@ -2928,12 +3656,34 @@ PrintEx(indices: number[]): void;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.0+ | v17.0+ | v17.0+ | v17.0+ | not supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported  </td>
+<td align="center">v17.0+ </td>
+<td align="center">v17.0+ </td>
+<td align="center">v17.0+ </td>
+<td align="center">v17.0+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -2950,13 +3700,34 @@ JPEGQuality: number;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
 
+<tr>
+<td align="center">v5.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 ---
 
 ## IfTiffMultiPage
@@ -2971,12 +3742,34 @@ IfTiffMultiPage: boolean;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v3.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -2998,12 +3791,34 @@ TIFFCompressionType: Dynamsoft.DWT.EnumDWT_TIFFCompressionType | number;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v4.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
