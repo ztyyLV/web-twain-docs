@@ -45,14 +45,6 @@ Download(
 ): void;
 ```
 
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
-
 ---
 
 ## IsModuleInstalled
@@ -65,15 +57,6 @@ Download(
  */
 IsModuleInstalled(): boolean;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
-
 ---
 
 ## DownloadLangData
@@ -99,14 +82,6 @@ DownloadLangData(
 ): void;
 ```
 
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
-
 ---
 
 ## GetIfUseDetectedFont
@@ -119,15 +94,6 @@ DownloadLangData(
  */
 GetIfUseDetectedFont(): boolean;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
-
 ---
 
 ## SetIfUseDetectedFont
@@ -141,14 +107,7 @@ GetIfUseDetectedFont(): boolean;
  */
 SetIfUseDetectedFont(value: boolean): boolean;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
+---
 
 ## GetMinFontSizeforMoreAccurateResult
 
@@ -160,15 +119,6 @@ SetIfUseDetectedFont(value: boolean): boolean;
  */
 GetMinFontSizeforMoreAccurateResult(): number;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
-
 ---
 
 ## SetMinFontSizeforMoreAccurateResult
@@ -186,15 +136,6 @@ SetMinFontSizeforMoreAccurateResult(size: number): number;
 **Usage notes**
 
 If the font size is set to 0, it indicates no regional accurate OCR will be performed.
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
-
 ---
 
 ## GetUnicodeFontName
@@ -207,15 +148,6 @@ If the font size is set to 0, it indicates no regional accurate OCR will be perf
  */
 GetUnicodeFontName(): string;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
-
 ---
 
 ## SetUnicodeFontName
@@ -237,15 +169,6 @@ The `name` parameter in `SetUnicodeFontName()` should be the name (without the `
 The definition of a "unicode" font is loose. Any font can be provided here, however it needs to support the characters of the language to be used. Some fonts may support only some languages, but certain fonts such as `ArialUni` supports all common languages.
 
 The font set with `SetUnicodeFontName()` is only used when `SetIfUseDetectedFont()` was called with `false` as the argument for `value` . In other words, the set font will only be used if the engine doesn't use the detected fonts.
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
-
 ---
 
 ## SetLanguage
@@ -259,15 +182,6 @@ The font set with `SetUnicodeFontName()` is only used when `SetIfUseDetectedFont
  */
 SetLanguage(language: Dynamsoft.DWT.EnumDWT_OCRLanguage | string): boolean;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
-
 ---
 
 ## SetOutputFormat
@@ -281,15 +195,6 @@ SetLanguage(language: Dynamsoft.DWT.EnumDWT_OCRLanguage | string): boolean;
  */
 SetOutputFormat(format: Dynamsoft.DWT.EnumDWT_OCROutputFormat | number): boolean;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
-
 ---
 
 ## SetPageSetMode
@@ -311,15 +216,6 @@ The default `language` is `eng` which indicates English. To use a certain langua
 The default `format` is `OCROF_PDFIMAGEOVERTEXT` which indicates an Image-over-Text PDF.
 
 The default `mode` is `PSM_AUTO` which indicates automatic page segmentation.
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
-
 ---
 
 ## Recognize
@@ -349,15 +245,6 @@ Recognize(
     ) => void
 ): void;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
-
 ---
 
 ## RecognizeFile
@@ -387,15 +274,6 @@ RecognizeFile(path: string,
     ) => void
 ): void;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
-
 ---
 
 ## RecognizeRect
@@ -437,15 +315,6 @@ RecognizeRect(
     ) => void
 ): void;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
-
 ---
 
 ## RecognizeSelectedImages
@@ -566,15 +435,6 @@ interface Word {
   GetWordRect(index: number): string;
 }
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
-
 ---
 
 ## Server-Side

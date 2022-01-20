@@ -30,12 +30,34 @@ GetConvertMode(): number;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported  </td>
+<td align="center">v17.2+ </td>
+<td align="center">v17.2+ </td>
+<td align="center">v17.2+ </td>
+<td align="center">v17.2+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -53,12 +75,34 @@ IsModuleInstalled(): boolean;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v14.1+ </td>
+<td align="center">v14.1+ </td>
+<td align="center">v14.1+ </td>
+<td align="center">v14.1+ </td>
+<td align="center">v14.1+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -75,12 +119,34 @@ IsTextBasedPDF(path: string): boolean;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v11.2+ </td>
+<td align="center">v11.2+ </td>
+<td align="center">v11.2+ </td>
+<td align="center">v11.2+ </td>
+<td align="center">v11.2+ </td>
+<td align="center">v16.0+</td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -108,12 +174,34 @@ There are three conversion modes
 Use this method before you import a PDF into the viewer with methods such as <a href="{{site.info}}api/WebTwain_IO.html#loadimage" target="_blank">`LoadImage()`</a> , <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`HTTPDownload()`</a> and <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`FTPDownload()`</a>.
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v11.2+ </td>
+<td align="center">v11.2+ </td>
+<td align="center">v11.2+ </td>
+<td align="center">v11.2+ </td>
+<td align="center">v11.2+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -134,13 +222,34 @@ SetPassword(password: string): boolean;
 Use this method before you import a PDF into the viewer with methods such as <a href="{{site.info}}api/WebTwain_IO.html#loadimage" target="_blank">`LoadImage()`</a> , <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`HTTPDownload()`</a> and <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`FTPDownload()`</a>.
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
 
+<tr>
+<td align="center">v11.2+ </td>
+<td align="center">v11.2+ </td>
+<td align="center">v11.2+ </td>
+<td align="center">v11.2+ </td>
+<td align="center">v11.2+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 ---
 
 ## SetResolution
@@ -162,12 +271,34 @@ The default resolution for the conversion is 200. We recommend that you set a va
 Use this method before you import a PDF into the viewer with methods such as <a href="{{site.info}}api/WebTwain_IO.html#loadimage" target="_blank">`LoadImage()`</a> , <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`HTTPDownload()`</a> and <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`FTPDownload()`</a>.
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v11.2+ </td>
+<td align="center">v11.2+ </td>
+<td align="center">v11.2+ </td>
+<td align="center">v11.2+ </td>
+<td align="center">v11.2+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -247,9 +378,31 @@ Use this method before you create a PDF with methods such as <a href="{{site.in
 Only the core module license is required to use this method.
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v15.0+ </td>
+<td align="center">v15.1+ </td>
+<td align="center">v15.1+ </td>
+<td align="center">v15.1+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>

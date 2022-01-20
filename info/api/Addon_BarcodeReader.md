@@ -126,12 +126,34 @@ interface Result {
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v14.3.1+ </td>
+<td align="center">v14.1+ </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -194,12 +216,34 @@ interface Region {
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v14.3.1+ </td>
+<td align="center">v14.1+ </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -236,12 +280,34 @@ DWObject.Addon.BarcodeReader.getRuntimeSettings("balance")
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v14.3.1+ </td>
+<td align="center">v14.1+ </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -257,12 +323,34 @@ resetRuntimeSettings(): Promise < RuntimeSettings > ;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v14.3.1+ </td>
+<td align="center">v14.1+ </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -281,9 +369,31 @@ initRuntimeSettingsWithString(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v16.0+ </td>
+<td align="center">v16.0+ </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
