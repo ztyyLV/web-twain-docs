@@ -519,6 +519,10 @@ interface ThumbnailViewer {
      * Default: false.
      */
     autoChangeIndex: boolean;
+     /**
+     * Show checkbox on image(s).
+     */
+    showCheckbox: boolean;
 };
 interface ThumbnailViewerEvent {
     // The index of the current page.
