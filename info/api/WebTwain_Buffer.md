@@ -2417,9 +2417,10 @@ OpenFile(filename:string):Boolean;
 **Example**
 
 ```javascript
-//the image you scanned will belong to File1.
 DWObject.CreateFile("File1");
-DWObject.OpenFile("File1"); //Need to call OpenFile after CreateFile.
+DWObject.CreateFile("File2");
+DWObject.CreateFile("File3");
+DWObject.OpenFile("File2"); //Need to call OpenFile after CreateFile.
 DWObject.AcquireImage(successCallback, failureCallback);
 
 function successCallback() {
@@ -2482,7 +2483,7 @@ GetCurrentFileName():String;
 
 ```typescript
 /**
- * Remove the specified file.
+ * Remove all images in the specified file.
  * @argument filename Specify the file name.
  */
 RemoveFile(filename:string):Boolean;
