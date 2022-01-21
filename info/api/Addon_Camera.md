@@ -756,8 +756,8 @@ interface ScanConfiguration{
     autoDetect?:{  //Only applicable to video scanning.                  
        visibility?: boolean,         //Whether to display the automatic border detection icon. The default value is true.
        enableAutoDetect?: boolean,   //Whether to enable automatic border detection. The default value is false.     
-       acceptedPolygonConfidence: number, //The default value is 80. The higher the setting, the more accurate the automatic border detection.
-       fpsLimit: number,  //The maximum number of frames detected per second. The default value is 3.
+       acceptedPolygonConfidence?: number, //The default value is 80. The higher the setting, the more accurate the automatic border detection.
+       fpsLimit?: number,  //The maximum number of frames detected per second. The default value is 3.
        },     
     continuousScan?:{   //Only applicable to video scanning.
        visibility?: boolean,   //Whether to display the continuous scan icon. The default value is true.
@@ -781,7 +781,7 @@ interface ScanConfiguration{
     visibility?: boolean,   //Whether to display filter viewer. The default value is true.
     insert?: {  //Insert an image  
        visibility?: boolean,   //Whether to display the insert icon. The default value is true.
-       position: string   //Set whether to insert the image "before" or "after" the current image. The default value is "before".
+       position?: string   //Set whether to insert the image "before" or "after" the current image. The default value is "before".
        },
     remove?: { //Remove an image
    	  visibility?: boolean,   //Whether to display the remove icon. The default value is true.
@@ -810,7 +810,7 @@ interface ScanConfiguration{
 	 
        defaultValue?: string,   //Filter selected by default. By default, the original filter is selected.
        },
-    exitDocumentScanAfterSave: false  //The default value is false.
+    exitDocumentScanAfterSave?: false  //The default value is false.
     },
 
   cropViewer?: { 
