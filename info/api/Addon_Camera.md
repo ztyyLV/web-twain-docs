@@ -10,6 +10,18 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Camera Addon APIs
 # `WebTwain.Addon.Camera`
 
 > Dynamsoft provides a built-in feature to handle camera capturing, prospective adjusting, etc. Check out the APIs [`showVideo()`](#showvideo) and [`closeVideo()`](#closevideo). Please NOTE that these two APIs should not be mixed with other more specific APIs like [`play()`](#play), [`pause()`](#pause) and [`stop()`](#stop), etc.
+> 
+> To include the Camera addon, simply add a reference to the corresponding JavaScript file, included in the [resources folder]({{site.about}}faqs.html#what-are-the-resources-files).
+
+``` html
+<script src="Resources/addon/dynamsoft.webtwain.addon.camera.js"></script>
+```
+
+Notes:
+- Make sure you deploy the sample to an webserver that
+ - Runs HTTPS
+ - Serves the *.wasm file with Content-Type: application/wasm
+- It is recommended to set <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Dynamsoft_WebTwainEnv.html?ver=latest#uselocalservice" target="_blank">UseLocalService</a> to false to use the Camera Addon. If it must be true, you need to set Dynamsoft.DWT.UseCameraAddonWasm=true.
 
 **Methods**
 
@@ -733,7 +745,7 @@ interface ScanConfiguration{
                              //After binding, display the video in the specified element, otherwise, display the video in full screen.
   scannerViewer?:{
     deviceId?: string,  
-    maxDocuments: int,       //The maximum documents can be captured/loaded in to the buffer. 
+    maxDocuments: number,       //The maximum documents can be captured/loaded in to the buffer. 
     enableBorderDetection?: boolean,  // Whether to enable border detection. The default value is true.
     fullScreen?: boolean,   //Whether to display the video in full screen. The default value is false.
     polygonStyle?:{      //The sytle of the auto detect border.       
