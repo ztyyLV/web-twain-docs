@@ -2367,7 +2367,7 @@ function failureCallback(errorCode, errorString) {
 
 **Usage notes**
 
-1. If the documents have been sorted before scanning, you can use CreateFile, <a href="{{site.info}}api/WebTwain_Buffer.html#openfile" target="_blank">OpenFile</a> to manage each type of document.
+1. If the documents have been sorted before scanning, you can use <a href="{{site.info}}api/WebTwain_Buffer.html#createfile" target="_blank">CreateFile</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#openfile" target="_blank">OpenFile</a> to manage each type of document.
 2. If the documents are out of order before scanning and you want to scan them in first and then sort them, use tags to manage the documents. Relevant APIs: <a href="{{site.info}}api/WebTwain_Buffer.html#setdefaulttag" target="_blank">SetDefaultTag</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#tagimages" target="_blank">TagImages</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#gettaglist" target="_blank">GetTagList</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#filterimagesbytag" target="_blank">FilterImagesByTag</a>
 
 ---
