@@ -118,12 +118,34 @@ Dynamsoft.DWT.CreateDWTObjectEx(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v17.2+ </td>
+<td align="center">v17.2+ </td>
+<td align="center">v17.2+ </td>
+<td align="center">v17.2+ </td>
+<td align="center">v17.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -143,12 +165,35 @@ clearSelectedAreas(): void;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -193,12 +238,35 @@ interface CustomElement {
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -253,12 +321,35 @@ interface ImageEditor {
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -550,12 +641,35 @@ interface ViewMode {
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -635,12 +749,35 @@ first():number;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -665,12 +802,35 @@ fitWindow(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -706,12 +866,35 @@ gotoPage(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -733,12 +916,35 @@ hide(): boolean;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -760,12 +966,35 @@ last():number;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -787,12 +1016,35 @@ next(): number;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -818,14 +1070,6 @@ Viewer.off(
     callback?: () => void
 ): void;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 **Example**
 
@@ -854,14 +1098,6 @@ Viewer.on(
     callback: (event: ViewerEvent) => void
 ): void;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 **Example**
 
@@ -894,12 +1130,35 @@ previous(): number;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -922,12 +1181,35 @@ render(): boolean;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -963,12 +1245,35 @@ interface Area {
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -1014,12 +1319,34 @@ setViewMode(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.1+ </td>
+<td align="center">v16.1+ </td>
+<td align="center">v16.1+ </td>
+<td align="center">v16.1+ </td>
+<td align="center">v16.1+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -1045,12 +1372,35 @@ show(): boolean;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -1072,12 +1422,35 @@ unbind(): boolean;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -1102,16 +1475,7 @@ Replace the previous `UnbindViewer` method.
  */
 acceptDrop: boolean;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
-
-**Example**
+ **Example**
 
 ```javascript
 DWObject.Viewer.acceptDrop = true;
@@ -1128,14 +1492,6 @@ DWObject.Viewer.acceptDrop = true;
  */
 .allowSlide: boolean;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 **Example**
 
@@ -1160,14 +1516,6 @@ This API only works if the view mode of the viewer is set to -1 by -1.
 background: string;
 ```
 
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
-
 **Example**
 
 ```javascript
@@ -1191,14 +1539,6 @@ Replace the previous `BackgroundColor` method. Now you can specify the backgourn
 border: string;
 ```
 
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
-
 **Example**
 
 ```javascript
@@ -1221,14 +1561,6 @@ The default value is "1px solid rgb(204, 204, 204)". Now you can specify the bor
  */
 cursor: string;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 **Example**
 
@@ -1262,14 +1594,6 @@ If there are selected areas on the page, changing the `cursor` property will cle
 height: number | string;
 ```
 
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
-
 **Example**
 
 ```javascript
@@ -1297,14 +1621,6 @@ When reading the property, the value is always in pixels no matter what value wa
 readonly idPostfix: string;
 ```
 
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
-
 **Example**
 
 ```javascript
@@ -1325,14 +1641,6 @@ var myViewerIdPostfix = DWObject.Viewer.idPostfix;
 ifAutoScroll: string;
 ```
 
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
-
 **Example**
 
 ```javascript
@@ -1351,14 +1659,6 @@ DWObject.Viewer.ifAutoScroll = false;
  */
 innerBorder: string;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 **Example**
 
@@ -1383,14 +1683,6 @@ The default value is null. You can specify the border by CSS. Read more on the [
 pageMargin: number | string;
 ```
 
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
-
 **Example**
 
 ```javascript
@@ -1413,14 +1705,6 @@ The page margin is only effective when the view mode is not -1 \* -1 (in other w
  */
 selectedAreaBorderColor: string;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 **Example**
 
@@ -1445,14 +1729,6 @@ The default value is "rgba(0, 0, 0, 1)".
 selectedPageBackground: string;
 ```
 
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
-
 **Example**
 
 ```javascript
@@ -1475,14 +1751,6 @@ The default value is "rgb(199, 222, 252)". You can specify the backgournd by CSS
  */
 selectedPageBorder: string;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 **Example**
 
@@ -1509,14 +1777,6 @@ The default value is "1px solid rgb(125, 162, 206)". Now you can specify the bor
 selectionRectAspectRatio: number | string;
 ```
 
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
-
 **Example**
 
 ```javascript
@@ -1538,14 +1798,6 @@ This API is only effective when drawing manually (it won't work if the selection
  * Return or set whether to show the page numbers.
  */
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 **Example**
 
@@ -1569,14 +1821,6 @@ The default value is `false` which means the page nubmers are hidden. The page n
  */
 singlePageMode: boolean;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 **Example**
 
@@ -1609,14 +1853,6 @@ The default value is `false`. If the thumbnail viewer is not shown, setting `sin
 width: number | string;
 ```
 
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
-
 **Example**
 
 ```javascript
@@ -1643,14 +1879,6 @@ When reading the property, the value is always in pixels no matter what value wa
  */
 zoom: number;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 **Example**
 
@@ -1901,14 +2129,6 @@ interface rect{
 };
 ```
 
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
-
 **Example**
 
 ```javascript
@@ -1934,14 +2154,6 @@ on('pageAreaUnselected',
     (index: number) => void
 ): void;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 **Example**
 
@@ -1973,14 +2185,6 @@ on('pageRendered',
 ): void;
 ```
 
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
-
 **Example**
 
 ```javascript
@@ -2006,14 +2210,6 @@ on('resize',
     (width: number, height: number) => void
 ): void;
 ```
-
-**Availability**
-
-<div class="availability"></div>
-
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
 
 **Example**
 

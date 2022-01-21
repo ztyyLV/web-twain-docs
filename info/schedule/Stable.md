@@ -311,7 +311,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 * Added APIs under `Addon.Camera` as a complement to the existing APIs under `Addon.Webcam` . These APIs include `getSourceList()` ,      `selectSource()` ,      `getCurrentSource()` ,      `closeSource()` ,      `getResolution()` ,      `setResolution()` ,      `getCurrentResolution()` , `play()` ,      `pause()` ,      `resume()` ,      `stop()` ,      `getStatus()` and `capture()` . Unlike the old APIs under `Addon.Webcam` which are good only on Windows, the new APIs are good on Windows, macOS, Linux as well as iOS & Android.
 
-* Added a perperty `UseLocalService` to return whether a `WebTwain` instance is running in the Local-Service mode or WASM mode.
+* Added a property `UseLocalService` to return whether a `WebTwain` instance is running in the Local-Service mode or WASM mode.
 
 * Added built-in video processing feature which enables video streaming, edge detection, perspective adjustment, capturing, etc. Related APIs include `showVideo()`,  `closeVideo()` and two callbacks `video-closed` and `video-error` .
 

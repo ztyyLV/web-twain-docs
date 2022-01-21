@@ -38,12 +38,34 @@ isUsingActiveX(): boolean;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">all versions </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -61,12 +83,34 @@ RegisterEvent(name: string, callback: () => void): boolean;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v9.2+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -84,12 +128,34 @@ UnregisterEvent(name: string, callback: () => void): boolean;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v9.2+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -112,12 +178,34 @@ SetProductKeyAsync(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v16.1+ | v16.1+ | v16.1+ | v16.1+ | not supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v16.1+ </td>
+<td align="center">v16.1+ </td>
+<td align="center">v16.1+ </td>
+<td align="center">v16.1+ </td>
+<td align="center">v16.1+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 ## SetLanguage
 
@@ -132,6 +220,36 @@ SetLanguage(
     language: Dynamsoft.DWT.EnumDWT_Language | number
 ): boolean;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v13.0+ </td>
+<td align="center">v13.0+ </td>
+<td align="center">v13.0+ </td>
+<td align="center">v13.0+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -170,12 +288,34 @@ GenerateURLForUploadData(
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v14.0+ </td>
+<td align="center">v15.1+ </td>
+<td align="center">v15.1+ </td>
+<td align="center">v15.1+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -195,12 +335,34 @@ readonly ErrorCode: number;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v1.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -220,12 +382,34 @@ readonly ErrorString: string;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v1.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -246,11 +430,34 @@ LogLevel: number;
 
 **Availability**
 
-<div class="availability"></div>
+<div class="availability">
+<table>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v6.3+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -273,11 +480,34 @@ readonly Manufacturer: string;
 
 **Availability**
 
-<div class="availability"></div>
+<div class="availability">
+<table>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v1.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -298,11 +528,34 @@ readonly ProductFamily: string;
 
 **Availability**
 
-<div class="availability"></div>
+<div class="availability">
+<table>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | not supported |
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v1.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -323,11 +576,34 @@ readonly ProductName: string;
 
 **Availability**
 
-<div class="availability"></div>
+<div class="availability">
+<table>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v1.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -348,11 +624,34 @@ readonly VersionInfo: string;
 
 **Availability**
 
-<div class="availability"></div>
+<div class="availability">
+<table>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v1.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -373,11 +672,34 @@ ProductKey: string;
 
 **Availability**
 
-<div class="availability"></div>
+<div class="availability">
+<table>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v9.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -395,9 +717,31 @@ UseLocalService: boolean;
 ```
 
 **Availability**
+<div class="availability">
+<table>
 
-<div class="availability"></div>
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.1+ </td>
+<td align="center">v16.1+ </td>
+<td align="center">v16.1+ </td>
+<td align="center">v16.1+ </td>
+<td align="center">v16.1+ </td>
+</tr>
+
+</table>
+</div>
