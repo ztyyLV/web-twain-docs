@@ -1325,7 +1325,7 @@ By default the colour is white (0xffffff). The byte-ordering of the 24-bit RGB v
  * @param index Specify the index of image in buffer.
  * @param val Specify the brightness. Allowed values [-1000~1000]. Negative value means decrease the brightness.
  */
-ChangeBrightnessAsync(index: number, val: number)
+ChangeBrightnessAsync(index: number, val: number): Promise<boolean>;
 ```
 
 **Availability**
@@ -1370,7 +1370,7 @@ ChangeBrightnessAsync(index: number, val: number)
  * @param index Specify the index of image in buffer.
  * @param val Specify the contrast. Allowed values [-1000~1000]. Negative value means decrease the contrast.
  */
-ChangeContrastAsnyc(index: number, val: number)
+ChangeContrastAsnyc(index: number, val: number): Promise<boolean>;
 ```
 
 **Availability**
