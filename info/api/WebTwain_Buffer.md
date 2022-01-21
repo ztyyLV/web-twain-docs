@@ -2342,7 +2342,7 @@ CreateFile(filename:string):Boolean;
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
-<td align="center">not supported </td>
+<td align="center">v17.2+ </td>
 </tr>
 
 </table>
@@ -2408,7 +2408,7 @@ OpenFile(filename:string):Boolean;
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
-<td align="center">not supported </td>
+<td align="center">v17.2+ </td>
 </tr>
 
 </table>
@@ -2468,7 +2468,7 @@ GetCurrentFileName():String;
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
-<td align="center">not supported </td>
+<td align="center">v17.2+ </td>
 </tr>
 
 </table>
@@ -2512,7 +2512,7 @@ RemoveFile(filename:string):Boolean;
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
-<td align="center">not supported </td>
+<td align="center">v17.2+ </td>
 </tr>
 
 </table>
@@ -2563,7 +2563,7 @@ Json:
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
-<td align="center">not supported </td>
+<td align="center">v17.2+ </td>
 </tr>
 
 </table>
