@@ -149,7 +149,7 @@ interface Result {
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -239,7 +239,7 @@ interface Region {
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -303,7 +303,7 @@ DWObject.Addon.BarcodeReader.getRuntimeSettings("balance")
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -346,7 +346,7 @@ resetRuntimeSettings(): Promise < RuntimeSettings > ;
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -392,7 +392,7 @@ initRuntimeSettingsWithString(
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
