@@ -262,7 +262,6 @@ interface CustomElement {
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
 </tr>
 
 </table>
@@ -340,7 +339,6 @@ interface ImageEditor {
 
 <tr>
 <td align="center">not supported </td>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -665,7 +663,6 @@ interface ViewMode {
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
 </tr>
 
 </table>
@@ -772,7 +769,6 @@ first():number;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -821,7 +817,6 @@ fitWindow(
 
 <tr>
 <td align="center">not supported </td>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -889,7 +884,6 @@ gotoPage(
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -935,7 +929,6 @@ hide(): boolean;
 
 <tr>
 <td align="center">not supported </td>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -989,7 +982,6 @@ last():number;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1035,7 +1027,6 @@ next(): number;
 
 <tr>
 <td align="center">not supported </td>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1153,7 +1144,6 @@ previous(): number;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1200,7 +1190,6 @@ render(): boolean;
 
 <tr>
 <td align="center">not supported </td>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1264,7 +1253,6 @@ interface Area {
 
 <tr>
 <td align="center">not supported </td>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1395,7 +1383,6 @@ show(): boolean;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1441,7 +1428,6 @@ unbind(): boolean;
 
 <tr>
 <td align="center">not supported </td>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
