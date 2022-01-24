@@ -142,7 +142,7 @@ organizationID: string;
 <td align="center">v17.1+ </td>
 <td align="center">v17.1+ </td>
 <td align="center">v17.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v17.1+ </td>
 </tr>
 
 </table>
