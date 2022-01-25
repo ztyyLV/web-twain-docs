@@ -828,29 +828,29 @@ interface ScanConfiguration{
   cropViewer?: { 
     visibility?: boolean,   //Whether to display the crop viewer. The default value is true. 
     polygonStyle?:{    //The polygon style in the crop viewer.       
-  	  stroke: string,       //default : "#fe8e14".  Only supports #16 hexadecimal.
+      stroke: string,       //default : "#fe8e14".  Only supports #16 hexadecimal.
       strokeWidth: string,   //default: "2px"
       dash: string           //The allowed value are "solid" and "dashed", the default value is "solid".
       },
     rotateLeft?:{   
-	   visibility?: boolean,   //Whether to display the rotate left icon. The default value is true.
+      visibility?: boolean,   //Whether to display the rotate left icon. The default value is true.
      },
     rotateRight?:{   
       visibility?: boolean,   //Whether to display the rotate right icon. The default value is true.
      },
     autoDetectBorder?:{   
-	    visibility?: boolean,   //Whether to display the automatic border detection icon. The default value is true.
+      visibility?: boolean,   //Whether to display the automatic border detection icon. The default value is true.
      },
    }
  }
 
  function funcConfirmExitContinuousScan(){
-	  return true;  
-    }
+     return true;  
+  }
 
  function funcConfirmExit(){
-	  return true;  
-    }
+     return true;  
+  }
 
 ```
 
