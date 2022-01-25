@@ -189,7 +189,6 @@ clearSelectedAreas(): void;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -769,7 +768,7 @@ first():number;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 </tr>
 
 </table>
@@ -821,7 +820,7 @@ fitWindow(
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 </tr>
 
 </table>
@@ -884,7 +883,7 @@ gotoPage(
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 </tr>
 
 </table>
@@ -933,7 +932,7 @@ hide(): boolean;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 </tr>
 
 </table>
@@ -982,7 +981,7 @@ last():number;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 </tr>
 
 </table>
@@ -1031,7 +1030,7 @@ next(): number;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 </tr>
 
 </table>
@@ -1144,7 +1143,7 @@ previous(): number;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 </tr>
 
 </table>
@@ -1194,7 +1193,7 @@ render(): boolean;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 </tr>
 
 </table>
@@ -1257,7 +1256,7 @@ interface Area {
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 </tr>
 
 </table>
@@ -1383,7 +1382,7 @@ show(): boolean;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 </tr>
 
 </table>
@@ -1432,7 +1431,7 @@ unbind(): boolean;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 </tr>
 
 </table>
