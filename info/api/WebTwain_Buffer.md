@@ -2196,7 +2196,7 @@ RegisterEvent('OnTopImageInTheViewChanged',
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.0+ </td>
 </tr>
 
 </table>
@@ -2248,7 +2248,7 @@ Pair: [from: number, to: number];
 <td align="center">v15.0+ </td>
 <td align="center">v15.0+ </td>
 <td align="center">v15.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.0+ </td>
 </tr>
 
 </table>
@@ -2292,7 +2292,7 @@ GetTagListByIndex(index: number):string[]
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
-<td align="center">not supported </td>
+<td align="center">v17.2+ </td>
 </tr>
 
 </table>
