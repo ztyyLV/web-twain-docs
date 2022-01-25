@@ -280,7 +280,7 @@ If it's set to 1, the following will also be retrieved (if available):
 | TWEI_PAPERCOUNT            | 0x1249 |
 | TWEI_PRINTERTEXT           | 0x124A |
 
-If it's set to 2, then besides what's mentioned in the two tables above, the Dynamci Web TWAIN library will also try to query the scanner for its own custom extended image info.
+If it's set to 2, then besides what's mentioned in the two tables above, the Dynamic Web TWAIN library will also try to query the scanner for its own custom extended image info.
 
 - Remote Scan
 
