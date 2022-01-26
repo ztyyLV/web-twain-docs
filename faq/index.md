@@ -181,6 +181,8 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}save-selected-images-to-server.html" target="_blank">How can I save selected images instead of all images to my server or database?</a>
 
+<a href="{{site.faq}}use-blank-page-as-a-separator.html" target="_blank">How to use a blank page as a separator?</a>
+
 ## Security
 
 <a href="{{site.faq}}where-images-are-stored.html" target="_blank">Where does the Dynamic Web TWAIN SDK store images on end-user machines? Are they encrypted?</a>
