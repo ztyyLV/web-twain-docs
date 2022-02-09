@@ -257,7 +257,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}component-needs-to-be-installed-on-end-user-machine.html" target="_blank">Is there any component of the Dynamic Web TWAIN SDK that needs to be installed on end-user machines?</a>
 
-<a href="{{site.faq}}how-to-enable-remote-scan.html" target="_blank">How can i enable Remote Scan?</a>
+<a href="{{site.faq}}how-to-enable-remote-scan.html" target="_blank">How can I enable Remote Scan?</a>
 
 <a href="{{site.faq}}admin-right-needed-to-install.html" target="_blank">Are admin right required to install the end-user component?</a>
 
