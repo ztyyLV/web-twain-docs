@@ -244,14 +244,14 @@ If the index is null, it will remove the tag you specified. If the index is not 
  */
 GetTagList():Json
 
-Json：
+Json:
 [
    {
-        name: ‘TagA’,
-         imageIds:’ ’
+        name: 'TagA',
+         imageIds:''
    },
    {
-        name: ‘TagB’,
+        name: 'TagB',
          imageIds:[239514082, 239514083]
    },
 ]
