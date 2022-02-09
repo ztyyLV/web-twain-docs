@@ -109,8 +109,8 @@ function AcquireImage() {
 
 <head>
     <title>Hello World</title>
-    <script src="Resources/dynamsoft.webtwain.initiate.js"> </script>
-    <script src="Resources/dynamsoft.webtwain.config.js"> </script>
+    <script src="Resources/dynamsoft.webtwain.initiate.js"></script>
+    <script src="Resources/dynamsoft.webtwain.config.js"></script>
 </head>
 
 <body>
