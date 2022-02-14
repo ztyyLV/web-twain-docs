@@ -40,17 +40,22 @@ Dynamic Web TWAIN utilizes a local service named 'Dynamsoft Service' to support 
 
 ### Resolution
 
-1. Upgrade Dynamic Web TWAIN SDK to version 17.2.1 or later 
+1. Upgrade Dynamic Web TWAIN SDK to version 17.2.1 or later
+
    In version 17.2.1, we have made changes to handle preflight requests on our end to resolve the issue. This version is expected to be released by end of February 2022.
+
    Please note that once upgraded, the Dynamosft Service on all client machines also need to be updated. You may consider [installing Dynamsoft Service silently](https://www.dynamsoft.com/web-twain/docs/faq/can-i-install-dynamsoft-service-silently.html?ver=latest#can-i-install-dynamsoft-service-silently).
 
 2. Disable Private Network Access checks using enterprise policies
+
    If you have administrative control over your users, you can disable Private Network Access checks using either of the following policies:
+
    [InsecurePrivateNetworkRequestsAllowed](https://chromeenterprise.google/policies/#InsecurePrivateNetworkRequestsAllowed)  
    [InsecurePrivateNetworkRequestsAllowedForUrls](https://chromeenterprise.google/policies/#InsecurePrivateNetworkRequestsAllowedForUrls)  
+
    For more details about managing policies for your users, please refer to Google's [help center article](https://support.google.com/chrome/a/answer/9037717).
 
 #### If you need more time to implement the solution
 
-Register for [Google's deprecation trials](https://developer.chrome.com/blog/origin-trials/#deprecation-trials) to request a time extension so your website will not be affected during the trial period which will last for at least 6 months.
+   Register for [Google's deprecation trials](https://developer.chrome.com/blog/origin-trials/#deprecation-trials) to request a time extension so your website will not be affected during the trial period which will last for at least 6 months.
 
