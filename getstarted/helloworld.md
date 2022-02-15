@@ -71,7 +71,7 @@ Add a scan button and the minimum code.
 </script>
 ```
 
-## (from version 16.1) Make sure the code works on mobile devices too
+## (from version 17.2) Make sure the code works on mobile devices too
 
 Change the function `AcquireImage()` like this
 
@@ -79,15 +79,26 @@ Change the function `AcquireImage()` like this
 function AcquireImage() {
    if (DWObject) {
      if (Dynamsoft.Lib.env.bMobile) {
-         DWObject.LoadImageEx('', 5,
-           function() {
-              console.log('success');
-               },
-             function(errCode, error) {
-                alert(error);
-                        }
-                    );
-                } 
+           var showVideoConfigs = {
+				scannerViewer:{
+					autoDetect:{
+						enableAutoDetect: true
+					}
+				},
+				filterViewer: {
+					exitDocumentScanAfterSave: true
+				}
+			};
+				
+            if (DWObject) {
+                if(!DWObject.UseLocalService) {
+					DWObject.Addon.Camera.scanDocument(showVideoConfigs).then(
+					function(){console.log("OK");}, 
+					function(error){console.log(error.message);});
+				    } 
+                }
+            }
+        } 
        else {
             DWObject.SelectSource(
                 function() {
@@ -126,14 +137,24 @@ function AcquireImage() {
         function AcquireImage() {
          if (DWObject) {
          if (Dynamsoft.Lib.env.bMobile) {
-            DWObject.LoadImageEx('', 5,
-               function() {
-                 console.log('success');
-                  },
-                 function(errCode, error) {
-                   alert(error);
-            }
-          );
+            var showVideoConfigs = {
+				scannerViewer:{
+				    autoDetect:{
+					  enableAutoDetect: true
+					}
+				},
+				filterViewer: {
+					exitDocumentScanAfterSave: true
+				}
+			};
+				
+            if (DWObject) {
+                if(!DWObject.UseLocalService) {
+					DWObject.Addon.Camera.scanDocument(showVideoConfigs).then(
+					function(){console.log("OK");}, 
+					function(error){console.log(error.message);});
+				    } 
+                }
          } 
             else {
                     DWObject.SelectSource(function() {
@@ -286,23 +307,34 @@ Now we can use the page to scan or acquire, then upload the images as a PDF docu
         function AcquireImage() {
             if (DWObject) {
                 if (Dynamsoft.Lib.env.bMobile) {
-                  DWObject.LoadImageEx('', 5,
-                        function() {
-                            console.log('success');
-                        },
-                        function(errCode, error) {
-                            alert(error);
-                        }
-                    );                 
-                } else {
-                    DWObject.SelectSource(function() {
-                            DWObject.OpenSource();
-                            DWObject.AcquireImage();
+                     var showVideoConfigs = {
+			  scannerViewer:{
+			      autoDetect:{
+				  enableAutoDetect: true
+			      }
+			  },
+			  filterViewer: {
+			      exitDocumentScanAfterSave: true
+			 }
+		  };
+				
+             if (DWObject) {
+                   if(!DWObject.UseLocalService) {
+			   DWObject.Addon.Camera.scanDocument(showVideoConfigs).then(
+			   function(){console.log("OK");}, 
+			   function(error){console.log(error.message);});
+			 } 
+                      }
+                   }                 
+               } 
+	    else {
+                   DWObject.SelectSource(function() {
+                           DWObject.OpenSource();
+                           DWObject.AcquireImage();
                         },
                         function() {
                             console.log("SelectSource failed!");
-                        }
-                    );
+                        });
                 }
             }
         }
