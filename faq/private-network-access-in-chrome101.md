@@ -14,9 +14,9 @@ description: How to resolve Dynamic Web TWAIN issue in Chrome 101?
 
 ### Symptom
 
-When visiting a website using Chrome 101+ that has Dynamic Web TWAIN SDK v17.2 or older integrated into the application, you may see the following **error message** in the browser console. For the end users of your website, they may be repeatedly prompted to download and install the Dynamsoft Service.
+ In Chrome 101+, when visiting a website that has Dynamic Web TWAIN SDK v17.2 or older integrated into the application, you may see the following **error message** in the browser console. For the end users of your website, they may be repeatedly prompted to download and install the Dynamsoft Service.
 
-Chrome 101 is expected to be released in early April 2022.
+Chrome 101 is expected to be released in April 2022.
 
 NOTE that the same issue will also occur in any browser based on **Chromuim 101+**, such as Microsoft Edge 101.
 
@@ -26,7 +26,7 @@ Response to preflight request doesn't pass access control check: No 'Access-Cont
 for this private network request targeting the `local` address space.
 ```
 
-In Chrome 98, you may have already noticed the following **warning/error message** in console, but it is not expected to cause any immediate issues.
+In Chrome 98, you may have already noticed the following **warning/error message** in the browser console, but it is not expected to cause any immediate issues.
 
 ```
 A site requested a resource from a network that it could only access because of its users' privileged network position. 
