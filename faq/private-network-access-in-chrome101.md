@@ -14,9 +14,11 @@ description: How to resolve Dynamic Web TWAIN issue in Chrome 101?
 
 ### Symptom
 
-When visiting a website with Dynamic Web TWAIN SDK v17.2 or an older version integrated via Chrome 101, you may see the following **error message** in the browser console. For the end users of your website, they may get prompted to download and install the Dynamsoft Service repeatedly.
+When visiting a website using Chrome 101+ that has Dynamic Web TWAIN SDK v17.2 or older integrated into the application, you may see the following **error message** in the browser console. For the end users of your website, they may be repeatedly prompted to download and install the Dynamsoft Service.
 
-NOTE that the same issue will also occur in any **Chromuim 101** based browsers such as Microsoft Edge 101.
+Chrome 101 is expected to be released in early April 2022.
+
+NOTE that the same issue will also occur in any browser based on **Chromuim 101+**, such as Microsoft Edge 101.
 
 ```
 Access to XMLHttpRequest at 'https://local.dynamsoft.com:****' from origin 'https://yourwebsiteURL' has been blocked by CORS policy: 
@@ -24,7 +26,7 @@ Response to preflight request doesn't pass access control check: No 'Access-Cont
 for this private network request targeting the `local` address space.
 ```
 
-In Chrome 98, you may have already noticed the following **warning/error message**, but it is not expected to break any websites.
+In Chrome 98, you may have already noticed the following **warning/error message** in console, but it is not expected to cause any immediate issues.
 
 ```
 A site requested a resource from a network that it could only access because of its users' privileged network position. 
