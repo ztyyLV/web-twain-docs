@@ -164,7 +164,7 @@ SetConvertMode(mode: Dynamsoft.DWT.EnumDWT_ConvertMode | number): boolean;
 
 **Usage notes**
 
-There are three conversion modes
+There are four conversion modes
 
 - CM_RENDERALL (1): All the content in the target PDF file will be rasterized.
 - CM_IMAGEONLY (2): The PDF Rasterizer is turned off. This is the default mode.
