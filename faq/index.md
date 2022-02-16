@@ -273,6 +273,8 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}use-dwt-in-citrix-env.html" target="_blank">How can I use Dynamic Web TWAIN in a Citrix environment?</a>
 
+<a href="{{site.faq}}private-network-access-in-chrome101.html" target="_blank">Dynamic Web TWAIN issue in Chrome 101</a>
+
 ## Error Troubleshooting
 
 <a href="{{site.faq}}general-troubleshooting-steps.html" target="_blank">General troubleshooting steps</a>
