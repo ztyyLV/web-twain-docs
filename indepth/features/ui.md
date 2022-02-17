@@ -52,7 +52,7 @@ When `DWT` performs a time-consuming task, it'll show a progress bar. This progr
 
 or like this (with a `Cancel` button)
 
-![UI-4]({{site.assets}}imgs/UI-4.png)
+![UI-4]({{site.assets}}imgs/UI-9.png)
 
 The 1st bar shows up when saving, loading or converting and can be hidden by setting [ `IfShowProgressBar` ]({{site.info}}api/WebTwain_IO.html#ifshowprogressbar) to `false` .
 
