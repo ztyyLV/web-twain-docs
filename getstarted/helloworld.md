@@ -236,7 +236,7 @@ function UploadAsPDF() {
             console.log("There is no image to upload!");
             return;
         }
-        DWObject.SelectAllImages();
+        // DWObject.SelectAllImages();
         indices = DWObject.SelectedImagesIndices;
         DWObject.HTTPUpload(
             url,
