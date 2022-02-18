@@ -275,6 +275,8 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}private-network-access-in-chrome101.html" target="_blank">Dynamic Web TWAIN issue in Chrome 101</a>
 
+<a href="{{site.faq}}content-security-policy-violated.html" target="_blank">Dynamic Web TWAIN – Content-Security-Policy violated</a>
+
 ## Error Troubleshooting
 
 <a href="{{site.faq}}general-troubleshooting-steps.html" target="_blank">General troubleshooting steps</a>
