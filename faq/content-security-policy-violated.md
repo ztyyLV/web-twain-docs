@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Can I install Dynamsoft Service silently? 
-keywords: Dynamic Web TWAIN, Dynamsoft Service, silently
-breadcrumbText: Can I install Dynamsoft Service silently? 
-description: Can I install Dynamsoft Service silently? 
+title: Dynamic Web TWAIN – Content-Security-Policy violated
+keywords: Dynamic Web TWAIN, Content-Security-Policy
+breadcrumbText: Dynamic Web TWAIN – Content-Security-Policy violated
+description: Dynamic Web TWAIN – Content-Security-Policy violated
 ---
 
 # Project Deployment and End-user Installation
