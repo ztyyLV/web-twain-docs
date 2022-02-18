@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamsoft Service installation and uninstalltion issue
-keywords: Dynamic Web TWAIN, Dynamsoft Service, installation, uninstalltion
-breadcrumbText: Dynamsoft Service installation and uninstalltion issue
-description: Dynamsoft Service installation and uninstalltion issue
+title: Dynamsoft Service installation and uninstallation issue
+keywords: Dynamic Web TWAIN, Dynamsoft Service, installation, uninstallation
+breadcrumbText: Dynamsoft Service installation and uninstallation issue
+description: Dynamsoft Service installation and uninstallation issue
 ---
 
 # Project Deployment and End-user Installation
@@ -23,11 +23,11 @@ The old version of Dynamsoft Service cannot be uninstalled successfully through 
 
 The current user account does not match the user account under C:\Users\account.
 
-In the screnshot below, the current user is owen_thinkpad_t480s, but the corresponding folder under the C:\Users is ThinkPad.
+In the screenshot below, the current user is owen_thinkpad_t480s, but the corresponding folder under the C:\Users is ThinkPad.
 
 ![service installation-2]({{site.assets}}imgs/service-installation-2.png)
 
-When installing by double-clicking DynamsoftServiceSetup.msi or uninsatlling via Control Panel, Dynamic Web TWAIN takes the current user's temp directory:
+When installing by double-clicking DynamsoftServiceSetup.msi or uninstalling via Control Panel, Dynamic Web TWAIN takes the current user's temp directory:
 C:\Users\owen_thinkpad_t480s\AppData\Local\Temp
 
 That's why install/uninstall fails because this path is not found.
