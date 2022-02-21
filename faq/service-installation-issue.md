@@ -28,9 +28,7 @@ In the screenshot below, the current user is owen_thinkpad_t480s, but in 'Comman
 ![service installation-2]({{site.assets}}imgs/service-installation-2.png)
 
 When installing by double-clicking DynamsoftServiceSetup.msi or uninstalling via Control Panel, Dynamic Web TWAIN takes the current user's Temp directory:
-C:\Users\owen_thinkpad_t480s\AppData\Local\Temp
-
-That's why install/uninstall fails because this path is not found.
+C:\Users\owen_thinkpad_t480s\AppData\Local\Temp, because this path can't be found, the installation/uninstallation failed.
 
 ### Resolution
 
