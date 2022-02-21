@@ -21,9 +21,9 @@ The old version of Dynamsoft Service cannot be uninstalled successfully through 
 
 ### Cause
 
-The current user account does not match the user account under C:\Users\account.
+The current user account does not match the user account under C:\Users\{account}
 
-In the screenshot below, the current user is owen_thinkpad_t480s, but the corresponding folder under the C:\Users is ThinkPad.
+In the screenshot below, the current user is owen_thinkpad_t480s, but in 'Command Prompt', the corresponding folder under the C:\Users is ThinkPad.
 
 ![service installation-2]({{site.assets}}imgs/service-installation-2.png)
 
