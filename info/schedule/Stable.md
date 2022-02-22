@@ -9,13 +9,13 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 ---
 
 # Stable Releases
-
+<!--
 ## 17.2.1 (02/24/2022)
 
 ### Improved Features 
 
- - Made changes to handle <a href="https://developer.chrome.com/blog/private-network-access-preflight/" target="_blank">CORS preflight requests</a> sent from Chrome 98. Learn more  - Made changes to handle <a href="https://developer.chrome.com/blog/private-network-access-preflight/" target="_blank">CORS preflight requests</a> sent from Chrome 98. Learn more <a href="https://www.dynamsoft.com/web-twain/docs/faq/private-network-access-in-chrome101.html" target="_blank">here</a>. 
-  - For Chrome V84+, `Dynamic Web TWAIN` uses userAgentData to response to Chrome UserAgent String phasing out issue. 
+ - Made changes to handle <a href="https://developer.chrome.com/blog/private-network-access-preflight/" target="_blank">CORS preflight requests</a> sent by Chrome from V98. Learn more <a href="https://www.dynamsoft.com/web-twain/docs/faq/private-network-access-in-chrome101.html" target="_blank">here</a>. 
+ - For Chrome V84+, use userAgentData instead of userAgent in response to Chrome UserAgent String phasing out issue. 
 
 
 ### Bug Fixed
@@ -23,7 +23,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
  - Fixed a bug where Dynamsoft Service installation/uninstallation failed due to the current user account does not match the user account under C:\Users{account}. Learn more <a href="https://www.dynamsoft.com/web-twain/docs/faq/service-installation-issue.html?ver=latest" target="_blank">here</a>. 
   - Fixed a bug where the short key (set by <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#organizationid" target="_blank">organizationID</a>) did not work on macOS 12+.
   - Fixed a bug where the mouse wheel did not work when the mouse was over the viewer.
-
+-->
 ## 17.2 (01/20/2022)
 
 ### New Features
