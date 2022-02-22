@@ -10,7 +10,7 @@ description: Dynamsoft Service installation and uninstallation issue
 
 # Project Deployment and End-user Installation
 
-## Dynamsoft Service installation and uninstalltion issue
+## Dynamsoft Service installation and uninstallation issue
 
 
 ### Symptom
