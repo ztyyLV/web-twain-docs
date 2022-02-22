@@ -15,8 +15,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 ### Improved Features 
 
  - Made changes to handle <a href="https://developer.chrome.com/blog/private-network-access-preflight/" target="_blank">CORS preflight requests</a> sent by Chrome from V98. Learn more <a href="https://www.dynamsoft.com/web-twain/docs/faq/private-network-access-in-chrome101.html" target="_blank">here</a>. 
- - For Chrome V84+, use userAgentData instead of userAgent in response to Chrome UserAgent String phasing out issue. 
-
+ - For Chromium V84+, use userAgentData instead of userAgent in response to UserAgent String phasing out issue. 
 
 ### Bug Fixed
 
