@@ -8,7 +8,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 ---
 
 # FAQ
-
+1
 ## SDK Download/Free Trial
 
 <a href="{{site.faq}}extend-free-trial.html" target="_blank">How can I extend my free trial?</a>
