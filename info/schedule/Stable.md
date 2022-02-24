@@ -9,7 +9,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 ---
 
 # Stable Releases
-<!--
+
 ## 17.2.1 (02/24/2022)
 
 ### Improved Features 
@@ -22,7 +22,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
  - Fixed a bug where Dynamsoft Service installation/uninstallation failed due to the current user account does not match the user account under C:\Users{account}. Learn more <a href="https://www.dynamsoft.com/web-twain/docs/faq/service-installation-issue.html?ver=latest" target="_blank">here</a>. 
   - Fixed a bug where the short key (set by <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#organizationid" target="_blank">organizationID</a>) did not work on macOS 12+.
   - Fixed a bug where the mouse wheel did not work when the mouse was over the viewer.
--->
+
 ## 17.2 (01/20/2022)
 
 ### New Features
