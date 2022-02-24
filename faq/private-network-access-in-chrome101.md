@@ -16,7 +16,7 @@ description: How to resolve Dynamic Web TWAIN issue in Chrome 101?
 
  In Chrome 101+, when visiting a website that has Dynamic Web TWAIN SDK v17.2 or older integrated into the application, you may see the following **error message** in the browser console. For the end users of your website, they may be prompted repeatedly to download and install the Dynamsoft Service.
 
-NOTE that the same issue will also occur in any browser based on **Chromuim 101+**, such as Microsoft Edge 101.
+NOTE that the same issue will also occur in any browser based on **Chromium 101+**, such as Microsoft Edge 101.
 
 ```
 Access to XMLHttpRequest at 'https://local.dynamsoft.com:****' from origin 'https://yourwebsiteURL' has been blocked by CORS policy: 

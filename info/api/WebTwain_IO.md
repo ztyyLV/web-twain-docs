@@ -3694,7 +3694,6 @@ PrintEx(indices: number[]): void;
 ```javascript
 /**
  * Return or set the quality for JPEG compression.
- * The values range from 0 to 100.
  */
 JPEGQuality: number;
 ```
@@ -3728,6 +3727,13 @@ JPEGQuality: number;
 
 </table>
 </div>
+
+**Usage notes**
+
+The default value of JPEGQuality property is 80.
+
+The valid range is 0-100. The higher the JPEGQuality property, the better the quality and the bigger the size of the file.
+
 ---
 
 ## IfTiffMultiPage
