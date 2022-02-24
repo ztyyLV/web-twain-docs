@@ -177,12 +177,16 @@ An array of `Container` definitions that specifies the UI elements for `WebTwain
 
 ``` typescript
 interface Container {
-    WebTwainId: string, // Id of the WebTwain instance
+    WebTwainId?: string, // Id of the WebTwain instance
     ContainerId?: string, // Id of the element
     Width?: string | number, // Width of the element
     Height?: string | number // Height of the element
 }
 ```
+
+`WebTwainId` and `ContainerId` are both optional but one must exist as the identifier for that `WebTwain` instance.
+
+`Width` and `Height` determine the initial viewer size of the instance.
 
 ### `IfAddMD5InUploadHeader`
 
