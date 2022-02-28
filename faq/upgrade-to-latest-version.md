@@ -16,7 +16,9 @@ For the upgrade process, we would recommend trying out the latest version with a
 You can download a 30-day free trial <a href="https://www.dynamsoft.com/web-twain/downloads/1000001-confirmation/" target="_blank">here</a>.
 
 Please refer to the upgrade guide and the release notes below to update your application/configuration.
+
 <a href="https://www.dynamsoft.com/web-twain/docs/indepth/development/upgrade.html?ver=latest" target="_blank">Dynamic Web TWAIN Development - Upgrade Guide</a>
+
 <a href="https://www.dynamsoft.com/web-twain/docs/info/schedule/stable.html?ver=latest" target="_blank">Dynamic Web TWAIN Schedule - Stable Release</a>
 
 Once you are ready to upgrade, please send an email to <a href="mailto:sales@dynamsoft.com">sales@dynamsoft.com</a> requesting the upgrade be done.
