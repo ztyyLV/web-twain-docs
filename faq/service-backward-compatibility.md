@@ -20,7 +20,7 @@ As a result, we have provided the following instructions for backward compatibil
 
 ### Compatibility with version 17 minor versions
 
-Version 17.2.1 is compatible with other minor versions: 17.2， 17.1.1， 17.1，and 17.0.
+Version 17.2.1 is compatible with other minor versions: 17.2, 17.1.1, 17.1, and 17.0.
 
 ### Compatibility with older versions
 For older versions to work with version 17.2.1, please copy the following .dll files to the version 17 Service Installation folder: `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17`
