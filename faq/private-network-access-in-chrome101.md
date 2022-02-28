@@ -46,7 +46,7 @@ You can apply one of the following solutions:
 
 1. Upgrade Dynamic Web TWAIN SDK to **version 17.2.1** or later
 
-   In version 17.2.1, we have made changes to handle preflight requests on our end to resolve the issue. This version is expected to be released by early March.
+   In version 17.2.1, we have made changes to handle preflight requests on our end to resolve the issue. You can test the latest version with our [free trial](https://www.dynamsoft.com/web-twain/downloads/) and when you are ready to upgrade, please contact <a href="mailto:sales@dynamsoft.com" target="_blank">sales@dynamsoft.com</a> to request the upgrade.
 
    Please note that once upgraded, the Dynamosft Service on all client machines also need to be updated. You may consider [installing Dynamsoft Service silently](https://www.dynamsoft.com/web-twain/docs/faq/can-i-install-dynamsoft-service-silently.html?ver=latest#can-i-install-dynamsoft-service-silently).
 
