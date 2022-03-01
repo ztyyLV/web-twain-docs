@@ -324,8 +324,9 @@ interface PDFWSettings {
     compression: Dynamsoft.DWT.EnumDWT_PDFCompressionType | number;
      /**
      * Specify the page type.
+     * Allowed values are 0: Original, 2: A4, 6: letter, 8: legal
      */
-    pageType: Dynamsoft.DWT.EnumPDF_Page | number;
+    pageType: number; 
     /**
      * Specify the creator.
      */
