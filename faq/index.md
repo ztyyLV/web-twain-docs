@@ -273,11 +273,13 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}use-dwt-in-citrix-env.html" target="_blank">How can I use Dynamic Web TWAIN in a Citrix environment?</a>
 
-<a href="{{site.faq}}private-network-access-in-chrome101.html" target="_blank">Dynamic Web TWAIN issue in Chrome 101</a>
+<a href="{{site.faq}}private-network-access-in-chrome101.html" target="_blank">How to resolve Dynamic Web TWAIN issue in Chrome 101?</a>
 
 <a href="{{site.faq}}content-security-policy-violated.html" target="_blank">Dynamic Web TWAIN – Content-Security-Policy violated</a>
 
 <a href="{{site.faq}}service-installation-issue.html" target="_blank">Dynamsoft Service installation and uninstalltion issue</a>
+
+<a href="{{site.faq}}service-backward-compatibility.md" target="_blank">Can I use two different websites integrated with two different versions of Dynamic Web TWAIN on the same computer?</a>
 
 ## Error Troubleshooting
 
