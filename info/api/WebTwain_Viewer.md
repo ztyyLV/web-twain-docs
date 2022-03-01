@@ -507,7 +507,7 @@ interface ThumbnailViewer {
      */
     updateViewMode(viewMode: ViewMode): void;
     /**
-     * Bind a listner to the specified event. You can bind one or multiple listners to the same event.
+     * Bind a listner to the specified event. You can bind one or multiple listeners to the same event.
      * @param eventName Specify the event name.
      * @param callback Specify the listner.
      */
@@ -1079,7 +1079,7 @@ If no listener is specified, all listeners will be removed.
 
 ```typescript
 /**
- * Bind a listner to the specified event. You can bind one or multiple listners to the same event.
+ * Bind a listner to the specified event. You can bind one or multiple listeners to the same event.
  * @param eventName Specify the event name.
  * @param callback Specify the listner.
  */

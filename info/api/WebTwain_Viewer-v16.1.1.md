@@ -809,7 +809,7 @@ on("video-closed", callback: () => void): boolean;
 
 ``` typescript
 /**
- * This event is triggered when the video playing operation. throws out an error.
+ * This event is triggered when the video playing operation throws out an error.
  * @argument errorCode The error code.
  * @argument errorString The error string.
  */
