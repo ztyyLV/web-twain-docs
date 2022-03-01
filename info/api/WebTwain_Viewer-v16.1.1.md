@@ -67,8 +67,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 
 **Events**
 
-* [video-closed](#vidoe-closed)
-* [video-error](#vidoe-error)
+* [video-closed](#video-closed)
+* [video-error](#video-error)
 
 ---
 
