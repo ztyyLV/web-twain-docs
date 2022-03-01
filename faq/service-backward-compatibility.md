@@ -16,7 +16,7 @@ Dynamic Web TWAIN has limited backward compatibility between different versions 
 
 However, as Dynamic Web TWAIN is a popular document scanning SDK and has been integrated to many web applications all over the world. It is not uncommon that some end users use two different websites (developed by two different vendors) integrated with different versions of Dynamic Web TWAIN on the same computer.
 
-As a result, we have provided the following instructions for backward compatibility between **version 17.2.1** and older versions, in order to support running both versions on the same computer.
+As a result, we have provided the following instructions for backward compatibility between **version 17.2.1** and some of the older versions, in order to support running both versions on the same computer.
 
 NOTE: The instructions below would also apply to all future versions after version 17.2.1.
 
