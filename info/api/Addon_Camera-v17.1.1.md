@@ -20,6 +20,12 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Camera Addon APIs
 |[`pause()`](#pause)| [`resume()`](#resume)| [`stop()`](#stop)|[`getStatus()`](#getstatus)|
 |[`capture()`](#capture)| [`showVideo()`](#showvideo)| [`closeVideo()`](#closevideo)|
 
+**Events**
+
+|                                   |
+| :-------------------------------- | :-------------------------- | --------------------------------------------------------------- |
+| [`video-closed`](#video-closed) | [`video-error`](#video-error) | 
+
 ---
 
 ## getSourceList
@@ -268,6 +274,30 @@ There are two available modes: `document` and `picture` .
 closeVideo(): void;
 ```
 
+## video-closed
 
+**Syntax**
+
+``` typescript
+/**
+ * This event is triggered when the video is closed.
+ */
+on("video-closed", callback: () => void): boolean;
+```
+
+---
+
+## video-error
+
+**Syntax**
+
+``` typescript
+/**
+ * This event is triggered when the video playing operation. throws out an error.
+ * @argument errorCode The error code.
+ * @argument errorString The error string.
+ */
+on("video-error", callback: (errorCode, errorString) => void): boolean;
+```
 
 

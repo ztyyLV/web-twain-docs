@@ -67,8 +67,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 
 **Events**
 
-* [video-closed](#vidoe-closed)
-* [video-error](#vidoe-error)
+* [video-closed](#video-closed)
+* [video-error](#video-error)
 
 ---
 
@@ -785,7 +785,7 @@ closeVideo(): void;
  * @param name Specify the event
  * @param callback The event listener
  */
-on(name: string, callback: () => void): boolean;
+on(name: string, callback: () => void): void;
 ```
 
 ---
@@ -798,7 +798,7 @@ on(name: string, callback: () => void): boolean;
 /**
  * This event is triggered when the video is closed.
  */
-on("video-closed", callback: () => void): boolean;
+on("video-closed", callback: () => void): void;
 ```
 
 ---
@@ -809,11 +809,11 @@ on("video-closed", callback: () => void): boolean;
 
 ``` typescript
 /**
- * This event is triggered when the video playing operation. throws out an error.
+ * This event is triggered when the video playing operation throws out an error.
  * @argument errorCode The error code.
  * @argument errorString The error string.
  */
-on("video-error", callback: (errorCode, errorString) => void): boolean;
+on("video-error", callback: (errorCode, errorString) => void): void;
 ```
 
 ---
