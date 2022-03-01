@@ -18,6 +18,8 @@ However, as Dynamic Web TWAIN is a popular document scanning SDK and has been in
 
 As a result, we have provided the following instructions for backward compatibility between **version 17.2.1** and older versions, in order to support running both versions on the same computer.
 
+NOTE: The instructions below would also apply to all future versions after version 17.2.1.
+
 ### Compatibility with version 17 minor versions
 
 Version 17.2.1 is compatible with other minor versions: 17.2, 17.1.1, 17.1, and 17.0.
