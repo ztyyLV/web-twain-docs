@@ -785,7 +785,7 @@ closeVideo(): void;
  * @param name Specify the event
  * @param callback The event listener
  */
-on(name: string, callback: () => void): boolean;
+on(name: string, callback: () => void): void;
 ```
 
 ---
@@ -798,7 +798,7 @@ on(name: string, callback: () => void): boolean;
 /**
  * This event is triggered when the video is closed.
  */
-on("video-closed", callback: () => void): boolean;
+on("video-closed", callback: () => void): void;
 ```
 
 ---
@@ -813,7 +813,7 @@ on("video-closed", callback: () => void): boolean;
  * @argument errorCode The error code.
  * @argument errorString The error string.
  */
-on("video-error", callback: (errorCode, errorString) => void): boolean;
+on("video-error", callback: (errorCode, errorString) => void): void;
 ```
 
 ---
