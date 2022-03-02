@@ -35,7 +35,7 @@ To mitigate these risks, Chrome will require non-public subresources to opt-into
 
 ### Cause
 
-As a part of the Private Network Access (PNA) specification, Chrome is deprecating direct access to private network endpoints from public websites. In Chrome 101, Chrome will enforce explicit permission from private network endpoints before requests from public websites can be allowed. More details can be found at [https://developer.chrome.com/blog/private-network-access-preflight/](https://developer.chrome.com/blog/private-network-access-preflight/).
+As a part of the Private Network Access (PNA) specification, Chrome is deprecating direct access to private network endpoints from public websites. In Chrome 101, Chrome will enforce explicit permission from private network endpoints before requests from public websites can be allowed. More details can be found at <a href="https://developer.chrome.com/blog/private-network-access-preflight/" target="_blank">https://developer.chrome.com/blog/private-network-access-preflight/</a>.
 
 Dynamic Web TWAIN utilizes a local service named 'Dynamsoft Service' to support document scanning from physical scanners. Your web scanning page needs to make requests to localhost or 127.0.0.1 to communicate with the local service. In Chrome 101, the connection from your public website to the private network (i.e. localhost/127.0.0.1) will be blocked.
 
@@ -44,22 +44,22 @@ Dynamic Web TWAIN utilizes a local service named 'Dynamsoft Service' to support 
 
 You can apply one of the following solutions:
 
-1. Upgrade Dynamic Web TWAIN SDK to **version 17.2.1** or later
+1. <a href="https://www.dynamsoft.com/web-twain/docs/indepth/development/upgrade.html?ver=latest" target="_blank">Upgrade</a> Dynamic Web TWAIN SDK to **version 17.2.1** or later
 
-   In version 17.2.1, we have made changes to handle preflight requests on our end to resolve the issue. You can test the latest version with our [free trial](https://www.dynamsoft.com/web-twain/downloads/) and when you are ready to upgrade, please contact <a href="mailto:sales@dynamsoft.com" target="_blank">sales@dynamsoft.com</a> to request the upgrade.
+   In version 17.2.1, we have made changes to handle preflight requests on our end to resolve the issue. You can test the latest version with our <a href="https://www.dynamsoft.com/web-twain/downloads/" target="_blank">free trial</a> and when you are ready to upgrade, please contact <a href="mailto:sales@dynamsoft.com" target="_blank">sales@dynamsoft.com</a> to request the upgrade.
 
-   Please note that once upgraded, the Dynamosft Service on all client machines also need to be updated. You may consider [installing Dynamsoft Service silently](https://www.dynamsoft.com/web-twain/docs/faq/can-i-install-dynamsoft-service-silently.html?ver=latest#can-i-install-dynamsoft-service-silently).
+   Please note that once upgraded, the Dynamosft Service on all client machines also need to be updated. You may consider <a href="https://www.dynamsoft.com/web-twain/docs/faq/can-i-install-dynamsoft-service-silently.html?ver=latest#can-i-install-dynamsoft-service-silently" target="_blank">installing Dynamsoft Service silently</a>.
 
 2. Disable Private Network Access checks using enterprise policies
 
    If you have administrative control over your users, you can disable Private Network Access checks using either of the following policies:
 
-   [InsecurePrivateNetworkRequestsAllowed](https://chromeenterprise.google/policies/#InsecurePrivateNetworkRequestsAllowed)  
-   [InsecurePrivateNetworkRequestsAllowedForUrls](https://chromeenterprise.google/policies/#InsecurePrivateNetworkRequestsAllowedForUrls)  
+   <a href="https://chromeenterprise.google/policies/#InsecurePrivateNetworkRequestsAllowed" target="_blank">InsecurePrivateNetworkRequestsAllowed</a> 
+   <a href="https://chromeenterprise.google/policies/#InsecurePrivateNetworkRequestsAllowedForUrls" target="_blank">InsecurePrivateNetworkRequestsAllowedForUrls</a> 
 
-   For more details about managing policies for your users, please refer to Google's [help center article](https://support.google.com/chrome/a/answer/9037717).
+   For more details about managing policies for your users, please refer to Google's <a href="https://support.google.com/chrome/a/answer/9037717" target="_blank">help center article</a>.
 
 ### If you need more time to implement the solution
 
-   Register for [Google's deprecation trials](https://developer.chrome.com/blog/origin-trials/#deprecation-trials) to request a time extension so your website will not be affected during the trial period which will last for at least 6 months.
+   Register for <a href="https://developer.chrome.com/blog/origin-trials/#deprecation-trials" target="_blank">Google's deprecation trials</a> to request a time extension so your website will not be affected during the trial period which will last for at least 6 months.
 
