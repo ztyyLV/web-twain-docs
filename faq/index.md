@@ -331,6 +331,8 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}failed-to-load-resource.html" target="_blank">Error Message - Failed to load resource: net::ERR_CERT_DATE_INVALID</a>  
  
+<a href="{{site.faq}}connection-from-the-insecure-HTTP-to-service-failed.html" target="_blank">Error Message - The connection from the insecure (HTTP) web page to the local 'Dynamsoft Service' failed</a>  
+
 ## Licensing and Purchase
 
 <a href="{{site.faq}}difference-in-service-and-webassembly-editions.html" target="_blank">What’s the difference between the Desktop Service Edition and WebAssembly Edition?</a>
