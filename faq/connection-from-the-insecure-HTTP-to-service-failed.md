@@ -26,11 +26,11 @@ GoDaddy Cert cannot be recognized.
 
 1. Click <a href="https://tst.dynamsoft.com/libs/dwt/17.2.1/GodaddyCert.zip" target="_blank">here</a> to download the certs. 
 
-2. Run `Certmgr.msc` to open Certificate Manager Tool
+2. Run `Certmgr.msc` to open Certificate Manager Tool  
 ![connection-from-HTTP-to-service-failed-1]({{site.assets}}imgs/connection-from-HTTP-to-service-failed-1.png)
 
 3. Import `godaddy Trusted Root Cert.cer` to Trusted Root Certification Authorities.
 
-4. Import `godaddy Intermediate Cert.cer` to Intermediate Certificate Authorities.
+4. Import `godaddy Intermediate Cert.cer` to Intermediate Certificate Authorities.  
 ![connection-from-HTTP-to-service-failed-2]({{site.assets}}imgs/connection-from-HTTP-to-service-failed-2.png)
 
