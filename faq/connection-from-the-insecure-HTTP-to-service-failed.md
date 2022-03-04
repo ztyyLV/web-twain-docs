@@ -20,7 +20,7 @@ And refresh the web page does not work.
 
 ### Cause 
 
-This issue is only limited on Windows 7, likely the cause is due to TLS 1.2 is not enabled on Windows 7 by default (this protocol is enabled by default on Windows 8 and higher versions), which leads to GoDaddy Cert cannot be recognized.
+This issue is only limited on Windows 7, likely the cause is due to TLS 1.2 is not enabled on Windows 7 by default (this protocol is enabled by default on Windows 8 and higher versions), which leads to GoDaddy Cert can't be recognized.
 
 ### Resolution 
 
