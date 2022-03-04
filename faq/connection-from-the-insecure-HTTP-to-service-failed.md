@@ -30,12 +30,9 @@ There are 2 resolutions to fix this issue.
 
 2. Update Godaddy Cert
   - Click <a href="https://tst.dynamsoft.com/libs/dwt/17.2.1/GodaddyCert.zip" target="_blank">here</a> to download the certs. 
-
   - Run `Certmgr.msc` to open Certificate Manager Tool  
-![connection-from-HTTP-to-service-failed-1]({{site.assets}}imgs/connection-from-HTTP-to-service-failed-1.png)
-
- - Import `godaddy Trusted Root Cert.cer` to Trusted Root Certification Authorities.
-
- - Import `godaddy Intermediate Cert.cer` to Intermediate Certificate Authorities.  
-![connection-from-HTTP-to-service-failed-2]({{site.assets}}imgs/connection-from-HTTP-to-service-failed-2.png)
+  ![connection-from-HTTP-to-service-failed-1]({{site.assets}}imgs/connection-from-HTTP-to-service-failed-1.png)
+  - Import `godaddy Trusted Root Cert.cer` to Trusted Root Certification Authorities.
+  - Import `godaddy Intermediate Cert.cer` to Intermediate Certificate Authorities.  
+  ![connection-from-HTTP-to-service-failed-2]({{site.assets}}imgs/connection-from-HTTP-to-service-failed-2.png)
 
