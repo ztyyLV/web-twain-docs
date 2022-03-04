@@ -29,7 +29,7 @@ There are 2 resolutions to fix this issue.
 1. Install <a href="http://support.microsoft.com/help/976932" target="_blank">Service Pack 1 for Windows 7 or Windows Server 2008 R2</a>. See more details <a href="https://support.microsoft.com/en-us/topic/update-to-enable-tls-1-1-and-tls-1-2-as-default-secure-protocols-in-winhttp-in-windows-c4bd73d2-31d7-761e-0178-11268bb10392" target="_blank">here</a>.
 
 2. Update Godaddy Cert
-  -  Click <a href="https://tst.dynamsoft.com/libs/dwt/17.2.1/GodaddyCert.zip" target="_blank">here</a> to download the certs. 
+  - Click <a href="https://tst.dynamsoft.com/libs/dwt/17.2.1/GodaddyCert.zip" target="_blank">here</a> to download the certs. 
 
   - Run `Certmgr.msc` to open Certificate Manager Tool  
 ![connection-from-HTTP-to-service-failed-1]({{site.assets}}imgs/connection-from-HTTP-to-service-failed-1.png)
