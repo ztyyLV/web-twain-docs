@@ -14,7 +14,7 @@ description: How to resolve Dynamic Web TWAIN issue in Chrome 101?
 
 ### Symptom
 
- In Chrome 101+, when visiting a website that has Dynamic Web TWAIN SDK v17.2 or older integrated into the application, you may see the following **error message** in the browser console. For the end users of your website, they may be prompted repeatedly to download and install the Dynamsoft Service.
+ In Chrome 101 at the earliest, when visiting a website that has Dynamic Web TWAIN SDK v17.2 or older integrated into the application, you may see the following **error message** in the browser console. For the end users of your website, they may be prompted repeatedly to download and install the Dynamsoft Service.
 
 NOTE that the same issue will also occur in any browser based on **Chromium 101+**, such as Microsoft Edge 101.
 
@@ -24,7 +24,7 @@ Response to preflight request doesn't pass access control check: No 'Access-Cont
 for this private network request targeting the `local` address space.
 ```
 
-Chrome 101 is expected to be released in April 2022. In Chrome 98, you may have already noticed the following **warning/error message** in the browser console, but it is not expected to cause any immediate issues.
+In Chrome 98, you may have already noticed the following **warning/error message** in the browser console, but it is not expected to cause any immediate issues. Per Google's message below, Chrome 101 is expected to be released in April 2022.
 
 ```
 A site requested a resource from a network that it could only access because of its users' privileged network position. 
@@ -35,14 +35,13 @@ To mitigate these risks, Chrome will require non-public subresources to opt-into
 
 ### Cause
 
-As a part of the Private Network Access (PNA) specification, Chrome is deprecating direct access to private network endpoints from public websites. In Chrome 101, Chrome will enforce explicit permission from private network endpoints before requests from public websites can be allowed. More details can be found at <a href="https://developer.chrome.com/blog/private-network-access-preflight/" target="_blank">https://developer.chrome.com/blog/private-network-access-preflight/</a>.
+As a part of the Private Network Access (PNA) specification, Chrome is deprecating direct access to private network endpoints from public websites. In Chrome 101 at the earliest, Chrome will enforce explicit permission from private network endpoints before requests from public websites can be allowed. According to Google, "this will begin only if and when compatibility data indicates that the change is safe enough and we've outreached directly when necessary." More details can be found at <a href="https://developer.chrome.com/blog/private-network-access-preflight/" target="_blank">https://developer.chrome.com/blog/private-network-access-preflight/</a>.
 
 Dynamic Web TWAIN utilizes a local service named 'Dynamsoft Service' to support document scanning from physical scanners. Your web scanning page needs to make requests to localhost or 127.0.0.1 to communicate with the local service. In Chrome 101, the connection from your public website to the private network (i.e. localhost/127.0.0.1) will be blocked.
 
-
 ### Resolution
 
-You can apply one of the following solutions:
+To avoid this potential issue, you can apply one of the following solutions:
 
 1. <a href="https://www.dynamsoft.com/web-twain/docs/indepth/development/upgrade.html?ver=latest" target="_blank">Upgrade</a> Dynamic Web TWAIN SDK to **version 17.2.1** or later
 
