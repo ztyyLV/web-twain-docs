@@ -1261,6 +1261,10 @@ interface ScanSetup {
   },
   /**
    * A callback triggered before the scan, after the scan and after each page has been transferred.
+   * Returned status
+   * {event: 'beforeAcquire', result: {…}} //Equivalent to OnPreAllTransfers event
+   * {event: 'postTransfer', bScanCompleted: false, result: {…}} //Equivalent to OnPostTransfer event
+   * {event: 'postTransfer', bScanCompleted: true, result: {…}} //Equivalent to OnPostAllTransfers event
    */
   funcScanStatus?: (status: Status) => void,
   /**
