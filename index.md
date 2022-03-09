@@ -10,10 +10,9 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
 
 * [About]({{site.about}}index.html)
 
-   - [Features]({{site.about}}features.html)
+   - [Specification]({{site.about}}features.html)
    - [Resources]({{site.about}}resources.html)
    - [License]({{site.about}}license.html)
-   - [FAQs]({{site.about}}faqs.html)
    - [Support]({{site.about}}getsupport.html)
 
 * [Getting Started]({{site.getstarted}}index.html)
@@ -32,9 +31,9 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
    - [Viewer]({{site.indepth}}features/viewer.html)
    - [UI]({{site.indepth}}features/ui.html)
    - [Edit]({{site.indepth}}features/edit.html)
-   - [Read Barcode]({{site.indepth}}features/barcode.html)
+   - [Barcode]({{site.indepth}}features/barcode.html)
    - [OCR]({{site.indepth}}features/ocr.html)
-   - [Handle PDF]({{site.indepth}}features/pdf.html)
+   - [PDF]({{site.indepth}}features/pdf.html)
 
 * [Development]({{site.indepth}}development/index.html)
 
@@ -46,6 +45,7 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
    - [Professional Service]({{site.indepth}}development/pro-service.html)
    - [Upgrade Guide]({{site.indepth}}development/upgrade.html)
    - [About ActiveX]({{site.indepth}}development/activeX.html)
+   - [ARM64 & MIPS64 Support]({{site.indepth}}development/armmips.html)
 
 * [Deployment]({{site.indepth}}deployment/index.html)
 
@@ -60,9 +60,9 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
 
 * [API Reference]({{site.info}}api/index.html)
 
-   - [Dynamsoft_WebTwainEnv]({{site.info}}api/Dynamsoft_WebTwainEnv.html)
+   - [Dynamsoft_DWT]({{site.info}}api/Dynamsoft_WebTwainEnv.html)
    - [Dynamsoft_Enum]({{site.info}}api/Dynamsoft_Enum.html)
-   - [WebTwain_Acquire]({{site.info}}api/WebTwain_Acquire.html)
+   - [WebTwain_Scanner]({{site.info}}api/WebTwain_Acquire.html)
    - [WebTwain_Buffer]({{site.info}}api/WebTwain_Buffer.html)
    - [WebTwain_Viewer]({{site.info}}api/WebTwain_Viewer.html)
    - [WebTwain_Edit]({{site.info}}api/WebTwain_Edit.html)
@@ -75,6 +75,7 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
    - [Addon_PDF]({{site.info}}api/Addon_PDF.html)
    - [Addon_Webcam]({{site.info}}api/Addon_Webcam.html)
    - [Dynamsoft_FileUploader]({{site.info}}api/Dynamsoft_FileUploader.html)
+   - [API Appendix]({{site.info}}api/appendix.html)
 
 
 * [FAQs]({{site.faqs}}faq/index.html)
