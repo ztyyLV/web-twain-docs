@@ -2665,6 +2665,11 @@ SaveAsJPEG(
 
 </table>
 </div>
+
+**Usage notes**
+
+If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.
+
 ---
 
 ## SaveAsPDF
@@ -2723,6 +2728,8 @@ SaveAsPDF(
 
 Learn about [how to config PDF save settings](./Addon_PDF.md#writesetup).
 
+If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.
+
 ---
 
 ## SaveAsPNG
@@ -2776,6 +2783,10 @@ SaveAsPNG(
 
 </table>
 </div>
+
+**Usage notes**
+
+If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.
 
 ---
 
@@ -2831,6 +2842,11 @@ SaveAsTIFF(
 </table>
 </div>
 
+
+**Usage notes**
+
+If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.
+
 ---
 
 ## SaveAllAsMultiPageTIFF
@@ -2882,6 +2898,10 @@ SaveAllAsMultiPageTIFF(
 
 </table>
 </div>
+
+**Usage notes**
+
+If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.
 
 ---
 
@@ -2939,6 +2959,8 @@ SaveAllAsPDF(
 
 Learn about [how to config PDF save settings](./Addon_PDF.md#write-setup).
 
+If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.
+
 ---
 
 ## SaveSelectedImagesAsMultiPagePDF
@@ -2994,6 +3016,8 @@ SaveSelectedImagesAsMultiPagePDF(
 **Usage notes**
 
 Learn about [how to config PDF save settings](./Addon_PDF.md#write-setup).
+
+If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.
 
 ---
 
@@ -3051,9 +3075,9 @@ SaveSelectedImagesAsMultiPageTIFF(
 
 **Usage notes**
 
-If called without any callback functions, these methods become synchronously and return a boolean value to indicate whether it succeeded.
+If called without any callback functions, these methods become synchronously and return a boolean value to indicate whether it succeeded. However, calling them asynchronously is recommended.
 
-However, calling them asynchronously is recommended.
+If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.
 
 ---
 
