@@ -12,6 +12,11 @@ description: How to resolve Dynamic Web TWAIN issue in Chrome 101?
 
 ## Dynamic Web TWAIN issue in Chrome 101
 
+### Latest Update from Google:
+(REF: <a href="https://developer.chrome.com/blog/private-network-access-preflight/" target="_blank">https://developer.chrome.com/blog/private-network-access-preflight/</a>)
+
+<span style="background-color:#f9f2f4; color:#c7254e">March 7, 2022: The experiment in Chrome 98 was rolled back due to stability and compatibility issues discovered in the rollout to Chrome stable. These issues will be fixed before the experiment is tried again, no earlier than in Chrome 101. Learn more in the blink-dev@chromium.org Intent to Ship email thread for more details.</span>
+
 ### Symptom
 
  In Chrome 101 at the earliest, when visiting a website that has Dynamic Web TWAIN SDK v17.2 or older integrated into the application, you may see the following **error message** in the browser console. For the end users of your website, they may be prompted repeatedly to download and install the Dynamsoft Service.
