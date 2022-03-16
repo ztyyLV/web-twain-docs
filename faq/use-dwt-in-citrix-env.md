@@ -19,7 +19,7 @@ To optimize user experience within the Citrix environment, Dynamsoft offers the 
 To configure the enhanced mode, please follow the steps below:
 
 1. Stop service
-2. Set EnableEnhancedMode=TRUE in DSConfiguration.ini
+2. Set EnableEnhancedMode=TRUE in DSConfiguration.ini which is under `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17`
 3. Set Dynamsoft.DWT.IfCheckDCP=true in dynamsoft.webtwain.config.js
 4. Restart service
 
