@@ -86,7 +86,7 @@ export default {
         /**
          * ResourcesPath & ProductKey must be set in order to use the library!
          */
-        Dynamsoft.DWT.ResourcesPath = "dwt-resources";
+        Dynamsoft.DWT.ResourcesPath = "/dwt-resources";
 	Dynamsoft.WebTwainEnv.ProductKey = 'YOUR-PRODUCT-KEY';
         Dynamsoft.DWT.Containers = [{
             WebTwainId: "dwtObject",
