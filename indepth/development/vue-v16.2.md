@@ -81,7 +81,7 @@ Change the file `/src/components/HelloWorld.vue` to match the following `templat
         },
         mounted() {
             this.bWASM = false;
-            Dynamsoft.WebTwainEnv.ResourcesPath = "dwt-resources";
+            Dynamsoft.WebTwainEnv.ResourcesPath = "/dwt-resources";
             Dynamsoft.WebTwainEnv.ProductKey = 'YOUR-PRODUCT-KEY';
             Dynamsoft.WebTwainEnv.Containers = [{
                 WebTwainId: "dwtObject",
