@@ -24,7 +24,7 @@ There are 3 ways to verify whether your scanner is SANE compliant.
 
 ![Hardware-Scanners-Cameras-5]({{site.assets}}imgs/Hardware-Scanners-Cameras-5.png)
 
-- Try scanning to make sure it works correctly without any errors
+  - Try scanning to make sure it works correctly without any errors
 
 * [Recommended] Try the scanner with the XSane app on Linux. Check out the [official guide](http://www.fifi.org/doc/xsane/html/sane-xsane-doc.html)
 
