@@ -706,7 +706,6 @@ No changes in version 16.1.
 
 * [HTML5] Changed the installing process especially for users who need to use the SDK in a domain network.
 * [ActiveX] Changed the default value for `IfAllowLocalCache` to `true` .
-* [Add-on] The convert mode `CM_AUTO` is removed for the method `PDF.SetConvertMode()` .
 
 ### Fixed
 
