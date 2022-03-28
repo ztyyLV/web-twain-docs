@@ -12,7 +12,7 @@ description: How can I change the certificate of the Dynamsoft Service?
 
 ## How can I change the certificate of the Dynamsoft Service?
 
-To replace the default certificates, the steps are:
+To replace the default certificate, the steps are:
 
 - Generate a certificate for `127.0.0.1`
 - Install that certificate
@@ -20,3 +20,5 @@ To replace the default certificates, the steps are:
 - Rename these two keys to `server.pem` (public) and `server_key.pem` (private)
 - Replace the old keys in `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\cert`
 - Restart the service
+
+NOTE: For v17.2 or higher versions, you can use the new API <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#updatecert" target="_blank">UpdateCert</a> to automatically update the client side certificate.
