@@ -2262,7 +2262,7 @@ Pair: [from: number, to: number];
 
 ```typescript
 /**
- * Return the tag of a specified image.
+ * Return the tag(s) of a specified image.
  * @argument index Index of the image.
  */
 GetTagListByIndex(index: number):string[]
@@ -2312,10 +2312,10 @@ DWObject.GetTagListByIndex(0);
 
 ```typescript
 /**
- * Create a file folder for image(s).
- * @argument filename Specify the file name.
+ * Create a category for the scanned image(s).
+ * @argument categoryName Specify the category name.
  */
-CreateFile(filename:string):Boolean;
+CreateFile(categoryName:string):Boolean;
 ```
 
 **Availability**
@@ -2351,9 +2351,9 @@ CreateFile(filename:string):Boolean;
 **Example**
 
 ```javascript
-//the image you scanned will belong to File1.
-DWObject.CreateFile("File1");
-DWObject.OpenFile("File1"); //Need to call OpenFile after CreateFile.
+//Store the scanned image(s) under 'Category1'.
+DWObject.CreateFile("Category1");
+DWObject.OpenFile("Category1"); //Need to call OpenFile after CreateFile.
 DWObject.AcquireImage(successCallback, failureCallback);
 
 function successCallback() {
@@ -2367,8 +2367,8 @@ function failureCallback(errorCode, errorString) {
 
 **Usage notes**
 
-1. If the documents have been sorted before scanning, you can use <a href="{{site.info}}api/WebTwain_Buffer.html#createfile" target="_blank">CreateFile</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#openfile" target="_blank">OpenFile</a> to manage each type of document.
-2. If the documents are out of order before scanning and you want to scan them in first and then sort them, use tags to manage the documents. Relevant APIs: <a href="{{site.info}}api/WebTwain_Buffer.html#setdefaulttag" target="_blank">SetDefaultTag</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#tagimages" target="_blank">TagImages</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#gettaglist" target="_blank">GetTagList</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#filterimagesbytag" target="_blank">FilterImagesByTag</a>
+1. If the documents are already sorted before scanning, you can use <a href="{{site.info}}api/WebTwain_Buffer.html#createfile" target="_blank">CreateFile</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#openfile" target="_blank">OpenFile</a> to group the documents.
+2. If the documents are not already sorted before scanning and you want to first scan, then sort, you can use tags to manage that. Relevant APIs: <a href="{{site.info}}api/WebTwain_Buffer.html#setdefaulttag" target="_blank">SetDefaultTag</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#tagimages" target="_blank">TagImages</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#gettaglist" target="_blank">GetTagList</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#filterimagesbytag" target="_blank">FilterImagesByTag</a>
 
 ---
 
@@ -2378,10 +2378,10 @@ function failureCallback(errorCode, errorString) {
 
 ```typescript
 /**
- * Open the specified file folder.
- * @argument filename Specify the file name.
+ * Use the specified category for the scanned image(s)
+ * @argument categoryName Specify the category name.
  */
-OpenFile(filename:string):Boolean;
+OpenFile(categoryName:string):Boolean;
 ```
 
 **Availability**
@@ -2417,10 +2417,11 @@ OpenFile(filename:string):Boolean;
 **Example**
 
 ```javascript
-DWObject.CreateFile("File1");
-DWObject.CreateFile("File2");
-DWObject.CreateFile("File3");
-DWObject.OpenFile("File2"); //Need to call OpenFile after CreateFile.
+//Stored the scanned image(s) under 'Category2'.
+DWObject.CreateFile("Category1");
+DWObject.CreateFile("Category2");
+DWObject.CreateFile("Category3");
+DWObject.OpenFile("Category2"); //Need to call OpenFile after CreateFile.
 DWObject.AcquireImage(successCallback, failureCallback);
 
 function successCallback() {
@@ -2440,7 +2441,7 @@ function failureCallback(errorCode, errorString) {
 
 ```typescript
 /**
- * Get the current file name. The default value is 'dynamsoft-dvs-file'.
+ * Get the current category name. The default value is 'dynamsoft-dvs-file'. Scanned image(s) are stored in this category by default if no category name is created.
  */
 GetCurrentFileName():String;
 ```
@@ -2483,10 +2484,10 @@ GetCurrentFileName():String;
 
 ```typescript
 /**
- * Remove all images in the specified file.
- * @argument filename Specify the file name.
+ * Delete the specified category and all images in it.
+ * @argument categoryName Specify the category name.
  */
-RemoveFile(filename:string):Boolean;
+RemoveFile(categoryName:string):Boolean;
 ```
 
 **Availability**
@@ -2527,13 +2528,13 @@ RemoveFile(filename:string):Boolean;
 
 ```typescript
 /**
- * Get the file info list.
+ * Get the list of all categories and their information.
  */
 GetFileInfoList():Json
 
 Json:
 [{
-   name: "fileName",
+   name: "categoryName",
    imageIds:[23122335, 25566822323]
 },
 {……}]
