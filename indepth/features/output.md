@@ -277,8 +277,6 @@ DWObject.FTPUpload(
 
 ### Show dialog to save
 
-> Supported on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices).
-
 You can set the [ `IfShowFileDialog` ]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) property to `true` , which will show the open/save file dialog whenever you save an image(s) within the `DWT` buffer
 
 ``` javascript
@@ -296,36 +294,12 @@ DWObject.SaveAllAsPDF("Sample.pdf",
 
 ### Save to an absolute path
 
-> Supported on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices).
-
 If you don't want to show any dialog and you know for sure where you want the files saved, you can save with absolute paths while setting [ `IfShowFileDialog` ]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `false` .
 
 > When using an absolute path, you must make sure the current user has the proper permission to save to that path. Otherwise the save will fail.
 
 ``` javascript
 DWObject.IfShowFileDialog = false;
-DWObject.SaveAllAsPDF("D:\\Sample.pdf",
-    function() {
-        console.log('Successful!');
-    },
-    function(errCode, errString) {
-        console.log(errString);
-    }
-);
-```
-
-### Save as a download
-
-> Supported on [WASM browsers]({{site.getstarted}}platform.html#wasm-browsers).
-
-In [WASM browsers]({{site.getstarted}}platform.html#wasm-browsers), `DWT` runs its entire operations within the browser. So saving locally triggers will instead download the file and [ `IfShowFileDialog` ]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) will have no effect.
-
-``` javascript
-// The following line only works on desktop but it 
-// doesn't throw errors on WASM browsers either 
-DWObject.IfShowFileDialog = false;
-// The following line specifies an absolute path but 
-// only the name 'Sample.pdf' is used in WASM browsers
 DWObject.SaveAllAsPDF("D:\\Sample.pdf",
     function() {
         console.log('Successful!');
@@ -361,6 +335,26 @@ DWObject.RegisterEvent("OnGetFilePath", (isSave, filesCount, index, directory, _
 });
 DWObject.IfShowFileDialog = true;
 DWObject.SaveAsJPEG("Sample.jpg", 0,
+    function() {
+        console.log('Successful!');
+    },
+    function(errCode, errString) {
+        console.log(errString);
+    }
+);
+```
+
+### Save in [WASM mode]({{site.indepth}}features/initialize.html?ver=latest#webassembly-edition)
+
+In [WASM mode]({{site.indepth}}features/initialize.html?ver=latest#webassembly-edition), `DWT` runs its entire operations within desktop/mobile browsers. As a result, files are always saved in the system's Downloads folder by default, regardless of the absolute path specified. And the API [ `IfShowFileDialog` ]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) has no effect in WASM mode.
+
+``` javascript
+// The following line will be ignored and 
+// no file dialog will be shown in WASM mode
+DWObject.IfShowFileDialog = true;
+// The absolute path specified will be ignored and 
+// the file 'Sample.pdf'is saved to the Downloads folder
+DWObject.SaveAllAsPDF("D:\\Sample.pdf",
     function() {
         console.log('Successful!');
     },
