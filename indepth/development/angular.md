@@ -129,10 +129,8 @@ ng serve -o
 
 > If you have installed `DWT` and have configured a valid `ProductKey` . You will have a working page to scan documents from your scanner now. Otherwise, you should see instructions on the page that guide you to install the library. [More info>>]({{site.indepth}}features/initialize.html#installation-of-the-dynamsoft-service).
 
-## Official Samples
+## Official Sample
 
-Check out the following two sample projects:
-
-* [dwt-angular-simple](https://github.com/dynamsoft-dwt/dwt-angular-simple)
+Check out the following sample project:
 
 * [dwt-angular-advanced](https://github.com/dynamsoft-dwt/dwt-angular-advanced)
