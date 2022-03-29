@@ -10,6 +10,16 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 # Stable Releases
 
+## 17.2.5 (03/29/2022)
+
+### Improved Features 
+
+ - Updated the files *dynamsoft.webtwain.initiate.js* and *dynamsoft.webtwain.addon.camera.js* for better performance of mobile document capturing when using Safari on iOS/iPadOS 13+
+
+### Bug Fixed
+
+ - Updated the file *dynamsoft.webtwain.initiate.js* to resolve a memory leak issue in v17.2.1 on Chrome 98+ when the <a href="{{site.info}}api/WebTwain_Viewer.html?ver=latest#setviewmode" target="_blank">view mode</a> is set to (-1, -1) or if a <a href="{{site.info}}api/WebTwain_Viewer.html?ver=latest#createthumbnailviewer" target="_blank">thumbnail viewer</a> is used.
+
 ## 17.2.1 (02/24/2022)
 
 ### Improved Features 
@@ -17,7 +27,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
  - Made changes to handle <a href="https://developer.chrome.com/blog/private-network-access-preflight/" target="_blank">CORS preflight requests</a> sent by Chrome from V98. Learn more <a href="https://www.dynamsoft.com/web-twain/docs/faq/private-network-access-in-chrome101.html" target="_blank">here</a>. 
  - For Chromium V84+, use userAgentData instead of userAgent in response to UserAgent String phasing out issue. 
 
-### Bug Fixed
+### Bug Fixes
 
  - Fixed a bug where Dynamsoft Service installation/uninstallation failed due to the current user account does not match the user account under C:\Users{account}. Learn more <a href="https://www.dynamsoft.com/web-twain/docs/faq/service-installation-issue.html?ver=latest" target="_blank">here</a>. 
  - [HTML5 on MacOS] Fixed a bug where the short key (set by <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#organizationid" target="_blank">organizationID</a>) did not work on macOS 12+.
@@ -59,7 +69,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 * Modified DynamicImage.dll(DynamicImagex64.dll) to improve encoding and decoding mode of TIFF files.
 * Updated Barcode Reader library to version 8.6. Check out the release notes for <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/release-notes/js-8.html?ver=latest#860-08312021" target="_blank">Barcode Reader JavaScript SDK - 8.6</a>
 
-### Bug Fixed
+### Bug Fixes
 
 * Fixed a bug where the image displayed in the thumbnail may be inconsistent with that on the canvas when switching tags through `FilterImageByTag`.
 * Fixed a bug that Dynamic Web TWAIN object could not be initialized when using iframe in Edge.
