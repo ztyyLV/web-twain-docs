@@ -26,14 +26,14 @@ For more info, please check out <a href="{{site.info}}schedule/stable.html" targ
 
 DWT makes the following tasks easy
 
-* Scanning documents from scanners [>>Read More<<]({{site.indepth}}features/input.html#scan)
-* Taking pictures from cameras [>>Read More<<]({{site.indepth}}features/input.html#capture)
-* Loading or downloading existing documents [>>Read More<<]({{site.indepth}}features/input.html#load)
-* Editing images [>>Read More<<]({{site.indepth}}features/edit.html)
-* Saving documents locally [>>Read More<<]({{site.indepth}}features/output.html#save)
-* Uploading documents to the server [>>Read More<<]({{site.indepth}}features/output.html#upload)
-* Reading barcodes [>>Read More<<]({{site.indepth}}features/barcode.html)
-* OCR [>>Read More<<]({{site.indepth}}features/ocr.html)
+* [Scanning documents from scanners]({{site.indepth}}features/input.html#scan)
+* [Taking pictures from cameras]({{site.indepth}}features/input.html#capture)
+* [Loading or downloading existing documents]({{site.indepth}}features/input.html#load)
+* [Editing images]({{site.indepth}}features/edit.html)
+* [Saving documents locally]({{site.indepth}}features/output.html#save)
+* [Uploading documents to the server]({{site.indepth}}features/output.html#upload)
+* [Reading barcodes]({{site.indepth}}features/barcode.html)
+* [OCR]({{site.indepth}}features/ocr.html)
 
 ## Highlights
 
@@ -49,7 +49,7 @@ Paper document digitalization is a common requirement in many industries, especi
 
 Dynamic Web TWAIN SDK supports scanning thousands of pages of document at a time! It even provides the ability to handle document uploading in the background without having to keep browsers open.
 
-### Build a Working Project in an hour!
+### Build a Working Project in an Hour!
 
 Easy integration with JavaScript frameworks (Angular, React, Vue, etc.) and 60+ sample projects are available to help all developers quickly create a customized project for proof-of-concept purpose. 
 
@@ -68,8 +68,10 @@ To ensure your data is safe, Dynamic Web TWAIN offers advanced security features
 *	HTTPs uploading and downloading
 *	Domain binding
 
+Learn more about [Dynamic Web TWAIN Security Features](https://www.dynamsoft.com/Products/Dynamic-Web-TWAIN-Security-Features.pdf)
+
 ## Assumptions
 
-These docs are meant for developers who are already familiar with <a href="https://developer.mozilla.org/docs/Learn/HTML/Introduction_to_HTML" target="_blank">HTML</a>, <a href="https://developer.mozilla.org/docs/Learn/CSS/First_steps" target="_blank">CSS</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript" target="_blank">JavaScript</a>, and some related ideas, tools, etc.
+These docs are meant for developers who are already familiar with HTML, CSS, JavaScript, and some related ideas, tools, etc.
 
 To try the samples or code snippets mentioned in the docs, you will need to have an IDE. If you are looking for one, Dynamsoft recommends <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> by Microsoft.
