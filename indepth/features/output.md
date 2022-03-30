@@ -353,7 +353,7 @@ In [WASM mode]({{site.indepth}}features/initialize.html?ver=latest#webassembly-e
 // no file dialog will be shown in WASM mode
 DWObject.IfShowFileDialog = true;
 // The absolute path specified will be ignored and 
-// the file 'Sample.pdf'is saved to the Downloads folder
+// the file is saved to the Downloads folder
 DWObject.SaveAllAsPDF("D:\\Sample.pdf",
     function() {
         console.log('Successful!');
