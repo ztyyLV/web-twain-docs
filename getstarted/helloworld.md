@@ -35,6 +35,7 @@ Embed the script of the library and add an element on the page.
 ``` html
 <script src="Resources/dynamsoft.webtwain.initiate.js"></script>
 <script src="Resources/dynamsoft.webtwain.config.js"></script>
+<script src="Resources/addon/dynamsoft.webtwain.addon.camera.js"></script>
 ```
 
 ``` html
@@ -79,26 +80,27 @@ Change the function `AcquireImage()` like this
 function AcquireImage() {
    if (DWObject) {
      if (Dynamsoft.Lib.env.bMobile) {
-           var showVideoConfigs = {
-				scannerViewer:{
-					autoDetect:{
-						enableAutoDetect: true
-					}
-				},
-				filterViewer: {
-					exitDocumentScanAfterSave: true
-				}
-			};
-				
-            if (DWObject) {
-                if(!DWObject.UseLocalService) {
-					DWObject.Addon.Camera.scanDocument(showVideoConfigs).then(
-					function(){console.log("OK");}, 
-					function(error){console.log(error.message);});
-				    } 
-                }
-            }
-        } 
+	   var showVideoConfigs = {
+		scannerViewer:{
+			autoDetect:{
+				enableAutoDetect: true
+			}
+		},
+		filterViewer: {
+			exitDocumentScanAfterSave: true
+		}
+	    };
+           
+	    if(!DWObject.UseLocalService) {
+		DWObject.Addon.Camera.scanDocument(showVideoConfigs).then(
+			function(){
+				console.log("OK");
+			}, 
+			function(error){
+				console.log(error.message);
+			});
+	    } 
+       }
        else {
             DWObject.SelectSource(
                 function() {
@@ -108,8 +110,8 @@ function AcquireImage() {
                 function() {
                     console.log("SelectSource failed!");
                 });
-        }
-    }
+       }
+   }
 }
 ```
 
@@ -122,6 +124,9 @@ function AcquireImage() {
     <title>Hello World</title>
     <script src="Resources/dynamsoft.webtwain.initiate.js"></script>
     <script src="Resources/dynamsoft.webtwain.config.js"></script>
+    <script src="Resources/addon/dynamsoft.webtwain.addon.camera.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 
 <body>
@@ -134,40 +139,42 @@ function AcquireImage() {
             DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer');
         }
 
-        function AcquireImage() {
-         if (DWObject) {
-         if (Dynamsoft.Lib.env.bMobile) {
-            var showVideoConfigs = {
-				scannerViewer:{
-				    autoDetect:{
-					  enableAutoDetect: true
-					}
-				},
-				filterViewer: {
-					exitDocumentScanAfterSave: true
+	function AcquireImage() {
+	   if (DWObject) {
+	     if (Dynamsoft.Lib.env.bMobile) {
+		   var showVideoConfigs = {
+			scannerViewer:{
+				autoDetect:{
+					enableAutoDetect: true
 				}
-			};
-				
-            if (DWObject) {
-                if(!DWObject.UseLocalService) {
-					DWObject.Addon.Camera.scanDocument(showVideoConfigs).then(
-					function(){console.log("OK");}, 
-					function(error){console.log(error.message);});
-				    } 
-                }
-         } 
-            else {
-                    DWObject.SelectSource(function() {
-                            DWObject.OpenSource();
-                            DWObject.AcquireImage();
-                        },
-                        function() {
-                            console.log("SelectSource failed!");
-                        }
-                    );
-                }
-            }
-        }
+			},
+			filterViewer: {
+				exitDocumentScanAfterSave: true
+			}
+		    };
+
+		    if(!DWObject.UseLocalService) {
+			DWObject.Addon.Camera.scanDocument(showVideoConfigs).then(
+				function(){
+					console.log("OK");
+				}, 
+				function(error){
+					console.log(error.message);
+				});
+		    } 
+	       }
+	       else {
+		    DWObject.SelectSource(
+			function() {
+			    DWObject.OpenSource();
+			    DWObject.AcquireImage();
+			},
+			function() {
+			    console.log("SelectSource failed!");
+			});
+	       }
+	   }
+	}
     </script>
 </body>
 
