@@ -996,6 +996,6 @@ interface ScanConfiguration{
 		     } 
 	     }
 	 }
- </script>
+</script>
 ```
 
