@@ -978,8 +978,8 @@ interface ScanConfiguration{
 
 **Example**
 
-```javascript
-<div id="dwtcontrolContainer"></div>
+```html
+<div id="dwtcontrolContainer" style="width:270px;height:350px"></div>
 <input type="button" value="scan document" onclick="ScanDocument();" />
 <script type="text/javascript">
 	function ScanDocument() {
