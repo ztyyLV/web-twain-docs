@@ -837,7 +837,7 @@ interface ScanConfiguration{
                              //After binding, display the video in the specified element, otherwise, display the video in full screen.
   scannerViewer?:{
     deviceId?: string,  
-    maxDocuments: number,       //The maximum documents can be captured/loaded in to the buffer. 
+    maxDocuments?: number,       //The maximum documents can be captured/loaded in to the buffer. 
     enableBorderDetection?: boolean,  // Whether to enable border detection. The default value is true.
     fullScreen?: boolean,   //Whether to display the video in full screen. The default value is false.
     polygonStyle?:{      //The sytle of the auto detect border.       
