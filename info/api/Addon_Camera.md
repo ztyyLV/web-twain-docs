@@ -979,7 +979,7 @@ interface ScanConfiguration{
 **Example**
 
 ```javascript
-<div id="dwtcontrolContainer" style="width:270px;height:350px"></div>
+<div id="dwtcontrolContainer"></div>
 <input type="button" value="scan document" onclick="ScanDocument();" />
 <script type="text/javascript">
 	function ScanDocument() {
