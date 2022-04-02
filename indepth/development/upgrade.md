@@ -16,22 +16,32 @@ This upgrade section talks about how to upgrade Dynamic Web TWAIN to the latest 
 
 You can follow the steps below to upgrade Dynamic Web TWAIN:
 
-1. On your development machine, uninstall the old version of Dynamic Web TWAIN and install the new one.
+1. Back up your current copy of `dynamsoft.webtwain.config.js`.
 
-2. Get the new **Resources** files under the installation folder of Dynamic Web TWAIN and update Resources in your application. 
+2. On your development machine, uninstall the old version of Dynamic Web TWAIN and install the new one.
+
+3. Get the new **Resources** folder under the installation folder of Dynamic Web TWAIN and update the folder in your application. Use your original `dynamsoft.webtwain.config.js` if you want to keep the old settings. 
 
     Typical paths of Dynamic Web TWAIN folder:
 
    * **Windows**: `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK {Version Number}\`
    * **macOS**: `Applications > Dynamsoft > Dynamic Web TWAIN SDK {Version Number}`
 
-3. Make necessary updates to the related code.
+4. Make necessary updates to the related code.
 
-    If you get a new license key for the new version, you may follow the steps in <a href="{{site.info}}about/license.html">License</a> to update it.
+    If you get a new **license key** for the new version, you may follow the steps in <a href="{{site.info}}about/license.html">License</a> to update it.
 
     And you can check the <a href="{{site.info}}schedule/stable.html">Release Notes</a> to learn the changes in the new version.
 
-4. Deploy the new version files to your server and test. 
+    > Note: Please be aware of the following namespace changes introduced in v17.0:
+
+    > | v17.0+ |v16.2- |
+    > |:-|:-|
+    > |`Dynamsoft.DWT` |`Dynamsoft.WebTwainEnv`|
+    > |`Dynamsoft.DWT.EnumDWT_` |`Dynamsoft.EnumDWT_`|
+    > |`Dynamsoft.DBR.EnumBarcodeFormat` |`Dynamsoft.EnumBarcodeFormat`|
+
+5. Deploy the new version files to your server and test. 
 
 ## Update `dwt` package
 
