@@ -873,10 +873,10 @@ interface ScanConfiguration{
     loadLocalFile?:{  
        visibility?: boolean,   //Whether to display the load local file icon. The default value is true.
        },
-    funcConfirmExitContinuousScan: funcConfirmExitContinuousScan, 
+    funcConfirmExitContinuousScan?: funcConfirmExitContinuousScan, 
       //funcConfirmExitContinuousScan is the callback funtion
       //Return true：Exit continuous scan mode without saving the captured image data. Return false: Stay on the original viewer
-    funcConfirmExit: funcConfirmExit, 
+    funcConfirmExit?: funcConfirmExit, 
       //funcConfirmExit is the callback funtion
       //Return true：End this capture without saving the image data. Return false: Stay on the original viewer
     },
