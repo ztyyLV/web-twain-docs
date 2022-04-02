@@ -299,6 +299,9 @@ Now we can use the page to scan or acquire, then upload the images as a PDF docu
     <title>Hello World</title>
     <script src="Resources/dynamsoft.webtwain.initiate.js"> </script>
     <script src="Resources/dynamsoft.webtwain.config.js"> </script>
+    <script src="Resources/addon/dynamsoft.webtwain.addon.camera.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 
 <body>
@@ -311,40 +314,42 @@ Now we can use the page to scan or acquire, then upload the images as a PDF docu
             DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer');
         }
 
-        function AcquireImage() {
-            if (DWObject) {
-                if (Dynamsoft.Lib.env.bMobile) {
-                     var showVideoConfigs = {
-			  scannerViewer:{
-			      autoDetect:{
-				  enableAutoDetect: true
-			      }
-			  },
-			  filterViewer: {
-			      exitDocumentScanAfterSave: true
-			 }
-		  };
-				
-             if (DWObject) {
-                   if(!DWObject.UseLocalService) {
-			   DWObject.Addon.Camera.scanDocument(showVideoConfigs).then(
-			   function(){console.log("OK");}, 
-			   function(error){console.log(error.message);});
-			 } 
-                      }
-                   }                 
-               } 
-	    else {
-                   DWObject.SelectSource(function() {
-                           DWObject.OpenSource();
-                           DWObject.AcquireImage();
-                        },
-                        function() {
-                            console.log("SelectSource failed!");
-                        });
-                }
-            }
-        }
+	function AcquireImage() {
+	   if (DWObject) {
+	     if (Dynamsoft.Lib.env.bMobile) {
+		   var showVideoConfigs = {
+			scannerViewer:{
+				autoDetect:{
+					enableAutoDetect: true
+				}
+			},
+			filterViewer: {
+				exitDocumentScanAfterSave: true
+			}
+		    };
+
+		    if(!DWObject.UseLocalService) {
+			DWObject.Addon.Camera.scanDocument(showVideoConfigs).then(
+				function(){
+					console.log("OK");
+				}, 
+				function(error){
+					console.log(error.message);
+				});
+		    } 
+	       }
+	       else {
+		    DWObject.SelectSource(
+			function() {
+			    DWObject.OpenSource();
+			    DWObject.AcquireImage();
+			},
+			function() {
+			    console.log("SelectSource failed!");
+			});
+	       }
+	   }
+	}
 
         function UploadAsPDF() {
             var url = Dynamsoft.Lib.detect.ssl ? "https://" : "http://";
