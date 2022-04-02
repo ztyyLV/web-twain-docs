@@ -982,16 +982,20 @@ interface ScanConfiguration{
 <div id="dwtcontrolContainer" style="width:270px;height:350px"></div>
 <input type="button" value="scan document" onclick="ScanDocument();" />
 <script type="text/javascript">
-function ScanDocument() {
-  var DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer');
-     if (DWObject) {
-     if(!DWObject.UseLocalService) {
-	DWObject.Addon.Camera.scanDocument({element: document.getElementById("dwtcontrolContainer")}).then(
-	function(){console.log("OK");}, 
-	function(error){console.log(error.message);});
-	} 
-      }
-   }
+	function ScanDocument() {
+	  var DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer');
+	     if (DWObject) {
+		     if(!DWObject.UseLocalService) {
+			DWObject.Addon.Camera.scanDocument({element: document.getElementById("dwtcontrolContainer")}).then(
+			function(){
+			   console.log("OK");
+			}, 
+			function(error){
+			   console.log(error.message);
+			});
+		     } 
+	     }
+	 }
  </script>
 ```
 
