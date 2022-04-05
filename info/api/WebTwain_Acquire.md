@@ -5016,7 +5016,7 @@ interface CapabilitySetup {
     /**
      * The value to set to the capability or the value of the capability after setting.
      */
-    curValue: number | string;
+    curValue: number | string; //array is not supported
     errorCode?: number;
     errorString?: string;
     /**
@@ -5073,16 +5073,16 @@ DWObject.setCapabilities(
     exception: "ignore",
     capabilities: [
       {
-        capability: 4376, //your own capability
-        curValue: 200, //your own curValue
+        capability: Dynamsoft.DWT.EnumDWT_Cap.ICAP_CONTRAST, // your own capability
+        curValue: 500, // your own curValue
       },
       {
-        capability: 4377, //your own capability
+        capability: Dynamsoft.DWT.EnumDWT_Cap.CAP_PRINTERSTRING, // your own capability
         curValue: "abc", // your own curValue
         exception: "fail",
       },
       {
-        capability: 257, // your own capability
+        capability: Dynamsoft.DWT.EnumDWT_Cap.ICAP_PIXELTYPE, // your own capability
         curValue: 0, // your own curValue
       },
     ],
