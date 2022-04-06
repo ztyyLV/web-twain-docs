@@ -32,7 +32,6 @@ For older versions to work with version 17.2.1, please copy the following .dll f
 dwt_16.2.0.0112.dll
 DynamicPdfCorex64_11.1.0.0112.dll
 DynamicPdfRx64_11.1.0.0112.dll
-DynamicImagex64.dll (16.2.0.0112)
 ```
 
 **Version 15.3.1**
@@ -40,7 +39,6 @@ DynamicImagex64.dll (16.2.0.0112)
 dwt_15.3.0.0116.dll
 DynamicPdfCorex64_10.3.3.0924.dll
 DynamicPdfRx64_10.3.3.0924.dll
-DynamicImagex64.dll (16.2.0.0112/15.2.0.0924)
 ```
 
 **Version 15.3**
@@ -48,7 +46,6 @@ DynamicImagex64.dll (16.2.0.0112/15.2.0.0924)
 dwt_15.3.0.0107.dll
 DynamicPdfCorex64_10.3.3.0924.dll
 DynamicPdfRx64_10.3.3.0924.dll
-DynamicImagex64.dll (16.2.0.0112/15.2.0.0924)
 ```
 
 **Version 15.2**
@@ -56,7 +53,6 @@ DynamicImagex64.dll (16.2.0.0112/15.2.0.0924)
 dwt_15.2.0.0924.dll
 DynamicPdfCorex64_10.3.3.0924.dll
 DynamicPdfRx64_10.3.3.0924.dll
-DynamicImagex64.dll (16.2.0.0112/15.2.0.0924)
 ```
 
 **Version 15.1**
@@ -64,7 +60,6 @@ DynamicImagex64.dll (16.2.0.0112/15.2.0.0924)
 dwt_15.1.0.0806.dll
 DynamicPdfCorex64_10.3.2.0806.dll
 DynamicPdfRx64_10.3.2.0806.dll
-DynamicImagex64.dll (16.2.0.0112/15.2.0.0924/15.1.0.0806)
 ```
 
 **Version 15.0**
@@ -72,5 +67,4 @@ DynamicImagex64.dll (16.2.0.0112/15.2.0.0924/15.1.0.0806)
 dwt_15.0.0.0625.dll
 DynamicPdfCorex64_10.3.1.0124.dll
 DynamicPdfRx64_10.3.1.0124.dll
-DynamicImagex64.dll (16.2.0.0112/15.2.0.0924/15.1.0.0806/15.0.0.0625)
 ```
