@@ -43,7 +43,7 @@ You can follow the steps below to upgrade Dynamic Web TWAIN:
 
 5. Deploy the new version files to your server and test. 
 
-For Dynamic Web TWAIN v16.0 and later, Dynamsoft Service is designed to be backward compatible. Once you upgrade Dynamic Web TWAIN for your application on the server side, for end users' side
+For Dynamic Web TWAIN v16.0 and later, Dynamsoft Service is designed to be backward compatible. Once you upgrade Dynamic Web TWAIN for your application on the server side, for **end users' side**
 
 - If the end users have installed the same version or newer minor versions of Dynamsoft Service, they don't need to do anything;
 - If the end users have never installed Dynamsoft Service, have an older version or a different newer major version of it, they will be required to do a reinstallation of Dynamsoft Service. The process is described <a href="{{site.indepth}}deployment/service.html#how-to-install-dwt">here</a>  
