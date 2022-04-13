@@ -110,43 +110,26 @@ function CaptureImage() {
 The following code snippet shows how to use a camera through `MediaDevices`.
 
 ``` javascript
-var videoPlaying = false;
-
-function PlayVideo(bShow) {
-    if (videoPlaying) return;
-    if (DWObject) {
-        DWObject.Addon.Camera.stop();
-        videoPlaying = false;
-        // DEVICE-ID must be correct
-        // e.g.: "592bbc7c0f951657d8dc6dc3af8bdd76cde89b78184a8475f70eb012a4040a54"
-        DWObject.Addon.Camera.selectSource("DEVICE-ID");
-            .then(function() {
-                DWObject.Addon.Camera.play()
-                    .then(function() {
-                        videoPlaying = true;
-                    }
-                );
-            }
-        );
-    }
-}
-
 function CaptureImage() {
     if (DWObject) {
-        PlayVideo();
-        var startCapture = function() {
-            setTimeout(function() {
-                if (videoPlaying) {
-                    DWObject.Addon.Camera.capture().then(function(blob) {
-                        DWObject.Addon.Camera.stop();
-                        videoPlaying = false;
-                    });
-                } else {
-                    startCapture();
+        var showVideoConfigs = {
+            scannerViewer: {
+                autoDetect: {
+                    enableAutoDetect: true
                 }
-            }, 50);
+            },
+            filterViewer: {
+                exitDocumentScanAfterSave: true
+            }
         };
-        startCapture();
+
+        DWObject.Addon.Camera.scanDocument(showVideoConfigs).then(
+            function () {
+                console.log("OK");
+            },
+            function (error) {
+                console.log(error.message);
+            });
     }
 }
 ```
