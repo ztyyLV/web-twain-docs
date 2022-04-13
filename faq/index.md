@@ -281,6 +281,8 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}service-backward-compatibility.html" target="_blank">Can I use two different websites integrated with two different versions of Dynamic Web TWAIN on the same computer?</a>
 
+<a href="{{site.faq}}no-source-on-linux.html" target="_blank">Scanner source is listed on the XSane applicaton but not on my web application on Linux machines</a>
+
 ## Error Troubleshooting
 
 <a href="{{site.faq}}general-troubleshooting-steps.html" target="_blank">General troubleshooting steps</a>
