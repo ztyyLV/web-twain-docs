@@ -38,7 +38,8 @@ usermod -aG wheel XXX ps：XXX is current username
 sudo rpm -i DynamsoftServiceSetup.rpm
 ```
 
-If the above does not resolve the issue, please check the following and send screenshots and logs to support@dynamsoft.com for further troubleshooting.
+If the above does not resolve the issue, please follow the troubleshooting steps below.
+
 1. Has the process started?
 ``` shell
 ps aux | grep dynamsoft
@@ -48,3 +49,5 @@ ps aux | grep dynamsoft
 bash /opt/dynamsoft/DynamsoftService/DynamsoftScanningMgr
 ```
 3. Please check the logs here: /var/log/syslog
+
+For further support, please email support@dynamsoft.com and include any screenshots and logs collected.
