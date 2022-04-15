@@ -23,6 +23,8 @@ To configure the enhanced mode, please follow the steps below:
 3. Set Dynamsoft.DWT.IfCheckDCP=true in dynamsoft.webtwain.config.js   *In this case, it does not support initializing the DWT object dynamically.*
 4. Restart Dynamsoft Service
 
+*In this case, it does not support initializing the DWT object dynamically.*
+
 <strong>How to check if Enhance mode is running</strong>
 
 1. user_config.ini which is under `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17` will list the ports that each user is listening on.
