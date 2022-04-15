@@ -20,7 +20,7 @@ To configure the enhanced mode, please follow the steps below:
 
 1. Stop Dynamsoft Service
 2. Set EnableEnhancedMode=TRUE in DSConfiguration.ini which is under `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17`
-3. Set Dynamsoft.DWT.IfCheckDCP=true in dynamsoft.webtwain.config.js *In this case, it does not support initializing the DWT object dynamically.*
+3. Set Dynamsoft.DWT.IfCheckDCP=true in dynamsoft.webtwain.config.js   *In this case, it does not support initializing the DWT object dynamically.*
 4. Restart Dynamsoft Service
 
 <strong>How to check if Enhance mode is running</strong>
