@@ -78,6 +78,51 @@ For more information, check [How to use a TWAIN-Direct scanner](#how-to-use-a-tw
 
 ## Capture from cameras
 
+### Use [MediaDevices Cameras]({{site.getstarted}}hardware.html#mediadevices-cameras)
+
+Dynamic Web TWAIN also comes with a Camera add-on for you to capture images or documents using MediaDevices cameras, auto crop and adjust perspective. 
+
+To include the Camera add-on, simply add a reference to the corresponding camera JS file which is included in the [resources folder]({{site.about}}faqs.html#what-are-the-resources-files).
+
+``` html
+<script src="Resources/addon/dynamsoft.webtwain.addon.camera.js"></script>
+```
+
+[Try an online demo](https://demo.dynamsoft.com/web-twain/mobile-online-camera-scanner/) | [Get sample code](https://download.dynamsoft.com/Samples/DWT/SourceCode-DWT-Mobile-Camera-Scanner.zip)
+
+Notes:
+
+Make sure you deploy the sample to a web server that
+   - runs HTTPS
+   - serves the *.wasm file with Content-Type: application/wasm
+
+The following code snippet shows how to use the camera add-on:
+
+``` javascript
+function CaptureImage() {
+    if (DWObject) {
+        var showVideoConfigs = {
+            scannerViewer: {
+                autoDetect: {
+                    enableAutoDetect: true
+                }
+            },
+            filterViewer: {
+                exitDocumentScanAfterSave: true
+            }
+        };
+
+        DWObject.Addon.Camera.scanDocument(showVideoConfigs).then(
+            function () {
+                console.log("OK");
+            },
+            function (error) {
+                console.log(error.message);
+            });
+    }
+}
+```
+
 ### Use [DirectShow Cameras]({{site.getstarted}}hardware.html#directshow-cameras)
 
 The following code snippet shows how to use a camera through `DirectShow`.
@@ -101,35 +146,6 @@ function CaptureImage() {
             }, 50);
         };
         DWObject.Addon.Webcam.CaptureImage(funCaptureImage, funCaptureImage);
-    }
-}
-```
-
-### Use [MediaDevices Cameras]({{site.getstarted}}hardware.html#mediadevices-cameras)
-
-The following code snippet shows how to use a camera through `MediaDevices`.
-
-``` javascript
-function CaptureImage() {
-    if (DWObject) {
-        var showVideoConfigs = {
-            scannerViewer: {
-                autoDetect: {
-                    enableAutoDetect: true
-                }
-            },
-            filterViewer: {
-                exitDocumentScanAfterSave: true
-            }
-        };
-
-        DWObject.Addon.Camera.scanDocument(showVideoConfigs).then(
-            function () {
-                console.log("OK");
-            },
-            function (error) {
-                console.log(error.message);
-            });
     }
 }
 ```
