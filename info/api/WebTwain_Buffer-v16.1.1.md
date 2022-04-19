@@ -7,7 +7,9 @@ breadcrumbText: Buffer
 description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page
 ---
 
-# WebTwain Buffer Manage
+# {WebTwainObject} Buffer Manage
+
+> {WebTwainObject} denotes the `WebTwain` instance.
 
 **Methods**
 

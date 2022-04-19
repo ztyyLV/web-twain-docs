@@ -7,7 +7,9 @@ breadcrumbText: Viewer
 description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 ---
 
-# `WebTwain.Viewer`
+# `{WebTwainObject}.Viewer`
+
+> {WebTwainObject} denotes the `WebTwain` instance.
 
 **Methods**
 

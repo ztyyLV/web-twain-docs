@@ -7,7 +7,9 @@ breadcrumbText: OCRB Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference OCRB Addon APIs Page
 ---
 
-# `WebTwain.Addon.OCR`
+# `{WebTwainObject}.Addon.OCR`
+
+> {WebTwainObject} denotes the `WebTwain` instance.
 
 For Server Side OCR, check out [Server-Side OCR](#server-side).
 
