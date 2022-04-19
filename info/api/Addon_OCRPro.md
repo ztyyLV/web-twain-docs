@@ -7,7 +7,9 @@ breadcrumbText: OCRPro Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference OCRPro Addon APIs Page
 ---
 
-# `WebTwain.Addon.OCRPro`
+# `{WebTwainObject}.Addon.OCRPro`
+
+> {WebTwainObject} denotes the `WebTwain` instance.
 
 For Server Side OCR, check out [Server-Side OCR](#server-side)
 
