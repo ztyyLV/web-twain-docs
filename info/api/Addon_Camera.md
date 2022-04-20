@@ -10,20 +10,15 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Camera Addon APIs
 # `{WebTwainObject}.Addon.Camera`
 
 > {WebTwainObject} denotes the `WebTwain` instance.
->
-> Dynamsoft provides a built-in feature to handle camera capturing, prospective adjusting, etc. Check out the APIs [`showVideo()`](#showvideo) and [`closeVideo()`](#closevideo). Please NOTE that these two APIs should not be mixed with other more specific APIs like [`play()`](#play), [`pause()`](#pause) and [`stop()`](#stop), etc.
-> 
-> To include the Camera addon, simply add a reference to the corresponding JavaScript file, included in the [resources folder]({{site.about}}faqs.html#what-are-the-resources-files).
+
+Dynamic Web TWAIN comes with a Camera add-on for you to capture images or documents using MediaDevices cameras, auto crop and adjust perspective. 
+
+To include the Camera add-on, simply add a reference to the corresponding camera JS file:
 
 ``` html
 <script src="Resources/addon/dynamsoft.webtwain.addon.camera.js"></script>
 ```
-
-Notes:
-- Make sure you deploy the sample to an webserver that
-   - Runs HTTPS
-   - Serves the *.wasm file with Content-Type: application/wasm
-- It is recommended to set <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Dynamsoft_WebTwainEnv.html?ver=latest#uselocalservice" target="_blank">UseLocalService</a> to false to use the Camera Addon. If it must be true, you need to set Dynamsoft.DWT.UseCameraAddonWasm=true.
+Check out [MediaDevices Cameras]({{site.indepth}}input.html#mediadevices-cameras) to learn more on how to use the camera add-on.
 
 **Methods**
 
