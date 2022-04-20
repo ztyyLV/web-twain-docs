@@ -33,9 +33,9 @@ description: Source is connected to the maximum supported number of applications
     DWObject.SelectSource();
     DWObject.CloseSource(); //close source before open
     DWObject.OpenSource();
-    DWObject.IfDisableSourceAfterAcquire = true; //close source after acquiring
+    DWObject.IfDisableSourceAfterAcquire = true; //close the scanner UI after acquiring
     DWObject.AcquireImage();
   }
   ```
 
-  Reboot your device.
+  - Reboot your device.

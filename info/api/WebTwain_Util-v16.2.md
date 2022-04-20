@@ -7,7 +7,9 @@ breadcrumbText: Utility
 description: Dynamic Web TWAIN SDK Documentation API Reference Utility APIs Page
 ---
 
-# WebTwain Util
+# {WebTwainObject} Util
+
+> {WebTwainObject} denotes the `WebTwain` instance.
 
 **Methods**
 

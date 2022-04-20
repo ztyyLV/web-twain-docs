@@ -3,12 +3,12 @@ layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
 title: The handle is in the wrong state for the requested operation
-keywords: Dynamic Web TWAIN, Documentation, ErrorList
+keywords: Dynamic Web TWAIN, Error Troubleshooting
 breadcrumbText: The handle is in the wrong state for the requested operation
 description: The handle is in the wrong state for the requested operation
 ---
 
-# ErrorList
+# Error Troubleshooting
 
 ## The handle is in the wrong state for the requested operation
 

@@ -253,9 +253,9 @@ settings.Redaction.FindTextAction = Dynamsoft.DWT.EnumDWT_OCRFindTextAction.OCRF
 
 ### Environment
 
-Server side OCR has no restriction on what OS or application is running on the client side. It receives an OCR request via HTTP from a client, carries out the OCR operation and returns the results to the client. While both `OCRB` and `OCRPro` can work on the server side, we generally recommend the use of `OCRPro` for this scenario.
+Server side OCR has no restriction on what OS or application is running on the client side. It receives an OCR request via HTTP from a client, carries out the OCR operation and returns the results to the client. As you may know, server side OCRPro is no longer supported since V17.0, so if you want to use Dynamic Web TWAIN V17.0+ for server-side OCR, you need to use OCRB.
 
-For `OCRPro` , only Windows can be used as the server OS. For `OCRB` , the server can run either `Windows` or `Linux` .
+For `OCRB` , the server can run either `Windows` or `Linux` .
 
 <!-- ### Use OCRPro on the Server Side
 

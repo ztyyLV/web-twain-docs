@@ -7,14 +7,16 @@ breadcrumbText: Barcode Reader Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference BarcodeReader Addon APIs Page
 ---
 
-# `WebTwain.Addon.BarcodeReader`
+# `{WebTwainObject}.Addon.BarcodeReader`
+
+> {WebTwainObject} denotes the `WebTwain` instance.
 
 **Methods**
 
-| |
-|:-|:-|
-|[`decode()`]({{site.info}}api/Addon_BarcodeReader.html#decode)| [`getRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#getruntimesettings)|[`updateRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#updateruntimesettings)|
-|[`resetRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#resetruntimesettings)| [`initRuntimeSettingsWithString()`]({{site.info}}api/Addon_BarcodeReader.html#initruntimesettingswithstring)|
+|                                                                                            |
+| :----------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| [`decode()`]({{site.info}}api/Addon_BarcodeReader.html#decode)                             | [`getRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#getruntimesettings)                       | [`updateRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#updateruntimesettings) |
+| [`resetRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#resetruntimesettings) | [`initRuntimeSettingsWithString()`]({{site.info}}api/Addon_BarcodeReader.html#initruntimesettingswithstring) |
 
 ---
 
@@ -22,7 +24,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference BarcodeReader Add
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Read an image in the buffer and try to locate and decode barcode(s) on it.
  * @param index Specify the image to decode.
@@ -125,13 +127,43 @@ interface Result {
 }
 ```
 
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v14.3.1+ </td>
+<td align="center">v14.1+ </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+<td align="center">v16.0+</td>
+</tr>
+
+</table>
+</div>
+
 ---
 
 ## getRuntimeSettings
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Get the current runtime settings.
  */
@@ -185,13 +217,43 @@ interface Region {
 }
 ```
 
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v14.3.1+ </td>
+<td align="center">v14.1+ </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+<td align="center">v16.0+</td>
+</tr>
+
+</table>
+</div>
+
 ---
 
 ## updateRuntimeSettings
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Update the runtime settings with a given object or use the string "speed", "balance", or "coverage" to use our preset settings. The default setting is "coverage".
  * @param settings Specify the runtime settings.
@@ -201,19 +263,53 @@ updateRuntimeSettings(settings: RuntimeSettings): Promise < RuntimeSettings > ;
 
 **Example**
 
-``` javascript
-DWObject.Addon.BarcodeReader.getRuntimeSettings('balance').then(function(settings) {    
+```javascript
+DWObject.Addon.BarcodeReader.getRuntimeSettings("balance")
+  .then(function (settings) {
     settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED;
     return DWObject.Addon.BarcodeReader.updateRuntimeSettings(settings);
-}).then(function() {
-    DWObject.Addon.BarcodeReader.decode(0).then(function(textResult) {
-            console.log(textResult);
-        },
-        function(ex) {
-            console.log(ex.message || ex);
-        });
-    });
+  })
+  .then(function () {
+    DWObject.Addon.BarcodeReader.decode(0).then(
+      function (textResult) {
+        console.log(textResult);
+      },
+      function (ex) {
+        console.log(ex.message || ex);
+      }
+    );
+  });
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v14.3.1+ </td>
+<td align="center">v14.1+ </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+<td align="center">v16.0+</td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -221,12 +317,42 @@ DWObject.Addon.BarcodeReader.getRuntimeSettings('balance').then(function(setting
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Reset all runtime settings to default values.
  */
 resetRuntimeSettings(): Promise < RuntimeSettings > ;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v14.3.1+ </td>
+<td align="center">v14.1+ </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+<td align="center">v16.0+</td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -234,7 +360,7 @@ resetRuntimeSettings(): Promise < RuntimeSettings > ;
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Set up the barcode reader with advanced settings.
  * @param settings The runtime setting in the form of a string.
@@ -243,3 +369,33 @@ initRuntimeSettingsWithString(
     settings: string
 ): Promise < RuntimeSettings > ;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td colspan="5" align="center">Desktop Service Edition</td>
+<td>WebAssembly Edition</td>
+</tr>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">v16.0+ </td>
+<td align="center">v16.0+ </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+<td align="center">v16.0+</td>
+</tr>
+
+</table>
+</div>

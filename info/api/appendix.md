@@ -181,8 +181,8 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 | [ `Addon.Camera.showVideo()` ]({{site.info}}api/Addon_Camera.html#showvideo) | `Viewer.showVideo()` |
 | [ `Addon.Camera.closeVideo()` ]({{site.info}}api/Addon_Camera.html#closevideo) | `Viewer.closeVideo()` |
 | [ `Addon.Camera.off()` ]({{site.info}}api/Addon_Camera.html#off) | `Viewer.off()` |
-| [ `Addon.Camera.on("video-closed")` ]({{site.info}}api/Addon_Camera.html#on) | `Viewer.on("video-closed")` |
-| [ `Addon.Camera.on("video-error")` ]({{site.info}}api/Addon_Camera.html#on) | `Viewer.on("video-error")` |
+| [ `Addon.Camera.on("video-closed")` ]({{site.info}}api/Addon_Camera.html#video-closed) | `Viewer.on("video-closed")` |
+| [ `Addon.Camera.on("video-error")` ]({{site.info}}api/Addon_Camera.html#video-error) | `Viewer.on("video-error")` |
 
 ### For the Viewer
 

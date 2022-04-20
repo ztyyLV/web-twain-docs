@@ -7,8 +7,10 @@ breadcrumbText: Acquire
 description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 ---
 
-# WebTwain Scan
+# {WebTwainObject} Scan
 
+> {WebTwainObject} denotes the `WebTwain` instance.
+>
 > The following APIs are compatible with TWAIN, ICA, SANE (Windows, macOS and Linux)
 
 **Methods**
@@ -823,6 +825,10 @@ interface ScanSetup {
   },
   /**
    * A callback triggered before the scan, after the scan and after each page has been transferred.
+   * Returned status
+   * {event: 'beforeAcquire', result: {…}} //Equivalent to OnPreAllTransfers event
+   * {event: 'postTransfer', bScanCompleted: false, result: {…}} //Equivalent to OnPostTransfer event
+   * {event: 'postTransfer', bScanCompleted: true, result: {…}} //Equivalent to OnPostAllTransfers event
    */
   funcScanStatus?: (status: Status) => void,
   /**
@@ -936,6 +942,10 @@ interface ScanSetup {
   }
 }
 ```
+
+**Sample**
+
+<a href="https://demo.dynamsoft.com/Samples/dwt/Make-use-of-the-API-startScan/index.html" target="_blank">Make use of the API startScan </a>
 
 ---
 
@@ -1602,6 +1612,8 @@ readonly Duplex: Dynamsoft.EnumDWT_DUPLEX | number;
 | TWDX_2PASSDUPLEX | 2 | 2-pass duplex |
 
 1-pass means the paper gets scanned on both sides at the same time. 2-pass means the paper passes the light bar twice to get both sides scanned separately.
+
+This property does not support macOS/ICA or Linux.
 
 ---
 

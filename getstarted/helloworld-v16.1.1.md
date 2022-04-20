@@ -215,7 +215,7 @@ function UploadAsPDF() {
             console.log("There is no image to upload!");
             return;
         }
-        DWObject.SelectAllImages();
+        // DWObject.SelectAllImages();
         indices = DWObject.SelectedImagesIndices;
         DWObject.HTTPUpload(
             url,
@@ -320,7 +320,7 @@ Now we can use the page to scan or acquire, then upload the images as a PDF docu
                     console.log("There is no image to upload!");
                     return;
                 }
-                DWObject.SelectAllImages();
+                //DWObject.SelectAllImages();
                 indices = DWObject.SelectedImagesIndices;
                 DWObject.HTTPUpload(
                     url,

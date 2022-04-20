@@ -75,7 +75,7 @@ export default class DWT extends React.Component {
             this.Dynamsoft_OnReady()
         });
         Dynamsoft.WebTwainEnv.ProductKey = 'YOUR-PRODUCT-KEY';
-        Dynamsoft.WebTwainEnv.ResourcesPath = "dwt-resources";
+        Dynamsoft.WebTwainEnv.ResourcesPath = "/dwt-resources";
         Dynamsoft.WebTwainEnv.Containers = [{
             WebTwainId: 'dwtObject',
             ContainerId: this.containerId,

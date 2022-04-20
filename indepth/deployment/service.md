@@ -1,6 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
+noTitleIndex: true
 title: Dynamic Web TWAIN Deployment - Dynamsoft Service
 keywords: Dynamic Web TWAIN, Documentation, Deployment, Dynamsoft Service
 breadcrumbText: Dynamsoft Service
@@ -53,17 +54,15 @@ By default, there are three Dynamsoft Service processes running which use the sa
   
 ## Installation of Dynamsoft Service
 
-### Dynamsoft service is not installed (Dynamic Web TWAIN is not installed)
-
 On a desktop, when a new user accesses a web page using Dynamic Web TWAIN SDK for the first time, he will be prompted to install the Dynamsoft Service. This is a built-in behaviour of the library. The prompt will display the download link. Once the installer is downloaded, the installation process will take just a few seconds.
 
-The prompt comes up when you try to [create a `WebTwain` instance](#creating-the-webtwain-instance) in Service mode.
+The prompt comes up when you try to [create a WebTwain instance](https://www.dynamsoft.com/web-twain/docs/indepth/faqs/develop/how-can-i-customize-the-webtwain-instances.html) in Service mode.
 
 ![Initialization]({{site.assets}}imgs/Initialization-1.png)
 
-On **Windows and macOS**, the users can double click the downloaded installer to install the SDK. 
+On **Windows and macOS**, double click the downloaded installer to install the service. 
 
-On **Linux**, the users can run one of the following commands to install it:
+On **Linux**, instead of double clicking, the downloaded installer needs to be run using one of the following commands:
 
 - Debian / Ubuntu
 
@@ -78,6 +77,8 @@ On **Linux**, the users can run one of the following commands to install it:
   ```
 
 Once the installation is done, the users can click 'Reconnect to the service' or refresh the page to start using Dynamic Web TWAIN.
+
+### Msg: Dynamsoft service is not installed / Dynamic Web TWAIN is not installed
 
 If Dynamsoft Service is not installed, users might receive the error 'The Dynamic Web TWAIN module is not installed' when accessing an application that uses Dynamic Web TWAIN. 
 
@@ -155,7 +156,7 @@ These files are named with their version number. The following uses v16.1.1 as a
 
 ## Related Resources:
 
-* <a href="{{site.indepth}}faqs/develop/how-to-uninstall-dynamic-web-twain.html" target="_blank">How to uninstall Dynamsoft Service?</a>
+* <a href="{{site.faq}}how-to-uninstall-dynamsoft-service.html" target="_blank">How to uninstall Dynamsoft Service?</a>
 * <a href="{{site.indepth}}faqs/develop/what-does-dynamsoft-service-do.html" target="_blank">What does Dynamsoft Service do?</a>
-* <a href="{{site.indepth}}faqs/develop/how-to-install-dynamic-web-twain.html" target="_blank">How to install Dynamic Web TWAIN?</a>
-* <a href="{{site.indepth}}faqs/distribution/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly.html" target="_blank">Why is the browser prompting me to install Dynamsoft Service repeatedly?</a>
+* <a href="{{site.faq}}service-prompting-to-install-repeatedly.html" target="_blank">I have installed the Dynamsoft Service on an end-user machine but still got asked to install it repeatedly. Why?</a>
+* <a href="{{site.faq}}can-i-install-dynamsoft-service-silently.html" target="_blank">Can I install Dynamsoft Service silently?</a>

@@ -19,7 +19,7 @@ description: How to uninstall Dynamsoft Service
 * Remove the folders `C:\Windows\SysWOW64\Dynamsoft\DynamsoftService` and `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64(version)`
 
 2. 
-Run 'Command Prompt' as **administrator**, go to C:\WINDOWS\system32, then execute the following line（Not applicable if you installed Dynamsoft Service through personal installer）:
+Run 'Command Prompt' as **administrator**, go to C:\WINDOWS\system32, then execute the following line (Not applicable if you installed Dynamsoft Service through personal installer):
 
 ``` shell
 wmic product where name="Dynamsoft Service" call uninstall /nointeractive
@@ -29,8 +29,8 @@ wmic product where name="Dynamsoft Service" call uninstall /nointeractive
 
 ### On macOS
 
-* Run the file `Uninstall.pkg` . The file can be found in `Go > Applications > Dynamsoft > WebTwain > {installed version No.}`
-* Remove the folder `Go > Applications > Dynamsoft > WebTwain > {installed version No.}`
+* Run the file `Uninstall.pkg` . The file can be found in `Go > Applications > Dynamsoft > DynamsoftService > {installed version No.}`
+* Remove the folder `Go > Applications > Dynamsoft > DynamsoftService > {installed version No.}`
 
 ### On Linux
 

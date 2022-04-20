@@ -35,6 +35,7 @@ Embed the script of the library and add an element on the page.
 ``` html
 <script src="Resources/dynamsoft.webtwain.initiate.js"></script>
 <script src="Resources/dynamsoft.webtwain.config.js"></script>
+<script src="Resources/addon/dynamsoft.webtwain.addon.camera.js"></script>
 ```
 
 ``` html
@@ -71,7 +72,7 @@ Add a scan button and the minimum code.
 </script>
 ```
 
-## (from version 16.1) Make sure the code works on mobile devices too
+## (from version 17.2) Make sure the code works on mobile devices too
 
 Change the function `AcquireImage()` like this
 
@@ -79,15 +80,27 @@ Change the function `AcquireImage()` like this
 function AcquireImage() {
    if (DWObject) {
      if (Dynamsoft.Lib.env.bMobile) {
-         DWObject.LoadImageEx('', 5,
-           function() {
-              console.log('success');
-               },
-             function(errCode, error) {
-                alert(error);
-                        }
-                    );
-                } 
+	   var showVideoConfigs = {
+		scannerViewer:{
+			autoDetect:{
+				enableAutoDetect: true
+			}
+		},
+		filterViewer: {
+			exitDocumentScanAfterSave: true
+		}
+	    };
+           
+	    if(!DWObject.UseLocalService) {
+		DWObject.Addon.Camera.scanDocument(showVideoConfigs).then(
+			function(){
+				console.log("OK");
+			}, 
+			function(error){
+				console.log(error.message);
+			});
+	    } 
+       }
        else {
             DWObject.SelectSource(
                 function() {
@@ -97,8 +110,8 @@ function AcquireImage() {
                 function() {
                     console.log("SelectSource failed!");
                 });
-        }
-    }
+       }
+   }
 }
 ```
 
@@ -109,8 +122,11 @@ function AcquireImage() {
 
 <head>
     <title>Hello World</title>
-    <script src="Resources/dynamsoft.webtwain.initiate.js"> </script>
-    <script src="Resources/dynamsoft.webtwain.config.js"> </script>
+    <script src="Resources/dynamsoft.webtwain.initiate.js"></script>
+    <script src="Resources/dynamsoft.webtwain.config.js"></script>
+    <script src="Resources/addon/dynamsoft.webtwain.addon.camera.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 
 <body>
@@ -123,30 +139,42 @@ function AcquireImage() {
             DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer');
         }
 
-        function AcquireImage() {
-         if (DWObject) {
-         if (Dynamsoft.Lib.env.bMobile) {
-            DWObject.LoadImageEx('', 5,
-               function() {
-                 console.log('success');
-                  },
-                 function(errCode, error) {
-                   alert(error);
-            }
-          );
-         } 
-            else {
-                    DWObject.SelectSource(function() {
-                            DWObject.OpenSource();
-                            DWObject.AcquireImage();
-                        },
-                        function() {
-                            console.log("SelectSource failed!");
-                        }
-                    );
-                }
-            }
-        }
+	function AcquireImage() {
+	   if (DWObject) {
+	     if (Dynamsoft.Lib.env.bMobile) {
+		   var showVideoConfigs = {
+			scannerViewer:{
+				autoDetect:{
+					enableAutoDetect: true
+				}
+			},
+			filterViewer: {
+				exitDocumentScanAfterSave: true
+			}
+		    };
+
+		    if(!DWObject.UseLocalService) {
+			DWObject.Addon.Camera.scanDocument(showVideoConfigs).then(
+				function(){
+					console.log("OK");
+				}, 
+				function(error){
+					console.log(error.message);
+				});
+		    } 
+	       }
+	       else {
+		    DWObject.SelectSource(
+			function() {
+			    DWObject.OpenSource();
+			    DWObject.AcquireImage();
+			},
+			function() {
+			    console.log("SelectSource failed!");
+			});
+	       }
+	   }
+	}
     </script>
 </body>
 
@@ -200,7 +228,7 @@ In almost all our user cases, the scanned documents need to be uploaded to a ser
 
 ### Add code to do the upload
 
-The method [HTTPUpload]({{site.info}}api/WebTwain. IO.html#httpupload) is used to do the upload.
+The method [HTTPUpload]({{site.info}}api/WebTwain.IO.html#httpupload) is used to do the upload.
 
 ``` javascript
 function UploadAsPDF() {
@@ -215,7 +243,7 @@ function UploadAsPDF() {
             console.log("There is no image to upload!");
             return;
         }
-        DWObject.SelectAllImages();
+        // DWObject.SelectAllImages();
         indices = DWObject.SelectedImagesIndices;
         DWObject.HTTPUpload(
             url,
@@ -271,6 +299,9 @@ Now we can use the page to scan or acquire, then upload the images as a PDF docu
     <title>Hello World</title>
     <script src="Resources/dynamsoft.webtwain.initiate.js"> </script>
     <script src="Resources/dynamsoft.webtwain.config.js"> </script>
+    <script src="Resources/addon/dynamsoft.webtwain.addon.camera.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 
 <body>
@@ -283,29 +314,42 @@ Now we can use the page to scan or acquire, then upload the images as a PDF docu
             DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer');
         }
 
-        function AcquireImage() {
-            if (DWObject) {
-                if (Dynamsoft.Lib.env.bMobile) {
-                  DWObject.LoadImageEx('', 5,
-                        function() {
-                            console.log('success');
-                        },
-                        function(errCode, error) {
-                            alert(error);
-                        }
-                    );                 
-                } else {
-                    DWObject.SelectSource(function() {
-                            DWObject.OpenSource();
-                            DWObject.AcquireImage();
-                        },
-                        function() {
-                            console.log("SelectSource failed!");
-                        }
-                    );
-                }
-            }
-        }
+	function AcquireImage() {
+	   if (DWObject) {
+	     if (Dynamsoft.Lib.env.bMobile) {
+		   var showVideoConfigs = {
+			scannerViewer:{
+				autoDetect:{
+					enableAutoDetect: true
+				}
+			},
+			filterViewer: {
+				exitDocumentScanAfterSave: true
+			}
+		    };
+
+		    if(!DWObject.UseLocalService) {
+			DWObject.Addon.Camera.scanDocument(showVideoConfigs).then(
+				function(){
+					console.log("OK");
+				}, 
+				function(error){
+					console.log(error.message);
+				});
+		    } 
+	       }
+	       else {
+		    DWObject.SelectSource(
+			function() {
+			    DWObject.OpenSource();
+			    DWObject.AcquireImage();
+			},
+			function() {
+			    console.log("SelectSource failed!");
+			});
+	       }
+	   }
+	}
 
         function UploadAsPDF() {
             var url = Dynamsoft.Lib.detect.ssl ? "https://" : "http://";
@@ -319,7 +363,7 @@ Now we can use the page to scan or acquire, then upload the images as a PDF docu
                     console.log("There is no image to upload!");
                     return;
                 }
-                DWObject.SelectAllImages();
+                //DWObject.SelectAllImages();
                 indices = DWObject.SelectedImagesIndices;
                 DWObject.HTTPUpload(
                     url,

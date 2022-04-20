@@ -19,6 +19,7 @@ description: Dynamic Web TWAIN SDK Documentation Platform Page
   + 7
   + 8 & 8.1
   + 10 `Recommended`
+  + 11
   + Server 2008
   + Server 2012
   + Server 2016
@@ -109,9 +110,9 @@ ActiveX browsers refers to Internet Explorer 9 ~ 11. They are not included in th
 ### Browsers on iOS & iPadOS
 
 * The following versions are supported
-  + iOS 12.*
-  + iOS 13.* `Recommended`
-  + iPadOS 13.* `Recommended`
+  + iOS 12
+  + iOS 13+ `Recommended`
+  + iPadOS 13+ `Recommended`
 
 * The following browsers are supported
   + Chrome 68.* ~ 79.* (no video streaming)
@@ -125,8 +126,8 @@ ActiveX browsers refers to Internet Explorer 9 ~ 11. They are not included in th
 
 * The following versions are supported
   + Android 8.0 Oreo
-  + Android 9 Pie `Recommended`
-  + Android 10 `Recommended`
+  + Android 9 Pie
+  + Android 10+ `Recommended`
 
 * The following browsers are supported
   + Chrome 68.* ~ 79.*

@@ -7,7 +7,9 @@ breadcrumbText: Buffer
 description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page
 ---
 
-# WebTwain Buffer Manage
+# {WebTwainObject} Buffer Manage
+
+> {WebTwainObject} denotes the `WebTwain` instance.
 
 **Methods**
 
@@ -690,6 +692,13 @@ Both `BlankImageCurrentStdDev` and `BlankImageMaxStdDev` range from 0 to 100.
 IfAllowLocalCache: boolean;
 ```
 
+**Usage notes**
+
+The default value of IfAllowLocalCache is true. When the property is true, you can scan as many images as you want as long as you have a big enough disk.  
+The default threshold is set to 800 (MB), anything beyond 800MB gets compressed, encrypted and cached on the local disk.  
+If neccessary, you can set the threshold using `BufferMemoryLimit` for better performance.  
+All cached data is encrypted and can only be read by Dynamic Web TWAIN and it will be destroyed when it is no longer used.  
+
 ---
 
 ## OnBitmapChanged
@@ -699,28 +708,30 @@ IfAllowLocalCache: boolean;
 ``` typescript
 /**
  * A built-in callback triggered when a change occurs in the buffer.
- * @argument indexString A string of the changed index(indices).
- * @argument type Operation type.
+ * @argument indexString Array of the changed index(indices).
+ * @argument type Operation type. 
+   1 means new image(s) were added at the tail, 
+   2 means image(s) were inserted before the current index, 
+   3 means image(s) are deleted, 
+   4 means image(s) are modified, 
  * @argument index Index of the current image.
  */
 RegisterEvent('OnBitmapChanged',
-    function (indexString: string,
+    function (
+        indexString: number[],
         type: number,
         index: number
     ) {}
 ): boolean; 
 ```
 
-**Usage notes**
+**Example**
 
-Operation types include 
-
-1: new image(s) were added at the tail
-2: new image(s) were inserted before the current index
-3: image(s) are deleted
-4: image(s) are modified
-5: indices of images changed
-
+```javascript
+DWObject.RegisterEvent('OnBitmapChanged', function(strUpdatedIndex, operationType, sCurrentIndex) {
+        console.log('Image ' + sCurrentIndex + ' has changed!');
+});
+```
 ---
 
 ## OnTopImageInTheViewChanged
