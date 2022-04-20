@@ -344,7 +344,7 @@ function loadFileFromBase64() {
 DWObject.LoadDibFromClipboard()
 ```
 
-### Related KBs
+## Related KBs
 
 <a href="{{site.faq}}what-physical-scanners-are-supported.html" target="_blank">What physical document scanners does the Dynamic Web TWAIN SDK support?</a>   
 <a href="{{site.faq}}how-to-use-TWACKER-to-check-if-your-device-is-TWAIN-Compliant.html" target="_blank">How to use TWACKER to check if your device is TWAIN Compliant?</a>  
