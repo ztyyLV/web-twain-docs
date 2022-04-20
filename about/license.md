@@ -47,8 +47,7 @@ Dynamsoft.DWT.ProductKey = 't0076lQAAAGNcO61He******'; // update the ProductKey 
 If you have multiple license keys, separate them with semicolons like below:
 
 ``` javascript
-
-Dynamsoft.DWT.ProductKey = 't0076lQAAAGNcO61He******; t0076lQAAAGNcO61He******';
+Dynamsoft.DWT.ProductKey = 't0076lQAAAGNcO61He******;t0076lQAAAGNcO61He******';
 ```
 
 ### Update organizationID

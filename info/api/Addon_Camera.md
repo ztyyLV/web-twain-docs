@@ -7,7 +7,9 @@ breadcrumbText: Camera Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference Camera Addon APIs Page
 ---
 
-# `WebTwain.Addon.Camera`
+# `{WebTwainObject}.Addon.Camera`
+
+> {WebTwainObject} denotes the `WebTwain` instance.
 
 Dynamic Web TWAIN comes with a Camera add-on for you to capture images or documents using MediaDevices cameras, auto crop and adjust perspective. 
 
@@ -16,7 +18,7 @@ To include the Camera add-on, simply add a reference to the corresponding camera
 ``` html
 <script src="Resources/addon/dynamsoft.webtwain.addon.camera.js"></script>
 ```
-Check out [MediaDevices Cameras]({{site.getstarted}}input.html#mediadevices-cameras) to learn more on how to use the camera add-on.
+Check out [MediaDevices Cameras]({{site.indepth}}input.html#mediadevices-cameras) to learn more on how to use the camera add-on.
 
 **Methods**
 

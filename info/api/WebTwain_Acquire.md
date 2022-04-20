@@ -7,9 +7,11 @@ breadcrumbText: Acquire
 description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 ---
 
-# WebTwain Scan
+# {WebTwainObject} Scan
 
-> The following APIs are compatible with TWAIN, ICA, SANE (Windows, macOS and Linux)
+> The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object](https://www.dynamsoft.com/web-twain/docs/indepth/features/initialize.html?ver=latest#creating-the-webtwain-instance).
+
+**1. The following APIs are compatible with TWAIN, ICA, SANE (Windows, macOS and Linux)** 
 
 **Methods**
 
@@ -35,7 +37,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 | [`OnPostAllTransfers`](#onpostalltransfers) | [`OnPostTransfer`](#onposttransfer) | [`OnPostTransferAsync`](#onposttransferasync) |
 | [`OnPreAllTransfers`](#onprealltransfers)   | [`OnPreTransfer`](#onpretransfer)   |
 
-> The following APIs are compatible with TWAIN and ICA
+**2. The following APIs are compatible with TWAIN and ICA** 
 
 **Methods**
 
@@ -43,7 +45,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 | :-------------------------------------- | :-------------------------------------- |
 | [`getCapabilities()`](#getcapabilities) | [`setCapabilities()`](#setcapabilities) |
 
-> The following APIs are compatible with TWAIN (mostly Windows, but could also be macOS)
+**3. The following APIs are compatible with TWAIN (mostly Windows, but could also be macOS)** 
 
 **Methods**
 
