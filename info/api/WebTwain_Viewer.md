@@ -7,7 +7,9 @@ breadcrumbText: Viewer
 description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 ---
 
-# `WebTwain.Viewer`
+# `{WebTwainObject}.Viewer`
+
+> {WebTwainObject} denotes the `WebTwain` instance.
 
 **Methods**
 
@@ -222,15 +224,15 @@ createCustomElement(
 
 interface CustomElement {
     /**
-     * Show the custome element.
+     * Show the custom element.
      */
     show(): boolean;
     /**
-     * Hide the custome element.
+     * Hide the custom element.
      */
     hide(): boolean;
     /**
-     * Remove the custome element.
+     * Remove the custom element.
      */
     dispose(): boolean;
 };

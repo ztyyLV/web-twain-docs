@@ -7,8 +7,10 @@ breadcrumbText: Acquire
 description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 ---
 
-# WebTwain Scan
+# {WebTwainObject} Scan
 
+> {WebTwainObject} denotes the `WebTwain` instance.
+>
 > The following APIs are compatible with TWAIN, ICA, SANE (Windows, macOS and Linux)
 
 **Methods**

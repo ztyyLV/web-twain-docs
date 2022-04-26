@@ -7,9 +7,11 @@ breadcrumbText: Acquire
 description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 ---
 
-# WebTwain Scan
+# {WebTwainObject} Scan
 
-> The following APIs are compatible with TWAIN, ICA, SANE (Windows, macOS and Linux)
+> The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object](https://www.dynamsoft.com/web-twain/docs/indepth/features/initialize.html?ver=latest#creating-the-webtwain-instance).
+
+**1. The following APIs are compatible with TWAIN, ICA, SANE (Windows, macOS and Linux)** 
 
 **Methods**
 
@@ -35,7 +37,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 | [`OnPostAllTransfers`](#onpostalltransfers) | [`OnPostTransfer`](#onposttransfer) | [`OnPostTransferAsync`](#onposttransferasync) |
 | [`OnPreAllTransfers`](#onprealltransfers)   | [`OnPreTransfer`](#onpretransfer)   |
 
-> The following APIs are compatible with TWAIN and ICA
+**2. The following APIs are compatible with TWAIN and ICA** 
 
 **Methods**
 
@@ -43,7 +45,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 | :-------------------------------------- | :-------------------------------------- |
 | [`getCapabilities()`](#getcapabilities) | [`setCapabilities()`](#setcapabilities) |
 
-> The following APIs are compatible with TWAIN (mostly Windows, but could also be macOS)
+**3. The following APIs are compatible with TWAIN (mostly Windows, but could also be macOS)** 
 
 **Methods**
 
@@ -5016,7 +5018,7 @@ interface CapabilitySetup {
     /**
      * The value to set to the capability or the value of the capability after setting.
      */
-    curValue: number | string;
+    curValue: number | string; //array is not supported
     errorCode?: number;
     errorString?: string;
     /**
@@ -5073,16 +5075,16 @@ DWObject.setCapabilities(
     exception: "ignore",
     capabilities: [
       {
-        capability: 4376, //your own capability
-        curValue: 200, //your own curValue
+        capability: Dynamsoft.DWT.EnumDWT_Cap.ICAP_CONTRAST, // your own capability
+        curValue: 500, // your own curValue
       },
       {
-        capability: 4377, //your own capability
+        capability: Dynamsoft.DWT.EnumDWT_Cap.CAP_PRINTERSTRING, // your own capability
         curValue: "abc", // your own curValue
         exception: "fail",
       },
       {
-        capability: 257, // your own capability
+        capability: Dynamsoft.DWT.EnumDWT_Cap.ICAP_PIXELTYPE, // your own capability
         curValue: 0, // your own curValue
       },
     ],

@@ -7,7 +7,9 @@ breadcrumbText: PDF Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference PDF Addon APIs Page
 ---
 
-# `WebTwain.Addon.PDF`
+# `{WebTwainObject}.Addon.PDF`
+
+> {WebTwainObject} denotes the `WebTwain` instance.
 
 **Methods**
 

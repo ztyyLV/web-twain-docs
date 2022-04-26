@@ -10,7 +10,6 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
 
 * [About]({{site.about}}index.html)
 
-   - [Specification]({{site.about}}features.html)
    - [Resources]({{site.about}}resources.html)
    - [License]({{site.about}}license.html)
    - [Support]({{site.about}}getsupport.html)
