@@ -29,9 +29,9 @@ You can follow the steps below to upgrade Dynamic Web TWAIN:
 
 4. Make necessary updates to the related code.
 
-    If you get a new **license key** for the new version, you may follow the steps in <a href="{{site.info}}about/license.html">License</a> to update it.
-
-    And you can check the <a href="{{site.info}}schedule/stable.html">Release Notes</a> to learn the changes in the new version.
+    If you get a new **license key** for the new version, you may follow the steps in [License]({{site.about}}license.html) to update it.
+ 
+    And you can check the [Release Notes]({{site.info}}schedule/stable.html) to learn the changes in the new version.
 
     > Note: Please be aware of the following namespace changes introduced in v17.0:
 
