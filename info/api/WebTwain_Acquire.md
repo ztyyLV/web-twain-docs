@@ -4417,7 +4417,7 @@ TransferMode: Dynamsoft.DWT.EnumDWT_TransferMode | number;
 Allowed values are
 
 - TWSX_NATIVE | 0: The default mode. In this mode, the whole image is transfered in a single memory block.
-- TWSX_FILE | 1: In this mode, the image is transfered to a specified file on the disk directly. This mode is ideal when transferring large images that might encounter memory limitations with Native mode. Check out [SetFileXferInfo](#SetFileXferInfo) for more information.
+- TWSX_FILE | 1: In this mode, the image is transfered to a specified file on the disk directly. This mode is ideal when transferring large images that might encounter memory limitations with Native mode. Check out [SetFileXferInfo](#setfilexferinfo) for more information.
 - TWSX_MEMORY | 2: In this mode, the image is transferred in multiple memory blocks. It's ideal for transferring very large images or a large number of images in a short time.
 
 TWSX_NATIVE and TWSX_MEMORY are required by all TWAIN data sources while TWSX_FILE is not. Therefore, make sure the data source supports TWSX_FILE before you use it.
