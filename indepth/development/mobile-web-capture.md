@@ -21,7 +21,7 @@ Create a `mobile-capture.html` and copy the `Resources` folder of Dynamic Web TW
 
 Embed the scripts of the library, among which `dynamsoft.webtwain.addon.camera.js` is the add-on module for mobile web capture.
 
-``` html
+```html
 <script src="Resources/dynamsoft.webtwain.initiate.js"></script>
 <script src="Resources/dynamsoft.webtwain.config.js"></script>
 <script src="Resources/addon/dynamsoft.webtwain.addon.camera.js"></script> 
@@ -29,51 +29,50 @@ Embed the scripts of the library, among which `dynamsoft.webtwain.addon.camera.j
 
 Add an `div` element on the page for the library. `dwtcontrolContainer` is the default ID for the div. You can change it in the file `dynamsoft.webtwain.config.js` if necessary.
 
-``` html
+```html
 <div id="dwtcontrolContainer"></div>
+<input type="button" id = "CameraCapture" value="CameraCapture" onclick="AcquireImage()">
 ```
 
 ## Add code for mobile web capture
 
-The below code shows how to scan a document from scanners on desktop and invoke the camera module for mobile capture. 
+The below code shows how to invoke the camera module for mobile capture. 
 
-``` javascript
+```javascript
+var DWObject;
+
+function Dynamsoft_OnReady() {
+	DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
+	Dynamsoft.DWT.UseLocalService = false; //Set `UseLocalService` API to `false` to invoke the camera WASM for image capture. 
+}
+
 function AcquireImage() {
-   if (DWObject) {
-     if (Dynamsoft.Lib.env.bMobile) {
-	   var showVideoConfigs = {
-		scannerViewer:{
-			autoDetect:{
-				enableAutoDetect: true
-			}
-		},
-		filterViewer: {
-			exitDocumentScanAfterSave: true
+	if (DWObject) {
+		// For mobile platform and when UseLocalService is set to False, invoke the camera add-on for mobile capture
+		if (Dynamsoft.Lib.env.bMobile && !DWObject.UseLocalService) {
+			var showVideoConfigs = {
+				ScannerViewer: {
+					autoDetect: {
+						enableAutoDetect: true
+					}
+				},
+				filterViewer: {
+					exitDocumentScanAfterSave: true
+				}
+			};
+			DWObject.Addon.Camera.scanDocument(showVideoConfigs).then(() => { console.error("pass") }).catch((errorMsg) => { console.error(errorMsg) });
+
 		}
-	    };
-           
-	    if(!DWObject.UseLocalService) {
-        // invoke the camera module for mobile capture
-		DWObject.Addon.Camera.scanDocument(showVideoConfigs).then(
-			function(){
-				console.log("OK");
-			}, 
-			function(error){
-				console.log(error.message);
-			});
-	    } 
-       }
-       else {
-            DWObject.SelectSource(
-                function() {
-                    DWObject.OpenSource();
-                    DWObject.AcquireImage();
-                },
-                function() {
-                    console.log("SelectSource failed!");
-                });
-       }
-   }
+		else if (Dynamsoft.Lib.env.bMobile && DWObject.UseLocalService) {
+			alert("Please make sure UseLocalService is False!");
+		}
+		else {
+			alert("Your current platform is recognized as not mobile.");
+		}
+	}
+	else {
+		alert("Object init failed")
+	}
 }
 ```
 
