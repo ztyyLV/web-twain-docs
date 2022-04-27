@@ -33,7 +33,6 @@ DWT makes the following tasks easy
 * [Saving documents locally]({{site.indepth}}features/output.html#save)
 * [Uploading documents to the server]({{site.indepth}}features/output.html#upload)
 * [Reading barcodes]({{site.indepth}}features/barcode.html)
-* [OCR]({{site.indepth}}features/ocr.html)
 
 ## Highlights
 
