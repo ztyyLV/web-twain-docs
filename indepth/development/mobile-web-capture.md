@@ -43,7 +43,7 @@ var DWObject;
 
 function Dynamsoft_OnReady() {
 	DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
-	Dynamsoft.DWT.UseLocalService = false; //Set `UseLocalService` API to `false` to invoke the camera WASM for image capture. 
+	Dynamsoft.DWT.UseLocalService = false; //Set `UseLocalService` API to `false` to invoke the WASM files for mobile capture. 
 }
 
 function AcquireImage() {
