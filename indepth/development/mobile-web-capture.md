@@ -19,6 +19,8 @@ Create a `mobile-capture.html` and copy the `Resources` folder of Dynamic Web TW
 
 ## Include the library
 
+Firstly, in `\Resources\dynamsoft.webtwain.config.js`, make sure `Dynamsoft.DWT.UseLocalService` is not set to `true`. You may set `Dynamsoft.DWT.UseLocalService` to `false` to let Dynamic Web TWAIN enable WASM files for mobile web capture; Of if no default value is set, local service or WASM will be invoked automaticlaly based on the current platform detected.
+
 Embed the scripts of the library, among which `dynamsoft.webtwain.addon.camera.js` is the add-on module for mobile web capture.
 
 ```html
@@ -43,7 +45,6 @@ var DWObject;
 
 function Dynamsoft_OnReady() {
 	DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
-	Dynamsoft.DWT.UseLocalService = false; //Set `UseLocalService` API to `false` to invoke the camera WASM for image capture. 
 }
 
 function AcquireImage() {
