@@ -16,23 +16,24 @@ Dynamic Web TWAIN has limited backward compatibility between different versions 
 
 However, as Dynamic Web TWAIN is a popular document scanning SDK and has been integrated to many web applications all over the world. It is not uncommon that some end users use two different websites (developed by two different vendors) integrated with different versions of Dynamic Web TWAIN on the same computer.
 
-As a result, we have provided the following instructions for backward compatibility between **version 17.2.1** and some of the older versions, in order to support running both versions on the same computer.
+As a result, we have provided the following instructions for backward compatibility between **version 17.1.1** and some of the older versions, in order to support running both versions on the same computer.
 
-NOTE: The instructions below would also apply to all future versions after version 17.2.1.
+NOTE:
+* The instructions below also apply to all future versions after version 17.1.1.
+* There is a known issue for versions 17.2 and 17.2.*,  please use version 17.1.1 as a workaround.
 
 ### Compatibility with version 17 minor versions
 
-Version 17.2.1 is compatible with other minor versions: 17.2, 17.1.1, 17.1, and 17.0.
+Version 17.1.1 is compatible with other minor versions: 17.1 and 17.0.
 
 ### Compatibility with older versions
-For older versions to work with version 17.2.1, please copy the following .dll files to the version 17 Service Installation folder: `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17`
+For older versions to work with version 17.1.1, please copy the following .dll files to the version 17 Service Installation folder: `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17`
 
 **Version 16.x (16.2, 16.1.1,  16.1, 16.0)**
 ```javascript
 dwt_16.2.0.0112.dll
 DynamicPdfCorex64_11.1.0.0112.dll
 DynamicPdfRx64_11.1.0.0112.dll
-DynamicImagex64.dll (16.2.0.0112)
 ```
 
 **Version 15.3.1**
@@ -40,7 +41,6 @@ DynamicImagex64.dll (16.2.0.0112)
 dwt_15.3.0.0116.dll
 DynamicPdfCorex64_10.3.3.0924.dll
 DynamicPdfRx64_10.3.3.0924.dll
-DynamicImagex64.dll (16.2.0.0112/15.2.0.0924)
 ```
 
 **Version 15.3**
@@ -48,7 +48,6 @@ DynamicImagex64.dll (16.2.0.0112/15.2.0.0924)
 dwt_15.3.0.0107.dll
 DynamicPdfCorex64_10.3.3.0924.dll
 DynamicPdfRx64_10.3.3.0924.dll
-DynamicImagex64.dll (16.2.0.0112/15.2.0.0924)
 ```
 
 **Version 15.2**
@@ -56,7 +55,6 @@ DynamicImagex64.dll (16.2.0.0112/15.2.0.0924)
 dwt_15.2.0.0924.dll
 DynamicPdfCorex64_10.3.3.0924.dll
 DynamicPdfRx64_10.3.3.0924.dll
-DynamicImagex64.dll (16.2.0.0112/15.2.0.0924)
 ```
 
 **Version 15.1**
@@ -64,7 +62,6 @@ DynamicImagex64.dll (16.2.0.0112/15.2.0.0924)
 dwt_15.1.0.0806.dll
 DynamicPdfCorex64_10.3.2.0806.dll
 DynamicPdfRx64_10.3.2.0806.dll
-DynamicImagex64.dll (16.2.0.0112/15.2.0.0924/15.1.0.0806)
 ```
 
 **Version 15.0**
@@ -72,5 +69,4 @@ DynamicImagex64.dll (16.2.0.0112/15.2.0.0924/15.1.0.0806)
 dwt_15.0.0.0625.dll
 DynamicPdfCorex64_10.3.1.0124.dll
 DynamicPdfRx64_10.3.1.0124.dll
-DynamicImagex64.dll (16.2.0.0112/15.2.0.0924/15.1.0.0806/15.0.0.0625)
 ```

@@ -7,7 +7,9 @@ breadcrumbText: Edit
 description: Dynamic Web TWAIN SDK Documentation API Reference Edit APIs Page
 ---
 
-# WebTwain Edit
+# {WebTwainObject} Edit
+
+> {WebTwainObject} denotes the `WebTwain` instance.
 
 ## Methods
 

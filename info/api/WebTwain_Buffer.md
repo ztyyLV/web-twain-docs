@@ -7,7 +7,9 @@ breadcrumbText: Buffer
 description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page
 ---
 
-# WebTwain Buffer Manage
+# {WebTwainObject} Buffer Manage
+
+The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object](https://www.dynamsoft.com/web-twain/docs/indepth/features/initialize.html?ver=latest#creating-the-webtwain-instance).
 
 **Methods**
 

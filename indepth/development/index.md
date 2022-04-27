@@ -22,3 +22,4 @@ Popular frameworks and frequently asked development questions are covered in the
 * [Enable mobile web capture]({{site.indepth}}development/mobile-web-capture.html)
 
 * [How to perform upgrade]({{site.indepth}}development/upgrade.html)
+

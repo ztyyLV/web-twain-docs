@@ -16,6 +16,8 @@ description: How to resolve Dynamic Web TWAIN issue in Chrome 101?
 
 (REF: <a href="https://developer.chrome.com/blog/private-network-access-preflight/" target="_blank">https://developer.chrome.com/blog/private-network-access-preflight/</a>)
 
+<span style="background-color:#f9f2f4; color:#c7254e">April 20, 2022: Google has not yet decided on a <a href="https://chromestatus.com/feature/5737414355058688" target="_blank">timeline</a> for this preflight request feature. But the <a href="{{site.faq}}http-insecure-websites-in-chromium-browser.html" target="_blank">secure feature</a> introduced in Chrome 94 is now <a href="https://chromestatus.com/feature/5436853517811712?ver=latest" target="_blank">scheduled</a>  for Chrome 106. Since the preflight request feature is more strict than the Chrome 94 secure feature, a reasonable guess is that preflight requests will not be enforced until after the <a href="https://chromiumdash.appspot.com/schedule" target="_blank">release date</a> of Chrome 106 on September 27th, 2022.</span>
+
 <span style="background-color:#f9f2f4; color:#c7254e">March 7, 2022: The experiment in Chrome 98 was rolled back due to stability and compatibility issues discovered in the rollout to Chrome stable. These issues will be fixed before the experiment is tried again, no earlier than in Chrome 101. Learn more in the blink-dev@chromium.org Intent to Ship email thread for more details.</span>
 
 ### Symptom

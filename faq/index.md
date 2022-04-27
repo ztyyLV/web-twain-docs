@@ -281,6 +281,10 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}service-backward-compatibility.html" target="_blank">Can I use two different websites integrated with two different versions of Dynamic Web TWAIN on the same computer?</a>
 
+<a href="{{site.faq}}source-not-listed-on-linux.html" target="_blank">Scanner source is listed on XSane applicaton but not on my web application on Linux machines</a>
+
+<a href="{{site.faq}}activeX-in-Edge-IE-mode.html" target="_blank">How to run Dynamic Web TWAIN ActiveX in Microsoft Edge Internet Explorer (IE) mode</a>
+
 ## Error Troubleshooting
 
 <a href="{{site.faq}}general-troubleshooting-steps.html" target="_blank">General troubleshooting steps</a>

@@ -2,19 +2,19 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: How to resolve Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94
+title: How to resolve Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94+
 keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, Chrome 94 issue, HTTP website, Edge 94 issue
-breadcrumbText: How to resolve if Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94
-description: How to resolve if Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94
+breadcrumbText: How to resolve if Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94+
+description: How to resolve if Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94+
 ---
 
 # Project Deployment and End-user Installation
 
-## Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94
+## Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94+
 
 ### Symptom
 
-Visiting a public HTTP website with Dynamic Web TWAIN SDK integrated via Chrome v94, you may get prompted to download and install the Dynamsoft Service repeatedly.
+Visiting a public HTTP website with Dynamic Web TWAIN SDK integrated via Chrome v94+, you may get prompted to download and install the Dynamsoft Service repeatedly.
 The same issue is also seen in Microsoft Edge 94.0.992.31 - as it uses the same Chromium version 94 as the latest Chrome browser.
 
 In the browser console, you may see the following **error message**
@@ -48,7 +48,7 @@ Once you update your website to HTTPS, please note that you also need to set [If
 If you need time to update your website, you may try one of the following workarounds:
 
 1. Registering for [Google's deprecation trials](https://developer.chrome.com/blog/origin-trials/#deprecation-trials), which will allow developers to request a time extension.  
-   During the trial period, your insecure public website will not be affected by the security upgrade until [Chrome 102](https://chromiumdash.appspot.com/schedule) - to be released by March 31, 2022.
+   During the trial period, your insecure public website will not be affected by the security upgrade until [Chrome 106](https://chromestatus.com/feature/5436853517811712) - to be released by September 27, 2022.
 
 2. If you have administrative control over your end users, you can re-enable the deprecated feature using either of the following policies:  
    [InsecurePrivateNetworkRequestsAllowed](https://chromeenterprise.google/policies/#InsecurePrivateNetworkRequestsAllowed)  

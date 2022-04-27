@@ -7,9 +7,11 @@ breadcrumbText: Acquire
 description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 ---
 
-# WebTwain Scan
+# {WebTwainObject} Scan
 
-> The following APIs are compatible with TWAIN, ICA, SANE (Windows, macOS and Linux)
+> The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object](https://www.dynamsoft.com/web-twain/docs/indepth/features/initialize.html?ver=latest#creating-the-webtwain-instance).
+
+**1. The following APIs are compatible with TWAIN, ICA, SANE (Windows, macOS and Linux)** 
 
 **Methods**
 
@@ -35,7 +37,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 | [`OnPostAllTransfers`](#onpostalltransfers) | [`OnPostTransfer`](#onposttransfer) | [`OnPostTransferAsync`](#onposttransferasync) |
 | [`OnPreAllTransfers`](#onprealltransfers)   | [`OnPreTransfer`](#onpretransfer)   |
 
-> The following APIs are compatible with TWAIN and ICA
+**2. The following APIs are compatible with TWAIN and ICA** 
 
 **Methods**
 
@@ -43,7 +45,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 | :-------------------------------------- | :-------------------------------------- |
 | [`getCapabilities()`](#getcapabilities) | [`setCapabilities()`](#setcapabilities) |
 
-> The following APIs are compatible with TWAIN (mostly Windows, but could also be macOS)
+**3. The following APIs are compatible with TWAIN (mostly Windows, but could also be macOS)** 
 
 **Methods**
 
@@ -4415,7 +4417,7 @@ TransferMode: Dynamsoft.DWT.EnumDWT_TransferMode | number;
 Allowed values are
 
 - TWSX_NATIVE | 0: The default mode. In this mode, the whole image is transfered in a single memory block.
-- TWSX_FILE | 1: In this mode, the image is transfered to a specified file on the disk directly. This mode is ideal when transferring large images that might encounter memory limitations with Native mode. Check out [SetFileXferInfo](#SetFileXferInfo) for more information.
+- TWSX_FILE | 1: In this mode, the image is transfered to a specified file on the disk directly. This mode is ideal when transferring large images that might encounter memory limitations with Native mode. Check out [SetFileXferInfo](#setfilexferinfo) for more information.
 - TWSX_MEMORY | 2: In this mode, the image is transferred in multiple memory blocks. It's ideal for transferring very large images or a large number of images in a short time.
 
 TWSX_NATIVE and TWSX_MEMORY are required by all TWAIN data sources while TWSX_FILE is not. Therefore, make sure the data source supports TWSX_FILE before you use it.
