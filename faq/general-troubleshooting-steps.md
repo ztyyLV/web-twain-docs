@@ -26,13 +26,13 @@ description: General troubleshooting steps
 2. Set the log level
   - For only one client machine, add the line `LogLevel=14` to `DSConfiguration.ini` on that specific machine.
   - For all client machines, set [ `LogLevel` ]({{site.info}}api/WebTwain_Util.html#loglevel) to 1 in your code. This property should be set as soon as the `WebTwain` instance is created. For example, in the event `Dynamsoft_OnReady`
-
-```javascript
-function Dynamsoft_OnReady() {
-  DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
-  DWObject.LogLevel = 1;
-}
-```
+  
+  ```javascript
+  function Dynamsoft_OnReady() {
+    DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
+    DWObject.LogLevel = 1;
+    }
+  ```
 
 3. Reproduce the issue
 
