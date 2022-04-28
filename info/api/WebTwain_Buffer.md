@@ -68,11 +68,6 @@ IndexToImageID(index: number): number;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -110,11 +105,6 @@ ImageIDToIndex(imageId: number): number;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -161,11 +151,6 @@ RenameTag(oldName:string, newName:string): boolean;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -204,11 +189,6 @@ RemoveTag(tagName: string, indices?: number[]):boolean
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -265,11 +245,6 @@ Json:
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -307,11 +282,6 @@ ClearImageTags(index: number): boolean;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -353,11 +323,6 @@ FilterImagesByTag(tag: string): boolean;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -394,11 +359,6 @@ ClearFilter(): boolean;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -438,11 +398,6 @@ SetDefaultTag(tag: string): boolean;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -485,11 +440,6 @@ TagImages(indices: number[], tag: string): boolean;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -527,11 +477,6 @@ GetImageBitDepth(index: number): number;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -589,11 +534,6 @@ GetImageHeight(index: number): number;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -631,11 +571,6 @@ GetImageWidth(index: number): number;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -677,11 +612,6 @@ GetImageXResolution(index: number): number;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -719,11 +649,6 @@ GetImageYResolution(index: number): number;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -775,11 +700,6 @@ GetSkewAngle(
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -841,11 +761,6 @@ GetSkewAngleEx(
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -891,11 +806,6 @@ GetImageSize(index: number, width: number, height: number): number;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -936,11 +846,6 @@ GetImageSizeWithSpecifiedType(index: number, type: Dynamsoft.DWT.EnumDWT_ImageTy
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -978,11 +883,6 @@ GetSelectedImagesSize(type: Dynamsoft.DWT.EnumDWT_ImageType | number): number;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -1030,11 +930,6 @@ GetImagePartURL(index: number, width?: number, height?: number): string;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -1078,11 +973,6 @@ GetImageURL(index: number, width?: number, height?: number): string;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -1129,11 +1019,6 @@ SelectAllImages(): number[];
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -1172,11 +1057,6 @@ SelectImages(indices: number[]): boolean;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -1219,11 +1099,6 @@ MoveImage(from: number, to: number): boolean;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -1262,11 +1137,6 @@ SwitchImage(index1: number, index2: number): boolean;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -1310,11 +1180,6 @@ RemoveImage(index: number): boolean;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -1353,11 +1218,6 @@ RemoveAllImages(): boolean;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -1413,11 +1273,6 @@ RemoveAllSelectedImages(): boolean;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -1471,11 +1326,6 @@ CurrentImageIndexInBuffer: number;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -1514,11 +1364,6 @@ readonly HowManyImagesInBuffer: number;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -1555,11 +1400,6 @@ MaxImagesInBuffer: number;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -1604,11 +1444,6 @@ readonly SelectedImagesIndices: number[];
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -1647,11 +1482,6 @@ SelectionRectAspectRatio: number;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -1688,11 +1518,6 @@ readonly BlankImageCurrentStdDev: number;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -1736,11 +1561,6 @@ BlankImageMaxStdDev: number;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -1787,11 +1607,6 @@ BlankImageThreshold: number;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -1834,11 +1649,6 @@ BufferMemoryLimit: number;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -1887,11 +1697,6 @@ IsBlankImage(index: number): boolean;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -1929,11 +1734,6 @@ IsBlankImageExpress(index: number): boolean;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -1982,11 +1782,6 @@ IfAllowLocalCache: boolean;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -2056,11 +1851,6 @@ interface BufferChangeInfo {
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -2122,11 +1912,6 @@ RegisterEvent('OnBitmapChanged',
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -2179,11 +1964,6 @@ RegisterEvent('OnTopImageInTheViewChanged',
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -2231,11 +2011,6 @@ Pair: [from: number, to: number];
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -2273,11 +2048,6 @@ GetTagListByIndex(index: number):string[]
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -2323,11 +2093,6 @@ CreateFile(categoryName:string):Boolean;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -2391,11 +2156,6 @@ OpenFile(categoryName:string):Boolean;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -2453,11 +2213,6 @@ GetCurrentFileName():String;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -2495,11 +2250,6 @@ RemoveFile(categoryName:string):Boolean;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -2546,11 +2296,6 @@ Json:
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
