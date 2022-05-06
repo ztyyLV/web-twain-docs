@@ -99,7 +99,7 @@ In a regular application, referencing `dynamsoft.webtwain.min.js` alone would be
 
 ## Loading Add-on JS files
 
-`DWT` offers a number of add-ons, including a barcode reader, a PDF rasterizer, two webcam utilizers and two OCR engines. The files for these components reside in the `addon` subfolder in the `Resources` directory. Check out more [here]({{site.about}}faqs.html#what-are-the-resources-files).
+`DWT` offers a number of add-ons, including a barcode reader, a PDF rasterizer, two webcam utilizers and two OCR engines. The files for these components reside in the `addon` subfolder in the `Resources` directory. Check out more [here]({{site.faq}}what-are-the-resources-files.html).
 
 Whether or not to include any of these components is as simple as referencing its respective JavaScript file. Once a JavaScript file is referenced, the member methods/properties of that component are made available in the [Dynamsoft Namespace](#the-dynamsoft-namespace) and can later be used by `WebTwain` instances.
 
