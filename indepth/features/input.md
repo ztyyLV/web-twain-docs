@@ -82,7 +82,7 @@ For more information, check [How to use a TWAIN-Direct scanner](#how-to-use-a-tw
 
 Dynamic Web TWAIN also comes with a Camera add-on for you to capture images or documents using MediaDevices cameras, auto crop and adjust perspective. 
 
-To include the Camera add-on, simply add a reference to the corresponding camera JS file which is included in the [resources folder]({{site.about}}faqs.html#what-are-the-resources-files).
+To include the Camera add-on, simply add a reference to the corresponding camera JS file which is included in the [resources folder]({{site.faq}}what-are-the-resources-files.html).
 
 ``` html
 <script src="Resources/addon/dynamsoft.webtwain.addon.camera.js"></script>

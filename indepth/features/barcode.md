@@ -25,7 +25,7 @@ With the increasing use of barcode reading in document management systems, the B
 
 ### Step one - Include the add-on
 
-To include this add-on is to reference the necessary JavaScript file which is included in the [resources files]({{site.about}}faqs.html#what-are-the-resources-files).
+To include this add-on is to reference the necessary JavaScript file which is included in the [resources files]({{site.faq}}what-are-the-resources-files.html).
 
 > If you are using the [dwt package](https://www.npmjs.com/package/dwt), the barcode reader is already included in the main JavaScript file ( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ) which means you can skip this step.
 

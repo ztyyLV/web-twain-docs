@@ -15,7 +15,7 @@ Once you have finished integrating `DWT` in your application, you can deploy it 
 
 ## Make sure the static files can be served correctly
 
-`DWT` comes with lots of static resources files, for the full list, check out [What are the Resources files]({{site.about}}FAQs.html#what-are-the-resources-files). The following table shows each file type and its MIME type which must be configured in your webserver in order for that type of file(s) to be correctly served to the client browsers.
+`DWT` comes with lots of static resources files, for the full list, check out [What are the Resources files]({{site.faq}}what-are-the-resources-files.html). The following table shows each file type and its MIME type which must be configured in your webserver in order for that type of file(s) to be correctly served to the client browsers.
 
 | File Type | MIME Type | Required by |
 |:-:|:-:|:-:|

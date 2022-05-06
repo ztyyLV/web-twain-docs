@@ -251,6 +251,8 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 <a href="{{site.faq}}how-come-would-you-need-local.dynamsoft.com.html" target="_blank">In which cases would I use local.dynamsoft.com instead of 127.0.0.1?</a>
 
+<a href="{{site.faq}}what-are-the-resources-files.html" target="_blank">What are the Resources files?</a>
+
 <a href="{{site.faq}}resources-to-be-included-in-SDK.html" target="_blank">What resources of the SDK should be included in my web application?</a>
 
 <a href="{{site.faq}}change-reference-path.html" target="_blank">How can I change the reference path to the Dynamsoft’s resources in my project?</a>

@@ -13,7 +13,7 @@ description: Dynamic Web TWAIN SDK Documentation Resources Page
 
 * <a href="https://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx" target="_blank">Official installer</a> 
 
-> This official package is meant for developers to evaluate the SDK. When the package is installed, you get all the [resource files]({{site.about}}faqs.html#what-are-the-resources-files), documentation, and samples. A 30-day free trial is included when evaluating our SDK.
+> This official package is meant for developers to evaluate the SDK. When the package is installed, you get all the [resource files]({{site.faq}}what-are-the-resources-files.html), documentation, and samples. A 30-day free trial is included when evaluating our SDK.
 
 * <a href="https://www.npmjs.com/package/dwt" target="_blank">NPM package</a>
 
@@ -27,7 +27,7 @@ description: Dynamic Web TWAIN SDK Documentation Resources Page
 
 * <a href="https://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx" target="_blank">Official samples</a> 
 
-> We have many prebuilt samples to demonstrate common user scenarios. All samples contain the [resource files]({{site.about}}faqs.html#what-are-the-resources-files) required in your application. If a sample is hosted on the Dynamsoft website (not Github), then the sample comes with a 30-day free trial license as well. Otherwise, you can [get a trial license](#how-do-i-get-a-trial-license).
+> We have many prebuilt samples to demonstrate common user scenarios. All samples contain the [resource files]({{site.faq}}what-are-the-resources-files.html) required in your application. If a sample is hosted on the Dynamsoft website (not Github), then the sample comes with a 30-day free trial license as well. Otherwise, you can [get a trial license](#how-do-i-get-a-trial-license).
 
 * <a href="https://github.com/dynamsoft-dwt" target="_blank">Github repo</a>
 
