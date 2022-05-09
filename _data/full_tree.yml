@@ -50,10 +50,6 @@ tree_list:
         path: /indepth/features/input.html
         startVersion:
         endVersion:
-      - name: Input
-        path: /indepth/features/input.html
-        startVersion:
-        endVersion:
       - name: Output
         path: /indepth/features/output.html
         startVersion:
