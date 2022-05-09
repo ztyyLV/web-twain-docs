@@ -37,6 +37,55 @@ tree_list:
         path: /getstarted/filetype.html
         startVersion:
         endVersion:
+  - name: Features
+    path: /indepth/features/
+    startVersion: 17.1.1
+    endVersion:
+    childList:
+      - name: Initialize 
+        path: /indepth/features/initialize.html
+        startVersion:
+        endVersion:
+      - name: Input
+        path: /indepth/features/input.html
+        startVersion:
+        endVersion:
+      - name: Input
+        path: /indepth/features/input.html
+        startVersion:
+        endVersion:
+      - name: Output
+        path: /indepth/features/output.html
+        startVersion:
+        endVersion:
+      - name: Buffer
+        path: /indepth/features/buffer.html
+        startVersion:
+        endVersion:
+      - name: Viewer
+        path: /indepth/features/viewer.html
+        startVersion:
+        endVersion:
+      - name: UI
+        path: /indepth/features/ui.html
+        startVersion:
+        endVersion:
+      - name: Edit
+        path: /indepth/features/edit.html
+        startVersion:
+        endVersion:
+      - name: Barcode
+        path: /indepth/features/barcode.html
+        startVersion:
+        endVersion:
+      - name: OCR
+        path: /indepth/features/ocr.html
+        startVersion:
+        endVersion:
+      - name: PDF
+        path: /indepth/features/pdf.html
+        startVersion:
+        endVersion:
   - name: Development
     path: /indepth/development/
     startVersion:
@@ -61,7 +110,7 @@ tree_list:
       - name: Professional Service
         path: /indepth/development/Pro-service.html
         startVersion:
-        endVersion:
+        endVersion: 17.1.1
       - name: Upgrade Guide
         path: /indepth/development/upgrade.html
         startVersion:
@@ -73,7 +122,15 @@ tree_list:
       - name: FileTypes
         path: /indepth/development/armmips.html
         startVersion:
-        endVersion:
+        endVersion: 17.1.1
+      - name: ARM64 & MIPS64 Support
+        path: /indepth/development/armmips.html
+        startVersion:
+        endVersion: 17.1.1
+      - name: Professional Service
+        path: /indepth/development/Pro-service.html
+        startVersion: 17.1.1
+        endVersion: 
   - name: Deployment
     path: /indepth/deployment/
     startVersion:
@@ -95,14 +152,26 @@ tree_list:
       - name: Server Setup
         path: /info/schedule/stable.html
         startVersion:
-        endVersion:
+        endVersion: 17.1.1
       - name: Service Setup
         path: /info/schedule/Addon.html
         startVersion:
-        endVersion:
+        endVersion: 17.1.1
       - name: Service Setup
         path: /info/schedule/deprecated.html
         startVersion:
+        endVersion: 17.1.1
+      - name: Stable
+        path: /info/schedule/stable.html
+        startVersion: 17.1.1
+        endVersion:
+      - name: Addon
+        path: /info/schedule/Addon.html
+        startVersion: 17.1.1
+        endVersion:
+      - name: Deprecated
+        path: /info/schedule/deprecated.html
+        startVersion: 17.1.1
         endVersion:
   - name: API Reference
     path: /info/api/
