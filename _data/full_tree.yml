@@ -121,8 +121,8 @@ tree_list:
         endVersion: 17.1.1
       - name: ARM64 & MIPS64 Support
         path: /indepth/development/armmips.html
-        startVersion:
-        endVersion: 17.1.1
+        startVersion: 17.1.1
+        endVersion:
       - name: Professional Service
         path: /indepth/development/Pro-service.html
         startVersion: 17.1.1
