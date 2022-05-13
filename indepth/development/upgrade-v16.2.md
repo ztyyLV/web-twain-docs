@@ -19,7 +19,7 @@ The following three steps are required to upgrade your application to use a newe
 
 ## Update the resources files
 
-Read more about [resources files]({{site.about}}faqs.html#what-are-the-resources-files).
+Read more about [resources files]({{site.faq}}what-are-the-resources-files.html).
 
 ### Regular Web application
 

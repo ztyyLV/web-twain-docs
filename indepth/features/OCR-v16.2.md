@@ -31,7 +31,7 @@ Client side OCR only works in [browsers on Windows]({{site.getstarted}}platform.
 
 #### Step one - Include OCRB
 
-To include this addon is to reference the necessary JavaScript file `dynamsoft.webtwain.addon.ocr.js` which is **NOT** included in the [resources files]({{site.about}}faqs.html#what-are-the-resources-files). If you can't find this file, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) or get it from [64bit-OCRB-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRBasicx64-v16.zip).
+To include this addon is to reference the necessary JavaScript file `dynamsoft.webtwain.addon.ocr.js` which is **NOT** included in the [resources files]({{site.faq}}what-are-the-resources-files.html). If you can't find this file, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) or get it from [64bit-OCRB-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRBasicx64-v16.zip).
 
 > If you are using the [dwt package](https://www.npmjs.com/package/dwt), the addon is already included in the main JavaScript file ( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ) which means you can skip this step.
 
@@ -72,7 +72,7 @@ function downloadOCRB(bDownloadDLL) {
 downloadOCRB(true);
 ```
 
-The code asks `DWT` to download `OCRB` from the URL `Dynamsoft.WebTwainEnv.ResourcesPath + '/addon/OCRx64.zip'` and the language data from the URL `Dynamsoft.WebTwainEnv.ResourcesPath + '/addon/OCRBasicLanguages/English.zip'` . Both zip files need to be placed on the server where you placed the [resources files]({{site.about}}faqs.html#what-are-the-resources-files). As mentioned above, if you can't find these files, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) or get it from [64bit-OCRB-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRBasicx64-v16.zip).
+The code asks `DWT` to download `OCRB` from the URL `Dynamsoft.WebTwainEnv.ResourcesPath + '/addon/OCRx64.zip'` and the language data from the URL `Dynamsoft.WebTwainEnv.ResourcesPath + '/addon/OCRBasicLanguages/English.zip'` . Both zip files need to be placed on the server where you placed the [resources files]({{site.faq}}what-are-the-resources-files.html). As mentioned above, if you can't find these files, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) or get it from [64bit-OCRB-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRBasicx64-v16.zip).
 
 Once the installation is done, you should be able to find the following files under `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16\DynamicOCR` .
 
@@ -131,7 +131,7 @@ function DoOCR() {
 
 #### Step one - Include OCRPro
 
-To include this addon is to reference the necessary JavaScript file `dynamsoft.webtwain.addon.ocrpro.js` which is **NOT** included in the [resources files]({{site.about}}faqs.html#what-are-the-resources-files). If you can't find this file, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) or get it from [64bit-OCRPro-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRProx64-v16.zip).
+To include this addon is to reference the necessary JavaScript file `dynamsoft.webtwain.addon.ocrpro.js` which is **NOT** included in the [resources files]({{site.faq}}what-are-the-resources-files.html). If you can't find this file, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) or get it from [64bit-OCRPro-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRProx64-v16.zip).
 
 > If you are using the [dwt package](https://www.npmjs.com/package/dwt), the addon is already included in the main JavaScript file ( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ) which means you can skip this step.
 
@@ -159,7 +159,7 @@ function downloadOCRPro() {
 downloadOCRPro();
 ```
 
-The code asks `DWT` to download `OCRPro` from the URL `Dynamsoft.WebTwainEnv.ResourcesPath + '/addon/OCRProx64.zip'` . This zip file needs to be placed on the server where you placed the [resources files]({{site.about}}faqs.html#what-are-the-resources-files). As mentioned above, if you can't find these files, you can get them from [64bit-OCRPro-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRProx64-v16.zip).
+The code asks `DWT` to download `OCRPro` from the URL `Dynamsoft.WebTwainEnv.ResourcesPath + '/addon/OCRProx64.zip'` . This zip file needs to be placed on the server where you placed the [resources files]({{site.faq}}what-are-the-resources-files.html). As mentioned above, if you can't find these files, you can get them from [64bit-OCRPro-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRProx64-v16.zip).
 
 Once the installation is done, you should be able to find the following under `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16`
 * `DynamicOCRProx64_1.2.0.0806.dll` : The version number may vary.

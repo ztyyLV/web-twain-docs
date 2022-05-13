@@ -30,7 +30,7 @@ If you are using the official [NPM package `dwt`](https://github.com/dynamsoft-d
 
 ## Loading Add-on JS files
 
-Dynamic Web TWAIN offers a number of optional add-ons, including a barcode reader, a PDF rasterizer, two webcam utilizers and two OCR engines. The files for these components reside in the **addon** subfolder in the **Resources** directory. [Learn more about the resource files]({{site.about}}faqs.html#what-are-the-resources-files).
+Dynamic Web TWAIN offers a number of optional add-ons, including a barcode reader, a PDF rasterizer, two webcam utilizers and two OCR engines. The files for these components reside in the **addon** subfolder in the **Resources** directory. [Learn more about the resource files]({{site.faq}}what-are-the-resources-files.html).
 
 You can reference the respective JS file to include any of these add-on components. Once a JS file is referenced, the member methods/properties of that component are made available in the [Dynamsoft Namespace](#the-dynamsoft-namespace) and can later be used by the `WebTwain` instances.
 

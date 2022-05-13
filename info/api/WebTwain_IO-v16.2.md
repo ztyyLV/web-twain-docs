@@ -8,7 +8,9 @@ breadcrumbText: IO
 description: Dynamic Web TWAIN SDK Documentation API Reference IO APIs Page
 ---
 
-# WebTwain IO
+# {WebTwainObject} IO
+
+> {WebTwainObject} denotes the `WebTwain` instance.
 
 Input
 

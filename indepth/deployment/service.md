@@ -60,9 +60,9 @@ The prompt comes up when you try to [create a WebTwain instance](https://www.dyn
 
 ![Initialization]({{site.assets}}imgs/Initialization-1.png)
 
-On **Windows and macOS**, the users can double click the downloaded installer to install the SDK. 
+On **Windows and macOS**, double click the downloaded installer to install the service. 
 
-On **Linux**, the users can run one of the following commands to install it:
+On **Linux**, instead of double clicking, the downloaded installer needs to be run using one of the following commands:
 
 - Debian / Ubuntu
 

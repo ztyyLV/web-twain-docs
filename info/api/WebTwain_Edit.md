@@ -7,7 +7,9 @@ breadcrumbText: Edit
 description: Dynamic Web TWAIN SDK Documentation API Reference Edit APIs Page
 ---
 
-# WebTwain Edit
+# {WebTwainObject} Edit
+
+The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object](https://www.dynamsoft.com/web-twain/docs/indepth/features/initialize.html?ver=latest#creating-the-webtwain-instance).
 
 **Methods**
 
