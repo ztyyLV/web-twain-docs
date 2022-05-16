@@ -82,15 +82,10 @@
 
     <script type="text/javascript">anchors.add();</script>
     <script type="text/javascript">UrlReplace();</script>
-    {%- if page.needAutoGenerateSidebar -%}
-    <script>
-        FullTreeMenuList(true);
+
+    <script type="text/javascript">
+        FullTreeMenuList('{{page.needAutoGenerateSidebar}}', '{{page.needGenerateH3Content}}');
     </script>
-    {%- else -%}
-    <script>
-        FullTreeMenuList(false);
-    </script>
-    {%- endif -%}
 
     <script type="text/javascript">
 
