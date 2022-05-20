@@ -109,7 +109,7 @@ tree_list:
   - name: Development
     path: /indepth/development/
     startVersion:
-    endVersion: 
+    endVersion: 17.2.5
     childList:
       - name: Angular Integration
         path: /indepth/development/angular.html
