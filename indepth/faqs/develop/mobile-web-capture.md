@@ -3,8 +3,9 @@ layout: default-layout
 needAutoGenerateSidebar: true
 title: How to enable mobile capture
 keywords: Dynamic Web TWAIN, Documentation, Mobile Web Capture
-breadcrumbText: Mobile Web Capture
+breadcrumbText: How to Enable Mobile Web Capture
 description: Dynamic Web TWAIN SDK Documentation Mobile Web Capture Page
+permalink: /indepth/development/mobile-web-capture.html
 ---
 
 # How to Enable Mobile Web Capture
