@@ -37,7 +37,7 @@ tree_list:
         path: /getstarted/filetype.html
         startVersion:
         endVersion:
-      - name: Deploy to your server
+      - name: Deploy to your Server
         path: /indepth/deployment/server.html
         startVersion: 17.2.5
         endVersion:
@@ -45,6 +45,10 @@ tree_list:
         path: /indepth/deployment/service.html
         startVersion: 17.2.5
         endVersion:
+      - name: Upgrade Guide
+        path: /indepth/development/upgrade.html
+        startVersion: 17.2.5
+        endVersion: 
   - name: Features
     path: /indepth/features/
     startVersion:
@@ -118,7 +122,7 @@ tree_list:
       - name: Upgrade Guide
         path: /indepth/development/upgrade.html
         startVersion:
-        endVersion:
+        endVersion: 17.2.5
       - name: About ActiveX
         path: /indepth/development/activex.html
         startVersion:
