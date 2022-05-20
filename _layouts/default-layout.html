@@ -7,17 +7,8 @@
     .DWT17Note {position: relative; padding: 15px 20px 15px 20px;background: #e5f5ff;border: 1px solid #c7dbe8;color: #4788b3;margin-bottom: 20px;}
     .DWT17Note i { position: absolute; right: 10px; top: 8px; font-size: 20px; cursor: pointer; }
     .rightSideMenu.hasNote { padding-top: 168px; }
-    @media (min-width: 1200px) and (max-width: 1679.98px) {
-        /* .col-md-3 {
-            width: 21%;
-        }
-        .col-md-9 {
-            width: 79%;
-        }
-        .markdown-body {
-            width: calc(100% - 212px);
-        } */
-    }
+    .docContainer, .sideBar, .history { visibility: visible; }
+    #fullTreeMenuListContainer li.expandListStyle > ul { display: block; }
 </style>
 
 <body>
@@ -34,6 +25,10 @@
                         <input id="txtSearch" class="search" type="text">
                     </div>
                     <ul class="mainPage" id="fullTreeMenuListContainer" name="listLevel1">
+                    {%- if site.useVersionTreeV2 -%}
+                        {%- assign treeList = site.data.full_tree.tree_list -%}
+                        {%- include liquid_generateFullTree.html treeList=treeList -%}
+                    {%- else -%}
                         {%- include sidelist-about/about.html -%}
                         {%- include sidelist-getting-started/getting-started.html -%}
                         {%- include sidelist-indepth/features.html -%}
@@ -42,6 +37,7 @@
                         {%- include sidelist-info/releases.html -%}
                         {%- include sidelist-info/API-index.html -%}
                         {%- include sidelist-faq/faq.html -%}
+                    {%- endif -%}
                     </ul>
                 </div>
             </div>
@@ -86,15 +82,10 @@
 
     <script type="text/javascript">anchors.add();</script>
     <script type="text/javascript">UrlReplace();</script>
-    {%- if page.needAutoGenerateSidebar -%}
-    <script>
-        FullTreeMenuList(true);
+
+    <script type="text/javascript">
+        FullTreeMenuList('{{page.needAutoGenerateSidebar}}', '{{page.needGenerateH3Content}}');
     </script>
-    {%- else -%}
-    <script>
-        FullTreeMenuList(false);
-    </script>
-    {%- endif -%}
 
     <script type="text/javascript">
 

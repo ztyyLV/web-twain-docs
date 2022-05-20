@@ -1,13 +1,14 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
+noTitleIndex: true
 title: Dynamic Web TWAIN API Reference - Enumerations
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Enumerations
 breadcrumbText: Enumerations
 description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 ---
 
-# `Enumerations`
+# Enumerations
 
 ## `Dynamsoft.DWT.EnumDWT_PixelType`
 
@@ -27,7 +28,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWPT_SCRGB | 11 |
 | TWPT_INFRARED | 16 |
 
-## `Dynamsoft.DWT.EnumDWT_BorderStyle `
+## `Dynamsoft.DWT.EnumDWT_BorderStyle`
 
 | Label | Value|
 |:-|:-|
@@ -35,7 +36,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWBS_SINGLEFLAT | 1 |
 | TWBS_SINGLE3D | 2 |
 
-## `Dynamsoft.DWT.EnumDWT_MessageType `
+## `Dynamsoft.DWT.EnumDWT_MessageType`
 
 | Label | Value|
 |:-|:-|
@@ -201,7 +202,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWON_ONEVALUE | 5 |
 | TWON_RANGE | 6 |
 
-## `Dynamsoft.DWT.EnumDWT_TransferMode `
+## `Dynamsoft.DWT.EnumDWT_TransferMode`
 
 | Label | Value|
 |:-|:-|
@@ -209,7 +210,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWSX_FILE | 1 |
 | TWSX_MEMORY | 2 |
 
-## `Dynamsoft.DWT.EnumDWT_FileFormat `
+## `Dynamsoft.DWT.EnumDWT_FileFormat`
 
 | Label | Value| Description |
 |:-|:-|:-|
@@ -230,7 +231,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWFF_PDFA | 15 | A file format from Adobe PDF/A, Version 1 (TWAIN Spec 2.0) |
 | TWFF_PDFA2 | 16 | A file format from Adobe PDF/A, Version 2 (TWAIN Spec 2.1) 、
 
-## `Dynamsoft.DWT.EnumDWT_TIFFCompressionType `
+## `Dynamsoft.DWT.EnumDWT_TIFFCompressionType`
 
 | Label | Value|
 |:-|:-|
@@ -245,7 +246,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TIFF_JPEG | 7 |
 | TIFF_PACKBITS | 32773 |
 
-## `Dynamsoft.DWT.EnumDWT_InterpolationMethod `
+## `Dynamsoft.DWT.EnumDWT_InterpolationMethod`
 
 | Label | Value|
 |:-|:-|
@@ -254,7 +255,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | IM_BICUBIC | 3 |
 | IM_BESTQUALITY | 5 |
 
-## `Dynamsoft.DWT.EnumDWT_ImageType `
+## `Dynamsoft.DWT.EnumDWT_ImageType`
 
 | Label | Value|
 |:-|:-|
@@ -269,7 +270,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
  
 Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType of [startScan]({{site.info}}api/WebTwain_Acquire.html#startscan)
 
-## `Dynamsoft.DWT.EnumPDF_Page `
+## `Dynamsoft.DWT.EnumPDF_Page`
 
 | Label | Value|
 |:-|:-|
@@ -295,7 +296,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | PDF_JP2000 | 6 |
 | PDF_JBig2 | 7 |
 
-## `Dynamsoft.DWT.EnumDWT_ShowMode `
+## `Dynamsoft.DWT.EnumDWT_ShowMode`
 
 | Label | Value|
 |:-|:-|
@@ -305,7 +306,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | SW_CLOSE | 3 |
 | SW_IFLIVE | 4 |
 
-## `Dynamsoft.DWT.EnumDWT_CapValueType `
+## `Dynamsoft.DWT.EnumDWT_CapValueType`
 
 | Label | Value|
 |:-|:-|
@@ -323,7 +324,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | TWTY_STR128 | 11 |
 | TWTY_STR255 | 12 |
 
-## `Dynamsoft.DWT.EnumDWT_UnitType `
+## `Dynamsoft.DWT.EnumDWT_UnitType`
 
 | Label | Value|
 |:-|:-|

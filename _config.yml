@@ -31,6 +31,8 @@ baseurl: /web-twain/docs/
 
 theme: jekyll-theme-cayman
 
+useVersionTreeV2: true
+
 plugins:
   - jemoji
 
