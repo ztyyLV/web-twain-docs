@@ -41,6 +41,18 @@ tree_list:
         path: /indepth/deployment/server.html
         startVersion: 17.2.5
         endVersion:
+      - name: Angular Integration
+        path: /indepth/development/angular.html
+        startVersion: 17.2.5
+        endVersion: 
+      - name: React Integration
+        path: /indepth/development/react.html
+        startVersion: 17.2.5
+        endVersion: 
+      - name: Vue Integration
+        path: /indepth/development/vue.html
+        startVersion: 17.2.5
+        endVersion: 
       - name: Set up Dynamsoft Service 
         path: /indepth/deployment/service.html
         startVersion: 17.2.5
@@ -102,15 +114,15 @@ tree_list:
       - name: Angular Integration
         path: /indepth/development/angular.html
         startVersion:
-        endVersion:
+        endVersion: 17.2.5
       - name: React Integration
         path: /indepth/development/react.html
         startVersion:
-        endVersion:
+        endVersion: 17.2.5
       - name: Vue Integration
         path: /indepth/development/vue.html
         startVersion:
-        endVersion:
+        endVersion: 17.2.5
       - name: Server-side Scripting
         path: /indepth/development/Server-script.html
         startVersion:

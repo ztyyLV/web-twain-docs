@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Development - Angular Integration
 keywords: Dynamic Web TWAIN, Documentation, Development, Angular Integration
 breadcrumbText: Angular Integration
 description: Dynamic Web TWAIN SDK Documentation Angular Integration Page
+permalink: /indepth/development/angular.html
 ---
 
 # Use DWT with Angular
