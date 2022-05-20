@@ -140,7 +140,7 @@ tree_list:
         path: /indepth/deployment/service.html
         startVersion:
         endVersion:
-  - name: Schedule
+  - name: Release Notes
     path: /info/schedule/
     startVersion:
     endVersion: 
