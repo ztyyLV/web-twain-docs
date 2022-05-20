@@ -37,6 +37,14 @@ tree_list:
         path: /getstarted/filetype.html
         startVersion:
         endVersion:
+      - name: Deploy to your server
+        path: /indepth/deployment/server.html
+        startVersion: 17.2.5
+        endVersion:
+      - name: Set up Dynamsoft Service 
+        path: /indepth/deployment/service.html
+        startVersion: 17.2.5
+        endVersion:
   - name: Features
     path: /indepth/features/
     startVersion:
@@ -130,9 +138,9 @@ tree_list:
   - name: Deployment
     path: /indepth/deployment/
     startVersion:
-    endVersion: 
+    endVersion: 17.2.5
     childList:
-      - name: Server Setup
+      - name: Deploy to your server
         path: /indepth/deployment/server.html
         startVersion:
         endVersion:
