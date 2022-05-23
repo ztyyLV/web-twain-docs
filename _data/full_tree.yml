@@ -24,11 +24,11 @@ tree_list:
       - name: HelloWorld 
         path: /getstarted/helloworld.html
         startVersion:
-        endVersion:
-      - name: Hardware
+        endVersion: 
+      - name: Imaging Hardware
         path: /getstarted/hardware.html
-        startVersion:
-        endVersion:
+        startVersion: 17.2.5
+        endVersion: 
       - name: Platform
         path: /getstarted/platform.html
         startVersion:

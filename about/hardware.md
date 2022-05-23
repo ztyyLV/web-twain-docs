@@ -5,11 +5,12 @@ title: TWAIN Scanners, ICA Scanners, SANE Scanners, and Cameras
 keywords: Dynamic Web TWAIN, Documentation, TWAIN, ICA, SANE, DirectShow, Webcam, MediaDevices Hardware
 breadcrumbText: Hardware
 description: Dynamic Web TWAIN supports image capture from TWAIN Scanners, ICA Scanners, SANE Scanners, DirectShow Cameras, and MediaDevices Cameras.
+permalink: /getstarted/hardware.html
 ---
 
-# Hardware 
+# Imaging Hardware 
 
-`DWT`'s main feature is interacting with imaging devices like scanners and cameras. In this section, we'll look at the supported devices.
+Dynamic Web TWAIN's main feature is interacting with imaging devices like scanners and cameras. In this section, we'll look at the supported devices.
 
 - [TWAIN Scanners](#twain-scanners)
 - [ICA Scanners](#ica-scanners)
