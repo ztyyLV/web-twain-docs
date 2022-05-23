@@ -37,7 +37,7 @@ tree_list:
         path: /getstarted/hardware.html
         startVersion: 
         endVersion: 17.2.5
-      - name: Platform
+      - name: System Requirements
         path: /getstarted/platform.html
         startVersion:
         endVersion:
