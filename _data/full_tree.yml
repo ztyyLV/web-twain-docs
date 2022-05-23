@@ -41,15 +41,15 @@ tree_list:
         path: /indepth/deployment/server.html
         startVersion: 17.2.5
         endVersion:
-      - name: Angular Integration
+      - name: Use DWT in Angular
         path: /indepth/development/angular.html
         startVersion: 17.2.5
         endVersion: 
-      - name: React Integration
+      - name: Use DWT in React
         path: /indepth/development/react.html
         startVersion: 17.2.5
         endVersion: 
-      - name: Vue Integration
+      - name: Use DWT in Vue
         path: /indepth/development/vue.html
         startVersion: 17.2.5
         endVersion: 
@@ -57,7 +57,7 @@ tree_list:
         path: /indepth/deployment/service.html
         startVersion: 17.2.5
         endVersion:
-      - name: Upgrade Guide
+      - name: How to Upgrade
         path: /indepth/development/upgrade.html
         startVersion: 17.2.5
         endVersion: 
