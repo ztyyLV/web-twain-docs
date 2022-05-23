@@ -8,7 +8,7 @@ description: Dynamic Web TWAIN SDK Documentation React Integration Page
 permalink: /indepth/development/react.html
 ---
 
-# Use DWT with React
+# Use DWT in React
 
 [React](https://reactjs.org/) is a JavaScript library meant explicitly for creating interactive UIs. Follow this guide to learn how to implement `DWT` in a React application.
 

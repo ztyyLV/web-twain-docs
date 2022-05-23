@@ -12,6 +12,18 @@ tree_list:
         path: /about/license.html        
         startVersion:
         endVersion:
+      - name: Imaging Hardware
+        path: /getstarted/hardware.html
+        startVersion: 17.2.5
+        endVersion: 
+      - name: File Types
+        path: /getstarted/filetype.html
+        startVersion: 17.2.5
+        endVersion: 
+      - name: About ActiveX
+        path: /indepth/development/activex.html
+        startVersion: 17.2.5
+        endVersion: 
       - name: Support
         path: /about/getsupport.html        
         startVersion:
@@ -24,32 +36,32 @@ tree_list:
       - name: HelloWorld 
         path: /getstarted/helloworld.html
         startVersion:
-        endVersion:
-      - name: Hardware
+        endVersion: 
+      - name: Imaging Hardware
         path: /getstarted/hardware.html
-        startVersion:
-        endVersion:
-      - name: Platform
+        startVersion: 
+        endVersion: 17.2.5
+      - name: System Requirements
         path: /getstarted/platform.html
         startVersion:
         endVersion:
       - name: FileTypes
         path: /getstarted/filetype.html
         startVersion:
-        endVersion:
+        endVersion: 17.2.5
       - name: Deploy to your Server
         path: /indepth/deployment/server.html
         startVersion: 17.2.5
         endVersion:
-      - name: Angular Integration
+      - name: Use DWT in Angular
         path: /indepth/development/angular.html
         startVersion: 17.2.5
         endVersion: 
-      - name: React Integration
+      - name: Use DWT in React
         path: /indepth/development/react.html
         startVersion: 17.2.5
         endVersion: 
-      - name: Vue Integration
+      - name: Use DWT in Vue
         path: /indepth/development/vue.html
         startVersion: 17.2.5
         endVersion: 
@@ -57,7 +69,7 @@ tree_list:
         path: /indepth/deployment/service.html
         startVersion: 17.2.5
         endVersion:
-      - name: Upgrade Guide
+      - name: How to Upgrade
         path: /indepth/development/upgrade.html
         startVersion: 17.2.5
         endVersion: 
