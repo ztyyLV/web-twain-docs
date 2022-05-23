@@ -12,6 +12,14 @@ tree_list:
         path: /about/license.html        
         startVersion:
         endVersion:
+      - name: Imaging Hardware
+        path: /getstarted/hardware.html
+        startVersion: 17.2.5
+        endVersion: 
+      - name: File Types
+        path: /getstarted/filetype.html
+        startVersion: 17.2.5
+        endVersion: 
       - name: Support
         path: /about/getsupport.html        
         startVersion:
@@ -27,8 +35,8 @@ tree_list:
         endVersion: 
       - name: Imaging Hardware
         path: /getstarted/hardware.html
-        startVersion: 17.2.5
-        endVersion: 
+        startVersion: 
+        endVersion: 17.2.5
       - name: Platform
         path: /getstarted/platform.html
         startVersion:
@@ -36,7 +44,7 @@ tree_list:
       - name: FileTypes
         path: /getstarted/filetype.html
         startVersion:
-        endVersion:
+        endVersion: 17.2.5
       - name: Deploy to your Server
         path: /indepth/deployment/server.html
         startVersion: 17.2.5

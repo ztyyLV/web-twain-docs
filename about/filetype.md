@@ -5,11 +5,12 @@ title: Dynamic Web TWAIN File Types
 keywords: Dynamic Web TWAIN, Documentation, File Types
 breadcrumbText: File Types
 description: Dynamic Web TWAIN SDK Documentation File Types Page
+permalink: /getstarted/filetype.html
 ---
 
 # File Types
 
-`DWT` supports the following file types.
+Dynamic Web TWAIN supports the following file types:
 
 ## BMP
 
