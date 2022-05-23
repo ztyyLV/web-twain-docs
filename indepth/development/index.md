@@ -23,8 +23,3 @@ Popular frameworks and frequently asked development questions are covered in the
 
 * [How to perform upgrade]({{site.indepth}}development/upgrade.html)
 
-* [About ActiveX]({{site.indepth}}development/activex.html)
-
-* [Support for 64-bit ARM & MIPS64]({{site.indepth}}development/armmips.html)
-
-* [About Professional Service]({{site.indepth}}development/Pro-service.html)

@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Development - React Integration
 keywords: Dynamic Web TWAIN, Documentation, Development, React Integration
 breadcrumbText: React Integration
 description: Dynamic Web TWAIN SDK Documentation React Integration Page
+permalink: /indepth/development/react.html
 ---
 
 # Use DWT with React

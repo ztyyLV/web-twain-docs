@@ -6,6 +6,7 @@ title: Dynamic Web TWAIN Development - Upgrade Guide
 keywords: Dynamic Web TWAIN, Documentation, Development, Upgrade Guide
 breadcrumbText: Upgrade Guide
 description: Dynamic Web TWAIN SDK Documentation Upgrade Guide Page
+permalink: /indepth/development/upgrade.html
 ---
 
 # Upgrade

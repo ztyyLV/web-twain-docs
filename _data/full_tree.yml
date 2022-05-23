@@ -37,6 +37,30 @@ tree_list:
         path: /getstarted/filetype.html
         startVersion:
         endVersion:
+      - name: Deploy to your Server
+        path: /indepth/deployment/server.html
+        startVersion: 17.2.5
+        endVersion:
+      - name: Angular Integration
+        path: /indepth/development/angular.html
+        startVersion: 17.2.5
+        endVersion: 
+      - name: React Integration
+        path: /indepth/development/react.html
+        startVersion: 17.2.5
+        endVersion: 
+      - name: Vue Integration
+        path: /indepth/development/vue.html
+        startVersion: 17.2.5
+        endVersion: 
+      - name: Set up Dynamsoft Service 
+        path: /indepth/deployment/service.html
+        startVersion: 17.2.5
+        endVersion:
+      - name: Upgrade Guide
+        path: /indepth/development/upgrade.html
+        startVersion: 17.2.5
+        endVersion: 
   - name: Features
     path: /indepth/features/
     startVersion:
@@ -85,20 +109,20 @@ tree_list:
   - name: Development
     path: /indepth/development/
     startVersion:
-    endVersion: 
+    endVersion: 17.2.5
     childList:
       - name: Angular Integration
         path: /indepth/development/angular.html
         startVersion:
-        endVersion:
+        endVersion: 17.2.5
       - name: React Integration
         path: /indepth/development/react.html
         startVersion:
-        endVersion:
+        endVersion: 17.2.5
       - name: Vue Integration
         path: /indepth/development/vue.html
         startVersion:
-        endVersion:
+        endVersion: 17.2.5
       - name: Server-side Scripting
         path: /indepth/development/Server-script.html
         startVersion:
@@ -110,11 +134,11 @@ tree_list:
       - name: Upgrade Guide
         path: /indepth/development/upgrade.html
         startVersion:
-        endVersion:
+        endVersion: 17.2.5
       - name: About ActiveX
         path: /indepth/development/activex.html
         startVersion:
-        endVersion:
+        endVersion: 17.2.5
       - name: FileTypes
         path: /indepth/development/armmips.html
         startVersion:
@@ -130,9 +154,9 @@ tree_list:
   - name: Deployment
     path: /indepth/deployment/
     startVersion:
-    endVersion: 
+    endVersion: 17.2.5
     childList:
-      - name: Server Setup
+      - name: Deploy to your server
         path: /indepth/deployment/server.html
         startVersion:
         endVersion:
@@ -140,7 +164,7 @@ tree_list:
         path: /indepth/deployment/service.html
         startVersion:
         endVersion:
-  - name: Schedule
+  - name: Release Notes
     path: /info/schedule/
     startVersion:
     endVersion: 

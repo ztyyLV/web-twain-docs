@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Development - About AcitveX
 keywords: Dynamic Web TWAIN, Documentation, Development, About AcitveX
 breadcrumbText: About AcitveX
 description: Dynamic Web TWAIN SDK Documentation About AcitveX Page
+permalink: /indepth/development/activex.html
 ---
 
 # About ActiveX
