@@ -73,7 +73,7 @@ tree_list:
         path: /indepth/development/upgrade.html
         startVersion: 17.2.5
         endVersion: 
-  - name: Features
+  - name: Using DWT
     path: /indepth/features/
     startVersion:
     endVersion:
