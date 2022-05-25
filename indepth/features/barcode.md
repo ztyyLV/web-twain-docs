@@ -15,6 +15,10 @@ With the increasing use of barcode reading in document management systems, the B
 >  
 > Barcode reading can be performed on the client side as well as the server side. For `DWT` , we only consider client-side reading. If you are interested in reading on the server side, you can contact [Dynamsoft Support]({{site.about}}getsupport.html).
 
+## Environment
+
+* [Desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and [Mobile]({{site.getstarted}}platform.html#browsers-on-mobile-devices).
+
 ## How to use
 
 ### Step one - Include the add-on
