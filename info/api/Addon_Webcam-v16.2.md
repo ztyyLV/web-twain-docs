@@ -7,7 +7,9 @@ breadcrumbText: Webcam Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference Webcam Addon APIs Page
 ---
 
-# `WebTwain.Addon.Webcam`
+# `{WebTwainObject}.Addon.Webcam`
+
+> {WebTwainObject} denotes the `WebTwain` instance.
 
 **Methods**
 
@@ -279,7 +281,7 @@ interface CameraControlPropertyExtra {
 
 **Usage notes**
 
-Check out [ `Dynamsoft. EnumDWT_CameraControlProperty` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_cameracontrolproperty).
+Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_cameracontrolproperty" target="_blank">Dynamsoft.DWT.EnumDWT_CameraControlProperty</a>.
 
 ---
 
@@ -369,7 +371,7 @@ interface VideoControlPropertyExtra {
 
 **Usage notes**
 
-Check out [ `Dynamsoft.EnumDWT_VideoProperty` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftenumdwt_videoproperty).
+Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_videoproperty" target="_blank">Dynamsoft.DWT.EnumDWT_VideoProperty</a>.
 
 ---
 
@@ -515,7 +517,7 @@ SetVideoRotateMode(
 
 **Usage notes**
 
-Check out [ `Dynamsoft.EnumDWT_VideoRotateMode` ](Dynamsoft. Enum.md#dynamsoftenumdwt_videorotatemode).
+Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_videorotatemode" target="_blank">Dynamsoft.DWT.EnumDWT_VideoRotateMode</a>. 
 
 ---
 

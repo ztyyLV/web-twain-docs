@@ -7,7 +7,9 @@ breadcrumbText: OCRPro Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference OCRPro Addon APIs Page
 ---
 
-# `WebTwain.Addon.OCRPro`
+# `{WebTwainObject}.Addon.OCRPro`
+
+> {WebTwainObject} denotes the `WebTwain` instance.
 
 For Server Side OCR, check out [Server-Side OCR](#server-side)
 
@@ -166,7 +168,6 @@ RecognizeRect(
 ``` typescript
 /**
  * Perform OCR on the selected images in the buffer.
- * @param index Specify the image.
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
  * @argument result The OCR result.

@@ -7,69 +7,68 @@ breadcrumbText: Viewer
 description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 ---
 
-# `WebTwain.Viewer`
+# `{WebTwainObject}.Viewer`
+
+> {WebTwainObject} denotes the `WebTwain` instance.
 
 **Methods**
 
-| |
-|:-|:-|
-|[`bind()`](#bind)| [`clearSelectedAreas()`](#clearselectedareas)| [`createCustomElement()`](#createcustomelement)| [`createImageEditor()`](#createimageeditor)|
-| [`createThumbnailViewer()`](#createthumbnailviewer)| [`first()`](#first)|[`fitWindow()`](#fitwindow)|[`gotoPage()`](#gotopage)|
-| [`hide()`](#hide)| [`last()`](#last)| [`next()`](#next)|[`off()`](#off)|
-|[`on()`](#on)| [`previous()`](#previous)| [`render()`](#render)| [`setButtonClass()`](#setbuttonclass)|
-| [`setSelectedAreas()`](#setselectedAreas)| [`setViewMode()`](#setviewmode) | [`show()`](#show)| [`unbind()`](#unbind)|
-
+|                                                     |
+| :-------------------------------------------------- | :-------------------------------------------- | ----------------------------------------------- | ------------------------------------------- |
+| [`bind()`](#bind)                                   | [`clearSelectedAreas()`](#clearselectedareas) | [`createCustomElement()`](#createcustomelement) | [`createImageEditor()`](#createimageeditor) |
+| [`createThumbnailViewer()`](#createthumbnailviewer) | [`first()`](#first)                           | [`fitWindow()`](#fitwindow)                     | [`gotoPage()`](#gotopage)                   |
+| [`hide()`](#hide)                                   | [`last()`](#last)                             | [`next()`](#next)                               | [`off()`](#off)                             |
+| [`on()`](#on)                                       | [`previous()`](#previous)                     | [`render()`](#render)                           | [`setButtonClass()`](#setbuttonclass)       |
+| [`setSelectedAreas()`](#setselectedareas)           | [`setViewMode()`](#setviewmode)               | [`show()`](#show)                               | [`unbind()`](#unbind)                       |
+| [`createTemplate()`](#createtemplate)               |
 
 <!--* [updateUISettings](#updateuisettings)-->
 
 **Properties**
 
-| |
-|:-|:-|
-|[`acceptDrop`](#acceptdrop)| [`allowSlide`](#allowslide)|[`background`](#background)|[`border`](#border)|
-| [`cursor`](#cursor)| [`height`](#height)|[`idPostfix`](#idpostfix)|[`ifAutoScroll`](#ifautoscroll)|
-|[`innerBorder`](#innerborder)| [`pageMargin`](#pagemargin)|[`selectedAreaBorderColor`](#selectedareabordercolor)|[`selectedPageBackground`](#selectedpagebackground)|
-|[`selectedPageBorder`](#selectedpageborder)| [`selectionRectAspectRatio`](#selectionrectaspectratio)|[`showPageNumber`](#showpagenumber)|[`singlePageMode`](#singlepagemode)|
-|[`width`](#width)| [`zoom`](#zoom)| [`autoChangeIndex`](#autochangeindex)|
+|                                             |
+| :------------------------------------------ | :------------------------------------------------------ | ----------------------------------------------------- | --------------------------------------------------- |
+| [`acceptDrop`](#acceptdrop)                 | [`allowSlide`](#allowslide)                             | [`background`](#background)                           | [`border`](#border)                                 |
+| [`cursor`](#cursor)                         | [`height`](#height)                                     | [`idPostfix`](#idpostfix)                             | [`ifAutoScroll`](#ifautoscroll)                     |
+| [`innerBorder`](#innerborder)               | [`pageMargin`](#pagemargin)                             | [`selectedAreaBorderColor`](#selectedareabordercolor) | [`selectedPageBackground`](#selectedpagebackground) |
+| [`selectedPageBorder`](#selectedpageborder) | [`selectionRectAspectRatio`](#selectionrectaspectratio) | [`showPageNumber`](#showpagenumber)                   | [`singlePageMode`](#singlepagemode)                 |
+| [`width`](#width)                           | [`zoom`](#zoom)                                         | [`autoChangeIndex`](#autochangeindex)                 | [`showCheckbox`](#showcheckbox)                     |
 
 **Events**
 
-| |
-|:-|:-|
-|[`click`](#click)| [`contextmenu`](#contextmenu)| [`dblclick`](#dblclick)|[`mousemove`](#mousemove)|
-| [`mousedown`](#mousedown)| [`mouseup`](#mouseup)| [`mouseout`](#mouseout)|[`mouseover`](#mouseover)|
-|[`keydown`](#keydown)| [`keyup`](#keyup)|[`pageAreaSelected`](#pageareaselected)| [`pageAreaUnselected`](#pageareaunselected)|
-|[`pageRendered`](#pagerendered)| [`resize`](#resize)|
+|                                 |
+| :------------------------------ | :---------------------------- | --------------------------------------- | ------------------------------------------- |
+| [`click`](#click)               | [`contextmenu`](#contextmenu) | [`dblclick`](#dblclick)                 | [`mousemove`](#mousemove)                   |
+| [`mousedown`](#mousedown)       | [`mouseup`](#mouseup)         | [`mouseout`](#mouseout)                 | [`mouseover`](#mouseover)                   |
+| [`keydown`](#keydown)           | [`keyup`](#keyup)             | [`pageAreaSelected`](#pageareaselected) | [`pageAreaUnselected`](#pageareaunselected) |
+| [`pageRendered`](#pagerendered) | [`resize`](#resize)           |
 
 <!--** [topPageChanged](#toppagechanged)-->
-
-
 
 > The following APIs are deprecated as of v16.2, check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html#viewer-related-api-changes-in-versoin-16.2).
 
 **Methods**
 
-| |
-|:-|:-|
-| `BindViewer()`| `UnbindView()`|
-| `UpdateViewer()`|
+|                  |
+| :--------------- | :------------- |
+| `BindViewer()`   | `UnbindView()` |
+| `UpdateViewer()` |
 
 **Properties**
 
-| |
-|:-|:-|
-|`BackgroundColor`| `SelectionImageBorderColor`| `FitWindowType`| `IfFitWindow`|
-| `Height`| `Width`| `IfAutoScroll`|`ShowPageNumber`|
-|`MouseX`| `MouseY`| `ImageMargin`| `MouseShape`| 
-|`SelectionRectAspectRatio`| `Zoom`|
-
+|                            |
+| :------------------------- | :-------------------------- | --------------- | ---------------- |
+| `BackgroundColor`          | `SelectionImageBorderColor` | `FitWindowType` | `IfFitWindow`    |
+| `Height`                   | `Width`                     | `IfAutoScroll`  | `ShowPageNumber` |
+| `MouseX`                   | `MouseY`                    | `ImageMargin`   | `MouseShape`     |
+| `SelectionRectAspectRatio` | `Zoom`                      |
 
 **Events**
 
-| |
-|:-|:-|
-| `OnMouseClick`| `OnMouseDoubleClick`| `OnMouseMove`|
-| `OnMouseRightClick`| `OnImageAreaSelected`| `OnImageAreaDeSelected`|
+|                     |
+| :------------------ | :-------------------- | ----------------------- |
+| `OnMouseClick`      | `OnMouseDoubleClick`  | `OnMouseMove`           |
+| `OnMouseRightClick` | `OnImageAreaSelected` | `OnImageAreaDeSelected` |
 
 ---
 
@@ -77,37 +76,73 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Create a Dynamsoft Viewer instance and bind it to the WebTwain instance.
  * @param element Specify an HTML element to create the viewer.
+ * @param documentTemplate Specify the document template.
  */
-bind(
-  element: boolean;
-): void;
+bind(element: HTMLDivElement, documentTemplate: DocumentViewerTemplate) : void;
+
+interface DocumentViewerTemplate{
+   getCustomElement():CustomElement; //Get CustomElement. Can display save & upload interface in CustomElement.
+   onAddDocumentFunc = function () {}
+   onExitFunc = function () {}
+   onSaveFunc = function () {} //Save button click event
+   onUploadFunc = function () {}  //Upload button click event
+   onRemoveSelectedFunc = function () {}   //Remove button click event
+}
 ```
 
 **Example**
 
-``` javascript
-var DWObject = null;
-Dynamsoft.DWT.CreateDWTObjectEx({
-        WebTwainId: 'dwtcontrol'
-    },
-    function(obj) {
-        DWObject = obj;
-        DWObject.Viewer.bind(document.getElementById('dwtcontrolContainer'));
-        DWObject.Viewer.height = 600;
-        DWObject.Viewer.width = 800;
-        var thumbnailViewer = DWObject.Viewer.createThumbnailViewer();
-        thumbnailViewer.show();
-        DWObject.Viewer.show();
-    },
-    function(err) {
-        console.log(err);
-    }
-);
+```javascript
+var DWObject, template;
+Dynamsoft.DWT.CreateDWTObjectEx(
+  {
+    WebTwainId: "a",
+    UseLocalService: false,
+  },
+  function (obj) {
+    DWObject = obj;
+    template = DWObject.Viewer.createTemplate("documentScanner");
+    DWObject.Viewer.bind(null, template); //full screen
+    DWObject.Viewer.show(); 
+  
+    template.onExitFunc = function () {
+    DWObject.Viewer.show();   
+    console.error ("execute");
+    //RemoveAllFile();     
+}
+}, function (errorCode, errorString) {
+    console.log(errorString);
+  });
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v17.2+ </td>
+<td align="center">v17.2+ </td>
+<td align="center">v17.2+ </td>
+<td align="center">v17.2+ </td>
+<td align="center">v17.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -119,16 +154,41 @@ Replace the previous `BindViewer` method.
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Clear the selected area(s) on the current page.
  */
 clearSelectedAreas(): void;
 ```
 
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
+
 **Example**
 
-``` javascript
+```javascript
 DWObject.Viewer.clearSelectedAreas();
 ```
 
@@ -138,42 +198,71 @@ DWObject.Viewer.clearSelectedAreas();
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Add a custom page DIV element and specify its position and display order.
- * Generate an independent CustomElement object. 
+ * Generate an independent CustomElement object.
  * @param element Specify the HTMLDivElement.
  * @param location Define where to place the custom element. The allowed values are "left" and "right", and the default value is "right".
  * @param bCover The default value is `false`, that is, the created CustomElement is displayed according to the set area. If set to true, the main viewer will be covered by the CustomElement.
  */
 createCustomElement(
-    element: HTMLDivElement, 
-    location?: string, 
+    element: HTMLDivElement,
+    location?: string,
     bCover?: boolean
 ): CustomElement;
 
 interface CustomElement {
     /**
-     * Show the custome element.
+     * Show the custom element.
      */
     show(): boolean;
     /**
-     * Hide the custome element.
+     * Hide the custom element.
      */
     hide(): boolean;
     /**
-     * Remove the custome element.
+     * Remove the custom element.
      */
     dispose(): boolean;
 };
 ```
 
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
+
 **Example**
 
-``` javascript
+```javascript
 var myElement = document.createElement("div");
 myElement.style = "width:100px;height:200px;background:red";
-var customElement = DWObject.Viewer.createCustomElement(myElement, "right", false);
+var customElement = DWObject.Viewer.createCustomElement(
+  myElement,
+  "right",
+  false
+);
 customElement.show();
 ```
 
@@ -191,8 +280,8 @@ The method [ `unbind()` ](#unbind) will dispose all created CustomElement object
 
 **Syntax**
 
-``` typescript
-/** 
+```typescript
+/**
  * Generate an independent ImageEditor object.
  * @param editorSettings Configure the object.
  */
@@ -216,96 +305,142 @@ interface ImageEditor {
 };
 ```
 
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
+
 **Example**
 
 > The example code shows 2 ways to use the API `createImageEditor()`
 
-``` javascript
+```javascript
 // Use default settings
 var imageEditor = DWObject.Viewer.createImageEditor();
 imageEditor.show();
 ```
 
-``` javascript
+```javascript
 // Customize the editor
 var editorSettings = {
-    /* Show the editor within the DIV 'imageEditor'
-    element: document.getElementById("imageEditor"),
-    width: 600,
-    height: 400,*/
-    border: '1px solid rgb(204, 204, 204)',
-    topMenuBorder: '',
-    innerBorder: '',
-    background: "rgb(255, 255, 255)",
-    promptToSaveChange: true,
-    buttons: {
-        titles: {
-            'previous': 'Previous Image',
-            'next': 'Next Image',
-            'print': 'Print Image',
-            'scan': 'Scan Documents',
-            'load': 'Load Local Images',
-            'rotateleft': 'Rotate Left',
-            'rotate': 'Rotate',
-            'rotateright': 'Rotate Right',
-            'deskew': 'Deskew',
-            'crop': 'Crop Selected Area',
-            'cut': 'Cut Selected Area',
-            'changeimagesize': 'Change Image Size',
-            'flip': 'Flip Image',
-            'mirror': 'Mirror Image',
-            'zoomin': 'Zoom In',
-            'originalsize': 'Show Original Size',
-            'zoomout': 'Zoom Out',
-            'stretch': 'Stretch Mode',
-            'fit': 'Fit Window',
-            'fitw': 'Fit Horizontally',
-            'fith': 'Fit Vertically',
-            'hand': 'Hand Mode',
-            'rectselect': 'Select Mode',
-            'zoom': 'Click to Zoom In',
-            'restore': 'Restore Original Image',
-            'save': 'Save Changes',
-            'close': 'Close the Editor',
-            'removeall': 'Remove All Images',
-            'removeselected': 'Remove All Selected Images'
-        },
-        visibility: {
-            'scan': true,
-            'load': true,
-            'print': true,
-            'removeall': true,
-            'removeselected': true,
-            'rotateleft': true,
-            'rotate': true,
-            'rotateright': true,
-            'deskew': true,
-            'crop': true,
-            'cut': true,
-            'changeimagesize': true,
-            'flip': true,
-            'mirror': true,
-            'zoomin': true,
-            'originalsize': true,
-            'zoomout': true,
-            'stretch': true,
-            'fit': true,
-            'fitw': true,
-            'fith': true,
-            'hand': true,
-            'rectselect': true,
-            'zoom': true,
-            'restore': true,
-            'save': true,
-            'close': true
-        }
+  /* Show the editor within the DIV 'imageEditor'*/
+  element: document.getElementById("imageEditor"),
+  width: 600,
+  height: 400,
+  border: "1px solid rgb(204, 204, 204)",
+  topMenuBorder: "",
+  innerBorder: "",
+  background: "rgb(255, 255, 255)",
+  promptToSaveChange: true,
+  buttons: {
+    titles: {
+      previous: "Previous Image",
+      next: "Next Image",
+      print: "Print Image",
+      scan: "Scan Documents",
+      load: "Load Local Images",
+      rotateleft: "Rotate Left",
+      rotate: "Rotate",
+      rotateright: "Rotate Right",
+      deskew: "Deskew",
+      crop: "Crop Selected Area",
+      cut: "Cut Selected Area",
+      changeimagesize: "Change Image Size",
+      flip: "Flip Image",
+      mirror: "Mirror Image",
+      zoomin: "Zoom In",
+      originalsize: "Show Original Size",
+      zoomout: "Zoom Out",
+      stretch: "Stretch Mode",
+      fit: "Fit Window",
+      fitw: "Fit Horizontally",
+      fith: "Fit Vertically",
+      hand: "Hand Mode",
+      rectselect: "Select Mode",
+      zoom: "Click to Zoom In",
+      restore: "Restore Original Image",
+      save: "Save Changes",
+      close: "Close the Editor",
+      removeall: "Remove All Images",
+      removeselected: "Remove All Selected Images",
     },
-    dialogText: {
-        dlgRotateAnyAngle: ['Angle :', 'Interpolation:', 'Keep size', '  OK  ', 'Cancel'],
-        dlgChangeImageSize: ['New Height :', 'New Width :', 'Interpolation method:', '  OK  ', 'Cancel'],
-        saveChangedImage: ['You have changed the image, do you want to keep the change(s)?', '  Yes  ', '  No  '],
-        selectSource: ['Select Source:', 'Select', 'Cancel', 'There is no source available']
-    }
+    visibility: {
+      scan: true,
+      load: true,
+      print: true,
+      removeall: true,
+      removeselected: true,
+      rotateleft: true,
+      rotate: true,
+      rotateright: true,
+      deskew: true,
+      crop: true,
+      cut: true,
+      changeimagesize: true,
+      flip: true,
+      mirror: true,
+      zoomin: true,
+      originalsize: true,
+      zoomout: true,
+      stretch: true,
+      fit: true,
+      fitw: true,
+      fith: true,
+      hand: true,
+      rectselect: true,
+      zoom: true,
+      restore: true,
+      save: true,
+      close: true,
+    },
+  },
+  dialogText: {
+    dlgRotateAnyAngle: [
+      "Angle :",
+      "Interpolation:",
+      "Keep size",
+      "  OK  ",
+      "Cancel",
+    ],
+    dlgChangeImageSize: [
+      "New Height :",
+      "New Width :",
+      "Interpolation method:",
+      "  OK  ",
+      "Cancel",
+    ],
+    saveChangedImage: [
+      "You have changed the image, do you want to keep the change(s)?",
+      "  Yes  ",
+      "  No  ",
+    ],
+    selectSource: [
+      "Select Source:",
+      "Select",
+      "Cancel",
+      "There is no source available",
+    ],
+  },
 };
 
 var imageEditor = DWObject.Viewer.createImageEditor(editorSettings);
@@ -326,7 +461,7 @@ The method [ `unbind()` ](#unbind) will dispose all created CustomElement object
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Generate a independent ThumbnailViewer object.
  * @param thumbnailViewerSettings Configure the ThumbnailViewer object
@@ -354,17 +489,17 @@ interface ThumbnailViewer {
      */
     updateViewMode(viewMode: ViewMode): void;
     /**
-     * Bind a listner to the specified event. You can bind one or multiple listners to the same event.
+     * Bind a listner to the specified event. You can bind one or multiple listeners to the same event.
      * @param eventName Specify the event name.
      * @param callback Specify the listner.
      */
-    on(eventName: string, callback: (event: ThumbnailViewerEvent | KeyboardEvent, domEvent?: MouseEvent) => void): void; 
+    on(eventName: string, callback: (event: ThumbnailViewerEvent | KeyboardEvent, domEvent?: MouseEvent) => void): void;
     /**
      * Unbind event listener(s) from the specified viewer event.
      * @param eventName Specify the event.
      * @param callback Specify the listener to remove
      */
-    off(eventName: string, callback?: () => void): void; 
+    off(eventName: string, callback?: () => void): void;
     /**
      * Whether to allow keyboard control. Default: true.
      */
@@ -375,7 +510,7 @@ interface ThumbnailViewer {
      */
     allowPageDragging: boolean;
     /**
-     * Whether to allow resizing of the thumbnail viewer. 
+     * Whether to allow resizing of the thumbnail viewer.
      * Default: false.
      */
     allowResizing: boolean;
@@ -450,18 +585,22 @@ interface ThumbnailViewer {
      */
     size: number | string;
     /**
-     * Set whether to select the index in the upper left corner of the viewer when scrolling. 
+     * Set whether to select the index in the upper left corner of the viewer when scrolling.
      * Default: false.
      */
     autoChangeIndex: boolean;
+     /**
+     * Show checkbox on image(s).
+     */
+    showCheckbox: boolean;
 };
 interface ThumbnailViewerEvent {
     // The index of the current page.
     index: number;
     // The x-coordinate of the browser page.
-    pageX: number; 
+    pageX: number;
     // The y-coordinate of the browser page.
-    pageY: number; 
+    pageY: number;
 };
 interface ViewMode {
     /**
@@ -471,7 +610,7 @@ interface ViewMode {
     /**
      * Specify the number of images per column.
      */
-    rows: number;    
+    rows: number;
     /**
      * Set or return whether the pages are arranged vertically or horizontally.
      * Default: "vertical". Allowed values are "vertical" and "horizontal".
@@ -480,18 +619,43 @@ interface ViewMode {
 }
 ```
 
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
+
 **Example**
 
 > The example code shows 2 ways to use the API `createThumbnailViewer()`
 
-``` javascript
+```javascript
 // Use default settings
 var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer();
 objThumbnailViewer.background = "rgb(0,0,255)";
 objThumbnailViewer.show();
 ```
 
-``` javascript
+```javascript
 // Customize the thumbnail viewer
 var thumbnailViewerSettings = {
     location: 'left',
@@ -523,21 +687,20 @@ thumbnail.show();
 
 The following table shows the events available to a ThumbnailViewer object.
 
-| Event Name | Arguments | Description |
-|:-|:-|:-|
-| `click` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the clicked |
-| `dblclick` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when double clicked |
-| `contextMenu` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when right clicked |
-| `mousemove` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse moved over |
-| `mousedown` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is pressed |
-| `mouseup` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is released |
-<!--**| `topPageChanged` | index: number | Triggered when the top page currently displayed changes |-->
-| `resize` | width：number, height：number | Triggered when width & height of the ThumbnailViewer object changes. |
-| `pageRendered` | index: number | Triggered when a page is rendered. |
-| `mouseout` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is out, only for desktop browsers |
-| `mouseover` | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is out, only for desktop browsers |
-| `keydown` | keyboardEvent: KeyboardEvent | Triggered when a key is pressed, only for desktop browsers |
-| `keyup` | keyboardEvent: KeyboardEvent | Triggered when a key is released, only for desktop browsers |
+| Event Name     | Arguments                                         | Description                                                          |
+| :------------- | :------------------------------------------------ | :------------------------------------------------------------------- |
+| `click`        | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is clicked                                  |
+| `dblclick`     | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is double clicked                           |
+| `contextMenu`  | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is right clicked                            |
+| `mousemove`    | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse moved over                                  |
+| `mousedown`    | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is pressed                              |
+| `mouseup`      | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is released                             |
+| `resize`       | width：number, height：number                     | Triggered when width & height of the ThumbnailViewer object changes. |
+| `pageRendered` | index: number                                     | Triggered when a page is rendered.                                   |
+| `mouseout`     | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is out, only for desktop browsers           |
+| `mouseover`    | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when mouse is hovering, only for desktop browsers          |
+| `keydown`      | keyboardEvent: KeyboardEvent                      | Triggered when a key is pressed, only for desktop browsers           |
+| `keyup`        | keyboardEvent: KeyboardEvent                      | Triggered when a key is released, only for desktop browsers          |
 
 By default, scrolling the scroll bar on Thumbnail does not trigger the `topchanged` event.
 
@@ -551,16 +714,41 @@ The method [ `unbind()` ](#unbind) will dispose all created CustomElement object
 
 **Syntax**
 
-``` typescript
-/** 
+```typescript
+/**
  * Show the first page and return the index which should be 0. If there is no page in the viewer, -1 is returned.
  */
-first():number; 
+first():number;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
-``` javascript
+```javascript
 DWObject.Viewer.first();
 ```
 
@@ -570,7 +758,7 @@ DWObject.Viewer.first();
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Set how the page is fit in the viewer.
  * @param type Specify how to fit. Allowed values are "width" and "height"
@@ -580,10 +768,35 @@ fitWindow(
 ): void
 ```
 
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
+
 **Example**
 
-``` javascript
- DWObject.Viewer.fitWindow();
+```javascript
+DWObject.Viewer.fitWindow();
 ```
 
 **Usage notes**
@@ -603,7 +816,7 @@ If no parameter is provided, it tries to fit the whole page within the viewer.
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Show the specified page and return its index.
  * @param index Specify the page.
@@ -613,9 +826,34 @@ gotoPage(
 ): number;
 ```
 
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
+
 **Example**
 
-``` javascript
+```javascript
 DWObject.Viewer.gotoPage(0);
 ```
 
@@ -625,16 +863,41 @@ DWObject.Viewer.gotoPage(0);
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Hide the viewer.
  */
 hide(): boolean;
 ```
 
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
+
 **Example**
 
-``` javascript
+```javascript
 DWObject.Viewer.hide();
 ```
 
@@ -644,16 +907,41 @@ DWObject.Viewer.hide();
 
 **Syntax**
 
-``` typescript
-/** 
+```typescript
+/**
  * Show the last page and return its index. If there is no page in the viewer, -1 is returned.
  */
-last():number; 
+last():number;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
-``` javascript
+```javascript
 DWObject.Viewer.last();
 ```
 
@@ -663,16 +951,41 @@ DWObject.Viewer.last();
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Show the next page and return its index. If there is no page in the viewer, -1 is returned.
  */
-next(): number; 
+next(): number;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
-``` javascript
+```javascript
 DWObject.SelectImages([3]); //Select the 4th page.
 var currentIndex = DWObject.Viewer.next(); // return 4 which represents the 5th page.
 ```
@@ -683,22 +996,22 @@ var currentIndex = DWObject.Viewer.next(); // return 4 which represents the 5th 
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Unbind event listener(s) from the specified viewer event.
  * @param eventName Specify the event.
  * @param callback Specify the listener to remove
  */
 Viewer.off(
-    eventName: string, 
+    eventName: string,
     callback?: () => void
-): void; 
+): void;
 ```
 
 **Example**
 
-``` javascript
-DWObject.Viewer.off('pageAreaSelected');
+```javascript
+DWObject.Viewer.off("pageAreaSelected");
 ```
 
 **Usage notes**
@@ -711,25 +1024,33 @@ If no listener is specified, all listeners will be removed.
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
- * Bind a listner to the specified event. You can bind one or multiple listners to the same event.
+ * Bind a listner to the specified event. You can bind one or multiple listeners to the same event.
  * @param eventName Specify the event name.
  * @param callback Specify the listner.
  */
 Viewer.on(
-    eventName: string, 
+    eventName: string,
     callback: (event: ViewerEvent) => void
-): void; 
+): void;
 ```
 
 **Example**
 
-``` javascript
-var callback = function(sImageIndex, rect) {
-    console.log(sImageIndex);
+```javascript
+//bind pageAreaSelected event on the main viewer
+var callback = function (sImageIndex, rect) {
+  console.log(sImageIndex);
 };
-DWObject.Viewer.on('pageAreaSelected', callback);
+DWObject.Viewer.on("pageAreaSelected", callback);
+
+//bind click event on the thumbnail viewer
+var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer();
+objThumbnailViewer.show();
+objThumbnailViewer.on("click", function (dwtEvent, domEvent) {
+  console.log(dwtEvent, domEvent);
+});
 ```
 
 ---
@@ -738,16 +1059,41 @@ DWObject.Viewer.on('pageAreaSelected', callback);
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Show the previous page and return its index. If there is no page in the viewer, -1 is returned.
  */
-previous(): number; 
+previous(): number;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
-``` javascript
+```javascript
 DWObject.SelectImages([3]); //Select the 4th page.
 var currentIndex = DWObject.Viewer.previous(); // return 2 which represents the 3rd page.
 ```
@@ -758,18 +1104,43 @@ var currentIndex = DWObject.Viewer.previous(); // return 2 which represents the 
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Refresh the viewer.
  */
-render(): boolean; 
+render(): boolean;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
-``` javascript
-DWObject.Viewer.on("pageRendered", function(index) {
-    console.log(index)
+```javascript
+DWObject.Viewer.on("pageRendered", function (index) {
+  console.log(index);
 });
 
 DWObject.Viewer.render(); //It will trigger the pageRendered event
@@ -777,11 +1148,11 @@ DWObject.Viewer.render(); //It will trigger the pageRendered event
 
 ---
 
-## setSelectedAreas 
+## setSelectedAreas
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Set one or more rectangular area(s) on the current page.
  * @param areas Specify the rectangular area(s).
@@ -798,20 +1169,48 @@ interface Area {
 };
 ```
 
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
+
 **Example**
 
-``` javascript
-DWObject.Viewer.setSelectedAreas([{
+```javascript
+DWObject.Viewer.setSelectedAreas([
+  {
     left: 0,
     top: 0,
     right: 100,
-    bottom: 100
-}, {
+    bottom: 100,
+  },
+  {
     left: 200,
     top: 200,
     right: 400,
-    bottom: 500
-}]);
+    bottom: 500,
+  },
+]);
 ```
 
 **Usage notes**
@@ -826,11 +1225,11 @@ This method only works when [ `cursor` ](#cursor) is set to "crosshair".
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Set the view mode of the viewer.
- * @param columns Specify the number of images per row.
- * @param rows Specify the number of images per column.
+ * @param columns Specify the number of images per column.
+ * @param rows Specify the number of images per row.
  */
 setViewMode(
     columns: number,
@@ -838,9 +1237,34 @@ setViewMode(
 ): boolean;
 ```
 
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.1+ </td>
+<td align="center">v16.1+ </td>
+<td align="center">v16.1+ </td>
+<td align="center">v16.1+ </td>
+<td align="center">v16.1+ </td>
+</tr>
+
+</table>
+</div>
+
 **Example**
 
-``` javascript
+```javascript
 DWObject.Viewer.setViewMode(2, 2);
 ```
 
@@ -854,16 +1278,41 @@ Setting the view mode as -1 by -1 is equivalent to setting [ `singlePageMode` ](
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Show the viewer.
  */
-show(): boolean; 
+show(): boolean;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
-``` javascript
+```javascript
 DWObject.Viewer.show();
 ```
 
@@ -873,17 +1322,42 @@ DWObject.Viewer.show();
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Unbind and destroy the viewer.
  */
-unbind(): boolean; 
+unbind(): boolean;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
-``` javascript
-DWObject.Viewer.unbindViewer();
+```javascript
+DWObject.Viewer.unbind();
 ```
 
 **Usage notes**
@@ -896,19 +1370,91 @@ Replace the previous `UnbindViewer` method.
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Set whether to load files dropped over the viewer area.
  * The default value is true.
  */
-acceptDrop: boolean; 
+acceptDrop: boolean;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
+
+ **Example**
+
+```javascript
+DWObject.Viewer.acceptDrop = true;
+```
+
+---
+
+## allowSlide
+
+```typescript
+/**
+ * Set whether to allow image navigation by swiping left or right on the viewer.
+ * The default value is true.
+ */
+.allowSlide: boolean;
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
-``` javascript
-DWObject.Viewer.acceptDrop = true;
+```javascript
+DWObject.Viewer.allowSlide = true;
 ```
+
+**Usage notes**
+
+This API only works if the view mode of the viewer is set to -1 by -1.
 
 ---
 
@@ -916,17 +1462,42 @@ DWObject.Viewer.acceptDrop = true;
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
- * Return or set the background of the viewer. 
+ * Return or set the background of the viewer.
  */
 background: string;
 ```
 
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
+
 **Example**
 
-``` javascript
-DWObject.Viewer.background = 'rgb(255, 255, 255)';
+```javascript
+DWObject.Viewer.background = "rgb(255, 255, 255)";
 ```
 
 **Usage notes**
@@ -939,17 +1510,42 @@ Replace the previous `BackgroundColor` method. Now you can specify the backgourn
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return or set the border of the viewer.
  */
-border: string; 
+border: string;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
-``` javascript
-DWObject.Viewer.border = '2px solid rgb(204, 204, 204)';
+```javascript
+DWObject.Viewer.border = "2px solid rgb(204, 204, 204)";
 ```
 
 **Usage notes**
@@ -962,29 +1558,54 @@ The default value is "1px solid rgb(204, 204, 204)". Now you can specify the bor
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return or set the shape of the cursor.
  */
-cursor: string; 
+cursor: string;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
-``` javascript
-DWObject.Viewer.cursor = 'crosshair';
+```javascript
+DWObject.Viewer.cursor = "crosshair";
 ```
 
 **Usage Notes**
 
 The allowed values are:
 
-| Value | Description |
-|:-|:-|
-| `default` | The shape is ![default]({{site.assets}}imgs/default.gif).|
-| `crosshair` | The shape is ![crosshair]({{site.assets}}imgs/crosshair.gif)(default setting), you can select one or multiple area(s) on the page. |
-| `pointer` | The shape is ![pointer]({{site.assets}}imgs/pointer.gif). If the displayed page is bigger than the viewer, the page can be moved.|
-| `zoom-in` | The shape is ![zoom-in]({{site.assets}}imgs/zoom-in.gif), supports click the page to zoom in. Only works if the view mode of the viewer is set to -1 by -1.|
+| Value       | Description                                                                                                                                                 |
+| :---------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `default`   | The shape is ![default]({{site.assets}}imgs/default.gif).                                                                                                   |
+| `crosshair` | The shape is ![crosshair]({{site.assets}}imgs/crosshair.gif)(default setting), you can select one or multiple area(s) on the page.                          |
+| `pointer`   | The shape is ![pointer]({{site.assets}}imgs/pointer.gif). If the displayed page is bigger than the viewer, the page can be moved.                           |
+| `zoom-in`   | The shape is ![zoom-in]({{site.assets}}imgs/zoom-in.gif), supports click the page to zoom in. Only works if the view mode of the viewer is set to -1 by -1. |
 
 If there are selected areas on the page, changing the `cursor` property will clear them.
 
@@ -994,16 +1615,41 @@ If there are selected areas on the page, changing the `cursor` property will cle
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return or set the height of the viewer.
- */ 
+ */
 height: number | string;
 ```
 
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
+
 **Example**
 
-``` javascript
+```javascript
 DWObject.Viewer.height = 350;
 DWObject.Viewer.height = "350px";
 DWObject.Viewer.height = "100%";
@@ -1021,16 +1667,41 @@ When reading the property, the value is always in pixels no matter what value wa
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return the postfix of the Ids of the elements in the viewer.
- */ 
+ */
 readonly idPostfix: string;
 ```
 
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
+
 **Example**
 
-``` javascript
+```javascript
 var myViewerIdPostfix = DWObject.Viewer.idPostfix;
 ```
 
@@ -1040,17 +1711,42 @@ var myViewerIdPostfix = DWObject.Viewer.idPostfix;
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return or set whether to scroll the viewer automatically when new pages are imported.
  * Default: true;
  */
-ifAutoScroll: string; 
+ifAutoScroll: string;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
-``` javascript
+```javascript
 DWObject.Viewer.ifAutoScroll = false;
 ```
 
@@ -1060,22 +1756,47 @@ DWObject.Viewer.ifAutoScroll = false;
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return or set the inner border of the viewer.
  */
-innerBorder: string; 
+innerBorder: string;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
-``` javascript
-DWObject.Viewer.innerBorder = '1px solid rgb(204, 204, 204)';
+```javascript
+DWObject.Viewer.innerBorder = "1px solid rgb(204, 204, 204)";
 ```
 
 **Usage notes**
 
-The default value is "1px solid rgb(125, 162, 206)". Now you can specify the border by CSS. Read more on the [border shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/border).
+The default value is null. You can specify the border by CSS. Read more on the [border shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/border).
 
 ---
 
@@ -1083,22 +1804,47 @@ The default value is "1px solid rgb(125, 162, 206)". Now you can specify the bor
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return or set the margin between images.
  */
-pageMargin: number | string; 
+pageMargin: number | string;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
-``` javascript
+```javascript
 DWObject.Viewer.pageMargin = 10;
 ```
 
 **Usage Notes**
 
-The page margin is only effective when the view mode is not -1 * -1 (in other words, [ `singlePageMode` ](#singlepagemode) is `false` ).
+The page margin is only effective when the view mode is not -1 \* -1 (in other words, [ `singlePageMode` ](#singlepagemode) is `false` ).
 
 ---
 
@@ -1106,17 +1852,42 @@ The page margin is only effective when the view mode is not -1 * -1 (in other wo
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Set the border color of the selected area. Also applies to the selection box on the video opened by the method `showVideo`.
  */
-selectedAreaBorderColor: string; 
+selectedAreaBorderColor: string;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
-``` javascript
-DWObject.Viewer.selectedAreaBorderColor = 'rgba(0, 0, 0, 1)';
+```javascript
+DWObject.Viewer.selectedAreaBorderColor = "rgba(0, 0, 0, 1)";
 ```
 
 **Usage notes**
@@ -1129,16 +1900,41 @@ The default value is "rgba(0, 0, 0, 1)".
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Set the selected page background color of the Thumbnail viewer.
  */
-selectedPageBackground: string; 
+selectedPageBackground: string;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
-``` javascript
+```javascript
 DWObject.Viewer.selectedPageBackground = "rgb(255, 0, 0)";
 ```
 
@@ -1152,22 +1948,47 @@ The default value is "rgb(199, 222, 252)". You can specify the backgournd by CSS
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return or set the border style for selected page(s).
  */
-selectedPageBorder: string; 
+selectedPageBorder: string;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
-``` javascript
+```javascript
 DWObject.Viewer.selectedPageBorder = "3px solid rgb(125,162,206)";
 ```
 
 **Usage Notes**
 
-This API is only effective when the view mode is not -1 * -1 (in other words, [ `singlePageMode` ](#singlepagemode) is `false` ).
+This API is only effective when the view mode is not -1 \* -1 (in other words, [ `singlePageMode` ](#singlepagemode) is `false` ).
 
 The default value is "1px solid rgb(125, 162, 206)". Now you can specify the border by CSS. Read more on the [border shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/border).
 
@@ -1177,16 +1998,41 @@ The default value is "1px solid rgb(125, 162, 206)". Now you can specify the bor
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Specify an aspect ratio to be used when selecting an rectangular area on a page.
  */
-selectionRectAspectRatio: number | string; 
+selectionRectAspectRatio: number | string;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
-``` javascript
+```javascript
 DWObject.Viewer.selectionRectAspectRatio = 0.5;
 ```
 
@@ -1200,21 +2046,46 @@ This API is only effective when drawing manually (it won't work if the selection
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return or set whether to show the page numbers.
  */
 ```
 
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
+
 **Example**
 
-``` javascript
+```javascript
 DWObject.Viewer.showPageNumber = true;
 ```
 
 **Usage notes**
 
-The default value is `false` which means the page nubmers are hidden. The page numbers indicate the order of the pages. When the viewmode is -1 * -1 (in other words, [ `singlePageMode` ](#singlepagemode) is `true` ), page numbers will be hidden.
+The default value is `false` which means the page nubmers are hidden. The page numbers indicate the order of the pages. When the viewmode is -1 \* -1 (in other words, [ `singlePageMode` ](#singlepagemode) is `true` ), page numbers will be hidden.
 
 ---
 
@@ -1222,24 +2093,55 @@ The default value is `false` which means the page nubmers are hidden. The page n
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
- * Set whether to use single page mode. 
+ * Set whether to use single page mode.
  */
-singlePageMode: boolean; 
+singlePageMode: boolean;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
-``` javascript
+```javascript
+// Use single page mode in the main viewer
+DWObject.Viewer.singlePageMode = true;
+```
+
+```javascript
+// Use single page mode in the thumnail viewer
 var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer();
 objThumbnailViewer.show();
-DWObject.Viewer.singlePageMode = false;
+DWObject.Viewer.singlePageMode = true;
 ```
 
 **Usage notes**
 
-The default value is `false` . If the thumbnail viewer is not shown, setting `singlePageMode` to `true` is equivalent to setting the view mode to -1 by -1. But if the thumbnail viewer is shown, `singlePageMode` will be changed to `true` automatically.
+The default value is `false`. If the thumbnail viewer is not shown, setting `singlePageMode` to `true` is equivalent to setting the view mode to -1 by -1. But if the thumbnail viewer is shown, `singlePageMode` will be changed to `true` automatically.
 
 ---
 
@@ -1247,16 +2149,41 @@ The default value is `false` . If the thumbnail viewer is not shown, setting `si
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return or set the width of the viewer.
- */ 
+ */
 width: number | string;
 ```
 
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
+
 **Example**
 
-``` javascript
+```javascript
 DWObject.Viewer.width = 270;
 DWObject.Viewer.width = "270px";
 DWObject.Viewer.width = "100%";
@@ -1265,7 +2192,7 @@ DWObject.Viewer.width = "100%";
 **Usage Notes**
 
 If a number is assigned, it means that number of pixels (px). If a string is assigned, it is either a fixed size like "500px" or a dynamic size like "50%" which follows standard CSS rules.
- 
+
 When reading the property, the value is always in pixels no matter what value was set to it.
 
 ---
@@ -1274,48 +2201,209 @@ When reading the property, the value is always in pixels no matter what value wa
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * Return or set the zoom factor, and then the current page will be enlarged or reduced.
  */
 zoom: number;
 ```
 
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
+
 **Example**
 
-``` javascript
+```javascript
 DWObject.Viewer.zoom = 2.0;
 ```
 
 **Usage Notes**
 
-The zoom factor is only effective when the view mode is -1 * -1. Allowed values is from 0.02 to 65.
+The zoom factor is only effective when the view mode is -1 \* -1. Allowed values is from 0.02 to 65.
 
 ---
 
-### autoChangeIndex
+## autoChangeIndex
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
- * Set whether to make sure the first image in the viewer is always selected when scrolling through multiple images. The default value is false. 
+ * Set whether to make sure the first image in the viewer is always selected when scrolling through multiple images. The default value is false.
  */
-autoChangeIndex : boolean
+autoChangeIndex: boolean;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v17.0+ </td>
+<td align="center">v17.0+</td>
+<td align="center">v17.0+</td>
+<td align="center">v17.0+</td>
+<td align="center">v17.0+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
-``` javascript
-DWObject.Viewer.Viewer.autoChangeIndex=true;
+```javascript
+DWObject.Viewer.autoChangeIndex = true;
 ```
 
 **Usage Notes**
+
 When set to true, the index in the upper left corner of the viewer will be selected when scrolling.
 
 ---
 
-## Events 
+## createTemplate
+
+**Syntax**
+
+```typescript
+/**
+ * Create document scanner template.
+ * @argument templateName Currently templateName only supports "documentScanner".
+ */
+createTemplate("templateName")：DocumentViewerTemplate
+
+interface DocumentViewerTemplate{
+   getCustomElement():CustomElement; //Get CustomElement. Can display save & upload interface in CustomElement.   
+   onAddDocumentFunc = function () {}
+   onExitFunc = function () {}
+   onSaveFunc = function () {} //Save button click event
+   onUploadFunc = function () {}  //Upload button click event
+   onRemoveSelectedFunc = function () {}   //Remove button click event
+}
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v17.2+ </td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+ </td>
+</tr>
+
+</table>
+</div>
+
+**Example**
+
+```javascript
+var DWObject, template;
+Dynamsoft.DWT.CreateDWTObjectEx(
+  {
+    WebTwainId: "a",
+    UseLocalService: false,
+  },
+  function (obj) {
+    DWObject = obj;
+    template = DWObject.Viewer.createTemplate("documentScanner");
+    DWObject.Viewer.bind(null, template); //full screen
+    DWObject.Viewer.show(); 
+  
+    template.onExitFunc = function () {
+    DWObject.Viewer.show();   
+    console.error ("execute");
+    //RemoveAllFile();     
+}
+}, function (errorCode, errorString) {
+    console.log(errorString);
+  });
+```
+
+---
+
+## showCheckbox
+
+**Syntax**
+
+```typescript
+/**
+ * Show checkbox on image(s).
+ */
+showCheckbox: boolean;
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v17.2+ </td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+ </td>
+</tr>
+
+</table>
+</div>
+---
+
+## Events
 
 ### click
 
@@ -1339,8 +2427,8 @@ When set to true, the index in the upper left corner of the viewer will be selec
 
 **Syntax**
 
-``` typescript
-/** 
+```typescript
+/**
  * Built-in callbacks that are triggered for a certain mouse event or keyboard event on a page.
  * @param eventName Specify the event.
  * @param callback Specify the callback.
@@ -1348,67 +2436,92 @@ When set to true, the index in the upper left corner of the viewer will be selec
  * @argument domEvent The original mouse event object.
  */
 on(
-    eventName: string, 
+    eventName: string,
     callback: (event: ViewerEvent | KeyboardEvent, domEvent: MouseEvent) => void
 ): void;
 
-interface ViewerEvent{ 
+interface ViewerEvent{
     // The index of the current page.
-    index: number; 
-    //The x-coordinate of the upper-left corner of the page. 
-    imageX: number; 
+    index: number;
+    //The x-coordinate of the upper-left corner of the page.
+    imageX: number;
     //The y-coordinate of the upper-left corner of the page.
-    imageY: number; 
+    imageY: number;
     // The x-coordinate of the browser page.
-    pageX: number; 
+    pageX: number;
     // The y-coordinate of the browser page.
-    pageY: number; 
+    pageY: number;
 };
 ```
 
 **Example**
 
-``` javascript
-DWObject.Viewer.on('click', function(dwtEvent, domEvent) {
-    console.log(dwtEvent, domEvent);
+```javascript
+DWObject.Viewer.on("click", function (dwtEvent, domEvent) {
+  console.log(dwtEvent, domEvent);
 });
 
-DWObject.Viewer.on('dblclick', function(dwtEvent, domEvent) {
-    console.log(dwtEvent, domEvent);
+DWObject.Viewer.on("dblclick", function (dwtEvent, domEvent) {
+  console.log(dwtEvent, domEvent);
 });
 
-DWObject.Viewer.on('contextmenu', function(dwtEvent, domEvent) {
-    console.log(dwtEvent, domEvent);
+DWObject.Viewer.on("contextmenu", function (dwtEvent, domEvent) {
+  console.log(dwtEvent, domEvent);
 });
 
-DWObject.Viewer.on('mousemove', function(dwtEvent, domEvent) {
-    console.log(dwtEvent, domEvent);
+DWObject.Viewer.on("mousemove", function (dwtEvent, domEvent) {
+  console.log(dwtEvent, domEvent);
 });
 
-DWObject.Viewer.on('mousedown', function(dwtEvent, domEvent) {
-    console.log(dwtEvent, domEvent);
+DWObject.Viewer.on("mousedown", function (dwtEvent, domEvent) {
+  console.log(dwtEvent, domEvent);
 });
 
-DWObject.Viewer.on('mouseup', function(dwtEvent, domEvent) {
-    console.log(dwtEvent, domEvent);
+DWObject.Viewer.on("mouseup", function (dwtEvent, domEvent) {
+  console.log(dwtEvent, domEvent);
 });
 
-DWObject.Viewer.on('mouseout', function(dwtEvent, domEvent) {
-    console.log(dwtEvent, domEvent);
+DWObject.Viewer.on("mouseout", function (dwtEvent, domEvent) {
+  console.log(dwtEvent, domEvent);
 });
 
-DWObject.Viewer.on('mouseover', function(dwtEvent, domEvent) {
-    console.log(dwtEvent, domEvent);
+DWObject.Viewer.on("mouseover", function (dwtEvent, domEvent) {
+  console.log(dwtEvent, domEvent);
 });
 
-DWObject.Viewer.on('keydown', function(keyboardEvent) {
-    console.log(keyboardEvent);
+DWObject.Viewer.on("keydown", function (keyboardEvent) {
+  console.log(keyboardEvent);
 });
 
-DWObject.Viewer.on('keyup', function(keyboardEvent) {
-    console.log(keyboardEvent);
+DWObject.Viewer.on("keyup", function (keyboardEvent) {
+  console.log(keyboardEvent);
 });
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -1416,117 +2529,221 @@ The events `mouseout`, `mouseover`, `keydown` and `keyup` are only triggered on 
 
 ---
 
-### pageAreaSelected
+## pageAreaSelected
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * This event is triggered when user selects an area (draws a rectangle) or move a selected area on the current page.
  * @argument index The index of the current page.
  * @argument rect Some attribute values of the selected area.
  */
-on('pageAreaSelected', 
+on('pageAreaSelected',
     (index: number, rect: rect)=> void
-): void; 
+): void;
 
-interface rect{ 
+interface rect{
     // The index of the selected area. The index is 0-based. This is useful when you have multiple selected areas on one page.
-    areaIndex: number;
+    areaIndex: number;
     // The x-coordinate of the upper-left corner of the area.
-    x: number;
+    x: number;
     // The y-coordinate of the upper-left corner of the area.
-    y: number;
+    y: number;
     // The width of the selected area.
-    width: number;
+    width: number;
     // The height of the selected area.
-    height: number;
+    height: number;
 };
 ```
 
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
+
 **Example**
 
-``` javascript
-DWObject.Viewer.on('pageAreaSelected', function(sImageIndex, rect) {
-    console.log(sImageIndex)
+```javascript
+DWObject.Viewer.on("pageAreaSelected", function (sImageIndex, rect) {
+  console.log(sImageIndex);
 });
 
-DWObject.Viewer.off('pageAreaSelected');
+DWObject.Viewer.off("pageAreaSelected");
 ```
 
 ---
 
-### pageAreaUnselected
+## pageAreaUnselected
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * This event is triggered when selected area(s) get cleared (when the user clicks outside of the drawn rectangle).
  * @argument index The index of the current page.
  */
-on('pageAreaUnselected', 
+on('pageAreaUnselected',
     (index: number) => void
-): void; 
+): void;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
-``` javascript
-DWObject.Viewer.on('pageAreaUnselected', function(sImageIndex) {
-    console.log('The selected areas on the page with index ' + sImageIndex + ' have been cleared');
+```javascript
+DWObject.Viewer.on("pageAreaUnselected", function (sImageIndex) {
+  console.log(
+    "The selected areas on the page with index " +
+      sImageIndex +
+      " have been cleared"
+  );
 });
 
-DWObject.Viewer.off('pageAreaUnselected');
+DWObject.Viewer.off("pageAreaUnselected");
 ```
 
 ---
 
-### pageRendered
+## pageRendered
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * This event is triggered when a page is rendered.
  * @argument index The index of the current page.
  */
-on('pageRendered', 
+on('pageRendered',
     (index: number) => void
-): void; 
+): void;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
-``` javascript
-DWObject.Viewer.on("pageRendered", function(index) {
-    console.log(index);
+```javascript
+DWObject.Viewer.on("pageRendered", function (index) {
+  console.log(index);
 });
-DWObject.Viewer.render();
+DWObject.Viewer.render(); //It will trigger the pageRendered event
 ```
 
 ---
 
-### resize
+## resize
 
 **Syntax**
 
-``` typescript
+```typescript
 /**
  * This event is triggered when width & height of the viewer has been changed.
  * @argument width The new width of the viewer.
  * @argument height The new height of the viewer.
  */
-on('resize', 
-    (width：number, height：number) => void
-): void; 
+on('resize',
+    (width: number, height: number) => void
+): void;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
-``` javascript
-DWObject.Viewer.on("resize", function(width, height) {
-    console.log(width, height);
+```javascript
+DWObject.Viewer.on("resize", function (width, height) {
+  console.log(width, height);
 });
 DWObject.Viewer.width += 100;
 ```
@@ -1542,9 +2759,9 @@ DWObject.Viewer.width += 100;
  * This event is triggered when the top page currently displayed in the viewer changes.
  * @argument index The index of the current page.
  */
-on('topPageChanged', 
+on('topPageChanged',
      (index: number) => void
-): void; 
+): void;
 ```
 
 **Example**
@@ -1559,4 +2776,3 @@ DWObject.Viewer.on("topPageChanged", function(index) {
 
 This event is only effective when the view mode is not -1 * -1 (in other words, [ `singlePageMode` ](#singlepagemode) is `false` ).
 -->
-

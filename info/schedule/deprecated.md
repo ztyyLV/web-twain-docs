@@ -88,7 +88,7 @@ The recommended fix is to patch the operating system, you can find the patch [he
 
 ### Related to Image Editing
 
-> [Alternative] Annotation feature to be added in a later version.
+<!-- > [Alternative] Annotation feature to be added in a later version. -->
 
 * [AddText()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#AddText) 
 * [CreateTextFont()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#CreateTextFont)

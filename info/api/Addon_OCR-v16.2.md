@@ -7,7 +7,9 @@ breadcrumbText: OCRB Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference OCRB Addon APIs Page
 ---
 
-# `WebTwain.Addon.OCR`
+# `{WebTwainObject}.Addon.OCR`
+
+> {WebTwainObject} denotes the `WebTwain` instance.
 
 For Server Side OCR, check out [Server-Side OCR](#server-side).
 
@@ -195,7 +197,7 @@ The font set with `SetUnicodeFontName()` is only used when `SetIfUseDetectedFont
  * Configure the OCR operation.
  * @param language Specify the target language.
  */
-SetLanguage(language: Dynamsoft.EnumDWT_OCRLanguage | number): boolean;
+SetLanguage(language: Dynamsoft.EnumDWT_OCRLanguage | string): boolean;
 ```
 
 ---
@@ -345,7 +347,6 @@ RecognizeRect(
 ``` typescript
 /**
  * Perform OCR on the selected images in the buffer.
- * @param index Specify the image.
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
  * @argument result The OCR result.

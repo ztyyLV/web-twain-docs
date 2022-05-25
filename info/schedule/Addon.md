@@ -14,11 +14,13 @@ description: Dynamic Web TWAIN SDK Documentation Schedule - Addon Release Page
 
 | Version | Service | Core | PDFR | Barcode | Camera | OCRB | OCRPro| Uploader | 
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| v17.2.1 | 1.7.2.0228 | 17.2.1.0228 | 11.3.0.1026 | 8.6.0.1026 | 15.0.0.0625 | 10.0.0.0618 | 1.2.0.0806 | 1.7.2.1026 |
+| v17.2 | 1.7.2.1026 | 17.2.0.1026 | 11.3.0.1026 | 8.6.0.1026 | 15.0.0.0625 | 10.0.0.0618 | 1.2.0.0806 | 1.7.2.1026 |
+| v17.1 | 1.7.1.0525 | 1.7.1.0525 | 11.2.0.0330 | 8.2.0.0525 | 15.0.0.0625 | 10.0.0.0618 | 1.2.0.0806 | 1.7.0.0525 |
 | v17.0 | 1.7.0.0330 | 1.7.0.0330 | 11.0.0.0330 | 8.2.0.0330 | 15.0.0.0625 | 10.0.0.0618 | 1.2.0.0806 | 1.7.0.0330 |
 | v16.2 | 1.6.2.0112 | 16.2.0.0112 | 11.1.0.112 | 7.6.0.0112 | 15.0.0.0625 | 10.0.0.0618 | 1.2.0.0806 | 1.6.0.0428 |
-| v16.1.1 | 1.6.1.0728 | 16.1.0.0728 | 11.0.0.0428 | 7.4.0.0428 | 15.0.0.0625 | 10.0.0.0618 | 1.2.0.0806 | 1.6.0.0428 |
 | v15.3.1 | 1.5.3.0107 | 15.3.0.0116 | 10.3.3.0924 | 7.3.0.0107 | 15.0.0.0625 | 10.0.0.0618 | 1.2.0.0806 | 1.4.0.0107 |
-| v14.3.1 | 1.4.1.0115 | 14.3.1.0115 | 10.3.0.0712 | 6.4.1.0115 | 14.3.1.0115 | 10.0.0.0618 | 1.2.0.0806 | 1.2.1.0115 |
+| v14.3.1 |  1.4.1.0115 | 14.3.1.0115 | 10.3.0.0712 | 6.4.1.0115 | 14.3.1.0115 | 10.0.0.0618 | 1.2.0.0806 | 1.2.1.0115 |
 
 ## PDFR
 
@@ -77,6 +79,17 @@ This addon now works on iOS, iPadOS & Android too.
 ## Barcode Reader
 
 A professional linear & 2D barcode reading library for recognizing barcode from any document captured from scanners, cameras or file systems.
+
+### `8.2` (04/20/2021)
+
+* Added support for MSI Code (Modified Plessey).
+* Improved the recognition accuracy for GS1 Databar.
+* Improved the localization robustness for QR Code.
+* Improved the localization for low quality 1D barcodes.
+* Improved the deblurring performance and recognition rate for DataMatrix.
+* Improved the recognition rate for Aztec.
+* Improved both the localization and decoding algorithms for Postal Codes
+
 
 ### `7.4.0.0428` (06/18/2020)
 

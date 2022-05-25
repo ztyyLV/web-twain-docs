@@ -25,7 +25,7 @@ With the increasing use of barcode reading in document management systems, the B
 
 ### Step one - Include the add-on
 
-To include this add-on is to reference the necessary JavaScript file which is included in the [resources files]({{site.about}}faqs.html#what-are-the-resources-files).
+To include this add-on is to reference the necessary JavaScript file which is included in the [resources files]({{site.faq}}what-are-the-resources-files.html).
 
 > If you are using the [dwt package](https://www.npmjs.com/package/dwt), the barcode reader is already included in the main JavaScript file ( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ) which means you can skip this step.
 
@@ -62,7 +62,7 @@ function readBarcodes(imageIndex) {
         DWObject.Addon.BarcodeReader.decode(imageIndex)
             .then(function(textResults) {
                 // Remove the indicator
-                Dynamsoft.WebTwainEnv.WebTwainEnv.OnWebTwainPostExecute();
+                Dynamsoft.WebTwainEnv.OnWebTwainPostExecute();
                 console.log(textResults)
             }, function(error) {
                 // Remove the indicator
@@ -117,20 +117,20 @@ DWObject.Addon.BarcodeReader.getRuntimeSettings()
     })
     .then(function(runtimeSettings) {
         // Add an indicator
-        Dynamsoft.WebTwainEnv.WebTwainEnv.OnWebTwainPreExecute();
+        Dynamsoft.WebTwainEnv.OnWebTwainPreExecute();
         return DWObject.Addon.BarcodeReader.decode(imageIndex);
     }, function(error) {
         console.log(error);
     })
     .then(function(textResults) {
         // Remove the indicator
-        Dynamsoft.WebTwainEnv.WebTwainEnv.OnWebTwainPostExecute();
+        Dynamsoft.WebTwainEnv.OnWebTwainPostExecute();
         for (var i = 0; i < textResults.length; i++) {
             console.log(textResults[i].BarcodeText);
         }
     }, function(error) {
         // Remove the indicator
-        Dynamsoft.WebTwainEnv.WebTwainEnv.OnWebTwainPostExecute();
+        Dynamsoft.WebTwainEnv.OnWebTwainPostExecute();
         console.log(error)
     });
 ```
@@ -243,7 +243,7 @@ If you are not sure how to change the `RuntimeSettings` , the add-on also comes 
 * `coverage` : slow but covers most barcodes
 * `balance` : between `speed` and `coverage`
 
-The following shows their differences
+<!-- The following shows their differences
 
 | Parameter | `speed` | `balance` | `coverage` | `default` |
 | :-: | :-: | :-: | :-: | :-: |
@@ -254,6 +254,7 @@ The following shows their differences
 | `textFilterModes` | `[0, 0, 0, 0, 0, 0, 0, 0]` 	 | `[2, 0, 0, 0, 0, 0, 0, 0]` 	 | `[2, 0, 0, 0, 0, 0, 0, 0]` | `[2, 0, 0, 0, 0, 0, 0, 0]` |
 | `localizationModes` | `[2, 32, 64, 0, 0, 0, 0, 0]` 	 | `[2, 4, 32, 64, 0, 0, 0, 0]` 	 | `[2, 16, 4, 8, 32, 64, 0, 0]` | `[2, 16, 4, 8, 0, 0, 0, 0]` |
 | `scaleDownThreshold` | `2300` 	| `2300` 	| `214748347` | `2300` |
+-->
 
 To use one of these modes, simply call `updateRuntimeSettings()`
 

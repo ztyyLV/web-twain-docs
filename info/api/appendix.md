@@ -130,13 +130,13 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2372 | You cannot convert to binary more than one image when the format is BMP, JPG or PNG |
 |<= -3000 | See ErrorString property for details |
 
-## License Tracking Server Error List 
+## Dynamsoft License Server Error List 
 
 | Error Code | Error Message |
 |:-|:-|
-| -20100 | The standby LTS refuses to provide service while the main LTS is working. |
-| -20100 | LTS refuses to provide service while under construction. |
-| -20101 | The handshake code you are using does not exist on the License Tracking Server. |
+| -20100 | The standby DLS refuses to provide service while the main DLS is working. |
+| -20100 | DLS refuses to provide service while under construction. |
+| -20101 | The handshake code you are using does not exist on the Dynamsoft License Server. |
 | -20102 | Session password is incorrect. |
 | -20103 | AppDomain for handshake is not matched. |
 | -20104 | No item matched. Please check your handshake and client settings. |
@@ -181,8 +181,8 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 | [ `Addon.Camera.showVideo()` ]({{site.info}}api/Addon_Camera.html#showvideo) | `Viewer.showVideo()` |
 | [ `Addon.Camera.closeVideo()` ]({{site.info}}api/Addon_Camera.html#closevideo) | `Viewer.closeVideo()` |
 | [ `Addon.Camera.off()` ]({{site.info}}api/Addon_Camera.html#off) | `Viewer.off()` |
-| [ `Addon.Camera.on("video-closed")` ]({{site.info}}api/Addon_Camera.html#on) | `Viewer.on("video-closed")` |
-| [ `Addon.Camera.on("video-error")` ]({{site.info}}api/Addon_Camera.html#on) | `Viewer.on("video-error")` |
+| [ `Addon.Camera.on("video-closed")` ]({{site.info}}api/Addon_Camera.html#video-closed) | `Viewer.on("video-closed")` |
+| [ `Addon.Camera.on("video-error")` ]({{site.info}}api/Addon_Camera.html#video-error) | `Viewer.on("video-error")` |
 
 ### For the Viewer
 

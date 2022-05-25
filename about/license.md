@@ -10,58 +10,54 @@ description: Dynamic Web TWAIN SDK Documentation License Page
 
 # License
 
-Dynamic Web TWAIN has the following licensing options:
+## Trial License
 
-### [Per Browser Client](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_browser_client)/ [Per Page](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_page)
+### Request trial license
 
-For Per Browser Client/ Per Page license, you need to use [handshakeCode]({{site.info}}api/Dynamsoft_WebTwainEnv.html#handshakecode) to set.
+You can request a trial license of Dynamic Web TWAIN via our <a href="https://www.dynamsoft.com/customer/license/trialLicense?ver=latest&product=dwt" target="_blank">customer portal</a> or [contacting support](https://www.dynamsoft.com/company/contact/).
+
+### Update trial license
+
+You can set the new key via the `ProductKey` API.
+
+1. Open `dynamsoft.webtwain.config.js` from your local project or search `ProductKey` to locate the code for license setting.
+
+2. Update `ProductKey` in the code.
+
+   ```javascript
+   Dynamsoft.DWT.ProductKey = 't0076lQAAAGNcO61He******'; // update the ProductKey with yours
+   ```
+
+3. Refresh your scan page and try again.
+
+## Full license
+
+You can find all the full licenses you own via our <a href="https://www.dynamsoft.com/customer/license/fullLicense" target="_blank">customer portal</a>.
+
+Depending on the type of full license you are using, you can add/update the full license via the `ProductKey` or `organizationID` API (available for Dynamic Web TWAIN v17.0+).
+
+### Update ProductKey
+
+If you are using a **ProductKey**, you can search `ProductKey` to locate the code for license setting which resides in the `dynamsoft.webtwain.config.js` file for most cases.
 
 ``` javascript
-Dynamsoft.DWT.handshakeCode = "DynamsoftID-CustomCode";
+Dynamsoft.DWT.ProductKey = 't0076lQAAAGNcO61He******'; // update the ProductKey with yours
 ```
 
-Please note that this licensing mode is only supported from `DWT` 17.0 and needs to be used with License Tracking Server (`LTS` for short). See more about [What is a LTS](https://www.dynamsoft.com/license-tracking/docs/selfhosting/managelts.html?ver=latest)
-
-LTS supports two deployment methods: [Dynamsoft-hosting](https://www.dynamsoft.com/license-tracking/docs/dshosting/index.html?ver=latest) and [Self-hosting](https://www.dynamsoft.com/license-tracking/docs/selfhosting/index.html?ver=latest). See [How secure is the License Tracking Server](https://www.dynamsoft.com/license-tracking/docs/about/licensefaq.html?ver=latest#how-secure-is-the-license-tracking-server)
-
-### [Per Server License](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_server)
-
-For [Per Server License](https://www.dynamsoft.com/Products/WebTWAIN_License.aspx#per_browser_client) license, you need to use [ProductKey]({{site.info}}api/Dynamsoft_Util.html#productkey) to set.
-
-In most cases, you can just make the change in the file `dynamsoft.webtwain.config.js` .
+If you have multiple license keys, separate them with semicolons like below:
 
 ``` javascript
-// If you have multiple license keys, just separate them with semicolons.
-Dynamsoft.DWT.ProductKey = 't0076lQAAAGNcO61He******; t0076lQAAAGNcO61He******';
+Dynamsoft.DWT.ProductKey = 't0076lQAAAGNcO61He******;t0076lQAAAGNcO61He******';
 ```
 
-If it is set elsewhere, you need to find it and replace it. For example, if you are making use of the [dwt package](https://www.npmjs.com/package/dwt) ( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ), the file `dynamsoft.webtwain.config.js` doesn't exist and you should already have the above line of code in your own JavaScript where you can update the license when needed.
+### Update organizationID
 
-### Other Licenses
+If you are using an **organizationID**, you can simply update the `organizationID` in your code.
 
-The license setting way is the same as Per Server License, please refer to the above Per Server License section.
+``` javascript
+Dynamsoft.DWT.organizationID = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
+```
 
-## Notes:
-Please note that `LTS` license handshakeCode and ProductKey cannot be used together. And you need to connect to `LTS` to track license usage. 
+## License Agreement
 
-All license usage data is submitted to the `LTS` hosted by Dynamsoft. You can
-
-* [View activated license items](https://www.dynamsoft.com/license-tracking/docs/common/licenseitems.html)
-* [View the license usage statistics](https://www.dynamsoft.com/license-tracking/docs/common/statistics.html)
-* [Get notified about license status](https://www.dynamsoft.com/license-tracking/docs/common/usagealerts.html)
-
-> Read more about [the mechanism](https://www.dynamsoft.com/license-tracking/docs/common/mechanism.html) behind license tracking.
-
-## Terms
-
-View the [Dynamic Web TWAIN License Agreement](https://www.dynamsoft.com/Products/WebTwain_license.aspx).
-
-## Questions
-
-### Q: When is a license validated?
-
-**A**: `DWT` verifies whether there is a valid license when a [ `WebTwain` instance is created]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance). For individual modules, such as the PDF Rasterizer, or the Barcode Reader, the add-on license is validated when the respective add-on api is invoked.
-
-### Q: How do I set my DWT license?
-
-**A**: The `DWT` license is set using the global API `Dynamsoft.DWT.ProductKey` or `Dynamsoft.DWT.handshakeCode`. For more information, please refer to [Update the License Key]({{site.indepth}}development/upgrade.html?ver=latest#update-the-product-key).
+View the <a href="https://www.dynamsoft.com/Products/WebTwain_license.aspx" target="_blank">Dynamic Web TWAIN License Agreement</a>.

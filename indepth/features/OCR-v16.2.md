@@ -31,7 +31,7 @@ Client side OCR only works in [browsers on Windows]({{site.getstarted}}platform.
 
 #### Step one - Include OCRB
 
-To include this addon is to reference the necessary JavaScript file `dynamsoft.webtwain.addon.ocr.js` which is **NOT** included in the [resources files]({{site.about}}faqs.html#what-are-the-resources-files). If you can't find this file, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) or get it from [64bit-OCRB-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRBasicx64-v16.zip).
+To include this addon is to reference the necessary JavaScript file `dynamsoft.webtwain.addon.ocr.js` which is **NOT** included in the [resources files]({{site.faq}}what-are-the-resources-files.html). If you can't find this file, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) or get it from [64bit-OCRB-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRBasicx64-v16.zip).
 
 > If you are using the [dwt package](https://www.npmjs.com/package/dwt), the addon is already included in the main JavaScript file ( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ) which means you can skip this step.
 
@@ -72,7 +72,7 @@ function downloadOCRB(bDownloadDLL) {
 downloadOCRB(true);
 ```
 
-The code asks `DWT` to download `OCRB` from the URL `Dynamsoft.WebTwainEnv.ResourcesPath + '/addon/OCRx64.zip'` and the language data from the URL `Dynamsoft.WebTwainEnv.ResourcesPath + '/addon/OCRBasicLanguages/English.zip'` . Both zip files need to be placed on the server where you placed the [resources files]({{site.about}}faqs.html#what-are-the-resources-files). As mentioned above, if you can't find these files, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) or get it from [64bit-OCRB-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRBasicx64-v16.zip).
+The code asks `DWT` to download `OCRB` from the URL `Dynamsoft.WebTwainEnv.ResourcesPath + '/addon/OCRx64.zip'` and the language data from the URL `Dynamsoft.WebTwainEnv.ResourcesPath + '/addon/OCRBasicLanguages/English.zip'` . Both zip files need to be placed on the server where you placed the [resources files]({{site.faq}}what-are-the-resources-files.html). As mentioned above, if you can't find these files, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) or get it from [64bit-OCRB-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRBasicx64-v16.zip).
 
 Once the installation is done, you should be able to find the following files under `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16\DynamicOCR` .
 
@@ -131,7 +131,7 @@ function DoOCR() {
 
 #### Step one - Include OCRPro
 
-To include this addon is to reference the necessary JavaScript file `dynamsoft.webtwain.addon.ocrpro.js` which is **NOT** included in the [resources files]({{site.about}}faqs.html#what-are-the-resources-files). If you can't find this file, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) or get it from [64bit-OCRPro-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRProx64-v16.zip).
+To include this addon is to reference the necessary JavaScript file `dynamsoft.webtwain.addon.ocrpro.js` which is **NOT** included in the [resources files]({{site.faq}}what-are-the-resources-files.html). If you can't find this file, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) or get it from [64bit-OCRPro-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRProx64-v16.zip).
 
 > If you are using the [dwt package](https://www.npmjs.com/package/dwt), the addon is already included in the main JavaScript file ( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ) which means you can skip this step.
 
@@ -159,7 +159,7 @@ function downloadOCRPro() {
 downloadOCRPro();
 ```
 
-The code asks `DWT` to download `OCRPro` from the URL `Dynamsoft.WebTwainEnv.ResourcesPath + '/addon/OCRProx64.zip'` . This zip file needs to be placed on the server where you placed the [resources files]({{site.about}}faqs.html#what-are-the-resources-files). As mentioned above, if you can't find these files, you can get them from [64bit-OCRPro-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRProx64-v16.zip).
+The code asks `DWT` to download `OCRPro` from the URL `Dynamsoft.WebTwainEnv.ResourcesPath + '/addon/OCRProx64.zip'` . This zip file needs to be placed on the server where you placed the [resources files]({{site.faq}}what-are-the-resources-files.html). As mentioned above, if you can't find these files, you can get them from [64bit-OCRPro-v16-Resources](https://tst.dynamsoft.com/public/download/ocr/OCRProx64-v16.zip).
 
 Once the installation is done, you should be able to find the following under `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16`
 * `DynamicOCRProx64_1.2.0.0806.dll` : The version number may vary.
@@ -248,97 +248,6 @@ settings.Redaction.FindTextAction = Dynamsoft.EnumDWT_OCRFindTextAction.OCRFT_ST
 ##### Online demo for OCRPro
 
 [Scan-Documents-and-Do-Client-side-OCR-Pro](https://www.dynamsoft.com/web-twain/resources/code-gallery/?SampleID=149)
-
-### Questions
-
-#### Q: Can I OCR multiple languages at the same time
-
-**A**: Yes, but only with `OCRPro` . The code is like
-
-``` javascript
-// Reads both English and Arabic
-settings.Languages = "eng,arabic"
-```
-
-#### Q: Can I OCR multiple zones at the same time
-
-**A**: Yes, but only with `OCRPro` . The code is like
-
-``` javascript
-var aryRects = [{
-        left: 213,
-        top: 105,
-        right: 419,
-        bottom: 166
-    },
-    {
-        left: 112,
-        top: 256,
-        right: 303,
-        bottom: 325
-    }
-];
-DWObject.Addon.OCRPro.RecognizeRect(
-    0, aryRects,
-    function(sImageIndex, aryRects, result) {
-        if (result == null)
-            return null;
-        var bRet = "",
-            pageCount = result.GetPageCount();
-        if (pageCount == 0) {
-            alert("OCR result is Null.");
-            return;
-        } else {
-            for (var i = 0; i < pageCount; i++) {
-                var page = result.GetPageContent(i);
-                var letterCount = page.GetLettersCount();
-                for (var n = 0; n < letterCount; n++) {
-                    var letter = page.GetLetterContent(n);
-                    bRet += letter.GetText();
-                }
-            }
-            console.log(bRet);
-        }
-    },
-    function(errorcode, errorstring, result) {
-        if (errorcode != -2600 && errorcode != -2601) {
-            //-2600:LicenseChecker cannot be empty.  
-            //-2601:Cannot connect to the LicenseChecker, please check and make sure it's set correctly.
-            alert(errorstring);
-        }
-        var strErrorDetail = "";
-        var aryErrorDetailList = result.GetErrorDetailList();
-        for (var i = 0; i < aryErrorDetailList.length; i++) {
-            if (i > 0)
-                strErrorDetail += ";";
-            strErrorDetail += aryErrorDetailList[i].GetMessage();
-        }
-        if (strErrorDetail.length > 0 && errorstring != strErrorDetail)
-            alert(strErrorDetail);
-    }
-);
-```
-
-#### Q: What is a LicenseChecker
-
-**A**: The `LicenseChecker` is a server-side script that tracks the usage of the license. It's required by `OCRPro` . For more info, please check out [OCRPro License Tracking Mechanism](https://tst.dynamsoft.com/public/docs/ocr/OCRPRO-LICENSE-TRACKING-MECHANISM.pdf).
-
-Also check out [License Checker for OCRPro]({{site.indepth}}development/serverscript.md#license-checker-for-ocrpro) on how to write the server side script.
-
-#### Q: Comparsion between OCRB and OCRPro
-
-**A**: Check out the comparison sheet [here](https://www.dynamsoft.com/Documents/ocr-basic-versus-ocr-pro.pdf).
-
-#### Q: How to optimize Recognition
-
-**A**: There are several ways to improve the OCR accuracy, they involve either adjusting the scanner settings or choosing high-quality source files.
-
-* Adjust resolution -- 300DPI is usually recommended
-* Adjust color of scanned document - greyscale is recommended
-* Adjust brightness settings. You would use the [Brightness]({{site.info}}api/WebTwain_Acquire.html#brightness) property for this. A 50% brightness is usually suitable
-* File type and compression - Lossless compression types would be the better option (i.e. `TIFF` or `PNG` but not `JPEG` )
-
-> For more elaboration, please see our [blog post](https://www.dynamsoft.com/blog/insights/scan-settings-for-best-ocr-accuracy/) on the matter.
 
 ## Server side OCR
 

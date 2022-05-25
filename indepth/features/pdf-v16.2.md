@@ -19,7 +19,7 @@ PDFs are widely used in many and various industries, and presently are the only 
 
 ## Including the PDF addon 
 
-To include the PDF addon, simply add a reference to the corresponding JavaScript file, included in the [resources folder]({{site.about}}faqs.html#what-are-the-resources-files).
+To include the PDF addon, simply add a reference to the corresponding JavaScript file, included in the [resources folder]({{site.faq}}what-are-the-resources-files.html).
 
 > If you are using the [dwt package](https://www.npmjs.com/package/dwt), the barcode reader is already included in the main JavaScript file ( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ) which means you can skip this step.
 
@@ -43,36 +43,13 @@ var onFailure = function(errorCode, errorString) {
     console.log(errorString);
 };
 DWObject.IfShowFileDialog = true;
-// PDF Addon is used here to ensure PDF support
+// PDF Addon is used here to ensure text-based PDF support
 DWObject.Addon.PDF.SetResolution(200);
 DWObject.Addon.PDF.SetConvertMode(EnumDWT_ConvertMode.CM_RENDERALL);
 DWObject.LoadImageEx("", EnumDWT_ImageType.IT_ALL, onSuccess, onFailure);
 ```
 
 The method [ `SetConvertMode()` ]({{site.info}}api/Addon_PDF.html#setconvertmode) decides how `PDFR` works and [ `SetResolution()` ]({{site.info}}api/Addon_PDF.html#setresolution) specifies the resolution. These two methods configure `PDFR` to detect and, if necessary, rasterize any PDF file that comes thereafter.
-
-### Questions
-
-#### Q: When shall I use PDFR?
-
-A: `PDFR` is only required for text-based PDFs, to find out whether a file is text-based. Use the method [ `IsTextBasedPDF()` ]({{site.info}}api/Addon_PDF.html#istextbasedpdf) .
-
-#### Q: When is it effective?
-
-A: Once `PDFR` has been configured, it will automatically detect if a file needs to be rasterized and if so, it will convert it to an image(s) with the set resolution(if no resolution is set, the default is 200). This happens when you call any of the following methods
-
-> `PDFR` also works when you drag and drop the file onto the viewer to load it
-
-* [ `LoadImage()` ]({{site.info}}api/WebTwain_IO.html#loadimage)
-* [ `LoadImageEx()` ]({{site.info}}api/WebTwain_IO.html#loadimageex)
-* [ `LoadImageFromBase64Binary()` ]({{site.info}}api/WebTwain_IO.html#loadimagefrombase64binary)
-* [ `LoadImageFromBinary()` ]({{site.info}}api/WebTwain_IO.html#loadimagefrombinary)
-* [ `FTPDownload()` ]({{site.info}}api/WebTwain_IO.html#ftpdownload)
-* [ `FTPDownloadEx()` ]({{site.info}}api/WebTwain_IO.html#ftpdownloadex)
-* [ `HTTPDownload()` ]({{site.info}}api/WebTwain_IO.html#httpdownload)
-* [ `HTTPDownloadEx()` ]({{site.info}}api/WebTwain_IO.html#httpdownloadex)
-* [ `HTTPDownloadThroughPost()` ]({{site.info}}api/WebTwain_IO.html#httpdownloadthroughpost)
-* [ `HTTPDownloadDirectly()` ]({{site.info}}api/WebTwain_IO.html#httpdownloaddirectly)
 
 ### Other methods
 

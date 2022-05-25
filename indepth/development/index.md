@@ -17,18 +17,9 @@ Popular frameworks and frequently asked development questions are covered in the
 
 * [Use DWT in Vue]({{site.indepth}}development/vue.html)
 
-<!--
+* [Upload or download images with Server-side scripts]({{site.indepth}}development/Server-script.html)
 
-* [Use DWT in MVC ]({{site.indepth}}development/mvc.html)
-
--->
-
-* [Server-side scripts]({{site.indepth}}development/Server-script.html)
-
-* [About Professional Service]({{site.indepth}}development/Pro-service.html)
+* [Enable mobile web capture]({{site.indepth}}development/mobile-web-capture.html)
 
 * [How to perform upgrade]({{site.indepth}}development/upgrade.html)
 
-* [About ActiveX]({{site.indepth}}development/activex.html)
-
-* [Other development topics]({{site.indepth}}development/topics.html)

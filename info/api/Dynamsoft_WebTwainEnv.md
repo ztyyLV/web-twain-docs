@@ -42,6 +42,11 @@ interface Dynamsoft.DWT {
     ResourcesPath: string;
     UseLocalService: boolean;
     UseDefaultInstallUI: boolean;
+     /**
+     * Whether to use camera wasm. The default value is false. 
+     * Set this property to true if you want to use camera wasm in service mode.
+     */
+    UseCameraAddonWasm: boolean;
     
     // Functions
     CreateDWTObject(
@@ -69,11 +74,17 @@ interface Dynamsoft.DWT {
     OnWebTwainReady: function () {};
     OnWebTwainWillInit: function () {};
 }
+
+    /**
+     * Update and download cert to DynamsoftServicex64_17\cert 
+     */
+    UpdateCert(
+        url: string, // url to download the new certificate. 
+        optionalAsyncSuccessFunc?: function () {}, 
+        optionalAsyncFailureFunc?: function (errorCode: number, errorString: string) {}
+    );
+
 ```
-
-
-
-> License Server properties
 
 ## licenseServer
 
@@ -93,7 +104,7 @@ Dynamsoft.DWT.licenseServer = ["https://your.mainServer.com", "https://your.back
 
 **Usage notes**
 
-Gets or sets the URL of the license tracking server used to authenticate the license (handshakeCode) and track barcode reading usage. When set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification. A self hosting option is available. Learn more about [License Tracking Server 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html?ver=latest). 
+Gets or sets the URL of the License Tracking Server used to authenticate the license (handshakeCode) and track usage. When set to null (default value), it will connect to Dynamsoft's License Tracking Server for online verification. A self hosting option is available. Learn more about [License Tracking Server 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html?ver=latest). 
 
 
 ## organizationID
@@ -106,6 +117,32 @@ Gets or sets the URL of the license tracking server used to authenticate the lic
  */
 organizationID: string;
 ```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported  </td>
+<td align="center">v17.1+ </td>
+<td align="center">v17.1+ </td>
+<td align="center">v17.1+ </td>
+<td align="center">v17.1+ </td>
+<td align="center">v17.1+ </td>
+</tr>
+
+</table>
+</div>
+
 
 **Example**
 ``` javascript
@@ -142,7 +179,7 @@ Learn more about [What is handshakeCode](https://www.dynamsoft.com/license-track
 
 ``` typescript
 /**
- * Gets or sets the session password of the handshake code set in license tracking server.
+ * Gets or sets the session password of the handshake code set in Dynamsoft License server.
  */
 handshakeCode: string;
 ```
@@ -153,7 +190,7 @@ Dynamsoft.DWT.sessionPassword = "MyPassw0rd";
 ```
 
 **Usage notes**
-Learn more about [session password](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#session-password) in License Tracking Server 2.0.
+Learn more about [session password](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#session-password) in Dynamsoft License server.
 
 ## licenseException
 
@@ -172,18 +209,81 @@ Check [license error list](https://www.dynamsoft.com/license-tracking/docs/commo
 
 ## Options
 
+### `UpdateCert`
+
+**Syntax**
+
+``` typescript
+/**
+ * Update and download certificate (server.pem.ldsc & server_key.pem.ldsc) to DynamsoftServicex64_17\cert.
+ * @param url Url to download the new certificate. E.g. http://download.dynamsoft.com/cert.zip. server.pem.ldsc & server_key.pem.ldsc should be in cert.zip. 
+ * @param successCallback A callback function that is executed if the request succeeds.
+ * @param failureCallback A callback function that is executed if the request fails.
+ * @argument errorCode The error code.
+ * @argument errorString The error string.
+ */
+UpdateCert(
+        url: string,
+        optionalAsyncSuccessFunc?: () => void,
+        optionalAsyncFailureFunc?: (
+            errorCode: number, 
+            errorString: string) => void
+    );
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported  </td>
+<td align="center">v17.2+ </td>
+<td align="center">v17.2+ </td>
+<td align="center">v17.2+ </td>
+<td align="center">v17.2+ </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
+
+**Example**
+``` javascript
+// overwrite the following function in dynamsoft.webtwain.install.js
+   Dynamsoft.OnSSLCertInfo = function (sslExpiredDate) {
+        console.log(sslExpiredDate);
+   Dynamsoft.DWT.UpdateCert("https://xxx.com/cert.zip", 
+        function () { console.log("OK"); }, 
+        function (errorCode, errorString) { console.log(errorString);}
+    );
+  };
+```
+
 ### `Containers`
 
 An array of `Container` definitions that specifies the UI elements for `WebTwain` instances. The `Container` interface is defined below
 
 ``` typescript
 interface Container {
-    WebTwainId: string, // Id of the WebTwain instance
+    WebTwainId?: string, // Id of the WebTwain instance
     ContainerId?: string, // Id of the element
     Width?: string | number, // Width of the element
     Height?: string | number // Height of the element
 }
 ```
+
+`WebTwainId` and `ContainerId` are both optional but one must exist as the identifier for that `WebTwain` instance.
+
+`Width` and `Height` determine the initial viewer size of the instance.
 
 ### `IfAddMD5InUploadHeader`
 

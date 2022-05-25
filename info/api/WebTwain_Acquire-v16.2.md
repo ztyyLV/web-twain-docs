@@ -7,8 +7,10 @@ breadcrumbText: Acquire
 description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 ---
 
-# WebTwain Scan
+# {WebTwainObject} Scan
 
+> {WebTwainObject} denotes the `WebTwain` instance.
+>
 > The following APIs are compatible with TWAIN, ICA, SANE (Windows, macOS and Linux)
 
 **Methods**
@@ -207,7 +209,7 @@ interface DeviceConfiguration {
      */
     ShowRemoteScanUI?:boolean;
     /**
-     * Specify a source by its index.
+     * Specify a source by its index (only effective when RemoteScan is true).
      * (Added in 16.2)
      */
     SelectSourceByIndex?: number;
@@ -304,7 +306,7 @@ If it's set to 2, then besides what's mentioned in the two tables above, the Dyn
 
 * Remote Scan
 
-  When [scanning remotely]({{site.indepth}}feature/input.html#scan-from-a-remote-scanner), if the method is called without any parameter, do not forget to set [ `IfShowUI` ](#ifshowui) to `false` .
+  When [scanning remotely]({{site.indepth}}features/input.html#scan-from-a-remote-scanner), if the method is called without any parameter, do not forget to set [ `IfShowUI` ](#ifshowui) to `false` .
 
 **Example**
 
@@ -612,10 +614,14 @@ DWObject.SelectSource(function() {
  * @argument errorCode The error code.
  * @argument errorString The error string.
  */
-SelectSourceAsync(
-    successCallBack?: () => void,
-    failureCallBack?: (errorCode: number, errorString: string) => void
-): Promise<boolean>;
+SelectSourceAsync(): Promise<number>;
+```
+
+**Example**
+
+``` javascript
+DWObject.SelectSourceAsync().then(function(sourceIndex){console.log(sourceIndex);
+DWObject.AcquireImage()}).catch(function(e){console.log(e)});
 ```
 
 ---
@@ -842,6 +848,10 @@ interface ScanSetup {
   },
   /**
    * A callback triggered before the scan, after the scan and after each page has been transferred.
+   * Returned status
+   * {event: 'beforeAcquire', result: {…}} //Equivalent to OnPreAllTransfers event
+   * {event: 'postTransfer', bScanCompleted: false, result: {…}} //Equivalent to OnPostTransfer event
+   * {event: 'postTransfer', bScanCompleted: true, result: {…}} //Equivalent to OnPostAllTransfers event
    */
   funcScanStatus?: (status: Status) => void,
   /**
@@ -955,6 +965,10 @@ interface ScanSetup {
   }
 }
 ```
+
+**Sample**
+
+<a href="https://demo.dynamsoft.com/Samples/dwt/Make-use-of-the-API-startScan/index.html" target="_blank">Make use of the API startScan </a>
 
 ---
 
@@ -1629,6 +1643,8 @@ readonly Duplex: Dynamsoft.EnumDWT_DUPLEX | number;
 | TWDX_2PASSDUPLEX | 2 | 2-pass duplex |
 
 1-pass means the paper gets scanned on both sides at the same time. 2-pass means the paper passes the light bar twice to get both sides scanned separately.
+
+This property does not support macOS/ICA or Linux.
 
 ---
 
