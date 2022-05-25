@@ -48,6 +48,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQs
 [How do you use a custom capability?]({{site.indepth}}faqs/develop/how-do-you-use-a-custom-capability.html)  
 [How to select a scanner by its name?]({{site.indepth}}faqs/develop/how-to-select-a-scanner-by-its-name.html)  
 [How to scan only a selected region?]({{site.indepth}}faqs/develop/how-to-scan-only-a-selected-region.html)  
+[How to enable mobile capture?]({{site.indepth}}indepth/development/mobile-web-capture.html) 
 [How to enable remote scan?]({{site.indepth}}faqs/develop/how-to-enable-remote-scan.html)  
 [How is the upload done?]({{site.indepth}}faqs/develop/how-is-the-upload-done.html)  
 [Is SSL supported?]({{site.indepth}}faqs/develop/is-ssl-supported.html)  

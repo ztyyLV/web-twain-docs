@@ -123,11 +123,6 @@ organizationID: string;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -220,7 +215,7 @@ Check [license error list](https://www.dynamsoft.com/license-tracking/docs/commo
 
 ``` typescript
 /**
- * Update and downaload certificate (server.pem.ldsc & server_key.pem.ldsc) to DynamsoftServicex64_17\cert.
+ * Update and download certificate (server.pem.ldsc & server_key.pem.ldsc) to DynamsoftServicex64_17\cert.
  * @param url Url to download the new certificate. E.g. http://download.dynamsoft.com/cert.zip. server.pem.ldsc & server_key.pem.ldsc should be in cert.zip. 
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
@@ -239,11 +234,6 @@ UpdateCert(
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>

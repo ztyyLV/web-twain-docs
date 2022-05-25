@@ -5,9 +5,12 @@ title: Dynamic Web TWAIN Development - About AcitveX
 keywords: Dynamic Web TWAIN, Documentation, Development, About AcitveX
 breadcrumbText: About AcitveX
 description: Dynamic Web TWAIN SDK Documentation About AcitveX Page
+permalink: /indepth/development/activex.html
 ---
 
 # About ActiveX
+
+<span style="background-color:#f9f2f4; color:#c7254e">April 21, 2022: Microsoft is retiring Internet Explorer 11 on June 15, 2022. To support Dynamic Web TWAIN ActiveX, please refer to <a href="{{site.faq}}activeX-in-Edge-IE-mode.html" target="_blank">this article</a> to configure IE mode in Edge.</span>
 
 **ActiveX** is a software framework created by Microsoft widely used in Internet Explorer (IE). However, Microsoft has announced plans to end support for older browsers completely and has now deprecated this technology.
 
@@ -22,8 +25,6 @@ Microsoft officially announced the end of support for IE 10 and older on `Januar
 That said, since many enterprise applications still and will continue to rely on IE 11 for some time yet, the browser will continue receiving security updates and technical support for the lifecycle of the version of Windows on which it is installed. Windows 10 is among these versions of Windows on which IE 11 is installed, and there is no evidence that Microsoft will release a newer version of Windows soon. Therefore, it is safe to assume that IE 11 will continue to exist for quite some time. Read more [here](https://docs.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge).
 
 The fate of the ActiveX framework depends on the fate of IE 11. As long as IE 11 is still hanging around, ActiveX will continue to be supported.
-
-> Microsoft Edge offers **Internet Explorer mode**, but ActiveX is not supported on Edge even when it runs in this mode.
 
 ## The Future of ActiveX Edition in DWT
 

@@ -5,9 +5,10 @@ title: Dynamic Web TWAIN Development - Angular Integration
 keywords: Dynamic Web TWAIN, Documentation, Development, Angular Integration
 breadcrumbText: Angular Integration
 description: Dynamic Web TWAIN SDK Documentation Angular Integration Page
+permalink: /indepth/development/angular.html
 ---
 
-# Use DWT with Angular
+# Use DWT in Angular
 
 [Angular](https://angular.io/) is one of the most popular and mature JavaScript frameworks. Check out the following on how to implement `DWT` into an Angular application.
 

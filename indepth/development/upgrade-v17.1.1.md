@@ -86,7 +86,7 @@ In most cases, you can just make the change in the file `dynamsoft.webtwain.conf
 
 ``` javascript
 // If you have multiple license keys, just separate them with semicolons.
-Dynamsoft.DWT.ProductKey = 't0076lQAAAGNcO61He******; t0076lQAAAGNcO61He******';
+Dynamsoft.DWT.ProductKey = 't0076lQAAAGNcO61He******;t0076lQAAAGNcO61He******';
 ```
 
 If it is set elsewhere, you need to find it and replace it. For example, if you are making use of the [dwt package](https://www.npmjs.com/package/dwt) (`dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs`), the file `dynamsoft.webtwain.config.js` doesn't exist and you should already have the above line of code in your own JavaScript where you can update the license when needed.

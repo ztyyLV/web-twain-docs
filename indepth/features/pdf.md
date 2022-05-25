@@ -19,7 +19,7 @@ PDFs are widely used in many and various industries, and presently are the only 
 
 ## Including the PDF addon 
 
-To include the PDF addon, simply add a reference to the corresponding JavaScript file, included in the [resources folder]({{site.about}}faqs.html#what-are-the-resources-files).
+To include the PDF addon, simply add a reference to the corresponding JavaScript file, included in the [resources folder]({{site.faq}}what-are-the-resources-files.html).
 
 ``` html
 <script src="Resources/addon/dynamsoft.webtwain.addon.pdf.js"></script>
