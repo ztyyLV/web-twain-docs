@@ -15,8 +15,6 @@ PDFs are widely used in many and various industries, and presently are the only 
 
 * Supported on [Desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and [Mobile]({{site.getstarted}}platform.html#browsers-on-mobile-devices).
 
-* Available in both [Service mode]({{site.indepth}}features/initialize.html#service-mode) and [WASM mode]({{site.indepth}}features/initialize.html#wasm-mode).
-
 ## Including the PDF addon 
 
 To include the PDF addon, simply add a reference to the corresponding JavaScript file, included in the [resources folder]({{site.faq}}what-are-the-resources-files.html).

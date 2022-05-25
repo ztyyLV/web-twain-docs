@@ -7,19 +7,13 @@ breadcrumbText: Read Barcode
 description: Dynamic Web TWAIN SDK Documentation Read Barcode Page
 ---
 
-# Read Barcode
+# Barcode Reader
 
-With the increasing use of barcode reading in document management systems, the Barcode Reader SDK add-on for `DWT` presents an easy and seamless way of integrating one of the industry's best barcode reading components into your document management system. In this section, we will show you how to get started with the add-on and demonstrate how it can be used as a batch document classifier or separator.
+With the increasing use of barcode reading in document management systems, the Barcode Reader add-on for Dynamic Web TWAIN presents an easy and seamless way of integrating one of the industry's best barcode reading components into your document management system. In this section, we will show you how to get started with the add-on and demonstrate how it can be used as a batch document classifier or separator.
 
 > NOTE
 >  
 > Barcode reading can be performed on the client side as well as the server side. For `DWT` , we only consider client-side reading. If you are interested in reading on the server side, you can contact [Dynamsoft Support]({{site.about}}getsupport.html).
-
-## Environment
-
-* [Desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and [Mobile]({{site.getstarted}}platform.html#browsers-on-mobile-devices).
-
-* [Service mode]({{site.indepth}}features/initialize.html#service-mode) and [WASM mode]({{site.indepth}}features/initialize.html#wasm-mode).
 
 ## How to use
 
@@ -35,7 +29,7 @@ To include this add-on is to reference the necessary JavaScript file which is in
 
 ### Step two - Start the reading
 
-Now that the add-on has been referenced, we can call [ `decode()` ]({{site.info}}api/Addon_BarcodeReader.html#initruntimesettingswithstring) to start reading barcode(s).
+Now that the add-on has been referenced, we can call [`decode()`]({{site.info}}api/Addon_BarcodeReader.html#initruntimesettingswithstring) to start reading barcode(s).
 
 ``` javascript
 function readBarcodes(imageIndex) {
