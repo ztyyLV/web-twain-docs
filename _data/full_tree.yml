@@ -6,7 +6,7 @@ tree_list:
     childList:
       - name: System Requirements
         path: /getstarted/platform.html
-        startVersion: 17.2.5
+        startVersion: 
         endVersion: 
       - name: License
         path: /about/license.html        
@@ -44,10 +44,6 @@ tree_list:
       - name: Imaging Hardware
         path: /getstarted/hardware.html
         startVersion: 
-        endVersion: 17.2.5
-      - name: System Requirements
-        path: /getstarted/platform.html
-        startVersion:
         endVersion: 17.2.5
       - name: FileTypes
         path: /getstarted/filetype.html
