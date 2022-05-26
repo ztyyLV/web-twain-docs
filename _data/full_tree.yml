@@ -4,10 +4,10 @@ tree_list:
     startVersion:
     endVersion:
     childList:
-      - name: Resource 
-        path: /about/resources.html
-        startVersion:
-        endVersion:
+      - name: System Requirements
+        path: /getstarted/platform.html
+        startVersion: 17.2.5
+        endVersion: 
       - name: License
         path: /about/license.html        
         startVersion:
@@ -24,6 +24,10 @@ tree_list:
         path: /indepth/development/activex.html
         startVersion: 17.2.5
         endVersion: 
+      - name: Resources 
+        path: /about/resources.html
+        startVersion:
+        endVersion:
       - name: Support
         path: /about/getsupport.html        
         startVersion:
@@ -44,7 +48,7 @@ tree_list:
       - name: System Requirements
         path: /getstarted/platform.html
         startVersion:
-        endVersion:
+        endVersion: 17.2.5
       - name: FileTypes
         path: /getstarted/filetype.html
         startVersion:
