@@ -4,10 +4,10 @@ tree_list:
     startVersion:
     endVersion:
     childList:
-      - name: Resource 
-        path: /about/resources.html
-        startVersion:
-        endVersion:
+      - name: System Requirements
+        path: /getstarted/platform.html
+        startVersion: 
+        endVersion: 
       - name: License
         path: /about/license.html        
         startVersion:
@@ -24,6 +24,10 @@ tree_list:
         path: /indepth/development/activex.html
         startVersion: 17.2.5
         endVersion: 
+      - name: Resources 
+        path: /about/resources.html
+        startVersion:
+        endVersion:
       - name: Support
         path: /about/getsupport.html        
         startVersion:
@@ -41,10 +45,6 @@ tree_list:
         path: /getstarted/hardware.html
         startVersion: 
         endVersion: 17.2.5
-      - name: System Requirements
-        path: /getstarted/platform.html
-        startVersion:
-        endVersion:
       - name: FileTypes
         path: /getstarted/filetype.html
         startVersion:
@@ -126,42 +126,34 @@ tree_list:
       - name: Angular Integration
         path: /indepth/development/angular.html
         startVersion:
-        endVersion: 17.2.5
+        endVersion:
       - name: React Integration
         path: /indepth/development/react.html
         startVersion:
-        endVersion: 17.2.5
+        endVersion:
       - name: Vue Integration
         path: /indepth/development/vue.html
         startVersion:
-        endVersion: 17.2.5
+        endVersion:
       - name: Server-side Scripting
         path: /indepth/development/Server-script.html
         startVersion:
         endVersion:
-      - name: Professional Service
-        path: /indepth/development/Pro-service.html
-        startVersion:
-        endVersion: 17.1.1
       - name: Upgrade Guide
         path: /indepth/development/upgrade.html
         startVersion:
-        endVersion: 17.2.5
+        endVersion:
       - name: About ActiveX
         path: /indepth/development/activex.html
         startVersion:
-        endVersion: 17.2.5
-      - name: FileTypes
-        path: /indepth/development/armmips.html
-        startVersion:
-        endVersion: 17.1.1
+        endVersion:
       - name: ARM64 & MIPS64 Support
         path: /indepth/development/armmips.html
-        startVersion: 17.1.1
+        startVersion:
         endVersion:
       - name: Professional Service
         path: /indepth/development/Pro-service.html
-        startVersion: 17.1.1
+        startVersion:
         endVersion: 
   - name: Deployment
     path: /indepth/deployment/
