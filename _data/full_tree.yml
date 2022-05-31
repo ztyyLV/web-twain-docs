@@ -14,15 +14,11 @@ tree_list:
         endVersion:
       - name: Imaging Hardware
         path: /getstarted/hardware.html
-        startVersion: 17.2.5
+        startVersion:
         endVersion: 
       - name: File Types
         path: /getstarted/filetype.html
-        startVersion: 17.2.5
-        endVersion: 
-      - name: About ActiveX
-        path: /indepth/development/activex.html
-        startVersion: 17.2.5
+        startVersion:
         endVersion: 
       - name: Resources 
         path: /about/resources.html
@@ -41,37 +37,29 @@ tree_list:
         path: /getstarted/helloworld.html
         startVersion:
         endVersion: 
-      - name: Imaging Hardware
-        path: /getstarted/hardware.html
-        startVersion: 
-        endVersion: 17.2.5
-      - name: FileTypes
-        path: /getstarted/filetype.html
-        startVersion:
-        endVersion: 17.2.5
       - name: Deploy to your Server
         path: /indepth/deployment/server.html
-        startVersion: 17.2.5
+        startVersion:
+        endVersion:
+      - name: Set up Dynamsoft Service 
+        path: /indepth/deployment/service.html
+        startVersion:
         endVersion:
       - name: Use DWT in Angular
         path: /indepth/development/angular.html
-        startVersion: 17.2.5
+        startVersion:
         endVersion: 
       - name: Use DWT in React
         path: /indepth/development/react.html
-        startVersion: 17.2.5
+        startVersion:
         endVersion: 
       - name: Use DWT in Vue
         path: /indepth/development/vue.html
-        startVersion: 17.2.5
+        startVersion:
         endVersion: 
-      - name: Set up Dynamsoft Service 
-        path: /indepth/deployment/service.html
-        startVersion: 17.2.5
-        endVersion:
       - name: How to Upgrade
         path: /indepth/development/upgrade.html
-        startVersion: 17.2.5
+        startVersion:
         endVersion: 
   - name: Using DWT
     path: /indepth/features/
@@ -118,84 +106,22 @@ tree_list:
         path: /indepth/features/pdf.html
         startVersion:
         endVersion:
-  - name: Development
-    path: /indepth/development/
-    startVersion:
-    endVersion: 17.2.5
-    childList:
-      - name: Angular Integration
-        path: /indepth/development/angular.html
-        startVersion:
-        endVersion:
-      - name: React Integration
-        path: /indepth/development/react.html
-        startVersion:
-        endVersion:
-      - name: Vue Integration
-        path: /indepth/development/vue.html
-        startVersion:
-        endVersion:
-      - name: Server-side Scripting
-        path: /indepth/development/Server-script.html
-        startVersion:
-        endVersion:
-      - name: Upgrade Guide
-        path: /indepth/development/upgrade.html
-        startVersion:
-        endVersion:
-      - name: About ActiveX
-        path: /indepth/development/activex.html
-        startVersion:
-        endVersion:
-      - name: ARM64 & MIPS64 Support
-        path: /indepth/development/armmips.html
-        startVersion:
-        endVersion:
-      - name: Professional Service
-        path: /indepth/development/Pro-service.html
-        startVersion:
-        endVersion: 
-  - name: Deployment
-    path: /indepth/deployment/
-    startVersion:
-    endVersion: 17.2.5
-    childList:
-      - name: Deploy to your server
-        path: /indepth/deployment/server.html
-        startVersion:
-        endVersion:
-      - name: Service Setup
-        path: /indepth/deployment/service.html
-        startVersion:
-        endVersion:
   - name: Release Notes
     path: /info/schedule/
     startVersion:
     endVersion: 
     childList:
-      - name: Server Setup
-        path: /info/schedule/stable.html
-        startVersion:
-        endVersion: 17.1.1
-      - name: Service Setup
-        path: /info/schedule/Addon.html
-        startVersion:
-        endVersion: 17.1.1
-      - name: Service Setup
-        path: /info/schedule/deprecated.html
-        startVersion:
-        endVersion: 17.1.1
       - name: Stable
         path: /info/schedule/stable.html
-        startVersion: 17.1.1
+        startVersion:
         endVersion:
       - name: Addon
         path: /info/schedule/Addon.html
-        startVersion: 17.1.1
+        startVersion:
         endVersion:
       - name: Deprecated
         path: /info/schedule/deprecated.html
-        startVersion: 17.1.1
+        startVersion:
         endVersion:
   - name: API Reference
     path: /info/api/
@@ -242,14 +168,6 @@ tree_list:
         path: /info/api/Addon_Camera.html
         startVersion:
         endVersion:
-      - name: Addon_OCR
-        path: /info/api/Addon_OCR.html
-        startVersion:
-        endVersion: 17.1.1
-      - name: Addon_OCRPro
-        path: /info/api/Addon_OCRPro.html
-        startVersion:
-        endVersion: 17.1.1
       - name: Addon_PDF
         path: /info/api/Addon_PDF.html
         startVersion:
