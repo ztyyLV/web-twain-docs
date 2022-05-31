@@ -25,19 +25,8 @@
                         <input id="txtSearch" class="search" type="text">
                     </div>
                     <ul class="mainPage" id="fullTreeMenuListContainer" name="listLevel1">
-                    {%- if site.useVersionTreeV2 -%}
                         {%- assign treeList = site.data.full_tree.tree_list -%}
                         {%- include liquid_generateFullTree.html treeList=treeList -%}
-                    {%- else -%}
-                        {%- include sidelist-about/about.html -%}
-                        {%- include sidelist-getting-started/getting-started.html -%}
-                        {%- include sidelist-indepth/features.html -%}
-                        {%- include sidelist-indepth/development.html -%}
-                        {%- include sidelist-indepth/deployment.html -%}
-                        {%- include sidelist-info/releases.html -%}
-                        {%- include sidelist-info/API-index.html -%}
-                        {%- include sidelist-faq/faq.html -%}
-                    {%- endif -%}
                     </ul>
                 </div>
             </div>
@@ -45,7 +34,7 @@
                 <div id="docHead" class = "head row hide-xs hide-sm">
                     {%- include main-page-head.html -%}
                 </div>
-                <div class="main row">
+                <div class="main row" id="articleContent">
                     <div class="content markdown-body headCounter col-xs-12 col-md-12 col-lg-9 col-xl-10">
                         {{ content }}
 
@@ -61,6 +50,11 @@
                         <p class="fontOswald" style="color: #306877;"> In this article: </p>
                         <div id="AutoGenerateSidebar"></div>
                         {%- endif -%}
+                    </div>
+                </div>
+                <div class="main row" style="display: none; background: #f5f5f5;" id="loadingContent">
+                    <div class="loading" id="loadingLogin">
+                        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
                     </div>
                 </div>
             </div>
