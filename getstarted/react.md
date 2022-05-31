@@ -5,9 +5,10 @@ title: Dynamic Web TWAIN Development - React Integration
 keywords: Dynamic Web TWAIN, Documentation, Development, React Integration
 breadcrumbText: React Integration
 description: Dynamic Web TWAIN SDK Documentation React Integration Page
+permalink: /indepth/development/react.html
 ---
 
-# Use DWT with React
+# Use DWT in React
 
 [React](https://reactjs.org/) is a JavaScript library meant explicitly for creating interactive UIs. Follow this guide to learn how to implement `DWT` in a React application.
 
@@ -48,7 +49,7 @@ Open `package.json` and change `scripts` like this:
 },
 ```
 
-> The change ensures the static files required to run `DWT` are copied over to the built project.
+> Note: The change ensures the static files required to run `DWT` are copied over to the built project.
 
 ## Implementation
 
@@ -71,21 +72,21 @@ export default class DWT extends React.Component {
     DWObject = null;
     containerId = 'dwtcontrolContainer';
     componentDidMount() {
-        Dynamsoft.WebTwainEnv.RegisterEvent('OnWebTwainReady', () => {
+        Dynamsoft.DWT.RegisterEvent('OnWebTwainReady', () => {
             this.Dynamsoft_OnReady()
         });
-        Dynamsoft.WebTwainEnv.ProductKey = 'YOUR-PRODUCT-KEY';
-        Dynamsoft.WebTwainEnv.ResourcesPath = "/dwt-resources";
-        Dynamsoft.WebTwainEnv.Containers = [{
+        Dynamsoft.DWT.ProductKey = 'YOUR-PRODUCT-KEY';
+        Dynamsoft.DWT.ResourcesPath = "/dwt-resources";
+        Dynamsoft.DWT.Containers = [{
             WebTwainId: 'dwtObject',
             ContainerId: this.containerId,
             Width: '300px',
             Height: '400px'
         }];
-        Dynamsoft.WebTwainEnv.Load();
+        Dynamsoft.DWT.Load();
     }
     Dynamsoft_OnReady() {
-        this.DWObject = Dynamsoft.WebTwainEnv.GetWebTwain(this.containerId);
+        this.DWObject = Dynamsoft.DWT.GetWebTwain(this.containerId);
     }
     acquireImage() {
         this.DWObject.AcquireImage();
@@ -126,7 +127,7 @@ export default App;
 yarn start
 ```
 
-> If you have installed `DWT` and have configured a valid `ProductKey`, you will have a working page to scan documents from your scanner now. Otherwise, you should see instructions on the page that guide you to install the library. [More info>>]({{site.indepth}}features/initialize.html#installation-of-the-dynamsoft-service).
+> Note: If you have installed `DWT` and have configured a valid `ProductKey`, you will have a working page to scan documents from your scanner now. Otherwise, you should see instructions on the page that guide you to install the library. [More info>>]({{site.indepth}}features/initialize.html#installation-of-the-dynamsoft-service)
 
 ## Official Samples
 

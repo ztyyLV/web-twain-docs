@@ -344,9 +344,9 @@ DWObject.SaveAsJPEG("Sample.jpg", 0,
 );
 ```
 
-### Save in [WASM mode]({{site.indepth}}features/initialize.html?ver=latest#webassembly-edition)
+### Save files from MediaDevices camera capture
 
-In [WASM mode]({{site.indepth}}features/initialize.html?ver=latest#webassembly-edition), `DWT` runs its entire operations within desktop/mobile browsers. As a result, files are always saved in the system's Downloads folder by default, regardless of the absolute path specified. And the API [ `IfShowFileDialog` ]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) has no effect in WASM mode.
+When using the Camera add-on, DWT runs its entire operations within desktop/mobile browsers. As a result, files are always saved in the system's Downloads folder by default, regardless of the absolute path specified. And the API [`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) has no effect in this case.
 
 ``` javascript
 // The following line will be ignored and 

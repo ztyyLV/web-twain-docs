@@ -58,11 +58,6 @@ interface DeviceInfo{
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -108,11 +103,6 @@ selectSource(deviceId: string): Promise<DeviceInfo>;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -151,11 +141,6 @@ getCurrentSource():DeviceInfo;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -192,11 +177,6 @@ closeSource(): Promise<DeviceInfo>;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -242,11 +222,6 @@ interface Resolution{
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -286,11 +261,6 @@ setResolution(resolution: Resolution): Promise<Resolution>;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -327,11 +297,6 @@ getCurrentResolution(): Promise<Resolution>;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -382,11 +347,6 @@ play(element?: HTMLElement,
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -431,11 +391,6 @@ pause(): void;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -471,11 +426,6 @@ resume(): void;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -514,11 +464,6 @@ stop(): void;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -563,11 +508,6 @@ The status string is either empty or one of the following: "playing", "paused", 
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -603,11 +543,6 @@ capture(): Promise<Blob>;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -656,11 +591,6 @@ showVideo(deviceId?: string,
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -706,11 +636,6 @@ closeVideo(): void;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -745,11 +670,6 @@ on("video-closed", callback: () => void): boolean;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -790,11 +710,6 @@ on("video-error", callback: (errorCode, errorString) => void): boolean;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -946,11 +861,6 @@ interface ScanConfiguration{
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>

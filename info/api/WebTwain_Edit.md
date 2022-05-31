@@ -89,11 +89,6 @@ ChangeBitDepth(
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -155,11 +150,6 @@ ChangeImageSize(
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -218,11 +208,6 @@ SetDPI(
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -277,11 +262,6 @@ ConvertToBW(
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -330,11 +310,6 @@ ConvertToGrayScale(
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -405,11 +380,6 @@ Invert(
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -462,11 +432,6 @@ SetImageWidth(
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -515,11 +480,6 @@ Flip(
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -590,11 +550,6 @@ Mirror(
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -662,11 +617,6 @@ RotateLeft(
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -732,11 +682,6 @@ RotateRight(
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -808,11 +753,6 @@ Rotate(
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -893,11 +833,6 @@ RotateEx(
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -960,11 +895,6 @@ Crop(
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -1023,11 +953,6 @@ Erase(
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -1065,11 +990,6 @@ CopyToClipboard(index: number): boolean;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -1128,11 +1048,6 @@ CutToClipboard(index: number): boolean;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -1181,11 +1096,6 @@ CropToClipboard(
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -1238,11 +1148,6 @@ CutFrameToClipboard(
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -1284,11 +1189,6 @@ BackgroundFillColor: number;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -1335,11 +1235,6 @@ ChangeBrightnessAsync(index: number, val: number): Promise<boolean>;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -1378,11 +1273,6 @@ ChangeContrastAsnyc(index: number, val: number): Promise<boolean>;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>

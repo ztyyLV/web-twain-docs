@@ -31,7 +31,7 @@ The following is how VDS works
 
 ## Customization Service
 
-Dynamsoft provides many public samples and code snippets free of cost to all customers. The code in these materials can be customized at will. However, the [resources files]({{site.faq}}what-are-the-resources-files.html) provided with each SDK **should not be changed** unless otherwise mentioned in this documentation. If you want to make unmentioned changes to any of these files in the documentation, you must first consult [Dynamsoft Support]({{site.about}}getsupport.html) to learn whether or not it can be done and if so, what that would entail from our end. If it involves a considerable amount of extra effort from the Dynamsoft team, the "Customization Service" (CS) may apply.
+Dynamsoft provides many public samples and code snippets free of cost to all customers. The code in these materials can be customized at will. However, the [resources files]({{site.about}}faqs.html#what-are-the-resources-files) provided with each SDK **should not be changed** unless otherwise mentioned in this documentation. If you want to make unmentioned changes to any of these files in the documentation, you must first consult [Dynamsoft Support]({{site.about}}getsupport.html) to learn whether or not it can be done and if so, what that would entail from our end. If it involves a considerable amount of extra effort from the Dynamsoft team, the "Customization Service" (CS) may apply.
 
 The difference between VDS and CS is that the latter involves changes to the `DWT` SDK itself and is considered much more complicated from a technical standpoint. However, in term of the customer's workflow to get a customization job done, the steps are the same as VDS.
 
