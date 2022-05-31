@@ -25,7 +25,7 @@ Inside the `Resources` directory that is included in the SDK installation folder
 
   This file is used for setting basic configurations of Dynamic Web TWAIN, e.g., configure the product key, change the initial viewer size, and more.
 
-If you are using the official [NPM package `dwt`](https://github.com/dynamsoft-dwt/web-twain-package), you will see `dynamsoft.webtwain.min.js` and `dynamsoft.webtwain.min.mjs` instead. For simplicity, in each of these files Dynamsoft has included all necessary JavaScript code which includes both files mentioned above plus `dynamsoft.webtwain.install.js` and all extra components (add-ons). The `dynamsoft.webtwain.min.js` file is a simple combination of the code while the `dynamsoft.webtwain.min.mjs` file is built as an ECMAScript 6 (ES6) Module that is used in applications based on Angular, React, and Vue etc.
+If you are using the official <a href="https://www.npmjs.com/package/dwt" target="_blank">dwt NPM package</a>, you will see `dynamsoft.webtwain.min.js` and `dynamsoft.webtwain.min.mjs` instead. For simplicity, in each of these files Dynamsoft has included all necessary JavaScript code which includes both files mentioned above plus `dynamsoft.webtwain.install.js` and all extra components (add-ons). The `dynamsoft.webtwain.min.js` file is a simple combination of the code while the `dynamsoft.webtwain.min.mjs` file is built as an ECMAScript 6 (ES6) Module that is used in applications based on Angular, React, and Vue etc.
 
 ## Loading Add-on JS files
 

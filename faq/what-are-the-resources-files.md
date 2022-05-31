@@ -62,7 +62,7 @@ Resources files help you include Dynamic Web TWAIN in your application. The foll
 
   + dbrjs
 
-  > These files are meant for the barcode reader addon under [WASM mode]({{site.indepth}}initialize.html#wasm-mode).
+  > These files are meant for the barcode reader addon for using by the Camera addon.
 
     - dbr.js
     - dbr-7.4.0.1.full.wasm

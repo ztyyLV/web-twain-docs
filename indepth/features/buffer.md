@@ -7,27 +7,23 @@ breadcrumbText: Buffer
 description: Dynamic Web TWAIN SDK Documentation Buffer Page
 ---
 
-# Buffer Manage
+# Buffer Management
 
-`DWT` collects all the input files and stores them in a buffer. This section of the guide will explore the different aspects of the buffer, including its features and abilities as well as its limits. First, let's explore the limits of the buffer and how to use the local cache:
+When using Dynamic Web TWAIN scanner module on desktop, it collects all the input files and stores them in a buffer. This section of the guide will explore the different aspects of the buffer, including its features and abilities as well as its limits. First, let's explore the limits of the buffer and how to use the local cache.
 
 ## Memory Limits 
 
-When `DWT` works in [Service mode]({{site.indepth}}features/initialize.html#service-mode), it can run in 32bit and 64bit and the data is stored raw in `DIB` format. Before version 15.0, it’s 32-bit by default and that means it can utilize no more than 2 GB of physical memory. In version 15.0 onwards, 64-bit has been made the default option on a 64-bit OS and that means there is no limitation on how much memory it can use.
+Dynamic Web TWAIN can run in 32bit and 64bit and the data is stored raw in `DIB` format. Before version 15.0, it’s 32-bit by default and that means it can utilize no more than 2 GB of physical memory. In version 15.0 onwards, 64-bit has been made the default option on a 64-bit OS and that means there is no limitation on how much memory it can use.
 
-On the other hand, if `DWT` works in [WASM mode]({{site.indepth}}features/initialize.html#wasm-mode), it can utilize no more than 2 GB of memory as `WebAssembly` only supports 32-bit pointers at present. However, the data is stored in `JPG` format or (for Black & White images) `PNG` format which are much smaller than `DIB` .
-
-In order to control the size of the data, `DWT` can limit the number of images allowed in buffer with the property [ `MaxImagesInBuffer` ]({{site.info}}api/WebTwain_Buffer.html#maximagesinbuffer).
+In order to control the size of the data, `DWT` can limit the number of images allowed in buffer with the property [`MaxImagesInBuffer`]({{site.info}}api/WebTwain_Buffer.html#maximagesinbuffer).
 
 ## Disk Caching
 
-> This section applies to [desktop browsers]({{site.getstarted}}platform.html#browsers-on-desktop-devices) running in [service mode]({{site.indepth}}features/initialize.html#service-mode).
-
 The data `DWT` deals with are images which take up lots of space as they are stored raw in **DIB** format. For example, one A4 paper scanned in 300 DPI takes around 24MB in memory which means 2GB of physical memory can only store no more than 85 of these images. As more images are processed, more memory gets used which may pose a threat to other programs on the machine. Due to this, the disk cache function was added. After enabling disk caching, most images will be temporarily cached on the disk, while keeping some active images in the memory to maintain high performance.
 
-The disk caching feature is enabled by default and can be disabled by setting [ `IfAllowLocalCache` ]({{site.info}}api/WebTwain_Buffer.html#ifallowlocalcache) to `false` .
+The disk caching feature is enabled by default and can be disabled by setting [`IfAllowLocalCache`]({{site.info}}api/WebTwain_Buffer.html#ifallowlocalcache) to `false` .
 
-You can also set how much memory `DWT` can use before images start to be cached. By default, **800MB** is used. You can change it using the property [ `BufferMemoryLimit` ]({{site.info}}api/WebTwain_Buffer.html#buffermemorylimit) . 
+You can also set how much memory `DWT` can use before images start to be cached. By default, **800MB** is used. You can change it using the property [`BufferMemoryLimit`]({{site.info}}api/WebTwain_Buffer.html#buffermemorylimit). 
 
 > NOTE
 >  
@@ -103,7 +99,7 @@ The buffer also provides access to a wide array of info for each image. Here is 
 * Horizontal resolution of the specified image: [ `GetImageXResolution()` ]({{site.info}}api/WebTwain_Buffer.html#getimagexresolution)
 * Vertical resolution of the specified image: [ `GetImageYResolution()` ]({{site.info}}api/WebTwain_Buffer.html#getimageyresolution)
 
-The following is only supported in [desktop browsers]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and in [Service mode]({{site.indepth}}features/initialize.html#service-mode).
+The following is only supported in [desktop browsers]({{site.getstarted}}platform.html#browsers-on-desktop-devices).
 
 * Size in bytes of the specified image according to input dimensions: [ `GetImageSize()` ]({{site.info}}api/WebTwain_Buffer.html#getimagesize)
 * Size, but this time you specify an image format and `DWT` calculates the size in bytes depending on that image format: [ `GetImageSizeWithSpecifiedType()` ]({{site.info}}api/WebTwain_Buffer.html#getimagesizewithspecifiedtype)
@@ -131,7 +127,7 @@ Image selection is a powerful tool that can be utilized if you want to carry out
 * [ `SelectAllImages()` ]({{site.info}}api/WebTwain_Buffer.html#selectallimages) simply selects all the images in the buffer
 * [ `SelectedImagesIndices` ]({{site.info}}api/WebTwain_Buffer.html#selectedimagesindices) returns the indices of the selected images as an array
 
-The following is only supported in [desktop browsers]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and in [Service mode]({{site.indepth}}features/initialize.html#service-mode).
+The following is only supported in [desktop browsers]({{site.getstarted}}platform.html#browsers-on-desktop-devices).
 
 * The method [ `GetSkewAngleEx()` ]({{site.info}}api/WebTwain_Buffer.html#getskewangleex) is used to get the skew angle of a specified rectangle on the specified image
 * Each image in the buffer also has an internal URL which you can use to reference it, accessible via [ `GetImageURL()` ]({{site.info}}api/WebTwain_Buffer.html#getimageurl) and [ `GetImagePartURL()` ]({{site.info}}api/WebTwain_Buffer.html#getimageparturl) . This could come in handy for certain situations, like retrieving and showing the images in your own viewer.
@@ -141,8 +137,6 @@ The following is only supported in [desktop browsers]({{site.getstarted}}platfor
 > `GetImageURL()` returns a URL that has the normal scheme `http://` or `https://` while `GetImagePartURL()` returns an internal URL that has the scheme `dwt://` . The latter can only be accessed by other `DWT` APIs.
 
 ## Blankness Detection
-
-> Only supported in [desktop browsers]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and in [Service mode]({{site.indepth}}features/initialize.html#service-mode).
 
 The buffer also comes with the ability to detect if a scanned image is blank or not. This is easily done using one of the two following methods: [ `IsBlankImage()` ]({{site.info}}api/WebTwain_Buffer.html#isblankimage) or [ `IsBlankImageExpress()` ]({{site.info}}api/WebTwain_Buffer.html#isblankimageexpress). The 2nd method is faster but not as accurate as the first.
 
