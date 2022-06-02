@@ -6,6 +6,7 @@ title: How to hide the progress bar
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How to hide the progress bar 
 description: How to hide the progress bar
+permalink: /indepth/faqs/develop/how-to-hide-the-progress-bar.html
 ---
 
 # Development

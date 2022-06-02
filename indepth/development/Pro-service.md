@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Development - Professional Service
 keywords: Dynamic Web TWAIN, Documentation, Development, Professional Service
 breadcrumbText: Professional Service
 description: Dynamic Web TWAIN SDK Documentation Professional Service Page
+permalink: /indepth/development/Pro-service.html
 ---
 
 # Professional Service

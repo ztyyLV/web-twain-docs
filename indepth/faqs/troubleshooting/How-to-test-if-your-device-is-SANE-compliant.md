@@ -6,6 +6,7 @@ title: How to test if your device is SANE compliant
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: How to test if your device is SANE compliant
 description: How to test if your device is SANE compliant
+permalink: /indepth/faqs/troubleshooting/How-to-test-if-your-device-is-SANE-compliant.html
 ---
 
 # Troubleshooting

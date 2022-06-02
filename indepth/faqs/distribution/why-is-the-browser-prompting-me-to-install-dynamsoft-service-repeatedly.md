@@ -6,6 +6,7 @@ title: Why is the browser prompting me to install Dynamsoft Service repeatedly?
 keywords: Dynamic Web TWAIN, Documentation, Distribution and Deployment 
 breadcrumbText: Why Is The Browser Prompting Me To Install Dynamsoft Service Repeatedly
 description: Why is the browser prompting me to install Dynamsoft Service repeatedly? 
+permalink: /indepth/faqs/distribution/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly.html
 ---
 
 # Distribution and Deployment

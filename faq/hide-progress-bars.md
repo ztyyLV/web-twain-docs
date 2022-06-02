@@ -6,6 +6,7 @@ title: How can I change/hide the UI of the progress bar when importing or upload
 keywords: Dynamic Web TWAIN, UI Customization, stop popup, hide the progress bar
 breadcrumbText: How can I change/hide the UI of the progress bar when importing or uploading images?
 description: How can I change/hide the UI of the progress bar when importing or uploading images?
+permalink: /faq/hide-progress-bars.html
 ---
 
 # UI Customization

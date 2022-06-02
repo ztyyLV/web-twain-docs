@@ -6,6 +6,7 @@ title: Are you flexible to discuss custom licensing models?
 keywords: Dynamic Web TWAIN, Licensing and Purchase, flexible, custom licensing
 breadcrumbText: Are you flexible to discuss custom licensing models?
 description: Are you flexible to discuss custom licensing models?
+permalink: /faq/flexible-to-custom-license.html
 ---
 
 # Licensing and Purchase

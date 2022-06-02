@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN FAQs License And Purchase
 keywords: Dynamic Web TWAIN, Documentation, License, Purchase
 breadcrumbText: License And Purchase
 description: Dynamic Web TWAIN SDK Documentation FAQs General License And Purchase
+permalink: /indepth/faqs/license/
 ---
 
 # License And Purchase

@@ -6,6 +6,7 @@ title: What is a LicenseChecker
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: What is a LicenseChecker
 description: What is a LicenseChecker
+permalink: /indepth/faqs/develop/What-is-a-LicenseChecker.html
 ---
 
 # Development

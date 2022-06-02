@@ -6,6 +6,7 @@ title: How to create dump files
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: How to create dump files
 description: How to create dump files
+permalink: /indepth/faqs/troubleshooting/How-to-create-dump-files.html
 ---
 
 # Troubleshooting

@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN API Reference - Webcam Addon APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Webcam Addon APIs
 breadcrumbText: Webcam Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference Webcam Addon APIs Page
+permalink: /info/api/Addon_Webcam.html
 ---
 
 # `{WebTwainObject}.Addon.Webcam`

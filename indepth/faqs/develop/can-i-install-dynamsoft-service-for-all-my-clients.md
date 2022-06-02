@@ -6,6 +6,7 @@ title: Dynamic Web TWAIN FAQs Develop Can I Install Dynamsoft Service For All My
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Can I Install Dynamsoft Service For All My Clients
 description: Dynamic Web TWAIN SDK Documentation FAQs Can I Install Dynamsoft Service For All My Clients
+permalink: /indepth/faqs/develop/can-i-install-dynamsoft-service-for-all-my-clients.html
 ---
 
 # Develop

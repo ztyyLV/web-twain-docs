@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Features - Buffer
 keywords: Dynamic Web TWAIN, Documentation, Buffer
 breadcrumbText: Buffer
 description: Dynamic Web TWAIN SDK Documentation Buffer Page
+permalink: /indepth/features/buffer.html
 ---
 
 # Buffer Management

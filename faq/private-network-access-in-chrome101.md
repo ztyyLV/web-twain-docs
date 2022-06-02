@@ -6,6 +6,7 @@ title: How to resolve Dynamic Web TWAIN issue in Chrome 101?
 keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, Chrome 101, Private Network Access, preflight request
 breadcrumbText: How to resolve Dynamic Web TWAIN issue in Chrome 101?
 description: How to resolve Dynamic Web TWAIN issue in Chrome 101?
+permalink: /faq/private-network-access-in-chrome101.html
 ---
 
 # Project Deployment and End-user Installation

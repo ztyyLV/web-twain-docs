@@ -6,6 +6,7 @@ title: How To Scan Only A Selected Region
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How To Scan Only A Selected Region
 description: How To Scan Only A Selected Region
+permalink: /indepth/faqs/develop/how-to-scan-only-a-selected-region.html
 ---
 
 # Development

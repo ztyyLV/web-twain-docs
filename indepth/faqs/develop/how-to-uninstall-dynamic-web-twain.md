@@ -6,6 +6,7 @@ title: How to uninstall Dynamsoft Service
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How to uninstall Dynamsoft Service
 description: How to uninstall Dynamsoft Service
+permalink: /indepth/faqs/develop/how-to-uninstall-dynamic-web-twain.html
 ---
 
 # Development

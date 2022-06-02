@@ -6,6 +6,7 @@ title: Does Dynamic Web TWAIN support all scanners?
 keywords: Dynamic Web TWAIN, Documentation, General
 breadcrumbText: Does DWT Support All Scanners
 description: Does Dynamic Web TWAIN support all scanners? 
+permalink: /indepth/faqs/general/does-dwt-support-all-scanners.html
 ---
 
 # General

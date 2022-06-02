@@ -6,6 +6,7 @@ title: WebSocket Connection Issue
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: WebSocket Connection Issue
 description: WebSocket Connection Issue
+permalink: /indepth/faqs/troubleshooting/WebSocket-Connection-Issue.html
 ---
 
 # Troubleshooting

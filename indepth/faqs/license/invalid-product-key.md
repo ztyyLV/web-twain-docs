@@ -6,6 +6,7 @@ title: Invalid Product Key
 keywords: Dynamic Web TWAIN, Documentation, License
 breadcrumbText: Invalid Product Key
 description: Invalid Product Key
+permalink: /indepth/faqs/license/invalid-product-key.html
 ---
 
 # License

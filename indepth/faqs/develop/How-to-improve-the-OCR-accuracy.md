@@ -6,6 +6,7 @@ title: How to improve the OCR accuracy
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How to improve the OCR accuracy
 description: How to improve the OCR accuracy
+permalink: /indepth/faqs/develop/How-to-improve-the-OCR-accuracy.html
 ---
 
 # Development

@@ -6,6 +6,7 @@ title: Uncaught ReferenceError - DVS is not defined
 keywords: Dynamic Web TWAIN, Error Troubleshooting, DVS
 breadcrumbText: Uncaught ReferenceError - DVS is not defined
 description: Uncaught ReferenceError - DVS is not defined
+permalink: /faq/DVS-is-not-defined.html
 ---
 
 # Error Troubleshooting

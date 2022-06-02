@@ -6,6 +6,7 @@ title: How To Install Dynamic Web TWAIN
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How To Install Dynamic Web TWAIN
 description: How To Install Dynamic Web TWAIN
+permalink: /indepth/faqs/develop/how-to-install-dynamic-web-twain.html
 ---
 
 # Development

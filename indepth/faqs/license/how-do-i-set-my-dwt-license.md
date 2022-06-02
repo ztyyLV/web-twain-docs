@@ -6,6 +6,7 @@ title: How do I set my Dynamic Web TWAIN license?
 keywords: Dynamic Web TWAIN, Documentation, License
 breadcrumbText: How Do I Set My DWT License
 description: How do I set my Dynamic Web TWAIN license? 
+permalink: /indepth/faqs/license/how-do-i-set-my-dwt-license.html
 ---
 
 # License

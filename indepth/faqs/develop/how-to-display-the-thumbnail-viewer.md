@@ -6,6 +6,7 @@ title: How to display the thumbnail viewer
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How to display the thumbnail viewer
 description: How to display the thumbnail viewer
+permalink: /indepth/faqs/develop/how-to-display-the-thumbnail-viewer.html
 ---
 
 # Development

@@ -6,6 +6,7 @@ title: How Do You Use Capability Negotiation
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How Do You Use Capability Negotiation
 description: How Do You Use Capability Negotiation
+permalink: /indepth/faqs/develop/how-do-you-use-capability-negotiation.html
 ---
 
 # Development

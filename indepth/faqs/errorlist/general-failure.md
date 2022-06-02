@@ -6,6 +6,7 @@ title: General failure
 keywords: Dynamic Web TWAIN, Documentation, ErrorList
 breadcrumbText: General failure
 description: General failure
+permalink: /indepth/faqs/errorlist/general-failure.html
 ---
 
 # ErrorList

@@ -6,6 +6,7 @@ title: How can I verify if my physical document scanner works with the Dynamic W
 keywords: Dynamic Web TWAIN, Capture/ Image Source, verify scanner, compatible
 breadcrumbText: How can I verify if my physical document scanner works with the Dynamic Web TWAIN SDK?
 description: How can I verify if my physical document scanner works with the Dynamic Web TWAIN SDK?
+permalink: /faq/verify-if-device-is-supported.html
 ---
 
 # Capture/Image Source

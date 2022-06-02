@@ -6,6 +6,7 @@ title:  The current product key does not match the domain
 keywords: Dynamic Web TWAIN, Documentation, License
 breadcrumbText: The Current Product Key Does Not Match The Domain
 description: The current product key does not match the domain
+permalink: /indepth/faqs/license/the-current-product-key-does-not-match-the-domain.html
 ---
 
 # License

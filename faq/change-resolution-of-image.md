@@ -6,6 +6,7 @@ title: Can I change the resolution/DPI of an image in the viewer?
 keywords: Dynamic Web TWAIN, Image Editing, change resolution
 breadcrumbText: Can I change the resolution/DPI of an image in the viewer?
 description: Can I change the resolution/DPI of an image in the viewer?
+permalink: /faq/change-resolution-of-image.html
 ---
 
 # Image Editing

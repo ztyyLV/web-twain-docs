@@ -6,6 +6,7 @@ title: How to know ResourcesPath is wrong
 keywords: Dynamic Web TWAIN, Documentation, Distribution and Deployment
 breadcrumbText: How to know ResourcesPath is wrong
 description: How to know ResourcesPath is wrong
+permalink: /indepth/faqs/distribution/How-to-know-ResourcesPath-is-wrong.html
 ---
 
 # Distribution and Deployment

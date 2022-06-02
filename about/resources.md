@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Resources
 keywords: Dynamic Web TWAIN, TWAIN, Documentation, Resources
 breadcrumbText: Resources
 description: Dynamic Web TWAIN SDK Documentation Resources Page
+permalink: /about/resources.html
 ---
 
 # Resources

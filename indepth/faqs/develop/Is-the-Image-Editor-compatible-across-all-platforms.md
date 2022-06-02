@@ -6,6 +6,7 @@ title: Is the Image Editor compatible across all platforms
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Is the Image Editor compatible across all platforms
 description: Is the Image Editor compatible across all platforms
+permalink: /indepth/faqs/develop/Is-the-Image-Editor-compatible-across-all-platforms.html
 ---
 
 # Development

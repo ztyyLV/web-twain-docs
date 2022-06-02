@@ -6,6 +6,7 @@ title: How Do I Know Whether The Upload Succeeded
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How Do I Know Whether The Upload Succeeded
 description: How Do I Know Whether The Upload Succeeded
+permalink: /indepth/faqs/develop/how-do-i-know-whether-the-upload-succeeded.html
 ---
 
 # Development

@@ -6,6 +6,7 @@ title: How do I upgrade the end-user installation for all end users once I upgra
 keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, upgrade
 breadcrumbText: How do I upgrade the end-user installation for all end users once I upgrade my project?
 description: How do I upgrade the end-user installation for all end users once I upgrade my project?
+permalink: /faq/upgrade-end-user-installations.html
 ---
 
 # Project Deployment and End-user Installation

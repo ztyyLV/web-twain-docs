@@ -6,6 +6,7 @@ title: Are all scanners in the source list available?
 keywords: Dynamic Web TWAIN, Documentation, General
 breadcrumbText: Are All Scanners In The Source List Available
 description: Are all scanners in the source list available? 
+permalink: /indepth/faqs/general/are-all-scanners-in-the-source-list-available.html
 ---
 
 # General

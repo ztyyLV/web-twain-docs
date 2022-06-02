@@ -6,6 +6,7 @@ title: Is SSL Supported
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Is SSL Supported
 description: Is SSL Supported
+permalink: /indepth/faqs/develop/is-ssl-supported.html
 ---
 
 # Development

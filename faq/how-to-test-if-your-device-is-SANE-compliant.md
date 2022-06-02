@@ -6,6 +6,7 @@ title: How to test if your device is SANE compliant
 keywords: Dynamic Web TWAIN, Capture/ Image Source, verify scanner, compatible, SANE
 breadcrumbText: How to test if your device is SANE compliant
 description: How to test if your device is SANE compliant
+permalink: /faq/how-to-test-if-your-device-is-SANE-compliant.html
 ---
 
 # Capture/Image Source

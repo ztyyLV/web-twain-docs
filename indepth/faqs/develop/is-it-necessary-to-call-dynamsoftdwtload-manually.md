@@ -6,6 +6,7 @@ title: Is It Necessary To Call Dynamsoft.DWT.Load Manually
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Is It Necessary To Call Dynamsoft.DWT.Load Manually
 description: Is It Necessary To Call Dynamsoft.DWT.Load Manually
+permalink: /indepth/faqs/develop/is-it-necessary-to-call-dynamsoftdwtload-manually.html
 ---
 
 # Development

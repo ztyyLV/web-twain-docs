@@ -6,6 +6,7 @@ title: How can I securely transfer scanned documents to my server?
 keywords: Dynamic Web TWAIN, Security, securely transfer, server
 breadcrumbText: How can I securely transfer scanned documents to my server?
 description: How can I securely transfer scanned documents to my server?
+permalink: /faq/securely-transfer-to-server.html
 ---
 
 # Security

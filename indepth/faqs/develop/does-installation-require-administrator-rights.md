@@ -6,6 +6,7 @@ title: Dynamic Web TWAIN FAQs Develop Does Installation Require Administrator Ri
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Does Installation Require Administrator Rights
 description: Dynamic Web TWAIN SDK Documentation FAQs Does Installation Require Administrator Rights
+permalink: /indepth/faqs/develop/does-installation-require-administrator-rights.html
 ---
 
 # Develop

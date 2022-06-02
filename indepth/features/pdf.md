@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Features - Handle PDF
 keywords: Dynamic Web TWAIN, Documentation, Handle PDF
 breadcrumbText: Handle PDF
 description: Dynamic Web TWAIN SDK Documentation Handle PDF Page
+permalink: /indepth/features/pdf.html
 ---
 
 # PDF Handling 

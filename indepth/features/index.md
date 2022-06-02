@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Features Index
 keywords: Dynamic Web TWAIN, Documentation, Features Index
 breadcrumbText: Using DWT
 description: Dynamic Web TWAIN SDK Documentation Features Index Page
+permalink: /indepth/features/
 ---
 
 # Using DWT

@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN FAQs
 keywords: Dynamic Web TWAIN, Documentation, FAQs
 breadcrumbText: FAQs
 description: Dynamic Web TWAIN SDK Documentation FAQs
+permalink: /indepth/faqs/
 ---
 
 # FAQs

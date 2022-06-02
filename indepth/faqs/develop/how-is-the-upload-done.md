@@ -6,6 +6,7 @@ title: How Is The Upload Done
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How Is The Upload Done
 description: How Is The Upload Done
+permalink: /indepth/faqs/develop/how-is-the-upload-done.html
 ---
 
 # Development

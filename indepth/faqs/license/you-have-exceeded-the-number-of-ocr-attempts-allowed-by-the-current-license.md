@@ -6,6 +6,7 @@ title: You have exceeded the number of OCR attempts allowed by the current licen
 keywords: Dynamic Web TWAIN, Documentation, License
 breadcrumbText: You Have Exceeded The Number Of OCR Attempts Allowed By The Current License
 description: You have exceeded the number of OCR attempts allowed by the current license
+permalink: /indepth/faqs/license/you-have-exceeded-the-number-of-ocr-attempts-allowed-by-the-current-license.html
 ---
 
 # License

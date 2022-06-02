@@ -6,6 +6,7 @@ title: How To Specify The Images To Upload
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How To Specify The Images To Upload
 description: How To Specify The Images To Upload
+permalink: /indepth/faqs/develop/how-to-specify-the-images-to-upload.html
 ---
 
 # Development

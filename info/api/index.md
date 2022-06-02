@@ -4,6 +4,7 @@ needAutoGenerateSidebar: true
 title: Dynamic Web TWAIN API Reference - Index
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Index
 breadcrumbText: API Reference
+permalink: /info/api/
 ---
 
 > Some old APIs are deprecated, check out [Deprecated Features and APIs]({{site.info}}schedule/deprecated.html)

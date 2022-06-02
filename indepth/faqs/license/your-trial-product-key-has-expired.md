@@ -6,6 +6,7 @@ title: Your trial product key has expired
 keywords: Dynamic Web TWAIN, Documentation, License
 breadcrumbText: Your Trial Product Key Has Expired
 description: Your trial product key has expired
+permalink: /indepth/faqs/license/your-trial-product-key-has-expired.html
 ---
 
 # License

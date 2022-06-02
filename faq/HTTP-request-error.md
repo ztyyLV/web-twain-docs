@@ -6,6 +6,7 @@ title: HTTP request error
 keywords: Dynamic Web TWAIN, Error Troubleshooting, HTTP request
 breadcrumbText: HTTP request error
 description: HTTP request error
+permalink: /faq/HTTP-request-error.html
 ---
 
 # Error Troubleshooting

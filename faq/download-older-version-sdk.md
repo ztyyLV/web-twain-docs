@@ -6,6 +6,7 @@ title: Where can I download an older version of the Dynamic Web TWAIN SDK?
 keywords: Dynamic Web TWAIN, SDK Download, free trial, older version
 breadcrumbText: Where can I download an older version of the Dynamic Web TWAIN SDK?
 description: Where can I download an older version of the Dynamic Web TWAIN SDK?
+permalink: /faq/download-older-version-sdk.html
 ---
 
 # SDK Download/Free Trial

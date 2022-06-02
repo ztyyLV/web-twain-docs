@@ -6,6 +6,7 @@ title: How Do You Use Custom DataSource Data
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How Do You Use Custom DataSource Data
 description: How Do You Use Custom DataSource Data
+permalink: /indepth/faqs/develop/how-do-you-use-custom-datasource-data.html
 ---
 
 # Development

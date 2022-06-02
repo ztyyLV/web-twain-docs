@@ -6,6 +6,7 @@ title: How to test if your camera is DirectShow compliant
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: How to test if your camera is DirectShow compliant
 description: How to test if your camera is DirectShow compliant
+permalink: /indepth/faqs/troubleshooting/How-to-test-if-your-camera-is-DirectShow-compliant.html
 ---
 
 # Troubleshooting

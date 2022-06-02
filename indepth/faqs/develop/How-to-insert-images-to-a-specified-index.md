@@ -6,6 +6,7 @@ title: How to insert images to a specified index
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How to insert images to a specified index
 description: How to insert images to a specified index
+permalink: /indepth/faqs/develop/How-to-insert-images-to-a-specified-index.html
 ---
 
 # Development

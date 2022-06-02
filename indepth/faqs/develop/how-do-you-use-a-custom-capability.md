@@ -6,6 +6,7 @@ title: How Do You Use A Custom Capability
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How Do You Use A Custom Capability
 description: How Do You Use A Custom Capability
+permalink: /indepth/faqs/develop/how-do-you-use-a-custom-capability.html
 ---
 
 # Development

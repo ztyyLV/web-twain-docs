@@ -6,6 +6,7 @@ title: How to test if your scanner supports ICA scanning on Mac OS
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: How to test if your scanner supports ICA scanning on Mac OS
 description: How to test if your scanner supports ICA scanning on Mac OS
+permalink: /indepth/faqs/troubleshooting/How-to-test-if-your-scanner-supports-ICA-scanning-on-Mac-OS.html
 ---
 
 # Troubleshooting

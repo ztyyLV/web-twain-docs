@@ -6,6 +6,7 @@ title: When shall I use PDF Rasterizer
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: When shall I use PDF Rasterizer
 description: When shall I use PDF Rasterizer
+permalink: /indepth/faqs/develop/When-shall-I-use-PDF-Rasterizer.html
 ---
 
 # Development

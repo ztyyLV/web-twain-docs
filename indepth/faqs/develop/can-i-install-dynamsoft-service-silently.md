@@ -6,6 +6,7 @@ title: Can I Install Dynamsoft Service Silently
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Can I Install Dynamsoft Service Silently
 description: Can I Install Dynamsoft Service Silently
+permalink: /indepth/faqs/develop/can-i-install-dynamsoft-service-silently.html
 ---
 
 # Development

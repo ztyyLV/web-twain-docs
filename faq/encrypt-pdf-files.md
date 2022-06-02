@@ -6,6 +6,7 @@ title: Can I generate an encrypted file in PDF format?
 keywords: Dynamic Web TWAIN, Security, encrypt PDF
 breadcrumbText: Can I generate an encrypted file in PDF format?
 description: Can I generate an encrypted file in PDF format?
+permalink: /faq/encrypt-pdf-files.html
 ---
 
 # Security

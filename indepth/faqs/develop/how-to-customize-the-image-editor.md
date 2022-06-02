@@ -6,6 +6,7 @@ title: How To Customize The Image Editor
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How To Customize The Image Editor
 description: How To Customize The Image Editor
+permalink: /indepth/faqs/develop/how-to-customize-the-image-editor.html
 ---
 
 # Development

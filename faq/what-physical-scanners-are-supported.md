@@ -6,6 +6,7 @@ title: What physical document scanners does the Dynamic Web TWAIN SDK support?
 keywords: Dynamic Web TWAIN, Capture/ Image Source, physical, document, scanner, support
 breadcrumbText: What physical document scanners does the Dynamic Web TWAIN SDK support?
 description: What physical document scanners does the Dynamic Web TWAIN SDK support?
+permalink: /faq/what-physical-scanners-are-supported.html
 ---
 
 # Capture/Image Source

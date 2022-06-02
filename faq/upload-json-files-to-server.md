@@ -6,6 +6,7 @@ title: How can I upload a JSON file to my server?
 keywords: Dynamic Web TWAIN, Document Saving, upload JSON
 breadcrumbText: How can I upload a JSON file to my server?
 description: How can I upload a JSON file to my server?
+permalink: /faq/upload-json-files-to-server.html
 ---
 
 # Document Saving

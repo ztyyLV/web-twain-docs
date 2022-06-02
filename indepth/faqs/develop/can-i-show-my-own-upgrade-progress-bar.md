@@ -6,6 +6,7 @@ title: Can I Show My Own Upgrade Progress Bar
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Can I Show My Own Upgrade Progress Bar
 description: Can I Show My Own Upgrade Progress Bar
+permalink: /indepth/faqs/develop/can-i-show-my-own-upgrade-progress-bar.html
 ---
 
 # Development

@@ -6,6 +6,7 @@ title: How Can I Customize The WebTWAIN Instance(s)
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How Can I Customize The WebTWAIN Instance(s)
 description: How Can I Customize The WebTWAIN Instance(s)
+permalink: /indepth/faqs/develop/how-can-i-customize-the-webtwain-instances.html
 ---
 
 # Development

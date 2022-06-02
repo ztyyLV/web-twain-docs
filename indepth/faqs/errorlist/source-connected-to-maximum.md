@@ -6,6 +6,7 @@ title: Source is connected to the maximum supported number of applications
 keywords: Dynamic Web TWAIN, Documentation, ErrorList
 breadcrumbText: Source is connected to the maximum supported number of applications
 description: Source is connected to the maximum supported number of applications
+permalink: /indepth/faqs/errorlist/source-connected-to-maximum.html
 ---
 
 # ErrorList

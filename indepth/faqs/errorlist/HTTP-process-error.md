@@ -6,6 +6,7 @@ title: HTTP process error
 keywords: Dynamic Web TWAIN, Documentation, ErrorList
 breadcrumbText: HTTP process error
 description: HTTP process error
+permalink: /indepth/faqs/errorlist/HTTP-process-error.html
 ---
 
 # ErrorList

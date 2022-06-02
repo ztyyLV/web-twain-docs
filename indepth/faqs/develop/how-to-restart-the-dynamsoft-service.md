@@ -6,6 +6,7 @@ title: How To Restart The Dynamsoft Service
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How To Restart The Dynamsoft Service
 description: How To Restart The Dynamsoft Service
+permalink: /indepth/faqs/develop/how-to-restart-the-dynamsoft-service.html
 ---
 
 # Development

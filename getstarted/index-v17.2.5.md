@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN GetStarted
 keywords: Dynamic Web TWAIN, Documentation, GetStarted
 breadcrumbText: GetStarted
 description: Dynamic Web TWAIN SDK Documentation GetStarted Page
+permalink: /getstarted/index-v17.2.5.html
 ---
 
 

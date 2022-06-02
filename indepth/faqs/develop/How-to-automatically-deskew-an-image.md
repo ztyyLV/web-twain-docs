@@ -6,6 +6,7 @@ title: How to automatically deskew an image
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How to automatically deskew an image
 description: How to automatically deskew an image
+permalink: /indepth/faqs/develop/How-to-automatically-deskew-an-image.html
 ---
 
 # Development

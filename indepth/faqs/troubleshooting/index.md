@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN FAQs Troubleshooting For End-users
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: Troubleshooting For End-users
 description: Dynamic Web TWAIN SDK Documentation FAQs Troubleshooting For End-users
+permalink: /indepth/faqs/troubleshooting/
 ---
 
 # Troubleshooting for End-users

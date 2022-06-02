@@ -6,6 +6,7 @@ title: The handle is in the wrong state for the requested operation
 keywords: Dynamic Web TWAIN, Error Troubleshooting
 breadcrumbText: The handle is in the wrong state for the requested operation
 description: The handle is in the wrong state for the requested operation
+permalink: /indepth/faqs/errorlist/the-handle-is-in-the-wrong-state-for-the-requested-operation.html
 ---
 
 # Error Troubleshooting

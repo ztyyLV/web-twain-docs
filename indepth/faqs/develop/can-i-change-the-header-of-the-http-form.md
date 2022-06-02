@@ -6,6 +6,7 @@ title: Can I Change The Header Of The HTTP Form
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Can I Change The Header Of The HTTP Form
 description: Can I Change The Header Of The HTTP Form
+permalink: /indepth/faqs/develop/can-i-change-the-header-of-the-http-form.html
 ---
 
 # Development

@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Support
 keywords: Dynamic Web TWAIN, Documentation, Support
 breadcrumbText: Support
 description: Dynamic Web TWAIN SDK Documentation Support Page
+permalink: /about/getsupport.html
 ---
 
 

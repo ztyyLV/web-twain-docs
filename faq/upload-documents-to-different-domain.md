@@ -6,6 +6,7 @@ title: Can I upload documents to a different website domain?
 keywords: Dynamic Web TWAIN, Document Saving, formats
 breadcrumbText: Can I upload documents to a different website domain?
 description: Can I upload documents to a different website domain?
+permalink: /faq/upload-documents-to-different-domain.html
 ---
 
 # Document Saving

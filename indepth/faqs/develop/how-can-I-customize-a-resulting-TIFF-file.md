@@ -6,6 +6,7 @@ title: How can I customize a resulting TIFF file
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How can I customize a resulting TIFF file
 description: How can I customize a resulting TIFF file
+permalink: /indepth/faqs/develop/how-can-I-customize-a-resulting-TIFF-file.html
 ---
 
 # Development

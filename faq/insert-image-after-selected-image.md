@@ -6,6 +6,7 @@ title: How can I insert an image after a selected image in the viewer?
 keywords: Dynamic Web TWAIN, Image Viewer, insert after selected image, insert
 breadcrumbText: How can I insert an image after a selected image in the viewer?
 description: How can I insert an image after a selected image in the viewer?
+permalink: /faq/insert-image-after-selected-image.html
 ---
 
 # Image Viewer
