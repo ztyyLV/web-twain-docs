@@ -130,8 +130,6 @@ yarn start
 
 ## Official Samples
 
-Check out the following two sample projects:
-
-* [dwt-react-simple](https://github.com/dynamsoft-dwt/dwt-react-simple)
+Check out the following sample project:
 
 * [dwt-react-advanced](https://github.com/dynamsoft-dwt/dwt-react-advanced)
