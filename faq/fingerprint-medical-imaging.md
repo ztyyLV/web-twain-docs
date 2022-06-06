@@ -6,6 +6,7 @@ title: Do you support fingerprint or medical imaging devices?
 keywords: Dynamic Web TWAIN, Capture/ Image Source, fingerprint, medical imaging
 breadcrumbText: Do you support fingerprint or medical imaging devices?
 description: Do you support fingerprint or medical imaging devices?
+permalink: /faq/fingerprint-medical-imaging.html
 ---
 
 # Capture/Image Source

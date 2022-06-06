@@ -6,6 +6,7 @@ title: HTTP process error
 keywords: Dynamic Web TWAIN, Error Troubleshooting, HTTP process
 breadcrumbText: HTTP process error
 description: HTTP process error
+permalink: /faq/HTTP-process-error.html
 ---
 
 # Error Troubleshooting

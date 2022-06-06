@@ -6,6 +6,7 @@ title: Dynamic Web TWAIN Schedule - Addon Release
 keywords: Dynamic Web TWAIN, Documentation, Schedule, Addon Release
 breadcrumbText: Addons
 description: Dynamic Web TWAIN SDK Documentation Schedule - Addon Release Page
+permalink: /info/schedule/Addon.html
 ---
 
 # DWT Core and Addon

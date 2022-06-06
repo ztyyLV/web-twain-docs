@@ -6,6 +6,7 @@ title: What image and document formats can I save my documents as?
 keywords: Dynamic Web TWAIN, Document Saving, formats
 breadcrumbText: What image and document formats can I save my documents as?
 description: What image and document formats can I save my documents as?
+permalink: /faq/image-document-formats-save.html
 ---
 
 # Document Saving

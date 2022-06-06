@@ -6,6 +6,7 @@ title: Error Message - The connection from the insecure (HTTP) web page to the l
 keywords: Dynamic Web TWAIN, Error Meaasge, connection failed, Dynamsoft Service, HTTP
 breadcrumbText: Error Message - The connection from the insecure (HTTP) web page to the local 'Dynamsoft Service' failed
 description: Error Message - The connection from the insecure (HTTP) web page to the local 'Dynamsoft Service' failed
+permalink: /faq/connection-from-the-insecure-HTTP-to-service-failed.html
 ---
 
 # Error Troubleshooting

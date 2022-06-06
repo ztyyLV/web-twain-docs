@@ -6,6 +6,7 @@ title: Can I upload documents via a background service outside the web browser?
 keywords: Dynamic Web TWAIN, Document Saving, upload using background service
 breadcrumbText: Can I upload documents via a background service outside the web browser?
 description: Can I upload documents via a background service outside the web browser?
+permalink: /faq/upload-using-background-service.html
 ---
 
 # Document Saving

@@ -6,6 +6,7 @@ title: How to get the coordinates of the selected area on an image?
 keywords: Dynamic Web TWAIN, Image Viewer, coordinates of the selected area
 breadcrumbText: How to get the coordinates of the selected area on an image?
 description: How to get the coordinates of the selected area on an image?
+permalink: /faq/coordinates-of-selected-area.html
 ---
 
 # Image Viewer

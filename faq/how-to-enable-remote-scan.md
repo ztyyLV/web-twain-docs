@@ -6,6 +6,7 @@ title: How can i enable Remote Scan?
 keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, resources
 breadcrumbText: How can i enable Remote Scan?
 description: How can i enable Remote Scan?
+permalink: /faq/how-to-enable-remote-scan.html
 ---
 
 # Project Deployment and End-user Installation

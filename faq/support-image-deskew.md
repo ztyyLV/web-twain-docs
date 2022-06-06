@@ -6,6 +6,7 @@ title: Do you support image deskew?
 keywords: Dynamic Web TWAIN, Image Editing, image deskew
 breadcrumbText: Do you support image deskew?
 description: Do you support image deskew?
+permalink: /faq/support-image-deskew.html
 ---
 
 # Image Editing

@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Features - Input
 keywords: Dynamic Web TWAIN, Documentation, Input
 breadcrumbText: Input
 description: Dynamic Web TWAIN SDK Documentation Input Page
+permalink: /indepth/features/input.html
 ---
 
 # Input

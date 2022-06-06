@@ -6,6 +6,7 @@ title: Can I use built-in or USB webcam to capture document?
 keywords: Dynamic Web TWAIN, Capture/ Image Source, usb webcam, built-in webcam
 breadcrumbText: Can I use built-in or USB webcam to capture document?
 description: Can I use built-in or USB webcam to capture document?
+permalink: /faq/use-usb-webcam-to-capture.html
 ---
 
 # Capture/Image Source

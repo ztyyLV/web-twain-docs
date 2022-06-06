@@ -6,6 +6,7 @@ title: How can I change the display language of all messages from English to ano
 keywords: Dynamic Web TWAIN, UI Customization, display language, language
 breadcrumbText: How can I change the display language of all messages from English to another language?
 description: How can I change the display language of all messages from English to another language?
+permalink: /faq/change-display-language.html
 ---
 
 # UI Customization

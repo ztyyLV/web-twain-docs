@@ -6,6 +6,7 @@ title: How can I change the reference path to the Dynamsoft’s resources in my 
 keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, reference path
 breadcrumbText: How can I change the reference path to the Dynamsoft’s resources in my project?
 description: How can I change the reference path to the Dynamsoft’s resources in my project?
+permalink: /faq/change-reference-path.html
 ---
 
 # Project Deployment and End-user Installation

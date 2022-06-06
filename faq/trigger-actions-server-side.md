@@ -6,6 +6,7 @@ title: How can I automatically trigger actions when images arrive on my server s
 keywords: Dynamic Web TWAIN, Document Saving, trigger actions, server side
 breadcrumbText: How can I automatically trigger actions when images arrive on my server side?
 description: How can I automatically trigger actions when images arrive on my server side?
+permalink: /faq/trigger-actions-server-side.html
 ---
 
 # Document Saving

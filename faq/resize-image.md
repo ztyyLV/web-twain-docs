@@ -6,6 +6,7 @@ title: How can I resize all images to meet a certain size standard (e.g. A4 size
 keywords: Dynamic Web TWAIN, Image Editing, resize image, A4
 breadcrumbText: How can I resize all images to meet a certain size standard (e.g. A4 size)?
 description: How can I resize all images to meet a certain size standard (e.g. A4 size)?
+permalink: /faq/resize-image.html
 ---
 
 # Image Editing

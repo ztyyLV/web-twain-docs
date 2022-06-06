@@ -6,6 +6,7 @@ title: Will a client machine take an additional license seat if its operating sy
 keywords: Dynamic Web TWAIN, Licensing and Purchase, operating system reinstalled
 breadcrumbText: Will a client machine take an additional license seat if its operating system is reinstalled?
 description: Will a client machine take an additional license seat if its operating system is reinstalled?
+permalink: /faq/seat-taken-if-os-reinstalled.html
 ---
 
 # Licensing and Purchase

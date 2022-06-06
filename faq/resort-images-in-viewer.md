@@ -6,6 +6,7 @@ title: How can I reorder images in the viewer?
 keywords: Dynamic Web TWAIN, Image Viewer, reorder images
 breadcrumbText: How can I reorder images in the viewer?
 description: How can I reorder images in the viewer?
+permalink: /faq/resort-images-in-viewer.html
 ---
 
 # Image Viewer

@@ -6,6 +6,7 @@ title: Can I load specific page numbers of a PDF file into the viewer?
 keywords: Dynamic Web TWAIN, Addon, specific page, pdf
 breadcrumbText: Can I load specific page numbers of a PDF file into the viewer?
 description: Can I load specific page numbers of a PDF file into the viewer?
+permalink: /faq/load-specific-page-of-pdf-to-viewer.html
 ---
 
 # Addon

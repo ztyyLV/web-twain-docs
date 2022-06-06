@@ -6,6 +6,7 @@ title: Error message - The current product key does not support XXX, please cont
 keywords: Dynamic Web TWAIN, Error Troubleshooting, product key does not support version
 breadcrumbText: Error message - The current product key does not support XXX, please contact the site administrator
 description: Error message - The current product key does not support XXX, please contact the site administrator
+permalink: /faq/error-message-current-product-key-does-not-support.html
 ---
 
 # Error Troubleshooting

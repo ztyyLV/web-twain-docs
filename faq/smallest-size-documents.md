@@ -6,6 +6,7 @@ title: How can I reduce the size of documents in PDF, TIFF or JPEG format?
 keywords: Dynamic Web TWAIN, Document Saving, smallest size document
 breadcrumbText: How can I reduce the size of documents in PDF, TIFF or JPEG format?
 description: How can I reduce the size of documents in PDF, TIFF or JPEG format?
+permalink: /faq/smallest-size-documents.html
 ---
 
 # Document Saving

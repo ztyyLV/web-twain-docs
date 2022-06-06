@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Features - Output
 keywords: Dynamic Web TWAIN, Documentation, Output
 breadcrumbText: Output
 description: Dynamic Web TWAIN SDK Documentation Output Page
+permalink: /indepth/features/output.html
 ---
 
 # Output

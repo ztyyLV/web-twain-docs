@@ -6,6 +6,7 @@ title: Syntax error – Unexpected Token “<”
 keywords: Dynamic Web TWAIN, Error Troubleshooting
 breadcrumbText: Syntax error – Unexpected Token “<”
 description: Syntax error – Unexpected Token “<”
+permalink: /faq/syntax-error-unexpected-token.html
 ---
 
 # Error Troubleshooting
