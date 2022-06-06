@@ -10,26 +10,16 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 # Stable Releases
 
-## 17.2.5 (03/29/2022)
-
-### Improved Features 
-
- - Updated the files *dynamsoft.webtwain.initiate.js* and *dynamsoft.webtwain.addon.camera.js* for better performance of mobile document capturing when using Safari on iOS/iPadOS 13+
-
-### Bug Fixed
-
- - Updated the file *dynamsoft.webtwain.initiate.js* to resolve a memory leak issue in v17.2.1 on Chrome 98+ when the <a href="{{site.info}}api/WebTwain_Viewer.html?ver=latest#setviewmode" target="_blank">view mode</a> is set to (-1, -1) or if a <a href="{{site.info}}api/WebTwain_Viewer.html?ver=latest#createthumbnailviewer" target="_blank">thumbnail viewer</a> is used.
-
 ## 17.2.1 (02/24/2022)
 
 ### Improved Features 
 
- - Made changes to handle <a href="https://developer.chrome.com/blog/private-network-access-preflight/" target="_blank">CORS preflight requests</a> sent by Chrome from V98. Learn more <a href="https://www.dynamsoft.com/web-twain/docs/faq/private-network-access-in-chrome101.html" target="_blank">here</a>. 
+ - Made changes to handle <a href="https://developer.chrome.com/blog/private-network-access-preflight/" target="_blank">CORS preflight requests</a> sent by Chrome from V98. Learn more <a href="https://www.dynamsoft.com/web-twain/docs-archive/faq/private-network-access-in-chrome101.html" target="_blank">here</a>. 
  - For Chromium V84+, use userAgentData instead of userAgent in response to UserAgent String phasing out issue. 
 
 ### Bug Fixes
 
- - Fixed a bug where Dynamsoft Service installation/uninstallation failed due to the current user account does not match the user account under C:\Users{account}. Learn more <a href="https://www.dynamsoft.com/web-twain/docs/faq/service-installation-issue.html?ver=latest" target="_blank">here</a>. 
+ - Fixed a bug where Dynamsoft Service installation/uninstallation failed due to the current user account does not match the user account under C:\Users{account}. Learn more <a href="https://www.dynamsoft.com/web-twain/docs-archive/faq/service-installation-issue.html?ver=17.2.1" target="_blank">here</a>. 
  - [HTML5 on MacOS] Fixed a bug where the short key (set by <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#organizationid" target="_blank">organizationID</a>) did not work on macOS 12+.
  - Fixed a bug where the mouse wheel did not work when the mouse was over the viewer.
  - [HTML5 on MacOS] Fixed a bug where buttons were not visible during Dynamic Web TWAIN/Dynamsoft Service installation when using dark mode.
@@ -65,9 +55,9 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 ### Improved Features 
 
 * Improved the <strong>mobile document capture</strong> in WASM mode. See more <a href="https://www.dynamsoft.com/web-twain/features/mobile-web-capture-sdk/" target="_blank">here</a>. 
-* Added `CM_RENDERALLWITHANNOTATION` convert mode to <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Addon_PDF.html?ver=latest#setconvertmode" target="_blank">EnumDWT_ConvertMode</a> to support loading PDFs with annotations.
+* Added `CM_RENDERALLWITHANNOTATION` convert mode to <a href="https://www.dynamsoft.com/web-twain/docs-archive/info/api/Addon_PDF.html?ver=17.2.1#setconvertmode" target="_blank">EnumDWT_ConvertMode</a> to support loading PDFs with annotations.
 * Modified DynamicImage.dll(DynamicImagex64.dll) to improve encoding and decoding mode of TIFF files.
-* Updated Barcode Reader library to version 8.6. Check out the release notes for <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/release-notes/js-8.html?ver=latest#860-08312021" target="_blank">Barcode Reader JavaScript SDK - 8.6</a>
+* Updated Barcode Reader library to version 8.6. Check out the release notes for <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/release-notes/js-8.html?ver=17.2.1#860-08312021" target="_blank">Barcode Reader JavaScript SDK - 8.6</a>
 
 ### Bug Fixes
 
@@ -146,7 +136,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 * [`DefaultSourceName`]({{site.info}}api/WebTwain_Acquire.html#defaultsourcename) now refers to the last used source. 
 
-* Updated Barcode Reader library to version 8.2.1. Check out release notes for [Barcode Reader JavaScript SDK - 8.2.1.](https://www.dynamsoft.com/barcode-reader/programming/javascript/release-notes/js-8.html?ver=latest#821-03292021)
+* Updated Barcode Reader library to version 8.2.1. Check out release notes for [Barcode Reader JavaScript SDK - 8.2.1.](https://www.dynamsoft.com/barcode-reader/programming/javascript/release-notes/js-8.html?ver=17.2.1#821-03292021)
 
 ###  Changed Behaviours 
 
@@ -215,7 +205,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 * Made the viewer more independent and robust. Related APIs are redesigned.
   + Added a new global property [`Dynamsoft.WebTwainEnv.UseDefaultViewer`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#usedefaultviewer) to control whether the built-in viewer is used.
-  + Check out the [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html?ver=latest#viewer-related-api-changes-in-version-162).
+  + Check out the [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html?ver=17.2.1#viewer-related-api-changes-in-version-162).
 
 * Scanning remotely now supports showing the Manufacturer's User Interface.
   + Only when the remote machine is Windows.
@@ -276,7 +266,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 #### Others
 
-* Check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html?ver=latest#viewer-related-api-changes-in-version-162).
+* Check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html?ver=17.2.1#viewer-related-api-changes-in-version-162).
 
 ### Bug Fixes
 
@@ -306,7 +296,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 ### Deprecations
 
-* Check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html?ver=latest#viewer-related-api-changes-in-versoin-162).
+* Check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html?ver=17.2.1#viewer-related-api-changes-in-versoin-162).
 
 ### Changes to the ActiveX Edition
 

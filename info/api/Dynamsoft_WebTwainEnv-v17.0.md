@@ -92,7 +92,7 @@ Dynamsoft.DWT.licenseServer = ["https://your.mainServer.com", "https://your.back
 
 **Usage notes**
 
-Gets or sets the URL of the license tracking server used to authenticate the license (handshakeCode) and track barcode reading usage. When set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification. A self hosting option is available. Learn more about [License Tracking Server 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html?ver=latest). 
+Gets or sets the URL of the license tracking server used to authenticate the license (handshakeCode) and track barcode reading usage. When set to null (default value), it will connect to Dynamsoft's license tracking servers for online verification. A self hosting option is available. Learn more about [License Tracking Server 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html). 
 
 ## handshakeCode
 
@@ -112,7 +112,7 @@ Dynamsoft.DWT.handshakeCode = "1000**601-1000***44";
 
 **Usage notes**
 
-Learn more about [What is handshakeCode](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#handshake-code)
+Learn more about [What is handshakeCode](https://www.dynamsoft.com/license-tracking/docs/about/terms.html#handshake-code)
 
 ## sessionPassword
 
@@ -131,7 +131,7 @@ Dynamsoft.DWT.sessionPassword = "MyPassw0rd";
 ```
 
 **Usage notes**
-Learn more about [session password](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#session-password) in License Tracking Server 2.0.
+Learn more about [session password](https://www.dynamsoft.com/license-tracking/docs/about/terms.html#session-password) in License Tracking Server 2.0.
 
 ## licenseException
 
@@ -146,7 +146,7 @@ licenseException: string;
 
 **Usage notes**
 
-Check [license error list](https://www.dynamsoft.com/license-tracking/docs/common/errorlist.html?ver=latest) 
+Check [license error list](https://www.dynamsoft.com/license-tracking/docs/common/errorlist.html) 
 
 ## Options
 

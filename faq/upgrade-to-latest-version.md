@@ -17,9 +17,9 @@ You can download a 30-day free trial <a href="https://www.dynamsoft.com/web-twai
 
 Please refer to the upgrade guide and the release notes below to update your application/configuration.
 
-<a href="https://www.dynamsoft.com/web-twain/docs/indepth/development/upgrade.html?ver=latest" target="_blank">Dynamic Web TWAIN Development - Upgrade Guide</a>
+<a href="https://www.dynamsoft.com/web-twain/docs-archive/indepth/development/upgrade.html?ver=17.2.1" target="_blank">Dynamic Web TWAIN Development - Upgrade Guide</a>
 
-<a href="https://www.dynamsoft.com/web-twain/docs/info/schedule/stable.html?ver=latest" target="_blank">Dynamic Web TWAIN Schedule - Stable Release</a>
+<a href="https://www.dynamsoft.com/web-twain/docs-archive/info/schedule/stable.html?ver=17.2.1" target="_blank">Dynamic Web TWAIN Schedule - Stable Release</a>
 
 Once you are ready to upgrade, please send an email to <a href="mailto:sales@dynamsoft.com">sales@dynamsoft.com</a> requesting the upgrade be done.
 

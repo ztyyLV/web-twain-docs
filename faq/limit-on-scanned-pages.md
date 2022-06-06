@@ -17,7 +17,7 @@ The Desktop Service edition can run in 32-bit and 64-bit and the data is stored 
 
 Note the disk caching feature is turned on by default and you can change the setting by using the following APIs
 
-- <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Buffer.html?ver=latest#ifallowlocalcache" target="_blank">IfAllowLocalCache</a>
-- <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Buffer.html?ver=latest#buffermemorylimit" target="_blank">BufferMemoryLimit</a>
+- <a href="https://www.dynamsoft.com/web-twain/docs-archive/info/api/WebTwain_Buffer.html?ver=17.2.1#ifallowlocalcache" target="_blank">IfAllowLocalCache</a>
+- <a href="https://www.dynamsoft.com/web-twain/docs-archive/info/api/WebTwain_Buffer.html?ver=17.2.1#buffermemorylimit" target="_blank">BufferMemoryLimit</a>
 
 On the other hand, if you are using the WebAssembly edition of Dynamic Web TWAIN, you can only utilize up to 2 GB of memory as WebAssembly only supports 32-bit pointers at present. However, the WebAssembly edition is mainly for document capturing <strong>from webcams/mobile cameras</strong> so it is less likely one would scan hundreds of pages at a time. Also, all captured pages are saved in buffer in JPEG format which won’t take much space.

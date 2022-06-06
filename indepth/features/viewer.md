@@ -34,7 +34,7 @@ Dynamsoft.DWT.Containers = [{
 
 #### Create a Viewer-less WebTwain Instance
 
-If you want to further customize the viewer, you can use [ `Dynamsoft.DWT.CreateDWTObjectEx()` ]({{site.indepth}}features/initialize.html?ver=latest#-dynamsoftwebtwainenvcreatedwtobjectex-) to create a `WebTwain` instance that doesn't come with a viewer.
+If you want to further customize the viewer, you can use [ `Dynamsoft.DWT.CreateDWTObjectEx()` ]({{site.indepth}}features/initialize.html?ver=17.2.1#-dynamsoftwebtwainenvcreatedwtobjectex-) to create a `WebTwain` instance that doesn't come with a viewer.
 
 #### Bind a Viewer
 

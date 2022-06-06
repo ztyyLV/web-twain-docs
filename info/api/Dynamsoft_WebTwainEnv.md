@@ -104,7 +104,7 @@ Dynamsoft.DWT.licenseServer = ["https://your.mainServer.com", "https://your.back
 
 **Usage notes**
 
-Gets or sets the URL of the License Tracking Server used to authenticate the license (handshakeCode) and track usage. When set to null (default value), it will connect to Dynamsoft's License Tracking Server for online verification. A self hosting option is available. Learn more about [License Tracking Server 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html?ver=latest). 
+Gets or sets the URL of the License Tracking Server used to authenticate the license (handshakeCode) and track usage. When set to null (default value), it will connect to Dynamsoft's License Tracking Server for online verification. A self hosting option is available. Learn more about [License Tracking Server 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html). 
 
 
 ## organizationID
@@ -156,7 +156,7 @@ Dynamsoft.DWT.organizationID = "123456"; // replace the number 123456 with YOUR-
 
 **Usage notes**
 
-Check out more on [how to specify the Organization ID](https://www.dynamsoft.com/license-tracking/docs/common/mechanism.html?ver=latest#specify-the-organization-id)
+Check out more on [how to specify the Organization ID](https://www.dynamsoft.com/license-tracking/docs/common/mechanism.html#specify-the-organization-id)
 
 ## handshakeCode
 
@@ -176,7 +176,7 @@ Dynamsoft.DWT.handshakeCode = "1000**601-1000***44";
 
 **Usage notes**
 
-Learn more about [What is handshakeCode](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#handshake-code)
+Learn more about [What is handshakeCode](https://www.dynamsoft.com/license-tracking/docs/about/terms.html#handshake-code)
 
 ## sessionPassword
 
@@ -195,7 +195,7 @@ Dynamsoft.DWT.sessionPassword = "MyPassw0rd";
 ```
 
 **Usage notes**
-Learn more about [session password](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#session-password) in Dynamsoft License server.
+Learn more about [session password](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=17.2.1#session-password) in Dynamsoft License server.
 
 ## licenseException
 
@@ -210,7 +210,7 @@ licenseException: string;
 
 **Usage notes**
 
-Check [license error list](https://www.dynamsoft.com/license-tracking/docs/common/errorlist.html?ver=latest) 
+Check [license error list](https://www.dynamsoft.com/license-tracking/docs/common/errorlist.html?ver=17.2.1) 
 
 ## Options
 

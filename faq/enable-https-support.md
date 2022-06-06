@@ -16,12 +16,12 @@ Dynamic Web TWAIN provides SSL support.
 
 To enable HTTPS,
 
-- Set <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_IO.html?ver=latest#ifssl" target="_blank">IfSSL</a> to true to turn on SSL in HTTP requests.
+- Set <a href="https://www.dynamsoft.com/web-twain/docs-archive/info/api/WebTwain_IO.html?ver=17.2.1#ifssl" target="_blank">IfSSL</a> to true to turn on SSL in HTTP requests.
 
-- Set the SSL port with the API <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_IO.html?ver=latest#httpport" target="_blank">HTTPPort</a>.
+- Set the SSL port with the API <a href="https://www.dynamsoft.com/web-twain/docs-archive/info/api/WebTwain_IO.html?ver=17.2.1#httpport" target="_blank">HTTPPort</a>.
 
-- Call the API <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_IO.html?ver=latest#httpupload" target="_blank">HTTPUpload to upload the documents.
+- Call the API <a href="https://www.dynamsoft.com/web-twain/docs-archive/info/api/WebTwain_IO.html?ver=17.2.1#httpupload" target="_blank">HTTPUpload to upload the documents.
 
-For more information on how to use HTTPUpload, please check <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_IO.html?ver=latest#httpupload" target="_blank">here</a>.
+For more information on how to use HTTPUpload, please check <a href="https://www.dynamsoft.com/web-twain/docs-archive/info/api/WebTwain_IO.html?ver=17.2.1#httpupload" target="_blank">here</a>.
 
 Note that if you use this feature, you need to enable HTTPS on the server. For how to enable HTTPS, please check out the manual of your webserver.

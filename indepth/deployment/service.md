@@ -56,7 +56,7 @@ By default, there are three Dynamsoft Service processes running which use the sa
 
 On a desktop, when a new user accesses a web page using Dynamic Web TWAIN SDK for the first time, he will be prompted to install the Dynamsoft Service. This is a built-in behaviour of the library. The prompt will display the download link. Once the installer is downloaded, the installation process will take just a few seconds.
 
-The prompt comes up when you try to [create a WebTwain instance](https://www.dynamsoft.com/web-twain/docs/indepth/faqs/develop/how-can-i-customize-the-webtwain-instances.html) in Service mode.
+The prompt comes up when you try to [create a WebTwain instance](https://www.dynamsoft.com/web-twain/docs-archive/indepth/faqs/develop/how-can-i-customize-the-webtwain-instances.html) in Service mode.
 
 ![Initialization]({{site.assets}}imgs/Initialization-1.png)
 

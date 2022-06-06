@@ -12,7 +12,7 @@ description: Can I import existing images or PDF documents using the Dynamic Web
 
 ## Can I import existing images or PDF documents using the Dynamic Web TWAIN SDK?
 
-Yes, Dynamic Web TWAIN supports loading PNG, JPG, BMP, image-only PDF, and TIFF files. But if you need to support text-based PDF files, you also require the <a href="https://www.dynamsoft.com/web-twain/pdf-to-image-javascript/" target="_blank">PDF Rasterizer Addon</a>. See more <a href="https://www.dynamsoft.com/web-twain/docs/indepth/features/pdf.html?ver=latest#input" target="_blank">here</a>.
+Yes, Dynamic Web TWAIN supports loading PNG, JPG, BMP, image-only PDF, and TIFF files. But if you need to support text-based PDF files, you also require the <a href="https://www.dynamsoft.com/web-twain/pdf-to-image-javascript/" target="_blank">PDF Rasterizer Addon</a>. See more <a href="https://www.dynamsoft.com/web-twain/docs-archive/indepth/features/pdf.html?ver=17.2.1#input" target="_blank">here</a>.
 
 **Code snippet**
 

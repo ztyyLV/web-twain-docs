@@ -19,6 +19,6 @@ There are several runtime settings you can use to speed up the barcode reading p
 - Specify a scan Region
 - Use the built-in mode ‘speed’
 
-For more details on runtime settings, please check <a href="https://www.dynamsoft.com/web-twain/docs/indepth/features/barcode.html?ver=latest#runtime-settings" target="_blank">here</a>.
+For more details on runtime settings, please check <a href="https://www.dynamsoft.com/web-twain/docs-archive/indepth/features/barcode.html?ver=17.2.1#runtime-settings" target="_blank">here</a>.
 
 In addition, the size of the image generated during the scanning process also impacts the reading performance. You can check your scanning settings to balance the image qualify and size.

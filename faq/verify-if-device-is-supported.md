@@ -63,4 +63,4 @@ For more info, please check out the <a href="https://support.apple.com/en-ca/gui
 ### For Linux
 
 Use the XSane app to verify if a scanner is SANE compatible on a Linux machine.
-Please check out the <a href="http://www.fifi.org/doc/xsane/html/sane-xsane-doc.html" target="_blank">official guide</a> and <a href="https://www.dynamsoft.com/web-twain/docs/assets/docs/Scanning_with_XSane.pdf" target="_blank">this document</a> for more detail.
+Please check out the <a href="http://www.fifi.org/doc/xsane/html/sane-xsane-doc.html" target="_blank">official guide</a> and <a href="https://www.dynamsoft.com/web-twain/docs-archive/assets/docs/Scanning_with_XSane.pdf" target="_blank">this document</a> for more detail.
