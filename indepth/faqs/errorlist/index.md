@@ -5,6 +5,7 @@ title: Error List
 keywords: Dynamic Web TWAIN, Documentation, Error List
 breadcrumbText: Error List
 description: Error List
+permalink: /indepth/faqs/errorlist/
 ---
 
 # Error List

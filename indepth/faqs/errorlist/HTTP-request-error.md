@@ -6,6 +6,7 @@ title: HTTP request error
 keywords: Dynamic Web TWAIN, Documentation, ErrorList
 breadcrumbText: HTTP request error
 description: HTTP request error
+permalink: /indepth/faqs/errorlist/HTTP-request-error.html
 ---
 
 # ErrorList

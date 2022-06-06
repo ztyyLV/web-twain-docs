@@ -6,6 +6,7 @@ title: Dynamic Web TWAIN FAQs Develop Can I remove or add buttons on the toolbar
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Can I remove or add buttons on the toolbar of the Editor
 description: Dynamic Web TWAIN SDK Documentation FAQs Can I remove or add buttons on the toolbar of the Editor
+permalink: /indepth/faqs/develop/Can-I-remove-or-add-buttons-on-the-toolbar-of-the-Editor.html
 ---
 
 # Develop

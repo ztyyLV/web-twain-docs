@@ -6,6 +6,7 @@ title: Can I Upload The File As A Base64 String
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Can I Upload The File As A Base64 String
 description: Can I Upload The File As A Base64 String
+permalink: /indepth/faqs/develop/can-i-upload-the-file-as-a-base64-string.html
 ---
 
 # Development

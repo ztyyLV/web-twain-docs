@@ -6,6 +6,7 @@ title: Activating the WebTwain instance' prompt doesn't disappear
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: Activating the WebTwain instance' prompt doesn't disappear
 description: Activating the WebTwain instance' prompt doesn't disappear
+permalink: /indepth/faqs/troubleshooting/activating-the-WebTwain-instance-prompt-doesnt-disappear.html
 ---
 
 # Troubleshooting

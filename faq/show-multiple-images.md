@@ -6,6 +6,7 @@ title: How can I show multiple images at a time?
 keywords: Dynamic Web TWAIN, Image Viewer, show multiple images
 breadcrumbText: How can I show multiple images at a time?
 description: How can I show multiple images at a time?
+permalink: /faq/show-multiple-images.html
 ---
 
 # Image Viewer

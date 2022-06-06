@@ -6,6 +6,7 @@ title: What can I do when my trial license expires?
 keywords: Dynamic Web TWAIN, Documentation, License
 breadcrumbText: What Can I Do When My Trial License Expires
 description: What can I do when my trial license expires? 
+permalink: /indepth/faqs/license/what-can-i-do-when-my-trial-license-expires.html
 ---
 
 # License

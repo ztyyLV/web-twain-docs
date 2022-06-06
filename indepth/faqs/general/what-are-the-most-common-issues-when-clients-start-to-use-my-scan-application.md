@@ -6,6 +6,7 @@ title: What are the most common issues when clients start to use my scan applica
 keywords: Dynamic Web TWAIN, Documentation, General
 breadcrumbText: What Are The Most Common Issues When Clients Start To Use My Scan Application
 description: What are the most common issues when clients start to use my scan application? 
+permalink: /indepth/faqs/general/what-are-the-most-common-issues-when-clients-start-to-use-my-scan-application.html
 ---
 
 # General

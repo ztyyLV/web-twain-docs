@@ -6,6 +6,7 @@ title: How To Select A Scanner By Its Name
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How To Select A Scanner By Its Name
 description: How To Select A Scanner By Its Name
+permalink: /indepth/faqs/develop/how-to-select-a-scanner-by-its-name.html
 ---
 
 # Development

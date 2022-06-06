@@ -6,6 +6,7 @@ title: Where Can I Get The WebTWAIN Instance(s)
 keywords: Dynamic Web TWAIN, Documentation, Develop 
 breadcrumbText: Where Can I Get The WebTWAIN Instance(s)
 description: Where Can I Get The WebTWAIN Instance(s)
+permalink: /indepth/faqs/develop/where-can-i-get-the-webtwain-instances.html
 ---
 
 # Development

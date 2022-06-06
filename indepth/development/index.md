@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Development - Index
 keywords: Dynamic Web TWAIN, Documentation, Development
 breadcrumbText: Development
 description: Dynamic Web TWAIN SDK Documentation Development Index Page
+permalink: /indepth/development/
 ---
 
 # Development

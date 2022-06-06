@@ -6,6 +6,7 @@ title: Dynamic Web TWAIN FAQs Develop Can I specify where and how big the Editor
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Can I specify where and how big the Editor is
 description: Dynamic Web TWAIN SDK Documentation FAQs Can I specify where and how big the Editor is
+permalink: /indepth/faqs/develop/Can-I-specify-where-and-how-big-the-Editor-is.html
 ---
 
 # Develop

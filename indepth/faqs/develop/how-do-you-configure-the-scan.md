@@ -6,6 +6,7 @@ title: How Do You Configure The Scan
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How Do You Configure The Scan
 description: How Do You Configure The Scan
+permalink: /indepth/faqs/develop/how-do-you-configure-the-scan.html
 ---
 
 # Development

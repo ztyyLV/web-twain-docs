@@ -6,6 +6,7 @@ title: How can I show the default image editor tool?
 keywords: Dynamic Web TWAIN, Image Editing, show default image editor
 breadcrumbText: How can I show the default image editor tool?
 description: How can I show the default image editor tool?
+permalink: /faq/show-default-image-editor.html
 ---
 
 # Image Editing

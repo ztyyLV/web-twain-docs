@@ -6,6 +6,7 @@ title: Dynamic Web TWAIN FAQs General Can I Use DWT For Free
 keywords: Dynamic Web TWAIN, Documentation, General
 breadcrumbText: Can I Use DWT For Free
 description: Dynamic Web TWAIN SDK Documentation FAQs Can I Use DWT For Free
+permalink: /indepth/faqs/general/can-i-use-dwt-for-free.html
 ---
 
 # General

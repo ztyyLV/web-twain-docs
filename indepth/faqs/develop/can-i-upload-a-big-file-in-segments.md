@@ -6,6 +6,7 @@ title: Can I Upload A Big File In Segments
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Can I Upload A Big File In Segments
 description: Can I Upload A Big File In Segments
+permalink: /indepth/faqs/develop/can-i-upload-a-big-file-in-segments.html
 ---
 
 # Development

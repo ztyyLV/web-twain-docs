@@ -6,6 +6,7 @@ title: Can I Upload Multiple Images As One File
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Can I Upload Multiple Images As One File
 description: Can I Upload Multiple Images As One File
+permalink: /indepth/faqs/develop/can-i-upload-multiple-images-as-one-file.html
 ---
 
 # Development

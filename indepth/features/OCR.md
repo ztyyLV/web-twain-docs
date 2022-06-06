@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Features - OCR
 keywords: Dynamic Web TWAIN, Documentation, OCR
 breadcrumbText: OCR
 description: Dynamic Web TWAIN SDK Documentation OCR Page
+permalink: /indepth/features/OCR.html
 ---
 
 # OCR

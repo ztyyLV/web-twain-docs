@@ -6,6 +6,7 @@ title: How to reduce the size of a resulting file
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How to reduce the size of a resulting file
 description: How to reduce the size of a resulting file
+permalink: /indepth/faqs/develop/how-to-reduce-the-size-of-a-resulting-file.html
 ---
 
 # Development

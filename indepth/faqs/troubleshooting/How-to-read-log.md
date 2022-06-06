@@ -6,6 +6,7 @@ title: How to read log
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: How to read log
 description: How to read log
+permalink: /indepth/faqs/troubleshooting/How-to-read-log.html
 ---
 
 # Troubleshooting

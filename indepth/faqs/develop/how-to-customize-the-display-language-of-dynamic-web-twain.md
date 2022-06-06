@@ -6,6 +6,7 @@ title: How To Customize The Display Language Of Dynamic Web TWAIN
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How To Customize The Display Language Of Dynamic Web TWAIN
 description: How To Customize The Display Language Of Dynamic Web TWAIN
+permalink: /indepth/faqs/develop/how-to-customize-the-display-language-of-dynamic-web-twain.html
 ---
 
 # Development

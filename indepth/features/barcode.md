@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Features - Read Barcode
 keywords: Dynamic Web TWAIN, Documentation, Read Barcode
 breadcrumbText: Read Barcode
 description: Dynamic Web TWAIN SDK Documentation Read Barcode Page
+permalink: /indepth/features/barcode.html
 ---
 
 # Barcode Reader

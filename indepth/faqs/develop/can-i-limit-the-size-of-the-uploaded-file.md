@@ -6,6 +6,7 @@ title: Can I Limit The Size Of The Uploaded File
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Can I Limit The Size Of The Uploaded File
 description: Can I Limit The Size Of The Uploaded File
+permalink: /indepth/faqs/develop/can-i-limit-the-size-of-the-uploaded-file.html
 ---
 
 # Development

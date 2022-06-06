@@ -6,6 +6,7 @@ title: How To Customize The Installation Dialog
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How to customize the installation dialog
 description: How to customize the installation dialog
+permalink: /indepth/faqs/develop/How-to-customize-the-installation-dialog.html
 ---
 
 # Development

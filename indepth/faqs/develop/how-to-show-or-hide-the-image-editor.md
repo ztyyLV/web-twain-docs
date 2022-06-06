@@ -6,6 +6,7 @@ title: How to show or hide the Image Editor
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: how to show or hide the Image Editor
 description: How to show or hide the Image Editor
+permalink: /indepth/faqs/develop/how-to-show-or-hide-the-image-editor.html
 ---
 
 # Development

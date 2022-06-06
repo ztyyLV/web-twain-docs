@@ -6,6 +6,7 @@ title: How Many Images Can Be Scanned
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How Many Images Can Be Scanned
 description: How Many Images Can Be Scanned
+permalink: /indepth/faqs/develop/how-many-images-can-be-scanned.html
 ---
 
 # Development

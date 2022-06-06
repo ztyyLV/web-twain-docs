@@ -6,6 +6,7 @@ title: How To Exclude WIA Sources In The Source List
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How To Exclude WIA Sources In The Source List
 description: How To Exclude WIA Sources In The Source List
+permalink: /indepth/faqs/develop/how-to-exclude-wia-sources-in-the-source-list.html
 ---
 
 # Development

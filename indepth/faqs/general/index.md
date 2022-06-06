@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN FAQs General
 keywords: Dynamic Web TWAIN, Documentation, General
 breadcrumbText: General
 description: Dynamic Web TWAIN SDK Documentation FAQs General
+permalink: /indepth/faqs/general/
 ---
 
 # General

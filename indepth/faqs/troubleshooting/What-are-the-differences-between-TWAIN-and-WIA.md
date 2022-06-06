@@ -6,6 +6,7 @@ title: What are the differences between TWAIN and WIA
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: What are the differences between TWAIN and WIA
 description: What are the differences between TWAIN and WIA
+permalink: /indepth/faqs/troubleshooting/What-are-the-differences-between-TWAIN-and-WIA.html
 ---
 
 # Troubleshooting

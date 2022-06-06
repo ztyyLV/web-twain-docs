@@ -6,6 +6,7 @@ title: Dynamic Web TWAIN FAQs Develop Can I change the language of the Editor
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Can I change the language of the Editor
 description: Dynamic Web TWAIN SDK Documentation FAQs Can I change the language of the Editor
+permalink: /indepth/faqs/develop/Can-I-change-the-language-of-the-Editor.html
 ---
 
 # Develop

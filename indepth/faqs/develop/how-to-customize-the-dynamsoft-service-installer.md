@@ -6,6 +6,7 @@ title: How To Customize The Dynamsoft Service Installer
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How To Customize The Dynamsoft Service Installer
 description: How To Customize The Dynamsoft Service Installer
+permalink: /indepth/faqs/develop/how-to-customize-the-dynamsoft-service-installer.html
 ---
 
 # Development

@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Platform
 keywords: Dynamic Web TWAIN, Documentation, Platform
 breadcrumbText: System Requirements
 description: Dynamic Web TWAIN SDK Documentation Platform Page
+permalink: /getstarted/platform.html
 ---
 
 # System Requirements

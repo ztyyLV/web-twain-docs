@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN FAQs Development
 keywords: Dynamic Web TWAIN, Documentation, Development
 breadcrumbText: Development
 description: Dynamic Web TWAIN SDK Documentation FAQs Development
+permalink: /indepth/faqs/develop/
 ---
 
 # Development

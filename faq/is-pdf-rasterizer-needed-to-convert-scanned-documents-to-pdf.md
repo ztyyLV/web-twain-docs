@@ -6,6 +6,7 @@ title: Do I need the PDF Rasterizer addon to convert scanned documents to PDF fi
 keywords: Dynamic Web TWAIN, Addon, separate, license
 breadcrumbText: Do I need the PDF Rasterizer addon to convert scanned documents to PDF files?
 description: Do I need the PDF Rasterizer addon to convert scanned documents to PDF files?
+permalink: /faq/is-pdf-rasterizer-needed-to-convert-scanned-documents-to-pdf.html
 ---
 
 # Addon

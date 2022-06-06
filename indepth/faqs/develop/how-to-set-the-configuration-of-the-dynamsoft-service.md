@@ -6,6 +6,7 @@ title: How To Set The Configuration Of The Dynamsoft Service
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How To Set The Configuration Of The Dynamsoft Service
 description: How To Set The Configuration Of The Dynamsoft Service
+permalink: /indepth/faqs/develop/how-to-set-the-configuration-of-the-dynamsoft-service.html
 ---
 
 # Development

@@ -6,6 +6,7 @@ title: Only 24-bit true color bmp and 8-bit gray-scaled image are supported for 
 keywords: Dynamic Web TWAIN, Documentation, ErrorList
 breadcrumbText: Only 24-bit true color bmp and 8-bit gray-scaled image are supported for JPEG compression
 description: Only 24-bit true color bmp and 8-bit gray-scaled image are supported for JPEG compression
+permalink: /indepth/faqs/errorlist/JPEG-compression.html
 ---
 
 # ErrorList

@@ -6,6 +6,7 @@ title:  What Does Dynamsoft Service Do
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: What Does Dynamsoft Service Do
 description: What Does Dynamsoft Service Do
+permalink: /indepth/faqs/develop/what-does-dynamsoft-service-do.html
 ---
 
 # Development

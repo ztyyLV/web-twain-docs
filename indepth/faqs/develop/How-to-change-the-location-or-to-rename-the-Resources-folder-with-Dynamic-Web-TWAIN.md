@@ -6,6 +6,7 @@ title: How to change the location or to rename the ‘Resources’ folder with D
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How to change the location or to rename the ‘Resources’ folder with Dynamic Web TWAIN
 description: How to change the location or to rename the ‘Resources’ folder with Dynamic Web TWAIN
+permalink: /indepth/faqs/develop/How-to-change-the-location-or-to-rename-the-Resources-folder-with-Dynamic-Web-TWAIN.html
 ---
 
 # Development

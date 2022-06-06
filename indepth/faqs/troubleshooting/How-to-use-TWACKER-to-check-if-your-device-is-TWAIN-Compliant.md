@@ -6,6 +6,7 @@ title: How to use TWACKER to check if your device is TWAIN Compliant
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: How to use TWACKER to check if your device is TWAIN Compliant
 description: How to use TWACKER to check if your device is TWAIN Compliant
+permalink: /indepth/faqs/troubleshooting/How-to-use-TWACKER-to-check-if-your-device-is-TWAIN-Compliant.html
 ---
 
 # Troubleshooting

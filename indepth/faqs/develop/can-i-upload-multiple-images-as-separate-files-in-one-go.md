@@ -6,6 +6,7 @@ title: Can I Upload Multiple Images As Separate Files In One Go
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Can I Upload Multiple Images As Separate Files In One Go
 description: Can I Upload Multiple Images As Separate Files In One Go
+permalink: /indepth/faqs/develop/can-i-upload-multiple-images-as-separate-files-in-one-go.html
 ---
 
 # Development

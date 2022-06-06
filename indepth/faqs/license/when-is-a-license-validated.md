@@ -6,6 +6,7 @@ title: When is a license validated?
 keywords: Dynamic Web TWAIN, Documentation, License
 breadcrumbText: When Is A License Validated
 description: When is a license validated? 
+permalink: /indepth/faqs/license/when-is-a-license-validated.html
 ---
 
 # License

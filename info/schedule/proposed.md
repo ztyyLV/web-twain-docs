@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Schedule - Features Proposed
 keywords: Dynamic Web TWAIN, Documentation, Schedule, Features Proposed
 breadcrumbText: Proposed
 description: Dynamic Web TWAIN SDK Documentation Schedule Features Proposed Page
+permalink: /info/schedule/proposed.html
 ---
 
 # Features confirmed to be implemented in a later release

@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN API Reference - Edit APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Edit APIs
 breadcrumbText: Edit
 description: Dynamic Web TWAIN SDK Documentation API Reference Edit APIs Page
+permalink: /info/api/WebTwain_Edit.html
 ---
 
 # {WebTwainObject} Edit

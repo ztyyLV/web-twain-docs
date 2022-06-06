@@ -6,6 +6,7 @@ title: How to test if your camera is MediaDevices compliant
 keywords: Dynamic Web TWAIN, MediaDevices, Camera
 breadcrumbText: How to test if your camera is MediaDevices compliant
 description: How to test if your camera is MediaDevices compliant
+permalink: /faq/how-to-test-if-your-camera-is-MediaDevices-compliant.html
 ---
 
 # Capture/Image Source

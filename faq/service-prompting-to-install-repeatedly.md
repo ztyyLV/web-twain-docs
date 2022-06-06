@@ -6,6 +6,7 @@ title: I have installed the Dynamsoft Service on an end-user machine but still g
 keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, install, repeatedly
 breadcrumbText: I have installed the Dynamsoft Service on an end-user machine but still got asked to install it repeatedly. Why?
 description: I have installed the Dynamsoft Service on an end-user machine but still got asked to install it repeatedly. Why?
+permalink: /faq/service-prompting-to-install-repeatedly.html
 ---
 
 # Project Deployment and End-user Installation

@@ -6,6 +6,7 @@ title: The connection with the server was terminated abnormally
 keywords: Dynamic Web TWAIN, Error Troubleshooting
 breadcrumbText: The connection with the server was terminated abnormally
 description: The connection with the server was terminated abnormally
+permalink: /indepth/faqs/errorlist/the-connection-with-the-server-was-terminated-abnormally.html
 ---
 
 # Error Troubleshooting

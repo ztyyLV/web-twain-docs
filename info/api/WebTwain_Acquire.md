@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN API Reference - Acquire APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Acquire APIs
 breadcrumbText: Acquire
 description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
+permalink: /info/api/WebTwain_Acquire.html
 ---
 
 # {WebTwainObject} Scan

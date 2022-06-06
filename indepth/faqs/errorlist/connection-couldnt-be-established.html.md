@@ -6,6 +6,7 @@ title: Dynamic Web TWAIN FAQs ErrorList A connection with the server could not b
 keywords: Dynamic Web TWAIN, Documentation, ErrorList
 breadcrumbText: A connection with the server could not be established
 description: Dynamic Web TWAIN SDK Documentation A connection with the server could not be established
+permalink: /indepth/faqs/errorlist/connection-couldnt-be-established.html.html
 ---
 
 # ErrorList

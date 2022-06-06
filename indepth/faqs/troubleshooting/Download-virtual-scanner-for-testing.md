@@ -6,6 +6,7 @@ title: Download virtual scanner for testing
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: Download virtual scanner for testing
 description: Download virtual scanner for testing
+permalink: /indepth/faqs/troubleshooting/Download-virtual-scanner-for-testing.html
 ---
 
 # Troubleshooting

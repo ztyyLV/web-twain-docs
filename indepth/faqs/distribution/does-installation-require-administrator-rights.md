@@ -6,6 +6,7 @@ title: Does installation require administrator rights?
 keywords: Dynamic Web TWAIN, Documentation, Distribution and Deployment
 breadcrumbText: Does Installation Require Administrator Rights
 description: Does installation require administrator rights? 
+permalink: /indepth/faqs/distribution/does-installation-require-administrator-rights.html
 ---
 
 # Distribution and Deployment

@@ -6,6 +6,7 @@ title: Comparison between OCR Basic and OCR Pro
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Comparison between OCR Basic and OCR Pro
 description: Comparison between OCR Basic and OCR Pro
+permalink: /indepth/faqs/develop/Comparison-between-OCR-Basic-and-OCR-Pro.html
 ---
 
 # Development

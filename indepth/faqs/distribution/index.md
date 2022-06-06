@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN FAQs Distribution And Deployment
 keywords: Dynamic Web TWAIN, Documentation, Distribution, Deployment
 breadcrumbText: Distribution And Deployment
 description: Dynamic Web TWAIN SDK Documentation FAQs Distribution And Deployment
+permalink: /indepth/faqs/distribution/
 ---
 
 # Distribution and Deployment

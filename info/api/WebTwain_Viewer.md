@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN API Reference - Viewer APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Viewer APIs
 breadcrumbText: Viewer
 description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
+permalink: /info/api/WebTwain_Viewer.html
 ---
 
 # `{WebTwainObject}.Viewer`

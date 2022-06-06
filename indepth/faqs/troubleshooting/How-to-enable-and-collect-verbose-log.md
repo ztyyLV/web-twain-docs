@@ -6,6 +6,7 @@ title: How to enable and collect verbose log
 keywords: Dynamic Web TWAIN, Documentation, Troubleshooting
 breadcrumbText: How to enable and collect verbose log
 description: How to enable and collect verbose log
+permalink: /indepth/faqs/troubleshooting/How-to-enable-and-collect-verbose-log.html
 ---
 
 # Troubleshooting

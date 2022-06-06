@@ -6,6 +6,7 @@ title: Dynamic Web TWAIN FAQs General What If I Want Dynamsoft Help With The Imp
 keywords: Dynamic Web TWAIN, Documentation, General
 breadcrumbText: What If I Want Dynamsoft Help With The Implementation
 description: Dynamic Web TWAIN SDK Documentation FAQs What If I Want Dynamsoft Help With The Implementation
+permalink: /indepth/faqs/general/what-if-i-want-dynamsoft-help-with-the-implementation.html
 ---
 
 # General

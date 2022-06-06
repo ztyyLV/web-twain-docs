@@ -6,6 +6,7 @@ title: What Are All The APIs DWT Provides For HTTP Upload
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: What Are All The APIs DWT Provides For HTTP Upload
 description: What Are All The APIs DWT Provides For HTTP Upload
+permalink: /indepth/faqs/develop/what-are-all-the-apis-dwt-provides-for-http-upload.html
 ---
 
 # Development

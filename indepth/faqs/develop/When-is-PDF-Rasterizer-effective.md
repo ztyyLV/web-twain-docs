@@ -6,6 +6,7 @@ title: When is PDF Rasterizer effective
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: When is PDF Rasterizer effective
 description: When is PDF Rasterizer effective
+permalink: /indepth/faqs/develop/When-is-PDF-Rasterizer-effective.html
 ---
 
 # Development

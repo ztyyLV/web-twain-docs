@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN API Reference - Global APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Global APIs
 breadcrumbText: Global
 description: Dynamic Web TWAIN SDK Documentation API Reference Global APIs Page
+permalink: /info/api/Dynamsoft_WebTwainEnv.html
 ---
 
 # `Dynamsoft.DWT`

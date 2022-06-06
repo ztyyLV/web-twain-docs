@@ -6,6 +6,7 @@ title: Do you also provide an SDK download for Linux and Mac developers?
 keywords: Dynamic Web TWAIN, SDK Download, linux, mac
 breadcrumbText: Do you also provide an SDK download for Linux and Mac developers?
 description: Do you also provide an SDK download for Linux and Mac developers?
+permalink: /faq/sdk-download-for-linux-and-mac.html
 ---
 
 # SDK Download/Free Trial

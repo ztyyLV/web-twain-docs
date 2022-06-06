@@ -6,6 +6,7 @@ title: Sequence error
 keywords: Dynamic Web TWAIN, Documentation, ErrorList
 breadcrumbText: Sequence error
 description: Sequence error
+permalink: /indepth/faqs/errorlist/sequence-error.html
 ---
 
 # ErrorList

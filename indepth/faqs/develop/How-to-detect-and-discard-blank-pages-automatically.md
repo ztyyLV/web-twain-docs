@@ -6,6 +6,7 @@ title: How to detect and discard blank pages automatically
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How to detect and discard blank pages automatically
 description: How to detect and discard blank pages automatically
+permalink: /indepth/faqs/develop/How-to-detect-and-discard-blank-pages-automatically.html
 ---
 
 # Development

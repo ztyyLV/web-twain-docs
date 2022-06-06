@@ -6,6 +6,7 @@ title: Dynamic Web TWAIN FAQs Develop Can I hide the progress bar
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: Can I hide the progress bar
 description: Dynamic Web TWAIN SDK Documentation FAQs Can I hide the progress bar
+permalink: /indepth/faqs/develop/can-I-hide-the-progress-bar.html
 ---
 
 # Develop

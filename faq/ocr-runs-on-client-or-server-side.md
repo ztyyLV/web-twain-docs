@@ -6,6 +6,7 @@ title: Does your OCR addon run on the client side or server side?
 keywords: Dynamic Web TWAIN, Addon, OCR
 breadcrumbText: Does your OCR addon run on the client side or server side?
 description: Does your OCR addon run on the client side or server side?
+permalink: /faq/ocr-runs-on-client-or-server-side.html
 ---
 
 # Addon

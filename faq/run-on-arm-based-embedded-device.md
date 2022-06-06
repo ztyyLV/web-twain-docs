@@ -6,6 +6,7 @@ title: Can I run the scanning service on an ARM-based embedded device, such as R
 keywords: Dynamic Web TWAIN, SDK Download, free trial, Raspberry Pi, ARM-based
 breadcrumbText: Can I run the scanning service on an ARM-based embedded device, such as Raspberry Pi?
 description: Can I run the scanning service on an ARM-based embedded device, such as Raspberry Pi?
+permalink: /faq/run-on-arm-based-embedded-device.html
 ---
 
 # SDK Download/Free Trial

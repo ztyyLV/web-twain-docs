@@ -6,6 +6,7 @@ title: Is there any component of the Dynamic Web TWAIN SDK that needs to be inst
 keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, installation on end-user
 breadcrumbText: Is there any component of the Dynamic Web TWAIN SDK that needs to be installed on end-user machines?
 description: Is there any component of the Dynamic Web TWAIN SDK that needs to be installed on end-user machines?
+permalink: /faq/component-needs-to-be-installed-on-end-user-machine.html
 ---
 
 # Project Deployment and End-user Installation

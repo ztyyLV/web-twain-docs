@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN API Reference - Buffer APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Buffer APIs
 breadcrumbText: Buffer
 description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page
+permalink: /info/api/WebTwain_Buffer.html
 ---
 
 # {WebTwainObject} Buffer Manage

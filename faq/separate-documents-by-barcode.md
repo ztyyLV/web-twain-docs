@@ -6,6 +6,7 @@ title: How can I separate my documents automatically by barcode?
 keywords: Dynamic Web TWAIN, Addon, separate documents by barcode
 breadcrumbText: How can I separate my documents automatically by barcode?
 description: How can I separate my documents automatically by barcode?
+permalink: /faq/separate-documents-by-barcode.html
 ---
 
 # Addon

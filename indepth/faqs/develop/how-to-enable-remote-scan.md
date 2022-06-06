@@ -6,6 +6,7 @@ title: How To Enable Remote Scan
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How To Enable Remote Scan
 description: How To Enable Remote Scan
+permalink: /indepth/faqs/develop/how-to-enable-remote-scan.html
 ---
 
 # Development

@@ -6,6 +6,7 @@ title: Do I need a separate license for each addon?
 keywords: Dynamic Web TWAIN, Addon, separate, license
 breadcrumbText: Do I need a separate license for each addon?
 description: Do I need a separate license for each addon?
+permalink: /faq/separate-license-for-addon.html
 ---
 
 # Addon
