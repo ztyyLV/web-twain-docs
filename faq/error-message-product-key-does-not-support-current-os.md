@@ -6,6 +6,7 @@ title: Error message - The current product key does not support current OS for e
 keywords: Dynamic Web TWAIN, Error Troubleshooting, does not support currrent OS
 breadcrumbText: Error message - The current product key does not support current OS for embed device, please contact the site administrator
 description: Error message - The current product key does not support current OS for embed device, please contact the site administrator
+permalink: /faq/error-message-product-key-does-not-support-current-os.html
 ---
 
 # Error Troubleshooting

@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN API Reference - Uploader APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Uploader APIs
 breadcrumbText: File Uploader
 description: Dynamic Web TWAIN SDK Documentation API Reference Uploader APIs Page
+permalink: /info/api/Dynamsoft_FileUploader.html
 ---
 
 # `Dynamsoft.FileUploader`

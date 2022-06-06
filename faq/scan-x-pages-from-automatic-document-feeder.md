@@ -6,6 +6,7 @@ title: Can I set my document scanner to scan x pages instead of all pages from t
 keywords: Dynamic Web TWAIN, Capture/ Image Source, ADF, automatic document feeder
 breadcrumbText: Can I set my document scanner to scan x pages instead of all pages from the automatic document feeder (ADF)?
 description: Can I set my document scanner to scan x pages instead of all pages from the automatic document feeder (ADF)?
+permalink: /faq/scan-x-pages-from-automatic-document-feeder.html
 ---
 
 # Capture/Image Source

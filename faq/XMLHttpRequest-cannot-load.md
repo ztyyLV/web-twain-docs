@@ -6,6 +6,7 @@ title: XMLHttpRequest cannot load XXX
 keywords: Dynamic Web TWAIN, Error Troubleshooting, XMLHttpRequest
 breadcrumbText: XMLHttpRequest cannot load XXX
 description: XMLHttpRequest cannot load XXX
+permalink: /faq/XMLHttpRequest-cannot-load.html
 ---
 
 # Error Troubleshooting

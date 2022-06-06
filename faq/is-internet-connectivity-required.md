@@ -6,6 +6,7 @@ title: Is internet connectivity required to use all licenses?
 keywords: Dynamic Web TWAIN, Licensing and Purchase, difference, service, webassembly
 breadcrumbText: Is internet connectivity required to use all licenses?
 description: Is internet connectivity required to use all licenses?
+permalink: /faq/is-internet-connectivity-required.html
 ---
 
 # Licensing and Purchase

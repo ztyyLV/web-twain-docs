@@ -6,6 +6,7 @@ title: Does your Barcode Reader addon support patch code?
 keywords: Dynamic Web TWAIN, Addon, patch code
 breadcrumbText: Does your Barcode Reader addon support patch code?
 description: Does your Barcode Reader addon support patch code?
+permalink: /faq/does-barcode-addon-support-patch-code.html
 ---
 
 # Addon

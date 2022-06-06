@@ -6,6 +6,7 @@ title: What types of webcams does the Webcam Capture addon support
 keywords: Dynamic Web TWAIN, Addon, webcam
 breadcrumbText: What types of webcams does the Webcam Capture addon support
 description: What types of webcams does the Webcam Capture addon support
+permalink: /faq/webcam-supported-by-webcam-capture-addon.html
 ---
 
 # Addon

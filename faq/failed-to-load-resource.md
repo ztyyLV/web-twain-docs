@@ -6,6 +6,7 @@ title: Error Message - Failed to load resource
 keywords: Dynamic Web TWAIN, Error Meaasge, Failed to load resource, CERT INVALID
 breadcrumbText: Error Message - Failed to load resource
 description: Error Message - Failed to load resource
+permalink: /faq/failed-to-load-resource.html
 ---
 
 # Error Troubleshooting

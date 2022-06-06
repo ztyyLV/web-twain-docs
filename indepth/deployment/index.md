@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Deployment - Index Page
 keywords: Dynamic Web TWAIN, Documentation, Deployment, Index
 breadcrumbText: Deployment
 description: Dynamic Web TWAIN SDK Documentation Index Page
+permalink: /indepth/deployment/
 ---
 
 # Deployment

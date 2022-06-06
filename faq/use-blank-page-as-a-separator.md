@@ -6,6 +6,7 @@ title: How to use a blank page as a separator?
 keywords: Dynamic Web TWAIN, document classification, separator
 breadcrumbText: How to use a blank page as a separator?
 description: How to use a blank page as a separator?
+permalink: /faq/use-blank-page-as-a-separator.html
 ---
 
 # Document Saving

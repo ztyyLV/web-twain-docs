@@ -6,6 +6,7 @@ title: How can I limit all users to use a specific scanner model?
 keywords: Dynamic Web TWAIN, Capture/ Image Source, limit, specific scanner
 breadcrumbText: How can I limit all users to use a specific scanner model?
 description: How can I limit all users to use a specific scanner model?
+permalink: /faq/limit-to-specific-scanner.html
 ---
 
 # Capture/Image Source

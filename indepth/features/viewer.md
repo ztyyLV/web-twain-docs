@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Features - Viewer
 keywords: Dynamic Web TWAIN, Documentation, Viewer
 breadcrumbText: Viewer
 description: Dynamic Web TWAIN SDK Documentation Viewer Page
+permalink: /indepth/features/viewer.html
 ---
 
 # Viewer

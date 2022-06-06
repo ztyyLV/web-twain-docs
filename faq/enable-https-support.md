@@ -6,6 +6,7 @@ title: How can I enable HTTPS support?
 keywords: Dynamic Web TWAIN, Document Saving, enable HTTPS support
 breadcrumbText: How can I enable HTTPS support?
 description: How can I enable HTTPS support?
+permalink: /faq/enable-https-support.html
 ---
 
 # Document Saving

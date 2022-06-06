@@ -6,6 +6,7 @@ title: Where is the image viewer object defined?
 keywords: Dynamic Web TWAIN, Image Viewer, object defined
 breadcrumbText: Where is the image viewer object defined?
 description: Where is the image viewer object defined?
+permalink: /faq/image-viewer-object-defined.html
 ---
 
 # Image Viewer

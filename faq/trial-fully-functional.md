@@ -6,6 +6,7 @@ title: Is the free trial version fully functional?
 keywords: Dynamic Web TWAIN, SDK Download, free trial,
 breadcrumbText: Is the free trial version fully functional?
 description: Is the free trial version fully functional?
+permalink: /faq/trial-fully-functional.html
 ---
 
 # SDK Download/Free Trial

@@ -6,6 +6,7 @@ title: What is the difference between WebTwain.Addon.Camera and WebTwain.Addon.W
 keywords: Dynamic Web TWAIN, Addon, camera, webcam
 breadcrumbText: What is the difference between WebTwain.Addon.Camera and WebTwain.Addon.Webcam?
 description: What is the difference between WebTwain.Addon.Camera and WebTwain.Addon.Webcam?
+permalink: /faq/difference-between-camera-and-webcam.html
 ---
 
 # Addon

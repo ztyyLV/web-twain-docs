@@ -6,6 +6,7 @@ keywords: Dynamic Web TWAIN, Documentation, Schedule, Stable Release
 breadcrumbText: Stable Releases
 noTitleIndex: true
 description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
+permalink: /info/schedule/Stable.html
 ---
 
 # Stable Releases

@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN API Reference - PDF Addon APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, PDF Addon APIs
 breadcrumbText: PDF Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference PDF Addon APIs Page
+permalink: /info/api/Addon_PDF.html
 ---
 
 # `{WebTwainObject}.Addon.PDF`

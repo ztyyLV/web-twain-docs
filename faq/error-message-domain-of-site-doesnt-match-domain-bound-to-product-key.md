@@ -6,6 +6,7 @@ title: Error message - The domain of your current site does not match the domain
 keywords: Dynamic Web TWAIN, Error Troubleshooting, doamin, mismatch with product key
 breadcrumbText: Error message - The domain of your current site does not match the domain bound in the current product key, please contact the site administrator.
 description: Error message - The domain of your current site does not match the domain bound in the current product key, please contact the site administrator.
+permalink: /faq/error-message-domain-of-site-doesnt-match-domain-bound-to-product-key.html
 ---
 
 # Error Troubleshooting

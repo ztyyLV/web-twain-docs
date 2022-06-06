@@ -6,6 +6,7 @@ title: Can I print images from the viewer?
 keywords: Dynamic Web TWAIN, Image Viewer, print
 breadcrumbText: Can I print images from the viewer?
 description: Can I print images from the viewer?
+permalink: /faq/print-images-from-viewer.html
 ---
 
 # Image Viewer

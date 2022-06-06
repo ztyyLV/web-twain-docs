@@ -3,6 +3,7 @@ layout: default-layout
 needAutoGenerateSidebar: true
 description: "TOADD"
 title: "TOADD"
+permalink: /info/governance.html
 ---
 
 # Governance

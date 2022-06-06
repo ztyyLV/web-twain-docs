@@ -6,6 +6,7 @@ title: What are the Resources files?
 keywords: Dynamic Web TWAIN, Documentation, General
 breadcrumbText: What Are The Resources Files
 description: What are the Resources files? 
+permalink: /faq/what-are-the-resources-files.html
 ---
 
 # General
