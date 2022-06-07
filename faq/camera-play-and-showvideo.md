@@ -18,4 +18,4 @@ description: What is the difference between Camera.play and Camera.showVideo?
 
 Note that these two APIs cannot be mixed with each other.
 
-Please check <a href="https://www.dynamsoft.com/web-twain/docs-archive/info/api/Addon_Camera.html?ver=17.2.1" target="_blank">here</a> for more information on the Camera APIs.
+Please check <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/Addon_Camera.html?ver=17.2.1" target="_blank">here</a> for more information on the Camera APIs.

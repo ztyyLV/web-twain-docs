@@ -12,7 +12,7 @@ description: What’s the difference between the Desktop Service Edition and Web
 
 ## What’s the difference between the Desktop Service Edition and WebAssembly Edition?
 
-Desktop Service Edition means Dynamic Web TWAIN operates through the <a href="https://www.dynamsoft.com/web-twain/docs-archive/indepth/deployment/service.html?ver=17.2.1" target="_blank">Dynamsoft Service</a> which is a quiet, background system service that handles the communication between connected physical document scanners and the browser client.
+Desktop Service Edition means Dynamic Web TWAIN operates through the <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/indepth/deployment/service.html?ver=17.2.1" target="_blank">Dynamsoft Service</a> which is a quiet, background system service that handles the communication between connected physical document scanners and the browser client.
 
 WebAssembly Edition means Dynamic Web TWAIN operates completely within the browser with the help of Web Worker and WebAssembly. No additional installation is required for each end user.
 

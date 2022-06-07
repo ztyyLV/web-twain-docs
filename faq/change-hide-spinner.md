@@ -12,4 +12,4 @@ description: How can I change/hide the spinner which shows during document scann
 
 ## How can I change/hide the spinner which shows during document scanning?
 
-You can change/hide the loading bar which is shown during document scanning. The detailed steps can be found in <a href="https://www.dynamsoft.com/web-twain/docs-archive/indepth/features/ui.html?ver=17.2.1#loading-bar-and-backdrop" target="_blank">this link</a>.
+You can change/hide the loading bar which is shown during document scanning. The detailed steps can be found in <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/indepth/features/ui.html?ver=17.2.1#loading-bar-and-backdrop" target="_blank">this link</a>.

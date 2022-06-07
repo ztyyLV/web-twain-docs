@@ -20,8 +20,8 @@ Documents can be saved in BMP / JPEG / TIFF / PNG / PDF format.
 
 - Black & white image data which is 1-bit cannot be saved in the JPEG format as this format supports eight-bit grayscale images and 24-bit color images (eight bits each for red, green, and blue).
 
-- Dynamic Web TWAIN can read and write image-based PDF files; however, to read text-based PDF files, the <a href="https://www.dynamsoft.com/web-twain/docs-archive/indepth/features/pdf.html?ver=17.2.1" target="_blank">PDF Rasterizer add-on</a> is required.
+- Dynamic Web TWAIN can read and write image-based PDF files; however, to read text-based PDF files, the <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/indepth/features/pdf.html?ver=17.2.1" target="_blank">PDF Rasterizer add-on</a> is required.
 
-- To load or create PDF/A files, the <a href="https://www.dynamsoft.com/web-twain/docs-archive/indepth/features/OCR.html?ver=17.2.1" target="_blank">OCR addon</a> is required.
+- To load or create PDF/A files, the <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/indepth/features/OCR.html?ver=17.2.1" target="_blank">OCR addon</a> is required.
 
-More details of each file type can be found <a href="https://www.dynamsoft.com/web-twain/docs-archive/getstarted/filetype.html?ver=17.2.1" target="_blank">here</a>
+More details of each file type can be found <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/getstarted/filetype.html?ver=17.2.1" target="_blank">here</a>

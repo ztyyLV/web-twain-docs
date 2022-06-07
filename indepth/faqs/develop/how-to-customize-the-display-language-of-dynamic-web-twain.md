@@ -109,4 +109,4 @@ Dynamsoft.DWT.CustomizableDisplayInfo = {
 };
 ```
 
-To customize the service installation pop up [click here](https://www.dynamsoft.com/web-twain/docs-archive/indepth/faqs/develop/How-to-customize-the-installation-dialog.html). 
+To customize the service installation pop up [click here](https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/indepth/faqs/develop/How-to-customize-the-installation-dialog.html). 

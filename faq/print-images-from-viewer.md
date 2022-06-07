@@ -12,5 +12,5 @@ description: Can I print images from the viewer?
 
 ## Can I print images from the viewer?
 
-Yes, you can print the images from the viewer by exporting all image data in the buffer to a new browser window and use the browser's default feature to print images. This can be achieved by using the <a href="https://www.dynamsoft.com/web-twain/docs-archive/info/api/WebTwain_IO.html?ver=17.2.1#print" target="_blank">Print</a> API.
-Note: The Print API prints all the images on the viewer, you can use <a href="https://www.dynamsoft.com/web-twain/docs-archive/info/api/WebTwain_IO.html?ver=17.2.1#printex" target="_blank">PrintEx</a> to print only selected images.
+Yes, you can print the images from the viewer by exporting all image data in the buffer to a new browser window and use the browser's default feature to print images. This can be achieved by using the <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/WebTwain_IO.html?ver=17.2.1#print" target="_blank">Print</a> API.
+Note: The Print API prints all the images on the viewer, you can use <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/WebTwain_IO.html?ver=17.2.1#printex" target="_blank">PrintEx</a> to print only selected images.

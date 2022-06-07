@@ -12,4 +12,4 @@ description: How can I change/hide the UI of the progress bar when importing or 
 
 ## How can I change/hide the UI of the progress bar when importing or uploading images?
 
-To change/hide the progress bar shown during the import/upload process, please refer to <a href="https://www.dynamsoft.com/web-twain/docs-archive/indepth/features/ui.html?ver=17.2.1#progress-bar" target="_blank">this article</a>.
+To change/hide the progress bar shown during the import/upload process, please refer to <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/indepth/features/ui.html?ver=17.2.1#progress-bar" target="_blank">this article</a>.

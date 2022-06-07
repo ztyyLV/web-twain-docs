@@ -12,6 +12,6 @@ description: Can the Dynamic Web TWAIN SDK automatically rotate upside-down page
 
 ## Can the Dynamic Web TWAIN SDK automatically rotate upside-down pages during the document scanning process?
 
-No, the rotation is not automatic, but it can be achieved by leveraging the rotating functionality explained in <a href="https://www.dynamsoft.com/web-twain/docs-archive/indepth/features/edit.html?ver=17.2.1#rotating-flipping-and-mirroring" target="_blank">this link</a>.
+No, the rotation is not automatic, but it can be achieved by leveraging the rotating functionality explained in <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/indepth/features/edit.html?ver=17.2.1#rotating-flipping-and-mirroring" target="_blank">this link</a>.
 
 If you need to do automatic skew correction on scanned pages, you can refer to [this article]({{site.faq}}support-image-deskew.html) for our automatic de-skewing feature.

@@ -10,7 +10,7 @@ description: Dynamic Web TWAIN SDK Documentation | API Reference | IO APIs Page
 
 # {WebTwainObject} IO
 
-The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object](https://www.dynamsoft.com/web-twain/docs-archive/indepth/features/initialize.html?ver=17.2.1#creating-the-webtwain-instance).
+The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object](https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/indepth/features/initialize.html?ver=17.2.1#creating-the-webtwain-instance).
 
 ## Methods
 

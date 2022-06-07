@@ -28,10 +28,10 @@ In this case, if you are trying to access an application that integrates a versi
 
 - For v17.1.1 or older versions, choose one of the following approaches:
 <ol>
-     <li> <a href="https://www.dynamsoft.com/web-twain/docs-archive/about/getsupport.html" target="_blank">Contact Dynamsoft</a> for a new MSI for client-side.</li>
+     <li> <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/about/getsupport.html" target="_blank">Contact Dynamsoft</a> for a new MSI for client-side.</li>
      <li>Upgrade to V17.2+ which comes with a valid certificate </li>
      <li> If you must fix the issue on a few client machines immediately, manually update the following cert files on the client-side machine. 
-          Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/local.dynamsoft.com/newcert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under <a href="https://www.dynamsoft.com/web-twain/docs-archive/indepth/deployment/service.html?ver=17.2.1#for-the-service" target="_blank">cert</a> folder. </li>
+          Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/local.dynamsoft.com/newcert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/indepth/deployment/service.html?ver=17.2.1#for-the-service" target="_blank">cert</a> folder. </li>
 
            Note: the new certificate from Dynamsoft will expire on January 9th, 2023. This means you will need to update the certificate again after this certificate expires.
  </ol>
@@ -59,7 +59,7 @@ cert_name=server.pem.ldsc
 key_name=server_key.pem.ldsc  
 ```
 
- 2) Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/newcert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under <a href="https://www.dynamsoft.com/web-twain/docs-archive/indepth/deployment/service.html?ver=17.2.1#for-the-service" target="_blank">cert</a> folder.
+ 2) Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/newcert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/indepth/deployment/service.html?ver=17.2.1#for-the-service" target="_blank">cert</a> folder.
 
 If you use your own certificate, put your own cert and key under the cert folder. 
 

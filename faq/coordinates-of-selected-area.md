@@ -12,4 +12,4 @@ description: How to get the coordinates of the selected area on an image?
 
 ## How to get the coordinates of the selected area on an image?
 
-You can use the pageAreaSelected event to get the coordinates of the selected area on an image. This event is triggered when the user selects an area (draws a rectangle) or moves a selected area on the current page. You can visit this <a href="https://www.dynamsoft.com/web-twain/docs-archive/info/api/WebTwain_Viewer.html?ver=17.2.1#pageareaselected" target="_blank">link</a> to see the syntax and examples of the pageAreaSelected event.
+You can use the pageAreaSelected event to get the coordinates of the selected area on an image. This event is triggered when the user selects an area (draws a rectangle) or moves a selected area on the current page. You can visit this <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/WebTwain_Viewer.html?ver=17.2.1#pageareaselected" target="_blank">link</a> to see the syntax and examples of the pageAreaSelected event.

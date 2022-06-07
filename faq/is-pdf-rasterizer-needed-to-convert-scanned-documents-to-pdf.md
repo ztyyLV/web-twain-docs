@@ -14,4 +14,4 @@ description: Do I need the PDF Rasterizer addon to convert scanned documents to 
 
 No. Dynamic Web TWAIN can output images as image-based PDF files and this is built into the core module, so no addon is required to convert scanned documents to PDF files.
 
-You need the PDF Rasterizer Add-on only if you load/download text-based PDF onto the viewer. To detect whether a PDF file is text-based or not, you can use the API <a href="https://www.dynamsoft.com/web-twain/docs-archive/info/api/Addon_PDF.html?ver=17.2.1#istextbasedpdf" target="_blank">IsTextBasedPDF</a>.
+You need the PDF Rasterizer Add-on only if you load/download text-based PDF onto the viewer. To detect whether a PDF file is text-based or not, you can use the API <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/Addon_PDF.html?ver=17.2.1#istextbasedpdf" target="_blank">IsTextBasedPDF</a>.

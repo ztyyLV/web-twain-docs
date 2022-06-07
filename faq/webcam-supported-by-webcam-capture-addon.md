@@ -12,4 +12,4 @@ description: What types of webcams does the Webcam Capture addon support
 
 ## What types of webcams does the Webcam Capture addon support?
 
-The webcams supported are DirectShow Cameras which are either built into desktops/laptops or connected via USB. Please check <a href="https://www.dynamsoft.com/web-twain/docs-archive/getstarted/hardware.html?ver=17.2.1#directshow-cameras" target="_blank">here</a> for more information about these cameras and to check if your camera is DirectShow compliant.
+The webcams supported are DirectShow Cameras which are either built into desktops/laptops or connected via USB. Please check <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/getstarted/hardware.html?ver=17.2.1#directshow-cameras" target="_blank">here</a> for more information about these cameras and to check if your camera is DirectShow compliant.
