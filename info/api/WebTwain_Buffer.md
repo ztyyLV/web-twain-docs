@@ -1588,7 +1588,7 @@ BlankImageMaxStdDev: number;
 
 [0, 100] is the interval of allowed values, inclusive. 0 gives a single-color image. The default value is 1.
 
-This property is only valid after `IsBlankImageExpress` is called.
+This property is only valid before `IsBlankImageExpress` is called.
 
 ---
 
@@ -1631,7 +1631,7 @@ BlankImageThreshold: number;
 **Usage notes**
 
 [0, 255] is the interval of allowed values, inclusive. The default value is 128.
-This property is only valid after `IsBlankImageExpress` is called.
+This property is only valid before `IsBlankImageExpress` is called.
 
 ---
 
