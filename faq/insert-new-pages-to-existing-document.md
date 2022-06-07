@@ -6,6 +6,7 @@ title: Can I insert newly scanned pages to an existing document?
 keywords: Dynamic Web TWAIN, Document Saving, insert new page to existing document
 breadcrumbText: Can I insert newly scanned pages to an existing document?
 description: Can I insert newly scanned pages to an existing document?
+permalink: /faq/insert-new-pages-to-existing-document.html
 ---
 
 # Document Saving

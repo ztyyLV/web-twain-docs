@@ -6,6 +6,7 @@ title: Download virtual scanner for testing
 keywords: Dynamic Web TWAIN, virtual scanner
 breadcrumbText: Download virtual scanner for testing
 description: Download virtual scanner for testing
+permalink: /faq/download-virtual-scanner-for-testing.html
 ---
 
 # Capture/Image Source

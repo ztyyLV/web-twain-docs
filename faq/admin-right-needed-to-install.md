@@ -2,10 +2,11 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Are admin rights required to install the end-user component?
-keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, admin rights, install
-breadcrumbText: Are admin rights required to install the end-user component?
-description: Are admin rights required to install the end-user component?
+title: Are admin right required to install the end-user component?
+keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, sdmin right, install
+breadcrumbText: Are admin right required to install the end-user component?
+description: Are admin right required to install the end-user component?
+permalink: /faq/admin-right-needed-to-install.html
 ---
 
 # Project Deployment and End-user Installation

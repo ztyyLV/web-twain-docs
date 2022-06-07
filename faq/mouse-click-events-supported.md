@@ -6,6 +6,7 @@ title: What mouse click events does the viewer support?
 keywords: Dynamic Web TWAIN, Image Viewer, mouse click, events, click events
 breadcrumbText: What mouse click events does the viewer support?
 description: What mouse click events does the viewer support?
+permalink: /faq/mouse-click-events-supported.html
 ---
 
 # Image Viewer

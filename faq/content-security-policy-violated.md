@@ -6,6 +6,7 @@ title: Dynamic Web TWAIN – Content-Security-Policy violated
 keywords: Dynamic Web TWAIN, Content-Security-Policy
 breadcrumbText: Dynamic Web TWAIN – Content-Security-Policy violated
 description: Dynamic Web TWAIN – Content-Security-Policy violated
+permalink: /faq/content-security-policy-violated.html
 ---
 
 # Project Deployment and End-user Installation

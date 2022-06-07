@@ -6,6 +6,7 @@ title: Can I hide the Dynamsoft image viewer and use my own image viewer?
 keywords: Dynamic Web TWAIN, Image Viewer, hide, use custom image viewer
 breadcrumbText: Can I hide the Dynamsoft image viewer and use my own image viewer?
 description: Can I hide the Dynamsoft image viewer and use my own image viewer?
+permalink: /faq/hide-image-viewer.html
 ---
 
 # Image Viewer

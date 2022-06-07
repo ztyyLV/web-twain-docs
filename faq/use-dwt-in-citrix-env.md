@@ -6,6 +6,7 @@ title: How can I use Dynamic Web TWAIN in a Citrix environment?
 keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, citrix
 breadcrumbText: How can I use Dynamic Web TWAIN in a Citrix environment?
 description: How can I use Dynamic Web TWAIN in a Citrix environment?
+permalink: /faq/use-dwt-in-citrix-env.html
 ---
 
 # Project Deployment and End-user Installation

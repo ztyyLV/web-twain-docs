@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Features - UI Elements
 keywords: Dynamic Web TWAIN, Documentation, UI
 breadcrumbText: UI
 description: Dynamic Web TWAIN SDK Documentation UI Page
+permalink: /indepth/features/ui.html
 ---
 
 # UI Elements
@@ -17,7 +18,7 @@ Generally speaking, most UI elements are configured in the file dynamsoft.webtwa
 
 ![UI 1]({{site.assets}}imgs/UI-1.png)
 
-This dialog comes up when running `DWT` in [service mode]({{site.indepth}}features/initialize.html#service-mode) under one of the following conditions:
+This dialog comes up when using `DWT` scanner module under one of the following conditions:
 
 * The Dynamsoft Service is not installed
 * The Dynamsoft Service is not running

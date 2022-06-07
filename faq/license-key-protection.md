@@ -6,6 +6,7 @@ title: The license key is set in JavaScript. How can I protect it?
 keywords: Dynamic Web TWAIN, Security, license key protection
 breadcrumbText: The license key is set in JavaScript. How can I protect it?
 description: The license key is set in JavaScript. How can I protect it?
+permalink: /faq/license-key-protection.html
 ---
 
 # Security

@@ -6,6 +6,7 @@ title: Is there an undo functionality?
 keywords: Dynamic Web TWAIN, Image Editing, undo
 breadcrumbText: Is there an undo functionality?
 description: Is there an undo functionality?
+permalink: /faq/undo-functionality.html
 ---
 
 # Image Editing

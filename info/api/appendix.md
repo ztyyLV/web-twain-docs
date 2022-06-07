@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN API - Appendix
 keywords: Dynamic Web TWAIN, Documentation, API Appendix
 breadcrumbText: API Appendix
 description: Dynamic Web TWAIN SDK Documentation API Appendix Page
+permalink: /info/api/appendix.html
 ---
 
 # API Appendix

@@ -6,6 +6,7 @@ title: What’s your refund policy?
 keywords: Dynamic Web TWAIN, Licensing and Purchase, refund, moneyback guarantee
 breadcrumbText: What’s your refund policy?
 description: What’s your refund policy?
+permalink: /faq/refund-policy.html
 ---
 
 # Licensing and Purchase

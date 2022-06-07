@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Development - ARM64 & MIPS64 support
 keywords: Dynamic Web TWAIN, Documentation, Development, ARM64, MIPS64
 breadcrumbText: ARM64 & MIPS64 support 
 description: Dynamic Web TWAIN SDK Documentation ARM64 & MIPS64 Support Page
+permalink: /indepth/development/armmips.html
 ---
 
 

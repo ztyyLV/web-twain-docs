@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Features - OCR
 keywords: Dynamic Web TWAIN, Documentation, OCR
 breadcrumbText: OCR
 description: Dynamic Web TWAIN SDK Documentation OCR Page
+permalink: /indepth/features/OCR.html
 ---
 
 # OCR
@@ -25,7 +26,7 @@ OCR can be performed both on the client side and on the server side. But Server-
 
 ### Environment
 
-Client side OCR only works in [browsers on Windows]({{site.getstarted}}platform.html#browsers-on-Windows) and in [Service mode]({{site.indepth}}features/initialize.html#service-mode).
+Client side OCR only works in [browsers on Windows]({{site.getstarted}}platform.html#browsers-on-Windows) on desktop.
 
 ### Use OCRB on the Client Side
 

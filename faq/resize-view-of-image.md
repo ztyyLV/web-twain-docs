@@ -6,6 +6,7 @@ title: How can I resize the view of image (e.g. zoom in/out an current image)?
 keywords: Dynamic Web TWAIN, Image Viewer, resize view
 breadcrumbText: How can I resize the view of image (e.g. zoom in/out on an image)?
 description: How can I resize the view of image (e.g. zoom in/out on an image)?
+permalink: /faq/resize-view-of-image.html
 ---
 
 # Image Viewer

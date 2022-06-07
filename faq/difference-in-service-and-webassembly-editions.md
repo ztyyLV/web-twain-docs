@@ -6,6 +6,7 @@ title: What’s the difference between the Desktop Service Edition and WebAssemb
 keywords: Dynamic Web TWAIN, Licensing and Purchase, difference, service, webassembly
 breadcrumbText: What’s the difference between the Desktop Service Edition and WebAssembly Edition?
 description: What’s the difference between the Desktop Service Edition and WebAssembly Edition?
+permalink: /faq/difference-in-service-and-webassembly-editions.html
 ---
 
 # Licensing and Purchase

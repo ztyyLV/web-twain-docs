@@ -6,6 +6,7 @@ title: For the per-client-device licensing model, can seats taken by retired/unu
 keywords: Dynamic Web TWAIN, Licensing and Purchase, per-client, seats, release
 breadcrumbText: For the per-client-device licensing model, can seats taken by retired/unused devices be released from the license?
 description: For the per-client-device licensing model, can seats taken by retired/unused devices be released from the license?
+permalink: /faq/release-license-seats.html
 ---
 
 # Licensing and Purchase

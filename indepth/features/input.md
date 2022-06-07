@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Features - Input
 keywords: Dynamic Web TWAIN, Documentation, Input
 breadcrumbText: Input
 description: Dynamic Web TWAIN SDK Documentation Input Page
+permalink: /indepth/features/input.html
 ---
 
 # Input
@@ -15,7 +16,7 @@ This section introduces different ways to get data into the `DWT` buffer.
 
 ### Scan From a Local Scanner
 
-> Supported on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and only when `DWT` runs in [service mode]({{site.indepth}}features/initialize.html#service-mode)
+> Supported on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices).
 
 A local scanner refers to a scanner that is plugged in the same desktop via USB or is available on the local network and is accessible on the local desktop. The latter is generally known as a network scanner. A network scanner is connected to the LAN itself (cable or WI-FI) and is assigned a static IP. The scanner driver from the device vendor then configures the IP to connect to the scanner.
 
@@ -94,7 +95,7 @@ Notes:
 
 Make sure you deploy the sample to a web server that
    - runs HTTPS
-   - serves the *.wasm file with Content-Type: application/wasm
+   - serves the `*.wasm` file with `Content-Type: application/wasm`
 
 The following code snippet shows how to use the camera add-on:
 
@@ -178,7 +179,7 @@ DWObject.LoadImageEx("", Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL, onSuccess, onFa
 
 ### Open an existing file using its absolute path
 
-> Supported on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and only when `DWT` runs in [service mode]({{site.indepth}}features/initialize.html#service-mode). 
+> Supported on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) only. 
 
 ``` javascript
 var onSuccess = function() {
@@ -354,7 +355,7 @@ function loadFileFromBase64() {
 
 ### Load files from the system clipboard
 
-> Supported on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and only when `DWT` runs in [service mode]({{site.indepth}}features/initialize.html#service-mode).
+> Supported on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) only.
 
 ``` javascript
 DWObject.LoadDibFromClipboard()

@@ -6,6 +6,7 @@ title: How can I disable drag and drop images in the viewer?
 keywords: Dynamic Web TWAIN, Image Viewer, object defined
 breadcrumbText: How can I disable drag and drop images in the viewer?
 description: How can I disable drag and drop images in the viewer?
+permalink: /faq/disable-drag-and-drop-in-images.html
 ---
 
 # Image Viewer

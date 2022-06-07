@@ -6,6 +6,7 @@ title: Do you offer lifetime/perpetual licenses?
 keywords: Dynamic Web TWAIN, Licensing and Purchase, lifetime, perpetual
 breadcrumbText: Do you offer lifetime/perpetual licenses?
 description: Do you offer lifetime/perpetual licenses?
+permalink: /faq/offer-perpetual-license.html
 ---
 
 # Licensing and Purchase

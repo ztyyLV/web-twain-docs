@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Hello World
 keywords: Dynamic Web TWAIN, Documentation, Hello World
 breadcrumbText: Hello World
 description: Dynamic Web TWAIN SDK Documentation Hello World Page
+permalink: /getstarted/helloworld.html
 ---
 
 # Build the HelloWorld Page

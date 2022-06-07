@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Features - Handle PDF
 keywords: Dynamic Web TWAIN, Documentation, Handle PDF
 breadcrumbText: Handle PDF
 description: Dynamic Web TWAIN SDK Documentation Handle PDF Page
+permalink: /indepth/features/pdf.html
 ---
 
 # PDF Handling 
@@ -14,8 +15,6 @@ PDFs are widely used in many and various industries, and presently are the only 
 ## Environment
 
 * Supported on [Desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and [Mobile]({{site.getstarted}}platform.html#browsers-on-mobile-devices).
-
-* Available in both [Service mode]({{site.indepth}}features/initialize.html#service-mode) and [WASM mode]({{site.indepth}}features/initialize.html#wasm-mode).
 
 ## Including the PDF addon 
 

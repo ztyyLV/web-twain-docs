@@ -6,6 +6,7 @@ title: How to run Dynamic Web TWAIN ActiveX in Microsoft Edge Internet Explorer 
 keywords: Dynamic Web TWAIN, ActiveX, Internet Explorer mode, IE mode
 breadcrumbText: How to run Dynamic Web TWAIN ActiveX in Microsoft Edge Internet Explorer (IE) mode
 description: How to run Dynamic Web TWAIN ActiveX in Microsoft Edge Internet Explorer (IE) mode
+permalink: /faq/activeX-in-Edge-IE-mode.html
 ---
 
 # Project Deployment and End-user Installation

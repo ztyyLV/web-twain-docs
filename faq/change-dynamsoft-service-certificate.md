@@ -6,6 +6,7 @@ title: How can I change the certificate of the Dynamsoft Service?
 keywords: Dynamic Web TWAIN, Security, change certificate, service
 breadcrumbText: How can I change the certificate of the Dynamsoft Service?
 description: How can I change the certificate of the Dynamsoft Service?
+permalink: /faq/change-dynamsoft-service-certificate.html
 ---
 
 # Security

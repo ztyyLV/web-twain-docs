@@ -6,6 +6,7 @@ title: What are the differences between TWAIN and WIA?
 keywords: Dynamic Web TWAIN, Capture/ Image Source, twain, wia, difference
 breadcrumbText: What are the differences between TWAIN and WIA?
 description: What are the differences between TWAIN and WIA?
+permalink: /faq/difference-between-Twain-and-wia.html
 ---
 
 # Capture/Image Source

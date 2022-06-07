@@ -3,11 +3,12 @@ layout: default-layout
 needAutoGenerateSidebar: false
 title: Dynamic Web TWAIN Schedule
 keywords: Dynamic Web TWAIN, Documentation, Schedule, Index
-breadcrumbText: Schedule
+breadcrumbText: Release Notes
 description: Dynamic Web TWAIN SDK Documentation Schedule Index Page
+permalink: /info/schedule/
 ---
 
-# Product Schedule
+# Release Notes
 
 ## [Stable]({{site.info}}schedule/stable.html)
 

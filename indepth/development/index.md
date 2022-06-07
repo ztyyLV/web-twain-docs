@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Development - Index
 keywords: Dynamic Web TWAIN, Documentation, Development
 breadcrumbText: Development
 description: Dynamic Web TWAIN SDK Documentation Development Index Page
+permalink: /indepth/development/
 ---
 
 # Development
@@ -23,8 +24,3 @@ Popular frameworks and frequently asked development questions are covered in the
 
 * [How to perform upgrade]({{site.indepth}}development/upgrade.html)
 
-* [About ActiveX]({{site.indepth}}development/activex.html)
-
-* [Support for 64-bit ARM & MIPS64]({{site.indepth}}development/armmips.html)
-
-* [About Professional Service]({{site.indepth}}development/Pro-service.html)

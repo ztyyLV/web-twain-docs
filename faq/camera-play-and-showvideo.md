@@ -6,6 +6,7 @@ title: What is the difference between Camera.play and Camera.showVideo?
 keywords: Dynamic Web TWAIN, Addon, webassembly, webcam capture
 breadcrumbText: What is the difference between Camera.play and Camera.showVideo?
 description: What is the difference between Camera.play and Camera.showVideo?
+permalink: /faq/camera-play-and-showvideo.html
 ---
 
 # Addon

@@ -6,6 +6,7 @@ title: Do I need to purchase a license for my dev or testing environment?
 keywords: Dynamic Web TWAIN, Licensing and Purchase, dev, test
 breadcrumbText: Do I need to purchase a license for my dev or testing environment?
 description: Do I need to purchase a license for my dev or testing environment?
+permalink: /faq/purchase-dev-or-test-license.html
 ---
 
 # Licensing and Purchase

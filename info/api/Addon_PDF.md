@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN API Reference - PDF Addon APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, PDF Addon APIs
 breadcrumbText: PDF Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference PDF Addon APIs Page
+permalink: /info/api/Addon_PDF.html
 ---
 
 # `{WebTwainObject}.Addon.PDF`
@@ -34,11 +35,6 @@ GetConvertMode(): number;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -81,11 +77,6 @@ IsModuleInstalled(): boolean;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -123,11 +114,6 @@ IsTextBasedPDF(path: string): boolean;
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -180,11 +166,6 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -226,11 +207,6 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -275,11 +251,6 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -383,11 +354,6 @@ Only the core module license is required to use this method.
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>

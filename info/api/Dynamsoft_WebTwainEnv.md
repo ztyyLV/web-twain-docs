@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN API Reference - Global APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Global APIs
 breadcrumbText: Global
 description: Dynamic Web TWAIN SDK Documentation API Reference Global APIs Page
+permalink: /info/api/Dynamsoft_WebTwainEnv.html
 ---
 
 # `Dynamsoft.DWT`
@@ -123,11 +124,6 @@ organizationID: string;
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -239,11 +235,6 @@ UpdateCert(
 **Availability**
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>

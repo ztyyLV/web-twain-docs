@@ -6,6 +6,7 @@ title: Error message - The current product key is invalid because it's generated
 keywords: Dynamic Web TWAIN, Error Troubleshooting, product key, invalid, different major version
 breadcrumbText: Error message - The current product key is invalid because it's generated with the licenses of a different major version
 description: Error message - The current product key is invalid because it's generated with the licenses of a different major version
+permalink: /faq/error-message-license-generated-with-license-of-major-version.html
 ---
 
 # Error Troubleshooting

@@ -6,6 +6,7 @@ title: Can I use the WebAssembly Edition of SDK to support webcams instead of us
 keywords: Dynamic Web TWAIN, Addon, webassembly, webcam capture
 breadcrumbText: Can I use the WebAssembly Edition of SDK to support webcams instead of using the Webcam Capture addon for Desktop Service Edition?
 description: Can I use the WebAssembly Edition of SDK to support webcams instead of using the Webcam Capture addon for Desktop Service Edition?
+permalink: /faq/use-webassembly-to-support-webcam.html
 ---
 
 # Addon

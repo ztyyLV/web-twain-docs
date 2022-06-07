@@ -6,6 +6,7 @@ title: What type of HTTP servers do your support? Do you support other server ty
 keywords: Dynamic Web TWAIN, Document Saving, HTTP servers support
 breadcrumbText: What type of HTTP servers do your support? Do you support other server types?
 description: What type of HTTP servers do your support? Do you support other server types?
+permalink: /faq/http-servers-support.html
 ---
 
 # Document Saving
