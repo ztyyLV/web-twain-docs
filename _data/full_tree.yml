@@ -106,23 +106,6 @@ tree_list:
         path: /indepth/features/pdf.html
         startVersion:
         endVersion:
-  - name: Release Notes
-    path: /info/schedule/
-    startVersion:
-    endVersion: 
-    childList:
-      - name: Stable
-        path: /info/schedule/stable.html
-        startVersion:
-        endVersion:
-      - name: Addon
-        path: /info/schedule/Addon.html
-        startVersion:
-        endVersion:
-      - name: Deprecated
-        path: /info/schedule/deprecated.html
-        startVersion:
-        endVersion:
   - name: API Reference
     path: /info/api/
     startVersion:
@@ -182,6 +165,23 @@ tree_list:
         endVersion:
       - name: API Appendix
         path: /info/api/appendix.html
+        startVersion:
+        endVersion:
+  - name: Release Notes
+    path: /info/schedule/
+    startVersion:
+    endVersion: 
+    childList:
+      - name: Stable
+        path: /info/schedule/stable.html
+        startVersion:
+        endVersion:
+      - name: Addon
+        path: /info/schedule/Addon.html
+        startVersion:
+        endVersion:
+      - name: Deprecated
+        path: /info/schedule/deprecated.html
         startVersion:
         endVersion:
   - name: FAQ
