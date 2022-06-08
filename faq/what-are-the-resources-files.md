@@ -90,11 +90,11 @@ Resources files help you include Dynamic Web TWAIN in your application. The foll
     > For macOS
 
     - LICENSE
-  + src
+* src
 
-  > These files contain the following functionalities for the [WASM-mode]({{site.indepth}}features/initialize.html#wasm-mode)
+  > These files contain the following functionalities
   > - image input & output
-  > - decode & encode
+  > - image decode & encode
   > - PDF read & write
   > - Viewer & UI
 
