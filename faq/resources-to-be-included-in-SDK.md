@@ -21,4 +21,4 @@ Under the `\dist` folder, you can include the installers required per your OS re
 
 Under the `\src` folder, you do not need the wasm files if you are not using camera functionalities.
 
-For more information, please check <a href="{{site.faq}}what-are-the-resources-files" target="_blank">What are the Resources files</a> and <a href="{{site.indepth}}features/initialize.html?ver=latest#loading-the-core-js-files" target="_blank">Loading the Resource Files</a>.
+For more information, please check <a href="{{site.faq}}what-are-the-resources-files.html" target="_blank">What are the Resources files</a> and <a href="{{site.indepth}}features/initialize.html#loading-the-core-js-files" target="_blank">Loading the Resource Files</a>.
