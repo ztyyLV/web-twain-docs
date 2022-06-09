@@ -51,11 +51,11 @@ Dynamic Web TWAIN utilizes a local service named 'Dynamsoft Service' to support 
 
 To avoid this potential issue, you can apply one of the following solutions:
 
-1. <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/indepth/development/upgrade.html?ver=17.2.1" target="_blank">Upgrade</a> Dynamic Web TWAIN SDK to **version 17.2.1** or later
+1. <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/indepth/development/upgrade.html" target="_blank">Upgrade</a> Dynamic Web TWAIN SDK to **version 17.2.1** or later
 
    In version 17.2.1, we have made changes to handle preflight requests on our end to resolve the issue. You can test the latest version with our <a href="https://www.dynamsoft.com/web-twain/downloads/" target="_blank">free trial</a> and when you are ready to upgrade, please contact <a href="mailto:sales@dynamsoft.com" target="_blank">sales@dynamsoft.com</a> to request the upgrade.
 
-   Please note that once upgraded, the Dynamosft Service on all client machines also need to be updated. You may consider <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/faq/can-i-install-dynamsoft-service-silently.html?ver=17.2.1#can-i-install-dynamsoft-service-silently" target="_blank">installing Dynamsoft Service silently</a>.
+   Please note that once upgraded, the Dynamosft Service on all client machines also need to be updated. You may consider <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/faq/can-i-install-dynamsoft-service-silently.html#can-i-install-dynamsoft-service-silently" target="_blank">installing Dynamsoft Service silently</a>.
 
 2. Disable Private Network Access checks using enterprise policies
 

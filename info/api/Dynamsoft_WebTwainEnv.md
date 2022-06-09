@@ -195,7 +195,7 @@ Dynamsoft.DWT.sessionPassword = "MyPassw0rd";
 ```
 
 **Usage notes**
-Learn more about [session password](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=17.2.1#session-password) in Dynamsoft License server.
+Learn more about [session password](https://www.dynamsoft.com/license-tracking/docs/about/terms.html#session-password) in Dynamsoft License server.
 
 ## licenseException
 
@@ -210,7 +210,7 @@ licenseException: string;
 
 **Usage notes**
 
-Check [license error list](https://www.dynamsoft.com/license-tracking/docs/common/errorlist.html?ver=17.2.1) 
+Check [license error list](https://www.dynamsoft.com/license-tracking/docs/common/errorlist.html?ver=latest) 
 
 ## Options
 

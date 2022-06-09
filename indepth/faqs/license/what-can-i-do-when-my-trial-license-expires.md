@@ -12,4 +12,4 @@ description: What can I do when my trial license expires?
 
 ## What can I do when my trial license expires? 
 
-Dynamic Web TWAIN comes with a 30-day free trial license from the day the software is installed with the Official installer. After that, a developer can extend the trial twice on [this page](https://www.dynamsoft.com/company/docs/customer-portal/trial-license.html?ver=17.2.1#request-a-trial-extension).  
+Dynamic Web TWAIN comes with a 30-day free trial license from the day the software is installed with the Official installer. After that, a developer can extend the trial twice on [this page](https://www.dynamsoft.com/company/docs/customer-portal/trial-license.html#request-a-trial-extension).  

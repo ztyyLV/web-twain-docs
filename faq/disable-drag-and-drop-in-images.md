@@ -12,7 +12,7 @@ description: How can I disable drag and drop images in the viewer?
 
 ## How can I disable drag and drop images in the viewer?
 
-You can leverage the inbuilt API <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/WebTwain_Viewer.html?ver=17.2.1#acceptdrop" target="_blank">acceptDrop</a> to disable the load functionality of the dropped images in the viewer.
+You can leverage the inbuilt API <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/WebTwain_Viewer.html#acceptdrop" target="_blank">acceptDrop</a> to disable the load functionality of the dropped images in the viewer.
 
 ```javascript
 DWObject.Viewer.acceptDrop = false;

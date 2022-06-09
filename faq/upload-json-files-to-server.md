@@ -12,6 +12,6 @@ description: How can I upload a JSON file to my server?
 
 ## How can I upload a JSON file to my server?
 
-While you cannot send a JSON file with HTTPUpload, you can send the JSON string with the API <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/WebTwain_IO.html?ver=17.2.1#sethttpformfield" target="_blank">SetHTTPFormField</a>.
+While you cannot send a JSON file with HTTPUpload, you can send the JSON string with the API <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/WebTwain_IO.html#sethttpformfield" target="_blank">SetHTTPFormField</a>.
 
-Dynamic Web TWAIN sends an HTTP POST request to the server when doing an upload. The SetHTTPFormField() method is used to <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/faq/additional-form-fields.html?ver=17.2.1" target="_blank">add extra fields to the HTTP form</a>. Just like how you can add extra text information to the form, you can also add the JSON string to it.
+Dynamic Web TWAIN sends an HTTP POST request to the server when doing an upload. The SetHTTPFormField() method is used to <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/faq/additional-form-fields.html" target="_blank">add extra fields to the HTTP form</a>. Just like how you can add extra text information to the form, you can also add the JSON string to it.

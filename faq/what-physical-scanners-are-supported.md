@@ -18,7 +18,7 @@ Dynamic Web TWAIN's main feature is interacting with imaging devices like scanne
 2. ICA Scanners (for macOS)
 3. SANE Scanners (for Linux)
 
-You can learn more details about each type of device on <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/getstarted/Hardware.html?ver=17.2.1" target="_blank">this page</a>.
+You can learn more details about each type of device on <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/getstarted/Hardware.html" target="_blank">this page</a>.
 
 TWAIN, ICA and SANE are free scanner driver specifications and they have been adopted by almost all the scanner manufacturers in the market. Network scanners are also supported as long as there is a TWAIN/ICA/SANE scanner driver available.
 

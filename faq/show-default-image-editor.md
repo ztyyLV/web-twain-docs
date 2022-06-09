@@ -20,4 +20,4 @@ var imageEditor = DWObject.Viewer.createImageEditor();
 imageEditor.show();
 ```
 
-If you are looking to customize the settings of the image editor before integrating it, you can change the properties mentioned on <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/WebTwain_Viewer.html?ver=17.2.1#createimageeditor" target="_blank">this link</a>.
+If you are looking to customize the settings of the image editor before integrating it, you can change the properties mentioned on <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/WebTwain_Viewer.html#createimageeditor" target="_blank">this link</a>.

@@ -14,7 +14,7 @@ description: What type of HTTP servers do your support? Do you support other ser
 
 We support any web servers such Apache, NGINX, IIS, Tomcat, Node.js, etc. We also support Mail/FTP/Database servers.
 
-To upload documents via HTTP, we recommend the API <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/WebTwain_IO.html?ver=17.2.1#httpupload" target="_blank">HTTPUpload()</a>. You can find more information on HTTP and FTP upload <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/indepth/features/output.html?ver=17.2.1#upload" target="_blank">here</a>.
+To upload documents via HTTP, we recommend the API <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/WebTwain_IO.html#httpupload" target="_blank">HTTPUpload()</a>. You can find more information on HTTP and FTP upload <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/indepth/features/output.html#upload" target="_blank">here</a>.
 
 Dynamic Web TWAIN sends an HTTP POST request to the server when doing an upload. You need to write your server-side script to receive and save the uploaded files. On the server side, any scripting language can be used.
 

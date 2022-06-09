@@ -17,6 +17,6 @@ You can include all the files under the Resources folder, but not all are requir
 Under the `\addon` folder, you do not need the files for add-ons which are not used by your web application.
 Under the `\dist` folder, you can include the installers required per your OS requirements.
 
-If you are using the Desktop edition, you do not need the <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/indepth/features/initialize.html?ver=17.2.1#webassembly-edition-specific-files" target="_blank">WebAssembly Edition specific files</a> under the `\src` folder.
+If you are using the Desktop edition, you do not need the <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/indepth/features/initialize.html#webassembly-edition-specific-files" target="_blank">WebAssembly Edition specific files</a> under the `\src` folder.
 
-For more information, please check <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/about/FAQs.html?ver=17.2.1#what-are-the-resources-files" target="_blank">What are the Resources files</a> and <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/indepth/features/initialize.html?ver=17.2.1#loading-the-core-js-files" target="_blank">Loading the Resource Files</a>.
+For more information, please check <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/about/FAQs.html#what-are-the-resources-files" target="_blank">What are the Resources files</a> and <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/indepth/features/initialize.html#loading-the-core-js-files" target="_blank">Loading the Resource Files</a>.

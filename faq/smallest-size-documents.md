@@ -22,16 +22,16 @@ There are a few things that you can try to reduce the size of a resulting file
 
 - Convert the images to a lower resolution (DPI). Read more <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/indepth/features/edit.html#working-with-pixels-and-bit-depth" target="_blank">here</a>;
 
-- [Optional] If the resulting file is in the JPEG format (.jpg) or is a TIF or PDF that is encoded by the JPEG standard, you can set <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/WebTwain_IO.html?ver=17.2.1#jpegquality" target="_blank">JPEGQuality</a> to a lower value.
+- [Optional] If the resulting file is in the JPEG format (.jpg) or is a TIF or PDF that is encoded by the JPEG standard, you can set <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/WebTwain_IO.html#jpegquality" target="_blank">JPEGQuality</a> to a lower value.
 
     Before setting the JPEGQuality, set the compression type to the JPEG standard as outlined below.
 
     Before saving the file,
 
     - set the compression type to the JPEG standard:
-  <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/Dynamsoft_Enum.html?ver=17.2.1#dynamsoftdwtenumdwt_pdfcompressiontype" target="_blank">PDFCompressionType</a> = 5 (PDF_JPEG)
-  <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/Dynamsoft_Enum.html?ver=17.2.1#dynamsoftdwtenumdwt_tiffcompressiontype" target="_blank">TIFFCompressionType</a> = 7 (TIFF_JPEG)
+  <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_pdfcompressiontype" target="_blank">PDFCompressionType</a> = 5 (PDF_JPEG)
+  <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_tiffcompressiontype" target="_blank">TIFFCompressionType</a> = 7 (TIFF_JPEG)
 
-    - set the <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/WebTwain_IO.html?ver=17.2.1#jpegquality" target="_blank">JPEGQuality</a> = [a lower value]
+    - set the <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/WebTwain_IO.html#jpegquality" target="_blank">JPEGQuality</a> = [a lower value]
 
     Note that black & white image cannot be saved in the JPEG format. To reduce the size, please convert the image to grayscale.

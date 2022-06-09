@@ -12,7 +12,7 @@ description: How can I set the last selected source as the default source for an
 
 ## How can I set the last selected source as the default source for an end user?
 
-<a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/WebTwain_Acquire.html?ver=17.2.1#defaultsourcename" target="_blank">DefaultSourceName</a> is the API which you can use to leverage this functionality.
+<a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/WebTwain_Acquire.html#defaultsourcename" target="_blank">DefaultSourceName</a> is the API which you can use to leverage this functionality.
 
 Example:
 

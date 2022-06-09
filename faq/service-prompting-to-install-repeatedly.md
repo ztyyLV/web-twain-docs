@@ -44,4 +44,4 @@ description: I have installed the Dynamsoft Service on an end-user machine but s
 
 6. On your Linux client machine, visit https://127.0.0.1:18626 and https://127.0.0.1:18623 separately in Chrome and FireFox, manually add both certificates to the exception lists.
 
-7. See the solution <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/faq/http-insecure-websites-in-chromium-browser.html?ver=17.2.1" target="_blank">here</a>
+7. See the solution <a href="https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/faq/http-insecure-websites-in-chromium-browser.html" target="_blank">here</a>

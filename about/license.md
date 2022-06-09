@@ -14,7 +14,7 @@ description: Dynamic Web TWAIN SDK Documentation License Page
 
 ### Request trial license
 
-You can request a trial license of Dynamic Web TWAIN via our <a href="https://www.dynamsoft.com/customer/license/trialLicense?ver=17.2.1&product=dwt" target="_blank">customer portal</a> or [contacting support](https://www.dynamsoft.com/company/contact/).
+You can request a trial license of Dynamic Web TWAIN via our <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dwt" target="_blank">customer portal</a> or [contacting support](https://www.dynamsoft.com/company/contact/).
 
 ### Update trial license
 
