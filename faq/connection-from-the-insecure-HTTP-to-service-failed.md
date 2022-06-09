@@ -15,7 +15,7 @@ permalink: /faq/connection-from-the-insecure-HTTP-to-service-failed.html
 
 ### Symptom 
 
-On Windows 7 x86, Win7 64 Enterprise (or any older Windows OS), you get an error message that says **"The connection from the insecure (HTTP) web page to the local 'Dynamsoft Service' failed. To fix the issue, please update your website to HTTPS or refer to <a href="https://www.dynamsoft.com/web-twain/docs/faq/http-insecure-websites-in-chromium-browser.html?ver=latest" target="_blank">this article</a> for other workarounds"** even if you are accessing a secure (HTTPs) web page.
+On Windows 7 x86, Win7 64 Enterprise (or any older Windows OS), you get an error message that says **"The connection from the insecure (HTTP) web page to the local 'Dynamsoft Service' failed. To fix the issue, please update your website to HTTPS or refer to <a href="{{site.faq}}http-insecure-websites-in-chromium-browser.html" target="_blank">this article</a> for other workarounds"** even if you are accessing a secure (HTTPs) web page.
 
 And refresh the web page does not work. 
 

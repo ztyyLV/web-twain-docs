@@ -13,7 +13,7 @@ permalink: /faq/last-selected-sourcename.html
 
 ## How can I set the last selected source as the default source for an end user?
 
-<a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html?ver=latest#defaultsourcename" target="_blank">DefaultSourceName</a> is the API which you can use to leverage this functionality.
+<a href="{{site.info}}api/WebTwain_Acquire.html#defaultsourcename" target="_blank">DefaultSourceName</a> is the API which you can use to leverage this functionality.
 
 Example:
 

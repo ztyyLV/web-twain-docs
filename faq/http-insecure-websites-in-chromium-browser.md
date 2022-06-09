@@ -40,7 +40,7 @@ If the web page couldn't connect to the Dynamsoft Service successfully, its defa
 #### Update your public website from HTTP to HTTPS
 
 As suggested by Google, the ultimate solution is to update your website from HTTP to HTTPS.  
-Once you update your website to HTTPS, please note that you also need to set [IfSSL](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_IO.html?ver=latest#ifssl) to 'true' and specify the secure port number for SSL connection via the [HTTPPort](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_IO.html?ver=latest#httpport) API before calling the HTTP upload method of the SDK.
+Once you update your website to HTTPS, please note that you also need to set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to 'true' and specify the secure port number for SSL connection via the [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport) API before calling the HTTP upload method of the SDK.
 
 \*_If you are using an older version of Dynamic Web TWAIN (v12.3 or earlier), you need to upgrade your SDK to newer version, please contact <support@dynamsoft.com> for further assistance._
 

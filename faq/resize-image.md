@@ -13,7 +13,7 @@ permalink: /faq/resize-image.html
 
 ## How can I resize all images to meet a certain size standard (e.g. A4 size)?
 
-Simply, you can use <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html?ver=latest#pagesize" target="_blank">PageSize</a> to set the page size to be used when acquiring images.
+Simply, you can use <a href="{{site.info}}api/WebTwain_Acquire.html#pagesize" target="_blank">PageSize</a> to set the page size to be used when acquiring images.
 Or you can leverage the negotiation capabilities functionality by following the steps mentioned below.
 
 1. ask for the supported sizes of your device.
@@ -59,4 +59,4 @@ DWObject.setCapabilities(
 );
 ```
 
-A list of the values of various supported sizes can be found <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Dynamsoft_Enum.html?ver=latest#dynamsoftdwtenumdwt_capsupportedsizes" target="_blank">here</a>. You can use the value for the curValue property.
+A list of the values of various supported sizes can be found <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_capsupportedsizes" target="_blank">here</a>. You can use the value for the curValue property.

@@ -13,5 +13,5 @@ permalink: /faq/resort-images-in-viewer.html
 
 ## How can I reorder images in the viewer?
 
-You can easily reorder the images in the viewer. You may drag and drop the images in the order you want them to appear. This process will trigger the inbuilt callback event <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Buffer.html?ver=latest#onindexchangedragdropdone" target="_blank">OnIndexChangeDragDropDone</a>.
-You can also reorder the images by using the method <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Buffer.html?ver=latest#switchimage" target="_blank">SwitchImage(index1, index2)</a>.
+You can easily reorder the images in the viewer. You may drag and drop the images in the order you want them to appear. This process will trigger the inbuilt callback event <a href="{{site.info}}api/WebTwain_Buffer.html#onindexchangedragdropdone" target="_blank">OnIndexChangeDragDropDone</a>.
+You can also reorder the images by using the method <a href="{{site.info}}api/WebTwain_Buffer.html#switchimage" target="_blank">SwitchImage(index1, index2)</a>.

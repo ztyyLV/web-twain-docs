@@ -71,4 +71,4 @@ https://127.0.0.1:18623/dwt/dwt_16100728/img?id=414778098&index=5&width=585&heig
 
   The image data.
 
-For more information, please refer to <a href="https://www.dynamsoft.com/web-twain/docs/indepth/deployment/service.html?ver=latest" target="_blank">Dynamic Web TWAIN Deployment - Dynamsoft Service</a>.
+For more information, please refer to <a href="{{site.indepth}}deployment/service.html" target="_blank">Dynamic Web TWAIN Deployment - Dynamsoft Service</a>.

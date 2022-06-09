@@ -45,4 +45,4 @@ Note: window.innerWidth and window.innerHeight do not work in IE. You can replac
 
 <strong>For option 2:</strong>
 
-Write your own function to calculate the Container's width and height according to the browser's size. Then, assign the values to our API's Height & Width. Finally, use the event <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Viewer.html?ver=latest#resize" target="_blank">resize</a> to trigger the function.
+Write your own function to calculate the Container's width and height according to the browser's size. Then, assign the values to our API's Height & Width. Finally, use the event <a href="{{site.info}}api/WebTwain_Viewer.html#resize" target="_blank">resize</a> to trigger the function.

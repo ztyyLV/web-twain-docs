@@ -13,4 +13,4 @@ permalink: /faq/download-image-from-FTP-or-HTTP-server.html
 
 ## Can I download an image from a FTP or HTTP server using the Dynamic Web TWAIN SDK?
 
-Yes, you can download an image from a FTP or HTTP server using the Dynamic Web TWAIN SDK by using FTPDownload and HTTPDownload. You can find <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_IO.html?ver=latest#input-methods" target="_blank">here</a> all the input methods that are provided by Dynamic Web TWAIN SDK.
+Yes, you can download an image from a FTP or HTTP server using the Dynamic Web TWAIN SDK by using FTPDownload and HTTPDownload. You can find <a href="{{site.info}}api/WebTwain_IO.html#input-methods" target="_blank">here</a> all the input methods that are provided by Dynamic Web TWAIN SDK.
