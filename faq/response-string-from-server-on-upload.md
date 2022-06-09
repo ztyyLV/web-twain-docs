@@ -28,4 +28,4 @@ Of course, in your own server-side script to accept and process the HTTP Post re
 
 > NOTE - When the callback onServerReturnedSomething is triggered, you will always get an errorCode and an errorString but you can choose to ignore them if it’s triggered on purpose.
 
-Dynamic Web TWAIN also provides an API called <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_IO.html#httppostresponsestring" target="_blank">HTTPPostResponseString</a> which contains the response and can be read outside of the upload method.
+Dynamic Web TWAIN also provides an API called <a href="{{site.info}}api/WebTwain_IO.html#httppostresponsestring" target="_blank">HTTPPostResponseString</a> which contains the response and can be read outside of the upload method.

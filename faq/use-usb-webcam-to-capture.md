@@ -13,4 +13,4 @@ permalink: /faq/use-usb-webcam-to-capture.html
 
 ## Can I use built-in or USB webcam to capture document?
 
-Yes, you can use the built-in or USB webcam to capture documents. DirectShow Cameras and MediaDevices Cameras can easily capture documents. You can test your camera's compatibility <a href="https://www.dynamsoft.com/web-twain/docs/faq/how-to-test-if-your-camera-is-DirectShow-compliant.html?ver=latest" target="_blank">here</a> . This <a href="https://www.dynamsoft.com/web-twain/docs/indepth/features/input.html?ver=latest#capture-from-cameras" target="_blank">link</a> will help you to embed code for capturing documents from webcams.
+Yes, you can use the built-in or USB webcam to capture documents. DirectShow Cameras and MediaDevices Cameras can easily capture documents. You can test your camera's compatibility <a href="{{site.faq}}how-to-test-if-your-camera-is-DirectShow-compliant.html" target="_blank">here</a> . This <a href="{{site.indepth}}features/input.html#capture-from-cameras" target="_blank">link</a> will help you to embed code for capturing documents from webcams.

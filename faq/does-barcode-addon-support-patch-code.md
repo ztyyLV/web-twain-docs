@@ -19,4 +19,4 @@ Check <a href="https://www.dynamsoft.com/barcode-reader/features/#Supported-Barc
 By default, the add-on reads all the supported barcode types from the image. To read specific barcode types, you can use barcodeFormatIds and barcodeFormatIds2 in runtime settings. For patch code, you would use:
 barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED
 
-More information can be found here: <a href="https://www.dynamsoft.com/web-twain/docs/indepth/features/barcode.html?ver=latest#specify-the-barcode-types-to-read" target="_blank">Specfiy the Barcode Type(s) to Read</a>.
+More information can be found here: <a href="{{site.indepth}}features/barcode.html#specify-the-barcode-types-to-read" target="_blank">Specfiy the Barcode Type(s) to Read</a>.

@@ -13,4 +13,4 @@ permalink: /faq/acquireimage-sync-or-async.html
 
 ## Is the AcquireImage() method synchronous or asynchronous?
 
-<a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html?ver=latest#acquireimage" target="_blank">AcquireImage()</a> is an asynchronous method, regardless of whether it includes a callback function or not.
+<a href="{{site.info}}api/WebTwain_Acquire.html#acquireimage" target="_blank">AcquireImage()</a> is an asynchronous method, regardless of whether it includes a callback function or not.

@@ -45,4 +45,4 @@ permalink: /faq/service-prompting-to-install-repeatedly.html
 
 6. On your Linux client machine, visit https://127.0.0.1:18626 and https://127.0.0.1:18623 separately in Chrome and FireFox, manually add both certificates to the exception lists.
 
-7. See the solution <a href="https://www.dynamsoft.com/web-twain/docs/faq/http-insecure-websites-in-chromium-browser.html?ver=latest" target="_blank">here</a>
+7. See the solution <a href="{{site.faq}}http-insecure-websites-in-chromium-browser.html" target="_blank">here</a>
