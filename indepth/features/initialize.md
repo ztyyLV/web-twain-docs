@@ -119,7 +119,7 @@ Dynamsoft.DWT.CreateDWTObject(
 );
 ```
 
-The method can also do something that [Load](#dynamsoftdwtload) can't. The following code creates a `WebTwain` instance that connects to the Dynamsoft Service running on another machine. Check out [how to enable remote scan]({{site.indepth}}faq/how-to-enable-remote-scan.html).
+The method can also do something that [Load](#dynamsoftdwtload) can't. The following code creates a `WebTwain` instance that connects to the Dynamsoft Service running on another machine. Check out [how to enable remote scan]({{site.faq}}/how-to-enable-remote-scan.html).
 
 ### [`Dynamsoft.DWT.CreateDWTObjectEx()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#createdwtobjectex)
 
@@ -174,7 +174,7 @@ Dynamsoft.DWT.CreateDWTObjectEx({
 );
 ```
 
-Similar to [`CreateDWTObject`](#dynamsoftwebtwainenvcreatedwtobject), `CreateDWTObjectEx` can also connect to the Dynamsoft Service running on another machine. Check out [how to enable remote scan]({{site.indepth}}faq/how-to-enable-remote-scan.html).
+Similar to [`CreateDWTObject`](#dynamsoftwebtwainenvcreatedwtobject), `CreateDWTObjectEx` can also connect to the Dynamsoft Service running on another machine. Check out [how to enable remote scan]({{site.faq}}/how-to-enable-remote-scan.html).
 
 ## Customizing the instances
 
