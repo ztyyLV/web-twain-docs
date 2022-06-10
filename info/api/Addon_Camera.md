@@ -19,7 +19,7 @@ To include the Camera add-on, simply add a reference to the corresponding camera
 ``` html
 <script src="Resources/addon/dynamsoft.webtwain.addon.camera.js"></script>
 ```
-Check out [MediaDevices Cameras]({{site.indepth}}input.html#mediadevices-cameras) to learn more on how to use the camera add-on.
+Check out [MediaDevices Cameras]({{site.indepth}}features/input.html#use-mediadevices-cameras) to learn more on how to use the camera add-on.
 
 **Methods**
 
