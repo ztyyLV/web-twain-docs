@@ -297,9 +297,8 @@ permalink: /faq/
 <li><a href="{{site.faq}}source-not-listed-on-linux.html" target="_blank">Scanner source is listed on XSane applicaton but not on my web application on Linux machines</a></li>
 
 <li><a href="{{site.faq}}activeX-in-Edge-IE-mode.html" target="_blank">How to run Dynamic Web TWAIN ActiveX in Microsoft Edge Internet Explorer (IE) mode</a></li>
-</ol>
 
-<li><a href="{{site.faq}}service-is-blocked.html" target="_blank">The scanner's UI or the system's file dialog does not open when scanning</a></li>
+</li><li><a href="{{site.faq}}service-is-blocked.html" target="_blank">The scanner's UI or the system's file dialog does not open when scanning</a></li>
 </ol>
 
 ## Error Troubleshooting
