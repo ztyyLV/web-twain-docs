@@ -837,7 +837,7 @@ GetImageSize(index: number, width: number, height: number): number;
 /**
  * Calculate the size in bytes of the specified image assuming an expected file type.
  * @param index Specify the image.
- * @param type Sepcify the expected file type.
+ * @param type Specify the expected file type.
  */
 GetImageSizeWithSpecifiedType(index: number, type: Dynamsoft.DWT.EnumDWT_ImageType | number): number;
 ```
@@ -1425,7 +1425,7 @@ MaxImagesInBuffer: number;
 
 **Usage notes**
 
-When acquiring images and the number of images goes beyond the value set to `MaxImagesInBuffer` , new images will replace old images starting from the 1st one.
+When acquiring images and the number of images goes beyond the value set to `MaxImagesInBuffer`, new images will replace old images starting from the 1st one.
 
 ---
 
@@ -1761,11 +1761,13 @@ IsBlankImageExpress(index: number): boolean;
 
 `IsBlankImage` is more accurate than `IsBlankImageExpress` but it works slower.
 
-`BlankImageCurrentStdDev` should be read after either `IsBlankImage()` or `IsBlankImageExpress` .
+`BlankImageCurrentStdDev` should be read after either `IsBlankImage()` or `IsBlankImageExpress`.
 
-If you believe an image should be blank but `IsBlankImage()` or `IsBlankImageExpress` is returning `false` , you can read `BlankImageCurrentStdDev` for that image and then set a bigger value to `BlankImageMaxStdDev` .
+If you believe an image should be blank but `IsBlankImage()` or `IsBlankImageExpress` is returning `false`, you can read `BlankImageCurrentStdDev` for that image and then set a bigger value to `BlankImageMaxStdDev`.
 
 Both `BlankImageCurrentStdDev` and `BlankImageMaxStdDev` range from 0 to 100.
+
+If the image is not blank and it is not black and white, `IsBlankImage()` or `IsBlankImageExpress` may return `true`. In that case, you can increase the [BlankImageThreshold]({{site.info}}api/WebTwain_Buffer.html#blankimagethreshold) value so that the image is not detected as blank.
 
 ---
 
@@ -1809,7 +1811,7 @@ IfAllowLocalCache: boolean;
 
 The default value of IfAllowLocalCache is true. When the property is true, you can scan as many images as you want as long as you have a big enough disk.  
 The default threshold is set to 800 (MB), anything beyond 800MB gets compressed, encrypted and cached on the local disk.  
-If neccessary, you can set the threshold using `BufferMemoryLimit` for better performance.  
+If necessary, you can set the threshold using `BufferMemoryLimit` for better performance.  
 All cached data is encrypted and can only be read by Dynamic Web TWAIN and it will be destroyed when it is no longer used.
 
 ---
