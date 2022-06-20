@@ -1459,6 +1459,49 @@ This API only works if the view mode of the viewer is set to -1 by -1.
 
 ---
 
+## allowPageDragging
+
+```typescript
+/**
+ * Set whether to allow page dragging to reorder the pages.
+ * The default value is true.
+ */
+.allowPageDragging: boolean;
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+</tr>
+
+</table>
+</div>
+
+**Example**
+
+```javascript
+DWObject.Viewer.allowPageDragging = true;
+```
+
+---
+
 ## background
 
 **Syntax**
