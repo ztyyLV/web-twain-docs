@@ -59,6 +59,8 @@ If you are using an **organizationID**, you can simply update the `organizationI
 Dynamsoft.DWT.organizationID = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
 ```
 
+*Note: **ProductKey** and **organizationID** cannot be used together.*
+
 ## License Agreement
 
 View the <a href="https://www.dynamsoft.com/Products/WebTwain_license.aspx" target="_blank">Dynamic Web TWAIN License Agreement</a>.
