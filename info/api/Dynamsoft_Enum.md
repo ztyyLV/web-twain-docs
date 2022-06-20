@@ -974,3 +974,10 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | VRM_270_DEGREES_CLOCKWISE | 3 | 270 degrees Clockwise |
 | VRM_FLIP_VERTICAL | 4 | Flip |
 | VRM_FLIP_HORIZONTAL | 5 | Mirror |
+
+## `Dynamsoft.DWT.EnumDWT_SelectionMode`
+
+| Label | Value|
+|:-|:-|
+| Single | 0 |
+| Multiple | 1 |
