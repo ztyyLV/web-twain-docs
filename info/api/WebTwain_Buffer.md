@@ -24,8 +24,8 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`ImageIDToIndex()`](#imageidtoindex)           | [`IndexToImageID()`](#indextoimageid)                   | [`IsBlankImage()`](#isblankimage)                                   | [`IsBlankImageExpress()`](#isblankimageexpress)     |
 | [`SelectAllImages()`](#selectallimages)         | [`MoveImage()`](#moveimage)                             | [`SwitchImage()`](#switchimage)                                     | [`RemoveImage()`](#removeimage)                     |
 | [`RemoveAllImages()`](#removeallimages)         | [`RemoveAllSelectedImages()`](#removeallselectedimages) | [`SelectImages()`](#selectimages)                                   | [`GetTagListByIndex()`](#gettaglistbyindex)         |
-| [`CreateDocument()`](#createdocument)                   | [`OpenDocument()`](#opendocument)                               | [`GetCurrentDocumentName()`](#getcurrentcocumentname)                       | [`RemoveDocument()`](#removedocument)                       |
-| [`GetDocumentInfoList()`](#getdocumentinfolist)         |
+| [`CreateDocument()`](#createdocument)           | [`OpenDocument()`](#opendocument)                       | [`GetCurrentDocumentName()`](#getcurrentcocumentname)               | [`RenameDocument()`](#renamedocument)                       |
+| [`RemoveDocument()`](#removedocument)           | [`GetDocumentInfoList()`](#getdocumentinfolist)         |
 
 
 <!--* [GetImageBitDepthAsync()](#getimagebitdepthasync)-->
@@ -2231,6 +2231,46 @@ GetCurrentDocumentName():String;
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
+</tr>
+
+</table>
+</div>
+
+---
+
+## RenameDocument
+
+**Syntax**
+
+```typescript
+/**
+ * Rename a document.
+ * @argument oldDocumentName Specify the old document name.
+ * @argument newDocumentName Specify the new document name.
+ */
+RenameDocument(oldDocumentName:string, newDocumentName:string):Boolean;
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported  </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
 </tr>
 
 </table>

@@ -29,11 +29,12 @@ permalink: /info/api/WebTwain_Viewer.html
 
 |                                             |
 | :------------------------------------------ | :------------------------------------------------------ | ----------------------------------------------------- | --------------------------------------------------- |
-| [`acceptDrop`](#acceptdrop)                 | [`allowSlide`](#allowslide)                             | [`background`](#background)                           | [`border`](#border)                                 |
-| [`cursor`](#cursor)                         | [`height`](#height)                                     | [`idPostfix`](#idpostfix)                             | [`ifAutoScroll`](#ifautoscroll)                     |
-| [`innerBorder`](#innerborder)               | [`pageMargin`](#pagemargin)                             | [`selectedAreaBorderColor`](#selectedareabordercolor) | [`selectedPageBackground`](#selectedpagebackground) |
-| [`selectedPageBorder`](#selectedpageborder) | [`selectionRectAspectRatio`](#selectionrectaspectratio) | [`showPageNumber`](#showpagenumber)                   | [`singlePageMode`](#singlepagemode)                 |
-| [`width`](#width)                           | [`zoom`](#zoom)                                         | [`autoChangeIndex`](#autochangeindex)                 | [`showCheckbox`](#showcheckbox)                     |
+| [`acceptDrop`](#acceptdrop)                 | [`allowSlide`](#allowslide)                             | [`allowPageDragging`](#allowpagedragging)             | [`background`](#background)                         |
+| [`border`](#border)                         | [`cursor`](#cursor)                                     | [`height`](#height)                                   | [`idPostfix`](#idpostfix)                           |
+| [`ifAutoScroll`](#ifautoscroll)             | [`innerBorder`](#innerborder)                           | [`pageMargin`](#pagemargin)                           | [`selectedAreaBorderColor`](#selectedareabordercolor) |
+| [`selectedPageBackground`](#selectedpagebackground) | [`selectedPageBorder`](#selectedpageborder)     | [`selectionRectAspectRatio`](#selectionrectaspectratio) | [`showPageNumber`](#showpagenumber)               |
+| [`singlePageMode`](#singlepagemode)         | [`width`](#width)                                       | [`zoom`](#zoom)                                       | [`autoChangeIndex`](#autochangeindex)               |
+| [`showCheckbox`](#showcheckbox)             |
 
 **Events**
 
