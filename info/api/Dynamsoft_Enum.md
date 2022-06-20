@@ -295,7 +295,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | PDF_LZW | 3 |
 | PDF_JPEG | 5 |
 | PDF_JP2000 | 6 |
-| PDF_JBig2 | 7 |
+| PDF_JBIG2 | 7 |
 
 ## `Dynamsoft.DWT.EnumDWT_ShowMode`
 
