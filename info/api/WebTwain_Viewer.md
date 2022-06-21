@@ -29,11 +29,12 @@ permalink: /info/api/WebTwain_Viewer.html
 
 |                                             |
 | :------------------------------------------ | :------------------------------------------------------ | ----------------------------------------------------- | --------------------------------------------------- |
-| [`acceptDrop`](#acceptdrop)                 | [`allowSlide`](#allowslide)                             | [`background`](#background)                           | [`border`](#border)                                 |
-| [`cursor`](#cursor)                         | [`height`](#height)                                     | [`idPostfix`](#idpostfix)                             | [`ifAutoScroll`](#ifautoscroll)                     |
-| [`innerBorder`](#innerborder)               | [`pageMargin`](#pagemargin)                             | [`selectedAreaBorderColor`](#selectedareabordercolor) | [`selectedPageBackground`](#selectedpagebackground) |
-| [`selectedPageBorder`](#selectedpageborder) | [`selectionRectAspectRatio`](#selectionrectaspectratio) | [`showPageNumber`](#showpagenumber)                   | [`singlePageMode`](#singlepagemode)                 |
-| [`width`](#width)                           | [`zoom`](#zoom)                                         | [`autoChangeIndex`](#autochangeindex)                 | [`showCheckbox`](#showcheckbox)                     |
+| [`acceptDrop`](#acceptdrop)                 | [`allowSlide`](#allowslide)                             | [`allowPageDragging`](#allowpagedragging)             | [`background`](#background)                         |
+| [`border`](#border)                         | [`cursor`](#cursor)                                     | [`height`](#height)                                   | [`idPostfix`](#idpostfix)                           |
+| [`ifAutoScroll`](#ifautoscroll)             | [`innerBorder`](#innerborder)                           | [`pageMargin`](#pagemargin)                           | [`selectedAreaBorderColor`](#selectedareabordercolor) |
+| [`selectedPageBackground`](#selectedpagebackground) | [`selectedPageBorder`](#selectedpageborder)     | [`selectionRectAspectRatio`](#selectionrectaspectratio) | [`showPageNumber`](#showpagenumber)               |
+| [`singlePageMode`](#singlepagemode)         | [`width`](#width)                                       | [`zoom`](#zoom)                                       | [`autoChangeIndex`](#autochangeindex)               |
+| [`showCheckbox`](#showcheckbox)             | [`selectionMode`](#selectionmode)                        |
 
 **Events**
 
@@ -1459,6 +1460,49 @@ This API only works if the view mode of the viewer is set to -1 by -1.
 
 ---
 
+## allowPageDragging
+
+```typescript
+/**
+ * Set whether to allow page dragging to reorder the pages.
+ * The default value is true.
+ */
+.allowPageDragging: boolean;
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+</tr>
+
+</table>
+</div>
+
+**Example**
+
+```javascript
+DWObject.Viewer.allowPageDragging = true;
+```
+
+---
+
 ## background
 
 **Syntax**
@@ -2402,6 +2446,49 @@ showCheckbox: boolean;
 
 </table>
 </div>
+
+---
+
+## selectionMode
+
+**Syntax**
+
+```typescript
+/**
+ * Return or set the selection mode used when acquiring images.
+ */
+selectionMode: Dynamsoft.DWT.EnumDWT_SelectionMode | number;
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+</tr>
+
+</table>
+</div>
+
+**Usage notes**
+
+The default value is 0 (Single). Even if checkbox is used, only one image can be selected if the selection mode is set to 0 (Single).
+
 ---
 
 ## Events
