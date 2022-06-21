@@ -568,59 +568,6 @@ capture(): Promise<Blob>;
 
 ---
 
-## showVideo
-
-**Syntax**
-
-```typescript
-/**
- * Start streaming video from the current camera in the viewer.
- * @param deviceId Specify a camera.
- * @param resolution Specify the initial resolution.
- * @param mode Specify the mode.
- * @param fill Whether to fill the viewer area with the video stream and leave no margin.
- */
-showVideo(deviceId?: string,
-    resolution?: Resolution,
-    mode?: string,
-    fill?: boolean
-): Promise<Resolution>;
-```
-
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-</tr>
-
-<tr>
-<td align="center">not supported  </td>
-<td align="center">v16.1+ </td>
-<td align="center">v16.1+</td>
-<td align="center">v16.1+ </td>
-<td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
-</tr>
-
-</table>
-</div>
-
-**Usage notes**
-
-There are two available modes: `document` and `picture` .
-
-- `picture`: border detection is turned off and supports taking images consecutively. This is the default mode.
-- `document`: border detection will be on and only supports taking one image at a time.
-
----
-
 ## closeVideo
 
 **Syntax**
