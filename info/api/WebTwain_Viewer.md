@@ -21,7 +21,7 @@ permalink: /info/api/WebTwain_Viewer.html
 | [`hide()`](#hide)                                   | [`last()`](#last)                             | [`next()`](#next)                               | [`off()`](#off)                             |
 | [`on()`](#on)                                       | [`previous()`](#previous)                     | [`render()`](#render)                           | [`setButtonClass()`](#setbuttonclass)       |
 | [`setSelectedAreas()`](#setselectedareas)           | [`setViewMode()`](#setviewmode)               | [`show()`](#show)                               | [`unbind()`](#unbind)                       |
-| [`createTemplate()`](#createtemplate)               | [`createDocumentEditor()`](#createdocumenteditor)               |
+| [`createTemplate()`](#createtemplate)               | [`createDocumentEditor()`](#createdocumenteditor)   | [`updateCheckboxStyle()`](#updatecheckboxstyle)     | [`updatePageNumberStyle()`](#updatepagenumberstyle)       |
 
 <!--* [updateUISettings](#updateuisettings)-->
 
@@ -468,7 +468,7 @@ The method [ `unbind()` ](#unbind) will dispose all created CustomElement object
  * @param thumbnailViewerSettings Configure the ThumbnailViewer object
  */
 createThumbnailViewer(
-    thumbnailViewerSettings?: thumbnailViewerSettings
+    thumbnailViewerSettings?: ThumbnailViewerSettings
 ): ThumbnailViewer;
 
 interface ThumbnailViewer {
@@ -490,6 +490,16 @@ interface ThumbnailViewer {
      */
     updateViewMode(viewMode: ViewMode): void;
     /**
+     * Change the checkbox style. Available in v17.3+.
+     * @param checkboxSettings Specify the checkbox settings.
+     */
+    updateCheckboxStyle(checkboxSettings?: CheckboxSettings): void;
+    /**
+     * Change the page number style. Available in v17.3+.
+     * @param pageNumberSettings Specify the page number settings.
+     */
+    updatePageNumberStyle(pageNumberSettings?: PageNumberSettings): void;
+    /**
      * Bind a listner to the specified event. You can bind one or multiple listeners to the same event.
      * @param eventName Specify the event name.
      * @param callback Specify the listner.
@@ -501,9 +511,12 @@ interface ThumbnailViewer {
      * @param callback Specify the listener to remove
      */
     off(eventName: string, callback?: () => void): void;
+}
+
+interface ThumbnailViewerSettings {    
     /**
      * Whether to allow keyboard control. Default: true.
-     */
+     */  
     allowKeyboardControl: boolean;
     /**
      * Whether to allow page dragging to reorder the pages.
@@ -585,7 +598,45 @@ interface ThumbnailViewer {
      * Default: false.
      */
     autoChangeIndex: boolean;
+    checkbox:{
+      visibility?: string, //"visible"：hidden", default："hidden" 
+      width?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
+      height?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
+      background?: string //default："#ffffff"
+      borderWidth?: number | string,  //default: "2px", unit: px, percentage value not supported
+      borderColor?: string, //default : "#000000"
+      checkMarkColor?: string; //default: "#000000"
+      checkMarkLineWidth?: number | string; //default: "2px", unit: px, percentage value not supported
+      borderRadius?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to itself
+      opacity?: number, //default：0.5, value range [0-1], value greater 1 defaults to 1
+      left?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
+      top?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
+      right?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
+      bottom?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
+      translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%"，relative to itself
+      translateY?: number | string; //default: "";  number unit: px, string value: "10px"/"10%"，relative to itself
+    }，
+    pageNumber:{
+      visibility?: string, //"visible"：hidden", default："hidden" 
+      width?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
+      height?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
+      background?: string //default："#ffffff"            
+      borderWidth?: number | string, //default: "1px", unit: px, percentage value not supported
+      borderColor?: string, //default: "#a79898"
+      borderRadius?: number | string,  //default: “50%”, number unit: px, string value: "10px"/"10%"，relative to itself
+      opacity?:number, //default：0.5, value range [0-1], value greater 1 defaults to 1
+      color?: string,  //default : "#000000"，supports #16 hexadecimal only
+      FontFamily?: string, //default : "sans-serif"
+      fontSize?: number | string, //default: 12, unit: px, percentage value not supported
+      left?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
+      top?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
+      right?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
+      bottom?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
+      translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%"，relative to itself
+      translateY?: number | string; //default: "", number unit: px, string value: "10px"/"10%"，relative to itself
+    }
 };
+
 interface ThumbnailViewerEvent {
     // The index of the current page.
     index: number;
@@ -594,6 +645,7 @@ interface ThumbnailViewerEvent {
     // The y-coordinate of the browser page.
     pageY: number;
 };
+
 interface ViewMode {
     /**
      * Specify the number of images per row.
@@ -675,6 +727,8 @@ thumbnail.show();
 ```
 
 **Usage notes**
+
+For the CheckboxSettings and PageNumberSettings interface, please refer to the APIs [updateCheckboxStyle]({{site.info}}api/WebTwain_Viewer.html#updatecheckboxstyle) and [updatePageNumberStyle]({{site.info}}api/WebTwain_Viewer.html#updatepagenumberstyle).
 
 The following table shows the events available to a ThumbnailViewer object.
 
@@ -2421,6 +2475,125 @@ documentEditor.show();
 **Usage Notes**
 
 For details on the DocumentConfiguration interface, please refer to the camera [scanDocument]({{site.info}}api/Addon_Camera.html#scandocument) API.
+
+---
+
+## updateCheckboxStyle
+
+**Syntax**
+
+```typescript
+/**
+ * Update checkbox style
+ * @argument checkboxSettings Settings for checkboxex.
+ */
+updateCheckboxStyle(checkboxSettings?: CheckboxSettings): void;
+
+interface CheckboxSettings {
+  visibility?: string, //"visible"：hidden", default："hidden" 
+  width?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
+  height?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
+  background?: string //default："#ffffff"
+  borderWidth?: number | string,  //default: "2px", unit: px, percentage value not supported
+  borderColor?: string, //default : "#000000"
+  checkMarkColor?: string; //default: "#000000"
+  checkMarkLineWidth?: number | string; //default: "2px", unit: px, percentage value not supported
+  borderRadius?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to itself
+  opacity?: number, //default：0.5, value range [0-1], value greater 1 defaults to 1
+  left?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
+  top?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
+  right?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
+  bottom?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
+  translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%"，relative to itself
+  translateY?: number | string; //default: "";  number unit: px, string value: "10px"/"10%"，relative to itself
+}
+
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+</tr>
+
+</table>
+</div>
+
+---
+
+## updatePageNumberStyle
+
+**Syntax**
+
+```typescript
+/**
+ * Update page number style
+ * @argument pageNumberSettings Settings for page numbers.
+ */
+updatePageNumberStyle(pageNumberSettings?: PageNumberSettings): void;
+
+interface pageNumberSettings {       
+  visibility?: string, //"visible"：hidden", default："hidden" 
+  width?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
+  height?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
+  background?: string //default："#ffffff"            
+  borderWidth?: number | string, //default: "1px", unit: px, percentage value not supported
+  borderColor?: string, //default: "#a79898"
+  borderRadius?: number | string,  //default: “50%”, number unit: px, string value: "10px"/"10%"，relative to itself
+  opacity?:number, //default：0.5, value range [0-1], value greater 1 defaults to 1
+  color?: string,  //default : "#000000"，supports #16 hexadecimal only
+  FontFamily?: string, //default : "sans-serif"
+  fontSize?: number | string, //default: 12, unit: px, percentage value not supported
+  left?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
+  top?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
+  right?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
+  bottom?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
+  translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%"，relative to itself
+  translateY?: number | string; //default: "", number unit: px, string value: "10px"/"10%"，relative to itself
+}
+
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
