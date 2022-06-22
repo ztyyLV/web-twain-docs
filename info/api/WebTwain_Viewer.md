@@ -32,9 +32,8 @@ permalink: /info/api/WebTwain_Viewer.html
 | [`acceptDrop`](#acceptdrop)                 | [`allowSlide`](#allowslide)                             | [`allowPageDragging`](#allowpagedragging)             | [`background`](#background)                         |
 | [`border`](#border)                         | [`cursor`](#cursor)                                     | [`height`](#height)                                   | [`idPostfix`](#idpostfix)                           |
 | [`ifAutoScroll`](#ifautoscroll)             | [`innerBorder`](#innerborder)                           | [`pageMargin`](#pagemargin)                           | [`selectedAreaBorderColor`](#selectedareabordercolor) |
-| [`selectedPageBackground`](#selectedpagebackground) | [`selectedPageBorder`](#selectedpageborder)     | [`selectionRectAspectRatio`](#selectionrectaspectratio) | [`showPageNumber`](#showpagenumber)               |
-| [`singlePageMode`](#singlepagemode)         | [`width`](#width)                                       | [`zoom`](#zoom)                                       | [`autoChangeIndex`](#autochangeindex)               |
-| [`showCheckbox`](#showcheckbox)             | [`selectionMode`](#selectionmode)                        |
+| [`selectedPageBackground`](#selectedpagebackground) | [`selectedPageBorder`](#selectedpageborder)     | [`selectionRectAspectRatio`](#selectionrectaspectratio) | [`singlePageMode`](#singlepagemode)               |
+| [`width`](#width)                           | [`zoom`](#zoom)                                         | [`autoChangeIndex`](#autochangeindex)                 | [`selectionMode`](#selectionmode)                   |
 
 **Events**
 
@@ -61,9 +60,9 @@ permalink: /info/api/WebTwain_Viewer.html
 |                            |
 | :------------------------- | :-------------------------- | --------------- | ---------------- |
 | `BackgroundColor`          | `SelectionImageBorderColor` | `FitWindowType` | `IfFitWindow`    |
-| `Height`                   | `Width`                     | `IfAutoScroll`  | `ShowPageNumber` |
-| `MouseX`                   | `MouseY`                    | `ImageMargin`   | `MouseShape`     |
-| `SelectionRectAspectRatio` | `Zoom`                      |
+| `Height`                   | `Width`                     | `IfAutoScroll`  | `MouseX`         |
+| `MouseY`                   | `ImageMargin`               | `MouseShape`    | `SelectionRectAspectRatio` |
+| `Zoom`                     |
 
 **Events**
 
@@ -577,11 +576,6 @@ interface ThumbnailViewer {
      */
     selectedPageBorder: string;
     /**
-     * Set or return whether page numbers are shown.
-     * Default: false.
-     */
-    showPageNumber: boolean;
-    /**
      * Set or return the size of the thumbnail viewer. The value can either be in pixels or percentage (based on the width or height of the entire viewer).
      * Default: "30%".
      */
@@ -591,10 +585,6 @@ interface ThumbnailViewer {
      * Default: false.
      */
     autoChangeIndex: boolean;
-     /**
-     * Show checkbox on image(s).
-     */
-    showCheckbox: boolean;
 };
 interface ThumbnailViewerEvent {
     // The index of the current page.
@@ -671,7 +661,6 @@ var thumbnailViewerSettings = {
     allowKeyboardControl: true,
     allowPageDragging: true,
     allowResizing: false,
-    showPageNumber: false,
     pageBackground: "transparent",
     pageBorder: "1px solid rgb(238, 238, 238)",
     hoverBackground: "rgb(239, 246, 253)",
@@ -2087,53 +2076,6 @@ This API is only effective when drawing manually (it won't work if the selection
 
 ---
 
-## showPageNumber
-
-**Syntax**
-
-```typescript
-/**
- * Return or set whether to show the page numbers.
- */
-```
-
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-</tr>
-
-<tr>
-<td align="center">not supported </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-</tr>
-
-</table>
-</div>
-
-**Example**
-
-```javascript
-DWObject.Viewer.showPageNumber = true;
-```
-
-**Usage notes**
-
-The default value is `false` which means the page nubmers are hidden. The page numbers indicate the order of the pages. When the viewmode is -1 \* -1 (in other words, [ `singlePageMode` ](#singlepagemode) is `true` ), page numbers will be hidden.
-
----
-
 ## singlePageMode
 
 **Syntax**
@@ -2479,44 +2421,6 @@ documentEditor.show();
 **Usage Notes**
 
 For details on the DocumentConfiguration interface, please refer to the camera [scanDocument]({{site.info}}api/Addon_Camera.html#scandocument) API.
-
----
-
-## showCheckbox
-
-**Syntax**
-
-```typescript
-/**
- * Show checkbox on image(s).
- */
-showCheckbox: boolean;
-```
-
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-</tr>
-
-<tr>
-<td align="center">not supported </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+</td>
-<td align="center">v17.2+</td>
-<td align="center">v17.2+</td>
-<td align="center">v17.2+ </td>
-</tr>
-
-</table>
-</div>
 
 ---
 
