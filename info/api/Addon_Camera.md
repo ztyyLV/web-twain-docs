@@ -698,6 +698,8 @@ interface DocumentConfiguration {
 }
 
 interface ScannerViewerSettings {
+  element?: HTMLDivElement, //Bind the element or element id. 
+                            //After binding, display the video in the specified element, otherwise, display the video in full screen.
   deviceId?: string,  
   maxDocuments?: number,       //The maximum documents can be captured/loaded in to the buffer. 
   enableBorderDetection?: boolean,  // Whether to enable border detection. The default value is true.
@@ -757,6 +759,8 @@ interface ScannerViewerSettings {
 
 interface DocumentEditorSettings {
   visibility: true,
+  element?: HTMLDivElement, //Bind the element or element id. 
+                            //After binding, display the video in the specified element, otherwise, display the video in full screen.  
   defaultViewerName: string,  //value: "cropViewer", "mainViewer". default: "crop Viewer
   headerStyle?:{
     background: string,  //default: "#000000". Only supports #16 hexadecimal.

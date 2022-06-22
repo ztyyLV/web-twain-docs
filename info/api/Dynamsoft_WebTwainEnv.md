@@ -361,7 +361,7 @@ Gets the RawData for the specified image captured from camera.
 
 ``` typescript
 interface RawData {
-  displayImage:{
+  displayImage:{  //Data of the display image, after filter and crop effects
     data: Blob,
     bitDepth: number，
     height: number,
@@ -370,10 +370,10 @@ interface RawData {
     width: number,
   },
   documentData:{
-    angle: number,
-    polygon: [{x:number, y:number},{x:number, y:number},{x:number, y:number},{x:number, y:number}],
+    angle: number,  //the clockwise rotation angle of the original image
+    polygon: [{x:number, y:number},{x:number, y:number},{x:number, y:number},{x:number, y:number}], //selection area
     filterValue: string,
-    originImage:{
+    originImage:{ //Data of the original image
       bitDepth: number,
       data: Blob,
       height: number,
