@@ -48,14 +48,14 @@ permalink: /info/api/WebTwain_Viewer.html
 
 > The following APIs are deprecated as of v16.2, check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html#viewer-related-api-changes-in-versoin-16.2).
 
-**Methods**
+**Deprecated Methods**
 
 |                  |
 | :--------------- | :------------- |
 | `BindViewer()`   | `UnbindView()` |
 | `UpdateViewer()` |
 
-**Properties**
+**Deprecated Properties**
 
 |                            |
 | :------------------------- | :-------------------------- | --------------- | ---------------- |
@@ -64,7 +64,7 @@ permalink: /info/api/WebTwain_Viewer.html
 | `MouseY`                   | `ImageMargin`               | `MouseShape`    | `SelectionRectAspectRatio` |
 | `Zoom`                     |
 
-**Events**
+**Deprecated Events**
 
 |                     |
 | :------------------ | :-------------------- | ----------------------- |
