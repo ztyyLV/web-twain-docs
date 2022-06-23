@@ -17,7 +17,7 @@ You can use capability negotiation to get all the resolutions supported by the s
 
 Steps:
 
-- Step-1: Use <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html?ver=latest#getcapabilities" target="_blank">getCapabilities</a> to get all capabilities of the current data source,
+- Step-1: Use <a href="{{site.info}}api/WebTwain_Acquire.html#getcapabilities" target="_blank">getCapabilities</a> to get all capabilities of the current data source,
 
 ```javascript
 DWObject.OpenSource();

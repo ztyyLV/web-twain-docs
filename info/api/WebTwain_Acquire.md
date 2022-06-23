@@ -10,7 +10,7 @@ permalink: /info/api/WebTwain_Acquire.html
 
 # {WebTwainObject} Scan
 
-> The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object](https://www.dynamsoft.com/web-twain/docs/indepth/features/initialize.html?ver=latest#creating-the-webtwain-instance).
+> The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance).
 
 **1. The following APIs are compatible with TWAIN, ICA, SANE (Windows, macOS and Linux)** 
 
@@ -2208,7 +2208,7 @@ If it's set to `false` , the images will be inserted before the current image. T
 ```
 
 /**
- * Return or set whether to close the user interface after all images have been acquired.
+ * Return or set whether to close the data source after all images have been acquired.
  */
 IfDisableSourceAfterAcquire: boolean;
 ```

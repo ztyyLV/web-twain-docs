@@ -13,6 +13,6 @@ permalink: /faq/protect-sensitive-information.html
 
 ## Can I protect sensitive information of an image from being seen?
 
-No, currently this functionality is not available, but our development team is working on an <a href="https://www.dynamsoft.com/web-twain/docs/info/schedule/proposed.html?ver=latest#add-annotations" target="_blank">annotation</a> feature which can be used to protect sensitive information.
+No, currently this functionality is not available, but our development team is working on an <a href="{{site.info}}schedule/proposed.html#add-annotations" target="_blank">annotation</a> feature which can be used to protect sensitive information.
 
-Another Use Case: If you want to modify the image and not only hide some parts of the image, then you can try using the <a href="https://www.dynamsoft.com/web-twain/docs/indepth/features/edit.html?ver=latest#cutting-cropping-and-copying" target="_blank">erase()</a> method. So, if the request is to replace a rectangle area of an image with a specific color block, then erase() can help achieve that.
+Another Use Case: If you want to modify the image and not only hide some parts of the image, then you can try using the <a href="{{site.indepth}}features/edit.html#cutting-cropping-and-copying" target="_blank">erase()</a> method. So, if the request is to replace a rectangle area of an image with a specific color block, then erase() can help achieve that.

@@ -21,7 +21,7 @@ permalink: /info/api/WebTwain_Viewer.html
 | [`hide()`](#hide)                                   | [`last()`](#last)                             | [`next()`](#next)                               | [`off()`](#off)                             |
 | [`on()`](#on)                                       | [`previous()`](#previous)                     | [`render()`](#render)                           | [`setButtonClass()`](#setbuttonclass)       |
 | [`setSelectedAreas()`](#setselectedareas)           | [`setViewMode()`](#setviewmode)               | [`show()`](#show)                               | [`unbind()`](#unbind)                       |
-| [`createTemplate()`](#createtemplate)               |
+| [`createTemplate()`](#createtemplate)               | [`createDocumentEditor()`](#createdocumenteditor)               |
 
 <!--* [updateUISettings](#updateuisettings)-->
 
@@ -29,11 +29,12 @@ permalink: /info/api/WebTwain_Viewer.html
 
 |                                             |
 | :------------------------------------------ | :------------------------------------------------------ | ----------------------------------------------------- | --------------------------------------------------- |
-| [`acceptDrop`](#acceptdrop)                 | [`allowSlide`](#allowslide)                             | [`background`](#background)                           | [`border`](#border)                                 |
-| [`cursor`](#cursor)                         | [`height`](#height)                                     | [`idPostfix`](#idpostfix)                             | [`ifAutoScroll`](#ifautoscroll)                     |
-| [`innerBorder`](#innerborder)               | [`pageMargin`](#pagemargin)                             | [`selectedAreaBorderColor`](#selectedareabordercolor) | [`selectedPageBackground`](#selectedpagebackground) |
-| [`selectedPageBorder`](#selectedpageborder) | [`selectionRectAspectRatio`](#selectionrectaspectratio) | [`showPageNumber`](#showpagenumber)                   | [`singlePageMode`](#singlepagemode)                 |
-| [`width`](#width)                           | [`zoom`](#zoom)                                         | [`autoChangeIndex`](#autochangeindex)                 | [`showCheckbox`](#showcheckbox)                     |
+| [`acceptDrop`](#acceptdrop)                 | [`allowSlide`](#allowslide)                             | [`allowPageDragging`](#allowpagedragging)             | [`background`](#background)                         |
+| [`border`](#border)                         | [`cursor`](#cursor)                                     | [`height`](#height)                                   | [`idPostfix`](#idpostfix)                           |
+| [`ifAutoScroll`](#ifautoscroll)             | [`innerBorder`](#innerborder)                           | [`pageMargin`](#pagemargin)                           | [`selectedAreaBorderColor`](#selectedareabordercolor) |
+| [`selectedPageBackground`](#selectedpagebackground) | [`selectedPageBorder`](#selectedpageborder)     | [`selectionRectAspectRatio`](#selectionrectaspectratio) | [`showPageNumber`](#showpagenumber)               |
+| [`singlePageMode`](#singlepagemode)         | [`width`](#width)                                       | [`zoom`](#zoom)                                       | [`autoChangeIndex`](#autochangeindex)               |
+| [`showCheckbox`](#showcheckbox)             | [`selectionMode`](#selectionmode)                        |
 
 **Events**
 
@@ -1459,6 +1460,49 @@ This API only works if the view mode of the viewer is set to -1 by -1.
 
 ---
 
+## allowPageDragging
+
+```typescript
+/**
+ * Set whether to allow page dragging to reorder the pages.
+ * The default value is true.
+ */
+.allowPageDragging: boolean;
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+</tr>
+
+</table>
+</div>
+
+**Example**
+
+```javascript
+DWObject.Viewer.allowPageDragging = true;
+```
+
+---
+
 ## background
 
 **Syntax**
@@ -2302,8 +2346,9 @@ When set to true, the index in the upper left corner of the viewer will be selec
 /**
  * Create document scanner template.
  * @argument templateName Currently templateName only supports "documentScanner".
+ * @argument documentConfiguration Configuration for the document object.
  */
-createTemplate("templateName")：DocumentViewerTemplate
+createTemplate("templateName", documentConfiguration?: DocumentConfiguration)：DocumentViewerTemplate
 
 interface DocumentViewerTemplate{
    getCustomElement():CustomElement; //Get CustomElement. Can display save & upload interface in CustomElement.   
@@ -2330,11 +2375,11 @@ interface DocumentViewerTemplate{
 
 <tr>
 <td align="center">not supported </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+</td>
-<td align="center">v17.2+</td>
-<td align="center">v17.2+</td>
-<td align="center">v17.2+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
 </tr>
 
 </table>
@@ -2364,6 +2409,76 @@ Dynamsoft.DWT.CreateDWTObjectEx(
     console.log(errorString);
   });
 ```
+
+**Usage Notes**
+
+For details on the DocumentConfiguration interface, please refer to the camera [scanDocument]({{site.info}}api/Addon_Camera.html#scandocument) API.
+
+---
+
+## createDocumentEditor
+
+**Syntax**
+
+```typescript
+/**
+ * Create a document editor object.
+ * @argument documentConfiguration Configuration for the object.
+ */
+createDocumentEditor(documentConfiguration?: DocumentConfiguration): DocumentEditor;
+
+interface DocumentEditor {
+    /**
+     * Show the DocumentEditor object.
+     */
+    show(): boolean;
+    /**
+     * Hide the DocumentEditor object.
+     */
+    hide(): boolean;
+    /**
+     * Remove the DocumentEditor object.
+     */
+    dispose(): boolean;
+};
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+</tr>
+
+</table>
+</div>
+
+**Example**
+
+```javascript
+// Use default settings
+var documentEditor = DWObject.Viewer.createDocumentEditor();
+documentEditor.show();
+```
+
+**Usage Notes**
+
+For details on the DocumentConfiguration interface, please refer to the camera [scanDocument]({{site.info}}api/Addon_Camera.html#scandocument) API.
 
 ---
 
@@ -2402,6 +2517,49 @@ showCheckbox: boolean;
 
 </table>
 </div>
+
+---
+
+## selectionMode
+
+**Syntax**
+
+```typescript
+/**
+ * Return or set the selection mode used when acquiring images.
+ */
+selectionMode: Dynamsoft.DWT.EnumDWT_SelectionMode | number;
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+</tr>
+
+</table>
+</div>
+
+**Usage notes**
+
+The default value is 0 (Single). Even if checkbox is used, only one image can be selected if the selection mode is set to 0 (Single).
+
 ---
 
 ## Events

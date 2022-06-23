@@ -15,6 +15,6 @@ permalink: /faq/separate-documents-by-barcode.html
 
 When dealing with batch documents, barcodes can function as a smart separator, or to properly group documents. For example, by affixing a barcode to each document in a batch and then scanning it, the files can be automatically grouped or separated. They can be automatically made into multi-page TIFF or PDF files. All of this can be accomplished with a single batch scan by integrating the Core Module and Barcode Reader add-on of Dynamic Web TWAIN SDK.
 
-Please refer to the two examples with sample codes here: <a href="https://www.dynamsoft.com/web-twain/docs/indepth/features/barcode.html?ver=latest#use-barcode-to-classify-and-separate-documents" target="_blank">Use barcode to classify and separate documents</a>.
+Please refer to the two examples with sample codes here: <a href="{{site.indepth}}features/barcode.html#use-barcode-to-classify-and-separate-documents" target="_blank">Use barcode to classify and separate documents</a>.
 
 Here is a sample project you can try and download: <a href="https://www.dynamsoft.com/web-twain/resources/code-gallery/?SampleID=102" target="_blank">Automate Document Classification Using Barcode Separator</a>.

@@ -39,8 +39,6 @@ The deployment of Dynamic Web TWAIN is easy. Simply copy the Resources folder to
 | `.deb` | `application/x-debian-package` | [Browsers on Linux]({{site.getstarted}}Platform.html#browsers-on-linux) |
 | `.rpm` | `application/x-redhat-package-manager` | [Browsers on Linux]({{site.getstarted}}Platform.html#browsers-on-linux) |
 
-See more: [How to set the MIME type]({{site.indepth}}faqs/distribution/How-to-set-the-MIME-type.html)
-
 ### Enable HTTPS
 
 If you need to use any of the following features, you must enable HTTPS on the server.

@@ -10,7 +10,7 @@ permalink: /info/api/WebTwain_Buffer.html
 
 # {WebTwainObject} Buffer Manage
 
-The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object](https://www.dynamsoft.com/web-twain/docs/indepth/features/initialize.html?ver=latest#creating-the-webtwain-instance).
+The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance).
 
 **Methods**
 
@@ -24,8 +24,8 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`ImageIDToIndex()`](#imageidtoindex)           | [`IndexToImageID()`](#indextoimageid)                   | [`IsBlankImage()`](#isblankimage)                                   | [`IsBlankImageExpress()`](#isblankimageexpress)     |
 | [`SelectAllImages()`](#selectallimages)         | [`MoveImage()`](#moveimage)                             | [`SwitchImage()`](#switchimage)                                     | [`RemoveImage()`](#removeimage)                     |
 | [`RemoveAllImages()`](#removeallimages)         | [`RemoveAllSelectedImages()`](#removeallselectedimages) | [`SelectImages()`](#selectimages)                                   | [`GetTagListByIndex()`](#gettaglistbyindex)         |
-| [`CreateFile()`](#createfile)                   | [`OpenFile()`](#openfile)                               | [`GetCurrentFileName()`](#getcurrentfilename)                       | [`RemoveFile()`](#removefile)                       |
-| [`GetFileInfoList()`](#getfileinfolist)         |
+| [`CreateDocument()`](#createdocument)           | [`OpenDocument()`](#opendocument)                       | [`GetCurrentDocumentName()`](#getcurrentcocumentname)               | [`RenameDocument()`](#renamedocument)                       |
+| [`RemoveDocument()`](#removedocument)           | [`GetDocumentInfoList()`](#getdocumentinfolist)         |
 
 
 <!--* [GetImageBitDepthAsync()](#getimagebitdepthasync)-->
@@ -837,7 +837,7 @@ GetImageSize(index: number, width: number, height: number): number;
 /**
  * Calculate the size in bytes of the specified image assuming an expected file type.
  * @param index Specify the image.
- * @param type Sepcify the expected file type.
+ * @param type Specify the expected file type.
  */
 GetImageSizeWithSpecifiedType(index: number, type: Dynamsoft.DWT.EnumDWT_ImageType | number): number;
 ```
@@ -1425,7 +1425,7 @@ MaxImagesInBuffer: number;
 
 **Usage notes**
 
-When acquiring images and the number of images goes beyond the value set to `MaxImagesInBuffer` , new images will replace old images starting from the 1st one.
+When acquiring images and the number of images goes beyond the value set to `MaxImagesInBuffer`, new images will replace old images starting from the 1st one.
 
 ---
 
@@ -1761,11 +1761,13 @@ IsBlankImageExpress(index: number): boolean;
 
 `IsBlankImage` is more accurate than `IsBlankImageExpress` but it works slower.
 
-`BlankImageCurrentStdDev` should be read after either `IsBlankImage()` or `IsBlankImageExpress` .
+`BlankImageCurrentStdDev` should be read after either `IsBlankImage()` or `IsBlankImageExpress`.
 
-If you believe an image should be blank but `IsBlankImage()` or `IsBlankImageExpress` is returning `false` , you can read `BlankImageCurrentStdDev` for that image and then set a bigger value to `BlankImageMaxStdDev` .
+If you believe an image should be blank but `IsBlankImage()` or `IsBlankImageExpress` is returning `false`, you can read `BlankImageCurrentStdDev` for that image and then set a bigger value to `BlankImageMaxStdDev`.
 
 Both `BlankImageCurrentStdDev` and `BlankImageMaxStdDev` range from 0 to 100.
+
+If the image is not blank and it is not black and white, `IsBlankImage()` or `IsBlankImageExpress` may return `true`. In that case, you can increase the [BlankImageThreshold]({{site.info}}api/WebTwain_Buffer.html#blankimagethreshold) value so that the image is not detected as blank.
 
 ---
 
@@ -1809,7 +1811,7 @@ IfAllowLocalCache: boolean;
 
 The default value of IfAllowLocalCache is true. When the property is true, you can scan as many images as you want as long as you have a big enough disk.  
 The default threshold is set to 800 (MB), anything beyond 800MB gets compressed, encrypted and cached on the local disk.  
-If neccessary, you can set the threshold using `BufferMemoryLimit` for better performance.  
+If necessary, you can set the threshold using `BufferMemoryLimit` for better performance.  
 All cached data is encrypted and can only be read by Dynamic Web TWAIN and it will be destroyed when it is no longer used.
 
 ---
@@ -2079,16 +2081,16 @@ DWObject.GetTagListByIndex(0);
 
 ---
 
-## CreateFile
+## CreateDocument
 
 **Syntax**
 
 ```typescript
 /**
- * Create a category for the scanned image(s).
- * @argument categoryName Specify the category name.
+ * Create a document for the scanned image(s).
+ * @argument documentName Specify the document name.
  */
-CreateFile(categoryName:string):Boolean;
+CreateDocument(documentName:string):Boolean;
 ```
 
 **Availability**
@@ -2119,9 +2121,9 @@ CreateFile(categoryName:string):Boolean;
 **Example**
 
 ```javascript
-//Store the scanned image(s) under 'Category1'.
-DWObject.CreateFile("Category1");
-DWObject.OpenFile("Category1"); //Need to call OpenFile after CreateFile.
+//Save the scanned image(s) under 'Document1'.
+DWObject.CreateDocument("Document1");
+DWObject.OpenDocument("Document1"); //Need to call OpenDocument after CreateDocument.
 DWObject.AcquireImage(successCallback, failureCallback);
 
 function successCallback() {
@@ -2135,21 +2137,21 @@ function failureCallback(errorCode, errorString) {
 
 **Usage notes**
 
-1. If the documents are already sorted before scanning, you can use <a href="{{site.info}}api/WebTwain_Buffer.html#createfile" target="_blank">CreateFile</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#openfile" target="_blank">OpenFile</a> to group the documents.
+1. If the documents are already sorted before scanning, you can use <a href="{{site.info}}api/WebTwain_Buffer.html#createdocument" target="_blank">CreateDocument</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#opendocument" target="_blank">OpenDocument</a> to group the documents.
 2. If the documents are not already sorted before scanning and you want to first scan, then sort, you can use tags to manage that. Relevant APIs: <a href="{{site.info}}api/WebTwain_Buffer.html#setdefaulttag" target="_blank">SetDefaultTag</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#tagimages" target="_blank">TagImages</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#gettaglist" target="_blank">GetTagList</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#filterimagesbytag" target="_blank">FilterImagesByTag</a>
 
 ---
 
-## OpenFile
+## OpenDocument
 
 **Syntax**
 
 ```typescript
 /**
- * Use the specified category for the scanned image(s)
- * @argument categoryName Specify the category name.
+ * Use the specified document for the scanned image(s)
+ * @argument documentName Specify the document name.
  */
-OpenFile(categoryName:string):Boolean;
+OpenDocument(documentName:string):Boolean;
 ```
 
 **Availability**
@@ -2180,11 +2182,11 @@ OpenFile(categoryName:string):Boolean;
 **Example**
 
 ```javascript
-//Stored the scanned image(s) under 'Category2'.
-DWObject.CreateFile("Category1");
-DWObject.CreateFile("Category2");
-DWObject.CreateFile("Category3");
-DWObject.OpenFile("Category2"); //Need to call OpenFile after CreateFile.
+//Save the scanned image(s) under 'Document2'.
+DWObject.CreateDocument("Document1");
+DWObject.CreateDocument("Document2");
+DWObject.CreateDocument("Document3");
+DWObject.OpenDocument("Document2"); //Need to call OpenDocument after CreateDocument.
 DWObject.AcquireImage(successCallback, failureCallback);
 
 function successCallback() {
@@ -2198,15 +2200,15 @@ function failureCallback(errorCode, errorString) {
 
 ---
 
-## GetCurrentFileName
+## GetCurrentDocumentName
 
 **Syntax**
 
 ```typescript
 /**
- * Get the current category name. The default value is 'dynamsoft-dvs-file'. Scanned image(s) are stored in this category by default if no category name is created.
+ * Get the current document name. The default value is 'dynamsoft-default-document'. Scanned image(s) are saved in this document by default if no document name is created.
  */
-GetCurrentFileName():String;
+GetCurrentDocumentName():String;
 ```
 
 **Availability**
@@ -2236,16 +2238,56 @@ GetCurrentFileName():String;
 
 ---
 
-## RemoveFile
+## RenameDocument
 
 **Syntax**
 
 ```typescript
 /**
- * Delete the specified category and all images in it.
- * @argument categoryName Specify the category name.
+ * Rename a document.
+ * @argument oldDocumentName Specify the old document name.
+ * @argument newDocumentName Specify the new document name.
  */
-RemoveFile(categoryName:string):Boolean;
+RenameDocument(oldDocumentName:string, newDocumentName:string):Boolean;
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported  </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+</tr>
+
+</table>
+</div>
+
+---
+
+## RemoveDocument
+
+**Syntax**
+
+```typescript
+/**
+ * Delete the specified document.
+ * @argument documentName Specify the document name.
+ */
+RemoveDocument(documentName:string):Boolean;
 ```
 
 **Availability**
@@ -2275,19 +2317,19 @@ RemoveFile(categoryName:string):Boolean;
 
 ---
 
-## GetFileInfoList
+## GetDocumentInfoList
 
 **Syntax**
 
 ```typescript
 /**
- * Get the list of all categories and their information.
+ * Get the list of all documents and their information.
  */
-GetFileInfoList():Json
+GetDocumentInfoList():Json
 
 Json:
 [{
-   name: "categoryName",
+   name: "documentName",
    imageIds:[23122335, 25566822323]
 },
 {……}]

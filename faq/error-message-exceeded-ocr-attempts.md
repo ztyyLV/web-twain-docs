@@ -15,7 +15,7 @@ permalink: /faq/error-message-exceeded-ocr-attempts.html
 
 ### Symptom
 
-When you use the OCRPro addon, you may receive this error message returned by the member method <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Addon_OCR.html?ver=latest#recognizeselectedimages" target="_blank">GetErrorString()</a> of the OCRResult class.
+When you use the OCRPro addon, you may receive this error message returned by the member method <a href="{{site.info}}api/Addon_OCR.html#recognizeselectedimages" target="_blank">GetErrorString()</a> of the OCRResult class.
 
 ### Cause
 
