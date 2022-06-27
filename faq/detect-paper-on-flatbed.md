@@ -19,12 +19,12 @@ Code Example:
 
 ```javascript
 DWObject.SelectSource();
-DWObject.OpenSource;
+DWObject.OpenSource();
 if(DWObject.IfPaperDetectable)
-if(DWObject.IfFeederLoaded)
-DWObject.AcquireImage();
-else
-alert("There is no paper in the feeder.");
+  if(DWObject.IfFeederLoaded)
+    DWObject.AcquireImage();
+  else
+    alert("There is no paper in the feeder.");
 ...
 ...
 ```
