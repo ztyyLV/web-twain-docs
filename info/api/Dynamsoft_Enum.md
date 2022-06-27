@@ -981,3 +981,11 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 |:-|:-|
 | Single | 0 |
 | Multiple | 1 |
+
+## `Dynamsoft.DWT.EnumDWT_ConfirmExitType `
+
+| Label | Value|
+|:-|:-|
+| Cancel | 0 |
+| Exit | 1 |
+| SaveAndExit | 2 |
