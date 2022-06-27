@@ -2467,16 +2467,16 @@ interface CheckboxSettings {
   background?: string //default："#ffffff"
   borderWidth?: number | string,  //default: "2px", unit: px, percentage value not supported
   borderColor?: string, //default : "#000000"
-  checkMarkColor?: string; //default: "#000000"
-  checkMarkLineWidth?: number | string; //default: "2px", unit: px, percentage value not supported
+  checkMarkColor?: string, //default: "#000000"
+  checkMarkLineWidth?: number | string, //default: "2px", unit: px, percentage value not supported
   borderRadius?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to itself
   opacity?: number, //default：0.5, value range [0-1], value greater 1 defaults to 1
   left?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
   top?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
   right?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
   bottom?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
-  translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%"，relative to itself
-  translateY?: number | string; //default: "";  number unit: px, string value: "10px"/"10%"，relative to itself
+  translateX?: number | string, //default: "", number unit: px, string value: "10px"/"10%"，relative to itself
+  translateY?: number | string //default: "";  number unit: px, string value: "10px"/"10%"，relative to itself
 }
 
 ```
@@ -2535,8 +2535,8 @@ interface pageNumberSettings {
   top?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
   right?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
   bottom?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
-  translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%"，relative to itself
-  translateY?: number | string; //default: "", number unit: px, string value: "10px"/"10%"，relative to itself
+  translateX?: number | string, //default: "", number unit: px, string value: "10px"/"10%"，relative to itself
+  translateY?: number | string //default: "", number unit: px, string value: "10px"/"10%"，relative to itself
 }
 
 ```
