@@ -104,7 +104,7 @@ CreateDWTObject(
 ): void;
 ```
 
-The following would be equivalent to using [Load](#dynamsoftwebtwainenvload) with the configuration `Dynamsoft.DWT.Containers = [{ContainerId: 'dwtcontrolContainer', Width: '585px', Height: '513px'}`
+The following would be equivalent to using [Load](#dynamsoftdwtload) with the configuration `Dynamsoft.DWT.Containers = [{ContainerId: 'dwtcontrolContainer', Width: '585px', Height: '513px'}`
 
 ``` javascript
 Dynamsoft.DWT.CreateDWTObject(
@@ -119,7 +119,7 @@ Dynamsoft.DWT.CreateDWTObject(
 );
 ```
 
-The method can also do something that [Load](#dynamsoftwebtwainenvload) can't. The following code creates a `WebTwain` instance that connects to the Dynamsoft Service running on another machine. Check out [how to enable remote scan]({{site.indepth}}faq/how-to-enable-remote-scan.html).
+The method can also do something that [Load](#dynamsoftdwtload) can't. The following code creates a `WebTwain` instance that connects to the Dynamsoft Service running on another machine. Check out [how to enable remote scan]({{site.faq}}how-to-enable-remote-scan.html).
 
 ### [`Dynamsoft.DWT.CreateDWTObjectEx()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#createdwtobjectex)
 
@@ -152,7 +152,7 @@ interface DWTInitialConfig {
 
 Compared with [`CreateDWTObject`](#dynamsoftwebtwainenvcreatedwtobject), `CreateDWTObjectEx` requires a `WebTwainId` instead of a `ContainerId`.
 
-The following would be equivalent to using [Load](#dynamsoftwebtwainenvload) with the configuration `Dynamsoft.DWT.Containers = [{ContainerId: 'dwtcontrolContainer', Width: '585px', Height: '513px'}`
+The following would be equivalent to using [Load](#dynamsoftdwtload) with the configuration `Dynamsoft.DWT.Containers = [{ContainerId: 'dwtcontrolContainer', Width: '585px', Height: '513px'}`
 
 The created instance doesn't have a built-in viewer. You can instead use the method [`bind()`]({{site.info}}api/WebTwain_Viewer.html#bind) to add a viewer.
 
@@ -174,7 +174,7 @@ Dynamsoft.DWT.CreateDWTObjectEx({
 );
 ```
 
-Similar to [`CreateDWTObject`](#dynamsoftwebtwainenvcreatedwtobject), `CreateDWTObjectEx` can also connect to the Dynamsoft Service running on another machine. Check out [how to enable remote scan]({{site.indepth}}faq/how-to-enable-remote-scan.html).
+Similar to [`CreateDWTObject`](#dynamsoftwebtwainenvcreatedwtobject), `CreateDWTObjectEx` can also connect to the Dynamsoft Service running on another machine. Check out [how to enable remote scan]({{site.faq}}how-to-enable-remote-scan.html).
 
 ## Customizing the instances
 

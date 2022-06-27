@@ -13,4 +13,4 @@ permalink: /faq/mouse-click-events-supported.html
 
 ## What mouse click events does the viewer support?
 
-Dynamic Web TWAIN Viewer supports several mouse click events like mouseup, mousedown, mousemove, mouseover, mouseout and click. You can find <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Viewer.html?ver=latest#events" target="_blank">here</a> a list of all supported events by the viewer.
+Dynamic Web TWAIN Viewer supports several mouse click events like mouseup, mousedown, mousemove, mouseover, mouseout and click. You can find <a href="{{site.info}}api/WebTwain_Viewer.html#events" target="_blank">here</a> a list of all supported events by the viewer.

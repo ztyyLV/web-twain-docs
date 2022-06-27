@@ -19,4 +19,4 @@ permalink: /faq/camera-play-and-showvideo.html
 
 Note that these two APIs cannot be mixed with each other.
 
-Please check <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Addon_Camera.html?ver=latest" target="_blank">here</a> for more information on the Camera APIs.
+Please check <a href="{{site.info}}api/Addon_Camera.html" target="_blank">here</a> for more information on the Camera APIs.

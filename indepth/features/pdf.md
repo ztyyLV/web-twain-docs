@@ -58,7 +58,7 @@ The method [ `SetConvertMode()` ]({{site.info}}api/Addon_PDF.html#setconvertmode
 
 #### Sample code
 
-See full sample <a href="https://github.com/Dynamsoft/Dynamic-Web-TWAIN/blob/master/samples/4.PDFRasterizer.html" target="_blank">here</a>.
+See full sample <a href="https://github.com/Dynamsoft/Dynamic-Web-TWAIN/blob/master/samples/PDFRasterizer.html" target="_blank">here</a>.
 
 #### Other methods
 

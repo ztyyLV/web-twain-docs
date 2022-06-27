@@ -15,6 +15,6 @@ permalink: /faq/trigger-actions-server-side.html
 
 Dynamic Web TWAIN sends an HTTP POST request to the server when doing an upload. You need to write your server-side script to receive and save the uploaded files. On the server side, any scripting language can be used. The server-side script file is specified in the POST Form with the name RemoteFile by default and will be triggered to process the uploaded file.
 
-To change the default field name RemoteFile, you can use the API <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_IO.html?ver=latest#httpfieldnameofuploadedimage" target="_blank">HttpFieldNameOfUploadedImage</a>.
+To change the default field name RemoteFile, you can use the API <a href="{{site.info}}api/WebTwain_IO.html#httpfieldnameofuploadedimage" target="_blank">HttpFieldNameOfUploadedImage</a>.
 
-For Server-side Scripting examples, please check <a href="https://www.dynamsoft.com/web-twain/docs/indepth/development/Server-script.html?ver=latest" target="_blank">this</a>.
+For Server-side Scripting examples, please check <a href="{{site.indepth}}development/Server-script.html" target="_blank">this</a>.

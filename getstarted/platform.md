@@ -33,6 +33,8 @@ WASM browsers refer to the browsers with the following advanced features.
 
 ActiveX browsers refers to Internet Explorer 9 ~ 11. They are not included in the above lists. By default, IE 10 ~ 11 runs in HTML5 mode. Setting the global API `Dynamsoft.DWT.IfUseActiveXForIE10Plus` to true can turn ActiveX mode on in IE 10 ~ 11.
 
+Please refer to <a href="{{site.indepth}}development/activex.html" target="_blank">Dynamic Web TWAIN & ActiveX</a> for more information.
+
 ## Other operating systems
 
 There could be some other systems which are also supported but not listed above. Dynamsoft doesn't recommend the use of such systems as they are not officially tested. If you need to use Dynamic Web TWAIN on a system not mentioned above, please first contact [Dynamsoft Support]({{site.about}}getsupport.html) to get more information.

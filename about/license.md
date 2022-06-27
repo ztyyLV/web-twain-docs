@@ -15,7 +15,7 @@ permalink: /about/license.html
 
 ### Request trial license
 
-You can request a trial license of Dynamic Web TWAIN via our <a href="https://www.dynamsoft.com/customer/license/trialLicense?ver=latest&product=dwt" target="_blank">customer portal</a> or [contacting support](https://www.dynamsoft.com/company/contact/).
+You can request a trial license of Dynamic Web TWAIN via our <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dwt" target="_blank">customer portal</a> or [contacting support](https://www.dynamsoft.com/company/contact/).
 
 ### Update trial license
 
@@ -58,6 +58,8 @@ If you are using an **organizationID**, you can simply update the `organizationI
 ``` javascript
 Dynamsoft.DWT.organizationID = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
 ```
+
+*Note: **ProductKey** and **organizationID** cannot be used together.*
 
 ## License Agreement
 

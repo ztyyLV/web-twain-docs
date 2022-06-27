@@ -42,7 +42,6 @@ interface Dynamsoft.DWT {
     ProductKey: string;
     ResourcesPath: string;
     UseLocalService: boolean;
-    UseDefaultInstallUI: boolean;
      /**
      * Whether to use camera wasm. The default value is false. 
      * Set this property to true if you want to use camera wasm in service mode.
@@ -68,7 +67,8 @@ interface Dynamsoft.DWT {
     GetWebTwainEx(WebTwainId: string): WebTwain;
     Load(): void;
     Unload(): void;
-    RemoveAllAuthorizations: function () {};
+    GetRawDataAsync(index: number): RawData;
+    RemoveAllAuthorizations: function () {};    
     OnWebTwainNotFound: function () {};
     OnWebTwainPostExecute: function () {};
     OnWebTwainPreExecute: function () {};
@@ -105,7 +105,7 @@ Dynamsoft.DWT.licenseServer = ["https://your.mainServer.com", "https://your.back
 
 **Usage notes**
 
-Gets or sets the URL of the License Tracking Server used to authenticate the license (handshakeCode) and track usage. When set to null (default value), it will connect to Dynamsoft's License Tracking Server for online verification. A self hosting option is available. Learn more about [License Tracking Server 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html?ver=latest). 
+Gets or sets the URL of the License Tracking Server used to authenticate the license (handshakeCode) and track usage. When set to null (default value), it will connect to Dynamsoft's License Tracking Server for online verification. A self hosting option is available. Learn more about [License Tracking Server 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html). 
 
 
 ## organizationID
@@ -152,7 +152,7 @@ Dynamsoft.DWT.organizationID = "123456"; // replace the number 123456 with YOUR-
 
 **Usage notes**
 
-Check out more on [how to specify the Organization ID](https://www.dynamsoft.com/license-tracking/docs/common/mechanism.html?ver=latest#specify-the-organization-id)
+Check out more on [how to specify the Organization ID](https://www.dynamsoft.com/license-tracking/docs/common/mechanism.html#specify-the-organization-id)
 
 ## handshakeCode
 
@@ -172,7 +172,7 @@ Dynamsoft.DWT.handshakeCode = "1000**601-1000***44";
 
 **Usage notes**
 
-Learn more about [What is handshakeCode](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#handshake-code)
+Learn more about [What is handshakeCode](https://www.dynamsoft.com/license-tracking/docs/about/terms.html#handshake-code)
 
 ## sessionPassword
 
@@ -191,7 +191,7 @@ Dynamsoft.DWT.sessionPassword = "MyPassw0rd";
 ```
 
 **Usage notes**
-Learn more about [session password](https://www.dynamsoft.com/license-tracking/docs/about/terms.html?ver=latest#session-password) in Dynamsoft License server.
+Learn more about [session password](https://www.dynamsoft.com/license-tracking/docs/about/terms.html#session-password) in Dynamsoft License server.
 
 ## licenseException
 
@@ -206,7 +206,7 @@ licenseException: string;
 
 **Usage notes**
 
-Check [license error list](https://www.dynamsoft.com/license-tracking/docs/common/errorlist.html?ver=latest) 
+Check [license error list](https://www.dynamsoft.com/license-tracking/docs/common/errorlist.html) 
 
 ## Options
 
@@ -323,14 +323,12 @@ The default value is `false` .
   Creates a new UI-less `WebTwain` instance. This instance will be uniquely identified by the parameter `WebTwainId` .
 
 ``` typescript
-  interface DWTInitialConfig {
-
-      WebTwainId: string,
-          Host ? : string,
-          Port ? : string,
-          PortSSL ? : string
-
-  }
+interface DWTInitialConfig {
+    WebTwainId: string,
+        Host ? : string,
+        Port ? : string,
+        PortSSL ? : string
+}
 ```
 
 ### `DeleteDWTObject()`
@@ -345,7 +343,6 @@ The default value is `false` .
 
   Gets an `WebTwain` instance by its `WebTwainId` .
   
-
 ### `Load()`
 
   Initiates the library. If there are predefined `Containers` , one `WebTwain` instance will be created for each `Container` .
@@ -357,6 +354,61 @@ The default value is `false` .
 ### `Unload()`
 
   Destroys all `WebTwain` instances and cuts off the connection to the Dynamsoft Service.
+
+### `GetRawDataAsync()`
+
+Gets the RawData for the specified image captured from camera.
+
+``` typescript
+interface RawData {
+  displayImage:{  //Data of the display image, after filter and crop effects
+    data: Blob,
+    bitDepth: number，
+    height: number,
+    resolutionX: number,
+    resolutionY: number,
+    width: number,
+  },
+  documentData:{
+    angle: number,  //the clockwise rotation angle of the original image
+    polygon: [{x:number, y:number},{x:number, y:number},{x:number, y:number},{x:number, y:number}], //selection area
+    filterValue: string,
+    originImage:{ //Data of the original image
+      bitDepth: number,
+      data: Blob,
+      height: number,
+      width: number,
+      resolutionX: number,
+      resolutionY: number,
+    }
+  }
+}
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">v17.3+ </td>
+</tr>
+
+</table>
+</div>
 
 ### `RemoveAllAuthorizations()`
 
