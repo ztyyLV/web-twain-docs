@@ -698,65 +698,66 @@ interface DocumentConfiguration {
 }
 
 interface ScannerViewer {
-  element?: HTMLDivElement, //Bind the element or element id. 
+  element?: HTMLDivElement | string; //Bind the element or element id. 
                             //After binding, display the video in the specified element, otherwise, display the video in full screen.
-  deviceId?: string,  
-  maxDocuments?: number,       //The maximum number of documents to be scanned
-  enableBorderDetection?: boolean,  // Whether to enable border detection. The default value is true.
-  fullScreen?: boolean,   //Whether to display the video in full screen. The default value is false.
+  deviceId?: string;
+  maxDocuments?: number;       //The maximum number of documents for current scan
+  enableBorderDetection?: boolean;  // Whether to enable border detection. The default value is true.
+  fullScreen?: boolean;   //Whether to display the video in full screen. The default value is false.
   polygonStyle?:{      //The sytle of the auto detect border.       
-    stroke: string,    //default: "#fe8e14". Only supports #16 hexadecimal.
-    strokeWidth: string,  //default: "2px"
-    dash: string          //The allowed value are "solid" and "dashed", the default value is "solid".
-    },
+    stroke?: string,    //default: "#fe8e14". Only supports #16 hexadecimal.
+    strokeWidth?: string,  //default: "2px"
+    dash?: string          //The allowed value are "solid" and "dashed", the default value is "solid".
+    };
   headerStyle?:{
-    background: string,  //default: "#000000". Only supports #16 hexadecimal.
-    color: string,  //The color of the icons. Default : "#ffffff". Only supports #16 hexadecimal.
-    selectedColor: string  //The color of the selected icon. Default : "#fe8e14". Only supports #16 hexadecimal.
-  },
+    background?: string,  //default: "#000000". Only supports #16 hexadecimal.
+    color?: string,  //The color of the icons. Default : "#ffffff". Only supports #16 hexadecimal.
+    selectedColor?: string  //The color of the selected icon. Default : "#fe8e14". Only supports #16 hexadecimal.
+  };
   bodyStyle?:{
-    background: string,  //default: "#ffffff". Only supports #16 hexadecimal.
-    loaderBarSource: string //The image source of the loader bar: url (e.g. "https://xxx.png") or base64
-  },
+    background?: string,  //default: "#ffffff". Only supports #16 hexadecimal.
+    loaderBarSource?: string //The image source of the loader bar: url (e.g. "https://xxx.png") or base64
+  };
   footerStyle?:{
-    background: string,  //default: "#000000". Only supports #16 hexadecimal.
-    color: string,  //The color of the icons. Default : "#ffffff". Only supports #16 hexadecimal.
-    selectedColor: string //The color of the selected icon. Default : "#fe8e14". Only supports #16 hexadecimal.
-  },
+    background?: string,  //default: "#000000". Only supports #16 hexadecimal.
+    color?: string,  //The color of the icons. Default : "#ffffff". Only supports #16 hexadecimal.
+    selectedColor?: string //The color of the selected icon. Default : "#fe8e14". Only supports #16 hexadecimal.
+  };
   scanButtonStyle?:{
-    background: string,  //default: "#fe8e14". Only supports #16 hexadecimal.
-    color: string  //Default : "#ffffff". Only supports #16 hexadecimal.
-  },      
+    background?: string,  //default: "#fe8e14". Only supports #16 hexadecimal.
+    color?: string  //Default : "#ffffff". Only supports #16 hexadecimal.
+  };    
   resolution?:{
-    visibility?: boolean, //Whether to display the resolution icon in the upper left corner. The default value is true.
+    visibility?: string, //Whether to display the resolution icon in the upper left corner. Values: "visible""hidden". Default; "visible".
+    
     valueList?:[ {   
       label: string,    //The resolution value listed in the drop-down list. For example："1920x1080"
       value: Resolution //The resolution you set. For example: { width:1920, height:1080}
     },{……}]
       defaultValue?: Resolution //Set the default value according to the value set in the valueList.
-    },
+    };
   autoScan?:{   //Automatically capture when a clear document is detected. Only applicable to video scanning. 
-      visibility?: boolean,     //Whether to display the automatic scan icon. The default value is true.
+      visibility?: string,     //Whether to display the automatic scan icon. Values: "visible""hidden". Default; "visible".
       enableAutoScan?: boolean, //Whether to enable automatic scan. The default value is false.
-      },
+      };
   autoDetect?:{  //Only applicable to video scanning.                  
-      visibility?: boolean,         //Whether to display the automatic border detection icon. The default value is true.
+      visibility?: string,         //Whether to display the automatic border detection icon. Values: "visible""hidden". Default; "visible".
       enableAutoDetect?: boolean,   //Whether to enable automatic border detection. The default value is false.     
       acceptedPolygonConfidence?: number, //The default value is 80. The higher the setting, the more accurate the automatic border detection.
       fpsLimit?: number  //The maximum number of frames detected per second. The default value is 3.
-      },     
-  continuousScan?: boolean, //Whether to enable continuous scan. The default value is true.
+      };     
+  continuousScan?: boolean; //Whether to enable continuous scan. The default value is true.
   switchCamera?:{  //The default camera is the rear camera.
-      visibility?: boolean   //Whether to display the switch camera icon. The default value is true.
-      },
+      visibility?: string   //Whether to display the switch camera icon. Values: "visible""hidden". Default; "visible".
+      };
   loadLocalFile?:{  
-      visibility?: boolean   //Whether to display the load local file icon. The default value is true.
-      },
-  funcConfirmExit?: (bExistImage: boolean) => Promise<boolean>,
+      visibility?: string   //Whether to display the load local file icon. Values: "visible""hidden". Default; "visible".
+      };
+  funcConfirmExit?: (bExistImage: boolean) => Promise<boolean>;
     //funcConfirmExit is the callback funtion,
     //Return Promise.resolve(true): End this capture without saving the image data.
     //Return Promise.resolve(false): Stay on the original viewer
-  funcConfirmExit?: (bChanged: boolean, previousViewerName: string) => Promise<Number>,
+  funcConfirmExit?: (bChanged: boolean, previousViewerName: string) => Promise<Number>;
     //funcConfirmExit is the callback funtion.
     //Return Promise.resolve(EnumDWT_ConfirmExitType.Exit): Exit original viewer without saving the image data. 
     //Return Promise.resolve(EnumDWT_ConfirmExitType.SaveAndExit): Exit original viewer with saving the image data. 
@@ -766,37 +767,37 @@ interface ScannerViewer {
 },
 
 interface DocumentEditorSettings {
-  visibility: true,
-  element?: HTMLDivElement, //Bind the element or element id. 
+  visibility?: string; //Values: "visible""hidden". Default; "visible".
+  element?: HTMLDivElement | string; //Bind the element or element id. 
                             //After binding, display the video in the specified element, otherwise, display the video in full screen.  
-  defaultViewerName: string,  //value: "cropViewer", "mainViewer". default: "cropViewer" for scanDocument, "mainViewer" for createDocumentEditor
+  defaultViewerName?: string;  //value: "cropViewer", "mainViewer". default: "cropViewer" for scanDocument, "mainViewer" for createDocumentEditor
   headerStyle?:{
-    background: string,  //default: "#000000". Only supports #16 hexadecimal.
-    color: string,  //The color of the icons. Default : "#ffffff". Only supports #16 hexadecimal.
-    selectedColor: string,  //The color of the selected icon. Default : "#fe8e14". Only supports #16 hexadecimal.
-    disableColor: string,  //default: "#808080"
-  },
+    background?: string,  //default: "#000000". Only supports #16 hexadecimal.
+    color?: string,  //The color of the icons. Default : "#ffffff". Only supports #16 hexadecimal.
+    selectedColor?: string,  //The color of the selected icon. Default : "#fe8e14". Only supports #16 hexadecimal.
+    disableColor?: string,  //default: "#808080"
+  };
   bodyStyle?:{
-    background: string,  //default: "#ffffff". Only supports #16 hexadecimal.
-    loaderBarSource: string, //The image source of the loader bar: url (e.g. "https://xxx.png") or base64
-  },
+    background?: string,  //default: "#ffffff". Only supports #16 hexadecimal.
+    loaderBarSource?: string, //The image source of the loader bar: url (e.g. "https://xxx.png") or base64
+  };
   footerStyle?:{
-    background: string,  //default: "#000000". Only supports #16 hexadecimal.
-    color: string,  //The color of the icons. Default : "#ffffff". Only supports #16 hexadecimal.
-    selectedColor: string,  //The color of the selected icon. Default : "#fe8e14". Only supports #16 hexadecimal.
-  },  
+    background?: string,  //default: "#000000". Only supports #16 hexadecimal.
+    color?: string,  //The color of the icons. Default : "#ffffff". Only supports #16 hexadecimal.
+    selectedColor?: string,  //The color of the selected icon. Default : "#fe8e14". Only supports #16 hexadecimal.
+  };
   insert?: {  //Insert an image  
     visibility?: string,   //Whether to display the insert icon. Values: "visible""hidden". Default; "visible".
     position?: string,   //Set whether to insert the image "before" or "after" the current image. The default value is "before".
-  },
+  };
   remove?: { //Remove an image
     visibility?: string,   //Whether to display the remove icon. Values: "visible""hidden". Default; "visible".
     funcConfirmRemove?: () => Promise<boolean>; 
       //funcConfirmRemove is the callback funtion
-  },
+  };
   rotateLeft?: { 
     visibility?: string,   //Whether to display the rotate left icon. Values: "visible""hidden". Default; "visible".
-  },
+  };
   filter?: {
     visibility?: string,   //Whether to display the filter icon. Values: "visible""hidden". Default; "visible".
     valueList?:[ {  //If not specified, listing all the filters in the order of original, blackAndWhite, grayscale, clean, brightening, saveToner by default. 
@@ -813,18 +814,18 @@ interface DocumentEditorSettings {
     applyToAll?: {
       visibility?: string, //"visible"：hidden". Default："visible"
       enableApplyToAll?: boolean, //Default:false
-      label: string, //Default: "Apply to all"
+      label?: string, //Default: "Apply to all"
     }
-  },
-  crop: {
+  };
+  crop?: {
     visibility?: string,  //"visible"：hidden". Default："visible"
-  },
-  cropViewer: CropViewer,
-  funcConfirmExit?: (bExistImage: boolean) => Promise<boolean>,
+  };
+  cropViewer?: CropViewer;
+  funcConfirmExit?: (bExistImage: boolean) => Promise<boolean>;
     //funcConfirmExit is the callback funtion,
     //Return Promise.resolve(true): End this capture without saving the image data.
     //Return Promise.resolve(false): Stay on the original viewer
-  funcConfirmExit?: (bChanged: boolean, previousViewerName: string) => Promise<Number>,
+  funcConfirmExit?: (bChanged: boolean, previousViewerName: string) => Promise<Number>;
     //funcConfirmExit is the callback funtion.
     //Return Promise.resolve(EnumDWT_ConfirmExitType.Exit): Exit original viewer without saving the image data. 
     //Return Promise.resolve(EnumDWT_ConfirmExitType.SaveAndExit): Exit original viewer with saving the image data. 
@@ -834,22 +835,22 @@ interface DocumentEditorSettings {
 },
 
 interface CropViewer {
-  visibility?: string,   //Whether to display the crop viewer. Values: "visible""hidden". Default; "visible".
-  polygonStyle?:{    //The polygon style in the crop viewer.       
+  visibility?: string;   //Whether to display the crop viewer. Values: "visible""hidden". Default; "visible".
+  polygonStyle?: {    //The polygon style in the crop viewer.       
     stroke: string,       //default : "#fe8e14".  Only supports #16 hexadecimal.
     strokeWidth: string,   //default: "2px"
     dash: string           //The allowed value are "solid" and "dashed", the default value is "solid".
-    },
-  rotateLeft?:{   
+  };
+  rotateLeft?: {   
     visibility?: string,   //Whether to display the rotate left icon. Values: "visible""hidden". Default; "visible".
-    },
-  rotateRight?:{   
+  };
+  rotateRight?: {   
     visibility?: string,   //Whether to display the rotate right icon. Values: "visible""hidden". Default; "visible".
-    },
-  autoDetectBorder?:{   
+  };
+  autoDetectBorder?: {   
     visibility?: string,   //Whether to display the automatic border detection icon. Values: "visible""hidden". Default; "visible".
-    },
-  funcConfirmExit?: (bExistImage: boolean) => Promise<boolean>,
+  };
+  funcConfirmExit?: (bExistImage: boolean) => Promise<boolean>;
     //funcConfirmExit is the callback funtion,
     //Return Promise.resolve(true): End this capture without saving the image data.
     //Return Promise.resolve(false): Stay on the original viewer

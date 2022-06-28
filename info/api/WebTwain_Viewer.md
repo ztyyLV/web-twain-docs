@@ -569,7 +569,7 @@ interface ThumbnailViewerSettings {
      * Default: false.
      */
     autoChangeIndex: boolean;
-    checkbox:{
+    checkbox: {
       visibility?: string, //"visible"：hidden", default："hidden" 
       width?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
       height?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
@@ -586,8 +586,8 @@ interface ThumbnailViewerSettings {
       bottom?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
       translateX?: number | string, //default: "", number unit: px, string value: "10px"/"10%"，relative to itself
       translateY?: number | string //default: "";  number unit: px, string value: "10px"/"10%"，relative to itself
-    }，
-    pageNumber:{
+    };
+    pageNumber: {
       visibility?: string, //"visible"：hidden", default："hidden" 
       width?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
       height?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
