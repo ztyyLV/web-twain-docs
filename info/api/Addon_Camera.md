@@ -701,7 +701,7 @@ interface ScannerViewer {
   element?: HTMLDivElement, //Bind the element or element id. 
                             //After binding, display the video in the specified element, otherwise, display the video in full screen.
   deviceId?: string,  
-  maxDocuments?: number,       //The maximum number of documents to be scanned
+  maxDocuments?: number,       //The maximum number of documents for current scan
   enableBorderDetection?: boolean,  // Whether to enable border detection. The default value is true.
   fullScreen?: boolean,   //Whether to display the video in full screen. The default value is false.
   polygonStyle?:{      //The sytle of the auto detect border.       
