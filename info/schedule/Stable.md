@@ -11,13 +11,49 @@ permalink: /info/schedule/Stable.html
 
 # Stable Releases
 
+## 17.3 (06/30/2022)
+
+### New and Improved Features 
+
+#### Mobile Web Capture
+ - Improved performance and user experience with re-designed mobile document capturing workflow. See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scanner/" target="_blank">live demo</a>.
+
+#### Buffer
+- Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#renamedocument" target="_blank">`RenameDocument`</a>.
+-	Renamed methods
+    - CreateFile -> <a href="{{site.info}}api/WebTwain_Buffer.html#createdocument" target="_blank">CreateDocument</a>.
+    - OpenFile -> <a href="{{site.info}}api/WebTwain_Buffer.html#opendocument" target="_blank">OpenDocument</a>.
+    - GetCurrentFileName -> <a href="{{site.info}}api/WebTwain_Buffer.html#getcurrentdocumentname" target="_blank">GetCurrentDocumentName</a>.
+    -	RemoveFile -> <a href="{{site.info}}api/WebTwain_Buffer.html#removedocument" target="_blank">RemoveDocument</a>.
+    -	GetFileInfoList -> <a href="{{site.info}}api/WebTwain_Buffer.html#getdocumentinfolist" target="_blank">GetDocumentInfoList</a>.
+
+#### Viewer
+- Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#updatecheckboxstyle" target="_blank">`updateCheckboxStyle`</a> to customize checkboxes.
+- Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#updatepagenumberstyle" target="_blank">`updatePageNumberStyle()`</a> to customize page numbers.
+
+### Minor Improvements and Bug Fixes
+ - Made changes to support organizationID value for Dynamsoft.DWT.ProductKey.
+ - Enabled license key validation for the correct version during initialization.
+ - Bug Fix: On MacOS, images in the viewer were sometimes lost when waking up from sleep mode.
+ - Bug Fix: Incorrect error message when using camera function with UseLocalService set to true.
+ - Bug Fix: Unchecking checkboxes did not trigger the onbufferchanged event.
+ - Bug Fix: Failed to load dll when trying to upload images.
+ - Bug Fix: Edited images not showing correctly in Image Editor.
+ - Bug Fix: Images failed to display in print window.
+ - Bug Fix: The image was not displayed correctly in landscape mode when printing from Image Editor.
+ - Bug Fix: Iframe did not work on Edge due to Content Security Policy.
+
+### Deprecations
+
+* Check out the [Deprecations]({{site.info}}schedule/deprecated.html#173) page for v17.3.
+
 ## 17.2.5 (03/29/2022)
 
 ### Improved Features 
 
  - Updated the files *dynamsoft.webtwain.initiate.js* and *dynamsoft.webtwain.addon.camera.js* for better performance of mobile document capturing when using Safari on iOS/iPadOS 13+
 
-### Bug Fixed
+### Bug Fixes
 
  - Updated the file *dynamsoft.webtwain.initiate.js* to resolve a memory leak issue in v17.2.1 on Chrome 98+ when the <a href="{{site.info}}api/WebTwain_Viewer.html#setviewmode" target="_blank">view mode</a> is set to (-1, -1) or if a <a href="{{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer" target="_blank">thumbnail viewer</a> is used.
 
@@ -307,7 +343,7 @@ permalink: /info/schedule/Stable.html
 
 ### Deprecations
 
-* Check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html#viewer-related-api-changes-in-versoin-162).
+* Check out the [Deprecations]({{site.info}}schedule/deprecated.html#162) page for v16.2.
 
 ### Changes to the ActiveX Edition
 

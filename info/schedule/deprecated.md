@@ -38,9 +38,14 @@ The recommended fix is to patch the operating system, you can find the patch [he
 
 ## 17.3
 
+### DWT
+
+* Deleted property: Dynamsoft.DWT.UseDefaultInstallUI
+
 ### Viewer
 
 > [Alternative] Use [updateCheckboxStyle]({{site.info}}api/api/WebTwain_Viewer.html#updatecheckboxstyle) and [updatePageNumberStyle]({{site.info}}api/WebTwain_Viewer.html#updatepagenumberstyle) instead.
+
 * Viewer.showPageNumber
 * Viewer.showCheckbox
 * thumbnailViewer.showCheckbox
@@ -49,6 +54,7 @@ The recommended fix is to patch the operating system, you can find the patch [he
 ### Camera Add-on
 
 > [Alternative] Use [scanDocument]({{site.info}}api/Addon_Camera.html#scandocument) instead.
+
 * Camera.showVideo()
 
 ## 17.0
