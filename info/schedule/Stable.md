@@ -16,7 +16,12 @@ permalink: /info/schedule/Stable.html
 ### New and Improved Features 
 
 #### Mobile Web Capture
- - Improved performance and user experience with re-designed mobile document capturing workflow. See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scanner/" target="_blank">live demo</a>.
+ - Improved performance and user experience with re-designed mobile document capturing workflow. Some highlights:
+    - the original copy of an image is kept in the new document editor object so you can always go back to the original image to make any edit
+    - build your custom workflow to trigger actions in your desired sequence is made easy
+    - interface elements in the viewer/editor are now very customizable. You can easily add/remove icons or change their style
+
+See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scanner/" target="_blank">**live demo**</a>.
 
 #### Buffer
 - Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#renamedocument" target="_blank">RenameDocument</a>.
