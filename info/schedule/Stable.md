@@ -29,7 +29,7 @@ permalink: /info/schedule/Stable.html
 
 #### Viewer
 - Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#updatecheckboxstyle" target="_blank">`updateCheckboxStyle`</a> to customize checkboxes.
-- Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#updatepagenumberstyle" target="_blank">`updatePageNumberStyle()`</a> to customize page numbers.
+- Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#updatepagenumberstyle" target="_blank">`updatePageNumberStyle`</a> to customize page numbers.
 
 ### Minor Improvements and Bug Fixes
  - Made changes to support organizationID value for Dynamsoft.DWT.ProductKey.
@@ -37,7 +37,7 @@ permalink: /info/schedule/Stable.html
  - Bug Fix: On MacOS, images in the viewer were sometimes lost when waking up from sleep mode.
  - Bug Fix: Incorrect error message when using camera function with UseLocalService set to true.
  - Bug Fix: Unchecking checkboxes did not trigger the onbufferchanged event.
- - Bug Fix: Failed to load dll when trying to upload images.
+ - Bug Fix: Failed to load dll for PDF decoding or encoding when using v17.x SDK with an older version image.dll file
  - Bug Fix: Edited images not showing correctly in Image Editor.
  - Bug Fix: Images failed to display in print window.
  - Bug Fix: The image was not displayed correctly in landscape mode when printing from Image Editor.
