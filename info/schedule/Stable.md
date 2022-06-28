@@ -21,19 +21,19 @@ permalink: /info/schedule/Stable.html
 #### Buffer
 - Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#renamedocument" target="_blank">RenameDocument</a>.
 -	Renamed methods
-    - CreateFile -> <a href="{{site.info}}api/WebTwain_Buffer.html#createdocument" target="_blank">CreateDocument</a>.
-    - OpenFile -> <a href="{{site.info}}api/WebTwain_Buffer.html#opendocument" target="_blank">OpenDocument</a>.
-    - GetCurrentFileName -> <a href="{{site.info}}api/WebTwain_Buffer.html#getcurrentdocumentname" target="_blank">GetCurrentDocumentName</a>.
-    -	RemoveFile -> <a href="{{site.info}}api/WebTwain_Buffer.html#removedocument" target="_blank">RemoveDocument</a>.
-    -	GetFileInfoList -> <a href="{{site.info}}api/WebTwain_Buffer.html#getdocumentinfolist" target="_blank">GetDocumentInfoList</a>.
+    - CreateFile -> <a href="{{site.info}}api/WebTwain_Buffer.html#createdocument" target="_blank">CreateDocument</a>
+    - OpenFile -> <a href="{{site.info}}api/WebTwain_Buffer.html#opendocument" target="_blank">OpenDocument</a>
+    - GetCurrentFileName -> <a href="{{site.info}}api/WebTwain_Buffer.html#getcurrentdocumentname" target="_blank">GetCurrentDocumentName</a>
+    -	RemoveFile -> <a href="{{site.info}}api/WebTwain_Buffer.html#removedocument" target="_blank">RemoveDocument</a>
+    -	GetFileInfoList -> <a href="{{site.info}}api/WebTwain_Buffer.html#getdocumentinfolist" target="_blank">GetDocumentInfoList</a>
 - Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#getrawdataasync" target="_blank">GetRawDataAsync</a>.
 
 #### Viewer
-- Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#updatecheckboxstyle" target="_blank">updateCheckboxStyle</a> to customize checkboxes. This method is also added to `ThumbnailViewer`. Refer to <a href="{{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer" target="_blank">createThumbnailViewer</a>
-- Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#updatepagenumberstyle" target="_blank">updatePageNumberStyle</a> to customize page numbers. This method is also added to `ThumbnailViewer`. Refer to <a href="{{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer" target="_blank">createThumbnailViewer</a>
+- Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#updatecheckboxstyle" target="_blank">updateCheckboxStyle</a> to customize checkboxes. This method is also added to `ThumbnailViewer`. Refer to <a href="{{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer" target="_blank">createThumbnailViewer</a>.
+- Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#updatepagenumberstyle" target="_blank">updatePageNumberStyle</a> to customize page numbers. This method is also added to `ThumbnailViewer`. Refer to <a href="{{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer" target="_blank">createThumbnailViewer</a>.
 - Added new properties `checkbox` and `pageNumber` to `ThumbnailViewerSettings`. Refer to <a href="{{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer" target="_blank">createThumbnailViewer</a>
 - Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#createdocumenteditor" target="_blank">createDocumentEditor</a>.
-- Added new property <a href="{{site.info}}api/WebTwain_Viewer.html#selectionmode" target="_blank">`selectionMode</a>
+- Added new property <a href="{{site.info}}api/WebTwain_Viewer.html#selectionmode" target="_blank">selectionMode</a>.
 
 ### Minor Improvements and Bug Fixes
  - Modified `Dynamsoft.DWT.EnumDWT_PDFCompressionType` from `PDF_JBig2` to `PDF_JBIG2`.
@@ -42,7 +42,7 @@ permalink: /info/schedule/Stable.html
  - Bug Fix: On MacOS, images in the viewer were sometimes lost when waking up from sleep mode.
  - Bug Fix: Incorrect error message when using camera function with UseLocalService set to true.
  - Bug Fix: Unchecking checkboxes did not trigger the OnBufferChanged event.
- - Bug Fix: Failed to load dll for PDF decoding or encoding when using v17.x SDK with an older version image.dll file
+ - Bug Fix: Failed to load dll for PDF decoding or encoding when using v17.x SDK with an older version image.dll file.
  - Bug Fix: Edited images not showing correctly in Image Editor.
  - Bug Fix: Images failed to display in print window.
  - Bug Fix: The image was not displayed correctly in landscape mode when printing from Image Editor.
