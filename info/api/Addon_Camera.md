@@ -757,11 +757,6 @@ interface ScannerViewer {
     //funcConfirmExit is the callback funtion,
     //Return Promise.resolve(true): End this capture without saving the image data.
     //Return Promise.resolve(false): Stay on the original viewer
-  funcConfirmExit?: (bChanged: boolean, previousViewerName: string) => Promise<Number>;
-    //funcConfirmExit is the callback funtion.
-    //Return Promise.resolve(EnumDWT_ConfirmExitType.Exit): Exit original viewer without saving the image data. 
-    //Return Promise.resolve(EnumDWT_ConfirmExitType.SaveAndExit): Exit original viewer with saving the image data. 
-    //Return Promise.resolve(EnumDWT_ConfirmExitType.Cancel): Stay on the original viewer
   funcConfirmExitAfterSave?: (firedByDocumentEdit: boolean) => void
     //funcConfirmExitAfterSave is the callback funtion
 },
@@ -821,10 +816,6 @@ interface DocumentEditorSettings {
     visibility?: string,  //"visible"：hidden". Default："visible"
   };
   cropViewer?: CropViewer;
-  funcConfirmExit?: (bExistImage: boolean) => Promise<boolean>;
-    //funcConfirmExit is the callback funtion,
-    //Return Promise.resolve(true): End this capture without saving the image data.
-    //Return Promise.resolve(false): Stay on the original viewer
   funcConfirmExit?: (bChanged: boolean, previousViewerName: string) => Promise<Number>;
     //funcConfirmExit is the callback funtion.
     //Return Promise.resolve(EnumDWT_ConfirmExitType.Exit): Exit original viewer without saving the image data. 
@@ -850,10 +841,6 @@ interface CropViewer {
   autoDetectBorder?: {   
     visibility?: string,   //Whether to display the automatic border detection icon. Values: "visible""hidden". Default; "visible".
   };
-  funcConfirmExit?: (bExistImage: boolean) => Promise<boolean>;
-    //funcConfirmExit is the callback funtion,
-    //Return Promise.resolve(true): End this capture without saving the image data.
-    //Return Promise.resolve(false): Stay on the original viewer
   funcConfirmExit?: (bChanged: boolean, previousViewerName: string) => Promise<Number>
     //funcConfirmExit is the callback funtion.
     //Return Promise.resolve(EnumDWT_ConfirmExitType.Exit): Exit original viewer without saving the image data. 
