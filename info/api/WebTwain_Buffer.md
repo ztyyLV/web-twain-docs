@@ -2360,33 +2360,40 @@ Json:
 
 </table>
 </div>
+
 ---
 
-## `GetRawDataAsync()`
+## GetRawDataAsync
 
-Gets the RawData for the specified image captured from camera.
+**Syntax**
 
-``` typescript
+```typescript
+/**
+ * Gets the RawData for the specified image captured from camera.
+ * @param index Specify the image.
+ */
+GetRawDataAsync(index: number):RawData;
+
 interface RawData {
   displayImage:{  //Data of the display image, after filter and crop effects
-    data: Blob,
-    bitDepth: number，
-    height: number,
-    resolutionX: number,
-    resolutionY: number,
-    width: number,
-  },
+    data: Blob;
+    bitDepth: number;
+    height: number;
+    resolutionX: number;
+    resolutionY: number;
+    width: number;
+  };
   documentData:{
-    angle: number,  //the clockwise rotation angle of the original image
-    polygon: [{x:number, y:number},{x:number, y:number},{x:number, y:number},{x:number, y:number}], //selection area
-    filterValue: string,
+    angle: number; //the clockwise rotation angle of the original image
+    polygon: [{x:number, y:number},{x:number, y:number},{x:number, y:number},{x:number, y:number}];//selection area
+    filterValue: string;
     originImage:{ //Data of the original image
-      bitDepth: number,
-      data: Blob,
-      height: number,
-      width: number,
-      resolutionX: number,
-      resolutionY: number,
+      bitDepth: number;
+      data: Blob;
+      height: number;
+      width: number;
+      resolutionX: number;
+      resolutionY: number;
     }
   }
 }
@@ -2416,4 +2423,5 @@ interface RawData {
 
 </table>
 </div>
+
 ---
