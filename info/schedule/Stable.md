@@ -37,8 +37,10 @@ See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scann
 - Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#updatecheckboxstyle" target="_blank">updateCheckboxStyle</a> to customize checkboxes. This method is also added to `ThumbnailViewer`. Refer to <a href="{{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer" target="_blank">createThumbnailViewer</a>.
 - Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#updatepagenumberstyle" target="_blank">updatePageNumberStyle</a> to customize page numbers. This method is also added to `ThumbnailViewer`. Refer to <a href="{{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer" target="_blank">createThumbnailViewer</a>.
 - Added new properties `checkbox` and `pageNumber` to `ThumbnailViewerSettings`. Refer to <a href="{{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer" target="_blank">createThumbnailViewer</a>.
+- Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#createtemplate" target="_blank">createTemplate</a>.
 - Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#createdocumenteditor" target="_blank">createDocumentEditor</a>.
 - Added new property <a href="{{site.info}}api/WebTwain_Viewer.html#selectionmode" target="_blank">selectionMode</a>.
+- Added new property <a href="{{site.info}}api/WebTwain_Viewer.html#allowpagedragging" target="_blank">allowPageDragging</a>.
 
 ### Minor Improvements 
  - Modified <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_pdfcompressiontype" target="_blank">Dynamsoft.DWT.EnumDWT_PDFCompressionType</a> from `PDF_JBig2` to `PDF_JBIG2`.

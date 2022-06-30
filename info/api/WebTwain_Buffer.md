@@ -213,6 +213,7 @@ RemoveTag(tagName: string, indices?: number[]):boolean
 </div>
 
 **Usage Notes**
+
 If the index is null, it will remove the tag you specified. If the index is not null, it will remove the specified tag on the image you selected.
 
 ---
@@ -225,19 +226,12 @@ If the index is null, it will remove the tag you specified. If the index is not 
 /**
  * Return the status of all current tags.
  */
-GetTagList():Json
+GetTagList(): TagInfo[];
 
-Json:
-[
-   {
-        name: 'TagA',
-         imageIds:''
-   },
-   {
-        name: 'TagB',
-         imageIds:[239514082, 239514083]
-   },
-]
+interface TagInfo {
+        name: string;
+         imageIds: number[];
+   }
 
 ```
 
@@ -2090,7 +2084,7 @@ DWObject.GetTagListByIndex(0);
  * Create a document for the scanned image(s).
  * @argument documentName Specify the document name.
  */
-CreateDocument(documentName:string):Boolean;
+CreateDocument(documentName:string):boolean;
 ```
 
 **Availability**
@@ -2151,7 +2145,7 @@ function failureCallback(errorCode, errorString) {
  * Use the specified document for the scanned image(s)
  * @argument documentName Specify the document name.
  */
-OpenDocument(documentName:string):Boolean;
+OpenDocument(documentName:string):boolean;
 ```
 
 **Availability**
@@ -2208,7 +2202,7 @@ function failureCallback(errorCode, errorString) {
 /**
  * Get the current document name. The default value is 'dynamsoft-default-document'. Scanned image(s) are saved in this document by default if no document name is created.
  */
-GetCurrentDocumentName():String;
+GetCurrentDocumentName():string;
 ```
 
 **Availability**
@@ -2248,7 +2242,7 @@ GetCurrentDocumentName():String;
  * @argument oldDocumentName Specify the old document name.
  * @argument newDocumentName Specify the new document name.
  */
-RenameDocument(oldDocumentName:string, newDocumentName:string):Boolean;
+RenameDocument(oldDocumentName:string, newDocumentName:string):boolean;
 ```
 
 **Availability**
@@ -2287,7 +2281,7 @@ RenameDocument(oldDocumentName:string, newDocumentName:string):Boolean;
  * Delete the specified document.
  * @argument documentName Specify the document name.
  */
-RemoveDocument(documentName:string):Boolean;
+RemoveDocument(documentName:string):boolean;
 ```
 
 **Availability**
@@ -2325,14 +2319,12 @@ RemoveDocument(documentName:string):Boolean;
 /**
  * Get the list of all documents and their information.
  */
-GetDocumentInfoList():Json
+GetDocumentInfoList(): DocumentInfo[];
 
-Json:
-[{
-   name: "documentName",
-   imageIds:[23122335, 25566822323]
-},
-{……}]
+interface DocumentInfo {
+   name: string;
+   imageIds: number[];
+}
 
 ```
 
@@ -2367,12 +2359,12 @@ Json:
 
 **Syntax**
 
-```typescript
+```javascript
 /**
  * Gets the RawData for the specified image captured from camera.
  * @param index Specify the image.
  */
-GetRawDataAsync(index: number):RawData;
+GetRawDataAsync(index: number): Promise<RawData>;
 
 interface RawData {
   displayImage:{  //Data of the display image, after filter and crop effects

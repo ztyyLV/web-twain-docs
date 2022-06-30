@@ -31,7 +31,7 @@ permalink: /info/api/WebTwain_Viewer.html
 | [`border`](#border)                         | [`cursor`](#cursor)                                     | [`height`](#height)                                   | [`idPostfix`](#idpostfix)                           |
 | [`ifAutoScroll`](#ifautoscroll)             | [`innerBorder`](#innerborder)                           | [`pageMargin`](#pagemargin)                           | [`selectedAreaBorderColor`](#selectedareabordercolor) |
 | [`selectedPageBackground`](#selectedpagebackground) | [`selectedPageBorder`](#selectedpageborder)     | [`selectionRectAspectRatio`](#selectionrectaspectratio) | [`singlePageMode`](#singlepagemode)               |
-| [`width`](#width)                           | [`zoom`](#zoom)                                         | [`autoChangeIndex`](#autochangeindex)                 | [`selectionMode`](#selectionmode)                   |
+| [`width`](#width)                           | [`zoom`](#zoom)                                         | [`autoChangeIndex`](#autochangeindex)                 | [`selectionMode`](#selectionmode)                   | | [`allowPageDragging`](#allowpagedragging)|
 
 **Events**
 
@@ -597,7 +597,7 @@ interface ThumbnailViewerSettings {
       borderRadius?: number | string; //default: “50%”, number unit: px, string value: "10px"/"10%", relative to itself
       opacity?:number; //default: 0.5, value range [0-1], value greater 1 defaults to 1
       color?: string; //default: "#000000", supports #16 hexadecimal only
-      FontFamily?: string; //default: "sans-serif"
+      fontFamily?: string; //default: "sans-serif"
       fontSize?: number | string; //default: 12, unit: px, percentage value not supported
       left?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
       top?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
@@ -2529,7 +2529,7 @@ interface pageNumberSettings {
   borderRadius?: number | string; //default: “50%”, number unit: px, string value: "10px"/"10%", relative to itself
   opacity?:number; //default: 0.5, value range [0-1], value greater 1 defaults to 1
   color?: string; //default: "#000000", supports #16 hexadecimal only
-  FontFamily?: string; //default: "sans-serif"
+  fontFamily?: string; //default: "sans-serif"
   fontSize?: number | string; //default: 12, unit: px, percentage value not supported
   left?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
   top?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
@@ -2604,9 +2604,65 @@ selectionMode: Dynamsoft.DWT.EnumDWT_SelectionMode | number;
 </table>
 </div>
 
+**Example**
+
+```javascript
+DWObject.Viewer.setViewMode(2,2);
+DWObject.Viewer.cursor="pointer";
+DWObject.Viewer.updateCheckboxStyle({
+    visibility:"visible",
+});
+DWObject.Viewer.selectionMode=Dynamsoft.DWT.EnumDWT_SelectionMode.Multiple; // Multiple Selection
+```
+
 **Usage notes**
 
 The default value is 0 (Single). Even if checkbox is used, only one image can be selected if the selection mode is set to 0 (Single).
+
+---
+
+## allowPageDragging
+
+**Syntax**
+
+```typescript
+/**
+ * Enable or disable drag&drop the images in buffer. Default value: true.
+ */
+allowPageDragging: boolean;
+```
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+</tr>
+
+</table>
+</div>
+
+**Example**
+
+```javascript
+DWObject.Viewer.setViewMode(2,2);
+DWObject.Viewer.cursor="pointer";
+DWObject.Viewer.allowPageDragging=false; //Disable drag&drop.
+```
 
 ---
 
