@@ -12,7 +12,7 @@ permalink: /info/api/appendix.html
 
 ## Error List
 
-|Code |String|
+| Error Code | Error Message |
 |:-|:-|
 |0 | Successful |
 |-1001 | General failure |

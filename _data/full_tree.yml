@@ -159,7 +159,7 @@ tree_list:
         path: /info/api/Dynamsoft_FileUploader.html
         startVersion:
         endVersion:
-      - name: API Appendix
+      - name: Error List
         path: /info/api/appendix.html
         startVersion:
         endVersion:
