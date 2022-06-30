@@ -2608,11 +2608,11 @@ selectionMode: Dynamsoft.DWT.EnumDWT_SelectionMode | number;
 
 ```javascript
 DWObject.Viewer.setViewMode(2,2);
-DWObject.Viewer.cursor="pointer";
+DWObject.Viewer.cursor = "pointer";
 DWObject.Viewer.updateCheckboxStyle({
     visibility:"visible",
 });
-DWObject.Viewer.selectionMode=Dynamsoft.DWT.EnumDWT_SelectionMode.Multiple; // Multiple Selection
+DWObject.Viewer.selectionMode = Dynamsoft.DWT.EnumDWT_SelectionMode.Multiple; // Multiple Selection
 ```
 
 **Usage notes**
@@ -2660,8 +2660,8 @@ allowPageDragging: boolean;
 
 ```javascript
 DWObject.Viewer.setViewMode(2,2);
-DWObject.Viewer.cursor="pointer";
-DWObject.Viewer.allowPageDragging=false; //Disable drag&drop.
+DWObject.Viewer.cursor = "pointer";
+DWObject.Viewer.allowPageDragging = false; //Disable drag&drop.
 ```
 
 ---
