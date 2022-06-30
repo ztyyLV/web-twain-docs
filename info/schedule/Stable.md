@@ -11,13 +11,63 @@ permalink: /info/schedule/Stable.html
 
 # Stable Releases
 
+## 17.3 (06/30/2022)
+
+### New and Improved Features 
+
+#### Mobile Web Capture
+ - Improved performance and user experience with re-designed mobile document capture workflow. Some highlights:
+    - The original copy of an image is kept in the new document editor object so you can always go back to the original image to make any edit.
+    - Building your custom workflow to trigger actions in your desired sequence is made easy.
+    - Interface elements in the viewer/editor are now customizable. You can easily add/remove icons or change their style.
+
+See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scanner/" target="_blank">**live demo**</a>.
+
+#### Buffer
+- Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#renamedocument" target="_blank">RenameDocument</a>.
+-	Renamed methods
+    - CreateFile -> <a href="{{site.info}}api/WebTwain_Buffer.html#createdocument" target="_blank">CreateDocument</a>
+    - OpenFile -> <a href="{{site.info}}api/WebTwain_Buffer.html#opendocument" target="_blank">OpenDocument</a>
+    - GetCurrentFileName -> <a href="{{site.info}}api/WebTwain_Buffer.html#getcurrentdocumentname" target="_blank">GetCurrentDocumentName</a>
+    -	RemoveFile -> <a href="{{site.info}}api/WebTwain_Buffer.html#removedocument" target="_blank">RemoveDocument</a>
+    -	GetFileInfoList -> <a href="{{site.info}}api/WebTwain_Buffer.html#getdocumentinfolist" target="_blank">GetDocumentInfoList</a>
+- Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#getrawdataasync" target="_blank">GetRawDataAsync</a>.
+
+#### Viewer
+- Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#updatecheckboxstyle" target="_blank">updateCheckboxStyle</a> to customize checkboxes. This method is also added to `ThumbnailViewer`. Refer to <a href="{{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer" target="_blank">createThumbnailViewer</a>.
+- Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#updatepagenumberstyle" target="_blank">updatePageNumberStyle</a> to customize page numbers. This method is also added to `ThumbnailViewer`. Refer to <a href="{{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer" target="_blank">createThumbnailViewer</a>.
+- Added new properties `checkbox` and `pageNumber` to `ThumbnailViewerSettings`. Refer to <a href="{{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer" target="_blank">createThumbnailViewer</a>.
+- Added a new parameter `documentConfiguration` to the method <a href="{{site.info}}api/WebTwain_Viewer.html#createtemplate" target="_blank">createTemplate</a>.
+- Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#createdocumenteditor" target="_blank">createDocumentEditor</a>.
+- Added new property <a href="{{site.info}}api/WebTwain_Viewer.html#selectionmode" target="_blank">selectionMode</a>.
+- Added new property <a href="{{site.info}}api/WebTwain_Viewer.html#allowpagedragging" target="_blank">allowPageDragging</a>.
+
+### Minor Improvements 
+ - Modified <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_pdfcompressiontype" target="_blank">Dynamsoft.DWT.EnumDWT_PDFCompressionType</a> from `PDF_JBig2` to `PDF_JBIG2`.
+ - Made changes to support organizationID value for Dynamsoft.DWT.ProductKey.
+ - Enabled license key validation for the correct version during initialization.
+
+### Bug Fixes
+ - On MacOS, images in the viewer were sometimes lost when waking up from sleep mode.
+ - Incorrect error message displayed when using camera function with UseLocalService set to true.
+ - Unchecking checkboxes did not trigger the OnBufferChanged event.
+ - Failed to load dll for PDF decoding or encoding when using v17.x SDK with an older version image dll file.
+ - Images failed to display in print window.
+ - Edited images not showing correctly in Image Editor.
+ - Images not displaying correctly in landscape mode when printing from Image Editor.
+ - Iframe not working in Edge due to Content Security Policy.
+
+### Deprecations
+
+* Check out the [Deprecations]({{site.info}}schedule/deprecated.html#173) page for v17.3 deprecations.
+
 ## 17.2.5 (03/29/2022)
 
 ### Improved Features 
 
  - Updated the files *dynamsoft.webtwain.initiate.js* and *dynamsoft.webtwain.addon.camera.js* for better performance of mobile document capturing when using Safari on iOS/iPadOS 13+
 
-### Bug Fixed
+### Bug Fixes
 
  - Updated the file *dynamsoft.webtwain.initiate.js* to resolve a memory leak issue in v17.2.1 on Chrome 98+ when the <a href="{{site.info}}api/WebTwain_Viewer.html#setviewmode" target="_blank">view mode</a> is set to (-1, -1) or if a <a href="{{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer" target="_blank">thumbnail viewer</a> is used.
 
@@ -307,7 +357,7 @@ permalink: /info/schedule/Stable.html
 
 ### Deprecations
 
-* Check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html#viewer-related-api-changes-in-versoin-162).
+* Check out the [Deprecations]({{site.info}}schedule/deprecated.html#162) page for v16.2.
 
 ### Changes to the ActiveX Edition
 

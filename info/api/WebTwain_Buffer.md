@@ -24,8 +24,8 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`ImageIDToIndex()`](#imageidtoindex)           | [`IndexToImageID()`](#indextoimageid)                   | [`IsBlankImage()`](#isblankimage)                                   | [`IsBlankImageExpress()`](#isblankimageexpress)     |
 | [`SelectAllImages()`](#selectallimages)         | [`MoveImage()`](#moveimage)                             | [`SwitchImage()`](#switchimage)                                     | [`RemoveImage()`](#removeimage)                     |
 | [`RemoveAllImages()`](#removeallimages)         | [`RemoveAllSelectedImages()`](#removeallselectedimages) | [`SelectImages()`](#selectimages)                                   | [`GetTagListByIndex()`](#gettaglistbyindex)         |
-| [`CreateFile()`](#createfile)                   | [`OpenFile()`](#openfile)                               | [`GetCurrentFileName()`](#getcurrentfilename)                       | [`RemoveFile()`](#removefile)                       |
-| [`GetFileInfoList()`](#getfileinfolist)         |
+| [`CreateDocument()`](#createdocument)           | [`OpenDocument()`](#opendocument)                       | [`GetCurrentDocumentName()`](#getcurrentdocumentname)               | [`RenameDocument()`](#renamedocument)                       |
+| [`RemoveDocument()`](#removedocument)           | [`GetDocumentInfoList()`](#getdocumentinfolist)         | [`GetRawDataAsync()`](#getrawdataasync)         |
 
 
 <!--* [GetImageBitDepthAsync()](#getimagebitdepthasync)-->
@@ -213,6 +213,7 @@ RemoveTag(tagName: string, indices?: number[]):boolean
 </div>
 
 **Usage Notes**
+
 If the index is null, it will remove the tag you specified. If the index is not null, it will remove the specified tag on the image you selected.
 
 ---
@@ -225,19 +226,12 @@ If the index is null, it will remove the tag you specified. If the index is not 
 /**
  * Return the status of all current tags.
  */
-GetTagList():Json
+GetTagList(): TagInfo[];
 
-Json:
-[
-   {
-        name: 'TagA',
-         imageIds:''
-   },
-   {
-        name: 'TagB',
-         imageIds:[239514082, 239514083]
-   },
-]
+interface TagInfo {
+        name: string;
+         imageIds: number[];
+   }
 
 ```
 
@@ -2081,16 +2075,16 @@ DWObject.GetTagListByIndex(0);
 
 ---
 
-## CreateFile
+## CreateDocument
 
 **Syntax**
 
 ```typescript
 /**
- * Create a category for the scanned image(s).
- * @argument categoryName Specify the category name.
+ * Create a document for the scanned image(s).
+ * @argument documentName Specify the document name.
  */
-CreateFile(categoryName:string):Boolean;
+CreateDocument(documentName:string):boolean;
 ```
 
 **Availability**
@@ -2121,9 +2115,9 @@ CreateFile(categoryName:string):Boolean;
 **Example**
 
 ```javascript
-//Store the scanned image(s) under 'Category1'.
-DWObject.CreateFile("Category1");
-DWObject.OpenFile("Category1"); //Need to call OpenFile after CreateFile.
+//Save the scanned image(s) under 'Document1'.
+DWObject.CreateDocument("Document1");
+DWObject.OpenDocument("Document1"); //Need to call OpenDocument after CreateDocument.
 DWObject.AcquireImage(successCallback, failureCallback);
 
 function successCallback() {
@@ -2137,21 +2131,21 @@ function failureCallback(errorCode, errorString) {
 
 **Usage notes**
 
-1. If the documents are already sorted before scanning, you can use <a href="{{site.info}}api/WebTwain_Buffer.html#createfile" target="_blank">CreateFile</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#openfile" target="_blank">OpenFile</a> to group the documents.
+1. If the documents are already sorted before scanning, you can use <a href="{{site.info}}api/WebTwain_Buffer.html#createdocument" target="_blank">CreateDocument</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#opendocument" target="_blank">OpenDocument</a> to group the documents.
 2. If the documents are not already sorted before scanning and you want to first scan, then sort, you can use tags to manage that. Relevant APIs: <a href="{{site.info}}api/WebTwain_Buffer.html#setdefaulttag" target="_blank">SetDefaultTag</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#tagimages" target="_blank">TagImages</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#gettaglist" target="_blank">GetTagList</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#filterimagesbytag" target="_blank">FilterImagesByTag</a>
 
 ---
 
-## OpenFile
+## OpenDocument
 
 **Syntax**
 
 ```typescript
 /**
- * Use the specified category for the scanned image(s)
- * @argument categoryName Specify the category name.
+ * Use the specified document for the scanned image(s)
+ * @argument documentName Specify the document name.
  */
-OpenFile(categoryName:string):Boolean;
+OpenDocument(documentName:string):boolean;
 ```
 
 **Availability**
@@ -2182,11 +2176,11 @@ OpenFile(categoryName:string):Boolean;
 **Example**
 
 ```javascript
-//Stored the scanned image(s) under 'Category2'.
-DWObject.CreateFile("Category1");
-DWObject.CreateFile("Category2");
-DWObject.CreateFile("Category3");
-DWObject.OpenFile("Category2"); //Need to call OpenFile after CreateFile.
+//Save the scanned image(s) under 'Document2'.
+DWObject.CreateDocument("Document1");
+DWObject.CreateDocument("Document2");
+DWObject.CreateDocument("Document3");
+DWObject.OpenDocument("Document2"); //Need to call OpenDocument after CreateDocument.
 DWObject.AcquireImage(successCallback, failureCallback);
 
 function successCallback() {
@@ -2200,15 +2194,15 @@ function failureCallback(errorCode, errorString) {
 
 ---
 
-## GetCurrentFileName
+## GetCurrentDocumentName
 
 **Syntax**
 
 ```typescript
 /**
- * Get the current category name. The default value is 'dynamsoft-dvs-file'. Scanned image(s) are stored in this category by default if no category name is created.
+ * Get the current document name. The default value is 'dynamsoft-default-document'. Scanned image(s) are saved in this document by default if no document name is created.
  */
-GetCurrentFileName():String;
+GetCurrentDocumentName():string;
 ```
 
 **Availability**
@@ -2238,16 +2232,56 @@ GetCurrentFileName():String;
 
 ---
 
-## RemoveFile
+## RenameDocument
 
 **Syntax**
 
 ```typescript
 /**
- * Delete the specified category and all images in it.
- * @argument categoryName Specify the category name.
+ * Rename a document.
+ * @argument oldDocumentName Specify the old document name.
+ * @argument newDocumentName Specify the new document name.
  */
-RemoveFile(categoryName:string):Boolean;
+RenameDocument(oldDocumentName:string, newDocumentName:string):boolean;
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported  </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+</tr>
+
+</table>
+</div>
+
+---
+
+## RemoveDocument
+
+**Syntax**
+
+```typescript
+/**
+ * Delete the specified document.
+ * @argument documentName Specify the document name.
+ */
+RemoveDocument(documentName:string):boolean;
 ```
 
 **Availability**
@@ -2277,22 +2311,20 @@ RemoveFile(categoryName:string):Boolean;
 
 ---
 
-## GetFileInfoList
+## GetDocumentInfoList
 
 **Syntax**
 
 ```typescript
 /**
- * Get the list of all categories and their information.
+ * Get the list of all documents and their information.
  */
-GetFileInfoList():Json
+GetDocumentInfoList(): DocumentInfo[];
 
-Json:
-[{
-   name: "categoryName",
-   imageIds:[23122335, 25566822323]
-},
-{……}]
+interface DocumentInfo {
+   name: string;
+   imageIds: number[];
+}
 
 ```
 
@@ -2320,4 +2352,68 @@ Json:
 
 </table>
 </div>
+
+---
+
+## GetRawDataAsync
+
+**Syntax**
+
+```javascript
+/**
+ * Gets the RawData for the specified image captured from camera.
+ * @param index Specify the image.
+ */
+GetRawDataAsync(index: number): Promise<RawData>;
+
+interface RawData {
+  displayImage:{  //Data of the display image, after filter and crop effects
+    data: Blob;
+    bitDepth: number;
+    height: number;
+    resolutionX: number;
+    resolutionY: number;
+    width: number;
+  };
+  documentData:{
+    angle: number; //the clockwise rotation angle of the original image
+    polygon: [{x:number, y:number},{x:number, y:number},{x:number, y:number},{x:number, y:number}];//selection area
+    filterValue: string;
+    originImage:{ //Data of the original image
+      bitDepth: number;
+      data: Blob;
+      height: number;
+      width: number;
+      resolutionX: number;
+      resolutionY: number;
+    }
+  }
+}
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">v17.3+ </td>
+</tr>
+
+</table>
+</div>
+
 ---

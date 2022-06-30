@@ -21,19 +21,17 @@ permalink: /info/api/WebTwain_Viewer.html
 | [`hide()`](#hide)                                   | [`last()`](#last)                             | [`next()`](#next)                               | [`off()`](#off)                             |
 | [`on()`](#on)                                       | [`previous()`](#previous)                     | [`render()`](#render)                           | [`setButtonClass()`](#setbuttonclass)       |
 | [`setSelectedAreas()`](#setselectedareas)           | [`setViewMode()`](#setviewmode)               | [`show()`](#show)                               | [`unbind()`](#unbind)                       |
-| [`createTemplate()`](#createtemplate)               |
-
-<!--* [updateUISettings](#updateuisettings)-->
+| [`createTemplate()`](#createtemplate)               | [`createDocumentEditor()`](#createdocumenteditor)   | [`updateCheckboxStyle()`](#updatecheckboxstyle)     | [`updatePageNumberStyle()`](#updatepagenumberstyle)       |
 
 **Properties**
 
 |                                             |
 | :------------------------------------------ | :------------------------------------------------------ | ----------------------------------------------------- | --------------------------------------------------- |
-| [`acceptDrop`](#acceptdrop)                 | [`allowSlide`](#allowslide)                             | [`background`](#background)                           | [`border`](#border)                                 |
-| [`cursor`](#cursor)                         | [`height`](#height)                                     | [`idPostfix`](#idpostfix)                             | [`ifAutoScroll`](#ifautoscroll)                     |
-| [`innerBorder`](#innerborder)               | [`pageMargin`](#pagemargin)                             | [`selectedAreaBorderColor`](#selectedareabordercolor) | [`selectedPageBackground`](#selectedpagebackground) |
-| [`selectedPageBorder`](#selectedpageborder) | [`selectionRectAspectRatio`](#selectionrectaspectratio) | [`showPageNumber`](#showpagenumber)                   | [`singlePageMode`](#singlepagemode)                 |
-| [`width`](#width)                           | [`zoom`](#zoom)                                         | [`autoChangeIndex`](#autochangeindex)                 | [`showCheckbox`](#showcheckbox)                     |
+| [`acceptDrop`](#acceptdrop)                 | [`allowSlide`](#allowslide)                             | [`allowPageDragging`](#allowpagedragging)             | [`background`](#background)                         |
+| [`border`](#border)                         | [`cursor`](#cursor)                                     | [`height`](#height)                                   | [`idPostfix`](#idpostfix)                           |
+| [`ifAutoScroll`](#ifautoscroll)             | [`innerBorder`](#innerborder)                           | [`pageMargin`](#pagemargin)                           | [`selectedAreaBorderColor`](#selectedareabordercolor) |
+| [`selectedPageBackground`](#selectedpagebackground) | [`selectedPageBorder`](#selectedpageborder)     | [`selectionRectAspectRatio`](#selectionrectaspectratio) | [`singlePageMode`](#singlepagemode)               |
+| [`width`](#width)                           | [`zoom`](#zoom)                                         | [`autoChangeIndex`](#autochangeindex)                 | [`selectionMode`](#selectionmode)                   |
 
 **Events**
 
@@ -43,33 +41,6 @@ permalink: /info/api/WebTwain_Viewer.html
 | [`mousedown`](#mousedown)       | [`mouseup`](#mouseup)         | [`mouseout`](#mouseout)                 | [`mouseover`](#mouseover)                   |
 | [`keydown`](#keydown)           | [`keyup`](#keyup)             | [`pageAreaSelected`](#pageareaselected) | [`pageAreaUnselected`](#pageareaunselected) |
 | [`pageRendered`](#pagerendered) | [`resize`](#resize)           |
-
-<!--** [topPageChanged](#toppagechanged)-->
-
-> The following APIs are deprecated as of v16.2, check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html#viewer-related-api-changes-in-versoin-16.2).
-
-**Deprecated Methods**
-
-|                  |
-| :--------------- | :------------- |
-| `BindViewer()`   | `UnbindView()` |
-| `UpdateViewer()` |
-
-**Deprecated Properties**
-
-|                            |
-| :------------------------- | :-------------------------- | --------------- | ---------------- |
-| `BackgroundColor`          | `SelectionImageBorderColor` | `FitWindowType` | `IfFitWindow`    |
-| `Height`                   | `Width`                     | `IfAutoScroll`  | `MouseX`         |
-| `MouseY`                   | `ImageMargin`               | `MouseShape`    | `SelectionRectAspectRatio` |
-| `Zoom`                     |
-
-**Deprecated Events**
-
-|                     |
-| :------------------ | :-------------------- | ----------------------- |
-| `OnMouseClick`      | `OnMouseDoubleClick`  | `OnMouseMove`           |
-| `OnMouseRightClick` | `OnImageAreaSelected` | `OnImageAreaDeSelected` |
 
 ---
 
@@ -598,42 +569,42 @@ interface ThumbnailViewerSettings {
      * Default: false.
      */
     autoChangeIndex: boolean;
-    checkbox:{
-      visibility?: string, //"visible"：hidden", default："hidden" 
-      width?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
-      height?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
-      background?: string //default："#ffffff"
-      borderWidth?: number | string,  //default: "2px", unit: px, percentage value not supported
-      borderColor?: string, //default : "#000000"
+    checkbox: {
+      visibility?: string; //"visible"：hidden", default: "hidden" 
+      width?: number | string; //default: "24px"，number unit: px, string value: "24px"/"10%", relative to parent container
+      height?: number | string; //default: "24px"，number unit: px, string value: "24px"/"10%", relative to parent container
+      background?: string; //default: "#ffffff"
+      borderWidth?: number | string;  //default: "2px", unit: px, percentage value not supported
+      borderColor?: string; //default: "#000000"
       checkMarkColor?: string; //default: "#000000"
       checkMarkLineWidth?: number | string; //default: "2px", unit: px, percentage value not supported
-      borderRadius?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to itself
-      opacity?: number, //default：0.5, value range [0-1], value greater 1 defaults to 1
-      left?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
-      top?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
-      right?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
-      bottom?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
-      translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%"，relative to itself
-      translateY?: number | string; //default: "";  number unit: px, string value: "10px"/"10%"，relative to itself
-    }，
-    pageNumber:{
-      visibility?: string, //"visible"：hidden", default："hidden" 
-      width?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
-      height?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
-      background?: string //default："#ffffff"            
-      borderWidth?: number | string, //default: "1px", unit: px, percentage value not supported
-      borderColor?: string, //default: "#a79898"
-      borderRadius?: number | string,  //default: “50%”, number unit: px, string value: "10px"/"10%"，relative to itself
-      opacity?:number, //default：0.5, value range [0-1], value greater 1 defaults to 1
-      color?: string,  //default : "#000000"，supports #16 hexadecimal only
-      FontFamily?: string, //default : "sans-serif"
-      fontSize?: number | string, //default: 12, unit: px, percentage value not supported
-      left?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
-      top?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
-      right?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
-      bottom?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
-      translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%"，relative to itself
-      translateY?: number | string; //default: "", number unit: px, string value: "10px"/"10%"，relative to itself
+      borderRadius?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%"，relative to itself
+      opacity?: number; //default：0.5, value range [0-1], value greater 1 defaults to 1
+      left?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+      top?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+      right?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+      bottom?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+      translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+      translateY?: number | string //default: "",  number unit: px, string value: "10px"/"10%", relative to itself
+    };
+    pageNumber: {
+      visibility?: string; //"visible": hidden", default: "hidden" 
+      width?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+      height?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+      background?: string; //default: "#ffffff"            
+      borderWidth?: number | string; //default: "1px", unit: px, percentage value not supported
+      borderColor?: string; //default: "#a79898"
+      borderRadius?: number | string; //default: “50%”, number unit: px, string value: "10px"/"10%", relative to itself
+      opacity?:number; //default: 0.5, value range [0-1], value greater 1 defaults to 1
+      color?: string; //default: "#000000", supports #16 hexadecimal only
+      fontFamily?: string; //default: "sans-serif"
+      fontSize?: number | string; //default: 12, unit: px, percentage value not supported
+      left?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+      top?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+      right?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+      bottom?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+      translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+      translateY?: number | string //default: "", number unit: px, string value: "10px"/"10%", relative to itself
     }
 };
 
@@ -1503,6 +1474,51 @@ This API only works if the view mode of the viewer is set to -1 by -1.
 
 ---
 
+## allowPageDragging
+
+```typescript
+/**
+ * Set whether to allow page dragging to reorder the pages in the viewer.
+ * The default value is true.
+ */
+.allowPageDragging: boolean;
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+</tr>
+
+</table>
+</div>
+
+**Example**
+
+```javascript
+DWObject.Viewer.setViewMode(2,2);
+DWObject.Viewer.cursor = "pointer";
+DWObject.Viewer.allowPageDragging = false; //Disable drag&drop.
+```
+
+---
+
 ## background
 
 **Syntax**
@@ -2299,8 +2315,9 @@ When set to true, the index in the upper left corner of the viewer will be selec
 /**
  * Create document scanner template.
  * @argument templateName Currently templateName only supports "documentScanner".
+ * @argument documentConfiguration Configuration for the document object.
  */
-createTemplate("templateName")：DocumentViewerTemplate
+createTemplate("templateName", documentConfiguration?: DocumentConfiguration)：DocumentViewerTemplate
 
 interface DocumentViewerTemplate{
    getCustomElement():CustomElement; //Get CustomElement. Can display save & upload interface in CustomElement.   
@@ -2327,11 +2344,11 @@ interface DocumentViewerTemplate{
 
 <tr>
 <td align="center">not supported </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+</td>
-<td align="center">v17.2+</td>
-<td align="center">v17.2+</td>
-<td align="center">v17.2+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
 </tr>
 
 </table>
@@ -2362,6 +2379,76 @@ Dynamsoft.DWT.CreateDWTObjectEx(
   });
 ```
 
+**Usage Notes**
+
+For details on the DocumentConfiguration interface, please refer to the camera [scanDocument]({{site.info}}api/Addon_Camera.html#scandocument) API.
+
+---
+
+## createDocumentEditor
+
+**Syntax**
+
+```typescript
+/**
+ * Create a document editor object.
+ * @argument documentConfiguration Configuration for the object.
+ */
+createDocumentEditor(documentConfiguration?: DocumentConfiguration): DocumentEditor;
+
+interface DocumentEditor {
+    /**
+     * Show the DocumentEditor object.
+     */
+    show(): boolean;
+    /**
+     * Hide the DocumentEditor object.
+     */
+    hide(): boolean;
+    /**
+     * Remove the DocumentEditor object.
+     */
+    dispose(): boolean;
+};
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+</tr>
+
+</table>
+</div>
+
+**Example**
+
+```javascript
+// Use default settings
+var documentEditor = DWObject.Viewer.createDocumentEditor();
+documentEditor.show();
+```
+
+**Usage Notes**
+
+For details on the DocumentConfiguration interface, please refer to the camera [scanDocument]({{site.info}}api/Addon_Camera.html#scandocument) API.
+
 ---
 
 ## updateCheckboxStyle
@@ -2376,22 +2463,22 @@ Dynamsoft.DWT.CreateDWTObjectEx(
 updateCheckboxStyle(checkboxSettings?: CheckboxSettings): void;
 
 interface CheckboxSettings {
-  visibility?: string, //"visible"：hidden", default："hidden" 
-  width?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
-  height?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
-  background?: string //default："#ffffff"
-  borderWidth?: number | string,  //default: "2px", unit: px, percentage value not supported
-  borderColor?: string, //default : "#000000"
+  visibility?: string; //"visible": hidden", default: "hidden" 
+  width?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+  height?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+  background?: string; //default: "#ffffff"
+  borderWidth?: number | string; //default: "2px", unit: px, percentage value not supported
+  borderColor?: string; //default: "#000000"
   checkMarkColor?: string; //default: "#000000"
   checkMarkLineWidth?: number | string; //default: "2px", unit: px, percentage value not supported
-  borderRadius?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to itself
-  opacity?: number, //default：0.5, value range [0-1], value greater 1 defaults to 1
-  left?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
-  top?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
-  right?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
-  bottom?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
-  translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%"，relative to itself
-  translateY?: number | string; //default: "";  number unit: px, string value: "10px"/"10%"，relative to itself
+  borderRadius?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to itself
+  opacity?: number; //default：0.5, value range [0-1], value greater 1 defaults to 1
+  left?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+  top?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+  right?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+  bottom?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+  translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+  translateY?: number | string //default: "", number unit: px, string value: "10px"/"10%", relative to itself
 }
 
 ```
@@ -2435,23 +2522,23 @@ interface CheckboxSettings {
 updatePageNumberStyle(pageNumberSettings?: PageNumberSettings): void;
 
 interface pageNumberSettings {       
-  visibility?: string, //"visible"：hidden", default："hidden" 
-  width?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
-  height?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
-  background?: string //default："#ffffff"            
-  borderWidth?: number | string, //default: "1px", unit: px, percentage value not supported
-  borderColor?: string, //default: "#a79898"
-  borderRadius?: number | string,  //default: “50%”, number unit: px, string value: "10px"/"10%"，relative to itself
-  opacity?:number, //default：0.5, value range [0-1], value greater 1 defaults to 1
-  color?: string,  //default : "#000000"，supports #16 hexadecimal only
-  FontFamily?: string, //default : "sans-serif"
-  fontSize?: number | string, //default: 12, unit: px, percentage value not supported
-  left?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
-  top?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
-  right?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
-  bottom?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
-  translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%"，relative to itself
-  translateY?: number | string; //default: "", number unit: px, string value: "10px"/"10%"，relative to itself
+  visibility?: string; //"visible": hidden", default: "hidden" 
+  width?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+  height?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+  background?: string; //default："#ffffff"            
+  borderWidth?: number | string; //default: "1px", unit: px, percentage value not supported
+  borderColor?: string; //default: "#a79898"
+  borderRadius?: number | string; //default: “50%”, number unit: px, string value: "10px"/"10%", relative to itself
+  opacity?:number; //default: 0.5, value range [0-1], value greater 1 defaults to 1
+  color?: string; //default: "#000000", supports #16 hexadecimal only
+  fontFamily?: string; //default: "sans-serif"
+  fontSize?: number | string; //default: 12, unit: px, percentage value not supported
+  left?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+  top?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+  right?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+  bottom?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+  translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+  translateY?: number | string //default: "", number unit: px, string value: "10px"/"10%", relative to itself
 }
 
 ```
@@ -2480,7 +2567,62 @@ interface pageNumberSettings {
 
 </table>
 </div>
+
 ---
+
+## selectionMode
+
+**Syntax**
+
+```typescript
+/**
+ * Return or set the selection mode used.
+ */
+selectionMode: Dynamsoft.DWT.EnumDWT_SelectionMode | number;
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+</tr>
+
+</table>
+</div>
+
+**Example**
+
+```javascript
+DWObject.Viewer.setViewMode(2,2);
+DWObject.Viewer.cursor = "pointer";
+DWObject.Viewer.updateCheckboxStyle({
+    visibility:"visible",
+});
+DWObject.Viewer.selectionMode = Dynamsoft.DWT.EnumDWT_SelectionMode.Multiple; // Multiple Selection
+```
+
+**Usage notes**
+
+The default value is 0 (Single). Even if checkbox is used, only one image can be selected if the selection mode is set to 0 (Single).
+
+---
+
 
 ## Events
 
@@ -2608,7 +2750,7 @@ The events `mouseout`, `mouseover`, `keydown` and `keyup` are only triggered on 
 
 ---
 
-## pageAreaSelected
+### pageAreaSelected
 
 **Syntax**
 
@@ -2673,7 +2815,7 @@ DWObject.Viewer.off("pageAreaSelected");
 
 ---
 
-## pageAreaUnselected
+### pageAreaUnselected
 
 **Syntax**
 
@@ -2728,7 +2870,7 @@ DWObject.Viewer.off("pageAreaUnselected");
 
 ---
 
-## pageRendered
+### pageRendered
 
 **Syntax**
 
@@ -2778,7 +2920,7 @@ DWObject.Viewer.render(); //It will trigger the pageRendered event
 
 ---
 
-## resize
+### resize
 
 **Syntax**
 
