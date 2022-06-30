@@ -31,7 +31,7 @@ permalink: /info/api/WebTwain_Viewer.html
 | [`border`](#border)                         | [`cursor`](#cursor)                                     | [`height`](#height)                                   | [`idPostfix`](#idpostfix)                           |
 | [`ifAutoScroll`](#ifautoscroll)             | [`innerBorder`](#innerborder)                           | [`pageMargin`](#pagemargin)                           | [`selectedAreaBorderColor`](#selectedareabordercolor) |
 | [`selectedPageBackground`](#selectedpagebackground) | [`selectedPageBorder`](#selectedpageborder)     | [`selectionRectAspectRatio`](#selectionrectaspectratio) | [`singlePageMode`](#singlepagemode)               |
-| [`width`](#width)                           | [`zoom`](#zoom)                                         | [`autoChangeIndex`](#autochangeindex)                 | [`selectionMode`](#selectionmode)                   | | [`allowPageDragging`](#allowpagedragging)|
+| [`width`](#width)                           | [`zoom`](#zoom)                                         | [`autoChangeIndex`](#autochangeindex)                 | [`selectionMode`](#selectionmode)                   |
 
 **Events**
 
@@ -1478,7 +1478,7 @@ This API only works if the view mode of the viewer is set to -1 by -1.
 
 ```typescript
 /**
- * Set whether to allow page dragging to reorder the pages.
+ * Set whether to allow page dragging to reorder the pages in the viewer.
  * The default value is true.
  */
 .allowPageDragging: boolean;
@@ -1512,7 +1512,9 @@ This API only works if the view mode of the viewer is set to -1 by -1.
 **Example**
 
 ```javascript
-DWObject.Viewer.allowPageDragging = true;
+DWObject.Viewer.setViewMode(2,2);
+DWObject.Viewer.cursor = "pointer";
+DWObject.Viewer.allowPageDragging = false; //Disable drag&drop.
 ```
 
 ---
@@ -2621,50 +2623,6 @@ The default value is 0 (Single). Even if checkbox is used, only one image can be
 
 ---
 
-## allowPageDragging
-
-**Syntax**
-
-```typescript
-/**
- * Enable or disable drag&drop the images in buffer. Default value: true.
- */
-allowPageDragging: boolean;
-```
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-</tr>
-
-<tr>
-<td align="center">not supported</td>
-<td align="center">v17.3+</td>
-<td align="center">v17.3+</td>
-<td align="center">v17.3+</td>
-<td align="center">v17.3+</td>
-<td align="center">v17.3+</td>
-</tr>
-
-</table>
-</div>
-
-**Example**
-
-```javascript
-DWObject.Viewer.setViewMode(2,2);
-DWObject.Viewer.cursor = "pointer";
-DWObject.Viewer.allowPageDragging = false; //Disable drag&drop.
-```
-
----
 
 ## Events
 
