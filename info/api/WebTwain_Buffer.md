@@ -2079,12 +2079,26 @@ DWObject.GetTagListByIndex(0);
 
 **Syntax**
 
+
+<div class="sample-code-prefix"></div>
+>- 17.3
+>- 17.2.5
+>
+>1. 
 ```typescript
 /**
  * Create a document for the scanned image(s).
  * @argument documentName Specify the document name.
  */
 CreateDocument(documentName:string):boolean;
+```
+2. 
+ ```typescript
+/**
+ * Create a category for the scanned image(s).
+ * @argument categoryName Specify the category name.
+ */
+CreateFile(categoryName:string):boolean;
 ```
 
 **Availability**
