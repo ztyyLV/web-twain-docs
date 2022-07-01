@@ -2079,10 +2079,9 @@ DWObject.GetTagListByIndex(0);
 
 **Syntax**
 
-
 <div class="sample-code-prefix"></div>
->- 17.3
->- 17.2.5
+>- v17.3
+>- v17.2.5
 >
 >1. 
 ```typescript
@@ -2154,6 +2153,11 @@ function failureCallback(errorCode, errorString) {
 
 **Syntax**
 
+<div class="sample-code-prefix"></div>
+>- v17.3
+>- v17.2.5
+>
+>1. 
 ```typescript
 /**
  * Use the specified document for the scanned image(s)
@@ -2161,6 +2165,15 @@ function failureCallback(errorCode, errorString) {
  */
 OpenDocument(documentName:string):boolean;
 ```
+2. 
+```typescript
+/**
+ * Use the specified category for the scanned image(s)
+ * @argument categoryName Specify the category name.
+ */
+OpenFile(categoryName:string):boolean;
+```
+
 
 **Availability**
 <div class="availability">
@@ -2212,11 +2225,23 @@ function failureCallback(errorCode, errorString) {
 
 **Syntax**
 
+<div class="sample-code-prefix"></div>
+>- v17.3
+>- v17.2.5
+>
+>1. 
 ```typescript
 /**
  * Get the current document name. The default value is 'dynamsoft-default-document'. Scanned image(s) are saved in this document by default if no document name is created.
  */
 GetCurrentDocumentName():string;
+```
+2. 
+```typescript
+/**
+ * Get the current category name. The default value is 'dynamsoft-dvs-file'. Scanned image(s) are stored in this category by default if no category name is created.
+ */
+GetCurrentFileName():string;
 ```
 
 **Availability**
@@ -2290,12 +2315,25 @@ RenameDocument(oldDocumentName:string, newDocumentName:string):boolean;
 
 **Syntax**
 
+<div class="sample-code-prefix"></div>
+>- v17.3
+>- v17.2.5
+>
+>1. 
 ```typescript
 /**
  * Delete the specified document.
  * @argument documentName Specify the document name.
  */
 RemoveDocument(documentName:string):boolean;
+```
+2. 
+```typescript
+/**
+ * Delete the specified category and all images in it.
+ * @argument categoryName Specify the category name.
+ */
+RemoveFile(categoryName:string):Boolean;
 ```
 
 **Availability**
@@ -2329,6 +2367,11 @@ RemoveDocument(documentName:string):boolean;
 
 **Syntax**
 
+<div class="sample-code-prefix"></div>
+>- v17.3
+>- v17.2.5
+>
+>1. 
 ```typescript
 /**
  * Get the list of all documents and their information.
@@ -2341,6 +2384,22 @@ interface DocumentInfo {
 }
 
 ```
+2. 
+```typescript
+/**
+ * Get the list of all categories and their information.
+ */
+GetFileInfoList():Json
+
+Json:
+[{
+   name: "categoryName",
+   imageIds:[23122335, 25566822323]
+},
+{……}]
+
+```
+
 
 **Availability**
 <div class="availability">
