@@ -42,6 +42,7 @@ interface Dynamsoft.DWT {
     ProductKey: string;
     ResourcesPath: string;
     UseLocalService: boolean;
+    UseDefaultInstallUI: boolean;
      /**
      * Whether to use camera wasm. The default value is false. 
      * Set this property to true if you want to use camera wasm in service mode.
@@ -67,7 +68,7 @@ interface Dynamsoft.DWT {
     GetWebTwainEx(WebTwainId: string): WebTwain;
     Load(): void;
     Unload(): void;
-    RemoveAllAuthorizations: function () {};    
+    RemoveAllAuthorizations: function () {};
     OnWebTwainNotFound: function () {};
     OnWebTwainPostExecute: function () {};
     OnWebTwainPreExecute: function () {};
@@ -322,12 +323,14 @@ The default value is `false` .
   Creates a new UI-less `WebTwain` instance. This instance will be uniquely identified by the parameter `WebTwainId` .
 
 ``` typescript
-interface DWTInitialConfig {
-    WebTwainId: string,
-        Host ? : string,
-        Port ? : string,
-        PortSSL ? : string
-}
+  interface DWTInitialConfig {
+
+      WebTwainId: string,
+          Host ? : string,
+          Port ? : string,
+          PortSSL ? : string
+
+  }
 ```
 
 ### `DeleteDWTObject()`
@@ -342,6 +345,7 @@ interface DWTInitialConfig {
 
   Gets an `WebTwain` instance by its `WebTwainId` .
   
+
 ### `Load()`
 
   Initiates the library. If there are predefined `Containers` , one `WebTwain` instance will be created for each `Container` .

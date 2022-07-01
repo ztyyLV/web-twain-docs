@@ -163,6 +163,10 @@ tree_list:
         path: /info/api/Dynamsoft_FileUploader.html
         startVersion:
         endVersion:
+      - name: Interfaces
+        path: /info/api/interfaces.html
+        startVersion:
+        endVersion:
       - name: API Appendix
         path: /info/api/appendix.html
         startVersion:
