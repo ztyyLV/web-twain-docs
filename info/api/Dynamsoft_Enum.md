@@ -288,6 +288,11 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 
 ## `Dynamsoft.DWT.EnumDWT_PDFCompressionType`
 
+<div class="sample-code-prefix"></div>
+>- v17.3
+>- v17.2.5
+>
+>1. 
 | Label | Value|
 |:-|:-|
 | PDF_AUTO | 0 |
@@ -296,6 +301,15 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | PDF_JPEG | 5 |
 | PDF_JP2000 | 6 |
 | PDF_JBIG2 | 7 |
+2. 
+| Label | Value|
+|:-|:-|
+| PDF_AUTO | 0 |
+| PDF_FAX4 | 2 |
+| PDF_LZW | 3 |
+| PDF_JPEG | 5 |
+| PDF_JP2000 | 6 |
+| PDF_JBig2 | 7 |
 
 ## `Dynamsoft.DWT.EnumDWT_ShowMode`
 
