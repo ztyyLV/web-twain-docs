@@ -295,7 +295,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | PDF_LZW | 3 |
 | PDF_JPEG | 5 |
 | PDF_JP2000 | 6 |
-| PDF_JBIG2 | 7 |
+| PDF_JBig2 | 7 |
 
 ## `Dynamsoft.DWT.EnumDWT_ShowMode`
 
@@ -974,10 +974,3 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | VRM_270_DEGREES_CLOCKWISE | 3 | 270 degrees Clockwise |
 | VRM_FLIP_VERTICAL | 4 | Flip |
 | VRM_FLIP_HORIZONTAL | 5 | Mirror |
-
-## `Dynamsoft.DWT.EnumDWT_SelectionMode`
-
-| Label | Value|
-|:-|:-|
-| Single | 0 |
-| Multiple | 1 |
