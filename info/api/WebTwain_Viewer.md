@@ -446,7 +446,6 @@ The method [ `unbind()` ](#unbind) will dispose all created CustomElement object
 createThumbnailViewer(
     thumbnailViewerSettings?: ThumbnailViewerSettings
 ): ThumbnailViewer;
-
 interface ThumbnailViewer {
     /**
      * Show the ThumbnailViewer object.
@@ -488,7 +487,6 @@ interface ThumbnailViewer {
      */
     off(eventName: string, callback?: () => void): void;
 }
-
 interface ThumbnailViewerSettings {    
     /**
      * Whether to allow keyboard control. Default: true.
@@ -612,7 +610,6 @@ interface ThumbnailViewerSettings {
       translateY?: number | string //default: "", number unit: px, string value: "10px"/"10%", relative to itself
     }
 };
-
 interface ThumbnailViewerEvent {
     // The index of the current page.
     index: number;
@@ -621,7 +618,6 @@ interface ThumbnailViewerEvent {
     // The y-coordinate of the browser page.
     pageY: number;
 };
-
 interface ViewMode {
     /**
      * Specify the number of images per row.
@@ -2486,7 +2482,6 @@ When set to true, the index in the upper left corner of the viewer will be selec
  * @argument documentConfiguration Configuration for the document object.
  */
 createTemplate("templateName", documentConfiguration?: DocumentConfiguration)：DocumentViewerTemplate
-
 interface DocumentViewerTemplate{
    getCustomElement():CustomElement; //Get CustomElement. Can display save & upload interface in CustomElement.   
    onAddDocumentFunc = function () {}
@@ -2503,7 +2498,6 @@ interface DocumentViewerTemplate{
  * @argument templateName Currently templateName only supports "documentScanner".
  */
 createTemplate("templateName")：DocumentViewerTemplate
-
 interface DocumentViewerTemplate{
    getCustomElement():CustomElement; //Get CustomElement. Can display save & upload interface in CustomElement.   
    onAddDocumentFunc = function () {}

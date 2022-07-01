@@ -2377,7 +2377,6 @@ RemoveFile(categoryName:string):Boolean;
  * Get the list of all documents and their information.
  */
 GetDocumentInfoList(): DocumentInfo[];
-
 interface DocumentInfo {
    name: string;
    imageIds: number[];
@@ -2390,7 +2389,6 @@ interface DocumentInfo {
  * Get the list of all categories and their information.
  */
 GetFileInfoList():Json
-
 Json:
 [{
    name: "categoryName",
