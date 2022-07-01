@@ -28,6 +28,7 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`GetFileInfoList()`](#getfileinfolist)         |
 
 
+
 <!--* [GetImageBitDepthAsync()](#getimagebitdepthasync)-->
 
 <!--* [RemoveAllImagesAsync()](#removeallimagesasync)-->
@@ -2320,4 +2321,68 @@ Json:
 
 </table>
 </div>
+
+---
+
+## GetRawDataAsync
+
+**Syntax**
+
+```typescript
+/**
+ * Gets the RawData for the specified image captured from camera.
+ * @param index Specify the image.
+ */
+GetRawDataAsync(index: number):RawData;
+
+interface RawData {
+  displayImage:{  //Data of the display image, after filter and crop effects
+    data: Blob;
+    bitDepth: number;
+    height: number;
+    resolutionX: number;
+    resolutionY: number;
+    width: number;
+  };
+  documentData:{
+    angle: number; //the clockwise rotation angle of the original image
+    polygon: [{x:number, y:number},{x:number, y:number},{x:number, y:number},{x:number, y:number}];//selection area
+    filterValue: string;
+    originImage:{ //Data of the original image
+      bitDepth: number;
+      data: Blob;
+      height: number;
+      width: number;
+      resolutionX: number;
+      resolutionY: number;
+    }
+  }
+}
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">v17.3+ </td>
+</tr>
+
+</table>
+</div>
+
 ---

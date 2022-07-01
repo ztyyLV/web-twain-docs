@@ -35,88 +35,267 @@ The prompts are one-time, once you accept the "risk", the software will install 
 
 The recommended fix is to patch the operating system, you can find the patch [here](http://www.catalog.update.microsoft.com/search.aspx?q=kb4474419).
 
-## New deprecations in 16.2 
+
+## 17.3
+
+### DWT
+
+* Deleted property: Dynamsoft.DWT.UseDefaultInstallUI
+
+### Viewer
+
+> [Alternative] Use [updateCheckboxStyle]({{site.info}}api/api/WebTwain_Viewer.html#updatecheckboxstyle) and [updatePageNumberStyle]({{site.info}}api/WebTwain_Viewer.html#updatepagenumberstyle) instead.
+
+* Viewer.showPageNumber
+* Viewer.showCheckbox
+* thumbnailViewer.showCheckbox
+* thumbnailViewer.showPageNumber
+
+### Camera Add-on
+
+> [Alternative] Use [scanDocument]({{site.info}}api/Addon_Camera.html#scandocument) instead.
+
+* Camera.showVideo()
+
+## 17.0
+
+### Viewer
+
+* New APIs in v17.0 replace old APIs in v16.2-, all old APIs are deprecated.
+
+| v17.0 | v16.2- |
+|:-|:-|
+| [ `Viewer.autoChangeIndex` ]({{site.info}}api/Addon_Viewer.html#autoChangeIndex) | `Viewer.topPageChanged()` |
+
+* The following APIs are new in v17.0
+  + [ `RemoveTag` ]({{site.info}}api/WebTwain_Buffer.html#removetag)
+  + [ `GetTagList` ]({{site.info}}api/WebTwain_Buffer.html#gettaglist)
+  + [ `DWT.licenseServer` ]({{site.info}}api/WebTwain_License.html#licenseServer)
+  + [ `DWT.handshakeCode` ]({{site.info}}api/WebTwain_License.html#handshakeCode)
+  + [ `DWT.sessionPassword` ]({{site.info}}api/WebTwain_License.html#sessionPassword)
+  + [ `DWT.licenseException` ]({{site.info}}api/WebTwain_License.html#licenseException)
+
+## 16.2 
 
 * Internet Explorer 8 is no longer supported.
 
-* Check out the [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html#viewer-related-api-changes-in-version-162).
+### Camera Add-on
 
-## As of version 16.1.1.
+* New APIs in v16.2 replace old APIs in v16.1-, all old APIs are deleted.
 
-### Related to TWAIN Capability Negotiation
+| v16.2 | v16.1- |
+|:-|:-|
+| [ `Addon.Camera.showVideo()` ]({{site.info}}api/Addon_Camera.html#showvideo) | `Viewer.showVideo()` |
+| [ `Addon.Camera.closeVideo()` ]({{site.info}}api/Addon_Camera.html#closevideo) | `Viewer.closeVideo()` |
+| [ `Addon.Camera.off()` ]({{site.info}}api/Addon_Camera.html#off) | `Viewer.off()` |
+| [ `Addon.Camera.on("video-closed")` ]({{site.info}}api/Addon_Camera.html#video-closed) | `Viewer.on("video-closed")` |
+| [ `Addon.Camera.on("video-error")` ]({{site.info}}api/Addon_Camera.html#video-error) | `Viewer.on("video-error")` |
+
+### Viewer
+
+* New APIs in v16.2 replace old APIs in v16.1-, all old APIs are deprecated.
+
+| v16.2 | v16.1- |
+|:-|:-|
+| [ `Viewer.background` ]({{site.info}}api/WebTwain_Viewer.html#background) | `BackgroundColor` |
+| [ `Viewer.bind()` ]({{site.info}}api/WebTwain_Viewer.html#bind) , [ `Viewer.show()` ]({{site.info}}api/WebTwain_Viewer.html#show) , [ `Viewer.hide()` ]({{site.info}}api/WebTwain_Viewer.html#hide) | `BindViewer()` |
+| [ `Viewer.cursor` ]({{site.info}}api/WebTwain_Viewer.html#cursor) | `MouseShape` |
+| [ `Viewer.fitWindow()` ]({{site.info}}api/WebTwain_Viewer.html#fitwindow) | `FitWindowType` , `IfFitWindow` |
+| [ `Viewer.height` ]({{site.info}}api/WebTwain_Viewer.html#height) | `Height` |
+| [ `Viewer.ifAutoScroll` ]({{site.info}}api/WebTwain_Viewer.html#ifautoscroll) | `IfAutoScroll` |
+| [ `Viewer.on("click", callback)` ]({{site.info}}api/WebTwain_Viewer.html#click) | `RegisterEvent("OnMouseClick", callback)` |
+| [ `Viewer.on("contextmenu", callback)` ]({{site.info}}api/WebTwain_Viewer.html#contextmenu) | `RegisterEvent("OnMouseRightClick", callback)` |
+| [ `Viewer.on("dblclick", callback)` ]({{site.info}}api/WebTwain_Viewer.html#dblclick) | `RegisterEvent("OnMouseDoubleClick", callback)` |
+| [ `Viewer.on("mousemove", callback)` ]({{site.info}}api/WebTwain_Viewer.html#mousemove) | `RegisterEvent("OnMouseMove", callback)` |
+| [ `Viewer.on("pageAreaSelected", callback)` ]({{site.info}}api/WebTwain_Viewer.html#pageareaselected) | `RegisterEvent("OnImageAreaSelected", callback)` |
+| [ `Viewer.on("pageAreaUnselected", callback)` ]({{site.info}}api/WebTwain_Viewer.html#pageareaunselected) | `RegisterEvent("OnImageAreaDeSelected", callback)` |
+| [ `Viewer.pageMargin` ]({{site.info}}api/WebTwain_Viewer.html#pagemargin) | `ImageMargin` |
+| [ `Viewer.selectedPageBorder` ]({{site.info}}api/WebTwain_Viewer.html#selectedpageborder) | `SelectionImageBorderColor` |
+| [ `Viewer.selectionRectAspectRatio` ]({{site.info}}api/WebTwain_Viewer.html#selectionrectaspectratio) | `SelectionRectAspectRatio` |
+| [ `Viewer.setSelectedAreas()` ]({{site.info}}api/WebTwain_Viewer.html#setselectedareas) | `SetSelectedImageArea()` |
+| [ `Viewer.showPageNumber` ]({{site.info}}api/WebTwain_Viewer.html#showpagenumber) | `ShowPageNumber` |
+| [ `Viewer.unbind()` ]({{site.info}}api/WebTwain_Viewer.html#unbind) | `UnbindView()` |
+| [ `Viewer.width` ]({{site.info}}api/WebTwain_Viewer.html#width) | `Width` |
+| [ `Viewer.zoom` ]({{site.info}}api/WebTwain_Viewer.html#zoom) | `Zoom` |
+| `ViewerEvent.imageX` | `MouseX` |
+| `ViewerEvent.imageY` | `MouseY` |
+
+> NOTE
+>  
+> `ViewerEvent.imageX` and `ViewerEvent.imageY` are only available as the first argument in callback functions for the mouse events "click", "dblclick", "contextMenu" and "mousemove".
+
+* The following APIs are new in v16.2
+  + [ `Viewer.acceptDrop` ]({{site.info}}api/WebTwain_Viewer.html#acceptdrop)
+  + [ `Viewer.allowSlide` ]({{site.info}}api/WebTwain_Viewer.html#allowslide)
+  + [ `Viewer.clearSelectedAreas()` ]({{site.info}}api/WebTwain_Viewer.html#clearselectedareas)
+  + [ `Viewer.createThumbnailViewer()` ]({{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer)
+  + [ `Viewer.border` ]({{site.info}}api/WebTwain_Viewer.html#border)
+  + [ `Viewer.first()` ]({{site.info}}api/WebTwain_Viewer.html#first)
+  + [ `Viewer.getUISettings()` ]({{site.info}}api/WebTwain_Viewer.html#getuisettings)
+  + [ `Viewer.gotoPage()` ]({{site.info}}api/WebTwain_Viewer.html#gotopage)
+  + [ `Viewer.idPostfix` ]({{site.info}}api/WebTwain_Viewer.html#idpostfix)
+  + [ `Viewer.innerBorder` ]({{site.info}}api/WebTwain_Viewer.html#innerborder)
+  + [ `Viewer.last()` ]({{site.info}}api/WebTwain_Viewer.html#last)
+  + [ `Viewer.next()` ]({{site.info}}api/WebTwain_Viewer.html#next)
+  + [ `Viewer.on("pageRendered", callback)` ]({{site.info}}api/WebTwain_Viewer.html#pagerendered)
+  + [ `Viewer.on("resize", callback)` ]({{site.info}}api/WebTwain_Viewer.html#resize)
+  + [ `Viewer.previous()` ]({{site.info}}api/WebTwain_Viewer.html#previous)
+  + [ `Viewer.render()` ]({{site.info}}api/WebTwain_Viewer.html#render)
+  + [ `Viewer.resetUISettings()` ]({{site.info}}api/WebTwain_Viewer.html#resetuisettings)
+  + [ `Viewer.selectedAreaBorderColor` ]({{site.info}}api/WebTwain_Viewer.html#selectedareabordercolor)
+  + [ `Viewer.selectedPageBackground` ]({{site.info}}api/WebTwain_Viewer.html#selectedpagebackground)
+  + [ `Viewer.singlePageMode` ]({{site.info}}api/WebTwain_Viewer.html#singlepagemode)
+
+* The following APIs in v16.2 are improved based on old APIs in v16.1-.
+
+  + [`Viewer.setViewMode()`]({{site.info}}api/WebTwain_Viewer.html#setviewmode)
+
+    It also accepts the values "-1, -1" which is equivalent to setting `Viewer.singlePageMode` to `true` .
+
+  + [`Viewer.updateUISettings()`]({{site.info}}api/WebTwain_Viewer.html#updateuisettings)
+
+* The following APIs are also deprecated in v16.2
+
+  + `SetViewMode()`
+
+    Use Viewer.setViewMode() instead.
+
+* The following APIs from v16.1- are removed
+
+  + `Viewer.bOnlyShowThumbnailsView`
+  + `Viewer.cursorOverThumbnailsView`
+  + `Viewer.bindCustomElement()`
+  + `Viewer.showCustomElement()`
+  + `Viewer.hideCustomElement()`
+  + `Viewer.toggleCustomElement()`
+  + `Viewer.setSelectedImageArea()`
+  + `Viewer.zoomIn()`
+  + `Viewer.zoomOut()`
+
+* The following APIs in v16.1- are implemented differently in v16.2  
+  + `BindViewer()` with two parameters
+  + `UpdateViewer()`
+
+  The two methods above were used to set the size of the viewer or to show the thumbnail viewer. In v16, 2, different APIs are used as shown below:
+
+``` javascript
+  /* Set the size of the viewer */
+  DWObject.Viewer.height = 800;
+  DWObject.Viewer.width = 600;
+  /* Create a thumbnail viewer, note that this viewer can be hidden or disposed */
+  var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer(thumbnailViewerSettings);
+  objThumbnailViewer.show();
+  //objThumbnailViewer.hide();
+  //objThumbnailViewer.dispose();
+  /* updateViewMode() is used to change only the view mode of the thumbnail viewer */
+  objThumbnailViewer.updateViewMode(viewMode: ViewMode);
+  /* The following two are used to hook or unhook events to the thumbnail viewer */
+  objThumbnailViewer.on()
+  objThumbnailViewer.off()
+```
+
+  + `ShowImageEditor()`
+
+  While this method still works, it's deprecated and the alternative is shown in the code below
+
+``` javascript
+  /* The image editor is now created on the fly and can be hidden or disposed */
+  var objImageEditor = DWObject.Viewer.createImageEditor(editorSettings);
+  objImageEditor.show();
+  objImageEditor.hide();
+  objImageEditor.dispose();
+```
+
+  + `Viewer.bindCustomElement()`
+  + `Viewer.showCustomElement()`
+  + `Viewer.hideCustomElement()`
+  + `Viewer.toggleCustomElement()`
+
+  As already mentioned, these four methods are removed and the alternative implementation is shown in the code below
+
+``` javascript
+  var objCustomElement = DWObject.Viewer.createCustomElement(document.getElementById("divCustomElement"));
+  objCustomElement.show();
+  objCustomElement.hide();
+  objCustomElement.dispose();
+```
+
+## 16.1.1
+
+### TWAIN Capability Negotiation
 
 > [Alternative] Use [getCapabilities()]({{site.info}}api/WebTwain_Acquire.html#getcapabilities) and [setCapabilities()]({{site.info}}api/WebTwain_Acquire.html#setcapabilities) instead.
 
-* [CapGet()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGet) 
-* [CapGetHelp()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetHelp)
-* [CapGetCurrent()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetCurrent) 
-* [CapGetDefault()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetDefault)
-* [CapGetFrameBottom()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetFrameBottom) 
-* [CapGetFrameLeft()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetFrameLeft)
-* [CapGetFrameRight()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetFrameRight) 
-* [CapGetFrameTop()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetFrameTop)
-* [CapGetLabel()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetLabel) 
-* [CapGetLabels()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetLabels)
-* [CapSet()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapSet) 
-* [CapReset()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapReset)
-* [CapSetFrame()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapSetFrame) 
-* [CapIfSupported()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapIfSupported)
-* [GetCapItems()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#GetCapItems) 
-* [GetCapItemsString()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#GetCapItemsString)
-* [SetCapItems()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#SetCapItems) 
-* [SetCapItemsString()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#SetCapItemsString)
-* [Capability](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#Capability) 
-* [CapNumItems](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapNumItems)
-* [CapMaxValue](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapMaxValue) 
-* [CapMinValue](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapMinValue)
-* [CapCurrentValue](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapCurrentValue) 
-* [CapCurrentIndex](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapCurrentIndex)
-* [CapDefaultValue](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapDefaultValue) 
-* [CapDefaultIndex](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapDefaultIndex)
-* [CapType](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapType) 
-* [CapValueType](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapValueType)
-* [CapStepSize](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapStepSize)
-* [CapValue](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapValue) 
-* [CapValueString](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapValueString)
+* CapGet()
+* CapGetHelp()
+* CapGetCurrent()
+* CapGetDefault()
+* CapGetFrameBottom()
+* CapGetFrameLeft()
+* CapGetFrameRight()
+* CapGetFrameTop()
+* CapGetLabel()
+* CapGetLabels()
+* CapSet()
+* CapReset()
+* CapSetFrame()
+* CapIfSupported()
+* GetCapItems()
+* GetCapItemsString()
+* SetCapItems()
+* SetCapItemsString()
+* Capability
+* CapNumItems
+* CapMaxValue
+* CapMinValue
+* CapCurrentValue
+* CapCurrentIndex
+* CapDefaultValue
+* CapDefaultIndex
+* CapType
+* CapValueType
+* CapStepSize
+* CapValue
+* CapValueString
 
-### Related to Buffer Management
+### Buffer Management
 
 > [Alternative] Use [SelectedImagesIndices]({{site.info}}api/WebTwain_Buffer.html#selectedimagesindices), [SelectAllImages()]({{site.info}}api/WebTwain_Buffer.html#selectallimages) and [SelectImages()]({{site.info}}api/WebTwain_Buffer.html#selectimages) instead.
 
-* [GetSelectedImageIndex()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Runtime-Info.html#GetSelectedImageIndex) 
-* [SetSelectedImageIndex](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#SetSelectedImageIndex)
-* [SelectedImagesCount](https://www.dynamsoft.com/docs/dwt15.3.1/API/Runtime-Info.html#SelectedImagesCount)
+* GetSelectedImageIndex()
+* SetSelectedImageIndex
+* SelectedImagesCount
 
-### Related to Image Editing
+### Image Editing
 
 <!-- > [Alternative] Annotation feature to be added in a later version. -->
 
-* [AddText()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#AddText) 
-* [CreateTextFont()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#CreateTextFont)
-* [OverlayRectangle()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#OverlayRectangle)
+* AddText()
+* CreateTextFont()
+* OverlayRectangle()
 
-### Related to Input and Output
+### Input and Output
 
 > [Alternative] Use new methods like [ConvertToBase64()]({{site.info}}api/WebTwain_IO.html#converttobase64), [PDF.Write.Setup()]({{site.info}}api/Addon_PDF.html#writesetup)
 
-* [SaveSelectedImagesToBase64Binary()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Load-Save.html#SaveSelectedImagesToBase64Binary) 
+* SaveSelectedImagesToBase64Binary()
 * SetCookie()
-* [IfOpenImageWithGDIPlus](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#IfOpenImageWithGDIPlus)
-* [PDFAuthor](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFAuthor) 
-* [PDFCompressionType](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFCompressionType)
-* [PDFCreationDate](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFCreationDate) 
-* [PDFCreator](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFCreator)
-* [PDFKeywords](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFKeywords) 
-* [PDFModifiedDate](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFModifiedDate)
-* [PDFProducer](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFProducer) 
-* [PDFSubject](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFSubject)
-* [PDFTitle](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFTitle) 
-* [PDFVersion](https://www.dynamsoft.com/docs/dwt15.3.1/API/Encode-Decode.html#PDFVersion)
+* IfOpenImageWithGDIPlus
+* PDFAuthor
+* PDFCompressionType
+* PDFCreationDate
+* PDFCreator
+* PDFKeywords
+* PDFModifiedDate
+* PDFProducer
+* PDFSubject
+* PDFTitle
+* PDFVersion
 * MaxInternetTransferThreads
 
-### Related to Viewer
+### Viewer
 
 > [Alternative] Use methods like [Viewer.setViewMode()]({{site.info}}api/WebTwain_Viewer.html#setviewmode), [Viewer.setViewMode()]({{site.info}}api/WebTwain_Viewer.html#setviewmode)
 
-* [SetViewMode()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Display-UI.html#SetViewMode) 
-* [SetSelectedImageArea()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Basic-Edit.html#SetSelectedImageArea)
+* SetViewMode()
+* SetSelectedImageArea()

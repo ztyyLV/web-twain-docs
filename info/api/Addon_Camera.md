@@ -856,7 +856,6 @@ interface ScanConfiguration{
  function funcConfirmExit(){
      return true;  
   }
-
 ```
 
 **Availability**

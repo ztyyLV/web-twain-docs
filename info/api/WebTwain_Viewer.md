@@ -23,8 +23,6 @@ permalink: /info/api/WebTwain_Viewer.html
 | [`setSelectedAreas()`](#setselectedareas)           | [`setViewMode()`](#setviewmode)               | [`show()`](#show)                               | [`unbind()`](#unbind)                       |
 | [`createTemplate()`](#createtemplate)               |
 
-<!--* [updateUISettings](#updateuisettings)-->
-
 **Properties**
 
 |                                             |
@@ -43,33 +41,6 @@ permalink: /info/api/WebTwain_Viewer.html
 | [`mousedown`](#mousedown)       | [`mouseup`](#mouseup)         | [`mouseout`](#mouseout)                 | [`mouseover`](#mouseover)                   |
 | [`keydown`](#keydown)           | [`keyup`](#keyup)             | [`pageAreaSelected`](#pageareaselected) | [`pageAreaUnselected`](#pageareaunselected) |
 | [`pageRendered`](#pagerendered) | [`resize`](#resize)           |
-
-<!--** [topPageChanged](#toppagechanged)-->
-
-> The following APIs are deprecated as of v16.2, check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html#viewer-related-api-changes-in-versoin-16.2).
-
-**Deprecated Methods**
-
-|                  |
-| :--------------- | :------------- |
-| `BindViewer()`   | `UnbindView()` |
-| `UpdateViewer()` |
-
-**Deprecated Properties**
-
-|                            |
-| :------------------------- | :-------------------------- | --------------- | ---------------- |
-| `BackgroundColor`          | `SelectionImageBorderColor` | `FitWindowType` | `IfFitWindow`    |
-| `Height`                   | `Width`                     | `IfAutoScroll`  | `MouseX`         |
-| `MouseY`                   | `ImageMargin`               | `MouseShape`    | `SelectionRectAspectRatio` |
-| `Zoom`                     |
-
-**Deprecated Events**
-
-|                     |
-| :------------------ | :-------------------- | ----------------------- |
-| `OnMouseClick`      | `OnMouseDoubleClick`  | `OnMouseMove`           |
-| `OnMouseRightClick` | `OnImageAreaSelected` | `OnImageAreaDeSelected` |
 
 ---
 
@@ -598,42 +569,42 @@ interface ThumbnailViewerSettings {
      * Default: false.
      */
     autoChangeIndex: boolean;
-    checkbox:{
-      visibility?: string, //"visible"：hidden", default："hidden" 
-      width?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
-      height?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
-      background?: string //default："#ffffff"
-      borderWidth?: number | string,  //default: "2px", unit: px, percentage value not supported
-      borderColor?: string, //default : "#000000"
+    checkbox: {
+      visibility?: string; //"visible"：hidden", default: "hidden" 
+      width?: number | string; //default: "24px"，number unit: px, string value: "24px"/"10%", relative to parent container
+      height?: number | string; //default: "24px"，number unit: px, string value: "24px"/"10%", relative to parent container
+      background?: string; //default: "#ffffff"
+      borderWidth?: number | string;  //default: "2px", unit: px, percentage value not supported
+      borderColor?: string; //default: "#000000"
       checkMarkColor?: string; //default: "#000000"
       checkMarkLineWidth?: number | string; //default: "2px", unit: px, percentage value not supported
-      borderRadius?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to itself
-      opacity?: number, //default：0.5, value range [0-1], value greater 1 defaults to 1
-      left?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
-      top?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
-      right?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
-      bottom?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
-      translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%"，relative to itself
-      translateY?: number | string; //default: "";  number unit: px, string value: "10px"/"10%"，relative to itself
-    }，
-    pageNumber:{
-      visibility?: string, //"visible"：hidden", default："hidden" 
-      width?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
-      height?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
-      background?: string //default："#ffffff"            
-      borderWidth?: number | string, //default: "1px", unit: px, percentage value not supported
-      borderColor?: string, //default: "#a79898"
-      borderRadius?: number | string,  //default: “50%”, number unit: px, string value: "10px"/"10%"，relative to itself
-      opacity?:number, //default：0.5, value range [0-1], value greater 1 defaults to 1
-      color?: string,  //default : "#000000"，supports #16 hexadecimal only
-      FontFamily?: string, //default : "sans-serif"
-      fontSize?: number | string, //default: 12, unit: px, percentage value not supported
-      left?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
-      top?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
-      right?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
-      bottom?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
-      translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%"，relative to itself
-      translateY?: number | string; //default: "", number unit: px, string value: "10px"/"10%"，relative to itself
+      borderRadius?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%"，relative to itself
+      opacity?: number; //default：0.5, value range [0-1], value greater 1 defaults to 1
+      left?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+      top?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+      right?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+      bottom?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+      translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+      translateY?: number | string //default: "",  number unit: px, string value: "10px"/"10%", relative to itself
+    };
+    pageNumber: {
+      visibility?: string; //"visible": hidden", default: "hidden" 
+      width?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+      height?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+      background?: string; //default: "#ffffff"            
+      borderWidth?: number | string; //default: "1px", unit: px, percentage value not supported
+      borderColor?: string; //default: "#a79898"
+      borderRadius?: number | string; //default: “50%”, number unit: px, string value: "10px"/"10%", relative to itself
+      opacity?:number; //default: 0.5, value range [0-1], value greater 1 defaults to 1
+      color?: string; //default: "#000000", supports #16 hexadecimal only
+      FontFamily?: string; //default: "sans-serif"
+      fontSize?: number | string; //default: 12, unit: px, percentage value not supported
+      left?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+      top?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+      right?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+      bottom?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+      translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+      translateY?: number | string //default: "", number unit: px, string value: "10px"/"10%", relative to itself
     }
 };
 
@@ -2376,22 +2347,22 @@ Dynamsoft.DWT.CreateDWTObjectEx(
 updateCheckboxStyle(checkboxSettings?: CheckboxSettings): void;
 
 interface CheckboxSettings {
-  visibility?: string, //"visible"：hidden", default："hidden" 
-  width?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
-  height?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
-  background?: string //default："#ffffff"
-  borderWidth?: number | string,  //default: "2px", unit: px, percentage value not supported
-  borderColor?: string, //default : "#000000"
+  visibility?: string; //"visible": hidden", default: "hidden" 
+  width?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+  height?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+  background?: string; //default: "#ffffff"
+  borderWidth?: number | string; //default: "2px", unit: px, percentage value not supported
+  borderColor?: string; //default: "#000000"
   checkMarkColor?: string; //default: "#000000"
   checkMarkLineWidth?: number | string; //default: "2px", unit: px, percentage value not supported
-  borderRadius?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to itself
-  opacity?: number, //default：0.5, value range [0-1], value greater 1 defaults to 1
-  left?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
-  top?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
-  right?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
-  bottom?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
-  translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%"，relative to itself
-  translateY?: number | string; //default: "";  number unit: px, string value: "10px"/"10%"，relative to itself
+  borderRadius?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to itself
+  opacity?: number; //default：0.5, value range [0-1], value greater 1 defaults to 1
+  left?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+  top?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+  right?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+  bottom?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+  translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+  translateY?: number | string //default: "", number unit: px, string value: "10px"/"10%", relative to itself
 }
 
 ```
@@ -2435,23 +2406,23 @@ interface CheckboxSettings {
 updatePageNumberStyle(pageNumberSettings?: PageNumberSettings): void;
 
 interface pageNumberSettings {       
-  visibility?: string, //"visible"：hidden", default："hidden" 
-  width?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
-  height?: number | string, //default: "24px"，number unit: px, string value: "24px"/"10%"，relative to parent container
-  background?: string //default："#ffffff"            
-  borderWidth?: number | string, //default: "1px", unit: px, percentage value not supported
-  borderColor?: string, //default: "#a79898"
-  borderRadius?: number | string,  //default: “50%”, number unit: px, string value: "10px"/"10%"，relative to itself
-  opacity?:number, //default：0.5, value range [0-1], value greater 1 defaults to 1
-  color?: string,  //default : "#000000"，supports #16 hexadecimal only
-  FontFamily?: string, //default : "sans-serif"
-  fontSize?: number | string, //default: 12, unit: px, percentage value not supported
-  left?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
-  top?: number | string,  //default: "", number unit: px, string value: "10px"/"10%"，relative to parent container
-  right?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
-  bottom?: number | string,  //default: 0, number unit: px, string value: "10px"/"10%"，relative to parent container
-  translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%"，relative to itself
-  translateY?: number | string; //default: "", number unit: px, string value: "10px"/"10%"，relative to itself
+  visibility?: string; //"visible": hidden", default: "hidden" 
+  width?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+  height?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+  background?: string; //default："#ffffff"            
+  borderWidth?: number | string; //default: "1px", unit: px, percentage value not supported
+  borderColor?: string; //default: "#a79898"
+  borderRadius?: number | string; //default: “50%”, number unit: px, string value: "10px"/"10%", relative to itself
+  opacity?:number; //default: 0.5, value range [0-1], value greater 1 defaults to 1
+  color?: string; //default: "#000000", supports #16 hexadecimal only
+  FontFamily?: string; //default: "sans-serif"
+  fontSize?: number | string; //default: 12, unit: px, percentage value not supported
+  left?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+  top?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+  right?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+  bottom?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+  translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+  translateY?: number | string //default: "", number unit: px, string value: "10px"/"10%", relative to itself
 }
 
 ```
@@ -2480,6 +2451,7 @@ interface pageNumberSettings {
 
 </table>
 </div>
+
 ---
 
 ## Events
