@@ -2333,7 +2333,7 @@ RemoveDocument(documentName:string):boolean;
  * Delete the specified category and all images in it.
  * @argument categoryName Specify the category name.
  */
-RemoveFile(categoryName:string):Boolean;
+RemoveFile(categoryName:string):boolean;
 ```
 
 **Availability**
@@ -2381,7 +2381,6 @@ interface DocumentInfo {
    name: string;
    imageIds: number[];
 }
-
 ```
 2. 
 ```typescript
@@ -2395,7 +2394,6 @@ Json:
    imageIds:[23122335, 25566822323]
 },
 {……}]
-
 ```
 
 
