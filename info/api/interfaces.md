@@ -8,6 +8,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Interfaces Page
 permalink: /info/api/interfaces.html
 ---
 
+# Interfaces 
+
 ```typescript
 interface ScanConfiguration{
   element?: HTMLDivElement, //Bind the element or element id. 
