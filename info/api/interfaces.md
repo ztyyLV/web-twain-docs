@@ -10,6 +10,8 @@ permalink: /info/api/interfaces.html
 
 # Interfaces 
 
+## ScanConfiguration
+
 ```typescript
 interface ScanConfiguration{
   element?: HTMLDivElement, //Bind the element or element id. 
