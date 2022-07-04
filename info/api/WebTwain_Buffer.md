@@ -2079,11 +2079,11 @@ DWObject.GetTagListByIndex(0);
 
 **Syntax**
 
-<div class="sample-code-prefix"></div>
+<div class="sample-code-prefix template2"></div>
 >- v17.3
 >- v17.2.5
 >
->1. 
+>
 ```typescript
 /**
  * Create a document for the scanned image(s).
@@ -2091,8 +2091,7 @@ DWObject.GetTagListByIndex(0);
  */
 CreateDocument(documentName:string):boolean;
 ```
-2. 
- ```typescript
+```typescript
 /**
  * Create a category for the scanned image(s).
  * @argument categoryName Specify the category name.
@@ -2153,11 +2152,11 @@ function failureCallback(errorCode, errorString) {
 
 **Syntax**
 
-<div class="sample-code-prefix"></div>
+<div class="sample-code-prefix template2"></div>
 >- v17.3
 >- v17.2.5
 >
->1. 
+>
 ```typescript
 /**
  * Use the specified document for the scanned image(s)
@@ -2165,7 +2164,6 @@ function failureCallback(errorCode, errorString) {
  */
 OpenDocument(documentName:string):boolean;
 ```
-2. 
 ```typescript
 /**
  * Use the specified category for the scanned image(s)
@@ -2225,18 +2223,17 @@ function failureCallback(errorCode, errorString) {
 
 **Syntax**
 
-<div class="sample-code-prefix"></div>
+<div class="sample-code-prefix template2"></div>
 >- v17.3
 >- v17.2.5
 >
->1. 
+>
 ```typescript
 /**
  * Get the current document name. The default value is 'dynamsoft-default-document'. Scanned image(s) are saved in this document by default if no document name is created.
  */
 GetCurrentDocumentName():string;
 ```
-2. 
 ```typescript
 /**
  * Get the current category name. The default value is 'dynamsoft-dvs-file'. Scanned image(s) are stored in this category by default if no category name is created.
@@ -2315,11 +2312,11 @@ RenameDocument(oldDocumentName:string, newDocumentName:string):boolean;
 
 **Syntax**
 
-<div class="sample-code-prefix"></div>
+<div class="sample-code-prefix template2"></div>
 >- v17.3
 >- v17.2.5
 >
->1. 
+> 
 ```typescript
 /**
  * Delete the specified document.
@@ -2327,7 +2324,6 @@ RenameDocument(oldDocumentName:string, newDocumentName:string):boolean;
  */
 RemoveDocument(documentName:string):boolean;
 ```
-2. 
 ```typescript
 /**
  * Delete the specified category and all images in it.
@@ -2367,11 +2363,11 @@ RemoveFile(categoryName:string):boolean;
 
 **Syntax**
 
-<div class="sample-code-prefix"></div>
+<div class="sample-code-prefix template2"></div>
 >- v17.3
 >- v17.2.5
 >
->1. 
+>
 ```typescript
 /**
  * Get the list of all documents and their information.
@@ -2382,7 +2378,6 @@ interface DocumentInfo {
    imageIds: number[];
 }
 ```
-2. 
 ```typescript
 /**
  * Get the list of all categories and their information.

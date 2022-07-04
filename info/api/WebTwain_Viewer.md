@@ -2469,11 +2469,11 @@ When set to true, the index in the upper left corner of the viewer will be selec
 
 **Syntax**
 
-<div class="sample-code-prefix"></div>
+<div class="sample-code-prefix template2"></div>
 >- v17.3
 >- v17.2.5
 >
->1. 
+>
 ```typescript
 /**
  * Create document scanner template.
@@ -2490,7 +2490,6 @@ interface DocumentViewerTemplate{
    onRemoveSelectedFunc = function () {}   //Remove button click event
 }
 ```
-2. 
 ```typescript
 /**
  * Create document scanner template.
