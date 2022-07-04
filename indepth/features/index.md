@@ -10,44 +10,40 @@ permalink: /indepth/features/
 
 # Using DWT
 
-This section covers how to implement the key capabilities of Dynamic Web TWAIN:
+This section covers how to implement the key capabilities of Dynamic Web TWAIN (DWT):
 
-* [Initialize]({{site.indepth}}features/Initialize.html)
+* [Initialize DWT]({{site.indepth}}features/Initialize.html)
 
   Learn how to include DWT and initialize it in your application.
 
-* [Input]({{site.indepth}}features/Input.html)
+* [Import Options]({{site.indepth}}features/Input.html)
 
-  Learn all the ways you can use to input data into DWT.
+  Learn different ways to import data into DWT.
 
-* [Output]({{site.indepth}}features/Output.html)
+* [Export Options]({{site.indepth}}features/Output.html)
 
-  Learn all the ways you can use DWT to output the data it holds.
+  Learn different ways to export the data it holds.
 
-* [Buffer]({{site.indepth}}features/Buffer.html)
+* [Manage Image Buffer]({{site.indepth}}features/Buffer.html)
 
-  Learn about APIs on buffer management.
+  Learn about the APIs for buffer management.
 
-* [Viewer]({{site.indepth}}features/viewer.html)
+* [Manage Viewer]({{site.indepth}}features/viewer.html)
 
   Learn about ways to manipulate the viewer of DWT.
 
-* [UI]({{site.indepth}}features/UI.html)
+* [Customize UI]({{site.indepth}}features/UI.html)
 
-  Learn how to customize UI elements besides the Viewer.
+  Learn how to customize UI elements besides the viewer.
 
-* [Edit]({{site.indepth}}features/Edit.html)
+* [Edit Images]({{site.indepth}}features/Edit.html)
 
-  Learn the APIs to edit data in buffer.
+  Learn the APIs for editing images in the buffer.
 
-* [Read Barcode]({{site.indepth}}features/Barcode.html)
+* [Read Barcodes]({{site.indepth}}features/Barcode.html)
 
   Learn how to use the Barcode Reader module.
 
-* [OCR]({{site.indepth}}features/OCR.html)
-
-  Learn about OCR Basic and OCR Pro modules.
-
-* [Handle PDF]({{site.indepth}}features/PDF.html)
+* [Handle PDFs]({{site.indepth}}features/PDF.html)
 
   Learn about PDF reading & writing capabilities.

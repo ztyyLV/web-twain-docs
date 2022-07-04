@@ -214,6 +214,7 @@ RemoveTag(tagName: string, indices?: number[]):boolean
 </div>
 
 **Usage Notes**
+
 If the index is null, it will remove the tag you specified. If the index is not null, it will remove the specified tag on the image you selected.
 
 ---
@@ -226,19 +227,12 @@ If the index is null, it will remove the tag you specified. If the index is not 
 /**
  * Return the status of all current tags.
  */
-GetTagList():Json
+GetTagList(): TagInfo[];
 
-Json:
-[
-   {
-        name: 'TagA',
-         imageIds:''
-   },
-   {
-        name: 'TagB',
-         imageIds:[239514082, 239514083]
-   },
-]
+interface TagInfo {
+        name: string;
+         imageIds: number[];
+   }
 
 ```
 
@@ -2086,12 +2080,25 @@ DWObject.GetTagListByIndex(0);
 
 **Syntax**
 
+<div class="sample-code-prefix"></div>
+>- v17.3
+>- v17.2.5
+>
+>1. 
 ```typescript
 /**
  * Create a category for the scanned image(s).
  * @argument categoryName Specify the category name.
  */
-CreateFile(categoryName:string):Boolean;
+CreateDocument(documentName:string):boolean;
+```
+2. 
+ ```typescript
+/**
+ * Create a category for the scanned image(s).
+ * @argument categoryName Specify the category name.
+ */
+CreateFile(categoryName:string):boolean;
 ```
 
 **Availability**
@@ -2147,13 +2154,27 @@ function failureCallback(errorCode, errorString) {
 
 **Syntax**
 
+<div class="sample-code-prefix"></div>
+>- v17.3
+>- v17.2.5
+>
+>1. 
 ```typescript
 /**
  * Use the specified category for the scanned image(s)
  * @argument categoryName Specify the category name.
  */
-OpenFile(categoryName:string):Boolean;
+OpenDocument(documentName:string):boolean;
 ```
+2. 
+```typescript
+/**
+ * Use the specified category for the scanned image(s)
+ * @argument categoryName Specify the category name.
+ */
+OpenFile(categoryName:string):boolean;
+```
+
 
 **Availability**
 <div class="availability">
@@ -2205,11 +2226,23 @@ function failureCallback(errorCode, errorString) {
 
 **Syntax**
 
+<div class="sample-code-prefix"></div>
+>- v17.3
+>- v17.2.5
+>
+>1. 
 ```typescript
 /**
  * Get the current category name. The default value is 'dynamsoft-dvs-file'. Scanned image(s) are stored in this category by default if no category name is created.
  */
-GetCurrentFileName():String;
+GetCurrentDocumentName():string;
+```
+2. 
+```typescript
+/**
+ * Get the current category name. The default value is 'dynamsoft-dvs-file'. Scanned image(s) are stored in this category by default if no category name is created.
+ */
+GetCurrentFileName():string;
 ```
 
 **Availability**
@@ -2248,7 +2281,59 @@ GetCurrentFileName():String;
  * Delete the specified category and all images in it.
  * @argument categoryName Specify the category name.
  */
-RemoveFile(categoryName:string):Boolean;
+RenameDocument(oldDocumentName:string, newDocumentName:string):boolean;
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported  </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+</tr>
+
+</table>
+</div>
+
+---
+
+## RemoveDocument
+
+**Syntax**
+
+<div class="sample-code-prefix"></div>
+>- v17.3
+>- v17.2.5
+>
+>1. 
+```typescript
+/**
+ * Delete the specified document.
+ * @argument documentName Specify the document name.
+ */
+RemoveDocument(documentName:string):boolean;
+```
+2. 
+```typescript
+/**
+ * Delete the specified category and all images in it.
+ * @argument categoryName Specify the category name.
+ */
+RemoveFile(categoryName:string):boolean;
 ```
 
 **Availability**
@@ -2282,20 +2367,35 @@ RemoveFile(categoryName:string):Boolean;
 
 **Syntax**
 
+<div class="sample-code-prefix"></div>
+>- v17.3
+>- v17.2.5
+>
+>1. 
+```typescript
+/**
+ * Get the list of all categories and their information.
+ */
+GetDocumentInfoList(): DocumentInfo[];
+interface DocumentInfo {
+   name: string;
+   imageIds: number[];
+}
+```
+2. 
 ```typescript
 /**
  * Get the list of all categories and their information.
  */
 GetFileInfoList():Json
-
 Json:
 [{
    name: "categoryName",
    imageIds:[23122335, 25566822323]
 },
 {……}]
-
 ```
+
 
 **Availability**
 <div class="availability">
@@ -2328,12 +2428,12 @@ Json:
 
 **Syntax**
 
-```typescript
+```javascript
 /**
  * Gets the RawData for the specified image captured from camera.
  * @param index Specify the image.
  */
-GetRawDataAsync(index: number):RawData;
+GetRawDataAsync(index: number): Promise<RawData>;
 
 interface RawData {
   displayImage:{  //Data of the display image, after filter and crop effects

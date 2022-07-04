@@ -441,7 +441,6 @@ The method [ `unbind()` ](#unbind) will dispose all created CustomElement object
 createThumbnailViewer(
     thumbnailViewerSettings?: ThumbnailViewerSettings
 ): ThumbnailViewer;
-
 interface ThumbnailViewer {
     /**
      * Show the ThumbnailViewer object.
@@ -483,7 +482,6 @@ interface ThumbnailViewer {
      */
     off(eventName: string, callback?: () => void): void;
 }
-
 interface ThumbnailViewerSettings {    
     /**
      * Whether to allow keyboard control. Default: true.
@@ -597,7 +595,7 @@ interface ThumbnailViewerSettings {
       borderRadius?: number | string; //default: “50%”, number unit: px, string value: "10px"/"10%", relative to itself
       opacity?:number; //default: 0.5, value range [0-1], value greater 1 defaults to 1
       color?: string; //default: "#000000", supports #16 hexadecimal only
-      FontFamily?: string; //default: "sans-serif"
+      fontFamily?: string; //default: "sans-serif"
       fontSize?: number | string; //default: 12, unit: px, percentage value not supported
       left?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
       top?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
@@ -607,7 +605,6 @@ interface ThumbnailViewerSettings {
       translateY?: number | string //default: "", number unit: px, string value: "10px"/"10%", relative to itself
     }
 };
-
 interface ThumbnailViewerEvent {
     // The index of the current page.
     index: number;
@@ -616,7 +613,6 @@ interface ThumbnailViewerEvent {
     // The y-coordinate of the browser page.
     pageY: number;
 };
-
 interface ViewMode {
     /**
      * Specify the number of images per row.
@@ -1474,6 +1470,51 @@ This API only works if the view mode of the viewer is set to -1 by -1.
 
 ---
 
+## allowPageDragging
+
+```typescript
+/**
+ * Set whether to allow page dragging to reorder the pages in the viewer.
+ * The default value is true.
+ */
+.allowPageDragging: boolean;
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+</tr>
+
+</table>
+</div>
+
+**Example**
+
+```javascript
+DWObject.Viewer.setViewMode(2,2);
+DWObject.Viewer.cursor = "pointer";
+DWObject.Viewer.allowPageDragging = false; //Disable drag&drop.
+```
+
+---
+
 ## background
 
 **Syntax**
@@ -2266,13 +2307,33 @@ When set to true, the index in the upper left corner of the viewer will be selec
 
 **Syntax**
 
+<div class="sample-code-prefix"></div>
+>- v17.3
+>- v17.2.5
+>
+>1. 
+```typescript
+/**
+ * Create document scanner template.
+ * @argument templateName Currently templateName only supports "documentScanner".
+ */
+createTemplate("templateName", documentConfiguration?: DocumentConfiguration)：DocumentViewerTemplate
+interface DocumentViewerTemplate{
+   getCustomElement():CustomElement; //Get CustomElement. Can display save & upload interface in CustomElement.   
+   onAddDocumentFunc = function () {}
+   onExitFunc = function () {}
+   onSaveFunc = function () {} //Save button click event
+   onUploadFunc = function () {}  //Upload button click event
+   onRemoveSelectedFunc = function () {}   //Remove button click event
+}
+```
+2. 
 ```typescript
 /**
  * Create document scanner template.
  * @argument templateName Currently templateName only supports "documentScanner".
  */
 createTemplate("templateName")：DocumentViewerTemplate
-
 interface DocumentViewerTemplate{
    getCustomElement():CustomElement; //Get CustomElement. Can display save & upload interface in CustomElement.   
    onAddDocumentFunc = function () {}
@@ -2415,7 +2476,7 @@ interface pageNumberSettings {
   borderRadius?: number | string; //default: “50%”, number unit: px, string value: "10px"/"10%", relative to itself
   opacity?:number; //default: 0.5, value range [0-1], value greater 1 defaults to 1
   color?: string; //default: "#000000", supports #16 hexadecimal only
-  FontFamily?: string; //default: "sans-serif"
+  fontFamily?: string; //default: "sans-serif"
   fontSize?: number | string; //default: 12, unit: px, percentage value not supported
   left?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
   top?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
@@ -2453,6 +2514,60 @@ interface pageNumberSettings {
 </div>
 
 ---
+
+## selectionMode
+
+**Syntax**
+
+```typescript
+/**
+ * Return or set the selection mode used.
+ */
+selectionMode: Dynamsoft.DWT.EnumDWT_SelectionMode | number;
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+</tr>
+
+</table>
+</div>
+
+**Example**
+
+```javascript
+DWObject.Viewer.setViewMode(2,2);
+DWObject.Viewer.cursor = "pointer";
+DWObject.Viewer.updateCheckboxStyle({
+    visibility:"visible",
+});
+DWObject.Viewer.selectionMode = Dynamsoft.DWT.EnumDWT_SelectionMode.Multiple; // Multiple Selection
+```
+
+**Usage notes**
+
+The default value is 0 (Single). Even if checkbox is used, only one image can be selected if the selection mode is set to 0 (Single).
+
+---
+
 
 ## Events
 

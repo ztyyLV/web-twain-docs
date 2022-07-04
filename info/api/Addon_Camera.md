@@ -28,7 +28,7 @@ Check out [MediaDevices Cameras]({{site.indepth}}features/input.html#use-mediade
 | [`getSourceList()`](#getsourcelist) | [`selectSource()`](#selectsource)   | [`getCurrentSource()`](#getcurrentsource)         | [`closeSource()`](#closesource)   |
 | [`getResolution()`](#getresolution) | [`setResolution()`](#setresolution) | [`getCurrentResolution()`](#getcurrentresolution) | [`play()`](#play)                 |
 | [`pause()`](#pause)                 | [`resume()`](#resume)               | [`stop()`](#stop)                                 | [`getStatus()`](#getstatus)       |
-| [`capture()`](#capture)             | [`showVideo()`](#showvideo)         | [`closeVideo()`](#closevideo)                     | [`scanDocument()`](#scandocument) |
+| [`capture()`](#capture)             | [`closeVideo()`](#closevideo)                     | [`scanDocument()`](#scandocument) |
 
 **Events**
 
