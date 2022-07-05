@@ -32,7 +32,7 @@ When you open the scan page, two new processes are created under the user accoun
 
 ![service blocked-2]({{site.assets}}imgs/service-blocked-2.png)
 
-If the processes are not created, we can confirm that Dynamsoft Service is being blocked by another process.
+If these two processes are not under the user account, we can confirm that Dynamsoft Service is being blocked by another process.
 
 ### Resolution
 
