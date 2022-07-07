@@ -10,7 +10,7 @@ permalink: /indepth/development/Server-script.html
 
 # Server-side Scripting
 
-`DWT` is a 100% client-side library. However, it does need to interact with the server when doing operations like **Upload**, **Download**, **Server-side OCR**, etc. While the scripts are scattered in the documentation, we'll try to cover some important ones in this article.
+`DWT` is a 100% client-side library. However, it does need to interact with the server when doing operations like **Upload**, **Download**, etc. While the scripts are scattered in the documentation, we'll try to cover some important ones in this article.
 
 ## How to process uploaded files
 
@@ -808,51 +808,6 @@ if (res_getData.next()){
         out.println("<script language='javascript'>");
         out.println("alert('No image found!');");
         out.println("</script>");
-    }
-}
-```
-
-## Other Scripts
-
-### License Checker for OCRPro
-
-When performing a [client-side OCR operation]({{site.indepth}}features/ocr.html#use-ocrb-on-the-client-side) with `OCRPro` , the engine sends HTTP POST requests to the server for license tracking. The following code snippet shows how the requests are redirected to the class `LicenseCheckerServer` .
-
-> The class `LicenseCheckerServer` is defined in the files `CheckLicense.dll` and `LicenseReader.dll` . If you don't have these files in your application, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) or download them from [here](https://tst.dynamsoft.com/public/download/ocr/OCRProx64-v16.zip).
-
-``` csharp
-using System;
-using System.Collections.Generic;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Text;
-using System.Drawing;
-using CheckLicense;
-
-namespace Dynamsoft
-{
-    public partial class LicenseChecker : System.Web.UI.Page
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            if (this.Request.Form["DTW_AjaxMethod"] != null)
-            {
-                String strMethod = this.Request.Form["DTW_AjaxMethod"];
-                if (strMethod == "CheckLicense")
-                {
-                    Response.Write(LicenseCheckerServer.CheckLicense(this.Request.Form["Productkey"], HttpContext.Current.Server.MapPath("OCRPro.lic")));
-                }
-                else if (strMethod == "WriteOCRCount")
-                {
-                    Response.Write(LicenseCheckerServer.WriteOCRCount(this.Request.Form["OCRCount"], HttpContext.Current.Server.MapPath("OCRPro.lic")));
-                }
-            }
-            else
-            {
-                Response.Write(LicenseCheckerServer.GetErrorString());
-            }
-        }
     }
 }
 ```

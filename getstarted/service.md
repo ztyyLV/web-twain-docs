@@ -127,16 +127,6 @@ These files are named with their version number. The following uses v16.1.1 as a
 * Webcam Addon
   + `DynamicWebcam_15.0.0.0625.dll`
   + `DynamicWebcamx64_15.0.0.0625.dll`
-* OCR Basic
-  + `\DynamicOCR\`
-  + `DynamicOCR_10.0.0.0618.dll`
-  + `DynamicOCRx64_10.0.0.0618.dll`
-* OCR Professional
-  + `\OCRProResource\`
-  + `DynamicOCRPro_1.2.0.0806.dll`
-  + `DynamicOCRProx64_1.2.0.0806.dll`
-  + `ocrp.lic`
-  + `OCRPro.lic`
 * File Uploader
   + `UploadModule_1.6.0.0428.dll`
 * Imaging features
