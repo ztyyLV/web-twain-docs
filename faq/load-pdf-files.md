@@ -17,7 +17,7 @@ You can use the PDF Rasterizer add-on which supports reading PDF/A images.
 
 If the PDF Rasterizer add-on is used, the file will automatically be rasterized when it’s loaded to the viewer.
 
-### When is PDF Rasterizer effective
+### When is PDF Rasterizer effective?
 
 Once `PDFR` has been configured, it will automatically detect if a file needs to be rasterized and if so, it will convert it to an image(s) with the set resolution(if no resolution is set, the default is 200). This happens when you call any of the following methods
 
@@ -34,4 +34,4 @@ Once `PDFR` has been configured, it will automatically detect if a file needs to
 - [ `HTTPDownloadThroughPost()` ]({{site.info}}api/WebTwain_IO.html#httpdownloadthroughpost)
 - [ `HTTPDownloadDirectly()` ]({{site.info}}api/WebTwain_IO.html#httpdownloaddirectly)
 
-You can also generate PDF/A files with our OCR add-on by setting the output format. Please refer to the FAQ: [generate PDF/A files]({{site.faq}}/generate-pdf-files.html)
+Dynamic Web TWAIN does not support the generation of PDF/A files.
