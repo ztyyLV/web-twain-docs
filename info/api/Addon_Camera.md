@@ -568,59 +568,6 @@ capture(): Promise<Blob>;
 
 ---
 
-## showVideo
-
-**Syntax**
-
-```typescript
-/**
- * Start streaming video from the current camera in the viewer.
- * @param deviceId Specify a camera.
- * @param resolution Specify the initial resolution.
- * @param mode Specify the mode.
- * @param fill Whether to fill the viewer area with the video stream and leave no margin.
- */
-showVideo(deviceId?: string,
-    resolution?: Resolution,
-    mode?: string,
-    fill?: boolean
-): Promise<Resolution>;
-```
-
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-</tr>
-
-<tr>
-<td align="center">not supported  </td>
-<td align="center">v16.1+ </td>
-<td align="center">v16.1+</td>
-<td align="center">v16.1+ </td>
-<td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
-</tr>
-
-</table>
-</div>
-
-**Usage notes**
-
-There are two available modes: `document` and `picture` .
-
-- `picture`: border detection is turned off and supports taking images consecutively. This is the default mode.
-- `document`: border detection will be on and only supports taking one image at a time.
-
----
-
 ## closeVideo
 
 **Syntax**
@@ -740,122 +687,167 @@ on("video-error", callback: (errorCode, errorString) => void): boolean;
 ``` typescript
 /**
  * Open the camera to capture document(s).
- * @param scanConfiguration Specify the scan configuration.
+ * @param documentConfiguration Specify the document configuration.
  */
-scanDocument(scanConfiguration?: ScanConfiguration
+scanDocument(documentConfiguration?: DocumentConfiguration
 ): Promise<Resolution>;
 
-interface ScanConfiguration{
-  element?: HTMLDivElement, //Bind the element or element id. 
-                             //After binding, display the video in the specified element, otherwise, display the video in full screen.
-  scannerViewer?:{
-    deviceId?: string,  
-    maxDocuments?: number,       //The maximum documents can be captured/loaded in to the buffer. 
-    enableBorderDetection?: boolean,  // Whether to enable border detection. The default value is true.
-    fullScreen?: boolean,   //Whether to display the video in full screen. The default value is false.
-    polygonStyle?:{      //The sytle of the auto detect border.       
-      stroke: string,    //default: "#fe8e14". Only supports #16 hexadecimal.
-      strokeWidth: string,  //default: "2px"
-      dash: string          //The allowed value are "solid" and "dashed", the default value is "solid".
-      },
-    resolution?:{
-      visibility?: boolean, //Whether to display the resolution icon in the upper left corner. The default value is true.
-      valueList?:[ {   
-       label: string,    //The resolution value listed in the drop-down list. For example："1920x1080"
-       value: Resolution //The resolution you set. For example: { width:1920, height:1080}
-      },{……}]
-       defaultValue?: Resolution , //Set the default value according to the value set in the valueList.
-      },
-    autoScan?:{   //Automatically capture when a clear document is detected. Only applicable to video scanning. 
-       visibility?: boolean,     //Whether to display the automatic scan icon. The default value is true.
-       enableAutoScan?: boolean, //Whether to enable automatic scan. The default value is false.
-       },
-    autoDetect?:{  //Only applicable to video scanning.                  
-       visibility?: boolean,         //Whether to display the automatic border detection icon. The default value is true.
-       enableAutoDetect?: boolean,   //Whether to enable automatic border detection. The default value is false.     
-       acceptedPolygonConfidence?: number, //The default value is 80. The higher the setting, the more accurate the automatic border detection.
-       fpsLimit?: number,  //The maximum number of frames detected per second. The default value is 3.
-       },     
-    continuousScan?:{   //Only applicable to video scanning.
-       visibility?: boolean,   //Whether to display the continuous scan icon. The default value is true.
-       enableContinuousScan?: boolean,  //Whether to enable continuous scan. The default value is true.
-       },
-    switchCamera?:{  //The default camera is the rear camera.
-       visibility?: boolean,   //Whether to display the switch camera icon. The default value is true.
-       },
-    loadLocalFile?:{  
-       visibility?: boolean,   //Whether to display the load local file icon. The default value is true.
-       },
-    funcConfirmExitContinuousScan?: funcConfirmExitContinuousScan, 
-      //funcConfirmExitContinuousScan is the callback funtion
-      //Return true：Exit continuous scan mode without saving the captured image data. Return false: Stay on the original viewer
-    funcConfirmExit?: funcConfirmExit, 
-      //funcConfirmExit is the callback funtion
-      //Return true：End this capture without saving the image data. Return false: Stay on the original viewer
-    },
+interface DocumentConfiguration {
+  scannerViewer?: ScannerViewer;
+  documentEditorSettings?: DocumentEditorSettings
+}
 
-  filterViewer?:{
-    visibility?: boolean,   //Whether to display filter viewer. The default value is true.
-    insert?: {  //Insert an image  
-       visibility?: boolean,   //Whether to display the insert icon. The default value is true.
-       position?: string   //Set whether to insert the image "before" or "after" the current image. The default value is "before".
-       },
-    remove?: { //Remove an image
-   	  visibility?: boolean,   //Whether to display the remove icon. The default value is true.
-       },
-    rotateLeft?: { 
-      visibility?: boolean,   //Whether to display the rotate left icon. The default value is true.
-      },
-    filter?: {  
-      visibility?: boolean,   //Whether to display the filter icon. The default value is true.
-      valueList?:[ {   //If not specified, listing all the filters in the order of original, blackAndWhite, grayscale, clean, brightening, saveToner by default. 
-                        //Support adjusting the valueList order to arrange the filter order.
-       label: string,   //The label of the filter. For example. The filter "Original" can be modified to any word you want to describe
-       value: string,   //The filter value. The value must be set according to our specification below.
-			//Allowed values:
-                        //original 
-		        //blackAndWhite
-			//grayscale
-			//clean
-			//brightening
-			//saveToner	
-       option?: {
-          level: 1 //The filter level. The allowed values are 1(default value), 2, 3.
-                      //The higher the level, the better the quality, but the more time it takes.
-           }
-        },{……}]
-	 
-       defaultValue?: string,   //Filter selected by default. By default, the original filter is selected.
-       },
-    exitDocumentScanAfterSave?: false  //The default value is false.
-    },
+interface ScannerViewer {
+  element?: HTMLDivElement | string; //Bind the element or element id. 
+                            //After binding, display the video in the specified element, otherwise, display the video in full screen.
+  deviceId?: string;
+  maxDocuments?: number;       //The maximum number of documents for current scan
+  enableBorderDetection?: boolean;  // Whether to enable border detection. The default value is true.
+  fullScreen?: boolean;   //Whether to display the video in full screen. The default value is false.
+  polygonStyle?:{      //The sytle of the auto detect border.       
+    stroke?: string;    //default: "#fe8e14". Only supports #16 hexadecimal.
+    strokeWidth?: string;  //default: "2px"
+    dash?: string          //The allowed value are "solid" and "dashed", the default value is "solid".
+    };
+  headerStyle?:{
+    background?: string;  //default: "#000000". Only supports #16 hexadecimal.
+    color?: string;  //The color of the icons. Default : "#ffffff". Only supports #16 hexadecimal.
+    selectedColor?: string  //The color of the selected icon. Default: "#fe8e14". Only supports #16 hexadecimal.
+  };
+  bodyStyle?:{
+    background?: string;  //default: "#ffffff". Only supports #16 hexadecimal.
+    loaderBarSource?: string //The image source of the loader bar: url (e.g. "https://xxx.png") or base64
+  };
+  footerStyle?:{
+    background?: string;  //default: "#000000". Only supports #16 hexadecimal.
+    color?: string;  //The color of the icons. Default : "#ffffff". Only supports #16 hexadecimal.
+    selectedColor?: string //The color of the selected icon. Default : "#fe8e14". Only supports #16 hexadecimal.
+  };
+  scanButtonStyle?:{
+    background?: string;  //default: "#fe8e14". Only supports #16 hexadecimal.
+    color?: string  //Default : "#ffffff". Only supports #16 hexadecimal.
+  };    
+  resolution?:{
+    visibility?: string; //Whether to display the resolution icon in the upper left corner. Values: "visible""hidden". Default; "visible".
+    
+    valueList?:[ {   
+      label: string;    //The resolution value listed in the drop-down list. For example："1920x1080"
+      value: Resolution //The resolution you set. For example: { width:1920, height:1080}
+    },{……}]
+      defaultValue?: Resolution //Set the default value according to the value set in the valueList.
+    };
+  autoScan?:{   //Automatically capture when a clear document is detected. Only applicable to video scanning. 
+      visibility?: string;     //Whether to display the automatic scan icon. Values: "visible""hidden". Default: "visible".
+      enableAutoScan?: boolean; //Whether to enable automatic scan. The default value is false.
+      };
+  autoDetect?:{  //Only applicable to video scanning.                  
+      visibility?: string;         //Whether to display the automatic border detection icon. Values: "visible""hidden". Default: "visible".
+      enableAutoDetect?: boolean;   //Whether to enable automatic border detection. The default value is false.     
+      acceptedPolygonConfidence?: number; //The default value is 80. The higher the setting, the more accurate the automatic border detection.
+      fpsLimit?: number  //The maximum number of frames detected per second. The default value is 3.
+      };     
+  continuousScan?: boolean; //Whether to enable continuous scan. The default value is true.
+  switchCamera?:{  //The default camera is the rear camera.
+      visibility?: string   //Whether to display the switch camera icon. Values: "visible""hidden". Default: "visible".
+      };
+  loadLocalFile?:{  
+      visibility?: string   //Whether to display the load local file icon. Values: "visible""hidden". Default: "visible".
+      };
+  funcConfirmExit?: (bExistImage: boolean) => Promise<boolean>;
+    //funcConfirmExit is the callback funtion,
+    //Return Promise.resolve(true): End this capture without saving the image data.
+    //Return Promise.resolve(false): Stay on the original viewer
+  funcConfirmExitAfterSave?: (firedByDocumentEdit: boolean) => void
+    //funcConfirmExitAfterSave is the callback funtion
+},
 
-  cropViewer?: { 
-    visibility?: boolean,   //Whether to display the crop viewer. The default value is true. 
-    polygonStyle?:{    //The polygon style in the crop viewer.       
-      stroke: string,       //default : "#fe8e14".  Only supports #16 hexadecimal.
-      strokeWidth: string,   //default: "2px"
-      dash: string           //The allowed value are "solid" and "dashed", the default value is "solid".
-      },
-    rotateLeft?:{   
-      visibility?: boolean,   //Whether to display the rotate left icon. The default value is true.
-     },
-    rotateRight?:{   
-      visibility?: boolean,   //Whether to display the rotate right icon. The default value is true.
-     },
-    autoDetectBorder?:{   
-      visibility?: boolean,   //Whether to display the automatic border detection icon. The default value is true.
-     },
-   }
+interface DocumentEditorSettings {
+  visibility?: string; //Values: "visible""hidden". Default: "visible".
+  element?: HTMLDivElement | string; //Bind the element or element id. 
+  //After binding, display the video in the specified element, otherwise, display the video in full screen.  
+  defaultViewerName?: string;  //value: "cropViewer", "mainViewer". default: "cropViewer" for scanDocument, "mainViewer" for createDocumentEditor
+  headerStyle?:{
+    background?: string;  //default: "#000000". Only supports #16 hexadecimal.
+    color?: string;  //The color of the icons. Default: "#ffffff". Only supports #16 hexadecimal.
+    selectedColor?: string;  //The color of the selected icon. Default: "#fe8e14". Only supports #16 hexadecimal.
+    disableColor?: string;  //default: "#808080"
+  };
+  bodyStyle?:{
+    background?: string;  //default: "#ffffff". Only supports #16 hexadecimal.
+    loaderBarSource?: string; //The image source of the loader bar: url (e.g. "https://xxx.png") or base64
+  };
+  footerStyle?:{
+    background?: string;  //default: "#000000". Only supports #16 hexadecimal.
+    color?: string;  //The color of the icons. Default : "#ffffff". Only supports #16 hexadecimal.
+    selectedColor?: string;  //The color of the selected icon. Default: "#fe8e14". Only supports #16 hexadecimal.
+  };
+  insert?: {  //Insert an image  
+    visibility?: string;  //Whether to display the insert icon. Values: "visible""hidden". Default: "visible".
+    position?: string;   //Set whether to insert the image "before" or "after" the current image. The default value is "before".
+  };
+  remove?: { //Remove an image
+    visibility?: string;   //Whether to display the remove icon. Values: "visible""hidden". Default: "visible".
+    funcConfirmRemove?: () => Promise<boolean>; 
+      //funcConfirmRemove is the callback funtion
+  };
+  rotateLeft?: { 
+    visibility?: string;   //Whether to display the rotate left icon. Values: "visible""hidden". Default: "visible".
+  };
+  filter?: {
+    visibility?: string;   //Whether to display the filter icon. Values: "visible""hidden". Default: "visible".
+    valueList?:[ {  //If not specified, listing all the filters in the order of original, blackAndWhite, grayscale, clean, brightening, saveToner by default. 
+                    //Support adjusting the valueList order to arrange the filter order.
+      label: string;   //The label of the filter. For example. The filter "Original" can be modified to any word you want to describe
+      value: string;   //The filter value. The value must be set according to our specification below.
+    //Allowed values: original, blackAndWhite, grayscale, clean, brightening, saveToner	
+      option?: {
+        level: 1  //The filter level. The allowed values are 1(default value), 2, 3.
+                  //The higher the level, the better the quality, but the more time it takes.
+        }
+    },{……}]
+    defaultValue?: string;   //Filter selected by default. By default, the original filter is selected.
+    applyToAll?: {
+      visibility?: string; //"visible": hidden". Default: "visible"
+      enableApplyToAll?: boolean; //Default:false
+      label?: string; //Default: "Apply to all"
+    }
+  };
+  crop?: {
+    visibility?: string;  //"visible": hidden". Default: "visible"
+  };
+  cropViewer?: CropViewer;
+  funcConfirmExit?: (bChanged: boolean, previousViewerName: string) => Promise<Number>;
+    //funcConfirmExit is the callback funtion.
+    //Return Promise.resolve(EnumDWT_ConfirmExitType.Exit): Exit original viewer without saving the image data. 
+    //Return Promise.resolve(EnumDWT_ConfirmExitType.SaveAndExit): Exit original viewer with saving the image data. 
+    //Return Promise.resolve(EnumDWT_ConfirmExitType.Cancel): Stay on the original viewer
+  funcConfirmExitAfterSave?: (firedByDocumentEdit: boolean) => void
+    //funcConfirmExitAfterSave is the callback funtion
+},
+
+interface CropViewer {
+  visibility?: string;   //Whether to display the crop viewer. Values: "visible""hidden". Default: "visible".
+  polygonStyle?: {    //The polygon style in the crop viewer.       
+    stroke: string;       //default: "#fe8e14". Only supports #16 hexadecimal.
+    strokeWidth: string;   //default: "2px"
+    dash: string           //The allowed value are "solid" and "dashed", the default value is "solid".
+  };
+  rotateLeft?: {   
+    visibility?: string;   //Whether to display the rotate left icon. Values: "visible""hidden". Default: "visible".
+  };
+  rotateRight?: {   
+    visibility?: string;   //Whether to display the rotate right icon. Values: "visible""hidden". Default: "visible".
+  };
+  autoDetectBorder?: {   
+    visibility?: string;   //Whether to display the automatic border detection icon. Values: "visible""hidden". Default: "visible".
+  };
+  funcConfirmExit?: (bChanged: boolean, previousViewerName: string) => Promise<Number>
+    //funcConfirmExit is the callback funtion.
+    //Return Promise.resolve(EnumDWT_ConfirmExitType.Exit): Exit original viewer without saving the image data. 
+    //Return Promise.resolve(EnumDWT_ConfirmExitType.SaveAndExit): Exit original viewer with saving the image data. 
+    //Return Promise.resolve(EnumDWT_ConfirmExitType.Cancel): Stay on the original viewer
  }
 
- function funcConfirmExitContinuousScan(){
-     return true;  
-  }
-
- function funcConfirmExit(){
-     return true;  
-  }
 ```
 
 **Availability**
@@ -872,37 +864,15 @@ interface ScanConfiguration{
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">not supported  </td>
-<td align="center">not supported  </td>
-<td align="center">not supported  </td>
-<td align="center">not supported  </td>
-<td align="center">v17.2+</td>
+<td align="center">not supported</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
 </tr>
 
 </table>
 </div>
 
-**Example**
-
-```html
-<div id="dwtcontrolContainer" style="width:270px;height:350px"></div>
-<input type="button" value="scan document" onclick="ScanDocument();" />
-<script type="text/javascript">
-	function ScanDocument() {
-	  var DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer');
-	     if (DWObject) {
-		     if(!DWObject.UseLocalService) {
-			DWObject.Addon.Camera.scanDocument({element: document.getElementById("dwtcontrolContainer")}).then(
-			function(){
-			   console.log("OK");
-			}, 
-			function(error){
-			   console.log(error.message);
-			});
-		     } 
-	     }
-	 }
-</script>
-```
 
