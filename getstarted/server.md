@@ -12,8 +12,6 @@ permalink: /indepth/deployment/server.html
 
 Once you have finished integrating `DWT` in your application, you can deploy it on your server to test it. As far as `DWT` is concerned, all related files are to be served as static files which makes the deployment very easy.
 
-> If you are using the OCR feature on the server side, please refer to [Use OCRB on the Server Side]({{site.indepth}}features/OCR.html#use-ocrb-on-the-server-side).
-
 ## How-to
 
 The Resources folder is typically found in the following location after the installation:

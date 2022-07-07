@@ -41,14 +41,6 @@ Resources files help you include Dynamic Web TWAIN in your application. The foll
 
   > This file contains the functionalities of the Camera addon. 
 
-  + dynamsoft.webtwain.addon.ocr.js
-
-  > This file contains the functionalities of the OCR Basic addon. It's not included by default, contact [Dynamsoft Support]({{site.about}}Getsupport.html) to get it.
-
-  + dynamsoft.webtwain.addon.ocrpro.js
-
-  > This file contains the functionalities of the OCR Professional addon. It's not included by default, contact [Dynamsoft Support]({{site.about}}Getsupport.html) to get it.
-
   + dynamsoft.webtwain.addon.pdf.js
 
   > This file contains the functionalities of the PDF Rasterizer addon. 
