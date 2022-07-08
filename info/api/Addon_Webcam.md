@@ -16,12 +16,12 @@ permalink: /info/api/Addon_Webcam.html
 
 |                                                         |
 | :------------------------------------------------------ | :-------------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| [`CaptureImage()`](#captureimage)                       | [`CloseSource()`](#closesource)                                 | [`GetCameraControlPropertySetting()`](#getcameracontrolpropertysetting) | [`GetCameraControlPropertyMoreSetting()`](#getcameracontrolpropertymoresetting) |
-| [`GetVideoPropertySetting()`](#getvideopropertysetting) | [`GetVideoPropertyMoreSetting()`](#getvideopropertymoresetting) | [`SetCameraControlPropertySetting()`](#setcameracontrolpropertysetting) | [`SetVideoPropertySetting()`](#setvideopropertysetting)                         |
-| [`GetFrameRate()`](#getframerate)                       | [`SetFrameRate()`](#setframerate)                               | [`GetMediaType()`](#getmediatype)                                       | [`SetMediaType()`](#setmediatype)                                               |
-| [`GetResolution()`](#getresolution)                     | [`SetResolution()`](#setresolution)                             | [`GetFramePartURL()`](#getframeparturl)                                 | [`GetFrameURL()`](#getframeurl)                                                 |
-| [`GetSourceList()`](#getsourcelist)                     | [`SelectSource()`](#selectsource)                               | [`PauseVideo()`](#pausevideo)                                           | [`PlayVideo()`](#playvideo)                                                     |
-| [`SetVideoRotateMode()`](#setvideorotatemode)           | [`StopVideo()`](#stopvideo)                                     |
+| [`CaptureImage()`](#captureimage)                       | [`OpenSource()`](#opensource)                                 | [`CloseSource()`](#closesource)                                 | [`GetCameraControlPropertySetting()`](#getcameracontrolpropertysetting) |
+| [`GetCameraControlPropertyMoreSetting()`](#getcameracontrolpropertymoresetting) | [`GetVideoPropertySetting()`](#getvideopropertysetting) | [`GetVideoPropertyMoreSetting()`](#getvideopropertymoresetting) | [`SetCameraControlPropertySetting()`](#setcameracontrolpropertysetting) |
+| [`SetVideoPropertySetting()`](#setvideopropertysetting)                         | [`GetFrameRate()`](#getframerate)                       | [`SetFrameRate()`](#setframerate)                               | [`GetMediaType()`](#getmediatype)                                       |
+| [`SetMediaType()`](#setmediatype)                                               | [`GetResolution()`](#getresolution)                     | [`SetResolution()`](#setresolution)                             | [`GetFramePartURL()`](#getframeparturl)                                 |
+| [`GetFrameURL()`](#getframeurl)                                                 | [`GetSourceList()`](#getsourcelist)                     | [`SelectSource()`](#selectsource)                               | [`PauseVideo()`](#pausevideo)                                           |
+| [`PlayVideo()`](#playvideo)                                                     | [`SetVideoRotateMode()`](#setvideorotatemode)           | [`StopVideo()`](#stopvideo)                                     |
 
 ## CaptureImage
 
