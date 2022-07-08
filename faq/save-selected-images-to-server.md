@@ -15,7 +15,7 @@ permalink: /faq/save-selected-images-to-server.html
 
 The API <a href="{{site.info}}api/WebTwain_Buffer.html#selectedimagesindices" target="_blank">SelectedImagesIndices</a> returns the indices of the selected images.
 
-You can pass those indices as a parameter to <a href="https://dynamsoft.sharepoint.com/sites/TST/Shared Documents/General/Training Program/HTTPUpload" target="_blank">HTTPUpload</a> which uploads files to the server/database.
+You can pass those indices as a parameter to <a href="{{site.info}}api/WebTwain_IO.html#httpupload" target="_blank">HTTPUpload</a> which uploads files to the server/database.
 
 To upload all images in the buffer with HTTPUpload, you can use the API <a href="{{site.info}}api/WebTwain_Buffer.html#selectallimages" target="_blank">SelectAllImages</a> which returns the indices of all images.
 
