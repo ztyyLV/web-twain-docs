@@ -23,6 +23,4 @@ Documents can be saved in BMP / JPEG / TIFF / PNG / PDF format.
 
 - Dynamic Web TWAIN can read and write image-based PDF files; however, to read text-based PDF files, the <a href="{{site.indepth}}features/pdf.html" target="_blank">PDF Rasterizer add-on</a> is required.
 
-- To load or create PDF/A files, the <a href="{{site.indepth}}features/OCR.html" target="_blank">OCR addon</a> is required.
-
 More details of each file type can be found <a href="{{site.getstarted}}filetype.html" target="_blank">here</a>

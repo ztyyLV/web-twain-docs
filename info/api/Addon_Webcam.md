@@ -16,12 +16,12 @@ permalink: /info/api/Addon_Webcam.html
 
 |                                                         |
 | :------------------------------------------------------ | :-------------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| [`CaptureImage()`](#captureimage)                       | [`CloseSource()`](#closesource)                                 | [`GetCameraControlPropertySetting()`](#getcameracontrolpropertysetting) | [`GetCameraControlPropertyMoreSetting()`](#getcameracontrolpropertymoresetting) |
-| [`GetVideoPropertySetting()`](#getvideopropertysetting) | [`GetVideoPropertyMoreSetting()`](#getvideopropertymoresetting) | [`SetCameraControlPropertySetting()`](#setcameracontrolpropertysetting) | [`SetVideoPropertySetting()`](#setvideopropertysetting)                         |
-| [`GetFrameRate()`](#getframerate)                       | [`SetFrameRate()`](#setframerate)                               | [`GetMediaType()`](#getmediatype)                                       | [`SetMediaType()`](#setmediatype)                                               |
-| [`GetResolution()`](#getresolution)                     | [`SetResolution()`](#setresolution)                             | [`GetFramePartURL()`](#getframeparturl)                                 | [`GetFrameURL()`](#getframeurl)                                                 |
-| [`GetSourceList()`](#getsourcelist)                     | [`SelectSource()`](#selectsource)                               | [`PauseVideo()`](#pausevideo)                                           | [`PlayVideo()`](#playvideo)                                                     |
-| [`SetVideoRotateMode()`](#setvideorotatemode)           | [`StopVideo()`](#stopvideo)                                     |
+| [`CaptureImage()`](#captureimage)                       | [`OpenSource()`](#opensource)                                 | [`CloseSource()`](#closesource)                                 | [`GetCameraControlPropertySetting()`](#getcameracontrolpropertysetting) |
+| [`GetCameraControlPropertyMoreSetting()`](#getcameracontrolpropertymoresetting) | [`GetVideoPropertySetting()`](#getvideopropertysetting) | [`GetVideoPropertyMoreSetting()`](#getvideopropertymoresetting) | [`SetCameraControlPropertySetting()`](#setcameracontrolpropertysetting) |
+| [`SetVideoPropertySetting()`](#setvideopropertysetting)                         | [`GetFrameRate()`](#getframerate)                       | [`SetFrameRate()`](#setframerate)                               | [`GetMediaType()`](#getmediatype)                                       |
+| [`SetMediaType()`](#setmediatype)                                               | [`GetResolution()`](#getresolution)                     | [`SetResolution()`](#setresolution)                             | [`GetFramePartURL()`](#getframeparturl)                                 |
+| [`GetFrameURL()`](#getframeurl)                                                 | [`GetSourceList()`](#getsourcelist)                     | [`SelectSource()`](#selectsource)                               | [`PauseVideo()`](#pausevideo)                                           |
+| [`PlayVideo()`](#playvideo)                                                     | [`SetVideoRotateMode()`](#setvideorotatemode)           | [`StopVideo()`](#stopvideo)                                     |
 
 ## CaptureImage
 
@@ -148,92 +148,15 @@ SelectSource(name: string): boolean;
 
 ---
 
-## CloseSource
+## OpenSource
 
 **Syntax**
 
 ```typescript
 /**
- * Close the current camera.
+ * Open the current camera.
  */
-CloseSource(): boolean;
-```
-
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-</tr>
-
-<tr>
-<td align="center">v10.2+ </td>
-<td align="center">v10.2+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-</tr>
-
-</table>
-</div>
-
----
-
-## GetSourceList
-
-**Syntax**
-
-```typescript
-/**
- * Return a list of all available cameras.
- */
-GetSourceList(): string[];
-```
-
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-</tr>
-
-<tr>
-<td align="center">v10.2+ </td>
-<td align="center">v10.2+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-</tr>
-
-</table>
-</div>
-
----
-
-## SelectSource
-
-**Syntax**
-
-```typescript
-/**
- * Select a camera to use.
- * @param name Specify the camera.
- */
-SelectSource(name: string): boolean;
+OpenSource(): boolean;
 ```
 
 **Availability**
@@ -385,6 +308,7 @@ PauseVideo(): boolean;
 
 </table>
 </div>
+
 ---
 
 ## StopVideo

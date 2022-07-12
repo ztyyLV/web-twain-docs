@@ -242,10 +242,6 @@ permalink: /faq/
 
 <li><a href="{{site.faq}}use-webassembly-to-support-webcam.html">Can I use the WebAssembly Edition of SDK to support webcams instead of using the Webcam Capture addon for Desktop Service Edition?</a></li>
 
-<li><a href="{{site.faq}}difference-between-ocr-basic-and-pro.html">What’s the difference between your OCR Basic and OCR Pro SDK?</a></li>
-
-<li><a href="{{site.faq}}ocr-runs-on-client-or-server-side.html">Does your OCR addon run on the client side or server side?</a></li>
-
 <li><a href="{{site.faq}}camera-play-and-showvideo.html">What is the difference between Camera.play and Camera.showVideo?</a></li>
 
 <li><a href="{{site.faq}}difference-between-camera-and-webcam.html">What is the difference between WebTwain.Addon.Camera and WebTwain.Addon.Webcam?</a></li>
@@ -331,8 +327,6 @@ permalink: /faq/
 <li><a href="{{site.faq}}syntax-error-unexpected-token.html">Syntax error – Unexpected Token “<”</a></li>
 
 <li><a href="{{site.faq}}DVS-is-not-defined.html">Uncaught ReferenceError - DVS is not defined</a></li>
-
-<li><a href="{{site.faq}}error-message-exceeded-ocr-attempts.html">Error message - You have exceeded the number of OCR attempts allowed by the current license</a></li>
 
 <li><a href="{{site.faq}}error-message-current-product-key-does-not-support.html">Error message - The current product key does not support XXX, please contact the site administrator</a></li>
 

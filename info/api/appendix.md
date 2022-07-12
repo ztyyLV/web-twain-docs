@@ -84,8 +84,6 @@ permalink: /info/api/appendix.html
 |-2320 | Invalid file |
 |-2321 | The Enumerations is out of range |
 |-2322 | The left or top or right or bottom you entered is invalid |
-|-2323 | The OCR output format is not supported |
-|-2324 | The OCR page set mode is not supported |
 |-2325 | The current product key is empty or invalid, please contact the site administrator |
 |-2326 | The current product key has expired, please contact the site administrator |
 |-2327 | The current product key does not support Chrome, please contact the site administrator |
@@ -101,8 +99,6 @@ permalink: /info/api/appendix.html
 |-2337 | The current product key does not include a license for reading DataMatrix barcode, please contact the site administrator |
 |-2338 | The current product key does not support Webcam, please contact the site administrator |
 |-2339 | The current product key does not support pdf rasterizer, please contact the site administrator |
-|-2340 | The current product key does not support OCR, please contact the site administrator |
-|-2341 | The current product key does not support OCR pro, please contact the site administrator |
 |-2342 | The domain of your current site does not match the domain bound in the current product key, please contact the site administrator |
 |-2343 | The current product key does not support your browser, please contact the site administrator |
 |-2344 | The current product key does not support Windows OS, please contact the site administrator |
