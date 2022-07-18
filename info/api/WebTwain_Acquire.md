@@ -816,7 +816,7 @@ SelectSource(
 
 - It's recommended to use this API asynchronously by pass arguments to the parameters `successCallback` and `failureCallback`.
 - On `Windows` and `Windows` only, you can call this method with no arguments so that it runs synchronously and return a boolean value.
-- When [scanning remotely]({{site.indepth}}feature/input.html#scan-from-a-remote-scanner), this method must be called asynchronously.
+- When [scanning remotely]({{site.indepth}}features/input.html#scan-from-a-remote-scanner), this method must be called asynchronously.
 
 **Example**
 
