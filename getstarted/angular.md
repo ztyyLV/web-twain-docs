@@ -12,6 +12,8 @@ permalink: /indepth/development/angular.html
 
 [Angular](https://angular.io/) is one of the most popular and mature JavaScript frameworks. Check out the following on how to implement `DWT` into an Angular application.
 
+![](https://www.dynamsoft.com/web-twain/docs/assets/imgs/download.png) [Sample of dwt-angular-advanced](https://github.com/dynamsoft-dwt/dwt-angular-advanced)
+
 ## Preparation
 
 Make sure you have [node](https://nodejs.org/) and [Angular CLI](https://cli.angular.io/) installed. `node 14.4.0` and `Angular CLI 9.1.12` are used in the example below.
