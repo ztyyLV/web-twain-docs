@@ -45,15 +45,15 @@ tree_list:
         path: /indepth/deployment/service.html
         startVersion:
         endVersion:
-      - name: Use DWT in Angular
+      - name: Use Web TWAIN in Angular
         path: /indepth/development/angular.html
         startVersion:
         endVersion: 
-      - name: Use DWT in React
+      - name: Use Web TWAIN in React
         path: /indepth/development/react.html
         startVersion:
         endVersion: 
-      - name: Use DWT in Vue
+      - name: Use Web TWAIN in Vue
         path: /indepth/development/vue.html
         startVersion:
         endVersion: 
