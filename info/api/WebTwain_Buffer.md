@@ -2141,10 +2141,7 @@ function failureCallback(errorCode, errorString) {
 }
 ```
 
-**Usage notes**
 
-1. If the documents are already sorted before scanning, you can use <a href="{{site.info}}api/WebTwain_Buffer.html#createdocument" target="_blank">CreateDocument</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#opendocument" target="_blank">OpenDocument</a> to group the documents.
-2. If the documents are not already sorted before scanning and you want to first scan, then sort, you can use tags to manage that. Relevant APIs: <a href="{{site.info}}api/WebTwain_Buffer.html#setdefaulttag" target="_blank">SetDefaultTag</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#tagimages" target="_blank">TagImages</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#gettaglist" target="_blank">GetTagList</a>, <a href="{{site.info}}api/WebTwain_Buffer.html#filterimagesbytag" target="_blank">FilterImagesByTag</a>
 
 ---
 
