@@ -1538,7 +1538,7 @@ readonly BlankImageCurrentStdDev: number;
 
 **Usage notes**
 
-This property is only valid after `IsBlankImageExpress` is called.
+This property is only valid after `IsBlankImageExpress` or `IsBlankImage()` is called.
 
 ---
 
