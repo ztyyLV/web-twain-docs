@@ -70,11 +70,11 @@ tree_list:
         path: /indepth/features/initialize.html
         startVersion:
         endVersion:
-      - name: Import Options
+      - name: Input Options
         path: /indepth/features/input.html
         startVersion:
         endVersion:
-      - name: Export Options
+      - name: Output Options
         path: /indepth/features/output.html
         startVersion:
         endVersion:

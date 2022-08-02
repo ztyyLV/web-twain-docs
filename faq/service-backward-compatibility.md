@@ -21,7 +21,7 @@ As a result, we have provided the following instructions for backward compatibil
 
 NOTE:
 * The instructions below also apply to all future versions after version 17.1.1.
-* There is a known issue for versions 17.2 and 17.2.*,  please use version 17.1.1 as a workaround.
+* There is a known issue for versions 17.2 and 17.2.*,  please use version 17.1.1 as a workaround. This issue has been fixed since version 17.3.
 
 ### Compatibility with version 17 minor versions
 

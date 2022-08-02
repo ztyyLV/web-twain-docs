@@ -1322,6 +1322,34 @@ DWObject.Viewer.render(); //It will trigger the pageRendered event
 
 ---
 
+## setButtonClass
+
+**Syntax**
+
+``` typescript
+/**
+ * Set the CSS class name of the specified button.
+ * @param name Specify the button.
+ * @param className Specify the CSS class name.
+ */
+setButtonClass(
+    name: string,
+    className: string
+): boolean;
+```
+
+**Usage notes**
+
+Use this method to fine-tune the buttons in the viewer with CSS.
+
+**Example**
+
+``` javascript
+DWObject.Viewer.setButtonClass("crop", "CropClass");
+```
+
+---
+
 ## setSelectedAreas
 
 **Syntax**
