@@ -100,7 +100,7 @@ RewriteUrl('/indepth/development/server.html#q-How-to-set-the-MIME-type', 'https
 
 RewriteUrl('/indepth/development/server.html#how-to-know-resourcespath-is-wrong', 'https://www.dynamsoft.com/web-twain/docs/indepth/faqs/distribution/How-to-know-ResourcesPath-is-wrong.html')
 
-RewriteUrl('/getstarted/hardware.html#is-my-scanner-twain-compliant', 'https://www.dynamsoft.com/web-twain/docs/indepth/faqs/troubleshooting/How-to-use-TWACKER-to-check-if-your-device-is-TWAIN-Compliant.html')
+RewriteUrl('/getstarted/hardware.html#is-my-scanner-twain-compliant', 'https://www.dynamsoft.com/web-twain/docs/indepth/faqs/troubleshooting/how-to-use-TWACKER-to-check-if-your-device-is-TWAIN-Compliant.html')
 
 RewriteUrl('/getstarted/hardware.html#q-Download-virtual-scanner-for-testing', 'https://www.dynamsoft.com/web-twain/docs/indepth/faqs/troubleshooting/Download-virtual-scanner-for-testing.html')
 
