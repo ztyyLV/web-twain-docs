@@ -16,13 +16,13 @@ This section covers how to implement the key capabilities of Dynamic Web TWAIN (
 
   Learn how to include DWT and initialize it in your application.
 
-* [Import Options]({{site.indepth}}features/Input.html)
+* [Input Options]({{site.indepth}}features/Input.html)
 
-  Learn different ways to import data into DWT.
+  Learn different ways to input data into DWT.
 
-* [Export Options]({{site.indepth}}features/Output.html)
+* [Output Options]({{site.indepth}}features/Output.html)
 
-  Learn different ways to export the data it holds.
+  Learn different ways to output data.
 
 * [Manage Image Buffer]({{site.indepth}}features/Buffer.html)
 

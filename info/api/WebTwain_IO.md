@@ -1593,7 +1593,7 @@ HTTPUploadThroughPost(
  * Upload the specified image via a HTTP Post request.
  * @param host The HTTP Host.
  * @param index Specify the image.
- * @param target The target wherethe request is sent.
+ * @param target The target where the request is sent.
  * @param fileName The file name.
  * @param type The format of the file.
  * @param onEmptyResponse A callback function that is executed if the response is empty.
