@@ -2,16 +2,16 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Why I cannot hide the spinner?
-keywords: Dynamic Web TWAIN, UI Customization, hide, spinner
-breadcrumbText: Why I cannot hide the spinner?
-description: Why I cannot hide the spinner?
-permalink: /faq/unable-hide-spinner.html
+title: Why I cannot hide the loading bar (spinner)?
+keywords: Dynamic Web TWAIN, UI Customization, hide, spinner, loading bar
+breadcrumbText: Why I cannot hide the loading bar (spinner)?
+description: Why I cannot hide the loading bar (spinner)?
+permalink: /faq/unable-hide-loading-bar.html
 ---
 
 # UI Customization
 
-## Why I cannot hide the spinner?
+## Why I cannot hide the loading bar (spinner)?
 
 ### ***Symptom:***
 In v17.3 of the Dynamic Web TWAIN SDK, you may find the spinner is unable to hide with the method mentioned in this [link]({{site.indepth}}features/ui.html#loading-bar-and-backdrop), it will continue to spin or will never stop.

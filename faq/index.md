@@ -160,7 +160,7 @@ permalink: /faq/
 
 <li><a href="{{site.faq}}stop-default-scanner-popup.html">Can I stop the scanner from showing its default popup when there is a paper jam?</a></li>
 
-<li><a href="{{site.faq}}unable-hide-spinner.html">Why I cannot hide the spinner?</a></li>
+<li><a href="{{site.faq}}unable-hide-loading-bar.html">Why I cannot hide the loading bar (spinner)?</a></li>
 </ol>
 
 ## Document Saving
