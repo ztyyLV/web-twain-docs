@@ -33,32 +33,29 @@ There are a few things that you can try to reduce the size of a resulting file
         - If you saved in PDF format,
   
         ```javascript
-          DWObject.Addon.PDF.Write.Setup({compression: Dynamsoft.DWT.EnumDWT_PDFCompressionType.PDF_JPEG});
-          //or set DWObject.Addon.PDF.Write.Setup({compression: 5}); which is equivalent.
+        DWObject.Addon.PDF.Write.Setup({compression: Dynamsoft.DWT.EnumDWT_PDFCompressionType.PDF_JPEG});
+        //or set DWObject.Addon.PDF.Write.Setup({compression: 5}); which is equivalent.
 
 
-          //Note: if you are using this method, you need to include dynamsoft.webtwain.addon.pdf.js file into the program. For example:
-          <script type="text/javascript" src="Resources/addon/dynamsoft.webtwain.addon.pdf.js"> </script>
+        //Note: if you are using this method, you need to include dynamsoft.webtwain.addon.pdf.js file into the program. For example:
+        <script type="text/javascript" src="Resources/addon/dynamsoft.webtwain.addon.pdf.js"> </script>
         ```
   
         - If you saved in TIF format,
   
         ```javascript
-          DWObject.TIFFCompressionType = Dynamsoft.DWT.EnumDWT_TIFFCompressionType.TIFF_JPEG;
-          //or set DWObject.TIFFCompressionType = 7 which is equivalent.
+        DWObject.TIFFCompressionType = Dynamsoft.DWT.EnumDWT_TIFFCompressionType.TIFF_JPEG;
+        //or set DWObject.TIFFCompressionType = 7 which is equivalent.
         ```
     
         - If you saved in JPEG format, please jump to **Step 2** directly.
   
-        <br/>
 
     - Step 2: 
         - set the <a href="{{site.info}}api/WebTwain_IO.html#jpegquality" target="_blank">JPEGQuality</a> to a lower value, for example:
 
         ```javascript
-            DWObject.JPEGQuality = 20;
+        DWObject.JPEGQuality = 20;
         ```
-
-        <br/>
         
   **Note that black & white image cannot be saved in the JPEG format. To reduce the size, please convert the image to grayscale.**
