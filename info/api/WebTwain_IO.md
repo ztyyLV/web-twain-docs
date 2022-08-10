@@ -2365,7 +2365,7 @@ DWObject.ConvertToBlob(
 ```javascript
 /**
  * Save the specified image as a BMP file.
- * @param fileName The name to save to.
+ * @param fileName The name to save to (or specify the absolute path).
  * @param index The index which specifies the image to save.
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
@@ -2414,7 +2414,7 @@ SaveAsBMP(
 ```javascript
 /**
  * Save the specified image as a JPEG file.
- * @param fileName The name to save to.
+ * @param fileName The name to save to (or specify the absolute path).
  * @param index The index which specifies the image to save.
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
@@ -2467,7 +2467,7 @@ If you are using WASM mode on the desktop, the image will always be saved to the
 ```javascript
 /**
  * Save the specified image as a PDF file.
- * @param fileName The name to save to.
+ * @param fileName The name to save to (or specify the absolute path).
  * @param index The index which specifies the image to save.
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
@@ -2522,7 +2522,7 @@ If you are using WASM mode on the desktop, the image will always be saved to the
 ```javascript
 /**
  * Save the specified image as a PNG file.
- * @param fileName The name to save to.
+ * @param fileName The name to save to (or specify the absolute path).
  * @param index The index which specifies the image to save.
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
@@ -2575,7 +2575,7 @@ If you are using WASM mode on the desktop, the image will always be saved to the
 ```javascript
 /**
  * Save the specified image as a TIFF file.
- * @param fileName The name to save to.
+ * @param fileName The name to save to (or specify the absolute path).
  * @param index The index which specifies the image to save.
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
@@ -2629,7 +2629,7 @@ If you are using WASM mode on the desktop, the image will always be saved to the
 ```javascript
 /**
  * Saves all the images in buffer as a multi-page TIFF file.
- * @param fileName The name to save to.
+ * @param fileName The name to save to (or specify the absolute path).
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
  * @argument errorCode The error code.
@@ -2680,7 +2680,7 @@ If you are using WASM mode on the desktop, the image will always be saved to the
 ```javascript
 /**
  * Saves all the images in buffer as a multi-page PDF file.
- * @param fileName The name to save to.
+ * @param fileName The name to save to (or specify the absolute path).
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
  * @argument errorCode The error code.
@@ -2733,7 +2733,7 @@ If you are using WASM mode on the desktop, the image will always be saved to the
 ```javascript
 /**
  * Saves all selected images in buffer as a multi-page PDF file.
- * @param fileName The name to save to.
+ * @param fileName The name to save to (or specify the absolute path).
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
  * @argument errorCode The error code.
@@ -2786,7 +2786,7 @@ If you are using WASM mode on the desktop, the image will always be saved to the
 ```javascript
 /**
  * Saves all selected images in buffer as a multi-page TIFF file.
- * @param fileName The name to save to.
+ * @param fileName The name to save to (or specify the absolute path).
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
  * @argument errorCode The error code.
