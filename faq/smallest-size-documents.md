@@ -35,9 +35,10 @@ There are a few things that you can try to reduce the size of a resulting file
         ```javascript
         DWObject.Addon.PDF.Write.Setup({compression: Dynamsoft.DWT.EnumDWT_PDFCompressionType.PDF_JPEG});
         //or set DWObject.Addon.PDF.Write.Setup({compression: 5}); which is equivalent.
+        ```
 
-
-        //Note: if you are using this method, you need to include dynamsoft.webtwain.addon.pdf.js file into the program. For example:
+        ```html
+        <!--Note: if you are using this method, you need to include dynamsoft.webtwain.addon.pdf.js file into the program. For example:-->
         <script type="text/javascript" src="Resources/addon/dynamsoft.webtwain.addon.pdf.js"> </script>
         ```
   
