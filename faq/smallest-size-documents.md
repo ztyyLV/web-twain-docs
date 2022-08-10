@@ -30,7 +30,7 @@ There are a few things that you can try to reduce the size of a resulting file
     Before saving the file,
 
     - Step 1:
-        - If you saved in PDF format,
+        - If you want to save in PDF format,
   
         ```javascript
         DWObject.Addon.PDF.Write.Setup({compression: Dynamsoft.DWT.EnumDWT_PDFCompressionType.PDF_JPEG});
@@ -42,14 +42,14 @@ There are a few things that you can try to reduce the size of a resulting file
         <script type="text/javascript" src="Resources/addon/dynamsoft.webtwain.addon.pdf.js"> </script>
         ```
   
-        - If you saved in TIF format,
+        - If you want to save in TIF format,
   
         ```javascript
         DWObject.TIFFCompressionType = Dynamsoft.DWT.EnumDWT_TIFFCompressionType.TIFF_JPEG;
         //or set DWObject.TIFFCompressionType = 7 which is equivalent.
         ```
     
-        - If you saved in JPEG format, please jump to **Step 2** directly.
+        - If you want to save in JPEG format, please jump to **Step 2** directly.
   
 
     - Step 2: 
