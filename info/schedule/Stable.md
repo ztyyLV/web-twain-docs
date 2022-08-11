@@ -584,7 +584,7 @@ No changes in version 16.1.
 ### New
 
 * [HTML5 on Windows] Added a new method `startScan()` which accepts a JSON object that specifies all the scan parameters. This makes it simpler and even faster to initiate a scan job. At the same time, you can specify how you want the scanned data to be processed by adding extra output parameters in the same JSON object.
-* [HTML5 on Windows] Added a new event `OnPostTransferAync` as the asynchronous counterpart to the existing synchronous event `OnPostTransfer` . Information about the transferred image is returned in the event listener.
+* [HTML5 on Windows] Added a new event `OnPostTransferAsync` as the asynchronous counterpart to the existing synchronous event `OnPostTransfer` . Information about the transferred image is returned in the event listener.
 * [HTML5 on Windows] Added a new PDF core DLL as the default engine for PDF encoding & decoding. This new PDF DLL has added support for JPEG2000 and JBIG2 compression types.
 * [HTML5 on Windows] Added a new method `PDF.Write.Setup()` which accepts a JSON object that contains all the parameters needed for creating PDF files.
 * [HTML5 on macOS] Added a new file `libDynamicImg.dylib` to the macOS edition which provides functionalities equal to those provided by the file `DynamicImage.dll` on Windows. Essentially, this file offers better image encoding and decoding.
