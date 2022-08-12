@@ -316,97 +316,97 @@ imageEditor.show();
 // Customize the editor
 var editorSettings = {
   /* Show the editor within the DIV 'imageEditor'*/
-  element: document.getElementById("imageEditor"),
-  width: 600,
-  height: 400,
-  border: "1px solid rgb(204, 204, 204)",
-  topMenuBorder: "",
-  innerBorder: "",
-  background: "rgb(255, 255, 255)",
-  promptToSaveChange: true,
-  buttons: {
-    titles: {
-      previous: "Previous Image",
-      next: "Next Image",
-      print: "Print Image",
-      scan: "Scan Documents",
-      load: "Load Local Images",
-      rotateleft: "Rotate Left",
-      rotate: "Rotate",
-      rotateright: "Rotate Right",
-      deskew: "Deskew",
-      crop: "Crop Selected Area",
-      cut: "Cut Selected Area",
-      changeimagesize: "Change Image Size",
-      flip: "Flip Image",
-      mirror: "Mirror Image",
-      zoomin: "Zoom In",
-      originalsize: "Show Original Size",
-      zoomout: "Zoom Out",
-      stretch: "Stretch Mode",
-      fit: "Fit Window",
-      fitw: "Fit Horizontally",
-      fith: "Fit Vertically",
-      hand: "Hand Mode",
-      rectselect: "Select Mode",
-      zoom: "Click to Zoom In",
-      restore: "Restore Original Image",
-      save: "Save Changes",
-      close: "Close the Editor",
-      removeall: "Remove All Images",
-      removeselected: "Remove All Selected Images",
+  element?: document.getElementById("imageEditor"),
+  width?: 600,
+  height?: 400,
+  border?: "1px solid rgb(204, 204, 204)",
+  topMenuBorder?: "",
+  innerBorder?: "",
+  background?: "rgb(255, 255, 255)",
+  promptToSaveChange?: true,
+  buttons?: {
+    titles?: {
+      previous?: "Previous Image",
+      next?: "Next Image",
+      print?: "Print Image",
+      scan?: "Scan Documents",
+      load?: "Load Local Images",
+      rotateleft?: "Rotate Left",
+      rotate?: "Rotate",
+      rotateright?: "Rotate Right",
+      deskew?: "Deskew",
+      crop?: "Crop Selected Area",
+      cut?: "Cut Selected Area",
+      changeimagesize?: "Change Image Size",
+      flip?: "Flip Image",
+      mirror?: "Mirror Image",
+      zoomin?: "Zoom In",
+      originalsize?: "Show Original Size",
+      zoomout?: "Zoom Out",
+      stretch?: "Stretch Mode",
+      fit?: "Fit Window",
+      fitw?: "Fit Horizontally",
+      fith?: "Fit Vertically",
+      hand?: "Hand Mode",
+      rectselect?: "Select Mode",
+      zoom?: "Click to Zoom In",
+      restore?: "Restore Original Image",
+      save?: "Save Changes",
+      close?: "Close the Editor",
+      removeall?: "Remove All Images",
+      removeselected?: "Remove All Selected Images",
     },
-    visibility: {
-      scan: true,
-      load: true,
-      print: true,
-      removeall: true,
-      removeselected: true,
-      rotateleft: true,
-      rotate: true,
-      rotateright: true,
-      deskew: true,
-      crop: true,
-      cut: true,
-      changeimagesize: true,
-      flip: true,
-      mirror: true,
-      zoomin: true,
-      originalsize: true,
-      zoomout: true,
-      stretch: true,
-      fit: true,
-      fitw: true,
-      fith: true,
-      hand: true,
-      rectselect: true,
-      zoom: true,
-      restore: true,
-      save: true,
-      close: true,
+    visibility?: {
+      scan?: true,
+      load?: true,
+      print?: true,
+      removeall?: true,
+      removeselected?: true,
+      rotateleft?: true,
+      rotate?: true,
+      rotateright?: true,
+      deskew?: true,
+      crop?: true,
+      cut?: true,
+      changeimagesize?: true,
+      flip?: true,
+      mirror?: true,
+      zoomin?: true,
+      originalsize?: true,
+      zoomout?: true,
+      stretch?: true,
+      fit?: true,
+      fitw?: true,
+      fith?: true,
+      hand?: true,
+      rectselect?: true,
+      zoom?: true,
+      restore?: true,
+      save?: true,
+      close?: true,
     },
   },
-  dialogText: {
-    dlgRotateAnyAngle: [
+  dialogText?: {
+    dlgRotateAnyAngle?: [
       "Angle :",
       "Interpolation:",
       "Keep size",
       "  OK  ",
       "Cancel",
     ],
-    dlgChangeImageSize: [
+    dlgChangeImageSize?: [
       "New Height :",
       "New Width :",
       "Interpolation method:",
       "  OK  ",
       "Cancel",
     ],
-    saveChangedImage: [
+    saveChangedImage?: [
       "You have changed the image, do you want to keep the change(s)?",
       "  Yes  ",
       "  No  ",
     ],
-    selectSource: [
+    selectSource?: [
       "Select Source:",
       "Select",
       "Cancel",
@@ -487,92 +487,100 @@ interface ThumbnailViewer {
      */
     off(eventName: string, callback?: () => void): void;
 }
-interface ThumbnailViewerSettings {    
+interface ThumbnailViewerSettings {
+    /**
+     * Specify how many images to display per row.
+     */  
+    columns?: number;
+    /**
+     * Specify how many images to display per column.
+     */  
+    rows?: number;    
     /**
      * Whether to allow keyboard control. Default: true.
      */  
-    allowKeyboardControl: boolean;
+    allowKeyboardControl?: boolean;
     /**
      * Whether to allow page dragging to reorder the pages.
      * Default: true.
      */
-    allowPageDragging: boolean;
+    allowPageDragging?: boolean;
     /**
      * Whether to allow resizing of the thumbnail viewer.
      * Default: false.
      */
-    allowResizing: boolean;
+    allowResizing?: boolean;
     /**
      * Set or return the CSS rule for the background of the thumbnail viewer.
      * Default: "rgb(255, 255, 255)".
      */
-    background: string;
+    background?: string;
     /**
      * Set or return the CSS rule for the border of the thumbnail viewer.
      * Default: "".
      */
-    border: string;
+    border?: string;
     /**
      * Set or return the CSS rule for the background of the page the mouse hovers over in the thumbnail viewer.
      * Default: "rgb(239, 246, 253)".
      */
-    hoverPageBackground: string;
+    hoverPageBackground?: string;
     /**
      * Set or return the CSS rule for the border of the page the mouse hovers over in the thumbnail viewer.
      * Default: "1px solid rgb(238, 238, 238)".
      */
-    hoverPageBorder: string;
+    hoverPageBorder?: string;
     /**
      * Set or return the location of the thumbnail viewer. Allowed values are "left", "right", "top", "bottom".
      * Default: "left".
      */
-    location: string;
+    location?: string;
     /**
      * Set or return the CSS rule for the background of a normal page in the thumbnail viewer.
      * Default: "transparent".
      */
-    pageBackground: string;
+    pageBackground?: string;
     /**
      * Set or return the CSS rule for the border of a normal page in the thumbnail viewer.
      * Default: "1px solid rgb(238, 238, 238)".
      */
-    pageBorder: string;
+    pageBorder?: string;
     /**
      * Set or return the margin between two adjacent images and the margin between an image and the border of the thumbnail viewer. The value can either be in pixels or percentage.
      * Default: 10.
      */
-    pageMargin: number | string;
+    pageMargin?: number | string;
     /**
      * Set or return the CSS rule for the background of the placeholder which appears when you drag page(s) to reorder them in the thumbnail viewer.
      * Default: "rgb(251, 236, 136)".
      */
-    placeholderBackground: string;
+    placeholderBackground?: string;
     /**
      * Set or return whether the pages are arranged vertically or horizontally.
      * Default: "vertical". Allowed values are "vertical" and "horizontal".
      */
-    scrollDirection: string;
+    scrollDirection?: string;
     /**
      * Set or return the CSS rule for the background of the selected page(s) in the thumbnail viewer.
      * Default: "rgb(199, 222, 252)".
      */
-    selectedPageBackground: string;
+    selectedPageBackground?: string;
     /**
      * Set or return the CSS rule for the border of the selected page(s) in the thumbnail viewer.
      * Default: "1px solid rgb(125,162,206)".
      */
-    selectedPageBorder: string;
+    selectedPageBorder?: string;
     /**
      * Set or return the size of the thumbnail viewer. The value can either be in pixels or percentage (based on the width or height of the entire viewer).
      * Default: "30%".
      */
-    size: number | string;
+    size?: number | string;
     /**
      * Set whether to select the index in the upper left corner of the viewer when scrolling.
      * Default: false.
      */
-    autoChangeIndex: boolean;
-    checkbox: {
+    autoChangeIndex?: boolean;
+    checkbox?: {
       visibility?: string; //"visible"：hidden", default: "hidden" 
       width?: number | string; //default: "24px"，number unit: px, string value: "24px"/"10%", relative to parent container
       height?: number | string; //default: "24px"，number unit: px, string value: "24px"/"10%", relative to parent container
@@ -590,7 +598,7 @@ interface ThumbnailViewerSettings {
       translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
       translateY?: number | string //default: "",  number unit: px, string value: "10px"/"10%", relative to itself
     };
-    pageNumber: {
+    pageNumber?: {
       visibility?: string; //"visible": hidden", default: "hidden" 
       width?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
       height?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
