@@ -30,7 +30,7 @@ There are a few things that you can try to reduce the size of a resulting file
     Before saving the file,
 
     - Step 1:
-        - If you want to save in PDF format,
+        - If you want to save in PDF format (No PDF Rasterizer Addon license needed for this API),
   
         ```javascript
         DWObject.Addon.PDF.Write.Setup({compression: Dynamsoft.DWT.EnumDWT_PDFCompressionType.PDF_JPEG});
