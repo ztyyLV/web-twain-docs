@@ -249,6 +249,7 @@ DWObject.LoadImageEx(
 /**
  * Load image(s) from a base64 string.
  * @param imageData The image data which is a base64 string without the data URI scheme.
+ * @param imageType The format of the image.
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
  * @argument errorCode The error code.
