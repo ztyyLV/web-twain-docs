@@ -2372,6 +2372,8 @@ IfShowUI: boolean;
 
 If the property is set to `true` , the data source will display its user interface when `AcquireImage()` is called. Otherwise, the UI will not be displayed and the scan will start immediately.
 
+It's recommended to use this API after `OpenSource()` is called.
+
 ---
 
 ## ImageCaptureDriverType
