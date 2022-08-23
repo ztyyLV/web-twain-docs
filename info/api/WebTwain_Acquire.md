@@ -2324,7 +2324,7 @@ IfFeederEnabled: boolean;
 </table>
 </div>
 
-## Usage notes
+**Usage notes**
 
 Set this property after `OpenSource()` and before `AcquireImage()` .
 
@@ -2371,6 +2371,8 @@ IfShowUI: boolean;
 **Usage notes**
 
 If the property is set to `true` , the data source will display its user interface when `AcquireImage()` is called. Otherwise, the UI will not be displayed and the scan will start immediately.
+
+It's recommended to use this API after OpenSource() is called.
 
 ---
 
@@ -2463,6 +2465,10 @@ PageSize: Dynamsoft.DWT.EnumDWT_CapSupportedSizes | number;
 </table>
 </div>
 
+**Usage notes**
+
+Set this property after `OpenSource()` and before `AcquireImage()`.
+
 ---
 
 ## PixelType
@@ -2501,6 +2507,10 @@ PixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 </table>
 </div>
 
+**Usage notes**
+
+Set this property after `OpenSource()` and before `AcquireImage()`.
+
 ---
 
 ## Resolution
@@ -2538,6 +2548,10 @@ Resolution: number;
 
 </table>
 </div>
+
+**Usage notes**
+
+Set this property after `OpenSource()` and before `AcquireImage()`.
 
 ---
 
@@ -2615,7 +2629,7 @@ BlankImageThreshold: number;
 </table>
 </div>
 
-**Usage Notes**
+**Usage notes**
 
 `BlankImageThreshold` ranges from 0 to 255 and is 128 by default, it's only effective when [ `PixelType` ] is set to `TWPT_BW` . The bigger the value is, the more likely an image may be regarded as blank.
 

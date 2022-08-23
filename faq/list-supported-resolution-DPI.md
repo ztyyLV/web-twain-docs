@@ -42,13 +42,23 @@ DWObject.OpenSource();
 DWObject.getCapabilities(
   function (result) {
     for (var i = 0; i < result.length; i++) {
-      if (
-        result[i].capability.value ===
-        Dynamsoft.DWT.EnumDWT_Cap.ICAP_XRESOLUTION
-      )
-        dpi = result[i].values;
-    }
-    console.log(dpi);
+      if (result[i].capability.value === Dynamsoft.DWT.EnumDWT_Cap.ICAP_XRESOLUTION) {
+        if (result[i].conType.label === 'TWON_ENUMERATION') {
+            dpi = result[i].values;
+            console.log(dpi);
+        } else if (result[i].conType.label === 'TWON_RANGE') {
+            max = result[i].maxValue;
+            min = result[i].minValue;
+            step = result[i].stepSize;
+
+            console.log("maxValue: " + max); // The maximum value for the resolution.
+            console.log("minValue: " + min); // The minimum value for the resolution.
+            console.log("stepSize: " + step); // The step size for the resolution.
+        } else {
+            console.log("Please contact Dynamsoft for help.");
+        }
+      }
+    }   
   },
   function (error) {
     console.log(error);
