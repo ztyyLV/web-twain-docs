@@ -26,7 +26,7 @@ Make sure you have [node](https://nodejs.org/) and [Angular CLI](https://cli.ang
 ng new dwt-angular
 ```
 
-### **CD** to the root directory of the application and install the dependencies
+### **cd** to the root directory of the application and install the dependencies
 
 ``` cmd
 npm install dwt
