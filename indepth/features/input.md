@@ -126,6 +126,12 @@ function CaptureImage() {
 
 ### Use [DirectShow Cameras]({{site.getstarted}}hardware.html#directshow-cameras)
 
+To include the Webcam add-on, simply add a reference to the corresponding webcam JS file which is included in the [resources folder]({{site.faq}}what-are-the-resources-files.html).
+
+``` html
+<script src="Resources/addon/dynamsoft.webtwain.addon.webcam.js"></script>
+```
+
 The following code snippet shows how to use a camera through `DirectShow`.
   
 
