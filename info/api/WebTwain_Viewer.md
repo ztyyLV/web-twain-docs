@@ -1628,7 +1628,7 @@ DWObject.Viewer.acceptDrop = true;
  * Set whether to allow image navigation by swiping left or right on the viewer.
  * The default value is true.
  */
-.allowSlide: boolean;
+allowSlide: boolean;
 ```
 
 **Availability**
