@@ -33,7 +33,7 @@ Dynamsoft.OnWebTwainPreExecuteCallback = function(){
 }
 ````
 
-Step 2) Follow the step in this [article](({{site.indepth}}features/ui.html#loading-bar-and-backdrop)).
+Step 2) Follow the step in this [article]({{site.indepth}}features/ui.html#loading-bar-and-backdrop).
 
 
 *Note: If `Dynamsoft.DWT.AutoLoad` in your code is set to false, please <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contact us</a>.*
