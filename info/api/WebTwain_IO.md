@@ -1762,7 +1762,7 @@ HTTPUploadAllThroughPostAsPDF(
 /**
  * Upload all selected images in the buffer as a PDF file via a HTTP Post request.
  * @param host The HTTP Host.
- * @param target The target wherethe request is sent.
+ * @param target The target where the request is sent.
  * @param fileName The file name.
  * @param onEmptyResponse A callback function that is executed if the response is empty.
  * @param onServerReturnedSomething A callback function that is executed if the response is not empty.

@@ -190,6 +190,8 @@ permalink: /faq/
 <li><a href="{{site.faq}}save-selected-images-to-server.html">How can I save selected images instead of all images to my server or database?</a></li>
 
 <li><a href="{{site.faq}}use-blank-page-as-a-separator.html">How to use a blank page as a separator?</a></li>
+
+<li><a href="{{site.faq}}upload-multiple-files-at-a-time.html">How to upload multiple files at a time?</a></li>
 </ol>
 
 ## Security
