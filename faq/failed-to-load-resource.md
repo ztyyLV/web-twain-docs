@@ -29,12 +29,12 @@ In this case, if you are trying to access an application that integrates a versi
 
 - For v17.1.1 or older versions, choose one of the following approaches:
 <ol>
-     <li> <a href="{{site.about}}getsupport.html" target="_blank">Contact Dynamsoft</a> for a new MSI for client-side.</li>
-     <li>Upgrade to V17.2+ which comes with a valid certificate </li>
+     <li> Upgrade to V17.2+ which comes with a valid certificate </li>
      <li> If you must fix the issue on a few client machines immediately, manually update the following cert files on the client-side machine. 
-          Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/local.dynamsoft.com/newcert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under <a href="{{site.indepth}}deployment/service.html#for-the-service" target="_blank">cert</a> folder. </li>
-
-           Note: the new certificate from Dynamsoft will expire on January 9th, 2023. This means you will need to update the certificate again after this certificate expires.
+          Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/local.dynamsoft.com/newcert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under <a href="{{site.indepth}}deployment/service.html#for-the-service" target="_blank">cert</a> folder. 
+          Note: the new certificate from Dynamsoft will expire on January 9th, 2023. This means you will need to update the certificate again after this certificate expires.</li>
+     <li> <a href="{{site.about}}getsupport.html" target="_blank">Contact Dynamsoft</a> for a new MSI for client-side.</li>
+     
  </ol>
 
 - For v17.2 or higher versions, use the new API <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#updatecert" target="_blank">UpdateCert</a> to automatically update the client side certificate
