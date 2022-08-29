@@ -14,7 +14,7 @@ permalink: /faq/upload-multiple-files-at-a-time.html
 ## How to upload multiple files at a time?
 
 ### Scenario:
-After scanning multiple files, you might want to upload them one by one as individual images. Before version 13.1, you have to call the upload method(s) multiple times. In v13.1+, you can do this in one go.
+After scanning multiple files, you might want to upload them one by one as individual images. Before version 13.1, you have to call the upload method(s) multiple times. From version 13.1+, you can do this in one go.
 
 ### Solution:
 You can use the methods [ConvertToBlob]({{site.info}}api/WebTwain_IO.html#converttoblob) and [HTTPUpload]({{site.info}}api/WebTwain_IO.html#httpupload) to achieve this.
@@ -61,7 +61,7 @@ function UploadAsJPG() {
     convertImage(0);
 }
 ```
-2. On the server, add an action page to process the uploaded data:
+2. On the server, add an action page to process the uploaded data, take c# as an example,
 
 ```csharp
 <%@ Page Language="C#" %>
@@ -86,6 +86,4 @@ function UploadAsJPG() {
 %>
 ```
 
-The following image shows the schematic of the resources deployed on IIS.
-![image1]({{site.assets}}imgs/schematic-resource-on-iis.png)
 
