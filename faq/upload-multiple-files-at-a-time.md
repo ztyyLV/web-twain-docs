@@ -21,8 +21,7 @@ You can use the methods [ConvertToBlob]({{site.info}}api/WebTwain_IO.html#conver
 
 ### Steps:
 
-  1. In JS, write code similar to the following:
-
+1. In JS, write code similar to the following:
 ```javascript
 function UploadAsJPG() {
     var count = 0;
@@ -61,8 +60,7 @@ function UploadAsJPG() {
     convertImage(0);
 }
 ```
-  2. On the server, add an action page to process the uploaded data, take c# as an example,
-
+2. On the server, add an action page to process the uploaded data, take c# as an example,
 ```csharp
 <%@ Page Language="C#" %>
 <%
@@ -85,5 +83,3 @@ function UploadAsJPG() {
     }
 %>
 ```
-
-
