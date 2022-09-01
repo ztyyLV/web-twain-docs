@@ -994,7 +994,7 @@ GetImageURL(index: number, width?: number, height?: number): string;
 
 The returned URL will be like "https://127.0.0.1:18623/dwt/dwt_17110818/img?id=795151779&index=1&t=1640936181588".
 
-If width or height is set to -1, you get the original size of image in PNG in Service Mode，or in JPG, PNG(Black&White) in WASM mode, otherwise you get the image with specified width or height while keeping the same aspect ratio.
+If width or height is set to -1, you get the original size of image in PNG in Service Mode, otherwise you get the image with specified width or height while keeping the same aspect ratio.
 
 ---
 
