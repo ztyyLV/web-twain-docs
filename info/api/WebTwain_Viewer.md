@@ -1675,7 +1675,7 @@ This API only works if the view mode of the viewer is set to -1 by -1.
  * Set whether to allow page dragging to reorder the pages in the viewer.
  * The default value is true.
  */
-.allowPageDragging: boolean;
+allowPageDragging: boolean;
 ```
 
 **Availability**
