@@ -124,7 +124,7 @@ permalink: /info/api/appendix.html
 |-2368 | Invalid value for the parameter moduleSize |
 |-2369 | The module for Dynamic Web TWAIN has failed to download |
 |-2370 | The current product key is invalid, please contact the site administrator |
-|-2372 | You cannot convert to binary more than one image when the format is BMP, JPG or PNG |
+|-2372 | You cannot convert more than one image to binary when the format is BMP, JPG or PNG |
 |<= -3000 | See ErrorString property for details |
 
 ## Dynamsoft License Server Error List 
