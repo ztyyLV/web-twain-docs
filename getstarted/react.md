@@ -24,7 +24,7 @@ Make sure you have [node](https://nodejs.org/) and [yarn](https://yarnpkg.com/cl
 npx create-react-app dwt-react
 ```
 
-### CD to the root directory of the application and install the `dwt` and `ncp` package
+### **cd** to the root directory of the application and install the `dwt` and `ncp` package
 
 ``` cmd
 yarn add dwt
