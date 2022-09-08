@@ -60,3 +60,11 @@ When you set `ResourcesPath` wrong, static files such as `dynamsoft.webtwain.ins
 If you wish to use an absolute path instead, such as "https://www.dynamsoft.com/dwt/demo/resources/", this is supported. 
 
 > Note: If you want to use the [Camera module]({{site.indepth}}features/Input.html#use-mediadevices-cameras), please make sure the absolute path stays in the same domain to avoid cross-origin issues.
+
+#### Setting ResourcePath using global API
+
+If you do not wish to add an absolute path, you can add codes before you define the `DWObject`. Learn more on how to [change the reference path]({{site.faq}}change-reference-path.html)
+
+```javascript
+Dynamsoft.DWT.ResourcesPath = "New folder/Resources";
+```
