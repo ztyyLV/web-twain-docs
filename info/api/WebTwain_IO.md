@@ -1590,7 +1590,7 @@ HTTPUploadThroughPost(
 
 ```javascript
 /**
- * Upload the specified image via a HTTP Post request.
+ * Upload the specified image in a specific image format via a HTTP Post request.
  * @param host The HTTP Host.
  * @param index Specify the image.
  * @param target The target where the request is sent.
