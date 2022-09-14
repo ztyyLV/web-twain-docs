@@ -49,6 +49,8 @@ permalink: /faq/
 
 <li><a href="{{site.faq}}difference-between-Twain-and-wia.html">What are the differences between TWAIN and WIA?</a></li>
 
+<li><a href="{{site.faq}}how-to-exclude-wia-sources-in-the-source-list.html">How to exclude WIA sources in the source list?</a></li>
+
 <li><a href="{{site.faq}}last-selected-sourcename.html">How can I set the last selected source as the default source for an end user?</a></li>
 
 <li><a href="{{site.faq}}limit-to-specific-scanner.html">How can I limit all users to use a specific scanner model?</a></li>
