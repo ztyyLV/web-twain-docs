@@ -148,44 +148,6 @@ SelectSource(name: string): boolean;
 
 ---
 
-## OpenSource
-
-**Syntax**
-
-```typescript
-/**
- * Open the current camera.
- */
-OpenSource(): boolean;
-```
-
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-</tr>
-
-<tr>
-<td align="center">v10.2+ </td>
-<td align="center">v10.2+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-</tr>
-
-</table>
-</div>
-
----
-
 ## CloseSource
 
 **Syntax**
