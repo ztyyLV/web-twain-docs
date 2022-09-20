@@ -290,10 +290,6 @@ GenerateURLForUploadData(
 </table>
 </div>
 
-**Usage notes**
-
-The language set with this method is only for the built-in security dialogs which show up when the user tries to access a scanner, a camera or a local file.
-
 ---
 
 ## ErrorCode

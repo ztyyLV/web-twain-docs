@@ -231,7 +231,23 @@ For a JSON object like `settings` above, you should make it a string first as sh
 
 ``` javascript
 var JSONString = JSON.stringify(settings);
-DWObject.Addon.BarcodeReader.initRuntimeSettingsWithString(JSONString).then( /*...*/ );
+DWObject.Addon.BarcodeReader.initRuntimeSettingsWithString(JSONString)
+.then(function(){
+    return DWObject.Addon.BarcodeReader.decode(imageIndex);
+},function(error) {
+    console.log(error)
+})
+.then(function(textResults) {
+    if (textResults.length == 0) {
+        console.log("No barcode found");
+    } else {
+        for (var i = 0; i < textResults.length; i++) {
+            console.log(textResults[i].BarcodeText);
+        }
+    }
+}, function(error) {
+    console.log(error)
+})
 ```
 
 ### Built-in modes

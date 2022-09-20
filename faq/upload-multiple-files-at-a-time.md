@@ -32,11 +32,11 @@ function UploadAsJPG() {
         alert("ErrorCode: " + errorCode + "\r" + "ErrorString:" + errorString);
     };
 
-    var OnHttpUploadSuccess = function () {
+    var onEmptyResponse = function () {
         console.log("Uploaded Successfully");
     };
 
-    var OnHttpUploadFailure = function (ecode,estring,resp) {
+    var onServerReturnedSomething = function (ecode,estring,resp) {
         console(resp);
     }
 
@@ -50,7 +50,7 @@ function UploadAsJPG() {
                 if (count < DWObject.HowManyImagesInBuffer) {
                     convertImage(count);
                 } else {
-                    DWObject.HTTPUpload("http://localhost:90/saveUploadedJPG.aspx", OnHttpUploadSuccess, OnHttpUploadFailure);// Please replace the URL with yours.
+                    DWObject.HTTPUpload("http://localhost:90/saveUploadedJPG.aspx", onEmptyResponse, onServerReturnedSomething);// Please replace the URL with yours.
                 }
             }, 
             asyncFailureFunc
