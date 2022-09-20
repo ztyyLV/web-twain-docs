@@ -22,7 +22,7 @@ You can use Capability Negotiation to set it. Capability Negotiation is the way 
 
 The steps are:
 
-- Step-1 - Use <a href="{{site.info}}api/WebTwain_Acquire.html#getcapabilities" target="_blank">getCapabilities</a> to find the capability you want to set.
+1. Use <a href="{{site.info}}api/WebTwain_Acquire.html#getcapabilities" target="_blank">getCapabilities</a> to find the capability you want to set.
 
 ```javascript
 DWObject.OpenSource();
@@ -36,7 +36,9 @@ DWObject.getCapabilities(
 );
 ```
 
-- Step-2 - Use <a href="{{site.info}}api/WebTwain_Acquire.html#setcapabilities" target="_blank">setCapabilities</a> to set the capability.
+- Alternatively, you can install the [TWAIN Sample App](http://www.dynamsoft.com/download/support/twainapp.win32.installer.msi) to check the capabilities available and their values.
+
+2. Use <a href="{{site.info}}api/WebTwain_Acquire.html#setcapabilities" target="_blank">setCapabilities</a> to set the capability.
 
 ```javascript
 DWObject.setCapabilities(
