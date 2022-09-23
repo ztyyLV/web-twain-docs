@@ -6,13 +6,14 @@ title: How can I disable drag and drop images in the viewer?
 keywords: Dynamic Web TWAIN, Image Viewer, object defined
 breadcrumbText: How can I disable drag and drop images in the viewer?
 description: How can I disable drag and drop images in the viewer?
+permalink: /faq/disable-drag-and-drop-in-images.html
 ---
 
 # Image Viewer
 
 ## How can I disable drag and drop images in the viewer?
 
-You can leverage the inbuilt API <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Viewer.html?ver=latest#acceptdrop" target="_blank">acceptDrop</a> to disable the load functionality of the dropped images in the viewer.
+You can leverage the inbuilt API <a href="{{site.info}}api/WebTwain_Viewer.html#acceptdrop" target="_blank">acceptDrop</a> to disable the load functionality of the dropped images in the viewer.
 
 ```javascript
 DWObject.Viewer.acceptDrop = false;

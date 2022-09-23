@@ -6,6 +6,7 @@ title: Scanner source is listed on XSane application but not on my web applicati
 keywords: Dynamic Web TWAIN, Dynamsoft Service, installation, uninstallation
 breadcrumbText: Scanner source is listed on XSane application but not on my web application on Linux machines
 description: Scanner source is listed on XSane application but not on my web application on Linux machines
+permalink: /faq/source-not-listed-on-linux.html
 ---
 
 # Project Deployment and End-user Installation

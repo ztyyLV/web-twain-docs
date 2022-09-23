@@ -6,6 +6,7 @@ title: A connection with the server could not be established
 keywords: Dynamic Web TWAIN, Error Troubleshooting, connection not established
 breadcrumbText: A connection with the server could not be established
 description: A connection with the server could not be established
+permalink: /faq/connection-couldnt-be-established.html
 ---
 
 # Error Troubleshooting

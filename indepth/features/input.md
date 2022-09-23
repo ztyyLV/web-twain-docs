@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Features - Input
 keywords: Dynamic Web TWAIN, Documentation, Input
 breadcrumbText: Input
 description: Dynamic Web TWAIN SDK Documentation Input Page
+permalink: /indepth/features/input.html
 ---
 
 # Input
@@ -30,7 +31,7 @@ A remote scanner refers to a scanner that is.
 * Not connected to the initiating device
 * Connected and accessible on a `Windows` desktop on LAN (USB or network) where `DWT` must be installed
 
-For more information, check out <a href="https://www.dynamsoft.com/web-twain/docs/faq/how-to-enable-remote-scan.html?ver=latest" target="_blank">how to enable remote scan</a>.
+For more information, check out <a href="{{site.faq}}how-to-enable-remote-scan.html" target="_blank">how to enable remote scan</a>.
 
 <!--
 
@@ -124,6 +125,12 @@ function CaptureImage() {
 ```
 
 ### Use [DirectShow Cameras]({{site.getstarted}}hardware.html#directshow-cameras)
+
+To include the Webcam add-on, simply add a reference to the corresponding webcam JS file which is included in the [resources folder]({{site.faq}}what-are-the-resources-files.html).
+
+``` html
+<script src="Resources/addon/dynamsoft.webtwain.addon.webcam.js"></script>
+```
 
 The following code snippet shows how to use a camera through `DirectShow`.
   

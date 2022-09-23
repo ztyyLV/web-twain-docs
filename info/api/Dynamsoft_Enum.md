@@ -6,6 +6,7 @@ title: Dynamic Web TWAIN API Reference - Enumerations
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Enumerations
 breadcrumbText: Enumerations
 description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
+permalink: /info/api/Dynamsoft_Enum.html
 ---
 
 # Enumerations
@@ -287,6 +288,20 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 
 ## `Dynamsoft.DWT.EnumDWT_PDFCompressionType`
 
+<div class="sample-code-prefix template-table"></div>
+>- v17.3
+>- v17.2.5
+>
+>1. 
+| Label | Value|
+|:-|:-|
+| PDF_AUTO | 0 |
+| PDF_FAX4 | 2 |
+| PDF_LZW | 3 |
+| PDF_JPEG | 5 |
+| PDF_JP2000 | 6 |
+| PDF_JBIG2 | 7 |
+>2. 
 | Label | Value|
 |:-|:-|
 | PDF_AUTO | 0 |
@@ -295,6 +310,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | PDF_JPEG | 5 |
 | PDF_JP2000 | 6 |
 | PDF_JBig2 | 7 |
+
 
 ## `Dynamsoft.DWT.EnumDWT_ShowMode`
 
@@ -802,140 +818,6 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | TWAIN_AND_TWAIN64 | 4 |
 | TWAIN64 | 5 |
 
-## `Dynamsoft.DWT.EnumDWT_OCRDownloadType`
-
-| Label | Value|
-|:-|:-|
-| OCRDT_Dll | 0 |
-| OCRDT_LANGUAGE | 1 |
-
-## `Dynamsoft.DWT.EnumDWT_OCRLanguage`
-
-| Label | Language | Value|
-|:-|:-|:-|
-| OCRL_ARA | Arabic | ara |
-| OCRL_BEN | Bengali | ben |
-| OCRL_CHI_SIM | Chinese_Simplified | chi_sim |
-| OCRL_CHI_TRA | Chinese_Traditional | chi_tra |
-| OCRL_DEU | German | deu |
-| OCRL_ENG | English | eng |
-| OCRL_FAS | Persian | fas |
-| OCRL_FRA | French | fra |
-| OCRL_HIN | Hindi | hin |
-| OCRL_IND | Indonesian | ind |
-| OCRL_ITA | Italian | ita |
-| OCRL_JAV | Javanese | jav |
-| OCRL_JPN | Japanese | jpn |
-| OCRL_KOR | Korean | kor |
-| OCRL_MAR | Marathi | mar |
-| OCRL_MSA | Malay | msa |
-| OCRL_PAN | Panjabi | pan |
-| OCRL_POR | Portuguese | por |
-| OCRL_RUS | Russian | rus |
-| OCRL_SPA | Spanish | spa |
-| OCRL_SWA | Swahili | swa |
-| OCRL_TAM | Tamil | tam |
-| OCRL_TEL | Telugu | tel |
-| OCRL_THA | Thai | tha |
-| OCRL_TUR | Turkish | tur |
-| OCRL_URD | Urdu | urd |
-| OCRL_VIE | Vietnamese | vie |
-
-## `Dynamsoft.DWT.EnumDWT_OCROutputFormat`
-
-| Label | Value | Description|
-|:-|:-|:-|
-| OCROF_TEXT | 0 | Outputs in a plain text format with a .txt extension if saved as a file. |
-| OCROF_PDFPLAINTEXT | 1 | Outputs the OCR text results to a PDF. Any images from the original scanned image are lost. |
-| OCROF_PDFIMAGEOVERTEXT | 2 | Outputs the OCR text results to a PDF, with the original scanned image printed overtop. |
-| OCROF_PDFPLAINTEXT_PDFX | 3 | Outputs the OCR text results to a PDF/A. Any images from the original scanned image are lost. |
-| OCROF_PDFIMAGEOVERTEXT_PDFX | 4 | Outputs the OCR text results to a PDF/A, with the original scanned image printed overtop. |
-
-## `Dynamsoft.DWT.EnumDWT_OCRPageSetMode`
-
-| Label | Value| Description |
-|:-|:-|:-|
-| OCRPSM_OSD_ONLY | 0 | Script detection only(OSD). |
-| PSM_AUTO_OSD | 1 | Automatic page segmentation with orientation and script detection. (OSD) |
-| PSM_AUTO_ONLY | 2 | Automatic page segmentation, but no OSD, or OCR. |
-| PSM_AUTO | 3 | Fully automatic page segmentation, but no OSD. (Default)
-| PSM_SINGLE_COLUMN | 4 | Assume a single column of text of variable sizes. |
-| PSM_SINGLE_COLUMN | 5 | Assume a single uniform block of vertically aligned text. |
-| PSM_SINGLE_BLOCK | 6 | Assume a single uniform block of text. |
-| PSM_SINGLE_LINE | 7 | Treat the image as a single text line. |
-| PSM_SINGLE_WORD | 8 | Treat the image as a single word. |
-| PSM_CIRCLE_WORD | 9 | Treat the image as a single word in a circle. |
-| PSM_SINGLE_CHAR | 10 | Treat the image as a single character. |
-
-## `Dynamsoft.DWT.EnumDWT_OCRProRecognitionModule`
-
-| Label | Value|
-|:-|:-|
-| OCRPM_AUTO | AUTO |
-| OCRPM_MOSTACCURATE | MOSTACCURATE |
-| OCRPM_BALANCED | BALANCED |
-| OCRPM_FASTEST | FASTEST |
-
-## `Dynamsoft.DWT.EnumDWT_OCRProOutputFormat`
-
-| Label | Value|
-|:-|:-|
-| OCRPFT_TXTS | TXTS |
-| OCRPFT_TXTCSV | TXTCSV |
-| OCRPFT_TXTF | TXTF |
-| OCRPFT_XML | XML |
-| OCRPFT_IOTPDF | IOTPDF |
-| OCRPFT_IOTPDF_MRC | IOTPDF_MRC |
-
-## `Dynamsoft.DWT.EnumDWT_OCRProPDFVersion`
-
-| Label | Value|
-|:-|:-|
-| OCRPPDFV_0 | 1.0 |
-| OCRPPDFV_1 | 1.1 |
-| OCRPPDFV_2 | 1.2 |
-| OCRPPDFV_3 | 1.3 |
-| OCRPPDFV_4 | 1.4 |
-| OCRPPDFV_5 | 1.5 |
-| OCRPPDFV_6 | 1.6 |
-| OCRPPDFV_7 | 1.7 |
-
-## `Dynamsoft.DWT.EnumDWT_OCRProPDFAVersion`
-
-| Label | Value|
-|:-|:-|
-| OCRPPDFAV_1A | pdf/a-1a |
-| OCRPPDFAV_1B | pdf/a-1b |
-| OCRPPDFAV_2A | pdf/a-2a |
-| OCRPPDFAV_2B | pdf/a-2b |
-| OCRPPDFAV_2U | pdf/a-2u |
-| OCRPPDFAV_3A | pdf/a-3a |
-| OCRPPDFAV_3B | pdf/a-3b |
-| OCRPPDFAV_3U | pdf/a-3u |
-
-## `Dynamsoft.DWT.EnumDWT_OCRProType`
-
-| Label | Value|
-|:-|:-|
-| OCRDT_File | 0 |
-| OCRDT_Index | 1 |
-
-## `Dynamsoft.DWT.EnumDWT_OCRFindTextFlags`
-
-| Label | Value|
-|:-|:-|
-| OCRFT_WHOLEWORD | 1 |
-| OCRFT_MATCHCASE | 2 |
-| OCRFT_FUZZYMATCH | 4 |
-
-## `Dynamsoft.DWT.EnumDWT_OCRFindTextAction`
-
-| Label | Value|
-|:-|:-|
-| OCRFT_HIGHLIGHT | 0 |
-| OCRFT_STRIKEOUT | 1 |
-| OCRFT_MARKFORREDACT | 2 |
-
 ## `Dynamsoft.DWT.EnumDWT_CameraControlProperty`
 
 | Label | Value | Description |
@@ -973,3 +855,18 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | VRM_270_DEGREES_CLOCKWISE | 3 | 270 degrees Clockwise |
 | VRM_FLIP_VERTICAL | 4 | Flip |
 | VRM_FLIP_HORIZONTAL | 5 | Mirror |
+
+## `Dynamsoft.DWT.EnumDWT_SelectionMode`
+
+| Label | Value|
+|:-|:-|
+| Single | 0 |
+| Multiple | 1 |
+
+## `Dynamsoft.DWT.EnumDWT_ConfirmExitType `
+
+| Label | Value|
+|:-|:-|
+| Cancel | 0 |
+| Exit | 1 |
+| SaveAndExit | 2 |

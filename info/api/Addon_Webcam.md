@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN API Reference - Webcam Addon APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Webcam Addon APIs
 breadcrumbText: Webcam Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference Webcam Addon APIs Page
+permalink: /info/api/Addon_Webcam.html
 ---
 
 # `{WebTwainObject}.Addon.Webcam`
@@ -15,12 +16,12 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Webcam Addon APIs
 
 |                                                         |
 | :------------------------------------------------------ | :-------------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| [`CaptureImage()`](#captureimage)                       | [`CloseSource()`](#closesource)                                 | [`GetCameraControlPropertySetting()`](#getcameracontrolpropertysetting) | [`GetCameraControlPropertyMoreSetting()`](#getcameracontrolpropertymoresetting) |
-| [`GetVideoPropertySetting()`](#getvideopropertysetting) | [`GetVideoPropertyMoreSetting()`](#getvideopropertymoresetting) | [`SetCameraControlPropertySetting()`](#setcameracontrolpropertysetting) | [`SetVideoPropertySetting()`](#setvideopropertysetting)                         |
-| [`GetFrameRate()`](#getframerate)                       | [`SetFrameRate()`](#setframerate)                               | [`GetMediaType()`](#getmediatype)                                       | [`SetMediaType()`](#setmediatype)                                               |
-| [`GetResolution()`](#getresolution)                     | [`SetResolution()`](#setresolution)                             | [`GetFramePartURL()`](#getframeparturl)                                 | [`GetFrameURL()`](#getframeurl)                                                 |
-| [`GetSourceList()`](#getsourcelist)                     | [`SelectSource()`](#selectsource)                               | [`PauseVideo()`](#pausevideo)                                           | [`PlayVideo()`](#playvideo)                                                     |
-| [`SetVideoRotateMode()`](#setvideorotatemode)           | [`StopVideo()`](#stopvideo)                                     |
+| [`CaptureImage()`](#captureimage)                       | [`OpenSource()`](#opensource)                                 | [`CloseSource()`](#closesource)                                 | [`GetCameraControlPropertySetting()`](#getcameracontrolpropertysetting) |
+| [`GetCameraControlPropertyMoreSetting()`](#getcameracontrolpropertymoresetting) | [`GetVideoPropertySetting()`](#getvideopropertysetting) | [`GetVideoPropertyMoreSetting()`](#getvideopropertymoresetting) | [`SetCameraControlPropertySetting()`](#setcameracontrolpropertysetting) |
+| [`SetVideoPropertySetting()`](#setvideopropertysetting)                         | [`GetFrameRate()`](#getframerate)                       | [`SetFrameRate()`](#setframerate)                               | [`GetMediaType()`](#getmediatype)                                       |
+| [`SetMediaType()`](#setmediatype)                                               | [`GetResolution()`](#getresolution)                     | [`SetResolution()`](#setresolution)                             | [`GetFramePartURL()`](#getframeparturl)                                 |
+| [`GetFrameURL()`](#getframeurl)                                                 | [`GetSourceList()`](#getsourcelist)                     | [`SelectSource()`](#selectsource)                               | [`PauseVideo()`](#pausevideo)                                           |
+| [`PlayVideo()`](#playvideo)                                                     | [`SetVideoRotateMode()`](#setvideorotatemode)           | [`StopVideo()`](#stopvideo)                                     |
 
 ## CaptureImage
 
@@ -41,121 +42,6 @@ CaptureImage(
         errorString: string
     ) => void
 ): void;
-```
-
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-</tr>
-
-<tr>
-<td align="center">v10.2+ </td>
-<td align="center">v10.2+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-</tr>
-
-</table>
-</div>
-
----
-
-## GetSourceList
-
-**Syntax**
-
-```typescript
-/**
- * Return a list of all available cameras.
- */
-GetSourceList(): string[];
-```
-
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-</tr>
-
-<tr>
-<td align="center">v10.2+ </td>
-<td align="center">v10.2+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-</tr>
-
-</table>
-</div>
-
----
-
-## SelectSource
-
-**Syntax**
-
-```typescript
-/**
- * Select a camera to use.
- * @param name Specify the camera.
- */
-SelectSource(name: string): boolean;
-```
-
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-</tr>
-
-<tr>
-<td align="center">v10.2+ </td>
-<td align="center">v10.2+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-</tr>
-
-</table>
-</div>
-
----
-
-## CloseSource
-
-**Syntax**
-
-```typescript
-/**
- * Close the current camera.
- */
-CloseSource(): boolean;
 ```
 
 **Availability**
@@ -384,6 +270,7 @@ PauseVideo(): boolean;
 
 </table>
 </div>
+
 ---
 
 ## StopVideo
@@ -442,6 +329,17 @@ When you close the camera, the video stream will stop at the last frame.
 GetCameraControlPropertySetting(
     property: Dynamsoft.DWT.EnumDWT_CameraControlProperty | number
 ): CameraControlProperty;
+
+interface CameraControlProperty {
+    /**
+     * Return the value of the property.
+     */
+    GetValue(): number;
+    /**
+     * Return whether the property is set autmatically or not.
+     */
+    GetIfAuto(): boolean;
+}
 ```
 
 **Availability**
@@ -483,6 +381,29 @@ GetCameraControlPropertySetting(
 GetCameraControlPropertyMoreSetting(
     property: Dynamsoft.DWT.EnumDWT_CameraControlProperty | number
 ): CameraControlPropertyExtra;
+
+interface CameraControlPropertyExtra {
+    /**
+     * Return the minimum value of the property.
+     */
+    GetMinValue(): number;
+    /**
+     * Return the maximum value of the property.
+     */
+    GetMaxValue(): number;
+    /**
+     * Return the default value of the property.
+     */
+    GetDefaultValue(): number;
+    /**
+     * Return the smallest increment by which the property can change.
+     */
+    GetSteppingDelta(): number;
+    /**
+     * Return whether the property is set autmatically or not.
+     */
+    GetIfAuto(): boolean;
+}
 ```
 
 **Availability**
@@ -528,40 +449,6 @@ SetCameraControlPropertySetting(
     value: number,
     auto: boolean
 ): boolean;
-
-interface CameraControlProperty {
-    /**
-     * Return the value of the property.
-     */
-    GetValue(): number;
-    /**
-     * Return whether the property is set autmatically or not.
-     */
-    GetIfAuto(): boolean;
-}
-
-interface CameraControlPropertyExtra {
-    /**
-     * Return the minimum value of the property.
-     */
-    GetMinValue(): number;
-    /**
-     * Return the maximum value of the property.
-     */
-    GetMaxValue(): number;
-    /**
-     * Return the default value of the property.
-     */
-    GetDefaultValue(): number;
-    /**
-     * Return the smallest increment by which the property can change.
-     */
-    GetSteppingDelta(): number;
-    /**
-     * Return whether the property is set autmatically or not.
-     */
-    GetIfAuto(): boolean;
-}
 ```
 
 **Usage notes**
@@ -607,6 +494,17 @@ Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_came
 GetVideoPropertySetting(
     property: Dynamsoft.DWT.EnumDWT_VideoProperty | number
 ): VideoControlProperty;
+
+interface VideoControlProperty {
+    /**
+     * Return the value of the property.
+     */
+    GetValue(): number;
+    /**
+     * Return whether the property is set autmatically or not.
+     */
+    GetIfAuto(): boolean;
+}
 ```
 
 **Availability**
@@ -648,6 +546,29 @@ GetVideoPropertySetting(
 GetVideoPropertyMoreSetting(
     property: Dynamsoft.DWT.EnumDWT_VideoProperty | number
 ): VideoControlPropertyExtra;
+
+interface VideoControlPropertyExtra {
+    /**
+     * Return the minimum value of the property.
+     */
+    GetMinValue(): number;
+    /**
+     * Return the maximum value of the property.
+     */
+    GetMaxValue(): number;
+    /**
+     * Return the default value of the property.
+     */
+    GetDefaultValue(): number;
+    /**
+     * Return the smallest increment by which the property can change.
+     */
+    GetSteppingDelta(): number;
+    /**
+     * Return whether the property is set autmatically or not.
+     */
+    GetIfAuto(): boolean;
+}
 ```
 
 **Availability**
@@ -693,40 +614,6 @@ SetVideoPropertySetting(
     value: number,
     auto: boolean
 ): boolean;
-
-interface VideoControlProperty {
-    /**
-     * Return the value of the property.
-     */
-    GetValue(): number;
-    /**
-     * Return whether the property is set autmatically or not.
-     */
-    GetIfAuto(): boolean;
-}
-
-interface VideoControlPropertyExtra {
-    /**
-     * Return the minimum value of the property.
-     */
-    GetMinValue(): number;
-    /**
-     * Return the maximum value of the property.
-     */
-    GetMaxValue(): number;
-    /**
-     * Return the default value of the property.
-     */
-    GetDefaultValue(): number;
-    /**
-     * Return the smallest increment by which the property can change.
-     */
-    GetSteppingDelta(): number;
-    /**
-     * Return whether the property is set autmatically or not.
-     */
-    GetIfAuto(): boolean;
-}
 ```
 
 **Usage notes**
@@ -769,6 +656,21 @@ Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_vide
  * Return the frame rates supported by the current camera.
  */
 GetFrameRate(): FrameRate;
+
+interface FrameRate {
+    /**
+     * Return the number of available frame rates.
+     */
+    GetCount(): number;
+    /**
+     * Return the specified frame rate.
+     */
+    Get(index: number): number;
+    /**
+     * Return the current frame rate.
+     */
+    GetCurrent(): number;
+}
 ```
 
 **Availability**
@@ -807,6 +709,21 @@ GetFrameRate(): FrameRate;
  * Return the media types supported by the current camera.
  */
 GetMediaType(): MediaType;
+
+interface MediaType {
+    /**
+     * Return the number of available media types.
+     */
+    GetCount(): number;
+    /**
+     * Return the specified media type.
+     */
+    Get(index: number): string;
+    /**
+     * Return the current media type.
+     */
+    GetCurrent(): string;
+}
 ```
 
 **Availability**
@@ -845,6 +762,21 @@ GetMediaType(): MediaType;
  * Return the resolutions supported by the current camera.
  */
 GetResolution(): Resolution;
+
+interface Resolution {
+    /**
+     * Return the number of available resolutions.
+     */
+    GetCount(): number;
+    /**
+     * Return the specified resolution.
+     */
+    Get(index: number): string;
+    /**
+     * Return the current resolution.
+     */
+    GetCurrent(): string;
+}
 ```
 
 **Availability**
@@ -962,51 +894,6 @@ SetMediaType(type: string): boolean;
  * @param resolution Specify the resolution.
  */
 SetResolution(resolution: string): boolean;
-
-interface FrameRate {
-    /**
-     * Return the number of available frame rates.
-     */
-    GetCount(): number;
-    /**
-     * Return the specified frame rate.
-     */
-    Get(index: number): number;
-    /**
-     * Return the current frame rate.
-     */
-    GetCurrent(): number;
-}
-
-interface MediaType {
-    /**
-     * Return the number of available media types.
-     */
-    GetCount(): number;
-    /**
-     * Return the specified media type.
-     */
-    Get(index: number): string;
-    /**
-     * Return the current media type.
-     */
-    GetCurrent(): string;
-}
-
-interface Resolution {
-    /**
-     * Return the number of available resolutions.
-     */
-    GetCount(): number;
-    /**
-     * Return the specified resolution.
-     */
-    Get(index: number): string;
-    /**
-     * Return the current resolution.
-     */
-    GetCurrent(): string;
-}
 ```
 
 **Example**

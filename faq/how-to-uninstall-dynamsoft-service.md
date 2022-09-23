@@ -6,6 +6,7 @@ title: How to uninstall Dynamsoft Service?
 keywords: Dynamic Web TWAIN, Dynamsoft Service, uninstall, silently
 breadcrumbText: How to uninstall Dynamsoft Service?
 description: How to uninstall Dynamsoft Service?
+permalink: /faq/how-to-uninstall-dynamsoft-service.html
 ---
 
 # Project Deployment and End-user Installation

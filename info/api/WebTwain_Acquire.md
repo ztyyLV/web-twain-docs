@@ -5,11 +5,12 @@ title: Dynamic Web TWAIN API Reference - Acquire APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Acquire APIs
 breadcrumbText: Acquire
 description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
+permalink: /info/api/WebTwain_Acquire.html
 ---
 
 # {WebTwainObject} Scan
 
-> The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object](https://www.dynamsoft.com/web-twain/docs/indepth/features/initialize.html?ver=latest#creating-the-webtwain-instance).
+> The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance).
 
 **1. The following APIs are compatible with TWAIN, ICA, SANE (Windows, macOS and Linux)** 
 
@@ -815,7 +816,7 @@ SelectSource(
 
 - It's recommended to use this API asynchronously by pass arguments to the parameters `successCallback` and `failureCallback`.
 - On `Windows` and `Windows` only, you can call this method with no arguments so that it runs synchronously and return a boolean value.
-- When [scanning remotely]({{site.indepth}}feature/input.html#scan-from-a-remote-scanner), this method must be called asynchronously.
+- When [scanning remotely]({{site.indepth}}features/input.html#scan-from-a-remote-scanner), this method must be called asynchronously.
 
 **Example**
 
@@ -2207,7 +2208,7 @@ If it's set to `false` , the images will be inserted before the current image. T
 ```
 
 /**
- * Return or set whether to close the user interface after all images have been acquired.
+ * Return or set whether to close the data source after all images have been acquired.
  */
 IfDisableSourceAfterAcquire: boolean;
 ```
@@ -2323,7 +2324,7 @@ IfFeederEnabled: boolean;
 </table>
 </div>
 
-## Usage notes
+**Usage notes**
 
 Set this property after `OpenSource()` and before `AcquireImage()` .
 
@@ -2359,7 +2360,7 @@ IfShowUI: boolean;
 <td align="center">v3.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -2370,6 +2371,8 @@ IfShowUI: boolean;
 **Usage notes**
 
 If the property is set to `true` , the data source will display its user interface when `AcquireImage()` is called. Otherwise, the UI will not be displayed and the scan will start immediately.
+
+It's recommended to use this API after OpenSource() is called.
 
 ---
 
@@ -2462,6 +2465,10 @@ PageSize: Dynamsoft.DWT.EnumDWT_CapSupportedSizes | number;
 </table>
 </div>
 
+**Usage notes**
+
+Set this property after `OpenSource()` and before `AcquireImage()`.
+
 ---
 
 ## PixelType
@@ -2500,6 +2507,10 @@ PixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 </table>
 </div>
 
+**Usage notes**
+
+Set this property after `OpenSource()` and before `AcquireImage()`.
+
 ---
 
 ## Resolution
@@ -2537,6 +2548,10 @@ Resolution: number;
 
 </table>
 </div>
+
+**Usage notes**
+
+Set this property after `OpenSource()` and before `AcquireImage()`.
 
 ---
 
@@ -2614,7 +2629,7 @@ BlankImageThreshold: number;
 </table>
 </div>
 
-**Usage Notes**
+**Usage notes**
 
 `BlankImageThreshold` ranges from 0 to 255 and is 128 by default, it's only effective when [ `PixelType` ] is set to `TWPT_BW` . The bigger the value is, the more likely an image may be regarded as blank.
 
@@ -4535,9 +4550,9 @@ interface ValueAndLabel {
 
 Check out the Enumerations
 
-- [ `Dynamsoft.DWT.EnumDWT_Cap` ]({{site.info}}api/Dynamsoft_Enum.html#enumdwt_cap-)
-- [ `Dynamsoft.DWT.EnumDWT_CapType` ]({{site.info}}api/Dynamsoft_Enum.html#enumdwt_captype-)
-- [ `Dynamsoft.DWT.EnumDWT_CapValueType` ]({{site.info}}api/Dynamsoft_Enum.html#enumdwt_capvaluetype-)
+- [ `Dynamsoft.DWT.EnumDWT_Cap` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_cap)
+- [ `Dynamsoft.DWT.EnumDWT_CapType` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_captype)
+- [ `Dynamsoft.DWT.EnumDWT_CapValueType` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_capvaluetype)
 
 ---
 

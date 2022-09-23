@@ -5,13 +5,14 @@ title: Dynamic Web TWAIN Features - UI Elements
 keywords: Dynamic Web TWAIN, Documentation, UI
 breadcrumbText: UI
 description: Dynamic Web TWAIN SDK Documentation UI Page
+permalink: /indepth/features/ui.html
 ---
 
 # UI Elements
 
 In this section, we'll explore the UI Elements that are built into the `DWT` library for user interactions. 
 
-Generally speaking, most UI elements are configured in the file dynamsoft.webtwain.install.js. This file is already referenced inside the dynamsoft.webtwain.initiate.js
+Generally speaking, most UI elements are configured in the file **dynamsoft.webtwain.install.js**. This file is already referenced inside the **dynamsoft.webtwain.initiate.js**.
 
 ## Installation Dialog
 
@@ -23,8 +24,7 @@ This dialog comes up when using `DWT` scanner module under one of the following 
 * The Dynamsoft Service is not running
 * A failure to connect to the Dynamsoft Service
 
-If needing to disable the default dialog or come up with your own install dialog, you can make changes to Dynamsoft._show_install_dialog().
-
+If needing to disable the default dialog or come up with your own install dialog, you can make changes to `Dynamsoft._show_install_dialog()` in the **dynamsoft.webtwain.install.js** file.
 ## Indicators
 
 ### Loading bar and backdrop

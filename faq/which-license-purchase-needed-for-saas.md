@@ -6,6 +6,7 @@ title: What license should I purchase if I am providing SaaS?
 keywords: Dynamic Web TWAIN, Licensing and Purchase, license, SaaS
 breadcrumbText: What license should I purchase if I am providing SaaS?
 description: What license should I purchase if I am providing SaaS?
+permalink: /faq/which-license-purchase-needed-for-saas.html
 ---
 
 # Licensing and Purchase

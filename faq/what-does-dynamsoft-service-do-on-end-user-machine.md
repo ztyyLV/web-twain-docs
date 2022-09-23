@@ -6,6 +6,7 @@ title: What does the Dynamsoft Service do on the end-user machine?
 keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, dynamsoft service
 breadcrumbText: What does the Dynamsoft Service do on the end-user machine?
 description: What does the Dynamsoft Service do on the end-user machine?
+permalink: /faq/what-does-dynamsoft-service-do-on-end-user-machine.html
 ---
 
 # Project Deployment and End-user Installation
@@ -70,4 +71,4 @@ https://127.0.0.1:18623/dwt/dwt_16100728/img?id=414778098&index=5&width=585&heig
 
   The image data.
 
-For more information, please refer to <a href="https://www.dynamsoft.com/web-twain/docs/indepth/deployment/service.html?ver=latest" target="_blank">Dynamic Web TWAIN Deployment - Dynamsoft Service</a>.
+For more information, please refer to <a href="{{site.indepth}}deployment/service.html" target="_blank">Dynamic Web TWAIN Deployment - Dynamsoft Service</a>.

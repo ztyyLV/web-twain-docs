@@ -12,8 +12,6 @@ permalink: /indepth/deployment/server.html
 
 Once you have finished integrating `DWT` in your application, you can deploy it on your server to test it. As far as `DWT` is concerned, all related files are to be served as static files which makes the deployment very easy.
 
-> If you are using the OCR feature on the server side, please refer to [Use OCRB on the Server Side]({{site.indepth}}features/OCR.html#use-ocrb-on-the-server-side).
-
 ## How-to
 
 The Resources folder is typically found in the following location after the installation:
@@ -39,8 +37,6 @@ The deployment of Dynamic Web TWAIN is easy. Simply copy the Resources folder to
 | `.deb` | `application/x-debian-package` | [Browsers on Linux]({{site.getstarted}}Platform.html#browsers-on-linux) |
 | `.rpm` | `application/x-redhat-package-manager` | [Browsers on Linux]({{site.getstarted}}Platform.html#browsers-on-linux) |
 
-See more: [How to set the MIME type]({{site.indepth}}faqs/distribution/How-to-set-the-MIME-type.html)
-
 ### Enable HTTPS
 
 If you need to use any of the following features, you must enable HTTPS on the server.
@@ -64,3 +60,11 @@ When you set `ResourcesPath` wrong, static files such as `dynamsoft.webtwain.ins
 If you wish to use an absolute path instead, such as "https://www.dynamsoft.com/dwt/demo/resources/", this is supported. 
 
 > Note: If you want to use the [Camera module]({{site.indepth}}features/Input.html#use-mediadevices-cameras), please make sure the absolute path stays in the same domain to avoid cross-origin issues.
+
+#### Setting ResourcePath using global API
+
+If you do not wish to add an absolute path, you can add codes before you define the `DWObject`. Learn more on how to [change the reference path]({{site.faq}}change-reference-path.html)
+
+```javascript
+Dynamsoft.DWT.ResourcesPath = "New folder/Resources";
+```

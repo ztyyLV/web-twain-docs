@@ -6,6 +6,7 @@ title: What’s the difference between your OCR Basic and OCR Pro SDK?
 keywords: Dynamic Web TWAIN, Addon, OCR, OCR basic, OCR pro
 breadcrumbText: What’s the difference between your OCR Basic and OCR Pro SDK?
 description: What’s the difference between your OCR Basic and OCR Pro SDK?
+permalink: /faq/difference-between-ocr-basic-and-pro.html
 ---
 
 # Addon

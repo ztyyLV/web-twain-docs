@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Features - Handle PDF
 keywords: Dynamic Web TWAIN, Documentation, Handle PDF
 breadcrumbText: Handle PDF
 description: Dynamic Web TWAIN SDK Documentation Handle PDF Page
+permalink: /indepth/features/pdf.html
 ---
 
 # PDF Handling 
@@ -57,7 +58,7 @@ The method [ `SetConvertMode()` ]({{site.info}}api/Addon_PDF.html#setconvertmode
 
 #### Sample code
 
-See full sample <a href="https://github.com/Dynamsoft/Dynamic-Web-TWAIN/blob/master/samples/4.PDFRasterizer.html" target="_blank">here</a>.
+See full sample <a href="https://github.com/Dynamsoft/Dynamic-Web-TWAIN/blob/master/samples/PDFRasterizer.html" target="_blank">here</a>.
 
 #### Other methods
 

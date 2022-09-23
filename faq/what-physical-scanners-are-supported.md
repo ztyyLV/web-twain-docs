@@ -6,6 +6,7 @@ title: What physical document scanners does the Dynamic Web TWAIN SDK support?
 keywords: Dynamic Web TWAIN, Capture/ Image Source, physical, document, scanner, support
 breadcrumbText: What physical document scanners does the Dynamic Web TWAIN SDK support?
 description: What physical document scanners does the Dynamic Web TWAIN SDK support?
+permalink: /faq/what-physical-scanners-are-supported.html
 ---
 
 # Capture/Image Source
@@ -18,7 +19,7 @@ Dynamic Web TWAIN's main feature is interacting with imaging devices like scanne
 2. ICA Scanners (for macOS)
 3. SANE Scanners (for Linux)
 
-You can learn more details about each type of device on <a href="https://www.dynamsoft.com/web-twain/docs/getstarted/Hardware.html?ver=latest" target="_blank">this page</a>.
+You can learn more details about each type of device on <a href="{{site.getstarted}}Hardware.html" target="_blank">this page</a>.
 
 TWAIN, ICA and SANE are free scanner driver specifications and they have been adopted by almost all the scanner manufacturers in the market. Network scanners are also supported as long as there is a TWAIN/ICA/SANE scanner driver available.
 

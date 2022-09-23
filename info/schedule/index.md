@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Schedule
 keywords: Dynamic Web TWAIN, Documentation, Schedule, Index
 breadcrumbText: Release Notes
 description: Dynamic Web TWAIN SDK Documentation Schedule Index Page
+permalink: /info/schedule/
 ---
 
 # Release Notes

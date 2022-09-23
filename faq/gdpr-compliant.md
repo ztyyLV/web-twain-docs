@@ -6,6 +6,7 @@ title: Is the Dynamic Web TWAIN SDK GDPR compliant?
 keywords: Dynamic Web TWAIN, Security, GDPR compliant
 breadcrumbText: Is the Dynamic Web TWAIN SDK GDPR compliant?
 description: Is the Dynamic Web TWAIN SDK GDPR compliant?
+permalink: /faq/gdpr-compliant.html
 ---
 
 # Security

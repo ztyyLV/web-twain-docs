@@ -6,6 +6,7 @@ title: What is the difference between WebTwain.Addon.Camera and WebTwain.Addon.W
 keywords: Dynamic Web TWAIN, Addon, camera, webcam
 breadcrumbText: What is the difference between WebTwain.Addon.Camera and WebTwain.Addon.Webcam?
 description: What is the difference between WebTwain.Addon.Camera and WebTwain.Addon.Webcam?
+permalink: /faq/difference-between-camera-and-webcam.html
 ---
 
 # Addon
@@ -16,4 +17,4 @@ description: What is the difference between WebTwain.Addon.Camera and WebTwain.A
 
 Please note that the Camera module requires a secure connection as only a secure site can make use of the camera on mobile devices. If you use this feature, you need to enable HTTPS on the server. For how to enable HTTPS, please check out the manual of your webserver.
 
-For some advanced features, you may also need <a href="https://www.dynamsoft.com/web-twain/docs/getstarted/platform.html?ver=latest#wasm-browsers" target="_blank">WASM browser</a>.
+For some advanced features, you may also need <a href="{{site.getstarted}}platform.html#wasm-browsers" target="_blank">WASM browser</a>.

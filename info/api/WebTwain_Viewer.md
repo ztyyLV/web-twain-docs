@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN API Reference - Viewer APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Viewer APIs
 breadcrumbText: Viewer
 description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
+permalink: /info/api/WebTwain_Viewer.html
 ---
 
 # `{WebTwainObject}.Viewer`
@@ -20,19 +21,17 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 | [`hide()`](#hide)                                   | [`last()`](#last)                             | [`next()`](#next)                               | [`off()`](#off)                             |
 | [`on()`](#on)                                       | [`previous()`](#previous)                     | [`render()`](#render)                           | [`setButtonClass()`](#setbuttonclass)       |
 | [`setSelectedAreas()`](#setselectedareas)           | [`setViewMode()`](#setviewmode)               | [`show()`](#show)                               | [`unbind()`](#unbind)                       |
-| [`createTemplate()`](#createtemplate)               |
-
-<!--* [updateUISettings](#updateuisettings)-->
+| [`createTemplate()`](#createtemplate)               | [`createDocumentEditor()`](#createdocumenteditor)   | [`updateCheckboxStyle()`](#updatecheckboxstyle)     | [`updatePageNumberStyle()`](#updatepagenumberstyle)       |
 
 **Properties**
 
 |                                             |
 | :------------------------------------------ | :------------------------------------------------------ | ----------------------------------------------------- | --------------------------------------------------- |
-| [`acceptDrop`](#acceptdrop)                 | [`allowSlide`](#allowslide)                             | [`background`](#background)                           | [`border`](#border)                                 |
-| [`cursor`](#cursor)                         | [`height`](#height)                                     | [`idPostfix`](#idpostfix)                             | [`ifAutoScroll`](#ifautoscroll)                     |
-| [`innerBorder`](#innerborder)               | [`pageMargin`](#pagemargin)                             | [`selectedAreaBorderColor`](#selectedareabordercolor) | [`selectedPageBackground`](#selectedpagebackground) |
-| [`selectedPageBorder`](#selectedpageborder) | [`selectionRectAspectRatio`](#selectionrectaspectratio) | [`showPageNumber`](#showpagenumber)                   | [`singlePageMode`](#singlepagemode)                 |
-| [`width`](#width)                           | [`zoom`](#zoom)                                         | [`autoChangeIndex`](#autochangeindex)                 | [`showCheckbox`](#showcheckbox)                     |
+| [`acceptDrop`](#acceptdrop)                 | [`allowSlide`](#allowslide)                             | [`allowPageDragging`](#allowpagedragging)             | [`background`](#background)                         |
+| [`border`](#border)                         | [`cursor`](#cursor)                                     | [`height`](#height)                                   | [`idPostfix`](#idpostfix)                           |
+| [`ifAutoScroll`](#ifautoscroll)             | [`innerBorder`](#innerborder)                           | [`pageMargin`](#pagemargin)                           | [`selectedAreaBorderColor`](#selectedareabordercolor) |
+| [`selectedPageBackground`](#selectedpagebackground) | [`selectedPageBorder`](#selectedpageborder)     | [`selectionRectAspectRatio`](#selectionrectaspectratio) | [`singlePageMode`](#singlepagemode)               |
+| [`width`](#width)                           | [`zoom`](#zoom)                                         | [`autoChangeIndex`](#autochangeindex)                 | [`selectionMode`](#selectionmode)                   |
 
 **Events**
 
@@ -42,33 +41,6 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 | [`mousedown`](#mousedown)       | [`mouseup`](#mouseup)         | [`mouseout`](#mouseout)                 | [`mouseover`](#mouseover)                   |
 | [`keydown`](#keydown)           | [`keyup`](#keyup)             | [`pageAreaSelected`](#pageareaselected) | [`pageAreaUnselected`](#pageareaunselected) |
 | [`pageRendered`](#pagerendered) | [`resize`](#resize)           |
-
-<!--** [topPageChanged](#toppagechanged)-->
-
-> The following APIs are deprecated as of v16.2, check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html#viewer-related-api-changes-in-versoin-16.2).
-
-**Methods**
-
-|                  |
-| :--------------- | :------------- |
-| `BindViewer()`   | `UnbindView()` |
-| `UpdateViewer()` |
-
-**Properties**
-
-|                            |
-| :------------------------- | :-------------------------- | --------------- | ---------------- |
-| `BackgroundColor`          | `SelectionImageBorderColor` | `FitWindowType` | `IfFitWindow`    |
-| `Height`                   | `Width`                     | `IfAutoScroll`  | `ShowPageNumber` |
-| `MouseX`                   | `MouseY`                    | `ImageMargin`   | `MouseShape`     |
-| `SelectionRectAspectRatio` | `Zoom`                      |
-
-**Events**
-
-|                     |
-| :------------------ | :-------------------- | ----------------------- |
-| `OnMouseClick`      | `OnMouseDoubleClick`  | `OnMouseMove`           |
-| `OnMouseRightClick` | `OnImageAreaSelected` | `OnImageAreaDeSelected` |
 
 ---
 
@@ -344,97 +316,97 @@ imageEditor.show();
 // Customize the editor
 var editorSettings = {
   /* Show the editor within the DIV 'imageEditor'*/
-  element: document.getElementById("imageEditor"),
-  width: 600,
-  height: 400,
-  border: "1px solid rgb(204, 204, 204)",
-  topMenuBorder: "",
-  innerBorder: "",
-  background: "rgb(255, 255, 255)",
-  promptToSaveChange: true,
-  buttons: {
-    titles: {
-      previous: "Previous Image",
-      next: "Next Image",
-      print: "Print Image",
-      scan: "Scan Documents",
-      load: "Load Local Images",
-      rotateleft: "Rotate Left",
-      rotate: "Rotate",
-      rotateright: "Rotate Right",
-      deskew: "Deskew",
-      crop: "Crop Selected Area",
-      cut: "Cut Selected Area",
-      changeimagesize: "Change Image Size",
-      flip: "Flip Image",
-      mirror: "Mirror Image",
-      zoomin: "Zoom In",
-      originalsize: "Show Original Size",
-      zoomout: "Zoom Out",
-      stretch: "Stretch Mode",
-      fit: "Fit Window",
-      fitw: "Fit Horizontally",
-      fith: "Fit Vertically",
-      hand: "Hand Mode",
-      rectselect: "Select Mode",
-      zoom: "Click to Zoom In",
-      restore: "Restore Original Image",
-      save: "Save Changes",
-      close: "Close the Editor",
-      removeall: "Remove All Images",
-      removeselected: "Remove All Selected Images",
+  element?: document.getElementById("imageEditor"),
+  width?: 600,
+  height?: 400,
+  border?: "1px solid rgb(204, 204, 204)",
+  topMenuBorder?: "",
+  innerBorder?: "",
+  background?: "rgb(255, 255, 255)",
+  promptToSaveChange?: true,
+  buttons?: {
+    titles?: {
+      previous?: "Previous Image",
+      next?: "Next Image",
+      print?: "Print Image",
+      scan?: "Scan Documents",
+      load?: "Load Local Images",
+      rotateleft?: "Rotate Left",
+      rotate?: "Rotate",
+      rotateright?: "Rotate Right",
+      deskew?: "Deskew",
+      crop?: "Crop Selected Area",
+      cut?: "Cut Selected Area",
+      changeimagesize?: "Change Image Size",
+      flip?: "Flip Image",
+      mirror?: "Mirror Image",
+      zoomin?: "Zoom In",
+      originalsize?: "Show Original Size",
+      zoomout?: "Zoom Out",
+      stretch?: "Stretch Mode",
+      fit?: "Fit Window",
+      fitw?: "Fit Horizontally",
+      fith?: "Fit Vertically",
+      hand?: "Hand Mode",
+      rectselect?: "Select Mode",
+      zoom?: "Click to Zoom In",
+      restore?: "Restore Original Image",
+      save?: "Save Changes",
+      close?: "Close the Editor",
+      removeall?: "Remove All Images",
+      removeselected?: "Remove All Selected Images",
     },
-    visibility: {
-      scan: true,
-      load: true,
-      print: true,
-      removeall: true,
-      removeselected: true,
-      rotateleft: true,
-      rotate: true,
-      rotateright: true,
-      deskew: true,
-      crop: true,
-      cut: true,
-      changeimagesize: true,
-      flip: true,
-      mirror: true,
-      zoomin: true,
-      originalsize: true,
-      zoomout: true,
-      stretch: true,
-      fit: true,
-      fitw: true,
-      fith: true,
-      hand: true,
-      rectselect: true,
-      zoom: true,
-      restore: true,
-      save: true,
-      close: true,
+    visibility?: {
+      scan?: true,
+      load?: true,
+      print?: true,
+      removeall?: true,
+      removeselected?: true,
+      rotateleft?: true,
+      rotate?: true,
+      rotateright?: true,
+      deskew?: true,
+      crop?: true,
+      cut?: true,
+      changeimagesize?: true,
+      flip?: true,
+      mirror?: true,
+      zoomin?: true,
+      originalsize?: true,
+      zoomout?: true,
+      stretch?: true,
+      fit?: true,
+      fitw?: true,
+      fith?: true,
+      hand?: true,
+      rectselect?: true,
+      zoom?: true,
+      restore?: true,
+      save?: true,
+      close?: true,
     },
   },
-  dialogText: {
-    dlgRotateAnyAngle: [
+  dialogText?: {
+    dlgRotateAnyAngle?: [
       "Angle :",
       "Interpolation:",
       "Keep size",
       "  OK  ",
       "Cancel",
     ],
-    dlgChangeImageSize: [
+    dlgChangeImageSize?: [
       "New Height :",
       "New Width :",
       "Interpolation method:",
       "  OK  ",
       "Cancel",
     ],
-    saveChangedImage: [
+    saveChangedImage?: [
       "You have changed the image, do you want to keep the change(s)?",
       "  Yes  ",
       "  No  ",
     ],
-    selectSource: [
+    selectSource?: [
       "Select Source:",
       "Select",
       "Cancel",
@@ -461,15 +433,19 @@ The method [ `unbind()` ](#unbind) will dispose all created CustomElement object
 
 **Syntax**
 
+<div class="sample-code-prefix template2"></div>
+
+>- 17.3
+>- 17.2.5
+>
 ```typescript
 /**
  * Generate a independent ThumbnailViewer object.
  * @param thumbnailViewerSettings Configure the ThumbnailViewer object
  */
 createThumbnailViewer(
-    thumbnailViewerSettings?: thumbnailViewerSettings
+    thumbnailViewerSettings?: ThumbnailViewerSettings
 ): ThumbnailViewer;
-
 interface ThumbnailViewer {
     /**
      * Show the ThumbnailViewer object.
@@ -489,6 +465,16 @@ interface ThumbnailViewer {
      */
     updateViewMode(viewMode: ViewMode): void;
     /**
+     * Change the checkbox style. Available in v17.3+.
+     * @param checkboxSettings Specify the checkbox settings.
+     */
+    updateCheckboxStyle(checkboxSettings?: CheckboxSettings): void;
+    /**
+     * Change the page number style. Available in v17.3+.
+     * @param pageNumberSettings Specify the page number settings.
+     */
+    updatePageNumberStyle(pageNumberSettings?: PageNumberSettings): void;
+    /**
      * Bind a listner to the specified event. You can bind one or multiple listeners to the same event.
      * @param eventName Specify the event name.
      * @param callback Specify the listner.
@@ -500,99 +486,137 @@ interface ThumbnailViewer {
      * @param callback Specify the listener to remove
      */
     off(eventName: string, callback?: () => void): void;
+}
+interface ThumbnailViewerSettings {
+    /**
+     * Specify how many images to display per row.
+     */  
+    columns?: number;
+    /**
+     * Specify how many images to display per column.
+     */  
+    rows?: number;    
     /**
      * Whether to allow keyboard control. Default: true.
-     */
-    allowKeyboardControl: boolean;
+     */  
+    allowKeyboardControl?: boolean;
     /**
      * Whether to allow page dragging to reorder the pages.
      * Default: true.
      */
-    allowPageDragging: boolean;
+    allowPageDragging?: boolean;
     /**
      * Whether to allow resizing of the thumbnail viewer.
      * Default: false.
      */
-    allowResizing: boolean;
+    allowResizing?: boolean;
     /**
      * Set or return the CSS rule for the background of the thumbnail viewer.
      * Default: "rgb(255, 255, 255)".
      */
-    background: string;
+    background?: string;
     /**
      * Set or return the CSS rule for the border of the thumbnail viewer.
      * Default: "".
      */
-    border: string;
+    border?: string;
     /**
      * Set or return the CSS rule for the background of the page the mouse hovers over in the thumbnail viewer.
      * Default: "rgb(239, 246, 253)".
      */
-    hoverPageBackground: string;
+    hoverPageBackground?: string;
     /**
      * Set or return the CSS rule for the border of the page the mouse hovers over in the thumbnail viewer.
      * Default: "1px solid rgb(238, 238, 238)".
      */
-    hoverPageBorder: string;
+    hoverPageBorder?: string;
     /**
      * Set or return the location of the thumbnail viewer. Allowed values are "left", "right", "top", "bottom".
      * Default: "left".
      */
-    location: string;
+    location?: string;
     /**
      * Set or return the CSS rule for the background of a normal page in the thumbnail viewer.
      * Default: "transparent".
      */
-    pageBackground: string;
+    pageBackground?: string;
     /**
      * Set or return the CSS rule for the border of a normal page in the thumbnail viewer.
      * Default: "1px solid rgb(238, 238, 238)".
      */
-    pageBorder: string;
+    pageBorder?: string;
     /**
      * Set or return the margin between two adjacent images and the margin between an image and the border of the thumbnail viewer. The value can either be in pixels or percentage.
      * Default: 10.
      */
-    pageMargin: number | string;
+    pageMargin?: number | string;
     /**
      * Set or return the CSS rule for the background of the placeholder which appears when you drag page(s) to reorder them in the thumbnail viewer.
      * Default: "rgb(251, 236, 136)".
      */
-    placeholderBackground: string;
+    placeholderBackground?: string;
     /**
      * Set or return whether the pages are arranged vertically or horizontally.
      * Default: "vertical". Allowed values are "vertical" and "horizontal".
      */
-    scrollDirection: string;
+    scrollDirection?: string;
     /**
      * Set or return the CSS rule for the background of the selected page(s) in the thumbnail viewer.
      * Default: "rgb(199, 222, 252)".
      */
-    selectedPageBackground: string;
+    selectedPageBackground?: string;
     /**
      * Set or return the CSS rule for the border of the selected page(s) in the thumbnail viewer.
      * Default: "1px solid rgb(125,162,206)".
      */
-    selectedPageBorder: string;
-    /**
-     * Set or return whether page numbers are shown.
-     * Default: false.
-     */
-    showPageNumber: boolean;
+    selectedPageBorder?: string;
     /**
      * Set or return the size of the thumbnail viewer. The value can either be in pixels or percentage (based on the width or height of the entire viewer).
      * Default: "30%".
      */
-    size: number | string;
+    size?: number | string;
     /**
      * Set whether to select the index in the upper left corner of the viewer when scrolling.
      * Default: false.
      */
-    autoChangeIndex: boolean;
-     /**
-     * Show checkbox on image(s).
-     */
-    showCheckbox: boolean;
+    autoChangeIndex?: boolean;
+    checkbox?: {
+      visibility?: string; //"visible"：hidden", default: "hidden" 
+      width?: number | string; //default: "24px"，number unit: px, string value: "24px"/"10%", relative to parent container
+      height?: number | string; //default: "24px"，number unit: px, string value: "24px"/"10%", relative to parent container
+      background?: string; //default: "#ffffff"
+      borderWidth?: number | string;  //default: "2px", unit: px, percentage value not supported
+      borderColor?: string; //default: "#000000"
+      checkMarkColor?: string; //default: "#000000"
+      checkMarkLineWidth?: number | string; //default: "2px", unit: px, percentage value not supported
+      borderRadius?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%"，relative to itself
+      opacity?: number; //default：0.5, value range [0-1], value greater 1 defaults to 1
+      left?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+      top?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+      right?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+      bottom?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+      translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+      translateY?: number | string //default: "",  number unit: px, string value: "10px"/"10%", relative to itself
+    };
+    pageNumber?: {
+      visibility?: string; //"visible": hidden", default: "hidden" 
+      width?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+      height?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+      background?: string; //default: "#ffffff"            
+      borderWidth?: number | string; //default: "1px", unit: px, percentage value not supported
+      borderColor?: string; //default: "#a79898"
+      borderRadius?: number | string; //default: “50%”, number unit: px, string value: "10px"/"10%", relative to itself
+      opacity?:number; //default: 0.5, value range [0-1], value greater 1 defaults to 1
+      color?: string; //default: "#000000", supports #16 hexadecimal only
+      fontFamily?: string; //default: "sans-serif"
+      fontSize?: number | string; //default: 12, unit: px, percentage value not supported
+      left?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+      top?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+      right?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+      bottom?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+      translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+      translateY?: number | string //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+    }
 };
 interface ThumbnailViewerEvent {
     // The index of the current page.
@@ -618,6 +642,163 @@ interface ViewMode {
     scrollDirection: string;
 }
 ```
+```typescript
+/** 
+ * Generate a independent ThumbnailViewer object. 
+ * @param thumbnailViewerSettings Configure the ThumbnailViewer object 
+ */ 
+createThumbnailViewer( 
+    thumbnailViewerSettings?: thumbnailViewerSettings 
+): ThumbnailViewer; 
+interface ThumbnailViewer { 
+    /** 
+    * Show the ThumbnailViewer object. 
+    */ 
+    show(): boolean; 
+    /** 
+    * Hide the ThumbnailViewer object. 
+    */ 
+    hide(): boolean; 
+    /** 
+    * Remove the ThumbnailViewer object. 
+    */ 
+    dispose(): boolean; 
+    /** 
+    * Change the view mode of the thumbnail viewer. 
+    * @param viewMode Specify the new mode. 
+    */ 
+    updateViewMode(viewMode: ViewMode): void; 
+    /** 
+    * Bind a listner to the specified event. You can bind one or multiple listeners to the same event. 
+    * @param eventName Specify the event name. 
+    * @param callback Specify the listner. 
+    */ 
+    on(eventName: string, callback: (event: ThumbnailViewerEvent | KeyboardEvent, domEvent?: MouseEvent) => void): void; 
+    /** 
+    * Unbind event listener(s) from the specified viewer event. 
+    * @param eventName Specify the event. 
+    * @param callback Specify the listener to remove 
+    */ 
+    off(eventName: string, callback?: () => void): void; 
+    /** 
+    * Whether to allow keyboard control. Default: true. 
+    */ 
+    allowKeyboardControl: boolean; 
+    /** 
+    * Whether to allow page dragging to reorder the pages. 
+    * Default: true. 
+    */ 
+    allowPageDragging: boolean; 
+    /** 
+    * Whether to allow resizing of the thumbnail viewer. 
+    * Default: false. 
+    */ 
+    allowResizing: boolean; 
+    /** 
+    * Set or return the CSS rule for the background of the thumbnail viewer. 
+    * Default: "rgb(255, 255, 255)". 
+    */ 
+    background: string; 
+    /** 
+    * Set or return the CSS rule for the border of the thumbnail viewer. 
+    * Default: "". 
+    */ 
+    border: string; 
+    /** 
+    * Set or return the CSS rule for the background of the page the mouse hovers over in the thumbnail viewer. 
+    * Default: "rgb(239, 246, 253)". 
+    */ 
+    hoverPageBackground: string; 
+    /** 
+    * Set or return the CSS rule for the border of the page the mouse hovers over in the thumbnail viewer. 
+    * Default: "1px solid rgb(238, 238, 238)". 
+    */ 
+    hoverPageBorder: string; 
+    /** 
+    * Set or return the location of the thumbnail viewer. Allowed values are "left", "right", "top", "bottom". 
+    * Default: "left". 
+    */ 
+    location: string; 
+    /** 
+    * Set or return the CSS rule for the background of a normal page in the thumbnail viewer. 
+    * Default: "transparent". 
+    */ 
+    pageBackground: string; 
+    /** 
+    * Set or return the CSS rule for the border of a normal page in the thumbnail viewer. 
+    * Default: "1px solid rgb(238, 238, 238)". 
+    */ 
+    pageBorder: string; 
+    /** 
+    * Set or return the margin between two adjacent images and the margin between an image and the border of the thumbnail viewer. The value can either be in pixels or percentage. 
+    * Default: 10. 
+    */ 
+    pageMargin: number | string; 
+    /** 
+    * Set or return the CSS rule for the background of the placeholder which appears when you drag page(s) to reorder them in the thumbnail viewer. 
+    * Default: "rgb(251, 236, 136)". 
+    */ 
+    placeholderBackground: string; 
+    /** 
+    * Set or return whether the pages are arranged vertically or horizontally. 
+    * Default: "vertical". Allowed values are "vertical" and "horizontal". 
+    */ 
+    scrollDirection: string; 
+    /** 
+    * Set or return the CSS rule for the background of the selected page(s) in the thumbnail viewer. 
+    * Default: "rgb(199, 222, 252)". 
+    */ 
+    selectedPageBackground: string; 
+    /** 
+    * Set or return the CSS rule for the border of the selected page(s) in the thumbnail viewer. 
+    * Default: "1px solid rgb(125,162,206)". 
+    */ 
+    selectedPageBorder: string; 
+    /** 
+    * Set or return whether page numbers are shown. 
+    * Default: false. 
+    */ 
+    showPageNumber: boolean; 
+    /** 
+    * Set or return the size of the thumbnail viewer. The value can either be in pixels or percentage (based on the width or height of the entire viewer). 
+    * Default: "30%". 
+    */ 
+    size: number | string; 
+    /** 
+    * Set whether to select the index in the upper left corner of the viewer when scrolling. 
+    * Default: false. 
+    */ 
+    autoChangeIndex: boolean; 
+    /** 
+    * Show checkbox on image(s). 
+    */ 
+    showCheckbox: boolean; 
+}; 
+interface ThumbnailViewerEvent { 
+    // The index of the current page. 
+    index: number; 
+    // The x-coordinate of the browser page. 
+    pageX: number; 
+    // The y-coordinate of the browser page. 
+    pageY: number; 
+}; 
+interface ViewMode { 
+    /** 
+    * Specify the number of images per row. 
+    */ 
+    columns: number; 
+    /** 
+    * Specify the number of images per column. 
+    */ 
+    rows: number; 
+    /** 
+    * Set or return whether the pages are arranged vertically or horizontally. 
+    * Default: "vertical". Allowed values are "vertical" and "horizontal". 
+    */ 
+    scrollDirection: string; 
+}
+```
+
 
 **Availability**
 <div class="availability">
@@ -669,7 +850,6 @@ var thumbnailViewerSettings = {
     allowKeyboardControl: true,
     allowPageDragging: true,
     allowResizing: false,
-    showPageNumber: false,
     pageBackground: "transparent",
     pageBorder: "1px solid rgb(238, 238, 238)",
     hoverBackground: "rgb(239, 246, 253)",
@@ -684,6 +864,8 @@ thumbnail.show();
 ```
 
 **Usage notes**
+
+For the CheckboxSettings and PageNumberSettings interface, please refer to the APIs [updateCheckboxStyle]({{site.info}}api/WebTwain_Viewer.html#updatecheckboxstyle) and [updatePageNumberStyle]({{site.info}}api/WebTwain_Viewer.html#updatepagenumberstyle).
 
 The following table shows the events available to a ThumbnailViewer object.
 
@@ -1148,6 +1330,34 @@ DWObject.Viewer.render(); //It will trigger the pageRendered event
 
 ---
 
+## setButtonClass
+
+**Syntax**
+
+``` typescript
+/**
+ * Set the CSS class name of the specified button.
+ * @param name Specify the button.
+ * @param className Specify the CSS class name.
+ */
+setButtonClass(
+    name: string,
+    className: string
+): boolean;
+```
+
+**Usage notes**
+
+Use this method to fine-tune the buttons in the viewer with CSS.
+
+**Example**
+
+``` javascript
+DWObject.Viewer.setButtonClass("crop", "CropClass");
+```
+
+---
+
 ## setSelectedAreas
 
 **Syntax**
@@ -1418,7 +1628,7 @@ DWObject.Viewer.acceptDrop = true;
  * Set whether to allow image navigation by swiping left or right on the viewer.
  * The default value is true.
  */
-.allowSlide: boolean;
+allowSlide: boolean;
 ```
 
 **Availability**
@@ -1455,6 +1665,51 @@ DWObject.Viewer.allowSlide = true;
 **Usage notes**
 
 This API only works if the view mode of the viewer is set to -1 by -1.
+
+---
+
+## allowPageDragging
+
+```typescript
+/**
+ * Set whether to allow page dragging to reorder the pages in the viewer.
+ * The default value is true.
+ */
+allowPageDragging: boolean;
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+</tr>
+
+</table>
+</div>
+
+**Example**
+
+```javascript
+DWObject.Viewer.setViewMode(2,2);
+DWObject.Viewer.cursor = "pointer";
+DWObject.Viewer.allowPageDragging = false; //Disable drag&drop.
+```
 
 ---
 
@@ -2042,53 +2297,6 @@ This API is only effective when drawing manually (it won't work if the selection
 
 ---
 
-## showPageNumber
-
-**Syntax**
-
-```typescript
-/**
- * Return or set whether to show the page numbers.
- */
-```
-
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-</tr>
-
-<tr>
-<td align="center">not supported </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-</tr>
-
-</table>
-</div>
-
-**Example**
-
-```javascript
-DWObject.Viewer.showPageNumber = true;
-```
-
-**Usage notes**
-
-The default value is `false` which means the page nubmers are hidden. The page numbers indicate the order of the pages. When the viewmode is -1 \* -1 (in other words, [ `singlePageMode` ](#singlepagemode) is `true` ), page numbers will be hidden.
-
----
-
 ## singlePageMode
 
 **Syntax**
@@ -2297,13 +2505,33 @@ When set to true, the index in the upper left corner of the viewer will be selec
 
 **Syntax**
 
+<div class="sample-code-prefix template2"></div>
+>- v17.3
+>- v17.2.5
+>
+>
+```typescript
+/**
+ * Create document scanner template.
+ * @argument templateName Currently templateName only supports "documentScanner".
+ * @argument documentConfiguration Configuration for the document object.
+ */
+createTemplate("templateName", documentConfiguration?: DocumentConfiguration)：DocumentViewerTemplate
+interface DocumentViewerTemplate{
+   getCustomElement():CustomElement; //Get CustomElement. Can display save & upload interface in CustomElement.   
+   onAddDocumentFunc = function () {}
+   onExitFunc = function () {}
+   onSaveFunc = function () {} //Save button click event
+   onUploadFunc = function () {}  //Upload button click event
+   onRemoveSelectedFunc = function () {}   //Remove button click event
+}
+```
 ```typescript
 /**
  * Create document scanner template.
  * @argument templateName Currently templateName only supports "documentScanner".
  */
 createTemplate("templateName")：DocumentViewerTemplate
-
 interface DocumentViewerTemplate{
    getCustomElement():CustomElement; //Get CustomElement. Can display save & upload interface in CustomElement.   
    onAddDocumentFunc = function () {}
@@ -2329,11 +2557,11 @@ interface DocumentViewerTemplate{
 
 <tr>
 <td align="center">not supported </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+</td>
-<td align="center">v17.2+</td>
-<td align="center">v17.2+</td>
-<td align="center">v17.2+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
 </tr>
 
 </table>
@@ -2364,17 +2592,37 @@ Dynamsoft.DWT.CreateDWTObjectEx(
   });
 ```
 
+**Usage Notes**
+
+For details on the DocumentConfiguration interface, please refer to the camera [scanDocument]({{site.info}}api/Addon_Camera.html#scandocument) API.
+
 ---
 
-## showCheckbox
+## createDocumentEditor
 
 **Syntax**
 
 ```typescript
 /**
- * Show checkbox on image(s).
+ * Create a document editor object.
+ * @argument documentConfiguration Configuration for the object.
  */
-showCheckbox: boolean;
+createDocumentEditor(documentConfiguration?: DocumentConfiguration): DocumentEditor;
+
+interface DocumentEditor {
+    /**
+     * Show the DocumentEditor object.
+     */
+    show(): boolean;
+    /**
+     * Hide the DocumentEditor object.
+     */
+    hide(): boolean;
+    /**
+     * Remove the DocumentEditor object.
+     */
+    dispose(): boolean;
+};
 ```
 
 **Availability**
@@ -2391,17 +2639,203 @@ showCheckbox: boolean;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+</td>
-<td align="center">v17.2+</td>
-<td align="center">v17.2+</td>
-<td align="center">v17.2+ </td>
+<td align="center">not supported</td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
 </tr>
 
 </table>
 </div>
+
+**Example**
+
+```javascript
+// Use default settings
+var documentEditor = DWObject.Viewer.createDocumentEditor();
+documentEditor.show();
+```
+
+**Usage Notes**
+
+For details on the DocumentConfiguration interface, please refer to the camera [scanDocument]({{site.info}}api/Addon_Camera.html#scandocument) API.
+
 ---
+
+## updateCheckboxStyle
+
+**Syntax**
+
+```typescript
+/**
+ * Update checkbox style
+ * @argument checkboxSettings Settings for checkboxex.
+ */
+updateCheckboxStyle(checkboxSettings?: CheckboxSettings): void;
+
+interface CheckboxSettings {
+  visibility?: string; //"visible": hidden", default: "hidden" 
+  width?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+  height?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+  background?: string; //default: "#ffffff"
+  borderWidth?: number | string; //default: "2px", unit: px, percentage value not supported
+  borderColor?: string; //default: "#000000"
+  checkMarkColor?: string; //default: "#000000"
+  checkMarkLineWidth?: number | string; //default: "2px", unit: px, percentage value not supported
+  borderRadius?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to itself
+  opacity?: number; //default：0.5, value range [0-1], value greater 1 defaults to 1
+  left?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+  top?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+  right?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+  bottom?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+  translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+  translateY?: number | string //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+}
+
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+</tr>
+
+</table>
+</div>
+
+---
+
+## updatePageNumberStyle
+
+**Syntax**
+
+```typescript
+/**
+ * Update page number style
+ * @argument pageNumberSettings Settings for page numbers.
+ */
+updatePageNumberStyle(pageNumberSettings?: PageNumberSettings): void;
+
+interface pageNumberSettings {       
+  visibility?: string; //"visible": hidden", default: "hidden" 
+  width?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+  height?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+  background?: string; //default："#ffffff"            
+  borderWidth?: number | string; //default: "1px", unit: px, percentage value not supported
+  borderColor?: string; //default: "#a79898"
+  borderRadius?: number | string; //default: “50%”, number unit: px, string value: "10px"/"10%", relative to itself
+  opacity?:number; //default: 0.5, value range [0-1], value greater 1 defaults to 1
+  color?: string; //default: "#000000", supports #16 hexadecimal only
+  fontFamily?: string; //default: "sans-serif"
+  fontSize?: number | string; //default: 12, unit: px, percentage value not supported
+  left?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+  top?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+  right?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+  bottom?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+  translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+  translateY?: number | string //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+}
+
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+</tr>
+
+</table>
+</div>
+
+---
+
+## selectionMode
+
+**Syntax**
+
+```typescript
+/**
+ * Return or set the selection mode used.
+ */
+selectionMode: Dynamsoft.DWT.EnumDWT_SelectionMode | number;
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+</tr>
+
+</table>
+</div>
+
+**Example**
+
+```javascript
+DWObject.Viewer.setViewMode(2,2);
+DWObject.Viewer.cursor = "pointer";
+DWObject.Viewer.updateCheckboxStyle({
+    visibility:"visible",
+});
+DWObject.Viewer.selectionMode = Dynamsoft.DWT.EnumDWT_SelectionMode.Multiple; // Multiple Selection
+```
+
+**Usage notes**
+
+The default value is 0 (Single). Even if checkbox is used, only one image can be selected if the selection mode is set to 0 (Single).
+
+---
+
 
 ## Events
 
@@ -2529,7 +2963,7 @@ The events `mouseout`, `mouseover`, `keydown` and `keyup` are only triggered on 
 
 ---
 
-## pageAreaSelected
+### pageAreaSelected
 
 **Syntax**
 
@@ -2594,7 +3028,7 @@ DWObject.Viewer.off("pageAreaSelected");
 
 ---
 
-## pageAreaUnselected
+### pageAreaUnselected
 
 **Syntax**
 
@@ -2649,7 +3083,7 @@ DWObject.Viewer.off("pageAreaUnselected");
 
 ---
 
-## pageRendered
+### pageRendered
 
 **Syntax**
 
@@ -2699,7 +3133,7 @@ DWObject.Viewer.render(); //It will trigger the pageRendered event
 
 ---
 
-## resize
+### resize
 
 **Syntax**
 

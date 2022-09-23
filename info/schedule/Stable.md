@@ -6,9 +6,60 @@ keywords: Dynamic Web TWAIN, Documentation, Schedule, Stable Release
 breadcrumbText: Stable Releases
 noTitleIndex: true
 description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
+permalink: /info/schedule/Stable.html
 ---
 
 # Stable Releases
+
+## 17.3 (06/30/2022)
+
+### New and Improved Features 
+
+#### Mobile Web Capture
+ - Improved performance and user experience with re-designed mobile document capture workflow. Some highlights:
+    - The original copy of an image is kept in the new document editor object so you can always go back to the original image to make any edit.
+    - Building your custom workflow to trigger actions in your desired sequence is made easy.
+    - Interface elements in the viewer/editor are now customizable. You can easily add/remove icons or change their style.
+
+See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scanner/" target="_blank">**live demo**</a>.
+
+#### Buffer
+- Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#renamedocument" target="_blank">RenameDocument</a>.
+-	Renamed methods
+    - CreateFile -> <a href="{{site.info}}api/WebTwain_Buffer.html#createdocument" target="_blank">CreateDocument</a>
+    - OpenFile -> <a href="{{site.info}}api/WebTwain_Buffer.html#opendocument" target="_blank">OpenDocument</a>
+    - GetCurrentFileName -> <a href="{{site.info}}api/WebTwain_Buffer.html#getcurrentdocumentname" target="_blank">GetCurrentDocumentName</a>
+    -	RemoveFile -> <a href="{{site.info}}api/WebTwain_Buffer.html#removedocument" target="_blank">RemoveDocument</a>
+    -	GetFileInfoList -> <a href="{{site.info}}api/WebTwain_Buffer.html#getdocumentinfolist" target="_blank">GetDocumentInfoList</a>
+- Added new method <a href="{{site.info}}api/WebTwain_Buffer.html#getrawdataasync" target="_blank">GetRawDataAsync</a>.
+
+#### Viewer
+- Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#updatecheckboxstyle" target="_blank">updateCheckboxStyle</a> to customize checkboxes. This method is also added to `ThumbnailViewer`. Refer to <a href="{{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer" target="_blank">createThumbnailViewer</a>.
+- Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#updatepagenumberstyle" target="_blank">updatePageNumberStyle</a> to customize page numbers. This method is also added to `ThumbnailViewer`. Refer to <a href="{{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer" target="_blank">createThumbnailViewer</a>.
+- Added new properties `checkbox` and `pageNumber` to `ThumbnailViewerSettings`. Refer to <a href="{{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer" target="_blank">createThumbnailViewer</a>.
+- Added a new parameter `documentConfiguration` to the method <a href="{{site.info}}api/WebTwain_Viewer.html#createtemplate" target="_blank">createTemplate</a>.
+- Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#createdocumenteditor" target="_blank">createDocumentEditor</a>.
+- Added new property <a href="{{site.info}}api/WebTwain_Viewer.html#selectionmode" target="_blank">selectionMode</a>.
+- Added new property <a href="{{site.info}}api/WebTwain_Viewer.html#allowpagedragging" target="_blank">allowPageDragging</a>.
+
+### Minor Improvements 
+ - Modified <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_pdfcompressiontype" target="_blank">Dynamsoft.DWT.EnumDWT_PDFCompressionType</a> from `PDF_JBig2` to `PDF_JBIG2`.
+ - Made changes to support organizationID value for Dynamsoft.DWT.ProductKey.
+ - Enabled license key validation for the correct version during initialization.
+
+### Bug Fixes
+ - On MacOS, images in the viewer were sometimes lost when waking up from sleep mode.
+ - Incorrect error message displayed when using camera function with UseLocalService set to true.
+ - Unchecking checkboxes did not trigger the OnBufferChanged event.
+ - Failed to load dll for PDF decoding or encoding when using v17.x SDK with an older version image dll file.
+ - Images failed to display in print window.
+ - Edited images not showing correctly in Image Editor.
+ - Images not displaying correctly in landscape mode when printing from Image Editor.
+ - Iframe not working in Edge due to Content Security Policy.
+
+### Deprecations
+
+* Check out the [Deprecations]({{site.info}}schedule/deprecated.html#173) page for v17.3 deprecations.
 
 ## 17.2.5 (03/29/2022)
 
@@ -16,20 +67,20 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
  - Updated the files *dynamsoft.webtwain.initiate.js* and *dynamsoft.webtwain.addon.camera.js* for better performance of mobile document capturing when using Safari on iOS/iPadOS 13+
 
-### Bug Fixed
+### Bug Fixes
 
- - Updated the file *dynamsoft.webtwain.initiate.js* to resolve a memory leak issue in v17.2.1 on Chrome 98+ when the <a href="{{site.info}}api/WebTwain_Viewer.html?ver=latest#setviewmode" target="_blank">view mode</a> is set to (-1, -1) or if a <a href="{{site.info}}api/WebTwain_Viewer.html?ver=latest#createthumbnailviewer" target="_blank">thumbnail viewer</a> is used.
+ - Updated the file *dynamsoft.webtwain.initiate.js* to resolve a memory leak issue in v17.2.1 on Chrome 98+ when the <a href="{{site.info}}api/WebTwain_Viewer.html#setviewmode" target="_blank">view mode</a> is set to (-1, -1) or if a <a href="{{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer" target="_blank">thumbnail viewer</a> is used.
 
 ## 17.2.1 (02/24/2022)
 
 ### Improved Features 
 
- - Made changes to handle <a href="https://developer.chrome.com/blog/private-network-access-preflight/" target="_blank">CORS preflight requests</a> sent by Chrome from V98. Learn more <a href="https://www.dynamsoft.com/web-twain/docs/faq/private-network-access-in-chrome101.html" target="_blank">here</a>. 
+ - Made changes to handle <a href="https://developer.chrome.com/blog/private-network-access-preflight/" target="_blank">CORS preflight requests</a> sent by Chrome from V98. Learn more <a href="{{site.faq}}private-network-access-in-chrome101.html" target="_blank">here</a>. 
  - For Chromium V84+, use userAgentData instead of userAgent in response to UserAgent String phasing out issue. 
 
 ### Bug Fixes
 
- - Fixed a bug where Dynamsoft Service installation/uninstallation failed due to the current user account does not match the user account under C:\Users{account}. Learn more <a href="https://www.dynamsoft.com/web-twain/docs/faq/service-installation-issue.html?ver=latest" target="_blank">here</a>. 
+ - Fixed a bug where Dynamsoft Service installation/uninstallation failed due to the current user account does not match the user account under C:\Users{account}. Learn more <a href="{{site.faq}}service-installation-issue.html" target="_blank">here</a>. 
  - [HTML5 on MacOS] Fixed a bug where the short key (set by <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#organizationid" target="_blank">organizationID</a>) did not work on macOS 12+.
  - Fixed a bug where the mouse wheel did not work when the mouse was over the viewer.
  - [HTML5 on MacOS] Fixed a bug where buttons were not visible during Dynamic Web TWAIN/Dynamsoft Service installation when using dark mode.
@@ -65,9 +116,9 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 ### Improved Features 
 
 * Improved the <strong>mobile document capture</strong> in WASM mode. See more <a href="https://www.dynamsoft.com/web-twain/features/mobile-web-capture-sdk/" target="_blank">here</a>. 
-* Added `CM_RENDERALLWITHANNOTATION` convert mode to <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Addon_PDF.html?ver=latest#setconvertmode" target="_blank">EnumDWT_ConvertMode</a> to support loading PDFs with annotations.
+* Added `CM_RENDERALLWITHANNOTATION` convert mode to <a href="{{site.info}}api/Addon_PDF.html#setconvertmode" target="_blank">EnumDWT_ConvertMode</a> to support loading PDFs with annotations.
 * Modified DynamicImage.dll(DynamicImagex64.dll) to improve encoding and decoding mode of TIFF files.
-* Updated Barcode Reader library to version 8.6. Check out the release notes for <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/release-notes/js-8.html?ver=latest#860-08312021" target="_blank">Barcode Reader JavaScript SDK - 8.6</a>
+* Updated Barcode Reader library to version 8.6. Check out the release notes for <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/release-notes/js-8.html#860-08312021" target="_blank">Barcode Reader JavaScript SDK - 8.6</a>
 
 ### Bug Fixes
 
@@ -146,7 +197,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 * [`DefaultSourceName`]({{site.info}}api/WebTwain_Acquire.html#defaultsourcename) now refers to the last used source. 
 
-* Updated Barcode Reader library to version 8.2.1. Check out release notes for [Barcode Reader JavaScript SDK - 8.2.1.](https://www.dynamsoft.com/barcode-reader/programming/javascript/release-notes/js-8.html?ver=latest#821-03292021)
+* Updated Barcode Reader library to version 8.2.1. Check out release notes for [Barcode Reader JavaScript SDK - 8.2.1.](https://www.dynamsoft.com/barcode-reader/programming/javascript/release-notes/js-8.html#821-03292021)
 
 ###  Changed Behaviours 
 
@@ -215,7 +266,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 * Made the viewer more independent and robust. Related APIs are redesigned.
   + Added a new global property [`Dynamsoft.WebTwainEnv.UseDefaultViewer`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#usedefaultviewer) to control whether the built-in viewer is used.
-  + Check out the [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html?ver=latest#viewer-related-api-changes-in-version-162).
+  + Check out the [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html#viewer-related-api-changes-in-version-162).
 
 * Scanning remotely now supports showing the Manufacturer's User Interface.
   + Only when the remote machine is Windows.
@@ -276,7 +327,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 #### Others
 
-* Check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html?ver=latest#viewer-related-api-changes-in-version-162).
+* Check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html#viewer-related-api-changes-in-version-162).
 
 ### Bug Fixes
 
@@ -306,7 +357,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 ### Deprecations
 
-* Check out [Viewer related API changes in version 16.2]({{site.info}}api/appendix.html?ver=latest#viewer-related-api-changes-in-versoin-162).
+* Check out the [Deprecations]({{site.info}}schedule/deprecated.html#162) page for v16.2.
 
 ### Changes to the ActiveX Edition
 
@@ -533,7 +584,7 @@ No changes in version 16.1.
 ### New
 
 * [HTML5 on Windows] Added a new method `startScan()` which accepts a JSON object that specifies all the scan parameters. This makes it simpler and even faster to initiate a scan job. At the same time, you can specify how you want the scanned data to be processed by adding extra output parameters in the same JSON object.
-* [HTML5 on Windows] Added a new event `OnPostTransferAync` as the asynchronous counterpart to the existing synchronous event `OnPostTransfer` . Information about the transferred image is returned in the event listener.
+* [HTML5 on Windows] Added a new event `OnPostTransferAsync` as the asynchronous counterpart to the existing synchronous event `OnPostTransfer` . Information about the transferred image is returned in the event listener.
 * [HTML5 on Windows] Added a new PDF core DLL as the default engine for PDF encoding & decoding. This new PDF DLL has added support for JPEG2000 and JBIG2 compression types.
 * [HTML5 on Windows] Added a new method `PDF.Write.Setup()` which accepts a JSON object that contains all the parameters needed for creating PDF files.
 * [HTML5 on macOS] Added a new file `libDynamicImg.dylib` to the macOS edition which provides functionalities equal to those provided by the file `DynamicImage.dll` on Windows. Essentially, this file offers better image encoding and decoding.

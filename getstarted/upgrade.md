@@ -32,7 +32,7 @@ You can follow the steps below to upgrade Dynamic Web TWAIN:
 
     If you get a new **license key** for the new version, you may follow the steps in [License]({{site.about}}license.html) to update it.
  
-    And you can check the [Release Notes]({{site.info}}schedule/stable.html) to learn the changes in the new version.
+    For changes in the new version, you can check the [Release Notes]({{site.info}}schedule/stable.html) and [Deprecations]({{site.info}}schedule/deprecated.html).
 
     > Note: Please be aware of the following namespace changes introduced in v17.0:
 

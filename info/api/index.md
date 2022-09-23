@@ -4,6 +4,7 @@ needAutoGenerateSidebar: true
 title: Dynamic Web TWAIN API Reference - Index
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Index
 breadcrumbText: API Reference
+permalink: /info/api/
 ---
 
 > Some old APIs are deprecated, check out [Deprecated Features and APIs]({{site.info}}schedule/deprecated.html)
@@ -35,8 +36,8 @@ breadcrumbText: API Reference
 |[`ImageIDToIndex()`]({{site.info}}api/WebTwain_Buffer.html#imageidtoindex) | [`IndexToImageID()`]({{site.info}}api/WebTwain_Buffer.html#indextoimageid)| [`IsBlankImage()`]({{site.info}}api/WebTwain_Buffer.html#isblankimage) | [`IsBlankImageExpress()`]({{site.info}}api/WebTwain_Buffer.html#isblankimageexpress)|  
 |[`SelectAllImages()`]({{site.info}}api/WebTwain_Buffer.html#selectallimages)|[`MoveImage()`]({{site.info}}api/WebTwain_Buffer.html#moveimage) | [`SwitchImage()`]({{site.info}}api/WebTwain_Buffer.html#switchimage)| [`RemoveImage()`]({{site.info}}api/WebTwain_Buffer.html#removeimage) |
 | [`RemoveAllImages()`]({{site.info}}api/WebTwain_Buffer.html#removeallimages)|[`RemoveAllSelectedImages()`]({{site.info}}api/WebTwain_Buffer.html#removeallselectedimages) |[`SelectImages()`]({{site.info}}api/WebTwain_Buffer.html#selectimages)|[`GetTagListByIndex()`]({{site.info}}api/WebTwain_Buffer.html#gettaglistbyindex) |
-| [`CreateFile()`]({{site.info}}api/WebTwain_Buffer.html#createfile)|[`OpenFile()`]({{site.info}}api/WebTwain_Buffer.html#openfile)|[`GetCurrentFileName()`]({{site.info}}api/WebTwain_Buffer.html#getcurrentfileName)|[`RemoveFile()`]({{site.info}}api/WebTwain_Buffer.html#removefile)|
-| [`GetFileInfoList()`]({{site.info}}api/WebTwain_Buffer.html#getfileinfolist)| 
+| [`CreateDocument()`]({{site.info}}api/WebTwain_Buffer.html#createdocument)|[`OpenDocument()`]({{site.info}}api/WebTwain_Buffer.html#opendocument)|[`GetCurrentDocumentName()`]({{site.info}}api/WebTwain_Buffer.html#getcurrentdocumentname)|[`RenameDocument()`]({{site.info}}api/WebTwain_Buffer.html#renamedocument)|
+|[`RemoveDocument()`]({{site.info}}api/WebTwain_Buffer.html#removedocument)| [`GetDocumentInfoList()`]({{site.info}}api/WebTwain_Buffer.html#getdocumentinfolist)| [`GetRawDataAsync()`]({{site.info}}api/WebTwain_Buffer.html#getrawdataasync)| 
 
 <!--
 * [`ClearImageTags()`]({{site.info}}api/WebTwain_Buffer.html#clearimagetags) 
@@ -473,7 +474,7 @@ breadcrumbText: API Reference
 | [`hide()`]({{site.info}}api/WebTwain_Viewer.html#hide)| [`last()`]({{site.info}}api/WebTwain_Viewer.html#last)| [`next()`]({{site.info}}api/WebTwain_Viewer.html#next)|[`off()`]({{site.info}}api/WebTwain_Viewer.html#off)|
 |[`on()`]({{site.info}}api/WebTwain_Viewer.html#on)| [`previous()`]({{site.info}}api/WebTwain_Viewer.html#previous)| [`render()`]({{site.info}}api/WebTwain_Viewer.html#render)| [`setButtonClass()`]({{site.info}}api/WebTwain_Viewer.html#setbuttonclass)|
 | [`setSelectedAreas()`]({{site.info}}api/WebTwain_Viewer.html#setselectedareas)| [`setViewMode()`]({{site.info}}api/WebTwain_Viewer.html#setviewmode) | [`show()`]({{site.info}}api/WebTwain_Viewer.html#show)| [`unbind()`]({{site.info}}api/WebTwain_Viewer.html#unbind)|
-|[`createTemplate()`]({{site.info}}api/WebTwain_Viewer.html#createtemplate)| 
+|[`createTemplate()`]({{site.info}}api/WebTwain_Viewer.html#createtemplate)| [`createDocumentEditor()`]({{site.info}}api/WebTwain_Viewer.html#createdocumenteditor)| [`updateCheckboxStyle()`]({{site.info}}api/WebTwain_Viewer.html#updatecheckboxstyle)| [`updatePageNumberStyle()`]({{site.info}}api/WebTwain_Viewer.html#updatepagenumberstyle)| 
 
 <!--
 * [`bind()`]({{site.info}}api/WebTwain_Viewer.html#bind)
@@ -502,11 +503,11 @@ breadcrumbText: API Reference
 
 | |
 |:-|:-|
-|[`acceptDrop`]({{site.info}}api/WebTwain_Viewer.html#acceptdrop)| [`allowSlide`]({{site.info}}api/WebTwain_Viewer.html#allowslide)|[`background`]({{site.info}}api/WebTwain_Viewer.html#background)|[`border`]({{site.info}}api/WebTwain_Viewer.html#border)|
-| [`cursor`]({{site.info}}api/WebTwain_Viewer.html#cursor)| [`height`]({{site.info}}api/WebTwain_Viewer.html#height)|[`idPostfix`]({{site.info}}api/WebTwain_Viewer.html#idpostfix)|[`ifAutoScroll`]({{site.info}}api/WebTwain_Viewer.html#ifautoscroll)|
-|[`innerBorder`]({{site.info}}api/WebTwain_Viewer.html#innerBorder)| [`pageMargin`]({{site.info}}api/WebTwain_Viewer.html#pagemargin)|[`selectedAreaBorderColor`]({{site.info}}api/WebTwain_Viewer.html#selectedareabordercolor)|[`selectedPageBackground`]({{site.info}}api/WebTwain_Viewer.html#selectedpagebackground)|
-|[`selectedPageBorder`]({{site.info}}api/WebTwain_Viewer.html#selectedpageborder)| [`selectionRectAspectRatio`]({{site.info}}api/WebTwain_Viewer.html#selectionrectaspectratio)|[`showPageNumber`]({{site.info}}api/WebTwain_Viewer.html#showpagenumber)|[`singlePageMode`]({{site.info}}api/WebTwain_Viewer.html#singlepagemode)|
-|[`width`]({{site.info}}api/WebTwain_Viewer.html#width)| [`zoom`]({{site.info}}api/WebTwain_Viewer.html#zoom)| [`autoChangeIndex`]({{site.info}}api/WebTwain_Viewer.html#autochangeindex)|[`showCheckbox`]({{site.info}}api/WebTwain_Viewer.html#showcheckbox)|
+|[`acceptDrop`]({{site.info}}api/WebTwain_Viewer.html#acceptdrop)| [`allowSlide`]({{site.info}}api/WebTwain_Viewer.html#allowslide)| [`allowPageDragging`]({{site.info}}api/WebTwain_Viewer.html#allowpagedragging)|[`background`]({{site.info}}api/WebTwain_Viewer.html#background)|
+|[`border`]({{site.info}}api/WebTwain_Viewer.html#border) | [`cursor`]({{site.info}}api/WebTwain_Viewer.html#cursor)| [`height`]({{site.info}}api/WebTwain_Viewer.html#height)|[`idPostfix`]({{site.info}}api/WebTwain_Viewer.html#idpostfix)|
+|[`ifAutoScroll`]({{site.info}}api/WebTwain_Viewer.html#ifautoscroll)|[`innerBorder`]({{site.info}}api/WebTwain_Viewer.html#innerBorder)| [`pageMargin`]({{site.info}}api/WebTwain_Viewer.html#pagemargin)|[`selectedAreaBorderColor`]({{site.info}}api/WebTwain_Viewer.html#selectedareabordercolor)|
+|[`selectedPageBackground`]({{site.info}}api/WebTwain_Viewer.html#selectedpagebackground)|[`selectedPageBorder`]({{site.info}}api/WebTwain_Viewer.html#selectedpageborder)| [`selectionRectAspectRatio`]({{site.info}}api/WebTwain_Viewer.html#selectionrectaspectratio)|[`singlePageMode`]({{site.info}}api/WebTwain_Viewer.html#singlepagemode)|
+|[`width`]({{site.info}}api/WebTwain_Viewer.html#width)| [`zoom`]({{site.info}}api/WebTwain_Viewer.html#zoom)| [`autoChangeIndex`]({{site.info}}api/WebTwain_Viewer.html#autochangeindex)|[`selectionMode`]({{site.info}}api/WebTwain_Viewer.html#selectionmode)|
 
 <!--
 * [`acceptDrop`]({{site.info}}api/WebTwain_Viewer.html#acceptdrop)
@@ -578,60 +579,6 @@ breadcrumbText: API Reference
 * [`resetRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#resetruntimesettings)
 * [`initRuntimeSettingsWithString()`]({{site.info}}api/Addon_BarcodeReader.html#initruntimesettingswithstring)
 -->
-
-### OCR
-
-#### Methods
-
-| |
-|:-|:-|
-|[`Download()`]({{site.info}}api/Addon_OCR.html#download)  | [`DownloadLangData()`]({{site.info}}api/Addon_OCR.html#downloadlangdata)| [`IsModuleInstalled()`]({{site.info}}api/Addon_OCR.html#ismoduleinstalled) |[`SetLanguage()`]({{site.info}}api/Addon_OCR.html#setlanguage)|
-|[`SetOutputFormat()`]({{site.info}}api/Addon_OCR.html#setoutputformat) | [`SetPageSetMode()`]({{site.info}}api/Addon_OCR.html#setpagesetmode)| [`GetIfUseDetectedFont()`]({{site.info}}api/Addon_OCR.html#getifusedetectedfont) |[`SetIfUseDetectedFont()`]({{site.info}}api/Addon_OCR.html#setifusedetectedfont)|
-| [`GetUnicodeFontName()`]({{site.info}}api/Addon_OCR.html#getunicodefontname) | [`SetUnicodeFontName()`]({{site.info}}api/Addon_OCR.html#setunicodefontname)|[`GetMinFontSizeforMoreAccurateResult()`]({{site.info}}api/Addon_OCR.html#getminfontsizeformoreaccurateresult) | [`SetMinFontSizeforMoreAccurateResult()`]({{site.info}}api/Addon_OCR.html#setminfontsizeformoreaccurateresult)|
-| [`Recognize()`]({{site.info}}api/Addon_OCR.html#recognize) | [`RecognizeFile()`]({{site.info}}api/Addon_OCR.html#recognizefile)|[`RecognizeRect()`]({{site.info}}api/Addon_OCR.html#recognizerect) | [`RecognizeSelectedImages()`]({{site.info}}api/Addon_OCR.html#recognizeselectedimages)|
-
-<!-- 
-* [`Download()`]({{site.info}}api/Addon_OCR.html#download)  
-* [`DownloadLangData()`]({{site.info}}api/Addon_OCR.html#downloadlangdata)
-* [`IsModuleInstalled()`]({{site.info}}api/Addon_OCR.html#ismoduleinstalled)   
-* [`SetLanguage()`]({{site.info}}api/Addon_OCR.html#setlanguage)
-* [`SetOutputFormat()`]({{site.info}}api/Addon_OCR.html#setoutputformat) 
-* [`SetPageSetMode()`]({{site.info}}api/Addon_OCR.html#setpagesetmode)
-* [`GetIfUseDetectedFont()`]({{site.info}}api/Addon_OCR.html#getifusedetectedfont)    
-* [`SetIfUseDetectedFont()`]({{site.info}}api/Addon_OCR.html#setifusedetectedfont)
-* [`GetUnicodeFontName()`]({{site.info}}api/Addon_OCR.html#getunicodefontname) 
-* [`SetUnicodeFontName()`]({{site.info}}api/Addon_OCR.html#setunicodefontname)
-* [`GetMinFontSizeforMoreAccurateResult()`]({{site.info}}api/Addon_OCR.html#getminfontsizeformoreaccurateresult) 
-* [`SetMinFontSizeforMoreAccurateResult()`]({{site.info}}api/Addon_OCR.html#setminfontsizeformoreaccurateresult)
-* [`Recognize()`]({{site.info}}api/Addon_OCR.html#recognize)    
-* [`RecognizeFile()`]({{site.info}}api/Addon_OCR.html#recognizefile)
-* [`RecognizeRect()`]({{site.info}}api/Addon_OCR.html#recognizerect) 
-* [`RecognizeSelectedImages()`]({{site.info}}api/Addon_OCR.html#recognizeselectedimages)
--->
-
-### OCRPro
-
-#### Methods
-
-| |
-|:-|:-|
-|[`Download()`]({{site.info}}api/Addon_OCRPro.html#download) | [`IsModuleInstalled()`]({{site.info}}api/Addon_OCRPro.html#ismoduleinstalled)|[`Recognize()`]({{site.info}}api/Addon_OCRPro.html#recognize) |
-|[`RecognizeFile()`]({{site.info}}api/Addon_OCRPro.html#recognizefile)| [`RecognizeRect()`]({{site.info}}api/Addon_OCRPro.html#recognizerect) | [`RecognizeSelectedImages()`]({{site.info}}api/Addon_OCRPro.html#recognizeselectedimages)|
-
-<!--
-* [`Download()`]({{site.info}}api/Addon_OCRPro.html#download) 
-* [`IsModuleInstalled()`]({{site.info}}api/Addon_OCRPro.html#ismoduleinstalled)
-* [`Recognize()`]({{site.info}}api/Addon_OCRPro.html#recognize)  
-* [`RecognizeFile()`]({{site.info}}api/Addon_OCRPro.html#recognizefile)
-* [`RecognizeRect()`]({{site.info}}api/Addon_OCRPro.html#recognizerect) 
-* [`RecognizeSelectedImages()`]({{site.info}}api/Addon_OCRPro.html#recognizeselectedimages)
--->
-
-#### Properties
-
-| |
-|:-|:-|
-|[`Settings`]({{site.info}}api/Addon_OCRPro.html#settings)|
 
 ### PDF
 

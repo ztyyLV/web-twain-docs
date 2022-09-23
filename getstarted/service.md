@@ -57,7 +57,7 @@ By default, there are three Dynamsoft Service processes running which use the sa
 
 On a desktop, when a new user accesses a web page using Dynamic Web TWAIN SDK for the first time, he will be prompted to install the Dynamsoft Service. This is a built-in behaviour of the library. The prompt will display the download link. Once the installer is downloaded, the installation process will take just a few seconds.
 
-The prompt comes up when you try to [create a WebTwain instance](https://www.dynamsoft.com/web-twain/docs/indepth/faqs/develop/how-can-i-customize-the-webtwain-instances.html) in Service mode.
+The prompt comes up when you try to [create a WebTwain instance]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance) in Service mode.
 
 ![Initialization]({{site.assets}}imgs/Initialization-1.png)
 
@@ -83,7 +83,7 @@ Once the installation is done, the users can click 'Reconnect to the service' or
 
 If Dynamsoft Service is not installed, users might receive the error 'The Dynamic Web TWAIN module is not installed' when accessing an application that uses Dynamic Web TWAIN. 
 
-If you see repeat prompt on installing the service, please check out <a href="{{site.indepth}}faqs/distribution/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly.html" target="_blank">Why is the browser prompting me to install Dynamsoft Service repeatedly?</a>
+If you see repeat prompt on installing the service, please check out <a href="{{site.faq}}service-prompting-to-install-repeatedly.html" target="_blank">Why is the browser prompting me to install Dynamsoft Service repeatedly?</a>
 
 ## Files and folders in the service directory
 
@@ -92,11 +92,11 @@ There are multiple files and folders in the service directory. Taking Windows se
 ### For the Service
 
 * `\cache\` : Data cached on the disk. Check out <a href="{{site.indepth}}features/buffer.html#disk-caching" target="_blank">Disk Caching</a>.
-* `\cert\` : The certificates used for SSL connection. Check out <a href="{{site.indepth}}faqs/develop/how-to-change-the-certificate-of-the-dynamsoft-service.html" target="_blank">How to change the certificates</a>.
+* `\cert\` : The certificates used for SSL connection. Check out <a href="{{site.faq}}change-dynamsoft-service-certificate.html" target="_blank">How to change the certificates</a>.
 * `\dump\` : Dump files in case the service crashes.
 * `\log\` : Log files for debugging purposes.
 * `\upload\` : Temporary location for image data to be uploaded by the file uploader.
-* `DSConfiguration.ini` : Service configuration file. Check out <a href="{{site.indepth}}faqs/develop/how-to-set-the-configuration-of-the-dynamsoft-service.html" target="_blank">How to configure the service</a>.
+* `DSConfiguration.ini` : Service configuration file.
 * `DWASManager_16000428.dll` : The service manager. The name of the file may vary among different versions.
 * `DynamsoftService.exe` : The service.
 * `DynamicSocket.dll` : For socket connections.
@@ -127,16 +127,6 @@ These files are named with their version number. The following uses v16.1.1 as a
 * Webcam Addon
   + `DynamicWebcam_15.0.0.0625.dll`
   + `DynamicWebcamx64_15.0.0.0625.dll`
-* OCR Basic
-  + `\DynamicOCR\`
-  + `DynamicOCR_10.0.0.0618.dll`
-  + `DynamicOCRx64_10.0.0.0618.dll`
-* OCR Professional
-  + `\OCRProResource\`
-  + `DynamicOCRPro_1.2.0.0806.dll`
-  + `DynamicOCRProx64_1.2.0.0806.dll`
-  + `ocrp.lic`
-  + `OCRPro.lic`
 * File Uploader
   + `UploadModule_1.6.0.0428.dll`
 * Imaging features
@@ -158,6 +148,6 @@ These files are named with their version number. The following uses v16.1.1 as a
 ## Related Resources:
 
 * <a href="{{site.faq}}how-to-uninstall-dynamsoft-service.html" target="_blank">How to uninstall Dynamsoft Service?</a>
-* <a href="{{site.indepth}}faqs/develop/what-does-dynamsoft-service-do.html" target="_blank">What does Dynamsoft Service do?</a>
+* <a href="{{site.faq}}what-does-dynamsoft-service-do-on-end-user-machine.html" target="_blank">What does Dynamsoft Service do?</a>
 * <a href="{{site.faq}}service-prompting-to-install-repeatedly.html" target="_blank">I have installed the Dynamsoft Service on an end-user machine but still got asked to install it repeatedly. Why?</a>
 * <a href="{{site.faq}}can-i-install-dynamsoft-service-silently.html" target="_blank">Can I install Dynamsoft Service silently?</a>

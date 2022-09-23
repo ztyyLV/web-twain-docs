@@ -6,13 +6,14 @@ title: How can I create a thumbnail viewer to view images?
 keywords: Dynamic Web TWAIN, Image Viewer, navigate images, thumbnail viewer
 breadcrumbText: How can I create a thumbnail viewer to view images?
 description: How can I create a thumbnail viewer to view images?
+permalink: /faq/create-thumbnail-viewer-to-navigate-images.html
 ---
 
 # Image Viewer
 
 ## How can I create a thumbnail viewer to view images?
 
-You can create a thumbnail viewer by using the API <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Viewer.html?ver=latest#createthumbnailviewer" target="_blank">createThumbnailViewer()</a>. You can either use the default settings or customize the viewer as shown below:
+You can create a thumbnail viewer by using the API <a href="{{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer" target="_blank">createThumbnailViewer()</a>. You can either use the default settings or customize the viewer as shown below:
 
 ```javascript
 // Use default settings

@@ -6,6 +6,7 @@ title: Can I add annotation to an image (e.g. add watermark or text)?
 keywords: Dynamic Web TWAIN, Image Editing, annotation, watermark
 breadcrumbText: Can I add annotation to an image (e.g. add watermark or text)?
 description: Can I add annotation to an image (e.g. add watermark or text)?
+permalink: /faq/add-annotation-to-image.html
 ---
 
 # Image Editing

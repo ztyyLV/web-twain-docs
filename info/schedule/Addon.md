@@ -6,6 +6,7 @@ title: Dynamic Web TWAIN Schedule - Addon Release
 keywords: Dynamic Web TWAIN, Documentation, Schedule, Addon Release
 breadcrumbText: Addons
 description: Dynamic Web TWAIN SDK Documentation Schedule - Addon Release Page
+permalink: /info/schedule/Addon.html
 ---
 
 # DWT Core and Addon
@@ -14,6 +15,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule - Addon Release Page
 
 | Version | Service | Core | PDFR | Barcode | Camera | OCRB | OCRPro| Uploader | 
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| v17.3 | 1.7.3.0531 | 1.7.3.0531 | 11.4.0.0531 | 8.8.0.0531 | 15.0.0.0625 | N/A | N/A | 1.7.2.1026 |
 | v17.2.1 | 1.7.2.0228 | 17.2.1.0228 | 11.3.0.1026 | 8.6.0.1026 | 15.0.0.0625 | 10.0.0.0618 | 1.2.0.0806 | 1.7.2.1026 |
 | v17.2 | 1.7.2.1026 | 17.2.0.1026 | 11.3.0.1026 | 8.6.0.1026 | 15.0.0.0625 | 10.0.0.0618 | 1.2.0.0806 | 1.7.2.1026 |
 | v17.1 | 1.7.1.0525 | 1.7.1.0525 | 11.2.0.0330 | 8.2.0.0525 | 15.0.0.0625 | 10.0.0.0618 | 1.2.0.0806 | 1.7.0.0525 |

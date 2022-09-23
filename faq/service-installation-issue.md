@@ -6,6 +6,7 @@ title: Dynamsoft Service installation and uninstallation issue
 keywords: Dynamic Web TWAIN, Dynamsoft Service, installation, uninstallation
 breadcrumbText: Dynamsoft Service installation and uninstallation issue
 description: Dynamsoft Service installation and uninstallation issue
+permalink: /faq/service-installation-issue.html
 ---
 
 # Project Deployment and End-user Installation

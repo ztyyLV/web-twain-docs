@@ -6,6 +6,7 @@ title: What are the Resources files?
 keywords: Dynamic Web TWAIN, Documentation, General
 breadcrumbText: What Are The Resources Files
 description: What are the Resources files? 
+permalink: /faq/what-are-the-resources-files.html
 ---
 
 # General
@@ -39,14 +40,6 @@ Resources files help you include Dynamic Web TWAIN in your application. The foll
   + dynamsoft.webtwain.addon.camera.js
 
   > This file contains the functionalities of the Camera addon. 
-
-  + dynamsoft.webtwain.addon.ocr.js
-
-  > This file contains the functionalities of the OCR Basic addon. It's not included by default, contact [Dynamsoft Support]({{site.about}}Getsupport.html) to get it.
-
-  + dynamsoft.webtwain.addon.ocrpro.js
-
-  > This file contains the functionalities of the OCR Professional addon. It's not included by default, contact [Dynamsoft Support]({{site.about}}Getsupport.html) to get it.
 
   + dynamsoft.webtwain.addon.pdf.js
 
@@ -89,11 +82,11 @@ Resources files help you include Dynamic Web TWAIN in your application. The foll
     > For macOS
 
     - LICENSE
-  + src
+* src
 
-  > These files contain the following functionalities for the [WASM-mode]({{site.indepth}}features/initialize.html#wasm-mode)
+  > These files contain the following functionalities
   > - image input & output
-  > - decode & encode
+  > - image decode & encode
   > - PDF read & write
   > - Viewer & UI
 

@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Features - Viewer
 keywords: Dynamic Web TWAIN, Documentation, Viewer
 breadcrumbText: Viewer
 description: Dynamic Web TWAIN SDK Documentation Viewer Page
+permalink: /indepth/features/viewer.html
 ---
 
 # Viewer
@@ -34,7 +35,7 @@ Dynamsoft.DWT.Containers = [{
 
 #### Create a Viewer-less WebTwain Instance
 
-If you want to further customize the viewer, you can use [ `Dynamsoft.DWT.CreateDWTObjectEx()` ]({{site.indepth}}features/initialize.html?ver=latest#-dynamsoftwebtwainenvcreatedwtobjectex-) to create a `WebTwain` instance that doesn't come with a viewer.
+If you want to further customize the viewer, you can use [ `Dynamsoft.DWT.CreateDWTObjectEx()` ]({{site.indepth}}features/initialize.html#-dynamsoftwebtwainenvcreatedwtobjectex-) to create a `WebTwain` instance that doesn't come with a viewer.
 
 #### Bind a Viewer
 

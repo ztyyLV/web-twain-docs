@@ -6,11 +6,12 @@ title: Dynamic Web TWAIN API Reference - Input and Output APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, IO APIs
 breadcrumbText: IO
 description: Dynamic Web TWAIN SDK Documentation | API Reference | IO APIs Page
+permalink: /info/api/WebTwain_IO.html
 ---
 
 # {WebTwainObject} IO
 
-The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object](https://www.dynamsoft.com/web-twain/docs/indepth/features/initialize.html?ver=latest#creating-the-webtwain-instance).
+The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance).
 
 ## Methods
 
@@ -248,6 +249,7 @@ DWObject.LoadImageEx(
 /**
  * Load image(s) from a base64 string.
  * @param imageData The image data which is a base64 string without the data URI scheme.
+ * @param imageType The format of the image.
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
  * @argument errorCode The error code.
@@ -1534,8 +1536,7 @@ HTTPUploadThroughPutEx(
  * Upload the specified image via a HTTP Post request.
  * @param host The HTTP Host.
  * @param index Specify the image.
- * @param target The target wherethe request is sent.
- * @param type The format of the file.
+ * @param target The target where the request is sent.
  * @param fileName The file name.
  * @param onEmptyResponse A callback function that is executed if the response is empty.
  * @param onServerReturnedSomething A callback function that is executed if the response is not empty.
@@ -1589,10 +1590,10 @@ HTTPUploadThroughPost(
 
 ```javascript
 /**
- * Upload the specified image via a HTTP Post request.
+ * Upload the specified image in a specific image format via a HTTP Post request.
  * @param host The HTTP Host.
  * @param index Specify the image.
- * @param target The target wherethe request is sent.
+ * @param target The target where the request is sent.
  * @param fileName The file name.
  * @param type The format of the file.
  * @param onEmptyResponse A callback function that is executed if the response is empty.
@@ -1760,7 +1761,7 @@ HTTPUploadAllThroughPostAsPDF(
 /**
  * Upload all selected images in the buffer as a PDF file via a HTTP Post request.
  * @param host The HTTP Host.
- * @param target The target wherethe request is sent.
+ * @param target The target where the request is sent.
  * @param fileName The file name.
  * @param onEmptyResponse A callback function that is executed if the response is empty.
  * @param onServerReturnedSomething A callback function that is executed if the response is not empty.
@@ -1871,7 +1872,7 @@ HTTPUploadThroughPostAsMultiPageTIFF(
  * Upload the specified file via a HTTP Post request.
  * @param host The HTTP Host.
  * @param path Specify the file to upload.
- * @param target The target wherethe request is sent.
+ * @param target The target where the request is sent.
  * @param fileName The file name.
  * @param onEmptyResponse A callback function that is executed if the response is empty.
  * @param onServerReturnedSomething A callback function that is executed if the response is not empty.
@@ -2364,7 +2365,7 @@ DWObject.ConvertToBlob(
 ```javascript
 /**
  * Save the specified image as a BMP file.
- * @param fileName The name to save to.
+ * @param fileName The name to save to (or specify the absolute path).
  * @param index The index which specifies the image to save.
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
@@ -2413,7 +2414,7 @@ SaveAsBMP(
 ```javascript
 /**
  * Save the specified image as a JPEG file.
- * @param fileName The name to save to.
+ * @param fileName The name to save to (or specify the absolute path).
  * @param index The index which specifies the image to save.
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
@@ -2466,7 +2467,7 @@ If you are using WASM mode on the desktop, the image will always be saved to the
 ```javascript
 /**
  * Save the specified image as a PDF file.
- * @param fileName The name to save to.
+ * @param fileName The name to save to (or specify the absolute path).
  * @param index The index which specifies the image to save.
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
@@ -2521,7 +2522,7 @@ If you are using WASM mode on the desktop, the image will always be saved to the
 ```javascript
 /**
  * Save the specified image as a PNG file.
- * @param fileName The name to save to.
+ * @param fileName The name to save to (or specify the absolute path).
  * @param index The index which specifies the image to save.
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
@@ -2574,7 +2575,7 @@ If you are using WASM mode on the desktop, the image will always be saved to the
 ```javascript
 /**
  * Save the specified image as a TIFF file.
- * @param fileName The name to save to.
+ * @param fileName The name to save to (or specify the absolute path).
  * @param index The index which specifies the image to save.
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
@@ -2628,7 +2629,7 @@ If you are using WASM mode on the desktop, the image will always be saved to the
 ```javascript
 /**
  * Saves all the images in buffer as a multi-page TIFF file.
- * @param fileName The name to save to.
+ * @param fileName The name to save to (or specify the absolute path).
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
  * @argument errorCode The error code.
@@ -2679,7 +2680,7 @@ If you are using WASM mode on the desktop, the image will always be saved to the
 ```javascript
 /**
  * Saves all the images in buffer as a multi-page PDF file.
- * @param fileName The name to save to.
+ * @param fileName The name to save to (or specify the absolute path).
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
  * @argument errorCode The error code.
@@ -2732,7 +2733,7 @@ If you are using WASM mode on the desktop, the image will always be saved to the
 ```javascript
 /**
  * Saves all selected images in buffer as a multi-page PDF file.
- * @param fileName The name to save to.
+ * @param fileName The name to save to (or specify the absolute path).
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
  * @argument errorCode The error code.
@@ -2785,7 +2786,7 @@ If you are using WASM mode on the desktop, the image will always be saved to the
 ```javascript
 /**
  * Saves all selected images in buffer as a multi-page TIFF file.
- * @param fileName The name to save to.
+ * @param fileName The name to save to (or specify the absolute path).
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
  * @argument errorCode The error code.

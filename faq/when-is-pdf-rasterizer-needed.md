@@ -6,13 +6,14 @@ title: When do I need PDF Rasterizer Addon? Can I load existing PDF files into t
 keywords: Dynamic Web TWAIN, Addon, padf rasterizer
 breadcrumbText: When do I need PDF Rasterizer Addon? Can I load existing PDF files into the Dynamic Web TWAIN SDK without the PDF Rasterizer addon?
 description: When do I need PDF Rasterizer Addon? Can I load existing PDF files into the Dynamic Web TWAIN SDK without the PDF Rasterizer addon?
+permalink: /faq/when-is-pdf-rasterizer-needed.html
 ---
 
 # Addon
 
 ## When do I need PDF Rasterizer Addon? Can I load existing PDF files into the Dynamic Web TWAIN SDK without the PDF Rasterizer addon?
 
-When you load/download a text-based PDF onto the viewer, you need the PDF Rasterizer Add-on. To detect whether a PDF file is text-based or not, you can use the API <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Addon_PDF.html?ver=latest#istextbasedpdf" target="_blank">IsTextBasedPDF</a>.
+When you load/download a text-based PDF onto the viewer, you need the PDF Rasterizer Add-on. To detect whether a PDF file is text-based or not, you can use the API <a href="{{site.info}}api/Addon_PDF.html#istextbasedpdf" target="_blank">IsTextBasedPDF</a>.
 
 Existing PDF files that are image-based can be handled by default and will load without the add-on.
 

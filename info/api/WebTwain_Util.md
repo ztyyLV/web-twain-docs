@@ -5,11 +5,12 @@ title: Dynamic Web TWAIN API Reference - Utility APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Utility APIs
 breadcrumbText: Utility
 description: Dynamic Web TWAIN SDK Documentation API Reference Utility APIs Page
+permalink: /info/api/WebTwain_Util.html
 ---
 
 # {WebTwainObject} Util
 
-The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object](https://www.dynamsoft.com/web-twain/docs/indepth/features/initialize.html?ver=latest#creating-the-webtwain-instance).
+The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance).
 
 **Methods**
 
@@ -288,10 +289,6 @@ GenerateURLForUploadData(
 
 </table>
 </div>
-
-**Usage notes**
-
-The language set with this method is only for the built-in security dialogs which show up when the user tries to access a scanner, a camera or a local file.
 
 ---
 

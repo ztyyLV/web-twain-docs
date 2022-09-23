@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN Hello World
 keywords: Dynamic Web TWAIN, Documentation, Hello World
 breadcrumbText: Hello World
 description: Dynamic Web TWAIN SDK Documentation Hello World Page
+permalink: /getstarted/helloworld.html
 ---
 
 # Build the HelloWorld Page
@@ -139,7 +140,7 @@ After scan, you may want to upload the scanned documents to a server. So as the 
 
 ### Add code to do the upload
 
-The method [HTTPUpload]({{site.info}}api/WebTwain.IO.html#httpupload) is used to do the upload.
+The method [HTTPUpload]({{site.info}}api/WebTwain_IO.html#httpupload) is used to do the upload.
 
 ``` javascript
 function UploadAsPDF() {

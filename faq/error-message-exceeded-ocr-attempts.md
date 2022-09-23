@@ -6,6 +6,7 @@ title: Error message - You have exceeded the number of OCR attempts allowed by t
 keywords: Dynamic Web TWAIN, Error Troubleshooting, exceeded OCR attempts
 breadcrumbText: Error message - You have exceeded the number of OCR attempts allowed by the current license
 description: Error message - You have exceeded the number of OCR attempts allowed by the current license
+permalink: /faq/error-message-exceeded-ocr-attempts.html
 ---
 
 # Error Troubleshooting
@@ -14,7 +15,7 @@ description: Error message - You have exceeded the number of OCR attempts allowe
 
 ### Symptom
 
-When you use the OCRPro addon, you may receive this error message returned by the member method <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Addon_OCR.html?ver=latest#recognizeselectedimages" target="_blank">GetErrorString()</a> of the OCRResult class.
+When you use the OCRPro addon, you may receive this error message returned by the member method <a href="{{site.info}}api/Addon_OCR.html#recognizeselectedimages" target="_blank">GetErrorString()</a> of the OCRResult class.
 
 ### Cause
 

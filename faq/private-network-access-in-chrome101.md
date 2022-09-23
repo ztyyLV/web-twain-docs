@@ -6,6 +6,7 @@ title: How to resolve Dynamic Web TWAIN issue in Chrome 101?
 keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, Chrome 101, Private Network Access, preflight request
 breadcrumbText: How to resolve Dynamic Web TWAIN issue in Chrome 101?
 description: How to resolve Dynamic Web TWAIN issue in Chrome 101?
+permalink: /faq/private-network-access-in-chrome101.html
 ---
 
 # Project Deployment and End-user Installation
@@ -16,7 +17,7 @@ description: How to resolve Dynamic Web TWAIN issue in Chrome 101?
 
 (REF: <a href="https://developer.chrome.com/blog/private-network-access-preflight/" target="_blank">https://developer.chrome.com/blog/private-network-access-preflight/</a>)
 
-<span style="background-color:#f9f2f4; color:#c7254e">May 18, 2022: Google has updated the timeline for this preflight request feature. The experiment is scheduled again for Chrome 102 and may be released in Chrome 105 at the earliest. Please refer to Google's update <a href="https://developer.chrome.com/blog/private-network-access-preflight/" target="_blank">here</a>.</span>
+<span style="background-color:#f9f2f4; color:#c7254e">July 7, 2022: Google has updated the timeline for this preflight request feature. The experiment is scheduled again for Chrome 104 and may be released in Chrome 107 at the earliest. Please refer to Google's update <a href="https://developer.chrome.com/blog/private-network-access-preflight/" target="_blank">here</a>.</span>
 
 <span style="background-color:#f9f2f4; color:#c7254e">March 7, 2022: The experiment in Chrome 98 was rolled back due to stability and compatibility issues discovered in the rollout to Chrome stable. These issues will be fixed before the experiment is tried again, no earlier than in Chrome 101. Learn more in the blink-dev@chromium.org Intent to Ship email thread for more details.</span>
 
@@ -51,11 +52,11 @@ Dynamic Web TWAIN utilizes a local service named 'Dynamsoft Service' to support 
 
 To avoid this potential issue, you can apply one of the following solutions:
 
-1. <a href="https://www.dynamsoft.com/web-twain/docs/indepth/development/upgrade.html?ver=latest" target="_blank">Upgrade</a> Dynamic Web TWAIN SDK to **version 17.2.1** or later
+1. <a href="{{site.indepth}}development/upgrade.html" target="_blank">Upgrade</a> Dynamic Web TWAIN SDK to **version 17.2.1** or later
 
    In version 17.2.1, we have made changes to handle preflight requests on our end to resolve the issue. You can test the latest version with our <a href="https://www.dynamsoft.com/web-twain/downloads/" target="_blank">free trial</a> and when you are ready to upgrade, please contact <a href="mailto:sales@dynamsoft.com" target="_blank">sales@dynamsoft.com</a> to request the upgrade.
 
-   Please note that once upgraded, the Dynamosft Service on all client machines also need to be updated. You may consider <a href="https://www.dynamsoft.com/web-twain/docs/faq/can-i-install-dynamsoft-service-silently.html?ver=latest#can-i-install-dynamsoft-service-silently" target="_blank">installing Dynamsoft Service silently</a>.
+   Please note that once upgraded, the Dynamosft Service on all client machines also need to be updated. You may consider <a href="{{site.faq}}can-i-install-dynamsoft-service-silently.html#can-i-install-dynamsoft-service-silently" target="_blank">installing Dynamsoft Service silently</a>.
 
 2. Disable Private Network Access checks using enterprise policies
 

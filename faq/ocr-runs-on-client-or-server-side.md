@@ -6,6 +6,7 @@ title: Does your OCR addon run on the client side or server side?
 keywords: Dynamic Web TWAIN, Addon, OCR
 breadcrumbText: Does your OCR addon run on the client side or server side?
 description: Does your OCR addon run on the client side or server side?
+permalink: /faq/ocr-runs-on-client-or-server-side.html
 ---
 
 # Addon
@@ -16,4 +17,4 @@ OCR Basic is a light-weight OCR engine that works with the scanning module of Dy
 
 OCR Pro is a heavyweight OCR engine and is mostly deployed to the server side due to its size, but server-side OCR Pro is no longer supported since version 17.0. However, we provide OCR Pro client-side addon if that’s desired. Note that client-side OCR Pro requires a trackable license. The traditional product key no longer works.
 
-For more information on OCR and how to use it, please check <a href="https://www.dynamsoft.com/web-twain/docs/indepth/features/OCR.html?ver=latest" target="_blank">here</a>.
+For more information on OCR and how to use it, please check <a href="{{site.indepth}}features/OCR.html" target="_blank">here</a>.

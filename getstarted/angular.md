@@ -8,9 +8,11 @@ description: Dynamic Web TWAIN SDK Documentation Angular Integration Page
 permalink: /indepth/development/angular.html
 ---
 
-# Use DWT in Angular
+# Use Web TWAIN in Angular
 
 [Angular](https://angular.io/) is one of the most popular and mature JavaScript frameworks. Check out the following on how to implement `DWT` into an Angular application.
+
+![](https://www.dynamsoft.com/web-twain/docs/assets/imgs/download.png) [Sample of dwt-angular-advanced](https://github.com/dynamsoft-dwt/dwt-angular-advanced)
 
 ## Preparation
 
@@ -24,7 +26,7 @@ Make sure you have [node](https://nodejs.org/) and [Angular CLI](https://cli.ang
 ng new dwt-angular
 ```
 
-### **CD** to the root directory of the application and install the dependencies
+### **cd** to the root directory of the application and install the dependencies
 
 ``` cmd
 npm install dwt

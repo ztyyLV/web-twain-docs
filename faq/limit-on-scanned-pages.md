@@ -6,6 +6,7 @@ title: Is there a limit on the number of pages I can scan at a time? Where do yo
 keywords: Dynamic Web TWAIN, Capture/ Image Source, limit on scanned pages
 breadcrumbText: Is there a limit on the number of pages I can scan at a time? Where do you store them after scanning?
 description: Is there a limit on the number of pages I can scan at a time? Where do you store them after scanning?
+permalink: /faq/limit-on-scanned-pages.html
 ---
 
 # Capture/Image Source
@@ -17,7 +18,7 @@ The Desktop Service edition can run in 32-bit and 64-bit and the data is stored 
 
 Note the disk caching feature is turned on by default and you can change the setting by using the following APIs
 
-- <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Buffer.html?ver=latest#ifallowlocalcache" target="_blank">IfAllowLocalCache</a>
-- <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Buffer.html?ver=latest#buffermemorylimit" target="_blank">BufferMemoryLimit</a>
+- <a href="{{site.info}}api/WebTwain_Buffer.html#ifallowlocalcache" target="_blank">IfAllowLocalCache</a>
+- <a href="{{site.info}}api/WebTwain_Buffer.html#buffermemorylimit" target="_blank">BufferMemoryLimit</a>
 
 On the other hand, if you are using the WebAssembly edition of Dynamic Web TWAIN, you can only utilize up to 2 GB of memory as WebAssembly only supports 32-bit pointers at present. However, the WebAssembly edition is mainly for document capturing <strong>from webcams/mobile cameras</strong> so it is less likely one would scan hundreds of pages at a time. Also, all captured pages are saved in buffer in JPEG format which won’t take much space.

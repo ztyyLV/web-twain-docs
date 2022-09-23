@@ -6,6 +6,7 @@ title: Can I use the WebAssembly Edition of SDK to support webcams instead of us
 keywords: Dynamic Web TWAIN, Addon, webassembly, webcam capture
 breadcrumbText: Can I use the WebAssembly Edition of SDK to support webcams instead of using the Webcam Capture addon for Desktop Service Edition?
 description: Can I use the WebAssembly Edition of SDK to support webcams instead of using the Webcam Capture addon for Desktop Service Edition?
+permalink: /faq/use-webassembly-to-support-webcam.html
 ---
 
 # Addon
@@ -16,6 +17,6 @@ Yes. The WebAssembly Edition does not require installation of the local Dynamsof
 
 > Note - that the WebAssembly Edition is not supported by the Internet Explorer browser.
 
-Also, not all Dynamic Web TWAIN features are fully available in the WebAssembly Edition. For more details, please check <a href="https://www.dynamsoft.com/web-twain/docs/indepth/development/upgrade.html?ver=latest#expand-your-application-to-mobile-platforms" target="_blank">here</a>.
+Also, not all Dynamic Web TWAIN features are fully available in the WebAssembly Edition. For more details, please check <a href="{{site.indepth}}development/upgrade.html#expand-your-application-to-mobile-platforms" target="_blank">here</a>.
 
-You will also need some advanced features of modern WASM browsers for the WebAssembly Edition. Please check <a href="https://www.dynamsoft.com/web-twain/docs/getstarted/platform.html?ver=latest#wasm-browsers" target="_blank">WASM browsers</a> for more information.
+You will also need some advanced features of modern WASM browsers for the WebAssembly Edition. Please check <a href="{{site.getstarted}}platform.html#wasm-browsers" target="_blank">WASM browsers</a> for more information.

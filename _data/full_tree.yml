@@ -37,7 +37,7 @@ tree_list:
         path: /getstarted/helloworld.html
         startVersion:
         endVersion: 
-      - name: Deploy to your Server
+      - name: Deploy to Server
         path: /indepth/deployment/server.html
         startVersion:
         endVersion:
@@ -45,15 +45,15 @@ tree_list:
         path: /indepth/deployment/service.html
         startVersion:
         endVersion:
-      - name: Use DWT in Angular
+      - name: Use Web TWAIN in Angular
         path: /indepth/development/angular.html
         startVersion:
         endVersion: 
-      - name: Use DWT in React
+      - name: Use Web TWAIN in React
         path: /indepth/development/react.html
         startVersion:
         endVersion: 
-      - name: Use DWT in Vue
+      - name: Use Web TWAIN in Vue
         path: /indepth/development/vue.html
         startVersion:
         endVersion: 
@@ -66,61 +66,40 @@ tree_list:
     startVersion:
     endVersion:
     childList:
-      - name: Initialize 
+      - name: Initialize DWT 
         path: /indepth/features/initialize.html
         startVersion:
         endVersion:
-      - name: Input
+      - name: Input Options
         path: /indepth/features/input.html
         startVersion:
         endVersion:
-      - name: Output
+      - name: Output Options
         path: /indepth/features/output.html
         startVersion:
         endVersion:
-      - name: Buffer
+      - name: Manage Image Buffer
         path: /indepth/features/buffer.html
         startVersion:
         endVersion:
-      - name: Viewer
+      - name: Manage Viewer
         path: /indepth/features/viewer.html
         startVersion:
         endVersion:
-      - name: UI
+      - name: Customize UI
         path: /indepth/features/ui.html
         startVersion:
         endVersion:
-      - name: Edit
+      - name: Edit Images
         path: /indepth/features/edit.html
         startVersion:
         endVersion:
-      - name: Barcode
+      - name: Read Barcodes
         path: /indepth/features/barcode.html
         startVersion:
         endVersion:
-      - name: OCR
-        path: /indepth/features/ocr.html
-        startVersion:
-        endVersion:
-      - name: PDF
+      - name: Handle PDFs
         path: /indepth/features/pdf.html
-        startVersion:
-        endVersion:
-  - name: Release Notes
-    path: /info/schedule/
-    startVersion:
-    endVersion: 
-    childList:
-      - name: Stable
-        path: /info/schedule/stable.html
-        startVersion:
-        endVersion:
-      - name: Addon
-        path: /info/schedule/Addon.html
-        startVersion:
-        endVersion:
-      - name: Deprecated
-        path: /info/schedule/deprecated.html
         startVersion:
         endVersion:
   - name: API Reference
@@ -180,8 +159,25 @@ tree_list:
         path: /info/api/Dynamsoft_FileUploader.html
         startVersion:
         endVersion:
-      - name: API Appendix
+      - name: Error List
         path: /info/api/appendix.html
+        startVersion:
+        endVersion:
+  - name: Release Notes
+    path: /info/schedule/
+    startVersion:
+    endVersion: 
+    childList:
+      - name: Stable
+        path: /info/schedule/stable.html
+        startVersion:
+        endVersion:
+      - name: Addon
+        path: /info/schedule/Addon.html
+        startVersion:
+        endVersion:
+      - name: Deprecated
+        path: /info/schedule/deprecated.html
         startVersion:
         endVersion:
   - name: FAQ

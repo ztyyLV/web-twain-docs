@@ -5,13 +5,14 @@ title: Dynamic Web TWAIN API - Appendix
 keywords: Dynamic Web TWAIN, Documentation, API Appendix
 breadcrumbText: API Appendix
 description: Dynamic Web TWAIN SDK Documentation API Appendix Page
+permalink: /info/api/appendix.html
 ---
 
 # API Appendix
 
 ## Error List
 
-|Code |String|
+| Error Code | Error Message |
 |:-|:-|
 |0 | Successful |
 |-1001 | General failure |
@@ -83,8 +84,6 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2320 | Invalid file |
 |-2321 | The Enumerations is out of range |
 |-2322 | The left or top or right or bottom you entered is invalid |
-|-2323 | The OCR output format is not supported |
-|-2324 | The OCR page set mode is not supported |
 |-2325 | The current product key is empty or invalid, please contact the site administrator |
 |-2326 | The current product key has expired, please contact the site administrator |
 |-2327 | The current product key does not support Chrome, please contact the site administrator |
@@ -100,8 +99,6 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2337 | The current product key does not include a license for reading DataMatrix barcode, please contact the site administrator |
 |-2338 | The current product key does not support Webcam, please contact the site administrator |
 |-2339 | The current product key does not support pdf rasterizer, please contact the site administrator |
-|-2340 | The current product key does not support OCR, please contact the site administrator |
-|-2341 | The current product key does not support OCR pro, please contact the site administrator |
 |-2342 | The domain of your current site does not match the domain bound in the current product key, please contact the site administrator |
 |-2343 | The current product key does not support your browser, please contact the site administrator |
 |-2344 | The current product key does not support Windows OS, please contact the site administrator |
@@ -127,7 +124,7 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2368 | Invalid value for the parameter moduleSize |
 |-2369 | The module for Dynamic Web TWAIN has failed to download |
 |-2370 | The current product key is invalid, please contact the site administrator |
-|-2372 | You cannot convert to binary more than one image when the format is BMP, JPG or PNG |
+|-2372 | You cannot convert more than one image to binary when the format is BMP, JPG or PNG |
 |<= -3000 | See ErrorString property for details |
 
 ## Dynamsoft License Server Error List 
@@ -153,162 +150,3 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 | -20115 | ChargeWay for licenseItem is not matched. |
 | -20120 | License has exceeded its limit. |
 | -20151 | Cloned device detected. |
-
-## Viewer related API changes in version 17.0
-
-* New APIs in v17.0 replace old APIs in v16.2-, all old APIs are deprecated.
-
-| v17.0 | v16.2- |
-|:-|:-|
-| [ `Viewer.autoChangeIndex` ]({{site.info}}api/Addon_Viewer.html#autoChangeIndex) | `Viewer.topPageChanged()` |
-
-* The following APIs are new in v17.0
-  + [ `RemoveTag` ]({{site.info}}api/WebTwain_Buffer.html#removetag)
-  + [ `GetTagList` ]({{site.info}}api/WebTwain_Buffer.html#gettaglist)
-  + [ `DWT.licenseServer` ]({{site.info}}api/WebTwain_License.html#licenseServer)
-  + [ `DWT.handshakeCode` ]({{site.info}}api/WebTwain_License.html#handshakeCode)
-  + [ `DWT.sessionPassword` ]({{site.info}}api/WebTwain_License.html#sessionPassword)
-  + [ `DWT.licenseException` ]({{site.info}}api/WebTwain_License.html#licenseException)
-
-## Viewer related API changes in version 16.2
-
-### For the Camera add-on
-
-* New APIs in v16.2 replace old APIs in v16.1-, all old APIs are deleted.
-
-| v16.2 | v16.1- |
-|:-|:-|
-| [ `Addon.Camera.showVideo()` ]({{site.info}}api/Addon_Camera.html#showvideo) | `Viewer.showVideo()` |
-| [ `Addon.Camera.closeVideo()` ]({{site.info}}api/Addon_Camera.html#closevideo) | `Viewer.closeVideo()` |
-| [ `Addon.Camera.off()` ]({{site.info}}api/Addon_Camera.html#off) | `Viewer.off()` |
-| [ `Addon.Camera.on("video-closed")` ]({{site.info}}api/Addon_Camera.html#video-closed) | `Viewer.on("video-closed")` |
-| [ `Addon.Camera.on("video-error")` ]({{site.info}}api/Addon_Camera.html#video-error) | `Viewer.on("video-error")` |
-
-### For the Viewer
-
-* New APIs in v16.2 replace old APIs in v16.1-, all old APIs are deprecated.
-
-| v16.2 | v16.1- |
-|:-|:-|
-| [ `Viewer.background` ]({{site.info}}api/WebTwain_Viewer.html#background) | `BackgroundColor` |
-| [ `Viewer.bind()` ]({{site.info}}api/WebTwain_Viewer.html#bind) , [ `Viewer.show()` ]({{site.info}}api/WebTwain_Viewer.html#show) , [ `Viewer.hide()` ]({{site.info}}api/WebTwain_Viewer.html#hide) | `BindViewer()` |
-| [ `Viewer.cursor` ]({{site.info}}api/WebTwain_Viewer.html#cursor) | `MouseShape` |
-| [ `Viewer.fitWindow()` ]({{site.info}}api/WebTwain_Viewer.html#fitwindow) | `FitWindowType` , `IfFitWindow` |
-| [ `Viewer.height` ]({{site.info}}api/WebTwain_Viewer.html#height) | `Height` |
-| [ `Viewer.ifAutoScroll` ]({{site.info}}api/WebTwain_Viewer.html#ifautoscroll) | `IfAutoScroll` |
-| [ `Viewer.on("click", callback)` ]({{site.info}}api/WebTwain_Viewer.html#click) | `RegisterEvent("OnMouseClick", callback)` |
-| [ `Viewer.on("contextmenu", callback)` ]({{site.info}}api/WebTwain_Viewer.html#contextmenu) | `RegisterEvent("OnMouseRightClick", callback)` |
-| [ `Viewer.on("dblclick", callback)` ]({{site.info}}api/WebTwain_Viewer.html#dblclick) | `RegisterEvent("OnMouseDoubleClick", callback)` |
-| [ `Viewer.on("mousemove", callback)` ]({{site.info}}api/WebTwain_Viewer.html#mousemove) | `RegisterEvent("OnMouseMove", callback)` |
-| [ `Viewer.on("pageAreaSelected", callback)` ]({{site.info}}api/WebTwain_Viewer.html#pageareaselected) | `RegisterEvent("OnImageAreaSelected", callback)` |
-| [ `Viewer.on("pageAreaUnselected", callback)` ]({{site.info}}api/WebTwain_Viewer.html#pageareaunselected) | `RegisterEvent("OnImageAreaDeSelected", callback)` |
-| [ `Viewer.pageMargin` ]({{site.info}}api/WebTwain_Viewer.html#pagemargin) | `ImageMargin` |
-| [ `Viewer.selectedPageBorder` ]({{site.info}}api/WebTwain_Viewer.html#selectedpageborder) | `SelectionImageBorderColor` |
-| [ `Viewer.selectionRectAspectRatio` ]({{site.info}}api/WebTwain_Viewer.html#selectionrectaspectratio) | `SelectionRectAspectRatio` |
-| [ `Viewer.setSelectedAreas()` ]({{site.info}}api/WebTwain_Viewer.html#setselectedareas) | `SetSelectedImageArea()` |
-| [ `Viewer.showPageNumber` ]({{site.info}}api/WebTwain_Viewer.html#showpagenumber) | `ShowPageNumber` |
-| [ `Viewer.unbind()` ]({{site.info}}api/WebTwain_Viewer.html#unbind) | `UnbindView()` |
-| [ `Viewer.width` ]({{site.info}}api/WebTwain_Viewer.html#width) | `Width` |
-| [ `Viewer.zoom` ]({{site.info}}api/WebTwain_Viewer.html#zoom) | `Zoom` |
-| `ViewerEvent.imageX` | `MouseX` |
-| `ViewerEvent.imageY` | `MouseY` |
-
-> NOTE
->  
-> `ViewerEvent.imageX` and `ViewerEvent.imageY` are only available as the first argument in callback functions for the mouse events "click", "dblclick", "contextMenu" and "mousemove".
-
-* The following APIs are new in v16.2
-  + [ `Viewer.acceptDrop` ]({{site.info}}api/WebTwain_Viewer.html#acceptdrop)
-  + [ `Viewer.allowSlide` ]({{site.info}}api/WebTwain_Viewer.html#allowslide)
-  + [ `Viewer.clearSelectedAreas()` ]({{site.info}}api/WebTwain_Viewer.html#clearselectedareas)
-  + [ `Viewer.createThumbnailViewer()` ]({{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer)
-  + [ `Viewer.border` ]({{site.info}}api/WebTwain_Viewer.html#border)
-  + [ `Viewer.first()` ]({{site.info}}api/WebTwain_Viewer.html#first)
-  + [ `Viewer.getUISettings()` ]({{site.info}}api/WebTwain_Viewer.html#getuisettings)
-  + [ `Viewer.gotoPage()` ]({{site.info}}api/WebTwain_Viewer.html#gotopage)
-  + [ `Viewer.idPostfix` ]({{site.info}}api/WebTwain_Viewer.html#idpostfix)
-  + [ `Viewer.innerBorder` ]({{site.info}}api/WebTwain_Viewer.html#innerborder)
-  + [ `Viewer.last()` ]({{site.info}}api/WebTwain_Viewer.html#last)
-  + [ `Viewer.next()` ]({{site.info}}api/WebTwain_Viewer.html#next)
-  + [ `Viewer.on("pageRendered", callback)` ]({{site.info}}api/WebTwain_Viewer.html#pagerendered)
-  + [ `Viewer.on("resize", callback)` ]({{site.info}}api/WebTwain_Viewer.html#resize)
-  + [ `Viewer.previous()` ]({{site.info}}api/WebTwain_Viewer.html#previous)
-  + [ `Viewer.render()` ]({{site.info}}api/WebTwain_Viewer.html#render)
-  + [ `Viewer.resetUISettings()` ]({{site.info}}api/WebTwain_Viewer.html#resetuisettings)
-  + [ `Viewer.selectedAreaBorderColor` ]({{site.info}}api/WebTwain_Viewer.html#selectedareabordercolor)
-  + [ `Viewer.selectedPageBackground` ]({{site.info}}api/WebTwain_Viewer.html#selectedpagebackground)
-  + [ `Viewer.singlePageMode` ]({{site.info}}api/WebTwain_Viewer.html#singlepagemode)
-
-* The following APIs in v16.2 are improved based on old APIs in v16.1-.
-
-  + [`Viewer.setViewMode()`]({{site.info}}api/WebTwain_Viewer.html#setviewmode)
-
-    It also accepts the values "-1, -1" which is equivalent to setting `Viewer.singlePageMode` to `true` .
-
-  + [`Viewer.updateUISettings()`]({{site.info}}api/WebTwain_Viewer.html#updateuisettings)
-
-* The following APIs are also deprecated in v16.2
-
-  + `SetViewMode()`
-
-    Use Viewer.setViewMode() instead.
-
-* The following APIs from v16.1- are removed
-
-  + `Viewer.bOnlyShowThumbnailsView`
-  + `Viewer.cursorOverThumbnailsView`
-  + `Viewer.bindCustomElement()`
-  + `Viewer.showCustomElement()`
-  + `Viewer.hideCustomElement()`
-  + `Viewer.toggleCustomElement()`
-  + `Viewer.setSelectedImageArea()`
-  + `Viewer.zoomIn()`
-  + `Viewer.zoomOut()`
-
-* The following APIs in v16.1- are implemented differently in v16.2  
-  + `BindViewer()` with two parameters
-  + `UpdateViewer()`
-
-  The two methods above were used to set the size of the viewer or to show the thumbnail viewer. In v16, 2, different APIs are used as shown below:
-
-``` javascript
-  /* Set the size of the viewer */
-  DWObject.Viewer.height = 800;
-  DWObject.Viewer.width = 600;
-  /* Create a thumbnail viewer, note that this viewer can be hidden or disposed */
-  var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer(thumbnailViewerSettings);
-  objThumbnailViewer.show();
-  //objThumbnailViewer.hide();
-  //objThumbnailViewer.dispose();
-  /* updateViewMode() is used to change only the view mode of the thumbnail viewer */
-  objThumbnailViewer.updateViewMode(viewMode: ViewMode);
-  /* The following two are used to hook or unhook events to the thumbnail viewer */
-  objThumbnailViewer.on()
-  objThumbnailViewer.off()
-```
-
-  + `ShowImageEditor()`
-
-  While this method still works, it's deprecated and the alternative is shown in the code below
-
-``` javascript
-  /* The image editor is now created on the fly and can be hidden or disposed */
-  var objImageEditor = DWObject.Viewer.createImageEditor(editorSettings);
-  objImageEditor.show();
-  objImageEditor.hide();
-  objImageEditor.dispose();
-```
-
-  + `Viewer.bindCustomElement()`
-  + `Viewer.showCustomElement()`
-  + `Viewer.hideCustomElement()`
-  + `Viewer.toggleCustomElement()`
-
-  As already mentioned, these four methods are removed and the alternative implementation is shown in the code below
-
-``` javascript
-  var objCustomElement = DWObject.Viewer.createCustomElement(document.getElementById("divCustomElement"));
-  objCustomElement.show();
-  objCustomElement.hide();
-  objCustomElement.dispose();
-```

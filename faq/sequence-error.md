@@ -6,6 +6,7 @@ title: Sequence error
 keywords: Dynamic Web TWAIN, Error Troubleshooting, sequence
 breadcrumbText: Sequence error
 description: Sequence error
+permalink: /faq/sequence-error.html
 ---
 
 # Error Troubleshooting
