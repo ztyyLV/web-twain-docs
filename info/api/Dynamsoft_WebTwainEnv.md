@@ -327,6 +327,7 @@ interface DWTInitialConfig {
         Host ? : string,
         Port ? : string,
         PortSSL ? : string
+        UseLocalService ? : boolean
 }
 ```
 
