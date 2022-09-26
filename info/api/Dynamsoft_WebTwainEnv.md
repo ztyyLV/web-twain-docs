@@ -13,10 +13,6 @@ permalink: /info/api/Dynamsoft_WebTwainEnv.html
 
 ``` typescript
 interface Dynamsoft.DWT {
-    readonly licenseServer: string [];
-    readonly organizationID: string;
-    readonly handshakeCode: string;
-    readonly sessionPassword: string;
     readonly licenseException: string;
     
     readonly ActiveXVersion: string;
@@ -85,112 +81,6 @@ interface Dynamsoft.DWT {
     );
 
 ```
-
-## licenseServer
-
-**Syntax**
-
-``` typescript
-/**
- * Specify by URL the license server from where authorization is acquired at runtime.
- */
-licenseServer: string [];
-```
-
-**Example**
-``` javascript
-Dynamsoft.DWT.licenseServer = ["https://your.mainServer.com", "https://your.backupServer.com"];
-```
-
-**Usage notes**
-
-Gets or sets the URL of the License Tracking Server used to authenticate the license (handshakeCode) and track usage. When set to null (default value), it will connect to Dynamsoft's License Tracking Server for online verification. A self hosting option is available. Learn more about [License Tracking Server 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html). 
-
-
-## organizationID
-
-**Syntax**
-
-``` typescript
-/**
- * Get or set the organization ID. 
- */
-organizationID: string;
-```
-
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-</tr>
-
-<tr>
-<td align="center">not supported  </td>
-<td align="center">v17.1+ </td>
-<td align="center">v17.1+ </td>
-<td align="center">v17.1+ </td>
-<td align="center">v17.1+ </td>
-<td align="center">v17.1+ </td>
-</tr>
-
-</table>
-</div>
-
-
-**Example**
-``` javascript
-Dynamsoft.DWT.organizationID = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
-```
-
-**Usage notes**
-
-Check out more on [how to specify the Organization ID](https://www.dynamsoft.com/license-tracking/docs/common/mechanism.html#specify-the-organization-id)
-
-## handshakeCode
-
-**Syntax**
-
-``` typescript
-/**
- * Gets or sets the handshake code to interact with the license server(s).
- */
-handshakeCode: string;
-```
-
-**Example**
-``` javascript
-Dynamsoft.DWT.handshakeCode = "1000**601-1000***44";
-```
-
-**Usage notes**
-
-Learn more about [What is handshakeCode](https://www.dynamsoft.com/license-tracking/docs/about/terms.html#handshake-code)
-
-## sessionPassword
-
-**Syntax**
-
-``` typescript
-/**
- * Gets or sets the session password of the handshake code set in Dynamsoft License server.
- */
-handshakeCode: string;
-```
-
-**Example**
-``` javascript
-Dynamsoft.DWT.sessionPassword = "MyPassw0rd";
-```
-
-**Usage notes**
-Learn more about [session password](https://www.dynamsoft.com/license-tracking/docs/about/terms.html#session-password) in Dynamsoft License server.
 
 ## licenseException
 
