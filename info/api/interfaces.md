@@ -22,7 +22,7 @@ permalink: /info/api/interfaces.html
 
 ```typescript
 interface serviceInfo {
-   server: string,
+   server: string;
    attrs?: any
 }
 ```
