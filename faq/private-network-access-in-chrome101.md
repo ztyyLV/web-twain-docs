@@ -17,7 +17,7 @@ permalink: /faq/private-network-access-in-chrome101.html
 
 (REF: <a href="https://developer.chrome.com/blog/private-network-access-preflight/" target="_blank">https://developer.chrome.com/blog/private-network-access-preflight/</a>)
 
-<span style="background-color:#f9f2f4; color:#c7254e">September 27, 2022: Google has stated that the pre-flight changes will not occur sooner than Chrome version 109 which according to <a href="https://chromiumdash.appspot.com/schedule" target="_blank">google's release calendar</a> is scheduled for early 2023.</span>
+<span style="background-color:#f9f2f4; color:#c7254e">September 27, 2022: Google has stated that the pre-flight changes will not occur sooner than Chrome version 109, which according to <a href="https://chromiumdash.appspot.com/schedule" target="_blank">Google's release calendar</a>, is scheduled for early 2023.</span>
 
 <span style="background-color:#f9f2f4; color:#c7254e">July 7, 2022: Google has updated the timeline for this preflight request feature. The experiment is scheduled again for Chrome 104 and may be released in Chrome 107 at the earliest. Please refer to Google's update <a href="https://developer.chrome.com/blog/private-network-access-preflight/" target="_blank">here</a>.</span>
 
