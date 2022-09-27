@@ -327,7 +327,7 @@ A string indicating whether credentials will be sent with the request always, ne
  * @param serverUrl The URL of the proxy server: https(http)://domain_name:port (default: 443).
  * @param forceRefresh Default value: false.
  */
-FindDynamsoftServiceAsync(serverUrl: string， forceRefresh?: boolean): Promise<serviceInfo[]>;  
+FindDynamsoftServiceAsync(serverUrl: string, forceRefresh?: boolean): Promise<serviceInfo[]>;  
 ```
 
 **Example**
@@ -435,7 +435,7 @@ FindDevicesAsync(serverUrl?: string | serviceInfo, deviceTypeMask?: number, forc
 **Example**
 
 ```javascript
-Dynamsoft.DWT.FindDevicesAsync("https://s0000001.dynamsoftwebtwain.com:port"， 1).then((device[])=>{
+Dynamsoft.DWT.FindDevicesAsync("https://s0000001.dynamsoftwebtwain.com:port", 1).then((device[])=>{
    Dynamsoft.DWT.createDWObjectAsync(device[0].serviceInfo).then((dwt)=>{
       return dwt.AcquireImageAsync(deviceConfiguration, DWTObject).then(
           function(){dwt.dispose();}, function(dwt.dispose(); throw;););
@@ -450,7 +450,7 @@ or
 var DWObject;
 Dynamsoft.DWT.FindDynamsoftServiceAsync("https://s0000001.dynamsoftwebtwain.com:port")
 .then((serviceInfo[])=>{
-    return Dynamsft.DWT.FindDevicesAsync(serviceInfo[0]， 10);
+    return Dynamsft.DWT.FindDevicesAsync(serviceInfo[0], 10);
 }).then((device[])=>{
     return Dynamsoft.DWT.createDWObjectAsync(device[0].serviceInfo); 
 }).then((dwt)=>{

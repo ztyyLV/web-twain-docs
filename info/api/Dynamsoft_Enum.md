@@ -872,6 +872,7 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | SaveAndExit | 2 |
 
 ## `Dynamsoft.DWT.EnumDWT_DeviceType`
+
 | Label | Value|
 |:-|:-|
 | TWAINSCANNER | 0x10 |

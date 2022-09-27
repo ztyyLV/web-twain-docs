@@ -22,8 +22,8 @@ permalink: /info/api/interfaces.html
 
 ```typescript
 interface serviceInfo {
-    server: string,
-    attrs?: any
+   server: string,
+   attrs?: any
 }
 ```
 
@@ -59,17 +59,12 @@ interface serviceInfo {
 **Syntax**
 
 ```typescript
-interface serviceInfo {
-    server: string,
-    attrs?: any
-}
-
 interface Device{
-	name: string;
-	displayName: string;
-	deviceType: DeviceType;
-	serverInfo?: serverInfo;
-	deviceInfo?: any;
+   name: string;
+   displayName: string;
+   deviceType: DeviceType;
+   serverInfo?: serverInfo;
+   deviceInfo?: any;
 }
 ```
 
