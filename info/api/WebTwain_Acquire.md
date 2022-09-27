@@ -4686,11 +4686,6 @@ DWObject.setCapabilities(
 **Syntax**
 
 ```typescript
-//新增加的函数，得到source，用来代替原来的GetSourceNames 与GetSourceNamesAsync
-//得到的source 包含原来GetSourceNames 得到的source外，还需要得到eSCL 扫描仪
-//校验的license为:TWAIN 模块
-//该接口只支持H5
-
 /**
  * Return all available devices (scanners, eSCL scanners, etc.) for the device type (if specified)
  * @param deviceType the device type
@@ -4804,7 +4799,7 @@ AcquireImageAsync(deviceConfiguration?: DeviceConfiguration, sendTo?:DWObject). 
 **Example**
 
 ```javascript
-Dynamsoft.DWT.FindDevicesAsync("https://s0000001.dynamsoftwebtwain.com:port"， 1).then((device[])=>{
+Dynamsoft.DWT.FindDevicesAsync("https://s0000001.dynamsoftwebtwain.com:port", 1).then((device[])=>{
    Dynamsoft.DWT.createDWObjectAsync(device[0].serviceInfo).then((dwt)=>{
       return dwt.AcquireImageAsync(deviceConfiguration, DWTObject).then(
           function(){dwt.dispose();}, function(dwt.dispose(); throw;););
@@ -4858,7 +4853,7 @@ DeviceObject.acquireImage(deviceConfiguration?: DeviceConfiguration, sendTo?:DWO
 **Example**
 
 ```javascript
-Dynamsoft.DWT.FindDevicesAsync("https://s0000001.dynamsoftwebtwain.com:port"， 1).then((device[])=>{
+Dynamsoft.DWT.FindDevicesAsync("https://s0000001.dynamsoftwebtwain.com:port", 1).then((device[])=>{
    Dynamsoft.DWT.createDWObjectAsync(device[0].serviceInfo).then((dwt)=>{
       return dwt.AcquireImageAsync(deviceConfiguration, DWTObject).then(
           function(){dwt.dispose();}, function(dwt.dispose(); throw;););
