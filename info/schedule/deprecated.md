@@ -35,6 +35,16 @@ The prompts are one-time, once you accept the "risk", the software will install 
 
 The recommended fix is to patch the operating system, you can find the patch [here](http://www.catalog.update.microsoft.com/search.aspx?q=kb4474419).
 
+## 18.0
+
+### DWT
+
+> [Alternative] Use [Dynamsoft.DWT.ProductKey]({{site.info}}api/Dynamsoft_WebTwainEnv.html#productkey) instead.
+
+* Dynamsoft.DWT.licenseServer 
+* Dynamsoft.DWT.sessionPassword 
+* Dynamsoft.DWT.organizationID
+* Dynamsoft.DWT.handshakeCode
 
 ## 17.3
 
@@ -44,7 +54,7 @@ The recommended fix is to patch the operating system, you can find the patch [he
 
 ### Viewer
 
-> [Alternative] Use [updateCheckboxStyle]({{site.info}}api/api/WebTwain_Viewer.html#updatecheckboxstyle) and [updatePageNumberStyle]({{site.info}}api/WebTwain_Viewer.html#updatepagenumberstyle) instead.
+> [Alternative] Use [updateCheckboxStyle]({{site.info}}api/WebTwain_Viewer.html#updatecheckboxstyle) and [updatePageNumberStyle]({{site.info}}api/WebTwain_Viewer.html#updatepagenumberstyle) instead.
 
 * Viewer.showPageNumber
 * Viewer.showCheckbox

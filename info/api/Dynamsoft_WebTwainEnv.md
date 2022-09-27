@@ -13,10 +13,6 @@ permalink: /info/api/Dynamsoft_WebTwainEnv.html
 
 ``` typescript
 interface Dynamsoft.DWT {
-    readonly licenseServer: string [];
-    readonly organizationID: string;
-    readonly handshakeCode: string;
-    readonly sessionPassword: string;
     readonly licenseException: string;
     
     readonly ActiveXVersion: string;
@@ -73,124 +69,30 @@ interface Dynamsoft.DWT {
     OnWebTwainPreExecute: function () {};
     OnWebTwainReady: function () {};
     OnWebTwainWillInit: function () {};
+    FindDynamsoftServiceAsync(
+        serverUrl: string,
+        forceRefresh?: boolean
+    ): Promise<serviceInfo[]>;
+    CreateDWTObjectAsync(
+      serviceInfo: serviceInfo
+    ): Promise<DWOject>;    
+    FindDevicesAsync(
+      serverUrl?: string | serviceInfo,
+      deviceTypeMask?: number,
+      forceRefresh?: boolean
+    ): Promise<Device[]>;     
 }
 
-    /**
-     * Update and download cert to DynamsoftServicex64_17\cert 
-     */
-    UpdateCert(
-        url: string, // url to download the new certificate. 
-        optionalAsyncSuccessFunc?: function () {}, 
-        optionalAsyncFailureFunc?: function (errorCode: number, errorString: string) {}
-    );
-
-```
-
-## licenseServer
-
-**Syntax**
-
-``` typescript
 /**
- * Specify by URL the license server from where authorization is acquired at runtime.
+ * Update and download cert to DynamsoftServicex64_17\cert 
  */
-licenseServer: string [];
+UpdateCert(
+    url: string, // url to download the new certificate. 
+    optionalAsyncSuccessFunc?: function () {}, 
+    optionalAsyncFailureFunc?: function (errorCode: number, errorString: string) {}
+);
+
 ```
-
-**Example**
-``` javascript
-Dynamsoft.DWT.licenseServer = ["https://your.mainServer.com", "https://your.backupServer.com"];
-```
-
-**Usage notes**
-
-Gets or sets the URL of the License Tracking Server used to authenticate the license (handshakeCode) and track usage. When set to null (default value), it will connect to Dynamsoft's License Tracking Server for online verification. A self hosting option is available. Learn more about [License Tracking Server 2.0](https://www.dynamsoft.com/license-tracking/docs/about/index.html). 
-
-
-## organizationID
-
-**Syntax**
-
-``` typescript
-/**
- * Get or set the organization ID. 
- */
-organizationID: string;
-```
-
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-</tr>
-
-<tr>
-<td align="center">not supported  </td>
-<td align="center">v17.1+ </td>
-<td align="center">v17.1+ </td>
-<td align="center">v17.1+ </td>
-<td align="center">v17.1+ </td>
-<td align="center">v17.1+ </td>
-</tr>
-
-</table>
-</div>
-
-
-**Example**
-``` javascript
-Dynamsoft.DWT.organizationID = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
-```
-
-**Usage notes**
-
-Check out more on [how to specify the Organization ID](https://www.dynamsoft.com/license-tracking/docs/common/mechanism.html#specify-the-organization-id)
-
-## handshakeCode
-
-**Syntax**
-
-``` typescript
-/**
- * Gets or sets the handshake code to interact with the license server(s).
- */
-handshakeCode: string;
-```
-
-**Example**
-``` javascript
-Dynamsoft.DWT.handshakeCode = "1000**601-1000***44";
-```
-
-**Usage notes**
-
-Learn more about [What is handshakeCode](https://www.dynamsoft.com/license-tracking/docs/about/terms.html#handshake-code)
-
-## sessionPassword
-
-**Syntax**
-
-``` typescript
-/**
- * Gets or sets the session password of the handshake code set in Dynamsoft License server.
- */
-handshakeCode: string;
-```
-
-**Example**
-``` javascript
-Dynamsoft.DWT.sessionPassword = "MyPassw0rd";
-```
-
-**Usage notes**
-Learn more about [session password](https://www.dynamsoft.com/license-tracking/docs/about/terms.html#session-password) in Dynamsoft License server.
 
 ## licenseException
 
@@ -327,6 +229,7 @@ interface DWTInitialConfig {
         Host ? : string,
         Port ? : string,
         PortSSL ? : string
+        UseLocalService ? : boolean
 }
 ```
 
@@ -413,3 +316,170 @@ A string to indicate whether the request will use CORS, or will be restricted to
 * `credentials`
 
 A string indicating whether credentials will be sent with the request always, never, or only when sent to a same-origin URL. Sets request's credentials. Check out [RequestCredentials](https://microsoft.github.io/PowerBI-JavaScript/modules/_node_modules_typedoc_node_modules_typescript_lib_lib_dom_d_.html#requestcredentials).
+
+### `FindDynamsoftServiceAsync()`
+
+**Syntax**
+
+```typescript
+/**
+ * Bring up the Source Selection User Interface (UI) for the user to choose a data source.
+ * @param serverUrl The URL of the proxy server: https(http)://domain_name:port (default: 443).
+ * @param forceRefresh Default value: false.
+ */
+FindDynamsoftServiceAsync(serverUrl: string， forceRefresh?: boolean): Promise<serviceInfo[]>;  
+```
+
+**Example**
+
+```javascript
+  var DWObject;
+  Dynamsoft.DWT.FindDynamsoftServiceAsync("https://s0000001.dynamsoftwebtwain.com:port")
+  .then((serviceInfo[])=>{
+    return Dynamsoft.DWT.createDWObjectAsync(serviceInfo[0]);
+  .then((obj)=>{
+    DWObject = obj; 
+  }).catch((exp)=>{console.log(exp.message);});
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">not supported</td>
+</tr>
+
+</table>
+</div>
+
+
+### `CreateDWTObjectAsync()`
+
+**Syntax**
+
+```typescript
+/**
+ * Based on serviceInfo, return the exisitng DWObject if already exists, otherwise, create a new one.
+ * @param serviceInfo The service information.
+ */
+CreateDWTObjectAsync(serviceInfo: serviceInfo): Promise< DWOject>;
+```
+
+**Example**
+
+```javascript
+  var DWObject;
+  Dynamsoft.DWT.FindDynamsoftServiceAsync("https://s0000001.dynamsoftwebtwain.com:port")
+  .then((serviceInfo[])=>{
+    return Dynamsoft.DWT.createDWObjectAsync(serviceInfo[0]);
+  .then((obj)=>{
+    DWObject = obj; 
+  }).catch((exp)=>{console.log(exp.message);});
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">not supported</td>
+</tr>
+
+</table>
+</div>
+
+
+### `FindDevicesAsync()`
+
+**Syntax**
+
+```typescript
+/**
+ * Based on serviceInfo, return the exisitng DWObject if already exists, otherwise, create a new one.
+ * @param serverUrl The proxy server url or the serviceInfo. If empty, find local devices.
+ * @param deviceTypeMask The enumeration value to filter scanners. Default: all values.
+ * @param forceRefresh Default value: false.
+ */
+FindDevicesAsync(serverUrl?: string | serviceInfo, deviceTypeMask?: number, forceRefresh?: boolean): Promise< Device[]>;
+```
+
+**Example**
+
+```javascript
+Dynamsoft.DWT.FindDevicesAsync("https://s0000001.dynamsoftwebtwain.com:port"， 1).then((device[])=>{
+   Dynamsoft.DWT.createDWObjectAsync(device[0].serviceInfo).then((dwt)=>{
+      return dwt.AcquireImageAsync(deviceConfiguration, DWTObject).then(
+          function(){dwt.dispose();}, function(dwt.dispose(); throw;););
+  }).catch((exp) => {console.log(exp.message);
+      //eSCL scanners
+     return device[0].acquireImage(deviceConfiguration, DWTObject);
+  });
+}).catch((exp) => {console.log(exp.message);});
+```
+or
+```javascript
+var DWObject;
+Dynamsoft.DWT.FindDynamsoftServiceAsync("https://s0000001.dynamsoftwebtwain.com:port")
+.then((serviceInfo[])=>{
+    return Dynamsft.DWT.FindDevicesAsync(serviceInfo[0]， 10);
+}).then((device[])=>{
+    return Dynamsoft.DWT.createDWObjectAsync(device[0].serviceInfo); 
+}).then((dwt)=>{
+     dwt.AcquireImageAsync(deviceConfiguration?: DeviceConfiguration, DWTObject:DWObject)
+     .then(function(){dwt.dispose();}, function(dwt.dispose(); throw;););
+}).catch((exp) =>{ console.log(exp.message);});
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">not supported</td>
+</tr>
+
+</table>
+</div>
