@@ -346,9 +346,9 @@ FilterImagesByTag(tag: string): boolean;
 
 ```typescript
 /**
- * Stop filtering images by tag.
+ * Stop filtering images by tag. Return an array of UUID of images under the viewer.
  */
-ClearFilter(): boolean;
+ClearFilter(): number[];
 ```
 
 **Availability**
