@@ -102,7 +102,7 @@ import { WebTwain } from 'dwt/dist/types/WebTwain';
 ```
 
 ``` typescript
-DWObject: WebTwain = null;
+DWObject: WebTwain | any = null;
 Dynamsoft_OnReady() {
     this.DWObject = Dynamsoft.DWT.GetWebTwain(this.containerId);
 }
