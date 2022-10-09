@@ -865,11 +865,11 @@ interface CropViewer {
 
 <tr>
 <td align="center">not supported</td>
-<td align="center">v17.3+</td>
-<td align="center">v17.3+</td>
-<td align="center">v17.3+</td>
-<td align="center">v17.3+</td>
-<td align="center">v17.3+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
 </tr>
 
 </table>
