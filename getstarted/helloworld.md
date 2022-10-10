@@ -10,7 +10,7 @@ permalink: /getstarted/helloworld.html
 
 # Build the HelloWorld Page
 
-> Before you start, please make sure you’ve downloaded and installed the latest version of `DWT`. If you haven’t done so, you can get the 30-day free trial installer [here](https://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx).
+> Before you start, please make sure you’ve downloaded and installed the latest version of `Dynamic Web TWAIN`. If you haven’t done so, you can get the 30-day free trial installer [here](https://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx).
 
 The following steps show you how to create your first web-based scanning application in a few minutes!
 

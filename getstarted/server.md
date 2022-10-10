@@ -10,7 +10,7 @@ permalink: /indepth/deployment/server.html
 
 # Deploy your application on the server
 
-Once you have finished integrating `DWT` in your application, you can deploy it on your server to test it. As far as `DWT` is concerned, all related files are to be served as static files which makes the deployment very easy.
+Once you have finished integrating `Dynamic Web TWAIN` in your application, you can deploy it on your server to test it. As far as `Dynamic Web TWAIN` is concerned, all related files are to be served as static files which makes the deployment very easy.
 
 ## How-to
 
@@ -25,7 +25,7 @@ The deployment of Dynamic Web TWAIN is easy. Simply copy the Resources folder to
 
 ### Make sure the static files can be served correctly
 
-`DWT` comes with lots of static resources files, for the full list, check out [What are the Resources files]({{site.faq}}what-are-the-resources-files.html). The following table shows each file type and its MIME type which must be configured in your webserver in order for that type of file(s) to be correctly served to the client browsers.
+`Dynamic Web TWAIN` comes with lots of static resources files, for the full list, check out [What are the Resources files]({{site.faq}}what-are-the-resources-files.html). The following table shows each file type and its MIME type which must be configured in your webserver in order for that type of file(s) to be correctly served to the client browsers.
 
 | File Type | MIME Type | Required by |
 |:-:|:-:|:-:|
@@ -49,7 +49,7 @@ For how to enable HTTPS, please check out the manual of your webserver.
 
 ### Set ResourcesPath
 
-The global API [ `Dynamsoft.DWT.ResourcesPath` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#resourcespath) sets a relative or absolute path that tells `DWT` where to look for the resources files at runtime. Its default value is `Resources` which means all these files are put in a directory called *Resources* that is in the same location as the web page on which `DWT` is running. This is the simplest situation possible, in most cases, it's a lot more complicated and you must make sure the correct value is set.
+The global API [ `Dynamsoft.DWT.ResourcesPath` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#resourcespath) sets a relative or absolute path that tells `Dynamic Web TWAIN` where to look for the resources files at runtime. Its default value is `Resources` which means all these files are put in a directory called *Resources* that is in the same location as the web page on which `Dynamic Web TWAIN` is running. This is the simplest situation possible, in most cases, it's a lot more complicated and you must make sure the correct value is set.
 
 #### How to know ResourcesPath is wrong
 

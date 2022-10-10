@@ -10,7 +10,7 @@ permalink: /indepth/features/input.html
 
 # Input
 
-This section introduces different ways to get data into the `DWT` buffer.
+This section introduces different ways to get data into the `Dynamic Web TWAIN` buffer.
 
 ## Scanners
 
@@ -20,7 +20,7 @@ This section introduces different ways to get data into the `DWT` buffer.
 
 A local scanner refers to a scanner that is plugged in the same desktop via USB or is available on the local network and is accessible on the local desktop. The latter is generally known as a network scanner. A network scanner is connected to the LAN itself (cable or WI-FI) and is assigned a static IP. The scanner driver from the device vendor then configures the IP to connect to the scanner.
 
-> As far as `DWT` is concerned, a network scanner is just like a local scanner because its driver has taken care of the network connection behind the scene.
+> As far as `Dynamic Web TWAIN` is concerned, a network scanner is just like a local scanner because its driver has taken care of the network connection behind the scene.
 
 ### Scan From a Remote Scanner
 
@@ -29,7 +29,7 @@ A local scanner refers to a scanner that is plugged in the same desktop via USB 
 A remote scanner refers to a scanner that is.
 
 * Not connected to the initiating device
-* Connected and accessible on a `Windows` desktop on LAN (USB or network) where `DWT` must be installed
+* Connected and accessible on a `Windows` desktop on LAN (USB or network) where `Dynamic Web TWAIN` must be installed
 
 For more information, check out <a href="{{site.faq}}how-to-enable-remote-scan.html" target="_blank">how to enable remote scan</a>.
 
@@ -161,7 +161,7 @@ function CaptureImage() {
 
 Load in this context means to open files which are accessible on the file system. These files can reside on the local disk or shared on the network.
 
-> As a lightweight library, `DWT` only supports the following file types: BMP, JPG, TIF, PNG, and PDF. However, not all files of these types can be loaded correctly. Learn more [here]({{site.getstarted}}Filetype.html). If you come across a file that is of one of the supported file types but fails to load, please contact [Dynamsoft Support]({{site.about}}getsupport.html).
+> As a lightweight library, `Dynamic Web TWAIN` only supports the following file types: BMP, JPG, TIF, PNG, and PDF. However, not all files of these types can be loaded correctly. Learn more [here]({{site.getstarted}}Filetype.html). If you come across a file that is of one of the supported file types but fails to load, please contact [Dynamsoft Support]({{site.about}}getsupport.html).
 
 ### [Recommended] Show the `Open File` dialog and select files to load.
 
@@ -214,7 +214,7 @@ DWObject.LoadImage("YOUR-FILE-PATH", onSuccess, onFailure);
 
 ### Download
 
-> `Download` is another type of `Load`. The only difference between a `Download` with what's written above is that the file to load needs to be transferred to the local device via the network first. `DWT` takes care of the whole process and supports both `HTTP` and `FTP`.
+> `Download` is another type of `Load`. The only difference between a `Download` with what's written above is that the file to load needs to be transferred to the local device via the network first. `Dynamic Web TWAIN` takes care of the whole process and supports both `HTTP` and `FTP`.
 
 #### `HTTP` or `HTTPS`
 
@@ -310,7 +310,7 @@ DWObject.FTPDownloadEx("192.168.8.20", "/files/sample.pdf", Dynamsoft.DWT.EnumDW
 
 > Supported on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and [mobile]({{site.getstarted}}platform.html#browsers-on-mobile-devices) platforms.
 
-`DWT` is capable of reading files in binary or base64 string format.
+`Dynamic Web TWAIN` is capable of reading files in binary or base64 string format.
 
 ``` javascript
 var onSuccess = function() {

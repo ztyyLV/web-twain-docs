@@ -16,7 +16,7 @@ permalink: /indepth/development/activex.html
 
 ## DWT & ActiveX
 
-Although `DWT` is built upon modern technologies like `WebSocket` , `HTML5` , `WebAssemby` , it was born as one of many ActiveX controls in 2003. The ActiveX edition of `DWT` continued to dominate for 11 years. ActveX is still part of `DWT` though only used by a small number of customers who want to stick with IE 8 or 9.
+Although `Dynamic Web TWAIN` is built upon modern technologies like `WebSocket` , `HTML5` , `WebAssemby` , it was born as one of many ActiveX controls in 2003. The ActiveX edition of `Dynamic Web TWAIN` continued to dominate for 11 years. ActveX is still part of `Dynamic Web TWAIN` though only used by a small number of customers who want to stick with IE 8 or 9.
 
 ## The Future of ActiveX
 
@@ -28,18 +28,18 @@ The fate of the ActiveX framework depends on the fate of IE 11. As long as IE 11
 
 ## The Future of ActiveX Edition in DWT
 
-Dynamsoft has a substantial customer base and their benefits are our biggest concern. While most of our customers have opted to use the modern browsers like Chrome, Firefox or Safari, a few of them must use IE 8 or 9 of which most cases are imitated by IE 11. In these cases, only the ActiveX edition of `DWT` can be used. Dynamsoft has kept its support of the ActiveX edition as part of the Windows edition until now and will continue to do so as long as IE continues to be supported by Microsoft.
+Dynamsoft has a substantial customer base and their benefits are our biggest concern. While most of our customers have opted to use the modern browsers like Chrome, Firefox or Safari, a few of them must use IE 8 or 9 of which most cases are imitated by IE 11. In these cases, only the ActiveX edition of `Dynamic Web TWAIN` can be used. Dynamsoft has kept its support of the ActiveX edition as part of the Windows edition until now and will continue to do so as long as IE continues to be supported by Microsoft.
 
-Simultaneously, the ActiveX edition of `DWT` will also be slowly phased out by Dynamsoft, just like IE by Microsoft. On the one hand, IE is reaching its end of life. On the other hand, outdated technologies are incompatible with updated Web standards, which hinders `DWT` development.
+Simultaneously, the ActiveX edition of `Dynamic Web TWAIN` will also be slowly phased out by Dynamsoft, just like IE by Microsoft. On the one hand, IE is reaching its end of life. On the other hand, outdated technologies are incompatible with updated Web standards, which hinders `Dynamic Web TWAIN` development.
 
-If you check our [release notes]({{site.info}}schedule/stable.html), you can find that most of our development has been done to the HTML5-based editions of `DWT` . For ActiveX, the strategy is as follows:
+If you check our [release notes]({{site.info}}schedule/stable.html), you can find that most of our development has been done to the HTML5-based editions of `Dynamic Web TWAIN` . For ActiveX, the strategy is as follows:
 
 * It'll continue to be a part of the Windows edition
 * No new features will be added
 * If a major bug is found, Dynamsoft will fix it
 * If there is a major feature conflict between two editions, the preference is to upgrade the ActiveX version or tag its behaviour as deprecated
 
-We encourage customers who are still using the ActiveX edition of `DWT` to consider moving to another edition as soon as possible.
+We encourage customers who are still using the ActiveX edition of `Dynamic Web TWAIN` to consider moving to another edition as soon as possible.
 
 ## Move away from ActiveX
 
