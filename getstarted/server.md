@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Deployment - Server Deployment
+title: Dynamic Web TWAIN SDK Deployment - Server Deployment
 keywords: Dynamic Web TWAIN, Documentation, Deployment, Server
 breadcrumbText: Server Deployment
 description: Dynamic Web TWAIN SDK Documentation Server Deployment Page

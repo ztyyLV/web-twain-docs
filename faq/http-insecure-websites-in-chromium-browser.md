@@ -2,7 +2,7 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: How to resolve Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94+
+title: How to resolve Dynamic Web TWAIN SDK doesn't work on insecure public websites in Chrome v94+
 keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, Chrome 94 issue, HTTP website, Edge 94 issue
 breadcrumbText: How to resolve if Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94+
 description: How to resolve if Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94+

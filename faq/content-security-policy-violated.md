@@ -2,7 +2,7 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN – Content-Security-Policy violated
+title: Dynamic Web TWAIN SDK – Content-Security-Policy violated
 keywords: Dynamic Web TWAIN, Content-Security-Policy
 breadcrumbText: Dynamic Web TWAIN – Content-Security-Policy violated
 description: Dynamic Web TWAIN – Content-Security-Policy violated

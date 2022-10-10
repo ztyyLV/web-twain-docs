@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN API Reference - Webcam Addon APIs
+title: Dynamic Web TWAIN SDK API Reference - Webcam Addon APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Webcam Addon APIs
 breadcrumbText: Webcam Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference Webcam Addon APIs Page

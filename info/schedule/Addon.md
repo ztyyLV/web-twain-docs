@@ -2,7 +2,7 @@
 layout: default-layout
 needAutoGenerateSidebar: true
 noTitleIndex: true
-title: Dynamic Web TWAIN Schedule - Addon Release
+title: Dynamic Web TWAIN SDK Schedule - Addon Release
 keywords: Dynamic Web TWAIN, Documentation, Schedule, Addon Release
 breadcrumbText: Addons
 description: Dynamic Web TWAIN SDK Documentation Schedule - Addon Release Page

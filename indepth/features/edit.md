@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Features - Edit
+title: Dynamic Web TWAIN SDK Features - Edit
 keywords: Dynamic Web TWAIN, Documentation, Edit
 breadcrumbText: Edit
 description: Dynamic Web TWAIN SDK Documentation Edit Page

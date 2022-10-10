@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Development - Professional Service
+title: Dynamic Web TWAIN SDK Development - Professional Service
 keywords: Dynamic Web TWAIN, Documentation, Development, Professional Service
 breadcrumbText: Professional Service
 description: Dynamic Web TWAIN SDK Documentation Professional Service Page

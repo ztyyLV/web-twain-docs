@@ -2,7 +2,7 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Can I use two different websites integrated with two different versions of Dynamic Web TWAIN on the same computer?
+title: Can I use two different websites integrated with two different versions of Dynamic Web TWAIN SDK on the same computer?
 keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, backward compatibility, two different versions
 breadcrumbText: Can I use two different websites integrated with two different versions of Dynamic Web TWAIN on the same computer?
 description: Can I use two different websites integrated with two different versions of Dynamic Web TWAIN on the same computer?

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN File Types
+title: Dynamic Web TWAIN SDK File Types
 keywords: Dynamic Web TWAIN, Documentation, File Types
 breadcrumbText: File Types
 description: Dynamic Web TWAIN SDK Documentation File Types Page

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Development - About AcitveX
+title: Dynamic Web TWAIN SDK Development - About AcitveX
 keywords: Dynamic Web TWAIN, Documentation, Development, About AcitveX
 breadcrumbText: About AcitveX
 description: Dynamic Web TWAIN SDK Documentation About AcitveX Page

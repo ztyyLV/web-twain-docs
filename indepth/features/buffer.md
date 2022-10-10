@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Features - Buffer
+title: Dynamic Web TWAIN SDK Features - Buffer
 keywords: Dynamic Web TWAIN, Documentation, Buffer
 breadcrumbText: Buffer
 description: Dynamic Web TWAIN SDK Documentation Buffer Page

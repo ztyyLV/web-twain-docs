@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Development - Server Scripts
+title: Dynamic Web TWAIN SDK Development - Server Scripts
 keywords: Dynamic Web TWAIN, Documentation, Development, Server Scripts
 breadcrumbText: Server Scripts
 description: Dynamic Web TWAIN SDK Documentation Server Scripts Page

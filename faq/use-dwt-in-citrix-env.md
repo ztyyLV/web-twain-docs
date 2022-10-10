@@ -2,7 +2,7 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: How can I use Dynamic Web TWAIN in a Citrix environment?
+title: How can I use Dynamic Web TWAIN SDK in a Citrix environment?
 keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, citrix
 breadcrumbText: How can I use Dynamic Web TWAIN in a Citrix environment?
 description: How can I use Dynamic Web TWAIN in a Citrix environment?

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Features - OCR
+title: Dynamic Web TWAIN SDK Features - OCR
 keywords: Dynamic Web TWAIN, Documentation, OCR
 breadcrumbText: OCR
 description: Dynamic Web TWAIN SDK Documentation OCR Page

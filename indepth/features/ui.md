@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Features - UI Elements
+title: Dynamic Web TWAIN SDK Features - UI Elements
 keywords: Dynamic Web TWAIN, Documentation, UI
 breadcrumbText: UI
 description: Dynamic Web TWAIN SDK Documentation UI Page

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Support
+title: Dynamic Web TWAIN SDK Support
 keywords: Dynamic Web TWAIN, Documentation, Support
 breadcrumbText: Support
 description: Dynamic Web TWAIN SDK Documentation Support Page

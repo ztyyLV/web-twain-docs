@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Development - Angular Integration
+title: Dynamic Web TWAIN SDK Development - Angular Integration
 keywords: Dynamic Web TWAIN, Documentation, Development, Angular Integration
 breadcrumbText: Angular Integration
 description: Dynamic Web TWAIN SDK Documentation Angular Integration Page

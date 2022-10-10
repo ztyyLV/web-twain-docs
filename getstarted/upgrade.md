@@ -2,7 +2,7 @@
 layout: default-layout
 needAutoGenerateSidebar: true
 noTitleIndex: true
-title: Dynamic Web TWAIN Development - Upgrade Guide
+title: Dynamic Web TWAIN SDK Development - Upgrade Guide
 keywords: Dynamic Web TWAIN, Documentation, Development, Upgrade Guide
 breadcrumbText: Upgrade Guide
 description: Dynamic Web TWAIN SDK Documentation Upgrade Guide Page

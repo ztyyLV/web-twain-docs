@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN API Reference - Buffer APIs
+title: Dynamic Web TWAIN SDK API Reference - Buffer APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Buffer APIs
 breadcrumbText: Buffer
 description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page

@@ -2,7 +2,7 @@
 layout: default-layout
 needAutoGenerateSidebar: true
 noTitleIndex: true
-title: Dynamic Web TWAIN Deployment - Dynamsoft Service
+title: Dynamic Web TWAIN SDK Deployment - Dynamsoft Service
 keywords: Dynamic Web TWAIN, Documentation, Deployment, Dynamsoft Service
 breadcrumbText: Dynamsoft Service
 description: Dynamic Web TWAIN SDK Documentation Dynamsoft Service Page

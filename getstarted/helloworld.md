@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Hello World
+title: Dynamic Web TWAIN SDK Hello World
 keywords: Dynamic Web TWAIN, Documentation, Hello World
 breadcrumbText: Hello World
 description: Dynamic Web TWAIN SDK Documentation Hello World Page

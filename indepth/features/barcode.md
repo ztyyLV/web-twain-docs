@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Features - Read Barcode
+title: Dynamic Web TWAIN SDK Features - Read Barcode
 keywords: Dynamic Web TWAIN, Documentation, Read Barcode
 breadcrumbText: Read Barcode
 description: Dynamic Web TWAIN SDK Documentation Read Barcode Page

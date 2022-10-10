@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Features - Viewer
+title: Dynamic Web TWAIN SDK Features - Viewer
 keywords: Dynamic Web TWAIN, Documentation, Viewer
 breadcrumbText: Viewer
 description: Dynamic Web TWAIN SDK Documentation Viewer Page
