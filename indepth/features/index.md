@@ -8,7 +8,7 @@ description: Dynamic Web TWAIN SDK Documentation Features Index Page
 permalink: /indepth/features/
 ---
 
-# Using DWT
+# Using Dynamic Web TWAIN
 
 This section covers how to implement the key capabilities of Dynamic Web TWAIN (DWT):
 

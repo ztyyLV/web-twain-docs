@@ -38,7 +38,7 @@ The recommended fix is to patch the operating system, you can find the patch [he
 
 ## 17.3
 
-### DWT
+### Dynamic Web TWAIN
 
 * Deleted property: Dynamsoft.DWT.UseDefaultInstallUI
 
