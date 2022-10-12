@@ -650,7 +650,7 @@ OpenSourceAsync(): Promise<boolean>;
  * Return all available data sources (scanners, etc.) and optionally all detailed information about them.
  * @param bIncludeDetails Whether to return more details about the data sources or just their names.
  */
-GetSourceNames(bIncludeDetails: boolean): string[] | ISourceDetails[];
+GetSourceNames(bIncludeDetails: boolean): string[] | SourceDetails[];
 
 interface SourceDetails {
     /**

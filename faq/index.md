@@ -353,6 +353,8 @@ permalink: /faq/
 <li><a href="{{site.faq}}failed-to-load-resource.html">Error Message - Failed to load resource: net::ERR_CERT_DATE_INVALID</a>  </li>
  
 <li><a href="{{site.faq}}connection-from-the-insecure-HTTP-to-service-failed.html">Error Message - The connection from the insecure (HTTP) web page to the local 'Dynamsoft Service' failed</a></li>
+
+<li><a href="{{site.faq}}source-has-nothing-to-capture.html">Error Message - Source has nothing to capture</a></li>
  </ol>
 
 ## Licensing and Purchase
