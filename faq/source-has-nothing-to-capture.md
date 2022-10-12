@@ -15,12 +15,12 @@ permalink: /faq/source-has-nothing-to-capture.html
 
 ### Symptom
 
-For Linux client, if they called ErrorCode or ErrorString after scanning, it might show the error "Source has nothing to capture".
+For Linux client OS, if ErrorCode or ErrorString is called after scanning, it returns the error code "1029" or string "Source has nothing to capture". Though the error appears, the scanning process has finished successfully.
 
-### Workaround
+### Solution
 
-Though the error message shows "source has nothing to capture", but the scanning process has finished successfully. Please note, the error message will not affect the process, you can continue to use scanning feature. It's a known issue and currently there is no solution for that.
+It's a known issue in Linux OS. Since this error will not affect the scanning process, no further action required. 
 
 ### Planning
 
-The issue will be fixed in the V18.
+The issue is planned to be fixed in version 18.0.
