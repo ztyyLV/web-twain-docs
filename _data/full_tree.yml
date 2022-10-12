@@ -37,14 +37,6 @@ tree_list:
         path: /getstarted/helloworld.html
         startVersion:
         endVersion: 
-      - name: Deploy to Server
-        path: /indepth/deployment/server.html
-        startVersion:
-        endVersion:
-      - name: Set up Dynamsoft Service 
-        path: /indepth/deployment/service.html
-        startVersion:
-        endVersion:
       - name: Use Web TWAIN in Angular
         path: /indepth/development/angular.html
         startVersion:
@@ -57,6 +49,14 @@ tree_list:
         path: /indepth/development/vue.html
         startVersion:
         endVersion: 
+      - name: Deploy to Server
+        path: /indepth/deployment/server.html
+        startVersion:
+        endVersion:
+      - name: Set up Dynamsoft Service 
+        path: /indepth/deployment/service.html
+        startVersion:
+        endVersion:
       - name: How to Upgrade
         path: /indepth/development/upgrade.html
         startVersion:
