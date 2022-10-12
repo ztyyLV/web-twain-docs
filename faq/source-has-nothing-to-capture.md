@@ -19,7 +19,7 @@ For Linux client OS, if ErrorCode or ErrorString is called after scanning, it re
 
 ### Solution
 
-It's a known issue in Linux OS. Since this error will not affect the scanning process, no further action required. 
+It's a known issue in Linux OS. Since this error will not affect the scanning process, no further action is required. 
 
 ### Planning
 
