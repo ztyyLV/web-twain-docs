@@ -49,21 +49,26 @@ For how to enable HTTPS, please check out the manual of your webserver.
 
 ### Set ResourcesPath
 
-The global API [ `Dynamsoft.DWT.ResourcesPath` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#resourcespath) sets a relative or absolute path that tells `Dynamic Web TWAIN` where to look for the resources files at runtime. Its default value is `Resources` which means all these files are put in a directory called *Resources* that is in the same location as the web page on which `Dynamic Web TWAIN` is running. This is the simplest situation possible, in most cases, it's a lot more complicated and you must make sure the correct value is set.
+The global API [ `Dynamsoft.DWT.ResourcesPath` ]({{site.info}}api/Dynamsoft_WebTwainEnv.html#resourcespath) sets a relative or absolute path that tells `Dynamic Web TWAIN` where to look for the resources files at runtime. Its default value is `Resources` which means all these files are put in a directory called *Resources* that is in the same location as the web page on which `Dynamic Web TWAIN` is running. This is the simplest situation possible. However, in most cases, it's a lot more complicated and you must make sure the correct value is set.
 
 #### How to know ResourcesPath is wrong
 
 When you set `ResourcesPath` wrong, static files such as `dynamsoft.webtwain.install.js` , `dynamsoft.viewer.css` will fail to load and you see 404 errors in the browser console.
 
-#### Using an absolute path
+#### Change ResourcePath using an absolute path
 
-If you wish to use an absolute path instead, such as "https://www.dynamsoft.com/dwt/demo/resources/", this is supported. 
+If you wish to use an absolute path to include the library, this is supported.
+
+``` html
+<script src="https://www.dynamsoft.com/dwt/demo/Resources/dynamsoft.webtwain.initiate.js"></script>
+<script src="https://www.dynamsoft.com/dwt/demo/Resources/dynamsoft.webtwain.config.js"></script>
+```
 
 > Note: If you want to use the [Camera module]({{site.indepth}}features/Input.html#use-mediadevices-cameras), please make sure the absolute path stays in the same domain to avoid cross-origin issues.
 
-#### Setting ResourcePath using global API
+#### Change ResourcePath using a relative path
 
-If you do not wish to add an absolute path, you can add codes before you define the `DWObject`. Learn more on how to [change the reference path]({{site.faq}}change-reference-path.html)
+If you do not wish to use an absolute path, learn more on how to [change the reference path]({{site.faq}}change-reference-path.html).
 
 ```javascript
 Dynamsoft.DWT.ResourcesPath = "New folder/Resources";
