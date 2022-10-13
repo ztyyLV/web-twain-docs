@@ -2208,7 +2208,7 @@ If it's set to `false` , the images will be inserted before the current image. T
 ```
 
 /**
- * Return or set whether to close the data source after all images have been acquired.
+ * Return or set whether to close the built-in User Interface after all images have been acquired.
  */
 IfDisableSourceAfterAcquire: boolean;
 ```
