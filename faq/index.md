@@ -356,7 +356,7 @@ permalink: /faq/
 
 <li><a href="{{site.faq}}source-has-nothing-to-capture.html">Error Message - Source has nothing to capture</a></li>
 
-<li><a href="{{site.faq}}chrome-106-107-warning.html">Error Message - Warning in Chrome 107(developer version) & 106 (official version)</a></li>
+<li><a href="{{site.faq}}chrome-106-107-warning.html">Warning Message - Warning in Chrome 107(developer version) & 106 (official version)</a></li>
  </ol>
 
 ## Licensing and Purchase
