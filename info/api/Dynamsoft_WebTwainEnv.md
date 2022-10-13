@@ -227,7 +227,6 @@ interface Container {
 `Width` and `Height` determine the initial viewer size of the instance.
 
 ### `IfAddMD5InUploadHeader`
-
   
 Whether or not an md5 header `dwt-md5` should be included in HTTP upload requests. Note that this header is not a standard header and may be deemed invalid on some web servers.
   
@@ -235,21 +234,23 @@ The default value is `false` .
 
 ### `ProductKey`
 
+Sets or returns the product key for the library. A product key is required to enables certain modules of the library.
   
-  Sets or returns the product key for the library. A product key is required to enables certain modules of the library.
-  
-
 ### `ResourcesPath`
 
+Sets or returns where the library looks for resources files including service installers, CSS, etc.
   
-  Sets or returns where the library looks for resources files including service installers, CSS, etc.
-  
-
 ### `UseLocalService`
 
-  Sets or returns whether to use the service or use WASM only. This property can be changed at runtime (but not recommended) and affects `WebTwain` instances created after the change.
+Sets or returns whether to use the service or use WASM only. This property can be changed at runtime (but not recommended) and affects `WebTwain` instances created after the change.
 
-  The default value is `true` .
+The default value is `true` .
+  
+### `UseCameraAddonWasm`
+
+Whether to use camera wasm. Set this property to true if you want to use camera wasm in service mode.
+
+The default value is false. 
 
 ## Functions
 
