@@ -222,7 +222,7 @@ LoadImageEx(
 
 **Usage notes**
 
-On mobile devices, `Dynamsoft.DWT.EnumDWT_ImageType.IT_All` means "JPG, PNG, TIF" while it means "BMP, JPG, PNG, TIF, PDF" on desktop.
+On mobile devices, `Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL` means "JPG, PNG, TIF" while it means "BMP, JPG, PNG, TIF, PDF" on desktop.
 
 **Example**
 
