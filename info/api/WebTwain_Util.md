@@ -326,8 +326,7 @@ readonly ErrorCode: number;
 </tr>
 
 </table>
-</
-v>
+</div>
 
 **Usage notes**
 
