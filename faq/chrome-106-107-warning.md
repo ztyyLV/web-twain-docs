@@ -21,4 +21,4 @@ Canvas2D: Multiple readback operations using getImageData are faster with the wi
 
 ### Solution
 
-This will be fix on official release v18. Online demo had already fix this warning. Please contact us if you would like eliminate this.
+It will be fixed in official release v18. Online demo had already fixed this warning. Please contact us if you would like to eliminate this.
