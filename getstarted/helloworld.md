@@ -119,7 +119,7 @@ Add a scan button and the minimum code.
 
   ![Build-the-Hello-World-Scan-Page-4]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-4.png)
 
-  > Only TWAIN / ICA / SANE compliant devices are listed in the Select Source dialog. If your connected scanner doesn't show up in the list, please make sure the proper driver is installed. If you are using Windows and don’t have a real scanner at hand, you may install the [Virtual Scanner](https://download.dynamsoft.com/TWAIN/twainds.win32.installer.2.1.3.msi) – a scanner simulator which is developed by the [TWAIN Working Group](https://www.twain.org/) for testing purposes.
+  > Only TWAIN / ICA / SANE compliant devices are listed in the Select Source dialog. If your connected scanner doesn't show up in the list, please make sure the proper driver is installed. If you are using Windows and don’t have a real scanner at hand, you may install the [Virtual Scanner](https://www.dynamsoft.com/web-twain/docs/faq/download-virtual-scanner-for-testing.html) – a scanner simulator which is developed by the [TWAIN Working Group](https://www.twain.org/) for testing purposes.
 
 * After scan
 
