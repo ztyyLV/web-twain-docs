@@ -9,9 +9,10 @@ description: Can I install Dynamsoft Service silently?
 permalink: /faq/can-i-install-dynamsoft-service-silently.html
 ---
 
-# Project Deployment and End-user Installation
+View all FAQs about [Project Deployment and End-user Installation](
+https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-installation)
 
-## Can I install Dynamsoft Service silently? 
+# Can I install Dynamsoft Service silently? 
 
 Yes. The following are the commands for this purpose
 

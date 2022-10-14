@@ -9,9 +9,10 @@ description: How to resolve if Dynamic Web TWAIN doesn't work on insecure public
 permalink: /faq/http-insecure-websites-in-chromium-browser.html
 ---
 
-# Project Deployment and End-user Installation
+View all FAQs about [Project Deployment and End-user Installation](
+https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-installation)
 
-## Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94+
+# Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94+
 
 ### Symptom
 

@@ -8,6 +8,8 @@ breadcrumbText: How can I change the reference path to the Dynamsoft’s resourc
 description: How can I change the reference path to the Dynamsoft’s resources in my project?
 permalink: /faq/change-reference-path.html
 ---
+View all FAQs about [Project Deployment and End-user Installation](
+https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-installation)
 
 # How can I change the reference path to the Dynamsoft’s resources in my project?
 

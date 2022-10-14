@@ -9,9 +9,10 @@ description: How can I use Dynamic Web TWAIN in a Citrix environment?
 permalink: /faq/use-dwt-in-citrix-env.html
 ---
 
-# Project Deployment and End-user Installation
+View all FAQs about [Project Deployment and End-user Installation](
+https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-installation)
 
-## How can I use Dynamic Web TWAIN in a Citrix environment?
+# How can I use Dynamic Web TWAIN in a Citrix environment?
 
 If too many end-users access the same scanning application using the same communication port, it can slow down server response and increase wait time.
 

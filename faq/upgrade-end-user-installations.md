@@ -9,9 +9,10 @@ description: How do I upgrade the end-user installation for all end users once I
 permalink: /faq/upgrade-end-user-installations.html
 ---
 
-# Project Deployment and End-user Installation
+View all FAQs about [Project Deployment and End-user Installation](
+https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-installation)
 
-## How do I upgrade the end-user installation for all end users once I upgrade my project?
+# How do I upgrade the end-user installation for all end users once I upgrade my project?
 
 By default once your application with the upgraded version has been deployed, end-users will be prompted to install the newer version of the Dynamsoft Service.
 

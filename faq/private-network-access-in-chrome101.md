@@ -9,9 +9,10 @@ description: How to resolve Dynamic Web TWAIN issue in Chrome 101?
 permalink: /faq/private-network-access-in-chrome101.html
 ---
 
-# Project Deployment and End-user Installation
+View all FAQs about [Project Deployment and End-user Installation](
+https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-installation)
 
-## Dynamic Web TWAIN issue in Chrome 101
+# Dynamic Web TWAIN issue in Chrome 101
 
 **Latest Update from Google:**
 
