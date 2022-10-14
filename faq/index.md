@@ -389,4 +389,6 @@ permalink: /faq/
 <li><a href="{{site.faq}}discount-policy.html">What is your discount policy?</a></li>
 
 <li><a href="{{site.faq}}refund-policy.html">What’s your refund policy?</a></li>
+
+<li><a href="{{site.faq}}how-to-deploy-full-license.html">How to deploy my full license?</a></li>
 </ol>
