@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Platform
+title: Dynamic Web TWAIN SDK Platform
 keywords: Dynamic Web TWAIN, Documentation, Platform
 breadcrumbText: System Requirements
 description: Dynamic Web TWAIN SDK Documentation Platform Page

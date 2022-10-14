@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Features - UI Elements
+title: Dynamic Web TWAIN SDK Features - UI Elements
 keywords: Dynamic Web TWAIN, Documentation, UI
 breadcrumbText: UI
 description: Dynamic Web TWAIN SDK Documentation UI Page
@@ -10,7 +10,7 @@ permalink: /indepth/features/ui.html
 
 # UI Elements
 
-In this section, we'll explore the UI Elements that are built into the `DWT` library for user interactions. 
+In this section, we'll explore the UI Elements that are built into the `Dynamic Web TWAIN` library for user interactions. 
 
 Generally speaking, most UI elements are configured in the file **dynamsoft.webtwain.install.js**. This file is already referenced inside the **dynamsoft.webtwain.initiate.js**.
 
@@ -18,7 +18,7 @@ Generally speaking, most UI elements are configured in the file **dynamsoft.webt
 
 ![UI 1]({{site.assets}}imgs/UI-1.png)
 
-This dialog comes up when using `DWT` scanner module under one of the following conditions:
+This dialog comes up when using `Dynamic Web TWAIN` scanner module under one of the following conditions:
 
 * The Dynamsoft Service is not installed
 * The Dynamsoft Service is not running
@@ -50,7 +50,7 @@ If you just want to change the loading bar, you can use the `Dynamsoft.DWT.Custo
 
 ### Progress bar
 
-When `DWT` performs a time-consuming task, it'll show a progress bar. This progress bar is either like this
+When `Dynamic Web TWAIN` performs a time-consuming task, it'll show a progress bar. This progress bar is either like this
 
 ![UI-3]({{site.assets}}imgs/UI-7.png)
 
@@ -91,7 +91,7 @@ DWObject.SetLanguage(Dynamsoft.DWT.EnumDWT_Language.Spanish);
 
 ### Error Messages
 
-`DWT` has many built-in error messages as shown [here]({{site.info}}api/appendix.html#error-list). Each `ErrorString` has its own `ErrorCode` . To change the language of the message, you can read the `ErrorCode` and output the error string you have customized. For example
+`Dynamic Web TWAIN` has many built-in error messages as shown [here]({{site.info}}api/appendix.html#error-list). Each `ErrorString` has its own `ErrorCode` . To change the language of the message, you can read the `ErrorCode` and output the error string you have customized. For example
 
 ``` javascript
 if (DWObject.ErrorCode === -2359) {

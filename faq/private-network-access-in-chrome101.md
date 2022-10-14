@@ -2,16 +2,17 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: How to resolve Dynamic Web TWAIN issue in Chrome 101?
+title: How to resolve Dynamic Web TWAIN SDK issue in Chrome 101?
 keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, Chrome 101, Private Network Access, preflight request
 breadcrumbText: How to resolve Dynamic Web TWAIN issue in Chrome 101?
 description: How to resolve Dynamic Web TWAIN issue in Chrome 101?
 permalink: /faq/private-network-access-in-chrome101.html
 ---
 
-# Project Deployment and End-user Installation
+View all FAQs about [Project Deployment and End-user Installation](
+https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-installation)
 
-## Dynamic Web TWAIN issue in Chrome 101
+# Dynamic Web TWAIN issue in Chrome 101
 
 **Latest Update from Google:**
 

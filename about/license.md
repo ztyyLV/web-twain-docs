@@ -2,7 +2,7 @@
 layout: default-layout
 needAutoGenerateSidebar: true
 noTitleIndex: true
-title: Dynamic Web TWAIN License
+title: Dynamic Web TWAIN SDK License
 keywords: Dynamic Web TWAIN, Documentation, License
 breadcrumbText: License
 description: Dynamic Web TWAIN SDK Documentation License Page

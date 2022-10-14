@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Development - Angular Integration
+title: Dynamic Web TWAIN SDK Development - Angular Integration
 keywords: Dynamic Web TWAIN, Documentation, Development, Angular Integration
 breadcrumbText: Angular Integration
 description: Dynamic Web TWAIN SDK Documentation Angular Integration Page
@@ -10,7 +10,7 @@ permalink: /indepth/development/angular.html
 
 # Use Web TWAIN in Angular
 
-[Angular](https://angular.io/) is one of the most popular and mature JavaScript frameworks. Check out the following on how to implement `DWT` into an Angular application.
+[Angular](https://angular.io/) is one of the most popular and mature JavaScript frameworks. Check out the following on how to implement `Dynamic Web TWAIN` into an Angular application.
 
 ![](https://www.dynamsoft.com/web-twain/docs/assets/imgs/download.png) [Sample of dwt-angular-advanced](https://github.com/dynamsoft-dwt/dwt-angular-advanced)
 
@@ -36,7 +36,7 @@ npm install dwt
 
 Open `angular.json` and add the following lines to `"build"/"options"/"assets"` .
 
-> These lines will copy the static files necessary to run `DWT` to the resulting project.
+> These lines will copy the static files necessary to run `Dynamic Web TWAIN` to the resulting project.
 
 ``` json
 {
@@ -63,7 +63,7 @@ ng generate component dwt
 <div id="dwtcontrolContainer"></div>
 ```
 
-* In `dwt.component.ts` add code to initialize `DWT` .
+* In `dwt.component.ts` add code to initialize `Dynamic Web TWAIN` .
 
 ``` typescript
 import Dynamsoft from 'dwt';
@@ -88,7 +88,7 @@ ngOnInit(): void {
 ```
 
 > Note:
-> * `containerId` specifies the `HTMLDIVElement` to create `DWT` viewer in.
+> * `containerId` specifies the `HTMLDIVElement` to create `Dynamic Web TWAIN` viewer in.
 > * `OnWebTwainReady` is the callback triggered when the initialization succeeds.
 > * `ProductKey` must be set to a valid trial or full key.
 > * `ResourcesPath` is set to the location of the static files mentioned in [Configure the project](#configure-the-project).
@@ -130,7 +130,7 @@ Edit the file `app.component.html` to contain nothing but the following
 ng serve -o
 ```
 
-> If you have installed `DWT` and have configured a valid `ProductKey` . You will have a working page to scan documents from your scanner now. Otherwise, you should see instructions on the page that guide you to install the library. [More info>>]({{site.indepth}}features/initialize.html#installation-of-the-dynamsoft-service).
+> If you have installed `Dynamic Web TWAIN` and have configured a valid `ProductKey` . You will have a working page to scan documents from your scanner now. Otherwise, you should see instructions on the page that guide you to install the library. [More info>>]({{site.indepth}}features/initialize.html#installation-of-the-dynamsoft-service).
 
 ## Official Sample
 
