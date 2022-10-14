@@ -16,7 +16,7 @@ permalink: /faq/how-to-deploy-full-license.html
 1. Please navigate to the customer portal.
 ![customer portal 1]({{site.assets}}imgs/deploy-c1.png)
 
-1. Copy the license
+2. Copy the license
 ![customer portal 2]({{site.assets}}imgs/deploy-c2.png)
 
 For example, this is my project.
