@@ -21,7 +21,7 @@ Canvas2D: Multiple readback operations using getImageData are faster with the wi
 
 ### Cause
 
-The attribute `willReadFrequently` has not been set to `ture` if you are using Chrome 107(developer version) & 106 (official version).
+The attribute `willReadFrequently` in `getContext("2d")` has not been set to `ture` if you are using Chrome 107(developer version) & 106 (official version).
 
 
 ### Solution
