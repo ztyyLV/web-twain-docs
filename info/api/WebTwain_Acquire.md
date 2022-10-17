@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN API Reference - Acquire APIs
+title: Dynamic Web TWAIN SDK API Reference - Acquire APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Acquire APIs
 breadcrumbText: Acquire
 description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
@@ -2208,7 +2208,7 @@ If it's set to `false` , the images will be inserted before the current image. T
 ```
 
 /**
- * Return or set whether to close the data source after all images have been acquired.
+ * Return or set whether to close the built-in User Interface after all images have been acquired.
  */
 IfDisableSourceAfterAcquire: boolean;
 ```

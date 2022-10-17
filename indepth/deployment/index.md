@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Deployment - Index Page
+title: Dynamic Web TWAIN SDK Deployment - Index Page
 keywords: Dynamic Web TWAIN, Documentation, Deployment, Index
 breadcrumbText: Deployment
 description: Dynamic Web TWAIN SDK Documentation Index Page

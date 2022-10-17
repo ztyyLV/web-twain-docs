@@ -9,9 +9,10 @@ description: Is there an easy way to deploy the end-user components to all users
 permalink: /faq/deploy-to-all-users.html
 ---
 
-# Project Deployment and End-user Installation
+View all FAQs about [Project Deployment and End-user Installation](
+https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-installation)
 
-## Is there an easy way to deploy the end-user components to all users?
+# Is there an easy way to deploy the end-user components to all users?
 
 Yes. The following are the commands for this purpose
 

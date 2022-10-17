@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Resources
+title: Dynamic Web TWAIN SDK Resources
 keywords: Dynamic Web TWAIN, TWAIN, Documentation, Resources
 breadcrumbText: Resources
 description: Dynamic Web TWAIN SDK Documentation Resources Page
@@ -18,7 +18,7 @@ permalink: /about/resources.html
 
 * <a href="https://www.npmjs.com/package/dwt" target="_blank">NPM package</a>
 
-> All the files in the [DWT package](https://github.com/dynamsoft-dwt/web-twain-package) will help you include `DWT` in your web application both as a regular library and as a module. To try our SDK and included samples, a [trial license](#how-do-i-get-a-trial-license) is required.
+> All the files in the [DWT package](https://github.com/dynamsoft-dwt/web-twain-package) will help you include `Dynamic Web TWAIN` in your web application both as a regular library and as a module. To try our SDK and included samples, a [trial license](#how-do-i-get-a-trial-license) is required.
 
 * <a href="https://yarnpkg.com/package/dwt" target="_blank">YARN package</a>
 
@@ -32,7 +32,7 @@ permalink: /about/resources.html
 
 * <a href="https://github.com/dynamsoft-dwt" target="_blank">Github repo</a>
 
-> In our repository, we've shared many samples and other projects related to `DWT` . Some of which may be experimental. To try out these samples, a [trial license](#how-do-i-get-a-trial-license) is required.
+> In our repository, we've shared many samples and other projects related to `Dynamic Web TWAIN` . Some of which may be experimental. To try out these samples, a [trial license](#how-do-i-get-a-trial-license) is required.
 
 ## How do I get a trial License
 

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Development - Vue Integration
+title: Dynamic Web TWAIN SDK Development - Vue Integration
 keywords: Dynamic Web TWAIN, Documentation, Development, Vue Integration
 breadcrumbText: Vue Integration
 description: Dynamic Web TWAIN SDK Documentation Vue Integration Page

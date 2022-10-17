@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN API Reference - Viewer APIs
+title: Dynamic Web TWAIN SDK API Reference - Viewer APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Viewer APIs
 breadcrumbText: Viewer
 description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page

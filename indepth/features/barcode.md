@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Features - Read Barcode
+title: Dynamic Web TWAIN SDK Features - Read Barcode
 keywords: Dynamic Web TWAIN, Documentation, Read Barcode
 breadcrumbText: Read Barcode
 description: Dynamic Web TWAIN SDK Documentation Read Barcode Page
@@ -14,7 +14,7 @@ With the increasing use of barcode reading in document management systems, the B
 
 > NOTE
 >  
-> Barcode reading can be performed on the client side as well as the server side. For `DWT` , we only consider client-side reading. If you are interested in reading on the server side, you can contact [Dynamsoft Support]({{site.about}}getsupport.html).
+> Barcode reading can be performed on the client side as well as the server side. For `Dynamic Web TWAIN` , we only consider client-side reading. If you are interested in reading on the server side, you can contact [Dynamsoft Support]({{site.about}}getsupport.html).
 
 ## Environment
 

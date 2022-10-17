@@ -9,9 +9,10 @@ description: Is there any component of the Dynamic Web TWAIN SDK that needs to b
 permalink: /faq/component-needs-to-be-installed-on-end-user-machine.html
 ---
 
-# Project Deployment and End-user Installation
+View all FAQs about [Project Deployment and End-user Installation](
+https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-installation)
 
-## Is there any component of the Dynamic Web TWAIN SDK that needs to be installed on end-user machines?
+# Is there any component of the Dynamic Web TWAIN SDK that needs to be installed on end-user machines?
 
 For the <a href="{{site.indepth}}features/initialize.html#desktop-service-edition" target="_blank">Desktop Service Edition</a>, the Dynamsoft Service needs to be installed on end-user machines. By default end-users will be prompted to install Dynamsoft Service when they access your application for the first time.
 

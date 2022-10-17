@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Features - Edit
+title: Dynamic Web TWAIN SDK Features - Edit
 keywords: Dynamic Web TWAIN, Documentation, Edit
 breadcrumbText: Edit
 description: Dynamic Web TWAIN SDK Documentation Edit Page
@@ -10,7 +10,7 @@ permalink: /indepth/features/edit.html
 
 # Edit
 
-`DWT` offers a variety of image editing features to help give you the final result you are looking for. In this section, we will explore those features and demonstrate how to use them.
+`Dynamic Web TWAIN` offers a variety of image editing features to help give you the final result you are looking for. In this section, we will explore those features and demonstrate how to use them.
 
 > All the methods on this page can be found in our [API reference]({{site.info}}api/WebTwain_Edit.html).
 
@@ -18,7 +18,7 @@ permalink: /indepth/features/edit.html
 
 ### Rotating, Flipping, and Mirroring
 
-`DWT` provides methods to rotate an image right or left by 90 degrees or by the angle you specify as an input parameter. Here is an overview of the available rotate methods:
+`Dynamic Web TWAIN` provides methods to rotate an image right or left by 90 degrees or by the angle you specify as an input parameter. Here is an overview of the available rotate methods:
 
 ``` javascript
 DWObject.Rotate() // rotates the specified image by the specified angle (up to 360 degrees)
@@ -31,7 +31,7 @@ DWObject.Mirror() // mirrors the specified image horizontally
 
 ### Cutting, Cropping, and Copying
 
-`DWT` can cut and copy images to the clipboard to be used later. It also has the ability to crop the image directly or save the cropped image to the clipboard. Here is an overview of the methods:
+`Dynamic Web TWAIN` can cut and copy images to the clipboard to be used later. It also has the ability to crop the image directly or save the cropped image to the clipboard. Here is an overview of the methods:
 
 ``` javascript
 DWObject.Crop() // Crops a rectangular area from the specified image using the specified coordinates
@@ -42,11 +42,11 @@ DWObject.CopyToClipboard() // Copies the specified image to the clipboard of the
 DWObject.Erase() // Erases a rectangular area from the specified image using the input coordinates
 ```
 
-Several of these methods require input coordinates to define the frame in question. `DWT` provides a way to visually define those coordinates to make the process as easy for the user as possible. Check out [select an area]({{site.indepth}}features/viewer.html#select-an-area).
+Several of these methods require input coordinates to define the frame in question. `Dynamic Web TWAIN` provides a way to visually define those coordinates to make the process as easy for the user as possible. Check out [select an area]({{site.indepth}}features/viewer.html#select-an-area).
 
 ### Resizing an image
 
-`DWT` also gives you the ability to resize an image in the buffer. Here is the overview of the available methods:
+`Dynamic Web TWAIN` also gives you the ability to resize an image in the buffer. Here is the overview of the available methods:
 
 ``` javascript
 DWObject.ChangeImageSize() // changes the size of the specified image by altering the height and width
@@ -55,7 +55,7 @@ DWObject.SetImageWidth() // Changes the width of the specified image by adding a
 
 ### Working with pixels and bit depth
 
-You can also change the colour and resolution of an image by altering its pixel type, bit depth, or DPI. `DWT` offers a number of methods to achieve this:
+You can also change the colour and resolution of an image by altering its pixel type, bit depth, or DPI. `Dynamic Web TWAIN` offers a number of methods to achieve this:
 
 ``` javascript
 DWObject.ChangeBitDepth() // Changes the pixel type of the image by altering the bit depth

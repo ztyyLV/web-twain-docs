@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Schedule - Stable Release
+title: Dynamic Web TWAIN SDK Schedule - Stable Release
 keywords: Dynamic Web TWAIN, Documentation, Schedule, Stable Release
 breadcrumbText: Stable Releases
 noTitleIndex: true
@@ -305,7 +305,7 @@ See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scann
 
 * The "Stretch" button is deleted from the image editor.
 
-* The type declaration files are now included in the [`dwt` package](https://www.npmjs.com/package/dwt). From version 16.2 on, these files are no longer maintained on [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped).
+* The type declaration files are now included in the [`Dynamic Web TWAIN` package](https://www.npmjs.com/package/dwt). From version 16.2 on, these files are no longer maintained on [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped).
 
 ### Breaking changes
 

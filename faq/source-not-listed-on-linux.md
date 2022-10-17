@@ -9,9 +9,10 @@ description: Scanner source is listed on XSane application but not on my web app
 permalink: /faq/source-not-listed-on-linux.html
 ---
 
-# Project Deployment and End-user Installation
+View all FAQs about [Project Deployment and End-user Installation](
+https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-installation)
 
-## Scanner source is listed on XSane applicaton but not on my web application on Linux machines
+# Scanner source is listed on XSane applicaton but not on my web application on Linux machines
 
 
 ### Symptom

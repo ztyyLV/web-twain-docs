@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN FAQ
+title: Dynamic Web TWAIN SDK FAQ
 keywords: Dynamic Web TWAIN, Documentation, FAQ
 breadcrumbText: FAQ
 description: Dynamic Web TWAIN SDK Documentation FAQ
@@ -131,7 +131,8 @@ permalink: /faq/
 <ol>
 <li><a href="{{site.faq}}what-image-editing-operation-supported.html">What image editing operations does the Dynamic Web TWAIN SDK support?</a></li>
 
-<li><a href="{{site.faq}}show-default-image-editor.html">How can I show the default image editor tool?</a></li>
+<li
+<a href="{{site.faq}}show-default-image-editor.html">How can I show the default image editor tool?</a></li>
 
 <li><a href="{{site.faq}}support-image-deskew.html">Do you support image deskew?</a></li>
 
