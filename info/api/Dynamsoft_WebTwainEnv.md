@@ -450,7 +450,7 @@ or
 var DWObject;
 Dynamsoft.DWT.FindDynamsoftServiceAsync("https://s0000001.dynamsoftwebtwain.com:port")
 .then((serviceInfo[])=>{
-    return Dynamsft.DWT.FindDevicesAsync(serviceInfo[0], 10);
+    return Dynamsoft.DWT.FindDevicesAsync(serviceInfo[0], 10);
 }).then((device[])=>{
     return Dynamsoft.DWT.createDWObjectAsync(device[0].serviceInfo); 
 }).then((dwt)=>{
