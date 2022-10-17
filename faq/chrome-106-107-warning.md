@@ -26,10 +26,10 @@ Based on Google developer guide, the setting for attribute `willReadFrequently` 
 
 ### Solution
 
-1. Navigate to '../Resources/dynamsoft.webtwain.initiate.js' replace all `getContext("2d")` to `getContext("2d",{willReadFrequently:true})`
+Step 1. Navigate to '<strong>../Resources/dynamsoft.webtwain.initiate.js</strong>' replace all `getContext("2d")` to `getContext("2d",{willReadFrequently:true})`
 
 
-2. Navigate to '../Resources/src/dynamsoft.viewer.js' replace all `getContext("2d")` to `getContext("2d",{willReadFrequently:true})`
+Step 2. Navigate to '<strong>../Resources/src/dynamsoft.viewer.js</strong>' replace all `getContext("2d")` to `getContext("2d",{willReadFrequently:true})`
 
 
 ### Planning
