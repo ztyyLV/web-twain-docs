@@ -17,11 +17,13 @@ permalink: /faq/chrome-106-107-warning.html
 
 When you are using Chrome 107(developer version) & 106 (official version) or any version above these, you could encounter a warning in console:
 
+```javascript
 Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently
+```
 
 ### Cause
 
-Based on Google developer guide, the setting for attribute `willReadFrequently` in `getContext("2d")` has to be `true` if you are using Chrome 107(developer version) & 106 (official version), otherwise it will show this warning message.
+Based on Google developer guide, the setting for attribute `willReadFrequently` in `getContext("2d")` has to be `true` if you are using Chrome 107(developer version) & 106 (official version) or higher, otherwise it will show this warning message.
 
 
 ### Solution
