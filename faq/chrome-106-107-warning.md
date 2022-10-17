@@ -17,7 +17,7 @@ permalink: /faq/chrome-106-107-warning.html
 
 When you are using Chrome 107(developer version) & 106 (official version) or any version above these, you could encounter a warning in console:
 
-```javascript
+```shell
 Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently
 ```
 
