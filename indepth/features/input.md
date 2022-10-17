@@ -45,7 +45,7 @@ For more information, check [How to use a TWAIN-Direct scanner](#how-to-use-a-tw
 -->
 
 
-##### Get a list of services from the proxy server and a list of devices for the selected service.
+#### Get a list of services from the proxy server and a list of devices for the selected service.
 
 ``` javascript
 //Get a list of services
@@ -124,7 +124,7 @@ function onClickScanButton() {
 }
 ```
 
-##### Get a list of all devices for all the services from the proxy server
+#### Get a list of all devices for all the services from the proxy server
 
 ``` javascript
 //Get all devices for all available services
@@ -195,7 +195,7 @@ function onClickScanButton() {
 }
 ```
 
-##### Scanning on Android:  Get a list of all available devices
+#### Scanning on Android:  Get a list of all available devices
 
 ``` javascript
     var deviceList;
