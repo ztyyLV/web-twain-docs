@@ -356,6 +356,8 @@ permalink: /faq/
 <li><a href="{{site.faq}}connection-from-the-insecure-HTTP-to-service-failed.html">Error Message - The connection from the insecure (HTTP) web page to the local 'Dynamsoft Service' failed</a></li>
 
 <li><a href="{{site.faq}}source-has-nothing-to-capture.html">Error Message - Source has nothing to capture</a></li>
+
+<li><a href="{{site.faq}}chrome-106-107-warning.html">Warning Message - Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true</a></li>
  </ol>
 
 ## Licensing and Purchase
