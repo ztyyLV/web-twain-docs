@@ -16,7 +16,7 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 Dynamsoft Service is required for the Desktop Service Edition of Dynamic Web TWAIN. It’s a background system service that handles the communication between connected physical devices and the browser, as well as image processing, encoding, decoding, etc.
 
-### Three processes
+## Three processes
 
 By default, there are three Dynamsoft Service processes running which use the same file `DynamsoftService.exe` but initiated with different arguments:
 
