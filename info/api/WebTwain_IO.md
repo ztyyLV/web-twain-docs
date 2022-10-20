@@ -1442,14 +1442,23 @@ HTTPUpload(
 
 
 `URL`: The server-side script to receive the post.
+
 `indices`: Specify the image(s).
+
 `type`: The format of the file. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+
 `dataFormat`: Whether to upload the file as binary or a base64 string. Please refer to [EnumDWT_UploadDataFormat]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_uploaddataformat).
+
 `fileName`: The file name.
+
 `onEmptyResponse`: A callback function that is executed if the response is empty.
+
 `onServerReturnedSomething`: A callback function that is executed if the response is not empty.
+
 `errorCode`: The error code.
+
 `errorString`: The error string.
+
 `response`: The response string.
 
 
