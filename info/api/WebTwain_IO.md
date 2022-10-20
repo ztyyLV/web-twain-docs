@@ -1438,21 +1438,20 @@ HTTPUpload(
 ): void;
 ```
 
-**Parameters**
+**Parameters&Argument**
 
-```javascript
-@param URL //The server-side script to receive the post.
-@param indices //Specify the image(s).
-@param type //The format of the file. Please refer to .
-@param dataFormat //Whether to upload the file as binary or a base64 string. Please refer to .
-@param fileName //The file name.
-@param onEmptyResponse //A callback function that is executed if the response is empty.
-@param onServerReturnedSomething //A callback function that is executed if the response is not empty.
-@argument errorCode //The error code.
-@argument errorString //The error string.
-@argument response //The response string.
-```
-Refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype) & [EnumDWT_UploadDataFormat]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_uploaddataformat).
+
+`URL`: The server-side script to receive the post.
+`indices`: Specify the image(s).
+`type`: The format of the file. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+`dataFormat`: Whether to upload the file as binary or a base64 string. Please refer to [EnumDWT_UploadDataFormat]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_uploaddataformat).
+`fileName`: The file name.
+`onEmptyResponse`: A callback function that is executed if the response is empty.
+`onServerReturnedSomething`: A callback function that is executed if the response is not empty.
+`errorCode`: The error code.
+`errorString`: The error string.
+`response`: The response string.
+
 
 **Availability**
 <div class="availability">
