@@ -1401,9 +1401,6 @@ Upload the specified image(s) via a HTTP Post.
 **Syntax**
 
 ```javascript
-/**
- * Upload the specified image(s) via a HTTP Post.
- */
 HTTPUpload(
     URL: string,
     indices: number[],
@@ -1439,25 +1436,19 @@ HTTPUpload(
 
 **Parameters**
 
-@param URL The server-side script to receive the post.
-
-@param indices Specify the image(s).
-
-@param type The format of the file. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
-
-@param dataFormat Whether to upload the file as binary or a base64 string. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_uploaddataformat).
-
-@param fileName The file name.
-
-@param onEmptyResponse A callback function that is executed if the response is empty.
-
-@param onServerReturnedSomething A callback function that is executed if the response is not empty.
-
-@argument errorCode The error code.
-
-@argument errorString The error string.
-
-@argument response The response string.
+```javascript
+@param URL //The server-side script to receive the post.
+@param indices //Specify the image(s).
+@param type //The format of the file. Please refer to .
+@param dataFormat //Whether to upload the file as binary or a base64 string. Please refer to .
+@param fileName //The file name.
+@param onEmptyResponse //A callback function that is executed if the response is empty.
+@param onServerReturnedSomething //A callback function that is executed if the response is not empty.
+@argument errorCode //The error code.
+@argument errorString //The error string.
+@argument response //The response string.
+```
+Refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype) & [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_uploaddataformat).
 
 **Availability**
 <div class="availability">
@@ -1489,7 +1480,8 @@ HTTPUpload(
 ```javascript
 DWObject.HTTPUpload('https://www.dynamsoft.com/SaveToFile.aspx', 
     [0,1],  
-    EnumDWT_ImageType.IT_PDF, EnumDWT_UploadDataFormat.Binary, 
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF, 
+    Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary, 
     'test.pdf', 
     OnHttpUploadSuccess, 
     OnHttpUploadFailure);
