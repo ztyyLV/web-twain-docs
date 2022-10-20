@@ -1401,9 +1401,6 @@ Upload the specified image(s) via a HTTP Post.
 **Syntax**
 
 ```javascript
-/**
- * Upload the specified image(s) via a HTTP Post.
- */
 HTTPUpload(
     URL: string,
     indices: number[],
@@ -1483,7 +1480,8 @@ Refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwten
 ```javascript
 DWObject.HTTPUpload('https://www.dynamsoft.com/SaveToFile.aspx', 
     [0,1],  
-    EnumDWT_ImageType.IT_PDF, EnumDWT_UploadDataFormat.Binary, 
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF, 
+    Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary, 
     'test.pdf', 
     OnHttpUploadSuccess, 
     OnHttpUploadFailure);
