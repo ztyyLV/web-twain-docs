@@ -1396,21 +1396,13 @@ DWObject.ShowFileDialog(true, "MSI|*.msi", 0, ".msi", "", true, false, 1);
 
 ## HTTPUpload
 
+Upload the specified image(s) via a HTTP Post.
+
 **Syntax**
 
 ```javascript
 /**
  * Upload the specified image(s) via a HTTP Post.
- * @param URL The server-side script to receive the post.
- * @param indices Specify the image(s).
- * @param type The format of the file. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
- * @param dataFormat Whether to upload the file as binary or a base64 string. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_uploaddataformat).
- * @param fileName The file name.
- * @param onEmptyResponse A callback function that is executed if the response is empty.
- * @param onServerReturnedSomething A callback function that is executed if the response is not empty.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- * @argument response The response string.
  */
 HTTPUpload(
     URL: string,
@@ -1445,6 +1437,28 @@ HTTPUpload(
 ): void;
 ```
 
+**Parameters**
+
+@param URL The server-side script to receive the post.
+
+@param indices Specify the image(s).
+
+@param type The format of the file. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+
+@param dataFormat Whether to upload the file as binary or a base64 string. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_uploaddataformat).
+
+@param fileName The file name.
+
+@param onEmptyResponse A callback function that is executed if the response is empty.
+
+@param onServerReturnedSomething A callback function that is executed if the response is not empty.
+
+@argument errorCode The error code.
+
+@argument errorString The error string.
+
+@argument response The response string.
+
 **Availability**
 <div class="availability">
 <table>
@@ -1474,11 +1488,11 @@ HTTPUpload(
 
 ```javascript
 DWObject.HTTPUpload('https://www.dynamsoft.com/SaveToFile.aspx', 
-  [0,1],  
-  EnumDWT_ImageType.IT_PDF, EnumDWT_UploadDataFormat.Binary, 
-  'test.pdf', 
-  OnHttpUploadSuccess, 
-  OnHttpUploadFailure);
+    [0,1],  
+    EnumDWT_ImageType.IT_PDF, EnumDWT_UploadDataFormat.Binary, 
+    'test.pdf', 
+    OnHttpUploadSuccess, 
+    OnHttpUploadFailure);
 
 function OnHttpUploadSuccess (httpResponse, newIndices, _arguments) {
     console.log("HTTPResponseString: " + httpResponse);
