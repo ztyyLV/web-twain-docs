@@ -1438,7 +1438,7 @@ HTTPUpload(
 ): void;
 ```
 
-**Parameters&Argument**
+**Parameters**
 
 
 `URL`: The server-side script to receive the post.
@@ -1454,12 +1454,9 @@ HTTPUpload(
 `onEmptyResponse`: A callback function that is executed if the response is empty.
 
 `onServerReturnedSomething`: A callback function that is executed if the response is not empty.
-
-`errorCode`: The error code.
-
-`errorString`: The error string.
-
-`response`: The response string.
+* `errorCode`: The error code.
+* `errorString`: The error string.
+* `response`: The response string.
 
 
 **Availability**
