@@ -133,4 +133,4 @@ yarn start
 
 Check out the following sample project:
 
-* [dwt-react-advanced](https://github.com/dynamsoft-dwt/dwt-react-advanced)
+* [dwt-react-advanced](https://github.com/Dynamsoft/web-twain-react-advanced)

@@ -1403,8 +1403,8 @@ DWObject.ShowFileDialog(true, "MSI|*.msi", 0, ".msi", "", true, false, 1);
  * Upload the specified image(s) via a HTTP Post.
  * @param URL The server-side script to receive the post.
  * @param indices Specify the image(s).
- * @param type The format of the file.
- * @param dataFormat Whether to upload the file as binary or a base64 string.
+ * @param type The format of the file. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+ * @param dataFormat Whether to upload the file as binary or a base64 string. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_uploaddataformat).
  * @param fileName The file name.
  * @param onEmptyResponse A callback function that is executed if the response is empty.
  * @param onServerReturnedSomething A callback function that is executed if the response is not empty.
@@ -1469,6 +1469,29 @@ HTTPUpload(
 
 </table>
 </div>
+
+**Example**
+
+```javascript
+DWObject.HTTPUpload('https://www.dynamsoft.com/SaveToFile.aspx', 
+  [0,1],  
+  EnumDWT_ImageType.IT_PDF, EnumDWT_UploadDataFormat.Binary, 
+  'test.pdf', 
+  OnHttpUploadSuccess, 
+  OnHttpUploadFailure);
+
+function OnHttpUploadSuccess (httpResponse, newIndices, _arguments) {
+    console.log("HTTPResponseString: " + httpResponse);
+}
+function OnHttpUploadFailure (errorCode, errorString, httpResponse, newIndices, _arguments) {
+    alert("ErrorCode: " + errorCode+ "ErrorString: " + 
+    errorString + "HTTPResponseString: " + httpResponse);
+}
+```
+
+**Remark**
+
+[Upload Guide]({{site.indepth}}features/output.html#http-with-built-in-apis)
 
 ---
 

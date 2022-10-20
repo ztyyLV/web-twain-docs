@@ -49,7 +49,7 @@ You can learn more detail about the feature via <a href="https://www.dynamsoft.c
       Host: host,
       Port: "18622",
       PortSSL: "18623",
-      UseLocalService: "true",
+      UseLocalService: true,
     };
     Dynamsoft.DWT.CreateDWTObjectEx(
       dwtConfig,
@@ -186,7 +186,7 @@ The following is the complete code, note that we are referencing the library fro
       Host: host,
       Port: "18622",
       PortSSL: "18623",
-      UseLocalService: "true",
+      UseLocalService: true,
     };
     Dynamsoft.DWT.CreateDWTObjectEx(
       dwtConfig,
