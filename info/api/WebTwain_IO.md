@@ -1486,12 +1486,11 @@ DWObject.HTTPUpload('https://www.dynamsoft.com/SaveToFile.aspx',
     OnEmptyResponse, 
     OnServerReturnedSomething);
 
-function OnEmptyResponse (httpResponse, newIndices, _arguments) {
-    console.log("HTTPResponseString: " + httpResponse);
+function OnEmptyResponse() {
+    console.log('Success');
 }
-function OnServerReturnedSomethinge (errorCode, errorString, httpResponse, newIndices, _arguments) {
-    alert("ErrorCode: " + errorCode+ "ErrorString: " + 
-    errorString + "HTTPResponseString: " + httpResponse);
+function OnServerReturnedSomething(errCode, errString, responseStr) {
+    console.log(errString);
 }
 ```
 
