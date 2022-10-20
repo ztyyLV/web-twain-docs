@@ -1448,7 +1448,7 @@ HTTPUpload(
 @argument errorString //The error string.
 @argument response //The response string.
 ```
-Refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype) & [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_uploaddataformat).
+Refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype) & [EnumDWT_UploadDataFormat]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_uploaddataformat).
 
 **Availability**
 <div class="availability">
@@ -1483,13 +1483,13 @@ DWObject.HTTPUpload('https://www.dynamsoft.com/SaveToFile.aspx',
     Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF, 
     Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary, 
     'test.pdf', 
-    OnHttpUploadSuccess, 
-    OnHttpUploadFailure);
+    OnEmptyResponse, 
+    OnServerReturnedSomething);
 
-function OnHttpUploadSuccess (httpResponse, newIndices, _arguments) {
+function OnEmptyResponse (httpResponse, newIndices, _arguments) {
     console.log("HTTPResponseString: " + httpResponse);
 }
-function OnHttpUploadFailure (errorCode, errorString, httpResponse, newIndices, _arguments) {
+function OnServerReturnedSomethinge (errorCode, errorString, httpResponse, newIndices, _arguments) {
     alert("ErrorCode: " + errorCode+ "ErrorString: " + 
     errorString + "HTTPResponseString: " + httpResponse);
 }
