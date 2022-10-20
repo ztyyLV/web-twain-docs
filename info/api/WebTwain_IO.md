@@ -1413,6 +1413,8 @@ HTTPUpload(
         errorString: string,
         response: string) => void
 ): void;
+```
+```javascript
 HTTPUpload(
     URL: string,
     indices: number[],
@@ -1424,6 +1426,8 @@ HTTPUpload(
         errorString: string,
         response: string) => void
 ): void;
+```
+```javascript
 HTTPUpload(
     URL: string,
     onEmptyResponse: () => void,
