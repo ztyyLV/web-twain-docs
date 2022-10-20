@@ -1439,25 +1439,19 @@ HTTPUpload(
 
 **Parameters**
 
-@param URL The server-side script to receive the post.
-
-@param indices Specify the image(s).
-
-@param type The format of the file. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
-
-@param dataFormat Whether to upload the file as binary or a base64 string. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_uploaddataformat).
-
-@param fileName The file name.
-
-@param onEmptyResponse A callback function that is executed if the response is empty.
-
-@param onServerReturnedSomething A callback function that is executed if the response is not empty.
-
-@argument errorCode The error code.
-
-@argument errorString The error string.
-
-@argument response The response string.
+```javascript
+@param URL //The server-side script to receive the post.
+@param indices //Specify the image(s).
+@param type //The format of the file. Please refer to .
+@param dataFormat //Whether to upload the file as binary or a base64 string. Please refer to .
+@param fileName //The file name.
+@param onEmptyResponse //A callback function that is executed if the response is empty.
+@param onServerReturnedSomething //A callback function that is executed if the response is not empty.
+@argument errorCode //The error code.
+@argument errorString //The error string.
+@argument response //The response string.
+```
+Refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype) & [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_uploaddataformat).
 
 **Availability**
 <div class="availability">
