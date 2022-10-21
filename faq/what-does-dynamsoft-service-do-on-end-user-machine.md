@@ -14,7 +14,7 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 # What does the Dynamsoft Service do on the end-user machine?
 
-Dynamsoft Service is required for the Desktop Service Edition of Dynamic Web TWAIN. It’s a background system service that handles the communication between connected physical devices and the browser, as well as image processing, encoding, decoding, etc.
+Dynamsoft Service is required for the Desktop Service Edition of Dynamic Web TWAIN. It's a background system service that handles the communication between connected physical devices and the browser, as well as image processing, encoding, decoding, etc.
 
 ## Three processes
 

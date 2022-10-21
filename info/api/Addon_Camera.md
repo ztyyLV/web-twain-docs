@@ -731,7 +731,7 @@ interface ScannerViewer {
     visibility?: string; //Whether to display the resolution icon in the upper left corner. Values: "visible""hidden". Default; "visible".
     
     valueList?:[ {   
-      label: string;    //The resolution value listed in the drop-down list. For example："1920x1080"
+      label: string;    //The resolution value listed in the drop-down list. For example:"1920x1080"
       value: Resolution //The resolution you set. For example: { width:1920, height:1080}
     },{……}]
       defaultValue?: Resolution //Set the default value according to the value set in the valueList.

@@ -2,16 +2,16 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: How can I change the reference path to the Dynamsoft’s resources in my project?
+title: How can I change the reference path to the Dynamsoft's resources in my project?
 keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, reference path
-breadcrumbText: How can I change the reference path to the Dynamsoft’s resources in my project?
-description: How can I change the reference path to the Dynamsoft’s resources in my project?
+breadcrumbText: How can I change the reference path to the Dynamsoft's resources in my project?
+description: How can I change the reference path to the Dynamsoft's resources in my project?
 permalink: /faq/change-reference-path.html
 ---
 View all FAQs about [Project Deployment and End-user Installation](
 https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-installation)
 
-# How can I change the reference path to the Dynamsoft’s resources in my project?
+# How can I change the reference path to the Dynamsoft's resources in my project?
 
 <strong>Scenario: </strong> For customers who are using Dynamic Web TWAIN, to change the location of the 'Resources' folder, or to rename it, please following the steps below:
 

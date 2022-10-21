@@ -13,4 +13,4 @@ permalink: /faq/local-resellers.html
 
 ## Do you have any local resellers from whom I can purchase a license of the Dynamic Web TWAIN SDK?
 
-Yes. To see if there is an authorized local reseller in your region, please go to <a href="https://www.dynamsoft.com/partner/resellers/" target="_blank">this page</a>. If you can’t find an appropriate one from the list, you can contact your preferred local reseller and have them email reseller@dynamsoft.com for quick registration. The registration process takes 1 - 3 business days. Or, <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contact us</a> so we can look into it directly.
+Yes. To see if there is an authorized local reseller in your region, please go to <a href="https://www.dynamsoft.com/partner/resellers/" target="_blank">this page</a>. If you can't find an appropriate one from the list, you can contact your preferred local reseller and have them email reseller@dynamsoft.com for quick registration. The registration process takes 1 - 3 business days. Or, <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contact us</a> so we can look into it directly.

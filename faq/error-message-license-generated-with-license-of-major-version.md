@@ -15,7 +15,7 @@ permalink: /faq/error-message-license-generated-with-license-of-major-version.ht
 
 ### Symptom
 
-You get an error message that says “The current product key is invalid because it's generated with the licenses of a different major version”.
+You get an error message that says "The current product key is invalid because it's generated with the licenses of a different major version".
 
 ### Cause
 

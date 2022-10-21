@@ -2,16 +2,16 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: What’s the difference between the Desktop Service Edition and WebAssembly Edition?
+title: What's the difference between the Desktop Service Edition and WebAssembly Edition?
 keywords: Dynamic Web TWAIN, Licensing and Purchase, difference, service, webassembly
-breadcrumbText: What’s the difference between the Desktop Service Edition and WebAssembly Edition?
-description: What’s the difference between the Desktop Service Edition and WebAssembly Edition?
+breadcrumbText: What's the difference between the Desktop Service Edition and WebAssembly Edition?
+description: What's the difference between the Desktop Service Edition and WebAssembly Edition?
 permalink: /faq/difference-in-service-and-webassembly-editions.html
 ---
 
 # Licensing and Purchase
 
-## What’s the difference between the Desktop Service Edition and WebAssembly Edition?
+## What's the difference between the Desktop Service Edition and WebAssembly Edition?
 
 Desktop Service Edition means Dynamic Web TWAIN operates through the <a href="{{site.indepth}}deployment/service.html" target="_blank">Dynamsoft Service</a> which is a quiet, background system service that handles the communication between connected physical document scanners and the browser client.
 

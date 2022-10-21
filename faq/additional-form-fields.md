@@ -26,7 +26,7 @@ You can check out this <a href="https://demo.dynamsoft.com/Samples/dwt/Scan-Docu
 <a href="{{site.info}}api/WebTwain_IO.html#sethttpformfield" target="_blank">SetHTTPFormField</a> can also be used to send image data in base64 or BLOB to the server side.
 
 By design, the method <a href="{{site.info}}api/WebTwain_IO.html#httpupload" target="_blank">HTTPUpload()</a> only contains one file. But as it essentially sends an HTTP form to the server, you can attach multiple files in that form using the methods <a href="{{site.info}}api/WebTwain_IO.html#converttoblob" target="_blank">ConvertToBlob()</a> and <a href="{{site.info}}api/WebTwain_IO.html#sethttpformfield" target="_blank">SetHTTPFormField()</a> .
-Check out the following snippet on how it is done. NOTE that the method <a href="{{site.info}}api/WebTwain_IO.html#httpupload" target="_blank">HTTPUpload()</a> only has 3 parameters as it doesn’t need to specify a file anymore.
+Check out the following snippet on how it is done. NOTE that the method <a href="{{site.info}}api/WebTwain_IO.html#httpupload" target="_blank">HTTPUpload()</a> only has 3 parameters as it doesn't need to specify a file anymore.
 
 ```javascript
 /**
