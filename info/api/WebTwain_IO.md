@@ -64,12 +64,11 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 ## IfAppendImage
 
+Return or set whether to insert or append images when they are scanned/loaded.
+
 **Syntax**
 
 ```javascript
-/**
- * Return or set whether to insert or append images when they are scanned/loaded.
- */
 IfAppendImage: boolean;
 ```
 
@@ -98,29 +97,23 @@ IfAppendImage: boolean;
 </table>
 </div>
 
-**Usage notes**
+**Usage Notes**
 
 The default value is true which means the newly acquired images will be appended after the last image in buffer. If it's set to false, the images will be inserted before the current image.
 
 An important thing to note here is that, by design, the current image is always the last acquired one which means the images acquired after `IfAppendImage` is set to false will be displayed/kept in reverse order.
 
-To make sure the order is as the pages are scanned while `IfAppendImage` is false, the easiest way is to increase `CurrentImageIndexInBuffer` by 1 in the event `OnPostTransfer`.
+To make sure the order is as the pages are scanned while `IfAppendImage` is false, the easiest way is to increase [CurrentImageIndexInBuffer]({{site.info}}api/WebTwain_Buffer.html#currentimageindexinbuffer) by 1 in the event [OnPostTransfer]({{site.info}}api/WebTwain_Acquire.html#onposttransfer).
 
 ---
 
-## LoadImage
+## LoadImage  
+
+Load image(s) specified by its absolute path.  
 
 **Syntax**
 
 ```javascript
-/**
- * Load image(s) specified by its absolute path.
- * @param fileName The path of the image to load.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 LoadImage(
     fileName: string,
     successCallback ? : () => void,
@@ -130,7 +123,20 @@ LoadImage(
 ): void | boolean;
 ```
 
-**Availability**
+**Parameters**  
+
+`fileName`: The path of the image to load.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+
+- `errorCode`: The error code.
+
+- `errorString`: The error string.
+
+**Availability**  
+
 <div class="availability">
 <table>
 
@@ -159,7 +165,7 @@ LoadImage(
 
 ```javascript
 DWObject.LoadImage(
-  "C:\\DWT.jpg",
+  "C:\\Users\\test\\DWT.jpg",
   function () {
     console.log("success");
   },
@@ -171,20 +177,13 @@ DWObject.LoadImage(
 
 ---
 
-## LoadImageEx
+## LoadImageEx  
+
+Load image(s) specified by its absolute path.
 
 **Syntax**
 
 ```javascript
-/**
- * Load image(s) specified by its absolute path.
- * @param fileName The path of the image to load.
- * @param type The format of the image.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 LoadImageEx(
     fileName: string,
     type: Dynamsoft.DWT.EnumDWT_ImageType | number,
@@ -195,7 +194,22 @@ LoadImageEx(
 ): void | boolean;
 ```
 
-**Availability**
+**Parameters**
+
+`fileName`: The path of the image to load.
+
+`type`: The format of the image. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+
+- `errorCode`: The error code.
+
+- `errorString`: The error string.
+
+**Availability**  
+
 <div class="availability">
 <table>
 
@@ -220,22 +234,24 @@ LoadImageEx(
 </table>
 </div>
 
-**Usage notes**
+**Usage Notes**
 
 On mobile devices, `Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL` means "JPG, PNG, TIF" while it means "BMP, JPG, PNG, TIF, PDF" on desktop.
+
+If you would like to load/open images by showing the "Open File" dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to true.
 
 **Example**
 
 ```javascript
 DWObject.LoadImageEx(
-  "C:\\DWT.jpg",
-  Dynamsoft.DWT.EnumDWT_ImageType.IT_JPG,
-  function () {
-    console.log("success");
-  },
-  function (errorCode, errorString) {
-    console.log(errorString);
-  }
+    "C:\\Users\\test\\DWT.jpg",
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_JPG,
+    function () {
+        console.log("success");
+    },
+    function (errorCode, errorString) {
+        console.log(errorString);
+    }
 );
 ```
 
@@ -243,18 +259,11 @@ DWObject.LoadImageEx(
 
 ## LoadImageFromBase64Binary
 
+Load image(s) from a base64 string.
+
 **Syntax**
 
 ```javascript
-/**
- * Load image(s) from a base64 string.
- * @param imageData The image data which is a base64 string without the data URI scheme.
- * @param imageType The format of the image.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 LoadImageFromBase64Binary(
     imageData: string,
     imageType: Dynamsoft.DWT.EnumDWT_ImageType,
@@ -265,7 +274,22 @@ LoadImageFromBase64Binary(
 ): void | boolean;
 ```
 
+**Parameters**
+
+`imageData`: The image data which is a base64 string without the data URI scheme.
+
+`imageType`: The format of the image. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+ 
+`failureCallback`: A callback function that is executed if the request fails.
+ 
+- `errorCode`: The error code.
+ 
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -289,6 +313,10 @@ LoadImageFromBase64Binary(
 
 </table>
 </div>
+
+**Usage Notes**
+
+You may leverage [ConvertToBase64]({{site.info}}api/WebTwain_IO.html#converttobase64) to get a base64 string.
 
 **Example**
 
@@ -318,17 +346,11 @@ DWObject.ConvertToBase64(
 
 ## LoadImageFromBinary
 
+Load image(s) from a binary object (Blob | ArrayBuffer).
+
 **Syntax**
 
 ```javascript
-/**
- * Load image(s) from a binary object (Blob | ArrayBuffer).
- * @param imageData The image data.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 LoadImageFromBinary(
     imageData: Blob | ArrayBuffer,
     successCallback: () => void,
@@ -337,6 +359,19 @@ LoadImageFromBinary(
         errorString: string) => void
 ): void;
 ```
+
+**Parameters**
+
+`imageData`: The image data.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+
+- `errorCode`: The error code.
+
+- `errorString`: The error string.
+
 
 **Availability**
 <div class="availability">
@@ -362,6 +397,10 @@ LoadImageFromBinary(
 
 </table>
 </div>
+
+**Usage Notes**
+
+You may leverage [ConvertToBlob]({{site.info}}api/WebTwain_IO.html#converttoblob) to get a Blob object.
 
 **Example**
 
