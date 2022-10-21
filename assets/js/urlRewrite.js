@@ -94,7 +94,7 @@ RewriteUrl('/indepth/development/topics.html#q-How-to-insert-images-to-a-specifi
 
 RewriteUrl('/indepth/development/topics.html#q-How-to-detect-and-discard-blank-pages-automatically', 'https://www.dynamsoft.com/web-twain/docs/indepth/faqs/develop/How-to-detect-and-discard-blank-pages-automatically.html')
 
-RewriteUrl('/indepth/development/topics.html#q-How-to-change-the-location-or-to-rename-the-Resources-folder-with-Dynamic-Web-TWAIN', 'https://www.dynamsoft.com/web-twain/docs/indepth/faqs/develop/How-to-change-the-location-or-to-rename-the-‘Resources’-folder-with-Dynamic-Web-TWAIN.html')
+RewriteUrl('/indepth/development/topics.html#q-How-to-change-the-location-or-to-rename-the-Resources-folder-with-Dynamic-Web-TWAIN', 'https://www.dynamsoft.com/web-twain/docs/indepth/faqs/develop/How-to-change-the-location-or-to-rename-the-Resources-folder-with-Dynamic-Web-TWAIN.html')
 
 RewriteUrl('/indepth/development/server.html#q-How-to-set-the-MIME-type', 'https://www.dynamsoft.com/web-twain/docs/indepth/faqs/distribution/How-to-set-the-MIME-type.html')
 

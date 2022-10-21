@@ -261,7 +261,7 @@ permalink: /faq/
 
 <li><a href="{{site.faq}}resources-to-be-included-in-SDK.html">What resources of the SDK should be included in my web application?</a></li>
 
-<li><a href="{{site.faq}}change-reference-path.html">How can I change the reference path to the Dynamsoft’s resources in my project?</a></li>
+<li><a href="{{site.faq}}change-reference-path.html">How can I change the reference path to the Dynamsoft's resources in my project?</a></li>
 
 <li><a href="{{site.faq}}how-to-enable-remote-scan.html">How can I enable Remote Scan?</a></li>
 
@@ -331,7 +331,7 @@ permalink: /faq/
 
 <li><a href="{{site.faq}}the-connection-with-the-server-was-terminated-abnormally.html">The connection with the server was terminated abnormally</a></li>
 
-<li><a href="{{site.faq}}syntax-error-unexpected-token.html">Syntax error – Unexpected Token “<”</a></li>
+<li><a href="{{site.faq}}syntax-error-unexpected-token.html">Syntax error – Unexpected Token "<"</a></li>
 
 <li><a href="{{site.faq}}DVS-is-not-defined.html">Uncaught ReferenceError - DVS is not defined</a></li>
 
@@ -363,7 +363,7 @@ permalink: /faq/
 ## Licensing and Purchase
 
 <ol>
-<li><a href="{{site.faq}}difference-in-service-and-webassembly-editions.html">What’s the difference between the Desktop Service Edition and WebAssembly Edition?</a></li>
+<li><a href="{{site.faq}}difference-in-service-and-webassembly-editions.html">What's the difference between the Desktop Service Edition and WebAssembly Edition?</a></li>
 
 <li><a href="{{site.faq}}is-internet-connectivity-required.html">Is internet connectivity required to use all licenses?</a></li>
 
@@ -391,5 +391,5 @@ permalink: /faq/
 
 <li><a href="{{site.faq}}discount-policy.html">What is your discount policy?</a></li>
 
-<li><a href="{{site.faq}}refund-policy.html">What’s your refund policy?</a></li>
+<li><a href="{{site.faq}}refund-policy.html">What's your refund policy?</a></li>
 </ol>

@@ -30,7 +30,7 @@ Please follow the steps below to reinstall Dynamsoft Service:
 1. Run the following commands
 ``` shell
 su
-usermod -aG wheel XXX ps：XXX is current username
+usermod -aG wheel XXX ps:XXX is current username
 ```
 
 2. Restart the terminal under current user

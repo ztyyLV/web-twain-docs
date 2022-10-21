@@ -21,7 +21,7 @@ Dynamsoft supports the following types of scanners
 
 There are two ways to check if a physical document scanner is compatible:
 
-<strong>1) Verify via Dynamsoft’s Online Demo</strong>
+<strong>1) Verify via Dynamsoft's Online Demo</strong>
 
 The fastest and most convenient way is to check using our <a href="https://demo.dynamsoft.com/web-twain/" target="_blank">online demo</a>, which is built based on the Dynamic Web TWAIN SDK. If your scanner shows in the source list and can scan documents properly, it means it works well with our SDK.
 
@@ -44,7 +44,7 @@ Use the tool called Twacker which is developed by the <a href="https://www.twain
 
 ![source check using twacker]({{site.assets}}imgs/source-check-using-twacker.png)
 
-If scanning is successful without any errors, then your device should be TWAIN compliant. You can also try other commands to see how it works. If your scanner doesn’t work with TWACKER, please check your scanner model online and make sure you have installed the (latest) TWAIN driver from its manufacturer.
+If scanning is successful without any errors, then your device should be TWAIN compliant. You can also try other commands to see how it works. If your scanner doesn't work with TWACKER, please check your scanner model online and make sure you have installed the (latest) TWAIN driver from its manufacturer.
 
 ### For macOS
 

@@ -20,9 +20,9 @@ Sometimes when you are using a scanning page built with Dynamic Web TWAIN, you w
 ### Causes
 
 1. The scanner is not connected to the machine or the scanner driver is not installed.
-   Especially when you are using **64-bit Internet Explorer** but you don’t have the 64-bit scanner (TWAIN) driver installed on the machine.
+   Especially when you are using **64-bit Internet Explorer** but you don't have the 64-bit scanner (TWAIN) driver installed on the machine.
 
-2. The Browser doesn’t have enough permission to access the scanner driver.
+2. The Browser doesn't have enough permission to access the scanner driver.
    This mostly happens on **Windows 7/Vista/2008 OS** where high security level is applied to **Internet Explorer**. It would also happen in Firefox 4+ and Safari.
 
 ### Solution
@@ -38,7 +38,7 @@ Sometimes when you are using a scanning page built with Dynamic Web TWAIN, you w
        IE | Tools | Internet Options | Security | Trusted Sites.
        
      2. Turn Protected Mode off.
-        To turn off the protected mode of IE, you can go to Tools | Internet Options | Security and uncheck “Enable Protected Mode (requires restarting Internet Explorer)” option.
+        To turn off the protected mode of IE, you can go to Tools | Internet Options | Security and uncheck "Enable Protected Mode (requires restarting Internet Explorer)" option.
 
         FYI, Protected Mode helps protect users from attack by running an IE process with greatly restricted privileges. It uses the Windows Vista integrity mechanism to run the        Internet Explorer process at low integrity.
 

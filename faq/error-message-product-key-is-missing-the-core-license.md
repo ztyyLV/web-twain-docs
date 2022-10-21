@@ -15,7 +15,7 @@ permalink: /faq/error-message-product-key-is-missing-the-core-license.html
 
 ### Symptom
 
-You get an error message that says “The current product key is missing the core license, please contact the site administrator”.
+You get an error message that says "The current product key is missing the core license, please contact the site administrator".
 
 ### Cause
 
