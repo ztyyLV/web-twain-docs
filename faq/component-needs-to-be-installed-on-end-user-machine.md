@@ -19,5 +19,5 @@ For the <a href="{{site.indepth}}features/initialize.html#desktop-service-editio
 When you upgrade Dynamic Web TWAIN, you may also need a reinstallation of Dynamsoft Service on the client-side. For more information, please refer to <a href="{{site.indepth}}development/upgrade.html#update-dynamsoft-service-on-the-client-side" target="_blank">Update Dynamsoft Service on the Client-side</a>.
 
 If you do not want to install anything, there are two options.
-1. You can choose the <a href="{{site.indepth}}features/initialize.html#webassembly-edition" target="_blank">WebAssembly Edition</a>, but please note that the WebAssembly Edition does not support physical document scanners.
+1. You can choose the WebAssembly Edition, but please note that the WebAssembly Edition does not support physical document scanners.
 2. You can enable Remote Scan, which scans documents from remote scanners connected to host machines. No installation is required on the client machine. Please check <a href="{{site.faq}}how-to-enable-remote-scan.html" target="_blank">here</a> for more information on how remote scan works and how to enable it.

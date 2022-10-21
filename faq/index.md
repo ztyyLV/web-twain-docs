@@ -131,7 +131,7 @@ permalink: /faq/
 <ol>
 <li><a href="{{site.faq}}what-image-editing-operation-supported.html">What image editing operations does the Dynamic Web TWAIN SDK support?</a></li>
 
-<li
+<li>
 <a href="{{site.faq}}show-default-image-editor.html">How can I show the default image editor tool?</a></li>
 
 <li><a href="{{site.faq}}support-image-deskew.html">Do you support image deskew?</a></li>
@@ -257,45 +257,45 @@ permalink: /faq/
 ## Project Deployment and End-user Installation
 
 <ol>
-<li><a href="{{site.faq}}can-i-install-dynamsoft-service-silently.html">Can I install Dynamsoft Service silently?</a></li>
-
-<li><a href="{{site.faq}}how-to-uninstall-dynamsoft-service.html">How to uninstall Dynamsoft Service?</a></li>
-
-<li><a href="{{site.faq}}http-insecure-websites-in-chromium-browser.html">How to resolve if Dynamic Web TWAIN stops working on insecure websites in Chrome v94?</a></li>
-
-<li><a href="{{site.faq}}how-come-would-you-need-local.dynamsoft.com.html">In which cases would I use local.dynamsoft.com instead of 127.0.0.1?</a></li>
-
 <li><a href="{{site.faq}}what-are-the-resources-files.html">What are the Resources files?</a></li>
 
 <li><a href="{{site.faq}}resources-to-be-included-in-SDK.html">What resources of the SDK should be included in my web application?</a></li>
 
 <li><a href="{{site.faq}}change-reference-path.html">How can I change the reference path to the Dynamsoft’s resources in my project?</a></li>
 
+<li><a href="{{site.faq}}how-to-enable-remote-scan.html">How can I enable Remote Scan?</a></li>
+
+<li><a href="{{site.faq}}use-dwt-in-citrix-env.html">How can I use Dynamic Web TWAIN in a Citrix environment?</a></li>
+
 <li><a href="{{site.faq}}component-needs-to-be-installed-on-end-user-machine.html">Is there any component of the Dynamic Web TWAIN SDK that needs to be installed on end-user machines?</a></li>
 
-<li><a href="{{site.faq}}how-to-enable-remote-scan.html">How can I enable Remote Scan?</a></li>
+<li><a href="{{site.faq}}what-does-dynamsoft-service-do-on-end-user-machine.html">What does the Dynamsoft Service do on the end-user machine?</a></li>
 
 <li><a href="{{site.faq}}admin-right-needed-to-install.html">Are admin right required to install the end-user component?</a></li>
 
+<li><a href="{{site.faq}}can-i-install-dynamsoft-service-silently.html">Can I install Dynamsoft Service silently?</a></li>
+
 <li><a href="{{site.faq}}deploy-to-all-users.html">Is there an easy way to deploy the end-user components to all users?</a></li>
 
-<li><a href="{{site.faq}}what-does-dynamsoft-service-do-on-end-user-machine.html">What does the Dynamsoft Service do on the end-user machine?</a></li>
+<li><a href="{{site.faq}}how-to-uninstall-dynamsoft-service.html">How to uninstall Dynamsoft Service?</a></li>
+
+<li><a href="{{site.faq}}service-prompting-to-install-repeatedly.html">I have installed the Dynamsoft Service on an end-user machine but still got asked to install it repeatedly. Why?</a></li>
+
+<li><a href="{{site.faq}}service-installation-issue.html">Dynamsoft Service installation and uninstallation issue</a></li>
+
+<li><a href="{{site.faq}}service-backward-compatibility.html">Can I use two different websites integrated with two different versions of Dynamic Web TWAIN on the same computer?</a></li>
+
+<li><a href="{{site.faq}}how-come-would-you-need-local.dynamsoft.com.html">In which cases would I use local.dynamsoft.com instead of 127.0.0.1?</a></li>
 
 <li><a href="{{site.faq}}upgrade-to-latest-version.html">How do I upgrade my project to use the latest version of the Dynamic Web TWAIN SDK?</a></li>
 
 <li><a href="{{site.faq}}upgrade-end-user-installations.html">How do I upgrade the end-user installation for all end users once I upgrade my project?</a></li>
 
-<li><a href="{{site.faq}}service-prompting-to-install-repeatedly.html">I have installed the Dynamsoft Service on an end-user machine but still got asked to install it repeatedly. Why?</a></li>
-
-<li><a href="{{site.faq}}use-dwt-in-citrix-env.html">How can I use Dynamic Web TWAIN in a Citrix environment?</a></li>
+<li><a href="{{site.faq}}http-insecure-websites-in-chromium-browser.html">How to resolve if Dynamic Web TWAIN stops working on insecure websites in Chrome v94?</a></li>
 
 <li><a href="{{site.faq}}private-network-access-in-chrome101.html">How to resolve Dynamic Web TWAIN issue in Chrome 101?</a></li>
 
 <li><a href="{{site.faq}}content-security-policy-violated.html">Dynamic Web TWAIN – Content-Security-Policy violated</a></li>
-
-<li><a href="{{site.faq}}service-installation-issue.html">Dynamsoft Service installation and uninstallation issue</a></li>
-
-<li><a href="{{site.faq}}service-backward-compatibility.html">Can I use two different websites integrated with two different versions of Dynamic Web TWAIN on the same computer?</a></li>
 
 <li><a href="{{site.faq}}source-not-listed-on-linux.html">Scanner source is listed on XSane applicaton but not on my web application on Linux machines</a></li>
 
@@ -356,6 +356,8 @@ permalink: /faq/
 <li><a href="{{site.faq}}connection-from-the-insecure-HTTP-to-service-failed.html">Error Message - The connection from the insecure (HTTP) web page to the local 'Dynamsoft Service' failed</a></li>
 
 <li><a href="{{site.faq}}source-has-nothing-to-capture.html">Error Message - Source has nothing to capture</a></li>
+
+<li><a href="{{site.faq}}chrome-106-107-warning.html">Warning Message - Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true</a></li>
  </ol>
 
 ## Licensing and Purchase

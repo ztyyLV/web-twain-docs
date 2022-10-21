@@ -95,6 +95,9 @@ permalink: /info/api/WebTwain_Acquire.html
 AcquireImage(
     deviceConfiguration?: DeviceConfiguration
 ): void;
+```
+
+```typescript
 
 AcquireImage(
     successCallBack?: () => void,
@@ -102,7 +105,9 @@ AcquireImage(
         errorCode: number,
         errorString: string) => void
 ): void;
+```
 
+```typescript
 AcquireImage(
     deviceConfiguration?: DeviceConfiguration,
     successCallBack?: () => void,
