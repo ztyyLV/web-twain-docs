@@ -165,7 +165,7 @@ LoadImage(
 
 ```javascript
 DWObject.LoadImage(
-  "C:\\Users\\test\\DWT.jpg",
+  "C:\\test\\DWT.jpg",
   function () {
     console.log("success");
   },
@@ -238,13 +238,28 @@ LoadImageEx(
 
 On mobile devices, `Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL` means "JPG, PNG, TIF" while it means "BMP, JPG, PNG, TIF, PDF" on desktop.
 
-If you would like to load/open images by showing the "Open File" dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to true.
+You can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) before calling this API to enable/disable "Open File" dialog.
 
 **Example**
 
 ```javascript
+DWObject.IfShowFileDialog = true; //"Open File" dialog will be opened.
 DWObject.LoadImageEx(
-    "C:\\Users\\test\\DWT.jpg",
+    "",
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_JPG,
+    function () {
+        console.log("success");
+    },
+    function (errorCode, errorString) {
+        console.log(errorString);
+    }
+);
+```
+
+```javascript
+DWObject.IfShowFileDialog = false; //Default value is true.
+DWObject.LoadImageEx(
+    "C:\\test\\DWT.jpg",
     Dynamsoft.DWT.EnumDWT_ImageType.IT_JPG,
     function () {
         console.log("success");
