@@ -783,8 +783,8 @@ GetSourceNamesAsync(bIncludeDetails: boolean): Promise<string[] | ISourceDetails
  * Bring up the Source Selection User Interface (UI) for the user to choose a data source.
  * @param successCallback A callback function that is executed if the request succeeds.
  * @param failureCallback A callback function that is executed if the request fails.
- * @param errorCode The error code.
- * @param errorString The error string.
+ * @argument errorCode The error code.
+ * @argument errorString The error string.
  */
 SelectSource(
     successCallBack?: () => void,
