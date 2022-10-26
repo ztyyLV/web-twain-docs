@@ -92,7 +92,7 @@ IfAppendImage: boolean;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.0+ </td>
 </tr>
 
 </table>
@@ -544,7 +544,7 @@ RegisterEvent(
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.0+ </td>
 </tr>
 
 </table>
@@ -598,7 +598,7 @@ FTPDownload(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
@@ -651,7 +651,7 @@ FTPDownloadEx(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
@@ -704,7 +704,7 @@ FTPUpload(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
@@ -759,7 +759,7 @@ FTPUploadEx(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v5.0+ </td>
 <td align="center">v5.0+ </td>
 <td align="center">v5.0+ </td>
 <td align="center">v5.0+ </td>
@@ -810,7 +810,7 @@ FTPUploadAllAsMultiPageTIFF(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
@@ -861,7 +861,7 @@ FTPUploadAllAsPDF(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
@@ -912,7 +912,7 @@ FTPUploadAsMultiPagePDF(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
@@ -964,7 +964,7 @@ FTPUploadAsMultiPageTIFF(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
@@ -1002,7 +1002,7 @@ FTPUserName: string;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
@@ -1040,7 +1040,7 @@ FTPPassword: string;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
@@ -1078,7 +1078,7 @@ FTPPort: number;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
@@ -1116,7 +1116,7 @@ IfPASVMode: boolean;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
@@ -1247,7 +1247,7 @@ HTTPDownloadEx(
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v5.0+ </td>
 <td align="center">v5.0+ </td>
 <td align="center">v5.0+ </td>
 <td align="center">v5.0+ </td>
@@ -1355,7 +1355,7 @@ HTTPDownloadDirectly(
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v7.0+ </td>
 <td align="center">v7.0+ </td>
 <td align="center">v7.0+ </td>
 <td align="center">v7.0+ </td>
@@ -3177,7 +3177,7 @@ IfShowCancelDialogWhenImageTransfer: boolean;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
@@ -3358,7 +3358,7 @@ Print(useOSPrintWindow ? : boolean): boolean;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.0+ </td>
 </tr>
 
 </table>
@@ -3396,7 +3396,7 @@ PrintEx(indices: number[]): void;
 <td align="center">v17.0+ </td>
 <td align="center">v17.0+ </td>
 <td align="center">v17.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v17.0+ </td>
 </tr>
 
 </table>
@@ -3434,7 +3434,7 @@ JPEGQuality: number;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.0+ </td>
 </tr>
 
 </table>
@@ -3522,7 +3522,7 @@ TIFFCompressionType: Dynamsoft.DWT.EnumDWT_TIFFCompressionType | number;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.0+ </td>
 </tr>
 
 </table>
