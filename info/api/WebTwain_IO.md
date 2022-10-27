@@ -1547,6 +1547,7 @@ DWObject.HTTPUpload(
 function OnEmptyResponse() {
     console.log('Success');
 }
+
 function OnServerReturnedSomething(errCode, errString, responseStr) {
     console.log(errString);
 }
