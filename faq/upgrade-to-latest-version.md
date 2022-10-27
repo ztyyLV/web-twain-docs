@@ -9,9 +9,10 @@ description: How do I upgrade my project to use the latest version of the Dynami
 permalink: /faq/upgrade-to-latest-version.html
 ---
 
-# Project Deployment and End-user Installation
+View all FAQs about [Project Deployment and End-user Installation](
+https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-installation)
 
-## How do I upgrade my project to use the latest version of the Dynamic Web TWAIN SDK?
+# How do I upgrade my project to use the latest version of the Dynamic Web TWAIN SDK?
 
 For the upgrade process, we would recommend trying out the latest version with a trial before requesting the upgrade.
 You can download a 30-day free trial <a href="https://www.dynamsoft.com/web-twain/downloads/1000001-confirmation/" target="_blank">here</a>.

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Features - Initialization
+title: Dynamic Web TWAIN SDK Features - Initialization
 keywords: Dynamic Web TWAIN, Documentation, Initialization 
 breadcrumbText: Initialization
 description: Dynamic Web TWAIN SDK Documentation Initialization Page
@@ -34,7 +34,7 @@ Dynamic Web TWAIN offers a number of optional add-ons, including a barcode reade
 
 You can reference the respective JS file to include any of these add-on components. Once a JS file is referenced, the member methods/properties of that component are made available in the [Dynamsoft Namespace](#the-dynamsoft-namespace) and can later be used by the `WebTwain` instances.
 
-If you use any of the `min` file from the `dwt` package, all add-on components are included by default.
+If you use any of the `min` file from the `Dynamic Web TWAIN` package, all add-on components are included by default.
 
 ## Loading the supporting files
 
@@ -78,7 +78,7 @@ By default, `Dynamsoft.DWT.Load()` will be called automatically as soon as the r
 
 You can control the behavior using `Dynamsoft.DWT.AutoLoad` which is defined in the file `dynamsoft.webtwain.config.js`. It is set to `true` by default but can be called anywhere before the actual loading begins.
 
-When `Load()` is called, `DWT` tries to create the `WebTwain` instances. Once it's done, `DWT` triggers the built-in callback `Dynamsoft.DWT.OnWebTwainReady` in which the method [`Dynamsoft.DWT.GetWebTwain`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#getwebtwain) can be used to get the handler(s) of the instance(s). For simplicity, the `OnWebTwainReady` callback points to a global function called `Dynamsoft_OnReady`.
+When `Load()` is called, `Dynamic Web TWAIN` tries to create the `WebTwain` instances. Once it's done, `Dynamic Web TWAIN` triggers the built-in callback `Dynamsoft.DWT.OnWebTwainReady` in which the method [`Dynamsoft.DWT.GetWebTwain`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#getwebtwain) can be used to get the handler(s) of the instance(s). For simplicity, the `OnWebTwainReady` callback points to a global function called `Dynamsoft_OnReady`.
 
 ### [`Dynamsoft.DWT.CreateDWTObject()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#createdwtobject)
 
@@ -225,7 +225,7 @@ Dynamic Web TWAIN operates under the `Dynamsoft` namespace.
 
 `Dynamsoft` is the top-level namespace. Dynamic Web TWAIN and other Dynamsoft libraries are all defined under `Dynamsoft`. For Dynamic Web TWAIN, the major members of this namespace are:
 
-- [`DWT`]({{site.info}}api/Dynamsoft_WebTwainEnv.html)
+- [`Dynamic Web TWAIN`]({{site.info}}api/Dynamsoft_WebTwainEnv.html)
 
     Includes global methods, properties for `WebTwain` initialization and instantiation, etc.
 

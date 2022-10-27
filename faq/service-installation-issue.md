@@ -9,9 +9,10 @@ description: Dynamsoft Service installation and uninstallation issue
 permalink: /faq/service-installation-issue.html
 ---
 
-# Project Deployment and End-user Installation
+View all FAQs about [Project Deployment and End-user Installation](
+https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-installation)
 
-## Dynamsoft Service installation and uninstallation issue
+# Dynamsoft Service installation and uninstallation issue
 
 
 ### Symptom

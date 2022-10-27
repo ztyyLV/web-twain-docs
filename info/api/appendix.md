@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN API - Appendix
+title: Dynamic Web TWAIN SDK API - Appendix
 keywords: Dynamic Web TWAIN, Documentation, API Appendix
 breadcrumbText: API Appendix
 description: Dynamic Web TWAIN SDK Documentation API Appendix Page

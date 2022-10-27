@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN API Reference - Acquire APIs
+title: Dynamic Web TWAIN SDK API Reference - Acquire APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Acquire APIs
 breadcrumbText: Acquire
 description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
@@ -95,6 +95,9 @@ permalink: /info/api/WebTwain_Acquire.html
 AcquireImage(
     deviceConfiguration?: DeviceConfiguration
 ): void;
+```
+
+```typescript
 
 AcquireImage(
     successCallBack?: () => void,
@@ -102,7 +105,9 @@ AcquireImage(
         errorCode: number,
         errorString: string) => void
 ): void;
+```
 
+```typescript
 AcquireImage(
     deviceConfiguration?: DeviceConfiguration,
     successCallBack?: () => void,
@@ -650,7 +655,7 @@ OpenSourceAsync(): Promise<boolean>;
  * Return all available data sources (scanners, etc.) and optionally all detailed information about them.
  * @param bIncludeDetails Whether to return more details about the data sources or just their names.
  */
-GetSourceNames(bIncludeDetails: boolean): string[] | ISourceDetails[];
+GetSourceNames(bIncludeDetails: boolean): string[] | SourceDetails[];
 
 interface SourceDetails {
     /**
@@ -2208,7 +2213,7 @@ If it's set to `false` , the images will be inserted before the current image. T
 ```
 
 /**
- * Return or set whether to close the data source after all images have been acquired.
+ * Return or set whether to close the built-in User Interface after all images have been acquired.
  */
 IfDisableSourceAfterAcquire: boolean;
 ```

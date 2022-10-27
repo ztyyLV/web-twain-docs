@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN API Reference - Edit APIs
+title: Dynamic Web TWAIN SDK API Reference - Edit APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Edit APIs
 breadcrumbText: Edit
 description: Dynamic Web TWAIN SDK Documentation API Reference Edit APIs Page
@@ -1058,7 +1058,8 @@ CutToClipboard(index: number): boolean;
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
+<>
+align="center">v4.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>

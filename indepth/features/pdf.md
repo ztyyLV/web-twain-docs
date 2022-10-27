@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Features - Handle PDF
+title: Dynamic Web TWAIN SDK Features - Handle PDF
 keywords: Dynamic Web TWAIN, Documentation, Handle PDF
 breadcrumbText: Handle PDF
 description: Dynamic Web TWAIN SDK Documentation Handle PDF Page
@@ -10,7 +10,7 @@ permalink: /indepth/features/pdf.html
 
 # PDF Handling 
 
-PDFs are widely used in many and various industries, and presently are the only non-image file type that `DWT` supports. In this next section, we will address all the input and output operations that allow the user to properly handle PDF files.
+PDFs are widely used in many and various industries, and presently are the only non-image file type that `Dynamic Web TWAIN` supports. In this next section, we will address all the input and output operations that allow the user to properly handle PDF files.
 
 ## Environment
 
@@ -30,7 +30,7 @@ To include the PDF addon, simply add a reference to the corresponding JavaScript
 
 ### Open an image-only PDF file
 
-When loading in a PDF file, `DWT` tries to extract images from that file, which is why the SDK can handle image-based PDF documents by default. 
+When loading in a PDF file, `Dynamic Web TWAIN` tries to extract images from that file, which is why the SDK can handle image-based PDF documents by default. 
 
 ### Open a searchable PDF file
 
@@ -69,7 +69,7 @@ See full sample <a href="https://github.com/Dynamsoft/Dynamic-Web-TWAIN/blob/mas
 
 ### Save images as image-based PDFs
 
-`DWT` can output one or multiple images in the buffer as image-based PDF file(s). This feature is built into the core module, and no addon is required as was covered in the [output]({{site.indepth}}features/output.html) section.
+`Dynamic Web TWAIN` can output one or multiple images in the buffer as image-based PDF file(s). This feature is built into the core module, and no addon is required as was covered in the [output]({{site.indepth}}features/output.html) section.
 
 ### PDF save settings
 

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN API Reference - OCRB Addon APIs
+title: Dynamic Web TWAIN SDK API Reference - OCRB Addon APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, OCRB Addon APIs
 breadcrumbText: OCRB Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference OCRB Addon APIs Page

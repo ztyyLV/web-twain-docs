@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN API Reference - Uploader APIs
+title: Dynamic Web TWAIN SDK API Reference - Uploader APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Uploader APIs
 breadcrumbText: File Uploader
 description: Dynamic Web TWAIN SDK Documentation API Reference Uploader APIs Page
