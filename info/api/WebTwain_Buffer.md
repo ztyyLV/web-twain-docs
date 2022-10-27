@@ -1862,7 +1862,7 @@ interface BufferChangeInfo {
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 </tr>
 
 </table>

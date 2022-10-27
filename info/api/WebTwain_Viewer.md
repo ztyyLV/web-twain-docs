@@ -291,7 +291,7 @@ interface ImageEditor {
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -581,16 +581,16 @@ interface ThumbnailViewerSettings {
      */
     autoChangeIndex?: boolean;
     checkbox?: {
-      visibility?: string; //"visible"：hidden", default: "hidden" 
-      width?: number | string; //default: "24px"，number unit: px, string value: "24px"/"10%", relative to parent container
-      height?: number | string; //default: "24px"，number unit: px, string value: "24px"/"10%", relative to parent container
+      visibility?: string; //"visible":hidden", default: "hidden" 
+      width?: number | string; //default: "24px",number unit: px, string value: "24px"/"10%", relative to parent container
+      height?: number | string; //default: "24px",number unit: px, string value: "24px"/"10%", relative to parent container
       background?: string; //default: "#ffffff"
       borderWidth?: number | string;  //default: "2px", unit: px, percentage value not supported
       borderColor?: string; //default: "#000000"
       checkMarkColor?: string; //default: "#000000"
       checkMarkLineWidth?: number | string; //default: "2px", unit: px, percentage value not supported
-      borderRadius?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%"，relative to itself
-      opacity?: number; //default：0.5, value range [0-1], value greater 1 defaults to 1
+      borderRadius?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%",relative to itself
+      opacity?: number; //default:0.5, value range [0-1], value greater 1 defaults to 1
       left?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
       top?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
       right?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
@@ -605,7 +605,7 @@ interface ThumbnailViewerSettings {
       background?: string; //default: "#ffffff"            
       borderWidth?: number | string; //default: "1px", unit: px, percentage value not supported
       borderColor?: string; //default: "#a79898"
-      borderRadius?: number | string; //default: “50%”, number unit: px, string value: "10px"/"10%", relative to itself
+      borderRadius?: number | string; //default: "50%", number unit: px, string value: "10px"/"10%", relative to itself
       opacity?:number; //default: 0.5, value range [0-1], value greater 1 defaults to 1
       color?: string; //default: "#000000", supports #16 hexadecimal only
       fontFamily?: string; //default: "sans-serif"
@@ -814,7 +814,7 @@ interface ViewMode {
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -877,7 +877,7 @@ The following table shows the events available to a ThumbnailViewer object.
 | `mousemove`    | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse moved over                                  |
 | `mousedown`    | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is pressed                              |
 | `mouseup`      | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is released                             |
-| `resize`       | width：number, height：number                     | Triggered when width & height of the ThumbnailViewer object changes. |
+| `resize`       | width:number, height:number                     | Triggered when width & height of the ThumbnailViewer object changes. |
 | `pageRendered` | index: number                                     | Triggered when a page is rendered.                                   |
 | `mouseout`     | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is out, only for desktop browsers           |
 | `mouseover`    | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when mouse is hovering, only for desktop browsers          |
@@ -917,7 +917,7 @@ first():number;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -964,7 +964,7 @@ fitWindow(
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1022,7 +1022,7 @@ gotoPage(
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1110,7 +1110,7 @@ last():number;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1154,7 +1154,7 @@ next(): number;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1262,7 +1262,7 @@ previous(): number;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1393,7 +1393,7 @@ interface Area {
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1461,7 +1461,7 @@ setViewMode(
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.1+ </td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+ </td>
@@ -1509,7 +1509,7 @@ show(): boolean;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1738,7 +1738,7 @@ background: string;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1834,7 +1834,7 @@ cursor: string;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1891,7 +1891,7 @@ height: number | string;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1988,7 +1988,7 @@ ifAutoScroll: string;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -2080,7 +2080,7 @@ pageMargin: number | string;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -2378,7 +2378,7 @@ width: number | string;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -2430,7 +2430,7 @@ zoom: number;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -2516,7 +2516,7 @@ When set to true, the index in the upper left corner of the viewer will be selec
  * @argument templateName Currently templateName only supports "documentScanner".
  * @argument documentConfiguration Configuration for the document object.
  */
-createTemplate("templateName", documentConfiguration?: DocumentConfiguration)：DocumentViewerTemplate
+createTemplate("templateName", documentConfiguration?: DocumentConfiguration):DocumentViewerTemplate
 interface DocumentViewerTemplate{
    getCustomElement():CustomElement; //Get CustomElement. Can display save & upload interface in CustomElement.   
    onAddDocumentFunc = function () {}
@@ -2531,7 +2531,7 @@ interface DocumentViewerTemplate{
  * Create document scanner template.
  * @argument templateName Currently templateName only supports "documentScanner".
  */
-createTemplate("templateName")：DocumentViewerTemplate
+createTemplate("templateName"):DocumentViewerTemplate
 interface DocumentViewerTemplate{
    getCustomElement():CustomElement; //Get CustomElement. Can display save & upload interface in CustomElement.   
    onAddDocumentFunc = function () {}
@@ -2685,7 +2685,7 @@ interface CheckboxSettings {
   checkMarkColor?: string; //default: "#000000"
   checkMarkLineWidth?: number | string; //default: "2px", unit: px, percentage value not supported
   borderRadius?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to itself
-  opacity?: number; //default：0.5, value range [0-1], value greater 1 defaults to 1
+  opacity?: number; //default:0.5, value range [0-1], value greater 1 defaults to 1
   left?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
   top?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
   right?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
@@ -2738,10 +2738,10 @@ interface pageNumberSettings {
   visibility?: string; //"visible": hidden", default: "hidden" 
   width?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
   height?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
-  background?: string; //default："#ffffff"            
+  background?: string; //default:"#ffffff"            
   borderWidth?: number | string; //default: "1px", unit: px, percentage value not supported
   borderColor?: string; //default: "#a79898"
-  borderRadius?: number | string; //default: “50%”, number unit: px, string value: "10px"/"10%", relative to itself
+  borderRadius?: number | string; //default: "50%", number unit: px, string value: "10px"/"10%", relative to itself
   opacity?:number; //default: 0.5, value range [0-1], value greater 1 defaults to 1
   color?: string; //default: "#000000", supports #16 hexadecimal only
   fontFamily?: string; //default: "sans-serif"
@@ -2946,7 +2946,7 @@ DWObject.Viewer.on("keyup", function (keyboardEvent) {
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ (partially supported) </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -2960,6 +2960,7 @@ DWObject.Viewer.on("keyup", function (keyboardEvent) {
 **Usage notes**
 
 The events `mouseout`, `mouseover`, `keydown` and `keyup` are only triggered on desktop browsers.
+The events `click`, `dbclick`, `mousemove`, `pageAreaSelected`, and `pageAreaUnselected` are supported in ActiveX.
 
 ---
 
@@ -3005,7 +3006,7 @@ interface rect{
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -3056,7 +3057,7 @@ on('pageAreaUnselected',
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>

@@ -846,10 +846,6 @@ DWObject.SelectSource(
 ```typescript
 /**
  * Bring up the Source Selection User Interface (UI) for the user to choose a data source.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
  */
 SelectSourceAsync(): Promise<number>;
 ```
@@ -881,7 +877,7 @@ DWObject.SelectSourceAsync()
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v16.1+ </td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
@@ -966,7 +962,7 @@ SelectSourceByIndexAsync(index: number): Promise<boolean>;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v16.1+  </td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>

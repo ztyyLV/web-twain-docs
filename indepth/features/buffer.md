@@ -14,7 +14,7 @@ When using Dynamic Web TWAIN scanner module on desktop, it collects all the inpu
 
 ## Memory Limits 
 
-Dynamic Web TWAIN can run in 32bit and 64bit and the data is stored raw in `DIB` format. Before version 15.0, it’s 32-bit by default and that means it can utilize no more than 2 GB of physical memory. In version 15.0 onwards, 64-bit has been made the default option on a 64-bit OS and that means there is no limitation on how much memory it can use.
+Dynamic Web TWAIN can run in 32bit and 64bit and the data is stored raw in `DIB` format. Before version 15.0, it's 32-bit by default and that means it can utilize no more than 2 GB of physical memory. In version 15.0 onwards, 64-bit has been made the default option on a 64-bit OS and that means there is no limitation on how much memory it can use.
 
 In order to control the size of the data, `Dynamic Web TWAIN` can limit the number of images allowed in buffer with the property [`MaxImagesInBuffer`]({{site.info}}api/WebTwain_Buffer.html#maximagesinbuffer).
 

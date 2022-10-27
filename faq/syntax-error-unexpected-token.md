@@ -2,16 +2,16 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Syntax error – Unexpected Token “<”
+title: Syntax error – Unexpected Token "<"
 keywords: Dynamic Web TWAIN, Error Troubleshooting
-breadcrumbText: Syntax error – Unexpected Token “<”
-description: Syntax error – Unexpected Token “<”
+breadcrumbText: Syntax error – Unexpected Token "<"
+description: Syntax error – Unexpected Token "<"
 permalink: /faq/syntax-error-unexpected-token.html
 ---
 
 # Error Troubleshooting
 
-## Syntax error – Unexpected Token “<”
+## Syntax error – Unexpected Token "<"
 
 This is usually because the request to load our resources is returning a 404 error.
 
