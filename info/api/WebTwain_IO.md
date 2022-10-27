@@ -118,13 +118,13 @@ LoadImage(
 
 ```javascript
 DWObject.LoadImage(
-  "C:\\test\\DWT.jpg",
-  function () {
-    console.log("success");
-  },
-  function (errorCode, errorString) {
-    console.log(errorString);
-  }
+    "C:\\test\\DWT.jpg",
+    function () {
+        console.log("success");
+    },
+    function (errorCode, errorString) {
+        console.log(errorString);
+    }
 );
 ```
 
