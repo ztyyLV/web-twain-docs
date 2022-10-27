@@ -83,9 +83,7 @@ LoadImage(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
-
 - `errorCode`: The error code.
-
 - `errorString`: The error string.
 
 **Availability**  
@@ -154,9 +152,7 @@ LoadImageEx(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
-
 - `errorCode`: The error code.
-
 - `errorString`: The error string.
 
 **Availability**  
@@ -249,9 +245,7 @@ LoadImageFromBase64Binary(
 `successCallback`: A callback function that is executed if the request succeeds.
  
 `failureCallback`: A callback function that is executed if the request fails.
- 
 - `errorCode`: The error code.
- 
 - `errorString`: The error string.
 
 **Availability**
@@ -331,9 +325,7 @@ LoadImageFromBinary(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
-
 - `errorCode`: The error code.
-
 - `errorString`: The error string.
 
 
@@ -410,9 +402,7 @@ LoadDibFromClipboard(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
-
 - `errorCode`: The error code.
-
 - `errorString`: The error string.
 
 **Availability**
@@ -476,7 +466,7 @@ RegisterEvent(
 
 `index`: The index of the current image.
 
-`directory`: The parent directory of currently selected file(s), "\\\\" is not included. If the methed [ShowFileDialog()]({{site.info}}api/WebTwain_IO.html#showfiledialog) failed, the initial directory path set in the [ShowFileDialog()]({{site.info}}api/WebTwain_IO.html#showfiledialog) method is returned.
+`directory`: The parent directory of currently selected file(s), "\\\\" is not included. If the methed [ShowFileDialog]({{site.info}}api/WebTwain_IO.html#showfiledialog) failed, the initial directory path set in the [ShowFileDialog]({{site.info}}api/WebTwain_IO.html#showfiledialog) method is returned.
 
 `fileName`: The current file name.
 
@@ -700,9 +690,7 @@ FTPUpload(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
-
 - `errorCode`: The error code.
-
 - `errorString`: The error string.
 
 **Availability**
@@ -763,9 +751,7 @@ FTPUploadEx(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
-
 - `errorCode`: The error code.
-
 - `errorString`: The error string.
 
 **Availability**
@@ -829,9 +815,7 @@ FTPUploadAllAsMultiPageTIFF(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
-
 - `errorCode`: The error code.
-
 - `errorString`: The error string.
 
 **Availability**
@@ -886,9 +870,7 @@ FTPUploadAllAsPDF(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
-
 - `errorCode`: The error code.
-
 - `errorString`: The error string.
 
 **Availability**
@@ -943,9 +925,7 @@ FTPUploadAsMultiPagePDF(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
-
 - `errorCode`: The error code.
-
 - `errorString`: The error string.
 
 **Availability**
@@ -1000,9 +980,7 @@ FTPUploadAsMultiPageTIFF(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
-
 - `errorCode`: The error code.
-
 - `errorString`: The error string.
 
 **Availability**
@@ -1498,11 +1476,8 @@ HTTPUpload(
 `onEmptyResponse`: A callback function that is executed if the response is empty.
 
 `onServerReturnedSomething`: A callback function that is executed if the response is not empty.
-
 - `errorCode` The error code.
-
 - `errorString` The error string.
-
 - `response` The response string.
 
 **Availability**
