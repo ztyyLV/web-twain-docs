@@ -2,14 +2,14 @@
 layout: default-layout
 needAutoGenerateSidebar: true
 noTitleIndex: true
-title: Dynamic Web TWAIN Schedule - Addon Release
+title: Dynamic Web TWAIN SDK Schedule - Addon Release
 keywords: Dynamic Web TWAIN, Documentation, Schedule, Addon Release
 breadcrumbText: Addons
 description: Dynamic Web TWAIN SDK Documentation Schedule - Addon Release Page
 permalink: /info/schedule/Addon.html
 ---
 
-# DWT Core and Addon
+# Dynamic Web TWAIN Core and Addon
 
 ## Recent Version Matches
 
@@ -121,7 +121,7 @@ A professional linear & 2D barcode reading library for recognizing barcode from 
 * Expanded the Barcode Reader feature to the ActiveX.
 * Updated the Barcode reader libraries to version 6.4.1.
 
-### `6.3` (09/18/2018) (Since DWT 14.1)
+### `6.3` (09/18/2018) (Since Dynamic Web TWAIN 14.1)
 
 * Check out DBR news for more info.
 
@@ -134,7 +134,7 @@ A professional linear & 2D barcode reading library for recognizing barcode from 
 * Optimized the timeout support. Now it is possible to stop barcode recognition by timeout.
 * Increased QR Code and DataMatrix barcode recognition speed for B&W images.
 
-### `5.1` (06/20/2017) (since DWT 13.0)
+### `5.1` (06/20/2017) (since Dynamic Web TWAIN 13.0)
 
 #### NEW
 
@@ -152,7 +152,7 @@ A professional linear & 2D barcode reading library for recognizing barcode from 
 
 * Updated barcode reader library with improved positioning algorithm that can better identify and locate DataMatrix barcodes.
 
-### `4.3` (10/13/2016) (DWT12.1~12.3.1)
+### `4.3` (10/13/2016) (Dynamic Web TWAIN12.1~12.3.1)
 
 #### NEW
 
@@ -165,7 +165,7 @@ A professional linear & 2D barcode reading library for recognizing barcode from 
 * Optimized decoding performance for large size, special angle and multiple 1D barcodes.
 * Other small fixes and tweaks.
 
-### `4.2` (04/08/2016) (DWT12.0)
+### `4.2` (04/08/2016) (Dynamic Web TWAIN12.0)
 
 #### IMPROVED
 
@@ -184,13 +184,13 @@ A professional linear & 2D barcode reading library for recognizing barcode from 
 * Added CodeBar, Code_93, EAN_8, EAN_13, ITF, UPC_A, UPC_E support to the 1D Barcode Reader module.
 * Added support for PDF417 and DataMatrix.
 
-### `3.0` (08/13/2015) (DWT11.1)
+### `3.0` (08/13/2015) (Dynamic Web TWAIN11.1)
 
 #### NEW
 
 * Added support for QR Code and Industrial 2 of 5.
 
-### `2.0` (07/17/2015) (DWT11.0, internal barcode dll version 9.6)
+### `2.0` (07/17/2015) (Dynamic Web TWAIN11.0, internal barcode dll version 9.6)
 
 #### NEW
 
@@ -200,7 +200,7 @@ A professional linear & 2D barcode reading library for recognizing barcode from 
 
 * Fixed the bug in the Barcode Reader add-on where barcode location fails for 200 DPI.
 
-### `1.0` (01/20/2015) (since DWT10.1~10.2, internal barcode dll version 9.5)
+### `1.0` (01/20/2015) (since Dynamic Web TWAIN10.1~10.2, internal barcode dll version 9.5)
 
 * Updates in this version include 1D barcode improvements in accuracy and performance for Code 39 and Code128 recognition. Also image preprocessing is improved. For Code 128, the recognition ratio and speed have jumped up by as much as 30 percent.
 

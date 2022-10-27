@@ -9,9 +9,10 @@ description: What resources of the SDK should be included in my web application?
 permalink: /faq/resources-to-be-included-in-SDK.html
 ---
 
-# Project Deployment and End-user Installation
+View all FAQs about [Project Deployment and End-user Installation](
+https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-installation)
 
-## What resources of the SDK should be included in my web application?
+# What resources of the SDK should be included in my web application?
 
 You can include all the files under the Resources folder, but not all are required.
 

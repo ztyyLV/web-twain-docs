@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: false
-title: Dynamic Web TWAIN Schedule - Features To Consider
+title: Dynamic Web TWAIN SDK Schedule - Features To Consider
 keywords: Dynamic Web TWAIN, Documentation, Schedule, Features To Consider
 breadcrumbText: Features To Consider
 description: Dynamic Web TWAIN SDK Documentation Schedule Features To Consider Page

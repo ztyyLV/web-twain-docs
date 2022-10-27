@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN API Reference - Camera Addon APIs
+title: Dynamic Web TWAIN SDK API Reference - Camera Addon APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Camera Addon APIs
 breadcrumbText: Camera Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference Camera Addon APIs Page
@@ -731,7 +731,7 @@ interface ScannerViewer {
     visibility?: string; //Whether to display the resolution icon in the upper left corner. Values: "visible""hidden". Default; "visible".
     
     valueList?:[ {   
-      label: string;    //The resolution value listed in the drop-down list. For example："1920x1080"
+      label: string;    //The resolution value listed in the drop-down list. For example:"1920x1080"
       value: Resolution //The resolution you set. For example: { width:1920, height:1080}
     },{……}]
       defaultValue?: Resolution //Set the default value according to the value set in the valueList.

@@ -2,7 +2,7 @@
 layout: default-layout
 needAutoGenerateSidebar: true
 noTitleIndex: true
-title: Dynamic Web TWAIN Schedule - Deprecated Features
+title: Dynamic Web TWAIN SDK Schedule - Deprecated Features
 keywords: Dynamic Web TWAIN, Documentation, Schedule, Deprecated Features
 breadcrumbText: Deprecated
 description: Dynamic Web TWAIN SDK Documentation Deprecated Features Page
@@ -38,7 +38,7 @@ The recommended fix is to patch the operating system, you can find the patch [he
 
 ## 17.3
 
-### DWT
+### Dynamic Web TWAIN
 
 * Deleted property: Dynamsoft.DWT.UseDefaultInstallUI
 

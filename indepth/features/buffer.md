@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Features - Buffer
+title: Dynamic Web TWAIN SDK Features - Buffer
 keywords: Dynamic Web TWAIN, Documentation, Buffer
 breadcrumbText: Buffer
 description: Dynamic Web TWAIN SDK Documentation Buffer Page
@@ -14,29 +14,29 @@ When using Dynamic Web TWAIN scanner module on desktop, it collects all the inpu
 
 ## Memory Limits 
 
-Dynamic Web TWAIN can run in 32bit and 64bit and the data is stored raw in `DIB` format. Before version 15.0, it’s 32-bit by default and that means it can utilize no more than 2 GB of physical memory. In version 15.0 onwards, 64-bit has been made the default option on a 64-bit OS and that means there is no limitation on how much memory it can use.
+Dynamic Web TWAIN can run in 32bit and 64bit and the data is stored raw in `DIB` format. Before version 15.0, it's 32-bit by default and that means it can utilize no more than 2 GB of physical memory. In version 15.0 onwards, 64-bit has been made the default option on a 64-bit OS and that means there is no limitation on how much memory it can use.
 
-In order to control the size of the data, `DWT` can limit the number of images allowed in buffer with the property [`MaxImagesInBuffer`]({{site.info}}api/WebTwain_Buffer.html#maximagesinbuffer).
+In order to control the size of the data, `Dynamic Web TWAIN` can limit the number of images allowed in buffer with the property [`MaxImagesInBuffer`]({{site.info}}api/WebTwain_Buffer.html#maximagesinbuffer).
 
 ## Disk Caching
 
-The data `DWT` deals with are images which take up lots of space as they are stored raw in **DIB** format. For example, one A4 paper scanned in 300 DPI takes around 24MB in memory which means 2GB of physical memory can only store no more than 85 of these images. As more images are processed, more memory gets used which may pose a threat to other programs on the machine. Due to this, the disk cache function was added. After enabling disk caching, most images will be temporarily cached on the disk, while keeping some active images in the memory to maintain high performance.
+The data `Dynamic Web TWAIN` deals with are images which take up lots of space as they are stored raw in **DIB** format. For example, one A4 paper scanned in 300 DPI takes around 24MB in memory which means 2GB of physical memory can only store no more than 85 of these images. As more images are processed, more memory gets used which may pose a threat to other programs on the machine. Due to this, the disk cache function was added. After enabling disk caching, most images will be temporarily cached on the disk, while keeping some active images in the memory to maintain high performance.
 
 The disk caching feature is enabled by default and can be disabled by setting [`IfAllowLocalCache`]({{site.info}}api/WebTwain_Buffer.html#ifallowlocalcache) to `false` .
 
-You can also set how much memory `DWT` can use before images start to be cached. By default, **800MB** is used. You can change it using the property [`BufferMemoryLimit`]({{site.info}}api/WebTwain_Buffer.html#buffermemorylimit). 
+You can also set how much memory `Dynamic Web TWAIN` can use before images start to be cached. By default, **800MB** is used. You can change it using the property [`BufferMemoryLimit`]({{site.info}}api/WebTwain_Buffer.html#buffermemorylimit). 
 
 > NOTE
 >  
-> All cached data is encrypted and can only be accessed by `DWT` .
+> All cached data is encrypted and can only be accessed by `Dynamic Web TWAIN` .
 >
-> When `DWT` is unloaded (like when the browser tab refreshes or closes), the cached data is destroyed and removed from the disk automatically.
+> When `Dynamic Web TWAIN` is unloaded (like when the browser tab refreshes or closes), the cached data is destroyed and removed from the disk automatically.
 
 Although you can scan and load as many images as you like, you may want to handle them in smaller volumes when doing further processing. For example, when dealing with extremely large volumes, you should not try to upload or save the images all at once as that would be too time consuming and prone to errors.
 
 ## Rearranging the images within the buffer
 
-`DWT` offers a number of methods to help you shift the images within the buffer.
+`Dynamic Web TWAIN` offers a number of methods to help you shift the images within the buffer.
 
 > NOTE
 >  
@@ -70,7 +70,7 @@ DWObject.RemoveAllSelectedImages();
 
 ## Tagging Images
 
-`DWT` offers the ability to place tag(s) on image(s) which helps putting them into groups. A tag is a string that describes the corresponding grouping. The following demonstrates how to tag images:
+`Dynamic Web TWAIN` offers the ability to place tag(s) on image(s) which helps putting them into groups. A tag is a string that describes the corresponding grouping. The following demonstrates how to tag images:
 
 ``` javascript
 /* Tags the first two scanned images with the classification "title" to indicate that they belong to the title section of the book being scanned. The 3 images after the first two belong to chapter 1 of the book so they were tagged correspondingly */
@@ -103,7 +103,7 @@ The buffer also provides access to a wide array of info for each image. Here is 
 The following is only supported in [desktop browsers]({{site.getstarted}}platform.html#browsers-on-desktop-devices).
 
 * Size in bytes of the specified image according to input dimensions: [ `GetImageSize()` ]({{site.info}}api/WebTwain_Buffer.html#getimagesize)
-* Size, but this time you specify an image format and `DWT` calculates the size in bytes depending on that image format: [ `GetImageSizeWithSpecifiedType()` ]({{site.info}}api/WebTwain_Buffer.html#getimagesizewithspecifiedtype)
+* Size, but this time you specify an image format and `Dynamic Web TWAIN` calculates the size in bytes depending on that image format: [ `GetImageSizeWithSpecifiedType()` ]({{site.info}}api/WebTwain_Buffer.html#getimagesizewithspecifiedtype)
 * Size in bytes of selected images according to input dimensions: [ `GetSelectedImagesSize()` ]({{site.info}}api/WebTwain_Buffer.html#getselectedimagessize)
 
 ## Status Reporting
@@ -118,7 +118,7 @@ Now that we've covered the general image info like  size and dimensions, let's a
 
 > NOTE
 >  
-> Unlike the index which changes when the position of the image changes, the image ID stays unchanged until the image is no longer in the `DWT` buffer.
+> Unlike the index which changes when the position of the image changes, the image ID stays unchanged until the image is no longer in the `Dynamic Web TWAIN` buffer.
 
 * If a scanned image comes out a bit skewed, and you are not able to put that specific page through the scanner again, one potential solution would be to rotate the image by how much it is skewed, which can be easily done using [ `GetSkewAngle()` ]({{site.info}}api/WebTwain_Buffer.html#getskewangle). 
 
@@ -135,7 +135,7 @@ The following is only supported in [desktop browsers]({{site.getstarted}}platfor
 
 > Note
 >  
-> `GetImageURL()` returns a URL that has the normal scheme `http://` or `https://` while `GetImagePartURL()` returns an internal URL that has the scheme `dwt://` . The latter can only be accessed by other `DWT` APIs.
+> `GetImageURL()` returns a URL that has the normal scheme `http://` or `https://` while `GetImagePartURL()` returns an internal URL that has the scheme `dwt://` . The latter can only be accessed by other `Dynamic Web TWAIN` APIs.
 
 ## Blankness Detection
 

@@ -9,9 +9,10 @@ description: How to uninstall Dynamsoft Service?
 permalink: /faq/how-to-uninstall-dynamsoft-service.html
 ---
 
-# Project Deployment and End-user Installation
+View all FAQs about [Project Deployment and End-user Installation](
+https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-installation)
 
-## How to uninstall Dynamsoft Service?
+# How to uninstall Dynamsoft Service?
 
 ### On Windows
 

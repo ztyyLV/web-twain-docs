@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN API Reference - Utility APIs
+title: Dynamic Web TWAIN SDK API Reference - Utility APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Utility APIs
 breadcrumbText: Utility
 description: Dynamic Web TWAIN SDK Documentation API Reference Utility APIs Page

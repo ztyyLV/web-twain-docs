@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN API Reference - Global APIs
+title: Dynamic Web TWAIN SDK API Reference - Global APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Global APIs
 breadcrumbText: Global
 description: Dynamic Web TWAIN SDK Documentation API Reference Global APIs Page
@@ -209,6 +209,51 @@ Check [license error list](https://www.dynamsoft.com/license-tracking/docs/commo
 
 ## Options
 
+### `Containers`
+
+An array of `Container` definitions that specifies the UI elements for `WebTwain` instances. The `Container` interface is defined below
+
+``` typescript
+interface Container {
+    WebTwainId?: string, // Id of the WebTwain instance
+    ContainerId?: string, // Id of the element
+    Width?: string | number, // Width of the element
+    Height?: string | number // Height of the element
+}
+```
+
+`WebTwainId` and `ContainerId` are both optional but one must exist as the identifier for that `WebTwain` instance.
+
+`Width` and `Height` determine the initial viewer size of the instance.
+
+### `IfAddMD5InUploadHeader`
+  
+Whether or not an md5 header `dwt-md5` should be included in HTTP upload requests. Note that this header is not a standard header and may be deemed invalid on some web servers.
+  
+The default value is `false` .
+
+### `ProductKey`
+
+Sets or returns the product key for the library. A product key is required to enables certain modules of the library.
+  
+### `ResourcesPath`
+
+Sets or returns where the library looks for resources files including service installers, CSS, etc.
+  
+### `UseLocalService`
+
+Sets or returns whether to use the service or use WASM only. This property can be changed at runtime (but not recommended) and affects `WebTwain` instances created after the change.
+
+The default value is `true` .
+  
+### `UseCameraAddonWasm`
+
+Whether to use camera wasm. Set this property to true if you want to use camera wasm in service mode.
+
+The default value is false. 
+
+## Functions
+
 ### `UpdateCert`
 
 **Syntax**
@@ -267,50 +312,6 @@ UpdateCert(
     );
   };
 ```
-
-### `Containers`
-
-An array of `Container` definitions that specifies the UI elements for `WebTwain` instances. The `Container` interface is defined below
-
-``` typescript
-interface Container {
-    WebTwainId?: string, // Id of the WebTwain instance
-    ContainerId?: string, // Id of the element
-    Width?: string | number, // Width of the element
-    Height?: string | number // Height of the element
-}
-```
-
-`WebTwainId` and `ContainerId` are both optional but one must exist as the identifier for that `WebTwain` instance.
-
-`Width` and `Height` determine the initial viewer size of the instance.
-
-### `IfAddMD5InUploadHeader`
-
-  
-Whether or not an md5 header `dwt-md5` should be included in HTTP upload requests. Note that this header is not a standard header and may be deemed invalid on some web servers.
-  
-The default value is `false` .
-
-### `ProductKey`
-
-  
-  Sets or returns the product key for the library. A product key is required to enables certain modules of the library.
-  
-
-### `ResourcesPath`
-
-  
-  Sets or returns where the library looks for resources files including service installers, CSS, etc.
-  
-
-### `UseLocalService`
-
-  Sets or returns whether to use the service or use WASM only. This property can be changed at runtime (but not recommended) and affects `WebTwain` instances created after the change.
-
-  The default value is `true` .
-
-## Functions
 
 ### `CreateDWTObject()`
 

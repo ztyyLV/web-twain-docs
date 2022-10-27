@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Development - Index
+title: Dynamic Web TWAIN SDK Development - Index
 keywords: Dynamic Web TWAIN, Documentation, Development
 breadcrumbText: Development
 description: Dynamic Web TWAIN SDK Documentation Development Index Page

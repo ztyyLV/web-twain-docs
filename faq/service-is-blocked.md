@@ -9,9 +9,10 @@ description:  The scanner's UI or the system's file dialog does not open when sc
 permalink: /faq/service-is-blocked.html
 ---
 
-# Project Deployment and End-user Installation
+View all FAQs about [Project Deployment and End-user Installation](
+https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-installation)
 
-## The scanner's UI or the system's file dialog does not open when scanning
+# The scanner's UI or the system's file dialog does not open when scanning
 
 
 ### Symptom

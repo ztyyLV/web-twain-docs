@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Schedule - Stable Release
+title: Dynamic Web TWAIN SDK Schedule - Stable Release
 keywords: Dynamic Web TWAIN, Documentation, Schedule, Stable Release
 breadcrumbText: Stable Releases
 noTitleIndex: true
@@ -177,7 +177,7 @@ See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scann
 
 * Added support for 64-bit MIPS based computers.  
 
-* Added support for trackable license types such as “Per Browser Client”. This new license mechanism is incompatible with the traditional product key. The related APIs are licenseServer, handshakeCode, sessionPassword, licenseException. 
+* Added support for trackable license types such as "Per Browser Client". This new license mechanism is incompatible with the traditional product key. The related APIs are licenseServer, handshakeCode, sessionPassword, licenseException. 
 
 * Added method [`RemoveTag()`]({{site.info}}api/WebTwain_Buffer.html#removetag) to remove a specified tag from one or multiple images. 
 
@@ -305,7 +305,7 @@ See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scann
 
 * The "Stretch" button is deleted from the image editor.
 
-* The type declaration files are now included in the [`dwt` package](https://www.npmjs.com/package/dwt). From version 16.2 on, these files are no longer maintained on [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped).
+* The type declaration files are now included in the [`Dynamic Web TWAIN` package](https://www.npmjs.com/package/dwt). From version 16.2 on, these files are no longer maintained on [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped).
 
 ### Breaking changes
 
@@ -500,7 +500,7 @@ No changes in version 16.1.
 
 * [HTML5] Fixed a bug where the scanner stops responding when you cancel the scan multiple times.
 * [HTML5] Fixed a bug where the scanner stops responding when the library tries to retrieve extended information that contains magnetic data.
-* [HTML5] Fixed a bug where images can‘t be selected in batches (CTRL/SHIFT + Click) after swapping the current tag.
+* [HTML5] Fixed a bug where images can't be selected in batches (CTRL/SHIFT + Click) after swapping the current tag.
 
 ## `15.3` (01/07/2020)
 
