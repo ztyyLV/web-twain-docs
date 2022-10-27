@@ -291,7 +291,7 @@ interface ImageEditor {
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -814,7 +814,7 @@ interface ViewMode {
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -917,7 +917,7 @@ first():number;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -964,7 +964,7 @@ fitWindow(
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1022,7 +1022,7 @@ gotoPage(
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1110,7 +1110,7 @@ last():number;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1154,7 +1154,7 @@ next(): number;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1262,7 +1262,7 @@ previous(): number;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1393,7 +1393,7 @@ interface Area {
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1461,7 +1461,7 @@ setViewMode(
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.1+ </td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+ </td>
@@ -1509,7 +1509,7 @@ show(): boolean;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1738,7 +1738,7 @@ background: string;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1834,7 +1834,7 @@ cursor: string;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1891,7 +1891,7 @@ height: number | string;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1988,7 +1988,7 @@ ifAutoScroll: string;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -2080,7 +2080,7 @@ pageMargin: number | string;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -2378,7 +2378,7 @@ width: number | string;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -2430,7 +2430,7 @@ zoom: number;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -2946,7 +2946,7 @@ DWObject.Viewer.on("keyup", function (keyboardEvent) {
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ (partially supported) </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -2960,6 +2960,7 @@ DWObject.Viewer.on("keyup", function (keyboardEvent) {
 **Usage notes**
 
 The events `mouseout`, `mouseover`, `keydown` and `keyup` are only triggered on desktop browsers.
+The events `click`, `dbclick`, `mousemove`, `pageAreaSelected`, and `pageAreaUnselected` are supported in ActiveX.
 
 ---
 
@@ -3005,7 +3006,7 @@ interface rect{
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -3056,7 +3057,7 @@ on('pageAreaUnselected',
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>

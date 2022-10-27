@@ -877,7 +877,7 @@ DWObject.SelectSourceAsync()
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v16.1+ </td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
@@ -962,7 +962,7 @@ SelectSourceByIndexAsync(index: number): Promise<boolean>;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v16.1+  </td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
