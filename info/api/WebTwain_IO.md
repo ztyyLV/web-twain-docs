@@ -152,9 +152,7 @@ LoadImageEx(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
-
 - `errorCode`: The error code.
-
 - `errorString`: The error string.
 
 **Availability**  
@@ -247,9 +245,7 @@ LoadImageFromBase64Binary(
 `successCallback`: A callback function that is executed if the request succeeds.
  
 `failureCallback`: A callback function that is executed if the request fails.
- 
 - `errorCode`: The error code.
- 
 - `errorString`: The error string.
 
 **Availability**
@@ -329,9 +325,7 @@ LoadImageFromBinary(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
-
 - `errorCode`: The error code.
-
 - `errorString`: The error string.
 
 
@@ -408,9 +402,7 @@ LoadDibFromClipboard(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
-
 - `errorCode`: The error code.
-
 - `errorString`: The error string.
 
 **Availability**
@@ -1496,11 +1488,8 @@ HTTPUpload(
 `onEmptyResponse`: A callback function that is executed if the response is empty.
 
 `onServerReturnedSomething`: A callback function that is executed if the response is not empty.
-
 - `errorCode` The error code.
-
 - `errorString` The error string.
-
 - `response` The response string.
 
 **Availability**
@@ -2327,9 +2316,7 @@ interface Base64Result {
 - `type`: The file type.
 
 `failureCallback`: A callback function that is executed if the request fails.
-
 - `errorCode`: The error code.
-
 - `errorString`: The error string.
 
 **Availability**
