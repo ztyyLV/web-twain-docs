@@ -69,7 +69,7 @@ permalink: /info/api/WebTwain_Acquire.html
 | [`ImageLayoutFrameBottom`](#imagelayoutframebottom) | [`ImageLayoutFrameLeft`](#imagelayoutframeleft)             | [`ImageLayoutFrameNumber`](#imagelayoutframenumber) | [`ImageLayoutFrameRight`](#imagelayoutframeright)         |
 | [`ImageLayoutFrameTop`](#imagelayoutframetop)       | [`ImageLayoutPageNumber`](#imagelayoutpagenumber)           | [`ImagePixelType`](#imagepixeltype)                 | [`MagData`](#magdata)                                     |
 | [`MagType`](#magtype)                               | [`PendingXfers`](#pendingxfers)                             | [`PixelFlavor`](#pixelflavor)                       | [`TransferMode`](#transfermode)                           |
-| [`Unit`](#unit)                                     | [`XferCount`](#xfercount)                                   |
+| [`Unit`](#unit)                                     | [`XferCount`](#xfercount)                                   |[`IfAppendImage`](#ifappendimage) |
 
 **Events**
 
