@@ -254,7 +254,7 @@ permalink: /info/api/
 |[`ImageLayoutFrameBottom`]({{site.info}}api/WebTwain_Acquire.html#imagelayoutframebottom)| [`ImageLayoutFrameLeft`]({{site.info}}api/WebTwain_Acquire.html#imagelayoutframeleft) |[`ImageLayoutFrameNumber`]({{site.info}}api/WebTwain_Acquire.html#imagelayoutframenumber)| [`ImageLayoutFrameRight`]({{site.info}}api/WebTwain_Acquire.html#imagelayoutframeright) |
 | [`ImageLayoutFrameTop`]({{site.info}}api/WebTwain_Acquire.html#imagelayoutframetop)| [`ImageLayoutPageNumber`]({{site.info}}api/WebTwain_Acquire.html#imagelayoutpagenumber) | [`ImagePixelType`]({{site.info}}api/WebTwain_Acquire.html#imagepixeltype)| [`MagData`]({{site.info}}api/WebTwain_Acquire.html#magdata) |
 |[`MagType`]({{site.info}}api/WebTwain_Acquire.html#magtype)|[`PendingXfers`]({{site.info}}api/WebTwain_Acquire.html#pendingxfers) | [`PixelFlavor`]({{site.info}}api/WebTwain_Acquire.html#pixelflavor)| [`TransferMode`]({{site.info}}api/WebTwain_Acquire.html#transfermode) |
-| [`Unit`]({{site.info}}api/WebTwain_Acquire.html#unit)|[`XferCount`]({{site.info}}api/WebTwain_Acquire.html#xfercount)|
+| [`Unit`]({{site.info}}api/WebTwain_Acquire.html#unit)|[`XferCount`]({{site.info}}api/WebTwain_Acquire.html#xfercount)|[`IfAppendImage`]({{site.info}}api/WebTwain_Acquire.html#ifappendimage)|
 
 <!--
 * [`BitDepth`]({{site.info}}api/WebTwain_Acquire.html#bitdepth)  
@@ -396,7 +396,7 @@ permalink: /info/api/
 |[`FTPPassword`]({{site.info}}api/WebTwain_IO.html#ftppassword) |[`FTPPort`]({{site.info}}api/WebTwain_IO.html#ftpport)| [`FTPUserName`]({{site.info}}api/WebTwain_IO.html#ftpusername) |[`IfPASVMode`]({{site.info}}api/WebTwain_IO.html#ifpasvmode)|
 |[`HttpFieldNameOfUploadedImage`]({{site.info}}api/WebTwain_IO.html#httpfieldnameofuploadedimage) | [`HTTPPort`]({{site.info}}api/WebTwain_IO.html#httpport)|[`IfSSL`]({{site.info}}api/WebTwain_IO.html#ifssl)  |[`HTTPPostResponseString`]({{site.info}}api/WebTwain_IO.html#httppostresponsestring)|
 |[`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) |[`IfShowCancelDialogWhenImageTransfer`]({{site.info}}api/WebTwain_IO.html#ifshowcanceldialogwhenimagetransfer)| [`IfShowProgressBar`]({{site.info}}api/WebTwain_IO.html#ifshowprogressbar)  | [`JPEGQuality`]({{site.info}}api/WebTwain_IO.html#jpegquality)|
-|[`IfTiffMultiPage`]({{site.info}}api/WebTwain_IO.html#iftiffmultipage) | [`TIFFCompressionType`]({{site.info}}api/WebTwain_IO.html#tiffcompressiontype)| [`MaxUploadImageSize`]({{site.info}}api/WebTwain_IO.html#maxuploadimagesize)|[`IfAppendImage`]({{site.info}}api/WebTwain_IO.html#ifappendimage)|
+|[`IfTiffMultiPage`]({{site.info}}api/WebTwain_IO.html#iftiffmultipage) | [`TIFFCompressionType`]({{site.info}}api/WebTwain_IO.html#tiffcompressiontype)| [`MaxUploadImageSize`]({{site.info}}api/WebTwain_IO.html#maxuploadimagesize)|
 
 <!--
 * [`FTPPassword`]({{site.info}}api/WebTwain_IO.html#ftppassword)  
