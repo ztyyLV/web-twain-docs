@@ -13,9 +13,9 @@ permalink: /info/api/WebTwain_IO.html
 
 The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance).
 
-## Methods
+**Methods**
 
-### Input Methods
+**Input Methods**
 
 |                                                   |
 | :------------------------------------------------ | :------------------------------------------------------ | ----------------------------------------------------------- | ----------------------------------------------- |
@@ -23,7 +23,7 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`LoadDibFromClipboard()`](#loaddibfromclipboard) | [`FTPDownload()`](#ftpdownload)                         | [`FTPDownloadEx()`](#ftpdownloadex)                         | [`HTTPDownload()`](#httpdownload)               |
 | [`HTTPDownloadEx()`](#httpdownloadex)             | [`HTTPDownloadThroughPost()`](#httpdownloadthroughpost) | [`HTTPDownloadDirectly()`](#httpdownloaddirectly)           |
 
-### Output Methods
+**Output Methods**
 
 |                                                                                                                          |
 | :----------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -37,7 +37,7 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`SaveAsTIFF()`]({{site.info}}api/WebTwain_IO.html#saveastiff)                                                           | [`SaveSelectedImagesAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagepdf) | [`SaveSelectedImagesAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagetiff)     |
 | [`SaveAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveallasmultipagetiff)                                   | [`SaveAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveallaspdf)                                         |
 
-### Other Methods
+**Other Methods**
 
 |                                               |
 | :-------------------------------------------- | :---------------------------------------- | --------------------------------------------------- | ----------------------------------------- |
@@ -45,7 +45,7 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`SetHTTPHeader()`](#sethttpheader)           | [`SetUploadSegment()`](#setuploadsegment) | [`ShowFileDialog()`](#showfiledialog)               | [`Print()`](#print)                       |
 | [`PrintEx()`](#printex)                       |
 
-## Properties
+**Properties**
 
 |                                                                 |
 | :-------------------------------------------------------------- | :---------------------------------------------------------------------------- | ------------------------------------------- | --------------------------------------------------- |
@@ -54,7 +54,7 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`IfShowFileDialog`](#ifshowfiledialog)                         | [`IfShowCancelDialogWhenImageTransfer`](#ifshowcanceldialogwhenimagetransfer) | [`IfShowProgressBar`](#ifshowprogressbar)   | [`JPEGQuality`](#jpegquality)                       |
 | [`IfTiffMultiPage`](#iftiffmultipage)                           | [`TIFFCompressionType`](#tiffcompressiontype)                                 | [`MaxUploadImageSize`](#maxuploadimagesize) |                    
 
-## Events
+**Events**
 
 |                                   |
 | :-------------------------------- | :-------------------------- | --------------------------------------------------------------- |
