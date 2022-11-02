@@ -1536,33 +1536,39 @@ function OnServerReturnedSomething(errCode, errString, responseStr) {
 
 ## HTTPUploadThroughPutEx
 
+Upload the specified image via a HTTP Put request.
+
 **Syntax**
 
 ```javascript
-/**
- * Upload the specified image via a HTTP Put request.
- * @param host The HTTP Host.
- * @param index Specify the image.
- * @param path Specify the path to put the file.
- * @param type The format of the file.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 HTTPUploadThroughPutEx(
     host: string,
     index: number,
     path: string,
     type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback: () => void,
-    failureCallback: (
-        errorCode: number,
-        errorString: string) => void
+    failureCallback: (errorCode: number, errorString: string) => void
 ): void;
 ```
 
+**Parameters**
+
+`host`: The HTTP Host.
+
+`index`: Specify the image.
+
+`path`: Specify the path to put the file.
+
+`type`: The format of the file. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1591,35 +1597,40 @@ HTTPUploadThroughPutEx(
 
 ## HTTPUploadThroughPost
 
+Upload the specified image via a HTTP Post request.
+
 **Syntax**
 
 ```javascript
-/**
- * Upload the specified image via a HTTP Post request.
- * @param host The HTTP Host.
- * @param index Specify the image.
- * @param target The target where the request is sent.
- * @param fileName The file name.
- * @param onEmptyResponse A callback function that is executed if the response is empty.
- * @param onServerReturnedSomething A callback function that is executed if the response is not empty.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- * @argument response The response string.
- */
 HTTPUploadThroughPost(
     host: string,
     index: number,
     target: string,
     fileName: string,
     onEmptyResponse: () => void,
-    onServerReturnedSomething: (
-        errorCode: number,
-        errorString: string,
-        response: string) => void
+    onServerReturnedSomething: (errorCode: number, errorString: string, response: string) => void
 ): void;
 ```
 
+**Parameters**
+
+`host`: The HTTP Host.
+
+`index`: Specify the image.
+
+`target`: The target where the request is sent.
+
+`fileName`: The file name.
+
+`onEmptyResponse`: A callback function that is executed if the response is empty.
+
+`onServerReturnedSomething`: A callback function that is executed if the response is not empty.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+- `response`: The response string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1643,6 +1654,32 @@ HTTPUploadThroughPost(
 
 </table>
 </div>
+
+**Example**
+
+```javascript
+var strHTTPServer = location.hostname; //The name of the HTTP server. For example: "www.dynamsoft.com";
+    var CurrentPathName = unescape(location.pathname);
+    var CurrentPath = CurrentPathName.substring(0, CurrentPathName.lastIndexOf("/") + 1);
+    var strActionPage = CurrentPath + "SaveToFile.aspx";
+    DWObject.IfSSL = false; // Set whether SSL is used
+    DWObject.HTTPPort = location.port == "" ? 100 : location.port;
+    var Digital = new Date();
+    var uploadfilename = Digital.getMilliseconds();
+
+    DWObject.HTTPUploadThroughPost(
+        strHTTPServer,
+        i,
+        strActionPage,
+        uploadfilename + ".jpg",
+        function () {
+            console.log("Empty response");
+        },
+        function (errorCode,errorString,response) {
+            console.log(response);
+        }
+    );
+```
 
 ---
 
