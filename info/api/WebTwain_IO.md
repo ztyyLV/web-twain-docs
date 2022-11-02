@@ -1659,26 +1659,28 @@ HTTPUploadThroughPost(
 
 ```javascript
 var strHTTPServer = location.hostname; //The name of the HTTP server. For example: "www.dynamsoft.com";
-    var CurrentPathName = unescape(location.pathname);
-    var CurrentPath = CurrentPathName.substring(0, CurrentPathName.lastIndexOf("/") + 1);
-    var strActionPage = CurrentPath + "SaveToFile.aspx";
-    DWObject.IfSSL = false; // Set whether SSL is used
-    DWObject.HTTPPort = location.port == "" ? 100 : location.port;
-    var Digital = new Date();
-    var uploadfilename = Digital.getMilliseconds();
+var CurrentPathName = unescape(location.pathname);
+var CurrentPath = CurrentPathName.substring(0, CurrentPathName.lastIndexOf("/") + 1);
+var strActionPage = CurrentPath + "SaveToFile.aspx";
 
-    DWObject.HTTPUploadThroughPost(
-        strHTTPServer,
-        i,
-        strActionPage,
-        uploadfilename + ".jpg",
-        function () {
-            console.log("Empty response");
-        },
-        function (errorCode,errorString,response) {
-            console.log(response);
-        }
-    );
+DWObject.IfSSL = false; // Set whether SSL is used
+DWObject.HTTPPort = location.port == "" ? 100 : location.port;
+
+var Digital = new Date();
+var uploadfilename = Digital.getMilliseconds();
+
+DWObject.HTTPUploadThroughPost(
+    strHTTPServer,
+    i,
+    strActionPage,
+    uploadfilename + ".jpg",
+    function () {
+        console.log("Empty response");
+    },
+    function (errorCode,errorString,response) {
+        console.log(response);
+    }
+);
 ```
 
 ---
