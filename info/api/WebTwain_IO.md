@@ -2,7 +2,7 @@
 layout: default-layout
 needAutoGenerateSidebar: true
 noTitleIndex: true
-title: Dynamic Web TWAIN API Reference - Input and Output APIs
+title: Dynamic Web TWAIN SDK API Reference - Input and Output APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, IO APIs
 breadcrumbText: IO
 description: Dynamic Web TWAIN SDK Documentation | API Reference | IO APIs Page
@@ -13,9 +13,9 @@ permalink: /info/api/WebTwain_IO.html
 
 The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance).
 
-## Methods
+**Methods**
 
-### Input Methods
+**Input Methods**
 
 |                                                   |
 | :------------------------------------------------ | :------------------------------------------------------ | ----------------------------------------------------------- | ----------------------------------------------- |
@@ -23,7 +23,7 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`LoadDibFromClipboard()`](#loaddibfromclipboard) | [`FTPDownload()`](#ftpdownload)                         | [`FTPDownloadEx()`](#ftpdownloadex)                         | [`HTTPDownload()`](#httpdownload)               |
 | [`HTTPDownloadEx()`](#httpdownloadex)             | [`HTTPDownloadThroughPost()`](#httpdownloadthroughpost) | [`HTTPDownloadDirectly()`](#httpdownloaddirectly)           |
 
-### Output Methods
+**Output Methods**
 
 |                                                                                                                          |
 | :----------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -37,7 +37,7 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`SaveAsTIFF()`]({{site.info}}api/WebTwain_IO.html#saveastiff)                                                           | [`SaveSelectedImagesAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagepdf) | [`SaveSelectedImagesAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagetiff)     |
 | [`SaveAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveallasmultipagetiff)                                   | [`SaveAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveallaspdf)                                         |
 
-### Other Methods
+**Other Methods**
 
 |                                               |
 | :-------------------------------------------- | :---------------------------------------- | --------------------------------------------------- | ----------------------------------------- |
@@ -45,16 +45,16 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`SetHTTPHeader()`](#sethttpheader)           | [`SetUploadSegment()`](#setuploadsegment) | [`ShowFileDialog()`](#showfiledialog)               | [`Print()`](#print)                       |
 | [`PrintEx()`](#printex)                       |
 
-## Properties
+**Properties**
 
 |                                                                 |
 | :-------------------------------------------------------------- | :---------------------------------------------------------------------------- | ------------------------------------------- | --------------------------------------------------- |
 | [`FTPPassword`](#ftppassword)                                   | [`FTPPort`](#ftpport)                                                         | [`FTPUserName`](#ftpusername)               | [`IfPASVMode`](#ifpasvmode)                         |
 | [`HttpFieldNameOfUploadedImage`](#httpfieldnameofuploadedimage) | [`HTTPPort`](#httpport)                                                       | [`IfSSL`](#ifssl)                           | [`HTTPPostResponseString`](#httppostresponsestring) |
 | [`IfShowFileDialog`](#ifshowfiledialog)                         | [`IfShowCancelDialogWhenImageTransfer`](#ifshowcanceldialogwhenimagetransfer) | [`IfShowProgressBar`](#ifshowprogressbar)   | [`JPEGQuality`](#jpegquality)                       |
-| [`IfTiffMultiPage`](#iftiffmultipage)                           | [`TIFFCompressionType`](#tiffcompressiontype)                                 | [`MaxUploadImageSize`](#maxuploadimagesize) | [`IfAppendImage`](#ifappendimage)                   |
+| [`IfTiffMultiPage`](#iftiffmultipage)                           | [`TIFFCompressionType`](#tiffcompressiontype)                                 | [`MaxUploadImageSize`](#maxuploadimagesize) |                    
 
-## Events
+**Events**
 
 |                                   |
 | :-------------------------------- | :-------------------------- | --------------------------------------------------------------- |
@@ -62,75 +62,32 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 ---
 
-## IfAppendImage
+## LoadImage  
+
+Load image(s) specified by its absolute path.  
 
 **Syntax**
 
 ```javascript
-/**
- * Return or set whether to insert or append images when they are scanned/loaded.
- */
-IfAppendImage: boolean;
-```
-
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-</tr>
-
-<tr>
-<td align="center">v5.1+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
-</tr>
-
-</table>
-</div>
-
-**Usage notes**
-
-The default value is true which means the newly acquired images will be appended after the last image in buffer. If it's set to false, the images will be inserted before the current image.
-
-An important thing to note here is that, by design, the current image is always the last acquired one which means the images acquired after `IfAppendImage` is set to false will be displayed/kept in reverse order.
-
-To make sure the order is as the pages are scanned while `IfAppendImage` is false, the easiest way is to increase `CurrentImageIndexInBuffer` by 1 in the event `OnPostTransfer`.
-
----
-
-## LoadImage
-
-**Syntax**
-
-```javascript
-/**
- * Load image(s) specified by its absolute path.
- * @param fileName The path of the image to load.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 LoadImage(
     fileName: string,
     successCallback ? : () => void,
-    failureCallback ? : (
-        errorCode: number,
-        errorString: string) => void
+    failureCallback ? : (errorCode: number, errorString: string) => void
 ): void | boolean;
 ```
 
-**Availability**
+**Parameters**  
+
+`fileName`: The path of the image to load.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
+**Availability**  
+
 <div class="availability">
 <table>
 
@@ -159,43 +116,47 @@ LoadImage(
 
 ```javascript
 DWObject.LoadImage(
-  "C:\\DWT.jpg",
-  function () {
-    console.log("success");
-  },
-  function (errorCode, errorString) {
-    console.log(errorString);
-  }
+    "C:\\test\\DWT.jpg",
+    function () {
+        console.log("success");
+    },
+    function (errorCode, errorString) {
+        console.log(errorString);
+    }
 );
 ```
 
 ---
 
-## LoadImageEx
+## LoadImageEx  
+
+Load image(s) specified by its absolute path.
 
 **Syntax**
 
 ```javascript
-/**
- * Load image(s) specified by its absolute path.
- * @param fileName The path of the image to load.
- * @param type The format of the image.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 LoadImageEx(
     fileName: string,
     type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback ? : () => void,
-    failureCallback ? : (
-        errorCode: number,
-        errorString: string) => void
+    failureCallback ? : (errorCode: number, errorString: string) => void
 ): void | boolean;
 ```
 
-**Availability**
+**Parameters**
+
+`fileName`: The path of the image to load.
+
+`type`: The format of the image. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
+**Availability**  
+
 <div class="availability">
 <table>
 
@@ -220,22 +181,41 @@ LoadImageEx(
 </table>
 </div>
 
-**Usage notes**
+**Usage Notes**
 
-On mobile devices, `Dynamsoft.DWT.EnumDWT_ImageType.IT_All` means "JPG, PNG, TIF" while it means "BMP, JPG, PNG, TIF, PDF" on desktop.
+On mobile devices, `Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL` means "JPG, PNG, TIF" while it means "BMP, JPG, PNG, TIF, PDF" on desktop.
+
+You can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) before calling this API to enable/disable "Open File" dialog.
 
 **Example**
 
 ```javascript
+DWObject.IfShowFileDialog = true; //"Open File" dialog will be opened.
+
 DWObject.LoadImageEx(
-  "C:\\DWT.jpg",
-  Dynamsoft.DWT.EnumDWT_ImageType.IT_JPG,
-  function () {
-    console.log("success");
-  },
-  function (errorCode, errorString) {
-    console.log(errorString);
-  }
+    "",
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_JPG,
+    function () {
+        console.log("success");
+    },
+    function (errorCode, errorString) {
+        console.log(errorString);
+    }
+);
+```
+
+```javascript
+DWObject.IfShowFileDialog = false; //Default value is true.
+
+DWObject.LoadImageEx(
+    "C:\\test\\DWT.jpg",
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_JPG,
+    function () {
+        console.log("success");
+    },
+    function (errorCode, errorString) {
+        console.log(errorString);
+    }
 );
 ```
 
@@ -243,29 +223,33 @@ DWObject.LoadImageEx(
 
 ## LoadImageFromBase64Binary
 
+Load image(s) from a base64 string.
+
 **Syntax**
 
 ```javascript
-/**
- * Load image(s) from a base64 string.
- * @param imageData The image data which is a base64 string without the data URI scheme.
- * @param imageType The format of the image.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 LoadImageFromBase64Binary(
     imageData: string,
     imageType: Dynamsoft.DWT.EnumDWT_ImageType,
     successCallback ? : () => void,
-    failureCallback ? : (
-        errorCode: number,
-        errorString: string) => void
+    failureCallback ? : (errorCode: number, errorString: string) => void
 ): void | boolean;
 ```
 
+**Parameters**
+
+`imageData`: The image data which is a base64 string without the data URI scheme.
+
+`imageType`: The format of the image. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+ 
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -290,27 +274,31 @@ LoadImageFromBase64Binary(
 </table>
 </div>
 
+**Usage Notes**
+
+You may leverage [ConvertToBase64]({{site.info}}api/WebTwain_IO.html#converttobase64) to get a base64 string.
+
 **Example**
 
 ```javascript
 DWObject.ConvertToBase64(
-  [0, 1, 2],
-  Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
-  function (result, indices, type) {
-    DWObject.LoadImageFromBase64Binary(
-      result.getData(0, result.getLength()),
-      Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
-      function () {
-        console.log("success");
-      },
-      function (errorCode, errorString) {
+    [0, 1, 2],
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
+    function (result, indices, type) {
+        DWObject.LoadImageFromBase64Binary(
+            result.getData(0, result.getLength()),
+            Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
+            function () {
+                console.log("success");
+            },
+            function (errorCode, errorString) {
+                console.log(errorString);
+            }
+        );
+    },
+    function (errorCode, errorString) {
         console.log(errorString);
-      }
-    );
-  },
-  function (errorCode, errorString) {
-    console.log(errorString);
-  }
+    }
 );
 ```
 
@@ -318,27 +306,31 @@ DWObject.ConvertToBase64(
 
 ## LoadImageFromBinary
 
+Load image(s) from a binary object (Blob or ArrayBuffer).
+
 **Syntax**
 
 ```javascript
-/**
- * Load image(s) from a binary object (Blob | ArrayBuffer).
- * @param imageData The image data.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 LoadImageFromBinary(
     imageData: Blob | ArrayBuffer,
     successCallback: () => void,
-    failureCallback: (
-        errorCode: number,
-        errorString: string) => void
+    failureCallback: (errorCode: number, errorString: string) => void
 ): void;
 ```
 
+**Parameters**
+
+`imageData`: The image data.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -363,26 +355,30 @@ LoadImageFromBinary(
 </table>
 </div>
 
+**Usage Notes**
+
+You may leverage [ConvertToBlob]({{site.info}}api/WebTwain_IO.html#converttoblob) to get a Blob object.
+
 **Example**
 
 ```javascript
 DWObject.ConvertToBlob(
-  [0, 1, 2],
-  Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
-  function (result, indices, type) {
-    DWObject.LoadImageFromBinary(
-      result,
-      function () {
-        console.log("success");
-      },
-      function (errorCode, errorString) {
+    [0, 1, 2],
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
+    function (result, indices, type) {
+        DWObject.LoadImageFromBinary(
+            result,
+            function () {
+                console.log("success");
+            },
+            function (errorCode, errorString) {
+                console.log(errorString);
+            }
+        );
+    },
+    function (errorCode, errorString) {
         console.log(errorString);
-      }
-    );
-  },
-  function (errorCode, errorString) {
-    console.log(errorString);
-  }
+    }
 );
 ```
 
@@ -390,25 +386,27 @@ DWObject.ConvertToBlob(
 
 ## LoadDibFromClipboard
 
+Load an image from the system clipboard. The image must be in DIB format.
+
 **Syntax**
 
 ```javascript
-/**
- * Load an image from the system clipboard. The image must be in DIB format.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 LoadDibFromClipboard(
     successCallback ? : () => void,
-    failureCallback ? : (
-        errorCode: number,
-        errorString: string) => void
+    failureCallback ? : (errorCode: number, errorString: string) => void
 ): void | boolean;
 ```
 
+**Parameters**
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -433,55 +431,47 @@ LoadDibFromClipboard(
 </table>
 </div>
 
-**Usage notes**
+**Usage Notes**
 
-If called without any callback functions, these methods (except for `LoadImageFromBinary()` ) become synchronously and return a boolean value to indicate whether it succeeded.
+If called without any callback functions, these methods (except for [LoadImageFromBinary()]({{site.info}}api/WebTwain_IO.html#loadimagefrombinary) ) become synchronously and return a boolean value to indicate whether it succeeded.
 
 However, calling them asynchronously is recommended.
 
 ---
 
-<!--
-
-## LoadDibFromClipboardAsync
-
-**Syntax**
-
-``` javascript
-/**
- * Load an image from the system clipboard. The image must be in DIB format.
- */
-LoadDibFromClipboardAsync(): Promise < boolean > ;
-```
-
---->
-
 ## OnGetFilePath
+
+This event is triggered when [ShowFileDialog()]({{site.info}}api/WebTwain_IO.html#showfiledialog) is called or when [LoadImageEx()]({{site.info}}api/WebTwain_IO.html#loadimageex) is called with [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) set to true.
 
 **Syntax**
 
 ```javascript
-/**
- * This event is triggered when {ShowFileDialog} is called or when  {LoadImageEx} is called with {IfShowFileDialog} set to true.
- * @argument isSave Whether or not the event is triggered after a save-file dialog was shown or a open-file dialog.
- * @argument filesCount How many files were selected.
- * @argument index The index of the current image.
- * @argument directory The parent directory of currently selected file(s), "\\" is not included. If the methed ShowFileDialog() failed, the initial directory path set in the ShowFileDialog method is returned.
- * @argument fileName The current file name.
- */
 RegisterEvent(
-  "OnGetFilePath",
-  function (
-    isSave: boolean,
-    filesCount: number,
-    index: number,
-    directory: string,
-    fileName: string
-  ) {}
+    "OnGetFilePath",
+    function (
+        isSave: boolean,
+        filesCount: number,
+        index: number,
+        directory: string,
+        fileName: string
+    ) {}
 );
 ```
 
+**Parameters**
+
+`isSave`: Whether or not the event is triggered after a save-file dialog was shown or a open-file dialog.
+
+`filesCount`: How many files were selected.
+
+`index`: The index of the current image.
+
+`directory`: The parent directory of currently selected file(s), "\\\\" is not included. If the methed [ShowFileDialog]({{site.info}}api/WebTwain_IO.html#showfiledialog) failed, the initial directory path set in the [ShowFileDialog]({{site.info}}api/WebTwain_IO.html#showfiledialog) method is returned.
+
+`fileName`: The current file name.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -506,26 +496,39 @@ RegisterEvent(
 </table>
 </div>
 
+**Example**
+
+```javascript
+DWObject.RegisterEvent('OnGetFilePath', function(bSave, filesCount, index, path, filename) {
+    alert("bSave:" + bSave + " fileCount: " +  filesCount + " index: " +  index + " path: " +  path + "\\" +  filename);
+});
+```
+
 ---
 
 ## OnPostLoad
 
+This event is triggered when a file from a local directory has been loaded into the control.
+
 **Syntax**
 
 ```javascript
-/**
- * This event is triggered when a file from a local directory has been loaded into the control.
- * @argument directory The directory of the loaded file.
- * @argument fileName The name of the loaded file.
- * @argument fileType The file type.
- */
 RegisterEvent(
-  "OnPostLoad",
-  function (directory: string, fileName: string, fileType: string) {}
+    "OnPostLoad",
+    function (directory: string, fileName: string, fileType: string) {}
 );
 ```
 
+**Parameters**
+
+`directory`: The directory of the loaded file. For example, "C:\\Users\\[username]\\Downloads".
+
+`fileName`: The name of the loaded file. For example, "image1.jpg".
+
+`fileType`: The file type. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -544,7 +547,7 @@ RegisterEvent(
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.0+ </td>
 </tr>
 
 </table>
@@ -554,7 +557,7 @@ RegisterEvent(
 
 ```javascript
 DWObject.RegisterEvent("OnPostLoad", function (path, name, type) {
-  alert(path + "\\" + name);
+    alert(path + "\\" + name);
 });
 ```
 
@@ -562,29 +565,33 @@ DWObject.RegisterEvent("OnPostLoad", function (path, name, type) {
 
 ## FTPDownload
 
+Download the specified file via FTP.
+
 **Syntax**
 
 ```javascript
-/**
- * Download the specified file via FTP
- * @param host The FTP Host.
- * @param path Specify the file to download.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 FTPDownload(
     host: string,
     path: string,
     successCallback: () => void,
-    failureCallBack: (
-        errorCode: number,
-        errorString: string) => void
+    failureCallBack: (errorCode: number, errorString: string) => void
 ): void;
 ```
 
+**Parameters**
+
+`host`: The FTP Host.
+
+`path`: Specify the file to download.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -598,7 +605,7 @@ FTPDownload(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
@@ -613,31 +620,36 @@ FTPDownload(
 
 ## FTPDownloadEx
 
+Download the specified file via FTP.
+
 **Syntax**
 
 ```javascript
-/**
- * Download the specified file via FTP.
- * @param host The FTP Host.
- * @param path Specify the file to download.
- * @param type The format of the file.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 FTPDownloadEx(
     host: string,
     path: string,
     type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback: () => void,
-    failureCallBack: (
-        errorCode: number,
-        errorString: string) => void
+    failureCallBack: (errorCode: number, errorString: string) => void
 ): void;
 ```
 
+**Parameters**
+
+`host`: The FTP Host.
+
+`path`: Specify the file to download.
+
+`type`: The format of the file. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -651,7 +663,7 @@ FTPDownloadEx(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
@@ -666,31 +678,36 @@ FTPDownloadEx(
 
 ## FTPUpload
 
+Upload the specified image via FTP.
+
 **Syntax**
 
 ```javascript
-/**
- * Upload the specified image via FTP.
- * @param host The FTP Host.
- * @param index Specify the image.
- * @param path The path to save the file.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 FTPUpload(
     host: string,
     index: number,
     path: string,
     successCallback: () => void,
-    failureCallback: (
-        errorCode: number,
-        errorString: string) => void
+    failureCallback: (errorCode: number, errorString: string) => void
 ): void;
 ```
 
+**Parameters**
+
+`host`: The FTP Host.
+
+`index`: Specify the index of the image in the buffer. The index is 0-based.
+
+`path`: The path to save the file.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -704,7 +721,7 @@ FTPUpload(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
@@ -719,33 +736,39 @@ FTPUpload(
 
 ## FTPUploadEx
 
+Upload the specified image via FTP.
+
 **Syntax**
 
 ```javascript
-/**
- * Upload the specified image via FTP.
- * @param host The FTP Host.
- * @param index Specify the image.
- * @param path The path to save the file.
- * @param type The format of the file.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 FTPUploadEx(
     host: string,
     index: number,
     path: string,
     type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback: () => void,
-    failureCallback: (
-        errorCode: number,
-        errorString: string) => void
+    failureCallback: (errorCode: number, errorString: string) => void
 ): void;
 ```
 
+**Parameters**
+
+`host`: The FTP Host.
+
+`index`: Specify the index of the image in the buffer. The index is 0-based.
+
+`path`: The path to save the file.
+
+`type`: The format of the file. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -759,7 +782,7 @@ FTPUploadEx(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v5.0+ </td>
 <td align="center">v5.0+ </td>
 <td align="center">v5.0+ </td>
 <td align="center">v5.0+ </td>
@@ -774,29 +797,33 @@ FTPUploadEx(
 
 ## FTPUploadAllAsMultiPageTIFF
 
+Upload all images as a multi-page TIFF via FTP.
+
 **Syntax**
 
 ```javascript
-/**
- * Upload all images as a multi-page TIFF via FTP.
- * @param host The FTP Host.
- * @param path Specify the path to save the file.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 FTPUploadAllAsMultiPageTIFF(
     host: string,
     path: string,
     successCallback: () => void,
-    failureCallback: (
-        errorCode: number,
-        errorString: string) => void
+    failureCallback: (errorCode: number, errorString: string) => void
 ): void;
 ```
 
+**Parameters**
+
+`host`: The FTP Host.
+
+`path`: Specify the path to save the file.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -810,7 +837,7 @@ FTPUploadAllAsMultiPageTIFF(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
@@ -825,29 +852,33 @@ FTPUploadAllAsMultiPageTIFF(
 
 ## FTPUploadAllAsPDF
 
+Upload all images as a multi-page PDF via FTP.
+
 **Syntax**
 
 ```javascript
-/**
- * Upload all images as a multi-page PDF via FTP.
- * @param host The FTP Host.
- * @param path Specify the path to save the file.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 FTPUploadAllAsPDF(
     host: string,
     path: string,
     successCallback: () => void,
-    failureCallback: (
-        errorCode: number,
-        errorString: string) => void
+    failureCallback: (errorCode: number, errorString: string) => void
 ): void;
 ```
 
+**Parameters**
+
+`host`: The FTP Host.
+
+`path`: Specify the path to save the file.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -861,7 +892,7 @@ FTPUploadAllAsPDF(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
@@ -876,27 +907,30 @@ FTPUploadAllAsPDF(
 
 ## FTPUploadAsMultiPagePDF
 
+Upload selected images as a multi-page PDF via FTP.
+
 **Syntax**
 
 ```javascript
-/**
- * Upload selected images as a multi-page PDF via FTP.
- * @param host The FTP Host.
- * @param path Specify the path to save the file.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 FTPUploadAsMultiPagePDF(
     host: string,
     path: string,
     successCallback: () => void,
-    failureCallback: (
-        errorCode: number,
-        errorString: string) => void
+    failureCallback: (errorCode: number, errorString: string) => void
 ): void;
 ```
+
+**Parameters**
+
+`host`: The FTP Host.
+
+`path`: Specify the path to save the file.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
 
 **Availability**
 <div class="availability">
@@ -912,7 +946,7 @@ FTPUploadAsMultiPagePDF(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
@@ -927,30 +961,34 @@ FTPUploadAsMultiPagePDF(
 
 ## FTPUploadAsMultiPageTIFF
 
+Upload selected images as a multi-page TIFF via FTP.
+
 **Syntax**
 
 ```javascript
-/**
- * Upload selected images as a multi-page TIFF via FTP.
- * @param host The FTP Host.
- * @param path Specify the path to save the file.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 FTPUploadAsMultiPageTIFF(
     host: string,
     path: string,
     type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback: () => void,
-    failureCallback: (
-        errorCode: number,
-        errorString: string) => void
+    failureCallback: (errorCode: number, errorString: string) => void
 ): void;
 ```
 
+**Parameters**
+
+`host`: The FTP Host.
+
+`path`: Specify the path to save the file.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -964,7 +1002,7 @@ FTPUploadAsMultiPageTIFF(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
@@ -979,16 +1017,16 @@ FTPUploadAsMultiPageTIFF(
 
 ## FTPUserName
 
+The password to connect to the FTP.
+
 **Syntax**
 
 ```javascript
-/**
- * The password to connect to the FTP.
- */
 FTPUserName: string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1002,7 +1040,7 @@ FTPUserName: string;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
@@ -1017,16 +1055,16 @@ FTPUserName: string;
 
 ## FTPPassword
 
+The password to connect to the FTP.
+
 **Syntax**
 
 ```javascript
-/**
- * The password to connect to the FTP.
- */
 FTPPassword: string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1040,7 +1078,7 @@ FTPPassword: string;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
@@ -1055,16 +1093,16 @@ FTPPassword: string;
 
 ## FTPPort
 
+The port to connect to the FTP.
+
 **Syntax**
 
 ```javascript
-/**
- * The port to connect to the FTP.
- */
 FTPPort: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1078,7 +1116,7 @@ FTPPort: number;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
@@ -1093,16 +1131,16 @@ FTPPort: number;
 
 ## IfPASVMode
 
+Return or set whether to use passive mode when connect to the FTP.
+
 **Syntax**
 
 ```javascript
-/**
- * Return or set whether to use passive mode when connect to the FTP.
- */
 IfPASVMode: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1116,7 +1154,7 @@ IfPASVMode: boolean;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
@@ -1132,12 +1170,11 @@ IfPASVMode: boolean;
 
 ## HTTPPassword
 
+Return or set the password used to log into the HTTP server.
+
 **Syntax**
 
 ```javascript
-/**
- * [Deprecation] Return or set the password used to log into the HTTP server.
- */
 HTTPPassword: string;
 ```
 
@@ -1145,12 +1182,11 @@ HTTPPassword: string;
 
 ## HTTPUserName
 
+Return or set the user name used to log into the HTTP server.
+
 **Syntax**
 
 ```javascript
-/**
- * [Deprecation] Return or set the user name used to log into the HTTP server.
- */
 HTTPUserName: string;
 ```
 
@@ -1158,18 +1194,11 @@ HTTPUserName: string;
 
 ## HTTPDownload
 
+Download the specified file via a HTTP Get request.
+
 **Syntax**
 
 ```javascript
-/**
- * Download the specified file via a HTTP Get request.
- * @param host The HTTP Host.
- * @param path Specify the path of the file to download.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 HTTPDownload(
     host: string,
     path: string,
@@ -1180,7 +1209,20 @@ HTTPDownload(
 ): void;
 ```
 
+**Parameters**
+
+`host`: The HTTP Host.
+
+`path`: Specify the path of the file to download.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1209,19 +1251,11 @@ HTTPDownload(
 
 ## HTTPDownloadEx
 
+Download the specified file via a HTTP Get request.
+
 **Syntax**
 
 ```javascript
-/**
- * Download the specified file via a HTTP Get request.
- * @param host The HTTP Host.
- * @param path Specify the path of the file to download.
- * @param type The format of the file.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 HTTPDownloadEx(
     host: string,
     path: string,
@@ -1233,7 +1267,22 @@ HTTPDownloadEx(
 ): void;
 ```
 
+**Parameters**
+
+`host`: The HTTP Host.
+
+`path`: Specify the path of the file to download.
+
+`type`: The format of the file. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1247,7 +1296,7 @@ HTTPDownloadEx(
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v5.0+ </td>
 <td align="center">v5.0+ </td>
 <td align="center">v5.0+ </td>
 <td align="center">v5.0+ </td>
@@ -1262,33 +1311,37 @@ HTTPDownloadEx(
 
 ## HTTPDownloadThroughPost
 
+Download the specified file via a HTTP Post request.
+
 **Syntax**
 
 ```javascript
-/**
- * Download the specified file via a HTTP Post request.
- * @param host The HTTP Host.
- * @param path Specify the path of the file to download.
- * @param type The format of the file.
- * @param onEmptyResponse A callback function that is executed if the response is empty.
- * @param onServerReturnedSomething A callback function that is executed if the response is not empty.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- * @argument response The response string.
- */
 HTTPDownloadThroughPost(
     host: string,
     path: string,
     type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     onEmptyResponse: () => void,
-    onServerReturnedSomething: (
-        errorCode: number,
-        errorString: string,
-        response: string, ) => void,
+    onServerReturnedSomething: (errorCode: number, errorString: string, response: string) => void,
 ): void;
 ```
 
+**Parameters**
+
+`host`: The HTTP Host.
+
+`path`: Specify the path of the file to download.
+
+`type`: The format of the file. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+
+`onEmptyResponse`: A callback function that is executed if the response is empty.
+
+`onServerReturnedSomething`: A callback function that is executed if the response is not empty.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+- `response`: The response string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1317,31 +1370,36 @@ HTTPDownloadThroughPost(
 
 ## HTTPDownloadDirectly
 
+Download the specified file via a HTTP Get request.
+
 **Syntax**
 
 ```javascript
-/**
- * Download the specified file via a HTTP Get request.
- * @param host The HTTP Host.
- * @param path Specify the path of the file to download.
- * @param localPath Specify where to save the file.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 HTTPDownloadDirectly(
     host: string,
     path: string,
     localPath: string,
     successCallback: () => void,
-    failureCallback: (
-        errorCode: number,
-        errorString: string) => void
+    failureCallback: (errorCode: number, errorString: string) => void
 ): void;
 ```
 
+**Parameters**
+
+`host`: The HTTP Host.
+
+`path`: Specify the path of the file to download.
+
+`localPath`: Specify where to save the file.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1355,7 +1413,7 @@ HTTPDownloadDirectly(
 </tr>
 
 <tr>
-<td align="center">not supported </td>
+<td align="center">v7.0+ </td>
 <td align="center">v7.0+ </td>
 <td align="center">v7.0+ </td>
 <td align="center">v7.0+ </td>
@@ -1376,19 +1434,20 @@ For security reasons, the method `HTTPDownloadDirectly()` can only download the 
 
 ```javascript
 DWObject.RegisterEvent(
-  "OnGetFilePath",
-  function (isSave, filesCount, index, directory, fileName) {
-    DWObject.HTTPDownloadDirectly(
-      "tst.dynamsoft.com",
-      "/public/download/tools/Twack_32.msi",
-      directory + "\\" + fileName,
-      function () {},
-      function (errorCode, errorString) {
-        console.log(errorString);
-      }
-    );
-  }
+    "OnGetFilePath",
+    function (isSave, filesCount, index, directory, fileName) {
+        DWObject.HTTPDownloadDirectly(
+        "tst.dynamsoft.com",
+        "/public/download/tools/Twack_32.msi",
+        directory + "\\" + fileName,
+        function () {},
+        function (errorCode, errorString) {
+            console.log(errorString);
+        }
+        );
+    }
 );
+
 DWObject.ShowFileDialog(true, "MSI|*.msi", 0, ".msi", "", true, false, 1);
 ```
 
@@ -1408,10 +1467,7 @@ HTTPUpload(
     dataFormat: Dynamsoft.DWT.EnumDWT_UploadDataFormat | number,
     fileName: string,
     onEmptyResponse: () => void,
-    onServerReturnedSomething: (
-        errorCode: number,
-        errorString: string,
-        response: string) => void
+    onServerReturnedSomething: (errorCode: number, errorString: string, response: string) => void
 ): void;
 ```
 ```javascript
@@ -1421,25 +1477,18 @@ HTTPUpload(
     type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     dataFormat: Dynamsoft.DWT.EnumDWT_UploadDataFormat | number,
     onEmptyResponse: () => void,
-    onServerReturnedSomething: (
-        errorCode: number,
-        errorString: string,
-        response: string) => void
+    onServerReturnedSomething: (errorCode: number, errorString: string, response: string) => void
 ): void;
 ```
 ```javascript
 HTTPUpload(
     URL: string,
     onEmptyResponse: () => void,
-    onServerReturnedSomething: (
-        errorCode: number,
-        errorString: string,
-        response: string) => void
+    onServerReturnedSomething: (errorCode: number, errorString: string, response: string) => void
 ): void;
 ```
 
 **Parameters**
-
 
 `URL`: The server-side script to receive the post.
 
@@ -1454,12 +1503,12 @@ HTTPUpload(
 `onEmptyResponse`: A callback function that is executed if the response is empty.
 
 `onServerReturnedSomething`: A callback function that is executed if the response is not empty.
-* `errorCode`: The error code.
-* `errorString`: The error string.
-* `response`: The response string.
-
+- `errorCode` The error code.
+- `errorString` The error string.
+- `response` The response string.
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1487,17 +1536,20 @@ HTTPUpload(
 **Example**
 
 ```javascript
-DWObject.HTTPUpload('https://www.dynamsoft.com/SaveToFile.aspx', 
+DWObject.HTTPUpload(
+    'https://www.dynamsoft.com/SaveToFile.aspx', 
     [0,1],  
     Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF, 
     Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary, 
     'test.pdf', 
     OnEmptyResponse, 
-    OnServerReturnedSomething);
+    OnServerReturnedSomething
+);
 
 function OnEmptyResponse() {
     console.log('Success');
 }
+
 function OnServerReturnedSomething(errCode, errString, responseStr) {
     console.log(errString);
 }
@@ -1505,39 +1557,45 @@ function OnServerReturnedSomething(errCode, errString, responseStr) {
 
 **Remark**
 
-[Upload Guide]({{site.indepth}}features/output.html#http-with-built-in-apis)
+[Upload Guide]({{site.indepth}}features/output.html#upload)
 
 ---
 
 ## HTTPUploadThroughPutEx
 
+Upload the specified image via a HTTP Put request.
+
 **Syntax**
 
 ```javascript
-/**
- * Upload the specified image via a HTTP Put request.
- * @param host The HTTP Host.
- * @param index Specify the image.
- * @param path Specify the path to put the file.
- * @param type The format of the file.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 HTTPUploadThroughPutEx(
     host: string,
     index: number,
     path: string,
     type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback: () => void,
-    failureCallback: (
-        errorCode: number,
-        errorString: string) => void
+    failureCallback: (errorCode: number, errorString: string) => void
 ): void;
 ```
 
+**Parameters**
+
+`host`: The HTTP Host.
+
+`index`: Specify the image.
+
+`path`: Specify the path to put the file.
+
+`type`: The format of the file. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1566,35 +1624,40 @@ HTTPUploadThroughPutEx(
 
 ## HTTPUploadThroughPost
 
+Upload the specified image via a HTTP Post request.
+
 **Syntax**
 
 ```javascript
-/**
- * Upload the specified image via a HTTP Post request.
- * @param host The HTTP Host.
- * @param index Specify the image.
- * @param target The target where the request is sent.
- * @param fileName The file name.
- * @param onEmptyResponse A callback function that is executed if the response is empty.
- * @param onServerReturnedSomething A callback function that is executed if the response is not empty.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- * @argument response The response string.
- */
 HTTPUploadThroughPost(
     host: string,
     index: number,
     target: string,
     fileName: string,
     onEmptyResponse: () => void,
-    onServerReturnedSomething: (
-        errorCode: number,
-        errorString: string,
-        response: string) => void
+    onServerReturnedSomething: (errorCode: number, errorString: string, response: string) => void
 ): void;
 ```
 
+**Parameters**
+
+`host`: The HTTP Host.
+
+`index`: Specify the image.
+
+`target`: The target where the request is sent.
+
+`fileName`: The file name.
+
+`onEmptyResponse`: A callback function that is executed if the response is empty.
+
+`onServerReturnedSomething`: A callback function that is executed if the response is not empty.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+- `response`: The response string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1619,26 +1682,43 @@ HTTPUploadThroughPost(
 </table>
 </div>
 
+**Example**
+
+```javascript
+var strHTTPServer = location.hostname; //The name of the HTTP server. For example: "www.dynamsoft.com";
+var CurrentPathName = unescape(location.pathname);
+var CurrentPath = CurrentPathName.substring(0, CurrentPathName.lastIndexOf("/") + 1);
+var strActionPage = CurrentPath + "SaveToFile.aspx";
+
+DWObject.IfSSL = false; // Set whether SSL is used
+DWObject.HTTPPort = location.port == "" ? 100 : location.port;
+
+var Digital = new Date();
+var uploadfilename = Digital.getMilliseconds();
+
+DWObject.HTTPUploadThroughPost(
+    strHTTPServer,
+    i,
+    strActionPage,
+    uploadfilename + ".jpg",
+    function () {
+        console.log("Empty response");
+    },
+    function (errorCode,errorString,response) {
+        console.log(response);
+    }
+);
+```
+
 ---
 
 ## HTTPUploadThroughPostEx
 
+Upload the specified image in a specific image format via a HTTP Post request.
+
 **Syntax**
 
 ```javascript
-/**
- * Upload the specified image in a specific image format via a HTTP Post request.
- * @param host The HTTP Host.
- * @param index Specify the image.
- * @param target The target where the request is sent.
- * @param fileName The file name.
- * @param type The format of the file.
- * @param onEmptyResponse A callback function that is executed if the response is empty.
- * @param onServerReturnedSomething A callback function that is executed if the response is not empty.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- * @argument response The response string.
- */
 HTTPUploadThroughPostEx(
     host: string,
     index: number,
@@ -1653,7 +1733,27 @@ HTTPUploadThroughPostEx(
 ): void;
 ```
 
+**Parameters**
+
+`host`: The HTTP Host.
+
+`index`: Specify the image.
+
+`target`: The target where the request is sent.
+
+`fileName`: The file name.
+
+`type`: The format of the file. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+
+`onEmptyResponse`: A callback function that is executed if the response is empty.
+
+`onServerReturnedSomething`: A callback function that is executed if the response is not empty.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+- `response`: The response string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1682,20 +1782,11 @@ HTTPUploadThroughPostEx(
 
 ## HTTPUploadAllThroughPostAsMultiPageTIFF
 
+Upload all images in the buffer as a TIFF file via a HTTP Post request.
+
 **Syntax**
 
 ```javascript
-/**
- * Upload all images in the buffer as a TIFF file via a HTTP Post request.
- * @param host The HTTP Host.
- * @param target The target wherethe request is sent.
- * @param fileName The file name.
- * @param onEmptyResponse A callback function that is executed if the response is empty.
- * @param onServerReturnedSomething A callback function that is executed if the response is not empty.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- * @argument response The response string.
- */
 HTTPUploadAllThroughPostAsMultiPageTIFF(
     host: string,
     target: string,
@@ -1708,7 +1799,23 @@ HTTPUploadAllThroughPostAsMultiPageTIFF(
 ): void;
 ```
 
+**Parameters**
+
+`host`: The HTTP Host.
+
+`target`: The target wherethe request is sent.
+
+`fileName`: The file name.
+
+`onEmptyResponse`: A callback function that is executed if the response is empty.
+
+`onServerReturnedSomething`: A callback function that is executed if the response is not empty.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+- `response`: The response string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1737,20 +1844,11 @@ HTTPUploadAllThroughPostAsMultiPageTIFF(
 
 ## HTTPUploadAllThroughPostAsPDF
 
+Upload all images in the buffer as a PDF file via a HTTP Post request.
+
 **Syntax**
 
 ```javascript
-/**
- * Upload all images in the buffer as a PDF file via a HTTP Post request.
- * @param host The HTTP Host.
- * @param target The target where the request is sent.
- * @param fileName The file name.
- * @param onEmptyResponse A callback function that is executed if the response is empty.
- * @param onServerReturnedSomething A callback function that is executed if the response is not empty.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- * @argument response The response string.
- */
 HTTPUploadAllThroughPostAsPDF(
     host: string,
     target: string,
@@ -1763,7 +1861,23 @@ HTTPUploadAllThroughPostAsPDF(
 ): void;
 ```
 
+**Parameters**
+
+`host`: The HTTP Host.
+
+`target`: The target where the request is sent.
+
+`fileName`: The file name.
+
+`onEmptyResponse`: A callback function that is executed if the response is empty.
+
+`onServerReturnedSomething`: A callback function that is executed if the response is not empty.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+- `response`: The response string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1792,20 +1906,11 @@ HTTPUploadAllThroughPostAsPDF(
 
 ## HTTPUploadThroughPostAsMultiPagePDF
 
+Upload all selected images in the buffer as a PDF file via a HTTP Post request.
+
 **Syntax**
 
 ```javascript
-/**
- * Upload all selected images in the buffer as a PDF file via a HTTP Post request.
- * @param host The HTTP Host.
- * @param target The target where the request is sent.
- * @param fileName The file name.
- * @param onEmptyResponse A callback function that is executed if the response is empty.
- * @param onServerReturnedSomething A callback function that is executed if the response is not empty.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- * @argument response The response string.
- */
 HTTPUploadThroughPostAsMultiPagePDF(
     host: string,
     target: string,
@@ -1818,7 +1923,23 @@ HTTPUploadThroughPostAsMultiPagePDF(
 ): void;
 ```
 
+**Parameters**
+
+`host`: The HTTP Host.
+
+`target`: The target where the request is sent.
+
+`fileName`: The file name.
+
+`onEmptyResponse`: A callback function that is executed if the response is empty.
+
+`onServerReturnedSomething`: A callback function that is executed if the response is not empty.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+- `response`: The response string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1847,20 +1968,11 @@ HTTPUploadThroughPostAsMultiPagePDF(
 
 ## HTTPUploadThroughPostAsMultiPageTIFF
 
+Upload all selected images in the buffer as a TIFF file via a HTTP Post request.
+
 **Syntax**
 
 ```javascript
-/**
- * Upload all selected images in the buffer as a TIFF file via a HTTP Post request.
- * @param host The HTTP Host.
- * @param target The target wherethe request is sent.
- * @param fileName The file name.
- * @param onEmptyResponse A callback function that is executed if the response is empty.
- * @param onServerReturnedSomething A callback function that is executed if the response is not empty.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- * @argument response The response string.
- */
 HTTPUploadThroughPostAsMultiPageTIFF(
     host: string,
     target: string,
@@ -1873,7 +1985,23 @@ HTTPUploadThroughPostAsMultiPageTIFF(
 ): void;
 ```
 
+**Parameters**
+
+`host`: The HTTP Host.
+
+`target`: The target wherethe request is sent.
+
+`fileName`: The file name.
+
+`onEmptyResponse`: A callback function that is executed if the response is empty.
+
+`onServerReturnedSomething`: A callback function that is executed if the response is not empty.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+- `response`: The response string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1905,18 +2033,6 @@ HTTPUploadThroughPostAsMultiPageTIFF(
 **Syntax**
 
 ```javascript
-/**
- * Upload the specified file via a HTTP Post request.
- * @param host The HTTP Host.
- * @param path Specify the file to upload.
- * @param target The target where the request is sent.
- * @param fileName The file name.
- * @param onEmptyResponse A callback function that is executed if the response is empty.
- * @param onServerReturnedSomething A callback function that is executed if the response is not empty.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- * @argument response The response string.
- */
 HTTPUploadThroughPostDirectly(
     host: string,
     path: string,
@@ -1930,7 +2046,25 @@ HTTPUploadThroughPostDirectly(
 ): void;
 ```
 
+**Parameters**
+
+`host`: The HTTP Host.
+
+`path`: Specify the file to upload.
+
+`target`: The target where the request is sent.
+
+`fileName`: The file name.
+
+`onEmptyResponse`: A callback function that is executed if the response is empty.
+
+`onServerReturnedSomething`: A callback function that is executed if the response is not empty.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+- `response`: The response string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2003,17 +2137,16 @@ Sample code for the target script (SaveUploadedFile.aspx)
 
 ## HttpFieldNameOfUploadedImage
 
+Return or set the field name for the uploaded file. By default, it's "RemoteFile".
+
 **Syntax**
 
 ```javascript
-/**
- * Return or set the field name for the uploaded file.
- * By default, it's "RemoteFile".
- */
 HttpFieldNameOfUploadedImage: string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2037,21 +2170,21 @@ HttpFieldNameOfUploadedImage: string;
 
 </table>
 </div>
+
 ---
 
 ## HTTPPort
 
+Return or set the HTTP Port.
+
 **Syntax**
 
 ```javascript
-/**
-/**
- * Return or set the HTTP Port.
- */
 HTTPPort: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2080,17 +2213,16 @@ HTTPPort: number;
 
 ## IfSSL
 
+Return or set whether to use SSL in HTTP requests.
+
 **Syntax**
 
 ```javascript
-/**
-/**
- * Return or set whether to use SSL in HTTP requests.
- */
 IfSSL: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2119,16 +2251,16 @@ IfSSL: boolean;
 
 ## HTTPPostResponseString
 
+Return the response string of the latest HTTP Post request.
+
 **Syntax**
 
 ```javascript
-/**
- * Return the response string of the latest HTTP Post request.
- */
 readonly HTTPPostResponseString: string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2152,20 +2284,21 @@ readonly HTTPPostResponseString: string;
 
 </table>
 </div>
+
 ---
 
 ## MaxUploadImageSize
 
+Return or set the maximum allowed size of a file to upload (in bytes).
+
 **Syntax**
 
 ```javascript
-/**
- * Return or set the maximum allowed size of a file to upload (in bytes).
- */
 MaxUploadImageSize: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2194,17 +2327,20 @@ MaxUploadImageSize: number;
 
 ## OnInternetTransferPercentage
 
+This event is triggered multiple times during a HTTP upload or download request.
+
 **Syntax**
 
 ```javascript
-/**
- * This event is triggered multiple times during a HTTP upload or download request.
- * @argument percentage Return the progress by percentage.
- */
 RegisterEvent("OnInternetTransferPercentage", function (percentage: number) {});
 ```
 
+**Parameters**
+
+`percentage`: Return the progress by percentage.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2228,35 +2364,21 @@ RegisterEvent("OnInternetTransferPercentage", function (percentage: number) {});
 
 </table>
 </div>
+
 ---
 
 ## ConvertToBase64
 
+Convert the specified images to a base64 string.
+
 **Syntax**
 
 ```javascript
-/**
- * Convert the specified images to a base64 string.
- * @param indices Specify one or multiple images.
- * @param type The file type.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument result The resulting base64 string.
- * @argument indices The indices of the converted images.
- * @argument type The file type.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 ConvertToBase64(
     indices: number[],
     type: Dynamsoft.DWT.EnumDWT_ImageType | number,
-    successCallback: (
-        result: Base64Result,
-        indices: number[],
-        type: number) => void,
-    failureCallBack: (
-        errorCode: number,
-        errorString: string) => void
+    successCallback: (result: Base64Result, indices: number[], type: number) => void,
+    failureCallBack: (errorCode: number, errorString: string) => void
 ): void;
 
 interface Base64Result {
@@ -2277,7 +2399,23 @@ interface Base64Result {
 }
 ```
 
+**Parameters**
+
+`indices`: Specify one or multiple images.
+
+`type`: The file type. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+- `result`: The resulting base64 string.
+- `indices`: The indices of the converted images.
+- `type`: The file type.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2302,7 +2440,7 @@ interface Base64Result {
 </table>
 </div>
 
-**Usage notes**
+**Usage Notes**
 
 `getData()` returns the pure base64 string without the data URI scheme. For example, "/9j/4AAQSkZJRgABA...". If you want to use the string, you probably need to add the scheme. For example, "data:image/png; base64, /9j/4AAQSkZJRgABA...".
 
@@ -2310,14 +2448,14 @@ interface Base64Result {
 
 ```javascript
 DWObject.ConvertToBase64(
-  [0, 1, 2],
-  Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
-  function (result, indices, type) {
-    console.log(result.getData(0, result.getLength()));
-  },
-  function (errorCode, errorString) {
-    console.log(errorString);
-  }
+    [0, 1, 2],
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
+    function (result, indices, type) {
+        console.log(result.getData(0, result.getLength()));
+    },
+    function (errorCode, errorString) {
+        console.log(errorString);
+    }
 );
 ```
 
@@ -2325,35 +2463,36 @@ DWObject.ConvertToBase64(
 
 ## ConvertToBlob
 
+Convert the specified images to a blob.
+
 **Syntax**
 
 ```javascript
-/**
- * Convert the specified images to a blob.
- * @param indices Specify one or multiple images.
- * @param type The file type.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument result The resulting blob.
- * @argument indices The indices of the converted images.
- * @argument type The file type.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 ConvertToBlob(
     indices: number[],
     type: Dynamsoft.DWT.EnumDWT_ImageType | number,
-    successCallback: (
-        result: Blob,
-        indices: number[],
-        type: number) => void,
-    failureCallBack: (
-        errorCode: number,
-        errorString: string) => void
+    successCallback: (result: Blob, indices: number[], type: number) => void,
+    failureCallBack: (errorCode: number, errorString: string) => void
 ): void;
 ```
 
+**Parameters**
+
+`indices`: Specify one or multiple images.
+
+`type`: The file type. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+- `result`: The resulting blob.
+- `indices`: The indices of the converted images.
+- `type`: The file type.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2382,14 +2521,14 @@ ConvertToBlob(
 
 ```javascript
 DWObject.ConvertToBlob(
-  [0, 1, 2],
-  Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
-  function (result, indices, type) {
-    console.log(result.size);
-  },
-  function (errorCode, errorString) {
-    console.log(errorString);
-  }
+    [0, 1, 2],
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
+    function (result, indices, type) {
+        console.log(result.size);
+    },
+    function (errorCode, errorString) {
+        console.log(errorString);
+    }
 );
 ```
 
@@ -2397,18 +2536,11 @@ DWObject.ConvertToBlob(
 
 ## SaveAsBMP
 
+Save the specified image as a BMP file.
+
 **Syntax**
 
 ```javascript
-/**
- * Save the specified image as a BMP file.
- * @param fileName The name to save to (or specify the absolute path).
- * @param index The index which specifies the image to save.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 SaveAsBMP(
     fileName: string,
     index: number,
@@ -2417,7 +2549,20 @@ SaveAsBMP(
 ): void | boolean;
 ```
 
+**Parameters**
+
+`fileName`: The name to save to (or specify the absolute path).
+
+`index`: The index which specifies the image to save.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2446,18 +2591,11 @@ SaveAsBMP(
 
 ## SaveAsJPEG
 
+Save the specified image as a JPEG file.
+
 **Syntax**
 
 ```javascript
-/**
- * Save the specified image as a JPEG file.
- * @param fileName The name to save to (or specify the absolute path).
- * @param index The index which specifies the image to save.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 SaveAsJPEG(
     fileName: string,
     index: number,
@@ -2466,7 +2604,20 @@ SaveAsJPEG(
 ): void | boolean;
 ```
 
+**Parameters**
+
+`fileName`: The name to save to (or specify the absolute path).
+
+`index`: The index which specifies the image to save.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2499,18 +2650,11 @@ If you are using WASM mode on the desktop, the image will always be saved to the
 
 ## SaveAsPDF
 
+Save the specified image as a PDF file.
+
 **Syntax**
 
 ```javascript
-/**
- * Save the specified image as a PDF file.
- * @param fileName The name to save to (or specify the absolute path).
- * @param index The index which specifies the image to save.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 SaveAsPDF(
     fileName: string,
     index: number,
@@ -2519,7 +2663,20 @@ SaveAsPDF(
 ): void | boolean;
 ```
 
+**Parameters**
+
+`fileName`: The name to save to (or specify the absolute path).
+
+`index`: The index which specifies the image to save.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2554,18 +2711,11 @@ If you are using WASM mode on the desktop, the image will always be saved to the
 
 ## SaveAsPNG
 
+Save the specified image as a PNG file.
+
 **Syntax**
 
 ```javascript
-/**
- * Save the specified image as a PNG file.
- * @param fileName The name to save to (or specify the absolute path).
- * @param index The index which specifies the image to save.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 SaveAsPNG(
     fileName: string,
     index: number,
@@ -2574,7 +2724,20 @@ SaveAsPNG(
 ): void | boolean;
 ```
 
+**Parameters**
+
+`fileName`: The name to save to (or specify the absolute path).
+
+`index`: The index which specifies the image to save.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2607,18 +2770,11 @@ If you are using WASM mode on the desktop, the image will always be saved to the
 
 ## SaveAsTIFF
 
+Save the specified image as a TIFF file.
+
 **Syntax**
 
 ```javascript
-/**
- * Save the specified image as a TIFF file.
- * @param fileName The name to save to (or specify the absolute path).
- * @param index The index which specifies the image to save.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 SaveAsTIFF(
     fileName: string,
     index: number,
@@ -2628,6 +2784,7 @@ SaveAsTIFF(
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2652,6 +2809,17 @@ SaveAsTIFF(
 </table>
 </div>
 
+**Parameters**
+
+`fileName`: The name to save to (or specify the absolute path).
+
+`index`: The index which specifies the image to save.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
 
 **Usage notes**
 
@@ -2661,17 +2829,11 @@ If you are using WASM mode on the desktop, the image will always be saved to the
 
 ## SaveAllAsMultiPageTIFF
 
+Saves all the images in buffer as a multi-page TIFF file.
+
 **Syntax**
 
 ```javascript
-/**
- * Saves all the images in buffer as a multi-page TIFF file.
- * @param fileName The name to save to (or specify the absolute path).
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 SaveAllAsMultiPageTIFF(
     fileName: string,
     successCallback ? : () => void,
@@ -2679,7 +2841,18 @@ SaveAllAsMultiPageTIFF(
 ): void | boolean;
 ```
 
+**Parameters**
+
+`fileName`: The name to save to (or specify the absolute path).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode` The error code.
+- `errorString` The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2712,17 +2885,11 @@ If you are using WASM mode on the desktop, the image will always be saved to the
 
 ## SaveAllAsPDF
 
+Saves all the images in buffer as a multi-page PDF file.
+
 **Syntax**
 
 ```javascript
-/**
- * Saves all the images in buffer as a multi-page PDF file.
- * @param fileName The name to save to (or specify the absolute path).
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 SaveAllAsPDF(
     fileName: string,
     successCallback ? : () => void,
@@ -2730,7 +2897,18 @@ SaveAllAsPDF(
 ): void | boolean;
 ```
 
+**Parameters**
+
+`fileName`: The name to save to (or specify the absolute path).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2765,17 +2943,11 @@ If you are using WASM mode on the desktop, the image will always be saved to the
 
 ## SaveSelectedImagesAsMultiPagePDF
 
+Saves all selected images in buffer as a multi-page PDF file.
+
 **Syntax**
 
 ```javascript
-/**
- * Saves all selected images in buffer as a multi-page PDF file.
- * @param fileName The name to save to (or specify the absolute path).
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 SaveSelectedImagesAsMultiPagePDF(
     fileName: string,
     successCallback ? : () => void,
@@ -2783,7 +2955,18 @@ SaveSelectedImagesAsMultiPagePDF(
 ): void | boolean;
 ```
 
+**Parameters**
+
+`fileName`: The name to save to (or specify the absolute path).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2818,27 +3001,30 @@ If you are using WASM mode on the desktop, the image will always be saved to the
 
 ## SaveSelectedImagesAsMultiPageTIFF
 
+Saves all selected images in buffer as a multi-page TIFF file.
+
 **Syntax**
 
 ```javascript
-/**
- * Saves all selected images in buffer as a multi-page TIFF file.
- * @param fileName The name to save to (or specify the absolute path).
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 SaveSelectedImagesAsMultiPageTIFF(
     fileName: string,
     successCallback ? : () => void,
-    failureCallback ? : (
-        errorCode: number,
-        errorString: string) => void
+    failureCallback ? : (errorCode: number, errorString: string) => void
 ): void | boolean;
 ```
 
+**Parameters**
+
+`fileName`: The name to save to (or specify the absolute path).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2873,16 +3059,16 @@ If you are using WASM mode on the desktop, the image will always be saved to the
 
 ## ClearTiffCustomTag
 
+Clear the content of all custom tiff tags.
+
 **Syntax**
 
 ```javascript
-/**
- * Clear the content of all custom tiff tags.
- */
 ClearTiffCustomTag(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2911,15 +3097,11 @@ ClearTiffCustomTag(): boolean;
 
 ## SetTiffCustomTag
 
+Sets a custom tiff tag (up to 32 tags). The string to be set in a tag can be base64 encoded.
+
 **Syntax**
 
 ```javascript
-/**
- * Sets a custom tiff tag (up to 32 tags). The string to be set in a tag can be base64 encoded.
- * @param id The id of the custom tag.
- * @param content The content of the tag.
- * @param useBase64Encoding Whether the content is encoded.
- */
 SetTiffCustomTag(
     id: number,
     content: string,
@@ -2927,7 +3109,16 @@ SetTiffCustomTag(
 ): boolean;
 ```
 
+**Parameters**
+
+`id`: The id of the custom tag.
+
+`content`: The content of the tag.
+
+`useBase64Encoding`: Whether the content is encoded.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2970,16 +3161,16 @@ DWObject.SaveAsTIFF("C:\\DWT.tiff", 0);
 
 ## ClearAllHTTPFormField
 
+Clear all the custom fields from the HTTP Post Form.
+
 **Syntax**
 
 ```javascript
-/**
- * Clear all the custom fields from the HTTP Post Form.
- */
 ClearAllHTTPFormField(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3008,25 +3199,17 @@ ClearAllHTTPFormField(): boolean;
 
 ## SetHTTPFormField
 
+Add a custom field to the HTTP Post Form. Or add a binary file to the HTTP Post Form.
+
 **Syntax**
 
 ```javascript
-/**
- * Add a custom field to the HTTP Post Form.
- * @param name The name of the field.
- * @param value The value of the field.
- */
 SetHTTPFormField(
     name: string,
     value: string
 ): boolean;
-
-/**
- * Add a binary file to the HTTP Post Form.
- * @param name The name of the field.
- * @param content The content of the file.
- * @param fileName The name of the file.
- */
+```
+```javascript
 SetHTTPFormField(
     name: string,
     content: Blob,
@@ -3034,7 +3217,18 @@ SetHTTPFormField(
 ): boolean;
 ```
 
+**Parameters**
+
+`name`: The name of the field.
+
+`value`: The value of the field.
+
+`content`: The content of the file.
+
+`fileName`: The name of the file.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3063,21 +3257,25 @@ SetHTTPFormField(
 
 ## SetHTTPHeader
 
+Add a custom header to the HTTP Post Form.
+
 **Syntax**
 
 ```javascript
-/**
- * Add a custom header to the HTTP Post Form.
- * @param name The name of the header.
- * @param value The value of the header.
- */
 SetHTTPHeader(
     name: string,
     value: string
 ): boolean;
 ```
 
+**Parameters**
+
+`name`: The name of the header.
+
+`value`: The value of the header.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3106,21 +3304,25 @@ SetHTTPHeader(
 
 ## SetUploadSegment
 
+Set the segmentation threshold and segment size.
+
 **Syntax**
 
 ```javascript
-/**
- * Set the segmentation threshold and segment size.
- * @param threshold Specify the threshold (in MB).
- * @param size Specify the segment size (in KB).
- */
 SetUploadSegment(
     threshold: number,
     size: number
 ): boolean;
 ```
 
+**Parameters**
+
+`threshold`: Specify the threshold (in MB).
+
+`size`: Specify the segment size (in KB).
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3149,16 +3351,16 @@ SetUploadSegment(
 
 ## IfShowFileDialog
 
+Return or set whether to show open/save file dialog when saving images in the buffer or loading images from a local directory.
+
 **Syntax**
 
 ```javascript
-/**
- * Return or set whether to show open/save file dialog when saving images in the buffer or loading images from a local directory.
- */
 IfShowFileDialog: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3191,16 +3393,16 @@ Supported in Service mode only.
 
 ## IfShowCancelDialogWhenImageTransfer
 
+Return or set whether to show the progress of an operation with a button to cancel it.
+
 **Syntax**
 
 ```javascript
-/**
- * Return or set whether to show the progress of an operation with a button to cancel it.
- */
 IfShowCancelDialogWhenImageTransfer: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3214,7 +3416,7 @@ IfShowCancelDialogWhenImageTransfer: boolean;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
+<td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
@@ -3229,16 +3431,16 @@ IfShowCancelDialogWhenImageTransfer: boolean;
 
 ## IfShowProgressBar
 
+Return or set whether the progress bar is/should be displayed during encoding or decoding. It works for any image encoding/decoding related methods. For example: LoadImage, LoadImageEx, ConvertToBlob, etc.
+
 **Syntax**
 
 ```javascript
-/**
- * Return or set whether the progress bar is/should be displayed during encoding or decoding. It works for any image encoding/decoding related methods. For example: LoadImage, LoadImageEx, ConvertToBlob, etc.
- */
 IfShowProgressBar: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3267,20 +3469,11 @@ IfShowProgressBar: boolean;
 
 ## ShowFileDialog
 
+Show the system's save-file dialog or open-file dialog.
+
 **Syntax**
 
 ```javascript
-/**
- * Show the system's save-file dialog or open-file dialog.
- * @param isSave Whether to show a save-file dialog or an open-file dialog
- * @param filter The filter pattern like "JPG | *.jpg".
- * @param filterIndex The order of the filter. Normally, just put 0.
- * @param defaultExtension Extension to be appended to the file name. Only valid in a save-file dialog
- * @param initialDirectory The initial directory that the dialog opens.
- * @param allowMultiSelect Whether or not multiple files can be selected at the same time. Only valid in an open-file dialog.
- * @param showOverwritePrompt Whether or not a prompt shows up when saving a file may overwrite an existing file.
- * @param flag If set to 0, bAllowMultiSelect and bShowOverwritePrompt will be effective. Otherwise, these two parameters are ignored.
- */
 ShowFileDialog(
     isSave: boolean,
     filter: string,
@@ -3293,7 +3486,26 @@ ShowFileDialog(
 ): boolean;
 ```
 
+**Parameters**
+
+`isSave`: Whether to show a save-file dialog or an open-file dialog.
+
+`filter`: The filter pattern like "JPG | *.jpg".
+
+`filterIndex`: The order of the filter. Normally, just put 0.
+
+`defaultExtension`: Extension to be appended to the file name. Only valid in a save-file dialog.
+
+`initialDirectory`: The initial directory that the dialog opens.
+
+`allowMultiSelect`: Whether or not multiple files can be selected at the same time. Only valid in an open-file dialog.
+
+`showOverwritePrompt`: Whether or not a prompt shows up when saving a file may overwrite an existing file.
+
+`flag`: If set to 0, bAllowMultiSelect and bShowOverwritePrompt will be effective. Otherwise, these two parameters are ignored.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3330,34 +3542,34 @@ This method will trigger [ `OnGetFilePath` ](#ongetfilepath) event even when it 
 
 ```javascript
 DWObject.RegisterEvent(
-  "OnGetFilePath",
-  function (isSave, filesCount, index, directory, fileName) {
-    alert(" directory: " + directory + "\\" + fileName);
-  }
+    "OnGetFilePath",
+    function (isSave, filesCount, index, directory, fileName) {
+        alert(" directory: " + directory + "\\" + fileName);
+    }
 );
 
 //On macOS
 DWObject.ShowFileDialog(
-  false,
-  "TIF,TIFF,JPG,JPEG,PNG,PDF",
-  0,
-  "",
-  "",
-  true,
-  false,
-  0
+    false,
+    "TIF,TIFF,JPG,JPEG,PNG,PDF",
+    0,
+    "",
+    "",
+    true,
+    false,
+    0
 );
 
 //On Windows
 DWObject.ShowFileDialog(
-  false,
-  "BMP,TIF,JPG,PNG,PDF|*.bmp;*.tif;*.png;*.jpg;*.pdf;*.tiff;*.jpeg",
-  0,
-  "",
-  "",
-  true,
-  false,
-  0
+    false,
+    "BMP,TIF,JPG,PNG,PDF|*.bmp;*.tif;*.png;*.jpg;*.pdf;*.tiff;*.jpeg",
+    0,
+    "",
+    "",
+    true,
+    false,
+    0
 );
 ```
 
@@ -3365,18 +3577,20 @@ DWObject.ShowFileDialog(
 
 ## Print
 
+Export all image data in the buffer to a new browser window and use the browser's built-in print feature to print the image(s).
+
 **Syntax**
 
 ```javascript
-/**
- * Export all image data in the buffer to a new browser window and use the browser's built-in print feature to print the image(s).
- * @param useOSPrintWindow Whether to use the print feature of the operating system instead.
- * @Note the parameter only works in Windows Service mode.
- */
 Print(useOSPrintWindow ? : boolean): boolean;
 ```
 
+**Parameters**
+
+`useOSPrintWindow`: Whether to use the print feature of the operating system instead.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3395,26 +3609,34 @@ Print(useOSPrintWindow ? : boolean): boolean;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.0+ </td>
 </tr>
 
 </table>
 </div>
+
+**Usage Notes**
+
+The parameter only works in Windows Service mode.
+
 ---
 
 ## PrintEx
 
+Print selected image(s).
+
 **Syntax**
 
 ```javascript
-/**
- * Print selected image(s).
- * @param indices Specify the image.
- */
 PrintEx(indices: number[]): void;
 ```
 
+**Parameters**
+
+`indices`: Specify the image.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3433,7 +3655,7 @@ PrintEx(indices: number[]): void;
 <td align="center">v17.0+ </td>
 <td align="center">v17.0+ </td>
 <td align="center">v17.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v17.0+ </td>
 </tr>
 
 </table>
@@ -3443,16 +3665,16 @@ PrintEx(indices: number[]): void;
 
 ## JPEGQuality
 
+Return or set the quality for JPEG compression.
+
 **Syntax**
 
 ```javascript
-/**
- * Return or set the quality for JPEG compression.
- */
 JPEGQuality: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3471,7 +3693,7 @@ JPEGQuality: number;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.0+ </td>
 </tr>
 
 </table>
@@ -3487,16 +3709,16 @@ The valid range is 0-100. The higher the JPEGQuality property, the better the qu
 
 ## IfTiffMultiPage
 
+Return or set whether to append to or replace an existing TIFF file with the same name.
+
 **Syntax**
 
 ```javascript
-/**
- * Return or set whether to append to or replace an existing TIFF file with the same name.
- */
 IfTiffMultiPage: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3523,24 +3745,26 @@ IfTiffMultiPage: boolean;
 
 **Usage notes**
 
-When you save a new image in the same name of an existing TIFF file  
-If this property is true, the new image will be added to the existing file  
-If this property is false, the new image will replace the existing file
+When you save a new image in the same name of an existing TIFF file: 
+
+1) If this property is true, the new image will be added to the existing file.
+
+2) If this property is false, the new image will replace the existing file.
 
 ---
 
 ## TIFFCompressionType
 
+Return or set the compression type for TIFF files.
+
 **Syntax**
 
 ```javascript
-/**
- * Return or set the compression type for TIFF files.
- */
 TIFFCompressionType: Dynamsoft.DWT.EnumDWT_TIFFCompressionType | number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3559,7 +3783,7 @@ TIFFCompressionType: Dynamsoft.DWT.EnumDWT_TIFFCompressionType | number;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.0+ </td>
 </tr>
 
 </table>

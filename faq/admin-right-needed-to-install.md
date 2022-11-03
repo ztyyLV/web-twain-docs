@@ -9,11 +9,12 @@ description: Are admin right required to install the end-user component?
 permalink: /faq/admin-right-needed-to-install.html
 ---
 
-# Project Deployment and End-user Installation
+View all FAQs about [Project Deployment and End-user Installation](
+https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-installation)
 
-## Are admin rights required to install the end-user component?
+# Are admin rights required to install the end-user component?
 
-Yes, the Dynamsoft Service installer is a `.msi` file which requires administrator rights. If your organization does not allow end users to have admin rights, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) to get a special “Personal Installer” that does not require admin rights.
+Yes, the Dynamsoft Service installer is a `.msi` file which requires administrator rights. If your organization does not allow end users to have admin rights, you can contact [Dynamsoft Support]({{site.about}}getsupport.html) to get a special "Personal Installer" that does not require admin rights.
 
 > NOTE
 >

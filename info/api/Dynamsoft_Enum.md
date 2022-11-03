@@ -2,7 +2,7 @@
 layout: default-layout
 needAutoGenerateSidebar: true
 noTitleIndex: true
-title: Dynamic Web TWAIN API Reference - Enumerations
+title: Dynamic Web TWAIN SDK API Reference - Enumerations
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Enumerations
 breadcrumbText: Enumerations
 description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
@@ -230,7 +230,7 @@ permalink: /info/api/Dynamsoft_Enum.html
 | TWFF_JPX | 13 | A file format from the Joint Photographic Experts Group ISO/IEC 15444-2 (TWAIN Spec 1.91) |
 | TWFF_DEJAVU | 14 | A file format from LizardTech (TWAIN Spec 1.91) |
 | TWFF_PDFA | 15 | A file format from Adobe PDF/A, Version 1 (TWAIN Spec 2.0) |
-| TWFF_PDFA2 | 16 | A file format from Adobe PDF/A, Version 2 (TWAIN Spec 2.1) 、
+| TWFF_PDFA2 | 16 | A file format from Adobe PDF/A, Version 2 (TWAIN Spec 2.1) |
 
 ## `Dynamsoft.DWT.EnumDWT_TIFFCompressionType`
 

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Features - Output
+title: Dynamic Web TWAIN SDK Features - Output
 keywords: Dynamic Web TWAIN, Documentation, Output
 breadcrumbText: Output
 description: Dynamic Web TWAIN SDK Documentation Output Page
@@ -10,11 +10,11 @@ permalink: /indepth/features/output.html
 
 # Output
 
-Different ways to export data from the `DWT` buffer.
+Different ways to export data from the `Dynamic Web TWAIN` buffer.
 
 ## Upload
 
-The most common usage of `DWT` is to scan documents and upload them to the server via `HTTP` and `FTP` . The library has a number of APIs to make this happen. Read on to learn more.
+The most common usage of `Dynamic Web TWAIN` is to scan documents and upload them to the server via `HTTP` and `FTP` . The library has a number of APIs to make this happen. Read on to learn more.
 
 ### HTTP with Built-in APIs
 
@@ -77,7 +77,7 @@ function getExtension(type) {
 
 ##### Q: How is the upload done
 
-**A**: `DWT` does the uploading in a few steps
+**A**: `Dynamic Web TWAIN` does the uploading in a few steps
 
 * Grab the image(s) specified by `indices` ; 
 * Encode the image(s) in the specified type which results in a binary file; 
@@ -97,7 +97,7 @@ var protocol = Dynamsoft.Lib.detect.ssl ? "https://" : "http://"
 
 ##### Q: What file types are supported
 
-**A**: As shown in the above function `getExtension()` , `DWT` supports `BMP` , `JPG` , `TIF` , `PNG` and `PDF` .
+**A**: As shown in the above function `getExtension()` , `Dynamic Web TWAIN` supports `BMP` , `JPG` , `TIF` , `PNG` and `PDF` .
 
 ##### Q: Can I upload multiple images as one file
 
@@ -109,11 +109,11 @@ var protocol = Dynamsoft.Lib.detect.ssl ? "https://" : "http://"
 
 ### HTTP with the File Uploader
 
-The File Uploader is an independent component that is dedicated to file uploading. It can be used seamlessly with `DWT` . 
+The File Uploader is an independent component that is dedicated to file uploading. It can be used seamlessly with `Dynamic Web TWAIN` . 
 
 #### How is upload done using the File Uploader
 
-1. `DWT` will prepare the file to upload with the method [ `GenerateURLForUploadData()` ]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)
+1. `Dynamic Web TWAIN` will prepare the file to upload with the method [ `GenerateURLForUploadData()` ]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)
 * Create a File Uploader instance with the method [ `Init()` ]({{site.info}}api/Dynamsoft_FileUploader.html#init)
 * Create an upload job with [ `CreateJob()` ]({{site.info}}api/Dynamsoft_FileUploader.html#createjob)
   + Define the target URL [ `ServerUrl` ]({{site.info}}api/Dynamsoft_FileUploader.html#serverurl)
@@ -164,7 +164,7 @@ Check out [Server-side Scripting]({{site.indepth}}development/Server-script.html
 
 ### HTTP with existing upload logic
 
-In some cases, you might already have an upload logic in your application and just want to upload the data in the `DWT` buffer with the same logic. The following code assumes the existing logic is pure `AJAX` which expects the [FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData/FormData)
+In some cases, you might already have an upload logic in your application and just want to upload the data in the `Dynamic Web TWAIN` buffer with the same logic. The following code assumes the existing logic is pure `AJAX` which expects the [FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData/FormData)
 
 ``` javascript
 function uploadThroughAJAX(indices, type) {
@@ -249,7 +249,7 @@ DWObject.FTPUpload(
 );
 ```
 
-`DWT` provides quite a few APIs for FTP upload too
+`Dynamic Web TWAIN` provides quite a few APIs for FTP upload too
 
 * [ `FTPUpload()` ]({{site.info}}api/WebTwain_IO.html#ftpupload)
 * [ `FTPUploadEx()` ]({{site.info}}api/WebTwain_IO.html#ftpuploadex)
@@ -264,7 +264,7 @@ DWObject.FTPUpload(
 
 ## Save
 
-`DWT` offers several methods to save your images to an absolute file path. Depending on what your exact needs are, you can choose from any of the following methods:
+`Dynamic Web TWAIN` offers several methods to save your images to an absolute file path. Depending on what your exact needs are, you can choose from any of the following methods:
 
 * [ `SaveAsBMP()` ]({{site.info}}api/WebTwain_IO.html#saveasbmp)
 * [ `SaveAsJPEG()` ]({{site.info}}api/WebTwain_IO.html#saveasjpeg)
@@ -278,7 +278,7 @@ DWObject.FTPUpload(
 
 ### Show dialog to save
 
-You can set the [ `IfShowFileDialog` ]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) property to `true` , which will show the open/save file dialog whenever you save an image(s) within the `DWT` buffer
+You can set the [ `IfShowFileDialog` ]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) property to `true` , which will show the open/save file dialog whenever you save an image(s) within the `Dynamic Web TWAIN` buffer
 
 ``` javascript
 DWObject.IfShowFileDialog = true;
@@ -367,7 +367,7 @@ DWObject.SaveAllAsPDF("D:\\Sample.pdf",
 
 ## Convert 
 
-In some cases, you want to process the data yourself and want to extract it from the `DWT` buffer. `DWT` offers two approaches.
+In some cases, you want to process the data yourself and want to extract it from the `Dynamic Web TWAIN` buffer. `Dynamic Web TWAIN` offers two approaches.
 
 ### Convert to a Blob
 
@@ -405,4 +405,4 @@ DWObject.ConvertToBase64(
 
 ## Print
 
-`DWT` supports printing with the method [ `Print()` ]({{site.info}}api/WebTwain_IO.html#print).
+`Dynamic Web TWAIN` supports printing with the method [ `Print()` ]({{site.info}}api/WebTwain_IO.html#print).

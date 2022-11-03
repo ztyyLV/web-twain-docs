@@ -15,7 +15,7 @@ permalink: /faq/error-message-current-product-key-does-not-support.html
 
 ### Symptom
 
-You get an error message that says “The current product key does not support xxx…” or “The current product key is invalid because …”.
+You get an error message that says "The current product key does not support xxx…" or "The current product key is invalid because …".
 
 ### Cause
 

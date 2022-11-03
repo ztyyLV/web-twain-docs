@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Development - Server Scripts
+title: Dynamic Web TWAIN SDK Development - Server Scripts
 keywords: Dynamic Web TWAIN, Documentation, Development, Server Scripts
 breadcrumbText: Server Scripts
 description: Dynamic Web TWAIN SDK Documentation Server Scripts Page
@@ -10,11 +10,11 @@ permalink: /indepth/development/Server-script.html
 
 # Server-side Scripting
 
-`DWT` is a 100% client-side library. However, it does need to interact with the server when doing operations like **Upload**, **Download**, etc. While the scripts are scattered in the documentation, we'll try to cover some important ones in this article.
+`Dynamic Web TWAIN` is a 100% client-side library. However, it does need to interact with the server when doing operations like **Upload**, **Download**, etc. While the scripts are scattered in the documentation, we'll try to cover some important ones in this article.
 
 ## How to process uploaded files
 
-As mentioned in [how to upload]({{site.indepth}}features/output.html#upload), `DWT` sends an HTTP POST request to the server when doing an upload. The file in the POST Form has the name `RemoteFile` by default. If you wish to change that, you can use [ `HttpFieldNameOfUploadedImage` ]({{site.info}}api/WebTwain_IO.html#httpfieldnameofuploadedimage). 
+As mentioned in [how to upload]({{site.indepth}}features/output.html#upload), `Dynamic Web TWAIN` sends an HTTP POST request to the server when doing an upload. The file in the POST Form has the name `RemoteFile` by default. If you wish to change that, you can use [ `HttpFieldNameOfUploadedImage` ]({{site.info}}api/WebTwain_IO.html#httpfieldnameofuploadedimage). 
 
 The following assumes the default `RemoteFile` is used and that [extra Form fields]({{site.indepth}}features/output.html#can-i-change-the-fields-of-the-http-form) might accompany the file.
 

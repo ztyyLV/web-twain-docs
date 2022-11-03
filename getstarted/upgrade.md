@@ -2,7 +2,7 @@
 layout: default-layout
 needAutoGenerateSidebar: true
 noTitleIndex: true
-title: Dynamic Web TWAIN Development - Upgrade Guide
+title: Dynamic Web TWAIN SDK Development - Upgrade Guide
 keywords: Dynamic Web TWAIN, Documentation, Development, Upgrade Guide
 breadcrumbText: Upgrade Guide
 description: Dynamic Web TWAIN SDK Documentation Upgrade Guide Page
@@ -47,7 +47,7 @@ You can follow the steps below to upgrade Dynamic Web TWAIN:
 For Dynamic Web TWAIN v16.0 and later, Dynamsoft Service is designed to be backward compatible. Once you upgrade Dynamic Web TWAIN for your application on the server side, for **end-users' side**
 
 - If the end-users have installed the same version or newer minor versions of Dynamsoft Service, they don't need to do anything;
-- If the end-users have never installed Dynamsoft Service, or have an older version or a different newer major version of it, they will be required to do a reinstallation of Dynamsoft Service. The process is described <a href="{{site.indepth}}deployment/service.html#how-to-install-dwt">here</a>  
+- If the end-users have never installed Dynamsoft Service, or have an older version or a different newer major version of it, they will be required to do a reinstallation of Dynamsoft Service. The process is described <a href="{{site.indepth}}deployment/service.html#installation-of-dynamsoft-service">here</a>  
 
 ## Update `dwt` package
 

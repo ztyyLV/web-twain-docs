@@ -15,7 +15,7 @@ permalink: /faq/error-message-product-key-does-not-support-current-os.html
 
 ### Symptom
 
-You get an error message that says “The current product key does not support current OS for embed device, please contact the site administrator”.
+You get an error message that says "The current product key does not support current OS for embed device, please contact the site administrator".
 
 ### Cause
 

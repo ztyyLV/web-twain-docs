@@ -26,10 +26,12 @@ jobs:
           cd /home/ubuntu
           [ -d DWTDoc ] && rm -rf DWTDoc
           [ -d web-twain-docs ] && rm -rf web-twain-docs
+          [ -d Docs-Template-Repo-Preview ] && rm -rf Docs-Template-Repo-Preview
           mkdir -p DWTDoc
           git clone --depth 1 https://github.com/dynamsoft-docs/web-twain-docs.git web-twain-docs
+          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
           cp -rfp ./web-twain-docs/* ./DWTDoc/
-          cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DWTDoc/
+          cd Docs-Template-Repo-Preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview/* ./DWTDoc/
           cd DWTDoc && bundle exec jekyll build
           python3 /home/ubuntu/ftp.py /home/ubuntu/DWTDoc/_site/ ./www.dynamsoft.com/web-twain/docs/ prod
           

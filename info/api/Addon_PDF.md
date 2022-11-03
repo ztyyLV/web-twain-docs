@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN API Reference - PDF Addon APIs
+title: Dynamic Web TWAIN SDK API Reference - PDF Addon APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, PDF Addon APIs
 breadcrumbText: PDF Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference PDF Addon APIs Page
@@ -130,7 +130,7 @@ IsTextBasedPDF(path: string): boolean;
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
-<td align="center">v16.0+</td>
+<td align="center">not supported  </td>
 </tr>
 
 </table>

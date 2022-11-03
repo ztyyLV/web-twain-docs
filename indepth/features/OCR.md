@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Features - OCR
+title: Dynamic Web TWAIN SDK Features - OCR
 keywords: Dynamic Web TWAIN, Documentation, OCR
 breadcrumbText: OCR
 description: Dynamic Web TWAIN SDK Documentation OCR Page
@@ -10,7 +10,7 @@ permalink: /indepth/features/OCR.html
 
 # OCR
 
-Dynamsoft offers two OCR engines that can be used as addons for `DWT` : OCR Basic ( `OCRB` for short) and OCR Professional ( `OCRPro` for short).
+Dynamsoft offers two OCR engines that can be used as addons for `Dynamic Web TWAIN` : OCR Basic ( `OCRB` for short) and OCR Professional ( `OCRPro` for short).
 
 `OCRB` is developed on top of the open source [Tesseract engine](https://github.com/tesseract-ocr/tesseract). `OCRPro` on the other hand was developed on top of Kofax's proprietary OCR engine. 
 
@@ -73,7 +73,7 @@ function downloadOCRB(bDownloadDLL) {
 downloadOCRB(true);
 ```
 
-The code asks `DWT` to download `OCRB` from the URL `Dynamsoft.DWT.ResourcesPath + '/addon/OCRx64.zip'` and the language data from the URL `Dynamsoft.DWT.ResourcesPath + '/addon/OCRBasicLanguages/English.zip'` . Both zip files need to be placed on the server where you placed the [resources files]({{site.faq}}what-are-the-resources-files.html). As mentioned above, if you can't find these files, you can contact [Dynamsoft Support]({{site.about}}getsupport.html).
+The code asks `Dynamic Web TWAIN` to download `OCRB` from the URL `Dynamsoft.DWT.ResourcesPath + '/addon/OCRx64.zip'` and the language data from the URL `Dynamsoft.DWT.ResourcesPath + '/addon/OCRBasicLanguages/English.zip'` . Both zip files need to be placed on the server where you placed the [resources files]({{site.faq}}what-are-the-resources-files.html). As mentioned above, if you can't find these files, you can contact [Dynamsoft Support]({{site.about}}getsupport.html).
 
 Once the installation is done, you should be able to find the following files under `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\DynamicOCR` .
 
@@ -160,7 +160,7 @@ function downloadOCRPro() {
 downloadOCRPro();
 ```
 
-The code asks `DWT` to download `OCRPro` from the URL `Dynamsoft.DWT.ResourcesPath + '/addon/OCRProx64.zip'` . This zip file needs to be placed on the server where you placed the [resources files]({{site.faq}}what-are-the-resources-files.html). If you can't find this file, you can contact [Dynamsoft Support]({{site.about}}getsupport.html).
+The code asks `Dynamic Web TWAIN` to download `OCRPro` from the URL `Dynamsoft.DWT.ResourcesPath + '/addon/OCRProx64.zip'` . This zip file needs to be placed on the server where you placed the [resources files]({{site.faq}}what-are-the-resources-files.html). If you can't find this file, you can contact [Dynamsoft Support]({{site.about}}getsupport.html).
 
 Once the installation is done, you should be able to find the following under `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17`
 * `DynamicOCRProx64_1.2.0.0806.dll` : The version number may vary.
@@ -454,9 +454,9 @@ Unzip what's downloaded in the previous step, copy the entire folder `WebContent
 
 ##### Upload the file and the configuration
 
-The following code shows how to upload the file to be read using `DWT` and the configuration for the reading
+The following code shows how to upload the file to be read using `Dynamic Web TWAIN` and the configuration for the reading
 
-> NOTE: you can upload the file and the configuration in other ways too, it's not required to use `DWT` .
+> NOTE: you can upload the file and the configuration in other ways too, it's not required to use `Dynamic Web TWAIN` .
 
 ``` javascript
 function DoOCR(index) {

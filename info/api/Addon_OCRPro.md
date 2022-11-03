@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN API Reference - OCRPro Addon APIs
+title: Dynamic Web TWAIN SDK API Reference - OCRPro Addon APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, OCRPro Addon APIs
 breadcrumbText: OCRPro Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference OCRPro Addon APIs Page

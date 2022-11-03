@@ -32,7 +32,7 @@ Dynamic Web TWAIN's main feature is interacting with imaging devices like scanne
 
 * TWAIN is actively maintained by the non-profit [TWAIN Working Group](https://www.twain.org/). Members of the group consist of scanner vendors and imaging software vendors, including FUJITSU, Panasonic, Epson, HP, ExactCODE, LEADTOOLS, and of course, Dynamsoft.
 
-* TWAIN is [the most commonly used protocol](https://www.twain.org/why-twain/) for image capturing and processing. Almost all scanners on the market come with a TWAIN driver and are supported by TWAIN applications like `DWT`.
+* TWAIN is [the most commonly used protocol](https://www.twain.org/why-twain/) for image capturing and processing. Almost all scanners on the market come with a TWAIN driver and are supported by TWAIN applications like `Dynamic Web TWAIN`.
 
 See more: <a href="{{site.faq}}how-to-use-TWACKER-to-check-if-your-device-is-TWAIN-Compliant.html" target="_blank">How to use TWACKER to check if your device is TWAIN Compliant?</a>
 
@@ -62,7 +62,7 @@ See more: <a href="{{site.faq}}how-to-test-if-your-scanner-supports-ICA-scanning
 
 * SANE is supported on multiple Linux distributions.
 
-* As of version 16.1.1, `DWT` supports SANE v1.0.25.
+* As of version 16.1.1, `Dynamic Web TWAIN` supports SANE v1.0.25.
 
 See more: <a href="{{site.faq}}how-to-test-if-your-device-is-SANE-compliant.html" target="_blank">How to test if your device is SANE compliant?</a> 
 

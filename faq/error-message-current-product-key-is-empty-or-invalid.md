@@ -15,7 +15,7 @@ permalink: /faq/error-message-current-product-key-is-empty-or-invalid.html
 
 ### Symptom
 
-You get an error message that says “The current product key is empty or invalid, please contact the site administrator”.
+You get an error message that says "The current product key is empty or invalid, please contact the site administrator".
 
 ### Cause
 

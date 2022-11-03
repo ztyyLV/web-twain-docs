@@ -18,7 +18,7 @@ There are several runtime settings you can use to speed up the barcode reading p
 - Specify the Barcode Type(s) to Read
 - Specify maximum barcode count
 - Specify a scan Region
-- Use the built-in mode ‘speed’
+- Use the built-in mode 'speed'
 
 For more details on runtime settings, please check <a href="{{site.indepth}}features/barcode.html#runtime-settings" target="_blank">here</a>.
 

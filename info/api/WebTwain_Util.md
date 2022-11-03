@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN API Reference - Utility APIs
+title: Dynamic Web TWAIN SDK API Reference - Utility APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Utility APIs
 breadcrumbText: Utility
 description: Dynamic Web TWAIN SDK Documentation API Reference Utility APIs Page
@@ -59,7 +59,7 @@ isUsingActiveX(): boolean;
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v16.2+ </td>
 </tr>
 
 </table>
@@ -184,7 +184,7 @@ SetProductKeyAsync(
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.1+ </td>
 </tr>
 
 </table>
@@ -538,7 +538,7 @@ readonly ProductName: string;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.0+ </td>
 </tr>
 
 </table>
@@ -624,7 +624,7 @@ ProductKey: string;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v16.0+ </td>
 </tr>
 
 </table>

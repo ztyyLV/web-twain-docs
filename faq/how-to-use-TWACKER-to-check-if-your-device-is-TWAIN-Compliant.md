@@ -36,7 +36,7 @@ permalink: /faq/how-to-use-TWACKER-to-check-if-your-device-is-TWAIN-Compliant.ht
 
 ![Hardware-Scanners-Cameras-8]({{site.assets}}imgs/Hardware-Scanners-Cameras-8.png)
 
-> If scanning is successful without any errors, then your device should be TWAIN compliant. You can also try other commands to see how it works. If your scanner doesn’t work with `TWACKER` , please check your scanner model online and make sure you have installed the (latest) TWAIN driver from its manufacturer.
+> If scanning is successful without any errors, then your device should be TWAIN compliant. You can also try other commands to see how it works. If your scanner doesn't work with `TWACKER` , please check your scanner model online and make sure you have installed the (latest) TWAIN driver from its manufacturer.
 
 ![Hardware-Scanners-Cameras-9]({{site.assets}}imgs/Hardware-Scanners-Cameras-9.png)
 

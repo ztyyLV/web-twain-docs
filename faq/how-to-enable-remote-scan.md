@@ -9,9 +9,10 @@ description: How can i enable Remote Scan?
 permalink: /faq/how-to-enable-remote-scan.html
 ---
 
-# Project Deployment and End-user Installation
+View all FAQs about [Project Deployment and End-user Installation](
+https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-installation)
 
-## How to enable Remote Scan?
+# How to enable Remote Scan?
 
 Remote Scan means directly scanning documents from a remote document scanner to a web browser client of a client machine. No installation is required on the client machine, which makes it easy for all end users to utilize the web scanning feature of the Dynamic Web TWAIN SDK.
 

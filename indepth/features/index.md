@@ -1,14 +1,14 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Features Index
+title: Dynamic Web TWAIN SDK Features Index
 keywords: Dynamic Web TWAIN, Documentation, Features Index
 breadcrumbText: Using DWT
 description: Dynamic Web TWAIN SDK Documentation Features Index Page
 permalink: /indepth/features/
 ---
 
-# Using DWT
+# Using Dynamic Web TWAIN
 
 This section covers how to implement the key capabilities of Dynamic Web TWAIN (DWT):
 

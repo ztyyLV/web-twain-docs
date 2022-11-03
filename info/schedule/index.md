@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: false
-title: Dynamic Web TWAIN Schedule
+title: Dynamic Web TWAIN SDK Schedule
 keywords: Dynamic Web TWAIN, Documentation, Schedule, Index
 breadcrumbText: Release Notes
 description: Dynamic Web TWAIN SDK Documentation Schedule Index Page
