@@ -193,7 +193,7 @@ You can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialo
 DWObject.IfShowFileDialog = true; //"Open File" dialog will be opened.
 
 DWObject.LoadImageEx(
-    "",
+    "", //file name can be empty if "Open File" dialog is called.
     Dynamsoft.DWT.EnumDWT_ImageType.IT_JPG,
     function () {
         console.log("success");
@@ -218,6 +218,10 @@ DWObject.LoadImageEx(
     }
 );
 ```
+
+**Remark**
+
+[Load Guide]({{site.indepth}}features/input.html#load-files)
 
 ---
 
@@ -302,6 +306,10 @@ DWObject.ConvertToBase64(
 );
 ```
 
+**Remark**
+
+[Load Guide]({{site.indepth}}features/input.html#load-files-in-binary-or-base64-string-format)
+
 ---
 
 ## LoadImageFromBinary
@@ -382,6 +390,10 @@ DWObject.ConvertToBlob(
 );
 ```
 
+**Remark**
+
+[Load Guide]({{site.indepth}}features/input.html#load-files-in-binary-or-base64-string-format)
+
 ---
 
 ## LoadDibFromClipboard
@@ -460,7 +472,7 @@ RegisterEvent(
 
 **Parameters**
 
-`isSave`: Whether or not the event is triggered after a save-file dialog was shown or a open-file dialog.
+`isSave`: Whether or not the event is triggered after a save-file dialog was shown.
 
 `filesCount`: How many files were selected.
 
@@ -499,8 +511,8 @@ RegisterEvent(
 **Example**
 
 ```javascript
-DWObject.RegisterEvent('OnGetFilePath', function(bSave, filesCount, index, path, filename) {
-    alert("bSave:" + bSave + " fileCount: " +  filesCount + " index: " +  index + " path: " +  path + "\\" +  filename);
+DWObject.RegisterEvent('OnGetFilePath', function(isSave, filesCount, index, directory, filename) {
+    alert("isSave:" + isSave + " fileCount: " +  filesCount + " index: " +  index + " directory: " +  directory + "\\" +  filename);
 });
 ```
 
@@ -674,6 +686,26 @@ FTPDownloadEx(
 </table>
 </div>
 
+**Example**
+
+```javascript
+/* The sample file path is: 
+ * "ftp://192.168.8.20/files/sample.pdf"
+ */
+var onSuccess = function() {
+    console.log("Downloaded a file successfully!");
+};
+
+var onFailure = function(errorCode, errorString) {
+    console.log(errorString);
+};
+
+DWObject.FTPPort = 21;
+DWObject.FTPUserName = "FTPUser";
+DWObject.FTPPassword = "SomePassword";
+DWObject.FTPDownloadEx("192.168.8.20", "/files/sample.pdf", Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF, onSuccess, onFailure);
+```
+
 ---
 
 ## FTPUpload
@@ -731,6 +763,29 @@ FTPUpload(
 
 </table>
 </div>
+
+**Example**
+
+```javascript
+var onSuccess = function() {
+    console.log("Uploaded a file successfully!");
+};
+
+var onFailure = function(errorCode, errorString) {
+    console.log(errorString);
+};
+
+DWObject.FTPUserName = 'test';
+DWObject.FTPPort = 21;
+DWObject.FTPPassword = 'test';
+DWObject.FTPUpload(
+    '192.168.8.222', //The FTP Host
+    0, // The index of the image
+    'test.pdf', // The path & name of the file 
+    OnSuccess, // Callback in case of success
+    OnFailure // Callback in case of failure
+);
+```
 
 ---
 
@@ -1247,6 +1302,28 @@ HTTPDownload(
 </table>
 </div>
 
+**Example**
+
+```javascript
+/* The sample file path is: 
+ * "http://localhost:300/files/sample.tif"
+ */
+var onSuccess = function() {
+    console.log("Downloaded a file successfully!");
+};
+
+var onFailure = function(errorCode, errorString) {
+    console.log(errorString);
+};
+
+DWObject.HTTPPort = 300;
+DWObject.HTTPDownload("localhost", "/files/sample.tif", onSuccess, onFailure);
+```
+
+**Remark**
+
+[Download Guide]({{site.indepth}}features/input.html#download)
+
 ---
 
 ## HTTPDownloadEx
@@ -1306,6 +1383,36 @@ HTTPDownloadEx(
 
 </table>
 </div>
+
+**Usage Notes**
+
+If you want to use this method to upload / download files through HTTPS, please don't forget to set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport).
+
+**Example**
+
+In this example, the URL points to a server-side script.
+
+The server-side script can be written in any language and in any logic as long as it returns a file. Please refer to [Download-Server-Script]({{site.indepth}}development/Server-script.html#download-a-file).
+
+```javascript
+/* The sample file path is: 
+ * "http://localhost:300/files/sample.tif"
+ */
+var onSuccess = function() {
+    console.log("Downloaded a file successfully!");
+};
+
+var onFailure = function(errorCode, errorString) {
+    console.log(errorString);
+};
+
+DWObject.HTTPPort = 300;
+DWObject.HTTPDownloadEx("localhost", "/getFile.aspx", Dynamsoft.DWT.EnumDWT_ImageType.IT_TIF, onSuccess, onFailure);
+```
+
+**Remark**
+
+[Download Guide]({{site.indepth}}features/input.html#download)
 
 ---
 
@@ -1480,17 +1587,10 @@ HTTPUpload(
     onServerReturnedSomething: (errorCode: number, errorString: string, response: string) => void
 ): void;
 ```
-```javascript
-HTTPUpload(
-    URL: string,
-    onEmptyResponse: () => void,
-    onServerReturnedSomething: (errorCode: number, errorString: string, response: string) => void
-): void;
-```
 
 **Parameters**
 
-`URL`: The server-side script to receive the post.
+`URL`: The server-side script to receive the post. For the sample code of Server Script, please refer to [Upload-Server-Script]({{site.indepth}}development/Server-script.html#how-to-process-uploaded-files).
 
 `indices`: Specify the image(s).
 
@@ -1532,6 +1632,10 @@ HTTPUpload(
 
 </table>
 </div>
+
+**Usage Notes**
+
+If you want to use this method to upload / download files through HTTPS, please don't forget to set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport).
 
 **Example**
 
@@ -1645,7 +1749,7 @@ HTTPUploadThroughPost(
 
 `index`: Specify the image.
 
-`target`: The target where the request is sent.
+`target`: The target where the request is sent. For the sample code of Server Script, please refer to [Upload-Server-Script]({{site.indepth}}development/Server-script.html#how-to-process-uploaded-files).
 
 `fileName`: The file name.
 
@@ -1681,6 +1785,10 @@ HTTPUploadThroughPost(
 
 </table>
 </div>
+
+**Usage Notes**
+
+If you want to use this method to upload / download files through HTTPS, please don't forget to set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport).
 
 **Example**
 
@@ -1739,7 +1847,7 @@ HTTPUploadThroughPostEx(
 
 `index`: Specify the image.
 
-`target`: The target where the request is sent.
+`target`: The target where the request is sent. For the sample code of Server Script, please refer to [Upload-Server-Script]({{site.indepth}}development/Server-script.html#how-to-process-uploaded-files).
 
 `fileName`: The file name.
 
@@ -1778,6 +1886,10 @@ HTTPUploadThroughPostEx(
 </table>
 </div>
 
+**Usage Notes**
+
+If you want to use this method to upload / download files through HTTPS, please don't forget to set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport).
+
 ---
 
 ## HTTPUploadAllThroughPostAsMultiPageTIFF
@@ -1803,7 +1915,7 @@ HTTPUploadAllThroughPostAsMultiPageTIFF(
 
 `host`: The HTTP Host.
 
-`target`: The target wherethe request is sent.
+`target`: The target wherethe request is sent. For the sample code of Server Script, please refer to [Upload-Server-Script]({{site.indepth}}development/Server-script.html#how-to-process-uploaded-files).
 
 `fileName`: The file name.
 
@@ -1839,6 +1951,10 @@ HTTPUploadAllThroughPostAsMultiPageTIFF(
 
 </table>
 </div>
+
+**Usage Notes**
+
+If you want to use this method to upload / download files through HTTPS, please don't forget to set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport).
 
 ---
 
@@ -1865,7 +1981,7 @@ HTTPUploadAllThroughPostAsPDF(
 
 `host`: The HTTP Host.
 
-`target`: The target where the request is sent.
+`target`: The target where the request is sent. For the sample code of Server Script, please refer to [Upload-Server-Script]({{site.indepth}}development/Server-script.html#how-to-process-uploaded-files).
 
 `fileName`: The file name.
 
@@ -1901,6 +2017,10 @@ HTTPUploadAllThroughPostAsPDF(
 
 </table>
 </div>
+
+**Usage Notes**
+
+If you want to use this method to upload / download files through HTTPS, please don't forget to set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport).
 
 ---
 
@@ -1927,7 +2047,7 @@ HTTPUploadThroughPostAsMultiPagePDF(
 
 `host`: The HTTP Host.
 
-`target`: The target where the request is sent.
+`target`: The target where the request is sent. For the sample code of Server Script, please refer to [Upload-Server-Script]({{site.indepth}}development/Server-script.html#how-to-process-uploaded-files).
 
 `fileName`: The file name.
 
@@ -1963,6 +2083,10 @@ HTTPUploadThroughPostAsMultiPagePDF(
 
 </table>
 </div>
+
+**Usage Notes**
+
+If you want to use this method to upload / download files through HTTPS, please don't forget to set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport).
 
 ---
 
@@ -1989,7 +2113,7 @@ HTTPUploadThroughPostAsMultiPageTIFF(
 
 `host`: The HTTP Host.
 
-`target`: The target wherethe request is sent.
+`target`: The target where the request is sent. For the sample code of Server Script, please refer to [Upload-Server-Script]({{site.indepth}}development/Server-script.html#how-to-process-uploaded-files).
 
 `fileName`: The file name.
 
@@ -2025,6 +2149,10 @@ HTTPUploadThroughPostAsMultiPageTIFF(
 
 </table>
 </div>
+
+**Usage Notes**
+
+If you want to use this method to upload / download files through HTTPS, please don't forget to set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport).
 
 ---
 
@@ -2052,7 +2180,7 @@ HTTPUploadThroughPostDirectly(
 
 `path`: Specify the file to upload.
 
-`target`: The target where the request is sent.
+`target`: The target where the request is sent. For the sample code of Server Script, please refer to [Upload-Server-Script]({{site.indepth}}development/Server-script.html#how-to-process-uploaded-files).
 
 `fileName`: The file name.
 
@@ -2091,6 +2219,8 @@ HTTPUploadThroughPostDirectly(
 
 **Usage notes**
 
+If you want to use this method to upload / download files through HTTPS, please don't forget to set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport).
+
 For security reasons, the method `HTTPUploadThroughPostDirectly()` can only upload a whitelisted file. In other words, the local file to upload should be either created by the library or selected manually by the user.
 
 To select a local file to upload, call the method [ShowFileDialog()](#showfiledialog) and then get the file path in the callback [OnGetFilePath](#ongetfilepath). Check out the example below.
@@ -2114,23 +2244,6 @@ DWObject.RegisterEvent(
   }
 );
 DWObject.ShowFileDialog(false, "All Files|*.*", 0, "", "", false, false, 1);
-```
-
-Sample code for the target script (SaveUploadedFile.aspx)
-
-```csharp
-<%@ Page Language="C#" %>
-<%
-    try{
-        String strImageName;
-        HttpFileCollection files = HttpContext.Current.Request.Files;
-        HttpPostedFile uploadfile = files["RemoteFile"];
-        strImageName = uploadfile.FileName;
-        uploadfile.SaveAs(Server.MapPath(".") + "\\" + strImageName);
-    }
-    catch{
-    }
-%>
 ```
 
 ---
@@ -2175,7 +2288,7 @@ HttpFieldNameOfUploadedImage: string;
 
 ## HTTPPort
 
-Return or set the HTTP Port.
+Return or set the HTTP Port. The default value is `80`.
 
 **Syntax**
 
@@ -2213,7 +2326,7 @@ HTTPPort: number;
 
 ## IfSSL
 
-Return or set whether to use SSL in HTTP requests.
+Return or set whether to use SSL in HTTP requests. The default value is `false`.
 
 **Syntax**
 
@@ -2289,7 +2402,7 @@ readonly HTTPPostResponseString: string;
 
 ## MaxUploadImageSize
 
-Return or set the maximum allowed size of a file to upload (in bytes).
+Return or set the maximum allowed size of a file to upload (in bytes). The default value is `-1` which indicates there is no limit over the upload size. The value should be equal or smaller than `2147483647` which essentially means `2 GB`.
 
 **Syntax**
 
@@ -2587,6 +2700,10 @@ SaveAsBMP(
 </table>
 </div>
 
+**Usage Notes**
+
+If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to true.
+
 ---
 
 ## SaveAsJPEG
@@ -2645,6 +2762,8 @@ SaveAsJPEG(
 **Usage notes**
 
 If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.
+
+If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `true`.
 
 ---
 
@@ -2707,6 +2826,8 @@ Learn about [how to config PDF save settings](./Addon_PDF.md#writesetup).
 
 If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.
 
+If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `true`.
+
 ---
 
 ## SaveAsPNG
@@ -2765,6 +2886,8 @@ SaveAsPNG(
 **Usage notes**
 
 If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.
+
+If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to true.
 
 ---
 
@@ -2825,6 +2948,8 @@ SaveAsTIFF(
 
 If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.
 
+If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to true.
+
 ---
 
 ## SaveAllAsMultiPageTIFF
@@ -2880,6 +3005,8 @@ SaveAllAsMultiPageTIFF(
 **Usage notes**
 
 If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.
+
+If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to true.
 
 ---
 
@@ -2939,6 +3066,8 @@ Learn about [how to config PDF save settings](./Addon_PDF.md#write-setup).
 
 If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.
 
+If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to true.
+
 ---
 
 ## SaveSelectedImagesAsMultiPagePDF
@@ -2997,6 +3126,8 @@ Learn about [how to config PDF save settings](./Addon_PDF.md#write-setup).
 
 If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.
 
+If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `true`.
+
 ---
 
 ## SaveSelectedImagesAsMultiPageTIFF
@@ -3054,6 +3185,8 @@ SaveSelectedImagesAsMultiPageTIFF(
 If called without any callback functions, these methods become synchronously and return a boolean value to indicate whether it succeeded. However, calling them asynchronously is recommended.
 
 If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.
+
+If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `true`.
 
 ---
 
@@ -3490,7 +3623,7 @@ ShowFileDialog(
 
 `isSave`: Whether to show a save-file dialog or an open-file dialog.
 
-`filter`: The filter pattern like "JPG | *.jpg".
+`filter`: The filter pattern like "JPG or *.jpg".
 
 `filterIndex`: The order of the filter. Normally, just put 0.
 
