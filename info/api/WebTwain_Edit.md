@@ -147,7 +147,7 @@ ChangeImageSize(
 
 `height`: Specify the new height.
 
-`method`: Specify the algorithm for the change. Please refer to (EnumDWT_InterpolationMethod)({{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_interpolationmethod).
+`method`: Specify the algorithm for the change. Please refer to [EnumDWT_InterpolationMethod]({{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_interpolationmethod).
 
 `successCallback`: A callback function that is executed if the request succeeds.
 
@@ -214,7 +214,7 @@ SetDPI(
 
 `resample`: Whether to resample the image. When it is true, the image size will change.
 
-`method`: Specify the algorithm for the change. Please refer to (EnumDWT_InterpolationMethod)({{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_interpolationmethod).
+`method`: Specify the algorithm for the change. Please refer to [EnumDWT_InterpolationMethod]({{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_interpolationmethod).
 
 `successCallback`: A callback function that is executed if the request succeeds.
 
