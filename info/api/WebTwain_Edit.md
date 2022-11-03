@@ -330,9 +330,8 @@ ConvertToGrayScale(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
- *`errorCode`: The error code.
- *`errorString`: The error string.
-
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
 
 **Availability**
 <div class="availability">
