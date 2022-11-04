@@ -52,19 +52,21 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 ## IndexToImageID
 
+Return the imageID of an image specified by the index.
+
 **Syntax**
 
 ```typescript
-/**
-
-* Return the imageId of an image specified by the index.
-* @param index The index of the image.
-
-*/
 IndexToImageID(index: number): number;
 ```
 
+**Parameters**
+
+`index`: The index of the image.
+
+
 **Availability**
+
 <div class="availability">
 <table>
 
