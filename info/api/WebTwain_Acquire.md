@@ -22,7 +22,8 @@ permalink: /info/api/WebTwain_Acquire.html
 | [`SelectSource()`](#selectsource)                 | [`SelectSourceAsync()`](#selectsourceasync) | [`SelectSourceByIndex()`](#selectsourcebyindex) | [`SelectSourceByIndexAsync()`](#selectsourcebyindexasync) |
 | [`SetOpenSourceTimeout()`](#setopensourcetimeout) | [`OpenSource()`](#opensource)               | [`OpenSourceAsync()`](#opensourceasync)         | [`EnableSourceUI()`](#enablesourceui)                     |
 | [`EnableSource()`](#enablesource)                 | [`AcquireImage()`](#acquireimage)           | [`startScan()`](#startscan)                     | [`DisableSource()`](#disablesource)                       |
-| [`CloseSource()`](#closesource)                   | [`CloseSourceAsync()`](#closesourceasync)   | [`CloseWorkingProcess()`](#closeworkingprocess) |
+| [`CloseSource()`](#closesource)                   | [`CloseSourceAsync()`](#closesourceasync)   | [`CloseWorkingProcess()`](#closeworkingprocess) | [`GetDevicesAsync()`](#getdevicesasync)   | 
+| [`SelectDeviceAsync()`](#selectdeviceasync)                   | [`AcquireImageAsync()`](#acquireimageasync)   | [`DeviceObject.acquireImage()`](#deviceobject.acquireimage)   |
 
 **Properties**
 
@@ -4679,3 +4680,212 @@ DWObject.setCapabilities(
   }
 );
 ```
+---
+
+## GetDevicesAsync
+
+**Syntax**
+
+```typescript
+/**
+ * Return all available devices (scanners, eSCL scanners, etc.) for the device type (if specified)
+ * @param deviceType the device type
+ * @param refresh Default value: ?
+ */
+GetDevicesAsync(deviceType?: DeviceType, refresh?: boolean): Promise<Device[]>;
+```
+
+**Example**
+
+```javascript
+DwtObject.GetDevicesAsync(deviceType)
+.then((device[])=>{
+   return DWObject.SelectDeviceAsync(device[0]);
+}).then(()=>{
+   DWObject.AcquireImage(deviceConfiguration?: DeviceConfiguration);
+})
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">not supported</td>
+</tr>
+
+</table>
+</div>
+
+---
+
+## SelectDeviceAsync
+
+**Syntax**
+
+```typescript
+/**
+ * Select the device to use for scanning
+ * @param device the device
+ 
+ */
+SelectDeviceAsync(device: Device); Promise< boolean>;
+```
+
+**Example**
+
+```javascript
+DwtObject.GetDevicesAsync(deviceType)
+  .then((device[])=>{
+    return DWObject.SelectDeviceAsync(device[0]) //selecting the first device
+  }).then(()=>{
+    DWObject.AcquireImage(deviceConfiguration?: DeviceConfiguration);
+})
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">not supported</td>
+</tr>
+
+</table>
+</div>
+
+---
+
+## AcquireImageAsync
+
+**Syntax**
+
+```typescript
+/**
+ * Scan documents into another DWObject control. eSCL is not supported.
+ * @param deviceConfiguration The device configuration.
+ * @param sendTo The DWObject control to scan into
+ */
+AcquireImageAsync(deviceConfiguration?: DeviceConfiguration, sendTo?:DWObject). Promise< boolean>;
+```
+
+**Example**
+
+```javascript
+Dynamsoft.DWT.FindDevicesAsync("https://s0000001.dynamsoftwebtwain.com:port", 1).then((device[])=>{
+   Dynamsoft.DWT.createDWObjectAsync(device[0].serviceInfo).then((dwt)=>{
+      return dwt.AcquireImageAsync(deviceConfiguration, DWTObject).then(
+          function(){dwt.dispose();}, function(dwt.dispose(); throw;););
+  }).catch((exp) => {console.log(exp.message);
+      //eSCL scanners
+     return device[0].acquireImage(deviceConfiguration, DWTObject);
+  });
+}).catch((exp) => {console.log(exp.message);});
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">not supported</td>
+</tr>
+
+</table>
+</div>
+
+---
+
+## DeviceObject.acquireImage()
+
+**Syntax**
+
+```typescript
+/**
+ * Scan documents into another DWObject control. Supports eSCL scanners and all other scanners with limited cabilities.
+ * @param deviceConfiguration The device configuration.
+ * @param sendTo The DWObject control to scan into
+ */
+DeviceObject.acquireImage(deviceConfiguration?: DeviceConfiguration, sendTo?:DWObject ). Promise< boolean>;
+```
+
+**Example**
+
+```javascript
+Dynamsoft.DWT.FindDevicesAsync("https://s0000001.dynamsoftwebtwain.com:port", 1).then((device[])=>{
+   Dynamsoft.DWT.createDWObjectAsync(device[0].serviceInfo).then((dwt)=>{
+      return dwt.AcquireImageAsync(deviceConfiguration, DWTObject).then(
+          function(){dwt.dispose();}, function(dwt.dispose(); throw;););
+  }).catch((exp) => {console.log(exp.message);
+      //eSCL scanners
+     return device[0].acquireImage(deviceConfiguration, DWTObject);
+  });
+}).catch((exp) => {console.log(exp.message);});
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">not supported</td>
+</tr>
+
+</table>
+</div>
