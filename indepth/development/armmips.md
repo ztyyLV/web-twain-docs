@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Development - ARM64 & MIPS64 support 
+title: Dynamic Web TWAIN SDK Development - ARM64 & MIPS64 support 
 keywords: Dynamic Web TWAIN, Documentation, Development, ARM64, MIPS64
 breadcrumbText: ARM64 & MIPS64 support 
 description: Dynamic Web TWAIN SDK Documentation ARM64 & MIPS64 Support Page

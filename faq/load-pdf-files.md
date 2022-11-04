@@ -15,7 +15,7 @@ permalink: /faq/load-pdf-files.html
 
 You can use the PDF Rasterizer add-on which supports reading PDF/A images.
 
-If the PDF Rasterizer add-on is used, the file will automatically be rasterized when it’s loaded to the viewer.
+If the PDF Rasterizer add-on is used, the file will automatically be rasterized when it's loaded to the viewer.
 
 ### When is PDF Rasterizer effective?
 

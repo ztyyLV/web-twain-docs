@@ -26,6 +26,6 @@ The 1st callback onEmptyResponse is triggered when the server returns no respons
 
 Of course, in your own server-side script to accept and process the HTTP Post request, you know whether the upload is successful and can make it more obvious by returning some custom information to indicate that. In this case, the 2nd callback onServerReturnedSomething will be triggered on purpose and you will need to read the argument response which contains what is returned by the server.
 
-> NOTE - When the callback onServerReturnedSomething is triggered, you will always get an errorCode and an errorString but you can choose to ignore them if it’s triggered on purpose.
+> NOTE - When the callback onServerReturnedSomething is triggered, you will always get an errorCode and an errorString but you can choose to ignore them if it's triggered on purpose.
 
 Dynamic Web TWAIN also provides an API called <a href="{{site.info}}api/WebTwain_IO.html#httppostresponsestring" target="_blank">HTTPPostResponseString</a> which contains the response and can be read outside of the upload method.

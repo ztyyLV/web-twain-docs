@@ -9,9 +9,10 @@ description: I have installed the Dynamsoft Service on an end-user machine but s
 permalink: /faq/service-prompting-to-install-repeatedly.html
 ---
 
-# Project Deployment and End-user Installation
+View all FAQs about [Project Deployment and End-user Installation](
+https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-installation)
 
-## I have installed the Dynamsoft Service on an end-user machine but still got asked to install it repeatedly. Why?
+# I have installed the Dynamsoft Service on an end-user machine but still got asked to install it repeatedly. Why?
 
 #### There are a few possible causes
 

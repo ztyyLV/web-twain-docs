@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN API Reference - Edit APIs
+title: Dynamic Web TWAIN SDK API Reference - Edit APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Edit APIs
 breadcrumbText: Edit
 description: Dynamic Web TWAIN SDK Documentation API Reference Edit APIs Page
@@ -69,21 +69,25 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 ## ChangeBitDepth
 
+Change the bit depth of the specified image.
+
 **Syntax**
 
-```typescript
-/**
- * Change the bit depth of the specified image.
- * @param index Specify the image.
- * @param bitDepth Specify the bit depth.
- * @param highQuality Whether to keep high quality.
- */
+```javascript
 ChangeBitDepth(
     index: number,
     bitDepth: number,
     highQuality: boolean,
 ): boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image to be changed. The index is 0-based.
+
+`bitDepth`: Specify the target bit depth.
+
+`highQuality`: Whether to keep high quality. When it's true, it takes more time.
 
 **Availability**
 <div class="availability">
@@ -110,7 +114,6 @@ ChangeBitDepth(
 </table>
 </div>
 
-
 **Usage notes**
 
 The allowed bit depths are 1, 4, 8, 24.
@@ -119,20 +122,11 @@ The allowed bit depths are 1, 4, 8, 24.
 
 ## ChangeImageSize
 
+Change the size of the specified image.
+
 **Syntax**
 
-```typescript
-/**
- * Change the size of the specified image.
- * @param index Specify the image.
- * @param width Specify the new width.
- * @param height Specify the new height.
- * @param method Specify the algorithm for the change.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
+```javascript
 ChangeImageSize(
     index: number,
     width: number,
@@ -145,6 +139,22 @@ ChangeImageSize(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+`index`: Specify  the index of the image to be changed. The index is 0-based.
+
+`width`: Specify the new width.
+
+`height`: Specify the new height.
+
+`method`: Specify the algorithm for the change. Please refer to [EnumDWT_InterpolationMethod]({{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_interpolationmethod).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
+
 
 **Availability**
 <div class="availability">
@@ -175,21 +185,11 @@ ChangeImageSize(
 
 ## SetDPI
 
+Change the DPI (dots per inch) of the specified image.
+
 **Syntax**
 
-```typescript
-/**
- * Change the DPI (dots per inch) of the specified image.
- * @param index Specify the image.
- * @param xResolution Specify the horizontal DPI.
- * @param yResolution Specify the vertical DPI.
- * @param resample Whether to resample the image.
- * @param method Specify the algorithm for the change.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
+```javascript
 SetDPI(
     index: number,
     xResolution: number,
@@ -203,6 +203,25 @@ SetDPI(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image to be changed. The index is 0-based.
+
+`xResolution`: Specify the horizontal DPI.
+
+`yResolution`: Specify the vertical DPI.
+
+`resample`: Whether to resample the image. When it is true, the image size will change.
+
+`method`: Specify the algorithm for the change. Please refer to [EnumDWT_InterpolationMethod]({{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_interpolationmethod).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString` The error string.
+
 
 **Availability**
 <div class="availability">
@@ -229,25 +248,16 @@ SetDPI(
 </table>
 </div>
 
-**Usage notes**
-
-Check out [ `Dynamsoft.DWT.EnumDWT_InterpolationMethod` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_interpolationmethod).
 
 ---
 
 ## ConvertToBW
 
+Convert the specified image to black & white.
+
 **Syntax**
 
-```typescript
-/**
- * Convert the specified image to black & white.
- * @param index Specify the image.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
+```javascript
 ConvertToBW(
     index: number,
     successCallback?: () => void,
@@ -257,6 +267,17 @@ ConvertToBW(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image to be converted. The index is 0-based.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
+
 
 **Availability**
 <div class="availability">
@@ -287,17 +308,11 @@ ConvertToBW(
 
 ## ConvertToGrayScale
 
+Convert the specified image to grayscale.
+
 **Syntax**
 
-```typescript
-/**
- * Convert the specified image to grayscale.
- * @param index Specify the image.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
+```javascript
 ConvertToGrayScale(
     index: number,
     successCallback?: () => void,
@@ -307,6 +322,16 @@ ConvertToGrayScale(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image to be converted. The index is 0-based.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
 
 **Availability**
 <div class="availability">
@@ -1058,7 +1083,8 @@ CutToClipboard(index: number): boolean;
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
+<>
+align="center">v4.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>

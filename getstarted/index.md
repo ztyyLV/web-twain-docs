@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN GetStarted
+title: Dynamic Web TWAIN SDK GetStarted
 keywords: Dynamic Web TWAIN, Documentation, GetStarted
 breadcrumbText: GetStarted
 description: Dynamic Web TWAIN SDK Documentation GetStarted Page

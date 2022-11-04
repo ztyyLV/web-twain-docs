@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN API Reference - Buffer APIs
+title: Dynamic Web TWAIN SDK API Reference - Buffer APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Buffer APIs
 breadcrumbText: Buffer
 description: Dynamic Web TWAIN SDK Documentation API Reference Buffer APIs Page
@@ -346,9 +346,9 @@ FilterImagesByTag(tag: string): boolean;
 
 ```typescript
 /**
- * Stop filtering images by tag.
+ * Stop filtering images by tag. Return an array of UUID of images under the viewer.
  */
-ClearFilter(): boolean;
+ClearFilter(): number[];
 ```
 
 **Availability**
@@ -947,7 +947,15 @@ GetImagePartURL(index: number, width?: number, height?: number): string;
 
 **Usage notes**
 
-If width and height are not specified, you get the original image, otherwise you get the image with specified width or height while keeping the same aspect ratio. The returned string is like this 'dwt://dwt_trial_13000404/img?id=306159652&index=0&t=1502184632022'.
+The returned URL looks like this: 'dwt://dwt_trial_13000404/img?id=306159652&index=0&t=1502184632022'.
+
+You get the original size (a, b) of the image in PNG format in Service Mode
+- if either width or height is not set or
+- if either width or height is set to -1 or
+- if either width or height is larger than the original width or height
+
+Otherwise, you get the image with the specified width (x) or height (y) while keeping the same aspect ratio:
+if x/a < y/b, return the image (x, b\*x/a); if x/a > y/b, return the image (a\*y/b, y)
 
 ---
 
@@ -992,9 +1000,15 @@ GetImageURL(index: number, width?: number, height?: number): string;
 
 **Usage notes**
 
-The returned URL will be like "https://127.0.0.1:18623/dwt/dwt_17110818/img?id=795151779&index=1&t=1640936181588".
+The returned URL looks like this: "https://127.0.0.1:18623/dwt/dwt_17110818/img?id=795151779&index=1&t=1640936181588".
 
-If width or height is set to -1, you get the original size of image in PNG in Service Mode, otherwise you get the image with specified width or height while keeping the same aspect ratio.
+You get the original size (a, b) of the image in PNG format in Service Mode
+- if either width or height is not set or
+- if either width or height is set to -1 or
+- if either width or height is larger than the original width or height
+
+Otherwise, you get the image with the specified width (x) or height (y) while keeping the same aspect ratio:
+if x/a < y/b, return the image (x, b\*x/a); if x/a > y/b, return the image (a\*y/b, y)
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Development - React Integration
+title: Dynamic Web TWAIN SDK Development - React Integration
 keywords: Dynamic Web TWAIN, Documentation, Development, React Integration
 breadcrumbText: React Integration
 description: Dynamic Web TWAIN SDK Documentation React Integration Page
@@ -133,4 +133,4 @@ yarn start
 
 Check out the following sample project:
 
-* [dwt-react-advanced](https://github.com/dynamsoft-dwt/dwt-react-advanced)
+* [dwt-react-advanced](https://github.com/Dynamsoft/web-twain-react-advanced)

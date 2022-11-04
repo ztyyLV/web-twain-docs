@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN Development - Vue Integration
+title: Dynamic Web TWAIN SDK Development - Vue Integration
 keywords: Dynamic Web TWAIN, Documentation, Development, Vue Integration
 breadcrumbText: Vue Integration
 description: Dynamic Web TWAIN SDK Documentation Vue Integration Page
@@ -196,6 +196,5 @@ You should be able to open a file or capture an image.
 
 Check out the following sample project:
 
-* [dwt-vue-simple](https://github.com/dynamsoft-dwt/dwt-vue-simple)
+* [dwt-vue](https://github.com/Dynamsoft/web-twain-vue-advanced)
 
-<!--* [dwt-vue-advanced](https://github.com/dynamsoft-dwt/dwt-vue-advanced)-->

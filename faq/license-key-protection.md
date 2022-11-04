@@ -21,4 +21,4 @@ If you are using Per Client Device or Per Page license of Dynamic Web TWAIN SDK,
 
 If you are using an offline/non-trackable license, you can configure your license to enable domain binding before activating your license. When you do this, you must make sure your application is deployed to the bound domain, otherwise you will receive an error.
 
-> Note - that this a static characteristic of your application, and it cannot be changed after it’s configured.
+> Note - that this a static characteristic of your application, and it cannot be changed after it's configured.
