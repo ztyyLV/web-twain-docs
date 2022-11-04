@@ -115,6 +115,14 @@ tree_list:
         path: /info/api/Dynamsoft_Enum.html
         startVersion:
         endVersion:
+      - name: Interfaces
+        path: /info/api/Interfaces.html
+        startVersion:
+        endVersion:  
+      - name: Device
+        path: /info/api/Device.html
+        startVersion:
+        endVersion: 
       - name: WebTwain_Scanner
         path: /info/api/WebTwain_Acquire.html
         startVersion:
@@ -153,10 +161,6 @@ tree_list:
         endVersion:
       - name: Addon_Webcam
         path: /info/api/Addon_Webcam.html
-        startVersion:
-        endVersion:
-      - name: Interfaces
-        path: /info/api/interfaces.html
         startVersion:
         endVersion:
       - name: Dynamsoft_FileUploader

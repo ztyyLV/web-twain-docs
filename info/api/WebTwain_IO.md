@@ -27,15 +27,15 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 |                                                                                                                          |
 | :----------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| [`ConvertToBase64()`]({{site.info}}api/WebTwain_IO.html#converttobase64)                                                 | [`ConvertToBlob()`]({{site.info}}api/WebTwain_IO.html#converttoblob)                                       | [`FTPUpload()`]({{site.info}}api/WebTwain_IO.html#ftpupload)                                                     |
-| [`FTPUploadEx()`]({{site.info}}api/WebTwain_IO.html#ftpuploadex)                                                         | [`FTPUploadAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadallasmultipagetiff)           | [`FTPUploadAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadallaspdf)                                     |
-| [`FTPUploadAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadasmultipagepdf)                                 | [`FTPUploadAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadasmultipagetiff)                 | [`HTTPUpload()`]({{site.info}}api/WebTwain_IO.html#httpupload)                                                   |
-| [`HTTPUploadThroughPutEx()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughputex)                                   | [`HTTPUploadThroughPost()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpost)                       | [`HTTPUploadThroughPostEx()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostex)                         |
-| [`HTTPUploadAllThroughPostAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#httpuploadallthroughpostasmultipagetiff) | [`HTTPUploadAllThroughPostAsPDF()`]({{site.info}}api/WebTwain_IO.html#httpuploadallthroughpostaspdf)       | [`HTTPUploadThroughPostAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostasmultipagepdf) |
-| [`HTTPUploadThroughPostAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostasmultipagetiff)       | [`HTTPUploadThroughPostDirectly()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostdirectly)       | [`SaveAsBMP()`]({{site.info}}api/WebTwain_IO.html#saveasbmp)                                                     |
-| [`SaveAsJPEG()`]({{site.info}}api/WebTwain_IO.html#saveasjpeg)                                                           | [`SaveAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveaspdf)                                               | [`SaveAsPNG()`]({{site.info}}api/WebTwain_IO.html#saveaspng)                                                     |
-| [`SaveAsTIFF()`]({{site.info}}api/WebTwain_IO.html#saveastiff)                                                           | [`SaveSelectedImagesAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagepdf) | [`SaveSelectedImagesAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagetiff)     |
-| [`SaveAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveallasmultipagetiff)                                   | [`SaveAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveallaspdf)                                         |
+| [`ConvertToBase64()`](#converttobase64)                                                 | [`ConvertToBlob()`](#converttoblob)                                       | [`FTPUpload()`](#ftpupload)                                                     |
+| [`FTPUploadEx()`](#ftpuploadex)                                                         | [`FTPUploadAllAsMultiPageTIFF()`](#ftpuploadallasmultipagetiff)           | [`FTPUploadAllAsPDF()`](#ftpuploadallaspdf)                                     |
+| [`FTPUploadAsMultiPagePDF()`](#ftpuploadasmultipagepdf)                                 | [`FTPUploadAsMultiPageTIFF()`](#ftpuploadasmultipagetiff)                 | [`HTTPUpload()`](#httpupload)                                                   |
+| [`HTTPUploadThroughPutEx()`](#httpuploadthroughputex)                                   | [`HTTPUploadThroughPost()`](#httpuploadthroughpost)                       | [`HTTPUploadThroughPostEx()`](#httpuploadthroughpostex)                         |
+| [`HTTPUploadAllThroughPostAsMultiPageTIFF()`](#httpuploadallthroughpostasmultipagetiff) | [`HTTPUploadAllThroughPostAsPDF()`](#httpuploadallthroughpostaspdf)       | [`HTTPUploadThroughPostAsMultiPagePDF()`](#httpuploadthroughpostasmultipagepdf) |
+| [`HTTPUploadThroughPostAsMultiPageTIFF()`](#httpuploadthroughpostasmultipagetiff)       | [`HTTPUploadThroughPostDirectly()`](#httpuploadthroughpostdirectly)       | [`SaveAsBMP()`](#saveasbmp)                                                     |
+| [`SaveAsJPEG()`](#saveasjpeg)                                                           | [`SaveAsPDF()`](#saveaspdf)                                               | [`SaveAsPNG()`](#saveaspng)                                                     |
+| [`SaveAsTIFF()`](#saveastiff)                                                           | [`SaveSelectedImagesAsMultiPagePDF()`](#saveselectedimagesasmultipagepdf) | [`SaveSelectedImagesAsMultiPageTIFF()`](#saveselectedimagesasmultipagetiff)     |
+| [`SaveAllAsMultiPageTIFF()`](#saveallasmultipagetiff)                                   | [`SaveAllAsPDF()`](#saveallaspdf)                                         |
 
 ### Other Methods
 
@@ -87,12 +87,12 @@ IfAppendImage: boolean;
 </tr>
 
 <tr>
-<td align="center">v5.1+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v5.1+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -144,12 +144,12 @@ LoadImage(
 </tr>
 
 <tr>
-<td align="center">v4.0+  </td>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v4.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -209,12 +209,12 @@ LoadImageEx(
 </tr>
 
 <tr>
-<td align="center">v5.0+  </td>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">v16.1+ </td>
+<td align="center">v5.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">v16.1+</td>
 </tr>
 
 </table>
@@ -279,12 +279,12 @@ LoadImageFromBase64Binary(
 </tr>
 
 <tr>
-<td align="center">v6.2+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">v16.1+ </td>
+<td align="center">v6.2+</td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">v16.1+</td>
 </tr>
 
 </table>
@@ -352,12 +352,12 @@ LoadImageFromBinary(
 </tr>
 
 <tr>
-<td align="center">not supported </td>
-<td align="center">v16.0+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">not supported</td>
+<td align="center">v16.0+</td>
+<td align="center">v16.0+</td>
+<td align="center">v16.0+</td>
+<td align="center">v16.0+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -422,12 +422,12 @@ LoadDibFromClipboard(
 </tr>
 
 <tr>
-<td align="center">v4.1+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v4.1+</td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -495,12 +495,12 @@ RegisterEvent(
 </tr>
 
 <tr>
-<td align="center">v8.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v8.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -539,12 +539,12 @@ RegisterEvent(
 </tr>
 
 <tr>
-<td align="center">v6.3+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v6.3+</td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -598,12 +598,12 @@ FTPDownload(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -651,12 +651,12 @@ FTPDownloadEx(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -704,12 +704,12 @@ FTPUpload(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -759,12 +759,12 @@ FTPUploadEx(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -810,12 +810,12 @@ FTPUploadAllAsMultiPageTIFF(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -861,12 +861,12 @@ FTPUploadAllAsPDF(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -912,12 +912,12 @@ FTPUploadAsMultiPagePDF(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v6.0+ </td>
-<td align="center">v6.0+ </td>
-<td align="center">v6.0+ </td>
-<td align="center">v6.0+ </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">v6.0+</td>
+<td align="center">v6.0+</td>
+<td align="center">v6.0+</td>
+<td align="center">v6.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -964,12 +964,12 @@ FTPUploadAsMultiPageTIFF(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v6.0+ </td>
-<td align="center">v6.0+ </td>
-<td align="center">v6.0+ </td>
-<td align="center">v6.0+ </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">v6.0+</td>
+<td align="center">v6.0+</td>
+<td align="center">v6.0+</td>
+<td align="center">v6.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1002,12 +1002,12 @@ FTPUserName: string;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1040,12 +1040,12 @@ FTPPassword: string;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1078,12 +1078,12 @@ FTPPort: number;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1116,12 +1116,12 @@ IfPASVMode: boolean;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v6.0+ </td>
-<td align="center">v6.0+ </td>
-<td align="center">v6.0+ </td>
-<td align="center">v6.0+ </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">v6.0+</td>
+<td align="center">v6.0+</td>
+<td align="center">v6.0+</td>
+<td align="center">v6.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 
@@ -1194,12 +1194,12 @@ HTTPDownload(
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -1247,12 +1247,12 @@ HTTPDownloadEx(
 </tr>
 
 <tr>
-<td align="center">not supported </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1302,12 +1302,12 @@ HTTPDownloadThroughPost(
 </tr>
 
 <tr>
-<td align="center">not supported </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1355,12 +1355,12 @@ HTTPDownloadDirectly(
 </tr>
 
 <tr>
-<td align="center">not supported </td>
-<td align="center">v7.0+ </td>
-<td align="center">v7.0+ </td>
-<td align="center">v7.0+ </td>
-<td align="center">v7.0+ </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">v7.0+</td>
+<td align="center">v7.0+</td>
+<td align="center">v7.0+</td>
+<td align="center">v7.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1459,12 +1459,12 @@ HTTPUpload(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v12.0+ </td>
-<td align="center">v12.0+ </td>
-<td align="center">v12.0+ </td>
-<td align="center">v12.0+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v18.0+</td>
+<td align="center">v12.0+</td>
+<td align="center">v12.0+</td>
+<td align="center">v12.0+</td>
+<td align="center">v12.0+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -1514,12 +1514,12 @@ HTTPUploadThroughPutEx(
 </tr>
 
 <tr>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1571,12 +1571,12 @@ HTTPUploadThroughPost(
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1630,12 +1630,12 @@ HTTPUploadThroughPostEx(
 </tr>
 
 <tr>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1685,12 +1685,12 @@ HTTPUploadAllThroughPostAsMultiPageTIFF(
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1740,12 +1740,12 @@ HTTPUploadAllThroughPostAsPDF(
 </tr>
 
 <tr>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1795,12 +1795,12 @@ HTTPUploadThroughPostAsMultiPagePDF(
 </tr>
 
 <tr>
-<td align="center">v6.0+ </td>
-<td align="center">v6.0+ </td>
-<td align="center">v6.0+ </td>
-<td align="center">v6.0+ </td>
-<td align="center">v6.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v6.0+</td>
+<td align="center">v6.0+</td>
+<td align="center">v6.0+</td>
+<td align="center">v6.0+</td>
+<td align="center">v6.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1850,12 +1850,12 @@ HTTPUploadThroughPostAsMultiPageTIFF(
 </tr>
 
 <tr>
-<td align="center">v6.0+ </td>
-<td align="center">v6.0+ </td>
-<td align="center">v6.0+ </td>
-<td align="center">v6.0+ </td>
-<td align="center">v6.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v6.0+</td>
+<td align="center">v6.0+</td>
+<td align="center">v6.0+</td>
+<td align="center">v6.0+</td>
+<td align="center">v6.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1907,12 +1907,12 @@ HTTPUploadThroughPostDirectly(
 </tr>
 
 <tr>
-<td align="center">v7.0+ </td>
-<td align="center">v7.0+ </td>
-<td align="center">v7.0+ </td>
-<td align="center">v7.0+ </td>
-<td align="center">v7.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v7.0+</td>
+<td align="center">v7.0+</td>
+<td align="center">v7.0+</td>
+<td align="center">v7.0+</td>
+<td align="center">v7.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1990,12 +1990,12 @@ HttpFieldNameOfUploadedImage: string;
 </tr>
 
 <tr>
-<td align="center">v6.0+ </td>
-<td align="center">v6.0+ </td>
-<td align="center">v6.0+ </td>
-<td align="center">v6.0+ </td>
-<td align="center">v6.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v6.0+</td>
+<td align="center">v6.0+</td>
+<td align="center">v6.0+</td>
+<td align="center">v6.0+</td>
+<td align="center">v6.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2028,12 +2028,12 @@ HTTPPort: number;
 </tr>
 
 <tr>
-<td align="center">v4.2.1+ </td>
-<td align="center">v4.2.1+ </td>
-<td align="center">v4.2.1+ </td>
-<td align="center">v4.2.1+ </td>
-<td align="center">v4.2.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v4.2.1+</td>
+<td align="center">v4.2.1+</td>
+<td align="center">v4.2.1+</td>
+<td align="center">v4.2.1+</td>
+<td align="center">v4.2.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2067,12 +2067,12 @@ IfSSL: boolean;
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">not supported </td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2105,12 +2105,12 @@ readonly HTTPPostResponseString: string;
 </tr>
 
 <tr>
-<td align="center">v3.0.3+ </td>
-<td align="center">v3.0.3+ </td>
-<td align="center">v3.0.3+ </td>
-<td align="center">v3.0.3+ </td>
-<td align="center">v3.0.3+ </td>
-<td align="center">not supported </td>
+<td align="center">v3.0.3+</td>
+<td align="center">v3.0.3+</td>
+<td align="center">v3.0.3+</td>
+<td align="center">v3.0.3+</td>
+<td align="center">v3.0.3+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2142,12 +2142,12 @@ MaxUploadImageSize: number;
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -2181,12 +2181,12 @@ RegisterEvent("OnInternetTransferPercentage", function (percentage: number) {});
 </tr>
 
 <tr>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2254,11 +2254,11 @@ interface Base64Result {
 </tr>
 
 <tr>
-<td align="center">not supported </td>
-<td align="center">v12.0+ </td>
-<td align="center">v12.0+ </td>
-<td align="center">v12.0+ </td>
-<td align="center">v12.1+ </td>
+<td align="center">v18.0+</td>
+<td align="center">v12.0+</td>
+<td align="center">v12.0+</td>
+<td align="center">v12.0+</td>
+<td align="center">v12.1+</td>
 <td align="center">v16.0+</td>
 </tr>
 
@@ -2330,11 +2330,11 @@ ConvertToBlob(
 </tr>
 
 <tr>
-<td align="center">not supported </td>
-<td align="center">v13.0+ </td>
-<td align="center">v13.0+ </td>
-<td align="center">v13.0+ </td>
-<td align="center">v13.0+ </td>
+<td align="center">not supported</td>
+<td align="center">v13.0+</td>
+<td align="center">v13.0+</td>
+<td align="center">v13.0+</td>
+<td align="center">v13.0+</td>
 <td align="center">v16.0+</td>
 </tr>
 
@@ -2394,12 +2394,12 @@ SaveAsBMP(
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v4.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2443,12 +2443,12 @@ SaveAsJPEG(
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v4.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -2496,12 +2496,12 @@ SaveAsPDF(
 </tr>
 
 <tr>
-<td align="center">v5.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v5.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -2551,12 +2551,12 @@ SaveAsPNG(
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v4.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -2604,12 +2604,12 @@ SaveAsTIFF(
 </tr>
 
 <tr>
-<td align="center">v3.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v3.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -2656,12 +2656,12 @@ SaveAllAsMultiPageTIFF(
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v4.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -2707,12 +2707,12 @@ SaveAllAsPDF(
 </tr>
 
 <tr>
-<td align="center">v5.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v5.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -2760,12 +2760,12 @@ SaveSelectedImagesAsMultiPagePDF(
 </tr>
 
 <tr>
-<td align="center">v6.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v6.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -2815,12 +2815,12 @@ SaveSelectedImagesAsMultiPageTIFF(
 </tr>
 
 <tr>
-<td align="center">v6.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v6.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -2859,12 +2859,12 @@ ClearTiffCustomTag(): boolean;
 </tr>
 
 <tr>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -2904,12 +2904,12 @@ SetTiffCustomTag(
 </tr>
 
 <tr>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -2956,12 +2956,12 @@ ClearAllHTTPFormField(): boolean;
 </tr>
 
 <tr>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -3011,12 +3011,12 @@ SetHTTPFormField(
 </tr>
 
 <tr>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v5.0+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -3054,12 +3054,12 @@ SetHTTPHeader(
 </tr>
 
 <tr>
-<td align="center">not supported </td>
-<td align="center">v12.0+ </td>
-<td align="center">v12.0+ </td>
-<td align="center">v12.0+ </td>
-<td align="center">v12.0+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">not supported</td>
+<td align="center">v12.0+</td>
+<td align="center">v12.0+</td>
+<td align="center">v12.0+</td>
+<td align="center">v12.0+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -3097,12 +3097,12 @@ SetUploadSegment(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v12.1+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">v12.1+</td>
+<td align="center">v12.1+</td>
+<td align="center">v12.1+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3135,12 +3135,12 @@ IfShowFileDialog: boolean;
 </tr>
 
 <tr>
-<td align="center">v6.2+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v6.2+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3177,12 +3177,12 @@ IfShowCancelDialogWhenImageTransfer: boolean;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3215,12 +3215,12 @@ IfShowProgressBar: boolean;
 </tr>
 
 <tr>
-<td align="center">v8.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v8.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3270,12 +3270,12 @@ ShowFileDialog(
 </tr>
 
 <tr>
-<td align="center">v8.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v8.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3353,12 +3353,12 @@ Print(useOSPrintWindow ? : boolean): boolean;
 </tr>
 
 <tr>
-<td align="center">v6.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v6.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3391,12 +3391,12 @@ PrintEx(indices: number[]): void;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v17.0+ </td>
-<td align="center">v17.0+ </td>
-<td align="center">v17.0+ </td>
-<td align="center">v17.0+ </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">v17.0+</td>
+<td align="center">v17.0+</td>
+<td align="center">v17.0+</td>
+<td align="center">v17.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3429,12 +3429,12 @@ JPEGQuality: number;
 </tr>
 
 <tr>
-<td align="center">v5.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v5.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3473,12 +3473,12 @@ IfTiffMultiPage: boolean;
 </tr>
 
 <tr>
-<td align="center">v3.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v3.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3517,12 +3517,12 @@ TIFFCompressionType: Dynamsoft.DWT.EnumDWT_TIFFCompressionType | number;
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v4.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>

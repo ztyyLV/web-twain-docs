@@ -23,7 +23,7 @@ permalink: /info/api/WebTwain_Acquire.html
 | [`SetOpenSourceTimeout()`](#setopensourcetimeout) | [`OpenSource()`](#opensource)               | [`OpenSourceAsync()`](#opensourceasync)         | [`EnableSourceUI()`](#enablesourceui)                     |
 | [`EnableSource()`](#enablesource)                 | [`AcquireImage()`](#acquireimage)           | [`startScan()`](#startscan)                     | [`DisableSource()`](#disablesource)                       |
 | [`CloseSource()`](#closesource)                   | [`CloseSourceAsync()`](#closesourceasync)   | [`CloseWorkingProcess()`](#closeworkingprocess) | [`GetDevicesAsync()`](#getdevicesasync)   | 
-| [`SelectDeviceAsync()`](#selectdeviceasync)                   | [`AcquireImageAsync()`](#acquireimageasync)   | [`DeviceObject.acquireImage()`](#deviceobject.acquireimage)   |
+| [`SelectDeviceAsync()`](#selectdeviceasync)                   | [`AcquireImageAsync()`](#acquireimageasync)   |
 
 **Properties**
 
@@ -53,10 +53,10 @@ permalink: /info/api/WebTwain_Acquire.html
 
 |                                                                                   |
 | :-------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| [`OpenSourceManager()`]({{site.info}}api/WebTwain_Acquire.html#opensourcemanager) | [`OpenSourceManagerAsync()`]({{site.info}}api/WebTwain_Acquire.html#opensourcemanagerasync) | [`CloseSourceManager()`]({{site.info}}api/WebTwain_Acquire.html#closesourcemanager)               | [`CloseSourceManagerAsync()`]({{site.info}}api/WebTwain_Acquire.html#closesourcemanagerasync) |
-| [`GetCustomDSData()`]({{site.info}}api/WebTwain_Acquire.html#getcustomdsdata)     | [`GetCustomDSDataEx()`]({{site.info}}api/WebTwain_Acquire.html#getcustomdsdataex)           | [`CancelAllPendingTransfers()`]({{site.info}}api/WebTwain_Acquire.html#cancelallpendingtransfers) | [`FeedPage()`]({{site.info}}api/WebTwain_Acquire.html#feedpage)                               |
-| [`ResetImageLayout()`]({{site.info}}api/WebTwain_Acquire.html#resetimagelayout)   | [`RewindPage()`]({{site.info}}api/WebTwain_Acquire.html#rewindpage)                         | [`SetCustomDSData()`]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdata)                     | [`SetCustomDSDataEx()`]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdataex)             |
-| [`SetFileXferInfo()`]({{site.info}}api/WebTwain_Acquire.html#setfilexferinfo)     | [`SetImageLayout()`]({{site.info}}api/WebTwain_Acquire.html#setimagelayout)                 |
+| [`OpenSourceManager()`](#opensourcemanager) | [`OpenSourceManagerAsync()`](#opensourcemanagerasync) | [`CloseSourceManager()`](#closesourcemanager)               | [`CloseSourceManagerAsync()`](#closesourcemanagerasync) |
+| [`GetCustomDSData()`](#getcustomdsdata)     | [`GetCustomDSDataEx()`](#getcustomdsdataex)           | [`CancelAllPendingTransfers()`](#cancelallpendingtransfers) | [`FeedPage()`](#feedpage)                               |
+| [`ResetImageLayout()`](#resetimagelayout)   | [`RewindPage()`](#rewindpage)                         | [`SetCustomDSData()`](#setcustomdsdata)                     | [`SetCustomDSDataEx()`](#setcustomdsdataex)             |
+| [`SetFileXferInfo()`](#setfilexferinfo)     | [`SetImageLayout()`](#setimagelayout)                 |
 
 **Properties**
 
@@ -149,7 +149,7 @@ interface DeviceConfiguration {
     /**
      * How much extended information is retrieved. Only valid when {IfGetExtImageInfo} is true.
      */
-    extendedImageInfoQueryLevel?: number;
+    extendedImageInfoQueryLevel?: EnumDWT_ExtImageInfo | number;
     /**
      * Whether to simulate the manufacturer's UI inside the client-side browser (only effective when IfShowUI is true).
      * (Added in 16.2)
@@ -182,12 +182,12 @@ interface DeviceConfiguration {
 </tr>
 
 <tr>
-<td align="center">v1.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v1.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -382,12 +382,12 @@ CloseSource(): boolean;
 </tr>
 
 <tr>
-<td align="center">v1.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v1.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -420,12 +420,12 @@ CloseSourceAsync(): Promise<boolean>;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
+<td align="center">v16.1+</td>
+<td align="center">v16.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -458,12 +458,12 @@ DisableSource(): boolean;
 </tr>
 
 <tr>
-<td align="center">v1.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v1.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -500,12 +500,12 @@ EnableSource(): boolean;
 </tr>
 
 <tr>
-<td align="center">v1.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v1.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -549,12 +549,12 @@ EnableSourceUI(
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v16.0+ </td>
+<td align="center">not supported</td>
 <td align="center">v16.0+</td>
-<td align="center">v16.0+ </td>
 <td align="center">v16.0+</td>
-<td align="center">not supported </td>
+<td align="center">v16.0+</td>
+<td align="center">v16.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -591,12 +591,12 @@ OpenSource(): boolean;
 </tr>
 
 <tr>
-<td align="center">v1.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v1.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -629,12 +629,12 @@ OpenSourceAsync(): Promise<boolean>;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
+<td align="center">v16.1+</td>
+<td align="center">v16.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -719,12 +719,12 @@ interface Version {
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v15.3+ </td>
-<td align="center">v15.3+ </td>
-<td align="center">v15.3+ </td>
-<td align="center">v15.3+ </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">v15.3+</td>
+<td align="center">v15.3+</td>
+<td align="center">v15.3+</td>
+<td align="center">v15.3+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -757,12 +757,12 @@ GetSourceNamesAsync(bIncludeDetails: boolean): Promise<string[] | ISourceDetails
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
+<td align="center">v16.1+</td>
+<td align="center">v16.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -802,12 +802,12 @@ SelectSource(
 </tr>
 
 <tr>
-<td align="center">v1.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v1.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v14.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v11.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -877,12 +877,12 @@ DWObject.SelectSourceAsync()
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v16.1+ </td>
+<td align="center">not supported</td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
+<td align="center">v16.1+</td>
+<td align="center">v16.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -915,12 +915,12 @@ SelectSourceByIndex(index: number): boolean;
 </tr>
 
 <tr>
-<td align="center">v1.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v1.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -962,12 +962,12 @@ SelectSourceByIndexAsync(index: number): Promise<boolean>;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v16.1+ </td>
+<td align="center">not supported</td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
+<td align="center">v16.1+</td>
+<td align="center">v16.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1014,11 +1014,11 @@ SetOpenSourceTimeout(duration: number): boolean;
 
 <tr>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1322,12 +1322,12 @@ interface ScanSetup {
 </tr>
 
 <tr>
-<td align="center">not supported </td>
-<td align="center">v15.0+ </td>
-<td align="center">v15.1+ </td>
-<td align="center">v15.1+ </td>
-<td align="center">v15.1+ </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">v15.0+</td>
+<td align="center">v15.1+</td>
+<td align="center">v15.1+</td>
+<td align="center">v15.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1364,12 +1364,12 @@ CancelAllPendingTransfers(): boolean;
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1406,12 +1406,12 @@ CloseSourceManager(): boolean;
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1443,12 +1443,12 @@ CloseSourceManagerAsync(): Promise<boolean>;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
+<td align="center">v16.1+</td>
+<td align="center">v16.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1481,12 +1481,12 @@ CloseWorkingProcess(): boolean;
 </tr>
 
 <tr>
-<td align="center">v11.2+ </td>
-<td align="center">v11.2+ </td>
-<td align="center">v11.2+ </td>
-<td align="center">v11.2+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v11.2+</td>
+<td align="center">v11.2+</td>
+<td align="center">v11.2+</td>
+<td align="center">v11.2+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1523,12 +1523,12 @@ FeedPage(): boolean;
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1566,12 +1566,12 @@ GetCustomDSData(fileName: string): boolean;
 </tr>
 
 <tr>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1610,12 +1610,12 @@ GetCustomDSDataEx(): string;
 </tr>
 
 <tr>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1648,12 +1648,12 @@ GetDeviceType(): number;
 </tr>
 
 <tr>
-<td align="center">v7.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v7.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1702,12 +1702,12 @@ GetSourceNameItems(index: number): string;
 </tr>
 
 <tr>
-<td align="center">v7.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v7.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1740,12 +1740,12 @@ OpenSourceManager(): boolean;
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1782,12 +1782,12 @@ OpenSourceManagerAsync(): Promise<boolean>;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
+<td align="center">v16.1+</td>
+<td align="center">v16.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1824,12 +1824,12 @@ ResetImageLayout(): boolean;
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1866,12 +1866,12 @@ RewindPage(): boolean;
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1909,12 +1909,12 @@ SetCustomDSData(fileName: string): boolean;
 </tr>
 
 <tr>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1952,12 +1952,12 @@ SetCustomDSDataEx(dsDataString: string): boolean;
 </tr>
 
 <tr>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1999,12 +1999,12 @@ SetFileXferInfo(
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v17.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v17.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2076,12 +2076,12 @@ SetImageLayout(
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2139,12 +2139,12 @@ BitDepth: number;
 </tr>
 
 <tr>
-<td align="center">v3.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v3.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2183,12 +2183,12 @@ IfAppendImage: boolean;
 </tr>
 
 <tr>
-<td align="center">v5.1+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v5.1+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2228,12 +2228,12 @@ IfDisableSourceAfterAcquire: boolean;
 </tr>
 
 <tr>
-<td align="center">v3.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v3.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2270,12 +2270,12 @@ IfDuplexEnabled: boolean;
 </tr>
 
 <tr>
-<td align="center">v3.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v3.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2314,12 +2314,12 @@ IfFeederEnabled: boolean;
 </tr>
 
 <tr>
-<td align="center">v3.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v3.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2358,12 +2358,12 @@ IfShowUI: boolean;
 </tr>
 
 <tr>
-<td align="center">v3.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v3.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2402,12 +2402,12 @@ ImageCaptureDriverType: Dynamsoft.DWT.EnumDWT_Driver | number;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2455,12 +2455,12 @@ PageSize: Dynamsoft.DWT.EnumDWT_CapSupportedSizes | number;
 </tr>
 
 <tr>
-<td align="center">v3.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v3.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2497,12 +2497,12 @@ PixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 </tr>
 
 <tr>
-<td align="center">v3.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v3.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2539,12 +2539,12 @@ Resolution: number;
 </tr>
 
 <tr>
-<td align="center">v3.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v3.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2581,12 +2581,12 @@ readonly SourceCount: number;
 </tr>
 
 <tr>
-<td align="center">v1.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v1.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2620,11 +2620,11 @@ BlankImageThreshold: number;
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">not supported </td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2662,11 +2662,11 @@ Brightness: number;
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
 <td align="center">not supported</td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2706,11 +2706,11 @@ Contrast: number;
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
 <td align="center">not supported</td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2750,11 +2750,11 @@ readonly CurrentSourceName: string;
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2792,11 +2792,11 @@ DataSourceStatus: number;
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2839,11 +2839,11 @@ DefaultSourceName: string;
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2877,11 +2877,11 @@ readonly Duplex: Dynamsoft.DWT.EnumDWT_DUPLEX | number;
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2927,11 +2927,11 @@ IfAutoBright: boolean;
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -2965,11 +2965,11 @@ IfAutoDiscardBlankpages: boolean;
 
 <tr>
 <td align="center">v7.0+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3009,11 +3009,11 @@ IfAutoFeed: boolean;
 
 <tr>
 <td align="center">v7.0+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3051,11 +3051,11 @@ IfAutomaticBorderDetection: boolean;
 
 <tr>
 <td align="center">v7.0+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3095,11 +3095,11 @@ IfAutomaticDeskew: boolean;
 
 <tr>
 <td align="center">v7.0+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3137,11 +3137,11 @@ IfAutoScan: boolean;
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3182,11 +3182,11 @@ readonly IfFeederLoaded: boolean;
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3224,11 +3224,11 @@ readonly IfPaperDetectable: boolean;
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3266,11 +3266,11 @@ IfShowIndicator: boolean;
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3310,11 +3310,11 @@ readonly IfUIControllable: boolean;
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3352,11 +3352,11 @@ IfUseTwainDSM: boolean;
 
 <tr>
 <td align="center">v6.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3398,7 +3398,7 @@ readonly ImageLayoutFrameBottom: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3436,7 +3436,7 @@ readonly ImageLayoutFrameLeft: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3474,7 +3474,7 @@ readonly ImageLayoutFrameRight: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3512,7 +3512,7 @@ readonly ImageLayoutFrameTop: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3550,7 +3550,7 @@ readonly ImageLayoutDocumentNumber: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3588,7 +3588,7 @@ readonly ImageLayoutPageNumber: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3626,7 +3626,7 @@ readonly ImageBitsPerPixel: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3664,7 +3664,7 @@ readonly ImageLength: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3702,7 +3702,7 @@ readonly ImageWidth: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3740,7 +3740,7 @@ readonly ImageXResolution: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3778,7 +3778,7 @@ readonly ImageYResolution: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3816,7 +3816,7 @@ readonly ImagePixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3854,7 +3854,7 @@ readonly MagData: string;
 <td align="center">v8.0+</td>
 <td align="center">v8.0+</td>
 <td align="center">v8.0+</td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3892,7 +3892,7 @@ readonly MagType: Dynamsoft.DWT.EnumDWT_MagType | number;
 <td align="center">v8.0+</td>
 <td align="center">v8.0+</td>
 <td align="center">v8.0+</td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3933,12 +3933,12 @@ readonly PendingXfers: number;
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3977,12 +3977,12 @@ PixelFlavor: number;
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -4022,12 +4022,12 @@ TransferMode: Dynamsoft.DWT.EnumDWT_TransferMode | number;
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -4070,12 +4070,12 @@ Unit: Dynamsoft.DWT.EnumDWT_UnitType | number;
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -4122,12 +4122,12 @@ XferCount: number;
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -4164,12 +4164,12 @@ RegisterEvent("OnPostAllTransfers", function () {});
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -4214,12 +4214,12 @@ RegisterEvent("OnPostTransfer", function () {});
 </tr>
 
 <tr>
-<td align="center">v1.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v1.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -4261,12 +4261,12 @@ RegisterEvent("OnPostTransferAsync", function (outputInfo: OutputInfo) {});
 </tr>
 
 <tr>
-<td align="center">not supported </td>
-<td align="center">v15.0+ </td>
+<td align="center">not supported</td>
+<td align="center">v15.0+</td>
 <td align="center">v15.1+</td>
 <td align="center">v15.1+</td>
 <td align="center">v15.1+</td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -4330,12 +4330,12 @@ RegisterEvent("OnPreAllTransfers", function () {});
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -4379,12 +4379,12 @@ RegisterEvent('OnPreTransfer',function(){...});
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -4425,12 +4425,12 @@ RegisterEvent("OnSourceUIClose", function () {});
 </tr>
 
 <tr>
-<td align="center">v8.0.1+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v8.0.1+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -4541,7 +4541,7 @@ interface ValueAndLabel {
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -4623,7 +4623,7 @@ interface CapabilitySetup {
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -4688,8 +4688,8 @@ DWObject.setCapabilities(
 ```typescript
 /**
  * Return all available devices (scanners, eSCL scanners, etc.) for the device type (if specified)
- * @param deviceType the device type
- * @param refresh Default value: ?
+ * @param deviceType The device type
+ * @param refresh Default value: false
  */
 GetDevicesAsync(deviceType?: DeviceType, refresh?: boolean): Promise<Device[]>;
 ```
@@ -4742,7 +4742,7 @@ DwtObject.GetDevicesAsync(deviceType)
  * @param device the device
  
  */
-SelectDeviceAsync(device: Device); Promise< boolean>;
+SelectDeviceAsync(device: Device): Promise< boolean>;
 ```
 
 **Example**
@@ -4790,10 +4790,10 @@ DwtObject.GetDevicesAsync(deviceType)
 ```typescript
 /**
  * Scan documents into another DWObject control. eSCL is not supported.
- * @param deviceConfiguration The device configuration.
+ * @param deviceConfiguration The device configuration
  * @param sendTo The DWObject control to scan into
  */
-AcquireImageAsync(deviceConfiguration?: DeviceConfiguration, sendTo?:DWObject). Promise< boolean>;
+AcquireImageAsync(deviceConfiguration?: DeviceConfiguration, sendTo?: DWObject): Promise< boolean>;
 ```
 
 **Example**
@@ -4847,7 +4847,7 @@ Dynamsoft.DWT.FindDevicesAsync("https://s0000001.dynamsoftwebtwain.com:port", 1)
  * @param deviceConfiguration The device configuration.
  * @param sendTo The DWObject control to scan into
  */
-DeviceObject.acquireImage(deviceConfiguration?: DeviceConfiguration, sendTo?:DWObject ). Promise< boolean>;
+DeviceObject.acquireImage(deviceConfiguration?: DeviceConfiguration, sendTo?:DWObject ): Promise< boolean>;
 ```
 
 **Example**

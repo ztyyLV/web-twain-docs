@@ -78,12 +78,12 @@ IndexToImageID(index: number): number;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v15.0+ </td>
-<td align="center">v15.0+ </td>
-<td align="center">v15.0+ </td>
-<td align="center">v15.0+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">not supported</td>
+<td align="center">v15.0+</td>
+<td align="center">v15.0+</td>
+<td align="center">v15.0+</td>
+<td align="center">v15.0+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -117,12 +117,12 @@ ImageIDToIndex(imageId: number): number;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v15.0+ </td>
-<td align="center">v15.0+ </td>
-<td align="center">v15.0+ </td>
-<td align="center">v15.0+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">not supported</td>
+<td align="center">v15.0+</td>
+<td align="center">v15.0+</td>
+<td align="center">v15.0+</td>
+<td align="center">v15.0+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -161,12 +161,12 @@ RenameTag(oldName:string, newName:string): boolean;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
+<td align="center">not supported</td>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
 </tr>
 
 </table>
@@ -201,12 +201,12 @@ RemoveTag(tagName: string, indices?: number[]):boolean
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v17.0+ </td>
-<td align="center">v17.0+ </td>
-<td align="center">v17.0+ </td>
-<td align="center">v17.0+ </td>
-<td align="center">v17.0+ </td>
+<td align="center">not supported</td>
+<td align="center">v17.0+</td>
+<td align="center">v17.0+</td>
+<td align="center">v17.0+</td>
+<td align="center">v17.0+</td>
+<td align="center">v17.0+</td>
 </tr>
 
 </table>
@@ -249,12 +249,12 @@ interface TagInfo {
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v17.0+ </td>
-<td align="center">v17.0+ </td>
-<td align="center">v17.0+ </td>
-<td align="center">v17.0+ </td>
-<td align="center">v17.0+ </td>
+<td align="center">not supported</td>
+<td align="center">v17.0+</td>
+<td align="center">v17.0+</td>
+<td align="center">v17.0+</td>
+<td align="center">v17.0+</td>
+<td align="center">v17.0+</td>
 </tr>
 
 </table>
@@ -288,12 +288,12 @@ ClearImageTags(index: number): boolean;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v15.2+ </td>
-<td align="center">v15.2+ </td>
-<td align="center">v15.2+ </td>
-<td align="center">v15.2+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">not supported</td>
+<td align="center">v15.2+</td>
+<td align="center">v15.2+</td>
+<td align="center">v15.2+</td>
+<td align="center">v15.2+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -327,12 +327,12 @@ FilterImagesByTag(tag: string): boolean;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v15.2+ </td>
-<td align="center">v15.2+ </td>
-<td align="center">v15.2+ </td>
-<td align="center">v15.2+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">not supported</td>
+<td align="center">v15.2+</td>
+<td align="center">v15.2+</td>
+<td align="center">v15.2+</td>
+<td align="center">v15.2+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -365,12 +365,12 @@ ClearFilter(): boolean;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
+<td align="center">not supported</td>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
 </tr>
 
 </table>
@@ -404,12 +404,12 @@ SetDefaultTag(tag: string): boolean;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v15.2+ </td>
-<td align="center">v15.2+ </td>
-<td align="center">v15.2+ </td>
-<td align="center">v15.2+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">not supported</td>
+<td align="center">v15.2+</td>
+<td align="center">v15.2+</td>
+<td align="center">v15.2+</td>
+<td align="center">v15.2+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -444,12 +444,12 @@ TagImages(indices: number[], tag: string): boolean;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v15.2+ </td>
-<td align="center">v15.2+ </td>
-<td align="center">v15.2+ </td>
-<td align="center">v15.2+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">not supported</td>
+<td align="center">v15.2+</td>
+<td align="center">v15.2+</td>
+<td align="center">v15.2+</td>
+<td align="center">v15.2+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -483,12 +483,12 @@ GetImageBitDepth(index: number): number;
 </tr>
 
 <tr>
-<td align="center">v6.2+ </td>
-<td align="center">v6.2+ </td>
-<td align="center">v6.2+ </td>
-<td align="center">v6.2+ </td>
-<td align="center">v6.2+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v6.2+</td>
+<td align="center">v6.2+</td>
+<td align="center">v6.2+</td>
+<td align="center">v6.2+</td>
+<td align="center">v6.2+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -538,12 +538,12 @@ GetImageHeight(index: number): number;
 </tr>
 
 <tr>
-<td align="center">v6.2+ </td>
-<td align="center">v6.2+ </td>
-<td align="center">v6.2+ </td>
-<td align="center">v6.2+ </td>
-<td align="center">v6.2+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v6.2+</td>
+<td align="center">v6.2+</td>
+<td align="center">v6.2+</td>
+<td align="center">v6.2+</td>
+<td align="center">v6.2+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -577,12 +577,12 @@ GetImageWidth(index: number): number;
 </tr>
 
 <tr>
-<td align="center">v6.2+ </td>
-<td align="center">v6.2+ </td>
-<td align="center">v6.2+ </td>
-<td align="center">v6.2+ </td>
-<td align="center">v6.2+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v6.2+</td>
+<td align="center">v6.2+</td>
+<td align="center">v6.2+</td>
+<td align="center">v6.2+</td>
+<td align="center">v6.2+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -616,12 +616,12 @@ GetImageXResolution(index: number): number;
 </tr>
 
 <tr>
-<td align="center">v8.0+ </td>
-<td align="center">v8.0+ </td>
-<td align="center">v8.0+ </td>
-<td align="center">v8.0+ </td>
-<td align="center">v8.0+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v8.0+</td>
+<td align="center">v8.0+</td>
+<td align="center">v8.0+</td>
+<td align="center">v8.0+</td>
+<td align="center">v8.0+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -655,12 +655,12 @@ GetImageYResolution(index: number): number;
 </tr>
 
 <tr>
-<td align="center">v8.0+ </td>
-<td align="center">v8.0+ </td>
-<td align="center">v8.0+ </td>
-<td align="center">v8.0+ </td>
-<td align="center">v8.0+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v8.0+</td>
+<td align="center">v8.0+</td>
+<td align="center">v8.0+</td>
+<td align="center">v8.0+</td>
+<td align="center">v8.0+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -706,12 +706,12 @@ GetSkewAngle(
 </tr>
 
 <tr>
-<td align="center">v9.0+ </td>
-<td align="center">v9.0+ </td>
-<td align="center">v9.0+ </td>
-<td align="center">v9.0+ </td>
-<td align="center">v9.0+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v9.0+</td>
+<td align="center">v9.0+</td>
+<td align="center">v9.0+</td>
+<td align="center">v9.0+</td>
+<td align="center">v9.0+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -765,12 +765,12 @@ GetSkewAngleEx(
 </tr>
 
 <tr>
-<td align="center">v9.0+ </td>
-<td align="center">v9.0+ </td>
-<td align="center">v9.0+ </td>
-<td align="center">v9.0+ </td>
-<td align="center">v9.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v9.0+</td>
+<td align="center">v9.0+</td>
+<td align="center">v9.0+</td>
+<td align="center">v9.0+</td>
+<td align="center">v9.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -810,12 +810,12 @@ GetImageSize(index: number, width: number, height: number): number;
 </tr>
 
 <tr>
-<td align="center">all versions </td>
-<td align="center">all versions </td>
-<td align="center">all versions </td>
-<td align="center">all versions </td>
-<td align="center">all versions </td>
-<td align="center">not supported </td>
+<td align="center">all versions</td>
+<td align="center">all versions</td>
+<td align="center">all versions</td>
+<td align="center">all versions</td>
+<td align="center">all versions</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -850,12 +850,12 @@ GetImageSizeWithSpecifiedType(index: number, type: Dynamsoft.DWT.EnumDWT_ImageTy
 </tr>
 
 <tr>
-<td align="center">all versions </td>
-<td align="center">all versions </td>
-<td align="center">all versions </td>
-<td align="center">all versions </td>
-<td align="center">all versions </td>
-<td align="center">not supported </td>
+<td align="center">all versions</td>
+<td align="center">all versions</td>
+<td align="center">all versions</td>
+<td align="center">all versions</td>
+<td align="center">all versions</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -889,12 +889,12 @@ GetSelectedImagesSize(type: Dynamsoft.DWT.EnumDWT_ImageType | number): number;
 </tr>
 
 <tr>
-<td align="center">v6.0+ </td>
-<td align="center">v6.0+ </td>
-<td align="center">v6.0+ </td>
-<td align="center">v6.0+ </td>
-<td align="center">v6.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v6.0+</td>
+<td align="center">v6.0+</td>
+<td align="center">v6.0+</td>
+<td align="center">v6.0+</td>
+<td align="center">v6.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -934,12 +934,12 @@ GetImagePartURL(index: number, width?: number, height?: number): string;
 </tr>
 
 <tr>
-<td align="center">v14.3.1+ </td>
-<td align="center">v13.0+ </td>
-<td align="center">v13.0+ </td>
-<td align="center">v13.0+ </td>
-<td align="center">v13.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v14.3.1+</td>
+<td align="center">v13.0+</td>
+<td align="center">v13.0+</td>
+<td align="center">v13.0+</td>
+<td align="center">v13.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -979,12 +979,12 @@ GetImageURL(index: number, width?: number, height?: number): string;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
-<td align="center">v12.0+ </td>
-<td align="center">v12.0+ </td>
-<td align="center">v12.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">v12.0+</td>
+<td align="center">v12.0+</td>
+<td align="center">v12.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1023,12 +1023,12 @@ SelectAllImages(): number[];
 </tr>
 
 <tr>
-<td align="center">not supported </td>
-<td align="center">v15.3+ </td>
-<td align="center">v15.3+ </td>
-<td align="center">v15.3+ </td>
-<td align="center">v15.3+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">not supported</td>
+<td align="center">v15.3+</td>
+<td align="center">v15.3+</td>
+<td align="center">v15.3+</td>
+<td align="center">v15.3+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -1063,12 +1063,12 @@ SelectImages(indices: number[]): boolean;
 </tr>
 
 <tr>
-<td align="center">v16.0+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v16.0+</td>
+<td align="center">v16.0+</td>
+<td align="center">v16.0+</td>
+<td align="center">v16.0+</td>
+<td align="center">v16.0+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -1103,12 +1103,12 @@ MoveImage(from: number, to: number): boolean;
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v4.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -1143,12 +1143,12 @@ SwitchImage(index1: number, index2: number): boolean;
 </tr>
 
 <tr>
-<td align="center">v5.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v5.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -1185,12 +1185,12 @@ RemoveImage(index: number): boolean;
 
 <tr>
 <tr>
-<td align="center">v4.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v4.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">v16.0+</td>
 </tr>
 </tr>
 
@@ -1224,12 +1224,12 @@ RemoveAllImages(): boolean;
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v4.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -1277,12 +1277,12 @@ RemoveAllSelectedImages(): boolean;
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v4.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -1330,12 +1330,12 @@ CurrentImageIndexInBuffer: number;
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -1368,12 +1368,12 @@ readonly HowManyImagesInBuffer: number;
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -1406,12 +1406,12 @@ MaxImagesInBuffer: number;
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v4.0+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -1448,12 +1448,12 @@ readonly SelectedImagesIndices: number[];
 </tr>
 
 <tr>
-<td align="center">v16.0+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v16.0+</td>
+<td align="center">v16.0+</td>
+<td align="center">v16.0+</td>
+<td align="center">v16.0+</td>
+<td align="center">v16.0+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -1486,12 +1486,12 @@ SelectionRectAspectRatio: number;
 </tr>
 
 <tr>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -1524,12 +1524,12 @@ readonly BlankImageCurrentStdDev: number;
 </tr>
 
 <tr>
-<td align="center">v8.0+ </td>
-<td align="center">v8.0+ </td>
-<td align="center">v8.0+ </td>
-<td align="center">v8.0+ </td>
-<td align="center">v8.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v8.0+</td>
+<td align="center">v8.0+</td>
+<td align="center">v8.0+</td>
+<td align="center">v8.0+</td>
+<td align="center">v8.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1567,12 +1567,12 @@ BlankImageMaxStdDev: number;
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">not supported </td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1611,12 +1611,12 @@ BlankImageThreshold: number;
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">not supported </td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1655,12 +1655,12 @@ BufferMemoryLimit: number;
 </tr>
 
 <tr>
-<td align="center">v10.1+ </td>
-<td align="center">v10.1+ </td>
-<td align="center">v10.1+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v10.1+</td>
+<td align="center">v10.1+</td>
+<td align="center">v10.1+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -1701,12 +1701,12 @@ IsBlankImage(index: number): boolean;
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">not supported </td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1740,12 +1740,12 @@ IsBlankImageExpress(index: number): boolean;
 </tr>
 
 <tr>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1790,12 +1790,12 @@ IfAllowLocalCache: boolean;
 </tr>
 
 <tr>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1857,12 +1857,12 @@ interface BufferChangeInfo {
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-<td align="center">not supported </td>
+<td align="center">v18.0+</td>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -1918,12 +1918,12 @@ RegisterEvent('OnBitmapChanged',
 </tr>
 
 <tr>
-<td align="center">v8.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v8.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -1970,12 +1970,12 @@ RegisterEvent('OnTopImageInTheViewChanged',
 </tr>
 
 <tr>
-<td align="center">v5.1+ </td>
-<td align="center">v10.1+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v5.1+</td>
+<td align="center">v10.1+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -2017,12 +2017,12 @@ Pair: [from: number, to: number];
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v15.0+ </td>
-<td align="center">v15.0+ </td>
-<td align="center">v15.0+ </td>
-<td align="center">v15.0+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">not supported</td>
+<td align="center">v15.0+</td>
+<td align="center">v15.0+</td>
+<td align="center">v15.0+</td>
+<td align="center">v15.0+</td>
+<td align="center">v16.0+</td>
 </tr>
 
 </table>
@@ -2056,12 +2056,12 @@ GetTagListByIndex(index: number):string[]
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">not supported</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
 </tr>
 
 </table>
@@ -2113,12 +2113,12 @@ CreateFile(categoryName:string):boolean;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">not supported</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
 </tr>
 
 </table>
@@ -2184,12 +2184,12 @@ OpenFile(categoryName:string):boolean;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">not supported</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
 </tr>
 
 </table>
@@ -2252,12 +2252,12 @@ GetCurrentFileName():string;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">not supported</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
 </tr>
 
 </table>
@@ -2292,12 +2292,12 @@ RenameDocument(oldDocumentName:string, newDocumentName:string):boolean;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v17.3+ </td>
-<td align="center">v17.3+ </td>
-<td align="center">v17.3+ </td>
-<td align="center">v17.3+ </td>
-<td align="center">v17.3+ </td>
+<td align="center">not supported</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
+<td align="center">v17.3+</td>
 </tr>
 
 </table>
@@ -2343,12 +2343,12 @@ RemoveFile(categoryName:string):boolean;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">not supported</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
 </tr>
 
 </table>
@@ -2403,12 +2403,12 @@ Json:
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">not supported</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
+<td align="center">v17.2+</td>
 </tr>
 
 </table>
@@ -2471,7 +2471,7 @@ interface RawData {
 <td align="center">not supported</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">v17.3+ </td>
+<td align="center">v17.3+</td>
 </tr>
 
 </table>
