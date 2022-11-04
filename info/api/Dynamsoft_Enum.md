@@ -881,3 +881,11 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | SANESCANNER | 0x80 |
 | ESCLSCANNER | 0x100 |
 | WIFIDIRECTSCANNER | 0x200 |
+
+## `Dynamsoft.DWT.EnumDWT_ExtImageInfo`
+
+| Label | Value|
+|:-|:-|
+| default | 0 |
+| standard | 1 |
+| supported | 2 |

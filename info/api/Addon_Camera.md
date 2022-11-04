@@ -28,7 +28,8 @@ Check out [MediaDevices Cameras]({{site.indepth}}features/input.html#use-mediade
 | [`getSourceList()`](#getsourcelist) | [`selectSource()`](#selectsource)   | [`getCurrentSource()`](#getcurrentsource)         | [`closeSource()`](#closesource)   |
 | [`getResolution()`](#getresolution) | [`setResolution()`](#setresolution) | [`getCurrentResolution()`](#getcurrentresolution) | [`play()`](#play)                 |
 | [`pause()`](#pause)                 | [`resume()`](#resume)               | [`stop()`](#stop)                                 | [`getStatus()`](#getstatus)       |
-| [`capture()`](#capture)             | [`closeVideo()`](#closevideo)                     | [`scanDocument()`](#scandocument) |
+| [`capture()`](#capture)             | [`closeVideo()`](#closevideo)       | [`scanDocument()`](#scandocument)                 | [`turnOnTorch()`](#turnontorch) | 
+| [`turnOffTorch()`](#turnofftorch)   | [`getCapabilities()`](#getcapabilities) | 
 
 **Events**
 
@@ -500,10 +501,6 @@ stop(): void;
 getStatus(): string;
 ```
 
-**Usage notes**
-
-The status string is either empty or one of the following: "playing", "paused", "stopped". An empty string means no camera is open.
-
 **Availability**
 <div class="availability">
 <table>
@@ -528,6 +525,11 @@ The status string is either empty or one of the following: "playing", "paused", 
 
 </table>
 </div>
+
+**Usage notes**
+
+The status string is either empty or one of the following: "playing", "paused", "stopped". An empty string means no camera is open.
+
 ---
 
 ## capture
@@ -753,8 +755,9 @@ interface ScannerViewer {
   loadLocalFile?:{  
       visibility?: string   //Whether to display the load local file icon. Values: "visible""hidden". Default: "visible".
   };
-  flash?:{
-      visibility?: string //  //Whether to display the flash icon if torch is supported. Values: "visible""hidden". Default: "visible".
+  torch?:{
+      visibility?: string;   //Whether to display the torch icon if torch is supported. Values: "visible""hidden". Default: "visible".
+      enableTorch?: boolean //Whether to enable torch by default. Default：false.
   },
   funcConfirmExit?: (bExistImage: boolean) => Promise<boolean>;
     //funcConfirmExit is the callback funtion,
@@ -878,4 +881,128 @@ interface CropViewer {
 </table>
 </div>
 
+---
 
+## turnOnTorch
+
+**Syntax**
+
+```typescript
+/**
+ * Turn on the torch/flashlight.
+ */
+async turnOnTorch(): Promise<void>;
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+</tr>
+
+</table>
+</div>
+
+**Usage notes**
+
+This method should be called when the camera is turned on. It only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. All browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported. You can check if this capability is supported by the camera using API [getCapabilities](#getcapabilities).
+
+---
+
+## turnOffTorch
+
+**Syntax**
+
+```typescript
+/**
+ * Turn off the torch/flashlight.
+ */
+async turnOffTorch(): Promise<void>;
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+</tr>
+
+</table>
+</div>
+
+**Usage notes**
+
+This method should be called when the camera is turned on. It only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. All browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported. You can check if this capability is supported by the camera using API [getCapabilities](#getcapabilities).
+
+---
+
+## getCapabilities
+
+**Syntax**
+
+```typescript
+/**
+ * Get the camera capabilities.
+ */
+getCapabilities(): MediaTrackCapabilities
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+</tr>
+
+</table>
+</div>
+
+**Usage notes**
+
+This method should be called when the camera is turned on. It only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. All browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
