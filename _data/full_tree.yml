@@ -155,10 +155,6 @@ tree_list:
         path: /info/api/Addon_Webcam.html
         startVersion:
         endVersion:
-      - name: Interfaces
-        path: /info/api/interfaces.html
-        startVersion:
-        endVersion:
       - name: Dynamsoft_FileUploader
         path: /info/api/Dynamsoft_FileUploader.html
         startVersion:
