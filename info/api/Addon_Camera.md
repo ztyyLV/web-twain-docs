@@ -708,7 +708,7 @@ interface ScannerViewer {
     stroke?: string;    //default: "#fe8e14". Only supports #16 hexadecimal.
     strokeWidth?: string;  //default: "2px"
     dash?: string          //The allowed value are "solid" and "dashed", the default value is "solid".
-  };
+    };
   headerStyle?:{
     background?: string;  //default: "#000000". Only supports #16 hexadecimal.
     color?: string;  //The color of the icons. Default : "#ffffff". Only supports #16 hexadecimal.
@@ -735,27 +735,24 @@ interface ScannerViewer {
       value: Resolution //The resolution you set. For example: { width:1920, height:1080}
     },{……}]
       defaultValue?: Resolution //Set the default value according to the value set in the valueList.
-  };
+    };
   autoScan?:{   //Automatically capture when a clear document is detected. Only applicable to video scanning. 
       visibility?: string;     //Whether to display the automatic scan icon. Values: "visible""hidden". Default: "visible".
       enableAutoScan?: boolean; //Whether to enable automatic scan. The default value is false.
-  };
+      };
   autoDetect?:{  //Only applicable to video scanning.                  
       visibility?: string;         //Whether to display the automatic border detection icon. Values: "visible""hidden". Default: "visible".
       enableAutoDetect?: boolean;   //Whether to enable automatic border detection. The default value is false.     
       acceptedPolygonConfidence?: number; //The default value is 80. The higher the setting, the more accurate the automatic border detection.
       fpsLimit?: number  //The maximum number of frames detected per second. The default value is 3.
-  };     
+      };     
   continuousScan?: boolean; //Whether to enable continuous scan. The default value is true.
   switchCamera?:{  //The default camera is the rear camera.
       visibility?: string   //Whether to display the switch camera icon. Values: "visible""hidden". Default: "visible".
-  };
+      };
   loadLocalFile?:{  
       visibility?: string   //Whether to display the load local file icon. Values: "visible""hidden". Default: "visible".
-  };
-  flash?:{
-      visibility?: string //  //Whether to display the flash icon if torch is supported. Values: "visible""hidden". Default: "visible".
-  },
+      };
   funcConfirmExit?: (bExistImage: boolean) => Promise<boolean>;
     //funcConfirmExit is the callback funtion,
     //Return Promise.resolve(true): End this capture without saving the image data.
