@@ -143,6 +143,8 @@ The buffer also comes with the ability to detect if a scanned image is blank or 
 
 If you believe an image should be blank but `IsBlankImage()` or `IsBlankImageExpress()` is returning `false` , you can read [ `BlankImageCurrentStdDev` ]({{site.info}}api/WebTwain_Buffer.html#blankimagecurrentstddev) (a read-only property) for that image and then **set a bigger value** to [ `BlankImageMaxStdDev` ]({{site.info}}api/WebTwain_Buffer.html#blankimagemaxstddev) , which sets the "limit" at which the buffer considers the image blank. Then when you try again, that image will be regarded as blank.
 
+[Go to FAQ for more details](https://www.dynamsoft.com/web-twain/docs/faq/remove-blank-page-automatically.html).
+
 ## Buffer Event Callbacks
 
 The buffer also provides a few event callbacks that take place under specific conditions. You can use these callbacks to trigger a certain action once this event takes place. Here is an overview of the events and what each represents:
