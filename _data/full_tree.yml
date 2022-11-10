@@ -163,10 +163,10 @@ tree_list:
         path: /info/api/appendix.html
         startVersion:
         endVersion:
-      - name: Interface
-        path: /info/api/interface.html
-        startVersion:
-        endVersion:
+      # - name: Interface
+      #   path: /info/api/interface.html
+      #   startVersion:
+      #   endVersion:
   - name: Release Notes
     path: /info/schedule/
     startVersion:
