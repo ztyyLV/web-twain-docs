@@ -30,15 +30,15 @@ permalink: /index.html
 
 * [Using DWT]({{site.indepth}}features/index.html)
 
-   - [Initialize DWT]({{site.indepth}}features/initialize.html)
+   - [DWT Initialization]({{site.indepth}}features/initialize.html)
    - [Input Options]({{site.indepth}}features/input.html)
+   - [Viewer Setting]({{site.indepth}}features/viewer.html)
+   - [Image Editing]({{site.indepth}}features/edit.html)
+   - [UI Customization]({{site.indepth}}features/ui.html)
    - [Output Options]({{site.indepth}}features/output.html)
-   - [Manage Image Buffer]({{site.indepth}}features/buffer.html)
-   - [Manage Viewer]({{site.indepth}}features/viewer.html)
-   - [Customize UI]({{site.indepth}}features/ui.html)
-   - [Edit Images]({{site.indepth}}features/edit.html)
-   - [Read Barcodes]({{site.indepth}}features/barcode.html)
-   - [Handle PDFs]({{site.indepth}}features/pdf.html)
+   - [Image Buffer Management]({{site.indepth}}features/buffer.html)
+   - [Barcode Recognition]({{site.indepth}}features/barcode.html)
+   - [PDF Handling]({{site.indepth}}features/pdf.html)
 
 * [API Reference]({{site.info}}api/index.html)
 
@@ -56,6 +56,7 @@ permalink: /index.html
    - [Addon_Webcam]({{site.info}}api/Addon_Webcam.html)
    - [Dynamsoft_FileUploader]({{site.info}}api/Dynamsoft_FileUploader.html)
    - [Error List]({{site.info}}api/appendix.html)
+   - [Interface]({{site.info}}api/interface.html)
 
 * [Release Notes]({{site.info}}schedule/index.html)
 

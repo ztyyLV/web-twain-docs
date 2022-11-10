@@ -66,7 +66,7 @@ tree_list:
     startVersion:
     endVersion:
     childList:
-      - name: Initialize DWT 
+      - name: DWT Initialization 
         path: /indepth/features/initialize.html
         startVersion:
         endVersion:
@@ -74,31 +74,31 @@ tree_list:
         path: /indepth/features/input.html
         startVersion:
         endVersion:
+      - name: Viewer Setting
+        path: /indepth/features/viewer.html
+        startVersion:
+        endVersion:
+      - name: Image Editing
+        path: /indepth/features/edit.html
+        startVersion:
+        endVersion:
+      - name: UI Customization
+        path: /indepth/features/ui.html
+        startVersion:
+        endVersion:
       - name: Output Options
         path: /indepth/features/output.html
         startVersion:
         endVersion:
-      - name: Manage Image Buffer
+      - name: Image Buffer Management
         path: /indepth/features/buffer.html
         startVersion:
         endVersion:
-      - name: Manage Viewer
-        path: /indepth/features/viewer.html
-        startVersion:
-        endVersion:
-      - name: Customize UI
-        path: /indepth/features/ui.html
-        startVersion:
-        endVersion:
-      - name: Edit Images
-        path: /indepth/features/edit.html
-        startVersion:
-        endVersion:
-      - name: Read Barcodes
+      - name: Barcode Recognition
         path: /indepth/features/barcode.html
         startVersion:
         endVersion:
-      - name: Handle PDFs
+      - name: PDF Handling
         path: /indepth/features/pdf.html
         startVersion:
         endVersion:
@@ -161,6 +161,10 @@ tree_list:
         endVersion:
       - name: Error List
         path: /info/api/appendix.html
+        startVersion:
+        endVersion:
+      - name: Interface
+        path: /info/api/interface.html
         startVersion:
         endVersion:
   - name: Release Notes

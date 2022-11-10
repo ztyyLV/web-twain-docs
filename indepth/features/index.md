@@ -12,7 +12,7 @@ permalink: /indepth/features/
 
 This section covers how to implement the key capabilities of Dynamic Web TWAIN (DWT):
 
-* [Initialize DWT]({{site.indepth}}features/Initialize.html)
+* [DWT Initialization]({{site.indepth}}features/Initialize.html)
 
   Learn how to include DWT and initialize it in your application.
 
@@ -20,30 +20,30 @@ This section covers how to implement the key capabilities of Dynamic Web TWAIN (
 
   Learn different ways to input data into DWT.
 
+* [Viewer Setting]({{site.indepth}}features/viewer.html)
+
+  Learn about ways to manipulate the viewer of DWT.
+
+* [Image Editing]({{site.indepth}}features/Edit.html)
+
+  Learn the APIs for editing images in the buffer.
+
+* [UI Customization]({{site.indepth}}features/UI.html)
+
+  Learn how to customize UI elements besides the viewer.
+
 * [Output Options]({{site.indepth}}features/Output.html)
 
   Learn different ways to output data.
 
-* [Manage Image Buffer]({{site.indepth}}features/Buffer.html)
+* [Image Buffer Management]({{site.indepth}}features/Buffer.html)
 
   Learn about the APIs for buffer management.
 
-* [Manage Viewer]({{site.indepth}}features/viewer.html)
-
-  Learn about ways to manipulate the viewer of DWT.
-
-* [Customize UI]({{site.indepth}}features/UI.html)
-
-  Learn how to customize UI elements besides the viewer.
-
-* [Edit Images]({{site.indepth}}features/Edit.html)
-
-  Learn the APIs for editing images in the buffer.
-
-* [Read Barcodes]({{site.indepth}}features/Barcode.html)
+* [Barcode Recognition]({{site.indepth}}features/Barcode.html)
 
   Learn how to use the Barcode Reader module.
 
-* [Handle PDFs]({{site.indepth}}features/PDF.html)
+* [PDF Handling]({{site.indepth}}features/PDF.html)
 
   Learn about PDF reading & writing capabilities.
