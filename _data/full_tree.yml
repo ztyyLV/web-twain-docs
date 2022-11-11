@@ -61,6 +61,8 @@ tree_list:
         path: /indepth/development/upgrade.html
         startVersion:
         endVersion: 
+  - name: DEVELOPMENT
+    isCategory: true
   - name: Using DWT
     path: /indepth/features/
     startVersion:
@@ -171,6 +173,8 @@ tree_list:
         path: /info/api/appendix.html
         startVersion:
         endVersion:
+  - name: USEFUL RESOURCES
+    isCategory: true
   - name: Release Notes
     path: /info/schedule/
     startVersion:
