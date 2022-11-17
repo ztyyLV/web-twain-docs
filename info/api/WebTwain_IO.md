@@ -1805,7 +1805,7 @@ var uploadfilename = Digital.getMilliseconds();
 
 DWObject.HTTPUploadThroughPost(
     strHTTPServer,
-    i,
+    DWObject.CurrentImageIndexInBuffer,
     strActionPage,
     uploadfilename + ".jpg",
     function () {
