@@ -380,17 +380,11 @@ ConvertToGrayScaleAsync(
 
 ## Invert
 
+Invert the colour of the pixels on the specified image.
+
 **Syntax**
 
 ```typescript
-/**
- * Invert the colour of the pixels on the specified image.
- * @param index Specify the image.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 Invert(
     index: number,
     successCallback?: () => void,
@@ -400,6 +394,16 @@ Invert(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image to be inverted. The index is 0-based.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
 
 **Availability**
 <div class="availability">
@@ -430,18 +434,11 @@ Invert(
 
 ## SetImageWidth
 
+Change the width of the specified image by adding a margin or removing part of the image.
+
 **Syntax**
 
-```typescript
-/**
- * Change the width of the specified image by adding a margin or removing part of the image.
- * @param index Specify the image.
- * @param width Specify the new width.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
+```javascript
 SetImageWidth(
     index: number,
     width: number,
@@ -452,6 +449,18 @@ SetImageWidth(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image to be changed. The index is 0-based.
+
+`width`: Specify the new width.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
 
 **Availability**
 <div class="availability">
@@ -482,17 +491,11 @@ SetImageWidth(
 
 ## Flip
 
+Flip the specified image.
+
 **Syntax**
 
-```typescript
-/**
- * Flip the specified image.
- * @param index Specify the image.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
+```javascript
 Flip(
     index: number,
     successCallback?: () => void,
@@ -502,6 +505,16 @@ Flip(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image in the buffer. The index is 0-based.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
 
 **Availability**
 <div class="availability">
@@ -550,17 +563,11 @@ FlipAsync(
 
 ## Mirror
 
+Mirror the specified image.
+
 **Syntax**
 
-```typescript
-/**
- * Mirror the specified image.
- * @param index Specify the image.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
+```javascript
 Mirror(
     index: number,
     successCallback?: () => void,
@@ -570,6 +577,16 @@ Mirror(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image in the buffer. The index is 0-based.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
 
 **Availability**
 <div class="availability">
@@ -617,17 +634,11 @@ MirrorAsync(
 
 ## RotateLeft
 
+Rotate the specified image 90 degrees counterclockwise.
+
 **Syntax**
 
-```typescript
-/**
- * Rotate the specified image 90 degrees counterclockwise.
- * @param index Specify the image.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
+```javascript
 RotateLeft(
     index: number,
     successCallback?: () => void,
@@ -637,6 +648,16 @@ RotateLeft(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image in the buffer. The index is 0-based.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
 
 **Availability**
 <div class="availability">
@@ -684,17 +705,11 @@ RotateLeftAsync(
 
 ## RotateRight
 
+Rotate the specified image 90 degrees clockwise.
+
 **Syntax**
 
-```typescript
-/**
- * Rotate the specified image 90 degrees clockwise.
- * @param index Specify the image.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
+```javascript
 RotateRight(
     index: number,
     successCallback?: () => void,
@@ -704,6 +719,16 @@ RotateRight(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image in the buffer. The index is 0-based.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
 
 **Availability**
 <div class="availability">
@@ -751,19 +776,11 @@ RotateRightAsync(
 
 ## Rotate
 
+Rotate the specified image by the specified angle.
+
 **Syntax**
 
-```typescript
-/**
- * Rotate the specified image by the specified angle.
- * @param index Specify the image.
- * @param angle Specify the angle.
- * @param keepSize Whether to keep the original size.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
+```javascript
 Rotate(
     index: number,
     angle: number,
@@ -775,6 +792,20 @@ Rotate(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image in the buffer. The index is 0-based.
+
+`angle`: Specify the angle to rotate the image. Positive angle means clockwise. Negative value is counter-clockwise.
+
+`keepSize`: Specify whether to keep the original size of the image.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
 
 **Availability**
 <div class="availability">
@@ -827,20 +858,11 @@ RotateAsync(
 
 ## RotateEx
 
+Rotate the specified image by the specified angle.
+
 **Syntax**
 
-```typescript
-/**
- * Rotate the specified image by the specified angle.
- * @param index Specify the image.
- * @param angle Specify the angle.
- * @param keepSize Whether to keep the original size.
- * @param method Specify the algorithm for the change.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
+```javascript
 RotateEx(
     index: number,
     angle: number,
@@ -853,6 +875,22 @@ RotateEx(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image in the buffer. The index is 0-based.
+
+`angle`: Specify the angle to rotate the image. Positive angle means clockwise. Negative value is counter-clockwise.
+
+`keepSize`: Specify whether to keep the original size of the image.
+
+`method`: Specify the algorithm for the change. Please refer to [EnumDWT_InterpolationMethod]({{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_interpolationmethod).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
 
 **Availability**
 <div class="availability">
@@ -879,29 +917,15 @@ RotateEx(
 </table>
 </div>
 
-**Usage notes**
-
-Check out [ `Dynamsoft.DWT.EnumDWT_InterpolationMethod` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_interpolationmethod).
-
 ---
 
 ## Crop
 
+Crop the specified image using the specified coordinates.
+
 **Syntax**
 
-```typescript
-/**
- * Crop the specified image using the specified coordinates.
- * @param index Specify the image.
- * @param left Specify the rectangle (leftmost coordinate).
- * @param top Specify the rectangle (topmost coordinate).
- * @param right Specify the rectangle (rightmost coordinate).
- * @param bottom Specify the rectangle (bottommost coordinate).
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
+```javascript
 Crop(
     index: number,
     left: number,
@@ -915,6 +939,24 @@ Crop(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image in the buffer. The index is 0-based.
+
+`left`: Specify the rectangle (leftmost coordinate).
+
+`top`: Specify the rectangle (topmost coordinate).
+
+`right`: Specify the rectangle (rightmost coordinate).
+
+`bottom`: Specify the rectangle (bottommost coordinate).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
 
 **Availability**
 <div class="availability">
