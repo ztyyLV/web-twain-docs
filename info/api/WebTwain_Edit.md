@@ -1007,6 +1007,7 @@ if (_iLeft != 0 || _iTop != 0 || _iRight != 0 || _iBottom != 0) {
 ```
 
 **Remark**
+
 [pageAreaSelected]({{{site.info}}api/WebTwain_Viewer.html#pageareaselected)
 
 ---
@@ -1162,8 +1163,7 @@ CutToClipboard(index: number): boolean;
 </tr>
 
 <tr>
-<>
-align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
