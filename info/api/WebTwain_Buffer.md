@@ -64,7 +64,6 @@ IndexToImageID(index: number): number;
 
 `index`: The index of the image.
 
-
 **Availability**
 
 <div class="availability">
@@ -408,7 +407,7 @@ SetDefaultTag(tag: string): boolean;
 
 **Parameters**
 
-`tag`: Specifies the tag.
+`tag`: Specifies the tag name.
 
 **Availability**
 <div class="availability">
@@ -710,9 +709,9 @@ GetSkewAngle(
 `index`: Specify the image.
 
 `successCallback`: A callback function that is executed if the request succeeds.
+- `angle`: The skew angle.
 
 `failureCallback`: A callback function that is executed if the request fails.
-- `angle`: The skew angle.
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -779,9 +778,9 @@ GetSkewAngleEx(
 `bottom`: The y-coordinate of the lower-right corner of the rectangle.
 
 `successCallback`: A callback function that is executed if the request succeeds.
+- `angle`: The skew angle.
 
 `failureCallback`: A callback function that is executed if the request fails.
-- `angle`: The skew angle.
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -831,9 +830,9 @@ GetImageSize(index: number, width: number, height: number): number;
 
 `index`: Specify the image.
 
-`width`: Specify the width.
+`width`: Specify the width in pixel.
 
-`height`: Specify the height.
+`height`: Specify the height in pixel.
 
 **Availability**
 
@@ -860,6 +859,10 @@ GetImageSize(index: number, width: number, height: number): number;
 
 </table>
 </div>
+
+**Usage Notes**
+
+If the calculation fails, -1 is returned.
 
 ---
 
@@ -904,6 +907,12 @@ GetImageSizeWithSpecifiedType(index: number, type: Dynamsoft.DWT.EnumDWT_ImageTy
 
 </table>
 </div>
+
+
+**Usage Notes**
+
+If the calculation fails, -1 is returned.
+If failed to set image type, 0 is returned.
 
 ---
 
@@ -969,9 +978,9 @@ GetImagePartURL(index: number, width?: number, height?: number): string;
 
 `index`: Specify the image.
 
-`width`: The width of the image (>150).
+`width`: The width of the image in pixel (>150).
 
-`height`: The height of the image (>150).
+`height`: The height of the image in pixel (>150).
 
 **Availability**
 
@@ -1027,9 +1036,9 @@ GetImageURL(index: number, width?: number, height?: number): string;
 
 `index`: Specify the image.
 
-`width`: The width of the image (>150).
+`width`: The width of the image in pixel (>150).
 
-`height`: The height of the image (>150).
+`height`: The height of the image in pixel (>150).
 
 **Availability**
 
