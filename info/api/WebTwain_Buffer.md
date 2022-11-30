@@ -1835,16 +1835,16 @@ If the image is not blank and it is not black and white, `IsBlankImage()` or `Is
 
 ## IfAllowLocalCache
 
+Return or set whether the feature of disk caching is enabled.
+
 **Syntax**
 
 ```javascript
-/**
- * Return or set whether the feature of disk caching is enabled.
- */
 IfAllowLocalCache: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1880,13 +1880,11 @@ All cached data is encrypted and can only be read by Dynamic Web TWAIN and it wi
 
 ## OnBufferChanged
 
+An enhanced callback triggered when a change occurs in the buffer.
+
 **Syntax**
 
 ```javascript
-/**
- * An enhanced callback triggered when a change occurs in the buffer.
- * @argument bufferChangeInfo Details about the buffer change.
- */
 RegisterEvent('OnBufferChanged',
     function (bufferChangeInfo: BufferChangeInfo) {}
 ): boolean;
@@ -1911,7 +1909,12 @@ interface BufferChangeInfo {
 }
 ```
 
+**Parameters**
+
+`bufferChangeInfo`: Details about the buffer change.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1950,27 +1953,27 @@ Action types include
 
 ## OnBitmapChanged
 
+A built-in callback triggered when the current image in buffer is changed like flipped, cropped, rotated, etc. or a new image has been acquired.
+
 **Syntax**
 
 ```javascript
-/**
- * A built-in callback triggered when the current image in buffer is changed like flipped, cropped, rotated, etc. or a new image has been acquired.
- * @argument indexString Array of the changed index(indices).
- * @argument type Operation type.
-   1 means new image(s) were added at the tail,
-   2 means image(s) were inserted before the current index,
-   3 means image(s) are deleted,
-   4 means image(s) are modified,
- * @argument index Index of the current image.
- */
 RegisterEvent('OnBitmapChanged',
-    function (
-        indexString: number[],
-        type: number,
-        index: number
-    ) {}
+    function (indexString: number[], type: number, index: number){}
 ): boolean;
 ```
+
+**Parameters**
+
+`indexString`: Array of the changed index(indices).
+
+`type`: Operation type.
+- 1 means new image(s) were added at the tail
+- 2 means image(s) were inserted before the current index
+- 3 means image(s) are deleted
+- 4 means image(s) are modified
+
+`index`: Index of the current image.
 
 **Availability**
 <div class="availability">
@@ -2001,10 +2004,10 @@ RegisterEvent('OnBitmapChanged',
 
 ```javascript
 DWObject.RegisterEvent(
-  "OnBitmapChanged",
-  function (strUpdatedIndex, operationType, sCurrentIndex) {
-    console.log("Image " + sCurrentIndex + " has changed!");
-  }
+    "OnBitmapChanged",
+    function (strUpdatedIndex, operationType, sCurrentIndex) {
+        console.log("Image " + sCurrentIndex + " has changed!");
+    }
 );
 ```
 
@@ -2012,19 +2015,22 @@ DWObject.RegisterEvent(
 
 ## OnTopImageInTheViewChanged
 
+A built-in callback triggered when the top index currently displayed in the viewer changes.
+
 **Syntax**
 
 ```javascript
-/**
- * A built-in callback triggered when the top index currently displayed in the viewer changes.
- * @argument index Index of the current image.
- */
 RegisterEvent('OnTopImageInTheViewChanged',
     function (index: number) {}
 ): boolean;
 ```
 
+**Parameters**
+
+`index`: Index of the current image.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2057,19 +2063,21 @@ This API does not work if the view mode of the viewer is set to -1 by -1.
 
 ## OnIndexChangeDragDropDone
 
+A built-in callback triggered when images in the buffer are dragged to new positions.
+
 **Syntax**
 
 ```javascript
-/**
- * A built-in callback triggered when images in the buffer are dragged to new positions.
- * @argument indexPairs The list of index changes.
- */
 RegisterEvent('OnIndexChangeDragDropDone',
     function (indexPairs: Pair[]) {}
 ): boolean;
 
 Pair: [from: number, to: number];
 ```
+
+**Parameters**
+
+`indexPairs`: The list of index changes.
 
 **Availability**
 <div class="availability">
@@ -2100,17 +2108,20 @@ Pair: [from: number, to: number];
 
 ## GetTagListByIndex
 
+Return the tag(s) of a specified image.
+
 **Syntax**
 
 ```javascript
-/**
- * Return the tag(s) of a specified image.
- * @argument index Index of the image.
- */
 GetTagListByIndex(index: number):string[]
 ```
 
+**Parameters**
+
+`index`: Index of the image.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2145,6 +2156,8 @@ DWObject.GetTagListByIndex(0);
 
 ## CreateDocument
 
+Create a document for the scanned image(s).
+
 **Syntax**
 
 <div class="sample-code-prefix template2"></div>
@@ -2153,10 +2166,6 @@ DWObject.GetTagListByIndex(0);
 >
 >
 ```javascript
-/**
- * Create a document for the scanned image(s).
- * @argument documentName Specify the document name.
- */
 CreateDocument(documentName:string):boolean;
 ```
 ```javascript
@@ -2167,7 +2176,12 @@ CreateDocument(documentName:string):boolean;
 CreateFile(categoryName:string):boolean;
 ```
 
+**Parameters**
+
+`documentName`: Specify the document name.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2201,19 +2215,19 @@ DWObject.OpenDocument("Document1"); //Need to call OpenDocument after CreateDocu
 DWObject.AcquireImage(successCallback, failureCallback);
 
 function successCallback() {
-  console.log("successful");
+    console.log("successful");
 }
 
 function failureCallback(errorCode, errorString) {
-  alert(errorString);
+    alert(errorString);
 }
 ```
-
-
 
 ---
 
 ## OpenDocument
+
+Use the specified document for the scanned image(s).
 
 **Syntax**
 
@@ -2223,10 +2237,6 @@ function failureCallback(errorCode, errorString) {
 >
 >
 ```javascript
-/**
- * Use the specified document for the scanned image(s)
- * @argument documentName Specify the document name.
- */
 OpenDocument(documentName:string):boolean;
 ```
 ```javascript
@@ -2237,8 +2247,12 @@ OpenDocument(documentName:string):boolean;
 OpenFile(categoryName:string):boolean;
 ```
 
+**Parameters**
+
+`documentName`: Specify the document name.
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2274,17 +2288,19 @@ DWObject.OpenDocument("Document2"); //Need to call OpenDocument after CreateDocu
 DWObject.AcquireImage(successCallback, failureCallback);
 
 function successCallback() {
-  console.log("successful");
+    console.log("successful");
 }
 
 function failureCallback(errorCode, errorString) {
-  alert(errorString);
+    alert(errorString);
 }
 ```
 
 ---
 
 ## GetCurrentDocumentName
+
+Get the current document name. The default value is 'dynamsoft-default-document'. Scanned image(s) are saved in this document by default if no document name is created.
 
 **Syntax**
 
@@ -2294,9 +2310,6 @@ function failureCallback(errorCode, errorString) {
 >
 >
 ```javascript
-/**
- * Get the current document name. The default value is 'dynamsoft-default-document'. Scanned image(s) are saved in this document by default if no document name is created.
- */
 GetCurrentDocumentName():string;
 ```
 ```javascript
@@ -2307,6 +2320,7 @@ GetCurrentFileName():string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2335,18 +2349,22 @@ GetCurrentFileName():string;
 
 ## RenameDocument
 
+Rename a document.
+
 **Syntax**
 
 ```javascript
-/**
- * Rename a document.
- * @argument oldDocumentName Specify the old document name.
- * @argument newDocumentName Specify the new document name.
- */
 RenameDocument(oldDocumentName:string, newDocumentName:string):boolean;
 ```
 
+**Parameters**
+
+`oldDocumentName`: Specify the old document name.
+
+`newDocumentName`: Specify the new document name.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2375,6 +2393,8 @@ RenameDocument(oldDocumentName:string, newDocumentName:string):boolean;
 
 ## RemoveDocument
 
+Delete the specified document.
+
 **Syntax**
 
 <div class="sample-code-prefix template2"></div>
@@ -2383,10 +2403,6 @@ RenameDocument(oldDocumentName:string, newDocumentName:string):boolean;
 >
 > 
 ```javascript
-/**
- * Delete the specified document.
- * @argument documentName Specify the document name.
- */
 RemoveDocument(documentName:string):boolean;
 ```
 ```javascript
@@ -2397,7 +2413,12 @@ RemoveDocument(documentName:string):boolean;
 RemoveFile(categoryName:string):boolean;
 ```
 
+**Parameters**
+
+`documentName`: Specify the document name.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2426,6 +2447,8 @@ RemoveFile(categoryName:string):boolean;
 
 ## GetDocumentInfoList
 
+Get the list of all documents and their information.
+
 **Syntax**
 
 <div class="sample-code-prefix template2"></div>
@@ -2434,13 +2457,11 @@ RemoveFile(categoryName:string):boolean;
 >
 >
 ```javascript
-/**
- * Get the list of all documents and their information.
- */
 GetDocumentInfoList(): DocumentInfo[];
+
 interface DocumentInfo {
-   name: string;
-   imageIds: number[];
+    name: string;
+    imageIds: number[];
 }
 ```
 ```javascript
@@ -2456,8 +2477,8 @@ Json:
 {……}]
 ```
 
-
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2486,41 +2507,44 @@ Json:
 
 ## GetRawDataAsync
 
+Gets the RawData for the specified image captured from camera.
+
 **Syntax**
 
 ```javascript
-/**
- * Gets the RawData for the specified image captured from camera.
- * @param index Specify the image.
- */
 GetRawDataAsync(index: number): Promise<RawData>;
 
 interface RawData {
-  displayImage:{  //Data of the display image, after filter and crop effects
-    data: Blob;
-    bitDepth: number;
-    height: number;
-    resolutionX: number;
-    resolutionY: number;
-    width: number;
-  };
-  documentData:{
-    angle: number; //the clockwise rotation angle of the original image
-    polygon: [{x:number, y:number},{x:number, y:number},{x:number, y:number},{x:number, y:number}];//selection area
-    filterValue: string;
-    originImage:{ //Data of the original image
-      bitDepth: number;
-      data: Blob;
-      height: number;
-      width: number;
-      resolutionX: number;
-      resolutionY: number;
+    displayImage:{  //Data of the display image, after filter and crop effects
+        data: Blob;
+        bitDepth: number;
+        height: number;
+        resolutionX: number;
+        resolutionY: number;
+        width: number;
+    };
+    documentData:{
+        angle: number; //the clockwise rotation angle of the original image
+        polygon: [{x:number, y:number},{x:number, y:number},{x:number, y:number},{x:number, y:number}];//selection area
+        filterValue: string;
+        originImage:{ //Data of the original image
+            bitDepth: number;
+            data: Blob;
+            height: number;
+            width: number;
+            resolutionX: number;
+            resolutionY: number;
+        }
     }
-  }
 }
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
 **Availability**
+
 <div class="availability">
 <table>
 
