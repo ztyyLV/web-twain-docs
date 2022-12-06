@@ -69,21 +69,25 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 ## ChangeBitDepth
 
+Change the bit depth of the specified image.
+
 **Syntax**
 
-```typescript
-/**
- * Change the bit depth of the specified image.
- * @param index Specify the image.
- * @param bitDepth Specify the bit depth.
- * @param highQuality Whether to keep high quality.
- */
+```javascript
 ChangeBitDepth(
     index: number,
     bitDepth: number,
     highQuality: boolean,
 ): boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image to be changed. The index is 0-based.
+
+`bitDepth`: Specify the target bit depth.
+
+`highQuality`: Whether to keep high quality. When it's true, it takes more time.
 
 **Availability**
 <div class="availability">
@@ -110,7 +114,6 @@ ChangeBitDepth(
 </table>
 </div>
 
-
 **Usage notes**
 
 The allowed bit depths are 1, 4, 8, 24.
@@ -119,20 +122,11 @@ The allowed bit depths are 1, 4, 8, 24.
 
 ## ChangeImageSize
 
+Change the size of the specified image.
+
 **Syntax**
 
-```typescript
-/**
- * Change the size of the specified image.
- * @param index Specify the image.
- * @param width Specify the new width.
- * @param height Specify the new height.
- * @param method Specify the algorithm for the change.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
+```javascript
 ChangeImageSize(
     index: number,
     width: number,
@@ -145,6 +139,22 @@ ChangeImageSize(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+`index`: Specify  the index of the image to be changed. The index is 0-based.
+
+`width`: Specify the new width.
+
+`height`: Specify the new height.
+
+`method`: Specify the algorithm for the change. Please refer to [EnumDWT_InterpolationMethod]({{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_interpolationmethod).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
+
 
 **Availability**
 <div class="availability">
@@ -175,21 +185,11 @@ ChangeImageSize(
 
 ## SetDPI
 
+Change the DPI (dots per inch) of the specified image.
+
 **Syntax**
 
-```typescript
-/**
- * Change the DPI (dots per inch) of the specified image.
- * @param index Specify the image.
- * @param xResolution Specify the horizontal DPI.
- * @param yResolution Specify the vertical DPI.
- * @param resample Whether to resample the image.
- * @param method Specify the algorithm for the change.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
+```javascript
 SetDPI(
     index: number,
     xResolution: number,
@@ -203,6 +203,25 @@ SetDPI(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image to be changed. The index is 0-based.
+
+`xResolution`: Specify the horizontal DPI.
+
+`yResolution`: Specify the vertical DPI.
+
+`resample`: Whether to resample the image. When it is true, the image size will change.
+
+`method`: Specify the algorithm for the change. Please refer to [EnumDWT_InterpolationMethod]({{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_interpolationmethod).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString` The error string.
+
 
 **Availability**
 <div class="availability">
@@ -229,25 +248,16 @@ SetDPI(
 </table>
 </div>
 
-**Usage notes**
-
-Check out [ `Dynamsoft.DWT.EnumDWT_InterpolationMethod` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_interpolationmethod).
 
 ---
 
 ## ConvertToBW
 
+Convert the specified image to black & white.
+
 **Syntax**
 
-```typescript
-/**
- * Convert the specified image to black & white.
- * @param index Specify the image.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
+```javascript
 ConvertToBW(
     index: number,
     successCallback?: () => void,
@@ -257,6 +267,17 @@ ConvertToBW(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image to be converted. The index is 0-based.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
+
 
 **Availability**
 <div class="availability">
@@ -287,17 +308,11 @@ ConvertToBW(
 
 ## ConvertToGrayScale
 
+Convert the specified image to grayscale.
+
 **Syntax**
 
-```typescript
-/**
- * Convert the specified image to grayscale.
- * @param index Specify the image.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
+```javascript
 ConvertToGrayScale(
     index: number,
     successCallback?: () => void,
@@ -307,6 +322,16 @@ ConvertToGrayScale(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image to be converted. The index is 0-based.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
 
 **Availability**
 <div class="availability">
@@ -355,17 +380,11 @@ ConvertToGrayScaleAsync(
 
 ## Invert
 
+Invert the colour of the pixels on the specified image.
+
 **Syntax**
 
 ```typescript
-/**
- * Invert the colour of the pixels on the specified image.
- * @param index Specify the image.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 Invert(
     index: number,
     successCallback?: () => void,
@@ -375,6 +394,16 @@ Invert(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image to be inverted. The index is 0-based.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
 
 **Availability**
 <div class="availability">
@@ -405,18 +434,11 @@ Invert(
 
 ## SetImageWidth
 
+Change the width of the specified image by adding a margin or removing part of the image.
+
 **Syntax**
 
-```typescript
-/**
- * Change the width of the specified image by adding a margin or removing part of the image.
- * @param index Specify the image.
- * @param width Specify the new width.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
+```javascript
 SetImageWidth(
     index: number,
     width: number,
@@ -427,6 +449,18 @@ SetImageWidth(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image to be changed. The index is 0-based.
+
+`width`: Specify the new width.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
 
 **Availability**
 <div class="availability">
@@ -457,17 +491,11 @@ SetImageWidth(
 
 ## Flip
 
+Flip the specified image.
+
 **Syntax**
 
-```typescript
-/**
- * Flip the specified image.
- * @param index Specify the image.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
+```javascript
 Flip(
     index: number,
     successCallback?: () => void,
@@ -477,6 +505,16 @@ Flip(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image in the buffer. The index is 0-based.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
 
 **Availability**
 <div class="availability">
@@ -525,17 +563,11 @@ FlipAsync(
 
 ## Mirror
 
+Mirror the specified image.
+
 **Syntax**
 
-```typescript
-/**
- * Mirror the specified image.
- * @param index Specify the image.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
+```javascript
 Mirror(
     index: number,
     successCallback?: () => void,
@@ -545,6 +577,16 @@ Mirror(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image in the buffer. The index is 0-based.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
 
 **Availability**
 <div class="availability">
@@ -592,17 +634,11 @@ MirrorAsync(
 
 ## RotateLeft
 
+Rotate the specified image 90 degrees counterclockwise.
+
 **Syntax**
 
-```typescript
-/**
- * Rotate the specified image 90 degrees counterclockwise.
- * @param index Specify the image.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
+```javascript
 RotateLeft(
     index: number,
     successCallback?: () => void,
@@ -612,6 +648,16 @@ RotateLeft(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image in the buffer. The index is 0-based.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
 
 **Availability**
 <div class="availability">
@@ -659,17 +705,11 @@ RotateLeftAsync(
 
 ## RotateRight
 
+Rotate the specified image 90 degrees clockwise.
+
 **Syntax**
 
-```typescript
-/**
- * Rotate the specified image 90 degrees clockwise.
- * @param index Specify the image.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
+```javascript
 RotateRight(
     index: number,
     successCallback?: () => void,
@@ -679,6 +719,16 @@ RotateRight(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image in the buffer. The index is 0-based.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
 
 **Availability**
 <div class="availability">
@@ -726,19 +776,11 @@ RotateRightAsync(
 
 ## Rotate
 
+Rotate the specified image by the specified angle.
+
 **Syntax**
 
-```typescript
-/**
- * Rotate the specified image by the specified angle.
- * @param index Specify the image.
- * @param angle Specify the angle.
- * @param keepSize Whether to keep the original size.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
+```javascript
 Rotate(
     index: number,
     angle: number,
@@ -750,6 +792,20 @@ Rotate(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image in the buffer. The index is 0-based.
+
+`angle`: Specify the angle to rotate the image. Positive angle means clockwise. Negative value is counter-clockwise.
+
+`keepSize`: Specify whether to keep the original size of the image.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
 
 **Availability**
 <div class="availability">
@@ -802,20 +858,11 @@ RotateAsync(
 
 ## RotateEx
 
+Rotate the specified image by the specified angle.
+
 **Syntax**
 
-```typescript
-/**
- * Rotate the specified image by the specified angle.
- * @param index Specify the image.
- * @param angle Specify the angle.
- * @param keepSize Whether to keep the original size.
- * @param method Specify the algorithm for the change.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
+```javascript
 RotateEx(
     index: number,
     angle: number,
@@ -828,6 +875,22 @@ RotateEx(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image in the buffer. The index is 0-based.
+
+`angle`: Specify the angle to rotate the image. Positive angle means clockwise. Negative value is counter-clockwise.
+
+`keepSize`: Specify whether to keep the original size of the image.
+
+`method`: Specify the algorithm for the change. Please refer to [EnumDWT_InterpolationMethod]({{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_interpolationmethod).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
 
 **Availability**
 <div class="availability">
@@ -854,29 +917,15 @@ RotateEx(
 </table>
 </div>
 
-**Usage notes**
-
-Check out [ `Dynamsoft.DWT.EnumDWT_InterpolationMethod` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_interpolationmethod).
-
 ---
 
 ## Crop
 
+Crop the specified image using the specified coordinates.
+
 **Syntax**
 
-```typescript
-/**
- * Crop the specified image using the specified coordinates.
- * @param index Specify the image.
- * @param left Specify the rectangle (leftmost coordinate).
- * @param top Specify the rectangle (topmost coordinate).
- * @param right Specify the rectangle (rightmost coordinate).
- * @param bottom Specify the rectangle (bottommost coordinate).
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
+```javascript
 Crop(
     index: number,
     left: number,
@@ -890,6 +939,24 @@ Crop(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image in the buffer. The index is 0-based.
+
+`left`: Specify the rectangle (leftmost coordinate).
+
+`top`: Specify the rectangle (topmost coordinate).
+
+`right`: Specify the rectangle (rightmost coordinate).
+
+`bottom`: Specify the rectangle (bottommost coordinate).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
 
 **Availability**
 <div class="availability">
@@ -916,25 +983,42 @@ Crop(
 </table>
 </div>
 
+**Example**
+
+```javascript
+//How to crop the selected area in the current image
+//Register an event to get the selected rectangle coordinate
+DWObject.Viewer.on("pageAreaSelected", function (sImageIndex, rect) {
+  if (rect.length > 0){
+      var currentRect = rect[rect.length - 1];
+      _iLeft = currentRect.x;
+      _iTop = currentRect.y;
+      _iRight - currentRect.x + currentRect.width;
+      _iBottom= currentRect.y + currentRect.height;
+  }
+}); 
+//Crop 
+if (_iLeft != 0 || _iTop != 0 || _iRight != 0 || _iBottom != 0) {
+    DWObject.Crop(
+        DWObject.CurrentImageIndexInBuffer, //Current image
+        _iLeft, _iTop, _iRight, _iBottom
+    );
+} 
+```
+
+**Remark**
+
+[pageAreaSelected]({{{site.info}}api/WebTwain_Viewer.html#pageareaselected)
+
 ---
 
 ## Erase
 
 **Syntax**
 
-```typescript
-/**
- * Erase a rectangular area from the specified image.
- * @param index Specify the image.
- * @param left Specify the rectangle (leftmost coordinate).
- * @param top Specify the rectangle (topmost coordinate).
- * @param right Specify the rectangle (rightmost coordinate).
- * @param bottom Specify the rectangle (bottommost coordinate).
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
+Erase a rectangular area from the specified image.
+
+```javascript
 Erase(
     index: number,
     left: number,
@@ -948,6 +1032,24 @@ Erase(
     ) => void
 ): void | boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image in the buffer. The index is 0-based.
+
+`left`: Specify the rectangle (leftmost coordinate).
+
+`top`: Specify the rectangle (topmost coordinate).
+
+`right`: Specify the rectangle (rightmost coordinate).
+
+`bottom`: Specify the rectangle (bottommost coordinate).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
 
 **Availability**
 <div class="availability">
@@ -978,15 +1080,17 @@ Erase(
 
 ## CopyToClipboard
 
+Copy the specified image to the clipboard of the operating system.
+
 **Syntax**
 
-```typescript
-/**
- * Copy the specified image to the clipboard of the operating system.
- * @param index Specify the image.
- */
+```javascript
 CopyToClipboard(index: number): boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image in the buffer. The index is 0-based.
 
 **Availability**
 <div class="availability">
@@ -1034,15 +1138,16 @@ CopyToClipboardAsync(index: number): Promise<boolean>;
 
 ## CutToClipboard
 
+Cut the specified image to the clipboard of the operating system.
+
 **Syntax**
 
-```typescript
-/**
- * Cut the specified image to the clipboard of the operating system.
- * @param index Specify the image.
- */
+```javascript
 CutToClipboard(index: number): boolean;
 ```
+**Parameters**
+
+`index`: Specify the index of the image in the buffer. The index is 0-based.
 
 **Availability**
 <div class="availability">
@@ -1058,8 +1163,7 @@ CutToClipboard(index: number): boolean;
 </tr>
 
 <tr>
-<>
-align="center">v4.0+ </td>
+<td align="center">v4.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
@@ -1075,17 +1179,11 @@ align="center">v4.0+ </td>
 
 ## CropToClipboard
 
+Crop a rectangular area from the specified image to the clipboard of the operating system.
+
 **Syntax**
 
-```typescript
-/**
- * Crop a rectangular area from the specified image to the clipboard of the operating system.
- * @param index Specify the image.
- * @param left Specify the rectangle (leftmost coordinate).
- * @param top Specify the rectangle (topmost coordinate).
- * @param right Specify the rectangle (rightmost coordinate).
- * @param bottom Specify the rectangle (bottommost coordinate).
- */
+```javascript
 CropToClipboard(
     index: number,
     left: number,
@@ -1094,6 +1192,18 @@ CropToClipboard(
     bottom: number
 ): boolean;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image in the buffer. The index is 0-based.
+
+`left`: Specify the rectangle (leftmost coordinate).
+
+`top`: Specify the rectangle (topmost coordinate).
+
+`right`: Specify the rectangle (rightmost coordinate).
+
+`bottom`: Specify the rectangle (bottommost coordinate).
 
 **Availability**
 <div class="availability">
@@ -1125,17 +1235,11 @@ CropToClipboard(
 
 ## CutFrameToClipboard
 
+Cut a rectangular area from the specified image to the clipboard of the operating system.
+
 **Syntax**
 
-```typescript
-/**
- * Cut a rectangular area from the specified image to the clipboard of the operating system.
- * @param index Specify the image.
- * @param left Specify the rectangle (leftmost coordinate).
- * @param top Specify the rectangle (topmost coordinate).
- * @param right Specify the rectangle (rightmost coordinate).
- * @param bottom Specify the rectangle (bottommost coordinate).
- */
+```javascript
 CutFrameToClipboard(
     index: number,
     left: number,
@@ -1144,6 +1248,17 @@ CutFrameToClipboard(
     bottom: number
 ): boolean;
 ```
+**Parameters**
+
+`index`: Specify the index of the image in the buffer. The index is 0-based.
+
+`left`: Specify the rectangle (leftmost coordinate).
+
+`top`: Specify the rectangle (topmost coordinate).
+
+`right`: Specify the rectangle (rightmost coordinate).
+
+`bottom`: Specify the rectangle (bottommost coordinate).
 
 **Availability**
 <div class="availability">
@@ -1179,12 +1294,11 @@ The empty area resulted from the crop/erase/cut will be filled with the colour s
 
 ## BackgroundFillColor
 
+Return or set the fill colour for the empty area on an image that has been cut/cropped/erased.
+
 **Syntax**
 
-```typescript
-/**
- * Return or set the fill colour for the empty area on an image that has been cut/cropped/erased.
- */
+```javascript
 BackgroundFillColor: number;
 ```
 
@@ -1221,16 +1335,18 @@ By default the colour is white (0xffffff). The byte-ordering of the 24-bit RGB v
 
 ## ChangeBrightnessAsync
 
+Change the image brightness.
+
 **Syntax**
 
-```typescript
-/**
- * Change the image brightness.
- * @param index Specify the index of image in buffer.
- * @param val Specify the brightness. Allowed values [-1000~1000]. Negative value means decrease the brightness.
- */
+```javascript
 ChangeBrightnessAsync(index: number, val: number): Promise<boolean>;
 ```
+**Parameters**
+
+`index`: Specify the index of the image in the buffer. The index is 0-based.
+
+`val`: Specify the brightness. Allowed values [-1000~1000]. Negative value means decrease the brightness.
 
 **Availability**
 <div class="availability">
@@ -1261,16 +1377,19 @@ ChangeBrightnessAsync(index: number, val: number): Promise<boolean>;
 
 ## ChangeContrastAsnyc
 
+Change the image contrast.
+
 **Syntax**
 
-```typescript
-/**
- * Change the image contrast.
- * @param index Specify the index of image in buffer.
- * @param val Specify the contrast. Allowed values [-1000~1000]. Negative value means decrease the contrast.
- */
+```javascript
 ChangeContrastAsnyc(index: number, val: number): Promise<boolean>;
 ```
+
+**Parameters**
+
+`index`: Specify the index of the image in the buffer. The index is 0-based.
+
+`val`: Specify the contrast. Allowed values [-1000~1000]. Negative value means decrease the contrast.
 
 **Availability**
 <div class="availability">

@@ -13,10 +13,10 @@ permalink: /info/api/Dynamsoft_WebTwainEnv.html
 
 ``` typescript
 interface Dynamsoft.DWT {
-    readonly licenseServer: string [];
-    readonly organizationID: string;
-    readonly handshakeCode: string;
-    readonly sessionPassword: string;
+    licenseServer: string [];
+    organizationID: string;
+    handshakeCode: string;
+    sessionPassword: string;
     readonly licenseException: string;
     
     readonly ActiveXVersion: string;
