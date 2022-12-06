@@ -46,7 +46,7 @@ When attempting to upload images using any of the HTTPUploadThroughPost\*\*\* me
 
 4. Check the server-side configuration
 
-  - Please reset the maximum transferable data size. If you are using `ASP.NET` , you can change the value in the following line in the `Web.Config` file.
+    - Please reset the maximum transferable data size. If you are using `ASP.NET` , you can change the value in the following line in the `Web.Config` file.
 
     ```xml
     <httpRuntime maxRequestLength="1000000"/> // In kilobytes
