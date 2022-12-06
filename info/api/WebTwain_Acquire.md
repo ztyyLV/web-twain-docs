@@ -160,6 +160,10 @@ interface DeviceConfiguration {
      * (Added in 16.2)
      */
     SelectSourceByIndex?: number;
+    /**
+     * Whether to close the data source after aquisition. Default: false.
+     */
+    IfCloseSourceAfterAcquire?: boolean;
 }
 ```
 
@@ -838,7 +842,7 @@ DWObject.SelectSource(
 /**
  * Bring up the Source Selection User Interface (UI) for the user to choose a data source.
  */
-SelectSourceAsync(): Promise<number>;
+SelectSourceAsync(deviceType?: DynamsoftEnumsDWT.EnumDWT_DeviceType | number): Promise<boolean>;
 ```
 
 **Example**
@@ -4684,7 +4688,7 @@ DWObject.setCapabilities(
  * @param deviceType The device type
  * @param refresh Default value: false
  */
-GetDevicesAsync(deviceType?: DeviceType, refresh?: boolean): Promise<Device[]>;
+GetDevicesAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number, refresh?:boolean): Promise<Device[]>;
 ```
 
 **Example**
@@ -4745,7 +4749,7 @@ DwtObject.GetDevicesAsync(deviceType)
   .then((device[])=>{
     return DWObject.SelectDeviceAsync(device[0]) //selecting the first device
   }).then(()=>{
-    DWObject.AcquireImage(deviceConfiguration?: DeviceConfiguration);
+    DWObject.AcquireImageAsync(deviceConfiguration?: DeviceConfiguration);
 })
 ```
 
@@ -4784,77 +4788,19 @@ DwtObject.GetDevicesAsync(deviceType)
 /**
  * Scan documents into another DWObject control. eSCL is not supported.
  * @param deviceConfiguration The device configuration
- * @param sendTo The DWObject control to scan into
  */
-AcquireImageAsync(deviceConfiguration?: DeviceConfiguration, sendTo?: DWObject): Promise< boolean>;
+AcquireImageAsync(deviceConfiguration?: DeviceConfiguration): Promise< boolean>;
 ```
 
 **Example**
 
 ```javascript
-Dynamsoft.DWT.FindDevicesAsync("https://s0000001.dynamsoftwebtwain.com:port", 1).then((device[])=>{
-   Dynamsoft.DWT.createDWObjectAsync(device[0].serviceInfo).then((dwt)=>{
-      return dwt.AcquireImageAsync(deviceConfiguration, DWTObject).then(
-          function(){dwt.dispose();}, function(dwt.dispose(); throw;););
-  }).catch((exp) => {console.log(exp.message);
-      //eSCL scanners
-     return device[0].acquireImage(deviceConfiguration, DWTObject);
-  });
-}).catch((exp) => {console.log(exp.message);});
-```
-
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-</tr>
-
-<tr>
-<td align="center">not supported</td>
-<td align="center">v18.0+</td>
-<td align="center">v18.0+</td>
-<td align="center">v18.0+</td>
-<td align="center">v18.0+</td>
-<td align="center">not supported</td>
-</tr>
-
-</table>
-</div>
-
----
-
-## DeviceObject.acquireImage()
-
-**Syntax**
-
-```typescript
-/**
- * Scan documents into another DWObject control. Supports eSCL scanners and all other scanners with limited cabilities.
- * @param deviceConfiguration The device configuration.
- * @param sendTo The DWObject control to scan into
- */
-DeviceObject.acquireImage(deviceConfiguration?: DeviceConfiguration, sendTo?:DWObject ): Promise< boolean>;
-```
-
-**Example**
-
-```javascript
-Dynamsoft.DWT.FindDevicesAsync("https://s0000001.dynamsoftwebtwain.com:port", 1).then((device[])=>{
-   Dynamsoft.DWT.createDWObjectAsync(device[0].serviceInfo).then((dwt)=>{
-      return dwt.AcquireImageAsync(deviceConfiguration, DWTObject).then(
-          function(){dwt.dispose();}, function(dwt.dispose(); throw;););
-  }).catch((exp) => {console.log(exp.message);
-      //eSCL scanners
-     return device[0].acquireImage(deviceConfiguration, DWTObject);
-  });
-}).catch((exp) => {console.log(exp.message);});
+DwtObject.GetDevicesAsync(deviceType)
+  .then((device[])=>{
+    return DWObject.SelectDeviceAsync(device[0]) //selecting the first device
+  }).then(()=>{
+    DWObject.AcquireImageAsync(deviceConfiguration?: DeviceConfiguration);
+})
 ```
 
 **Availability**
