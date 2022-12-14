@@ -36,6 +36,14 @@ The prompts are one-time, once you accept the "risk", the software will install 
 The recommended fix is to patch the operating system, you can find the patch [here](http://www.catalog.update.microsoft.com/search.aspx?q=kb4474419).
 
 
+## 18.0
+
+### Dynamic Web TWAIN
+
+* DWObject.ProductKey
+* DWObject.SetProductKeyAsync()
+* DWObject.GetDeviceType()
+
 ## 17.3
 
 ### Dynamic Web TWAIN
