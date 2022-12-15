@@ -46,6 +46,15 @@ The recommended fix is to patch the operating system, you can find the patch [he
 * Dynamsoft.DWT.organizationID
 * Dynamsoft.DWT.handshakeCode
 
+### Scan
+
+* Deprecated Method: GetDeviceType
+
+### Util
+
+* Deprecated Method: SetProductKeyAsync
+* Deprecated Property: ProductKey
+
 ## 17.3
 
 ### Dynamic Web TWAIN
