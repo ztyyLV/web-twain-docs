@@ -18,12 +18,12 @@ permalink: /info/api/WebTwain_Acquire.html
 
 |                                                   |
 | :------------------------------------------------ | :------------------------------------------ | ----------------------------------------------- | --------------------------------------------------------- |
-| [`GetSourceNameItems()`](#getsourcenameitems)     | [`GetSourceNames()`](#getsourcenames)       | [`GetSourceNamesAsync()`](#getsourcenamesasync) | [`GetDeviceType()`](#getdevicetype)                       |
-| [`SelectSource()`](#selectsource)                 | [`SelectSourceAsync()`](#selectsourceasync) | [`SelectSourceByIndex()`](#selectsourcebyindex) | [`SelectSourceByIndexAsync()`](#selectsourcebyindexasync) |
-| [`SetOpenSourceTimeout()`](#setopensourcetimeout) | [`OpenSource()`](#opensource)               | [`OpenSourceAsync()`](#opensourceasync)         | [`EnableSourceUI()`](#enablesourceui)                     |
-| [`EnableSource()`](#enablesource)                 | [`AcquireImage()`](#acquireimage)           | [`startScan()`](#startscan)                     | [`DisableSource()`](#disablesource)                       |
-| [`CloseSource()`](#closesource)                   | [`CloseSourceAsync()`](#closesourceasync)   | [`CloseWorkingProcess()`](#closeworkingprocess) | [`GetDevicesAsync()`](#getdevicesasync)   | 
-| [`SelectDeviceAsync()`](#selectdeviceasync)                   | [`AcquireImageAsync()`](#acquireimageasync)   |
+| [`GetSourceNameItems()`](#getsourcenameitems)     | [`GetSourceNames()`](#getsourcenames)       | [`GetSourceNamesAsync()`](#getsourcenamesasync) | [`SelectSource()`](#selectsource)                 |
+| [`SelectSourceAsync()`](#selectsourceasync) | [`SelectSourceByIndex()`](#selectsourcebyindex) | [`SelectSourceByIndexAsync()`](#selectsourcebyindexasync) | [`SetOpenSourceTimeout()`](#setopensourcetimeout) |
+| [`OpenSource()`](#opensource)               | [`OpenSourceAsync()`](#opensourceasync)         | [`EnableSourceUI()`](#enablesourceui)                     | [`EnableSource()`](#enablesource)                 |
+| [`AcquireImage()`](#acquireimage)           | [`startScan()`](#startscan)                     | [`DisableSource()`](#disablesource)                       | [`CloseSource()`](#closesource)                   |
+| [`CloseSourceAsync()`](#closesourceasync)   | [`CloseWorkingProcess()`](#closeworkingprocess) | [`GetDevicesAsync()`](#getdevicesasync)   | [`SelectDeviceAsync()`](#selectdeviceasync)                   |
+| [`AcquireImageAsync()`](#acquireimageasync)   |
 
 **Properties**
 
@@ -841,6 +841,7 @@ DWObject.SelectSource(
 ```typescript
 /**
  * Bring up the Source Selection User Interface (UI) for the user to choose a data source.
+ * @param deviceType The device type (added in v18.0)
  */
 SelectSourceAsync(deviceType?: DynamsoftEnumsDWT.EnumDWT_DeviceType | number): Promise<boolean>;
 ```
@@ -1617,59 +1618,6 @@ GetCustomDSDataEx(): string;
 
 </table>
 </div>
-
----
-
-## GetDeviceType
-
-**Syntax**
-
-```typescript
-/**
- * Inspect the current data source and return whether it is a scanner, a webcam, etc.
- */
-GetDeviceType(): number;
-```
-
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-</tr>
-
-<tr>
-<td align="center">v7.0+</td>
-<td align="center">v10.0+</td>
-<td align="center">v11.0+</td>
-<td align="center">not supported</td>
-<td align="center">not supported</td>
-<td align="center">not supported</td>
-</tr>
-
-</table>
-</div>
-
-**Usage notes**
-
-| Value | Description                            |
-| :---- | :------------------------------------- |
-| 0     | Failed                                 |
-| 1     | Digital Camera                         |
-| 2     | Flatbed-only scanner                   |
-| 3     | Flatbed, feeder, auto feed             |
-| 4     | Feeder-only scanner, auto feed         |
-| 5     | Flatbed, feeder, without auto feed     |
-| 6     | Feeder-only scanner, without auto feed |
-| 7     | Webcam                                 |
-
-Use this method after [OpenSource()](#opensource).
 
 ---
 
@@ -4736,8 +4684,7 @@ DwtObject.GetDevicesAsync(deviceType)
 ```typescript
 /**
  * Select the device to use for scanning
- * @param device the device
- 
+ * @param device the device 
  */
 SelectDeviceAsync(device: Device): Promise< boolean>;
 ```
