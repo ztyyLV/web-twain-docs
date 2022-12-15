@@ -45,20 +45,15 @@ The recommended fix is to patch the operating system, you can find the patch [he
 * Dynamsoft.DWT.sessionPassword 
 * Dynamsoft.DWT.organizationID
 * Dynamsoft.DWT.handshakeCode
-* DWObject.ProductKey
-* DWObject.SetProductKeyAsync()
-
-
-* DWObject.GetDeviceType()
-
-### Scan
-
-* Deprecated Method: GetDeviceType
 
 ### Util
 
-* Deprecated Method: SetProductKeyAsync
-* Deprecated Property: ProductKey
+* Deprecated Method: DWObject.SetProductKeyAsync
+* Deprecated Property: DWObject.ProductKey
+
+### Scan
+
+* Deprecated Method: DWObject.GetDeviceType
 
 ## 17.3
 
