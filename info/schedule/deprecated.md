@@ -48,6 +48,7 @@ The recommended fix is to patch the operating system, you can find the patch [he
 * DWObject.ProductKey
 * DWObject.SetProductKeyAsync()
 
+
 * DWObject.GetDeviceType()
 
 ## 17.3
