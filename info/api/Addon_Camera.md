@@ -885,13 +885,12 @@ interface CropViewer {
 
 ## turnOnTorch
 
+Turn on the torch/flashlight.
+
 **Syntax**
 
 ```typescript
-/**
- * Turn on the torch/flashlight.
- */
-async turnOnTorch(): Promise<void>;
+turnOnTorch(): Promise<void>;
 ```
 
 **Availability**
@@ -927,13 +926,14 @@ This method should be called when the camera is turned on. It only works with Ch
 
 ## turnOffTorch
 
-**Syntax**
+Turn off the torch/flashlight.
 
+**Syntax**
 ```typescript
 /**
- * Turn off the torch/flashlight.
+ * 
  */
-async turnOffTorch(): Promise<void>;
+turnOffTorch(): Promise<void>;
 ```
 
 **Availability**
