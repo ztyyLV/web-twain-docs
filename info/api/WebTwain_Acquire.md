@@ -890,7 +890,6 @@ SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promi
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
 <td align="center">not supported</td>
 <td align="center">v18.0+</td>
 </tr>
@@ -988,7 +987,6 @@ SelectSourceByIndexAsync(index: number): Promise<boolean>;
 </tr>
 
 <tr>
-<td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>

@@ -2895,6 +2895,7 @@ selectionMode: Dynamsoft.DWT.EnumDWT_SelectionMode | number;
 <td align="center">v17.3+</td>
 <td align="center">v17.3+</td>
 <td align="center">v17.3+</td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>

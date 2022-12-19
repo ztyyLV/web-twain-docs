@@ -77,7 +77,6 @@ interface DeviceInfo{
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v18.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -125,7 +124,6 @@ selectSource(deviceId: string): Promise<DeviceInfo>;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v18.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -166,7 +164,6 @@ getCurrentSource():DeviceInfo;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v18.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
