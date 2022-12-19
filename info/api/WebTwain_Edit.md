@@ -100,6 +100,7 @@ ChangeBitDepth(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -107,6 +108,7 @@ ChangeBitDepth(
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -167,6 +169,7 @@ ChangeImageSize(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -175,7 +178,8 @@ ChangeImageSize(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+</td>
+<td align="center">v16.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -234,6 +238,7 @@ SetDPI(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -242,7 +247,8 @@ SetDPI(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+</td>
+<td align="center">v16.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -290,6 +296,7 @@ ConvertToBW(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -298,7 +305,8 @@ ConvertToBW(
 <td align="center">v15.3+ </td>
 <td align="center">v15.3+ </td>
 <td align="center">v15.3+ </td>
-<td align="center">v16.0+</td>
+<td align="center">v16.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -344,6 +352,7 @@ ConvertToGrayScale(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -352,7 +361,8 @@ ConvertToGrayScale(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+</td>
+<td align="center">v16.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -412,6 +422,7 @@ Invert(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -420,7 +431,8 @@ Invert(
 <td align="center">v15.3+ </td>
 <td align="center">v15.3+ </td>
 <td align="center">v15.3+ </td>
-<td align="center">v16.0+</td>
+<td align="center">v16.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -464,6 +476,7 @@ SetImageWidth(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -472,7 +485,8 @@ SetImageWidth(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v16.0+</td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -514,6 +528,7 @@ Flip(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -522,7 +537,8 @@ Flip(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v16.0+</td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -582,6 +598,7 @@ Mirror(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -590,7 +607,8 @@ Mirror(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v16.0+</td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -649,6 +667,7 @@ RotateLeft(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -657,7 +676,8 @@ RotateLeft(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v16.0+</td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -716,6 +736,7 @@ RotateRight(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -724,7 +745,8 @@ RotateRight(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v16.0+</td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -787,6 +809,7 @@ Rotate(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -795,7 +818,8 @@ Rotate(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v16.0+</td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -865,6 +889,7 @@ RotateEx(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -873,7 +898,8 @@ RotateEx(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v16.0+</td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -927,6 +953,7 @@ Crop(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -935,7 +962,8 @@ Crop(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v16.0+</td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -985,6 +1013,7 @@ Erase(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -993,7 +1022,8 @@ Erase(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v16.0+</td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1024,6 +1054,7 @@ CopyToClipboard(index: number): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1032,6 +1063,7 @@ CopyToClipboard(index: number): boolean;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1080,6 +1112,7 @@ CutToClipboard(index: number): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1089,6 +1122,7 @@ align="center">v4.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1131,6 +1165,7 @@ CropToClipboard(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1139,6 +1174,7 @@ CropToClipboard(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1181,6 +1217,7 @@ CutFrameToClipboard(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1189,6 +1226,7 @@ CutFrameToClipboard(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1224,6 +1262,7 @@ BackgroundFillColor: number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1232,7 +1271,8 @@ BackgroundFillColor: number;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
+<td align="center">v16.0+</td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1268,6 +1308,7 @@ ChangeBrightnessAsync(index: number, val: number): Promise<boolean>;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1276,7 +1317,8 @@ ChangeBrightnessAsync(index: number, val: number): Promise<boolean>;
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v17.2+</td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1308,6 +1350,7 @@ ChangeContrastAsnyc(index: number, val: number): Promise<boolean>;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1316,7 +1359,8 @@ ChangeContrastAsnyc(index: number, val: number): Promise<boolean>;
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
-<td align="center">v17.2+ </td>
+<td align="center">v17.2+</td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
