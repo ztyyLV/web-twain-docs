@@ -22,7 +22,7 @@ interface Device  {
      * The displayed name of the device.
      */
     readonly displayName: string;
-    readonly deviceType: DynamsoftEnumsDWT.EnumDWT_DeviceType;
+    readonly deviceType: Dynamsoft.EnumDWT_DeviceType;
     readonly serviceInfo?: ServiceInfo;
     readonly deviceInfo?: any;
     acquireImage(deviceConfiguration: DeviceConfiguration | null, sendTo: WebTwain): Promise< boolean>;
