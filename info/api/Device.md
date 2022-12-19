@@ -12,6 +12,22 @@ permalink: /info/api/Device.html
 
 > The properties and methods on this page live in the namespace {DeviceObject}.
 
+``` typescript
+interface Device  {
+    /**
+     * The real name of the device.
+     */
+    readonly name: string;
+    /**
+     * The displayed name of the device.
+     */
+    readonly displayName: string;
+    readonly deviceType: DynamsoftEnumsDWT.EnumDWT_DeviceType;
+    readonly serviceInfo?: ServiceInfo;
+    readonly deviceInfo?: any;
+    acquireImage(deviceConfiguration: DeviceConfiguration | null, sendTo: WebTwain): Promise< boolean>;
+}
+``` 
 
 **Methods**
 
@@ -31,7 +47,7 @@ permalink: /info/api/Device.html
  * @param deviceConfiguration The device configuration
  * @param sendTo The DWObject control to scan into
  */
-acquireImage(deviceConfiguration: DeviceConfiguration | null, sendTo:DWObject ). Promise< boolean>;
+acquireImage(deviceConfiguration: DeviceConfiguration | null, sendTo: WebTwain): Promise< boolean>;
 
 interface DeviceConfiguration {
     /**
