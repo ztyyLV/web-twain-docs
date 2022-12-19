@@ -31,21 +31,70 @@ permalink: /info/api/Device.html
  * @param deviceConfiguration The device configuration
  * @param sendTo The DWObject control to scan into
  */
-acquireImage(deviceConfiguration?: DeviceConfiguration, sendTo?:DWObject ). Promise< boolean>;
+acquireImage(deviceConfiguration: DeviceConfiguration | null, sendTo:DWObject ). Promise< boolean>;
+
+interface DeviceConfiguration {
+    /**
+     * Whether to show the built-in User Interface from the device vendor.
+     */
+    IfShowUI?: boolean;
+    /**
+     * How a pixel is represented. Basically it means whether to scan in color, grey or black & white
+     */
+    PixelType?: Dynamsoft.DWT.EnumDWT_PixelType;
+    /**
+     * How detailed is the acquisition. Measured by dots per pixel (DPI)
+     */
+    Resolution?: number;
+    /**
+     * Whether to use the document feeder or the flatbed of the device.
+     */
+    IfFeederEnabled?: boolean;
+    /**
+     * Whether to scan one side or both sides of each paper.
+     */
+    IfDuplexEnabled?: boolean;
+    /**
+     * Whether to close the built-in User Interface after aquisition. Only valid when {IfShowUI} is true.
+     */
+    IfDisableSourceAfterAcquire?: boolean;
+    /**
+     * Whether to retrieve information about the image after it's transferred.
+     */
+    IfGetImageInfo?: boolean;
+    /**
+     * Whether to retrieve extended information about the image after it's transferred.
+     */
+    IfGetExtImageInfo?: boolean;
+    /**
+     * How much extended information is retrieved. Only valid when {IfGetExtImageInfo} is true.
+     */
+    extendedImageInfoQueryLevel?: number;
+    /**
+     * Whether to simulate the manufacturer's UI inside the client-side browser (only effective when IfShowUI is true).
+     */
+    RemoteScan?:boolean;
+    /**
+     * Whether to simulate the manufacturer's UI inside the client-side browser (only effective when IfShowUI and RemoteScan are both true and the WebTwain instance doing the scan has no viewer of its own).
+     */
+    ShowRemoteScanUI?:boolean;
+    /**
+     * Specify a source by its index.
+     */
+    SelectSourceByIndex?: number;
+}
 ```
 
 **Example**
 
 ```javascript
-Dynamsoft.DWT.FindDevicesAsync("https://s0000001.dynamsoftwebtwain.com:port", 1).then((device[])=>{
-   Dynamsoft.DWT.createDWObjectAsync(device[0].serviceInfo).then((dwt)=>{
-      return dwt.AcquireImageAsync(deviceConfiguration, DWTObject).then(
-          function(){dwt.dispose();}, function(dwt.dispose(); throw;););
-  }).catch((exp) => {console.log(exp.message);
-      //eSCL scanners
-     return device[0].acquireImage(deviceConfiguration, DWTObject);
-  });
-}).catch((exp) => {console.log(exp.message);});
+DWObject.GetDevicesAsync().then((devicleList)=>{
+  return devicleList[0].acquireImage({},DWObject)  
+}).then((result)=>{
+    console.log(result)
+}).catch((e)=>{
+    console.error(e)
+})
 ```
 
 **Availability**
@@ -59,6 +108,7 @@ Dynamsoft.DWT.FindDevicesAsync("https://s0000001.dynamsoftwebtwain.com:port", 1)
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android</td>
 </tr>
 
 <tr>
@@ -68,6 +118,7 @@ Dynamsoft.DWT.FindDevicesAsync("https://s0000001.dynamsoftwebtwain.com:port", 1)
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">not supported</td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
