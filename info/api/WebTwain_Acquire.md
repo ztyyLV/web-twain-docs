@@ -881,7 +881,7 @@ SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promi
 DWObject.SelectSourceAsync()
   .then(function (sourceIndex) {
     console.log(sourceIndex);
-    DWObject.AcquireImage();
+    DWObject.AcquireImageAsync();
   })
   .catch(function (e) {
     console.log(e);
@@ -981,7 +981,7 @@ DWObject.SelectSourceByIndexAsync(0)
     return DWObject.OpenSourceAsync();
   })
   .then(() => {
-    return DWObject.AcquireImage();
+    return DWObject.AcquireImageAsync();
   });
 ```
 
@@ -4644,11 +4644,12 @@ GetDevicesAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number, refresh?
 **Example**
 
 ```javascript
-DwtObject.GetDevicesAsync(deviceType)
-.then((device[])=>{
-   return DWObject.SelectDeviceAsync(device[0]);
+DWObject.GetDevicesAsync().then((devicleList)=>{
+  return DWObject.SelectDeviceAsync(devicleList[4])  
 }).then(()=>{
-   DWObject.AcquireImage(deviceConfiguration?: DeviceConfiguration);
+    return DWObject.AcquireImageAsync({}) 
+}).catch((e)=>{
+    console.error(e)
 })
 ```
 
@@ -4677,6 +4678,10 @@ DwtObject.GetDevicesAsync(deviceType)
 </table>
 </div>
 
+**Remark**
+
+[Device APIs]({{site.info}}api/Device.html)
+
 ---
 
 ## SelectDeviceAsync
@@ -4694,11 +4699,12 @@ SelectDeviceAsync(device: Device): Promise< boolean>;
 **Example**
 
 ```javascript
-DwtObject.GetDevicesAsync(deviceType)
-  .then((device[])=>{
-    return DWObject.SelectDeviceAsync(device[0]) //selecting the first device
-  }).then(()=>{
-    DWObject.AcquireImageAsync(deviceConfiguration?: DeviceConfiguration);
+DWObject.GetDevicesAsync().then((devicleList)=>{
+  return DWObject.SelectDeviceAsync(devicleList[4])  
+}).then(()=>{
+    return DWObject.AcquireImageAsync({}) 
+}).catch((e)=>{
+    console.error(e)
 })
 ```
 
@@ -4744,11 +4750,12 @@ AcquireImageAsync(deviceConfiguration?: DeviceConfiguration): Promise< boolean>;
 **Example**
 
 ```javascript
-DwtObject.GetDevicesAsync(deviceType)
-  .then((device[])=>{
-    return DWObject.SelectDeviceAsync(device[0]) //selecting the first device
-  }).then(()=>{
-    DWObject.AcquireImageAsync(deviceConfiguration?: DeviceConfiguration);
+DWObject.GetDevicesAsync().then((devicleList)=>{
+  return DWObject.SelectDeviceAsync(devicleList[4])  
+}).then(()=>{
+    return DWObject.AcquireImageAsync({}) 
+}).catch((e)=>{
+    console.error(e)
 })
 ```
 
