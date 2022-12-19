@@ -573,6 +573,7 @@ RegisterEvent(
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
 <td align="center">v16.0+ </td>
+<td align="center">v18.0+ </td>
 </tr>
 
 </table>
@@ -637,6 +638,7 @@ FTPDownload(
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">not supported </td>
+<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -695,6 +697,7 @@ FTPDownloadEx(
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -774,6 +777,7 @@ FTPUpload(
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -860,6 +864,7 @@ FTPUploadEx(
 <td align="center">v5.0+ </td>
 <td align="center">v5.0+ </td>
 <td align="center">not supported </td>
+<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -915,6 +920,7 @@ FTPUploadAllAsMultiPageTIFF(
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -972,6 +978,7 @@ FTPUploadAllAsPDF(
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">not supported </td>
+<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1026,6 +1033,7 @@ FTPUploadAsMultiPagePDF(
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1084,6 +1092,7 @@ FTPUploadAsMultiPageTIFF(
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
 <td align="center">not supported </td>
+<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1122,6 +1131,7 @@ FTPUserName: string;
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1162,6 +1172,7 @@ FTPPassword: string;
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">not supported </td>
+<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1201,6 +1212,7 @@ FTPPort: number;
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">not supported </td>
+<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1239,6 +1251,7 @@ IfPASVMode: boolean;
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1407,6 +1420,7 @@ HTTPDownloadEx(
 <td align="center">v5.0+ </td>
 <td align="center">v5.0+ </td>
 <td align="center">not supported </td>
+<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1556,6 +1570,7 @@ HTTPDownloadDirectly(
 <td align="center">v7.0+ </td>
 <td align="center">v7.0+ </td>
 <td align="center">v7.0+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -3652,6 +3667,7 @@ IfShowCancelDialogWhenImageTransfer: boolean;
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
