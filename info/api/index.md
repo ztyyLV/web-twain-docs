@@ -433,8 +433,8 @@ permalink: /info/api/
 
 | |
 |:-|:-|
-|[`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)| [`SetProductKeyAsync()`]({{site.info}}api/WebTwain_Util.html#setproductkeyasync)| 
-|[`SetLanguage()`]({{site.info}}api/WebTwain_Util.html#setlanguage)|[`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)|
+|[`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)| [`SetLanguage()`]({{site.info}}api/WebTwain_Util.html#setlanguage)|
+|[`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)|
 
 <!--
 * [`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) 
@@ -448,8 +448,7 @@ permalink: /info/api/
 | |
 |:-|:-|
 |[`ErrorCode`]({{site.info}}api/WebTwain_Util.html#errorcode)| [`ErrorString`]({{site.info}}api/WebTwain_Util.html#errorstring) | [`LogLevel`]({{site.info}}api/WebTwain_Util.html#loglevel)| [`Manufacturer`]({{site.info}}api/WebTwain_Util.html#manufacturer)|
-|[`ProductFamily`]({{site.info}}api/WebTwain_Util.html#productfamily)| [`ProductName`]({{site.info}}api/WebTwain_Util.html#productname)| [`VersionInfo`]({{site.info}}api/WebTwain_Util.html#versioninfo)| [`ProductKey`]({{site.info}}api/WebTwain_Util.html#productkey)|
-|[`UseLocalService`]({{site.info}}api/WebTwain_Util.html#uselocalservice)|
+|[`ProductFamily`]({{site.info}}api/WebTwain_Util.html#productfamily)| [`ProductName`]({{site.info}}api/WebTwain_Util.html#productname)| [`VersionInfo`]({{site.info}}api/WebTwain_Util.html#versioninfo)| [`UseLocalService`]({{site.info}}api/WebTwain_Util.html#uselocalservice)|
 
 <!--
 * [`ErrorCode`]({{site.info}}api/WebTwain_Util.html#errorcode)
