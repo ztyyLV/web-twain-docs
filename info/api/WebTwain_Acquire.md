@@ -416,7 +416,7 @@ CloseSourceAsync(): Promise<boolean>;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
-<td align="center">Android</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -861,7 +861,7 @@ SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promi
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
-<td align="center">Android</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -4668,7 +4668,7 @@ DWObject.GetDevicesAsync().then((devicleList)=>{
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
-<td align="center">Android</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -4725,7 +4725,7 @@ DWObject.GetDevicesAsync().then((devicleList)=>{
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
-<td align="center">Android</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -4778,7 +4778,7 @@ DWObject.GetDevicesAsync().then((devicleList)=>{
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
-<td align="center">Android</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>

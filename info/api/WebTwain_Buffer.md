@@ -1868,7 +1868,7 @@ interface BufferChangeInfo {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
-<td align="center">Android</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
