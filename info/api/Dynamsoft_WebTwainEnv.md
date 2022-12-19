@@ -27,6 +27,10 @@ interface Dynamsoft.DWT {
     AutoLoad: boolean;
     ContainerMap: object;
     /**
+     * Define the friendly name to the specified client device.
+     */
+    DeviceFriendlyName: string;
+    /**
      * Define the Id and UI of the WebTwain instances.
      */
     Containers: Container[];
