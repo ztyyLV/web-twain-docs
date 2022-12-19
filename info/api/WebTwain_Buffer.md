@@ -1868,6 +1868,7 @@ interface BufferChangeInfo {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android</td>
 </tr>
 
 <tr>
@@ -1876,7 +1877,8 @@ interface BufferChangeInfo {
 <td align="center">v16.2+</td>
 <td align="center">v16.2+</td>
 <td align="center">v16.2+</td>
-<td align="center">not supported</td>
+<td align="center">v16.2+</td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
