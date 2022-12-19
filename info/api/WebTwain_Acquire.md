@@ -836,28 +836,17 @@ DWObject.SelectSource(
 
 ## SelectSourceAsync
 
+Bring up the Source Selection User Interface (UI) for the user to choose a data source.
+
 **Syntax**
 
 ```typescript
-/**
- * Bring up the Source Selection User Interface (UI) for the user to choose a data source.
- * @param deviceType The device type (added in v18.0)
- */
-SelectSourceAsync(deviceType?: DynamsoftEnumsDWT.EnumDWT_DeviceType | number): Promise<boolean>;
+SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promise<boolean>;
 ```
 
-**Example**
+**Parameters**
 
-```javascript
-DWObject.SelectSourceAsync()
-  .then(function (sourceIndex) {
-    console.log(sourceIndex);
-    DWObject.AcquireImage();
-  })
-  .catch(function (e) {
-    console.log(e);
-  });
-```
+`deviceType`: Specify the device type of scanners. Please refer to [EnumDWT_DeviceType](({{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_devicetype)).
 
 **Availability**
 <div class="availability">
@@ -885,6 +874,19 @@ DWObject.SelectSourceAsync()
 </table>
 </div>
 ---
+
+**Example**
+
+```javascript
+DWObject.SelectSourceAsync()
+  .then(function (sourceIndex) {
+    console.log(sourceIndex);
+    DWObject.AcquireImage();
+  })
+  .catch(function (e) {
+    console.log(e);
+  });
+```
 
 ## SelectSourceByIndex
 
