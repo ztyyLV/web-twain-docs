@@ -66,6 +66,7 @@ interface DeviceInfo{
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -75,6 +76,8 @@ interface DeviceInfo{
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
+<td align="center">v18.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -111,6 +114,7 @@ selectSource(deviceId: string): Promise<DeviceInfo>;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -120,6 +124,8 @@ selectSource(deviceId: string): Promise<DeviceInfo>;
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
+<td align="center">v18.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -149,6 +155,7 @@ getCurrentSource():DeviceInfo;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -158,6 +165,8 @@ getCurrentSource():DeviceInfo;
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
+<td align="center">v18.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -187,6 +196,7 @@ closeSource(): Promise<DeviceInfo>;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -195,7 +205,8 @@ closeSource(): Promise<DeviceInfo>;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
+<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -230,6 +241,7 @@ interface Resolution{
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -238,7 +250,8 @@ interface Resolution{
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
+<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -269,6 +282,7 @@ setResolution(resolution: Resolution): Promise<Resolution>;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -277,7 +291,8 @@ setResolution(resolution: Resolution): Promise<Resolution>;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
+<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -307,6 +322,7 @@ getCurrentResolution(): Promise<Resolution>;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -315,7 +331,8 @@ getCurrentResolution(): Promise<Resolution>;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
+<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -355,6 +372,7 @@ play(element?: HTMLElement,
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -363,7 +381,8 @@ play(element?: HTMLElement,
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
+<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -399,6 +418,7 @@ pause(): void;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -407,7 +427,8 @@ pause(): void;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
+<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -436,6 +457,7 @@ resume(): void;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -444,7 +466,8 @@ resume(): void;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
+<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -474,6 +497,7 @@ stop(): void;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -482,7 +506,8 @@ stop(): void;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
+<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -512,6 +537,7 @@ getStatus(): string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -520,7 +546,8 @@ getStatus(): string;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
+<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -554,6 +581,7 @@ capture(): Promise<Blob>;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -562,7 +590,8 @@ capture(): Promise<Blob>;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
+<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -592,6 +621,7 @@ closeVideo(): void;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -600,7 +630,8 @@ closeVideo(): void;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
+<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -628,6 +659,7 @@ on("video-closed", callback: () => void): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -636,7 +668,8 @@ on("video-closed", callback: () => void): boolean;
 <td align="center">v16.2+</td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+</td>
-<td align="center">v16.2+</td>
+<td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -668,6 +701,7 @@ on("video-error", callback: (errorCode, errorString) => void): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -676,7 +710,8 @@ on("video-error", callback: (errorCode, errorString) => void): boolean;
 <td align="center">v16.2+</td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+</td>
-<td align="center">v16.2+</td>
+<td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -867,6 +902,7 @@ interface CropViewer {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -875,7 +911,8 @@ interface CropViewer {
 <td align="center">v17.2+</td>
 <td align="center">v17.2+</td>
 <td align="center">v17.2+</td>
-<td align="center">v17.2+</td>
+<td align="center">v17.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -904,6 +941,7 @@ turnOnTorch(): Promise<void>;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -912,6 +950,7 @@ turnOnTorch(): Promise<void>;
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
+<td align="center">v18.0+ </td>
 <td align="center">v18.0+</td>
 </tr>
 
@@ -947,6 +986,7 @@ turnOffTorch(): Promise<void>;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -955,6 +995,7 @@ turnOffTorch(): Promise<void>;
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
+<td align="center">v18.0+ </td>
 <td align="center">v18.0+</td>
 </tr>
 
@@ -989,6 +1030,7 @@ getCapabilities(): MediaTrackCapabilities
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -997,6 +1039,7 @@ getCapabilities(): MediaTrackCapabilities
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
+<td align="center">v18.0+ </td>
 <td align="center">v18.0+</td>
 </tr>
 

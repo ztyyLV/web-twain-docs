@@ -102,6 +102,7 @@ Dynamsoft.DWT.CreateDWTObjectEx(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -111,6 +112,7 @@ Dynamsoft.DWT.CreateDWTObjectEx(
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -144,6 +146,7 @@ clearSelectedAreas(): void;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -153,6 +156,7 @@ clearSelectedAreas(): void;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -211,6 +215,7 @@ interface CustomElement {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -220,6 +225,7 @@ interface CustomElement {
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -288,6 +294,7 @@ interface ImageEditor {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -297,6 +304,7 @@ interface ImageEditor {
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -811,6 +819,7 @@ interface ViewMode {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -820,6 +829,7 @@ interface ViewMode {
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -914,6 +924,7 @@ first():number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -923,6 +934,7 @@ first():number;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -961,6 +973,7 @@ fitWindow(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -970,6 +983,7 @@ fitWindow(
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1019,6 +1033,7 @@ gotoPage(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1028,6 +1043,7 @@ gotoPage(
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1063,6 +1079,7 @@ hide(): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1072,6 +1089,7 @@ hide(): boolean;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1107,6 +1125,7 @@ last():number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1116,6 +1135,7 @@ last():number;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1151,6 +1171,7 @@ next(): number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1160,6 +1181,7 @@ next(): number;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1259,6 +1281,7 @@ previous(): number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1268,6 +1291,7 @@ previous(): number;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1304,6 +1328,7 @@ render(): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1313,6 +1338,7 @@ render(): boolean;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1390,6 +1416,7 @@ interface Area {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1399,6 +1426,7 @@ interface Area {
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1458,6 +1486,7 @@ setViewMode(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1467,6 +1496,7 @@ setViewMode(
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1506,6 +1536,7 @@ show(): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1515,6 +1546,7 @@ show(): boolean;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1550,6 +1582,7 @@ unbind(): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1559,6 +1592,7 @@ unbind(): boolean;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1599,6 +1633,7 @@ acceptDrop: boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1608,6 +1643,7 @@ acceptDrop: boolean;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1642,6 +1678,7 @@ allowSlide: boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1651,6 +1688,7 @@ allowSlide: boolean;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1689,6 +1727,7 @@ allowPageDragging: boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1698,6 +1737,7 @@ allowPageDragging: boolean;
 <td align="center">v17.3+ </td>
 <td align="center">v17.3+ </td>
 <td align="center">v17.3+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1735,6 +1775,7 @@ background: string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1744,6 +1785,7 @@ background: string;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1783,6 +1825,7 @@ border: string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1792,6 +1835,7 @@ border: string;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1831,6 +1875,7 @@ cursor: string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1840,6 +1885,7 @@ cursor: string;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1888,6 +1934,7 @@ height: number | string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1897,6 +1944,7 @@ height: number | string;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1940,6 +1988,7 @@ readonly idPostfix: string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1949,6 +1998,7 @@ readonly idPostfix: string;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1985,6 +2035,7 @@ ifAutoScroll: string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1994,6 +2045,7 @@ ifAutoScroll: string;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -2029,6 +2081,7 @@ innerBorder: string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2038,6 +2091,7 @@ innerBorder: string;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -2077,6 +2131,7 @@ pageMargin: number | string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2086,6 +2141,7 @@ pageMargin: number | string;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -2125,6 +2181,7 @@ selectedAreaBorderColor: string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2134,6 +2191,7 @@ selectedAreaBorderColor: string;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -2173,6 +2231,7 @@ selectedPageBackground: string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2182,6 +2241,7 @@ selectedPageBackground: string;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -2221,6 +2281,7 @@ selectedPageBorder: string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2230,6 +2291,7 @@ selectedPageBorder: string;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -2271,6 +2333,7 @@ selectionRectAspectRatio: number | string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2280,6 +2343,7 @@ selectionRectAspectRatio: number | string;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -2319,6 +2383,7 @@ singlePageMode: boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2328,6 +2393,7 @@ singlePageMode: boolean;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -2375,6 +2441,7 @@ width: number | string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2384,6 +2451,7 @@ width: number | string;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -2427,6 +2495,7 @@ zoom: number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2436,6 +2505,7 @@ zoom: number;
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -2475,6 +2545,7 @@ autoChangeIndex: boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2484,6 +2555,7 @@ autoChangeIndex: boolean;
 <td align="center">v17.0+</td>
 <td align="center">v17.0+</td>
 <td align="center">v17.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -2553,6 +2625,7 @@ interface DocumentViewerTemplate{
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2562,6 +2635,7 @@ interface DocumentViewerTemplate{
 <td align="center">v17.3+ </td>
 <td align="center">v17.3+ </td>
 <td align="center">v17.3+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -2636,6 +2710,7 @@ interface DocumentEditor {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2645,6 +2720,7 @@ interface DocumentEditor {
 <td align="center">v17.3+ </td>
 <td align="center">v17.3+ </td>
 <td align="center">v17.3+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -2707,6 +2783,7 @@ interface CheckboxSettings {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2716,6 +2793,7 @@ interface CheckboxSettings {
 <td align="center">v17.3+ </td>
 <td align="center">v17.3+ </td>
 <td align="center">v17.3+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -2767,6 +2845,7 @@ interface pageNumberSettings {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2776,6 +2855,7 @@ interface pageNumberSettings {
 <td align="center">v17.3+ </td>
 <td align="center">v17.3+ </td>
 <td align="center">v17.3+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -2805,6 +2885,7 @@ selectionMode: Dynamsoft.DWT.EnumDWT_SelectionMode | number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2943,6 +3024,7 @@ DWObject.Viewer.on("keyup", function (keyboardEvent) {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2952,6 +3034,7 @@ DWObject.Viewer.on("keyup", function (keyboardEvent) {
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -3003,6 +3086,7 @@ interface rect{
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3012,6 +3096,7 @@ interface rect{
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -3054,6 +3139,7 @@ on('pageAreaUnselected',
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3063,6 +3149,7 @@ on('pageAreaUnselected',
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -3109,6 +3196,7 @@ on('pageRendered',
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3118,6 +3206,7 @@ on('pageRendered',
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -3160,6 +3249,7 @@ on('resize',
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3169,6 +3259,7 @@ on('resize',
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>

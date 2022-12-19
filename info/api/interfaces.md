@@ -38,6 +38,7 @@ interface serviceInfo {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -46,7 +47,8 @@ interface serviceInfo {
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
-<td align="center">not supported</td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -79,6 +81,7 @@ interface Device{
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -87,7 +90,8 @@ interface Device{
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
-<td align="center">not supported</td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
 </tr>
 
 </table>
