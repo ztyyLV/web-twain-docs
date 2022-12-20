@@ -11,6 +11,55 @@ permalink: /info/schedule/Stable.html
 
 # Stable Releases
 
+## 18.0 (12/22/2022)
+
+### Localhost Scan
+
+#### New Features 
+
+##### Service Edition for Android
+  - Enable document scanning from eSCL-compatible scanners or Wi-Fi Direct scanners directly to your Android mobile device. Please refer to <a href="https://www.dynamsoft.com/blog/announcement/web-twain-android-service-scan-document/" target="_blank">this blog</a> for more details.
+
+##### Scanner
+  - Added new method <a href="{{site.info}}api/WebTwain_Acquire.html#getdevicesasync" target="_blank">GetDevicesAsync</a>.
+  - Added new method <a href="{{site.info}}api/WebTwain_Acquire.html#selectdeviceasync" target="_blank">SelectDeviceAsync</a>.
+  - Added new method <a href="{{site.info}}api/WebTwain_Acquire.html#acquireimageasync" target="_blank">AcquireImageAsync</a>.
+  - Added new optional parameter `deviceType` to the method <a href="{{site.info}}api/WebTwain_Acquire.html#selectsourceasync" target="_blank">SelectSourceAsync</a>.
+
+##### Mobile Web Capture
+  - Support turning on/off torch
+    - Added new method <a href="{{site.info}}api/Addon_Camera.html#turnontorch" target="_blank">turnOnTorch</a> and <a href="{{site.info}}api/Addon_Camera.html#turnofftorch" target="_blank">turnOffTorch</a>.
+    - Added new method <a href="{{site.info}}api/Addon_Camera.html#getcapabilities" target="_blank">getCapabilities</a>.
+    - Added new property `torch` to `ScannerViewer`. Refer to <a href="{{site.info}}api/Addon_Camera.html#scandocument" target="_blank">scanDocument</a>.
+
+#### Improved Features
+  - All license key types can now be specified with the API Dynamsoft.DWT.ProductKey.
+  - Added new property <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html" target="_blank">Dynamsoft.DWT.DeviceFriendlyName</a> which defines the specific device that consumes the license quota
+  -	Added new enumeration <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_extimageinfo" target="_blank">Dynamsoft.DWT.EnumDWT_ExtImageInfo</a>
+  -	Updated Barcode Reader add-on library to version 9.4. Check out the release notes for <a href="https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/release-notes/js-9.html?ver=latest" target="_blank">Barcode Reader JavaScript SDK - 9.x</a>
+
+
+#### Bug Fixes
+  - On MacOS, images in the viewer were sometimes lost when waking up from sleep mode.
+ 
+#### Deprecations
+  - Check out the [Deprecations]({{site.info}}schedule/deprecated.html#180) page for v18.0 deprecations.
+
+#### Changes to ActiveX Edition
+  -	Added the following API supports for better compatibility with HTML5 Edition: 
+  <a href="{{site.info}}api/WebTwain_IO.html#httpupload" target="_blank">HTTPUpload</a>, 
+  <a href="{{site.info}}api/WebTwain_IO.html#converttobase64" target="_blank">ConvertToBase64</a>, 
+  <a href="{{site.info}}api/WebTwain_Buffer.html#onbufferchanged" target="_blank">OnBufferChanged</a>, 
+  <a href="{{site.info}}api/WebTwain_Acquire.html#closesourceasync" target="_blank">CloseSourceAsync</a>, 
+  <a href="{{site.info}}api/WebTwain_Acquire.html#opensourceasync" target="_blank">OpenSourceAsync</a>, 
+  <a href="{{site.info}}api/WebTwain_Acquire.html#getsourcenamesasync" target="_blank">GetSourceNamesAsync</a>, 
+  <a href="{{site.info}}api/WebTwain_Acquire.html#closesourcemanagerasync" target="_blank">CloseSourceManagerAsync</a>, 
+  <a href="{{site.info}}api/WebTwain_Acquire.html#opensourcemanagerasync" target="_blank">OpenSourceManagerAsync</a>
+
+### Remote Scan
+Remote Document Scanning enables document scanning from all available Dynamsoft Services and eSCL scanners on the intranet through one proxy service, via any supported devices and browsers, without any software installation. Please refer to <a href="https://www.dynamsoft.com/remote-scan/docs" target="_blank">this documentation</a> for more details.
+
+
 ## 17.3 (06/30/2022)
 
 ### New and Improved Features 
