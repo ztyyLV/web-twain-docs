@@ -904,7 +904,7 @@ SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promi
 DWObject.SelectSourceAsync()
   .then(function (sourceIndex) {
     console.log(sourceIndex);
-    DWObject.AcquireImageAsync();
+    return DWObject.AcquireImageAsync();
   })
   .catch(function (e) {
     console.log(e);
