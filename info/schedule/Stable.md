@@ -40,7 +40,10 @@ permalink: /info/schedule/Stable.html
 
 
 #### Bug Fixes
-  - On MacOS, images in the viewer were sometimes lost when waking up from sleep mode.
+  - Base64 string returning null on load
+  - Scanner source name not showing on source list
+  - OnPreexecute not removing loading bar
+  - ConvertToBase64 not working in v17.3
  
 #### Deprecations
   - Check out the [Deprecations]({{site.info}}schedule/deprecated.html#180) page for v18.0 deprecations.
@@ -213,7 +216,7 @@ See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scann
 
 *	Fixed a bug where erasing part of an image will change its original display mode to be 'centered'.
 
-### Changes to the ActiveX Edition
+### Changes to ActiveX Edition
 
 *	Fixed a bug where the barcode reader addon fails to initiate on IE 10.
 
@@ -408,7 +411,7 @@ See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scann
 
 * Check out the [Deprecations]({{site.info}}schedule/deprecated.html#162) page for v16.2.
 
-### Changes to the ActiveX Edition
+### Changes to ActiveX Edition
 
 * Internet Explorer 8 is no longer supported.
 * Fixed a bug where when saving an image as TIFF, the same image gets duplicated in the buffer.
@@ -475,7 +478,7 @@ See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scann
 
 No deprecation in version 16.1.
 
-### Changes to the ActiveX Edition
+### Changes to ActiveX Edition
 
 No changes in version 16.1.
 
@@ -534,7 +537,7 @@ No changes in version 16.1.
 
 `CapGet()` , `CapGetHelp()` , `CapGetCurrent()` , `CapGetDefault()` , `CapGetFrameBottom()` , `CapGetFrameLeft()` , `CapGetFrameRight()` , `CapGetFrameTop()` , `CapGetLabel()` , `CapGetLabels()` , `CapSet()` , `CapReset()` , `CapSetFrame()` , `CapIfSupported()` , `GetCapItems()` , `GetCapItemsString()` , `SetCapItems()` , `SetCapItemsString()` , `Capability` , `CapNumItems` , `CapMaxValue` , `CapMinValue` , `CapCurrentValue` , `CapCurrentIndex` , `CapDefaultValue` , `CapDefaultIndex` , `CapType` , `CapValueType` , `CapDescription` , `CapStepSize` , `CapValue` , `CapValueString`
 
-### Changes to the ActiveX Edition
+### Changes to ActiveX Edition
 
 * Added method `SelectImages()` .
 * Added property `SelectedImagesIndices` .
