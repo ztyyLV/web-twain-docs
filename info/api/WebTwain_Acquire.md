@@ -4818,8 +4818,8 @@ GetDevicesAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number, refresh?
 **Example**
 
 ```javascript
-DWObject.GetDevicesAsync().then((devicleList)=>{
-  return DWObject.SelectDeviceAsync(devicleList[4])  
+DWObject.GetDevicesAsync().then((deviceList)=>{
+  return DWObject.SelectDeviceAsync(deviceList[0])  //Select the first device
 }).then(()=>{
     return DWObject.AcquireImageAsync({}) 
 }).catch((e)=>{
@@ -4875,8 +4875,8 @@ SelectDeviceAsync(device: Device): Promise< boolean>;
 **Example**
 
 ```javascript
-DWObject.GetDevicesAsync().then((devicleList)=>{
-  return DWObject.SelectDeviceAsync(devicleList[4])  
+DWObject.GetDevicesAsync().then((deviceList)=>{
+  return DWObject.SelectDeviceAsync(deviceList[0])  //Select the first device
 }).then(()=>{
     return DWObject.AcquireImageAsync({}) 
 }).catch((e)=>{
@@ -4928,8 +4928,8 @@ AcquireImageAsync(deviceConfiguration?: DeviceConfiguration): Promise< boolean>;
 **Example**
 
 ```javascript
-DWObject.GetDevicesAsync().then((devicleList)=>{
-  return DWObject.SelectDeviceAsync(devicleList[4])  
+DWObject.GetDevicesAsync().then((deviceList)=>{
+  return DWObject.SelectDeviceAsync(deviceList[0])  //Select the first device
 }).then(()=>{
     return DWObject.AcquireImageAsync({}) 
 }).catch((e)=>{

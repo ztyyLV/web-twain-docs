@@ -163,12 +163,12 @@ permalink: /info/api/
 
 |                                                   |
 | :------------------------------------------------ | :------------------------------------------ | ----------------------------------------------- | --------------------------------------------------------- |
-| [`GetSourceNameItems()`](#getsourcenameitems)     | [`GetSourceNames()`](#getsourcenames)       | [`GetSourceNamesAsync()`](#getsourcenamesasync) | [`SelectSource()`](#selectsource)                 |
-| [`SelectSourceAsync()`](#selectsourceasync) | [`SelectSourceByIndex()`](#selectsourcebyindex) | [`SelectSourceByIndexAsync()`](#selectsourcebyindexasync) | [`SetOpenSourceTimeout()`](#setopensourcetimeout) |
-| [`OpenSource()`](#opensource)               | [`OpenSourceAsync()`](#opensourceasync)         | [`EnableSourceUI()`](#enablesourceui)                     | [`EnableSource()`](#enablesource)                 |
-| [`AcquireImage()`](#acquireimage)           | [`startScan()`](#startscan)                     | [`DisableSource()`](#disablesource)                       | [`CloseSource()`](#closesource)                   |
-| [`CloseSourceAsync()`](#closesourceasync)   | [`CloseWorkingProcess()`](#closeworkingprocess) | [`GetDevicesAsync()`](#getdevicesasync)   | [`SelectDeviceAsync()`](#selectdeviceasync)                   |
-| [`AcquireImageAsync()`](#acquireimageasync)   |
+| [`GetSourceNameItems()`]({{site.info}}api/WebTwain_Acquire.html#getsourcenameitems)     | [`GetSourceNames()`]({{site.info}}api/WebTwain_Acquire.html#getsourcenames)       | [`GetSourceNamesAsync()`]({{site.info}}api/WebTwain_Acquire.html#getsourcenamesasync) | [`SelectSource()`]({{site.info}}api/WebTwain_Acquire.html#selectsource)                 |
+| [`SelectSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#selectsourceasync) | [`SelectSourceByIndex()`]({{site.info}}api/WebTwain_Acquire.html#selectsourcebyindex) | [`SelectSourceByIndexAsync()`]({{site.info}}api/WebTwain_Acquire.html#selectsourcebyindexasync) | [`SetOpenSourceTimeout()`]({{site.info}}api/WebTwain_Acquire.html#setopensourcetimeout) |
+| [`OpenSource()`]({{site.info}}api/WebTwain_Acquire.html#opensource)               | [`OpenSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#opensourceasync)         | [`EnableSourceUI()`]({{site.info}}api/WebTwain_Acquire.html#enablesourceui)                     | [`EnableSource()`]({{site.info}}api/WebTwain_Acquire.html#enablesource)                 |
+| [`AcquireImage()`]({{site.info}}api/WebTwain_Acquire.html#acquireimage)           | [`startScan()`]({{site.info}}api/WebTwain_Acquire.html#startscan)                     | [`DisableSource()`]({{site.info}}api/WebTwain_Acquire.html#disablesource)                       | [`CloseSource()`]({{site.info}}api/WebTwain_Acquire.html#closesource)                   |
+| [`CloseSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#closesourceasync)   | [`CloseWorkingProcess()`]({{site.info}}api/WebTwain_Acquire.html#closeworkingprocess) | [`GetDevicesAsync()`]({{site.info}}api/WebTwain_Acquire.html#getdevicesasync)   | [`SelectDeviceAsync()`]({{site.info}}api/WebTwain_Acquire.html#selectdeviceasync)                   |
+| [`AcquireImageAsync()`]({{site.info}}api/WebTwain_Acquire.html#acquireimageasync)   |
 
 
 <!--

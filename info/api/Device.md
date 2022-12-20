@@ -104,8 +104,8 @@ interface DeviceConfiguration {
 **Example**
 
 ```javascript
-DWObject.GetDevicesAsync().then((devicleList)=>{
-  return devicleList[0].acquireImage({},DWObject)  
+DWObject.GetDevicesAsync().then((deviceList)=>{
+  return deviceList[0].acquireImage({},DWObject)  
 }).then((result)=>{
     console.log(result)
 }).catch((e)=>{
