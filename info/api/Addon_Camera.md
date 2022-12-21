@@ -966,9 +966,6 @@ Turn off the torch/flashlight.
 
 **Syntax**
 ```typescript
-/**
- * 
- */
 turnOffTorch(): Promise<void>;
 ```
 
