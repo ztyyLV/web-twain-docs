@@ -62,6 +62,7 @@ permalink: /info/schedule/Stable.html
 ### Remote Scan
 Remote Document Scanning enables document scanning from all available Dynamsoft Services and eSCL scanners on the intranet through one proxy service, via any supported devices and browsers, without any software installation. Please refer to <a href="https://www.dynamsoft.com/remote-scan/docs" target="_blank">this documentation</a> for more details.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yMUmETWLDQ8" title="New Features in Dynamic Web TWAIN 18.0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 17.3 (06/30/2022)
 
