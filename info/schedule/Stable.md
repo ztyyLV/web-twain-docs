@@ -42,7 +42,7 @@ permalink: /info/schedule/Stable.html
 #### Bug Fixes
   - Base64 string returning null on load
   - Scanner source name not showing on source list
-  - OnPreexecute not removing loading bar
+  - OnPreExecute not removing loading bar
   - ConvertToBase64 not working in v17.3
  
 #### Deprecations
