@@ -31,7 +31,7 @@ There are 3 ways to verify whether your scanner is ICA compliant.
 
   - Open the [demo page](https://demo.dynamsoft.com/dwt/online_demo_scan.aspx) on [macOS]({{site.getstarted}}platform.html#browsers-on-macos)
 
-  > If you haven't installed DWT, a dialog will show up for you to download and install it.
+  > If you haven't installed Dynamic Web TWAIN, a dialog will show up for you to download and install it.
 
   - Make sure the scanner driver shows up in the scanner list.
 
