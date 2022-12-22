@@ -18,11 +18,12 @@ permalink: /info/api/WebTwain_Acquire.html
 
 |                                                   |
 | :------------------------------------------------ | :------------------------------------------ | ----------------------------------------------- | --------------------------------------------------------- |
-| [`GetSourceNameItems()`](#getsourcenameitems)     | [`GetSourceNames()`](#getsourcenames)       | [`GetSourceNamesAsync()`](#getsourcenamesasync) | [`GetDeviceType()`](#getdevicetype)                       |
-| [`SelectSource()`](#selectsource)                 | [`SelectSourceAsync()`](#selectsourceasync) | [`SelectSourceByIndex()`](#selectsourcebyindex) | [`SelectSourceByIndexAsync()`](#selectsourcebyindexasync) |
-| [`SetOpenSourceTimeout()`](#setopensourcetimeout) | [`OpenSource()`](#opensource)               | [`OpenSourceAsync()`](#opensourceasync)         | [`EnableSourceUI()`](#enablesourceui)                     |
-| [`EnableSource()`](#enablesource)                 | [`AcquireImage()`](#acquireimage)           | [`startScan()`](#startscan)                     | [`DisableSource()`](#disablesource)                       |
-| [`CloseSource()`](#closesource)                   | [`CloseSourceAsync()`](#closesourceasync)   | [`CloseWorkingProcess()`](#closeworkingprocess) |
+| [`GetSourceNameItems()`](#getsourcenameitems)     | [`GetSourceNames()`](#getsourcenames)       | [`GetSourceNamesAsync()`](#getsourcenamesasync) | [`SelectSource()`](#selectsource)                 |
+| [`SelectSourceAsync()`](#selectsourceasync) | [`SelectSourceByIndex()`](#selectsourcebyindex) | [`SelectSourceByIndexAsync()`](#selectsourcebyindexasync) | [`SetOpenSourceTimeout()`](#setopensourcetimeout) |
+| [`OpenSource()`](#opensource)               | [`OpenSourceAsync()`](#opensourceasync)         | [`EnableSourceUI()`](#enablesourceui)                     | [`EnableSource()`](#enablesource)                 |
+| [`AcquireImage()`](#acquireimage)           | [`startScan()`](#startscan)                     | [`DisableSource()`](#disablesource)                       | [`CloseSource()`](#closesource)                   |
+| [`CloseSourceAsync()`](#closesourceasync)   | [`CloseWorkingProcess()`](#closeworkingprocess) | [`GetDevicesAsync()`](#getdevicesasync)   | [`SelectDeviceAsync()`](#selectdeviceasync)                   |
+| [`AcquireImageAsync()`](#acquireimageasync)   |
 
 **Properties**
 
@@ -52,10 +53,10 @@ permalink: /info/api/WebTwain_Acquire.html
 
 |                                                                                   |
 | :-------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| [`OpenSourceManager()`]({{site.info}}api/WebTwain_Acquire.html#opensourcemanager) | [`OpenSourceManagerAsync()`]({{site.info}}api/WebTwain_Acquire.html#opensourcemanagerasync) | [`CloseSourceManager()`]({{site.info}}api/WebTwain_Acquire.html#closesourcemanager)               | [`CloseSourceManagerAsync()`]({{site.info}}api/WebTwain_Acquire.html#closesourcemanagerasync) |
-| [`GetCustomDSData()`]({{site.info}}api/WebTwain_Acquire.html#getcustomdsdata)     | [`GetCustomDSDataEx()`]({{site.info}}api/WebTwain_Acquire.html#getcustomdsdataex)           | [`CancelAllPendingTransfers()`]({{site.info}}api/WebTwain_Acquire.html#cancelallpendingtransfers) | [`FeedPage()`]({{site.info}}api/WebTwain_Acquire.html#feedpage)                               |
-| [`ResetImageLayout()`]({{site.info}}api/WebTwain_Acquire.html#resetimagelayout)   | [`RewindPage()`]({{site.info}}api/WebTwain_Acquire.html#rewindpage)                         | [`SetCustomDSData()`]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdata)                     | [`SetCustomDSDataEx()`]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdataex)             |
-| [`SetFileXferInfo()`]({{site.info}}api/WebTwain_Acquire.html#setfilexferinfo)     | [`SetImageLayout()`]({{site.info}}api/WebTwain_Acquire.html#setimagelayout)                 |
+| [`OpenSourceManager()`](#opensourcemanager) | [`OpenSourceManagerAsync()`](#opensourcemanagerasync) | [`CloseSourceManager()`](#closesourcemanager)               | [`CloseSourceManagerAsync()`](#closesourcemanagerasync) |
+| [`GetCustomDSData()`](#getcustomdsdata)     | [`GetCustomDSDataEx()`](#getcustomdsdataex)           | [`CancelAllPendingTransfers()`](#cancelallpendingtransfers) | [`FeedPage()`](#feedpage)                               |
+| [`ResetImageLayout()`](#resetimagelayout)   | [`RewindPage()`](#rewindpage)                         | [`SetCustomDSData()`](#setcustomdsdata)                     | [`SetCustomDSDataEx()`](#setcustomdsdataex)             |
+| [`SetFileXferInfo()`](#setfilexferinfo)     | [`SetImageLayout()`](#setimagelayout)                 |
 
 **Properties**
 
@@ -118,57 +119,18 @@ AcquireImage(
 ): void;
 
 interface DeviceConfiguration {
-    /**
-     * Whether to show the built-in User Interface from the device vendor.
-     */
-    IfShowUI?: boolean;
-    /**
-     * How a pixel is represented. Basically it means whether to scan in color, grey or black & white
-     */
-    PixelType?: Dynamsoft.DWT.EnumDWT_PixelType;
-    /**
-     * How detailed is the acquisition. Measured by dots per pixel (DPI)
-     */
-    Resolution?: number;
-    /**
-     * Whether to use the document feeder or the flatbed of the device.
-     */
-    IfFeederEnabled?: boolean;
-    /**
-     * Whether to scan one side or both sides of each paper.
-     */
-    IfDuplexEnabled?: boolean;
-    /**
-     * Whether to close the built-in User Interface after aquisition. Only valid when {IfShowUI} is true.
-     */
-    IfDisableSourceAfterAcquire?: boolean;
-    /**
-     * Whether to retrieve information about the image after it's transferred.
-     */
-    IfGetImageInfo?: boolean;
-    /**
-     * Whether to retrieve extended information about the image after it's transferred.
-     */
-    IfGetExtImageInfo?: boolean;
-    /**
-     * How much extended information is retrieved. Only valid when {IfGetExtImageInfo} is true.
-     */
-    extendedImageInfoQueryLevel?: number;
-    /**
-     * Whether to simulate the manufacturer's UI inside the client-side browser (only effective when IfShowUI is true).
-     * (Added in 16.2)
-     */
-    RemoteScan?:boolean;
-    /**
-     * Whether to simulate the manufacturer's UI inside the client-side browser (only effective when IfShowUI and RemoteScan are both true and the WebTwain instance doing the scan has no viewer of its own).
-     * (Added in 16.2)
-     */
-    ShowRemoteScanUI?:boolean;
-    /**
-     * Specify a source by its index.
-     * (Added in 16.2)
-     */
-    SelectSourceByIndex?: number;
+    IfShowUI?: boolean; //Whether to show the built-in User Interface from the device vendor
+    PixelType?: Dynamsoft.DWT.EnumDWT_PixelType | number | string; //Whether to scan in color, grey or black & white
+    Resolution?: number; //Measured by dots per pixel (DPI)
+    IfFeederEnabled?: boolean; //Whether to use the document feeder or the flatbed of the device
+    IfDuplexEnabled?: boolean; //Whether to scan one side or both sides
+    IfDisableSourceAfterAcquire?: boolean; //Whether to close the built-in User Interface after aquisition. Only valid when {IfShowUI} is true.
+    IfGetImageInfo?: boolean; //Whether to retrieve information about the image after it's transferred.
+    IfGetExtImageInfo?: boolean; //Whether to retrieve extended information about the image after it's transferred.
+    extendedImageInfoQueryLevel?: Dynamsoft.DWT.EnumDWT_ExtImageInfo | number; //How much extended information is retrieved. Only valid when {IfGetExtImageInfo} is true.
+    SelectSourceByIndex?: number; //Specify a source by its index.
+    IfCloseSourceAfterAcquire?: boolean; //Whether to close the data source after aquisition. Default: false.
+}
 }
 ```
 
@@ -183,14 +145,16 @@ interface DeviceConfiguration {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v1.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v1.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -383,14 +347,16 @@ CloseSource(): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v1.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v1.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -421,15 +387,17 @@ CloseSourceAsync(): Promise<boolean>;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
+<td align="center">v16.1+</td>
+<td align="center">v16.1+</td>
+<td align="center">not supported</td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -459,14 +427,16 @@ DisableSource(): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v1.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v1.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -501,14 +471,16 @@ EnableSource(): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v1.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v1.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -550,14 +522,16 @@ EnableSourceUI(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v16.0+ </td>
+<td align="center">not supported</td>
 <td align="center">v16.0+</td>
-<td align="center">v16.0+ </td>
 <td align="center">v16.0+</td>
+<td align="center">v16.0+</td>
+<td align="center">v16.0+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -592,14 +566,16 @@ OpenSource(): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v1.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v1.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -630,14 +606,16 @@ OpenSourceAsync(): Promise<boolean>;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
+<td align="center">v16.1+</td>
+<td align="center">v16.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -720,14 +698,16 @@ interface Version {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v15.3+ </td>
-<td align="center">v15.3+ </td>
-<td align="center">v15.3+ </td>
-<td align="center">v15.3+ </td>
+<td align="center">not supported</td>
+<td align="center">v15.3+</td>
+<td align="center">v15.3+</td>
+<td align="center">v15.3+</td>
+<td align="center">v15.3+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -758,14 +738,16 @@ GetSourceNamesAsync(bIncludeDetails: boolean): Promise<string[] | ISourceDetails
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
+<td align="center">v16.1+</td>
+<td align="center">v16.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -803,14 +785,16 @@ SelectSource(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v1.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v1.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v14.0+ </td>
+<td align="center">v11.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -841,27 +825,17 @@ DWObject.SelectSource(
 
 ## SelectSourceAsync
 
+Bring up the Source Selection User Interface (UI) for the user to choose a data source.
+
 **Syntax**
 
 ```typescript
-/**
- * Bring up the Source Selection User Interface (UI) for the user to choose a data source.
- */
-SelectSourceAsync(): Promise<number>;
+SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promise<boolean>;
 ```
 
-**Example**
+**Parameters**
 
-```javascript
-DWObject.SelectSourceAsync()
-  .then(function (sourceIndex) {
-    console.log(sourceIndex);
-    DWObject.AcquireImage();
-  })
-  .catch(function (e) {
-    console.log(e);
-  });
-```
+`deviceType`: Specify the device type of scanners. Please refer to [EnumDWT_DeviceType](({{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_devicetype)).
 
 **Availability**
 <div class="availability">
@@ -874,20 +848,35 @@ DWObject.SelectSourceAsync()
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v16.1+ </td>
-<td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
+<td align="center">v16.1+</td>
+<td align="center">v16.1+</td>
+<td align="center">v16.1+</td>
+<td align="center">not supported</td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
 </div>
 ---
+
+**Example**
+
+```javascript
+DWObject.SelectSourceAsync()
+  .then(function (sourceIndex) {
+    console.log(sourceIndex);
+    return DWObject.AcquireImageAsync();
+  })
+  .catch(function (e) {
+    console.log(e);
+  });
+```
 
 ## SelectSourceByIndex
 
@@ -912,14 +901,16 @@ SelectSourceByIndex(index: number): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v1.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v1.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -959,14 +950,16 @@ SelectSourceByIndexAsync(index: number): Promise<boolean>;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v16.1+  </td>
-<td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
+<td align="center">v16.1+</td>
+<td align="center">v16.1+</td>
+<td align="center">v16.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -981,7 +974,7 @@ DWObject.SelectSourceByIndexAsync(0)
     return DWObject.OpenSourceAsync();
   })
   .then(() => {
-    return DWObject.AcquireImage();
+    return DWObject.AcquireImageAsync();
   });
 ```
 
@@ -1010,13 +1003,15 @@ SetOpenSourceTimeout(duration: number): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -1319,14 +1314,16 @@ interface ScanSetup {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
+<td align="center">not supported</td>
+<td align="center">v15.0+</td>
+<td align="center">v15.1+</td>
+<td align="center">v15.1+</td>
+<td align="center">v15.1+</td>
 <td align="center">not supported </td>
-<td align="center">v15.0+ </td>
-<td align="center">v15.1+ </td>
-<td align="center">v15.1+ </td>
-<td align="center">v15.1+ </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1361,14 +1358,16 @@ CancelAllPendingTransfers(): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1403,14 +1402,16 @@ CloseSourceManager(): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1440,14 +1441,16 @@ CloseSourceManagerAsync(): Promise<boolean>;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
+<td align="center">v16.1+</td>
+<td align="center">v16.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1478,14 +1481,16 @@ CloseWorkingProcess(): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v11.2+ </td>
-<td align="center">v11.2+ </td>
-<td align="center">v11.2+ </td>
-<td align="center">v11.2+ </td>
-<td align="center">v12.1+ </td>
+<td align="center">v11.2+</td>
+<td align="center">v11.2+</td>
+<td align="center">v11.2+</td>
+<td align="center">v11.2+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1520,13 +1525,15 @@ FeedPage(): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -1563,13 +1570,15 @@ GetCustomDSData(fileName: string): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -1607,72 +1616,21 @@ GetCustomDSDataEx(): string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
 </table>
 </div>
-
----
-
-## GetDeviceType
-
-**Syntax**
-
-```typescript
-/**
- * Inspect the current data source and return whether it is a scanner, a webcam, etc.
- */
-GetDeviceType(): number;
-```
-
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-</tr>
-
-<tr>
-<td align="center">v7.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-</tr>
-
-</table>
-</div>
-
-**Usage notes**
-
-| Value | Description                            |
-| :---- | :------------------------------------- |
-| 0     | Failed                                 |
-| 1     | Digital Camera                         |
-| 2     | Flatbed-only scanner                   |
-| 3     | Flatbed, feeder, auto feed             |
-| 4     | Feeder-only scanner, auto feed         |
-| 5     | Flatbed, feeder, without auto feed     |
-| 6     | Feeder-only scanner, without auto feed |
-| 7     | Webcam                                 |
-
-Use this method after [OpenSource()](#opensource).
 
 ---
 
@@ -1699,14 +1657,16 @@ GetSourceNameItems(index: number): string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v7.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
+<td align="center">v7.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1737,14 +1697,16 @@ OpenSourceManager(): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1779,14 +1741,16 @@ OpenSourceManagerAsync(): Promise<boolean>;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
+<td align="center">v16.1+</td>
+<td align="center">v16.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -1821,13 +1785,15 @@ ResetImageLayout(): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -1863,13 +1829,15 @@ RewindPage(): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -1906,13 +1874,15 @@ SetCustomDSData(fileName: string): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -1949,13 +1919,15 @@ SetCustomDSDataEx(dsDataString: string): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -1996,13 +1968,15 @@ SetFileXferInfo(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v17.0+ </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v17.0+</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -2073,13 +2047,15 @@ SetImageLayout(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -2136,13 +2112,15 @@ BitDepth: number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v3.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v3.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -2180,14 +2158,16 @@ IfAppendImage: boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v5.1+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v5.1+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -2225,14 +2205,16 @@ IfDisableSourceAfterAcquire: boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v3.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v3.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -2267,14 +2249,16 @@ IfDuplexEnabled: boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v3.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v3.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -2311,14 +2295,16 @@ IfFeederEnabled: boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v3.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v3.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -2355,13 +2341,15 @@ IfShowUI: boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v3.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v3.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -2399,13 +2387,15 @@ ImageCaptureDriverType: Dynamsoft.DWT.EnumDWT_Driver | number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -2452,13 +2442,15 @@ PageSize: Dynamsoft.DWT.EnumDWT_CapSupportedSizes | number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v3.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v3.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -2494,14 +2486,16 @@ PixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v3.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v3.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -2536,14 +2530,16 @@ Resolution: number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v3.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v3.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -2578,14 +2574,16 @@ readonly SourceCount: number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v1.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v1.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -2616,14 +2614,16 @@ BlankImageThreshold: number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">v5.2+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -2658,14 +2658,16 @@ Brightness: number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
 <td align="center">not supported</td>
-<td align="center">v12.1+ </td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -2702,14 +2704,16 @@ Contrast: number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
 <td align="center">not supported</td>
-<td align="center">v12.1+ </td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -2746,14 +2750,16 @@ readonly CurrentSourceName: string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v12.1+ </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -2788,14 +2794,16 @@ DataSourceStatus: number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v12.1+ </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -2835,13 +2843,15 @@ DefaultSourceName: string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -2873,13 +2883,15 @@ readonly Duplex: Dynamsoft.DWT.EnumDWT_DUPLEX | number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -2923,13 +2935,15 @@ IfAutoBright: boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -2961,13 +2975,15 @@ IfAutoDiscardBlankpages: boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v7.0+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -3005,13 +3021,15 @@ IfAutoFeed: boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v7.0+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -3047,13 +3065,15 @@ IfAutomaticBorderDetection: boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v7.0+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -3091,13 +3111,15 @@ IfAutomaticDeskew: boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v7.0+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -3133,13 +3155,15 @@ IfAutoScan: boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -3178,13 +3202,15 @@ readonly IfFeederLoaded: boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -3220,13 +3246,15 @@ readonly IfPaperDetectable: boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -3262,13 +3290,15 @@ IfShowIndicator: boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -3306,13 +3336,15 @@ readonly IfUIControllable: boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v5.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -3348,13 +3380,15 @@ IfUseTwainDSM: boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v6.2+</td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">not supported </td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -3390,6 +3424,7 @@ readonly ImageLayoutFrameBottom: number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3398,6 +3433,7 @@ readonly ImageLayoutFrameBottom: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -3428,6 +3464,7 @@ readonly ImageLayoutFrameLeft: number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3436,6 +3473,7 @@ readonly ImageLayoutFrameLeft: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -3466,6 +3504,7 @@ readonly ImageLayoutFrameRight: number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3474,6 +3513,7 @@ readonly ImageLayoutFrameRight: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -3504,6 +3544,7 @@ readonly ImageLayoutFrameTop: number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3512,6 +3553,7 @@ readonly ImageLayoutFrameTop: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -3542,6 +3584,7 @@ readonly ImageLayoutDocumentNumber: number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3550,6 +3593,7 @@ readonly ImageLayoutDocumentNumber: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -3580,6 +3624,7 @@ readonly ImageLayoutPageNumber: number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3588,6 +3633,7 @@ readonly ImageLayoutPageNumber: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -3618,6 +3664,7 @@ readonly ImageBitsPerPixel: number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3626,6 +3673,7 @@ readonly ImageBitsPerPixel: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -3656,6 +3704,7 @@ readonly ImageLength: number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3664,6 +3713,7 @@ readonly ImageLength: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -3694,6 +3744,7 @@ readonly ImageWidth: number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3702,6 +3753,7 @@ readonly ImageWidth: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -3732,6 +3784,7 @@ readonly ImageXResolution: number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3740,6 +3793,7 @@ readonly ImageXResolution: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -3770,6 +3824,7 @@ readonly ImageYResolution: number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3778,6 +3833,7 @@ readonly ImageYResolution: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -3808,6 +3864,7 @@ readonly ImagePixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3816,6 +3873,7 @@ readonly ImagePixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -3846,6 +3904,7 @@ readonly MagData: string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3854,6 +3913,7 @@ readonly MagData: string;
 <td align="center">v8.0+</td>
 <td align="center">v8.0+</td>
 <td align="center">v8.0+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -3884,6 +3944,7 @@ readonly MagType: Dynamsoft.DWT.EnumDWT_MagType | number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3892,6 +3953,7 @@ readonly MagType: Dynamsoft.DWT.EnumDWT_MagType | number;
 <td align="center">v8.0+</td>
 <td align="center">v8.0+</td>
 <td align="center">v8.0+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -3930,13 +3992,15 @@ readonly PendingXfers: number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -3974,13 +4038,15 @@ PixelFlavor: number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -4019,13 +4085,15 @@ TransferMode: Dynamsoft.DWT.EnumDWT_TransferMode | number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -4067,13 +4135,15 @@ Unit: Dynamsoft.DWT.EnumDWT_UnitType | number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -4119,14 +4189,16 @@ XferCount: number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
 <td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -4161,14 +4233,16 @@ RegisterEvent("OnPostAllTransfers", function () {});
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -4211,14 +4285,16 @@ RegisterEvent("OnPostTransfer", function () {});
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v1.0+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v1.0+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -4258,14 +4334,16 @@ RegisterEvent("OnPostTransferAsync", function (outputInfo: OutputInfo) {});
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
+<td align="center">not supported</td>
+<td align="center">v15.0+</td>
+<td align="center">v15.1+</td>
+<td align="center">v15.1+</td>
+<td align="center">v15.1+</td>
 <td align="center">not supported </td>
-<td align="center">v15.0+ </td>
-<td align="center">v15.1+</td>
-<td align="center">v15.1+</td>
-<td align="center">v15.1+</td>
 <td align="center">not supported </td>
 </tr>
 
@@ -4327,14 +4405,16 @@ RegisterEvent("OnPreAllTransfers", function () {});
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -4376,14 +4456,16 @@ RegisterEvent('OnPreTransfer',function(){...});
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v5.2+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -4422,13 +4504,15 @@ RegisterEvent("OnSourceUIClose", function () {});
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v8.0.1+ </td>
-<td align="center">v10.0+ </td>
+<td align="center">v8.0.1+</td>
+<td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">not supported </td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
@@ -4533,6 +4617,7 @@ interface ValueAndLabel {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -4541,6 +4626,7 @@ interface ValueAndLabel {
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -4615,6 +4701,7 @@ interface CapabilitySetup {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -4623,6 +4710,7 @@ interface CapabilitySetup {
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -4679,3 +4767,166 @@ DWObject.setCapabilities(
   }
 );
 ```
+---
+
+## GetDevicesAsync
+
+**Syntax**
+
+```typescript
+/**
+ * Return all available devices (scanners, eSCL scanners, etc.) for the device type (if specified)
+ * @param deviceType The device type
+ * @param refresh Default value: false
+ */
+GetDevicesAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number, refresh?:boolean): Promise<Device[]>;
+```
+
+**Example**
+
+```javascript
+DWObject.GetDevicesAsync().then((deviceList)=>{
+  return DWObject.SelectDeviceAsync(deviceList[0])  //Select the first device
+}).then(()=>{
+    return DWObject.AcquireImageAsync({}) 
+}).catch((e)=>{
+    console.error(e)
+})
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+<td align="center">Android Service</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">not supported</td>
+<td align="center">v18.0+</td>
+</tr>
+
+</table>
+</div>
+
+**Remark**
+
+[Device APIs]({{site.info}}api/Device.html)
+
+---
+
+## SelectDeviceAsync
+
+**Syntax**
+
+```typescript
+/**
+ * Select the device to use for scanning
+ * @param device the device 
+ */
+SelectDeviceAsync(device: Device): Promise< boolean>;
+```
+
+**Example**
+
+```javascript
+DWObject.GetDevicesAsync().then((deviceList)=>{
+  return DWObject.SelectDeviceAsync(deviceList[0])  //Select the first device
+}).then(()=>{
+    return DWObject.AcquireImageAsync({}) 
+}).catch((e)=>{
+    console.error(e)
+})
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+<td align="center">Android Service</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">not supported</td>
+<td align="center">v18.0+</td>
+</tr>
+
+</table>
+</div>
+
+---
+
+## AcquireImageAsync
+
+**Syntax**
+
+```typescript
+/**
+ * Scan documents into another DWObject control. eSCL is not supported.
+ * @param deviceConfiguration The device configuration
+ */
+AcquireImageAsync(deviceConfiguration?: DeviceConfiguration): Promise< boolean>;
+```
+
+**Example**
+
+```javascript
+DWObject.GetDevicesAsync().then((deviceList)=>{
+  return DWObject.SelectDeviceAsync(deviceList[0])  //Select the first device
+}).then(()=>{
+    return DWObject.AcquireImageAsync({}) 
+}).catch((e)=>{
+    console.error(e)
+})
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+<td align="center">Android Service</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">not supported</td>
+<td align="center">v18.0+</td>  
+</tr>
+
+</table>
+</div>

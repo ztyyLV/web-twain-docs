@@ -24,58 +24,7 @@ A local scanner refers to a scanner that is plugged in the same desktop via USB 
 
 ### Scan From a Remote Scanner
 
-> Supported on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and [mobile]({{site.getstarted}}platform.html#browsers-on-mobile-devices) platforms.
-
-A remote scanner refers to a scanner that is.
-
-* Not connected to the initiating device
-* Connected and accessible on a `Windows` desktop on LAN (USB or network) where `Dynamic Web TWAIN` must be installed
-
-For more information, check out <a href="{{site.faq}}how-to-enable-remote-scan.html" target="_blank">how to enable remote scan</a>.
-
-<!--
-
-### Scan from a TWAIN-Direct scanner
-
-> Supported on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and [mobile]({{site.getstarted}}platform.html#browsers-on-mobile-devices).
-
-A TWAIN-Direct scanner refers to a device that supports the next generation of the TWAIN protocal called [ `TWAIN-Direct` ](https://www.twaindirect.org/).
-
-For more information, check [How to use a TWAIN-Direct scanner](#how-to-use-a-twain-direct-scanner).
--->
-
-##### Save the data
-
-``` javascript
-  var cDD = "";
-  DWObject.SelectSource(function() {
-      DWObject.OpenSource();
-      DWObject.AcquireImage(function() {
-          cDD = DWObject.GetCustomDSDataEx();
-      }, function(code, error) {
-          console.log(error);
-      });
-  }, function(code, error) {
-      console.log(error);
-  });
-```
-
-##### Use the data
-
-``` javascript
-  DWObject.SelectSource(function() {
-      DWObject.IfShowUI = false;
-      DWObject.OpenSource();
-      DWObject.SetCustomDSDataEx(cDD);
-      DWObject.AcquireImage(function() {
-          console.log('Success');
-      }, function(code, error) {
-          console.log(error);
-      });
-  }, function(code, error) {
-      console.log(error);
-  });
-```
+Please refer to [this article](#) for more information on remote scanning. (Link TBC)
 
 ## Capture from cameras
 

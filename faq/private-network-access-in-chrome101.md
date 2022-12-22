@@ -18,8 +18,6 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 (REF: <a href="https://developer.chrome.com/blog/private-network-access-preflight/" target="_blank">https://developer.chrome.com/blog/private-network-access-preflight/</a>)
 
-<span style="background-color:#f9f2f4; color:#c7254e">December 15, 2022: Google has updated that the pre-flight changes will not occur sooner than Chrome version 111. Please refer to <a href="https://chromiumdash.appspot.com/schedule" target="_blank">Google's release calendar</a> for release dates.</span>
-
 <span style="background-color:#f9f2f4; color:#c7254e">September 27, 2022: Google has stated that the pre-flight changes will not occur sooner than Chrome version 109, which according to <a href="https://chromiumdash.appspot.com/schedule" target="_blank">Google's release calendar</a>, is scheduled for early 2023.</span>
 
 <span style="background-color:#f9f2f4; color:#c7254e">July 7, 2022: Google has updated the timeline for this preflight request feature. The experiment is scheduled again for Chrome 104 and may be released in Chrome 107 at the earliest. Please refer to Google's feature updates <a href="https://chromestatus.com/feature/5436853517811712" target="_blank">here</a>.</span>

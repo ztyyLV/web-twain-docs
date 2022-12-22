@@ -144,6 +144,7 @@ interface Result {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -152,7 +153,8 @@ interface Result {
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
-<td align="center">v16.0+</td>
+<td align="center">v16.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -234,6 +236,7 @@ interface Region {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -242,7 +245,8 @@ interface Region {
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
-<td align="center">v16.0+</td>
+<td align="center">v16.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -298,6 +302,7 @@ DWObject.Addon.BarcodeReader.getRuntimeSettings("balance")
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -306,7 +311,8 @@ DWObject.Addon.BarcodeReader.getRuntimeSettings("balance")
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
-<td align="center">v16.0+</td>
+<td align="center">v16.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -341,6 +347,7 @@ resetRuntimeSettings(): Promise < RuntimeSettings > ;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -349,7 +356,8 @@ resetRuntimeSettings(): Promise < RuntimeSettings > ;
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
-<td align="center">v16.0+</td>
+<td align="center">v16.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -382,6 +390,7 @@ initRuntimeSettingsWithString(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -390,7 +399,8 @@ initRuntimeSettingsWithString(
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
-<td align="center">v16.0+</td>
+<td align="center">v16.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>

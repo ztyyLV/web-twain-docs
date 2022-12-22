@@ -23,7 +23,7 @@ By default, we use "127.0.0.1" for service connection. However, you may use our 
 
 Ref: <a href="{{site.faq}}how-come-would-you-need-local.dynamsoft.com.html" target="_blank">In which cases would I use local.dynamsoft.com instead of 127.0.0.1?</a>
 
-In this case, if you are trying to access an application that integrates a version of Dynamic Web TWAIN V15.3 ~ V17.2.1, you will get the error. Because the old "local.dynamsoft.com" certificate expired on <font color=red>November 20th, 2021</font>. 
+In this case, if you are trying to access an application that integrates a version of Dynamic Web TWAIN V15.3 ~ V17.1.1, you will get the error. Because the old "local.dynamsoft.com" certificate expired on <font color=red>November 20th, 2021</font>. 
 
 ### Resolution 
 
