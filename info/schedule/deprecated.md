@@ -55,13 +55,6 @@ The recommended fix is to patch the operating system, you can find the patch [he
 
 * Deprecated Method: DWObject.GetDeviceType
 
-## 18.0
-
-### Dynamic Web TWAIN
-
-* DWObject.ProductKey
-* DWObject.SetProductKeyAsync()
-* DWObject.GetDeviceType()
 
 ## 17.3
 
