@@ -50,22 +50,32 @@ Add a scan button and the minimum code.
     var DWObject;
 
     function Dynamsoft_OnReady() {
-        DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer');
+        DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
     }
 
     function AcquireImage() {
         if (DWObject) {
-            DWObject.SelectSource(
-                function() {
-                    DWObject.OpenSource();
-                    DWObject.AcquireImage();
-                },
-                function() {
-                    console.log("SelectSource failed!");
+            DWObject.SelectSourceAsync()
+            .then(function () {
+                return DWObject.AcquireImageAsync({
+                    IfDisableSourceAfterAcquire: true,
                 });
+            })
+            .then(function (result) {
+                console.log(result);
+            })
+            .catch(function (exp) {
+                console.error(exp.message);
+            })
+            .finally(function () {
+                DWObject.CloseSourceAsync().catch(function (e) {
+                    console.error(e);
+                });
+            });
         }
     }
 </script>
+
 ```
 
 ## Review the complete code
@@ -86,21 +96,30 @@ Add a scan button and the minimum code.
         var DWObject;
 
         function Dynamsoft_OnReady() {
-            DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer');
+            DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
         }
 
-	function AcquireImage() {
-	   if (DWObject) {
-		    DWObject.SelectSource(
-			function() {
-			    DWObject.OpenSource();
-			    DWObject.AcquireImage();
-			},
-			function() {
-			    console.log("SelectSource failed!");
-			});
-	       }
-	   }
+        function AcquireImage() {
+            if (DWObject) {
+                DWObject.SelectSourceAsync()
+                .then(function () {
+                    return DWObject.AcquireImageAsync({
+                        IfDisableSourceAfterAcquire: true,
+                    });
+                })
+                .then(function (result) {
+                    console.log(result);
+                })
+                .catch(function (exp) {
+                    console.error(exp.message);
+                })
+                .finally(function () {
+                    DWObject.CloseSourceAsync().catch(function (e) {
+                        console.error(e);
+                    });
+                });
+            }
+        }
     </script>
 </body>
 

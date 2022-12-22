@@ -161,13 +161,14 @@ permalink: /info/api/
 
 #### Methods
 
-| |
-|:-|:-|
-|[`GetSourceNameItems()`]({{site.info}}api/WebTwain_Acquire.html#getsourcenameitems) | [`GetSourceNames()`]({{site.info}}api/WebTwain_Acquire.html#getsourcenames)| [`GetSourceNamesAsync()`]({{site.info}}api/WebTwain_Acquire.html#getsourcenamesasync) |[`GetDeviceType()`]({{site.info}}api/WebTwain_Acquire.html#getdevicetype)|
-|[`SelectSource()`]({{site.info}}api/WebTwain_Acquire.html#selectsource)| [`SelectSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#selectsourceasync)| [`SelectSourceByIndex()`]({{site.info}}api/WebTwain_Acquire.html#selectsourcebyindex) |[`SelectSourceByIndexAsync()`]({{site.info}}api/WebTwain_Acquire.html#selectsourcebyindexasync) |
-|[`SetOpenSourceTimeout()`]({{site.info}}api/WebTwain_Acquire.html#setopensourcetimeout) |[`OpenSource()`]({{site.info}}api/WebTwain_Acquire.html#opensource) |[`OpenSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#opensourceasync)| [`EnableSourceUI()`]({{site.info}}api/WebTwain_Acquire.html#enablesourceui)|
-|[`EnableSource()`]({{site.info}}api/WebTwain_Acquire.html#enablesource) |[`AcquireImage()`]({{site.info}}api/WebTwain_Acquire.html#acquireimage) | [`startScan()`]({{site.info}}api/WebTwain_Acquire.html#startscan) | [`DisableSource()`]({{site.info}}api/WebTwain_Acquire.html#disablesource)|
-|[`CloseSource()`]({{site.info}}api/WebTwain_Acquire.html#closesource) |[`CloseSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#closesourceasync)| [`CloseWorkingProcess()`]({{site.info}}api/WebTwain_Acquire.html#closeworkingprocess)|
+|                                                   |
+| :------------------------------------------------ | :------------------------------------------ | ----------------------------------------------- | --------------------------------------------------------- |
+| [`GetSourceNameItems()`]({{site.info}}api/WebTwain_Acquire.html#getsourcenameitems)     | [`GetSourceNames()`]({{site.info}}api/WebTwain_Acquire.html#getsourcenames)       | [`GetSourceNamesAsync()`]({{site.info}}api/WebTwain_Acquire.html#getsourcenamesasync) | [`SelectSource()`]({{site.info}}api/WebTwain_Acquire.html#selectsource)                 |
+| [`SelectSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#selectsourceasync) | [`SelectSourceByIndex()`]({{site.info}}api/WebTwain_Acquire.html#selectsourcebyindex) | [`SelectSourceByIndexAsync()`]({{site.info}}api/WebTwain_Acquire.html#selectsourcebyindexasync) | [`SetOpenSourceTimeout()`]({{site.info}}api/WebTwain_Acquire.html#setopensourcetimeout) |
+| [`OpenSource()`]({{site.info}}api/WebTwain_Acquire.html#opensource)               | [`OpenSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#opensourceasync)         | [`EnableSourceUI()`]({{site.info}}api/WebTwain_Acquire.html#enablesourceui)                     | [`EnableSource()`]({{site.info}}api/WebTwain_Acquire.html#enablesource)                 |
+| [`AcquireImage()`]({{site.info}}api/WebTwain_Acquire.html#acquireimage)           | [`startScan()`]({{site.info}}api/WebTwain_Acquire.html#startscan)                     | [`DisableSource()`]({{site.info}}api/WebTwain_Acquire.html#disablesource)                       | [`CloseSource()`]({{site.info}}api/WebTwain_Acquire.html#closesource)                   |
+| [`CloseSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#closesourceasync)   | [`CloseWorkingProcess()`]({{site.info}}api/WebTwain_Acquire.html#closeworkingprocess) | [`GetDevicesAsync()`]({{site.info}}api/WebTwain_Acquire.html#getdevicesasync)   | [`SelectDeviceAsync()`]({{site.info}}api/WebTwain_Acquire.html#selectdeviceasync)                   |
+| [`AcquireImageAsync()`]({{site.info}}api/WebTwain_Acquire.html#acquireimageasync)   |
 
 
 <!--
@@ -433,8 +434,8 @@ permalink: /info/api/
 
 | |
 |:-|:-|
-|[`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)| [`SetProductKeyAsync()`]({{site.info}}api/WebTwain_Util.html#setproductkeyasync)| 
-|[`SetLanguage()`]({{site.info}}api/WebTwain_Util.html#setlanguage)|[`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)|
+|[`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)| [`SetLanguage()`]({{site.info}}api/WebTwain_Util.html#setlanguage)|
+|[`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)|
 
 <!--
 * [`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) 
@@ -448,8 +449,7 @@ permalink: /info/api/
 | |
 |:-|:-|
 |[`ErrorCode`]({{site.info}}api/WebTwain_Util.html#errorcode)| [`ErrorString`]({{site.info}}api/WebTwain_Util.html#errorstring) | [`LogLevel`]({{site.info}}api/WebTwain_Util.html#loglevel)| [`Manufacturer`]({{site.info}}api/WebTwain_Util.html#manufacturer)|
-|[`ProductFamily`]({{site.info}}api/WebTwain_Util.html#productfamily)| [`ProductName`]({{site.info}}api/WebTwain_Util.html#productname)| [`VersionInfo`]({{site.info}}api/WebTwain_Util.html#versioninfo)| [`ProductKey`]({{site.info}}api/WebTwain_Util.html#productkey)|
-|[`UseLocalService`]({{site.info}}api/WebTwain_Util.html#uselocalservice)|
+|[`ProductFamily`]({{site.info}}api/WebTwain_Util.html#productfamily)| [`ProductName`]({{site.info}}api/WebTwain_Util.html#productname)| [`VersionInfo`]({{site.info}}api/WebTwain_Util.html#versioninfo)| [`UseLocalService`]({{site.info}}api/WebTwain_Util.html#uselocalservice)|
 
 <!--
 * [`ErrorCode`]({{site.info}}api/WebTwain_Util.html#errorcode)

@@ -89,7 +89,25 @@ export default class DWT extends React.Component {
         this.DWObject = Dynamsoft.DWT.GetWebTwain(this.containerId);
     }
     acquireImage() {
-        this.DWObject.AcquireImage();
+        if (this.DWObject) {
+            this.DWObject.SelectSourceAsync()
+            .then(() => {
+                return this.DWObject.AcquireImageAsync({
+                    IfDisableSourceAfterAcquire: true,
+                });
+            })
+            .then( (result) => {
+                console.log(result);
+            })
+            .catch((exp) => {
+                console.error(exp.message);
+            })
+            .finally(() => {
+                this.DWObject.CloseSourceAsync().catch((e) => {
+                    console.error(e);
+                });
+            });
+        }
     }
     render() {
         return (<>

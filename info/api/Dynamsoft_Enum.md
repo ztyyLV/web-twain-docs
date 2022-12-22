@@ -863,10 +863,30 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | Single | 0 |
 | Multiple | 1 |
 
-## `Dynamsoft.DWT.EnumDWT_ConfirmExitType `
+## `Dynamsoft.DWT.EnumDWT_ConfirmExitType`
 
 | Label | Value|
 |:-|:-|
 | Cancel | 0 |
 | Exit | 1 |
 | SaveAndExit | 2 |
+
+## `Dynamsoft.DWT.EnumDWT_DeviceType`
+
+| Label | Value|
+|:-|:-|
+| TWAINSCANNER | 0x10 |
+| WIATWAINSCANNER | 0x20 |
+| TWAINX64SCANNER | 0x40 |
+| ICASCANNER | 0x80 |
+| SANESCANNER | 0x100 |
+| ESCLSCANNER | 0x200 |
+| WIFIDIRECTSCANNER | 0x400 |
+
+## `Dynamsoft.DWT.EnumDWT_ExtImageInfo`
+
+| Label | Value|
+|:-|:-|
+| default | 0 |
+| standard | 1 |
+| supported | 2 |

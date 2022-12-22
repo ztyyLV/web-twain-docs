@@ -16,16 +16,15 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 |                                                                        |
 | :--------------------------------------------------------------------- | :------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| [`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)                   | [`SetProductKeyAsync()`]({{site.info}}api/WebTwain_Util.html#setproductkeyasync) |
-| [`SetLanguage()`]({{site.info}}api/WebTwain_Util.html#setlanguage)     | [`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata) |
+| [`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)                   | [`SetLanguage()`]({{site.info}}api/WebTwain_Util.html#setlanguage)     |
+| [`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata) |
 
 **Properties**
 
 |                                       |
 | :------------------------------------ | :---------------------------- | ----------------------------- | ------------------------------- |
 | [`ErrorCode`](#errorcode)             | [`ErrorString`](#errorstring) | [`LogLevel`](#loglevel)       | [`Manufacturer`](#manufacturer) |
-| [`ProductFamily`](#productfamily)     | [`ProductName`](#productname) | [`VersionInfo`](#versioninfo) | [`ProductKey`](#productkey)     |
-| [`UseLocalService`](#uselocalservice) |
+| [`ProductFamily`](#productfamily)     | [`ProductName`](#productname) | [`VersionInfo`](#versioninfo) | [`UseLocalService`](#uselocalservice) |
 
 ---
 
@@ -51,6 +50,7 @@ isUsingActiveX(): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -60,6 +60,7 @@ isUsingActiveX(): boolean;
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -91,6 +92,7 @@ RegisterEvent(name: string, callback: () => void): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -100,6 +102,7 @@ RegisterEvent(name: string, callback: () => void): boolean;
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
 <td align="center">v16.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -131,6 +134,7 @@ UnregisterEvent(name: string, callback: () => void): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -140,6 +144,7 @@ UnregisterEvent(name: string, callback: () => void): boolean;
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
 <td align="center">v16.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -150,45 +155,6 @@ UnregisterEvent(name: string, callback: () => void): boolean;
 There can only be one listener for each built-in event. If you call `RegisterEvent` on the same event again, the new callback will replace the old one.
 
 ---
-
-## SetProductKeyAsync
-
-**Syntax**
-
-```typescript
-/**
- * Set the product key.
- * @param productKey Specify the key.
- */
-SetProductKeyAsync(
-    productKey: string
-): Promise<any>;
-```
-
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-</tr>
-
-<tr>
-<td align="center">v16.1+ </td>
-<td align="center">v16.1+ </td>
-<td align="center">v16.1+ </td>
-<td align="center">v16.1+ </td>
-<td align="center">v16.1+ </td>
-<td align="center">v16.1+ </td>
-</tr>
-
-</table>
-</div>
 
 ## SetLanguage
 
@@ -215,6 +181,7 @@ SetLanguage(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -223,6 +190,7 @@ SetLanguage(
 <td align="center">v13.0+ </td>
 <td align="center">v13.0+ </td>
 <td align="center">v13.0+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -276,6 +244,7 @@ GenerateURLForUploadData(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -284,6 +253,7 @@ GenerateURLForUploadData(
 <td align="center">v15.1+ </td>
 <td align="center">v15.1+ </td>
 <td align="center">v15.1+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -314,6 +284,7 @@ readonly ErrorCode: number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -323,6 +294,7 @@ readonly ErrorCode: number;
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
 <td align="center">v16.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -356,6 +328,7 @@ readonly ErrorString: string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -365,6 +338,7 @@ readonly ErrorString: string;
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
 <td align="center">v16.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -399,6 +373,7 @@ LogLevel: number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -408,6 +383,7 @@ LogLevel: number;
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
 <td align="center">v16.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -444,6 +420,7 @@ readonly Manufacturer: string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -452,6 +429,7 @@ readonly Manufacturer: string;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -487,6 +465,7 @@ readonly ProductFamily: string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -495,6 +474,7 @@ readonly ProductFamily: string;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
 
@@ -530,6 +510,7 @@ readonly ProductName: string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -539,6 +520,7 @@ readonly ProductName: string;
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
 <td align="center">v16.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -573,6 +555,7 @@ readonly VersionInfo: string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -582,6 +565,7 @@ readonly VersionInfo: string;
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
 <td align="center">v16.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -592,47 +576,6 @@ readonly VersionInfo: string;
 `Manufacturer` , `ProductFamily` , `ProductName` and `VersionInfo` together form the identity string of the Dynamic Web TWAIN library.
 
 ---
-
-## ProductKey
-
-**Syntax**
-
-```typescript
-/**
- * Return or set the ProductKey.
- */
-ProductKey: string;
-```
-
-**Availability**
-
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-</tr>
-
-<tr>
-<td align="center">v9.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
-</tr>
-
-</table>
-</div>
-
-**Usage notes**
-
-The ProductKey contains the license to use the Dynamic Web TWAIN library. From version 16.1, if the license needs to be changed at runtime, use the method `SetProductKeyAsync()` instead.
 
 ## UseLocalService
 
@@ -656,6 +599,7 @@ UseLocalService: boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -665,6 +609,7 @@ UseLocalService: boolean;
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
