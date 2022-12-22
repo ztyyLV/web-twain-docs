@@ -830,12 +830,12 @@ Bring up the Source Selection User Interface (UI) for the user to choose a data 
 **Syntax**
 
 ```typescript
-SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promise<boolean>;
+SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promise<number>;
 ```
 
 **Parameters**
 
-`deviceType`: Specify the device type of scanners. Please refer to [EnumDWT_DeviceType](({{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_devicetype)).
+`deviceType`: Specify the device type of scanners. Please refer to [EnumDWT_DeviceType]({{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_devicetype).
 
 **Availability**
 <div class="availability">

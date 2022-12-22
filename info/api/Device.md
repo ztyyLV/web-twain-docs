@@ -50,54 +50,17 @@ interface Device  {
 acquireImage(deviceConfiguration: DeviceConfiguration | null, sendTo: WebTwain): Promise< boolean>;
 
 interface DeviceConfiguration {
-    /**
-     * Whether to show the built-in User Interface from the device vendor.
-     */
-    IfShowUI?: boolean;
-    /**
-     * How a pixel is represented. Basically it means whether to scan in color, grey or black & white
-     */
-    PixelType?: Dynamsoft.DWT.EnumDWT_PixelType;
-    /**
-     * How detailed is the acquisition. Measured by dots per pixel (DPI)
-     */
-    Resolution?: number;
-    /**
-     * Whether to use the document feeder or the flatbed of the device.
-     */
-    IfFeederEnabled?: boolean;
-    /**
-     * Whether to scan one side or both sides of each paper.
-     */
-    IfDuplexEnabled?: boolean;
-    /**
-     * Whether to close the built-in User Interface after aquisition. Only valid when {IfShowUI} is true.
-     */
-    IfDisableSourceAfterAcquire?: boolean;
-    /**
-     * Whether to retrieve information about the image after it's transferred.
-     */
-    IfGetImageInfo?: boolean;
-    /**
-     * Whether to retrieve extended information about the image after it's transferred.
-     */
-    IfGetExtImageInfo?: boolean;
-    /**
-     * How much extended information is retrieved. Only valid when {IfGetExtImageInfo} is true.
-     */
-    extendedImageInfoQueryLevel?: number;
-    /**
-     * Whether to simulate the manufacturer's UI inside the client-side browser (only effective when IfShowUI is true).
-     */
-    RemoteScan?:boolean;
-    /**
-     * Whether to simulate the manufacturer's UI inside the client-side browser (only effective when IfShowUI and RemoteScan are both true and the WebTwain instance doing the scan has no viewer of its own).
-     */
-    ShowRemoteScanUI?:boolean;
-    /**
-     * Specify a source by its index.
-     */
-    SelectSourceByIndex?: number;
+    IfShowUI?: boolean; //Whether to show the built-in User Interface from the device vendor
+    PixelType?: Dynamsoft.DWT.EnumDWT_PixelType | number | string; //Whether to scan in color, grey or black & white
+    Resolution?: number; //Measured by dots per pixel (DPI)
+    IfFeederEnabled?: boolean; //Whether to use the document feeder or the flatbed of the device
+    IfDuplexEnabled?: boolean; //Whether to scan one side or both sides
+    IfDisableSourceAfterAcquire?: boolean; //Whether to close the built-in User Interface after aquisition. Only valid when {IfShowUI} is true.
+    IfGetImageInfo?: boolean; //Whether to retrieve information about the image after it's transferred.
+    IfGetExtImageInfo?: boolean; //Whether to retrieve extended information about the image after it's transferred.
+    extendedImageInfoQueryLevel?: Dynamsoft.DWT.EnumDWT_ExtImageInfo | number; //How much extended information is retrieved. Only valid when {IfGetExtImageInfo} is true.
+    SelectSourceByIndex?: number; //Specify a source by its index.
+    IfCloseSourceAfterAcquire?: boolean; //Whether to close the data source after aquisition. Default: false.
 }
 ```
 
