@@ -46,52 +46,31 @@ permalink: /info/api/WebTwain_Viewer.html
 
 ## bind
 
+Create a Dynamsoft Viewer instance and bind it to the WebTwain instance.
+
 **Syntax**
 
 ```typescript
-/**
- * Create a Dynamsoft Viewer instance and bind it to the WebTwain instance.
- * @param element Specify an HTML element to create the viewer.
- * @param documentTemplate Specify the document template.
- */
 bind(element: HTMLDivElement, documentTemplate: DocumentViewerTemplate) : void;
 
 interface DocumentViewerTemplate{
-   getCustomElement():CustomElement; //Get CustomElement. Can display save & upload interface in CustomElement.
-   onAddDocumentFunc = function () {}
-   onExitFunc = function () {}
-   onSaveFunc = function () {} //Save button click event
-   onUploadFunc = function () {}  //Upload button click event
-   onRemoveSelectedFunc = function () {}   //Remove button click event
+    getCustomElement():CustomElement; //Get CustomElement. Can display save & upload interface in CustomElement.
+    onAddDocumentFunc = function () {}
+    onExitFunc = function () {}
+    onSaveFunc = function () {} //Save button click event
+    onUploadFunc = function () {}  //Upload button click event
+    onRemoveSelectedFunc = function () {}   //Remove button click event
 }
 ```
 
-**Example**
+**Parameters**
 
-```javascript
-var DWObject, template;
-Dynamsoft.DWT.CreateDWTObjectEx(
-  {
-    WebTwainId: "a",
-    UseLocalService: false,
-  },
-  function (obj) {
-    DWObject = obj;
-    template = DWObject.Viewer.createTemplate("documentScanner");
-    DWObject.Viewer.bind(null, template); //full screen
-    DWObject.Viewer.show(); 
-  
-    template.onExitFunc = function () {
-    DWObject.Viewer.show();   
-    console.error ("execute");
-    //RemoveAllFile();     
-}
-}, function (errorCode, errorString) {
-    console.log(errorString);
-  });
-```
+`element`: Specify an HTML element to create the viewer.
+
+`documentTemplate`: Specify the document template.
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -122,20 +101,47 @@ Dynamsoft.DWT.CreateDWTObjectEx(
 
 Replace the previous `BindViewer` method.
 
+**Example**
+
+```javascript
+var DWObject, template;
+Dynamsoft.DWT.CreateDWTObjectEx(
+    {
+        WebTwainId: "a",
+        UseLocalService: false,
+    },
+    function (obj) {
+        DWObject = obj;
+        template = DWObject.Viewer.createTemplate("documentScanner");
+        DWObject.Viewer.bind(null, template); //full screen
+        DWObject.Viewer.show(); 
+      
+        template.onExitFunc = function () {
+        DWObject.Viewer.show();   
+        console.error ("execute");
+        //RemoveAllFile();     
+        }
+    }, 
+    function (errorCode, errorString) {
+        console.log(errorString);
+    }
+);
+```
+
 ---
 
 ## clearSelectedAreas
 
+Clear the selected area(s) on the current page.
+
 **Syntax**
 
 ```typescript
-/**
- * Clear the selected area(s) on the current page.
- */
 clearSelectedAreas(): void;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -172,16 +178,11 @@ DWObject.Viewer.clearSelectedAreas();
 
 ## createCustomElement
 
+Add a custom page DIV element and specify its position and display order. Generate an independent CustomElement object.
+
 **Syntax**
 
-```typescript
-/**
- * Add a custom page DIV element and specify its position and display order.
- * Generate an independent CustomElement object.
- * @param element Specify the HTMLDivElement.
- * @param location Define where to place the custom element. The allowed values are "left" and "right", and the default value is "right".
- * @param bCover The default value is `false`, that is, the created CustomElement is displayed according to the set area. If set to true, the main viewer will be covered by the CustomElement.
- */
+```javascript
 createCustomElement(
     element: HTMLDivElement,
     location?: string,
@@ -204,7 +205,16 @@ interface CustomElement {
 };
 ```
 
+**Parameters**
+
+`element`: Specify the HTMLDivElement.
+
+`location`: Define where to place the custom element. The allowed values are "left" and "right", and the default value is "right".
+
+`bCover`: The default value is `false`, that is, the created CustomElement is displayed according to the set area. If set to true, the main viewer will be covered by the CustomElement.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -231,38 +241,37 @@ interface CustomElement {
 </table>
 </div>
 
+**Usage notes**
+
+Only one CustomElement object can be created. If you try creating another one, you'll get the error 'A CustomElement already exists', and the existing CustomElement object will be returned.
+
+If the width defined by the CustomElement object exceeds the width of the main viewer, the width of the main viewer is used.
+
+The method [unbind()](#unbind) will dispose all created CustomElement objects, ThumbnailViewer objects and ImageEditor objects.
+
 **Example**
 
 ```javascript
 var myElement = document.createElement("div");
 myElement.style = "width:100px;height:200px;background:red";
 var customElement = DWObject.Viewer.createCustomElement(
-  myElement,
-  "right",
-  false
+    myElement,
+    "right",
+    false
 );
+
 customElement.show();
 ```
-
-**Usage notes**
-
-Only one CustomElement object can be created. If you try creating another one, you'll get the error 'A CustomElement already exists.', and the existing CustomElement object will be returned.
-
-If the width defined by the CustomElement object exceeds the width of the main viewer, the width of the main viewer is used.
-
-The method [ `unbind()` ](#unbind) will dispose all created CustomElement objects, ThumbnailViewer objects and ImageEditor objects.
 
 ---
 
 ## createImageEditor
 
+Generate an independent ImageEditor object.
+
 **Syntax**
 
 ```typescript
-/**
- * Generate an independent ImageEditor object.
- * @param editorSettings Configure the object.
- */
 createImageEditor(
     editorSettings?: EditorSettings
 ): ImageEditor;
@@ -283,7 +292,12 @@ interface ImageEditor {
 };
 ```
 
+**Parameters**
+
+`editorSettings`: Configure the object.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -310,6 +324,14 @@ interface ImageEditor {
 </table>
 </div>
 
+**Usage notes**
+
+Replace the previous `ShowImageEditor()` method.
+
+Only one ImageEditor object can be created. If you try creating it again, you'll get the error 'An ImageEditor already exists.' and the existing ImageEditor object will be returned.
+
+The method [unbind()](#unbind) will dispose all created CustomElement objects, ThumbnailViewer objects and ImageEditor objects.
+
 **Example**
 
 > The example code shows 2 ways to use the API `createImageEditor()`
@@ -323,121 +345,115 @@ imageEditor.show();
 ```javascript
 // Customize the editor
 var editorSettings = {
-  /* Show the editor within the DIV 'imageEditor'*/
-  element?: document.getElementById("imageEditor"),
-  width?: 600,
-  height?: 400,
-  border?: "1px solid rgb(204, 204, 204)",
-  topMenuBorder?: "",
-  innerBorder?: "",
-  background?: "rgb(255, 255, 255)",
-  promptToSaveChange?: true,
-  buttons?: {
-    titles?: {
-      previous?: "Previous Image",
-      next?: "Next Image",
-      print?: "Print Image",
-      scan?: "Scan Documents",
-      load?: "Load Local Images",
-      rotateleft?: "Rotate Left",
-      rotate?: "Rotate",
-      rotateright?: "Rotate Right",
-      deskew?: "Deskew",
-      crop?: "Crop Selected Area",
-      cut?: "Cut Selected Area",
-      changeimagesize?: "Change Image Size",
-      flip?: "Flip Image",
-      mirror?: "Mirror Image",
-      zoomin?: "Zoom In",
-      originalsize?: "Show Original Size",
-      zoomout?: "Zoom Out",
-      stretch?: "Stretch Mode",
-      fit?: "Fit Window",
-      fitw?: "Fit Horizontally",
-      fith?: "Fit Vertically",
-      hand?: "Hand Mode",
-      rectselect?: "Select Mode",
-      zoom?: "Click to Zoom In",
-      restore?: "Restore Original Image",
-      save?: "Save Changes",
-      close?: "Close the Editor",
-      removeall?: "Remove All Images",
-      removeselected?: "Remove All Selected Images",
+    /* Show the editor within the DIV 'imageEditor'*/
+    element?: document.getElementById("imageEditor"),
+    width?: 600,
+    height?: 400,
+    border?: "1px solid rgb(204, 204, 204)",
+    topMenuBorder?: "",
+    innerBorder?: "",
+    background?: "rgb(255, 255, 255)",
+    promptToSaveChange?: true,
+    buttons?: {
+        titles?: {
+            previous?: "Previous Image",
+            next?: "Next Image",
+            print?: "Print Image",
+            scan?: "Scan Documents",
+            load?: "Load Local Images",
+            rotateleft?: "Rotate Left",
+            rotate?: "Rotate",
+            rotateright?: "Rotate Right",
+            deskew?: "Deskew",
+            crop?: "Crop Selected Area",
+            cut?: "Cut Selected Area",
+            changeimagesize?: "Change Image Size",
+            flip?: "Flip Image",
+            mirror?: "Mirror Image",
+            zoomin?: "Zoom In",
+            originalsize?: "Show Original Size",
+            zoomout?: "Zoom Out",
+            stretch?: "Stretch Mode",
+            fit?: "Fit Window",
+            fitw?: "Fit Horizontally",
+            fith?: "Fit Vertically",
+            hand?: "Hand Mode",
+            rectselect?: "Select Mode",
+            zoom?: "Click to Zoom In",
+            restore?: "Restore Original Image",
+            save?: "Save Changes",
+            close?: "Close the Editor",
+            removeall?: "Remove All Images",
+            removeselected?: "Remove All Selected Images",
+        },
+        visibility?: {
+            scan?: true,
+            load?: true,
+            print?: true,
+            removeall?: true,
+            removeselected?: true,
+            rotateleft?: true,
+            rotate?: true,
+            rotateright?: true,
+            deskew?: true,
+            crop?: true,
+            cut?: true,
+            changeimagesize?: true,
+            flip?: true,
+            mirror?: true,
+            zoomin?: true,
+            originalsize?: true,
+            zoomout?: true,
+            stretch?: true,
+            fit?: true,
+            fitw?: true,
+            fith?: true,
+            hand?: true,
+            rectselect?: true,
+            zoom?: true,
+            restore?: true,
+            save?: true,
+            close?: true,
+        },
     },
-    visibility?: {
-      scan?: true,
-      load?: true,
-      print?: true,
-      removeall?: true,
-      removeselected?: true,
-      rotateleft?: true,
-      rotate?: true,
-      rotateright?: true,
-      deskew?: true,
-      crop?: true,
-      cut?: true,
-      changeimagesize?: true,
-      flip?: true,
-      mirror?: true,
-      zoomin?: true,
-      originalsize?: true,
-      zoomout?: true,
-      stretch?: true,
-      fit?: true,
-      fitw?: true,
-      fith?: true,
-      hand?: true,
-      rectselect?: true,
-      zoom?: true,
-      restore?: true,
-      save?: true,
-      close?: true,
+    dialogText?: {
+        dlgRotateAnyAngle?: [
+            "Angle :",
+            "Interpolation:",
+            "Keep size",
+            "  OK  ",
+            "Cancel",
+        ],
+        dlgChangeImageSize?: [
+            "New Height :",
+            "New Width :",
+            "Interpolation method:",
+            "  OK  ",
+            "Cancel",
+        ],
+        saveChangedImage?: [
+            "You have changed the image, do you want to keep the change(s)?",
+            "  Yes  ",
+            "  No  ",
+        ],
+        selectSource?: [
+            "Select Source:",
+            "Select",
+            "Cancel",
+            "There is no source available",
+        ],
     },
-  },
-  dialogText?: {
-    dlgRotateAnyAngle?: [
-      "Angle :",
-      "Interpolation:",
-      "Keep size",
-      "  OK  ",
-      "Cancel",
-    ],
-    dlgChangeImageSize?: [
-      "New Height :",
-      "New Width :",
-      "Interpolation method:",
-      "  OK  ",
-      "Cancel",
-    ],
-    saveChangedImage?: [
-      "You have changed the image, do you want to keep the change(s)?",
-      "  Yes  ",
-      "  No  ",
-    ],
-    selectSource?: [
-      "Select Source:",
-      "Select",
-      "Cancel",
-      "There is no source available",
-    ],
-  },
 };
 
 var imageEditor = DWObject.Viewer.createImageEditor(editorSettings);
 imageEditor.show();
 ```
 
-**Usage notes**
-
-Replace the previous `ShowImageEditor()` method.
-
-Only one ImageEditor object can be created. If you try creating it again, you'll get the error 'An ImageEditor already exists.' and the existing ImageEditor object will be returned.
-
-The method [ `unbind()` ](#unbind) will dispose all created CustomElement objects, ThumbnailViewer objects and ImageEditor objects.
-
 ---
 
 ## createThumbnailViewer
+
+Generate a independent ThumbnailViewer object.
 
 **Syntax**
 
@@ -447,10 +463,6 @@ The method [ `unbind()` ](#unbind) will dispose all created CustomElement object
 >- 17.2.5
 >
 ```typescript
-/**
- * Generate a independent ThumbnailViewer object.
- * @param thumbnailViewerSettings Configure the ThumbnailViewer object
- */
 createThumbnailViewer(
     thumbnailViewerSettings?: ThumbnailViewerSettings
 ): ThumbnailViewer;
@@ -589,41 +601,41 @@ interface ThumbnailViewerSettings {
      */
     autoChangeIndex?: boolean;
     checkbox?: {
-      visibility?: string; //"visible":hidden", default: "hidden" 
-      width?: number | string; //default: "24px",number unit: px, string value: "24px"/"10%", relative to parent container
-      height?: number | string; //default: "24px",number unit: px, string value: "24px"/"10%", relative to parent container
-      background?: string; //default: "#ffffff"
-      borderWidth?: number | string;  //default: "2px", unit: px, percentage value not supported
-      borderColor?: string; //default: "#000000"
-      checkMarkColor?: string; //default: "#000000"
-      checkMarkLineWidth?: number | string; //default: "2px", unit: px, percentage value not supported
-      borderRadius?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%",relative to itself
-      opacity?: number; //default:0.5, value range [0-1], value greater 1 defaults to 1
-      left?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
-      top?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
-      right?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
-      bottom?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
-      translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
-      translateY?: number | string //default: "",  number unit: px, string value: "10px"/"10%", relative to itself
+        visibility?: string; //"visible":hidden", default: "hidden" 
+        width?: number | string; //default: "24px",number unit: px, string value: "24px"/"10%", relative to parent container
+        height?: number | string; //default: "24px",number unit: px, string value: "24px"/"10%", relative to parent container
+        background?: string; //default: "#ffffff"
+        borderWidth?: number | string;  //default: "2px", unit: px, percentage value not supported
+        borderColor?: string; //default: "#000000"
+        checkMarkColor?: string; //default: "#000000"
+        checkMarkLineWidth?: number | string; //default: "2px", unit: px, percentage value not supported
+        borderRadius?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%",relative to itself
+        opacity?: number; //default:0.5, value range [0-1], value greater 1 defaults to 1
+        left?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+        top?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+        right?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+        bottom?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+        translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+        translateY?: number | string //default: "",  number unit: px, string value: "10px"/"10%", relative to itself
     };
     pageNumber?: {
-      visibility?: string; //"visible": hidden", default: "hidden" 
-      width?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
-      height?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
-      background?: string; //default: "#ffffff"            
-      borderWidth?: number | string; //default: "1px", unit: px, percentage value not supported
-      borderColor?: string; //default: "#a79898"
-      borderRadius?: number | string; //default: "50%", number unit: px, string value: "10px"/"10%", relative to itself
-      opacity?:number; //default: 0.5, value range [0-1], value greater 1 defaults to 1
-      color?: string; //default: "#000000", supports #16 hexadecimal only
-      fontFamily?: string; //default: "sans-serif"
-      fontSize?: number | string; //default: 12, unit: px, percentage value not supported
-      left?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
-      top?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
-      right?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
-      bottom?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
-      translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
-      translateY?: number | string //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+        visibility?: string; //"visible": hidden", default: "hidden" 
+        width?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+        height?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+        background?: string; //default: "#ffffff"            
+        borderWidth?: number | string; //default: "1px", unit: px, percentage value not supported
+        borderColor?: string; //default: "#a79898"
+        borderRadius?: number | string; //default: "50%", number unit: px, string value: "10px"/"10%", relative to itself
+        opacity?:number; //default: 0.5, value range [0-1], value greater 1 defaults to 1
+        color?: string; //default: "#000000", supports #16 hexadecimal only
+        fontFamily?: string; //default: "sans-serif"
+        fontSize?: number | string; //default: 12, unit: px, percentage value not supported
+        left?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+        top?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+        right?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+        bottom?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+        translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+        translateY?: number | string //default: "", number unit: px, string value: "10px"/"10%", relative to itself
     }
 };
 interface ThumbnailViewerEvent {
@@ -807,8 +819,12 @@ interface ViewMode {
 }
 ```
 
+**Parameters**
+
+`thumbnailViewerSettings`: Configure the ThumbnailViewer object
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -834,6 +850,33 @@ interface ViewMode {
 
 </table>
 </div>
+
+**Usage notes**
+
+For the CheckboxSettings and PageNumberSettings interface, please refer to the APIs [updateCheckboxStyle]({{site.info}}api/WebTwain_Viewer.html#updatecheckboxstyle) and [updatePageNumberStyle]({{site.info}}api/WebTwain_Viewer.html#updatepagenumberstyle).
+
+The following table shows the events available to a ThumbnailViewer object.
+
+| Event Name     | Arguments                                         | Description                                                          |
+| :------------- | :------------------------------------------------ | :------------------------------------------------------------------- |
+| `click`        | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is clicked                                  |
+| `dblclick`     | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is double clicked                           |
+| `contextMenu`  | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is right clicked                            |
+| `mousemove`    | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse moved over                                  |
+| `mousedown`    | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is pressed                              |
+| `mouseup`      | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is released                             |
+| `resize`       | width:number, height:number                     | Triggered when width & height of the ThumbnailViewer object changes. |
+| `pageRendered` | index: number                                     | Triggered when a page is rendered.                                   |
+| `mouseout`     | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is out, only for desktop browsers           |
+| `mouseover`    | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when mouse is hovering, only for desktop browsers          |
+| `keydown`      | keyboardEvent: KeyboardEvent                      | Triggered when a key is pressed, only for desktop browsers           |
+| `keyup`        | keyboardEvent: KeyboardEvent                      | Triggered when a key is released, only for desktop browsers          |
+
+By default, scrolling the scroll bar on Thumbnail does not trigger the `topchanged` event.
+
+Only one ThumbnailViewer object can be created. If you try creating it again, you will get the error 'A ThumbnailViewer already exists' and the existing ThumbnailViewer object will be returned.
+
+The method [unbind()](#unbind) will dispose all created CustomElement objects, ThumbnailViewer objects and ImageEditor objects.
 
 **Example**
 
@@ -873,47 +916,20 @@ var thumbnail = DWObject.Viewer.createThumbnailViewer(thumbnailViewerSettings);
 thumbnail.show();
 ```
 
-**Usage notes**
-
-For the CheckboxSettings and PageNumberSettings interface, please refer to the APIs [updateCheckboxStyle]({{site.info}}api/WebTwain_Viewer.html#updatecheckboxstyle) and [updatePageNumberStyle]({{site.info}}api/WebTwain_Viewer.html#updatepagenumberstyle).
-
-The following table shows the events available to a ThumbnailViewer object.
-
-| Event Name     | Arguments                                         | Description                                                          |
-| :------------- | :------------------------------------------------ | :------------------------------------------------------------------- |
-| `click`        | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is clicked                                  |
-| `dblclick`     | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is double clicked                           |
-| `contextMenu`  | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is right clicked                            |
-| `mousemove`    | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse moved over                                  |
-| `mousedown`    | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is pressed                              |
-| `mouseup`      | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is released                             |
-| `resize`       | width:number, height:number                     | Triggered when width & height of the ThumbnailViewer object changes. |
-| `pageRendered` | index: number                                     | Triggered when a page is rendered.                                   |
-| `mouseout`     | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is out, only for desktop browsers           |
-| `mouseover`    | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when mouse is hovering, only for desktop browsers          |
-| `keydown`      | keyboardEvent: KeyboardEvent                      | Triggered when a key is pressed, only for desktop browsers           |
-| `keyup`        | keyboardEvent: KeyboardEvent                      | Triggered when a key is released, only for desktop browsers          |
-
-By default, scrolling the scroll bar on Thumbnail does not trigger the `topchanged` event.
-
-Only one ThumbnailViewer object can be created. If you try creating it again, you will get the error 'A ThumbnailViewer already exists.' and the existing ThumbnailViewer object will be returned.
-
-The method [ `unbind()` ](#unbind) will dispose all created CustomElement objects, ThumbnailViewer objects and ImageEditor objects.
-
 ---
 
 ## first
 
+Show the first page and return the index which should be 0. If there is no page in the viewer, -1 is returned.
+
 **Syntax**
 
 ```typescript
-/**
- * Show the first page and return the index which should be 0. If there is no page in the viewer, -1 is returned.
- */
 first():number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -950,19 +966,20 @@ DWObject.Viewer.first();
 
 ## fitWindow
 
+Set how the page is fit in the viewer.
+
 **Syntax**
 
 ```typescript
-/**
- * Set how the page is fit in the viewer.
- * @param type Specify how to fit. Allowed values are "width" and "height"
- */
-fitWindow(
-    type?: string
-): void
+fitWindow(type?: string): void
 ```
 
+**Parameters**
+
+`type`: Specify how to fit. Allowed values are "width" and "height"
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -989,22 +1006,22 @@ fitWindow(
 </table>
 </div>
 
+**Usage Notes**
+
+This API only works if the view mode of the viewer is set to -1 by -1 ([singlePageMode](#singlepagemode) is true).
+
+The allowed values are
+
+`width`: Fit the page vertically.
+`height`: Fit the page horizontally.
+
+If no parameter is provided, it tries to fit the whole page within the viewer.
+
 **Example**
 
 ```javascript
 DWObject.Viewer.fitWindow();
 ```
-
-**Usage notes**
-
-This API only works if the view mode of the viewer is set to -1 by -1 ([ `singlePageMode` ](#singlepagemode) is true).
-
-The allowed values are
-
-width: Fit the page vertically.
-height: Fit the page horizontally.
-
-If no parameter is provided, it tries to fit the whole page within the viewer.
 
 ---
 
