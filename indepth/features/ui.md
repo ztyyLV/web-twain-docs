@@ -31,7 +31,7 @@ If needing to disable the default dialog or come up with your own install dialog
 
 ![UI 2]({{site.assets}}imgs/UI-8.png)
 
-This loading bar and backdrop shows up when creating a `WebTwain` instance or when you try to scan. The functions `Dynamsoft.DWT.OnWebTwainPreExecute()` and `Dynamsoft.DWT.OnWebTwainPostExecute()` are called before and after the process. You can customize the behavior like this
+This loading bar and backdrop shows up when creating a `WebTwain` instance or when you try to scan. The functions `Dynamsoft.DWT.OnWebTwainPreExecute()` and `Dynamsoft.DWT.OnWebTwainPostExecute()` are called before and after the process. You can customize the behavior like this in **dynamsoft.webtwain.config.js** file:
 
 ``` javascript
 Dynamsoft.DWT.OnWebTwainPreExecute = function() {

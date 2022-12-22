@@ -305,6 +305,10 @@ interface PDFWSettings {
     author: string;
     /**
      * Specify the compression type.
+     *  When set to PDF_AUTO, Dynamic Web TWAIN will automatically choose the suitable compression type for each image.
+        - For 1 Bit images, if the PDF version is over 1.4, use JBIG2 encoding, otherwise, use FAX4 (CCITT Group 4 Fax).
+        - For 8 Bit images, if the image is grayscale, use JPEG encoding, otherwise, use LZW (Lempel-Ziv-Welch).
+        - For 24 and 32 Bit images, use JPEG encoding.
      */
     compression: Dynamsoft.DWT.EnumDWT_PDFCompressionType | number;
      /**
