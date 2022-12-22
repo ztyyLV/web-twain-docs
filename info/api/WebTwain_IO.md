@@ -1,6 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
+noTitleIndex: true
 title: Dynamic Web TWAIN SDK API Reference - Input and Output APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, IO APIs
 breadcrumbText: IO
@@ -481,7 +482,7 @@ RegisterEvent(
 
 **Parameters**
 
-`isSave`: Whether to show a save-file dialog (true) or an open-file dialog (false).
+`isSave`: Whether or not the event is triggered after a save-file dialog was shown.
 
 `filesCount`: How many files were selected.
 
@@ -801,8 +802,8 @@ DWObject.FTPUpload(
     '192.168.8.222', //The FTP Host
     0, // The index of the image
     'test.pdf', // The path & name of the file 
-    onSuccess, // Callback in case of success
-    onFailure // Callback in case of failure
+    OnSuccess, // Callback in case of success
+    OnFailure // Callback in case of failure
 );
 ```
 
@@ -1857,7 +1858,7 @@ var uploadfilename = Digital.getMilliseconds();
 
 DWObject.HTTPUploadThroughPost(
     strHTTPServer,
-    DWObject.CurrentImageIndexInBuffer,
+    i,
     strActionPage,
     uploadfilename + ".jpg",
     function () {
@@ -3223,24 +3224,6 @@ If you are using WASM mode on the desktop, the image will always be saved to the
 
 If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `true`.
 
-**Example**
-
-```javascript
-function SaveAll() {
-    DWObject.SelectImages([0,1]); // select first 2 images.
-    DWObject.IfShowFileDialog = true; // Set "true" to show "Save File" dialog.
-    DWObject.SaveSelectedImagesAsMultiPagePDF(
-        "C:\\Users\\UserName\\Desktop\\multi-save.pdf",
-        function () {
-            console.log("Success");
-        },
-        function (errorCode, errorString) {
-            console.log(errorString);
-        }
-    );
-}
-```
-
 ---
 
 ## SaveSelectedImagesAsMultiPageTIFF
@@ -3302,22 +3285,6 @@ If called without any callback functions, these methods become synchronously and
 If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.
 
 If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `true`.
-
-```javascript
-function SaveAll() {
-    DWObject.SelectImages([0,1]); // select first 2 images.
-    DWObject.IfShowFileDialog = true; // Set "true" to show "Save File" dialog.
-    DWObject.SaveSelectedImagesAsMultiPageTIFF(
-        "C:\\Users\\UserName\\Desktop\\multi-save.tif",
-        function () {
-            console.log("Success");
-        },
-        function (errorCode, errorString) {
-            console.log(errorString);
-        }
-    );
-}
-```
 
 ---
 
@@ -3770,7 +3737,7 @@ ShowFileDialog(
 
 **Parameters**
 
-`isSave`: Whether to show a save-file dialog (true) or an open-file dialog (false).
+`isSave`: Whether to show a save-file dialog or an open-file dialog.
 
 `filter`: The filter pattern like "JPG or *.jpg".
 

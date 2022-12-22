@@ -39,7 +39,7 @@ permalink: /info/api/appendix.html
 |-1030 | Can not open Source Manager "TWain_32.dll" is missing or is in use by another application |
 |-1031 | Sequence error. The operation can not be performed upon the current Source Manager or Source state |
 |-1032 | User cancelled the operation |
-|-1033 | Invalid index |
+|-1033 | Invalid Enumerations |
 |-1034 | Invalid value |
 |-1035 | There is no image |
 |-1036 | Error reading file |
