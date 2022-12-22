@@ -223,7 +223,8 @@ interface DWTInitialConfig {
     WebTwainId: string,
         Host ? : string,
         Port ? : string,
-        PortSSL ? : string
+        PortSSL ? : string,
+        UseLocalService? : boolean
 }
 ```
 
