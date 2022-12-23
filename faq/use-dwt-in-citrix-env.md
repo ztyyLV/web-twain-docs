@@ -27,7 +27,7 @@ To configure the enhanced mode, please follow the steps below:
 
 ***In this case, initializing the DWT object dynamically is not supported.***
 
-<strong>How to check if Enhance mode is running</strong>
+<strong>How to check if Enhanced mode is running</strong>
 
 1. user_config.ini which is under `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17` will list the ports that each user is listening on.
 2. In Network, the DWT port included in the request URL should be 17000 and so on, not 18622 anymore
