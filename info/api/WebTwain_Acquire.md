@@ -4344,7 +4344,7 @@ RegisterEvent("OnPostTransferAsync", function (outputInfo: OutputInfo) {});
 <td align="center">v15.1+</td>
 <td align="center">v15.1+</td>
 <td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v18.0+ </td>
 </tr>
 
 </table>
