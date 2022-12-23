@@ -3751,7 +3751,7 @@ ShowFileDialog(
 
 `showOverwritePrompt`: Whether or not a prompt shows up when saving a file may overwrite an existing file.
 
-`flag`: If set to 0, bAllowMultiSelect and bShowOverwritePrompt will be effective. Otherwise, these two parameters are ignored.
+`flag`: If set to 0, `allowMultiSelect` and `showOverwritePrompt` will be effective. Otherwise, these two parameters are ignored.
 
 **Availability**
 
