@@ -4809,7 +4809,7 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 </tr>
 
 <tr>
-<td align="center">not supported</td>
+<td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
@@ -4866,7 +4866,7 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 </tr>
 
 <tr>
-<td align="center">not supported</td>
+<td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
@@ -4919,7 +4919,7 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 </tr>
 
 <tr>
-<td align="center">not supported</td>
+<td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
