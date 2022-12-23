@@ -25,7 +25,7 @@ These ports can be configured in the `DSConfiguration.ini` file located in:
 
 ## Installation of Dynamsoft Service
 
-On a desktop, when a new user accesses a web page using Dynamic Web TWAIN SDK for the first time, the user will be prompted to install the Dynamsoft Service. This is a built-in behaviour of the library. The prompt will display the download link. Once the installer is downloaded, the installation process will take just a few seconds.
+On a desktop, when a new user accesses a web page using Dynamic Web TWAIN SDK for the first time, he will be prompted to install the Dynamsoft Service. This is a built-in behaviour of the library. The prompt will display the download link. Once the installer is downloaded, the installation process will take just a few seconds.
 
 The prompt comes up when you try to [create a WebTwain instance]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance) in Service mode.
 

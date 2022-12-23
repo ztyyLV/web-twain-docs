@@ -55,11 +55,13 @@ CaptureImage(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v10.2+ </td>
 <td align="center">v10.2+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -93,11 +95,13 @@ GetSourceList(): string[];
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v10.2+ </td>
 <td align="center">v10.2+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -132,11 +136,13 @@ SelectSource(name: string): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v10.2+ </td>
 <td align="center">v10.2+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -174,11 +180,13 @@ When you close the camera, the video stream will stop at the last frame.
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v10.2+ </td>
 <td align="center">v10.2+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -219,11 +227,13 @@ PlayVideo(
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -257,11 +267,13 @@ PauseVideo(): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -301,11 +313,13 @@ When you close the camera, the video stream will stop at the last frame.
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -353,11 +367,13 @@ interface CameraControlProperty {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -417,11 +433,13 @@ interface CameraControlPropertyExtra {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -466,11 +484,13 @@ Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_came
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -518,11 +538,13 @@ interface VideoControlProperty {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -582,11 +604,13 @@ interface VideoControlPropertyExtra {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -631,11 +655,13 @@ Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_vide
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -684,11 +710,13 @@ interface FrameRate {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">not supported </td>
 <td align="center">v14.3.1+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -737,11 +765,13 @@ interface MediaType {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -790,11 +820,13 @@ interface Resolution {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -829,11 +861,13 @@ SetFrameRate(rate: number): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -868,11 +902,13 @@ SetMediaType(type: string): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -913,11 +949,13 @@ DWObject.Addon.Webcam.SetResolution("640 x 480");
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -958,11 +996,13 @@ Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_vide
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -996,11 +1036,13 @@ GetFrameURL(): string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">not supported </td>
 <td align="center">v14.3.1+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -1040,11 +1082,13 @@ GetFramePartURL(): string;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3.1+ </td>
+<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>

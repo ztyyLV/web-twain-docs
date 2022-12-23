@@ -23,5 +23,5 @@ You can learn more details about each type of device on <a href="{{site.getstart
 
 TWAIN, ICA and SANE are free scanner driver specifications and they have been adopted by almost all the scanner manufacturers in the market. Network scanners are also supported as long as there is a TWAIN/ICA/SANE scanner driver available.
 
-Therefore, Dynamic Web TWAIN SDK has great compatibilities with almost all scanners in the market.
-If you want to verify if your scanner is compatible with our SDK, you can refer to [this article]({{site.faq}}verify-if-device-is-supported.html).
+Therefore, Dynamic Web TWAIN SDK has great compatibilities with almost all scanners in the market. Note that ScanSnap is one known scanner model that is not TWAIN compliant. To verify if your scanner is compatible with our SDK, you can refer to [this article]({{site.faq}}verify-if-device-is-supported.html).
+

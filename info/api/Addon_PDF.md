@@ -43,6 +43,7 @@ GetConvertMode(): number;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -52,6 +53,7 @@ GetConvertMode(): number;
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v16.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -83,6 +85,7 @@ IsModuleInstalled(): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -92,6 +95,7 @@ IsModuleInstalled(): boolean;
 <td align="center">v14.1+ </td>
 <td align="center">v14.1+ </td>
 <td align="center">v16.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -122,6 +126,7 @@ IsTextBasedPDF(path: string): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -130,7 +135,8 @@ IsTextBasedPDF(path: string): boolean;
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
-<td align="center">not supported  </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -172,6 +178,7 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -181,6 +188,7 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
 <td align="center">v16.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -215,6 +223,7 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -224,6 +233,7 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
 <td align="center">v16.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -259,6 +269,7 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -268,6 +279,7 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
 <td align="center">v16.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -293,10 +305,6 @@ interface PDFWSettings {
     author: string;
     /**
      * Specify the compression type.
-     *  When set to PDF_AUTO, Dynamic Web TWAIN will automatically choose the suitable compression type for each image.
-        - For 1 Bit images, if the PDF version is over 1.4, use JBIG2 encoding, otherwise, use FAX4 (CCITT Group 4 Fax).
-        - For 8 Bit images, if the image is grayscale, use JPEG encoding, otherwise, use LZW (Lempel-Ziv-Welch).
-        - For 24 and 32 Bit images, use JPEG encoding.
      */
     compression: Dynamsoft.DWT.EnumDWT_PDFCompressionType | number;
      /**
@@ -366,6 +374,7 @@ Only the core module license is required to use this method.
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -375,6 +384,7 @@ Only the core module license is required to use this method.
 <td align="center">v15.1+ </td>
 <td align="center">v15.1+ </td>
 <td align="center">v16.0+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>

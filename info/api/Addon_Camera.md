@@ -28,7 +28,8 @@ Check out [MediaDevices Cameras]({{site.indepth}}features/input.html#use-mediade
 | [`getSourceList()`](#getsourcelist) | [`selectSource()`](#selectsource)   | [`getCurrentSource()`](#getcurrentsource)         | [`closeSource()`](#closesource)   |
 | [`getResolution()`](#getresolution) | [`setResolution()`](#setresolution) | [`getCurrentResolution()`](#getcurrentresolution) | [`play()`](#play)                 |
 | [`pause()`](#pause)                 | [`resume()`](#resume)               | [`stop()`](#stop)                                 | [`getStatus()`](#getstatus)       |
-| [`capture()`](#capture)             | [`closeVideo()`](#closevideo)                     | [`scanDocument()`](#scandocument) |
+| [`capture()`](#capture)             | [`closeVideo()`](#closevideo)       | [`scanDocument()`](#scandocument)                 | [`turnOnTorch()`](#turnontorch) | 
+| [`turnOffTorch()`](#turnofftorch)   | [`getCapabilities()`](#getcapabilities) | 
 
 **Events**
 
@@ -65,6 +66,7 @@ interface DeviceInfo{
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -74,6 +76,7 @@ interface DeviceInfo{
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
+<td align="center">v18.0+ </td>
 </tr>
 
 </table>
@@ -110,6 +113,7 @@ selectSource(deviceId: string): Promise<DeviceInfo>;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -119,6 +123,7 @@ selectSource(deviceId: string): Promise<DeviceInfo>;
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
+<td align="center">v18.0+ </td>
 </tr>
 
 </table>
@@ -148,6 +153,7 @@ getCurrentSource():DeviceInfo;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -157,6 +163,7 @@ getCurrentSource():DeviceInfo;
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
+<td align="center">v18.0+ </td>
 </tr>
 
 </table>
@@ -186,6 +193,7 @@ closeSource(): Promise<DeviceInfo>;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -194,7 +202,8 @@ closeSource(): Promise<DeviceInfo>;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
+<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -229,6 +238,7 @@ interface Resolution{
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -237,7 +247,8 @@ interface Resolution{
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
+<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -268,6 +279,7 @@ setResolution(resolution: Resolution): Promise<Resolution>;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -276,7 +288,8 @@ setResolution(resolution: Resolution): Promise<Resolution>;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
+<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -306,6 +319,7 @@ getCurrentResolution(): Promise<Resolution>;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -314,7 +328,8 @@ getCurrentResolution(): Promise<Resolution>;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
+<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -354,6 +369,7 @@ play(element?: HTMLElement,
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -362,7 +378,8 @@ play(element?: HTMLElement,
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
+<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -398,6 +415,7 @@ pause(): void;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -406,7 +424,8 @@ pause(): void;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
+<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -435,6 +454,7 @@ resume(): void;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -443,7 +463,8 @@ resume(): void;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
+<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -473,6 +494,7 @@ stop(): void;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -481,7 +503,8 @@ stop(): void;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
+<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -500,10 +523,6 @@ stop(): void;
 getStatus(): string;
 ```
 
-**Usage notes**
-
-The status string is either empty or one of the following: "playing", "paused", "stopped". An empty string means no camera is open.
-
 **Availability**
 <div class="availability">
 <table>
@@ -515,6 +534,7 @@ The status string is either empty or one of the following: "playing", "paused", 
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -523,11 +543,17 @@ The status string is either empty or one of the following: "playing", "paused", 
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
+<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
 </div>
+
+**Usage notes**
+
+The status string is either empty or one of the following: "playing", "paused", "stopped". An empty string means no camera is open.
+
 ---
 
 ## capture
@@ -552,6 +578,7 @@ capture(): Promise<Blob>;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -560,7 +587,8 @@ capture(): Promise<Blob>;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
+<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -590,6 +618,7 @@ closeVideo(): void;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -598,7 +627,8 @@ closeVideo(): void;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
+<td align="center">v16.1+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -626,6 +656,7 @@ on("video-closed", callback: () => void): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -634,7 +665,8 @@ on("video-closed", callback: () => void): boolean;
 <td align="center">v16.2+</td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+</td>
-<td align="center">v16.2+</td>
+<td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -666,6 +698,7 @@ on("video-error", callback: (errorCode, errorString) => void): boolean;
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -674,7 +707,8 @@ on("video-error", callback: (errorCode, errorString) => void): boolean;
 <td align="center">v16.2+</td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+</td>
-<td align="center">v16.2+</td>
+<td align="center">v16.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -708,7 +742,7 @@ interface ScannerViewer {
     stroke?: string;    //default: "#fe8e14". Only supports #16 hexadecimal.
     strokeWidth?: string;  //default: "2px"
     dash?: string          //The allowed value are "solid" and "dashed", the default value is "solid".
-    };
+  };
   headerStyle?:{
     background?: string;  //default: "#000000". Only supports #16 hexadecimal.
     color?: string;  //The color of the icons. Default : "#ffffff". Only supports #16 hexadecimal.
@@ -735,24 +769,28 @@ interface ScannerViewer {
       value: Resolution //The resolution you set. For example: { width:1920, height:1080}
     },{……}]
       defaultValue?: Resolution //Set the default value according to the value set in the valueList.
-    };
+  };
   autoScan?:{   //Automatically capture when a clear document is detected. Only applicable to video scanning. 
       visibility?: string;     //Whether to display the automatic scan icon. Values: "visible""hidden". Default: "visible".
       enableAutoScan?: boolean; //Whether to enable automatic scan. The default value is false.
-      };
+  };
   autoDetect?:{  //Only applicable to video scanning.                  
       visibility?: string;         //Whether to display the automatic border detection icon. Values: "visible""hidden". Default: "visible".
       enableAutoDetect?: boolean;   //Whether to enable automatic border detection. The default value is false.     
       acceptedPolygonConfidence?: number; //The default value is 80. The higher the setting, the more accurate the automatic border detection.
       fpsLimit?: number  //The maximum number of frames detected per second. The default value is 3.
-      };     
+  };     
   continuousScan?: boolean; //Whether to enable continuous scan. The default value is true.
   switchCamera?:{  //The default camera is the rear camera.
       visibility?: string   //Whether to display the switch camera icon. Values: "visible""hidden". Default: "visible".
-      };
+  };
   loadLocalFile?:{  
       visibility?: string   //Whether to display the load local file icon. Values: "visible""hidden". Default: "visible".
-      };
+  };
+  torch?:{
+      visibility?: string;   //Whether to display the torch icon if torch is supported. Values: "visible""hidden". Default: "visible".
+      enableTorch?: boolean //Whether to enable torch by default. Default：false.
+  },
   funcConfirmExit?: (bExistImage: boolean) => Promise<boolean>;
     //funcConfirmExit is the callback funtion,
     //Return Promise.resolve(true): End this capture without saving the image data.
@@ -861,6 +899,7 @@ interface CropViewer {
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
 <td align="center">WASM</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -869,10 +908,138 @@ interface CropViewer {
 <td align="center">v17.2+</td>
 <td align="center">v17.2+</td>
 <td align="center">v17.2+</td>
-<td align="center">v17.2+</td>
+<td align="center">v17.2+ </td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
 </div>
 
+---
 
+## turnOnTorch
+
+Turn on the torch/flashlight.
+
+**Syntax**
+
+```typescript
+turnOnTorch(): Promise<void>;
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+<td align="center">Android Service</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+ </td>
+<td align="center">v18.0+</td>
+</tr>
+
+</table>
+</div>
+
+**Usage notes**
+
+This method should be called when the camera is turned on. It only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. All browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported. You can check if this capability is supported by the camera using API [getCapabilities](#getcapabilities).
+
+---
+
+## turnOffTorch
+
+Turn off the torch/flashlight.
+
+**Syntax**
+```typescript
+turnOffTorch(): Promise<void>;
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+<td align="center">Android Service</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+ </td>
+<td align="center">v18.0+</td>
+</tr>
+
+</table>
+</div>
+
+**Usage notes**
+
+This method should be called when the camera is turned on. It only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. All browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported. You can check if this capability is supported by the camera using API [getCapabilities](#getcapabilities).
+
+---
+
+## getCapabilities
+
+**Syntax**
+
+```typescript
+/**
+ * Get the camera capabilities.
+ */
+getCapabilities(): MediaTrackCapabilities
+```
+
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">WASM</td>
+<td align="center">Android Service</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+ </td>
+<td align="center">v18.0+</td>
+</tr>
+
+</table>
+</div>
+
+**Usage notes**
+
+This method should be called when the camera is turned on. It only works with Chromium-based browsers such as Edge and Chrome on Windows or Android. Other browsers such as Firefox or Safari are not supported. All browsers on iOS (including Chrome) use WebKit as the rendering engine and are not supported.
