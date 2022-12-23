@@ -19,6 +19,8 @@ permalink: /info/schedule/Stable.html
 
 ##### Service Edition for Android
   - Enable document scanning from eSCL-compatible scanners or Wi-Fi Direct scanners directly to your Android mobile device. Please refer to <a href="https://www.dynamsoft.com/blog/announcement/web-twain-android-service-scan-document/" target="_blank">this blog</a> for more details.
+  
+  [Get Dynamsoft Service in Google Play](https://play.google.com/store/apps/details?id=com.dynamsoft.mobilescan)
 
 ##### Scanner
   - Added new method <a href="{{site.info}}api/WebTwain_Acquire.html#getdevicesasync" target="_blank">GetDevicesAsync</a>.
