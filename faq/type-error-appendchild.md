@@ -16,7 +16,6 @@ permalink: /faq/type-error-appendchild.html
 ### Symptom:
 You may see following errors when you opened up the application or running the application, then your program will be stopped by the errors.
 ![type-error-1]({{site.assets}}imgs/TypeError.png)
-![type-error-2]({{site.assets}}imgs/type-error.png)
 
 ### Cause:
 The issue is because when the application implements this line `DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer')`, the container is still null. Although it may finish the initialization success, the issue will appear when you upload the files.
