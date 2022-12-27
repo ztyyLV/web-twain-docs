@@ -358,6 +358,8 @@ permalink: /faq/
 <li><a href="{{site.faq}}source-has-nothing-to-capture.html">Error Message - Source has nothing to capture</a></li>
 
 <li><a href="{{site.faq}}chrome-106-107-warning.html">Warning Message - Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true</a></li>
+
+<li><a href="{{site.faq}}type-error-appendchild.html">Error Message - Uncaught TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.</a></li>
  </ol>
 
 ## Licensing and Purchase
