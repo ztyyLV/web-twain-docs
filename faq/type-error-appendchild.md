@@ -14,7 +14,12 @@ permalink: /faq/type-error-appendchild.html
 ## Error Message - Uncaught TypeError: Cannot read properties of null (reading 'appendChild') or Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.
 
 ### Symptom:
-You may see the above errors when you open up the application or run the application, then your program will be stopped by the errors.
+You may see the following errors when you open up the application or run the application, then your program will be stopped by the errors.
+
+- Uncaught TypeError: Cannot read properties of null (reading 'appendChild')
+
+- Uncaught TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'
+
 
 ### Cause:
 The issue is because when the application implements this line `DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer')`, the container is still null or haven't been created yet. Although it may finish the initialization success, the issue will appear when you upload the files.
