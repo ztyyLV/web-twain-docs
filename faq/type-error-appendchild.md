@@ -2,20 +2,19 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Error Message - Uncaught TypeError: Cannot read properties of null (reading 'appendChild').
+title: Error Message - Uncaught TypeError: Cannot read properties of null (reading 'appendChild') or Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.
 keywords: Dynamic Web TWAIN, Error message
-breadcrumbText: Error Message - Uncaught TypeError: Cannot read properties of null (reading 'appendChild').
-description: Error Message - Uncaught TypeError: Cannot read properties of null (reading 'appendChild').
+breadcrumbText: Error Message - Uncaught TypeError: Cannot read properties of null (reading 'appendChild') or Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.
+description: Error Message - Uncaught TypeError: Cannot read properties of null (reading 'appendChild') or Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.
 permalink: /faq/type-error-appendchild.html
 ---
 
 # Error Troubleshooting
 
-## Error Message - Uncaught TypeError: Cannot read properties of null (reading 'appendChild').
+## Error Message - Uncaught TypeError: Cannot read properties of null (reading 'appendChild') or Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.
 
 ### Symptom:
-You may see following error when you opened up the application or running the application, then your program will be stopped by the error.
-![type-error-1]({{site.assets}}imgs/TypeError.png)
+You may see the above errors when you open up the application or run the application, then your program will be stopped by the errors.
 
 ### Cause:
 The issue is because when the application implements this line `DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer')`, the container is still null or haven't been created yet. Although it may finish the initialization success, the issue will appear when you upload the files.
