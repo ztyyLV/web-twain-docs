@@ -2,10 +2,10 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: Error Message - Uncaught TypeError: Cannot read properties of null (reading 'appendChild') or Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.
+title: Error Message - Uncaught TypeError - Cannot read properties of null (reading 'appendChild') or Failed to execute 'appendChild' on 'Node' - parameter 1 is not of type 'Node'.
 keywords: Dynamic Web TWAIN, Error message
-breadcrumbText: Error Message - Uncaught TypeError: Cannot read properties of null (reading 'appendChild') or Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.
-description: Error Message - Uncaught TypeError: Cannot read properties of null (reading 'appendChild') or Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.
+breadcrumbText: Error Message - Uncaught TypeError - Cannot read properties of null (reading 'appendChild') or Failed to execute 'appendChild' on 'Node'- parameter 1 is not of type 'Node'.
+description: Error Message - Uncaught TypeError - Cannot read properties of null (reading 'appendChild') or Failed to execute 'appendChild' on 'Node'- parameter 1 is not of type 'Node'.
 permalink: /faq/type-error-appendchild.html
 ---
 
