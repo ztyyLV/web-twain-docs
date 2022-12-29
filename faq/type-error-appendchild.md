@@ -14,7 +14,7 @@ permalink: /faq/type-error-appendchild.html
 ## Error Message - Uncaught TypeError: Cannot read properties of null (reading 'appendChild') or Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.
 
 ### Symptom:
-You may see the following errors when you open up the application or run the application, then your program will be stopped by the errors.
+You may see the following errors when you open run your application. These errors may be sporadic, or may halt your application.
 
 - Uncaught TypeError: Cannot read properties of null (reading 'appendChild')
 
@@ -22,12 +22,12 @@ You may see the following errors when you open up the application or run the app
 
 
 ### Cause:
-The issue is because when the application implements this line `DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer')`, the container is still null or haven't been created yet. Although it may finish the initialization success, the issue will appear when you upload the files.
+Typically an application uses `DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer')` to create the DWObject at the target container. There are certain conditions where Web TWAIN's intialization process will complete, but after initalization, the target container is not defined or remains null.  You will then see the error when trying to upload your files.
 
 ### Workaround:
-Please check if your container is created dynamically (specially if you are using framework). There are two ways to get rid of the issue. 
+Please check if your container is created dynamically (especially if you are using dynamic frameworks). There are two ways to address the issue. 
 
-(1) If you want to use dynamic initialization method, here is the sample code to create the object dynamically:
+(1) If you want to use dynamic initialization method, here is sample code to create the object dynamically:
 
 ```javascript
 Dynamsoft.DWT.CreateDWTObjectEx(
@@ -47,4 +47,4 @@ Dynamsoft.DWT.CreateDWTObjectEx(
 );
 ```
 
-(2) If you want to use default initialization method, please set `Dynamsoft.DWT.AutoLoad` to `false`. Manually implement `Dynamsoft.DWT.Load()` after you confirm the container has been created.
+(2) If you want to use default initialization method, please set `Dynamsoft.DWT.AutoLoad` to `false` and manually implement `Dynamsoft.DWT.Load()` after you confirm the container has been created.
