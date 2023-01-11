@@ -25,7 +25,9 @@ The following table gives a quick comparison between the two editions.
 | Barcode Reader addon                                              | Windows platform for now; macOS and Linux support will be added soon | Cross-platform support on all desktops and mobile  |
 | Remote Scan                                                       | Windows/macOS/Linux support                                          | Cross-platform support                             |
 
+NOTE: 
 
+Plus Edition is a temporary edition as it's enhanced features will be separated into another SDK product in around June 2023. Due to the upcoming change, the Plus Edition is not available to download from the public website. If you want to access the Plus Edition now, please send a request to support@dynamsoft.com. 
 
 
 ## 18.0 (12/22/2022)
