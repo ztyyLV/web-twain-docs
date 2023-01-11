@@ -15,7 +15,7 @@ permalink: /faq/HTTP-process-error.html
 
 ### Symptom
 
-When attempting to upload images using any of the HTTPUploadThroughPost\*\*\* methods the upload fails and you receive this error.
+When attempting to upload images using any of the HTTPUpload\*\*\* methods the upload fails and you receive this error.
 
 ### Cause
 
