@@ -14,7 +14,7 @@ PDFs are widely used in many and various industries, and presently are the only 
 
 ## Environment
 
-* Supported on [Desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and [Mobile]({{site.getstarted}}platform.html#browsers-on-mobile-devices).
+* Supported on [Desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices).
 
 ## Including the PDF addon 
 

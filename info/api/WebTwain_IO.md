@@ -187,8 +187,6 @@ LoadImageEx(
 
 **Usage Notes**
 
-On mobile devices, `Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL` means "JPG, PNG, TIF" while it means "BMP, JPG, PNG, TIF, PDF" on desktop.
-
 You can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) before calling this API to enable/disable "Open File" dialog.
 
 **Example**
@@ -2845,8 +2843,6 @@ SaveAsJPEG(
 
 **Usage notes**
 
-If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.
-
 If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `true`.
 
 ---
@@ -2910,8 +2906,6 @@ SaveAsPDF(
 
 Learn about [how to config PDF save settings](./Addon_PDF.md#writesetup).
 
-If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.
-
 If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `true`.
 
 ---
@@ -2973,8 +2967,6 @@ SaveAsPNG(
 
 **Usage notes**
 
-If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.
-
 If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to true.
 
 ---
@@ -3035,8 +3027,6 @@ SaveAsTIFF(
 - `errorString`: The error string.
 
 **Usage notes**
-
-If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.
 
 If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to true.
 
@@ -3158,8 +3148,6 @@ SaveAllAsPDF(
 
 Learn about [how to config PDF save settings](./Addon_PDF.md#write-setup).
 
-If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.
-
 If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to true.
 
 ---
@@ -3220,8 +3208,6 @@ SaveSelectedImagesAsMultiPagePDF(
 
 Learn about [how to config PDF save settings](./Addon_PDF.md#write-setup).
 
-If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.
-
 If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `true`.
 
 ---
@@ -3281,8 +3267,6 @@ SaveSelectedImagesAsMultiPageTIFF(
 **Usage notes**
 
 If called without any callback functions, these methods become synchronously and return a boolean value to indicate whether it succeeded. However, calling them asynchronously is recommended.
-
-If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.
 
 If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `true`.
 
@@ -3839,33 +3823,6 @@ Print(useOSPrintWindow ? : boolean): boolean;
 **Parameters**
 
 `useOSPrintWindow`: Whether to use the print feature of the operating system instead.
-
-**Availability**
-
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
-</tr>
-
-<tr>
-<td align="center">v6.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
-</tr>
-
-</table>
-</div>
 
 **Usage Notes**
 

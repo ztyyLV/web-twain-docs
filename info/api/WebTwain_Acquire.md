@@ -249,10 +249,6 @@ If it's set to 1, the following will also be retrieved (if available):
 
 If it's set to 2, then besides what's mentioned in the two tables above, the Dynamic Web TWAIN library will also try to query the scanner for its own custom extended image info.
 
-- Remote Scan
-
-  When [scanning remotely]({{site.indepth}}features/input.html#scan-from-a-remote-scanner), if the method is called without any parameter, do not forget to set [ `IfShowUI` ](#ifshowui) to `false` .
-
 **Example**
 
 > The example code shows 4 ways to use the API `AcquireImage()`
@@ -805,7 +801,6 @@ SelectSource(
 
 - It's recommended to use this API asynchronously by pass arguments to the parameters `successCallback` and `failureCallback`.
 - On `Windows` and `Windows` only, you can call this method with no arguments so that it runs synchronously and return a boolean value.
-- When [scanning remotely]({{site.indepth}}features/input.html#scan-from-a-remote-scanner), this method must be called asynchronously.
 
 **Example**
 
