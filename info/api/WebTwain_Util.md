@@ -393,8 +393,6 @@ LogLevel: number;
 
 The logs for the Dynamic Web TWAIN library are saved in the directory `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\log\`. By default, `LogLevel` is 0 and nothing is recorded. When it is set to 1, all debugging information is recorded. This setting in your application will apply to all machines.
 
-To enable logging on a specific machine, you can set `LogLevel` to 14 in this file: `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\DSConfiguration.ini`.
-
 ---
 
 ## Manufacturer
