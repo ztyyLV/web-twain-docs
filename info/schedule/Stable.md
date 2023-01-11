@@ -27,7 +27,7 @@ The following table gives a quick comparison between the two editions.
 
 NOTE: 
 
-Plus Edition is a temporary edition as it's enhanced features will be separated into another SDK product in around June 2023. Due to the upcoming change, the Plus Edition is not available to download from the public website. If you want to access the Plus Edition now, please send a request to support@dynamsoft.com. 
+Plus Edition is a temporary edition as it's enhanced features will be separated into another SDK product in around June 2023. Due to the upcoming change, the Plus Edition is not available to download from the public website. If you want to access the Plus Edition now, please send a request to [support@dynamsoft.com](mailto:support@dynamsoft.com). 
 
 
 ## 18.0 (12/22/2022)
