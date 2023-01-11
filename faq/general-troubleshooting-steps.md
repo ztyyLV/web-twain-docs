@@ -25,7 +25,7 @@ permalink: /faq/general-troubleshooting-steps.html
   - Linux, `/opt/dynamsoft/DynamsoftService/log`
 
 2. Set the log level
-  - For only one client machine, add the line `LogLevel=14` to `DSConfiguration.ini` on that specific machine.
+  - For only one client machine, go to the application with Dynamic Web TWAIN embedded, Press F12 to open the development tools, switch to "console" tab and enter the command "DWObject.LogLevel = 1" to enable the debugger mode.
   - For all client machines, set [ `LogLevel` ]({{site.info}}api/WebTwain_Util.html#loglevel) to 1 in your code. This property should be set as soon as the `WebTwain` instance is created. For example, in the event `Dynamsoft_OnReady`
     ```javascript
     function Dynamsoft_OnReady() {
@@ -40,3 +40,5 @@ permalink: /faq/general-troubleshooting-steps.html
   - On Windows, the log files are in `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\log` or `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\DynamsoftService\log`
   - On macOS, the log files are in `Go > Applications > Dynamsoft > DynamsoftServicex64_17 > {installed version No.} > log`
   - On Linux, the log files are in `/opt/dynamsoft/DynamsoftServicex64_17/log`
+
+5. Set log level back to the default value (0) to disable the debugger mode, otherwise the operation speed will be decreased.
