@@ -41,7 +41,6 @@ The deployment of Dynamic Web TWAIN is easy. Simply copy the Resources folder to
 
 If you need to use any of the following features, you must enable HTTPS on the server.
 
-* Use the new [Camera module]({{site.indepth}}features/Input.html#use-mediadevices-cameras)
 * Upload or Download via SSL
 * Any other features that require a secure connection
 

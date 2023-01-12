@@ -50,7 +50,7 @@ tree_list:
       - name: Use Web TWAIN in Vue
         path: /indepth/development/vue.html
       - name: Simple Demo
-        path: /getstarted/Helloworld.html
+        path: https://www.dynamsoft.com/web-twain/resources/code-gallery/
   - name: API Reference
     path: /info/api/
     childList:
@@ -76,8 +76,8 @@ tree_list:
         path: /info/api/WebTwain_Util.html
       - name: Addon_BarcodeReader
         path: /info/api/Addon_BarcodeReader.html
-      - name: Addon_Camera
-        path: /info/api/Addon_Camera.html
+      # - name: Addon_Camera
+      #   path: /info/api/Addon_Camera.html
       - name: Addon_PDF
         path: /info/api/Addon_PDF.html
       - name: Addon_Webcam
