@@ -74,8 +74,6 @@ IndexToImageID(index: number): number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -84,8 +82,6 @@ IndexToImageID(index: number): number;
 <td align="center">v15.0+</td>
 <td align="center">v15.0+</td>
 <td align="center">v15.0+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -115,8 +111,6 @@ ImageIDToIndex(imageId: number): number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -125,8 +119,6 @@ ImageIDToIndex(imageId: number): number;
 <td align="center">v15.0+</td>
 <td align="center">v15.0+</td>
 <td align="center">v15.0+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -161,8 +153,6 @@ RenameTag(oldName:string, newName:string): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -171,8 +161,6 @@ RenameTag(oldName:string, newName:string): boolean;
 <td align="center">v16.2+</td>
 <td align="center">v16.2+</td>
 <td align="center">v16.2+</td>
-<td align="center">v16.2+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -203,8 +191,6 @@ RemoveTag(tagName: string, indices?: number[]):boolean
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -213,8 +199,6 @@ RemoveTag(tagName: string, indices?: number[]):boolean
 <td align="center">v17.0+</td>
 <td align="center">v17.0+</td>
 <td align="center">v17.0+</td>
-<td align="center">v17.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -253,8 +237,6 @@ interface TagInfo {
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -263,8 +245,6 @@ interface TagInfo {
 <td align="center">v17.0+</td>
 <td align="center">v17.0+</td>
 <td align="center">v17.0+</td>
-<td align="center">v17.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -294,8 +274,6 @@ ClearImageTags(index: number): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -304,8 +282,6 @@ ClearImageTags(index: number): boolean;
 <td align="center">v15.2+</td>
 <td align="center">v15.2+</td>
 <td align="center">v15.2+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -335,8 +311,6 @@ FilterImagesByTag(tag: string): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -345,8 +319,6 @@ FilterImagesByTag(tag: string): boolean;
 <td align="center">v15.2+</td>
 <td align="center">v15.2+</td>
 <td align="center">v15.2+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -375,8 +347,6 @@ ClearFilter(): number[];
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -385,8 +355,6 @@ ClearFilter(): number[];
 <td align="center">v16.2+</td>
 <td align="center">v16.2+</td>
 <td align="center">v16.2+</td>
-<td align="center">v16.2+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -416,8 +384,6 @@ SetDefaultTag(tag: string): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -426,8 +392,6 @@ SetDefaultTag(tag: string): boolean;
 <td align="center">v15.2+</td>
 <td align="center">v15.2+</td>
 <td align="center">v15.2+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -458,8 +422,6 @@ TagImages(indices: number[], tag: string): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -468,8 +430,6 @@ TagImages(indices: number[], tag: string): boolean;
 <td align="center">v15.2+</td>
 <td align="center">v15.2+</td>
 <td align="center">v15.2+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -499,8 +459,6 @@ GetImageBitDepth(index: number): number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -509,8 +467,6 @@ GetImageBitDepth(index: number): number;
 <td align="center">v6.2+</td>
 <td align="center">v6.2+</td>
 <td align="center">v6.2+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -556,8 +512,6 @@ GetImageHeight(index: number): number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -566,8 +520,6 @@ GetImageHeight(index: number): number;
 <td align="center">v6.2+</td>
 <td align="center">v6.2+</td>
 <td align="center">v6.2+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -597,8 +549,6 @@ GetImageWidth(index: number): number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -607,8 +557,6 @@ GetImageWidth(index: number): number;
 <td align="center">v6.2+</td>
 <td align="center">v6.2+</td>
 <td align="center">v6.2+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -638,8 +586,6 @@ GetImageXResolution(index: number): number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -648,8 +594,6 @@ GetImageXResolution(index: number): number;
 <td align="center">v8.0+</td>
 <td align="center">v8.0+</td>
 <td align="center">v8.0+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -679,8 +623,6 @@ GetImageYResolution(index: number): number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -689,8 +631,6 @@ GetImageYResolution(index: number): number;
 <td align="center">v8.0+</td>
 <td align="center">v8.0+</td>
 <td align="center">v8.0+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -732,8 +672,6 @@ GetSkewAngle(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -742,8 +680,6 @@ GetSkewAngle(
 <td align="center">v9.0+</td>
 <td align="center">v9.0+</td>
 <td align="center">v9.0+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -793,8 +729,6 @@ GetSkewAngleEx(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -803,8 +737,6 @@ GetSkewAngleEx(
 <td align="center">v9.0+</td>
 <td align="center">v9.0+</td>
 <td align="center">v9.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -840,8 +772,6 @@ GetImageSize(index: number, width: number, height: number): number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -850,8 +780,6 @@ GetImageSize(index: number, width: number, height: number): number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -882,8 +810,6 @@ GetImageSizeWithSpecifiedType(index: number, type: Dynamsoft.DWT.EnumDWT_ImageTy
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -892,8 +818,6 @@ GetImageSizeWithSpecifiedType(index: number, type: Dynamsoft.DWT.EnumDWT_ImageTy
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -923,8 +847,6 @@ GetSelectedImagesSize(type: Dynamsoft.DWT.EnumDWT_ImageType | number): number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -933,8 +855,6 @@ GetSelectedImagesSize(type: Dynamsoft.DWT.EnumDWT_ImageType | number): number;
 <td align="center">v6.0+</td>
 <td align="center">v6.0+</td>
 <td align="center">v6.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -970,8 +890,6 @@ GetImagePartURL(index: number, width?: number, height?: number): string;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -980,8 +898,6 @@ GetImagePartURL(index: number, width?: number, height?: number): string;
 <td align="center">v13.0+</td>
 <td align="center">v13.0+</td>
 <td align="center">v13.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1025,8 +941,6 @@ GetImageURL(index: number, width?: number, height?: number): string;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1035,8 +949,6 @@ GetImageURL(index: number, width?: number, height?: number): string;
 <td align="center">v12.0+</td>
 <td align="center">v12.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1077,8 +989,6 @@ SelectAllImages(): number[];
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1087,8 +997,6 @@ SelectAllImages(): number[];
 <td align="center">v15.3+</td>
 <td align="center">v15.3+</td>
 <td align="center">v15.3+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1119,8 +1027,6 @@ SelectImages(indices: number[]): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1129,8 +1035,6 @@ SelectImages(indices: number[]): boolean;
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1161,8 +1065,6 @@ MoveImage(from: number, to: number): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1171,8 +1073,6 @@ MoveImage(from: number, to: number): boolean;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1203,8 +1103,6 @@ SwitchImage(index1: number, index2: number): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1213,8 +1111,6 @@ SwitchImage(index1: number, index2: number): boolean;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1246,8 +1142,6 @@ RemoveImage(index: number): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1257,8 +1151,6 @@ RemoveImage(index: number): boolean;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 </tr>
 
@@ -1288,8 +1180,6 @@ RemoveAllImages(): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1298,8 +1188,6 @@ RemoveAllImages(): boolean;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1343,8 +1231,6 @@ RemoveAllSelectedImages(): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1353,8 +1239,6 @@ RemoveAllSelectedImages(): boolean;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1398,8 +1282,6 @@ CurrentImageIndexInBuffer: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1408,8 +1290,6 @@ CurrentImageIndexInBuffer: number;
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1438,8 +1318,6 @@ readonly HowManyImagesInBuffer: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1448,8 +1326,6 @@ readonly HowManyImagesInBuffer: number;
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1478,8 +1354,6 @@ MaxImagesInBuffer: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1488,8 +1362,6 @@ MaxImagesInBuffer: number;
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1522,8 +1394,6 @@ readonly SelectedImagesIndices: number[];
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1532,8 +1402,6 @@ readonly SelectedImagesIndices: number[];
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1562,8 +1430,6 @@ SelectionRectAspectRatio: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1572,8 +1438,6 @@ SelectionRectAspectRatio: number;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1602,8 +1466,6 @@ readonly BlankImageCurrentStdDev: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1612,8 +1474,6 @@ readonly BlankImageCurrentStdDev: number;
 <td align="center">v8.0+</td>
 <td align="center">v8.0+</td>
 <td align="center">v8.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1647,8 +1507,6 @@ BlankImageMaxStdDev: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1657,8 +1515,6 @@ BlankImageMaxStdDev: number;
 <td align="center">v5.2+</td>
 <td align="center">v5.2+</td>
 <td align="center">v5.2+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1693,8 +1549,6 @@ BlankImageThreshold: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1703,8 +1557,6 @@ BlankImageThreshold: number;
 <td align="center">v5.2+</td>
 <td align="center">v5.2+</td>
 <td align="center">v5.2+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1739,8 +1591,6 @@ BufferMemoryLimit: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1749,8 +1599,6 @@ BufferMemoryLimit: number;
 <td align="center">v10.1+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1787,8 +1635,6 @@ IsBlankImage(index: number): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1797,8 +1643,6 @@ IsBlankImage(index: number): boolean;
 <td align="center">v5.2+</td>
 <td align="center">v5.2+</td>
 <td align="center">v5.2+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1828,8 +1672,6 @@ IsBlankImageExpress(index: number): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1838,8 +1680,6 @@ IsBlankImageExpress(index: number): boolean;
 <td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1880,8 +1720,6 @@ IfAllowLocalCache: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1890,8 +1728,6 @@ IfAllowLocalCache: boolean;
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1949,8 +1785,6 @@ interface BufferChangeInfo {
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1959,8 +1793,6 @@ interface BufferChangeInfo {
 <td align="center">v16.2+</td>
 <td align="center">v16.2+</td>
 <td align="center">v16.2+</td>
-<td align="center">v16.2+</td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -2012,8 +1844,6 @@ RegisterEvent('OnBitmapChanged',
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2022,8 +1852,6 @@ RegisterEvent('OnBitmapChanged',
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -2066,8 +1894,6 @@ RegisterEvent('OnTopImageInTheViewChanged',
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2076,8 +1902,6 @@ RegisterEvent('OnTopImageInTheViewChanged',
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -2115,8 +1939,6 @@ Pair: [from: number, to: number];
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2125,8 +1947,6 @@ Pair: [from: number, to: number];
 <td align="center">v15.0+</td>
 <td align="center">v15.0+</td>
 <td align="center">v15.0+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -2156,8 +1976,6 @@ GetTagListByIndex(index: number):string[]
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2166,8 +1984,6 @@ GetTagListByIndex(index: number):string[]
 <td align="center">v17.2+</td>
 <td align="center">v17.2+</td>
 <td align="center">v17.2+</td>
-<td align="center">v17.2+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>

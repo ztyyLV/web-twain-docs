@@ -97,8 +97,6 @@ LoadImage(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -107,8 +105,6 @@ LoadImage(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -168,8 +164,6 @@ LoadImageEx(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -178,8 +172,6 @@ LoadImageEx(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v16.1+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -265,8 +257,6 @@ LoadImageFromBase64Binary(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -275,8 +265,6 @@ LoadImageFromBase64Binary(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v16.1+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -352,8 +340,6 @@ LoadImageFromBinary(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -362,8 +348,6 @@ LoadImageFromBinary(
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -434,8 +418,6 @@ LoadDibFromClipboard(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -444,8 +426,6 @@ LoadDibFromClipboard(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -501,8 +481,6 @@ RegisterEvent(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -511,8 +489,6 @@ RegisterEvent(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -560,8 +536,6 @@ RegisterEvent(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -570,8 +544,6 @@ RegisterEvent(
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+ </td>
 </tr>
 
 </table>
@@ -625,8 +597,6 @@ FTPDownload(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -635,8 +605,6 @@ FTPDownload(
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -685,8 +653,6 @@ FTPDownloadEx(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -695,8 +661,6 @@ FTPDownloadEx(
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -765,8 +729,6 @@ FTPUpload(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -775,8 +737,6 @@ FTPUpload(
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -851,8 +811,6 @@ FTPUploadEx(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -861,8 +819,6 @@ FTPUploadEx(
 <td align="center">v5.0+ </td>
 <td align="center">v5.0+ </td>
 <td align="center">v5.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -908,8 +864,6 @@ FTPUploadAllAsMultiPageTIFF(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -918,8 +872,6 @@ FTPUploadAllAsMultiPageTIFF(
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -965,8 +917,6 @@ FTPUploadAllAsPDF(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -975,8 +925,6 @@ FTPUploadAllAsPDF(
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1021,8 +969,6 @@ FTPUploadAsMultiPagePDF(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1031,8 +977,6 @@ FTPUploadAsMultiPagePDF(
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1079,8 +1023,6 @@ FTPUploadAsMultiPageTIFF(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1089,8 +1031,6 @@ FTPUploadAsMultiPageTIFF(
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1119,8 +1059,6 @@ FTPUserName: string;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1129,8 +1067,6 @@ FTPUserName: string;
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1159,8 +1095,6 @@ FTPPassword: string;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1169,8 +1103,6 @@ FTPPassword: string;
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1199,8 +1131,6 @@ FTPPort: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1209,8 +1139,6 @@ FTPPort: number;
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1239,8 +1167,6 @@ IfPASVMode: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1249,8 +1175,6 @@ IfPASVMode: boolean;
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 
@@ -1323,8 +1247,6 @@ HTTPDownload(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1333,8 +1255,6 @@ HTTPDownload(
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1407,8 +1327,6 @@ HTTPDownloadEx(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1417,8 +1335,6 @@ HTTPDownloadEx(
 <td align="center">v5.0+ </td>
 <td align="center">v5.0+ </td>
 <td align="center">v5.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1498,8 +1414,6 @@ HTTPDownloadThroughPost(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1508,8 +1422,6 @@ HTTPDownloadThroughPost(
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1558,8 +1470,6 @@ HTTPDownloadDirectly(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1568,8 +1478,6 @@ HTTPDownloadDirectly(
 <td align="center">v7.0+ </td>
 <td align="center">v7.0+ </td>
 <td align="center">v7.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1662,8 +1570,6 @@ HTTPUpload(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1672,8 +1578,6 @@ HTTPUpload(
 <td align="center">v12.0+</td>
 <td align="center">v12.0+</td>
 <td align="center">v12.0+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -1755,8 +1659,6 @@ HTTPUploadThroughPutEx(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1765,8 +1667,6 @@ HTTPUploadThroughPutEx(
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1819,8 +1719,6 @@ HTTPUploadThroughPost(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1829,8 +1727,6 @@ HTTPUploadThroughPost(
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1921,8 +1817,6 @@ HTTPUploadThroughPostEx(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1931,8 +1825,6 @@ HTTPUploadThroughPostEx(
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1989,8 +1881,6 @@ HTTPUploadAllThroughPostAsMultiPageTIFF(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1999,8 +1889,6 @@ HTTPUploadAllThroughPostAsMultiPageTIFF(
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2057,8 +1945,6 @@ HTTPUploadAllThroughPostAsPDF(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2067,8 +1953,6 @@ HTTPUploadAllThroughPostAsPDF(
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2125,8 +2009,6 @@ HTTPUploadThroughPostAsMultiPagePDF(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2135,8 +2017,6 @@ HTTPUploadThroughPostAsMultiPagePDF(
 <td align="center">v6.0+</td>
 <td align="center">v6.0+</td>
 <td align="center">v6.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2193,8 +2073,6 @@ HTTPUploadThroughPostAsMultiPageTIFF(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2203,8 +2081,6 @@ HTTPUploadThroughPostAsMultiPageTIFF(
 <td align="center">v6.0+</td>
 <td align="center">v6.0+</td>
 <td align="center">v6.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2262,8 +2138,6 @@ HTTPUploadThroughPostDirectly(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2272,8 +2146,6 @@ HTTPUploadThroughPostDirectly(
 <td align="center">v7.0+</td>
 <td align="center">v7.0+</td>
 <td align="center">v7.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2331,8 +2203,6 @@ HttpFieldNameOfUploadedImage: string;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2341,8 +2211,6 @@ HttpFieldNameOfUploadedImage: string;
 <td align="center">v6.0+</td>
 <td align="center">v6.0+</td>
 <td align="center">v6.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2371,8 +2239,6 @@ HTTPPort: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2381,8 +2247,6 @@ HTTPPort: number;
 <td align="center">v4.2.1+</td>
 <td align="center">v4.2.1+</td>
 <td align="center">v4.2.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2411,8 +2275,6 @@ IfSSL: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2421,8 +2283,6 @@ IfSSL: boolean;
 <td align="center">v5.2+</td>
 <td align="center">v5.2+</td>
 <td align="center">v5.2+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2451,8 +2311,6 @@ readonly HTTPPostResponseString: string;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2461,8 +2319,6 @@ readonly HTTPPostResponseString: string;
 <td align="center">v3.0.3+</td>
 <td align="center">v3.0.3+</td>
 <td align="center">v3.0.3+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2491,8 +2347,6 @@ MaxUploadImageSize: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2501,8 +2355,6 @@ MaxUploadImageSize: number;
 <td align="center">v5.2+</td>
 <td align="center">v5.2+</td>
 <td align="center">v5.2+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -2535,8 +2387,6 @@ RegisterEvent("OnInternetTransferPercentage", function (percentage: number) {});
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2545,8 +2395,6 @@ RegisterEvent("OnInternetTransferPercentage", function (percentage: number) {});
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2612,8 +2460,6 @@ interface Base64Result {
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2622,8 +2468,6 @@ interface Base64Result {
 <td align="center">v12.0+</td>
 <td align="center">v12.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -2691,8 +2535,6 @@ ConvertToBlob(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2701,8 +2543,6 @@ ConvertToBlob(
 <td align="center">v13.0+</td>
 <td align="center">v13.0+</td>
 <td align="center">v13.0+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -2763,8 +2603,6 @@ SaveAsBMP(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2773,8 +2611,6 @@ SaveAsBMP(
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2824,8 +2660,6 @@ SaveAsJPEG(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2834,8 +2668,6 @@ SaveAsJPEG(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -2885,8 +2717,6 @@ SaveAsPDF(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2895,8 +2725,6 @@ SaveAsPDF(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -2948,8 +2776,6 @@ SaveAsPNG(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2958,8 +2784,6 @@ SaveAsPNG(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -2997,8 +2821,6 @@ SaveAsTIFF(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3007,8 +2829,6 @@ SaveAsTIFF(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -3067,8 +2887,6 @@ SaveAllAsMultiPageTIFF(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3077,8 +2895,6 @@ SaveAllAsMultiPageTIFF(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -3127,8 +2943,6 @@ SaveAllAsPDF(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3137,8 +2951,6 @@ SaveAllAsPDF(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -3187,8 +2999,6 @@ SaveSelectedImagesAsMultiPagePDF(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3197,8 +3007,6 @@ SaveSelectedImagesAsMultiPagePDF(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -3247,8 +3055,6 @@ SaveSelectedImagesAsMultiPageTIFF(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3257,8 +3063,6 @@ SaveSelectedImagesAsMultiPageTIFF(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -3293,8 +3097,6 @@ ClearTiffCustomTag(): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3303,8 +3105,6 @@ ClearTiffCustomTag(): boolean;
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -3345,8 +3145,6 @@ SetTiffCustomTag(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3355,8 +3153,6 @@ SetTiffCustomTag(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -3399,8 +3195,6 @@ ClearAllHTTPFormField(): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3409,8 +3203,6 @@ ClearAllHTTPFormField(): boolean;
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -3459,8 +3251,6 @@ SetHTTPFormField(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3469,8 +3259,6 @@ SetHTTPFormField(
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -3508,8 +3296,6 @@ SetHTTPHeader(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3518,8 +3304,6 @@ SetHTTPHeader(
 <td align="center">v12.0+</td>
 <td align="center">v12.0+</td>
 <td align="center">v12.0+</td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -3557,8 +3341,6 @@ SetUploadSegment(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3567,8 +3349,6 @@ SetUploadSegment(
 <td align="center">v12.1+</td>
 <td align="center">v12.1+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3597,8 +3377,6 @@ IfShowFileDialog: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3607,8 +3385,6 @@ IfShowFileDialog: boolean;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3641,8 +3417,6 @@ IfShowCancelDialogWhenImageTransfer: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3651,8 +3425,6 @@ IfShowCancelDialogWhenImageTransfer: boolean;
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3681,8 +3453,6 @@ IfShowProgressBar: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3691,8 +3461,6 @@ IfShowProgressBar: boolean;
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3748,8 +3516,6 @@ ShowFileDialog(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3758,8 +3524,6 @@ ShowFileDialog(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3855,13 +3619,10 @@ PrintEx(indices: number[]): void;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">not supported  </td>
-<td align="center">v17.0+ </td>
 <td align="center">v17.0+ </td>
 <td align="center">v17.0+ </td>
 <td align="center">v17.0+ </td>
@@ -3894,8 +3655,6 @@ JPEGQuality: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3904,7 +3663,6 @@ JPEGQuality: number;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
 </tr>
 
 </table>
@@ -3939,8 +3697,6 @@ IfTiffMultiPage: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3949,8 +3705,6 @@ IfTiffMultiPage: boolean;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3987,8 +3741,6 @@ TIFFCompressionType: Dynamsoft.DWT.EnumDWT_TIFFCompressionType | number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3997,7 +3749,6 @@ TIFFCompressionType: Dynamsoft.DWT.EnumDWT_TIFFCompressionType | number;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
 </tr>
 
 </table>

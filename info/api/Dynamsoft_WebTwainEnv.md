@@ -162,8 +162,6 @@ UpdateCert(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -172,8 +170,6 @@ UpdateCert(
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
