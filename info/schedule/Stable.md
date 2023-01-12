@@ -11,6 +11,25 @@ permalink: /info/schedule/Stable.html
 
 # Stable Releases
 
+## 18.1 (01/12/2023)
+
+Dynamic Web TWAIN v18.1 is restructured into two editions. While the standard Service Edition focuses on interactions with scanners, the Plus Edition offers support for mobile cameras as well. The goal is to make sure the Service Edition is small-sized, easy-to-use, and stable. The Plus Edition, on the other hand, is more comprehensive and offers flexibility in platforms and devices.
+
+The following table gives a quick comparison between the two editions.
+
+|                                                                   | Service Edition                                                      | Plus Edition                                       |
+|-------------------------------------------------------------------|----------------------------------------------------------------------|----------------------------------------------------|
+| Interact with scanners from browsers on Windows, macOS and Linux  | Yes                                                                  | Yes                                                |
+| Interact with scanners from browsers on Android                   | This will be supported in the next release.                          | Yes                                                |
+| Interact with mobile cameras on iOS and Android devices           | No                                                                   | Yes                                                |
+| Barcode Reader addon                                              | Windows platform for now; macOS and Linux support will be added soon | Cross-platform support on all desktops and mobile  |
+| Remote Scan                                                       | Windows/macOS/Linux support                                          | Cross-platform support                             |
+
+NOTE: 
+
+Plus Edition is a temporary edition as it's enhanced features will be separated into another SDK product in around June 2023. Due to the upcoming change, the Plus Edition is not available to download from the public website. If you want to access the Plus Edition now, please send a request to [support@dynamsoft.com](mailto:support@dynamsoft.com). 
+
+
 ## 18.0 (12/22/2022)
 
 ### Localhost Scan
