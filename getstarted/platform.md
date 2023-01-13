@@ -12,28 +12,9 @@ permalink: /getstarted/platform.html
 
 ## Supported systems and browsers
 
-Dynamic Web TWAIN is designed to be cross-platform, thus, it works in all major browsers across all major operating systems, including Windows, macOS, Linux and mobile. 
+Dynamic Web TWAIN is designed to be cross-platform, thus, it works in all major browsers across all major operating systems, including Windows, macOS, Linux. 
 
 [See the list of supported systems and browsers >](https://www.dynamsoft.com/web-twain/features/)
-
-## Additional notes
-
-Besides the mainstream systems, here are some additional notes on WASM browsers, ActiveX browsers and more:
-
-**WASM browsers**
-
-WASM browsers refer to the browsers with the following advanced features.
-
-- [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) - [More info](https://caniuse.com/#feat=blobbuilder)
-
-- [URL/createObjectURL](https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL) - [More info](https://caniuse.com/#feat=bloburls)
-
-- [Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API) - [More info](https://caniuse.com/#feat=webworkers)
-
-- [WebAssembly](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/WebAssembly) -
-[More info](https://caniuse.com/#feat=wasm)
-
-- [MediaDevices/getUserMedia](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia) - [More info](https://caniuse.com/#feat=stream)
 
 **ActiveX browsers**
 

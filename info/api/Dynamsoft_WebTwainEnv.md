@@ -41,12 +41,6 @@ interface Dynamsoft.DWT {
     readonly inited: boolean;
     ProductKey: string;
     ResourcesPath: string;
-    UseLocalService: boolean;
-     /**
-     * Whether to use camera wasm. The default value is false. 
-     * Set this property to true if you want to use camera wasm in service mode.
-     */
-    UseCameraAddonWasm: boolean;
     
     // Functions
     CreateDWTObject(
@@ -133,18 +127,6 @@ Sets or returns the product key for the library. A product key is required to en
 ### `ResourcesPath`
 
 Sets or returns where the library looks for resources files including service installers, CSS, etc.
-  
-### `UseLocalService`
-
-Sets or returns whether to use the service or use WASM only. This property can be changed at runtime (but not recommended) and affects `WebTwain` instances created after the change.
-
-The default value is `true` .
-  
-### `UseCameraAddonWasm`
-
-Whether to use camera wasm. Set this property to true if you want to use camera wasm in service mode.
-
-The default value is false. 
 
 ## Functions
 
@@ -180,8 +162,6 @@ UpdateCert(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -190,8 +170,6 @@ UpdateCert(
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -291,23 +269,3 @@ Specify the source of the loader bar image. Check out more on [HTMLImageElement.
 #### `loaderBarClassName`
 
 Specify the class name of the DIV element that contains the loader bar. With this class, you can customize the loader bar even further with CSS.
-
-### `WasmConfig`
-
-#### `maxHeapSize`
-
-Specify the maximum memory allowed to be used by the library when it's in WASM-mode. By default, it's 200 (MB).
-
-#### `fetchOptions`
-
-* `headers`
-
-A Headers object, an object literal, or an array of two-item arrays to set request's headers. Check out [HeadersInit](https://microsoft.github.io/PowerBI-JavaScript/modules/_node_modules_typedoc_node_modules_typescript_lib_lib_dom_d_.html#headersinit).
-
-* `mode`
-
-A string to indicate whether the request will use CORS, or will be restricted to same-origin URLs. Sets request's mode. Check out [RequestMode](https://microsoft.github.io/PowerBI-JavaScript/modules/_node_modules_typedoc_node_modules_typescript_lib_lib_dom_d_.html#requestmode).
-
-* `credentials`
-
-A string indicating whether credentials will be sent with the request always, never, or only when sent to a same-origin URL. Sets request's credentials. Check out [RequestCredentials](https://microsoft.github.io/PowerBI-JavaScript/modules/_node_modules_typedoc_node_modules_typescript_lib_lib_dom_d_.html#requestcredentials).

@@ -345,26 +345,6 @@ DWObject.SaveAsJPEG("Sample.jpg", 0,
 );
 ```
 
-### Save files from MediaDevices camera capture
-
-When using the Camera add-on, DWT runs its entire operations within desktop/mobile browsers. As a result, files are always saved in the system's Downloads folder by default, regardless of the absolute path specified. And the API [`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) has no effect in this case.
-
-``` javascript
-// The following line will be ignored and 
-// no file dialog will be shown in WASM mode
-DWObject.IfShowFileDialog = true;
-// The absolute path specified will be ignored and 
-// the file is saved to the Downloads folder
-DWObject.SaveAllAsPDF("D:\\Sample.pdf",
-    function() {
-        console.log('Successful!');
-    },
-    function(errCode, errString) {
-        console.log(errString);
-    }
-);
-```
-
 ## Convert 
 
 In some cases, you want to process the data yourself and want to extract it from the `Dynamic Web TWAIN` buffer. `Dynamic Web TWAIN` offers two approaches.
