@@ -20,8 +20,8 @@ permalink: /info/api/WebTwain_Viewer.html
 | [`createThumbnailViewer()`](#createthumbnailviewer) | [`first()`](#first)                           | [`fitWindow()`](#fitwindow)                     | [`gotoPage()`](#gotopage)                   |
 | [`hide()`](#hide)                                   | [`last()`](#last)                             | [`next()`](#next)                               | [`off()`](#off)                             |
 | [`on()`](#on)                                       | [`previous()`](#previous)                     | [`render()`](#render)                           | [`setButtonClass()`](#setbuttonclass)       |
-| [`setSelectedAreas()`](#setselectedareas)           | [`setViewMode()`](#setviewmode)               | [`show()`](#show)                               | [`unbind()`](#unbind)                       |
-| [`createTemplate()`](#createtemplate)               | [`createDocumentEditor()`](#createdocumenteditor)   | [`updateCheckboxStyle()`](#updatecheckboxstyle)     | [`updatePageNumberStyle()`](#updatepagenumberstyle)       |
+| [`setSelectedAreas()`](#setselectedareas)           | [`setViewMode()`](#setviewmode)               | [`show()`](#show)                               | [`unbind()`](#unbind)                       | 
+| [`updateCheckboxStyle()`](#updatecheckboxstyle)     | [`updatePageNumberStyle()`](#updatepagenumberstyle)       |
 
 **Properties**
 
