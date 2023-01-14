@@ -172,12 +172,12 @@ DWObject.Viewer.clearSelectedAreas();
  * Generate an independent CustomElement object.
  * @param element Specify the HTMLDivElement.
  * @param location Define where to place the custom element. The allowed values are "left" and "right", and the default value is "right".
- * @param bCover The default value is `false`, that is, the created CustomElement is displayed according to the set area. If set to true, the main viewer will be covered by the CustomElement.
+ * @param ifFull The default value is `false`, that is, the created CustomElement is displayed according to the set area. If set to true, the main viewer will be covered by the CustomElement.
  */
 createCustomElement(
     element: HTMLDivElement,
     location?: string,
-    bCover?: boolean
+    ifFull?: boolean
 ): CustomElement;
 
 interface CustomElement {
@@ -193,6 +193,10 @@ interface CustomElement {
      * Remove the custom element.
      */
     dispose(): boolean;
+    /**
+     * Return the created element.
+     */
+    element?: any;
 };
 ```
 
@@ -573,7 +577,7 @@ interface ThumbnailViewerSettings {
      */
     autoChangeIndex?: boolean;
     checkbox?: {
-      visibility?: string; //"visible":hidden", default: "hidden" 
+      visibility?: string; //"visible":hidden", default: "hidden"
       width?: number | string; //default: "24px",number unit: px, string value: "24px"/"10%", relative to parent container
       height?: number | string; //default: "24px",number unit: px, string value: "24px"/"10%", relative to parent container
       background?: string; //default: "#ffffff"
@@ -591,7 +595,7 @@ interface ThumbnailViewerSettings {
       translateY?: number | string //default: "",  number unit: px, string value: "10px"/"10%", relative to itself
     };
     pageNumber?: {
-      visibility?: string; //"visible": hidden", default: "hidden" 
+      visibility?: string; //"visible": hidden", default: "hidden"
       width?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
       height?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
       background?: string; //default: "#ffffff"            
@@ -622,16 +626,16 @@ interface ViewMode {
     /**
      * Specify the number of images per row.
      */
-    columns: number;
+    columns?: number;
     /**
      * Specify the number of images per column.
      */
-    rows: number;
+    rows?: number;
     /**
      * Set or return whether the pages are arranged vertically or horizontally.
      * Default: "vertical". Allowed values are "vertical" and "horizontal".
      */
-    scrollDirection: string;
+    scrollDirection?: string;
 }
 ```
 ```typescript

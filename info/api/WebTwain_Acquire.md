@@ -597,7 +597,7 @@ OpenSourceAsync(): Promise<boolean>;
  * Return all available data sources (scanners, etc.) and optionally all detailed information about them.
  * @param bIncludeDetails Whether to return more details about the data sources or just their names.
  */
-GetSourceNames(bIncludeDetails: boolean): string[] | SourceDetails[];
+GetSourceNames(bIncludeDetails?: boolean): string[] | SourceDetails[];
 
 interface SourceDetails {
     /**
@@ -4204,23 +4204,23 @@ interface CapabilityDetails {
     /**
      * The container type of the Capability
      */
-    conType: ValueAndLabel;
+    conType?: ValueAndLabel;
     /**
      * The index for the current value of the Capability
      */
-    curIndex: number;
+    curIndex?: number;
     /**
      * The current value of the Capability
      */
-    curValue: ValueAndLabel;
+    curValue?: ValueAndLabel;
     /**
      * The index for the default value of the Capability
      */
-    defIndex: number;
+    defIndex?: number;
     /**
      * The operation types that are supported by the Capability. Types include {"get", "set", "reset" "getdefault", "getcurrent"}
      */
-    query: string[];
+    query?: string[];
     /**
      * The value type of the Capability. Value types include
         TWTY_BOOL: 6
@@ -4237,22 +4237,22 @@ interface CapabilityDetails {
         TWTY_UINT16: 4
         TWTY_int: 5
      */
-    valueType: ValueAndLabel;
+    valueType?: ValueAndLabel;
     /**
      * The available values of the Capability
      */
-    values: ValueAndLabel[];
+    values?: ValueAndLabel[];
 }
 
 interface ValueAndLabel {
     /**
      * Numeric representation of the item
      */
-    value: Dynamsoft.DWT.EnumDWT_Cap | Dynamsoft.DWT.EnumDWT_CapType | Dynamsoft.DWT.EnumDWT_CapValueType | number;
+    value?: Dynamsoft.DWT.EnumDWT_Cap | Dynamsoft.DWT.EnumDWT_CapType | Dynamsoft.DWT.EnumDWT_CapValueType | number;
     /**
      * Label or name of the item
      */
-    label: string;
+    label?: string;
 }
 ```
 
