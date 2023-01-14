@@ -3588,6 +3588,30 @@ Print(useOSPrintWindow ? : boolean): boolean;
 
 `useOSPrintWindow`: Whether to use the print feature of the operating system instead.
 
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v6.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+</tr>
+
+</table>
+</div>
+
 **Usage Notes**
 
 The parameter only works in Windows Service mode.
