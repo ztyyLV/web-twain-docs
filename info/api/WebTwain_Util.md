@@ -24,7 +24,7 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 |                                       |
 | :------------------------------------ | :---------------------------- | ----------------------------- | ------------------------------- |
 | [`ErrorCode`](#errorcode)             | [`ErrorString`](#errorstring) | [`LogLevel`](#loglevel)       | [`Manufacturer`](#manufacturer) |
-| [`ProductFamily`](#productfamily)     | [`ProductName`](#productname) | [`VersionInfo`](#versioninfo) | [`UseLocalService`](#uselocalservice) |
+| [`ProductFamily`](#productfamily)     | [`ProductName`](#productname) | [`VersionInfo`](#versioninfo) |
 
 ---
 
