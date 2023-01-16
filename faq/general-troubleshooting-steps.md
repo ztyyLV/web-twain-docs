@@ -33,7 +33,6 @@ permalink: /faq/general-troubleshooting-steps.html
       DWObject.LogLevel = 1;
     }
     ```
-
 3. Reproduce the issue
 
 4. Zip the log files and share with [Dynamsoft Support Team]({{site.about}}getsupport.html) via email.
