@@ -2433,6 +2433,96 @@ When set to true, the index in the upper left corner of the viewer will be selec
 
 ---
 
+## createTemplate
+
+**Syntax**
+
+<div class="sample-code-prefix template2"></div>
+>- v17.3
+>- v17.2.5
+>
+>
+```typescript
+/**
+ * Create document scanner template.
+ * @argument templateName Currently templateName only supports "documentScanner".
+ * @argument documentConfiguration Configuration for the document object.
+ */
+createTemplate("templateName", documentConfiguration?: DocumentConfiguration):DocumentViewerTemplate
+interface DocumentViewerTemplate{
+   getCustomElement():CustomElement; //Get CustomElement. Can display save & upload interface in CustomElement.   
+   onAddDocumentFunc = function () {}
+   onExitFunc = function () {}
+   onSaveFunc = function () {} //Save button click event
+   onUploadFunc = function () {}  //Upload button click event
+   onRemoveSelectedFunc = function () {}   //Remove button click event
+}
+```
+```typescript
+/**
+ * Create document scanner template.
+ * @argument templateName Currently templateName only supports "documentScanner".
+ */
+createTemplate("templateName"):DocumentViewerTemplate
+interface DocumentViewerTemplate{
+   getCustomElement():CustomElement; //Get CustomElement. Can display save & upload interface in CustomElement.   
+   onAddDocumentFunc = function () {}
+   onExitFunc = function () {}
+   onSaveFunc = function () {} //Save button click event
+   onUploadFunc = function () {}  //Upload button click event
+   onRemoveSelectedFunc = function () {}   //Remove button click event
+}
+```
+**Availability**
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+<td align="center">v17.3+ </td>
+</tr>
+
+</table>
+</div>
+
+**Example**
+
+```javascript
+var DWObject, template;
+Dynamsoft.DWT.CreateDWTObjectEx(
+  {
+    WebTwainId: "a",
+    UseLocalService: false,
+  },
+  function (obj) {
+    DWObject = obj;
+    template = DWObject.Viewer.createTemplate("documentScanner");
+    DWObject.Viewer.bind(null, template); //full screen
+    DWObject.Viewer.show(); 
+  
+    template.onExitFunc = function () {
+    DWObject.Viewer.show();   
+    console.error ("execute");
+    //RemoveAllFile();     
+}
+}, function (errorCode, errorString) {
+    console.log(errorString);
+  });
+```
+
+---
+
 ## updateCheckboxStyle
 
 **Syntax**
