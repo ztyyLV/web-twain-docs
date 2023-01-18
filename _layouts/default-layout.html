@@ -79,10 +79,10 @@
         {%- include page_footer.html -%}
     </div>
 
-    <script type="text/javascript">anchors.add();</script>
-    <script type="text/javascript">UrlReplace();</script>
-
     <script type="text/javascript">
+        $(".currentVersion").text("latest version (18.1)");
+        anchors.add();
+        UrlReplace();
         FullTreeMenuList('{{page.needAutoGenerateSidebar}}', '{{page.needGenerateH3Content}}');
     </script>
 
