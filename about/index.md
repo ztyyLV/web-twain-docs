@@ -70,6 +70,19 @@ To ensure your data is safe, Dynamic Web TWAIN offers advanced security features
 
 Learn more about [Dynamic Web TWAIN Security Features](https://www.dynamsoft.com/Products/Dynamic-Web-TWAIN-Security-Features.pdf)
 
+
+## Assumptions
+
+Check out our Angular, React and Vue sample project on GitHub:
+
+![](https://www.dynamsoft.com/web-twain/docs/assets/imgs/download.png) [Sample of dwt-angular-advanced](https://github.com/dynamsoft-dwt/dwt-angular-advanced)  
+![](https://www.dynamsoft.com/web-twain/docs/assets/imgs/download.png) [Sample of dwt-react-advanced](https://github.com/Dynamsoft/web-twain-react-advanced)  
+![](https://www.dynamsoft.com/web-twain/docs/assets/imgs/download.png) [Sample of dwt-vue-advanced](https://github.com/Dynamsoft/web-twain-vue-advanced)
+
+## Live Online Demo
+
+Click <a href="https://demo.dynamsoft.com/web-twain/" target="_blank">here</a> to go to online demo.
+
 ## Assumptions
 
 These docs are meant for developers who are already familiar with HTML, CSS, JavaScript, and some related ideas, tools, etc.
