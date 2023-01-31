@@ -71,7 +71,7 @@ To ensure your data is safe, Dynamic Web TWAIN offers advanced security features
 Learn more about [Dynamic Web TWAIN Security Features](https://www.dynamsoft.com/Products/Dynamic-Web-TWAIN-Security-Features.pdf)
 
 
-## Assumptions
+## Example Apps
 
 Check out our Angular, React and Vue sample project on GitHub:
 
