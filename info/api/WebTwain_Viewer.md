@@ -52,18 +52,8 @@ permalink: /info/api/WebTwain_Viewer.html
 /**
  * Create a Dynamsoft Viewer instance and bind it to the WebTwain instance.
  * @param element Specify an HTML element to create the viewer.
- * @param documentTemplate Specify the document template.
  */
-bind(element: HTMLDivElement, documentTemplate: DocumentViewerTemplate) : void;
-
-interface DocumentViewerTemplate{
-   getCustomElement():CustomElement; //Get CustomElement. Can display save & upload interface in CustomElement.
-   onAddDocumentFunc = function () {}
-   onExitFunc = function () {}
-   onSaveFunc = function () {} //Save button click event
-   onUploadFunc = function () {}  //Upload button click event
-   onRemoveSelectedFunc = function () {}   //Remove button click event
-}
+bind(element: HTMLDivElement | HTMLElement) : boolean;
 ```
 
 **Example**
@@ -73,20 +63,15 @@ var DWObject, template;
 Dynamsoft.DWT.CreateDWTObjectEx(
   {
     WebTwainId: "a",
-    UseLocalService: false,
   },
   function (obj) {
     DWObject = obj;
-    template = DWObject.Viewer.createTemplate("documentScanner");
-    DWObject.Viewer.bind(null, template); //full screen
-    DWObject.Viewer.show(); 
-  
-    template.onExitFunc = function () {
-    DWObject.Viewer.show();   
-    console.error ("execute");
-    //RemoveAllFile();     
-}
-}, function (errorCode, errorString) {
+    template = DWObject.Viewer.getElementById("dwtcontrolContainer_temp3");
+    DWObject.Viewer.width=500;
+    DWObject.Viewer.height=600;
+    DWObject.Viewer.show();    
+  }, 
+  function (errorCode, errorString) {
     console.log(errorString);
   });
 ```
@@ -2430,96 +2415,6 @@ DWObject.Viewer.autoChangeIndex = true;
 **Usage Notes**
 
 When set to true, the index in the upper left corner of the viewer will be selected when scrolling.
-
----
-
-## createTemplate
-
-**Syntax**
-
-<div class="sample-code-prefix template2"></div>
->- v17.3
->- v17.2.5
->
->
-```typescript
-/**
- * Create document scanner template.
- * @argument templateName Currently templateName only supports "documentScanner".
- * @argument documentConfiguration Configuration for the document object.
- */
-createTemplate("templateName", documentConfiguration?: DocumentConfiguration):DocumentViewerTemplate
-interface DocumentViewerTemplate{
-   getCustomElement():CustomElement; //Get CustomElement. Can display save & upload interface in CustomElement.   
-   onAddDocumentFunc = function () {}
-   onExitFunc = function () {}
-   onSaveFunc = function () {} //Save button click event
-   onUploadFunc = function () {}  //Upload button click event
-   onRemoveSelectedFunc = function () {}   //Remove button click event
-}
-```
-```typescript
-/**
- * Create document scanner template.
- * @argument templateName Currently templateName only supports "documentScanner".
- */
-createTemplate("templateName"):DocumentViewerTemplate
-interface DocumentViewerTemplate{
-   getCustomElement():CustomElement; //Get CustomElement. Can display save & upload interface in CustomElement.   
-   onAddDocumentFunc = function () {}
-   onExitFunc = function () {}
-   onSaveFunc = function () {} //Save button click event
-   onUploadFunc = function () {}  //Upload button click event
-   onRemoveSelectedFunc = function () {}   //Remove button click event
-}
-```
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-</tr>
-
-<tr>
-<td align="center">not supported </td>
-<td align="center">v17.3+ </td>
-<td align="center">v17.3+ </td>
-<td align="center">v17.3+ </td>
-<td align="center">v17.3+ </td>
-</tr>
-
-</table>
-</div>
-
-**Example**
-
-```javascript
-var DWObject, template;
-Dynamsoft.DWT.CreateDWTObjectEx(
-  {
-    WebTwainId: "a",
-    UseLocalService: false,
-  },
-  function (obj) {
-    DWObject = obj;
-    template = DWObject.Viewer.createTemplate("documentScanner");
-    DWObject.Viewer.bind(null, template); //full screen
-    DWObject.Viewer.show(); 
-  
-    template.onExitFunc = function () {
-    DWObject.Viewer.show();   
-    console.error ("execute");
-    //RemoveAllFile();     
-}
-}, function (errorCode, errorString) {
-    console.log(errorString);
-  });
-```
 
 ---
 

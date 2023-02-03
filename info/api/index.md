@@ -37,7 +37,7 @@ permalink: /info/api/
 |[`SelectAllImages()`]({{site.info}}api/WebTwain_Buffer.html#selectallimages)|[`MoveImage()`]({{site.info}}api/WebTwain_Buffer.html#moveimage) | [`SwitchImage()`]({{site.info}}api/WebTwain_Buffer.html#switchimage)| [`RemoveImage()`]({{site.info}}api/WebTwain_Buffer.html#removeimage) |
 | [`RemoveAllImages()`]({{site.info}}api/WebTwain_Buffer.html#removeallimages)|[`RemoveAllSelectedImages()`]({{site.info}}api/WebTwain_Buffer.html#removeallselectedimages) |[`SelectImages()`]({{site.info}}api/WebTwain_Buffer.html#selectimages)|[`GetTagListByIndex()`]({{site.info}}api/WebTwain_Buffer.html#gettaglistbyindex) |
 | [`CreateDocument()`]({{site.info}}api/WebTwain_Buffer.html#createdocument)|[`OpenDocument()`]({{site.info}}api/WebTwain_Buffer.html#opendocument)|[`GetCurrentDocumentName()`]({{site.info}}api/WebTwain_Buffer.html#getcurrentdocumentname)|[`RenameDocument()`]({{site.info}}api/WebTwain_Buffer.html#renamedocument)|
-|[`RemoveDocument()`]({{site.info}}api/WebTwain_Buffer.html#removedocument)| [`GetDocumentInfoList()`]({{site.info}}api/WebTwain_Buffer.html#getdocumentinfolist)| [`GetRawDataAsync()`]({{site.info}}api/WebTwain_Buffer.html#getrawdataasync)| 
+|[`RemoveDocument()`]({{site.info}}api/WebTwain_Buffer.html#removedocument)| [`GetDocumentInfoList()`]({{site.info}}api/WebTwain_Buffer.html#getdocumentinfolist)|
 
 <!--
 * [`ClearImageTags()`]({{site.info}}api/WebTwain_Buffer.html#clearimagetags) 
@@ -474,7 +474,7 @@ permalink: /info/api/
 | [`hide()`]({{site.info}}api/WebTwain_Viewer.html#hide)| [`last()`]({{site.info}}api/WebTwain_Viewer.html#last)| [`next()`]({{site.info}}api/WebTwain_Viewer.html#next)|[`off()`]({{site.info}}api/WebTwain_Viewer.html#off)|
 |[`on()`]({{site.info}}api/WebTwain_Viewer.html#on)| [`previous()`]({{site.info}}api/WebTwain_Viewer.html#previous)| [`render()`]({{site.info}}api/WebTwain_Viewer.html#render)| [`setButtonClass()`]({{site.info}}api/WebTwain_Viewer.html#setbuttonclass)|
 | [`setSelectedAreas()`]({{site.info}}api/WebTwain_Viewer.html#setselectedareas)| [`setViewMode()`]({{site.info}}api/WebTwain_Viewer.html#setviewmode) | [`show()`]({{site.info}}api/WebTwain_Viewer.html#show)| [`unbind()`]({{site.info}}api/WebTwain_Viewer.html#unbind)|
-|[`createTemplate()`]({{site.info}}api/WebTwain_Viewer.html#createtemplate)| [`createDocumentEditor()`]({{site.info}}api/WebTwain_Viewer.html#createdocumenteditor)| [`updateCheckboxStyle()`]({{site.info}}api/WebTwain_Viewer.html#updatecheckboxstyle)| [`updatePageNumberStyle()`]({{site.info}}api/WebTwain_Viewer.html#updatepagenumberstyle)| 
+| [`createDocumentEditor()`]({{site.info}}api/WebTwain_Viewer.html#createdocumenteditor)| [`updateCheckboxStyle()`]({{site.info}}api/WebTwain_Viewer.html#updatecheckboxstyle)| [`updatePageNumberStyle()`]({{site.info}}api/WebTwain_Viewer.html#updatepagenumberstyle)| 
 
 <!--
 * [`bind()`]({{site.info}}api/WebTwain_Viewer.html#bind)
