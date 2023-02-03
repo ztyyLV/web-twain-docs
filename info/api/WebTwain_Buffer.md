@@ -23,7 +23,9 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`GetImageXResolution()`](#getimagexresolution) | [`GetImageYResolution()`](#getimageyresolution)         | [`GetSkewAngle()`](#getskewangle)                                   | [`GetSkewAngleEx()`](#getskewangleex)               |
 | [`ImageIDToIndex()`](#imageidtoindex)           | [`IndexToImageID()`](#indextoimageid)                   | [`IsBlankImage()`](#isblankimage)                                   | [`IsBlankImageExpress()`](#isblankimageexpress)     |
 | [`SelectAllImages()`](#selectallimages)         | [`MoveImage()`](#moveimage)                             | [`SwitchImage()`](#switchimage)                                     | [`RemoveImage()`](#removeimage)                     |
-| [`RemoveAllImages()`](#removeallimages)         | [`RemoveAllSelectedImages()`](#removeallselectedimages) | [`SelectImages()`](#selectimages)                                   | [`GetTagListByIndex()`](#gettaglistbyindex)         | [`CreateDocument()`](#createdocument)         | [`OpenDocument()`](#opendocument)         | [`GetCurrentDocumentName()`](#getcurrentdocumentname)         | [`RenameDocument()`](#renamedocument)         | [`RemoveDocument()`](#removedocument)         | [`GetDocumentInfoList()`](#getdocumentinfolist)         |
+| [`RemoveAllImages()`](#removeallimages)         | [`RemoveAllSelectedImages()`](#removeallselectedimages) | [`SelectImages()`](#selectimages)                                   | [`GetTagListByIndex()`](#gettaglistbyindex)         |
+| [`CreateDocument()`](#createdocument)         | [`OpenDocument()`](#opendocument)         | [`GetCurrentDocumentName()`](#getcurrentdocumentname)         | [`RenameDocument()`](#renamedocument)         |
+| [`RemoveDocument()`](#removedocument)         | [`GetDocumentInfoList()`](#getdocumentinfolist)         |
 
 
 <!--* [GetImageBitDepthAsync()](#getimagebitdepthasync)-->

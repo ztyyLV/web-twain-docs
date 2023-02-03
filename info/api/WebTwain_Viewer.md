@@ -70,8 +70,8 @@ Dynamsoft.DWT.CreateDWTObjectEx(
     DWObject.Viewer.width=500;
     DWObject.Viewer.height=600;
     DWObject.Viewer.show();    
-}
-}, function (errorCode, errorString) {
+  }, 
+  function (errorCode, errorString) {
     console.log(errorString);
   });
 ```
