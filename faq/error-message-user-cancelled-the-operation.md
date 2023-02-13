@@ -19,13 +19,13 @@ You may encounter the error "user cancelled the operation" after successfully sc
 
 ### Cause
 
-This happened frequently if you use the WIA driver instead of TWAIN driver. Our SDK is developed based on the TWAIN protocol, therefore the performance in WIA driver cannot be guaranteed.
+1) The user manually terminated thte ongoing operation.
 
-In another case, just like its literal meaning, the user manually terminated the ongoing operation.
+2) This is known to happen if you use a WIA driver instead of TWAIN driver. Our SDK is developed based upon the TWAIN protocol, therefore the performance in WIA driver cannot be guaranteed.
 
 ### Resolution
 
-Since Dynamic Web TWAIN has better compatibility and stability with TWAIN driver, please use TWAIN driver to avoid issue.
+To avoid issues using the WIA driver, please use the manufacturer supplied TWAIN driver.
 
 > **If you want to continue with WIA driver:**
-_You can ignore the error message since it won't affect the actual usage, Dynamsoft is planning to fix the issue at v18.2. Moreover, Dynamic Web TWAIN will officially support WIA driver starting from v18.2._
+_You can ignore the error message since it won't affect the actual usage. Dynamic Web TWAIN will officially support WIA driver before the end of the second quarter of 2023._
