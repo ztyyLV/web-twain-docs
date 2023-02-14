@@ -34,29 +34,28 @@ permalink: /info/api/Dynamsoft_FileUploader.html
 
 ## Init
 
+Initialize and create a FileUploader instance.
+
 **Syntax**
 
 ```typescript
-/**
- * Initialize and create a FileUploader instance.
- * @param URL Specify a path to retrieve the FileUploader library.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument uploadManager A FileUploader instance.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 Init(
     URL: string,
-    successCallback: (
-        uploadManager: UploadManager
-    ) => void,
-    failureCallback: (
-        errorCode: number,
-        errorString: string
-    ) => void
+    successCallback: (uploadManager: UploadManager) => void,
+    failureCallback: (errorCode: number, errorString: string) => void
 ): void;
 ```
+
+**Parameters**
+
+`URL`: Specify a path to retrieve the FileUploader library.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+- `uploadManager`: A FileUploader instance.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
 
 **Availability**
 
@@ -74,12 +73,11 @@ The FileUploader library is installed with Dynamsoft Service by default, therefo
 
 ## CreateJob
 
+Create an upload job.
+
 **Syntax**
 
 ```typescript
-/**
- * Create an upload job.
- */
 CreateJob(): Job;
 
 interface Job {
@@ -185,15 +183,17 @@ interface FormField {
 
 ## Run
 
+Start uploading (processing the specified job).
+
 **Syntax**
 
 ```typescript
-/**
- * Start uploading (processing the specified job).
- * @param job Specify the job.
- */
 Run(job: Job): boolean;
 ```
+
+**Parameters**
+
+`job`: Specify the job.
 
 **Availability**
 
@@ -207,15 +207,17 @@ Run(job: Job): boolean;
 
 ## Cancel
 
+Cancel a job.
+
 **Syntax**
 
 ```typescript
-/**
- * Cancel a job.
- * @param job Specify the job.
- */
 Cancel(job: Job): boolean;
 ```
+
+**Parameters**
+
+`job`: Specify the job.
 
 **Availability**
 
@@ -229,12 +231,11 @@ Cancel(job: Job): boolean;
 
 ## CancelAllupload
 
+Cancel all jobs.
+
 **Syntax**
 
 ```typescript
-/**
- * Cancel all jobs.
- */
 CancelAllUpload(): boolean;
 ```
 
@@ -245,8 +246,6 @@ CancelAllUpload(): boolean;
 |:-|:-|
 |ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
 | not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
-
----
 
 **Usage notes**
 
@@ -275,32 +274,31 @@ Dynamsoft.FileUploader.Init(
 
 ## GenerateURLForUploadData
 
+Generates a URL that will be used by the upload module to fetch the file/data to upload.
+
 **Syntax**
 
 ```typescript
-/**
- * Generates a URL that will be used by the upload module to fetch the file/data to upload.
- * @param Number[] The indices of the images in the buffer. The index is 0-based.
- * @param EnumDWT_ImageType The format in which you'd like the images to be uploaded.
- * @param successCallback A callback function triggered when the operation succeeds. This function will return the result URL.
- * @param failureCallback A callback function triggered when the operation fails.
- * @argument resultURL The result URL.
- * @argument errorCode The error code.
- * @argument errorString The error string.
-
- */
 GenerateURLForUploadData(
-    Number[]: array,
+    Indexes: Number[],
     EnumDWT_ImageType: Dynamsoft.DWT.EnumDWT_ImageType | number,
-    successCallback: (
-        resultURL: resultURL
-    ) => void,
-    failureCallback: (
-        errorCode: number,
-        errorString: string
-    ) => void
+    successCallback: (resultURL: resultURL) => void,
+    failureCallback: (errorCode: number, errorString: string) => void
 ): void;
 ```
+
+**Parameters**
+
+`Indexes`: The indices of the images in the buffer. The index is 0-based.
+
+`EnumDWT_ImageType`: The format in which you'd like the images to be uploaded. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+
+`successCallback`: A callback function triggered when the operation succeeds. This function will return the result URL.
+- `resultURL`: The result URL.
+
+`failureCallback`: A callback function triggered when the operation fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
 
 **Availability**
 
