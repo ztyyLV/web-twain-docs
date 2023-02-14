@@ -23,13 +23,11 @@ permalink: /info/api/Addon_BarcodeReader.html
 
 ## decode
 
+Read an image in the buffer and try to locate and decode barcode(s) on it.
+
 **Syntax**
 
 ```typescript
-/**
- * Read an image in the buffer and try to locate and decode barcode(s) on it.
- * @param index Specify the image to decode.
- */
 decode(index: number): Promise < ITextResults > ;
 
 interface TextResults {
@@ -128,7 +126,12 @@ interface Result {
 }
 ```
 
+**Parameters**
+
+`index`: Specify the image to decode.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -155,12 +158,11 @@ interface Result {
 
 ## getRuntimeSettings
 
+Get the current runtime settings.
+
 **Syntax**
 
 ```typescript
-/**
- * Get the current runtime settings.
- */
 getRuntimeSettings(): Promise < RuntimeSettings > ;
 
 interface RuntimeSettings {
@@ -238,37 +240,20 @@ interface Region {
 
 ## updateRuntimeSettings
 
+Update the runtime settings with a given object or use the string "speed", "balance", or "coverage" to use our preset settings. The default setting is "coverage".
+
 **Syntax**
 
 ```typescript
-/**
- * Update the runtime settings with a given object or use the string "speed", "balance", or "coverage" to use our preset settings. The default setting is "coverage".
- * @param settings Specify the runtime settings.
- */
 updateRuntimeSettings(settings: RuntimeSettings): Promise < RuntimeSettings > ;
 ```
 
-**Example**
+**Parameters**
 
-```javascript
-DWObject.Addon.BarcodeReader.getRuntimeSettings("balance")
-  .then(function (settings) {
-    settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED;
-    return DWObject.Addon.BarcodeReader.updateRuntimeSettings(settings);
-  })
-  .then(function () {
-    DWObject.Addon.BarcodeReader.decode(0).then(
-      function (textResult) {
-        console.log(textResult);
-      },
-      function (ex) {
-        console.log(ex.message || ex);
-      }
-    );
-  });
-```
+`settings`: Specify the runtime settings.
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -291,20 +276,40 @@ DWObject.Addon.BarcodeReader.getRuntimeSettings("balance")
 </table>
 </div>
 
+**Example**
+
+```javascript
+DWObject.Addon.BarcodeReader.getRuntimeSettings("balance")
+  .then(function (settings) {
+    settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED;
+    return DWObject.Addon.BarcodeReader.updateRuntimeSettings(settings);
+  })
+  .then(function () {
+    DWObject.Addon.BarcodeReader.decode(0).then(
+      function (textResult) {
+        console.log(textResult);
+      },
+      function (ex) {
+        console.log(ex.message || ex);
+      }
+    );
+  });
+```
+
 ---
 
 ## resetRuntimeSettings
 
+Reset all runtime settings to default values.
+
 **Syntax**
 
 ```typescript
-/**
- * Reset all runtime settings to default values.
- */
 resetRuntimeSettings(): Promise < RuntimeSettings > ;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -331,19 +336,22 @@ resetRuntimeSettings(): Promise < RuntimeSettings > ;
 
 ## initRuntimeSettingsWithString
 
+Set up the barcode reader with advanced settings.
+
 **Syntax**
 
 ```typescript
-/**
- * Set up the barcode reader with advanced settings.
- * @param settings The runtime setting in the form of a string.
- */
 initRuntimeSettingsWithString(
     settings: string
 ): Promise < RuntimeSettings > ;
 ```
 
+**Parameters**
+
+`settings`: The runtime setting in the form of a string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
