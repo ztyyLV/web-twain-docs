@@ -28,4 +28,4 @@ You may encounter the error "user cancelled the operation" after successfully sc
 To avoid issues using the WIA driver, please use the manufacturer supplied TWAIN driver.
 
 > **If you want to continue with WIA driver:**
-_You can ignore the error message since it won't affect the actual usage. Dynamic Web TWAIN will officially support WIA driver before the end of the second quarter of 2023._
+_You can ignore the error message since it won't affect the actual usage. Dynamic Web TWAIN will officially support WIA driver in the coming release._
