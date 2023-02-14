@@ -34,7 +34,7 @@ permalink: /faq/general-troubleshooting-steps.html
     }
     ```
 
-3. Reproduce the issue
+3. Reproduce the issue (If the time span of the log is greater than 3 days, please create a txt file to indicate the date when the issue occurred)
 
 4. Zip the log files and share with [Dynamsoft Support Team]({{site.about}}getsupport.html) via email.
   - On Windows, the log files are in `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\log` or `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\DynamsoftService\log`
