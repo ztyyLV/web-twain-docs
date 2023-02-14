@@ -30,16 +30,16 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 ## isUsingActiveX
 
+Return whether the WebTwain object is running the ActiveX edition.
+
 **Syntax**
 
 ```typescript
-/**
- * Return whether the WebTwain object is running the ActiveX edition.
- */
 isUsingActiveX(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -66,18 +66,22 @@ isUsingActiveX(): boolean;
 
 ## RegisterEvent
 
+Specify an event listener for the specified built-in event.
+
 **Syntax**
 
 ```typescript
-/**
- * Specify an event listener for the specified built-in event.
- * @param name Specify the event
- * @param callback The event listener
- */
 RegisterEvent(name: string, callback: () => void): boolean;
 ```
 
+**Parameters**
+
+`name`: Specify the event.
+
+`callback`: The event listener.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -104,18 +108,22 @@ RegisterEvent(name: string, callback: () => void): boolean;
 
 ## UnregisterEvent
 
+Remove an event listener from the specified built-in event.
+
 **Syntax**
 
 ```typescript
-/**
- * Remove an event listener from the specified built-in event.
- * @param name Specify the event
- * @param callback The event listener
- */
 UnregisterEvent(name: string, callback: () => void): boolean;
 ```
 
+**Parameters**
+
+`name`: Specify the event.
+
+`callback`: The event listener.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -146,19 +154,22 @@ There can only be one listener for each built-in event. If you call `RegisterEve
 
 ## SetLanguage
 
+Set the language for the authorization dialogs.
+
 **Syntax**
 
 ```typescript
-/**
- * Set the language for the authorization dialogs.
- * @param language Specify the language.
- */
 SetLanguage(
     language: Dynamsoft.DWT.EnumDWT_Language | number
 ): boolean;
 ```
 
+**Parameters**
+
+`language`: Specify the language. Please refer to [EnumDWT_Language]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_language)
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -189,11 +200,13 @@ The language set with this method is only for the built-in security dialogs whic
 
 ## GenerateURLForUploadData
 
+Generate a URL to be used by a FileUpoader instance to fetch the data to upload.
+
 **Syntax**
 
 ```typescript
 /**
- * Generate a URL to be used by a FileUpoader instance to fetch the data to upload.
+ * 
  * @param indices Specify the images to upload.
  * @param type Specify the file type.
  * @param successCallback A callback function that is executed if the request succeeds.
@@ -217,7 +230,23 @@ GenerateURLForUploadData(
 ): void;
 ```
 
+**Parameters**
+
+`indices`: Specify the images to upload.
+
+`type`: Specify the file type. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+- `resultURL`: The generated URL.
+- `indices`: The indices of the images.
+- `type`: The file type. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -244,16 +273,16 @@ GenerateURLForUploadData(
 
 ## ErrorCode
 
+Return the error code.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the error code.
- */
 readonly ErrorCode: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -284,16 +313,16 @@ The `ErrorCode` and `ErrorString` always reflect the result of the last API call
 
 ## ErrorString
 
+Return the error string.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the error string.
- */
 readonly ErrorString: string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -324,12 +353,11 @@ The `ErrorCode` and `ErrorString` always reflect the result of the last API call
 
 ## LogLevel
 
+Return or set the log level for debugging.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the log level for debugging.
- */
 LogLevel: number;
 ```
 
@@ -359,18 +387,17 @@ LogLevel: number;
 
 **Usage notes**
 
-The logs for the Dynamic Web TWAIN library are saved in the directory `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\log\`. By default, `LogLevel` is 0 and nothing is recorded. When it is set to 1, all debugging information is recorded. This setting in your application will apply to all machines.
+The logs for the Dynamic Web TWAIN library are saved in the directory `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\log\`. By default, `LogLevel` is 0 and nothing is recorded. When it is set to 1, all debugging information is recorded. This setting in your application will apply to all machines. Please set it back to 0 if you don't need to record log as it will slow down the speed.
 
 ---
 
 ## Manufacturer
 
+Manufacturer in the identity string of the Dynamic Web TWAIN library.
+
 **Syntax**
 
 ```typescript
-/**
- * Manufacturer in the identity string of the Dynamic Web TWAIN library.
- */
 readonly Manufacturer: string;
 ```
 
@@ -406,12 +433,11 @@ readonly Manufacturer: string;
 
 ## ProductFamily
 
+ProductFamily in the identity string of the Dynamic Web TWAIN library.
+
 **Syntax**
 
 ```typescript
-/**
- * ProductFamily in the identity string of the Dynamic Web TWAIN library.
- */
 readonly ProductFamily: string;
 ```
 
@@ -447,12 +473,11 @@ readonly ProductFamily: string;
 
 ## ProductName
 
+ProductName in the identity string of the Dynamic Web TWAIN library.
+
 **Syntax**
 
 ```typescript
-/**
- * ProductName in the identity string of the Dynamic Web TWAIN library.
- */
 readonly ProductName: string;
 ```
 
@@ -488,12 +513,11 @@ readonly ProductName: string;
 
 ## VersionInfo
 
+VersionInfo in the identity string of the Dynamic Web TWAIN library.
+
 **Syntax**
 
 ```typescript
-/**
- * VersionInfo in the identity string of the Dynamic Web TWAIN library.
- */
 readonly VersionInfo: string;
 ```
 
