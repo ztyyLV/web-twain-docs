@@ -33,9 +33,25 @@ In this case, if you are trying to access an application that integrates a versi
 Note: the new certificate from Dynamsoft will expire on December 8th, 2023. This means you will need to update the certificate again after this certificate expires.
      - Method 3. <a href="{{site.about}}getsupport.html" target="_blank">Contact Dynamsoft</a> for a new MSI for client-side.
      
-
-
 - For v17.2 or higher versions, use the new API <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#updatecert" target="_blank">UpdateCert</a> to automatically update the client side certificate before it expires.
+
+- If you want to automatically update the certificate, please add following code:
+
+   ```javascript
+   // Add the code in dynamsoft.webtwain.configure.js file
+   Dynamsoft.DWT.ServiceCertUpdateURL= "https://demo.dynamsoft.com/DWT/Resources/dist/cert.zip";
+   ```
+   ```javascript
+   // Add the code in dynamsoft.webtwain.install.js file
+   Dynamsoft.DWT.UpdateCert(
+      Dynamsoft.DWT.ServiceCertUpdateURL,
+      function () {
+       },
+       function (errorCode, errorString) {
+           console.log(errorString);
+       }
+   );
+   ```
 
 <!--
 
