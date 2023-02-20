@@ -37,21 +37,21 @@ Note: the new certificate from Dynamsoft will expire on December 8th, 2023. This
 
 - If you want to automatically update the certificate, please add following code:
 
-   ```javascript
+    ```javascript
    // Add the code in dynamsoft.webtwain.configure.js file
-   Dynamsoft.DWT.ServiceCertUpdateURL= "https://demo.dynamsoft.com/DWT/Resources/dist/cert.zip";
-   ```
-   ```javascript
-   // Add the code in dynamsoft.webtwain.install.js file
-   Dynamsoft.DWT.UpdateCert(
-      Dynamsoft.DWT.ServiceCertUpdateURL,
-      function () {
-      },
-      function (errorCode, errorString) {
-         console.log(errorString);
-      }
-   );
-   ```
+    Dynamsoft.DWT.ServiceCertUpdateURL= "https://demo.dynamsoft.com/DWT/Resources/dist/cert.zip";
+    ```
+    ```javascript
+    // Add the code in dynamsoft.webtwain.install.js file
+    Dynamsoft.DWT.UpdateCert(
+        Dynamsoft.DWT.ServiceCertUpdateURL,
+        function () {
+        },
+        function (errorCode, errorString) {
+            console.log(errorString);
+        }
+    );
+    ```
 
 <!--
 
