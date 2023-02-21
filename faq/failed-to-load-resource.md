@@ -46,13 +46,12 @@ Note: the new certificate from Dynamsoft will expire on December 8th, 2023. This
     Dynamsoft.DWT.UpdateCert(
         Dynamsoft.DWT.ServiceCertUpdateURL,
         function () {
-        },
-        function (errorCode, errorString) {
-            console.log(errorString);
-        }
+        },
+        function (errorCode, errorString) {
+            console.log(errorString);
+        }
     );
     ```
-
 <!--
 
  1) Go to service directory, and find _DSConfiguration.ini_.  
