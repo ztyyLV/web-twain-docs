@@ -2587,32 +2587,14 @@ The default value is 0 (Single). Even if checkbox is used, only one image can be
 
 ## Events
 
-### click
-
-### contextmenu
-
-### dblclick
-
-### mousemove
-
-### mousedown
-
-### mouseup
-
-### mouseout
-
-### mouseover
-
-### keydown
-
-### keyup
+### On
 
 **Syntax**
 
 ```typescript
 /**
  * Built-in callbacks that are triggered for a certain mouse event or keyboard event on a page.
- * @param eventName Specify the event.
+ * @param eventName Specify the event. Value: click, contextmenu, dblclick, mousemove, mousedown, mouseup, mouseout, mouseover, keydown, keyup.
  * @param callback Specify the callback.
  * @argument dwtEvent The viewer-specific event object.
  * @argument domEvent The original mouse event object.
