@@ -46,37 +46,40 @@ permalink: /info/api/WebTwain_Viewer.html
 
 ## bind
 
+Create a Dynamsoft Viewer instance and bind it to the WebTwain instance.
+
 **Syntax**
 
 ```typescript
-/**
- * Create a Dynamsoft Viewer instance and bind it to the WebTwain instance.
- * @param element Specify an HTML element to create the viewer.
- */
 bind(element: HTMLDivElement | HTMLElement) : boolean;
 ```
+
+**Parameters**
+
+`element`: Specify an HTML element to create the viewer.
 
 **Example**
 
 ```javascript
 var DWObject, template;
 Dynamsoft.DWT.CreateDWTObjectEx(
-  {
-    WebTwainId: "a",
-  },
-  function (obj) {
-    DWObject = obj;
-    template = DWObject.Viewer.getElementById("dwtcontrolContainer_temp3");
-    DWObject.Viewer.width=500;
-    DWObject.Viewer.height=600;
-    DWObject.Viewer.show();    
-  }, 
-  function (errorCode, errorString) {
-    console.log(errorString);
-  });
+    {
+        WebTwainId: "a",
+    },
+    function (obj) {
+        DWObject = obj;
+        template = DWObject.Viewer.getElementById("dwtcontrolContainer_temp3");
+        DWObject.Viewer.width=500;
+        DWObject.Viewer.height=600;
+        DWObject.Viewer.show();    
+    }, 
+    function (errorCode, errorString) {
+        console.log(errorString);
+    });
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -107,16 +110,16 @@ Replace the previous `BindViewer` method.
 
 ## clearSelectedAreas
 
+Clear the selected area(s) on the current page.
+
 **Syntax**
 
 ```typescript
-/**
- * Clear the selected area(s) on the current page.
- */
 clearSelectedAreas(): void;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -149,16 +152,11 @@ DWObject.Viewer.clearSelectedAreas();
 
 ## createCustomElement
 
+Add a custom page DIV element and specify its position and display order. Generate an independent CustomElement object.
+
 **Syntax**
 
 ```typescript
-/**
- * Add a custom page DIV element and specify its position and display order.
- * Generate an independent CustomElement object.
- * @param element Specify the HTMLDivElement.
- * @param location Define where to place the custom element. The allowed values are "left" and "right", and the default value is "right".
- * @param ifFull The default value is `false`, that is, the created CustomElement is displayed according to the set area. If set to true, the main viewer will be covered by the CustomElement.
- */
 createCustomElement(
     element: HTMLDivElement,
     location?: string,
@@ -185,7 +183,16 @@ interface CustomElement {
 };
 ```
 
+**Parameters**
+
+`element`: Specify the HTMLDivElement.
+
+ `location`: Define where to place the custom element. The allowed values are "left" and "right", and the default value is "right".
+
+ `ifFull`: The default value is `false`, that is, the created CustomElement is displayed according to the set area. If set to true, the main viewer will be covered by the CustomElement.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -233,13 +240,11 @@ The method [ `unbind()` ](#unbind) will dispose all created CustomElement object
 
 ## createImageEditor
 
+Generate an independent ImageEditor object.
+
 **Syntax**
 
 ```typescript
-/**
- * Generate an independent ImageEditor object.
- * @param editorSettings Configure the object.
- */
 createImageEditor(
     editorSettings?: EditorSettings
 ): ImageEditor;
@@ -260,7 +265,12 @@ interface ImageEditor {
 };
 ```
 
+**Parameters**
+
+`editorSettings`: Configure the object.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -412,6 +422,8 @@ The method [ `unbind()` ](#unbind) will dispose all created CustomElement object
 
 ## createThumbnailViewer
 
+Generate a independent ThumbnailViewer object.
+
 **Syntax**
 
 <div class="sample-code-prefix template2"></div>
@@ -421,7 +433,7 @@ The method [ `unbind()` ](#unbind) will dispose all created CustomElement object
 >
 ```typescript
 /**
- * Generate a independent ThumbnailViewer object.
+ * 
  * @param thumbnailViewerSettings Configure the ThumbnailViewer object
  */
 createThumbnailViewer(
@@ -873,16 +885,16 @@ The method [ `unbind()` ](#unbind) will dispose all created CustomElement object
 
 ## first
 
+Show the first page and return the index which should be 0. If there is no page in the viewer, -1 is returned.
+
 **Syntax**
 
 ```typescript
-/**
- * Show the first page and return the index which should be 0. If there is no page in the viewer, -1 is returned.
- */
 first():number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -915,19 +927,22 @@ DWObject.Viewer.first();
 
 ## fitWindow
 
+Set how the page is fit in the viewer.
+
 **Syntax**
 
 ```typescript
-/**
- * Set how the page is fit in the viewer.
- * @param type Specify how to fit. Allowed values are "width" and "height"
- */
 fitWindow(
     type?: string
 ): void
 ```
 
+**Parameters**
+
+`type`: Specify how to fit. Allowed values are "width" and "height"
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -971,19 +986,22 @@ If no parameter is provided, it tries to fit the whole page within the viewer.
 
 ## gotoPage
 
+Show the specified page and return its index.
+
 **Syntax**
 
 ```typescript
-/**
- * Show the specified page and return its index.
- * @param index Specify the page.
- */
 gotoPage(
     index: number
 ): number;
 ```
 
+**Parameters**
+
+`index`: Specify the page.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1016,16 +1034,16 @@ DWObject.Viewer.gotoPage(0);
 
 ## hide
 
+Hide the viewer.
+
 **Syntax**
 
 ```typescript
-/**
- * Hide the viewer.
- */
 hide(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1058,16 +1076,16 @@ DWObject.Viewer.hide();
 
 ## last
 
+Show the last page and return its index. If there is no page in the viewer, -1 is returned.
+
 **Syntax**
 
 ```typescript
-/**
- * Show the last page and return its index. If there is no page in the viewer, -1 is returned.
- */
 last():number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1100,16 +1118,16 @@ DWObject.Viewer.last();
 
 ## next
 
+Show the next page and return its index. If there is no page in the viewer, -1 is returned.
+
 **Syntax**
 
 ```typescript
-/**
- * Show the next page and return its index. If there is no page in the viewer, -1 is returned.
- */
 next(): number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1143,19 +1161,46 @@ var currentIndex = DWObject.Viewer.next(); // return 4 which represents the 5th 
 
 ## off
 
+Unbind event listener(s) from the specified viewer event.
+
 **Syntax**
 
 ```typescript
-/**
- * Unbind event listener(s) from the specified viewer event.
- * @param eventName Specify the event.
- * @param callback Specify the listener to remove
- */
 Viewer.off(
     eventName: string,
     callback?: () => void
 ): void;
 ```
+
+**Parameters**
+
+`eventName`: Specify the event.
+
+`callback`: Specify the listener to remove
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -1171,19 +1216,45 @@ If no listener is specified, all listeners will be removed.
 
 ## on
 
+Bind a listner to the specified event. You can bind one or multiple listeners to the same event.
+
 **Syntax**
 
 ```typescript
-/**
- * Bind a listner to the specified event. You can bind one or multiple listeners to the same event.
- * @param eventName Specify the event name.
- * @param callback Specify the listner.
- */
 Viewer.on(
     eventName: string,
     callback: (event: ViewerEvent) => void
 ): void;
 ```
+
+**Parameters**
+
+`eventName`: Specify the event name.
+`callback`: Specify the listner.
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -1206,16 +1277,16 @@ objThumbnailViewer.on("click", function (dwtEvent, domEvent) {
 
 ## previous
 
+Show the previous page and return its index. If there is no page in the viewer, -1 is returned.
+
 **Syntax**
 
 ```typescript
-/**
- * Show the previous page and return its index. If there is no page in the viewer, -1 is returned.
- */
 previous(): number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1249,16 +1320,16 @@ var currentIndex = DWObject.Viewer.previous(); // return 2 which represents the 
 
 ## render
 
+Refresh the viewer.
+
 **Syntax**
 
 ```typescript
-/**
- * Refresh the viewer.
- */
 render(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1295,19 +1366,22 @@ DWObject.Viewer.render(); //It will trigger the pageRendered event
 
 ## setButtonClass
 
+Set the CSS class name of the specified button.
+
 **Syntax**
 
 ``` typescript
-/**
- * Set the CSS class name of the specified button.
- * @param name Specify the button.
- * @param className Specify the CSS class name.
- */
 setButtonClass(
     name: string,
     className: string
 ): boolean;
 ```
+
+**Parameters**
+
+`name`: Specify the button.
+
+`className`: Specify the CSS class name.
 
 **Usage notes**
 
@@ -1323,13 +1397,11 @@ DWObject.Viewer.setButtonClass("crop", "CropClass");
 
 ## setSelectedAreas
 
+Set one or more rectangular area(s) on the current page.
+
 **Syntax**
 
 ```typescript
-/**
- * Set one or more rectangular area(s) on the current page.
- * @param areas Specify the rectangular area(s).
- */
 setSelectedAreas(
     areas: Area[]
 ): void;
@@ -1342,7 +1414,12 @@ interface Area {
 };
 ```
 
+**Parameters**
+
+`areas`: Specify the rectangular area(s).
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1364,6 +1441,12 @@ interface Area {
 
 </table>
 </div>
+
+**Usage notes**
+
+The coordinates are based on the size of the original page (instead of the size of the viewer).
+
+This method only works when [ `cursor` ](#cursor) is set to "crosshair".
 
 **Example**
 
@@ -1384,31 +1467,29 @@ DWObject.Viewer.setSelectedAreas([
 ]);
 ```
 
-**Usage notes**
-
-The coordinates are based on the size of the original page (instead of the size of the viewer).
-
-This method only works when [ `cursor` ](#cursor) is set to "crosshair".
-
 ---
 
 ## setViewMode
 
+Set the view mode of the viewer.
+
 **Syntax**
 
 ```typescript
-/**
- * Set the view mode of the viewer.
- * @param columns Specify the number of images per column.
- * @param rows Specify the number of images per row.
- */
 setViewMode(
     columns: number,
     rows: number
 ): boolean;
 ```
 
+**Parameters**
+
+`columns`: Specify the number of images per column.
+
+`rows`: Specify the number of images per row.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1431,30 +1512,31 @@ setViewMode(
 </table>
 </div>
 
+**Usage notes**
+
+Setting the view mode as -1 by -1 is equivalent to setting [ `singlePageMode` ](#singlepagemode) to true.
+
+
 **Example**
 
 ```javascript
 DWObject.Viewer.setViewMode(2, 2);
 ```
 
-**Usage notes**
-
-Setting the view mode as -1 by -1 is equivalent to setting [ `singlePageMode` ](#singlepagemode) to true.
-
 ---
 
 ## show
 
+Show the viewer.
+
 **Syntax**
 
 ```typescript
-/**
- * Show the viewer.
- */
 show(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1487,16 +1569,16 @@ DWObject.Viewer.show();
 
 ## unbind
 
+Unbind and destroy the viewer.
+
 **Syntax**
 
 ```typescript
-/**
- * Unbind and destroy the viewer.
- */
 unbind(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1519,31 +1601,30 @@ unbind(): boolean;
 </table>
 </div>
 
+**Usage notes**
+
+Replace the previous `UnbindViewer` method.
+
 **Example**
 
 ```javascript
 DWObject.Viewer.unbind();
 ```
 
-**Usage notes**
-
-Replace the previous `UnbindViewer` method.
-
 ---
 
 ## acceptDrop
 
+Set whether to load files dropped over the viewer area. The default value is true.
+
 **Syntax**
 
 ```typescript
-/**
- * Set whether to load files dropped over the viewer area.
- * The default value is true.
- */
 acceptDrop: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1576,15 +1657,14 @@ DWObject.Viewer.acceptDrop = true;
 
 ## allowSlide
 
+Set whether to allow image navigation by swiping left or right on the viewer. The default value is true.
+
 ```typescript
-/**
- * Set whether to allow image navigation by swiping left or right on the viewer.
- * The default value is true.
- */
 allowSlide: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1607,29 +1687,28 @@ allowSlide: boolean;
 </table>
 </div>
 
+**Usage notes**
+
+This API only works if the view mode of the viewer is set to -1 by -1.
+
 **Example**
 
 ```javascript
 DWObject.Viewer.allowSlide = true;
 ```
 
-**Usage notes**
-
-This API only works if the view mode of the viewer is set to -1 by -1.
-
 ---
 
 ## allowPageDragging
 
+Set whether to allow page dragging to reorder the pages in the viewer. The default value is true.
+
 ```typescript
-/**
- * Set whether to allow page dragging to reorder the pages in the viewer.
- * The default value is true.
- */
 allowPageDragging: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1664,16 +1743,16 @@ DWObject.Viewer.allowPageDragging = false; //Disable drag&drop.
 
 ## background
 
+Return or set the background of the viewer.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the background of the viewer.
- */
 background: string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1696,30 +1775,30 @@ background: string;
 </table>
 </div>
 
+**Usage notes**
+
+Replace the previous `BackgroundColor` method. Now you can specify the backgournd by CSS which may be a single color or even an image. Read more on the [background shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/background).
+
 **Example**
 
 ```javascript
 DWObject.Viewer.background = "rgb(255, 255, 255)";
 ```
 
-**Usage notes**
-
-Replace the previous `BackgroundColor` method. Now you can specify the backgournd by CSS which may be a single color or even an image. Read more on the [background shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/background).
-
 ---
 
 ## border
 
+Return or set the border of the viewer.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the border of the viewer.
- */
 border: string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1742,30 +1821,30 @@ border: string;
 </table>
 </div>
 
+**Usage notes**
+
+The default value is "1px solid rgb(204, 204, 204)". Now you can specify the border by CSS. Read more on the [border shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/border).
+
 **Example**
 
 ```javascript
 DWObject.Viewer.border = "2px solid rgb(204, 204, 204)";
 ```
 
-**Usage notes**
-
-The default value is "1px solid rgb(204, 204, 204)". Now you can specify the border by CSS. Read more on the [border shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/border).
-
 ---
 
 ## cursor
 
+Return or set the shape of the cursor.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the shape of the cursor.
- */
 cursor: string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1787,12 +1866,6 @@ cursor: string;
 
 </table>
 </div>
-
-**Example**
-
-```javascript
-DWObject.Viewer.cursor = "crosshair";
-```
 
 **Usage Notes**
 
@@ -1807,20 +1880,26 @@ The allowed values are:
 
 If there are selected areas on the page, changing the `cursor` property will clear them.
 
+**Example**
+
+```javascript
+DWObject.Viewer.cursor = "crosshair";
+```
+
 ---
 
 ## height
 
+Return or set the height of the viewer.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the height of the viewer.
- */
 height: number | string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1843,6 +1922,12 @@ height: number | string;
 </table>
 </div>
 
+**Usage Notes**
+
+If a number is assigned, it means that number of pixels (px). If a string is assigned, it is either a fixed size like "500px" or a dynamic size like "50%" which follows standard CSS rules.
+
+When reading the property, the value is always in pixels no matter what value was set to it.
+
 **Example**
 
 ```javascript
@@ -1851,26 +1936,20 @@ DWObject.Viewer.height = "350px";
 DWObject.Viewer.height = "100%";
 ```
 
-**Usage Notes**
-
-If a number is assigned, it means that number of pixels (px). If a string is assigned, it is either a fixed size like "500px" or a dynamic size like "50%" which follows standard CSS rules.
-
-When reading the property, the value is always in pixels no matter what value was set to it.
-
 ---
 
 ## idPostfix
 
+Return the postfix of the Ids of the elements in the viewer.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the postfix of the Ids of the elements in the viewer.
- */
 readonly idPostfix: string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1903,17 +1982,16 @@ var myViewerIdPostfix = DWObject.Viewer.idPostfix;
 
 ## ifAutoScroll
 
+Return or set whether to scroll the viewer automatically when new pages are imported. Default: true;
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether to scroll the viewer automatically when new pages are imported.
- * Default: true;
- */
 ifAutoScroll: string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1946,12 +2024,11 @@ DWObject.Viewer.ifAutoScroll = false;
 
 ## innerBorder
 
+Return or set the inner border of the viewer.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the inner border of the viewer.
- */
 innerBorder: string;
 ```
 
