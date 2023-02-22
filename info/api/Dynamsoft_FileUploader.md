@@ -342,12 +342,11 @@ DWObject.GenerateURLForUploadData(
 
 ## ServerUrl
 
+Specifies the target of the HTTP Post Request of the upload job. This typically is a file on the server. For example: `job.ServerUrl = 'http://www.dynamsoft.com/ScanAndUpload/Actions/SaveToFile.aspx';`
+
 **Syntax**
 
 ```typescript
-/**
- * Specifies the target of the HTTP Post Request of the upload job. This typically is a file on the server. For example: job.ServerUrl = 'http://www.dynamsoft.com/ScanAndUpload/Actions/SaveToFile.aspx';
- */
 ServerUrl: string;
 ```
 
@@ -363,12 +362,11 @@ ServerUrl: string;
 
 ## HttpHeader
 
+Specifies headers in the the HTTP Post Request of the upload job. For example: `job.HttpHeader["Content-Type"] = "text/plain";`
+
 **Syntax**
 
 ```typescript
-/**
- * Specifies headers in the the HTTP Post Request of the upload job. For example: job.HttpHeader["Content-Type"] = "text/plain";
- */
 HttpHeader: object;
 ```
 
@@ -388,12 +386,11 @@ By default, HttpHeader is an empty object. If left as it is, default headers are
 
 ## SourceValue
 
+Specifies the files to be uploaded and the name for it. The files are specified by URLs which can be created with the method GenerateURLForUploadData. This object has a method Add to add file to the job.
+
 **Syntax**
 
 ```typescript
-/**
- * Specifies the files to be uploaded and the name for it. The files are specified by URLs which can be created with the method GenerateURLForUploadData. This object has a method Add to add file to the job.
- */
 SourceValue: object;
 ```
 
@@ -419,12 +416,11 @@ job.SourceValue.Add(url, fileName);
 
 ## FormField
 
+Specifies extra fields to be uploaded in the same HTTP post.
+
 **Syntax**
 
 ```typescript
-/**
- * Specifies extra fields to be uploaded in the same HTTP post.
- */
 FormField: object;
 ```
 
@@ -450,16 +446,19 @@ job.FormField.Add("customField", "FormFieldValue");
 
 ## OnUploadTransferPercentage
 
+The event is triggered during the execution of an upload job. It has a parameter which specifies the percentage of the completion of the job.
+
 **Syntax**
 
 ```typescript
-/**
- * The event is triggered during the execution of an upload job. It has a parameter which specifies the percentage of the completion of the job.
- * @argument obj  A job object.
- * @argument sPercentage The percentage of the completion of the job.
- */
 .OnUploadTransferPercentage = function(obj: Object , sPercentage: number){};
 ```
+
+**Parameters**
+
+`obj`: A job object.
+
+`sPercentage`: The percentage of the completion of the job.
 
 **Availability**
 
@@ -482,15 +481,17 @@ function FileUpload_ OnUploadTransferPercentage (obj, sPercentage){
 
 ## OnRunSuccess
 
+The event is triggered when an upload job completes successfully.
+
 **Syntax**
 
 ```typescript
-/**
- * The event is triggered when an upload job completes successfully.
- * @argument obj  A job object.
- */
 .OnRunSuccess = function(obj: Object){};
 ```
+
+**Parameters**
+
+`obj`: A job object.
 
 **Availability**
 
@@ -511,25 +512,27 @@ function FileUpload_OnRunSuccess(obj) {
 
 ---
 
----
-
 ## OnRunFailure
+
+The event is triggered when an upload job completes successfully.
 
 **Syntax**
 
 ```typescript
-/**
- * The event is triggered when an upload job completes successfully.
- * @argument obj  A job object.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 .OnRunFailure = function(
-obj: Object
-errorCode: number,
-errorString: string
+    obj: Object,
+    errorCode: number,
+    errorString: string
 ){};
 ```
+
+**Parameters**
+
+`obj`: A job object.
+
+`errorCode`: The error code.
+
+`errorString`: The error string.
 
 **Availability**
 
@@ -547,5 +550,3 @@ function FileUpload_OnRunFailure(obj, errorCode, errorString) {
   alert(errorString);
 }
 ```
-
----
