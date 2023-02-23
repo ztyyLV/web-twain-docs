@@ -40,6 +40,7 @@ Note: the new certificate from Dynamsoft will expire on December 8th, 2023. This
             Dynamsoft.DWT.UpdateCert(
                 "https://demo.dynamsoft.com/DWT/Resources/dist/cert.zip",
                 function () {
+                    //Success callback
                 },
                 function (errorCode, errorString) {
                 console.log(errorString);
