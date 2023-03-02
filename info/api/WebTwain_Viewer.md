@@ -70,7 +70,7 @@ Dynamsoft.DWT.CreateDWTObjectEx(
         DWObject = obj;
         template = DWObject.Viewer.getElementById("dwtcontrolContainer_temp3");
         DWObject.Viewer.width=500;
-        DWObject.Viewer.height=600;
+        DWObject.Viewer.height=600;
         DWObject.Viewer.show();    
     }, 
     function (errorCode, errorString) {
