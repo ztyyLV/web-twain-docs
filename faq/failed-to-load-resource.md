@@ -32,7 +32,7 @@ By default, “127.0.0.1” is used for service connection. "127.0.0.1" uses a s
 
 - **No High Level Security Requirement**:
 
-  Set back to "127.0.0.1" by comment the line `Dynamsoft.WebTwainEnv.Host = "local.dynamsoft.com"` or `Dynamsoft.DWT.Host="local.dynamsoft.com"` out. No need to worry about the expiry date of the certificate anymore.
+  Set back to self-signed certificate "127.0.0.1" by comment the line `Dynamsoft.WebTwainEnv.Host = "local.dynamsoft.com"` or `Dynamsoft.DWT.Host="local.dynamsoft.com"` out. No need to worry about the expiry date of the certificate anymore.
 
 - **[Highly Recommend] High Level Security Requirement**
 
