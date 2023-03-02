@@ -45,22 +45,22 @@ By default, “127.0.0.1” is used for service connection. "127.0.0.1" uses a s
       > Note: the new certificate from Dynamsoft will expire on <font color=red>December 8th, 2023</font>. This means you must update the certificate again after this certificate expires.
     - Method 3. <a href="{{site.about}}getsupport.html" target="_blank">Contact Dynamsoft</a> for a new MSI for client-side. -->
      
-  <!-- - For v17.2 or higher versions, use the new API <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#updatecert" target="_blank">UpdateCert</a> to automatically update the client side certificate before it expires. **Please go to dynamsoft.webtwain.install.js file in the Resource Folder and search the keyword "OnSSLCertInfo"**, add the following lines of code:
+- For v17.2 or higher versions, you can use the new API <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#updatecert" target="_blank">UpdateCert</a> to automatically update client side certificate before it expires. **Please go to dynamsoft.webtwain.install.js file in the Resource Folder and search the keyword "OnSSLCertInfo"**, add the following lines of code:
     ```javascript
     Dynamsoft.OnSSLCertInfo = function (sslExpiredDate) {
         if ((sslExpiredDate - new Date()) / 86400000 < 15) { // Automatically updates 15 days before expiration
             Dynamsoft.DWT.UpdateCert(
-                "https://demo.dynamsoft.com/DWT/Resources/dist/cert.zip",
+                "Url to download the new certificate.", //E.g. http://xxx.com/cert.zip. server.pem.ldsc & server_key.pem.ldsc should be in cert.zip.
                 function () {
                     //Success callback
                 },
                 function (errorCode, errorString) {
-                console.log(errorString);
+                    console.log(errorString);
                 }
             );
         }
     };
-    ``` -->
+    ```
 
 <!--
 
