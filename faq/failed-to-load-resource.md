@@ -37,7 +37,7 @@ By default, “127.0.0.1” is used for service connection. "127.0.0.1" uses a s
 - **[Highly Recommend] High Level Security Requirement**
 
 1. Set back to "127.0.0.1" by comment the line `Dynamsoft.WebTwainEnv.Host = "local.dynamsoft.com"` or `Dynamsoft.DWT.Host="local.dynamsoft.com"` out.
-2. Replace the certificate of "127.0.0.1" with your own domain certificate and build Service MSI yourself. More information refer to [How can I change the certificate of the Dynamsoft Service?](https://www.dynamsoft.com/web-twain/docs/faq/change-dynamsoft-service-certificate.html).
+2. Replace the certificate of "127.0.0.1" with your own domain certificate and build Service MSI yourself. More information refer to [How can I change the certificate of the Dynamsoft Service?](https://www.dynamsoft.com/web-twain/docs/faq/change-dynamsoft-service-certificate.html)
 
 <!-- - **[Not Recommend] If you have to use "local.dynamsoft.com", the following methods can be taken:**
     - Method 1. Upgrade to V18.0+ which comes with a valid certificate 
