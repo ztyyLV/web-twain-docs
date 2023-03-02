@@ -21,7 +21,7 @@ You get an error message that says **"Failed to load resource: net::ERR_CERT_DAT
 
 By default, “127.0.0.1” is used for service connection. "127.0.0.1" uses a self-signed certificate because it is an internal IP address, if your environment requires high level security, self-signed certificates may not be accepted. Moreover, Android OS or Chrome OS does not accept connection between browsers and Dynamsoft Service via "127.0.0.1".
 
-1. In case, you used our expired certificate - local.dynamsoft.com, as an official domain which uses a VeriSign’ed certificate. The old "local.dynamsoft.com" certificate expired on <font color=red>January 9th, 2023</font>
+1. In case, you used our expired certificate - local.dynamsoft.com, as an official domain which uses a VeriSign’ed certificate. The old "local.dynamsoft.com" certificate expired on <font color=red>January 9th, 2023</font> and the new certificate will expire on <font color=red>December 8th, 2023</font>
    > ___Please note:___ _all official certificates issued by 3rd party come with an expiry date - generally one year. This means that each year the certificate will need to be updated if local.dynamsoft.com is used._
 
 2. Your own domain certificate expired.
