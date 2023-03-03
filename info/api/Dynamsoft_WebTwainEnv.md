@@ -180,7 +180,7 @@ UpdateCert(
 // overwrite the following function in dynamsoft.webtwain.install.js
    Dynamsoft.OnSSLCertInfo = function (sslExpiredDate) {
         console.log(sslExpiredDate);
-   Dynamsoft.DWT.UpdateCert("https://xxx.com/cert.zip", 
+   Dynamsoft.DWT.UpdateCert("https://domainlocation.com/cert.zip", 
         function () { console.log("OK"); }, 
         function (errorCode, errorString) { console.log(errorString);}
     );
