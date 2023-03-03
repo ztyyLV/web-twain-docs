@@ -2069,16 +2069,16 @@ The default value is null. You can specify the border by CSS. Read more on the [
 
 ## pageMargin
 
+Return or set the margin between images.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the margin between images.
- */
 pageMargin: number | string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2100,6 +2100,10 @@ pageMargin: number | string;
 
 </table>
 </div>
+
+**Usage Notes**
+
+The page margin is only effective when the view mode is not -1 \* -1 (in other words, [ `singlePageMode` ](#singlepagemode) is `false` ).
 
 **Example**
 
@@ -2107,24 +2111,20 @@ pageMargin: number | string;
 DWObject.Viewer.pageMargin = 10;
 ```
 
-**Usage Notes**
-
-The page margin is only effective when the view mode is not -1 \* -1 (in other words, [ `singlePageMode` ](#singlepagemode) is `false` ).
-
 ---
 
 ## selectedAreaBorderColor
 
+Set the border color of the selected area. Also applies to the selection box on the video opened by the method `showVideo`.
+
 **Syntax**
 
 ```typescript
-/**
- * Set the border color of the selected area. Also applies to the selection box on the video opened by the method `showVideo`.
- */
 selectedAreaBorderColor: string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2146,6 +2146,10 @@ selectedAreaBorderColor: string;
 
 </table>
 </div>
+
+**Usage notes**
+
+The default value is "rgba(0, 0, 0, 1)".
 
 **Example**
 
@@ -2153,24 +2157,20 @@ selectedAreaBorderColor: string;
 DWObject.Viewer.selectedAreaBorderColor = "rgba(0, 0, 0, 1)";
 ```
 
-**Usage notes**
-
-The default value is "rgba(0, 0, 0, 1)".
-
 ---
 
 ## selectedPageBackground
 
+Set the selected page background color of the Thumbnail viewer.
+
 **Syntax**
 
 ```typescript
-/**
- * Set the selected page background color of the Thumbnail viewer.
- */
 selectedPageBackground: string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2192,6 +2192,10 @@ selectedPageBackground: string;
 
 </table>
 </div>
+
+**Usage notes**
+
+The default value is "rgb(199, 222, 252)". You can specify the backgournd by CSS which may be a single color or even an image. Read more on the [background shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/background).
 
 **Example**
 
@@ -2199,24 +2203,20 @@ selectedPageBackground: string;
 DWObject.Viewer.selectedPageBackground = "rgb(255, 0, 0)";
 ```
 
-**Usage notes**
-
-The default value is "rgb(199, 222, 252)". You can specify the backgournd by CSS which may be a single color or even an image. Read more on the [background shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/background).
-
 ---
 
 ## selectedPageBorder
 
+Return or set the border style for selected page(s).
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the border style for selected page(s).
- */
 selectedPageBorder: string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2238,12 +2238,6 @@ selectedPageBorder: string;
 
 </table>
 </div>
-
-**Example**
-
-```javascript
-DWObject.Viewer.selectedPageBorder = "3px solid rgb(125,162,206)";
-```
 
 **Usage Notes**
 
@@ -2251,20 +2245,26 @@ This API is only effective when the view mode is not -1 \* -1 (in other words, [
 
 The default value is "1px solid rgb(125, 162, 206)". Now you can specify the border by CSS. Read more on the [border shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/border).
 
+**Example**
+
+```javascript
+DWObject.Viewer.selectedPageBorder = "3px solid rgb(125,162,206)";
+```
+
 ---
 
 ## selectionRectAspectRatio
 
+Specify an aspect ratio to be used when selecting an rectangular area on a page.
+
 **Syntax**
 
 ```typescript
-/**
- * Specify an aspect ratio to be used when selecting an rectangular area on a page.
- */
 selectionRectAspectRatio: number | string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2286,6 +2286,10 @@ selectionRectAspectRatio: number | string;
 
 </table>
 </div>
+
+**Usage Notes**
+
+This API is only effective when drawing manually (it won't work if the selection is done with the API [`setSelectedAreas()`](#setselectedareas)).
 
 **Example**
 
@@ -2293,24 +2297,20 @@ selectionRectAspectRatio: number | string;
 DWObject.Viewer.selectionRectAspectRatio = 0.5;
 ```
 
-**Usage Notes**
-
-This API is only effective when drawing manually (it won't work if the selection is done with the API [`setSelectedAreas()`](#setselectedareas)).
-
 ---
 
 ## singlePageMode
 
+Set whether to use single page mode.
+
 **Syntax**
 
 ```typescript
-/**
- * Set whether to use single page mode.
- */
 singlePageMode: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2332,6 +2332,10 @@ singlePageMode: boolean;
 
 </table>
 </div>
+
+**Usage notes**
+
+The default value is `false`. If the thumbnail viewer is not shown, setting `singlePageMode` to `true` is equivalent to setting the view mode to -1 by -1. But if the thumbnail viewer is shown, `singlePageMode` will be changed to `true` automatically.
 
 **Example**
 
@@ -2347,24 +2351,20 @@ objThumbnailViewer.show();
 DWObject.Viewer.singlePageMode = true;
 ```
 
-**Usage notes**
-
-The default value is `false`. If the thumbnail viewer is not shown, setting `singlePageMode` to `true` is equivalent to setting the view mode to -1 by -1. But if the thumbnail viewer is shown, `singlePageMode` will be changed to `true` automatically.
-
 ---
 
 ## width
 
+Return or set the width of the viewer.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the width of the viewer.
- */
 width: number | string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2386,6 +2386,12 @@ width: number | string;
 
 </table>
 </div>
+
+**Usage Notes**
+
+If a number is assigned, it means that number of pixels (px). If a string is assigned, it is either a fixed size like "500px" or a dynamic size like "50%" which follows standard CSS rules.
+
+When reading the property, the value is always in pixels no matter what value was set to it.
 
 **Example**
 
@@ -2395,26 +2401,20 @@ DWObject.Viewer.width = "270px";
 DWObject.Viewer.width = "100%";
 ```
 
-**Usage Notes**
-
-If a number is assigned, it means that number of pixels (px). If a string is assigned, it is either a fixed size like "500px" or a dynamic size like "50%" which follows standard CSS rules.
-
-When reading the property, the value is always in pixels no matter what value was set to it.
-
 ---
 
 ## zoom
 
+Return or set the zoom factor, and then the current page will be enlarged or reduced.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the zoom factor, and then the current page will be enlarged or reduced.
- */
 zoom: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2437,30 +2437,30 @@ zoom: number;
 </table>
 </div>
 
+**Usage Notes**
+
+The zoom factor is only effective when the view mode is -1 \* -1. Allowed values is from 0.02 to 65.
+
 **Example**
 
 ```javascript
 DWObject.Viewer.zoom = 2.0;
 ```
 
-**Usage Notes**
-
-The zoom factor is only effective when the view mode is -1 \* -1. Allowed values is from 0.02 to 65.
-
 ---
 
 ## autoChangeIndex
 
+Set whether to make sure the first image in the viewer is always selected when scrolling through multiple images. The default value is false.
+
 **Syntax**
 
 ```typescript
-/**
- * Set whether to make sure the first image in the viewer is always selected when scrolling through multiple images. The default value is false.
- */
 autoChangeIndex: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2483,27 +2483,25 @@ autoChangeIndex: boolean;
 </table>
 </div>
 
+**Usage Notes**
+
+When set to true, the index in the upper left corner of the viewer will be selected when scrolling.
+
 **Example**
 
 ```javascript
 DWObject.Viewer.autoChangeIndex = true;
 ```
 
-**Usage Notes**
-
-When set to true, the index in the upper left corner of the viewer will be selected when scrolling.
-
 ---
 
 ## updateCheckboxStyle
 
+Update checkbox style
+
 **Syntax**
 
 ```typescript
-/**
- * Update checkbox style
- * @argument checkboxSettings Settings for checkboxex.
- */
 updateCheckboxStyle(checkboxSettings?: CheckboxSettings): void;
 
 interface CheckboxSettings {
@@ -2527,7 +2525,12 @@ interface CheckboxSettings {
 
 ```
 
+**Parameters**
+
+`checkboxSettings`: Settings for checkboxex.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2554,13 +2557,11 @@ interface CheckboxSettings {
 
 ## updatePageNumberStyle
 
+Update page number style
+
 **Syntax**
 
 ```typescript
-/**
- * Update page number style
- * @argument pageNumberSettings Settings for page numbers.
- */
 updatePageNumberStyle(pageNumberSettings?: PageNumberSettings): void;
 
 interface pageNumberSettings {       
@@ -2582,10 +2583,14 @@ interface pageNumberSettings {
   translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
   translateY?: number | string //default: "", number unit: px, string value: "10px"/"10%", relative to itself
 }
-
 ```
 
+**Parameters**
+
+`pageNumberSettings`: Settings for page numbers.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2612,16 +2617,16 @@ interface pageNumberSettings {
 
 ## selectionMode
 
+Return or set the selection mode used.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the selection mode used.
- */
 selectionMode: Dynamsoft.DWT.EnumDWT_SelectionMode | number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2644,6 +2649,10 @@ selectionMode: Dynamsoft.DWT.EnumDWT_SelectionMode | number;
 </table>
 </div>
 
+**Usage notes**
+
+The default value is 0 (Single). Even if checkbox is used, only one image can be selected if the selection mode is set to 0 (Single).
+
 **Example**
 
 ```javascript
@@ -2655,10 +2664,6 @@ DWObject.Viewer.updateCheckboxStyle({
 DWObject.Viewer.selectionMode = Dynamsoft.DWT.EnumDWT_SelectionMode.Multiple; // Multiple Selection
 ```
 
-**Usage notes**
-
-The default value is 0 (Single). Even if checkbox is used, only one image can be selected if the selection mode is set to 0 (Single).
-
 ---
 
 
@@ -2666,19 +2671,14 @@ The default value is 0 (Single). Even if checkbox is used, only one image can be
 
 ### On
 
+Built-in callbacks that are triggered for a certain mouse event or keyboard event on a page.
+
 **Syntax**
 
 ```typescript
-/**
- * Built-in callbacks that are triggered for a certain mouse event or keyboard event on a page.
- * @param eventName Specify the event. Value: click, contextmenu, dblclick, mousemove, mousedown, mouseup, mouseout, mouseover, keydown, keyup.
- * @param callback Specify the callback.
- * @argument dwtEvent The viewer-specific event object.
- * @argument domEvent The original mouse event object.
- */
 on(
     eventName: string,
-    callback: (event: ViewerEvent | KeyboardEvent, domEvent: MouseEvent) => void
+    callback: (dwtEvent: ViewerEvent | KeyboardEvent, domEvent: MouseEvent) => void
 ): void;
 
 interface ViewerEvent{
@@ -2694,6 +2694,43 @@ interface ViewerEvent{
     pageY: number;
 };
 ```
+
+**Parameters**
+
+`eventName`: Specify the event. Value: click, contextmenu, dblclick, mousemove, mousedown, mouseup, mouseout, mouseover, keydown, keyup.
+
+`callback`: Specify the callback.
+- `dwtEvent`: The viewer-specific event object.
+- `domEvent`: The original mouse event object.
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v16.2+ (partially supported) </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
+
+**Usage notes**
+
+The events `mouseout`, `mouseover`, `keydown` and `keyup` are only triggered on desktop browsers.
+The events `click`, `dbclick`, `mousemove`, `pageAreaSelected`, and `pageAreaUnselected` are supported in ActiveX.
 
 **Example**
 
@@ -2739,46 +2776,15 @@ DWObject.Viewer.on("keyup", function (keyboardEvent) {
 });
 ```
 
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-</tr>
-
-<tr>
-<td align="center">v16.2+ (partially supported) </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-</tr>
-
-</table>
-</div>
-
-**Usage notes**
-
-The events `mouseout`, `mouseover`, `keydown` and `keyup` are only triggered on desktop browsers.
-The events `click`, `dbclick`, `mousemove`, `pageAreaSelected`, and `pageAreaUnselected` are supported in ActiveX.
-
 ---
 
 ### pageAreaSelected
 
+This event is triggered when user selects an area (draws a rectangle) or move a selected area on the current page.
+
 **Syntax**
 
 ```typescript
-/**
- * This event is triggered when user selects an area (draws a rectangle) or move a selected area on the current page.
- * @argument index The index of the current page.
- * @argument rect Some attribute values of the selected area.
- */
 on('pageAreaSelected',
     (index: number, rect: rect)=> void
 ): void;
@@ -2797,7 +2803,14 @@ interface rect{
 };
 ```
 
+**Parameters**
+
+`index`: The index of the current page.
+
+`rect`: Some attribute values of the selected area.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2834,19 +2847,22 @@ DWObject.Viewer.off("pageAreaSelected");
 
 ### pageAreaUnselected
 
+This event is triggered when selected area(s) get cleared (when the user clicks outside of the drawn rectangle).
+
 **Syntax**
 
 ```typescript
-/**
- * This event is triggered when selected area(s) get cleared (when the user clicks outside of the drawn rectangle).
- * @argument index The index of the current page.
- */
 on('pageAreaUnselected',
     (index: number) => void
 ): void;
 ```
 
+**Parameters**
+
+`index`: The index of the current page.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2887,19 +2903,22 @@ DWObject.Viewer.off("pageAreaUnselected");
 
 ### pageRendered
 
+This event is triggered when a page is rendered.
+
 **Syntax**
 
 ```typescript
-/**
- * This event is triggered when a page is rendered.
- * @argument index The index of the current page.
- */
 on('pageRendered',
     (index: number) => void
 ): void;
 ```
 
+**Parameters**
+
+`index`: The index of the current page.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2935,20 +2954,24 @@ DWObject.Viewer.render(); //It will trigger the pageRendered event
 
 ### resize
 
+This event is triggered when width & height of the viewer has been changed.
+
 **Syntax**
 
 ```typescript
-/**
- * This event is triggered when width & height of the viewer has been changed.
- * @argument width The new width of the viewer.
- * @argument height The new height of the viewer.
- */
 on('resize',
     (width: number, height: number) => void
 ): void;
 ```
 
+**Parameters**
+
+`width`: The new width of the viewer.
+
+`height`: The new height of the viewer.
+
 **Availability**
+
 <div class="availability">
 <table>
 
