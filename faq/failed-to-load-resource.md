@@ -34,22 +34,22 @@ In case, you used our expired certificate - local.dynamsoft.com, as an official 
   Set back to self-signed certificate "127.0.0.1" by comment the line `Dynamsoft.WebTwainEnv.Host = "local.dynamsoft.com"` or `Dynamsoft.DWT.Host="local.dynamsoft.com"` out. No need to worry about the expiry date of the certificate anymore.
 
 - **High Level Security Requirement (<font color=red>Please pay attention: you need to replace the certificate annually due to expiration</font>)**
-  1. Dynamsoft understand the importance of information security and are committed to remaining one of the most security-compliant companies in the industry. Starting from April 9,2021, Dynamsoft become ISO 27001 certified. Though you are using a self-sign certificate, but all connections are limited to the device itself (127.0.0.1) which ensures the security in most cases.
+  1. (<u>**Recommend**</u>) Set back to self-signed certificate "127.0.0.1". Dynamsoft understand the importance of information security and are committed to remaining one of the most security-compliant companies in the industry. Starting from April 9,2021, Dynamsoft become ISO 27001 certified. Though you are using a self-sign certificate, but all connections are limited to the device itself (127.0.0.1) which ensures the security in most cases.
 
-  2. If you have to use "local.dynamsoft.com", the following methods can be taken:**
-        - Method 1. Take the advantage of new feature -- **Remote Scan** which released in v18.0. With 
+  2. If you have to use "local.dynamsoft.com", the following methods can be taken:
+        - Method 1 (<u>**Recommend**</u>). Take the advantage of new feature -- **Remote Scan** which released in v18.0. With Remote Scan, you can limit the number of Dynamsoft Service Installations to the minimum. For more details, please refer to [What is Remote Scan](https://www.dynamsoft.com/remote-scan/docs/introduction/).
         
-        - Method 2. If you must fix the issue on a few client machines immediately, manually update the following cert files on the client-side machine. Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/local.dynamsoft.com/newcert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under **`C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64)\cert`**.
+        - Method 2. If you must fix the issue on a few client machines immediately, manually update the following cert files on the client-side machine. Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/local.dynamsoft.com/newcert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under **`C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64)\cert`**. Then restart Dynamsoft Service.
             > Note: the new certificate from Dynamsoft will expire on <font color=red>December 8th, 2023</font>. This means you must update the certificate again after this certificate expires.
 
         - Method 3. <a href="{{site.about}}getsupport.html" target="_blank">Contact Dynamsoft</a> for a new MSI for client-side.
 
-        - Method 4. For v17.2 or higher versions, you can use the new API <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#updatecert" target="_blank">UpdateCert</a> to automatically update client side certificate before it expires. **Please go to dynamsoft.webtwain.install.js file in the Resource Folder and search the keyword "OnSSLCertInfo"**, add the following lines of code:
+        - Method 4 (<u>**Convenience but not recommend**</u>). For v17.2 or higher versions, you can use the new API <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#updatecert" target="_blank">UpdateCert</a> to automatically update client side certificate before it expires. **Please go to dynamsoft.webtwain.install.js file in the Resource Folder and search the keyword "OnSSLCertInfo"**, add the following lines of code:
             ```javascript
             Dynamsoft.OnSSLCertInfo = function (sslExpiredDate) {
                 if ((sslExpiredDate - new Date()) / 86400000 < 15) { // Automatically updates 15 days before expiration
                     Dynamsoft.DWT.UpdateCert(
-                        "Url to download the new certificate.", //E.g. http://xxx.com/cert.zip. server.pem.ldsc & server_key.pem.ldsc should be in cert.zip.
+                        "-https://tst.dynamsoft.com/public/download/dwt/newcert/local.dynamsoft.com/newcert.zip", //E.g. http://xxx.com/cert.zip. server.pem.ldsc & server_key.pem.ldsc should be in cert.zip.
                         function () {
                             //Success callback
                         },
