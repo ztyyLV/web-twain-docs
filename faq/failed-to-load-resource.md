@@ -33,7 +33,7 @@ In case, you used our expired certificate - local.dynamsoft.com, as an official 
 - **No High Level Security Requirement**:
   Set back to self-signed certificate "127.0.0.1" by comment the line `Dynamsoft.WebTwainEnv.Host = "local.dynamsoft.com"` or `Dynamsoft.DWT.Host="local.dynamsoft.com"` out. No need to worry about the expiry date of the certificate anymore.
 
-- **High Level Security Requirement (<font color=red>Please pay attention: you need to replace the certificate annually due to expiration</font>)**
+- **High Level Security Requirement (<font color=red>Pay attention: you need to replace the certificate annually due to expiration</font>)**
   1. (**<u>Recommend</u>**) Set back to self-signed certificate "127.0.0.1". Dynamsoft understand the importance of information security and are committed to remaining one of the most security-compliant companies in the industry. Starting from April 9,2021, Dynamsoft become ISO 27001 certified. Though you are using a self-sign certificate, but all connections are limited to the device itself (127.0.0.1) which ensures the security in most cases.
 
   2. If you have to use "local.dynamsoft.com", the following methods can be taken:
@@ -49,7 +49,7 @@ In case, you used our expired certificate - local.dynamsoft.com, as an official 
             Dynamsoft.OnSSLCertInfo = function (sslExpiredDate) {
                 if ((sslExpiredDate - new Date()) / 86400000 < 15) { // Automatically updates 15 days before expiration
                     Dynamsoft.DWT.UpdateCert(
-                        "-https://tst.dynamsoft.com/public/download/dwt/newcert/local.dynamsoft.com/newcert.zip", //E.g. http://xxx.com/cert.zip. server.pem.ldsc & server_key.pem.ldsc should be in cert.zip.
+                        "https://tst.dynamsoft.com/public/download/dwt/newcert/local.dynamsoft.com/newcert.zip", //You may use your own URL to where the new certificate is placed.
                         function () {
                             //Success callback
                         },
