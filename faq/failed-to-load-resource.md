@@ -21,7 +21,9 @@ You get an error message that says **"Failed to load resource: net::ERR_CERT_DAT
 
 By default, “127.0.0.1” is used for service connection. "127.0.0.1" uses a self-signed certificate because it is an internal IP address, if your environment requires high level security, self-signed certificates may not be accepted. Moreover, Android OS or Chrome OS does not accept connection between browsers and Dynamsoft Service via "127.0.0.1".
 
+
 In the case that you have used our expired certificate - local.dynamsoft.com, you will need to update to the latest VeriSign’ed certificate. The most recent expired "local.dynamsoft.com" certificate expired on <font color=red>January 9th, 2023</font> and the latest certificate will expire on <font color=red>December 8th, 2023</font>
+
 > ___Please note:___ _all official certificates issued by 3rd party come with an expiry date - generally one year. This means that each year the certificate will need to be updated if local.dynamsoft.com is used._
 
 <!-- 2. Your own domain certificate expired. -->
@@ -34,6 +36,7 @@ In the case that you have used our expired certificate - local.dynamsoft.com, yo
   Set back to self-signed certificate "127.0.0.1" by comment the line `Dynamsoft.WebTwainEnv.Host = "local.dynamsoft.com"` or `Dynamsoft.DWT.Host="local.dynamsoft.com"` out. No need to worry about the expiry date of the certificate anymore.
 
 - **High Level Security Requirement (<font color=red>Please note: you need to replace the certificate annually due to expiration</font>)**
+
   1. (**<u>Recommended</u>**) Revert back to the self-signed certificate for "127.0.0.1". Dynamsoft understands the importance of information security and are committed to remaining one of the most security-compliant companies in the industry. Starting from April 9,2021, Dynamsoft becomes ISO 27001 certified. Although a self-sign certificate is being used all connections are limited to the device itself (127.0.0.1) which ensures security in most cases.
 
   2. If you have to use "local.dynamsoft.com", the following methods can be taken:
