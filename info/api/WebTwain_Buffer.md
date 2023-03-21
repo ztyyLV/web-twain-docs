@@ -52,19 +52,20 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 ## IndexToImageID
 
+Return the imageId of an image specified by the index.
+
 **Syntax**
 
 ```typescript
-/**
-
-* Return the imageId of an image specified by the index.
-* @param index The index of the image.
-
-*/
 IndexToImageID(index: number): number;
 ```
 
+**Parameters**
+
+`index`: The index of the image.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -91,17 +92,20 @@ IndexToImageID(index: number): number;
 
 ## ImageIDToIndex
 
+Return the index of an image specified by the imageId.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the index of an image specified by the imageId.
- * @param imageId The imageId of the image.
- */
 ImageIDToIndex(imageId: number): number;
 ```
 
+**Parameters**
+
+`imageId`: The imageId of the image.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -132,18 +136,22 @@ An `imageId` is unique and won't change as long as the Dynamsoft Service process
 
 ## RenameTag
 
+Rename a tag.
+
 **Syntax**
 
 ```typescript
-/**
- * Rename a tag.
- * @param oldName Specify the tag to change.
- * @param newName Specify the new tag name.
- */
 RenameTag(oldName:string, newName:string): boolean;
 ```
 
+**Parameters**
+
+`oldName`: Specify the tag to change.
+
+`newName`: Specify the new tag name.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -170,18 +178,27 @@ RenameTag(oldName:string, newName:string): boolean;
 
 ## RemoveTag
 
+Remove the specified tag from one or more images(if not specified, remove from all).
+
 **Syntax**
 
 ```typescript
 /**
- * Remove the specified tag from one or more images(if not specified, remove from all).
+ * 
  * @param tagName Specify the new tag name.
  * @param indices Specify the index.
  */
 RemoveTag(tagName: string, indices?: number[]):boolean
 ```
 
+**Parameters**
+
+`tagName`: Specify the new tag name.
+
+`indices`: Specify the index.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -212,22 +229,22 @@ If the index is null, it will remove the tag you specified. If the index is not 
 
 ## GetTagList
 
+Return the status of all current tags.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the status of all current tags.
- */
 GetTagList(): TagInfo[];
 
 interface TagInfo {
-        name: string;
-         imageIds: number[];
-   }
+    name: string;
+    imageIds: number[];
+}
 
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -254,17 +271,20 @@ interface TagInfo {
 
 ## ClearImageTags
 
+Remove all tags from the specified image.
+
 **Syntax**
 
 ```typescript
-/**
- * Remove all tags from the specified image.
- * @param index Specify the image.
- */
 ClearImageTags(index: number): boolean;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -291,17 +311,20 @@ ClearImageTags(index: number): boolean;
 
 ## FilterImagesByTag
 
+Filter images by the specified tag.
+
 **Syntax**
 
 ```typescript
-/**
- * Filter images by the specified tag.
- * @param tag The tag used as the filter. If nothing or an empty string is used, the filter is cleared.
- */
 FilterImagesByTag(tag: string): boolean;
 ```
 
+**Parameters**
+
+`tag`: The tag used as the filter. If nothing or an empty string is used, the filter is cleared.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -328,16 +351,16 @@ FilterImagesByTag(tag: string): boolean;
 
 ## ClearFilter
 
+Stop filtering images by tag. Return an array of UUID of images under the viewer.
+
 **Syntax**
 
 ```typescript
-/**
- * Stop filtering images by tag. Return an array of UUID of images under the viewer.
- */
 ClearFilter(): number[];
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -364,17 +387,20 @@ ClearFilter(): number[];
 
 ## SetDefaultTag
 
+Set a default tag for newly acquired images.
+
 **Syntax**
 
 ```typescript
-/**
- * Set a default tag for newly acquired images.
- * @param tag Specifies the tag.
- */
 SetDefaultTag(tag: string): boolean;
 ```
 
+**Parameters**
+
+`tag`: Specifies the tag.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -401,18 +427,22 @@ SetDefaultTag(tag: string): boolean;
 
 ## TagImages
 
+Add a tag to specified images.
+
 **Syntax**
 
 ```typescript
-/**
- * Add a tag to specified images.
- * @param indices Specifies images to be tagged.
- * @param tag Specify the tag.
- */
 TagImages(indices: number[], tag: string): boolean;
 ```
 
+**Parameters**
+
+`indices`: Specifies images to be tagged.
+
+`tag`: Specify the tag.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -439,17 +469,20 @@ TagImages(indices: number[], tag: string): boolean;
 
 ## GetImageBitDepth
 
+Return the pixel bit depth of the specified image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the pixel bit depth of the specified image.
- * @param index Specify the image.
- */
 GetImageBitDepth(index: number): number;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -492,17 +525,20 @@ GetImageBitDepthAsync(index: number): Promise<number>;
 
 ## GetImageHeight
 
+Return the height (in pixels) of the specified image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the height (in pixels) of the specified image.
- * @param index Specify the image.
- */
 GetImageHeight(index: number): number;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -529,17 +565,20 @@ GetImageHeight(index: number): number;
 
 ## GetImageWidth
 
+Return the width (in pixels) of the specified image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the width (in pixels) of the specified image.
- * @param index Specify the image.
- */
 GetImageWidth(index: number): number;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -566,17 +605,20 @@ GetImageWidth(index: number): number;
 
 ## GetImageXResolution
 
+Return the horizontal resolution of the specified image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the horizontal resolution of the specified image.
- * @param index Specify the image.
- */
 GetImageXResolution(index: number): number;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -603,17 +645,20 @@ GetImageXResolution(index: number): number;
 
 ## GetImageYResolution
 
+Return the vertical resolution of the specified image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the vertical resolution of the specified image.
- * @param index Specify the image.
- */
 GetImageYResolution(index: number): number;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -640,29 +685,31 @@ GetImageYResolution(index: number): number;
 
 ## GetSkewAngle
 
+Return the skew angle of the specified image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the skew angle of the specified image.
- * @param index Specify the image.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument angle The skew angle.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 GetSkewAngle(
     index: number,
-    successCallback?: (
-        angle: number) => void,
-    failureCallback?: (
-        errorCode: number,
-        errorString: string) => void
+    successCallback?: (angle: number) => void,
+    failureCallback?: (errorCode: number, errorString: string) => void
 ): number | void;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+- `angle`: The skew angle.
+
+`failureCallback`: A callback function that is executed if the request fails. 
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -689,37 +736,43 @@ GetSkewAngle(
 
 ## GetSkewAngleEx
 
+Return the skew angle of the specified rectangle on the specified image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the skew angle of the specified rectangle on the specified image.
- * @param index Specify the image.
- * @param left The x-coordinate of the upper-left corner of the rectangle.
- * @param top The y-coordinate of the upper-left corner of the rectangle.
- * @param right The x-coordinate of the lower-right corner of the rectangle.
- * @param bottom The y-coordinate of the lower-right corner of the rectangle.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument angle The skew angle.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 GetSkewAngleEx(
     index: number,
     left: number,
     top: number,
     right: number,
     bottom: number,
-    successCallback?: (
-        angle: number) => void,
-    failureCallback?: (
-        errorCode: number,
-        errorString: string) => void
+    successCallback?: (angle: number) => void,
+    failureCallback?: (errorCode: number, errorString: string) => void
 ): number | void;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
+`left`: The x-coordinate of the upper-left corner of the rectangle.
+
+`top`: The y-coordinate of the upper-left corner of the rectangle.
+
+`right`: The x-coordinate of the lower-right corner of the rectangle.
+
+`bottom`: The y-coordinate of the lower-right corner of the rectangle.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+- `angle`: The skew angle.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -750,19 +803,24 @@ After you get the skew angle of an image, you can rotate it with the method [Rot
 
 ## GetImageSize
 
+Calculate the size in bytes of the specified image assuming it's resized to the given dimensions.
+
 **Syntax**
 
 ```typescript
-/**
- * Calculate the size in bytes of the specified image assuming it's resized to the given dimensions.
- * @param index Specify the image.
- * @param width Specify the width.
- * @param height Specify the height.
- */
 GetImageSize(index: number, width: number, height: number): number;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
+`width`: Specify the width.
+
+`height`: Specify the height.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -789,18 +847,22 @@ GetImageSize(index: number, width: number, height: number): number;
 
 ## GetImageSizeWithSpecifiedType
 
+Calculate the size in bytes of the specified image assuming an expected file type.
+
 **Syntax**
 
 ```typescript
-/**
- * Calculate the size in bytes of the specified image assuming an expected file type.
- * @param index Specify the image.
- * @param type Specify the expected file type.
- */
 GetImageSizeWithSpecifiedType(index: number, type: Dynamsoft.DWT.EnumDWT_ImageType | number): number;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
+`type`: Specify the expected file type.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -827,17 +889,20 @@ GetImageSizeWithSpecifiedType(index: number, type: Dynamsoft.DWT.EnumDWT_ImageTy
 
 ## GetSelectedImagesSize
 
+Calculate the size in bytes of all selected images assuming an expected file type.
+
 **Syntax**
 
 ```typescript
-/**
- * Calculate the size in bytes of all selected images assuming an expected file type.
- * @param type Sepcify the expected file type.
- */
 GetSelectedImagesSize(type: Dynamsoft.DWT.EnumDWT_ImageType | number): number;
 ```
 
+**Parameters**
+
+`type`: Sepcify the expected file type.
+
 **Availability**
+
 <div class="availability">
 <table>
 

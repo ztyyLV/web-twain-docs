@@ -158,12 +158,12 @@ interface Result {
 
 ## getRuntimeSettings
 
-Get the current runtime settings.
+Return the current runtime settings or the settings of the specified built-in template. The template can only be "speed", "balance", or "coverage".
 
 **Syntax**
 
 ```typescript
-getRuntimeSettings(): Promise < RuntimeSettings > ;
+getRuntimeSettings(template?: string): Promise < RuntimeSettings > ;
 
 interface RuntimeSettings {
     barcodeFormatIds: number;

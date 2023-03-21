@@ -285,8 +285,7 @@ permalink: /faq/
 
 <li><a href="{{site.faq}}service-backward-compatibility.html">Can I use two different websites integrated with two different versions of Dynamic Web TWAIN on the same computer?</a></li>
 
-<li><a href="{{site.faq}}how-come-would-you-need-local.dynamsoft.com.html">In which cases would I use local.dynamsoft.com instead of 127.0.0.1?</a></li>
-
+<!-- <li><a href="{{site.faq}}how-come-would-you-need-local.dynamsoft.com.html">In which cases would I use local.dynamsoft.com instead of 127.0.0.1?</a></li> -->
 <li><a href="{{site.faq}}upgrade-to-latest-version.html">How do I upgrade my project to use the latest version of the Dynamic Web TWAIN SDK?</a></li>
 
 <li><a href="{{site.faq}}upgrade-end-user-installations.html">How do I upgrade the end-user installation for all end users once I upgrade my project?</a></li>
