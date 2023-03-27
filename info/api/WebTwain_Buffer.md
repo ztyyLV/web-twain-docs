@@ -387,7 +387,7 @@ ClearFilter(): number[];
 
 ## SetDefaultTag
 
-Set a default tag for newly acquired images.
+Set a default tag for newly incoming images.
 
 **Syntax**
 
@@ -933,19 +933,24 @@ If the calculation fails, -1 is returned.
 
 ## GetImagePartURL
 
+Return the internal URL of the specified image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the internal URL of the specified image.
- * @param index Specify the image.
- * @param width The width of the image (>150).
- * @param height The height of the image (>150).
- */
 GetImagePartURL(index: number, width?: number, height?: number): string;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
+`width`: The width of the image (>150 px).
+
+`height`: The height of the image (>150 px).
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -984,19 +989,24 @@ if x/a < y/b, return the image (x, b\*x/a); if x/a > y/b, return the image (a\*y
 
 ## GetImageURL
 
+Return the direct URL of the specified image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the direct URL of the specified image.
- * @param index Specify the image.
- * @param width The width of the image (>150).
- * @param height The height of the image (>150).
- */
 GetImageURL(index: number, width?: number, height?: number): string;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
+`width`: The width of the image (>150 px).
+
+`height`: The height of the image (>150 px).
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1035,16 +1045,16 @@ if x/a < y/b, return the image (x, b\*x/a); if x/a > y/b, return the image (a\*y
 
 ## SelectAllImages
 
+Select all images and return the indices. Viewer will be scrolled to the last image.
+
 **Syntax**
 
 ```typescript
-/**
- * Select all images and return the indices. Viewer will be scrolled to the last image.
- */
 SelectAllImages(): number[];
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1071,18 +1081,20 @@ SelectAllImages(): number[];
 
 ## SelectImages
 
+Select the specified images.
+
 **Syntax**
 
 ```typescript
-
-/**
- * Select the specified images.
- * @param indices Specify one or multiple images.
- */
 SelectImages(indices: number[]): boolean;
 ```
 
+**Parameters**
+
+`indices`: Specify one or multiple images
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1109,18 +1121,22 @@ SelectImages(indices: number[]): boolean;
 
 ## MoveImage
 
+Change the position of an image in the buffer.
+
 **Syntax**
 
 ```typescript
-/**
- * Change the position of an image in the buffer.
- * @param from Specify the original position by index.
- * @param to Specify the target position by index.
- */
 MoveImage(from: number, to: number): boolean;
 ```
 
+**Parameters**
+
+`from`: Specify the original position by index.
+
+`to`: Specify the target position by index.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1147,18 +1163,22 @@ MoveImage(from: number, to: number): boolean;
 
 ## SwitchImage
 
+Exchange the positions of two images.
+
 **Syntax**
 
 ```typescript
-/**
- * Exchange the positions of two images.
- * @param index1 Specify the 1st image.
- * @param index2 Specify the 2nd image.
- */
 SwitchImage(index1: number, index2: number): boolean;
 ```
 
+**Parameters**
+
+`index1`: Specify the 1st image.
+
+`index2`: Specify the 2nd image.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1185,19 +1205,20 @@ SwitchImage(index1: number, index2: number): boolean;
 
 ## RemoveImage
 
+Remove the specified image.
+
 **Syntax**
 
 ```typescript
-/**
-
-* Remove the specified image.
-* @param index Specify the image.
-
-*/
 RemoveImage(index: number): boolean;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1226,16 +1247,16 @@ RemoveImage(index: number): boolean;
 
 ## RemoveAllImages
 
+Remove all images.
+
 **Syntax**
 
 ```typescript
-/**
- * Remove all images.
- */
 RemoveAllImages(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1277,16 +1298,16 @@ RemoveAllImagesAsync(): Promise<boolean>;
 
 ## RemoveAllSelectedImages
 
+Remove all selected images.
+
 **Syntax**
 
 ```typescript
-/**
- * Remove all selected images.
- */
 RemoveAllSelectedImages(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1328,16 +1349,16 @@ RemoveAllSelectedImagesAsync(): Promise<boolean>;
 
 ## CurrentImageIndexInBuffer
 
+Return the index of the current image in the buffer or set the image specified by index as the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the index of the current image in the buffer or set the image specified by index as the current image.
- */
 CurrentImageIndexInBuffer: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1364,16 +1385,16 @@ CurrentImageIndexInBuffer: number;
 
 ## HowManyImagesInBuffer
 
+Return how many images are held in the buffer
+
 **Syntax**
 
 ```typescript
-/**
- * Return how many images are held in the buffer
- */
 readonly HowManyImagesInBuffer: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1400,16 +1421,16 @@ readonly HowManyImagesInBuffer: number;
 
 ## MaxImagesInBuffer
 
+Return or set how many images can be held in the buffer.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set how many images can be held in the buffer.
- */
 MaxImagesInBuffer: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1440,16 +1461,16 @@ When acquiring images and the number of images goes beyond the value set to `Max
 
 ## SelectedImagesIndices
 
+Return the indices of the selected images.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the indices of the selected images.
- */
 readonly SelectedImagesIndices: number[];
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1476,16 +1497,16 @@ readonly SelectedImagesIndices: number[];
 
 ## SelectionRectAspectRatio
 
+Specify a aspect ratio to be used when selecting a rectangle on an image.
+
 **Syntax**
 
 ```typescript
-/**
- * Specify a aspect ratio to be used when selecting a rectangle on an image.
- */
 SelectionRectAspectRatio: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1512,16 +1533,16 @@ SelectionRectAspectRatio: number;
 
 ## BlankImageCurrentStdDev
 
+Return the deviation of the pixels in the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the deviation of the pixels in the current image.
- */
 readonly BlankImageCurrentStdDev: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1553,16 +1574,16 @@ This property is only valid after `IsBlankImageExpress` or `IsBlankImage()` is c
 
 ## BlankImageMaxStdDev
 
+Return or set the maximum deviation of the pixels in an image which is used to determine whether the image is blank.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the maximum deviation of the pixels in an image which is used to determine whether the image is blank.
- */
 BlankImageMaxStdDev: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1595,16 +1616,16 @@ This property is only valid before `IsBlankImageExpress` is called.
 
 ## BlankImageThreshold
 
+Returns or sets the dividing line between black and white.
+
 **Syntax**
 
 ```typescript
-/**
- * Returns or sets the dividing line between black and white.
- */
 BlankImageThreshold: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1636,17 +1657,16 @@ This property is only valid before `IsBlankImageExpress` is called.
 
 ## BufferMemoryLimit
 
+Return or set how much physical memory is allowed for storing images currently loaded in Dynamic Web TWAIN. Once the limit is reached, images will be cached on the hard disk.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set how much physical memory is allowed for storing images currently
- * loaded in Dynamic Web TWAIN. Once the limit is reached, images will be cached on the hard disk.
- */
 BufferMemoryLimit: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1680,17 +1700,20 @@ All cached data is encrypted and can only be read by Dynamic Web TWAIN and it wi
 
 ## IsBlankImage
 
+Check whether the specified image is blank.
+
 **Syntax**
 
 ```typescript
-/**
- * Check whether the specified image is blank.
- * @param index Specify the image.
- */
 IsBlankImage(index: number): boolean;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1717,17 +1740,20 @@ IsBlankImage(index: number): boolean;
 
 ## IsBlankImageExpress
 
+Check whether the specified image is blank.
+
 **Syntax**
 
 ```typescript
-/**
- * Check whether the specified image is blank.
- * @param index Specify the image.
- */
 IsBlankImageExpress(index: number): boolean;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1766,16 +1792,16 @@ If the image is not blank and it is not black and white, `IsBlankImage()` or `Is
 
 ## IfAllowLocalCache
 
+Return or set whether the feature of disk caching is enabled.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether the feature of disk caching is enabled.
- */
 IfAllowLocalCache: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1809,13 +1835,11 @@ All cached data is encrypted and can only be read by Dynamic Web TWAIN and it wi
 
 ## OnBufferChanged
 
+An enhanced callback triggered when a change occurs in the buffer.
+
 **Syntax**
 
 ```typescript
-/**
- * An enhanced callback triggered when a change occurs in the buffer.
- * @argument bufferChangeInfo Details about the buffer change.
- */
 RegisterEvent('OnBufferChanged',
     function (bufferChangeInfo: BufferChangeInfo) {}
 ): boolean;
@@ -1840,7 +1864,12 @@ interface BufferChangeInfo {
 }
 ```
 
+**Parameters**
+
+`bufferChangeInfo`: Details about the buffer change.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1877,19 +1906,11 @@ Action types include
 
 ## OnBitmapChanged
 
+A built-in callback triggered when the current image in buffer is changed like flipped, cropped, rotated, etc. or a new image has been acquired.
+
 **Syntax**
 
 ```typescript
-/**
- * A built-in callback triggered when the current image in buffer is changed like flipped, cropped, rotated, etc. or a new image has been acquired.
- * @argument indexString Array of the changed index(indices).
- * @argument type Operation type.
-   1 means new image(s) were added at the tail,
-   2 means image(s) were inserted before the current index,
-   3 means image(s) are deleted,
-   4 means image(s) are modified,
- * @argument index Index of the current image.
- */
 RegisterEvent('OnBitmapChanged',
     function (
         indexString: number[],
@@ -1899,7 +1920,20 @@ RegisterEvent('OnBitmapChanged',
 ): boolean;
 ```
 
+**Parameters**
+
+`indexString`: Array of the changed index(indices).
+
+`type`: Operation type.
+   1 means new image(s) were added at the tail,
+   2 means image(s) were inserted before the current index,
+   3 means image(s) are deleted,
+   4 means image(s) are modified,
+
+`index`: Index of the current image.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1937,19 +1971,22 @@ DWObject.RegisterEvent(
 
 ## OnTopImageInTheViewChanged
 
+A built-in callback triggered when the top index currently displayed in the viewer changes.
+
 **Syntax**
 
 ```typescript
-/**
- * A built-in callback triggered when the top index currently displayed in the viewer changes.
- * @argument index Index of the current image.
- */
 RegisterEvent('OnTopImageInTheViewChanged',
     function (index: number) {}
 ): boolean;
 ```
 
+**Parameters**
+
+`index`: Index of the current image.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1980,13 +2017,11 @@ This API does not work if the view mode of the viewer is set to -1 by -1.
 
 ## OnIndexChangeDragDropDone
 
+A built-in callback triggered when images in the buffer are dragged to new positions.
+
 **Syntax**
 
 ```typescript
-/**
- * A built-in callback triggered when images in the buffer are dragged to new positions.
- * @argument indexPairs The list of index changes.
- */
 RegisterEvent('OnIndexChangeDragDropDone',
     function (indexPairs: Pair[]) {}
 ): boolean;
@@ -1994,7 +2029,12 @@ RegisterEvent('OnIndexChangeDragDropDone',
 Pair: [from: number, to: number];
 ```
 
+**Parameters**
+
+`indexPairs`: The list of index changes.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2021,17 +2061,20 @@ Pair: [from: number, to: number];
 
 ## GetTagListByIndex
 
+Return the tag(s) of a specified image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the tag(s) of a specified image.
- * @argument index Index of the image.
- */
 GetTagListByIndex(index: number):string[]
 ```
 
+**Parameters**
+
+`index`: Index of the image.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2064,28 +2107,20 @@ DWObject.GetTagListByIndex(0);
 
 ## CreateDocument
 
+Create a document for the scanned image(s).
+
 **Syntax**
 
-<div class="sample-code-prefix template2"></div>
->- v17.3
->- v17.2.5
->
->
 ```typescript
-/**
- * Create a document for the scanned image(s).
- * @argument documentName Specify the document name.
- */
 CreateDocument(documentName:string):boolean;
 ```
-```typescript
-/**
- * Create a category for the scanned image(s).
- * @argument categoryName Specify the category name.
- */
-CreateFile(categoryName:string):boolean;
-```
+
+**Parameters**
+
+`documentName`: Specify the document name.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2123,35 +2158,24 @@ function failureCallback(errorCode, errorString) {
 }
 ```
 
-
-
 ---
 
 ## OpenDocument
 
+Use the specified document for the scanned image(s)
+
 **Syntax**
 
-<div class="sample-code-prefix template2"></div>
->- v17.3
->- v17.2.5
->
->
 ```typescript
-/**
- * Use the specified document for the scanned image(s)
- * @argument documentName Specify the document name.
- */
 OpenDocument(documentName:string):boolean;
 ```
-```typescript
-/**
- * Use the specified category for the scanned image(s)
- * @argument categoryName Specify the category name.
- */
-OpenFile(categoryName:string):boolean;
-```
+
+**Parameters**
+
+`documentName`: Specify the document name.
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2195,26 +2219,16 @@ function failureCallback(errorCode, errorString) {
 
 ## GetCurrentDocumentName
 
+Get the current document name. The default value is 'dynamsoft-default-document'. Scanned image(s) are saved in this document by default if no document name is created.
+
 **Syntax**
 
-<div class="sample-code-prefix template2"></div>
->- v17.3
->- v17.2.5
->
->
 ```typescript
-/**
- * Get the current document name. The default value is 'dynamsoft-default-document'. Scanned image(s) are saved in this document by default if no document name is created.
- */
 GetCurrentDocumentName():string;
 ```
-```typescript
-/**
- * Get the current category name. The default value is 'dynamsoft-dvs-file'. Scanned image(s) are stored in this category by default if no category name is created.
- */
-GetCurrentFileName():string;
-```
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2241,18 +2255,22 @@ GetCurrentFileName():string;
 
 ## RenameDocument
 
+Rename a document.
+
 **Syntax**
 
 ```typescript
-/**
- * Rename a document.
- * @argument oldDocumentName Specify the old document name.
- * @argument newDocumentName Specify the new document name.
- */
 RenameDocument(oldDocumentName:string, newDocumentName:string):boolean;
 ```
 
+**Parameters**
+
+`oldDocumentName`: Specify the old document name.
+
+`newDocumentName`: Specify the new document name.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2279,28 +2297,20 @@ RenameDocument(oldDocumentName:string, newDocumentName:string):boolean;
 
 ## RemoveDocument
 
+Delete the specified document.
+
 **Syntax**
 
-<div class="sample-code-prefix template2"></div>
->- v17.3
->- v17.2.5
->
-> 
 ```typescript
-/**
- * Delete the specified document.
- * @argument documentName Specify the document name.
- */
 RemoveDocument(documentName:string):boolean;
 ```
-```typescript
-/**
- * Delete the specified category and all images in it.
- * @argument categoryName Specify the category name.
- */
-RemoveFile(categoryName:string):boolean;
-```
+
+**Parameters**
+
+`documentName`: Specify the document name.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2327,37 +2337,21 @@ RemoveFile(categoryName:string):boolean;
 
 ## GetDocumentInfoList
 
+Get the list of all documents and their information.
+
 **Syntax**
 
-<div class="sample-code-prefix template2"></div>
->- v17.3
->- v17.2.5
->
->
 ```typescript
-/**
- * Get the list of all documents and their information.
- */
 GetDocumentInfoList(): DocumentInfo[];
 interface DocumentInfo {
    name: string;
    imageIds: number[];
 }
 ```
-```typescript
-/**
- * Get the list of all categories and their information.
- */
-GetFileInfoList():Json
-Json:
-[{
-   name: "categoryName",
-   imageIds:[23122335, 25566822323]
-},
-{……}]
-```
+
 
 **Availability**
+
 <div class="availability">
 <table>
 
