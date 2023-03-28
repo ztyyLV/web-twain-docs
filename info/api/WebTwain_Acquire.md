@@ -4021,17 +4021,20 @@ DWObject.RegisterEvent("OnPostTransfer", function () {
 
 ## OnPostTransferAsync
 
+This event is triggered after each page has been scanned and transferred. This is the asynchronous counterpart to the synchronous event {OnPostTransfer}.
+
 **Syntax**
 
 ```typescript
-/**
- * This event is triggered after each page has been scanned and transferred. This is the asynchronous counterpart to the synchronous event {OnPostTransfer}.
- * @argument outputInfo Detailed information about the image that just got transferred.
- */
 RegisterEvent("OnPostTransferAsync", function (outputInfo: OutputInfo) {});
 ```
 
+**Parameters**
+
+`outputInfo`: Detailed information about the image that just got transferred.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4089,16 +4092,16 @@ DWObject.RegisterEvent("OnPostTransferAsync", function (outputInfo) {
 
 ## OnPreAllTransfers
 
+This event is triggered when all images are scanned and ready to be transferred.
+
 **Syntax**
 
 ```typescript
-/**
- * This event is triggered when all images are scanned and ready to be transferred.
- */
 RegisterEvent("OnPreAllTransfers", function () {});
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4136,16 +4139,16 @@ In the callback function of this event, you can call `CancelAllPendingTransfers(
 
 ## OnPreTransfer
 
+This event is triggered when a page has been scanned and is ready to be transferred.
+
 **Syntax**
 
 ```typescript
-/**
- * This event is triggered when a page has been scanned and is ready to be transferred.
- */
 RegisterEvent('OnPreTransfer',function(){...});
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4180,16 +4183,16 @@ In the callback function of this event, you can
 
 ## OnSourceUIClose
 
+This event is triggered when the user interface of the data source is closed manually by the user.
+
 **Syntax**
 
 ```typescript
-/**
- * This event is triggered when the user interface of the data source is closed manually by the user.
- */
 RegisterEvent("OnSourceUIClose", function () {});
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4216,23 +4219,14 @@ RegisterEvent("OnSourceUIClose", function () {});
 
 ## getCapabilities
 
+Gets detailed information about all capabilities of the current data source.
+
 **Syntax**
 
 ```typescript
-/**
- * Gets detailed information about all capabilities of the current data source.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument capabilityDetails Detailed information about the specified capabilities.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 getCapabilities(
     successCallback: (capabilityDetails: CapabilityDetails[]) => void,
-    failureCallback: (
-        errorCode: number,
-        errorString: string
-    ) => void
+    failureCallback: (errorCode: number, errorString: string) => void
 ): void;
 
 /**
@@ -4298,7 +4292,17 @@ interface ValueAndLabel {
 }
 ```
 
+**Parameters**
+
+`successCallback`: A callback function that is executed if the request succeeds.
+- `capabilityDetails`: Detailed information about the specified capabilities.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4333,16 +4337,11 @@ Check out the Enumerations
 
 ## setCapabilities
 
+Sets up one or multiple capabilities in one call.
+
 **Syntax**
 
 ```typescript
-/**
- * Sets up one or multiple capabilities in one call.
- * @param capabilities A object that describes how to set capabilities.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument capabilities The capabilities to set.
- */
 setCapabilities(
     capabilities: Capabilities,
     successCallback: (capabilities: Capabilities) => void,
@@ -4378,7 +4377,17 @@ interface CapabilitySetup {
 }
 ```
 
+**Parameters**
+
+`capabilities`: A object that describes how to set capabilities.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `capabilities`: The capabilities to set.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4455,16 +4464,19 @@ DWObject.setCapabilities(
 
 ## GetDevicesAsync
 
+Return all available devices (scanners, eSCL scanners, etc.) for the device type (if specified)
+
 **Syntax**
 
 ```typescript
-/**
- * Return all available devices (scanners, eSCL scanners, etc.) for the device type (if specified)
- * @param deviceType The device type
- * @param refresh Default value: false
- */
 GetDevicesAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number, refresh?:boolean): Promise<Device[]>;
 ```
+
+**Parameters**
+
+`deviceType`: The device type
+
+`refresh`: Default value is **false**
 
 **Example**
 
@@ -4479,6 +4491,7 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4509,13 +4522,11 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 
 ## SelectDeviceAsync
 
+Select the device to use for scanning
+
 **Syntax**
 
 ```typescript
-/**
- * Select the device to use for scanning
- * @param device the device 
- */
 SelectDeviceAsync(device: Device): Promise< boolean>;
 ```
 
@@ -4531,7 +4542,12 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 })
 ```
 
+**Parameters**
+
+`device`: the device
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4558,29 +4574,20 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 
 ## AcquireImageAsync
 
+Scan documents into another DWObject control. eSCL is not supported.
+
 **Syntax**
 
 ```typescript
-/**
- * Scan documents into another DWObject control. eSCL is not supported.
- * @param deviceConfiguration The device configuration
- */
 AcquireImageAsync(deviceConfiguration?: DeviceConfiguration): Promise< boolean>;
 ```
 
-**Example**
+**Parameters**
 
-```javascript
-DWObject.GetDevicesAsync().then((deviceList)=>{
-  return DWObject.SelectDeviceAsync(deviceList[0])  //Select the first device
-}).then(()=>{
-    return DWObject.AcquireImageAsync({}) 
-}).catch((e)=>{
-    console.error(e)
-})
-```
+`deviceConfiguration`: The device configuration
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4602,3 +4609,15 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 
 </table>
 </div>
+
+**Example**
+
+```javascript
+DWObject.GetDevicesAsync().then((deviceList)=>{
+  return DWObject.SelectDeviceAsync(deviceList[0])  //Select the first device
+}).then(()=>{
+    return DWObject.AcquireImageAsync({}) 
+}).catch((e)=>{
+    console.error(e)
+})
+```
