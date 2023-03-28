@@ -2707,16 +2707,16 @@ DefaultSourceName: string;
 
 ## Duplex
 
+Return whether the source supports duplex. If yes, it further returns the level of duplex the data source supports.
+
 **Syntax**
 
 ```typescript
-/**
- * Return whether the source supports duplex. If yes, it further returns the level of duplex the data source supports.
- */
 readonly Duplex: Dynamsoft.DWT.EnumDWT_DUPLEX | number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2755,16 +2755,16 @@ This property does not support Linux.
 
 ## IfAutoBright
 
+Return or set whether to enable the data source's auto-brightness feature.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether to enable the data source's auto-brightness feature.
- */
 IfAutoBright: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2791,16 +2791,16 @@ IfAutoBright: boolean;
 
 ## IfAutoDiscardBlankpages
 
+Return or set whether the data source (the scanner) discards blank images during scanning automatically.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether the data source (the scanner) discards blank images during scanning automatically.
- */
 IfAutoDiscardBlankpages: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2833,16 +2833,16 @@ Alternatively, the Dynamic Web TWAIN library can also detect blank images after 
 
 ## IfAutoFeed
 
+Return or set whether to enable the data source's automatic document feeding process.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether to enable the data source's automatic document feeding process.
- */
 IfAutoFeed: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2873,16 +2873,16 @@ If set to `true` , the data source will automatically feed the next page from th
 
 ## IfAutomaticBorderDetection
 
+Return or set whether to enable the data source's automatic border detection feature.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether to enable the data source's automatic border detection feature.
- */
 IfAutomaticBorderDetection: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2915,16 +2915,16 @@ Once enabled, the data source (scanner) will automatically detect the borders of
 
 ## IfAutomaticDeskew
 
+Return or set whether to enable the data source's automatic skew correction feature.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether to enable the data source's automatic skew correction feature.
- */
 IfAutomaticDeskew: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2955,16 +2955,16 @@ The property works only if the device and its driver supports automatical deskew
 
 ## IfAutoScan
 
+Return or set whether to enable the data source's automatic document scanning process.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether to enable the data source's automatic document scanning process.
- */
 IfAutoScan: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2997,16 +2997,16 @@ The fundamental assumption behind this property is that the device may be able t
 
 ## IfFeederLoaded
 
+Return whether or not there are documents loaded in the data source's feeder.
+
 **Syntax**
 
 ```typescript
-/**
- * Return whether or not there are documents loaded in the data source's feeder.
- */
 readonly IfFeederLoaded: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3037,16 +3037,16 @@ This property is only valid when [IfFeederEnabled](#iffeederenabled) and [IfPa
 
 ## IfPaperDetectable
 
+Return whether the Source has a paper sensor that can detect pages on the ADF or Flatbed.
+
 **Syntax**
 
 ```typescript
-/**
- * Return whether the Source has a paper sensor that can detect pages on the ADF or Flatbed.
- */
 readonly IfPaperDetectable: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3077,12 +3077,11 @@ Check this property after [OpenSource()](#opensource) is called.
 
 ## IfShowIndicator
 
+Return or set whether the data source displays a progress indicator during acquisition and transfer.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether the data source displays a progress indicator during acquisition and transfer.
- */
 IfShowIndicator: boolean;
 ```
 
@@ -3119,16 +3118,16 @@ The indicator will only be hidden if you set both [IfShowUI](#ifshowui) and [IfS
 
 ## IfUIControllable
 
+Return whether the data source supports acquisitions with the UI (User Interface) disabled.
+
 **Syntax**
 
 ```typescript
-/**
- * Return whether the data source supports acquisitions with the UI (User Interface) disabled.
- */
 readonly IfUIControllable: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3159,16 +3158,16 @@ Check this property after [OpenSource()](#opensource) is called.
 
 ## IfUseTwainDSM
 
+Return or set whether the new TWAIN DSM (data source Manager) is used for acquisitions. The new TWAIN DSM is a DLL called 'TWAINDSM.dll' while the default | old DSM is called 'twain_32.dll'.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether the new TWAIN DSM (data source Manager) is used for acquisitions. The new TWAIN DSM is a DLL called 'TWAINDSM.dll' while the default | old DSM is called 'twain_32.dll'.
- */
 IfUseTwainDSM: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3199,16 +3198,16 @@ This property should be set before any TWAIN related methods or properties are c
 
 ## ImageLayoutFrameBottom
 
+Return the value of the bottom edge of the current image frame (in Unit).
+
 **Syntax**
 
 ```typescript
-/**
- * Return the value of the bottom edge of the current image frame (in Unit).
- */
 readonly ImageLayoutFrameBottom: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3235,16 +3234,16 @@ readonly ImageLayoutFrameBottom: number;
 
 ## ImageLayoutFrameLeft
 
+Return the value of the left edge of the current image frame (in Unit).
+
 **Syntax**
 
 ```typescript
-/**
- * Return the value of the left edge of the current image frame (in Unit).
- */
 readonly ImageLayoutFrameLeft: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3271,16 +3270,16 @@ readonly ImageLayoutFrameLeft: number;
 
 ## ImageLayoutFrameRight
 
+Return the value of the right edge of the current image frame (in Unit).
+
 **Syntax**
 
 ```typescript
-/**
- * Return the value of the right edge of the current image frame (in Unit).
- */
 readonly ImageLayoutFrameRight: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3307,16 +3306,16 @@ readonly ImageLayoutFrameRight: number;
 
 ## ImageLayoutFrameTop
 
+Return the value of the top edge of the current image frame (in Unit).
+
 **Syntax**
 
 ```typescript
-/**
- * Return the value of the top edge of the current image frame (in Unit).
- */
 readonly ImageLayoutFrameTop: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3343,16 +3342,16 @@ readonly ImageLayoutFrameTop: number;
 
 ## ImageLayoutDocumentNumber
 
+Return the document number of the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the document number of the current image.
- */
 readonly ImageLayoutDocumentNumber: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3379,16 +3378,16 @@ readonly ImageLayoutDocumentNumber: number;
 
 ## ImageLayoutPageNumber
 
+Return the page number of the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the page number of the current image.
- */
 readonly ImageLayoutPageNumber: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3415,16 +3414,16 @@ readonly ImageLayoutPageNumber: number;
 
 ## ImageBitsPerPixel
 
+Return the bit depth of the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the bit depth of the current image.
- */
 readonly ImageBitsPerPixel: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3451,16 +3450,16 @@ readonly ImageBitsPerPixel: number;
 
 ## ImageLength
 
+Return the length of the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the length of the current image.
- */
 readonly ImageLength: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3487,12 +3486,11 @@ readonly ImageLength: number;
 
 ## ImageWidth
 
+Return the width of the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the width of the current image.
- */
 readonly ImageWidth: number;
 ```
 
@@ -3523,12 +3521,11 @@ readonly ImageWidth: number;
 
 ## ImageXResolution
 
+Return the horizontal resolution of the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the horizontal resolution of the current image.
- */
 readonly ImageXResolution: number;
 ```
 
@@ -3559,16 +3556,16 @@ readonly ImageXResolution: number;
 
 ## ImageYResolution
 
+Return the vertical resolution of the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the vertical resolution of the current image.
- */
 readonly ImageYResolution: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3595,16 +3592,16 @@ readonly ImageYResolution: number;
 
 ## ImagePixelType
 
+Return the pixel type of the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the pixel type of the current image.
- */
 readonly ImagePixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3631,16 +3628,16 @@ readonly ImagePixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 
 ## MagData
 
+Return the data of the magnetic data if the data source supports magnetic data recognition.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the data of the magnetic data if the data source supports magnetic data recognition.
- */
 readonly MagData: string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3667,16 +3664,16 @@ readonly MagData: string;
 
 ## MagType
 
+Return the type of the magnetic data if the data source supports magnetic data recognition.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the type of the magnetic data if the data source supports magnetic data recognition.
- */
 readonly MagType: Dynamsoft.DWT.EnumDWT_MagType | number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3711,16 +3708,16 @@ These APIs are only valid in the callbacks for the events [OnPreTransfer](#onpre
 
 ## PendingXfers
 
+Return the number of transfers the data source is ready to supply upon demand.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the number of transfers the data source is ready to supply upon demand.
- */
 readonly PendingXfers: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3753,16 +3750,16 @@ The data source returns -1 if it is not sure how many transfers are pending whic
 
 ## PixelFlavor
 
+Return or set the pixel flavor to be used for acquiring images.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the pixel flavor to be used for acquiring images.
- */
 PixelFlavor: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3796,16 +3793,16 @@ Available values:
 
 ## TransferMode
 
+Return or set the data source's transfer mode.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the data source's transfer mode.
- */
 TransferMode: Dynamsoft.DWT.EnumDWT_TransferMode | number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3842,16 +3839,16 @@ TWSX_NATIVE and TWSX_MEMORY are required by all TWAIN data sources while TWSX_FI
 
 ## Unit
 
+Return or set the unit of measure for all quantities. Note that this setting is only effective for TWAIN (hardware) related operations.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the unit of measure for all quantities. Note that this setting is only effective for TWAIN (hardware) related operations.
- */
 Unit: Dynamsoft.DWT.EnumDWT_UnitType | number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3892,16 +3889,16 @@ Allowed values are
 
 ## XferCount
 
+Return and set the number of images your application is willing to accept for each scan job.
+
 **Syntax**
 
 ```typescript
-/**
- * Return and set the number of images your application is willing to accept for each scan job.
- */
 XferCount: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3932,16 +3929,16 @@ Allowed values are between -1 and 215 where -1 indicate multiple images.
 
 ## OnPostAllTransfers
 
+This event is triggered when all page(s) have been scanned and transferred.
+
 **Syntax**
 
 ```typescript
-/**
- * This event is triggered when all page(s) have been scanned and transferred.
- */
 RegisterEvent("OnPostAllTransfers", function () {});
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3980,16 +3977,16 @@ DWObject.RegisterEvent("OnPostAllTransfers", function () {
 
 ## OnPostTransfer
 
+This event is triggered after each page has been scanned and transferred.
+
 **Syntax**
 
 ```typescript
-/**
- * This event is triggered after each page has been scanned and transferred.
- */
 RegisterEvent("OnPostTransfer", function () {});
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
