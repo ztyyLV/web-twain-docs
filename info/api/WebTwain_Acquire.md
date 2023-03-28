@@ -319,16 +319,16 @@ function AcquireImage4() {
 
 ## CloseSource
 
+Close the data source (a TWAIN/ICA/SANE device which in most cases is a scanner) to free it to be used by other applications.
+
 **Syntax**
 
 ```typescript
-/**
- * Close the data source (a TWAIN/ICA/SANE device which in most cases is a scanner) to free it to be used by other applications.
- */
 CloseSource(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -355,16 +355,16 @@ CloseSource(): boolean;
 
 ## CloseSourceAsync
 
+Close the data source (a TWAIN/ICA/SANE device which in most cases is a scanner) to free it to be used by other applications.
+
 **Syntax**
 
 ```typescript
-/**
- * Close the data source (a TWAIN/ICA/SANE device which in most cases is a scanner) to free it to be used by other applications.
- */
 CloseSourceAsync(): Promise<boolean>;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -391,16 +391,16 @@ CloseSourceAsync(): Promise<boolean>;
 
 ## DisableSource
 
+Disable the data source (a TWAIN/ICA/SANE device which in most cases is a scanner) to stop the acquiring process. If the data source's user interface is displayed, it will be closed.
+
 **Syntax**
 
 ```typescript
-/**
- * Disable the data source (a TWAIN/ICA/SANE device which in most cases is a scanner) to stop the acquiring process. If the data source's user interface is displayed, it will be closed.
- */
 DisableSource(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -431,16 +431,16 @@ After `DisableSource()` is called, the Source is still open and you can continue
 
 ## EnableSource
 
+Enable the data source to start the acquiring process.
+
 **Syntax**
 
 ```typescript
-/**
- * Enable the data source to start the acquiring process.
- */
 EnableSource(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -471,23 +471,27 @@ The method is equivalent to `AcquireImage()` without parameters.
 
 ## EnableSourceUI
 
+Display the TWAIN source's built-in user interface.
+
 **Syntax**
 
 ```typescript
-/**
- * Display the TWAIN source's built-in user interface.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- */
 EnableSourceUI(
     successCallBack: () => void,
-    failureCallBack: (
-        errorCode: number,
-        errorString: string) => void
+    failureCallBack: (errorCode: number, errorString: string) => void
 ): void;
 ```
 
+**Parameters**
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -518,16 +522,16 @@ This method enables the user to manipulate the settings for scanning but not sta
 
 ## OpenSource
 
+Load a data source to get it ready to acquire images.
+
 **Syntax**
 
 ```typescript
-/**
- * Load a data source to get it ready to acquire images.
- */
 OpenSource(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -554,16 +558,16 @@ OpenSource(): boolean;
 
 ## OpenSourceAsync
 
+Load a data source to get it ready to acquire images.
+
 **Syntax**
 
 ```typescript
-/**
- * Load a data source to get it ready to acquire images.
- */
 OpenSourceAsync(): Promise<boolean>;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -590,13 +594,11 @@ OpenSourceAsync(): Promise<boolean>;
 
 ## GetSourceNames
 
+Return all available data sources (scanners, etc.) and optionally all detailed information about them.
+
 **Syntax**
 
 ```typescript
-/**
- * Return all available data sources (scanners, etc.) and optionally all detailed information about them.
- * @param bIncludeDetails Whether to return more details about the data sources or just their names.
- */
 GetSourceNames(bIncludeDetails?: boolean): string[] | SourceDetails[];
 
 interface SourceDetails {
@@ -651,7 +653,12 @@ interface Version {
 }
 ```
 
+**Parameters**
+
+`bIncludeDetails`: Whether to return more details about the data sources or just their names.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -673,21 +680,25 @@ interface Version {
 
 </table>
 </div>
+
 ---
 
 ## GetSourceNamesAsync
 
+Return all available data sources (scanners, etc.) and optionally all detailed information about them.
+
 **Syntax**
 
 ```typescript
-/**
- * Return all available data sources (scanners, etc.) and optionally all detailed information about them.
- * @param bIncludeDetails Whether to return more details about the data sources or just their names.
- */
 GetSourceNamesAsync(bIncludeDetails: boolean): Promise<string[] | ISourceDetails[]>;
 ```
 
+**Parameters**
+
+`bIncludeDetails`: Whether to return more details about the data sources or just their names.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -714,23 +725,27 @@ GetSourceNamesAsync(bIncludeDetails: boolean): Promise<string[] | ISourceDetails
 
 ## SelectSource
 
+Bring up the Source Selection User Interface (UI) for the user to choose a data source.
+
 **Syntax**
 
 ```typescript
-/**
- * Bring up the Source Selection User Interface (UI) for the user to choose a data source.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 SelectSource(
     successCallBack?: () => void,
     failureCallBack?: (errorCode: number, errorString: string) => void
 ): boolean | void;
 ```
 
+**Parameters**
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -786,7 +801,7 @@ SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promi
 
 **Parameters**
 
-`deviceType`: Specify the device type of scanners. Please refer to [EnumDWT_DeviceType]({{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_devicetype).
+`deviceType`: Specify the device type of scanners. Please refer to [EnumDWT_DeviceType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_devicetype).
 
 **Availability**
 <div class="availability">
@@ -827,17 +842,20 @@ DWObject.SelectSourceAsync()
 
 ## SelectSourceByIndex
 
+Select a data source by its index.
+
 **Syntax**
 
 ```typescript
-/**
- * Select a data source by its index.
- * @param index The index of the data source.
- */
 SelectSourceByIndex(index: number): boolean;
 ```
 
+**Parameters**
+
+`index`: The index of the data source.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -872,17 +890,20 @@ DWObject.AcquireImage();
 
 ## SelectSourceByIndexAsync
 
+Select a data source by its index.
+
 **Syntax**
 
 ```typescript
-/**
- * Select a data source by its index.
- * @param index The index of the data source.
- */
 SelectSourceByIndexAsync(index: number): Promise<boolean>;
 ```
 
+**Parameters**
+
+`index`: The index of the data source.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -921,17 +942,20 @@ DWObject.SelectSourceByIndexAsync(0)
 
 ## SetOpenSourceTimeout
 
+Sets a timer which stops the data source opening process once it expires.
+
 **Syntax**
 
 ```typescript
-/**
- * Sets a timer which stops the data source opening process once it expires.
- * @param duration Define the duration of the timer (in milliseconds).
- */
 SetOpenSourceTimeout(duration: number): boolean;
 ```
 
+**Parameters**
+
+`duration`: Define the duration of the timer (in milliseconds).
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -968,13 +992,11 @@ DWObject.SelectSource(function () {
 
 ## startScan
 
+Start the acquisition by passing all settings at once.
+
 **Syntax**
 
 ```typescript
-/**
- * Start the acquisition by passing all settings at once.
- * @param scanSetup Configuration for the acquisition.
- */
 startScan(scanSetup: ScanSetup): Promise<IScanSetup>;
 
 interface ScanSetup {
@@ -1238,7 +1260,12 @@ interface ScanSetup {
 }
 ```
 
+**Parameters**
+
+`scanSetup`: Configuration for the acquisition.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1269,12 +1296,11 @@ interface ScanSetup {
 
 ## CancelAllPendingTransfers
 
+Cancels all pending transfers.
+
 **Syntax**
 
 ```typescript
-/**
- * Cancels all pending transfers.
- */
 CancelAllPendingTransfers(): boolean;
 ```
 
@@ -1309,16 +1335,16 @@ This method is only valid in the events [OnPreAllTransfers](#onprealltransfers),
 
 ## CloseSourceManager
 
+Closes and unloads Data Source Manager.
+
 **Syntax**
 
 ```typescript
-/**
- * Closes and unloads Data Source Manager.
- */
 CloseSourceManager(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1344,16 +1370,16 @@ CloseSourceManager(): boolean;
 
 ## CloseSourceManagerAsync
 
+Closes and unloads Data Source Manager.
+
 **Syntax**
 
 ```typescript
-/**
- * Closes and unloads Data Source Manager.
- */
 CloseSourceManagerAsync(): Promise<boolean>;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1380,16 +1406,16 @@ CloseSourceManagerAsync(): Promise<boolean>;
 
 ## CloseWorkingProcess
 
+Closes the scanning process to release resources on the machine.
+
 **Syntax**
 
 ```typescript
-/**
- * Closes the scanning process to release resources on the machine.
- */
 CloseWorkingProcess(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1420,16 +1446,16 @@ In the HTML5 edition, Dynamic Web TWAIN uses a separate process to communicate w
 
 ## FeedPage
 
+Ejects the current page and begins scanning the next page in the document feeder.
+
 **Syntax**
 
 ```typescript
-/**
- * Ejects the current page and begins scanning the next page in the document feeder.
- */
 FeedPage(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1460,17 +1486,20 @@ Use this method after [OpenSource()](#opensource) is called and make sure [IfFee
 
 ## GetCustomDSData
 
+Get the custom data source data and saves the data in a specified file.
+
 **Syntax**
 
 ```typescript
-/**
- * Get the custom data source data and saves the data in a specified file.
- * @param fileName The path of the file to save the data source data to.
- */
 GetCustomDSData(fileName: string): boolean;
 ```
 
+**Parameters**
+
+`fileName`: The path of the file to save the data source data to.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1503,16 +1532,16 @@ DWObject.GetCustomDSData("C:\\customDSData");
 
 ## GetCustomDSDataEx
 
+Gets custom DS data and returns it in a base64 string.
+
 **Syntax**
 
 ```typescript
-/**
- * Gets custom DS data and returns it in a base64 string.
- */
 GetCustomDSDataEx(): string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1539,17 +1568,20 @@ GetCustomDSDataEx(): string;
 
 ## GetSourceNameItems
 
+Get the name of a data source by its index in data source manager source list.
+
 **Syntax**
 
 ```typescript
-/**
- * Get the name of a data source by its index in data source manager source list.
- * @param index The index of the data source.
- */
 GetSourceNameItems(index: number): string;
 ```
 
+**Parameters**
+
+`index`: The index of the data source.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1576,16 +1608,16 @@ GetSourceNameItems(index: number): string;
 
 ## OpenSourceManager
 
+Load and open data source manager.
+
 **Syntax**
 
 ```typescript
-/**
- * Load and open data source manager.
- */
 OpenSourceManager(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1616,12 +1648,11 @@ If application identification needs to be set, it should be set before this API.
 
 ## OpenSourceManagerAsync
 
+Load and open data source manager.
+
 **Syntax**
 
 ```typescript
-/**
- * Load and open data source manager.
- */
 OpenSourceManagerAsync(): Promise<boolean>;
 ```
 
@@ -1656,16 +1687,16 @@ If application identification needs to be set, it should be set before this API.
 
 ## ResetImageLayout
 
+Reset the image layout in the data source.
+
 **Syntax**
 
 ```typescript
-/**
- * Reset the image layout in the data source.
- */
 ResetImageLayout(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1696,16 +1727,16 @@ To set the image layout manually, you can use [SetImageLayout()](#setimagelayout
 
 ## RewindPage
 
+If called while {IfFeederEnabled} property is true, the data source will return the current page to the input area and return the last page from the output area into the acquisition area.
+
 **Syntax**
 
 ```typescript
-/**
- * If called while {IfFeederEnabled} property is true, the data source will return the current page to the input area and return the last page from the output area into the acquisition area.
- */
 RewindPage(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1736,17 +1767,20 @@ Use this method after [OpenSource()](#opensource) method and make sure [IfFeeder
 
 ## SetCustomDSData
 
+Sets custom data source data to be used for scanning, the data is stored in a file which can be regarded as a scanning profile.
+
 **Syntax**
 
 ```typescript
-/**
- * Sets custom data source data to be used for scanning, the data is stored in a file which can be regarded as a scanning profile.
- * @param fileName The path  of the file.
- */
 SetCustomDSData(fileName: string): boolean;
 ```
 
+**Parameters**
+
+`fileName`: The path  of the file.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1777,17 +1811,20 @@ Typically, the data source data file is created by the method [GetCustomDSData()
 
 ## SetCustomDSDataEx
 
+Set custom data source data to be used for scanning, the input is a base64 string.
+
 **Syntax**
 
 ```typescript
-/**
- * Set custom data source data to be used for scanning, the input is a base64 string.
- * @param dsDataString The string that contains custom data source data.
- */
 SetCustomDSDataEx(dsDataString: string): boolean;
 ```
 
+**Parameters**
+
+`dsDataString`: The string that contains custom data source data.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1818,21 +1855,25 @@ Typically the data source data string is created by the method [GetCustomDSDataE
 
 ## SetFileXferInfo
 
+Set the file transfer information to be used in File Transfer mode.
+
 **Syntax**
 
 ```typescript
-/**
- * Set the file transfer information to be used in File Transfer mode.
- * @param fileName The path to transfer the file to.
- * @param fileFormat The format of the file.
- */
 SetFileXferInfo(
     fileName: string,
     fileFormat: Dynamsoft.DWT.EnumDWT_FileFormat | number
 ): boolean;
 ```
 
+**Parameters**
+
+`fileName`: The path to transfer the file to.
+
+`fileFormat`: The format of the file.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1889,16 +1930,11 @@ if (DWObject.TransferMode === Dynamsoft.DWT.EnumDWT_TransferMode.TWSX_FILE) {
 
 ## SetImageLayout
 
+Set the left, top, right, and bottom sides of the image layout rectangle for the current data source. The image layout rectangle defines a frame of the data source's scanning area to be acquired.
+
 **Syntax**
 
 ```typescript
-/**
- * Set the left, top, right, and bottom sides of the image layout rectangle for the current data source. The image layout rectangle defines a frame of the data source's scanning area to be acquired.
- * @param left Specify the rectangle (leftmost coordinate).
- * @param top Specify the rectangle (topmost coordinate).
- * @param right Specify the rectangle (rightmost coordinate).
- * @param bottom Specify the rectangle (bottommost coordinate).
- */
 SetImageLayout(
     left: number,
     top: number,
@@ -1907,7 +1943,18 @@ SetImageLayout(
 ): boolean;
 ```
 
+**Parameters**
+
+`left`: Specify the rectangle (leftmost coordinate).
+
+`top`: Specify the rectangle (topmost coordinate).
+
+`right`: Specify the rectangle (rightmost coordinate).
+
+`bottom`: Specify the rectangle (bottommost coordinate).
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1959,16 +2006,16 @@ DWObject.AcquireImage();
 
 ## BitDepth
 
+Return or set the pixel bit depth for the current value of `PixelType` .
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the pixel bit depth for the current value of `PixelType` .
- */
 BitDepth: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2001,16 +2048,16 @@ By default, the bit depth is 1 for `TWPT_BW` , 8 for `TWPT_GRAY` and 24 for `TWP
 
 ## IfAppendImage
 
+Return or set whether newly acquired images are inserted or appended.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether newly acquired images are inserted or appended.
- */
 IfAppendImage: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2043,17 +2090,16 @@ If it's set to `false` , the images will be inserted before the current image. T
 
 ## IfDisableSourceAfterAcquire
 
+Return or set whether to close the built-in User Interface after all images have been acquired.
+
 **Syntax**
 
-```
-
-/**
- * Return or set whether to close the built-in User Interface after all images have been acquired.
- */
+```javascript
 IfDisableSourceAfterAcquire: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2084,16 +2130,16 @@ This property only makes sense when `IfShowUI` is set to `true` .
 
 ## IfDuplexEnabled
 
+Return or set whether to enable duplex scanning (in other words, whether to scan both sides of the paper).
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether to enable duplex scanning (in other words, whether to scan both sides of the paper).
- */
 IfDuplexEnabled: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2126,16 +2172,16 @@ Not all scanners support duplex scanning. To confirm, check the user manual of t
 
 ## IfFeederEnabled
 
+Return or set whether a data source's Automatic Document Feeder (ADF) is enabled for scanning.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether a data source's Automatic Document Feeder (ADF) is enabled for scanning.
- */
 IfFeederEnabled: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2168,12 +2214,11 @@ If the property is set to `true` , the data source will try acquiring images fro
 
 ## IfShowUI
 
+Return or set whether the data source displays the user interface when scanning.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether the data source displays the user interface when scanning.
- */
 IfShowUI: boolean;
 ```
 
@@ -2210,16 +2255,16 @@ It's recommended to use this API after OpenSource() is called.
 
 ## ImageCaptureDriverType
 
+Return or set the driver type which determines the type of sources to use.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the driver type which determines the type of sources to use.
- */
 ImageCaptureDriverType: Dynamsoft.DWT.EnumDWT_Driver | number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2261,16 +2306,16 @@ The allowed values for `EnumDWT_Driver` are
 
 ## PageSize
 
+Return or set the page size the data source uses to acquire images.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the page size the data source uses to acquire images.
- */
 PageSize: Dynamsoft.DWT.EnumDWT_CapSupportedSizes | number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2301,16 +2346,16 @@ Set this property after `OpenSource()` and before `AcquireImage()`.
 
 ## PixelType
 
+Return or set the pixel type used when acquiring images.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the pixel type used when acquiring images.
- */
 PixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2341,16 +2386,16 @@ Set this property after `OpenSource()` and before `AcquireImage()`.
 
 ## Resolution
 
+Return or set the resolution used when acquiring images.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the resolution used when acquiring images.
- */
 Resolution: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2381,16 +2426,16 @@ Set this property after `OpenSource()` and before `AcquireImage()`.
 
 ## SourceCount
 
+Returns how many data sources are available on the local system.
+
 **Syntax**
 
 ```typescript
-/**
- * Returns how many data sources are available on the local system.
- */
 readonly SourceCount: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2417,16 +2462,16 @@ readonly SourceCount: number;
 
 ## BlankImageThreshold
 
+Retrun or set the dividing line between black and white.
+
 **Syntax**
 
 ```typescript
-/**
- * Retrun or set the dividing line between black and white.
- */
 BlankImageThreshold: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2457,16 +2502,16 @@ BlankImageThreshold: number;
 
 ## Brightness
 
+Return or set the brightness to be used for scanning by the data source.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the brightness to be used for scanning by the data source.
- */
 Brightness: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2499,16 +2544,16 @@ Typically, the value range is -1000 ~ 1000 where -1000 indicates the darkest and
 
 ## Contrast
 
+Return or set Contrast to be used for scanning by the data source.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set Contrast to be used for scanning by the data source.
- */
 Contrast: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2541,16 +2586,16 @@ Typically, the value range is -1000 ~ 1000 where -1000 indicates the darkest and
 
 ## CurrentSourceName
 
+Return the device name of current source.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the device name of current source.
- */
 readonly CurrentSourceName: string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2581,16 +2626,16 @@ If no source is currently selected, this property returns "".
 
 ## DataSourceStatus
 
+Return a value that indicates the data source status.
+
 **Syntax**
 
 ```typescript
-/**
- * Return a value that indicates the data source status.
- */
 DataSourceStatus: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2626,16 +2671,16 @@ DataSourceStatus: number;
 
 ## DefaultSourceName
 
+Return the name of the last used source.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the name of the last used source.
- */
 DefaultSourceName: string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2662,16 +2707,16 @@ DefaultSourceName: string;
 
 ## Duplex
 
+Return whether the source supports duplex. If yes, it further returns the level of duplex the data source supports.
+
 **Syntax**
 
 ```typescript
-/**
- * Return whether the source supports duplex. If yes, it further returns the level of duplex the data source supports.
- */
 readonly Duplex: Dynamsoft.DWT.EnumDWT_DUPLEX | number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2710,16 +2755,16 @@ This property does not support Linux.
 
 ## IfAutoBright
 
+Return or set whether to enable the data source's auto-brightness feature.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether to enable the data source's auto-brightness feature.
- */
 IfAutoBright: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2746,16 +2791,16 @@ IfAutoBright: boolean;
 
 ## IfAutoDiscardBlankpages
 
+Return or set whether the data source (the scanner) discards blank images during scanning automatically.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether the data source (the scanner) discards blank images during scanning automatically.
- */
 IfAutoDiscardBlankpages: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2788,16 +2833,16 @@ Alternatively, the Dynamic Web TWAIN library can also detect blank images after 
 
 ## IfAutoFeed
 
+Return or set whether to enable the data source's automatic document feeding process.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether to enable the data source's automatic document feeding process.
- */
 IfAutoFeed: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2828,16 +2873,16 @@ If set to `true` , the data source will automatically feed the next page from th
 
 ## IfAutomaticBorderDetection
 
+Return or set whether to enable the data source's automatic border detection feature.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether to enable the data source's automatic border detection feature.
- */
 IfAutomaticBorderDetection: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2870,16 +2915,16 @@ Once enabled, the data source (scanner) will automatically detect the borders of
 
 ## IfAutomaticDeskew
 
+Return or set whether to enable the data source's automatic skew correction feature.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether to enable the data source's automatic skew correction feature.
- */
 IfAutomaticDeskew: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2910,16 +2955,16 @@ The property works only if the device and its driver supports automatical deskew
 
 ## IfAutoScan
 
+Return or set whether to enable the data source's automatic document scanning process.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether to enable the data source's automatic document scanning process.
- */
 IfAutoScan: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2952,16 +2997,16 @@ The fundamental assumption behind this property is that the device may be able t
 
 ## IfFeederLoaded
 
+Return whether or not there are documents loaded in the data source's feeder.
+
 **Syntax**
 
 ```typescript
-/**
- * Return whether or not there are documents loaded in the data source's feeder.
- */
 readonly IfFeederLoaded: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2992,16 +3037,16 @@ This property is only valid when [IfFeederEnabled](#iffeederenabled) and [IfPa
 
 ## IfPaperDetectable
 
+Return whether the Source has a paper sensor that can detect pages on the ADF or Flatbed.
+
 **Syntax**
 
 ```typescript
-/**
- * Return whether the Source has a paper sensor that can detect pages on the ADF or Flatbed.
- */
 readonly IfPaperDetectable: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3032,12 +3077,11 @@ Check this property after [OpenSource()](#opensource) is called.
 
 ## IfShowIndicator
 
+Return or set whether the data source displays a progress indicator during acquisition and transfer.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether the data source displays a progress indicator during acquisition and transfer.
- */
 IfShowIndicator: boolean;
 ```
 
@@ -3074,16 +3118,16 @@ The indicator will only be hidden if you set both [IfShowUI](#ifshowui) and [IfS
 
 ## IfUIControllable
 
+Return whether the data source supports acquisitions with the UI (User Interface) disabled.
+
 **Syntax**
 
 ```typescript
-/**
- * Return whether the data source supports acquisitions with the UI (User Interface) disabled.
- */
 readonly IfUIControllable: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3114,16 +3158,16 @@ Check this property after [OpenSource()](#opensource) is called.
 
 ## IfUseTwainDSM
 
+Return or set whether the new TWAIN DSM (data source Manager) is used for acquisitions. The new TWAIN DSM is a DLL called 'TWAINDSM.dll' while the default | old DSM is called 'twain_32.dll'.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether the new TWAIN DSM (data source Manager) is used for acquisitions. The new TWAIN DSM is a DLL called 'TWAINDSM.dll' while the default | old DSM is called 'twain_32.dll'.
- */
 IfUseTwainDSM: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3154,16 +3198,16 @@ This property should be set before any TWAIN related methods or properties are c
 
 ## ImageLayoutFrameBottom
 
+Return the value of the bottom edge of the current image frame (in Unit).
+
 **Syntax**
 
 ```typescript
-/**
- * Return the value of the bottom edge of the current image frame (in Unit).
- */
 readonly ImageLayoutFrameBottom: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3190,16 +3234,16 @@ readonly ImageLayoutFrameBottom: number;
 
 ## ImageLayoutFrameLeft
 
+Return the value of the left edge of the current image frame (in Unit).
+
 **Syntax**
 
 ```typescript
-/**
- * Return the value of the left edge of the current image frame (in Unit).
- */
 readonly ImageLayoutFrameLeft: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3226,16 +3270,16 @@ readonly ImageLayoutFrameLeft: number;
 
 ## ImageLayoutFrameRight
 
+Return the value of the right edge of the current image frame (in Unit).
+
 **Syntax**
 
 ```typescript
-/**
- * Return the value of the right edge of the current image frame (in Unit).
- */
 readonly ImageLayoutFrameRight: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3262,16 +3306,16 @@ readonly ImageLayoutFrameRight: number;
 
 ## ImageLayoutFrameTop
 
+Return the value of the top edge of the current image frame (in Unit).
+
 **Syntax**
 
 ```typescript
-/**
- * Return the value of the top edge of the current image frame (in Unit).
- */
 readonly ImageLayoutFrameTop: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3298,16 +3342,16 @@ readonly ImageLayoutFrameTop: number;
 
 ## ImageLayoutDocumentNumber
 
+Return the document number of the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the document number of the current image.
- */
 readonly ImageLayoutDocumentNumber: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3334,16 +3378,16 @@ readonly ImageLayoutDocumentNumber: number;
 
 ## ImageLayoutPageNumber
 
+Return the page number of the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the page number of the current image.
- */
 readonly ImageLayoutPageNumber: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3370,16 +3414,16 @@ readonly ImageLayoutPageNumber: number;
 
 ## ImageBitsPerPixel
 
+Return the bit depth of the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the bit depth of the current image.
- */
 readonly ImageBitsPerPixel: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3406,16 +3450,16 @@ readonly ImageBitsPerPixel: number;
 
 ## ImageLength
 
+Return the length of the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the length of the current image.
- */
 readonly ImageLength: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3442,12 +3486,11 @@ readonly ImageLength: number;
 
 ## ImageWidth
 
+Return the width of the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the width of the current image.
- */
 readonly ImageWidth: number;
 ```
 
@@ -3478,12 +3521,11 @@ readonly ImageWidth: number;
 
 ## ImageXResolution
 
+Return the horizontal resolution of the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the horizontal resolution of the current image.
- */
 readonly ImageXResolution: number;
 ```
 
@@ -3514,16 +3556,16 @@ readonly ImageXResolution: number;
 
 ## ImageYResolution
 
+Return the vertical resolution of the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the vertical resolution of the current image.
- */
 readonly ImageYResolution: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3550,16 +3592,16 @@ readonly ImageYResolution: number;
 
 ## ImagePixelType
 
+Return the pixel type of the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the pixel type of the current image.
- */
 readonly ImagePixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3586,16 +3628,16 @@ readonly ImagePixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 
 ## MagData
 
+Return the data of the magnetic data if the data source supports magnetic data recognition.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the data of the magnetic data if the data source supports magnetic data recognition.
- */
 readonly MagData: string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3622,16 +3664,16 @@ readonly MagData: string;
 
 ## MagType
 
+Return the type of the magnetic data if the data source supports magnetic data recognition.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the type of the magnetic data if the data source supports magnetic data recognition.
- */
 readonly MagType: Dynamsoft.DWT.EnumDWT_MagType | number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3666,16 +3708,16 @@ These APIs are only valid in the callbacks for the events [OnPreTransfer](#onpre
 
 ## PendingXfers
 
+Return the number of transfers the data source is ready to supply upon demand.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the number of transfers the data source is ready to supply upon demand.
- */
 readonly PendingXfers: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3708,16 +3750,16 @@ The data source returns -1 if it is not sure how many transfers are pending whic
 
 ## PixelFlavor
 
+Return or set the pixel flavor to be used for acquiring images.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the pixel flavor to be used for acquiring images.
- */
 PixelFlavor: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3751,16 +3793,16 @@ Available values:
 
 ## TransferMode
 
+Return or set the data source's transfer mode.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the data source's transfer mode.
- */
 TransferMode: Dynamsoft.DWT.EnumDWT_TransferMode | number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3797,16 +3839,16 @@ TWSX_NATIVE and TWSX_MEMORY are required by all TWAIN data sources while TWSX_FI
 
 ## Unit
 
+Return or set the unit of measure for all quantities. Note that this setting is only effective for TWAIN (hardware) related operations.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the unit of measure for all quantities. Note that this setting is only effective for TWAIN (hardware) related operations.
- */
 Unit: Dynamsoft.DWT.EnumDWT_UnitType | number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3847,16 +3889,16 @@ Allowed values are
 
 ## XferCount
 
+Return and set the number of images your application is willing to accept for each scan job.
+
 **Syntax**
 
 ```typescript
-/**
- * Return and set the number of images your application is willing to accept for each scan job.
- */
 XferCount: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3887,16 +3929,16 @@ Allowed values are between -1 and 215 where -1 indicate multiple images.
 
 ## OnPostAllTransfers
 
+This event is triggered when all page(s) have been scanned and transferred.
+
 **Syntax**
 
 ```typescript
-/**
- * This event is triggered when all page(s) have been scanned and transferred.
- */
 RegisterEvent("OnPostAllTransfers", function () {});
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3935,16 +3977,16 @@ DWObject.RegisterEvent("OnPostAllTransfers", function () {
 
 ## OnPostTransfer
 
+This event is triggered after each page has been scanned and transferred.
+
 **Syntax**
 
 ```typescript
-/**
- * This event is triggered after each page has been scanned and transferred.
- */
 RegisterEvent("OnPostTransfer", function () {});
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3979,17 +4021,20 @@ DWObject.RegisterEvent("OnPostTransfer", function () {
 
 ## OnPostTransferAsync
 
+This event is triggered after each page has been scanned and transferred. This is the asynchronous counterpart to the synchronous event {OnPostTransfer}.
+
 **Syntax**
 
 ```typescript
-/**
- * This event is triggered after each page has been scanned and transferred. This is the asynchronous counterpart to the synchronous event {OnPostTransfer}.
- * @argument outputInfo Detailed information about the image that just got transferred.
- */
 RegisterEvent("OnPostTransferAsync", function (outputInfo: OutputInfo) {});
 ```
 
+**Parameters**
+
+`outputInfo`: Detailed information about the image that just got transferred.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4047,16 +4092,16 @@ DWObject.RegisterEvent("OnPostTransferAsync", function (outputInfo) {
 
 ## OnPreAllTransfers
 
+This event is triggered when all images are scanned and ready to be transferred.
+
 **Syntax**
 
 ```typescript
-/**
- * This event is triggered when all images are scanned and ready to be transferred.
- */
 RegisterEvent("OnPreAllTransfers", function () {});
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4094,16 +4139,16 @@ In the callback function of this event, you can call `CancelAllPendingTransfers(
 
 ## OnPreTransfer
 
+This event is triggered when a page has been scanned and is ready to be transferred.
+
 **Syntax**
 
 ```typescript
-/**
- * This event is triggered when a page has been scanned and is ready to be transferred.
- */
 RegisterEvent('OnPreTransfer',function(){...});
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4138,16 +4183,16 @@ In the callback function of this event, you can
 
 ## OnSourceUIClose
 
+This event is triggered when the user interface of the data source is closed manually by the user.
+
 **Syntax**
 
 ```typescript
-/**
- * This event is triggered when the user interface of the data source is closed manually by the user.
- */
 RegisterEvent("OnSourceUIClose", function () {});
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4174,23 +4219,14 @@ RegisterEvent("OnSourceUIClose", function () {});
 
 ## getCapabilities
 
+Gets detailed information about all capabilities of the current data source.
+
 **Syntax**
 
 ```typescript
-/**
- * Gets detailed information about all capabilities of the current data source.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument capabilityDetails Detailed information about the specified capabilities.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 getCapabilities(
     successCallback: (capabilityDetails: CapabilityDetails[]) => void,
-    failureCallback: (
-        errorCode: number,
-        errorString: string
-    ) => void
+    failureCallback: (errorCode: number, errorString: string) => void
 ): void;
 
 /**
@@ -4256,7 +4292,17 @@ interface ValueAndLabel {
 }
 ```
 
+**Parameters**
+
+`successCallback`: A callback function that is executed if the request succeeds.
+- `capabilityDetails`: Detailed information about the specified capabilities.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4291,16 +4337,11 @@ Check out the Enumerations
 
 ## setCapabilities
 
+Sets up one or multiple capabilities in one call.
+
 **Syntax**
 
 ```typescript
-/**
- * Sets up one or multiple capabilities in one call.
- * @param capabilities A object that describes how to set capabilities.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument capabilities The capabilities to set.
- */
 setCapabilities(
     capabilities: Capabilities,
     successCallback: (capabilities: Capabilities) => void,
@@ -4336,7 +4377,17 @@ interface CapabilitySetup {
 }
 ```
 
+**Parameters**
+
+`capabilities`: A object that describes how to set capabilities.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `capabilities`: The capabilities to set.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4413,16 +4464,19 @@ DWObject.setCapabilities(
 
 ## GetDevicesAsync
 
+Return all available devices (scanners, eSCL scanners, etc.) for the device type (if specified)
+
 **Syntax**
 
 ```typescript
-/**
- * Return all available devices (scanners, eSCL scanners, etc.) for the device type (if specified)
- * @param deviceType The device type
- * @param refresh Default value: false
- */
 GetDevicesAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number, refresh?:boolean): Promise<Device[]>;
 ```
+
+**Parameters**
+
+`deviceType`: The device type
+
+`refresh`: Default value is **false**
 
 **Example**
 
@@ -4437,6 +4491,7 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4467,13 +4522,11 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 
 ## SelectDeviceAsync
 
+Select the device to use for scanning
+
 **Syntax**
 
 ```typescript
-/**
- * Select the device to use for scanning
- * @param device the device 
- */
 SelectDeviceAsync(device: Device): Promise< boolean>;
 ```
 
@@ -4489,7 +4542,12 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 })
 ```
 
+**Parameters**
+
+`device`: the device
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4516,29 +4574,20 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 
 ## AcquireImageAsync
 
+Scan documents into another DWObject control. eSCL is not supported.
+
 **Syntax**
 
 ```typescript
-/**
- * Scan documents into another DWObject control. eSCL is not supported.
- * @param deviceConfiguration The device configuration
- */
 AcquireImageAsync(deviceConfiguration?: DeviceConfiguration): Promise< boolean>;
 ```
 
-**Example**
+**Parameters**
 
-```javascript
-DWObject.GetDevicesAsync().then((deviceList)=>{
-  return DWObject.SelectDeviceAsync(deviceList[0])  //Select the first device
-}).then(()=>{
-    return DWObject.AcquireImageAsync({}) 
-}).catch((e)=>{
-    console.error(e)
-})
-```
+`deviceConfiguration`: The device configuration
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4560,3 +4609,15 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 
 </table>
 </div>
+
+**Example**
+
+```javascript
+DWObject.GetDevicesAsync().then((deviceList)=>{
+  return DWObject.SelectDeviceAsync(deviceList[0])  //Select the first device
+}).then(()=>{
+    return DWObject.AcquireImageAsync({}) 
+}).catch((e)=>{
+    console.error(e)
+})
+```

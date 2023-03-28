@@ -183,11 +183,6 @@ Remove the specified tag from one or more images(if not specified, remove from a
 **Syntax**
 
 ```typescript
-/**
- * 
- * @param tagName Specify the new tag name.
- * @param indices Specify the index.
- */
 RemoveTag(tagName: string, indices?: number[]):boolean
 ```
 
