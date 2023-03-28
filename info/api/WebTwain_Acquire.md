@@ -88,28 +88,9 @@ Start image acquisition.
 
 ```typescript
 AcquireImage(
-    deviceConfiguration?: DeviceConfiguration
-): void;
-```
-
-```typescript
-
-AcquireImage(
-    successCallBack?: () => void,
-    failureCallBack?: (
-        errorCode: number,
-        errorString: string) => void
-): void;
-```
-
-```typescript
-AcquireImage(
     deviceConfiguration?: DeviceConfiguration,
     successCallBack?: () => void,
-    failureCallBack?: (
-        deviceConfiguration?: DeviceConfiguration,
-        errorCode: number,
-        errorString: string) => void
+    failureCallBack?: (deviceConfiguration?: DeviceConfiguration, errorCode: number, errorString: string) => void
 ): void;
 
 interface DeviceConfiguration {
