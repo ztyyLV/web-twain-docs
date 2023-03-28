@@ -82,12 +82,11 @@ UpdateCert(
 
 ## licenseException
 
+Error message related to license.
+
 **Syntax**
 
 ``` typescript
-/**
- * Error message related to license.
- */
 licenseException: string;
 ```
 
@@ -132,27 +131,32 @@ Sets or returns where the library looks for resources files including service in
 
 ### `UpdateCert`
 
+Update and download certificate (server.pem.ldsc & server_key.pem.ldsc) to DynamsoftServicex64_17\cert.
+
 **Syntax**
 
 ``` typescript
-/**
- * Update and download certificate (server.pem.ldsc & server_key.pem.ldsc) to DynamsoftServicex64_17\cert.
- * @param url Url to download the new certificate. E.g. http://download.dynamsoft.com/cert.zip. server.pem.ldsc & server_key.pem.ldsc should be in cert.zip. 
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 UpdateCert(
-        url: string,
-        optionalAsyncSuccessFunc?: () => void,
-        optionalAsyncFailureFunc?: (
-            errorCode: number, 
-            errorString: string) => void
-    );
+    url: string,
+    optionalAsyncSuccessFunc?: () => void,
+    optionalAsyncFailureFunc?: (
+        errorCode: number, 
+        errorString: string) => void
+);
 ```
 
+**Parameters**
+
+`url`: Url to download the new certificate. E.g. http://download.dynamsoft.com/cert.zip. server.pem.ldsc & server_key.pem.ldsc should be in cert.zip.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
