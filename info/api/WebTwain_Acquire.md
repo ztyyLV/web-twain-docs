@@ -82,17 +82,11 @@ permalink: /info/api/WebTwain_Acquire.html
 
 ## AcquireImage
 
+Start image acquisition.
+
 **Syntax**
 
 ```typescript
-/**
- * Start image acquisition.
- * @param deviceConfiguration Configuration for the acquisition.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 AcquireImage(
     deviceConfiguration?: DeviceConfiguration
 ): void;
@@ -131,10 +125,20 @@ interface DeviceConfiguration {
     SelectSourceByIndex?: number; //Specify a source by its index.
     IfCloseSourceAfterAcquire?: boolean; //Whether to close the data source after aquisition. Default: false.
 }
-}
 ```
 
+**Parameters**
+
+`deviceConfiguration`: Configuration for the acquisition.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 

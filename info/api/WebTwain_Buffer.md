@@ -235,7 +235,6 @@ interface TagInfo {
     name: string;
     imageIds: number[];
 }
-
 ```
 
 **Availability**
