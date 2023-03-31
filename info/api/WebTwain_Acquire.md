@@ -336,6 +336,22 @@ CloseSource(): boolean;
 </table>
 </div>
 
+**Example**
+
+```javascript
+// Close the scanner source in the success/failure callback after all images are acquired. In this case, the source can be freed and used by others.
+DWObject.OpenSource();
+DWObject.AcquireImage(successCallback,failureCallback);
+
+function successCallback() {
+  console.log("successful");
+}
+
+function failureCallback(errorCode, errorString) {
+  alert(errorString);
+}
+```
+
 ---
 
 ## CloseSourceAsync
@@ -539,6 +555,15 @@ OpenSource(): boolean;
 </table>
 </div>
 
+**Example**
+
+```javascript
+DWObject.GetSourceNames() // for example ['PaperStream IP fi-7300NX Net', 'TWAIN2 FreeImage Software Scanner']
+DWObject.SelectSourceByIndex(0); // choose scanner with the name "PaperStream IP fi-7300NX Net"
+DWObject.OpenSource();
+DWObject.AcquireImage();
+```
+
 ---
 
 ## OpenSourceAsync
@@ -665,6 +690,12 @@ interface Version {
 
 </table>
 </div>
+
+**Example**
+
+```javascript
+DWObject.GetSourceNames(); // return a list of scanner sources such as ['PaperStream IP fi-7300NX Net', 'TWAIN2 FreeImage Software Scanner']
+```
 
 ---
 
