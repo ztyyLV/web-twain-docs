@@ -345,10 +345,12 @@ DWObject.AcquireImage(successCallback,failureCallback);
 
 function successCallback() {
   console.log("successful");
+  DWObject.CloseSource();
 }
 
 function failureCallback(errorCode, errorString) {
   alert(errorString);
+  DWObject.CloseSource();
 }
 ```
 
@@ -558,7 +560,7 @@ OpenSource(): boolean;
 **Example**
 
 ```javascript
-DWObject.GetSourceNames() // for example ['PaperStream IP fi-7300NX Net', 'TWAIN2 FreeImage Software Scanner']
+DWObject.GetSourceNames(); // for example ['PaperStream IP fi-7300NX Net', 'TWAIN2 FreeImage Software Scanner']
 DWObject.SelectSourceByIndex(0); // choose scanner with the name "PaperStream IP fi-7300NX Net"
 DWObject.OpenSource();
 DWObject.AcquireImage();
@@ -841,7 +843,6 @@ SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promi
 
 </table>
 </div>
----
 
 **Example**
 
@@ -855,6 +856,8 @@ DWObject.SelectSourceAsync()
     console.log(e);
   });
 ```
+
+---
 
 ## SelectSourceByIndex
 
@@ -897,7 +900,8 @@ SelectSourceByIndex(index: number): boolean;
 **Example**
 
 ```javascript
-DWObject.SelectSourceByIndex(0);
+DWObject.GetSourceNames(); // for example ['PaperStream IP fi-7300NX Net', 'TWAIN2 FreeImage Software Scanner']
+DWObject.SelectSourceByIndex(0); // choose scanner with the name "PaperStream IP fi-7300NX Net"
 DWObject.OpenSource();
 DWObject.AcquireImage();
 ```
@@ -998,7 +1002,7 @@ SetOpenSourceTimeout(duration: number): boolean;
 
 ```javascript
 DWObject.SelectSource(function () {
-  DWObject.SetOpenSourceTimeout(3000);
+  DWObject.SetOpenSourceTimeout(3000); // stop the opening process if the source cannot be opened within 3000 ms.
   DWObject.OpenSource();
   DWObject.AcquireImage();
 });
@@ -1382,6 +1386,12 @@ CloseSourceManager(): boolean;
 
 </table>
 </div>
+
+**Example**
+
+DWObject.CloseSource();
+DWObject.CloseSourceManager();
+
 ---
 
 ## CloseSourceManagerAsync
