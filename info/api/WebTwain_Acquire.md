@@ -1389,8 +1389,9 @@ CloseSourceManager(): boolean;
 
 **Example**
 
-DWObject.CloseSource();
+```javascript
 DWObject.CloseSourceManager();
+```
 
 ---
 
@@ -1548,10 +1549,15 @@ GetCustomDSData(fileName: string): boolean;
 </table>
 </div>
 
+**Usage notes**
+
+Typically, the data source data file is set by the method [SetCustomDSData()](#setcustomdsdata).
+
 **Example**
 
 ```javascript
-DWObject.GetCustomDSData("C:\\customDSData");
+// Please note, the API only works for TWAIN driver.
+DWObject.GetCustomDSData("C:\\Users\\UserName\\Desktop\\ProfileName");
 ```
 
 ---
@@ -1589,6 +1595,17 @@ GetCustomDSDataEx(): string;
 
 </table>
 </div>
+
+**Usage notes**
+
+Typically, the data source data file is set by the method [SetCustomDSDataEx()](#setcustomdsdataex).
+
+**Example**
+
+```javascript
+// Please note, the API only works for TWAIN driver.
+DWObject.GetCustomDSDataEx(); // Return a base64 string
+```
 
 ---
 
@@ -1630,6 +1647,13 @@ GetSourceNameItems(index: number): string;
 </table>
 </div>
 
+**Example**
+
+```javascript
+DWObject.GetSourceNames(); // [scanner 1, scanner 2, scanner 3...]
+DWObject.GetSourceNameItems(0); // return the name of scanner 1
+```
+
 ---
 
 ## OpenSourceManager
@@ -1669,6 +1693,12 @@ OpenSourceManager(): boolean;
 **Usage notes**
 
 If application identification needs to be set, it should be set before this API.
+
+**Example**
+
+```javascript
+DWObject.OpenSourceManager(); 
+```
 
 ---
 
@@ -1833,6 +1863,13 @@ SetCustomDSData(fileName: string): boolean;
 
 Typically, the data source data file is created by the method [GetCustomDSData()](#getcustomdsdata).
 
+**Example**
+
+```javascript
+// Please note, the API only works for TWAIN driver.
+DWObject.SetCustomDSData("C:\\Users\\UserName\\Desktop\\ProfileName");
+```
+
 ---
 
 ## SetCustomDSDataEx
@@ -1876,6 +1913,11 @@ SetCustomDSDataEx(dsDataString: string): boolean;
 **Usage notes**
 
 Typically the data source data string is created by the method [GetCustomDSDataEx()](#getcustomdsdataex)
+
+```javascript
+// Please note, the API only works for TWAIN driver.
+DWObject.SetCustomDSData("the base64 string of your profile");
+```
 
 ---
 
