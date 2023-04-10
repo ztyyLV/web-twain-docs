@@ -336,6 +336,24 @@ CloseSource(): boolean;
 </table>
 </div>
 
+**Example**
+
+```javascript
+// Close the scanner source in the success/failure callback after all images are acquired. In this case, the source can be freed and used by others.
+DWObject.OpenSource();
+DWObject.AcquireImage(successCallback,failureCallback);
+
+function successCallback() {
+  console.log("successful");
+  DWObject.CloseSource();
+}
+
+function failureCallback(errorCode, errorString) {
+  alert(errorString);
+  DWObject.CloseSource();
+}
+```
+
 ---
 
 ## CloseSourceAsync
@@ -539,6 +557,15 @@ OpenSource(): boolean;
 </table>
 </div>
 
+**Example**
+
+```javascript
+DWObject.GetSourceNames(); // for example ['PaperStream IP fi-7300NX Net', 'TWAIN2 FreeImage Software Scanner']
+DWObject.SelectSourceByIndex(0); // choose scanner with the name "PaperStream IP fi-7300NX Net"
+DWObject.OpenSource();
+DWObject.AcquireImage();
+```
+
 ---
 
 ## OpenSourceAsync
@@ -665,6 +692,12 @@ interface Version {
 
 </table>
 </div>
+
+**Example**
+
+```javascript
+DWObject.GetSourceNames(); // return a list of scanner sources such as ['PaperStream IP fi-7300NX Net', 'TWAIN2 FreeImage Software Scanner']
+```
 
 ---
 
@@ -810,7 +843,6 @@ SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promi
 
 </table>
 </div>
----
 
 **Example**
 
@@ -824,6 +856,8 @@ DWObject.SelectSourceAsync()
     console.log(e);
   });
 ```
+
+---
 
 ## SelectSourceByIndex
 
@@ -866,7 +900,8 @@ SelectSourceByIndex(index: number): boolean;
 **Example**
 
 ```javascript
-DWObject.SelectSourceByIndex(0);
+DWObject.GetSourceNames(); // for example ['PaperStream IP fi-7300NX Net', 'TWAIN2 FreeImage Software Scanner']
+DWObject.SelectSourceByIndex(0); // choose scanner with the name "PaperStream IP fi-7300NX Net"
 DWObject.OpenSource();
 DWObject.AcquireImage();
 ```
@@ -967,7 +1002,7 @@ SetOpenSourceTimeout(duration: number): boolean;
 
 ```javascript
 DWObject.SelectSource(function () {
-  DWObject.SetOpenSourceTimeout(3000);
+  DWObject.SetOpenSourceTimeout(3000); // stop the opening process if the source cannot be opened within 3000 ms.
   DWObject.OpenSource();
   DWObject.AcquireImage();
 });
@@ -1351,6 +1386,13 @@ CloseSourceManager(): boolean;
 
 </table>
 </div>
+
+**Example**
+
+```javascript
+DWObject.CloseSourceManager();
+```
+
 ---
 
 ## CloseSourceManagerAsync
@@ -1507,10 +1549,15 @@ GetCustomDSData(fileName: string): boolean;
 </table>
 </div>
 
+**Usage notes**
+
+Typically, the data source data file is set by the method [SetCustomDSData()](#setcustomdsdata).
+
 **Example**
 
 ```javascript
-DWObject.GetCustomDSData("C:\\customDSData");
+// Please note, the API only works for TWAIN driver.
+DWObject.GetCustomDSData("C:\\Users\\UserName\\Desktop\\ProfileName");
 ```
 
 ---
@@ -1548,6 +1595,17 @@ GetCustomDSDataEx(): string;
 
 </table>
 </div>
+
+**Usage notes**
+
+Typically, the data source data file is set by the method [SetCustomDSDataEx()](#setcustomdsdataex).
+
+**Example**
+
+```javascript
+// Please note, the API only works for TWAIN driver.
+DWObject.GetCustomDSDataEx(); // Return a base64 string
+```
 
 ---
 
@@ -1589,6 +1647,13 @@ GetSourceNameItems(index: number): string;
 </table>
 </div>
 
+**Example**
+
+```javascript
+DWObject.GetSourceNames(); // [scanner 1, scanner 2, scanner 3...]
+DWObject.GetSourceNameItems(0); // return the name of scanner 1
+```
+
 ---
 
 ## OpenSourceManager
@@ -1628,6 +1693,12 @@ OpenSourceManager(): boolean;
 **Usage notes**
 
 If application identification needs to be set, it should be set before this API.
+
+**Example**
+
+```javascript
+DWObject.OpenSourceManager(); 
+```
 
 ---
 
@@ -1792,6 +1863,13 @@ SetCustomDSData(fileName: string): boolean;
 
 Typically, the data source data file is created by the method [GetCustomDSData()](#getcustomdsdata).
 
+**Example**
+
+```javascript
+// Please note, the API only works for TWAIN driver.
+DWObject.SetCustomDSData("C:\\Users\\UserName\\Desktop\\ProfileName");
+```
+
 ---
 
 ## SetCustomDSDataEx
@@ -1835,6 +1913,11 @@ SetCustomDSDataEx(dsDataString: string): boolean;
 **Usage notes**
 
 Typically the data source data string is created by the method [GetCustomDSDataEx()](#getcustomdsdataex)
+
+```javascript
+// Please note, the API only works for TWAIN driver.
+DWObject.SetCustomDSData("the base64 string of your profile");
+```
 
 ---
 
