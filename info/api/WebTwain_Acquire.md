@@ -2196,6 +2196,23 @@ IfDisableSourceAfterAcquire: boolean;
 
 This property only makes sense when `IfShowUI` is set to `true` .
 
+**Example**
+
+```javascript
+DWObject.OpenSource();
+DWObject.IfDisableSourceAfterAcquire = true; // Close the scanner UI after images acquired.
+DWObject.IfShowUI = true;
+DWObject.AcquireImage(successCallback,failureCallback);
+
+function successCallback() {
+    DWObject.CloseSource();
+}
+
+function failureCallback(errorCode, errorString) {
+    DWObject.CloseSource();
+}
+```
+
 ---
 
 ## IfDuplexEnabled
@@ -2237,6 +2254,18 @@ IfDuplexEnabled: boolean;
 Set this property after `OpenSource()` and before `AcquireImage()` .
 
 Not all scanners support duplex scanning. To confirm, check the user manual of the device or check the value of `Duplex` after `OpenSource()` .
+
+**Example**
+
+```javascript
+DWObject.OpenSource();
+
+if (DWObject.Duplex != 0) { // Note: DWObject.Duplex doesn't support Linux.
+    DWObject.IfDuplexEnabled = true;
+}
+
+DWObject.AcquireImage();
+```
 
 ---
 
@@ -2280,6 +2309,14 @@ Set this property after `OpenSource()` and before `AcquireImage()` .
 
 If the property is set to `true` , the data source will try acquiring images from the document feeder first. If the data source doesn't have a document feeder, the flatbed will be used.
 
+**Example**
+
+```javascript
+DWObject.OpenSource();
+DWObject.IfFeederEnabled = true;
+DWObject.AcquireImage();
+```
+
 ---
 
 ## IfShowUI
@@ -2319,7 +2356,15 @@ IfShowUI: boolean;
 
 If the property is set to `true` , the data source will display its user interface when `AcquireImage()` is called. Otherwise, the UI will not be displayed and the scan will start immediately.
 
-It's recommended to use this API after OpenSource() is called.
+It's recommended to use this API after `OpenSource()` is called.
+
+**Example**
+
+```javascript
+DWObject.OpenSource();
+DWObject.IfShowUI = true; // display the scanner UI before acquiring image
+DWObject.AcquireImage();
+```
 
 ---
 
