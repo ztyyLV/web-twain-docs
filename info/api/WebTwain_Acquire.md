@@ -3954,7 +3954,7 @@ TWSX_NATIVE and TWSX_MEMORY are required by all TWAIN data sources while TWSX_FI
 
 ## Unit
 
-Return or set the unit of measure for all quantities. Note that this setting is only effective for TWAIN (hardware) related operations.
+Return or set the unit of measure for all quantities. Note that this setting is only effective for TWAIN/ICA (hardware) related operations.
 
 **Syntax**
 
