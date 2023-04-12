@@ -2393,7 +2393,7 @@ ImageCaptureDriverType: Dynamsoft.DWT.EnumDWT_Driver | number;
 
 <tr>
 <td align="center">not supported</td>
-<td align="center">not supported</td>
+<td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
