@@ -1974,7 +1974,7 @@ Example argument for the parameter `fileName`
 - "C:\\webtwain" + <> + ".jpg": The scanned images will result in "C:\\webtwain1.jpg", "C:\\webtwain2.jpg", "C:\\webtwain3.jpg", etc.
 - "C:\\webtwain" + <%06d> + ".jpg": The scanned images will result in "C:\\webtwain000001.jpg", "C:\\webtwain000002.jpg", "C:\\webtwain000003.jpg", etc.
 
-Check out the available formats [Dynamsoft.DWT.EnumDWT_FileFormat]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_fileformat-).
+Check out the available formats [Dynamsoft.DWT.EnumDWT_FileFormat]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_fileformat).
 
 **Example**
 
@@ -1982,15 +1982,15 @@ Check out the available formats [Dynamsoft.DWT.EnumDWT_FileFormat]({{site.info}}
 DWObject.OpenSource();
 DWObject.TransferMode = Dynamsoft.DWT.EnumDWT_TransferMode.TWSX_FILE;
 if (DWObject.TransferMode === Dynamsoft.DWT.EnumDWT_TransferMode.TWSX_FILE) {
-  if (
-    DWObject.SetFileXferInfo(
-      "C:\\Temp\\WebTWAIN<%06d>.bmp",
-      Dynamsoft.DWT.EnumDWT_FileFormat.TWFF_BMP
-    )
-  ) {
-    DWObject.IfShowUI = true;
-    DWObject.AcquireImage();
-  }
+    if (
+        DWObject.SetFileXferInfo(
+            "C:\\Temp\\WebTWAIN<%06d>.bmp",
+            Dynamsoft.DWT.EnumDWT_FileFormat.TWFF_BMP
+        )
+    ) {
+          DWObject.IfShowUI = true;
+          DWObject.AcquireImage();
+    }
 }
 ```
 
@@ -2153,6 +2153,8 @@ IfAppendImage: boolean;
 The value of this property defaults to `true` , which means that the newly acquired image will be appended to the last image in the buffer.
 
 If it's set to `false` , the images will be inserted before the current image. The important thing to note is that, by design, the current image is always the last acquired one which means that the images acquired after setting `IfAppendImage` to `false` will be displayed / retained in the reverse order.
+
+Here is an [article]({{site.faq}}insert-new-pages-to-existing-document.html#can-i-insert-newly-scanned-pages-to-an-existing-document) to demonstrate how to insert new images to a specified index.
 
 ---
 
