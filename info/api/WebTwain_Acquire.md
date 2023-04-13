@@ -1974,7 +1974,7 @@ Example argument for the parameter `fileName`
 - "C:\\webtwain" + <> + ".jpg": The scanned images will result in "C:\\webtwain1.jpg", "C:\\webtwain2.jpg", "C:\\webtwain3.jpg", etc.
 - "C:\\webtwain" + <%06d> + ".jpg": The scanned images will result in "C:\\webtwain000001.jpg", "C:\\webtwain000002.jpg", "C:\\webtwain000003.jpg", etc.
 
-Check out the available formats [Dynamsoft.DWT.EnumDWT_FileFormat]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_fileformat-).
+Check out the available formats [Dynamsoft.DWT.EnumDWT_FileFormat]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_fileformat).
 
 **Example**
 
@@ -1982,15 +1982,15 @@ Check out the available formats [Dynamsoft.DWT.EnumDWT_FileFormat]({{site.info}}
 DWObject.OpenSource();
 DWObject.TransferMode = Dynamsoft.DWT.EnumDWT_TransferMode.TWSX_FILE;
 if (DWObject.TransferMode === Dynamsoft.DWT.EnumDWT_TransferMode.TWSX_FILE) {
-  if (
-    DWObject.SetFileXferInfo(
-      "C:\\Temp\\WebTWAIN<%06d>.bmp",
-      Dynamsoft.DWT.EnumDWT_FileFormat.TWFF_BMP
-    )
-  ) {
-    DWObject.IfShowUI = true;
-    DWObject.AcquireImage();
-  }
+    if (
+        DWObject.SetFileXferInfo(
+            "C:\\Temp\\WebTWAIN<%06d>.bmp",
+            Dynamsoft.DWT.EnumDWT_FileFormat.TWFF_BMP
+        )
+    ) {
+          DWObject.IfShowUI = true;
+          DWObject.AcquireImage();
+    }
 }
 ```
 
@@ -2154,6 +2154,8 @@ The value of this property defaults to `true` , which means that the newly acqui
 
 If it's set to `false` , the images will be inserted before the current image. The important thing to note is that, by design, the current image is always the last acquired one which means that the images acquired after setting `IfAppendImage` to `false` will be displayed / retained in the reverse order.
 
+Here is an [article]({{site.faq}}insert-new-pages-to-existing-document.html#can-i-insert-newly-scanned-pages-to-an-existing-document) to demonstrate how to insert new images to a specified index.
+
 ---
 
 ## IfDisableSourceAfterAcquire
@@ -2193,6 +2195,23 @@ IfDisableSourceAfterAcquire: boolean;
 **Usage notes**
 
 This property only makes sense when `IfShowUI` is set to `true` .
+
+**Example**
+
+```javascript
+DWObject.OpenSource();
+DWObject.IfDisableSourceAfterAcquire = true; // Close the scanner UI after images acquired.
+DWObject.IfShowUI = true;
+DWObject.AcquireImage(successCallback,failureCallback);
+
+function successCallback() {
+    DWObject.CloseSource();
+}
+
+function failureCallback(errorCode, errorString) {
+    DWObject.CloseSource();
+}
+```
 
 ---
 
@@ -2236,6 +2255,18 @@ Set this property after `OpenSource()` and before `AcquireImage()` .
 
 Not all scanners support duplex scanning. To confirm, check the user manual of the device or check the value of `Duplex` after `OpenSource()` .
 
+**Example**
+
+```javascript
+DWObject.OpenSource();
+
+if (DWObject.Duplex != 0) { // Note: DWObject.Duplex doesn't support Linux.
+    DWObject.IfDuplexEnabled = true;
+}
+
+DWObject.AcquireImage();
+```
+
 ---
 
 ## IfFeederEnabled
@@ -2278,6 +2309,14 @@ Set this property after `OpenSource()` and before `AcquireImage()` .
 
 If the property is set to `true` , the data source will try acquiring images from the document feeder first. If the data source doesn't have a document feeder, the flatbed will be used.
 
+**Example**
+
+```javascript
+DWObject.OpenSource();
+DWObject.IfFeederEnabled = true;
+DWObject.AcquireImage();
+```
+
 ---
 
 ## IfShowUI
@@ -2317,7 +2356,15 @@ IfShowUI: boolean;
 
 If the property is set to `true` , the data source will display its user interface when `AcquireImage()` is called. Otherwise, the UI will not be displayed and the scan will start immediately.
 
-It's recommended to use this API after OpenSource() is called.
+It's recommended to use this API after `OpenSource()` is called.
+
+**Example**
+
+```javascript
+DWObject.OpenSource();
+DWObject.IfShowUI = true; // display the scanner UI before acquiring image
+DWObject.AcquireImage();
+```
 
 ---
 
@@ -2346,7 +2393,7 @@ ImageCaptureDriverType: Dynamsoft.DWT.EnumDWT_Driver | number;
 
 <tr>
 <td align="center">not supported</td>
-<td align="center">not supported</td>
+<td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -3907,7 +3954,7 @@ TWSX_NATIVE and TWSX_MEMORY are required by all TWAIN data sources while TWSX_FI
 
 ## Unit
 
-Return or set the unit of measure for all quantities. Note that this setting is only effective for TWAIN (hardware) related operations.
+Return or set the unit of measure for all quantities. Note that this setting is only effective for TWAIN/ICA (hardware) related operations.
 
 **Syntax**
 

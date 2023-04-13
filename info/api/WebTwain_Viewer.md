@@ -37,10 +37,7 @@ permalink: /info/api/WebTwain_Viewer.html
 
 |                                 |
 | :------------------------------ | :---------------------------- | --------------------------------------- | ------------------------------------------- |
-| [`click`](#click)               | [`contextmenu`](#contextmenu) | [`dblclick`](#dblclick)                 | [`mousemove`](#mousemove)                   |
-| [`mousedown`](#mousedown)       | [`mouseup`](#mouseup)         | [`mouseout`](#mouseout)                 | [`mouseover`](#mouseover)                   |
-| [`keydown`](#keydown)           | [`keyup`](#keyup)             | [`pageAreaSelected`](#pageareaselected) | [`pageAreaUnselected`](#pageareaunselected) |
-| [`pageRendered`](#pagerendered) | [`resize`](#resize)           |
+| [`Events`](#events) |
 
 ---
 
@@ -426,16 +423,7 @@ Generate a independent ThumbnailViewer object.
 
 **Syntax**
 
-<div class="sample-code-prefix template2"></div>
-
->- 17.3+
->- 17.2.5
->
 ```typescript
-/**
- * 
- * @param thumbnailViewerSettings Configure the ThumbnailViewer object
- */
 createThumbnailViewer(
     thumbnailViewerSettings?: ThumbnailViewerSettings
 ): ThumbnailViewer;
@@ -635,165 +623,13 @@ interface ViewMode {
     scrollDirection?: string;
 }
 ```
-```typescript
-/** 
- * Generate a independent ThumbnailViewer object. 
- * @param thumbnailViewerSettings Configure the ThumbnailViewer object 
- */ 
-createThumbnailViewer( 
-    thumbnailViewerSettings?: thumbnailViewerSettings 
-): ThumbnailViewer; 
-interface ThumbnailViewer { 
-    /** 
-    * Show the ThumbnailViewer object. 
-    */ 
-    show(): boolean; 
-    /** 
-    * Hide the ThumbnailViewer object. 
-    */ 
-    hide(): boolean; 
-    /** 
-    * Remove the ThumbnailViewer object. 
-    */ 
-    dispose(): boolean; 
-    /** 
-    * Change the view mode of the thumbnail viewer. 
-    * @param viewMode Specify the new mode. 
-    */ 
-    updateViewMode(viewMode: ViewMode): void; 
-    /** 
-    * Bind a listner to the specified event. You can bind one or multiple listeners to the same event. 
-    * @param eventName Specify the event name. 
-    * @param callback Specify the listner. 
-    */ 
-    on(eventName: string, callback: (event: ThumbnailViewerEvent | KeyboardEvent, domEvent?: MouseEvent) => void): void; 
-    /** 
-    * Unbind event listener(s) from the specified viewer event. 
-    * @param eventName Specify the event. 
-    * @param callback Specify the listener to remove 
-    */ 
-    off(eventName: string, callback?: () => void): void; 
-    /** 
-    * Whether to allow keyboard control. Default: true. 
-    */ 
-    allowKeyboardControl: boolean; 
-    /** 
-    * Whether to allow page dragging to reorder the pages. 
-    * Default: true. 
-    */ 
-    allowPageDragging: boolean; 
-    /** 
-    * Whether to allow resizing of the thumbnail viewer. 
-    * Default: false. 
-    */ 
-    allowResizing: boolean; 
-    /** 
-    * Set or return the CSS rule for the background of the thumbnail viewer. 
-    * Default: "rgb(255, 255, 255)". 
-    */ 
-    background: string; 
-    /** 
-    * Set or return the CSS rule for the border of the thumbnail viewer. 
-    * Default: "". 
-    */ 
-    border: string; 
-    /** 
-    * Set or return the CSS rule for the background of the page the mouse hovers over in the thumbnail viewer. 
-    * Default: "rgb(239, 246, 253)". 
-    */ 
-    hoverPageBackground: string; 
-    /** 
-    * Set or return the CSS rule for the border of the page the mouse hovers over in the thumbnail viewer. 
-    * Default: "1px solid rgb(238, 238, 238)". 
-    */ 
-    hoverPageBorder: string; 
-    /** 
-    * Set or return the location of the thumbnail viewer. Allowed values are "left", "right", "top", "bottom". 
-    * Default: "left". 
-    */ 
-    location: string; 
-    /** 
-    * Set or return the CSS rule for the background of a normal page in the thumbnail viewer. 
-    * Default: "transparent". 
-    */ 
-    pageBackground: string; 
-    /** 
-    * Set or return the CSS rule for the border of a normal page in the thumbnail viewer. 
-    * Default: "1px solid rgb(238, 238, 238)". 
-    */ 
-    pageBorder: string; 
-    /** 
-    * Set or return the margin between two adjacent images and the margin between an image and the border of the thumbnail viewer. The value can either be in pixels or percentage. 
-    * Default: 10. 
-    */ 
-    pageMargin: number | string; 
-    /** 
-    * Set or return the CSS rule for the background of the placeholder which appears when you drag page(s) to reorder them in the thumbnail viewer. 
-    * Default: "rgb(251, 236, 136)". 
-    */ 
-    placeholderBackground: string; 
-    /** 
-    * Set or return whether the pages are arranged vertically or horizontally. 
-    * Default: "vertical". Allowed values are "vertical" and "horizontal". 
-    */ 
-    scrollDirection: string; 
-    /** 
-    * Set or return the CSS rule for the background of the selected page(s) in the thumbnail viewer. 
-    * Default: "rgb(199, 222, 252)". 
-    */ 
-    selectedPageBackground: string; 
-    /** 
-    * Set or return the CSS rule for the border of the selected page(s) in the thumbnail viewer. 
-    * Default: "1px solid rgb(125,162,206)". 
-    */ 
-    selectedPageBorder: string; 
-    /** 
-    * Set or return whether page numbers are shown. 
-    * Default: false. 
-    */ 
-    showPageNumber: boolean; 
-    /** 
-    * Set or return the size of the thumbnail viewer. The value can either be in pixels or percentage (based on the width or height of the entire viewer). 
-    * Default: "30%". 
-    */ 
-    size: number | string; 
-    /** 
-    * Set whether to select the index in the upper left corner of the viewer when scrolling. 
-    * Default: false. 
-    */ 
-    autoChangeIndex: boolean; 
-    /** 
-    * Show checkbox on image(s). 
-    */ 
-    showCheckbox: boolean; 
-}; 
-interface ThumbnailViewerEvent { 
-    // The index of the current page. 
-    index: number; 
-    // The x-coordinate of the browser page. 
-    pageX: number; 
-    // The y-coordinate of the browser page. 
-    pageY: number; 
-}; 
-interface ViewMode { 
-    /** 
-    * Specify the number of images per row. 
-    */ 
-    columns: number; 
-    /** 
-    * Specify the number of images per column. 
-    */ 
-    rows: number; 
-    /** 
-    * Set or return whether the pages are arranged vertically or horizontally. 
-    * Default: "vertical". Allowed values are "vertical" and "horizontal". 
-    */ 
-    scrollDirection: string; 
-}
-```
 
+**Parameters**
+
+`thumbnailViewerSettings`: Configure the ThumbnailViewer object
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1230,6 +1066,7 @@ Viewer.on(
 **Parameters**
 
 `eventName`: Specify the event name.
+
 `callback`: Specify the listner.
 
 **Availability**
