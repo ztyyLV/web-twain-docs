@@ -1067,6 +1067,7 @@ Viewer.on(
 **Parameters**
 
 `eventName`: Specify the event name.
+
 `callback`: Specify the listner.
 
 **Availability**
