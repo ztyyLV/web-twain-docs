@@ -37,8 +37,7 @@ permalink: /info/api/WebTwain_Viewer.html
 
 |                                 |
 | :------------------------------ | :---------------------------- | --------------------------------------- | ------------------------------------------- |
-| [`pageAreaSelected`](#pageareaselected) | [`pageAreaUnselected`](#pageareaunselected) |
-| [`pageRendered`](#pagerendered) | [`resize`](#resize)           |
+| [`Events`](#events) |
 
 ---
 
