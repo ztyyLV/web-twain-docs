@@ -1296,9 +1296,7 @@ HTTPDownloadEx(
     path: string,
     type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback: () => void,
-    failureCallback: (
-        errorCode: number,
-        errorString: string) => void
+    failureCallback: (errorCode: number, errorString: string) => void
 ): void;
 ```
 
@@ -1383,8 +1381,8 @@ HTTPDownloadThroughPost(
     host: string,
     path: string,
     type: Dynamsoft.DWT.EnumDWT_ImageType | number,
-    onEmptyResponse: () => void,
-    onServerReturnedSomething: (errorCode: number, errorString: string, response: string) => void,
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string, response?: any) => void,
 ): void;
 ```
 
@@ -1396,12 +1394,12 @@ HTTPDownloadThroughPost(
 
 `type`: The format of the file. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
 
-`onEmptyResponse`: A callback function that is executed if the response is empty.
+`successCallback`: A callback function that is executed if the request succeeds.
 
-`onServerReturnedSomething`: A callback function that is executed if the response is not empty.
+`failureCallback`: A callback function that is executed if the request fails.
 - `errorCode`: The error code.
 - `errorString`: The error string.
-- `response`: The response string.
+- `response`: The response from your server.
 
 **Availability**
 
