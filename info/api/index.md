@@ -589,7 +589,7 @@ permalink: /info/api/
 |[`GetConvertMode()`]({{site.info}}api/Addon_PDF.html#getconvertmode)| [`IsModuleInstalled()`]({{site.info}}api/Addon_PDF.html#ismoduleinstalled) | [`IsTextBasedPDF()`]({{site.info}}api/Addon_PDF.html#istextbasedpdf)| [`SetConvertMode()`]({{site.info}}api/Addon_PDF.html#setconvertmode)|
 |[`SetPassword()`]({{site.info}}api/Addon_PDF.html#setpassword)|[`SetResolution()`]({{site.info}}api/Addon_PDF.html#setresolution)|[`Write.Setup()`]({{site.info}}api/Addon_PDF.html#writesetup)|
 
-### Camera
+<!-- ### Camera
 
 #### Methods
 
@@ -598,7 +598,7 @@ permalink: /info/api/
 |[`getSourceList()`]({{site.info}}api/Addon_Camera.html#getsourcelist) | [`selectSource()`]({{site.info}}api/Addon_Camera.html#selectsource)|[`getCurrentSource()`]({{site.info}}api/Addon_Camera.html#getcurrentsource)|[`closeSource()`]({{site.info}}api/Addon_Camera.html#closesource)|
 |[`getResolution()`]({{site.info}}api/Addon_Camera.html#getresolution)| [`setResolution()`]({{site.info}}api/Addon_Camera.html#setresolution)| [`getCurrentResolution()`]({{site.info}}api/Addon_Camera.html#getcurrentresolution)| [`play()`]({{site.info}}api/Addon_Camera.html#play)|
 |[`pause()`]({{site.info}}api/Addon_Camera.html#pause)| [`resume()`]({{site.info}}api/Addon_Camera.html#resume)| [`stop()`]({{site.info}}api/Addon_Camera.html#stop)|[`getStatus()`]({{site.info}}api/Addon_Camera.html#getstatus)|
-|[`capture()`]({{site.info}}api/Addon_Camera.html#capture)| [`showVideo()`]({{site.info}}api/Addon_Camera.html#showvideo)| [`closeVideo()`]({{site.info}}api/Addon_Camera.html#closevideo)|[`scanDocument()`]({{site.info}}api/Addon_Camera.html#scandocument)|
+|[`capture()`]({{site.info}}api/Addon_Camera.html#capture)| [`showVideo()`]({{site.info}}api/Addon_Camera.html#showvideo)| [`closeVideo()`]({{site.info}}api/Addon_Camera.html#closevideo)|[`scanDocument()`]({{site.info}}api/Addon_Camera.html#scandocument)| -->
 
 ### Webcam
 
