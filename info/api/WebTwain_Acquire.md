@@ -3932,8 +3932,8 @@ TransferMode: Dynamsoft.DWT.EnumDWT_TransferMode | number;
 <tr>
 <td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
-<td align="center">not supported</td>
 <td align="center">v11.0+</td>
+<td align="center">not supported</td>
 <td align="center">not supported</td>
 </tr>
 
