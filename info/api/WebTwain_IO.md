@@ -1382,7 +1382,7 @@ HTTPDownloadThroughPost(
     path: string,
     type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback: () => void,
-    failureCallback: (errorCode: number, errorString: string) => void,
+    failureCallback: (errorCode: number, errorString: string, response?: any) => void,
 ): void;
 ```
 
@@ -1399,6 +1399,7 @@ HTTPDownloadThroughPost(
 `failureCallback`: A callback function that is executed if the request fails.
 - `errorCode`: The error code.
 - `errorString`: The error string.
+- `response`: The response from your server.
 
 **Availability**
 
