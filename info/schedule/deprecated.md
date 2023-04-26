@@ -44,6 +44,9 @@ Removed:
 * OnWebTwainReady: function () {}; 
 * OnWebTwainWillInit: function () {}; 
 
+Deprecated:
+* IfShowProgressBar
+
 ## 18.0
 
 ### Dynamic Web TWAIN
