@@ -11,6 +11,26 @@ permalink: /info/schedule/Stable.html
 
 # Stable Releases
 
+## 18.2 (05/09/2023)
+
+### New Features
+#### WIA Scanner Support
+ - Added support for direct control of WIA drivers. Please see <!--Insert link to FAQ -->
+
+### Improvements
+#### WebViewer 
+
+#### Android Service
+ - The Android service is available on the Google [Play Store](https://play.google.com/store/apps/details?id=com.dynamsoft.mobilescan)
+ - Enhancements to the Android Service and supported APIs
+
+### Deprecations
+#### Progress Bar Changes
+
+### Bugfixes
+
+### Known Issues
+
 ## 18.1 (01/12/2023)
 
 Dynamic Web TWAIN v18.1 is restructured into two editions. While the standard Service Edition focuses on interactions with scanners, the Plus Edition offers support for mobile cameras as well. The goal is to make sure the Service Edition is small-sized, easy-to-use, and stable. The Plus Edition, on the other hand, is more comprehensive and offers flexibility in platforms and devices.
