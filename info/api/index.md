@@ -17,6 +17,11 @@ permalink: /info/api/
 |:-|:-|
 |[`Dynamsoft.DWT`]({{site.info}}api/Dynamsoft_WebTwainEnv.html)  | [`Dynamsoft.DWT.Enum`]({{site.info}}api/Dynamsoft_Enum.html)  |
 
+### Events
+| |
+|:-|:-|
+|[`OnWebTwainReady`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#OnWebTwainReady)|[`OnWebTwainReady`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#OnWebTwainError)|
+
 ## WebTwain
 
 ### Buffer

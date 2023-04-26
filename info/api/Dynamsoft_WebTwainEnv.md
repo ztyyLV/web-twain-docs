@@ -62,11 +62,8 @@ interface Dynamsoft.DWT {
     Load(): void;
     Unload(): void;
     RemoveAllAuthorizations: function () {};    
-    OnWebTwainNotFound: function () {};
     OnWebTwainPostExecute: function () {};
     OnWebTwainPreExecute: function () {};
-    OnWebTwainReady: function () {};
-    OnWebTwainWillInit: function () {};
 }
 
 /**
@@ -226,16 +223,12 @@ interface DWTInitialConfig {
   Initiates the library. If there are predefined `Containers` , one `WebTwain` instance will be created for each `Container` .
 
 ### `RegisterEvent()`
-
+  [We removed OnWebTWainReady...]: # 
   Registers an environmental event. Typically the event is `OnWebTwainReady` which is triggered when the initialization completes.
 
 ### `Unload()`
 
   Destroys all `WebTwain` instances and cuts off the connection to the Dynamsoft Service.
-
-### `RemoveAllAuthorizations()`
-
-Removes the specific authorizations made by end users on a client machine. Only effective when the security feature is enabled for local files, scanners or cameras.
 
 ### `UseDefaultViewer`
 
@@ -272,3 +265,11 @@ Specify the source of the loader bar image. Check out more on [HTMLImageElement.
 #### `loaderBarClassName`
 
 Specify the class name of the DIV element that contains the loader bar. With this class, you can customize the loader bar even further with CSS.
+
+#### `OnWebTwainReady`
+
+A built-in callback triggered when the Web TWAIN environment is loaded
+
+#### `OnWebTwainError`
+
+A built-in callback triggered when the Web TWAIN environment cannot load
