@@ -18,16 +18,31 @@ permalink: /info/schedule/Stable.html
  - Added support for direct control of WIA drivers. Please see <!--Insert link to FAQ -->
 
 ### Improvements
+ - ConvertToBW algorthim optimization
+
+#### Viewer
+ - The Viewer component has been migrated to a dedicated resource file. This will allow for viewerless implementations of Dynamic Web TWAIN to reduce the load by removing the necessity of loading the Viewer resources into memory even when the Viewer is not being used.
+
 #### WebViewer 
+ - Replaced the webviewer to align with previous previous conventions
 
 #### Android Service
  - The Android service is available on the Google [Play Store](https://play.google.com/store/apps/details?id=com.dynamsoft.mobilescan)
  - Enhancements to the Android Service and supported APIs
 
 ### Deprecations
-#### Progress Bar Changes
+
+#### New Deprecations
+ - IfShowProgressBar is now marked as deprecated
+
+#### API Removals
+ - RemoveAllAuthorizations
+ - OnWebTwainNotFound
+ - OnWebTwainReady
+ - OnWebTwainWillInit
 
 ### Bugfixes
+32507 - MacOS issue with ShowFileDialog
 
 ### Known Issues
 

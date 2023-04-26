@@ -268,8 +268,27 @@ Specify the class name of the DIV element that contains the loader bar. With thi
 
 #### `OnWebTwainReady`
 
-A built-in callback triggered when the Web TWAIN environment is loaded
+A built-in callback triggered when the Web TWAIN resources have completed loading
+
+**Example**
+```javascript
+Dynamsoft.DWT.RegisterEvent('OnWebTwainReady', 
+  Dynamsoft_OnReady //The typical function for initalizing the environment once the resources have loaded
+); 
+```
 
 #### `OnWebTwainError`
 
-A built-in callback triggered when the Web TWAIN environment cannot load
+A built-in callback triggered when an error is detected when laoding the Web TWAIN environment
+
+**Example**
+```javascript
+Dynamsoft.DWT.RegisterEvent('OnWebTwainError', 
+  Dynamsoft_OnError 
+); 
+
+ 
+Dynamsoft_OnError: function(Dynamsoft.DWT.Exception){
+ // error handling
+} 
+```
