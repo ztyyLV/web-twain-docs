@@ -876,12 +876,14 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | Label | Value|
 |:-|:-|
 | TWAINSCANNER | 0x10 |
-| WIATWAINSCANNER | 0x20 |
+| WIASCANNER | 0x20 |
 | TWAINX64SCANNER | 0x40 |
 | ICASCANNER | 0x80 |
 | SANESCANNER | 0x100 |
 | ESCLSCANNER | 0x200 |
 | WIFIDIRECTSCANNER | 0x400 |
+| WIATWAINSCANNER | 0x800 |
+
 
 ## `Dynamsoft.DWT.EnumDWT_ExtImageInfo`
 
