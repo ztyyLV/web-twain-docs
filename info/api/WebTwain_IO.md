@@ -97,6 +97,7 @@ LoadImage(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -105,6 +106,7 @@ LoadImage(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
+<td align="center">18.2+</td>
 </tr>
 
 </table>
@@ -257,6 +259,7 @@ LoadImageFromBase64Binary(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -265,6 +268,7 @@ LoadImageFromBase64Binary(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -340,6 +344,7 @@ LoadImageFromBinary(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -348,6 +353,7 @@ LoadImageFromBinary(
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -418,6 +424,7 @@ LoadDibFromClipboard(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -426,6 +433,7 @@ LoadDibFromClipboard(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -1247,6 +1255,7 @@ HTTPDownload(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1254,7 +1263,8 @@ HTTPDownload(
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
-<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>Z
+<td align="center">v18.2+</td>Z
 </tr>
 
 </table>
@@ -1570,6 +1580,7 @@ HTTPUpload(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1578,6 +1589,7 @@ HTTPUpload(
 <td align="center">v12.0+</td>
 <td align="center">v12.0+</td>
 <td align="center">v12.0+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -3358,7 +3370,9 @@ SetUploadSegment(
 
 ## IfShowFileDialog
 
-Return or set whether to show open/save file dialog when saving images in the buffer or loading images from a local directory.
+Return or set whether to show open/save file dialog when saving images in the buffer or loading images from a local directory. 
+
+**_Note:_** This does not affect the Android Service edition. The dialog will always show not matter what ```IfShowFileDialog``` is set to.
 
 **Syntax**
 
@@ -3377,6 +3391,7 @@ IfShowFileDialog: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3385,6 +3400,7 @@ IfShowFileDialog: boolean;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
+<td align="center">Not Supported</td>
 </tr>
 
 </table>
