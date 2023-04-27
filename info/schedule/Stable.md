@@ -15,7 +15,7 @@ permalink: /info/schedule/Stable.html
 
 ### New Features
 #### WIA Scanner Support
- - Added support for direct control of WIA drivers. Please see <!--Insert link to FAQ -->
+ - Added support for direct control of WIA drivers. <!-- Please see Insert link to FAQ -->
 
 ### Improvements
  - ConvertToBW algorthim optimization
@@ -24,7 +24,7 @@ permalink: /info/schedule/Stable.html
  - The Viewer component has been migrated to a dedicated resource file. This will allow for viewerless implementations of Dynamic Web TWAIN to reduce the load by removing the necessity of loading the Viewer resources into memory even when the Viewer is not being used.
 
 #### WebViewer 
- - Replaced the webviewer to align with previous previous conventions
+ - Replaced the webviewer to align with previous conventions
 
 #### Android Service
  - The Android service is available on the Google [Play Store](https://play.google.com/store/apps/details?id=com.dynamsoft.mobilescan)

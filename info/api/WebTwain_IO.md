@@ -3487,14 +3487,7 @@ IfShowCancelDialogWhenImageTransfer: boolean;
 ## IfShowProgressBar
 **_Note:_** Deprecated as of 18.2
 
-Return or set whether the progress bar is/should be displayed during encoding or decoding. It works for any image encoding/decoding related methods. 
-
-APIs affected by this setting:
-- LoadImage
-- LoadImageEx
-- ConvertToBlob
-- HTTPUpload
-- HTTPDownload
+Return or set whether the progress bar will be displayed during encoding or decoding. It works for any image encoding/decoding related methods. 
 
 **Syntax**
 
