@@ -25,8 +25,8 @@ permalink: /faq/general-troubleshooting-steps.html
   - Linux, `/opt/dynamsoft/DynamsoftService/log`
 
 2. Set the log level
-  - For only one client machine, go to the application with Dynamic Web TWAIN integrated, press F12 to open the development tools, switch to "console" tab and enter the command "DWObject.LogLevel = 1" to enable the debugger mode.
-  - For all client machines, set [ `LogLevel` ]({{site.info}}api/WebTwain_Util.html#loglevel) to 1 in your code. This property should be set as soon as the `WebTwain` instance is created. For example, in the event `Dynamsoft_OnReady`
+  Option A - Single client machine troubleshooting - go to the application with Dynamic Web TWAIN integrated, press F12 to open the development tools, switch to "console" tab and enter the command "DWObject.LogLevel = 1" to enable the debugger mode.
+  Option B - For all client machines (application wide) - set [ `LogLevel` ]({{site.info}}api/WebTwain_Util.html#loglevel) to 1 in your code. This property should be set as soon as the `WebTwain` instance is created. For example, in the event `Dynamsoft_OnReady`
     ```javascript
     function Dynamsoft_OnReady() {
       DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");

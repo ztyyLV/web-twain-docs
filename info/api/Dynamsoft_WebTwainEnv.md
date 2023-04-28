@@ -61,12 +61,8 @@ interface Dynamsoft.DWT {
     GetWebTwainEx(WebTwainId: string): WebTwain;
     Load(): void;
     Unload(): void;
-    RemoveAllAuthorizations: function () {};    
-    OnWebTwainNotFound: function () {};
     OnWebTwainPostExecute: function () {};
     OnWebTwainPreExecute: function () {};
-    OnWebTwainReady: function () {};
-    OnWebTwainWillInit: function () {};
 }
 
 /**
