@@ -11,6 +11,65 @@ permalink: /info/schedule/Stable.html
 
 # Stable Releases
 
+## 18.2 (05/09/2023)
+
+### New Features
+#### WIA Scanner Support
+ - Added support for direct control of WIA drivers. <!-- Please see Insert link to FAQ -->
+
+<!-- #### Remote Scan
+
+-->
+
+### Improvements
+#### General Improvements
+- Improved licence verification logic to support Remote Scan
+- Added workMode to ImageEditor
+- 
+
+#### Resource Files
+ - The Viewer component has been migrated to a dedicated resource file. This will allow for viewerless implementations of Dynamic Web TWAIN to reduce the load by removing the necessity of loading the Viewer resources into memory even when the Viewer is not being used.
+
+#### ImageEditor
+ - The ImageEditor has been re-architected for better speed and image quality.
+ - You can now apply a workMode customization when using ImageEditor (not supported for RemoteScan)
+     - Original mode - The data is processed on the server side first, and then displayed in the viewer
+     - New model - The data is processed in the canvas and then updated to the server side
+
+#### Android Service
+ - The Android service is available on the Google [Play Store](https://play.google.com/store/apps/details?id=com.dynamsoft.mobilescan)
+ - Enhancements to the Android Service and supported APIs
+
+### API Changes
+#### General Changes
+ - Changed IfShowProgressBar to control the progress indicators for all encoding, decoding, and transfer operations.
+ - IfShowCancelDialogWhenImageTransfer scope reduced to only control propmts for user cancellable operations.
+     - IfShowProgressBar must be enabled for IfShowCancelDialog to take effect
+
+#### New APIs
+ - Added ShareImages() for the Android Service
+ - Added the following under the Viewer class:
+     - crop()
+     - rotate()
+     - errorCode
+     - errorString
+     - ImageEditor
+ - Added the enum WorkMode
+ - Added .save() to the ImageEditor object
+
+#### Enumeration Changes
+ - EnumDWT_DeviceType updated to support WIA scanning.
+    - Supported WIA devices will be labelled WIA
+    - Unsupported WIA devices will be labelled WIATWAIN
+
+<!-- 
+--> 
+### Bugfixes
+32507 - MacOS issue with ShowFileDialog
+
+### Known Issues
+ - Image Editor Undo/Redo is not implemented in this version.
+
 ## 18.1 (01/12/2023)
 
 Dynamic Web TWAIN v18.1 is restructured into two editions. While the standard Service Edition focuses on interactions with scanners, the Plus Edition offers support for mobile cameras as well. The goal is to make sure the Service Edition is small-sized, easy-to-use, and stable. The Plus Edition, on the other hand, is more comprehensive and offers flexibility in platforms and devices.

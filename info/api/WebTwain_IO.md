@@ -35,7 +35,7 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`HTTPUploadThroughPostAsMultiPageTIFF()`](#httpuploadthroughpostasmultipagetiff)       | [`HTTPUploadThroughPostDirectly()`](#httpuploadthroughpostdirectly)       | [`SaveAsBMP()`](#saveasbmp)                                                     |
 | [`SaveAsJPEG()`](#saveasjpeg)                                                           | [`SaveAsPDF()`](#saveaspdf)                                               | [`SaveAsPNG()`](#saveaspng)                                                     |
 | [`SaveAsTIFF()`](#saveastiff)                                                           | [`SaveSelectedImagesAsMultiPagePDF()`](#saveselectedimagesasmultipagepdf) | [`SaveSelectedImagesAsMultiPageTIFF()`](#saveselectedimagesasmultipagetiff)     |
-| [`SaveAllAsMultiPageTIFF()`](#saveallasmultipagetiff)                                   | [`SaveAllAsPDF()`](#saveallaspdf)                                         |
+| [`SaveAllAsMultiPageTIFF()`](#saveallasmultipagetiff)                                   | [`SaveAllAsPDF()`](#saveallaspdf)                                         | [`ShareImages()`](#shareimages)                                                 |
 
 **Other Methods**
 
@@ -97,6 +97,7 @@ LoadImage(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -104,6 +105,7 @@ LoadImage(
 <td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
+<td align="center">not supported</td>
 <td align="center">not supported</td>
 </tr>
 
@@ -164,6 +166,7 @@ LoadImageEx(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -172,6 +175,7 @@ LoadImageEx(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
+<td align="center">18.2+</td>
 </tr>
 
 </table>
@@ -257,6 +261,7 @@ LoadImageFromBase64Binary(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -265,6 +270,7 @@ LoadImageFromBase64Binary(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -340,6 +346,7 @@ LoadImageFromBinary(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -348,6 +355,7 @@ LoadImageFromBinary(
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -418,6 +426,7 @@ LoadDibFromClipboard(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -426,6 +435,7 @@ LoadDibFromClipboard(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -1247,6 +1257,7 @@ HTTPDownload(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1254,7 +1265,8 @@ HTTPDownload(
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
-<td align="center">v4.0+</td>
+<td align="center">v4.0+</td>Z
+<td align="center">v18.2+</td>Z
 </tr>
 
 </table>
@@ -1568,6 +1580,7 @@ HTTPUpload(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1576,6 +1589,7 @@ HTTPUpload(
 <td align="center">v12.0+</td>
 <td align="center">v12.0+</td>
 <td align="center">v12.0+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -2601,6 +2615,7 @@ SaveAsBMP(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2609,6 +2624,7 @@ SaveAsBMP(
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -2658,6 +2674,7 @@ SaveAsJPEG(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2666,6 +2683,7 @@ SaveAsJPEG(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -2715,6 +2733,7 @@ SaveAsPDF(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2723,6 +2742,7 @@ SaveAsPDF(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -2774,6 +2794,7 @@ SaveAsPNG(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2782,6 +2803,7 @@ SaveAsPNG(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -2819,6 +2841,7 @@ SaveAsTIFF(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2827,6 +2850,7 @@ SaveAsTIFF(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -2885,6 +2909,7 @@ SaveAllAsMultiPageTIFF(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2893,6 +2918,7 @@ SaveAllAsMultiPageTIFF(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -2941,6 +2967,7 @@ SaveAllAsPDF(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2949,6 +2976,7 @@ SaveAllAsPDF(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -2960,6 +2988,22 @@ Learn about [how to config PDF save settings](./Addon_PDF.md#write-setup).
 
 If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to true.
 
+---
+## ShareImages
+
+Shares images using Android's built in share functionality. 
+
+**Syntax**
+```javascript
+ShareImages(
+    fileName: string,
+    indices: number[],
+    type: Dynamsoft.DWT.EnumDWT_ImageType
+): Promise< void>; 
+```
+If ```indicies``` is an array, the behavour is dependant on ```type```:
+ - If type is set to PDF or TIFF, a single multi-page file is shared
+ - If any other type is set, mutiple single page files will be shared in the format of filename1.filetype, filename2.filetype, etc.
 ---
 
 ## SaveSelectedImagesAsMultiPagePDF
@@ -2997,6 +3041,7 @@ SaveSelectedImagesAsMultiPagePDF(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3005,6 +3050,7 @@ SaveSelectedImagesAsMultiPagePDF(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -3053,6 +3099,7 @@ SaveSelectedImagesAsMultiPageTIFF(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3061,6 +3108,7 @@ SaveSelectedImagesAsMultiPageTIFF(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -3356,7 +3404,9 @@ SetUploadSegment(
 
 ## IfShowFileDialog
 
-Return or set whether to show open/save file dialog when saving images in the buffer or loading images from a local directory.
+Return or set whether to show open/save file dialog when saving images in the buffer or loading images from a local directory. 
+
+**_Note:_** This does not affect the Android Service edition. The dialog will always show not matter what ```IfShowFileDialog``` is set to.
 
 **Syntax**
 
@@ -3375,6 +3425,7 @@ IfShowFileDialog: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3383,6 +3434,7 @@ IfShowFileDialog: boolean;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3428,11 +3480,14 @@ IfShowCancelDialogWhenImageTransfer: boolean;
 </table>
 </div>
 
+**Usage Notes**
+
+This API is only valid if `IfShowProgressBar = true;`
+
 ---
 
 ## IfShowProgressBar
-
-Return or set whether the progress bar is/should be displayed during encoding or decoding. It works for any image encoding/decoding related methods. For example: LoadImage, LoadImageEx, ConvertToBlob, etc.
+Return or set whether the progress bar will be displayed during any encoding, decoding, or transfer activities.
 
 **Syntax**
 
