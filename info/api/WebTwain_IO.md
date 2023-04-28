@@ -3487,7 +3487,7 @@ IfShowCancelDialogWhenImageTransfer: boolean;
 ---
 
 ## IfShowProgressBar
-Return or set whether the progress bar will be displayed during encoding or decoding. It works for any image encoding/decoding related methods. 
+Return or set whether the progress bar will be displayed during any encoding, decoding, or transfer activities.
 
 **Syntax**
 
