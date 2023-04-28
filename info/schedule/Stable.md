@@ -19,6 +19,7 @@ permalink: /info/schedule/Stable.html
 
 ### Improvements
  - ConvertToBW algorthim optimization
+ - IfShowProgressBar now covers both transfer operations and encode/decode operations
 
 #### Viewer
  - The Viewer component has been migrated to a dedicated resource file. This will allow for viewerless implementations of Dynamic Web TWAIN to reduce the load by removing the necessity of loading the Viewer resources into memory even when the Viewer is not being used.
@@ -32,8 +33,8 @@ permalink: /info/schedule/Stable.html
 
 ### Deprecations
 
-#### New Deprecations
- - IfShowProgressBar is now marked as deprecated
+ - IfShowCancelDialogWhenImageTransfer
+     - Now controlled by IfShowProgressBar
 
 #### API Removals
  - RemoveAllAuthorizations

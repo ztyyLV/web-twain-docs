@@ -35,7 +35,7 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`HTTPUploadThroughPostAsMultiPageTIFF()`](#httpuploadthroughpostasmultipagetiff)       | [`HTTPUploadThroughPostDirectly()`](#httpuploadthroughpostdirectly)       | [`SaveAsBMP()`](#saveasbmp)                                                     |
 | [`SaveAsJPEG()`](#saveasjpeg)                                                           | [`SaveAsPDF()`](#saveaspdf)                                               | [`SaveAsPNG()`](#saveaspng)                                                     |
 | [`SaveAsTIFF()`](#saveastiff)                                                           | [`SaveSelectedImagesAsMultiPagePDF()`](#saveselectedimagesasmultipagepdf) | [`SaveSelectedImagesAsMultiPageTIFF()`](#saveselectedimagesasmultipagetiff)     |
-| [`SaveAllAsMultiPageTIFF()`](#saveallasmultipagetiff)                                   | [`SaveAllAsPDF()`](#saveallaspdf)                                         |
+| [`SaveAllAsMultiPageTIFF()`](#saveallasmultipagetiff)                                   | [`SaveAllAsPDF()`](#saveallaspdf)                                         | [`ShareImages()`](#shareimages)                                                 |
 
 **Other Methods**
 
@@ -3450,6 +3450,8 @@ Supported in Service mode only.
 
 ## IfShowCancelDialogWhenImageTransfer
 
+**__Note:__** Deprecated as of 18.2
+
 Return or set whether to show the progress of an operation with a button to cancel it.
 
 **Syntax**
@@ -3485,8 +3487,6 @@ IfShowCancelDialogWhenImageTransfer: boolean;
 ---
 
 ## IfShowProgressBar
-**_Note:_** Deprecated as of 18.2
-
 Return or set whether the progress bar will be displayed during encoding or decoding. It works for any image encoding/decoding related methods. 
 
 **Syntax**
