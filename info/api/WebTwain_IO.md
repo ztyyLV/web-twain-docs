@@ -3450,8 +3450,6 @@ Supported in Service mode only.
 
 ## IfShowCancelDialogWhenImageTransfer
 
-**__Note:__** Deprecated as of 18.2
-
 Return or set whether to show the progress of an operation with a button to cancel it.
 
 **Syntax**
@@ -3483,6 +3481,10 @@ IfShowCancelDialogWhenImageTransfer: boolean;
 
 </table>
 </div>
+
+**Usage Notes**
+
+This API is only valid if `IfShowProgressBar = true;`
 
 ---
 

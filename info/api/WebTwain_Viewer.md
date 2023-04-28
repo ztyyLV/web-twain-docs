@@ -21,7 +21,7 @@ permalink: /info/api/WebTwain_Viewer.html
 | [`hide()`](#hide)                                   | [`last()`](#last)                             | [`next()`](#next)                               | [`off()`](#off)                             |
 | [`on()`](#on)                                       | [`previous()`](#previous)                     | [`render()`](#render)                           | [`setButtonClass()`](#setbuttonclass)       |
 | [`setSelectedAreas()`](#setselectedareas)           | [`setViewMode()`](#setviewmode)               | [`show()`](#show)                               | [`unbind()`](#unbind)                       | 
-| [`updateCheckboxStyle()`](#updatecheckboxstyle)     | [`updatePageNumberStyle()`](#updatepagenumberstyle)       |
+| [`updateCheckboxStyle()`](#updatecheckboxstyle)     | [`updatePageNumberStyle()`](#updatepagenumberstyle)       | [`save()`](#save) |
 
 **Properties**
 
@@ -2449,6 +2449,49 @@ interface pageNumberSettings {
 
 </table>
 </div>
+
+---
+
+## save
+
+Save the update image from the ImageEditor
+
+**Syntax**
+```typescript
+save():Promise<void>;
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v18.2+ </td>
+<td align="center">v18.2+ </td>
+<td align="center">v18.2+ </td>
+<td align="center">v18.2+ </td>
+</tr>
+
+</table>
+</div>
+
+**Example**
+
+```javascript
+var objImageEditor = DWObject.Viewer.createImageEditor(editorSettings?:EditorSettings);
+objImageEditor.save():Promise<void>;
+```
+
 
 ---
 
