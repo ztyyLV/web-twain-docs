@@ -34,7 +34,7 @@ permalink: /info/schedule/Stable.html
  - The ImageEditor has been re-architected for better speed and image quality.
  - You can now apply a workMode customization when using ImageEditor (not supported for RemoteScan)
      - Original mode - The data is processed on the server side first, and then displayed in the viewer
-     - New model - The data is processed in the canvas and then updated to the server side
+     - New mode - The data is processed in the canvas and then updated to the server side
 
 #### Android Service
  - The Android service is available on the Google [Play Store](https://play.google.com/store/apps/details?id=com.dynamsoft.mobilescan)
@@ -43,7 +43,7 @@ permalink: /info/schedule/Stable.html
 ### API Changes
 #### General Changes
  - Changed IfShowProgressBar to control the progress indicators for all encoding, decoding, and transfer operations.
- - IfShowCancelDialogWhenImageTransfer scope reduced to only control propmts for user cancellable operations.
+ - IfShowCancelDialogWhenImageTransfer scope reduced to only control prompts for user cancellable operations.
      - IfShowProgressBar must be enabled for IfShowCancelDialog to take effect
 
 #### New APIs
@@ -64,7 +64,7 @@ permalink: /info/schedule/Stable.html
 
 <!-- 
 --> 
-### Bugfixes
+### Bug fixes
 32507 - MacOS issue with ShowFileDialog
 
 ### Known Issues
