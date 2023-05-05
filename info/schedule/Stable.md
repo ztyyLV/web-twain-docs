@@ -25,26 +25,29 @@ permalink: /info/schedule/Stable.html
 #### General Improvements
 - Improved licence verification logic to support Remote Scan
 - Added workMode to ImageEditor
-- 
+- Updated DBR library to 9.6.20
 
 #### Resource Files
  - The Viewer component has been migrated to a dedicated resource file. This will allow for viewerless implementations of Dynamic Web TWAIN to reduce the load by removing the necessity of loading the Viewer resources into memory even when the Viewer is not being used.
+     - Please see the property Dynamsoft.DWT.UseDefaultViewer
 
 #### ImageEditor
  - The ImageEditor has been re-architected for better speed and image quality.
- - You can now apply a workMode customization when using ImageEditor (not supported for RemoteScan)
+ - You can now use the new EnumDWT_WorkMode to control where the processing for ImageEditor occurs (not supported for RemoteScan)
      - Original mode - The data is processed on the server side first, and then displayed in the viewer
-     - New model - The data is processed in the canvas and then updated to the server side
+     - New mode - The data is processed in the canvas and then updated to the server side
 
 #### Android Service
  - The Android service is available on the Google [Play Store](https://play.google.com/store/apps/details?id=com.dynamsoft.mobilescan)
- - Enhancements to the Android Service and supported APIs
+ - Expanded the capabilities of the Android platform
+     - Added the API ShareImages()
 
 ### API Changes
 #### General Changes
  - Changed IfShowProgressBar to control the progress indicators for all encoding, decoding, and transfer operations.
- - IfShowCancelDialogWhenImageTransfer scope reduced to only control propmts for user cancellable operations.
+ - IfShowCancelDialogWhenImageTransfer scope reduced to only control prompts for user cancellable operations.
      - IfShowProgressBar must be enabled for IfShowCancelDialog to take effect
+ - Improved progress bar accuracy
 
 #### New APIs
  - Added ShareImages() for the Android Service
@@ -56,6 +59,8 @@ permalink: /info/schedule/Stable.html
      - ImageEditor
  - Added the enum WorkMode
  - Added .save() to the ImageEditor object
+     - This is used when using the ImageEditor as the only viewer to keep the image manipulations in sync between the editor and the data used in the Dynamsoft Service
+ - Added OnWebTwainError event callback to DWT.WebTwainEnv
 
 #### Enumeration Changes
  - EnumDWT_DeviceType updated to support WIA scanning.
@@ -64,7 +69,7 @@ permalink: /info/schedule/Stable.html
 
 <!-- 
 --> 
-### Bugfixes
+### Bug fixes
 32507 - MacOS issue with ShowFileDialog
 
 ### Known Issues
