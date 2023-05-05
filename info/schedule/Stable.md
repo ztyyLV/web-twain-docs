@@ -45,7 +45,7 @@ permalink: /info/schedule/Stable.html
 ### API Changes
 #### General Changes
  - Changed IfShowProgressBar to control the progress indicators for all encoding, decoding, and transfer operations.
- - IfShowCancelDialogWhenImageTransfer scope reduced to only control propmts for user cancellable operations.
+ - IfShowCancelDialogWhenImageTransfer scope reduced to only control prompts for user cancellable operations.
      - IfShowProgressBar must be enabled for IfShowCancelDialog to take effect
  - Improved progress bar accuracy
 
@@ -69,7 +69,7 @@ permalink: /info/schedule/Stable.html
 
 <!-- 
 --> 
-### Bugfixes
+### Bug fixes
 32507 - MacOS issue with ShowFileDialog
 
 ### Known Issues
