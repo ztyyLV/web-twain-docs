@@ -35,18 +35,6 @@ The prompts are one-time, once you accept the "risk", the software will install 
 
 The recommended fix is to patch the operating system, you can find the patch [here](http://www.catalog.update.microsoft.com/search.aspx?q=kb4474419).
 
-## 18.2
-
-### Dynamic Web TWAIN
-Removed:
-* RemoveAllAuthorizations: function () {}; 
-* OnWebTwainNotFound: function () {}; 
-* OnWebTwainReady: function () {}; 
-* OnWebTwainWillInit: function () {}; 
-
-Deprecated:
-* IfShowProgressBar
-
 ## 18.0
 
 ### Dynamic Web TWAIN
