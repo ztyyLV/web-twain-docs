@@ -214,7 +214,7 @@ SetDPI(
 
 `resample`: Whether to resample the image. When it is true, the image size will change.
 
-`method`: Specify the algorithm for the change. Please refer to [EnumDWT_InterpolationMethod]({{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_interpolationmethod).
+`method`: Specify the algorithm for the change. Please refer to [EnumDWT_InterpolationMethod]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_interpolationmethod).
 
 `successCallback`: A callback function that is executed if the request succeeds.
 
@@ -1269,6 +1269,7 @@ BackgroundFillColor: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1277,6 +1278,7 @@ BackgroundFillColor: number;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>

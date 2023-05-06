@@ -231,7 +231,7 @@ interface DWTInitialConfig {
 
 ### `UseDefaultViewer`
 
-Whether to use the built-in viewer. If it is set to `false` , the file `dynamsoft.viewer.js` is not loaded at all and there is no way to add it back later. Therefore, only set it to `false` when you absolutely won't need the viewer or will be building your own viewer.
+Whether to use the built-in viewer. If it is set to `false` , the file `dynamsoft.webtwain.viewer.js` is not loaded at all and there is no way to add it back later. Therefore, only set it to `false` when you absolutely won't need the viewer or will be building your own viewer.
 
 ### `CustomizableDisplayInfo`
 
@@ -287,7 +287,8 @@ Dynamsoft.DWT.RegisterEvent('OnWebTwainError',
 ); 
 
  
-Dynamsoft_OnError: function(Dynamsoft.DWT.Exception){
- // error handling
+function Dynamsoft_OnError(error){
+  // error handling
+  console.error(error.message);
 } 
 ```
