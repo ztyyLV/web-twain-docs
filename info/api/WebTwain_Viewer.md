@@ -252,7 +252,7 @@ interface ImageEditor {
      */
     show(): boolean;
     /**
-     * 
+     * Keeps the image data in the browser editor in sync with the buffer.
      **/
     save(): boolean;
     /**
