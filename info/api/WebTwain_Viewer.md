@@ -266,59 +266,58 @@ interface ImageEditor {
 };
 
 interface EditorSettings {
-    /**
+    /**
      * Specify an HTML Element.
      */
-    element?: HTMLDivElement | HTMLElement;
-    /**
+    element?: HTMLDivElement | HTMLElement;
+    /**
      * The width of the image editor viewer. The default value is "100%".
      * 'Invalid property value' will be reported when the set value is not string or number.
      */
-    width?: number | string;
-    /**
+    width?: number | string;
+    /**
      * The height of the image editor viewer. The default value is "100%".
      * 'Invalid property value' will be reported when the set value is not string or number.
      */
-    height?: number | string;
-    /**
+    height?: number | string;
+    /**
      * The border of the ImageEditor viewer.
      * 'Invalid property value' is reported when the set value does not meet the CSS standard.
      */
-    border?: string;
-    /**
+    border?: string;
+    /**
      * Set the border of the top toolbar.
      * 'Invalid property value' is reported when the set value does not meet the CSS standard.
      */
-    topMenuBorder?: string;
-    /**
+    topMenuBorder?: string;
+    /**
      * The inner border of the image area.
      */
-    innerBorder?: string;
-    /**
+    innerBorder?: string;
+    /**
      * The background color/image of the ImageEditor viewer.
      * 'Invalid property value' is reported when the set value does not meet the CSS standard.
      */
-    background?: string;
-    /**
+    background?: string;
+    /**
      * Whether to pop up a window prompting to save the changes. The default value is true.
-
      * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
      */
-    promptToSaveChange?: boolean;
-    /**
+    promptToSaveChange?: boolean;
+    /**
      * Modify button titles and whether to hide specific buttons in the image editor viewer.
      * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
      */
-    buttons?: any;
-    /**
+    buttons?: any;
+    /**
      * Define the dialog text
      * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
      */
-    dialogText?: any;
-    /**
+    dialogText?: any;
+    /**
      * Default is normal, value: normal=0, balance=1.
      */
-    workMode?: number | DynamsoftEnumsDWT.EnumDWT_WorkMode;
+    workMode?: number | DynamsoftEnumsDWT.EnumDWT_WorkMode;
 }
 ```
 
