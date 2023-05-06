@@ -18,9 +18,10 @@ permalink: /info/api/
 |[`Dynamsoft.DWT`]({{site.info}}api/Dynamsoft_WebTwainEnv.html)  | [`Dynamsoft.DWT.Enum`]({{site.info}}api/Dynamsoft_Enum.html)  |
 
 ### Events
+
 | |
 |:-|:-|
-|[`OnWebTwainReady`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#OnWebTwainReady)|[`OnWebTwainReady`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#OnWebTwainError)|
+|[`OnWebTwainReady`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#OnWebTwainReady)|[`OnWebTwainError`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#OnWebTwainError)|
 
 ## WebTwain
 
@@ -343,7 +344,7 @@ permalink: /info/api/
 |[`HTTPUploadThroughPostAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostasmultipagetiff)|[`HTTPUploadThroughPostDirectly()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostdirectly)|[`SaveAsBMP()`]({{site.info}}api/WebTwain_IO.html#saveasbmp)| 
 |[`SaveAsJPEG()`]({{site.info}}api/WebTwain_IO.html#saveasjpeg)| [`SaveAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveaspdf)|[`SaveAsPNG()`]({{site.info}}api/WebTwain_IO.html#saveaspng)| 
 |[`SaveAsTIFF()`]({{site.info}}api/WebTwain_IO.html#saveastiff)| [`SaveSelectedImagesAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagepdf)|[`SaveSelectedImagesAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagetiff)|
-| [`SaveAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveallasmultipagetiff)|[`SaveAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveallaspdf)||[`ShareImages()`]({{site.info}}api/WebTwain_IO.html#shareimages)|
+| [`SaveAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveallasmultipagetiff)|[`SaveAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveallaspdf)|[`ShareImages()`]({{site.info}}api/WebTwain_IO.html#shareimages)|
 
 <!--
 * [`ConvertToBase64()`]({{site.info}}api/WebTwain_IO.html#converttobase64)

@@ -4502,7 +4502,7 @@ interface CapabilitySetup {
 
 **Parameters**
 
-`capabilities`: A object that describes how to set capabilities.
+`capabilities`: An object that describes how to set capabilities.
 
 `successCallback`: A callback function that is executed if the request succeeds.
 
@@ -4524,6 +4524,7 @@ interface CapabilitySetup {
 </tr>
 
 <tr>
+<td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>

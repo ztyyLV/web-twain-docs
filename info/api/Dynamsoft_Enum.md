@@ -897,5 +897,5 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 
 | Label | Value | Description |
 |:-|:-|:-|
-| Normal | 0 | The data is processed on the server side first, and then displayed in the viewer |
-| Balanced | 1 | The data is processed in the canvas and then updated to the server side |
+| Normal | 0 | Original mode, the image data is processed in the buffer |
+| Balance | 1 | The image data is processed in the browser canvas |

@@ -1265,8 +1265,8 @@ HTTPDownload(
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
-<td align="center">v4.0+</td>Z
-<td align="center">v18.2+</td>Z
+<td align="center">v4.0+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -1337,6 +1337,7 @@ HTTPDownloadEx(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1345,6 +1346,7 @@ HTTPDownloadEx(
 <td align="center">v5.0+ </td>
 <td align="center">v5.0+ </td>
 <td align="center">v5.0+ </td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -1424,6 +1426,7 @@ HTTPDownloadThroughPost(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1432,6 +1435,7 @@ HTTPDownloadThroughPost(
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -1480,6 +1484,7 @@ HTTPDownloadDirectly(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1488,6 +1493,7 @@ HTTPDownloadDirectly(
 <td align="center">v7.0+ </td>
 <td align="center">v7.0+ </td>
 <td align="center">v7.0+ </td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -1671,6 +1677,7 @@ HTTPUploadThroughPutEx(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1679,6 +1686,7 @@ HTTPUploadThroughPutEx(
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -1731,6 +1739,7 @@ HTTPUploadThroughPost(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1739,6 +1748,7 @@ HTTPUploadThroughPost(
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -1829,6 +1839,7 @@ HTTPUploadThroughPostEx(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1837,6 +1848,7 @@ HTTPUploadThroughPostEx(
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -1893,6 +1905,7 @@ HTTPUploadAllThroughPostAsMultiPageTIFF(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1901,6 +1914,7 @@ HTTPUploadAllThroughPostAsMultiPageTIFF(
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -1957,6 +1971,7 @@ HTTPUploadAllThroughPostAsPDF(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1965,6 +1980,7 @@ HTTPUploadAllThroughPostAsPDF(
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -2021,6 +2037,7 @@ HTTPUploadThroughPostAsMultiPagePDF(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2029,6 +2046,7 @@ HTTPUploadThroughPostAsMultiPagePDF(
 <td align="center">v6.0+</td>
 <td align="center">v6.0+</td>
 <td align="center">v6.0+</td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -2085,6 +2103,7 @@ HTTPUploadThroughPostAsMultiPageTIFF(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2093,6 +2112,7 @@ HTTPUploadThroughPostAsMultiPageTIFF(
 <td align="center">v6.0+</td>
 <td align="center">v6.0+</td>
 <td align="center">v6.0+</td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -2150,6 +2170,7 @@ HTTPUploadThroughPostDirectly(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2158,6 +2179,7 @@ HTTPUploadThroughPostDirectly(
 <td align="center">v7.0+</td>
 <td align="center">v7.0+</td>
 <td align="center">v7.0+</td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -3001,9 +3023,38 @@ ShareImages(
     type: Dynamsoft.DWT.EnumDWT_ImageType
 ): Promise< void>; 
 ```
-If ```indicies``` is an array, the behavour is dependant on ```type```:
+If `indicies` is an array, the behavour is dependant on `type`:
+
  - If type is set to PDF or TIFF, a single multi-page file is shared
+
  - If any other type is set, mutiple single page files will be shared in the format of filename1.filetype, filename2.filetype, etc.
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">v18.2+</td>
+</tr>
+
+</table>
+</div>
+
 ---
 
 ## SaveSelectedImagesAsMultiPagePDF
@@ -3467,6 +3518,7 @@ IfShowCancelDialogWhenImageTransfer: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3475,6 +3527,7 @@ IfShowCancelDialogWhenImageTransfer: boolean;
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -3506,6 +3559,7 @@ IfShowProgressBar: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3514,6 +3568,7 @@ IfShowProgressBar: boolean;
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
