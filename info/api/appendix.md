@@ -154,7 +154,6 @@ permalink: /info/api/appendix.html
 |-2822 | The WebTwain JavaScript lts.js load failed. |
 |-2823 | The http url redirected. |
 |-2824 | The Connection from the web page failed. Please make sure the Dynamsoft Service is running. |
-
 |<= -3000 | See ErrorString property for details |
 
 ## Dynamsoft License Server Error List 
