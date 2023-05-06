@@ -2514,7 +2514,7 @@ interface pageNumberSettings {
 
 ## save
 
-Keeps the image data in the browser canvas in sync with the buffer.
+Keeps the image data in the browser editor in sync with the buffer.
 
 **Syntax**
 ```typescript
