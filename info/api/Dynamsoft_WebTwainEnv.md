@@ -21,15 +21,15 @@ interface Dynamsoft.DWT {
     readonly ServerLinuxVersionInfo: string;
     readonly ServerMacVersionInfo: string;
     readonly ServerVersionInfo: string;
-   /**
-    * Whether to load UI related js files.
-    */
+    /**
+     * Whether to load UI related js files.
+    */
     UseDefaultViewer: boolean;
     /**
-    * Attach the callback function to the specified event.
-    * @param event Specify the event.
-    * @param callback Specify the callback.
-    */
+    * Attach the callback function to the specified event.
+    * @param event Specify the event.
+    * @param callback Specify the callback.
+    */
     RegisterEvent(event: string, callback: (...args: any[]) => void): void;
     /**
      * Whether to create a WebTwain instance automatically.
