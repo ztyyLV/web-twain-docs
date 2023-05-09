@@ -105,6 +105,7 @@ interface DeviceConfiguration {
     extendedImageInfoQueryLevel?: Dynamsoft.DWT.EnumDWT_ExtImageInfo | number; //How much extended information is retrieved. Only valid when {IfGetExtImageInfo} is true.
     SelectSourceByIndex?: number; //Specify a source by its index.
     IfCloseSourceAfterAcquire?: boolean; //Whether to close the data source after aquisition. Default: false.
+    PageSize?: Dynamsoft.DWT.EnumDWT_CapSupportedSizes | number; //Specify page size
 }
 ```
 
