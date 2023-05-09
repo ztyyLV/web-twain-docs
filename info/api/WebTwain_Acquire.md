@@ -105,6 +105,7 @@ interface DeviceConfiguration {
     extendedImageInfoQueryLevel?: Dynamsoft.DWT.EnumDWT_ExtImageInfo | number; //How much extended information is retrieved. Only valid when {IfGetExtImageInfo} is true.
     SelectSourceByIndex?: number; //Specify a source by its index.
     IfCloseSourceAfterAcquire?: boolean; //Whether to close the data source after aquisition. Default: false.
+    PageSize?: Dynamsoft.DWT.EnumDWT_CapSupportedSizes | number; //Specify page size
 }
 ```
 
@@ -2433,6 +2434,10 @@ Return or set the page size the data source uses to acquire images.
 PageSize: Dynamsoft.DWT.EnumDWT_CapSupportedSizes | number;
 ```
 
+**Parameters**
+
+`PageSize`: Please refer to [EnumDWT_CapSupportedSizes]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_capsupportedsizes)
+
 **Availability**
 
 <div class="availability">
@@ -2472,6 +2477,10 @@ Return or set the pixel type used when acquiring images.
 ```typescript
 PixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 ```
+
+**Parameters**
+
+`PixelType`: Please refer to [EnumDWT_PixelType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_pixeltype)
 
 **Availability**
 
@@ -3277,7 +3286,7 @@ Check this property after [OpenSource()](#opensource) is called.
 
 ## IfUseTwainDSM
 
-Return or set whether the new TWAIN DSM (data source Manager) is used for acquisitions. The new TWAIN DSM is a DLL called 'TWAINDSM.dll' while the default | old DSM is called 'twain_32.dll'.
+Return or set whether the new TWAIN DSM (data source Manager) is used for acquisitions. The new TWAIN DSM is a DLL called 'TWAINDSM.dll' while the default or old DSM is called 'twain_32.dll'.
 
 **Syntax**
 
@@ -4599,7 +4608,7 @@ GetDevicesAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number, refresh?
 
 **Parameters**
 
-`deviceType`: The device type
+`deviceType`: The device type. Please refere to [EnumDWT_DeviceType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_borderstyle)
 
 `refresh`: Default value is **false**
 
@@ -4671,7 +4680,7 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 
 **Parameters**
 
-`device`: the device
+`device`: the device object. Please refer to [Device]({{site.info}}api/Interfaces.html#device)
 
 **Availability**
 

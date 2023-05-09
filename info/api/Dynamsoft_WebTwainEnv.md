@@ -22,6 +22,16 @@ interface Dynamsoft.DWT {
     readonly ServerMacVersionInfo: string;
     readonly ServerVersionInfo: string;
     /**
+     * Whether to load UI related js files.
+    */
+    UseDefaultViewer: boolean;
+    /**
+    * Attach the callback function to the specified event.
+    * @param event Specify the event.
+    * @param callback Specify the callback.
+    */
+    RegisterEvent(event: string, callback: (...args: any[]) => void): void;
+    /**
      * Whether to create a WebTwain instance automatically.
      */
     AutoLoad: boolean;
@@ -57,8 +67,8 @@ interface Dynamsoft.DWT {
         asyncFailureFunc: (errorString: string) => {}
     ): void;
     DeleteDWTObject(Id?: string): boolean;
-    GetWebTwain(ContainerId?: string): WebTwain;
-    GetWebTwainEx(WebTwainId: string): WebTwain;
+    GetWebTwain(ContainerIdOrWebTwainId?: string): WebTwain;
+    GetWebTwainEx(ContainerIdOrWebTwainId: string): WebTwain;
     Load(): void;
     Unload(): void;
     OnWebTwainPostExecute: function () {};

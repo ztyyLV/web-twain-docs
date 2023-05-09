@@ -21,7 +21,7 @@ permalink: /info/api/WebTwain_Viewer.html
 | [`hide()`](#hide)                                   | [`last()`](#last)                             | [`next()`](#next)                               | [`off()`](#off)                             |
 | [`on()`](#on)                                       | [`previous()`](#previous)                     | [`render()`](#render)                           | [`setButtonClass()`](#setbuttonclass)       |
 | [`setSelectedAreas()`](#setselectedareas)           | [`setViewMode()`](#setviewmode)               | [`show()`](#show)                               | [`unbind()`](#unbind)                       | 
-| [`updateCheckboxStyle()`](#updatecheckboxstyle)     | [`updatePageNumberStyle()`](#updatepagenumberstyle)       | [`save()`](#save) |
+| [`updateCheckboxStyle()`](#updatecheckboxstyle)     | [`updatePageNumberStyle()`](#updatepagenumberstyle)       | 
 
 **Properties**
 
@@ -254,7 +254,7 @@ interface ImageEditor {
     /**
      * Keeps the image data in the browser editor in sync with the buffer.
      **/
-    save(): boolean;
+    save(): Promise<void>;
     /**
      * Hide the ImageEditor object.
      */
@@ -317,7 +317,7 @@ interface EditorSettings {
     /**
      * Default is normal, value: normal=0, balance=1.
      */
-    workMode?: number | DynamsoftEnumsDWT.EnumDWT_WorkMode;
+    workMode?: number | Dynamsoft.DWT.EnumDWT_WorkMode;
 }
 ```
 
@@ -460,6 +460,7 @@ var editorSettings = {
       "There is no source available",
     ],
   },
+  workMode:Dynamsoft.DWT.EnumDWT_WorkMode.balance,
 };
 
 var imageEditor = DWObject.Viewer.createImageEditor(editorSettings);
@@ -2509,48 +2510,6 @@ interface pageNumberSettings {
 </table>
 </div>
 
----
-
-## save
-
-Keeps the image data in the browser editor in sync with the buffer.
-
-**Syntax**
-```typescript
-save():Promise<void>;
-```
-
-**Availability**
-
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-</tr>
-
-<tr>
-<td align="center">not supported </td>
-<td align="center">v18.2+ </td>
-<td align="center">v18.2+ </td>
-<td align="center">v18.2+ </td>
-<td align="center">v18.2+ </td>
-</tr>
-
-</table>
-</div>
-
-**Example**
-
-```javascript
-var ImageEditor = DWObject.Viewer.createImageEditor(editorSettings);
-ImageEditor.save();
-```
-
 
 ---
 
@@ -2939,7 +2898,7 @@ on('resize',
 DWObject.Viewer.on("resize", function (width, height) {
   console.log(width, height);
 });
-DWObject.Viewer.width += 100;
+DWObject.Viewer.width = 100;
 ```
 
 ---
