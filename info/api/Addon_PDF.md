@@ -12,6 +12,8 @@ permalink: /info/api/Addon_PDF.html
 
 > {WebTwainObject} denotes the `WebTwain` instance.
 
+> All APIs on this page support Android Service from version 18.2.
+
 **Methods**
 
 |                                       |
