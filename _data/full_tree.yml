@@ -60,8 +60,8 @@ tree_list:
         path: /info/api/Dynamsoft_Enum.html
       - name: Interfaces
         path: /info/api/Interfaces.html
-      - name: Device
-        path: /info/api/Device.html
+      #- name: Device
+      #  path: /info/api/Device.html
       - name: WebTwain_Scanner
         path: /info/api/WebTwain_Acquire.html
       - name: WebTwain_Buffer

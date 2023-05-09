@@ -10,47 +10,12 @@ permalink: /info/api/interfaces.html
 
 # Interfaces
 
-|                                       |
-| :------------------------------------ | :---------------------------- | ----------------------------- | ------------------------------- |
-| [`serviceInfo`](#serviceinfo)             | [`Device`](#device)             |
+| |
+| :----- |
+| [`Device`](#device)  |
 
 ---
 
-## serviceInfo
-
-**Syntax**
-
-```typescript
-interface serviceInfo {
-   server: string;
-   attrs?: any
-}
-```
-
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-</tr>
-
-<tr>
-<td align="center">not supported</td>
-<td align="center">v18.0+</td>
-<td align="center">v18.0+</td>
-<td align="center">v18.0+</td>
-<td align="center">v18.0+</td>
-</tr>
-
-</table>
-</div>
-
----
 
 ## Device
 
