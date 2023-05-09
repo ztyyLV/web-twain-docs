@@ -15,65 +15,40 @@ permalink: /info/schedule/Stable.html
 
 ### New Features
 #### WIA Scanner Support
- - Added support for direct control of WIA drivers. <!-- Please see Insert link to FAQ -->
+ - Added support for direct control of WIA drivers in [EnumDWT_DeviceType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_devicetype). <!-- Please see Insert link to FAQ -->
 
-<!-- #### Remote Scan
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mZcWLGwfCP4" title="WIA Scanner Support" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
--->
+
+#### Optimized Android Service for document scanning from Android devices
+- The Android service is available on the <a href="https://play.google.com/store/apps/details?id=com.dynamsoft.mobilescan" target="_blank">Google Play Store</a>.
+- Expanded the capabilities of the Android platform. <!--See the APIs supported on Android service. -->
+
+#### Remote Scan
+- The remote scan solution powered by Dynamic Web TWAIN is now officially available. With it, you can turn any of your transitional document scanners into a network-able scanner and allow your end users to use it without installing anything on the client device. Read <a href="https://www.dynamsoft.com/remote-scan/docs/introduction/" target="_blank">this documentation</a> to learn the Remote Scan solution works.
+
 
 ### Improvements
+
+#### Image Viewer
+- The Viewer component has been migrated to a dedicated resource file. This will allow for viewerless implementations of Dynamic Web TWAIN to reduce the load by removing the necessity of loading the Viewer resources into memory even when the Viewer is not being used. See the property [Dynamsoft.DWT.UseDefaultViewer]({{site.info}}api/Dynamsoft_WebTwainEnv.html#usedefaultviewer).
+- Added the enum [EnumDWT_WorkMode]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_workmode) with a new option for image editing 
+- Added [save()]({{site.info}}api/WebTwain_Viewer.html#save) to the ImageEditor object
+
+#### Optimized error handling during web twain initialization
+- Added an [OnWebTwainError]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainerror) event for better capturing errors during the web twain object initialization. 
+
 #### General Improvements
-- Improved licence verification logic to support Remote Scan
-- Added workMode to ImageEditor
-- Updated DBR library to 9.6.20
+- Updated the barcode reader library to v9.6.20
+- Improved progress bar accuracy during the encoding and decoding operations
 
-#### Resource Files
- - The Viewer component has been migrated to a dedicated resource file. This will allow for viewerless implementations of Dynamic Web TWAIN to reduce the load by removing the necessity of loading the Viewer resources into memory even when the Viewer is not being used.
-     - Please see the property Dynamsoft.DWT.UseDefaultViewer
-
-#### ImageEditor
- - The ImageEditor has been re-architected for better speed and image quality.
- - You can now use the new EnumDWT_WorkMode to control where the processing for ImageEditor occurs (not supported for RemoteScan)
-     - Original mode - The data is processed on the server side first, and then displayed in the viewer
-     - New mode - The data is processed in the canvas and then updated to the server side
-
-#### Android Service
- - The Android service is available on the Google [Play Store](https://play.google.com/store/apps/details?id=com.dynamsoft.mobilescan)
- - Expanded the capabilities of the Android platform
-     - Added the API ShareImages()
-
-### API Changes
-#### General Changes
- - Changed IfShowProgressBar to control the progress indicators for all encoding, decoding, and transfer operations.
- - IfShowCancelDialogWhenImageTransfer scope reduced to only control prompts for user cancellable operations.
-     - IfShowProgressBar must be enabled for IfShowCancelDialog to take effect
- - Improved progress bar accuracy
-
-#### New APIs
- - Added ShareImages() for the Android Service
- - Added the following under the Viewer class:
-     - crop()
-     - rotate()
-     - errorCode
-     - errorString
-     - ImageEditor
- - Added the enum WorkMode
- - Added .save() to the ImageEditor object
-     - This is used when using the ImageEditor as the only viewer to keep the image manipulations in sync between the editor and the data used in the Dynamsoft Service
- - Added OnWebTwainError event callback to DWT.WebTwainEnv
-
-#### Enumeration Changes
- - EnumDWT_DeviceType updated to support WIA scanning.
-    - Supported WIA devices will be labelled WIA
-    - Unsupported WIA devices will be labelled WIATWAIN
 
 <!-- 
 --> 
 ### Bug fixes
-32507 - MacOS issue with ShowFileDialog
+Fixed bug where ShowFileDialog might not work properly on MacOS. 
 
-### Known Issues
- - Image Editor Undo/Redo is not implemented in this version.
+
 
 ## 18.1 (01/12/2023)
 

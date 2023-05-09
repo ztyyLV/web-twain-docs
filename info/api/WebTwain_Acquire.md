@@ -4643,7 +4643,7 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 
 **Remark**
 
-[Device APIs]({{site.info}}api/Device.html)
+Interface [Device]({{site.info}}api/Interfaces.html#device)
 
 ---
 
