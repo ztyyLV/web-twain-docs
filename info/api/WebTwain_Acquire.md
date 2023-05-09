@@ -377,6 +377,7 @@ CloseSourceAsync(): Promise<boolean>;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -385,6 +386,7 @@ CloseSourceAsync(): Promise<boolean>;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -831,6 +833,7 @@ SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promi
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -839,6 +842,7 @@ SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promi
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -4159,6 +4163,7 @@ RegisterEvent("OnPostTransferAsync", function (outputInfo: OutputInfo) {});
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -4167,6 +4172,7 @@ RegisterEvent("OnPostTransferAsync", function (outputInfo: OutputInfo) {});
 <td align="center">v15.1+</td>
 <td align="center">v15.1+</td>
 <td align="center">v15.1+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -4427,6 +4433,7 @@ interface ValueAndLabel {
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -4435,6 +4442,7 @@ interface ValueAndLabel {
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -4494,7 +4502,7 @@ interface CapabilitySetup {
 
 **Parameters**
 
-`capabilities`: A object that describes how to set capabilities.
+`capabilities`: An object that describes how to set capabilities.
 
 `successCallback`: A callback function that is executed if the request succeeds.
 
@@ -4512,6 +4520,7 @@ interface CapabilitySetup {
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -4520,6 +4529,7 @@ interface CapabilitySetup {
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -4616,6 +4626,7 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -4624,6 +4635,7 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -4631,7 +4643,7 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 
 **Remark**
 
-[Device APIs]({{site.info}}api/Device.html)
+Interface [Device]({{site.info}}api/Interfaces.html#device)
 
 ---
 
@@ -4672,6 +4684,7 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -4680,6 +4693,7 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -4712,6 +4726,7 @@ AcquireImageAsync(deviceConfiguration?: DeviceConfiguration): Promise< boolean>;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -4720,6 +4735,7 @@ AcquireImageAsync(deviceConfiguration?: DeviceConfiguration): Promise< boolean>;
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>

@@ -61,12 +61,8 @@ interface Dynamsoft.DWT {
     GetWebTwainEx(WebTwainId: string): WebTwain;
     Load(): void;
     Unload(): void;
-    RemoveAllAuthorizations: function () {};    
-    OnWebTwainNotFound: function () {};
     OnWebTwainPostExecute: function () {};
     OnWebTwainPreExecute: function () {};
-    OnWebTwainReady: function () {};
-    OnWebTwainWillInit: function () {};
 }
 
 /**
@@ -226,20 +222,16 @@ interface DWTInitialConfig {
   Initiates the library. If there are predefined `Containers` , one `WebTwain` instance will be created for each `Container` .
 
 ### `RegisterEvent()`
-
+  [We removed OnWebTWainReady...]: # 
   Registers an environmental event. Typically the event is `OnWebTwainReady` which is triggered when the initialization completes.
 
 ### `Unload()`
 
   Destroys all `WebTwain` instances and cuts off the connection to the Dynamsoft Service.
 
-### `RemoveAllAuthorizations()`
-
-Removes the specific authorizations made by end users on a client machine. Only effective when the security feature is enabled for local files, scanners or cameras.
-
 ### `UseDefaultViewer`
 
-Whether to use the built-in viewer. If it is set to `false` , the file `dynamsoft.viewer.js` is not loaded at all and there is no way to add it back later. Therefore, only set it to `false` when you absolutely won't need the viewer or will be building your own viewer.
+Whether to use the built-in viewer. If it is set to `false` , the file `dynamsoft.webtwain.viewer.js` is not loaded at all and there is no way to add it back later. Therefore, only set it to `false` when you absolutely won't need the viewer or will be building your own viewer.
 
 ### `CustomizableDisplayInfo`
 
@@ -272,3 +264,31 @@ Specify the source of the loader bar image. Check out more on [HTMLImageElement.
 #### `loaderBarClassName`
 
 Specify the class name of the DIV element that contains the loader bar. With this class, you can customize the loader bar even further with CSS.
+
+#### `OnWebTwainReady`
+
+A built-in callback triggered when the Web TWAIN resources have completed loading
+
+**Example**
+```javascript
+Dynamsoft.DWT.RegisterEvent('OnWebTwainReady', 
+  Dynamsoft_OnReady //The typical function for initalizing the environment once the resources have loaded
+); 
+```
+
+#### `OnWebTwainError`
+
+A built-in callback triggered when an error is detected when laoding the Web TWAIN environment
+
+**Example**
+```javascript
+Dynamsoft.DWT.RegisterEvent('OnWebTwainError', 
+  Dynamsoft_OnError 
+); 
+
+ 
+function Dynamsoft_OnError(error){
+  // error handling
+  console.error(error.message);
+} 
+```

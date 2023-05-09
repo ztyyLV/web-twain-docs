@@ -21,7 +21,7 @@ permalink: /info/api/WebTwain_Viewer.html
 | [`hide()`](#hide)                                   | [`last()`](#last)                             | [`next()`](#next)                               | [`off()`](#off)                             |
 | [`on()`](#on)                                       | [`previous()`](#previous)                     | [`render()`](#render)                           | [`setButtonClass()`](#setbuttonclass)       |
 | [`setSelectedAreas()`](#setselectedareas)           | [`setViewMode()`](#setviewmode)               | [`show()`](#show)                               | [`unbind()`](#unbind)                       | 
-| [`updateCheckboxStyle()`](#updatecheckboxstyle)     | [`updatePageNumberStyle()`](#updatepagenumberstyle)       |
+| [`updateCheckboxStyle()`](#updatecheckboxstyle)     | [`updatePageNumberStyle()`](#updatepagenumberstyle)       | [`save()`](#save) |
 
 **Properties**
 
@@ -252,6 +252,10 @@ interface ImageEditor {
      */
     show(): boolean;
     /**
+     * Keeps the image data in the browser editor in sync with the buffer.
+     **/
+    save(): boolean;
+    /**
      * Hide the ImageEditor object.
      */
     hide(): boolean;
@@ -260,6 +264,61 @@ interface ImageEditor {
      */
     dispose(): boolean;
 };
+
+interface EditorSettings {
+    /**
+     * Specify an HTML Element.
+     */
+    element?: HTMLDivElement | HTMLElement;
+    /**
+     * The width of the image editor viewer. The default value is "100%".
+     * 'Invalid property value' will be reported when the set value is not string or number.
+     */
+    width?: number | string;
+    /**
+     * The height of the image editor viewer. The default value is "100%".
+     * 'Invalid property value' will be reported when the set value is not string or number.
+     */
+    height?: number | string;
+    /**
+     * The border of the ImageEditor viewer.
+     * 'Invalid property value' is reported when the set value does not meet the CSS standard.
+     */
+    border?: string;
+    /**
+     * Set the border of the top toolbar.
+     * 'Invalid property value' is reported when the set value does not meet the CSS standard.
+     */
+    topMenuBorder?: string;
+    /**
+     * The inner border of the image area.
+     */
+    innerBorder?: string;
+    /**
+     * The background color/image of the ImageEditor viewer.
+     * 'Invalid property value' is reported when the set value does not meet the CSS standard.
+     */
+    background?: string;
+    /**
+     * Whether to pop up a window prompting to save the changes. The default value is true.
+     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
+     */
+    promptToSaveChange?: boolean;
+    /**
+     * Modify button titles and whether to hide specific buttons in the image editor viewer.
+     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
+     */
+    buttons?: any;
+    /**
+     * Define the dialog text
+     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
+     */
+    dialogText?: any;
+    /**
+     * Default is normal, value: normal=0, balance=1.
+     */
+    workMode?: number | DynamsoftEnumsDWT.EnumDWT_WorkMode;
+}
 ```
 
 **Parameters**
@@ -304,97 +363,97 @@ imageEditor.show();
 // Customize the editor
 var editorSettings = {
   /* Show the editor within the DIV 'imageEditor'*/
-  element?: document.getElementById("imageEditor"),
-  width?: 600,
-  height?: 400,
-  border?: "1px solid rgb(204, 204, 204)",
-  topMenuBorder?: "",
-  innerBorder?: "",
-  background?: "rgb(255, 255, 255)",
-  promptToSaveChange?: true,
-  buttons?: {
-    titles?: {
-      previous?: "Previous Image",
-      next?: "Next Image",
-      print?: "Print Image",
-      scan?: "Scan Documents",
-      load?: "Load Local Images",
-      rotateleft?: "Rotate Left",
-      rotate?: "Rotate",
-      rotateright?: "Rotate Right",
-      deskew?: "Deskew",
-      crop?: "Crop Selected Area",
-      cut?: "Cut Selected Area",
-      changeimagesize?: "Change Image Size",
-      flip?: "Flip Image",
-      mirror?: "Mirror Image",
-      zoomin?: "Zoom In",
-      originalsize?: "Show Original Size",
-      zoomout?: "Zoom Out",
-      stretch?: "Stretch Mode",
-      fit?: "Fit Window",
-      fitw?: "Fit Horizontally",
-      fith?: "Fit Vertically",
-      hand?: "Hand Mode",
-      rectselect?: "Select Mode",
-      zoom?: "Click to Zoom In",
-      restore?: "Restore Original Image",
-      save?: "Save Changes",
-      close?: "Close the Editor",
-      removeall?: "Remove All Images",
-      removeselected?: "Remove All Selected Images",
+  element: document.getElementById("imageEditor"),
+  width: 600,
+  height: 400,
+  border: "1px solid rgb(204, 204, 204)",
+  topMenuBorder: "",
+  innerBorder: "",
+  background: "rgb(255, 255, 255)",
+  promptToSaveChange: true,
+  buttons: {
+    titles: {
+      previous: "Previous Image",
+      next: "Next Image",
+      print: "Print Image",
+      scan: "Scan Documents",
+      load: "Load Local Images",
+      rotateleft: "Rotate Left",
+      rotate: "Rotate",
+      rotateright: "Rotate Right",
+      deskew: "Deskew",
+      crop: "Crop Selected Area",
+      cut: "Cut Selected Area",
+      changeimagesize: "Change Image Size",
+      flip: "Flip Image",
+      mirror: "Mirror Image",
+      zoomin: "Zoom In",
+      originalsize: "Show Original Size",
+      zoomout: "Zoom Out",
+      stretch: "Stretch Mode",
+      fit: "Fit Window",
+      fitw: "Fit Horizontally",
+      fith: "Fit Vertically",
+      hand: "Hand Mode",
+      rectselect: "Select Mode",
+      zoom: "Click to Zoom In",
+      restore: "Restore Original Image",
+      save: "Save Changes",
+      close: "Close the Editor",
+      removeall: "Remove All Images",
+      removeselected: "Remove All Selected Images",
     },
-    visibility?: {
-      scan?: true,
-      load?: true,
-      print?: true,
-      removeall?: true,
-      removeselected?: true,
-      rotateleft?: true,
-      rotate?: true,
-      rotateright?: true,
-      deskew?: true,
-      crop?: true,
-      cut?: true,
-      changeimagesize?: true,
-      flip?: true,
-      mirror?: true,
-      zoomin?: true,
-      originalsize?: true,
-      zoomout?: true,
-      stretch?: true,
-      fit?: true,
-      fitw?: true,
-      fith?: true,
-      hand?: true,
-      rectselect?: true,
-      zoom?: true,
-      restore?: true,
-      save?: true,
-      close?: true,
+    visibility: {
+      scan: true,
+      load: true,
+      print: true,
+      removeall: true,
+      removeselected: true,
+      rotateleft: true,
+      rotate: true,
+      rotateright: true,
+      deskew: true,
+      crop: true,
+      cut: true,
+      changeimagesize: true,
+      flip: true,
+      mirror: true,
+      zoomin: true,
+      originalsize: true,
+      zoomout: true,
+      stretch: true,
+      fit: true,
+      fitw: true,
+      fith: true,
+      hand: true,
+      rectselect: true,
+      zoom: true,
+      restore: true,
+      save: true,
+      close: true,
     },
   },
-  dialogText?: {
-    dlgRotateAnyAngle?: [
+  dialogText: {
+    dlgRotateAnyAngle: [
       "Angle :",
       "Interpolation:",
       "Keep size",
       "  OK  ",
       "Cancel",
     ],
-    dlgChangeImageSize?: [
+    dlgChangeImageSize: [
       "New Height :",
       "New Width :",
       "Interpolation method:",
       "  OK  ",
       "Cancel",
     ],
-    saveChangedImage?: [
+    saveChangedImage: [
       "You have changed the image, do you want to keep the change(s)?",
       "  Yes  ",
       "  No  ",
     ],
-    selectSource?: [
+    selectSource: [
       "Select Source:",
       "Select",
       "Cancel",
@@ -2449,6 +2508,49 @@ interface pageNumberSettings {
 
 </table>
 </div>
+
+---
+
+## save
+
+Keeps the image data in the browser editor in sync with the buffer.
+
+**Syntax**
+```typescript
+save():Promise<void>;
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v18.2+ </td>
+<td align="center">v18.2+ </td>
+<td align="center">v18.2+ </td>
+<td align="center">v18.2+ </td>
+</tr>
+
+</table>
+</div>
+
+**Example**
+
+```javascript
+var ImageEditor = DWObject.Viewer.createImageEditor(editorSettings);
+ImageEditor.save();
+```
+
 
 ---
 

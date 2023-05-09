@@ -11,6 +11,45 @@ permalink: /info/schedule/Stable.html
 
 # Stable Releases
 
+## 18.2 (05/09/2023)
+
+### New Features
+#### WIA Scanner Support
+ - Added support for direct control of WIA drivers in [EnumDWT_DeviceType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_devicetype). <!-- Please see Insert link to FAQ -->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mZcWLGwfCP4" title="WIA Scanner Support" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+#### Optimized Android Service for document scanning from Android devices
+- The Android service is available on the <a href="https://play.google.com/store/apps/details?id=com.dynamsoft.mobilescan" target="_blank">Google Play Store</a>.
+- Expanded the capabilities of the Android platform. <!--See the APIs supported on Android service. -->
+
+#### Remote Scan
+- The remote scan solution powered by Dynamic Web TWAIN is now officially available. With it, you can turn any of your transitional document scanners into a network-able scanner and allow your end users to use it without installing anything on the client device. Read <a href="https://www.dynamsoft.com/remote-scan/docs/introduction/" target="_blank">this documentation</a> to learn the Remote Scan solution works.
+
+
+### Improvements
+
+#### Image Viewer
+- The Viewer component has been migrated to a dedicated resource file. This will allow for viewerless implementations of Dynamic Web TWAIN to reduce the load by removing the necessity of loading the Viewer resources into memory even when the Viewer is not being used. See the property [Dynamsoft.DWT.UseDefaultViewer]({{site.info}}api/Dynamsoft_WebTwainEnv.html#usedefaultviewer).
+- Added the enum [EnumDWT_WorkMode]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_workmode) with a new option for image editing 
+- Added [save()]({{site.info}}api/WebTwain_Viewer.html#save) to the ImageEditor object
+
+#### Optimized error handling during web twain initialization
+- Added an [OnWebTwainError]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainerror) event for better capturing errors during the web twain object initialization. 
+
+#### General Improvements
+- Updated the barcode reader library to v9.6.20
+- Improved progress bar accuracy during the encoding and decoding operations
+
+
+<!-- 
+--> 
+### Bug fixes
+Fixed bug where ShowFileDialog might not work properly on MacOS. 
+
+
+
 ## 18.1 (01/12/2023)
 
 Dynamic Web TWAIN v18.1 is restructured into two editions. While the standard Service Edition focuses on interactions with scanners, the Plus Edition offers support for mobile cameras as well. The goal is to make sure the Service Edition is small-sized, easy-to-use, and stable. The Plus Edition, on the other hand, is more comprehensive and offers flexibility in platforms and devices.

@@ -69,7 +69,7 @@ permalink: /info/api/appendix.html
 |-2305 | User cancelled the operation |
 |-2306 | Upload Error: the upload file cannot be empty |
 |-2307 | The width or height you entered is invalid |
-|-2308 | The local dynamsoft service has been stopped |
+|-2308 | The Dynamsoft Service has been stopped |
 |-2309 | The LocalFile is emtpy in the Function |
 |-2310 | The Enumerations is out of range |
 |-2311 | The RemoteFile is emtpy in Barcode Download Function |
@@ -125,6 +125,35 @@ permalink: /info/api/appendix.html
 |-2369 | The module for Dynamic Web TWAIN has failed to download |
 |-2370 | The current product key is invalid, please contact the site administrator |
 |-2372 | You cannot convert more than one image to binary when the format is BMP, JPG or PNG |
+|-2612 | The devices must be an Array. |
+|-2614 | The Dynamsoft Service has been restarted. |
+|-2615 | User cancelled the operation. |
+|-2616 | Invalid image format type. |
+|-2617 | ShareImages is only supported on Android devices. |
+|-2618 | Only single index selection is allowed when enumImageType is set to BMP, JPG or PNG. |
+|-2619 | Only single index selection is allowed when enumImageFormatType is set to url. |
+|-2621 | Dynamsoft.DWT.Containers was not set. |
+|-2622 | Please do not set enumImageType to "IT_MULTIPAGE_PDF", "IT_MULTIPAGE_TIF" or "IT_ALL". |
+|-2800 | Please make sure the Dynamsoft Service has been installed. |
+|-2801 | Invalid response data was returned from the Dynamsoft Service. |
+|-2802 | The file dynamsoft.webtwain.config.js timed out while loading. |
+|-2803 | Loading the WebTwain JavaScript source files has failed. |
+|-2804 | Loading the WebTwain css files has failed. |
+|-2805 | Error: The "WebTwainId" is not a string. |
+|-2806 | Error: The argument passed to the parameter "conatinerId" is not a string. |
+|-2807 | Error: The element specified by the id XXX doesn't exist. |
+|-2812 | Error: Duplicate ID detected while creating a Dynamic Web TWAIN object. |
+|-2813 | Error: The ID of the target DIV for the new DWT object is invalid. |
+|-2814 | Error: The Dynamic Web TWAIN module is not installed. |
+|-2815 | Error: Duplicate ContainerId detected while creating a Dynamic Web TWAIN object. |
+|-2817 | The Connection from the insecure (HTTP) web page failed for HTST. |
+|-2818 | The Dynamsoft Service SSL certificate has expired. |
+|-2819 | The Dynamsoft Service SSL certificate is invalid. |
+|-2820 | The Connection from the insecure (HTTP) web page to the local "Dynamsoft Service" failed! |
+|-2821 | The Dynamsoft Servie is not ready, please try again later. |
+|-2822 | The WebTwain JavaScript lts.js load failed. |
+|-2823 | The http url redirected. |
+|-2824 | The Connection from the web page failed. Please make sure the Dynamsoft Service is running. |
 |<= -3000 | See ErrorString property for details |
 
 ## Dynamsoft License Server Error List 
