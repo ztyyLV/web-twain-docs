@@ -25,7 +25,7 @@ permalink: /info/schedule/Stable.html
 - Expanded the capabilities of the Android platform. <!--See the APIs supported on Android service. -->
 
 #### Remote Scan
-- The remote scan solution powered by Dynamic Web TWAIN is now officially available. With it, you can turn any of your tranditional document scanners into a network-able scanner and allow your end users to use it without installing anything on the client device. Read <a href="https://www.dynamsoft.com/remote-scan/docs/introduction/" target="_blank">this documentation</a> to learn the Remote Scan solution works.
+- The remote scan solution powered by Dynamic Web TWAIN is now officially available. With it, you can turn any of your tranditional document scanners into a network-able scanner and allow your end users to use it without installing anything on the client device. Read <a href="https://www.dynamsoft.com/remote-scan/docs/introduction/" target="_blank">this documentation</a> to learn how the Remote Scan solution works.
 
 
 ### Improvements
