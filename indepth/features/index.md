@@ -47,3 +47,6 @@ This section covers how to implement the key capabilities of Dynamic Web TWAIN (
 * [Handle PDFs]({{site.indepth}}features/PDF.html)
 
   Learn about PDF reading & writing capabilities.
+
+* [Remote Scan](https://www.dynamsoft.com/remote-scan/docs/introduction/)
+  Learn about how to use Remote Scan.

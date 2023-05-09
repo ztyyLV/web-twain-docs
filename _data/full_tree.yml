@@ -40,7 +40,9 @@ tree_list:
           - name: Barcode Recognition
             path: /indepth/features/barcode.html
           - name: PDF Handling
-            path: /indepth/features/pdf.html  
+            path: /indepth/features/pdf.html 
+          - name: Remote Scan
+            path: https://www.dynamsoft.com/remote-scan/docs/introduction/ 
   - name: Samples and Demos
     childList:
       - name: Use Web TWAIN in Angular

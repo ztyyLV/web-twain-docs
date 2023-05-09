@@ -2898,7 +2898,7 @@ on('resize',
 DWObject.Viewer.on("resize", function (width, height) {
   console.log(width, height);
 });
-DWObject.Viewer.width += 100;
+DWObject.Viewer.width = 100;
 ```
 
 ---
