@@ -13,4 +13,8 @@ permalink: /faq/offer-perpetual-license.html
 
 ## Do you offer lifetime/perpetual licenses?
 
-Yes, we offer the lifetime/perpetual license which typically comes with one year of software maintenance service. For upgrades and premium technical support you would need to renew yearly maintenance for more on the benefits of maintenance please view <a href="https://www.dynamsoft.com/company/annual-maintenance/" target="_blank">this article</a>.
+
+
+Yes, we offer a lifetime/perpetual license, which typically includes one year of software maintenance service. To receive upgrades and premium technical support, you would need to renew your yearly maintenance. Learn more about [the benefits of maintenance](https://www.dynamsoft.com/company/annual-maintenance/).
+
+To obtain pricing for your specific scenario, please visit our "[Ask for Quote](https://www.dynamsoft.com/store/dynamic-web-twain/)" page.
