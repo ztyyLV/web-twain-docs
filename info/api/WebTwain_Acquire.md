@@ -13,7 +13,11 @@ permalink: /info/api/WebTwain_Acquire.html
 
 > The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance).
 
-<div class="multi-panel-switching-prefix"></div>- [Desktop Service](#desktop) - [Android Service](#android) 
+<div class="multi-panel-switching-prefix"></div>
+
+- [Desktop Service](#desktop) 
+- [Android Service](#android) 
+
 <div class="multi-panel-start"></div>
 **1. The following APIs are compatible with TWAIN, ICA, SANE (Windows, macOS and Linux)** 
 
@@ -99,6 +103,7 @@ permalink: /info/api/WebTwain_Acquire.html
 | [`OnPostTransferAsync`](#onposttransferasync)  |
 
 <div class="multi-panel-end"></div>
+
 <div class="multi-panel-switching-end"></div>
 
 ---
