@@ -86,7 +86,7 @@ permalink: /info/api/WebTwain_Acquire.html
 | :------------------------------------ |
 | [`OnSourceUIClose`](#onsourceuiclose) |
 
-<div class="multi-panel-end">
+
 
 
 ---
@@ -4757,6 +4757,7 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
     console.error(e)
 })
 ```
+<div class="multi-panel-end">
 
 </div><div class="multi-panel-start"></div>
 
