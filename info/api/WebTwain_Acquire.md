@@ -19,6 +19,7 @@ permalink: /info/api/WebTwain_Acquire.html
 - [Android Service](#android) 
 
 <div class="multi-panel-start"></div>
+
 **1. The following APIs are compatible with TWAIN, ICA, SANE (Windows, macOS and Linux)** 
 
 **Methods**
@@ -87,24 +88,6 @@ permalink: /info/api/WebTwain_Acquire.html
 
 <div class="multi-panel-end">
 
-</div><div class="multi-panel-start"></div>
-
-**Methods**
-
-|                                                     |
-| :-------------------------------------------------- | :---------------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------- |
-| [`SelectSourceAsync()`](#selectsourceasync)  | [`CloseSourceAsync()`](#closesourceasync)  | [`GetDevicesAsync()`](#getdevicesasync)   | [`SelectDeviceAsync()`](#selectdeviceasync)                   |
-| [`AcquireImageAsync()`](#acquireimageasync)   |
-
-**Events**
-
-|                                       |
-| :------------------------------------ |
-| [`OnPostTransferAsync`](#onposttransferasync)  |
-
-<div class="multi-panel-end"></div>
-
-<div class="multi-panel-switching-end"></div>
 
 ---
 
@@ -4789,3 +4772,24 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
     console.error(e)
 })
 ```
+
+</div><div class="multi-panel-start"></div>
+
+>The Android Service Edition only supports a subset of the APIs available in the Desktop Service Edition. For the APIs that are compatible with both editions, the usage remains the same. To learn how to use the APIs, please refer to the documentation for the Desktop Service Edition.
+
+**Methods**
+
+|                                                     |
+| :-------------------------------------------------- | :---------------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------- |
+| [`SelectSourceAsync()`](#selectsourceasync)  | [`CloseSourceAsync()`](#closesourceasync)  | [`GetDevicesAsync()`](#getdevicesasync)   | [`SelectDeviceAsync()`](#selectdeviceasync)                   |
+| [`AcquireImageAsync()`](#acquireimageasync)   |[`getCapabilities()`](#getcapabilities) | [`setCapabilities()`](#setcapabilities) |
+
+**Events**
+
+|                                       |
+| :------------------------------------ |
+| [`OnPostTransferAsync`](#onposttransferasync)  |
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-switching-end"></div>
