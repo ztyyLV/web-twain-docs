@@ -12,6 +12,8 @@ permalink: /info/api/WebTwain_Edit.html
 
 The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance).
 
+> All APIs on this page support Android Service from version 18.2.
+
 **Methods**
 
 |                                                 |
