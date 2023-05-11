@@ -11,9 +11,9 @@ permalink: /info/api/interfaces.html
 # Interfaces
 
 | |
-| :----- |
-| [`Device`](#device)  |
-| [`DeviceConfiguration`](#DeviceConfiguration)  |
+|:-|:-|
+| [`Device`](#device)  | [`DeviceConfiguration`](#DeviceConfiguration)  |
+
 
 ---
 
