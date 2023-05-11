@@ -126,7 +126,7 @@ AcquireImage(
 
 **Parameters**
 
-`deviceConfiguration`: Configuration for the acquisition. Please refer to [Interface]({{site.info}}api/Interfaces.html#DeviceConfiguration).
+`deviceConfiguration`: Configuration for the acquisition. Please refer to [DeviceConfiguration]({{site.info}}api/Interfaces.html#DeviceConfiguration).
 
 `successCallback`: A callback function that is executed if the request succeeds.
 
@@ -4695,7 +4695,7 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 
 **Parameters**
 
-`device`: the device object. Please refer to [Interface]({{site.info}}api/Interfaces.html#device).
+`device`: the device object. Please refer to [Device]({{site.info}}api/Interfaces.html#device).
 
 **Availability**
 
@@ -4737,7 +4737,7 @@ AcquireImageAsync(deviceConfiguration?: DeviceConfiguration): Promise< boolean>;
 
 **Parameters**
 
-`deviceConfiguration`: The device configuration. Please refer to [Interface]({{site.info}}api/Interfaces.html#DeviceConfiguration).
+`deviceConfiguration`: The device configuration. Please refer to [DeviceConfiguration]({{site.info}}api/Interfaces.html#DeviceConfiguration).
 
 **Availability**
 
