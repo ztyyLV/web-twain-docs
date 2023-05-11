@@ -68,6 +68,58 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`OnGetFilePath`](#ongetfilepath) | [`OnPostLoad`](#onpostload) | [`OnInternetTransferPercentage`](#oninternettransferpercentage) |
 
 
+<div class="multi-panel-end">
+
+</div><div class="multi-panel-start"></div>
+
+>The Android Service Edition only supports a subset of the APIs available in the Desktop Service Edition. For the APIs that are compatible with both editions, the usage remains the same. To learn how to use the APIs, please refer to the documentation for the Desktop Service Edition.
+
+**Methods**
+
+**Input Methods**
+
+|                                                   |
+| :------------------------------------------------ | :------------------------------------------------------ | ----------------------------------------------------------- | ----------------------------------------------- |
+| [`LoadImageEx()`](#loadimageex)                         | [`LoadImageFromBase64Binary()`](#loadimagefrombase64binary) | [`LoadImageFromBinary()`](#loadimagefrombinary) |[`LoadDibFromClipboard()`](#loaddibfromclipboard) |               
+| [`HTTPDownload()`](#httpdownload)               |[`HTTPDownloadEx()`](#httpdownloadex)             | [`HTTPDownloadThroughPost()`](#httpdownloadthroughpost) |       
+
+**Output Methods**
+
+|                                                                                                                          |
+| :----------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| [`ConvertToBase64()`](#converttobase64) | [`ConvertToBlob()`](#converttoblob) | [`HTTPUpload()`](#httpupload) |
+| [`HTTPUploadThroughPutEx()`](#httpuploadthroughputex)  | [`HTTPUploadThroughPost()`](#httpuploadthroughpost)  | [`HTTPUploadThroughPostEx()`](#httpuploadthroughpostex)  |
+| [`HTTPUploadAllThroughPostAsMultiPageTIFF()`](#httpuploadallthroughpostasmultipagetiff) | [`HTTPUploadAllThroughPostAsPDF()`](#httpuploadallthroughpostaspdf)       | [`HTTPUploadThroughPostAsMultiPagePDF()`](#httpuploadthroughpostasmultipagepdf) |
+|[`HTTPUploadThroughPostAsMultiPageTIFF()`](#httpuploadthroughpostasmultipagetiff) |  [`SaveAsBMP()`](#saveasbmp)   | [`SaveAsJPEG()`](#saveasjpeg) | 
+|[`SaveAsPDF()`](#saveaspdf) | [`SaveAsPNG()`](#saveaspng)                                                     |
+ [`SaveAsTIFF()`](#saveastiff)                                                           | 
+ |[`SaveSelectedImagesAsMultiPagePDF()`](#saveselectedimagesasmultipagepdf) | [`SaveSelectedImagesAsMultiPageTIFF()`](#saveselectedimagesasmultipagetiff)     
+| [`SaveAllAsMultiPageTIFF()`](#saveallasmultipagetiff)                                   | 
+|[`SaveAllAsPDF()`](#saveallaspdf)                                         |[`ShareImages()`](#shareimages)                                                 |
+
+**Other Methods**
+
+|                                               |
+| :-------------------------------------------- | :---------------------------------------- | --------------------------------------------------- | ----------------------------------------- |
+| [`ClearTiffCustomTag()`](#cleartiffcustomtag) | [`SetTiffCustomTag()`](#settiffcustomtag) | [`ClearAllHTTPFormField()`](#clearallhttpformfield) | [`SetHTTPFormField()`](#sethttpformfield) |
+| [`SetHTTPHeader()`](#sethttpheader)           | [`SetUploadSegment()`](#setuploadsegment) |  [`Print()`](#print)                       |[`PrintEx()`](#printex)                       |
+
+**Properties**
+
+|                                                                 |
+| :-------------------------------------------------------------- | :---------------------------------------------------------------------------- | ------------------------------------------- | --------------------------------------------------- |
+| [`HttpFieldNameOfUploadedImage`](#httpfieldnameofuploadedimage) | [`HTTPPort`](#httpport)                                                       | [`IfSSL`](#ifssl)                           | [`HTTPPostResponseString`](#httppostresponsestring) |
+|[`IfShowCancelDialogWhenImageTransfer`](#ifshowcanceldialogwhenimagetransfer) | [`IfShowProgressBar`](#ifshowprogressbar)   | [`JPEGQuality`](#jpegquality)                       | [`IfTiffMultiPage`](#iftiffmultipage)                           |
+| [`TIFFCompressionType`](#tiffcompressiontype)                                 | [`MaxUploadImageSize`](#maxuploadimagesize) |                    
+
+**Events**
+
+|                                   |
+| :-------------------------------- | :-------------------------- | --------------------------------------------------------------- |
+|  [`OnPostLoad`](#onpostload) | [`OnInternetTransferPercentage`](#oninternettransferpercentage) |
+
+<div class="multi-panel-end"></div>
+
 ---
 
 ## LoadImage  
@@ -3907,56 +3959,6 @@ TIFF_RLE (2), TIFF_T4 (3), TIFF_FAX3 (3) and TIFF_PACKBITS (32773) only support 
 When TIFF_JPEG (7) is used, you can use JPEGQuality to further reduce the size of the TIFF file.
 
 
-<div class="multi-panel-end">
 
-</div><div class="multi-panel-start"></div>
-
->The Android Service Edition only supports a subset of the APIs available in the Desktop Service Edition. For the APIs that are compatible with both editions, the usage remains the same. To learn how to use the APIs, please refer to the documentation for the Desktop Service Edition.
-
-**Methods**
-
-**Input Methods**
-
-|                                                   |
-| :------------------------------------------------ | :------------------------------------------------------ | ----------------------------------------------------------- | ----------------------------------------------- |
-| [`LoadImageEx()`](#loadimageex)                         | [`LoadImageFromBase64Binary()`](#loadimagefrombase64binary) | [`LoadImageFromBinary()`](#loadimagefrombinary) |[`LoadDibFromClipboard()`](#loaddibfromclipboard) |               
-| [`HTTPDownload()`](#httpdownload)               |[`HTTPDownloadEx()`](#httpdownloadex)             | [`HTTPDownloadThroughPost()`](#httpdownloadthroughpost) |       
-
-**Output Methods**
-
-|                                                                                                                          |
-| :----------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| [`ConvertToBase64()`](#converttobase64) | [`ConvertToBlob()`](#converttoblob) | [`HTTPUpload()`](#httpupload) |
-| [`HTTPUploadThroughPutEx()`](#httpuploadthroughputex)  | [`HTTPUploadThroughPost()`](#httpuploadthroughpost)  | [`HTTPUploadThroughPostEx()`](#httpuploadthroughpostex)  |
-| [`HTTPUploadAllThroughPostAsMultiPageTIFF()`](#httpuploadallthroughpostasmultipagetiff) | [`HTTPUploadAllThroughPostAsPDF()`](#httpuploadallthroughpostaspdf)       | [`HTTPUploadThroughPostAsMultiPagePDF()`](#httpuploadthroughpostasmultipagepdf) |
-|[`HTTPUploadThroughPostAsMultiPageTIFF()`](#httpuploadthroughpostasmultipagetiff) |  [`SaveAsBMP()`](#saveasbmp)   | [`SaveAsJPEG()`](#saveasjpeg) | 
-|[`SaveAsPDF()`](#saveaspdf) | [`SaveAsPNG()`](#saveaspng)                                                     |
- [`SaveAsTIFF()`](#saveastiff)                                                           | 
- |[`SaveSelectedImagesAsMultiPagePDF()`](#saveselectedimagesasmultipagepdf) | [`SaveSelectedImagesAsMultiPageTIFF()`](#saveselectedimagesasmultipagetiff)     
-| [`SaveAllAsMultiPageTIFF()`](#saveallasmultipagetiff)                                   | 
-|[`SaveAllAsPDF()`](#saveallaspdf)                                         |[`ShareImages()`](#shareimages)                                                 |
-
-**Other Methods**
-
-|                                               |
-| :-------------------------------------------- | :---------------------------------------- | --------------------------------------------------- | ----------------------------------------- |
-| [`ClearTiffCustomTag()`](#cleartiffcustomtag) | [`SetTiffCustomTag()`](#settiffcustomtag) | [`ClearAllHTTPFormField()`](#clearallhttpformfield) | [`SetHTTPFormField()`](#sethttpformfield) |
-| [`SetHTTPHeader()`](#sethttpheader)           | [`SetUploadSegment()`](#setuploadsegment) |  [`Print()`](#print)                       |[`PrintEx()`](#printex)                       |
-
-**Properties**
-
-|                                                                 |
-| :-------------------------------------------------------------- | :---------------------------------------------------------------------------- | ------------------------------------------- | --------------------------------------------------- |
-| [`HttpFieldNameOfUploadedImage`](#httpfieldnameofuploadedimage) | [`HTTPPort`](#httpport)                                                       | [`IfSSL`](#ifssl)                           | [`HTTPPostResponseString`](#httppostresponsestring) |
-|[`IfShowCancelDialogWhenImageTransfer`](#ifshowcanceldialogwhenimagetransfer) | [`IfShowProgressBar`](#ifshowprogressbar)   | [`JPEGQuality`](#jpegquality)                       | [`IfTiffMultiPage`](#iftiffmultipage)                           |
-| [`TIFFCompressionType`](#tiffcompressiontype)                                 | [`MaxUploadImageSize`](#maxuploadimagesize) |                    
-
-**Events**
-
-|                                   |
-| :-------------------------------- | :-------------------------- | --------------------------------------------------------------- |
-|  [`OnPostLoad`](#onpostload) | [`OnInternetTransferPercentage`](#oninternettransferpercentage) |
-
-<div class="multi-panel-end"></div>
 
 <div class="multi-panel-switching-end"></div>
