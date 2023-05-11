@@ -91,11 +91,9 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`HTTPUploadThroughPutEx()`](#httpuploadthroughputex)  | [`HTTPUploadThroughPost()`](#httpuploadthroughpost)  | [`HTTPUploadThroughPostEx()`](#httpuploadthroughpostex)  |
 | [`HTTPUploadAllThroughPostAsMultiPageTIFF()`](#httpuploadallthroughpostasmultipagetiff) | [`HTTPUploadAllThroughPostAsPDF()`](#httpuploadallthroughpostaspdf)       | [`HTTPUploadThroughPostAsMultiPagePDF()`](#httpuploadthroughpostasmultipagepdf) |
 |[`HTTPUploadThroughPostAsMultiPageTIFF()`](#httpuploadthroughpostasmultipagetiff) |  [`SaveAsBMP()`](#saveasbmp)   | [`SaveAsJPEG()`](#saveasjpeg) | 
-|[`SaveAsPDF()`](#saveaspdf) | [`SaveAsPNG()`](#saveaspng)                                                     |
- [`SaveAsTIFF()`](#saveastiff)                                                           | 
- |[`SaveSelectedImagesAsMultiPagePDF()`](#saveselectedimagesasmultipagepdf) | [`SaveSelectedImagesAsMultiPageTIFF()`](#saveselectedimagesasmultipagetiff)     
-| [`SaveAllAsMultiPageTIFF()`](#saveallasmultipagetiff)                                   | 
-|[`SaveAllAsPDF()`](#saveallaspdf)                                         |[`ShareImages()`](#shareimages)                                                 |
+|[`SaveAsPDF()`](#saveaspdf) | [`SaveAsPNG()`](#saveaspng)  |[`SaveAsTIFF()`](#saveastiff) | 
+ |[`SaveSelectedImagesAsMultiPagePDF()`](#saveselectedimagesasmultipagepdf) | [`SaveSelectedImagesAsMultiPageTIFF()`](#saveselectedimagesasmultipagetiff)| [`SaveAllAsMultiPageTIFF()`](#saveallasmultipagetiff) | 
+|[`SaveAllAsPDF()`](#saveallaspdf) |[`ShareImages()`](#shareimages)|
 
 **Other Methods**
 
