@@ -845,8 +845,7 @@ permalink: /info/api/
 | [`HTTPUploadAllThroughPostAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#httpuploadallthroughpostasmultipagetiff) | [`HTTPUploadAllThroughPostAsPDF()`]({{site.info}}api/WebTwain_IO.html#httpuploadallthroughpostaspdf)       | [`HTTPUploadThroughPostAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostasmultipagepdf) |
 |[`HTTPUploadThroughPostAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostasmultipagetiff) |  [`SaveAsBMP()`]({{site.info}}api/WebTwain_IO.html#saveasbmp)   | [`SaveAsJPEG()`]({{site.info}}api/WebTwain_IO.html#saveasjpeg) | 
 |[`SaveAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveaspdf) | [`SaveAsPNG()`]({{site.info}}api/WebTwain_IO.html#saveaspng)|[`SaveAsTIFF()`]({{site.info}}api/WebTwain_IO.html#saveastiff)| 
-|[`SaveSelectedImagesAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagepdf) | [`SaveSelectedImagesAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagetiff)     
-|[`SaveAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveallasmultipagetiff)| 
+|[`SaveSelectedImagesAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagepdf) | [`SaveSelectedImagesAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagetiff)|[`SaveAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveallasmultipagetiff)| 
 |[`SaveAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveallaspdf)|[`ShareImages()`]({{site.info}}api/WebTwain_IO.html#shareimages)|   
 
 <!--
