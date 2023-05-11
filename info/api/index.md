@@ -844,11 +844,9 @@ permalink: /info/api/
 | [`HTTPUploadThroughPutEx()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughputex)  | [`HTTPUploadThroughPost()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpost)  | [`HTTPUploadThroughPostEx()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostex)  |
 | [`HTTPUploadAllThroughPostAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#httpuploadallthroughpostasmultipagetiff) | [`HTTPUploadAllThroughPostAsPDF()`]({{site.info}}api/WebTwain_IO.html#httpuploadallthroughpostaspdf)       | [`HTTPUploadThroughPostAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostasmultipagepdf) |
 |[`HTTPUploadThroughPostAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostasmultipagetiff) |  [`SaveAsBMP()`]({{site.info}}api/WebTwain_IO.html#saveasbmp)   | [`SaveAsJPEG()`]({{site.info}}api/WebTwain_IO.html#saveasjpeg) | 
-|[`SaveAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveaspdf) | [`SaveAsPNG()`]({{site.info}}api/WebTwain_IO.html#saveaspng)                                                     |
- [`SaveAsTIFF()`]({{site.info}}api/WebTwain_IO.html#saveastiff)                                                           | 
- |[`SaveSelectedImagesAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagepdf) | [`SaveSelectedImagesAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagetiff)     
-| [`SaveAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveallasmultipagetiff)                                   | 
-|[`SaveAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveallaspdf)                                         |[`ShareImages()`]({{site.info}}api/WebTwain_IO.html#shareimages)   
+|[`SaveAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveaspdf) | [`SaveAsPNG()`]({{site.info}}api/WebTwain_IO.html#saveaspng)|[`SaveAsTIFF()`]({{site.info}}api/WebTwain_IO.html#saveastiff)| 
+|[`SaveSelectedImagesAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagepdf) | [`SaveSelectedImagesAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagetiff)|[`SaveAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveallasmultipagetiff)| 
+|[`SaveAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveallaspdf)|[`ShareImages()`]({{site.info}}api/WebTwain_IO.html#shareimages)|   
 
 <!--
 * [`ConvertToBase64()`]({{site.info}}api/WebTwain_IO.html#converttobase64)
