@@ -21,8 +21,8 @@ permalink: /info/schedule/Stable.html
 
 
 #### Optimized Android Service for document scanning from Android devices
-- The <a href="https://demo.dynamsoft.com/DWT/Resources/dist/DynamsoftServiceSetup.apk" target="_blank">Android service</a> is available now. <!--Google Play Store.-->
-- Expanded the capabilities of the Android platform. <!--See the APIs supported on Android service. -->
+- The Android service is available on <a href="https://play.google.com/store/apps/details?id=com.dynamsoft.mobilescan" target="_blank">Google Play Store</a>.
+- Expanded the capabilities of the Android platform. See <a href="https://www.dynamsoft.com/web-twain/docs/info/api/#android" target="_blank">the APIs supported on Android service</a>.
 
 #### Remote Scan
 - The remote scan solution powered by Dynamic Web TWAIN is now officially available. With it, you can turn any of your tranditional document scanners into a network-able scanner and allow your end users to use it without installing anything on the client device. Read <a href="https://www.dynamsoft.com/remote-scan/docs/introduction/" target="_blank">this documentation</a> to learn how the Remote Scan solution works.
