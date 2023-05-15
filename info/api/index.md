@@ -447,8 +447,8 @@ permalink: /info/api/
 
 | |
 |:-|:-|
-|[`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)| [`SetLanguage()`]({{site.info}}api/WebTwain_Util.html#setlanguage)|
-|[`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)|
+| [`isUsingActiveX()`]({{site.info}}api/WebTwain_Util.html#isusingactivex) |[`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)  | [`SetLanguage()`]({{site.info}}api/WebTwain_Util.html#setlanguage)|
+| [`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata) |
 
 <!--
 * [`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) 
@@ -940,7 +940,8 @@ permalink: /info/api/
 
 | |
 |:-|:-|
-|[`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)|[`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)|
+| [`isUsingActiveX()`]({{site.info}}api/WebTwain_Util.html#isusingactivex) |[`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)|
+|[`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)|
 
 <!--
 * [`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) 
