@@ -23,8 +23,8 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 |                                                                        |
 | :--------------------------------------------------------------------- | :------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| [`isUsingActiveX()`]({{site.info}}api/WebTwain_Util.html#isusingactivex) |[`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)                   | [`SetLanguage()`]({{site.info}}api/WebTwain_Util.html#setlanguage)     |
-| [`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata) |
+| [`isUsingActiveX()`](#isusingactivex) |[`RegisterEvent()`](#registerevent) | [`UnregisterEvent()`](#unregisterevent)                   | [`SetLanguage()`](#setlanguage)     |
+| [`GenerateURLForUploadData()`](#generateurlforuploaddata) |
 
 **Properties**
 
@@ -43,8 +43,8 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 |                                                                        |
 | :--------------------------------------------------------------------- | :------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| [`isUsingActiveX()`]({{site.info}}api/WebTwain_Util.html#isusingactivex) |[`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)|
-|[`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)|
+| [`isUsingActiveX()`](#isusingactivex) |[`RegisterEvent()`](#registerevent) | [`UnregisterEvent()`](#unregisterevent)|
+|[`GenerateURLForUploadData()`](#generateurlforuploaddata)|
 
 **Properties**
 
