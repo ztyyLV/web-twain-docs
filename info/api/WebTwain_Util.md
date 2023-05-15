@@ -23,7 +23,7 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 |                                                                        |
 | :--------------------------------------------------------------------- | :------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| [`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)                   | [`SetLanguage()`]({{site.info}}api/WebTwain_Util.html#setlanguage)     |
+| [`isUsingActiveX()`]({{site.info}}api/WebTwain_Util.html#isusingactivex) |[`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)                   | [`SetLanguage()`]({{site.info}}api/WebTwain_Util.html#setlanguage)     |
 | [`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata) |
 
 **Properties**
@@ -43,7 +43,8 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 |                                                                        |
 | :--------------------------------------------------------------------- | :------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| [`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)                   | [`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata) |
+| [`isUsingActiveX()`]({{site.info}}api/WebTwain_Util.html#isusingactivex) |[`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)|
+|[`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)|
 
 **Properties**
 
