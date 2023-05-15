@@ -82,10 +82,10 @@ isUsingActiveX(): boolean;
 
 <tr>
 <td align="center">all versions </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">all versions </td>
+<td align="center">all versions </td>
+<td align="center">all versions </td>
+<td align="center">all versions </td>
 </tr>
 
 </table>
