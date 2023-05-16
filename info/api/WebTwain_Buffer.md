@@ -1805,7 +1805,7 @@ Action types include
 - `add`: New pages are added to the buffer.
 - `remove`: The existing pages are removed.
 - `modify`: The existing pages are modified.
-- `shift`: The existing pages are reordered.
+- `shift`: The existing pages are reordered or the selected pages are changed.
 - `filter`: The existing pages are filtered by a tag.
 
 ---
