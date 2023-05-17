@@ -203,9 +203,4 @@ If you have installed `DWT` and have configured a valid `ProductKey` . You will 
 
 You should be able to open a file or capture an image.
 
-## Official Samples
-
-Check out the following sample project:
-
-* [dwt-vue](https://github.com/Dynamsoft/web-twain-vue-advanced)
 

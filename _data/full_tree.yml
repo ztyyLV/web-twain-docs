@@ -51,6 +51,8 @@ tree_list:
         path: /indepth/development/react.html
       - name: Use Web TWAIN in Vue
         path: /indepth/development/vue.html
+      - name: Use Web TWAIN in Vue 3
+        path: /indepth/development/vue3.html
       - name: Simple Demo
         path: https://www.dynamsoft.com/web-twain/resources/code-gallery/
   - name: API Reference
