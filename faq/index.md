@@ -361,6 +361,8 @@ permalink: /faq/
 <li><a href="{{site.faq}}type-error-appendchild.html">Error Message - Uncaught TypeError: Cannot read properties of null (reading 'appendChild') or Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'</a></li>
 
 <li><a href="{{site.faq}}error-message-user-cancelled-the-operation.html">Error Message - User cancelled the operation</a></li>
+
+<li><a href="{{site.faq}}the-loading-bar-keeps-spinning-when-capture-the-image-with-iphone.html">The loading bar keeps spinning when capture the image with iPhone.</a></li>
  </ol>
 
 ## Licensing and Purchase
