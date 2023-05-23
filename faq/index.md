@@ -92,6 +92,9 @@ permalink: /faq/
 <li><a href="{{site.faq}}scanner-not-shown-or-not-responding-in-the browser.html">Why is my scanner not shown or not responding in the browser?</a></li>
 
 <li><a href="{{site.faq}}download-virtual-scanner-for-testing.html">Download virtual scanner for testing</a></li>
+
+<li><a href="{{site.faq}}use-wia-insteadof-wiatwain.html">How to use pure WIA source instead of WIATWAIN source from version 18.2?</a></li>
+
 </ol>
 
 ## Image Viewer
