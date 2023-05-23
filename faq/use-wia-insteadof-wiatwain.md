@@ -27,7 +27,7 @@ WIA offers standardized hardware compatibility and a stable driver environment, 
 ### Difference between WIASCANNER and WIATWAINSCANNER
 
 
-We add a new Enumaration `WIASCANNER` to [Dynamsoft.DWT.EnumDWT_DeviceType](https://www.dynamsoft.com/web-twain/docs/info/api/Dynamsoft_Enum.html?ver=latest&&cVer=true#dynamsoftdwtenumdwt_devicetype) to support WIA protocol. There is another Enumaration named `WIATWAINSCANNER` which is a WIA Source mapped through the TWAIN protocol after packaging by Microsoft and it was used to support WIA in the previous version.
+We add a new Enumaration `WIASCANNER` to [Dynamsoft.DWT.EnumDWT_DeviceType](https://www.dynamsoft.com/web-twain/docs/info/api/Dynamsoft_Enum.html?ver=latest&&cVer=true#dynamsoftdwtenumdwt_devicetype) to support WIA protocol. There is another Enumaration named `WIATWAINSCANNER` which represents WIA source mapped through the TWAIN protocol after packaging by Microsoft and it was used to support WIA sources in the previous version.
 
 If you are using `WIATWAINSCANNER` before and would like to use `WIASCANNER` from version 18.2 instead, you need to modify the APIs used in your code accordingly.
 
