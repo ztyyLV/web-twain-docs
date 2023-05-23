@@ -39,14 +39,11 @@ interface Device  {
 
 ## DeviceObject.acquireImage()
 
+Scan documents into another DWObject control. Supports eSCL scanners and all other scanners with limited capabilities.
+
 **Syntax**
 
 ```typescript
-/**
- * Scan documents into another DWObject control. Supports eSCL scanners and all other scanners with limited capabilities.
- * @param deviceConfiguration The device configuration
- * @param sendTo The DWObject control to scan into
- */
 acquireImage(deviceConfiguration: DeviceConfiguration | null, sendTo: WebTwain): Promise< boolean>;
 
 interface DeviceConfiguration {
@@ -64,17 +61,11 @@ interface DeviceConfiguration {
 }
 ```
 
-**Example**
+**Parameters**
 
-```javascript
-DWObject.GetDevicesAsync().then((deviceList)=>{
-  return deviceList[0].acquireImage({},DWObject)  
-}).then((result)=>{
-    console.log(result)
-}).catch((e)=>{
-    console.error(e)
-})
-```
+`deviceConfiguration`: The device configuration
+
+`sendTo`: The DWObject control to scan into
 
 **Availability**
 <div class="availability">
@@ -86,8 +77,6 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -96,9 +85,19 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
-<td align="center">not supported</td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
 </div>
+
+**Example**
+
+```javascript
+DWObject.GetDevicesAsync().then((deviceList)=>{
+  return deviceList[0].acquireImage({},DWObject)  
+}).then((result)=>{
+    console.log(result)
+}).catch((e)=>{
+    console.error(e)
+})
+```

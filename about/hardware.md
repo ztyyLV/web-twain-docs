@@ -12,11 +12,14 @@ permalink: /getstarted/hardware.html
 
 Dynamic Web TWAIN's main feature is interacting with imaging devices like scanners and cameras. In this section, we'll look at the supported devices.
 
-- [TWAIN Scanners](#twain-scanners)
-- [ICA Scanners](#ica-scanners)
-- [SANE Scanners](#sane-scanners)
-- [DirectShow Cameras](#directshow-cameras)
-- [MediaDevices Cameras](#mediadevices-cameras)
+- [Imaging Hardware](#imaging-hardware)
+  - [TWAIN Scanners](#twain-scanners)
+    - [Facts about TWAIN](#facts-about-twain)
+  - [ICA Scanners](#ica-scanners)
+    - [Facts about ICA](#facts-about-ica)
+  - [SANE Scanners](#sane-scanners)
+    - [Facts about SANE](#facts-about-sane)
+  - [DirectShow Cameras](#directshow-cameras)
 
 ## TWAIN Scanners
 
@@ -73,11 +76,3 @@ See more: <a href="{{site.faq}}how-to-test-if-your-device-is-SANE-compliant.html
 `DirectShow Cameras` refer to the cameras which can be accessed via the [Microsoft DirectShow architecture](https://docs.microsoft.com/en-us/windows/win32/directshow/introduction-to-directshow). These cameras are either built into desktops / laptops or connected via USB.
 
 See more: <a href="{{site.faq}}how-to-test-if-your-camera-is-DirectShow-compliant.html" target="_blank">Is my Camera DirectShow Compliant?</a>  
-
-## MediaDevices Cameras
-
-`MediaDevices Cameras` refers to the cameras accessible via the [MediaDevices interface](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices). These cameras are either built into desktops/laptops/mobile devices, including phones and tablets, or connected via USB.
-
-> `DirectShow Cameras` and `MediaDevices Cameras` could refer to the same devices which can be accessed either way.
-
-See more:  <a href="{{site.faq}}how-to-test-if-your-camera-is-MediaDevices-compliant.html" target="_blank">Is my Camera MediaDevices Compliant?</a> 

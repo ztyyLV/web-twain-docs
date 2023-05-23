@@ -8,9 +8,17 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 permalink: /info/api/WebTwain_Acquire.html
 ---
 
+
 # {WebTwainObject} Scan
 
 > The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance).
+
+<div class="multi-panel-switching-prefix"></div>
+
+- [Desktop Service](#desktop) 
+- [Android Service](#android) 
+
+<div class="multi-panel-start"></div>
 
 **1. The following APIs are compatible with TWAIN, ICA, SANE (Windows, macOS and Linux)** 
 
@@ -78,63 +86,56 @@ permalink: /info/api/WebTwain_Acquire.html
 | :------------------------------------ |
 | [`OnSourceUIClose`](#onsourceuiclose) |
 
+<div class="multi-panel-end">
+
+</div><div class="multi-panel-start"></div>
+
+>The Android Service Edition only supports a subset of the APIs available in the Desktop Service Edition. For the APIs that are compatible with both editions, the usage remains the same. To learn how to use the APIs, please refer to the documentation for the Desktop Service Edition.
+
+**Methods**
+
+|                                                     |
+| :-------------------------------------------------- | :---------------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------- |
+| [`SelectSourceAsync()`](#selectsourceasync)  | [`CloseSourceAsync()`](#closesourceasync)  | [`GetDevicesAsync()`](#getdevicesasync)   | [`SelectDeviceAsync()`](#selectdeviceasync)                   |
+| [`AcquireImageAsync()`](#acquireimageasync)   |[`getCapabilities()`](#getcapabilities) | [`setCapabilities()`](#setcapabilities) |
+
+**Events**
+
+|                                       |
+| :------------------------------------ |
+| [`OnPostTransferAsync`](#onposttransferasync)  |
+
+<div class="multi-panel-end"></div>
+
+
 ---
 
 ## AcquireImage
 
+Start image acquisition.
+
 **Syntax**
-
-```typescript
-/**
- * Start image acquisition.
- * @param deviceConfiguration Configuration for the acquisition.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
-AcquireImage(
-    deviceConfiguration?: DeviceConfiguration
-): void;
-```
-
-```typescript
-
-AcquireImage(
-    successCallBack?: () => void,
-    failureCallBack?: (
-        errorCode: number,
-        errorString: string) => void
-): void;
-```
 
 ```typescript
 AcquireImage(
     deviceConfiguration?: DeviceConfiguration,
     successCallBack?: () => void,
-    failureCallBack?: (
-        deviceConfiguration?: DeviceConfiguration,
-        errorCode: number,
-        errorString: string) => void
+    failureCallBack?: (deviceConfiguration?: DeviceConfiguration, errorCode: number, errorString: string) => void
 ): void;
-
-interface DeviceConfiguration {
-    IfShowUI?: boolean; //Whether to show the built-in User Interface from the device vendor
-    PixelType?: Dynamsoft.DWT.EnumDWT_PixelType | number | string; //Whether to scan in color, grey or black & white
-    Resolution?: number; //Measured by dots per pixel (DPI)
-    IfFeederEnabled?: boolean; //Whether to use the document feeder or the flatbed of the device
-    IfDuplexEnabled?: boolean; //Whether to scan one side or both sides
-    IfDisableSourceAfterAcquire?: boolean; //Whether to close the built-in User Interface after aquisition. Only valid when {IfShowUI} is true.
-    IfGetImageInfo?: boolean; //Whether to retrieve information about the image after it's transferred.
-    IfGetExtImageInfo?: boolean; //Whether to retrieve extended information about the image after it's transferred.
-    extendedImageInfoQueryLevel?: Dynamsoft.DWT.EnumDWT_ExtImageInfo | number; //How much extended information is retrieved. Only valid when {IfGetExtImageInfo} is true.
-    SelectSourceByIndex?: number; //Specify a source by its index.
-    IfCloseSourceAfterAcquire?: boolean; //Whether to close the data source after aquisition. Default: false.
-}
-}
 ```
 
+**Parameters**
+
+`deviceConfiguration`: Configuration for the acquisition. Please refer to [DeviceConfiguration]({{site.info}}api/Interfaces.html#DeviceConfiguration).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -144,8 +145,6 @@ interface DeviceConfiguration {
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -154,8 +153,6 @@ interface DeviceConfiguration {
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -249,10 +246,6 @@ If it's set to 1, the following will also be retrieved (if available):
 
 If it's set to 2, then besides what's mentioned in the two tables above, the Dynamic Web TWAIN library will also try to query the scanner for its own custom extended image info.
 
-- Remote Scan
-
-  When [scanning remotely]({{site.indepth}}features/input.html#scan-from-a-remote-scanner), if the method is called without any parameter, do not forget to set [ `IfShowUI` ](#ifshowui) to `false` .
-
 **Example**
 
 > The example code shows 4 ways to use the API `AcquireImage()`
@@ -327,16 +320,16 @@ function AcquireImage4() {
 
 ## CloseSource
 
+Close the data source (a TWAIN/ICA/SANE device which in most cases is a scanner) to free it to be used by other applications.
+
 **Syntax**
 
 ```typescript
-/**
- * Close the data source (a TWAIN/ICA/SANE device which in most cases is a scanner) to free it to be used by other applications.
- */
 CloseSource(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -346,8 +339,6 @@ CloseSource(): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -356,27 +347,43 @@ CloseSource(): boolean;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
 </div>
 
+**Example**
+
+```javascript
+// Close the scanner source in the success/failure callback after all images are acquired. In this case, the source can be freed and used by others.
+DWObject.OpenSource();
+DWObject.AcquireImage(successCallback,failureCallback);
+
+function successCallback() {
+  console.log("successful");
+  DWObject.CloseSource();
+}
+
+function failureCallback(errorCode, errorString) {
+  alert(errorString);
+  DWObject.CloseSource();
+}
+```
+
 ---
 
 ## CloseSourceAsync
 
+Close the data source (a TWAIN/ICA/SANE device which in most cases is a scanner) to free it to be used by other applications.
+
 **Syntax**
 
 ```typescript
-/**
- * Close the data source (a TWAIN/ICA/SANE device which in most cases is a scanner) to free it to be used by other applications.
- */
 CloseSourceAsync(): Promise<boolean>;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -386,7 +393,6 @@ CloseSourceAsync(): Promise<boolean>;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -396,8 +402,7 @@ CloseSourceAsync(): Promise<boolean>;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
-<td align="center">not supported</td>
-<td align="center">v18.0+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -407,16 +412,16 @@ CloseSourceAsync(): Promise<boolean>;
 
 ## DisableSource
 
+Disable the data source (a TWAIN/ICA/SANE device which in most cases is a scanner) to stop the acquiring process. If the data source's user interface is displayed, it will be closed.
+
 **Syntax**
 
 ```typescript
-/**
- * Disable the data source (a TWAIN/ICA/SANE device which in most cases is a scanner) to stop the acquiring process. If the data source's user interface is displayed, it will be closed.
- */
 DisableSource(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -426,8 +431,6 @@ DisableSource(): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -436,8 +439,6 @@ DisableSource(): boolean;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -451,16 +452,16 @@ After `DisableSource()` is called, the Source is still open and you can continue
 
 ## EnableSource
 
+Enable the data source to start the acquiring process.
+
 **Syntax**
 
 ```typescript
-/**
- * Enable the data source to start the acquiring process.
- */
 EnableSource(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -470,8 +471,6 @@ EnableSource(): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -480,8 +479,6 @@ EnableSource(): boolean;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -495,23 +492,27 @@ The method is equivalent to `AcquireImage()` without parameters.
 
 ## EnableSourceUI
 
+Display the TWAIN source's built-in user interface.
+
 **Syntax**
 
 ```typescript
-/**
- * Display the TWAIN source's built-in user interface.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- */
 EnableSourceUI(
     successCallBack: () => void,
-    failureCallBack: (
-        errorCode: number,
-        errorString: string) => void
+    failureCallBack: (errorCode: number, errorString: string) => void
 ): void;
 ```
 
+**Parameters**
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -521,8 +522,6 @@ EnableSourceUI(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -531,8 +530,6 @@ EnableSourceUI(
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -546,16 +543,16 @@ This method enables the user to manipulate the settings for scanning but not sta
 
 ## OpenSource
 
+Load a data source to get it ready to acquire images.
+
 **Syntax**
 
 ```typescript
-/**
- * Load a data source to get it ready to acquire images.
- */
 OpenSource(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -565,8 +562,6 @@ OpenSource(): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -575,27 +570,34 @@ OpenSource(): boolean;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
 </div>
 
+**Example**
+
+```javascript
+DWObject.GetSourceNames(); // for example ['PaperStream IP fi-7300NX Net', 'TWAIN2 FreeImage Software Scanner']
+DWObject.SelectSourceByIndex(0); // choose scanner with the name "PaperStream IP fi-7300NX Net"
+DWObject.OpenSource();
+DWObject.AcquireImage();
+```
+
 ---
 
 ## OpenSourceAsync
 
+Load a data source to get it ready to acquire images.
+
 **Syntax**
 
 ```typescript
-/**
- * Load a data source to get it ready to acquire images.
- */
 OpenSourceAsync(): Promise<boolean>;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -605,8 +607,6 @@ OpenSourceAsync(): Promise<boolean>;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -615,8 +615,6 @@ OpenSourceAsync(): Promise<boolean>;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -626,14 +624,12 @@ OpenSourceAsync(): Promise<boolean>;
 
 ## GetSourceNames
 
+Return all available data sources (scanners, etc.) and optionally all detailed information about them.
+
 **Syntax**
 
 ```typescript
-/**
- * Return all available data sources (scanners, etc.) and optionally all detailed information about them.
- * @param bIncludeDetails Whether to return more details about the data sources or just their names.
- */
-GetSourceNames(bIncludeDetails: boolean): string[] | SourceDetails[];
+GetSourceNames(bIncludeDetails?: boolean): string[] | SourceDetails[];
 
 interface SourceDetails {
     /**
@@ -687,7 +683,12 @@ interface Version {
 }
 ```
 
+**Parameters**
+
+`bIncludeDetails`: Whether to return more details about the data sources or just their names.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -697,8 +698,6 @@ interface Version {
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -707,27 +706,35 @@ interface Version {
 <td align="center">v15.3+</td>
 <td align="center">v15.3+</td>
 <td align="center">v15.3+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
 </div>
+
+**Example**
+
+```javascript
+DWObject.GetSourceNames(); // return a list of scanner sources such as ['PaperStream IP fi-7300NX Net', 'TWAIN2 FreeImage Software Scanner']
+```
+
 ---
 
 ## GetSourceNamesAsync
 
+Return all available data sources (scanners, etc.) and optionally all detailed information about them.
+
 **Syntax**
 
 ```typescript
-/**
- * Return all available data sources (scanners, etc.) and optionally all detailed information about them.
- * @param bIncludeDetails Whether to return more details about the data sources or just their names.
- */
 GetSourceNamesAsync(bIncludeDetails: boolean): Promise<string[] | ISourceDetails[]>;
 ```
 
+**Parameters**
+
+`bIncludeDetails`: Whether to return more details about the data sources or just their names.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -737,8 +744,6 @@ GetSourceNamesAsync(bIncludeDetails: boolean): Promise<string[] | ISourceDetails
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -747,8 +752,6 @@ GetSourceNamesAsync(bIncludeDetails: boolean): Promise<string[] | ISourceDetails
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -758,23 +761,27 @@ GetSourceNamesAsync(bIncludeDetails: boolean): Promise<string[] | ISourceDetails
 
 ## SelectSource
 
+Bring up the Source Selection User Interface (UI) for the user to choose a data source.
+
 **Syntax**
 
 ```typescript
-/**
- * Bring up the Source Selection User Interface (UI) for the user to choose a data source.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 SelectSource(
     successCallBack?: () => void,
     failureCallBack?: (errorCode: number, errorString: string) => void
 ): boolean | void;
 ```
 
+**Parameters**
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -784,8 +791,6 @@ SelectSource(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -794,8 +799,6 @@ SelectSource(
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v14.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -805,7 +808,6 @@ SelectSource(
 
 - It's recommended to use this API asynchronously by pass arguments to the parameters `successCallback` and `failureCallback`.
 - On `Windows` and `Windows` only, you can call this method with no arguments so that it runs synchronously and return a boolean value.
-- When [scanning remotely]({{site.indepth}}features/input.html#scan-from-a-remote-scanner), this method must be called asynchronously.
 
 **Example**
 
@@ -835,7 +837,7 @@ SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promi
 
 **Parameters**
 
-`deviceType`: Specify the device type of scanners. Please refer to [EnumDWT_DeviceType]({{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_devicetype).
+`deviceType`: Specify the device type of scanners. Please refer to [EnumDWT_DeviceType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_devicetype).
 
 **Availability**
 <div class="availability">
@@ -847,7 +849,6 @@ SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promi
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -857,13 +858,11 @@ SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promi
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
-<td align="center">not supported</td>
-<td align="center">v18.0+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
 </div>
----
 
 **Example**
 
@@ -878,19 +877,24 @@ DWObject.SelectSourceAsync()
   });
 ```
 
+---
+
 ## SelectSourceByIndex
+
+Select a data source by its index.
 
 **Syntax**
 
 ```typescript
-/**
- * Select a data source by its index.
- * @param index The index of the data source.
- */
 SelectSourceByIndex(index: number): boolean;
 ```
 
+**Parameters**
+
+`index`: The index of the data source.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -900,8 +904,6 @@ SelectSourceByIndex(index: number): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -910,8 +912,6 @@ SelectSourceByIndex(index: number): boolean;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -920,7 +920,8 @@ SelectSourceByIndex(index: number): boolean;
 **Example**
 
 ```javascript
-DWObject.SelectSourceByIndex(0);
+DWObject.GetSourceNames(); // for example ['PaperStream IP fi-7300NX Net', 'TWAIN2 FreeImage Software Scanner']
+DWObject.SelectSourceByIndex(0); // choose scanner with the name "PaperStream IP fi-7300NX Net"
 DWObject.OpenSource();
 DWObject.AcquireImage();
 ```
@@ -929,17 +930,20 @@ DWObject.AcquireImage();
 
 ## SelectSourceByIndexAsync
 
+Select a data source by its index.
+
 **Syntax**
 
 ```typescript
-/**
- * Select a data source by its index.
- * @param index The index of the data source.
- */
 SelectSourceByIndexAsync(index: number): Promise<boolean>;
 ```
 
+**Parameters**
+
+`index`: The index of the data source.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -949,8 +953,6 @@ SelectSourceByIndexAsync(index: number): Promise<boolean>;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -959,8 +961,6 @@ SelectSourceByIndexAsync(index: number): Promise<boolean>;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -982,17 +982,20 @@ DWObject.SelectSourceByIndexAsync(0)
 
 ## SetOpenSourceTimeout
 
+Sets a timer which stops the data source opening process once it expires.
+
 **Syntax**
 
 ```typescript
-/**
- * Sets a timer which stops the data source opening process once it expires.
- * @param duration Define the duration of the timer (in milliseconds).
- */
 SetOpenSourceTimeout(duration: number): boolean;
 ```
 
+**Parameters**
+
+`duration`: Define the duration of the timer (in milliseconds).
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1002,8 +1005,6 @@ SetOpenSourceTimeout(duration: number): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1012,8 +1013,6 @@ SetOpenSourceTimeout(duration: number): boolean;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1023,7 +1022,7 @@ SetOpenSourceTimeout(duration: number): boolean;
 
 ```javascript
 DWObject.SelectSource(function () {
-  DWObject.SetOpenSourceTimeout(3000);
+  DWObject.SetOpenSourceTimeout(3000); // stop the opening process if the source cannot be opened within 3000 ms.
   DWObject.OpenSource();
   DWObject.AcquireImage();
 });
@@ -1033,13 +1032,11 @@ DWObject.SelectSource(function () {
 
 ## startScan
 
+Start the acquisition by passing all settings at once.
+
 **Syntax**
 
 ```typescript
-/**
- * Start the acquisition by passing all settings at once.
- * @param scanSetup Configuration for the acquisition.
- */
 startScan(scanSetup: ScanSetup): Promise<IScanSetup>;
 
 interface ScanSetup {
@@ -1303,7 +1300,12 @@ interface ScanSetup {
 }
 ```
 
+**Parameters**
+
+`scanSetup`: Configuration for the acquisition.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1313,8 +1315,6 @@ interface ScanSetup {
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1323,8 +1323,6 @@ interface ScanSetup {
 <td align="center">v15.1+</td>
 <td align="center">v15.1+</td>
 <td align="center">v15.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1338,12 +1336,11 @@ interface ScanSetup {
 
 ## CancelAllPendingTransfers
 
+Cancels all pending transfers.
+
 **Syntax**
 
 ```typescript
-/**
- * Cancels all pending transfers.
- */
 CancelAllPendingTransfers(): boolean;
 ```
 
@@ -1357,8 +1354,6 @@ CancelAllPendingTransfers(): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1367,8 +1362,6 @@ CancelAllPendingTransfers(): boolean;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1382,16 +1375,16 @@ This method is only valid in the events [OnPreAllTransfers](#onprealltransfers),
 
 ## CloseSourceManager
 
+Closes and unloads Data Source Manager.
+
 **Syntax**
 
 ```typescript
-/**
- * Closes and unloads Data Source Manager.
- */
 CloseSourceManager(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1401,8 +1394,6 @@ CloseSourceManager(): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1411,26 +1402,31 @@ CloseSourceManager(): boolean;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
 </div>
+
+**Example**
+
+```javascript
+DWObject.CloseSourceManager();
+```
+
 ---
 
 ## CloseSourceManagerAsync
 
+Closes and unloads Data Source Manager.
+
 **Syntax**
 
 ```typescript
-/**
- * Closes and unloads Data Source Manager.
- */
 CloseSourceManagerAsync(): Promise<boolean>;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1440,8 +1436,6 @@ CloseSourceManagerAsync(): Promise<boolean>;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1450,8 +1444,6 @@ CloseSourceManagerAsync(): Promise<boolean>;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1461,16 +1453,16 @@ CloseSourceManagerAsync(): Promise<boolean>;
 
 ## CloseWorkingProcess
 
+Closes the scanning process to release resources on the machine.
+
 **Syntax**
 
 ```typescript
-/**
- * Closes the scanning process to release resources on the machine.
- */
 CloseWorkingProcess(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1480,8 +1472,6 @@ CloseWorkingProcess(): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1490,8 +1480,6 @@ CloseWorkingProcess(): boolean;
 <td align="center">v11.2+</td>
 <td align="center">v11.2+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1505,16 +1493,16 @@ In the HTML5 edition, Dynamic Web TWAIN uses a separate process to communicate w
 
 ## FeedPage
 
+Ejects the current page and begins scanning the next page in the document feeder.
+
 **Syntax**
 
 ```typescript
-/**
- * Ejects the current page and begins scanning the next page in the document feeder.
- */
 FeedPage(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1524,8 +1512,6 @@ FeedPage(): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1534,8 +1520,6 @@ FeedPage(): boolean;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1549,17 +1533,20 @@ Use this method after [OpenSource()](#opensource) is called and make sure [IfFee
 
 ## GetCustomDSData
 
+Get the custom data source data and saves the data in a specified file.
+
 **Syntax**
 
 ```typescript
-/**
- * Get the custom data source data and saves the data in a specified file.
- * @param fileName The path of the file to save the data source data to.
- */
 GetCustomDSData(fileName: string): boolean;
 ```
 
+**Parameters**
+
+`fileName`: The path of the file to save the data source data to.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1569,8 +1556,6 @@ GetCustomDSData(fileName: string): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1579,33 +1564,36 @@ GetCustomDSData(fileName: string): boolean;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
 </div>
 
+**Usage notes**
+
+Typically, the data source data file is set by the method [SetCustomDSData()](#setcustomdsdata).
+
 **Example**
 
 ```javascript
-DWObject.GetCustomDSData("C:\\customDSData");
+// Please note, the API only works for TWAIN driver.
+DWObject.GetCustomDSData("C:\\Users\\UserName\\Desktop\\ProfileName");
 ```
 
 ---
 
 ## GetCustomDSDataEx
 
+Gets custom DS data and returns it in a base64 string.
+
 **Syntax**
 
 ```typescript
-/**
- * Gets custom DS data and returns it in a base64 string.
- */
 GetCustomDSDataEx(): string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1615,8 +1603,6 @@ GetCustomDSDataEx(): string;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1625,28 +1611,40 @@ GetCustomDSDataEx(): string;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
 </div>
 
+**Usage notes**
+
+Typically, the data source data file is set by the method [SetCustomDSDataEx()](#setcustomdsdataex).
+
+**Example**
+
+```javascript
+// Please note, the API only works for TWAIN driver.
+DWObject.GetCustomDSDataEx(); // Return a base64 string
+```
+
 ---
 
 ## GetSourceNameItems
 
+Get the name of a data source by its index in data source manager source list.
+
 **Syntax**
 
 ```typescript
-/**
- * Get the name of a data source by its index in data source manager source list.
- * @param index The index of the data source.
- */
 GetSourceNameItems(index: number): string;
 ```
 
+**Parameters**
+
+`index`: The index of the data source.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1656,8 +1654,6 @@ GetSourceNameItems(index: number): string;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1666,27 +1662,32 @@ GetSourceNameItems(index: number): string;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
 </div>
 
+**Example**
+
+```javascript
+DWObject.GetSourceNames(); // [scanner 1, scanner 2, scanner 3...]
+DWObject.GetSourceNameItems(0); // return the name of scanner 1
+```
+
 ---
 
 ## OpenSourceManager
 
+Load and open data source manager.
+
 **Syntax**
 
 ```typescript
-/**
- * Load and open data source manager.
- */
 OpenSourceManager(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1696,8 +1697,6 @@ OpenSourceManager(): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1706,8 +1705,6 @@ OpenSourceManager(): boolean;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1717,16 +1714,21 @@ OpenSourceManager(): boolean;
 
 If application identification needs to be set, it should be set before this API.
 
+**Example**
+
+```javascript
+DWObject.OpenSourceManager(); 
+```
+
 ---
 
 ## OpenSourceManagerAsync
 
+Load and open data source manager.
+
 **Syntax**
 
 ```typescript
-/**
- * Load and open data source manager.
- */
 OpenSourceManagerAsync(): Promise<boolean>;
 ```
 
@@ -1740,8 +1742,6 @@ OpenSourceManagerAsync(): Promise<boolean>;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1750,8 +1750,6 @@ OpenSourceManagerAsync(): Promise<boolean>;
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1765,16 +1763,16 @@ If application identification needs to be set, it should be set before this API.
 
 ## ResetImageLayout
 
+Reset the image layout in the data source.
+
 **Syntax**
 
 ```typescript
-/**
- * Reset the image layout in the data source.
- */
 ResetImageLayout(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1784,8 +1782,6 @@ ResetImageLayout(): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1794,8 +1790,6 @@ ResetImageLayout(): boolean;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1809,16 +1803,16 @@ To set the image layout manually, you can use [SetImageLayout()](#setimagelayout
 
 ## RewindPage
 
+If called while {IfFeederEnabled} property is true, the data source will return the current page to the input area and return the last page from the output area into the acquisition area.
+
 **Syntax**
 
 ```typescript
-/**
- * If called while {IfFeederEnabled} property is true, the data source will return the current page to the input area and return the last page from the output area into the acquisition area.
- */
 RewindPage(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1828,8 +1822,6 @@ RewindPage(): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1838,8 +1830,6 @@ RewindPage(): boolean;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1853,17 +1843,20 @@ Use this method after [OpenSource()](#opensource) method and make sure [IfFeeder
 
 ## SetCustomDSData
 
+Sets custom data source data to be used for scanning, the data is stored in a file which can be regarded as a scanning profile.
+
 **Syntax**
 
 ```typescript
-/**
- * Sets custom data source data to be used for scanning, the data is stored in a file which can be regarded as a scanning profile.
- * @param fileName The path  of the file.
- */
 SetCustomDSData(fileName: string): boolean;
 ```
 
+**Parameters**
+
+`fileName`: The path  of the file.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1873,8 +1866,6 @@ SetCustomDSData(fileName: string): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1883,8 +1874,6 @@ SetCustomDSData(fileName: string): boolean;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1894,21 +1883,31 @@ SetCustomDSData(fileName: string): boolean;
 
 Typically, the data source data file is created by the method [GetCustomDSData()](#getcustomdsdata).
 
+**Example**
+
+```javascript
+// Please note, the API only works for TWAIN driver.
+DWObject.SetCustomDSData("C:\\Users\\UserName\\Desktop\\ProfileName");
+```
+
 ---
 
 ## SetCustomDSDataEx
 
+Set custom data source data to be used for scanning, the input is a base64 string.
+
 **Syntax**
 
 ```typescript
-/**
- * Set custom data source data to be used for scanning, the input is a base64 string.
- * @param dsDataString The string that contains custom data source data.
- */
 SetCustomDSDataEx(dsDataString: string): boolean;
 ```
 
+**Parameters**
+
+`dsDataString`: The string that contains custom data source data.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1918,8 +1917,6 @@ SetCustomDSDataEx(dsDataString: string): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1928,8 +1925,6 @@ SetCustomDSDataEx(dsDataString: string): boolean;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1939,25 +1934,34 @@ SetCustomDSDataEx(dsDataString: string): boolean;
 
 Typically the data source data string is created by the method [GetCustomDSDataEx()](#getcustomdsdataex)
 
+```javascript
+// Please note, the API only works for TWAIN driver.
+DWObject.SetCustomDSData("the base64 string of your profile");
+```
+
 ---
 
 ## SetFileXferInfo
 
+Set the file transfer information to be used in File Transfer mode.
+
 **Syntax**
 
 ```typescript
-/**
- * Set the file transfer information to be used in File Transfer mode.
- * @param fileName The path to transfer the file to.
- * @param fileFormat The format of the file.
- */
 SetFileXferInfo(
     fileName: string,
     fileFormat: Dynamsoft.DWT.EnumDWT_FileFormat | number
 ): boolean;
 ```
 
+**Parameters**
+
+`fileName`: The path to transfer the file to.
+
+`fileFormat`: The format of the file.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1967,8 +1971,6 @@ SetFileXferInfo(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1977,8 +1979,6 @@ SetFileXferInfo(
 <td align="center">v11.0+</td>
 <td align="center">v17.0+</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -1994,7 +1994,7 @@ Example argument for the parameter `fileName`
 - "C:\\webtwain" + <> + ".jpg": The scanned images will result in "C:\\webtwain1.jpg", "C:\\webtwain2.jpg", "C:\\webtwain3.jpg", etc.
 - "C:\\webtwain" + <%06d> + ".jpg": The scanned images will result in "C:\\webtwain000001.jpg", "C:\\webtwain000002.jpg", "C:\\webtwain000003.jpg", etc.
 
-Check out the available formats [Dynamsoft.DWT.EnumDWT_FileFormat]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_fileformat-).
+Check out the available formats [Dynamsoft.DWT.EnumDWT_FileFormat]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_fileformat).
 
 **Example**
 
@@ -2002,15 +2002,15 @@ Check out the available formats [Dynamsoft.DWT.EnumDWT_FileFormat]({{site.info}}
 DWObject.OpenSource();
 DWObject.TransferMode = Dynamsoft.DWT.EnumDWT_TransferMode.TWSX_FILE;
 if (DWObject.TransferMode === Dynamsoft.DWT.EnumDWT_TransferMode.TWSX_FILE) {
-  if (
-    DWObject.SetFileXferInfo(
-      "C:\\Temp\\WebTWAIN<%06d>.bmp",
-      Dynamsoft.DWT.EnumDWT_FileFormat.TWFF_BMP
-    )
-  ) {
-    DWObject.IfShowUI = true;
-    DWObject.AcquireImage();
-  }
+    if (
+        DWObject.SetFileXferInfo(
+            "C:\\Temp\\WebTWAIN<%06d>.bmp",
+            Dynamsoft.DWT.EnumDWT_FileFormat.TWFF_BMP
+        )
+    ) {
+          DWObject.IfShowUI = true;
+          DWObject.AcquireImage();
+    }
 }
 ```
 
@@ -2018,16 +2018,11 @@ if (DWObject.TransferMode === Dynamsoft.DWT.EnumDWT_TransferMode.TWSX_FILE) {
 
 ## SetImageLayout
 
+Set the left, top, right, and bottom sides of the image layout rectangle for the current data source. The image layout rectangle defines a frame of the data source's scanning area to be acquired.
+
 **Syntax**
 
 ```typescript
-/**
- * Set the left, top, right, and bottom sides of the image layout rectangle for the current data source. The image layout rectangle defines a frame of the data source's scanning area to be acquired.
- * @param left Specify the rectangle (leftmost coordinate).
- * @param top Specify the rectangle (topmost coordinate).
- * @param right Specify the rectangle (rightmost coordinate).
- * @param bottom Specify the rectangle (bottommost coordinate).
- */
 SetImageLayout(
     left: number,
     top: number,
@@ -2036,7 +2031,18 @@ SetImageLayout(
 ): boolean;
 ```
 
+**Parameters**
+
+`left`: Specify the rectangle (leftmost coordinate).
+
+`top`: Specify the rectangle (topmost coordinate).
+
+`right`: Specify the rectangle (rightmost coordinate).
+
+`bottom`: Specify the rectangle (bottommost coordinate).
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2046,8 +2052,6 @@ SetImageLayout(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2056,8 +2060,6 @@ SetImageLayout(
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2092,16 +2094,16 @@ DWObject.AcquireImage();
 
 ## BitDepth
 
+Return or set the pixel bit depth for the current value of `PixelType` .
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the pixel bit depth for the current value of `PixelType` .
- */
 BitDepth: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2111,8 +2113,6 @@ BitDepth: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2121,8 +2121,6 @@ BitDepth: number;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2138,16 +2136,16 @@ By default, the bit depth is 1 for `TWPT_BW` , 8 for `TWPT_GRAY` and 24 for `TWP
 
 ## IfAppendImage
 
+Return or set whether newly acquired images are inserted or appended.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether newly acquired images are inserted or appended.
- */
 IfAppendImage: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2157,8 +2155,6 @@ IfAppendImage: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2167,8 +2163,6 @@ IfAppendImage: boolean;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2180,21 +2174,22 @@ The value of this property defaults to `true` , which means that the newly acqui
 
 If it's set to `false` , the images will be inserted before the current image. The important thing to note is that, by design, the current image is always the last acquired one which means that the images acquired after setting `IfAppendImage` to `false` will be displayed / retained in the reverse order.
 
+Here is an [article]({{site.faq}}insert-new-pages-to-existing-document.html#can-i-insert-newly-scanned-pages-to-an-existing-document) to demonstrate how to insert new images to a specified index.
+
 ---
 
 ## IfDisableSourceAfterAcquire
 
+Return or set whether to close the built-in User Interface after all images have been acquired.
+
 **Syntax**
 
-```
-
-/**
- * Return or set whether to close the built-in User Interface after all images have been acquired.
- */
+```javascript
 IfDisableSourceAfterAcquire: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2204,8 +2199,6 @@ IfDisableSourceAfterAcquire: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2214,8 +2207,6 @@ IfDisableSourceAfterAcquire: boolean;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2225,20 +2216,37 @@ IfDisableSourceAfterAcquire: boolean;
 
 This property only makes sense when `IfShowUI` is set to `true` .
 
+**Example**
+
+```javascript
+DWObject.OpenSource();
+DWObject.IfDisableSourceAfterAcquire = true; // Close the scanner UI after images acquired.
+DWObject.IfShowUI = true;
+DWObject.AcquireImage(successCallback,failureCallback);
+
+function successCallback() {
+    DWObject.CloseSource();
+}
+
+function failureCallback(errorCode, errorString) {
+    DWObject.CloseSource();
+}
+```
+
 ---
 
 ## IfDuplexEnabled
 
+Return or set whether to enable duplex scanning (in other words, whether to scan both sides of the paper).
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether to enable duplex scanning (in other words, whether to scan both sides of the paper).
- */
 IfDuplexEnabled: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2248,8 +2256,6 @@ IfDuplexEnabled: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2258,8 +2264,6 @@ IfDuplexEnabled: boolean;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2271,20 +2275,32 @@ Set this property after `OpenSource()` and before `AcquireImage()` .
 
 Not all scanners support duplex scanning. To confirm, check the user manual of the device or check the value of `Duplex` after `OpenSource()` .
 
+**Example**
+
+```javascript
+DWObject.OpenSource();
+
+if (DWObject.Duplex != 0) { // Note: DWObject.Duplex doesn't support Linux.
+    DWObject.IfDuplexEnabled = true;
+}
+
+DWObject.AcquireImage();
+```
+
 ---
 
 ## IfFeederEnabled
 
+Return or set whether a data source's Automatic Document Feeder (ADF) is enabled for scanning.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether a data source's Automatic Document Feeder (ADF) is enabled for scanning.
- */
 IfFeederEnabled: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2294,8 +2310,6 @@ IfFeederEnabled: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2304,8 +2318,6 @@ IfFeederEnabled: boolean;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2317,16 +2329,23 @@ Set this property after `OpenSource()` and before `AcquireImage()` .
 
 If the property is set to `true` , the data source will try acquiring images from the document feeder first. If the data source doesn't have a document feeder, the flatbed will be used.
 
+**Example**
+
+```javascript
+DWObject.OpenSource();
+DWObject.IfFeederEnabled = true;
+DWObject.AcquireImage();
+```
+
 ---
 
 ## IfShowUI
 
+Return or set whether the data source displays the user interface when scanning.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether the data source displays the user interface when scanning.
- */
 IfShowUI: boolean;
 ```
 
@@ -2340,8 +2359,6 @@ IfShowUI: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2350,8 +2367,6 @@ IfShowUI: boolean;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2361,22 +2376,30 @@ IfShowUI: boolean;
 
 If the property is set to `true` , the data source will display its user interface when `AcquireImage()` is called. Otherwise, the UI will not be displayed and the scan will start immediately.
 
-It's recommended to use this API after OpenSource() is called.
+It's recommended to use this API after `OpenSource()` is called.
+
+**Example**
+
+```javascript
+DWObject.OpenSource();
+DWObject.IfShowUI = true; // display the scanner UI before acquiring image
+DWObject.AcquireImage();
+```
 
 ---
 
 ## ImageCaptureDriverType
 
+Return or set the driver type which determines the type of sources to use.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the driver type which determines the type of sources to use.
- */
 ImageCaptureDriverType: Dynamsoft.DWT.EnumDWT_Driver | number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2386,18 +2409,14 @@ ImageCaptureDriverType: Dynamsoft.DWT.EnumDWT_Driver | number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">not supported</td>
-<td align="center">not supported</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2422,16 +2441,20 @@ The allowed values for `EnumDWT_Driver` are
 
 ## PageSize
 
+Return or set the page size the data source uses to acquire images.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the page size the data source uses to acquire images.
- */
 PageSize: Dynamsoft.DWT.EnumDWT_CapSupportedSizes | number;
 ```
 
+**Parameters**
+
+`PageSize`: Please refer to [EnumDWT_CapSupportedSizes]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_capsupportedsizes)
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2441,8 +2464,6 @@ PageSize: Dynamsoft.DWT.EnumDWT_CapSupportedSizes | number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2451,8 +2472,6 @@ PageSize: Dynamsoft.DWT.EnumDWT_CapSupportedSizes | number;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2466,16 +2485,20 @@ Set this property after `OpenSource()` and before `AcquireImage()`.
 
 ## PixelType
 
+Return or set the pixel type used when acquiring images.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the pixel type used when acquiring images.
- */
 PixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 ```
 
+**Parameters**
+
+`PixelType`: Please refer to [EnumDWT_PixelType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_pixeltype)
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2485,8 +2508,6 @@ PixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2495,8 +2516,6 @@ PixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2510,16 +2529,16 @@ Set this property after `OpenSource()` and before `AcquireImage()`.
 
 ## Resolution
 
+Return or set the resolution used when acquiring images.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the resolution used when acquiring images.
- */
 Resolution: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2529,8 +2548,6 @@ Resolution: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2539,8 +2556,6 @@ Resolution: number;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2554,16 +2569,16 @@ Set this property after `OpenSource()` and before `AcquireImage()`.
 
 ## SourceCount
 
+Returns how many data sources are available on the local system.
+
 **Syntax**
 
 ```typescript
-/**
- * Returns how many data sources are available on the local system.
- */
 readonly SourceCount: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2573,8 +2588,6 @@ readonly SourceCount: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2583,8 +2596,6 @@ readonly SourceCount: number;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2594,16 +2605,16 @@ readonly SourceCount: number;
 
 ## BlankImageThreshold
 
+Retrun or set the dividing line between black and white.
+
 **Syntax**
 
 ```typescript
-/**
- * Retrun or set the dividing line between black and white.
- */
 BlankImageThreshold: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2613,8 +2624,6 @@ BlankImageThreshold: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2623,8 +2632,6 @@ BlankImageThreshold: number;
 <td align="center">v5.2+</td>
 <td align="center">v5.2+</td>
 <td align="center">v5.2+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2638,16 +2645,16 @@ BlankImageThreshold: number;
 
 ## Brightness
 
+Return or set the brightness to be used for scanning by the data source.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the brightness to be used for scanning by the data source.
- */
 Brightness: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2657,8 +2664,6 @@ Brightness: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2667,8 +2672,6 @@ Brightness: number;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2684,16 +2687,16 @@ Typically, the value range is -1000 ~ 1000 where -1000 indicates the darkest and
 
 ## Contrast
 
+Return or set Contrast to be used for scanning by the data source.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set Contrast to be used for scanning by the data source.
- */
 Contrast: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2703,8 +2706,6 @@ Contrast: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2713,8 +2714,6 @@ Contrast: number;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2730,16 +2729,16 @@ Typically, the value range is -1000 ~ 1000 where -1000 indicates the darkest and
 
 ## CurrentSourceName
 
+Return the device name of current source.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the device name of current source.
- */
 readonly CurrentSourceName: string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2749,8 +2748,6 @@ readonly CurrentSourceName: string;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2759,8 +2756,6 @@ readonly CurrentSourceName: string;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2774,16 +2769,16 @@ If no source is currently selected, this property returns "".
 
 ## DataSourceStatus
 
+Return a value that indicates the data source status.
+
 **Syntax**
 
 ```typescript
-/**
- * Return a value that indicates the data source status.
- */
 DataSourceStatus: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2793,8 +2788,6 @@ DataSourceStatus: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2803,8 +2796,6 @@ DataSourceStatus: number;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2823,16 +2814,16 @@ DataSourceStatus: number;
 
 ## DefaultSourceName
 
+Return the name of the last used source.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the name of the last used source.
- */
 DefaultSourceName: string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2842,8 +2833,6 @@ DefaultSourceName: string;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2852,8 +2841,6 @@ DefaultSourceName: string;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2863,16 +2850,16 @@ DefaultSourceName: string;
 
 ## Duplex
 
+Return whether the source supports duplex. If yes, it further returns the level of duplex the data source supports.
+
 **Syntax**
 
 ```typescript
-/**
- * Return whether the source supports duplex. If yes, it further returns the level of duplex the data source supports.
- */
 readonly Duplex: Dynamsoft.DWT.EnumDWT_DUPLEX | number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2882,8 +2869,6 @@ readonly Duplex: Dynamsoft.DWT.EnumDWT_DUPLEX | number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2892,8 +2877,6 @@ readonly Duplex: Dynamsoft.DWT.EnumDWT_DUPLEX | number;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2915,16 +2898,16 @@ This property does not support Linux.
 
 ## IfAutoBright
 
+Return or set whether to enable the data source's auto-brightness feature.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether to enable the data source's auto-brightness feature.
- */
 IfAutoBright: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2934,8 +2917,6 @@ IfAutoBright: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2944,8 +2925,6 @@ IfAutoBright: boolean;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -2955,16 +2934,16 @@ IfAutoBright: boolean;
 
 ## IfAutoDiscardBlankpages
 
+Return or set whether the data source (the scanner) discards blank images during scanning automatically.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether the data source (the scanner) discards blank images during scanning automatically.
- */
 IfAutoDiscardBlankpages: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -2974,8 +2953,6 @@ IfAutoDiscardBlankpages: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2984,8 +2961,6 @@ IfAutoDiscardBlankpages: boolean;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3001,16 +2976,16 @@ Alternatively, the Dynamic Web TWAIN library can also detect blank images after 
 
 ## IfAutoFeed
 
+Return or set whether to enable the data source's automatic document feeding process.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether to enable the data source's automatic document feeding process.
- */
 IfAutoFeed: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3020,8 +2995,6 @@ IfAutoFeed: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3030,8 +3003,6 @@ IfAutoFeed: boolean;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3045,16 +3016,16 @@ If set to `true` , the data source will automatically feed the next page from th
 
 ## IfAutomaticBorderDetection
 
+Return or set whether to enable the data source's automatic border detection feature.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether to enable the data source's automatic border detection feature.
- */
 IfAutomaticBorderDetection: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3064,8 +3035,6 @@ IfAutomaticBorderDetection: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3074,8 +3043,6 @@ IfAutomaticBorderDetection: boolean;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3091,16 +3058,16 @@ Once enabled, the data source (scanner) will automatically detect the borders of
 
 ## IfAutomaticDeskew
 
+Return or set whether to enable the data source's automatic skew correction feature.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether to enable the data source's automatic skew correction feature.
- */
 IfAutomaticDeskew: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3110,8 +3077,6 @@ IfAutomaticDeskew: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3120,8 +3085,6 @@ IfAutomaticDeskew: boolean;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3135,16 +3098,16 @@ The property works only if the device and its driver supports automatical deskew
 
 ## IfAutoScan
 
+Return or set whether to enable the data source's automatic document scanning process.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether to enable the data source's automatic document scanning process.
- */
 IfAutoScan: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3154,8 +3117,6 @@ IfAutoScan: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3164,8 +3125,6 @@ IfAutoScan: boolean;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3175,23 +3134,22 @@ IfAutoScan: boolean;
 
 This property is only valid when [IfFeederEnabled](#iffeederenabled) is set to `true` .
 
-The fundamental assumption behind this property is that the device may be able to capture the number of images indicated by the property [XferCount](#xfercount) without waiting for the Application to request the image transfers. This is
-only possible if the device has internal buffers capable of caching the images it captures.
+The fundamental assumption behind this property is that the device may be able to capture the number of images indicated by the property [XferCount](#xfercount) without waiting for the Application to request the image transfers. This is only possible if the device has internal buffers capable of caching the images it captures.
 
 ---
 
 ## IfFeederLoaded
 
+Return whether or not there are documents loaded in the data source's feeder.
+
 **Syntax**
 
 ```typescript
-/**
- * Return whether or not there are documents loaded in the data source's feeder.
- */
 readonly IfFeederLoaded: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3201,8 +3159,6 @@ readonly IfFeederLoaded: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3211,8 +3167,6 @@ readonly IfFeederLoaded: boolean;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3226,16 +3180,16 @@ This property is only valid when [IfFeederEnabled](#iffeederenabled) and [IfPa
 
 ## IfPaperDetectable
 
+Return whether the Source has a paper sensor that can detect pages on the ADF or Flatbed.
+
 **Syntax**
 
 ```typescript
-/**
- * Return whether the Source has a paper sensor that can detect pages on the ADF or Flatbed.
- */
 readonly IfPaperDetectable: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3245,8 +3199,6 @@ readonly IfPaperDetectable: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3255,8 +3207,6 @@ readonly IfPaperDetectable: boolean;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3270,12 +3220,11 @@ Check this property after [OpenSource()](#opensource) is called.
 
 ## IfShowIndicator
 
+Return or set whether the data source displays a progress indicator during acquisition and transfer.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether the data source displays a progress indicator during acquisition and transfer.
- */
 IfShowIndicator: boolean;
 ```
 
@@ -3289,8 +3238,6 @@ IfShowIndicator: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3299,8 +3246,6 @@ IfShowIndicator: boolean;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3316,16 +3261,16 @@ The indicator will only be hidden if you set both [IfShowUI](#ifshowui) and [IfS
 
 ## IfUIControllable
 
+Return whether the data source supports acquisitions with the UI (User Interface) disabled.
+
 **Syntax**
 
 ```typescript
-/**
- * Return whether the data source supports acquisitions with the UI (User Interface) disabled.
- */
 readonly IfUIControllable: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3335,8 +3280,6 @@ readonly IfUIControllable: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3345,8 +3288,6 @@ readonly IfUIControllable: boolean;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3360,16 +3301,16 @@ Check this property after [OpenSource()](#opensource) is called.
 
 ## IfUseTwainDSM
 
+Return or set whether the new TWAIN DSM (data source Manager) is used for acquisitions. The new TWAIN DSM is a DLL called 'TWAINDSM.dll' while the default or old DSM is called 'twain_32.dll'.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set whether the new TWAIN DSM (data source Manager) is used for acquisitions. The new TWAIN DSM is a DLL called 'TWAINDSM.dll' while the default | old DSM is called 'twain_32.dll'.
- */
 IfUseTwainDSM: boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3379,8 +3320,6 @@ IfUseTwainDSM: boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3389,8 +3328,6 @@ IfUseTwainDSM: boolean;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3404,16 +3341,16 @@ This property should be set before any TWAIN related methods or properties are c
 
 ## ImageLayoutFrameBottom
 
+Return the value of the bottom edge of the current image frame (in Unit).
+
 **Syntax**
 
 ```typescript
-/**
- * Return the value of the bottom edge of the current image frame (in Unit).
- */
 readonly ImageLayoutFrameBottom: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3423,8 +3360,6 @@ readonly ImageLayoutFrameBottom: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3433,8 +3368,6 @@ readonly ImageLayoutFrameBottom: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3444,16 +3377,16 @@ readonly ImageLayoutFrameBottom: number;
 
 ## ImageLayoutFrameLeft
 
+Return the value of the left edge of the current image frame (in Unit).
+
 **Syntax**
 
 ```typescript
-/**
- * Return the value of the left edge of the current image frame (in Unit).
- */
 readonly ImageLayoutFrameLeft: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3463,8 +3396,6 @@ readonly ImageLayoutFrameLeft: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3473,8 +3404,6 @@ readonly ImageLayoutFrameLeft: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3484,16 +3413,16 @@ readonly ImageLayoutFrameLeft: number;
 
 ## ImageLayoutFrameRight
 
+Return the value of the right edge of the current image frame (in Unit).
+
 **Syntax**
 
 ```typescript
-/**
- * Return the value of the right edge of the current image frame (in Unit).
- */
 readonly ImageLayoutFrameRight: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3503,8 +3432,6 @@ readonly ImageLayoutFrameRight: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3513,8 +3440,6 @@ readonly ImageLayoutFrameRight: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3524,16 +3449,16 @@ readonly ImageLayoutFrameRight: number;
 
 ## ImageLayoutFrameTop
 
+Return the value of the top edge of the current image frame (in Unit).
+
 **Syntax**
 
 ```typescript
-/**
- * Return the value of the top edge of the current image frame (in Unit).
- */
 readonly ImageLayoutFrameTop: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3543,8 +3468,6 @@ readonly ImageLayoutFrameTop: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3553,8 +3476,6 @@ readonly ImageLayoutFrameTop: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3564,16 +3485,16 @@ readonly ImageLayoutFrameTop: number;
 
 ## ImageLayoutDocumentNumber
 
+Return the document number of the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the document number of the current image.
- */
 readonly ImageLayoutDocumentNumber: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3583,8 +3504,6 @@ readonly ImageLayoutDocumentNumber: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3593,8 +3512,6 @@ readonly ImageLayoutDocumentNumber: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3604,16 +3521,16 @@ readonly ImageLayoutDocumentNumber: number;
 
 ## ImageLayoutPageNumber
 
+Return the page number of the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the page number of the current image.
- */
 readonly ImageLayoutPageNumber: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3623,8 +3540,6 @@ readonly ImageLayoutPageNumber: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3633,8 +3548,6 @@ readonly ImageLayoutPageNumber: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3644,16 +3557,16 @@ readonly ImageLayoutPageNumber: number;
 
 ## ImageBitsPerPixel
 
+Return the bit depth of the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the bit depth of the current image.
- */
 readonly ImageBitsPerPixel: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3663,8 +3576,6 @@ readonly ImageBitsPerPixel: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3673,8 +3584,6 @@ readonly ImageBitsPerPixel: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3684,16 +3593,16 @@ readonly ImageBitsPerPixel: number;
 
 ## ImageLength
 
+Return the length of the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the length of the current image.
- */
 readonly ImageLength: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3703,8 +3612,6 @@ readonly ImageLength: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3713,8 +3620,6 @@ readonly ImageLength: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3724,12 +3629,11 @@ readonly ImageLength: number;
 
 ## ImageWidth
 
+Return the width of the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the width of the current image.
- */
 readonly ImageWidth: number;
 ```
 
@@ -3743,8 +3647,6 @@ readonly ImageWidth: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3753,8 +3655,6 @@ readonly ImageWidth: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3764,12 +3664,11 @@ readonly ImageWidth: number;
 
 ## ImageXResolution
 
+Return the horizontal resolution of the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the horizontal resolution of the current image.
- */
 readonly ImageXResolution: number;
 ```
 
@@ -3783,8 +3682,6 @@ readonly ImageXResolution: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3793,8 +3690,6 @@ readonly ImageXResolution: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3804,16 +3699,16 @@ readonly ImageXResolution: number;
 
 ## ImageYResolution
 
+Return the vertical resolution of the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the vertical resolution of the current image.
- */
 readonly ImageYResolution: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3823,8 +3718,6 @@ readonly ImageYResolution: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3833,8 +3726,6 @@ readonly ImageYResolution: number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3844,16 +3735,16 @@ readonly ImageYResolution: number;
 
 ## ImagePixelType
 
+Return the pixel type of the current image.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the pixel type of the current image.
- */
 readonly ImagePixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3863,8 +3754,6 @@ readonly ImagePixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3873,8 +3762,6 @@ readonly ImagePixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3884,16 +3771,16 @@ readonly ImagePixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 
 ## MagData
 
+Return the data of the magnetic data if the data source supports magnetic data recognition.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the data of the magnetic data if the data source supports magnetic data recognition.
- */
 readonly MagData: string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3903,8 +3790,6 @@ readonly MagData: string;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3913,8 +3798,6 @@ readonly MagData: string;
 <td align="center">v8.0+</td>
 <td align="center">v8.0+</td>
 <td align="center">v8.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3924,16 +3807,16 @@ readonly MagData: string;
 
 ## MagType
 
+Return the type of the magnetic data if the data source supports magnetic data recognition.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the type of the magnetic data if the data source supports magnetic data recognition.
- */
 readonly MagType: Dynamsoft.DWT.EnumDWT_MagType | number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3943,8 +3826,6 @@ readonly MagType: Dynamsoft.DWT.EnumDWT_MagType | number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3953,8 +3834,6 @@ readonly MagType: Dynamsoft.DWT.EnumDWT_MagType | number;
 <td align="center">v8.0+</td>
 <td align="center">v8.0+</td>
 <td align="center">v8.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -3972,16 +3851,16 @@ These APIs are only valid in the callbacks for the events [OnPreTransfer](#onpre
 
 ## PendingXfers
 
+Return the number of transfers the data source is ready to supply upon demand.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the number of transfers the data source is ready to supply upon demand.
- */
 readonly PendingXfers: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -3991,8 +3870,6 @@ readonly PendingXfers: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -4001,8 +3878,6 @@ readonly PendingXfers: number;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -4018,16 +3893,16 @@ The data source returns -1 if it is not sure how many transfers are pending whic
 
 ## PixelFlavor
 
+Return or set the pixel flavor to be used for acquiring images.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the pixel flavor to be used for acquiring images.
- */
 PixelFlavor: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4037,8 +3912,6 @@ PixelFlavor: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -4047,8 +3920,6 @@ PixelFlavor: number;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -4065,16 +3936,16 @@ Available values:
 
 ## TransferMode
 
+Return or set the data source's transfer mode.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the data source's transfer mode.
- */
 TransferMode: Dynamsoft.DWT.EnumDWT_TransferMode | number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4084,18 +3955,14 @@ TransferMode: Dynamsoft.DWT.EnumDWT_TransferMode | number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
+<td align="center">not supported</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
-<td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -4115,16 +3982,16 @@ TWSX_NATIVE and TWSX_MEMORY are required by all TWAIN data sources while TWSX_FI
 
 ## Unit
 
+Return or set the unit of measure for all quantities. Note that this setting is only effective for TWAIN/ICA (hardware) related operations.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the unit of measure for all quantities. Note that this setting is only effective for TWAIN (hardware) related operations.
- */
 Unit: Dynamsoft.DWT.EnumDWT_UnitType | number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4134,8 +4001,6 @@ Unit: Dynamsoft.DWT.EnumDWT_UnitType | number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -4144,8 +4009,6 @@ Unit: Dynamsoft.DWT.EnumDWT_UnitType | number;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -4169,16 +4032,16 @@ Allowed values are
 
 ## XferCount
 
+Return and set the number of images your application is willing to accept for each scan job.
+
 **Syntax**
 
 ```typescript
-/**
- * Return and set the number of images your application is willing to accept for each scan job.
- */
 XferCount: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4188,8 +4051,6 @@ XferCount: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -4198,8 +4059,6 @@ XferCount: number;
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -4213,16 +4072,16 @@ Allowed values are between -1 and 215 where -1 indicate multiple images.
 
 ## OnPostAllTransfers
 
+This event is triggered when all page(s) have been scanned and transferred.
+
 **Syntax**
 
 ```typescript
-/**
- * This event is triggered when all page(s) have been scanned and transferred.
- */
 RegisterEvent("OnPostAllTransfers", function () {});
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4232,8 +4091,6 @@ RegisterEvent("OnPostAllTransfers", function () {});
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -4242,8 +4099,6 @@ RegisterEvent("OnPostAllTransfers", function () {});
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -4265,16 +4120,16 @@ DWObject.RegisterEvent("OnPostAllTransfers", function () {
 
 ## OnPostTransfer
 
+This event is triggered after each page has been scanned and transferred.
+
 **Syntax**
 
 ```typescript
-/**
- * This event is triggered after each page has been scanned and transferred.
- */
 RegisterEvent("OnPostTransfer", function () {});
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4284,8 +4139,6 @@ RegisterEvent("OnPostTransfer", function () {});
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -4294,8 +4147,6 @@ RegisterEvent("OnPostTransfer", function () {});
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -4313,17 +4164,20 @@ DWObject.RegisterEvent("OnPostTransfer", function () {
 
 ## OnPostTransferAsync
 
+This event is triggered after each page has been scanned and transferred. This is the asynchronous counterpart to the synchronous event {OnPostTransfer}.
+
 **Syntax**
 
 ```typescript
-/**
- * This event is triggered after each page has been scanned and transferred. This is the asynchronous counterpart to the synchronous event {OnPostTransfer}.
- * @argument outputInfo Detailed information about the image that just got transferred.
- */
 RegisterEvent("OnPostTransferAsync", function (outputInfo: OutputInfo) {});
 ```
 
+**Parameters**
+
+`outputInfo`: Detailed information about the image that just got transferred.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4333,7 +4187,6 @@ RegisterEvent("OnPostTransferAsync", function (outputInfo: OutputInfo) {});
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -4343,8 +4196,7 @@ RegisterEvent("OnPostTransferAsync", function (outputInfo: OutputInfo) {});
 <td align="center">v15.1+</td>
 <td align="center">v15.1+</td>
 <td align="center">v15.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -4385,16 +4237,16 @@ DWObject.RegisterEvent("OnPostTransferAsync", function (outputInfo) {
 
 ## OnPreAllTransfers
 
+This event is triggered when all images are scanned and ready to be transferred.
+
 **Syntax**
 
 ```typescript
-/**
- * This event is triggered when all images are scanned and ready to be transferred.
- */
 RegisterEvent("OnPreAllTransfers", function () {});
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4404,8 +4256,6 @@ RegisterEvent("OnPreAllTransfers", function () {});
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -4414,8 +4264,6 @@ RegisterEvent("OnPreAllTransfers", function () {});
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -4436,16 +4284,16 @@ In the callback function of this event, you can call `CancelAllPendingTransfers(
 
 ## OnPreTransfer
 
+This event is triggered when a page has been scanned and is ready to be transferred.
+
 **Syntax**
 
 ```typescript
-/**
- * This event is triggered when a page has been scanned and is ready to be transferred.
- */
 RegisterEvent('OnPreTransfer',function(){...});
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4455,8 +4303,6 @@ RegisterEvent('OnPreTransfer',function(){...});
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -4465,8 +4311,6 @@ RegisterEvent('OnPreTransfer',function(){...});
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -4484,16 +4328,16 @@ In the callback function of this event, you can
 
 ## OnSourceUIClose
 
+This event is triggered when the user interface of the data source is closed manually by the user.
+
 **Syntax**
 
 ```typescript
-/**
- * This event is triggered when the user interface of the data source is closed manually by the user.
- */
 RegisterEvent("OnSourceUIClose", function () {});
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4503,8 +4347,6 @@ RegisterEvent("OnSourceUIClose", function () {});
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -4513,8 +4355,6 @@ RegisterEvent("OnSourceUIClose", function () {});
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
 <td align="center">not supported</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -4524,23 +4364,14 @@ RegisterEvent("OnSourceUIClose", function () {});
 
 ## getCapabilities
 
+Gets detailed information about all capabilities of the current data source.
+
 **Syntax**
 
 ```typescript
-/**
- * Gets detailed information about all capabilities of the current data source.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument capabilityDetails Detailed information about the specified capabilities.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 getCapabilities(
     successCallback: (capabilityDetails: CapabilityDetails[]) => void,
-    failureCallback: (
-        errorCode: number,
-        errorString: string
-    ) => void
+    failureCallback: (errorCode: number, errorString: string) => void
 ): void;
 
 /**
@@ -4554,23 +4385,23 @@ interface CapabilityDetails {
     /**
      * The container type of the Capability
      */
-    conType: ValueAndLabel;
+    conType?: ValueAndLabel;
     /**
      * The index for the current value of the Capability
      */
-    curIndex: number;
+    curIndex?: number;
     /**
      * The current value of the Capability
      */
-    curValue: ValueAndLabel;
+    curValue?: ValueAndLabel;
     /**
      * The index for the default value of the Capability
      */
-    defIndex: number;
+    defIndex?: number;
     /**
      * The operation types that are supported by the Capability. Types include {"get", "set", "reset" "getdefault", "getcurrent"}
      */
-    query: string[];
+    query?: string[];
     /**
      * The value type of the Capability. Value types include
         TWTY_BOOL: 6
@@ -4587,26 +4418,36 @@ interface CapabilityDetails {
         TWTY_UINT16: 4
         TWTY_int: 5
      */
-    valueType: ValueAndLabel;
+    valueType?: ValueAndLabel;
     /**
      * The available values of the Capability
      */
-    values: ValueAndLabel[];
+    values?: ValueAndLabel[];
 }
 
 interface ValueAndLabel {
     /**
      * Numeric representation of the item
      */
-    value: Dynamsoft.DWT.EnumDWT_Cap | Dynamsoft.DWT.EnumDWT_CapType | Dynamsoft.DWT.EnumDWT_CapValueType | number;
+    value?: Dynamsoft.DWT.EnumDWT_Cap | Dynamsoft.DWT.EnumDWT_CapType | Dynamsoft.DWT.EnumDWT_CapValueType | number;
     /**
      * Label or name of the item
      */
-    label: string;
+    label?: string;
 }
 ```
 
+**Parameters**
+
+`successCallback`: A callback function that is executed if the request succeeds.
+- `capabilityDetails`: Detailed information about the specified capabilities.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4616,7 +4457,6 @@ interface ValueAndLabel {
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -4626,8 +4466,7 @@ interface ValueAndLabel {
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -4645,16 +4484,11 @@ Check out the Enumerations
 
 ## setCapabilities
 
+Sets up one or multiple capabilities in one call.
+
 **Syntax**
 
 ```typescript
-/**
- * Sets up one or multiple capabilities in one call.
- * @param capabilities A object that describes how to set capabilities.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument capabilities The capabilities to set.
- */
 setCapabilities(
     capabilities: Capabilities,
     successCallback: (capabilities: Capabilities) => void,
@@ -4690,7 +4524,17 @@ interface CapabilitySetup {
 }
 ```
 
+**Parameters**
+
+`capabilities`: An object that describes how to set capabilities.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `capabilities`: The capabilities to set.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4700,7 +4544,6 @@ interface CapabilitySetup {
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -4710,8 +4553,7 @@ interface CapabilitySetup {
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -4771,16 +4613,19 @@ DWObject.setCapabilities(
 
 ## GetDevicesAsync
 
+Return all available devices (scanners, eSCL scanners, etc.) for the device type (if specified)
+
 **Syntax**
 
 ```typescript
-/**
- * Return all available devices (scanners, eSCL scanners, etc.) for the device type (if specified)
- * @param deviceType The device type
- * @param refresh Default value: false
- */
 GetDevicesAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number, refresh?:boolean): Promise<Device[]>;
 ```
+
+**Parameters**
+
+`deviceType`: The device type. Please refere to [EnumDWT_DeviceType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_borderstyle)
+
+`refresh`: Default value is **false**
 
 **Example**
 
@@ -4795,6 +4640,7 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4804,18 +4650,16 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
-<td align="center">not supported</td>
 <td align="center">v18.0+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -4823,19 +4667,17 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 
 **Remark**
 
-[Device APIs]({{site.info}}api/Device.html)
+Interface [Device]({{site.info}}api/Interfaces.html#device)
 
 ---
 
 ## SelectDeviceAsync
 
+Select the device to use for scanning
+
 **Syntax**
 
 ```typescript
-/**
- * Select the device to use for scanning
- * @param device the device 
- */
 SelectDeviceAsync(device: Device): Promise< boolean>;
 ```
 
@@ -4851,7 +4693,12 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 })
 ```
 
+**Parameters**
+
+`device`: the device object. Please refer to [Device]({{site.info}}api/Interfaces.html#device).
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -4861,18 +4708,16 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
-<td align="center">not supported</td>
 <td align="center">v18.0+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -4882,15 +4727,43 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 
 ## AcquireImageAsync
 
+Scan documents into another DWObject control. eSCL is not supported.
+
 **Syntax**
 
 ```typescript
-/**
- * Scan documents into another DWObject control. eSCL is not supported.
- * @param deviceConfiguration The device configuration
- */
 AcquireImageAsync(deviceConfiguration?: DeviceConfiguration): Promise< boolean>;
 ```
+
+**Parameters**
+
+`deviceConfiguration`: The device configuration. Please refer to [DeviceConfiguration]({{site.info}}api/Interfaces.html#DeviceConfiguration).
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
+</tr>
+
+<tr>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.2+</td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -4904,29 +4777,5 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 })
 ```
 
-**Availability**
-<div class="availability">
-<table>
 
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
-</tr>
-
-<tr>
-<td align="center">not supported</td>
-<td align="center">v18.0+</td>
-<td align="center">v18.0+</td>
-<td align="center">v18.0+</td>
-<td align="center">v18.0+</td>
-<td align="center">not supported</td>
-<td align="center">v18.0+</td>  
-</tr>
-
-</table>
-</div>
+<div class="multi-panel-switching-end"></div>

@@ -34,37 +34,36 @@ permalink: /info/api/Dynamsoft_FileUploader.html
 
 ## Init
 
+Initialize and create a FileUploader instance.
+
 **Syntax**
 
 ```typescript
-/**
- * Initialize and create a FileUploader instance.
- * @param URL Specify a path to retrieve the FileUploader library.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument uploadManager A FileUploader instance.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 Init(
     URL: string,
-    successCallback: (
-        uploadManager: UploadManager
-    ) => void,
-    failureCallback: (
-        errorCode: number,
-        errorString: string
-    ) => void
+    successCallback: (uploadManager: UploadManager) => void,
+    failureCallback: (errorCode: number, errorString: string) => void
 ): void;
 ```
+
+**Parameters**
+
+`URL`: Specify a path to retrieve the FileUploader library.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+- `uploadManager`: A FileUploader instance.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
 
 **Availability**
 
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
 
 **Usage notes**
 
@@ -74,12 +73,11 @@ The FileUploader library is installed with Dynamsoft Service by default, therefo
 
 ## CreateJob
 
+Create an upload job.
+
 **Syntax**
 
 ```typescript
-/**
- * Create an upload job.
- */
 CreateJob(): Job;
 
 interface Job {
@@ -178,63 +176,66 @@ interface FormField {
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
 
 ---
 
 ## Run
 
+Start uploading (processing the specified job).
+
 **Syntax**
 
 ```typescript
-/**
- * Start uploading (processing the specified job).
- * @param job Specify the job.
- */
 Run(job: Job): boolean;
 ```
+
+**Parameters**
+
+`job`: Specify the job.
 
 **Availability**
 
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
 
 ---
 
 ## Cancel
 
+Cancel a job.
+
 **Syntax**
 
 ```typescript
-/**
- * Cancel a job.
- * @param job Specify the job.
- */
 Cancel(job: Job): boolean;
 ```
+
+**Parameters**
+
+`job`: Specify the job.
 
 **Availability**
 
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
 
 ---
 
 ## CancelAllupload
 
+Cancel all jobs.
+
 **Syntax**
 
 ```typescript
-/**
- * Cancel all jobs.
- */
 CancelAllUpload(): boolean;
 ```
 
@@ -243,10 +244,8 @@ CancelAllUpload(): boolean;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
-
----
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
 
 **Usage notes**
 
@@ -275,40 +274,39 @@ Dynamsoft.FileUploader.Init(
 
 ## GenerateURLForUploadData
 
+Generates a URL that will be used by the upload module to fetch the file/data to upload.
+
 **Syntax**
 
 ```typescript
-/**
- * Generates a URL that will be used by the upload module to fetch the file/data to upload.
- * @param Number[] The indices of the images in the buffer. The index is 0-based.
- * @param EnumDWT_ImageType The format in which you'd like the images to be uploaded.
- * @param successCallback A callback function triggered when the operation succeeds. This function will return the result URL.
- * @param failureCallback A callback function triggered when the operation fails.
- * @argument resultURL The result URL.
- * @argument errorCode The error code.
- * @argument errorString The error string.
-
- */
 GenerateURLForUploadData(
-    Number[]: array,
+    Indexes: Number[],
     EnumDWT_ImageType: Dynamsoft.DWT.EnumDWT_ImageType | number,
-    successCallback: (
-        resultURL: resultURL
-    ) => void,
-    failureCallback: (
-        errorCode: number,
-        errorString: string
-    ) => void
+    successCallback: (resultURL: resultURL) => void,
+    failureCallback: (errorCode: number, errorString: string) => void
 ): void;
 ```
+
+**Parameters**
+
+`Indexes`: The indices of the images in the buffer. The index is 0-based.
+
+`EnumDWT_ImageType`: The format in which you'd like the images to be uploaded. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+
+`successCallback`: A callback function triggered when the operation succeeds. This function will return the result URL.
+- `resultURL`: The result URL.
+
+`failureCallback`: A callback function triggered when the operation fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
 
 **Availability**
 
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
 
 **Example**
 
@@ -344,12 +342,11 @@ DWObject.GenerateURLForUploadData(
 
 ## ServerUrl
 
+Specifies the target of the HTTP Post Request of the upload job. This typically is a file on the server. For example: `job.ServerUrl = 'http://www.dynamsoft.com/ScanAndUpload/Actions/SaveToFile.aspx';`
+
 **Syntax**
 
 ```typescript
-/**
- * Specifies the target of the HTTP Post Request of the upload job. This typically is a file on the server. For example: job.ServerUrl = 'http://www.dynamsoft.com/ScanAndUpload/Actions/SaveToFile.aspx';
- */
 ServerUrl: string;
 ```
 
@@ -358,19 +355,18 @@ ServerUrl: string;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
 
 ---
 
 ## HttpHeader
 
+Specifies headers in the the HTTP Post Request of the upload job. For example: `job.HttpHeader["Content-Type"] = "text/plain";`
+
 **Syntax**
 
 ```typescript
-/**
- * Specifies headers in the the HTTP Post Request of the upload job. For example: job.HttpHeader["Content-Type"] = "text/plain";
- */
 HttpHeader: object;
 ```
 
@@ -379,8 +375,8 @@ HttpHeader: object;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
 
 **Usage notes**
 
@@ -390,12 +386,11 @@ By default, HttpHeader is an empty object. If left as it is, default headers are
 
 ## SourceValue
 
+Specifies the files to be uploaded and the name for it. The files are specified by URLs which can be created with the method GenerateURLForUploadData. This object has a method Add to add file to the job.
+
 **Syntax**
 
 ```typescript
-/**
- * Specifies the files to be uploaded and the name for it. The files are specified by URLs which can be created with the method GenerateURLForUploadData. This object has a method Add to add file to the job.
- */
 SourceValue: object;
 ```
 
@@ -404,8 +399,8 @@ SourceValue: object;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
 
 **Usage notes**
 
@@ -421,12 +416,11 @@ job.SourceValue.Add(url, fileName);
 
 ## FormField
 
+Specifies extra fields to be uploaded in the same HTTP post.
+
 **Syntax**
 
 ```typescript
-/**
- * Specifies extra fields to be uploaded in the same HTTP post.
- */
 FormField: object;
 ```
 
@@ -435,8 +429,8 @@ FormField: object;
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
 
 **Usage notes**
 
@@ -452,24 +446,27 @@ job.FormField.Add("customField", "FormFieldValue");
 
 ## OnUploadTransferPercentage
 
+The event is triggered during the execution of an upload job. It has a parameter which specifies the percentage of the completion of the job.
+
 **Syntax**
 
 ```typescript
-/**
- * The event is triggered during the execution of an upload job. It has a parameter which specifies the percentage of the completion of the job.
- * @argument obj  A job object.
- * @argument sPercentage The percentage of the completion of the job.
- */
 .OnUploadTransferPercentage = function(obj: Object , sPercentage: number){};
 ```
+
+**Parameters**
+
+`obj`: A job object.
+
+`sPercentage`: The percentage of the completion of the job.
 
 **Availability**
 
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
 
 **Example**
 
@@ -484,23 +481,25 @@ function FileUpload_ OnUploadTransferPercentage (obj, sPercentage){
 
 ## OnRunSuccess
 
+The event is triggered when an upload job completes successfully.
+
 **Syntax**
 
 ```typescript
-/**
- * The event is triggered when an upload job completes successfully.
- * @argument obj  A job object.
- */
 .OnRunSuccess = function(obj: Object){};
 ```
+
+**Parameters**
+
+`obj`: A job object.
 
 **Availability**
 
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
 
 **Example**
 
@@ -513,33 +512,35 @@ function FileUpload_OnRunSuccess(obj) {
 
 ---
 
----
-
 ## OnRunFailure
+
+The event is triggered when an upload job completes successfully.
 
 **Syntax**
 
 ```typescript
-/**
- * The event is triggered when an upload job completes successfully.
- * @argument obj  A job object.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 .OnRunFailure = function(
-obj: Object
-errorCode: number,
-errorString: string
+    obj: Object,
+    errorCode: number,
+    errorString: string
 ){};
 ```
+
+**Parameters**
+
+`obj`: A job object.
+
+`errorCode`: The error code.
+
+`errorString`: The error string.
 
 **Availability**
 
 <div class="availability"></div>
 
 |:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|WASM|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ | supported |
+|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
+| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
 
 **Example**
 
@@ -549,5 +550,3 @@ function FileUpload_OnRunFailure(obj, errorCode, errorString) {
   alert(errorString);
 }
 ```
-
----

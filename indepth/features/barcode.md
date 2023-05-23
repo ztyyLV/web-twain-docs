@@ -18,7 +18,7 @@ With the increasing use of barcode reading in document management systems, the B
 
 ## Environment
 
-* [Desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) and [Mobile]({{site.getstarted}}platform.html#browsers-on-mobile-devices).
+* Windows
 
 ## How to use
 

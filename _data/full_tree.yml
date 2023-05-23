@@ -40,7 +40,9 @@ tree_list:
           - name: Barcode Recognition
             path: /indepth/features/barcode.html
           - name: PDF Handling
-            path: /indepth/features/pdf.html  
+            path: /indepth/features/pdf.html 
+          - name: Remote Scan
+            path: https://www.dynamsoft.com/remote-scan/docs/introduction/ 
   - name: Samples and Demos
     childList:
       - name: Use Web TWAIN in Angular
@@ -49,8 +51,10 @@ tree_list:
         path: /indepth/development/react.html
       - name: Use Web TWAIN in Vue
         path: /indepth/development/vue.html
+      - name: Use Web TWAIN in Vue 3
+        path: /indepth/development/vue3.html
       - name: Simple Demo
-        path: /getstarted/Helloworld.html
+        path: https://www.dynamsoft.com/web-twain/resources/code-gallery/
   - name: API Reference
     path: /info/api/
     childList:
@@ -60,8 +64,8 @@ tree_list:
         path: /info/api/Dynamsoft_Enum.html
       - name: Interfaces
         path: /info/api/Interfaces.html
-      - name: Device
-        path: /info/api/Device.html
+      #- name: Device
+      #  path: /info/api/Device.html
       - name: WebTwain_Scanner
         path: /info/api/WebTwain_Acquire.html
       - name: WebTwain_Buffer
@@ -76,8 +80,8 @@ tree_list:
         path: /info/api/WebTwain_Util.html
       - name: Addon_BarcodeReader
         path: /info/api/Addon_BarcodeReader.html
-      - name: Addon_Camera
-        path: /info/api/Addon_Camera.html
+      # - name: Addon_Camera
+      #   path: /info/api/Addon_Camera.html
       - name: Addon_PDF
         path: /info/api/Addon_PDF.html
       - name: Addon_Webcam

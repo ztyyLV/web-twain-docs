@@ -11,6 +11,64 @@ permalink: /info/schedule/Stable.html
 
 # Stable Releases
 
+## 18.2 (05/09/2023)
+
+### New Features
+#### WIA Scanner Support
+ - Added support for direct control of WIA drivers in [EnumDWT_DeviceType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_devicetype). <!-- Please see Insert link to FAQ -->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mZcWLGwfCP4" title="WIA Scanner Support" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+#### Optimized Android Service for document scanning from Android devices
+- The Android service is available on <a href="https://play.google.com/store/apps/details?id=com.dynamsoft.mobilescan" target="_blank">Google Play Store</a>.
+- Expanded the capabilities of the Android platform. See <a href="https://www.dynamsoft.com/web-twain/docs/info/api/#android" target="_blank">the APIs supported on Android service</a>.
+
+#### Remote Scan
+- The Remote Scan solution powered by Dynamic Web TWAIN is now officially available. Using Remote Scan, you can turn any of your traditional document scanners into a network accessible scanner and allow your end users to use it without any client side installs. Read <a href="https://www.dynamsoft.com/remote-scan/docs/introduction/" target="_blank">this documentation</a> to learn how the Remote Scan solution works.
+
+
+### Improvements
+
+#### Image Viewer
+- The Viewer component has been migrated to a dedicated resource file. This will allow for viewerless implementations of Dynamic Web TWAIN, as well as reducing the load on the browser by removing the necessity of loading the Viewer resources into memory when the Viewer is not being used. See the property [Dynamsoft.DWT.UseDefaultViewer]({{site.info}}api/Dynamsoft_WebTwainEnv.html#usedefaultviewer).
+- Added the enum [EnumDWT_WorkMode]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_workmode) with a new option for image editor setting. Please refer to [createImageEditor]({{site.info}}api/WebTwain_Viewer.html#createimageeditor).
+- Added new method `save()` to the ImageEditor object, please refer to [createImageEditor]({{site.info}}api/WebTwain_Viewer.html#createimageeditor).
+
+#### Optimized error handling during web twain initialization
+- Added the [OnWebTwainError]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainerror) event for better capturing errors during the Web Twain object initialization. 
+
+#### General Improvements
+- Updated the barcode reader library to v9.6.20
+- Improved progress bar accuracy during the encoding and decoding operations
+
+
+<!-- 
+--> 
+### Bug fixes
+Fixed bug where ShowFileDialog might not work properly on MacOS. 
+
+
+
+## 18.1 (01/12/2023)
+
+Dynamic Web TWAIN v18.1 is restructured into two editions. While the standard Service Edition focuses on interactions with scanners, the Plus Edition offers support for mobile cameras as well. The goal is to make sure the Service Edition is small-sized, easy-to-use, and stable. The Plus Edition, on the other hand, is more comprehensive and offers flexibility in platforms and devices.
+
+The following table gives a quick comparison between the two editions.
+
+|                                                                   | Service Edition                                                      | Plus Edition                                       |
+|-------------------------------------------------------------------|----------------------------------------------------------------------|----------------------------------------------------|
+| Interact with scanners from browsers on Windows, macOS and Linux  | Yes                                                                  | Yes                                                |
+| Interact with scanners from browsers on Android                   | This will be supported in the next release.                          | Yes                                                |
+| Interact with mobile cameras on iOS and Android devices           | No                                                                   | Yes                                                |
+| Barcode Reader addon                                              | Windows platform for now; macOS and Linux support will be added soon | Cross-platform support on all desktops and mobile  |
+| Remote Scan                                                       | Windows/macOS/Linux support                                          | Cross-platform support                             |
+
+NOTE: 
+
+Plus Edition is a temporary edition as its enhanced features will be separated into another SDK product by the end of 2023. Due to the upcoming change, the Plus Edition is not available to download from the public website. If you want to access the Plus Edition now, please send a request to [support@dynamsoft.com](mailto:support@dynamsoft.com). 
+
+
 ## 18.0 (12/22/2022)
 
 ### Localhost Scan
@@ -19,6 +77,8 @@ permalink: /info/schedule/Stable.html
 
 ##### Service Edition for Android
   - Enable document scanning from eSCL-compatible scanners or Wi-Fi Direct scanners directly to your Android mobile device. Please refer to <a href="https://www.dynamsoft.com/blog/announcement/web-twain-android-service-scan-document/" target="_blank">this blog</a> for more details.
+  
+  [Get Dynamsoft Service in Google Play](https://play.google.com/store/apps/details?id=com.dynamsoft.mobilescan)
 
 ##### Scanner
   - Added new method <a href="{{site.info}}api/WebTwain_Acquire.html#getdevicesasync" target="_blank">GetDevicesAsync</a>.

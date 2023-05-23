@@ -12,6 +12,8 @@ permalink: /info/api/Addon_PDF.html
 
 > {WebTwainObject} denotes the `WebTwain` instance.
 
+> All APIs on this page support Android Service from version 18.2.
+
 **Methods**
 
 |                                       |
@@ -23,16 +25,16 @@ permalink: /info/api/Addon_PDF.html
 
 ## GetConvertMode
 
+Return the convert mode.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the convert mode.
- */
 GetConvertMode(): number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -42,8 +44,6 @@ GetConvertMode(): number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -52,8 +52,6 @@ GetConvertMode(): number;
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -63,18 +61,16 @@ GetConvertMode(): number;
 
 ## IsModuleInstalled
 
+Return whether the PDF module has been installed.
+
 **Syntax**
 
 ```typescript
-/**
-
-* Return whether the PDF module has been installed.
-
-*/
 IsModuleInstalled(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -84,8 +80,6 @@ IsModuleInstalled(): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -94,8 +88,6 @@ IsModuleInstalled(): boolean;
 <td align="center">v14.1+ </td>
 <td align="center">v14.1+ </td>
 <td align="center">v14.1+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -105,17 +97,20 @@ IsModuleInstalled(): boolean;
 
 ## IsTextBasedPDF
 
+Detect whether a local PDF file is text based or not.
+
 **Syntax**
 
 ```typescript
-/**
- * Detect whether a local PDF file is text based or not.
- * @path Specify the path of the PDF file.
- */
 IsTextBasedPDF(path: string): boolean;
 ```
 
+**Parameters**
+
+`path`: Specify the path of the PDF file.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -125,8 +120,6 @@ IsTextBasedPDF(path: string): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -135,8 +128,6 @@ IsTextBasedPDF(path: string): boolean;
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -146,15 +137,41 @@ IsTextBasedPDF(path: string): boolean;
 
 ## SetConvertMode
 
+Set the convert mode.
+
 **Syntax**
 
 ```typescript
-/**
- * Set the convert mode.
- * @param mode Specify the mode. The default value is 3 (Dynamsoft.DWT.EnumDWT_ConvertMode.CM_AUTO)
- */
 SetConvertMode(mode: Dynamsoft.DWT.EnumDWT_ConvertMode | number): boolean;
 ```
+
+**Parameters**
+
+`mode`: Specify the mode. The default value is 3 (Dynamsoft.DWT.EnumDWT_ConvertMode.CM_AUTO)
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v11.2+ </td>
+<td align="center">v11.2+ </td>
+<td align="center">v11.2+ </td>
+<td align="center">v11.2+ </td>
+<td align="center">v11.2+ </td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -167,7 +184,24 @@ There are four conversion modes
 
 Use this method before you import a PDF into the viewer with methods such as <a href="{{site.info}}api/WebTwain_IO.html#loadimage" target="_blank">`LoadImage()`</a> , <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`HTTPDownload()`</a> and <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`FTPDownload()`</a>.
 
+---
+
+## SetPassword
+
+Set the password for reading encrypted PDF files.
+
+**Syntax**
+
+```typescript
+SetPassword(password: string): boolean;
+```
+
+**Parameters**
+
+`password`: Specify the password.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -177,8 +211,6 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -187,32 +219,33 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
 </div>
-
----
-
-## SetPassword
-
-**Syntax**
-
-```typescript
-/**
- * Set the password for reading encrypted PDF files.
- * @param password Specify the password.
- */
-SetPassword(password: string): boolean;
-```
 
 **Usage notes**
 
 Use this method before you import a PDF into the viewer with methods such as <a href="{{site.info}}api/WebTwain_IO.html#loadimage" target="_blank">`LoadImage()`</a> , <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`HTTPDownload()`</a> and <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`FTPDownload()`</a>.
 
+---
+
+## SetResolution
+
+Set the resolution for rasterizing.
+
+**Syntax**
+
+```typescript
+SetResolution(resolution: number): boolean;
+```
+
+**Parameters**
+
+`resolution`: Specify the resolution.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -222,8 +255,6 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -232,25 +263,10 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
 </div>
----
-
-## SetResolution
-
-**Syntax**
-
-```typescript
-/**
- * Set the resolution for rasterizing.
- * @param resolution Specify the resolution.
- */
-SetResolution(resolution: number): boolean;
-```
 
 **Usage notes**
 
@@ -258,112 +274,82 @@ The default resolution for the conversion is 200. We recommend that you set a va
 
 Use this method before you import a PDF into the viewer with methods such as <a href="{{site.info}}api/WebTwain_IO.html#loadimage" target="_blank">`LoadImage()`</a> , <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`HTTPDownload()`</a> and <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`FTPDownload()`</a>.
 
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
-</tr>
-
-<tr>
-<td align="center">v11.2+ </td>
-<td align="center">v11.2+ </td>
-<td align="center">v11.2+ </td>
-<td align="center">v11.2+ </td>
-<td align="center">v11.2+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
-</tr>
-
-</table>
-</div>
-
 ---
 
 ## Write.Setup()
 
+Set up the PDF writing engine.
+
 **Syntax**
 
 ```typescript
-/**
- * Set up the PDF writing engine.
- * @param settings Configures how the PDF is generated.
- */
 Write.Setup(settings: PDFWSettings): void;
 
 interface PDFWSettings {
     /**
      * Specify the author.
      */
-    author: string;
+    author?: string;
     /**
      * Specify the compression type.
      */
-    compression: Dynamsoft.DWT.EnumDWT_PDFCompressionType | number;
+    compression?: Dynamsoft.DWT.EnumDWT_PDFCompressionType | number;
      /**
      * Specify the page type.
      * Allowed values are 0: Original, 2: A4, 6: letter, 8: legal
      */
-    pageType: number; 
+    pageType?: number; 
     /**
      * Specify the creator.
      */
-    creator: string;
+    creator?: string;
     /**
      * Specify the creation date.
      * Note that the argument should start with 'D:' like 'D:20181231'.
      */
-    creationDate: string;
+    creationDate?: string;
     /**
      * Specify the key words.
      */
-    keyWords: string;
+    keyWords?: string;
     /**
      * Specify the modified date.
      * Note that the argument should start with 'D:' like 'D:20181231'.
      */
-    modifiedDate: string;
+    modifiedDate?: string;
     /**
      * Specify the producer.
      */
-    producer: string;
+    producer?: string;
     /**
      * Specify the subject.
      */
-    subject: string;
+    subject?: string;
     /**
      * Specify the title.
      */
-    title: string;
+    title?: string;
     /**
      * Specify the PDF version. For example, 1.5. The allowed values are 1.1 ~ 1.7.
      * NOTE: If the compression type is PDF_JBig2, the lowerest version is 1.4
      * If the compression type is PDF_JP2000, the lowerest version is 1.5
      */
-    version: number;
+    version?: string;
     /**
      * Specify the quality of the images in the file.
      * The value ranges from 0 to 100.
      * Only valid when the {compression} is 'JPEG' or 'JPEG2000'.
      */
-    quality: number;
+    quality?: number;
 }
 ```
 
-**Usage notes**
+**Parameters**
 
-Use this method before you create a PDF with methods such as <a href="{{site.info}}api/WebTwain_IO.html#httpupload" target="_blank">`HTTPUpload()`</a>, <a href="{{site.info}}api/WebTwain_IO.html#saveaspdf" target="_blank">`SaveAsPDF()`</a>, and <a href="{{site.info}}api/WebTwain_IO.html#saveallaspdf" target="_blank">`SaveAllAsPDF()`</a>
-
-Only the core module license is required to use this method.
+`settings`: Configures how the PDF is generated.
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -373,8 +359,6 @@ Only the core module license is required to use this method.
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -383,9 +367,13 @@ Only the core module license is required to use this method.
 <td align="center">v15.1+ </td>
 <td align="center">v15.1+ </td>
 <td align="center">v15.1+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
 </div>
+
+**Usage notes**
+
+Use this method before you create a PDF with methods such as <a href="{{site.info}}api/WebTwain_IO.html#httpupload" target="_blank">`HTTPUpload()`</a>, <a href="{{site.info}}api/WebTwain_IO.html#saveaspdf" target="_blank">`SaveAsPDF()`</a>, and <a href="{{site.info}}api/WebTwain_IO.html#saveallaspdf" target="_blank">`SaveAllAsPDF()`</a>
+
+Only the core module license is required to use this method.

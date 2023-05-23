@@ -12,34 +12,63 @@ permalink: /info/api/WebTwain_Util.html
 
 The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance).
 
+<div class="multi-panel-switching-prefix"></div>
+
+- [Desktop Service](#desktop) 
+- [Android Service](#android) 
+
+<div class="multi-panel-start"></div>
+
 **Methods**
 
 |                                                                        |
 | :--------------------------------------------------------------------- | :------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| [`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent)                   | [`SetLanguage()`]({{site.info}}api/WebTwain_Util.html#setlanguage)     |
-| [`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata) |
+| [`isUsingActiveX()`](#isusingactivex) |[`RegisterEvent()`](#registerevent) | [`UnregisterEvent()`](#unregisterevent)                   | [`SetLanguage()`](#setlanguage)     |
+| [`GenerateURLForUploadData()`](#generateurlforuploaddata) |
 
 **Properties**
 
 |                                       |
 | :------------------------------------ | :---------------------------- | ----------------------------- | ------------------------------- |
 | [`ErrorCode`](#errorcode)             | [`ErrorString`](#errorstring) | [`LogLevel`](#loglevel)       | [`Manufacturer`](#manufacturer) |
-| [`ProductFamily`](#productfamily)     | [`ProductName`](#productname) | [`VersionInfo`](#versioninfo) | [`UseLocalService`](#uselocalservice) |
+| [`ProductFamily`](#productfamily)     | [`ProductName`](#productname) | [`VersionInfo`](#versioninfo) |
+
+<div class="multi-panel-end">
+
+</div><div class="multi-panel-start"></div>
+
+>The Android Service Edition only supports a subset of the APIs available in the Desktop Service Edition. For the APIs that are compatible with both editions, the usage remains the same. To learn how to use the APIs, please refer to the documentation for the Desktop Service Edition.
+
+**Methods**
+
+|                                                                        |
+| :--------------------------------------------------------------------- | :------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| [`isUsingActiveX()`](#isusingactivex) |[`RegisterEvent()`](#registerevent) | [`UnregisterEvent()`](#unregisterevent)|
+|[`GenerateURLForUploadData()`](#generateurlforuploaddata)|
+
+**Properties**
+
+|                                       |
+| :------------------------------------ | :---------------------------- | ----------------------------- | ------------------------------- |
+| [`ErrorCode`](#errorcode)             | [`ErrorString`](#errorstring) | [`LogLevel`](#loglevel)       | [`Manufacturer`](#manufacturer) |
+| [`ProductFamily`](#productfamily)     | [`ProductName`](#productname) | [`VersionInfo`](#versioninfo) |
+
+<div class="multi-panel-end"></div>
 
 ---
 
 ## isUsingActiveX
 
+Return whether the WebTwain object is running the ActiveX edition.
+
 **Syntax**
 
 ```typescript
-/**
- * Return whether the WebTwain object is running the ActiveX edition.
- */
 isUsingActiveX(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -49,18 +78,14 @@ isUsingActiveX(): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">all versions </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">v16.2+ </td>
-<td align="center">v18.0+</td>
+<td align="center">all versions </td>
+<td align="center">all versions </td>
+<td align="center">all versions </td>
+<td align="center">all versions </td>
 </tr>
 
 </table>
@@ -70,18 +95,22 @@ isUsingActiveX(): boolean;
 
 ## RegisterEvent
 
+Specify an event listener for the specified built-in event.
+
 **Syntax**
 
 ```typescript
-/**
- * Specify an event listener for the specified built-in event.
- * @param name Specify the event
- * @param callback The event listener
- */
 RegisterEvent(name: string, callback: () => void): boolean;
 ```
 
+**Parameters**
+
+`name`: Specify the event.
+
+`callback`: The event listener.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -91,8 +120,6 @@ RegisterEvent(name: string, callback: () => void): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -101,8 +128,6 @@ RegisterEvent(name: string, callback: () => void): boolean;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -112,18 +137,22 @@ RegisterEvent(name: string, callback: () => void): boolean;
 
 ## UnregisterEvent
 
+Remove an event listener from the specified built-in event.
+
 **Syntax**
 
 ```typescript
-/**
- * Remove an event listener from the specified built-in event.
- * @param name Specify the event
- * @param callback The event listener
- */
 UnregisterEvent(name: string, callback: () => void): boolean;
 ```
 
+**Parameters**
+
+`name`: Specify the event.
+
+`callback`: The event listener.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -133,8 +162,6 @@ UnregisterEvent(name: string, callback: () => void): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -143,8 +170,6 @@ UnregisterEvent(name: string, callback: () => void): boolean;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -158,19 +183,22 @@ There can only be one listener for each built-in event. If you call `RegisterEve
 
 ## SetLanguage
 
+Set the language for the authorization dialogs.
+
 **Syntax**
 
 ```typescript
-/**
- * Set the language for the authorization dialogs.
- * @param language Specify the language.
- */
 SetLanguage(
     language: Dynamsoft.DWT.EnumDWT_Language | number
 ): boolean;
 ```
 
+**Parameters**
+
+`language`: Specify the language. Please refer to [EnumDWT_Language]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_language)
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -180,8 +208,6 @@ SetLanguage(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -190,8 +216,6 @@ SetLanguage(
 <td align="center">v13.0+ </td>
 <td align="center">v13.0+ </td>
 <td align="center">v13.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -205,19 +229,11 @@ The language set with this method is only for the built-in security dialogs whic
 
 ## GenerateURLForUploadData
 
+Generate a URL to be used by a FileUpoader instance to fetch the data to upload.
+
 **Syntax**
 
 ```typescript
-/**
- * Generate a URL to be used by a FileUpoader instance to fetch the data to upload.
- * @param indices Specify the images to upload.
- * @param type Specify the file type.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument resultURL The generated URL.
- * @argument indices The indices of the images.
- * @argument type The file type.
- */
 GenerateURLForUploadData(
     indices: number[],
     type: Dynamsoft.DWT.EnumDWT_ImageType | number,
@@ -233,7 +249,23 @@ GenerateURLForUploadData(
 ): void;
 ```
 
+**Parameters**
+
+`indices`: Specify the images to upload.
+
+`type`: Specify the file type. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+- `resultURL`: The generated URL.
+- `indices`: The indices of the images.
+- `type`: The file type. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -243,8 +275,6 @@ GenerateURLForUploadData(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -253,8 +283,6 @@ GenerateURLForUploadData(
 <td align="center">v15.1+ </td>
 <td align="center">v15.1+ </td>
 <td align="center">v15.1+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -264,16 +292,16 @@ GenerateURLForUploadData(
 
 ## ErrorCode
 
+Return the error code.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the error code.
- */
 readonly ErrorCode: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -283,8 +311,6 @@ readonly ErrorCode: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -293,8 +319,6 @@ readonly ErrorCode: number;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -308,16 +332,16 @@ The `ErrorCode` and `ErrorString` always reflect the result of the last API call
 
 ## ErrorString
 
+Return the error string.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the error string.
- */
 readonly ErrorString: string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -327,8 +351,6 @@ readonly ErrorString: string;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -337,8 +359,6 @@ readonly ErrorString: string;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -352,12 +372,11 @@ The `ErrorCode` and `ErrorString` always reflect the result of the last API call
 
 ## LogLevel
 
+Return or set the log level for debugging.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the log level for debugging.
- */
 LogLevel: number;
 ```
 
@@ -372,8 +391,6 @@ LogLevel: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -382,8 +399,6 @@ LogLevel: number;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -391,20 +406,17 @@ LogLevel: number;
 
 **Usage notes**
 
-The logs for the Dynamic Web TWAIN library are saved in the directory `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\log\`. By default, `LogLevel` is 0 and nothing is recorded. When it is set to 1, all debugging information is recorded. This setting in your application will apply to all machines.
-
-To enable logging on a specific machine, you can set `LogLevel` to 14 in this file: `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\DSConfiguration.ini`.
+The logs for the Dynamic Web TWAIN library are saved in the directory `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\log\`. By default, `LogLevel` is 0 and nothing is recorded. When it is set to 1, all debugging information is recorded. This setting in your application will apply to all machines. Please set it back to 0 if you don't need to record log as it will slow down the speed.
 
 ---
 
 ## Manufacturer
 
+Manufacturer in the identity string of the Dynamic Web TWAIN library.
+
 **Syntax**
 
 ```typescript
-/**
- * Manufacturer in the identity string of the Dynamic Web TWAIN library.
- */
 readonly Manufacturer: string;
 ```
 
@@ -419,8 +431,6 @@ readonly Manufacturer: string;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -429,8 +439,6 @@ readonly Manufacturer: string;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -444,12 +452,11 @@ readonly Manufacturer: string;
 
 ## ProductFamily
 
+ProductFamily in the identity string of the Dynamic Web TWAIN library.
+
 **Syntax**
 
 ```typescript
-/**
- * ProductFamily in the identity string of the Dynamic Web TWAIN library.
- */
 readonly ProductFamily: string;
 ```
 
@@ -464,8 +471,6 @@ readonly ProductFamily: string;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -474,8 +479,6 @@ readonly ProductFamily: string;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -489,12 +492,11 @@ readonly ProductFamily: string;
 
 ## ProductName
 
+ProductName in the identity string of the Dynamic Web TWAIN library.
+
 **Syntax**
 
 ```typescript
-/**
- * ProductName in the identity string of the Dynamic Web TWAIN library.
- */
 readonly ProductName: string;
 ```
 
@@ -509,8 +511,6 @@ readonly ProductName: string;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -519,8 +519,6 @@ readonly ProductName: string;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -534,12 +532,11 @@ readonly ProductName: string;
 
 ## VersionInfo
 
+VersionInfo in the identity string of the Dynamic Web TWAIN library.
+
 **Syntax**
 
 ```typescript
-/**
- * VersionInfo in the identity string of the Dynamic Web TWAIN library.
- */
 readonly VersionInfo: string;
 ```
 
@@ -554,8 +551,6 @@ readonly VersionInfo: string;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -564,8 +559,6 @@ readonly VersionInfo: string;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -575,42 +568,6 @@ readonly VersionInfo: string;
 
 `Manufacturer` , `ProductFamily` , `ProductName` and `VersionInfo` together form the identity string of the Dynamic Web TWAIN library.
 
----
 
-## UseLocalService
 
-**Syntax**
-
-```typescript
-/**
- * Return whether this WebTwain instance is in Local-Service mode or WASM mode.
- */
-UseLocalService: boolean;
-```
-
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
-</tr>
-
-<tr>
-<td align="center">not supported </td>
-<td align="center">v16.1+ </td>
-<td align="center">v16.1+ </td>
-<td align="center">v16.1+ </td>
-<td align="center">v16.1+ </td>
-<td align="center">v16.1+ </td>
-<td align="center">v18.0+</td>
-</tr>
-
-</table>
-</div>
+<div class="multi-panel-switching-end"></div>

@@ -12,6 +12,8 @@ permalink: /info/api/WebTwain_Edit.html
 
 The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance).
 
+> All APIs on this page support Android Service from version 18.2.
+
 **Methods**
 
 |                                                 |
@@ -99,7 +101,6 @@ ChangeBitDepth(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -109,8 +110,7 @@ ChangeBitDepth(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">18.2+ </td>
 </tr>
 
 </table>
@@ -168,7 +168,6 @@ ChangeImageSize(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -178,8 +177,7 @@ ChangeImageSize(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -218,7 +216,7 @@ SetDPI(
 
 `resample`: Whether to resample the image. When it is true, the image size will change.
 
-`method`: Specify the algorithm for the change. Please refer to [EnumDWT_InterpolationMethod]({{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_interpolationmethod).
+`method`: Specify the algorithm for the change. Please refer to [EnumDWT_InterpolationMethod]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_interpolationmethod).
 
 `successCallback`: A callback function that is executed if the request succeeds.
 
@@ -237,7 +235,6 @@ SetDPI(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -247,8 +244,7 @@ SetDPI(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -295,7 +291,6 @@ ConvertToBW(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -305,8 +300,7 @@ ConvertToBW(
 <td align="center">v15.3+ </td>
 <td align="center">v15.3+ </td>
 <td align="center">v15.3+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -351,7 +345,6 @@ ConvertToGrayScale(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -361,8 +354,7 @@ ConvertToGrayScale(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -390,28 +382,30 @@ ConvertToGrayScaleAsync(
 
 ## Invert
 
+Invert the colour of the pixels on the specified image.
+
 **Syntax**
 
 ```typescript
-/**
- * Invert the colour of the pixels on the specified image.
- * @param index Specify the image.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 Invert(
     index: number,
     successCallback?: () => void,
-    failureCallback?: (
-        errorCode: number,
-        errorString: string
-    ) => void
+    failureCallback?: (errorCode: number, errorString: string) => void
 ): void | boolean;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -421,7 +415,6 @@ Invert(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -431,8 +424,7 @@ Invert(
 <td align="center">v15.3+ </td>
 <td align="center">v15.3+ </td>
 <td align="center">v15.3+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -442,30 +434,33 @@ Invert(
 
 ## SetImageWidth
 
+Change the width of the specified image by adding a margin or removing part of the image.
+
 **Syntax**
 
 ```typescript
-/**
- * Change the width of the specified image by adding a margin or removing part of the image.
- * @param index Specify the image.
- * @param width Specify the new width.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 SetImageWidth(
     index: number,
     width: number,
     successCallback?: () => void,
-    failureCallback?: (
-        errorCode: number,
-        errorString: string
-    ) => void
+    failureCallback?: (errorCode: number, errorString: string) => void
 ): void | boolean;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
+`width`: Specify the new width.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -475,7 +470,6 @@ SetImageWidth(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -485,8 +479,7 @@ SetImageWidth(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+</td>
-<td align="center">v18.0+</td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -496,28 +489,30 @@ SetImageWidth(
 
 ## Flip
 
+Flip the specified image.
+
 **Syntax**
 
 ```typescript
-/**
- * Flip the specified image.
- * @param index Specify the image.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 Flip(
     index: number,
     successCallback?: () => void,
-    failureCallback?: (
-        errorCode: number,
-        errorString: string
-    ) => void
+    failureCallback?: (errorCode: number, errorString: string) => void
 ): void | boolean;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
+ `successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -527,7 +522,6 @@ Flip(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -537,8 +531,7 @@ Flip(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+</td>
-<td align="center">v18.0+</td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -566,28 +559,30 @@ FlipAsync(
 
 ## Mirror
 
+Mirror the specified image.
+
 **Syntax**
 
 ```typescript
-/**
- * Mirror the specified image.
- * @param index Specify the image.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 Mirror(
     index: number,
     successCallback?: () => void,
-    failureCallback?: (
-        errorCode: number,
-        errorString: string
-    ) => void
+    failureCallback?: (errorCode: number, errorString: string) => void
 ): void | boolean;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -597,7 +592,6 @@ Mirror(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -607,8 +601,7 @@ Mirror(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+</td>
-<td align="center">v18.0+</td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -635,28 +628,30 @@ MirrorAsync(
 
 ## RotateLeft
 
+Rotate the specified image 90 degrees counterclockwise.
+
 **Syntax**
 
 ```typescript
-/**
- * Rotate the specified image 90 degrees counterclockwise.
- * @param index Specify the image.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 RotateLeft(
     index: number,
     successCallback?: () => void,
-    failureCallback?: (
-        errorCode: number,
-        errorString: string
-    ) => void
+    failureCallback?: (errorCode: number, errorString: string) => void
 ): void | boolean;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -666,7 +661,6 @@ RotateLeft(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -676,8 +670,7 @@ RotateLeft(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+</td>
-<td align="center">v18.0+</td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -704,28 +697,30 @@ RotateLeftAsync(
 
 ## RotateRight
 
+Rotate the specified image 90 degrees clockwise.
+
 **Syntax**
 
 ```typescript
-/**
- * Rotate the specified image 90 degrees clockwise.
- * @param index Specify the image.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 RotateRight(
     index: number,
     successCallback?: () => void,
-    failureCallback?: (
-        errorCode: number,
-        errorString: string
-    ) => void
+    failureCallback?: (errorCode: number, errorString: string) => void
 ): void | boolean;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -735,7 +730,6 @@ RotateRight(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -745,8 +739,7 @@ RotateRight(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+</td>
-<td align="center">v18.0+</td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -773,32 +766,36 @@ RotateRightAsync(
 
 ## Rotate
 
+Rotate the specified image by the specified angle.
+
 **Syntax**
 
 ```typescript
-/**
- * Rotate the specified image by the specified angle.
- * @param index Specify the image.
- * @param angle Specify the angle.
- * @param keepSize Whether to keep the original size.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 Rotate(
     index: number,
     angle: number,
     keepSize: boolean,
     successCallback?: () => void,
-    failureCallback?: (
-        errorCode: number,
-        errorString: string
-    ) => void
+    failureCallback?: (errorCode: number, errorString: string) => void
 ): void | boolean;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
+`angle`: Specify the angle.
+
+`keepSize`: Whether to keep the original size.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -808,7 +805,6 @@ Rotate(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -818,8 +814,7 @@ Rotate(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+</td>
-<td align="center">v18.0+</td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -851,34 +846,39 @@ RotateAsync(
 
 ## RotateEx
 
+Rotate the specified image by the specified angle.
+
 **Syntax**
 
 ```typescript
-/**
- * Rotate the specified image by the specified angle.
- * @param index Specify the image.
- * @param angle Specify the angle.
- * @param keepSize Whether to keep the original size.
- * @param method Specify the algorithm for the change.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 RotateEx(
     index: number,
     angle: number,
     keepSize: boolean,
     method: Dynamsoft.DWT.EnumDWT_InterpolationMethod | number,
     successCallback?: () => void,
-    failureCallback?: (
-        errorCode: number,
-        errorString: string
-    ) => void
+    failureCallback?: (errorCode: number, errorString: string) => void
 ): void | boolean;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
+`angle`: Specify the angle.
+
+`keepSize`: Whether to keep the original size.
+
+`method`: Specify the algorithm for the change. Please refer to [Dynamsoft.DWT.EnumDWT_InterpolationMethod]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_interpolationmethod).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -888,7 +888,6 @@ RotateEx(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -898,36 +897,21 @@ RotateEx(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+</td>
-<td align="center">v18.0+</td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
 </div>
 
-**Usage notes**
-
-Check out [ `Dynamsoft.DWT.EnumDWT_InterpolationMethod` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_interpolationmethod).
-
 ---
 
 ## Crop
 
+Crop the specified image using the specified coordinates.
+
 **Syntax**
 
 ```typescript
-/**
- * Crop the specified image using the specified coordinates.
- * @param index Specify the image.
- * @param left Specify the rectangle (leftmost coordinate).
- * @param top Specify the rectangle (topmost coordinate).
- * @param right Specify the rectangle (rightmost coordinate).
- * @param bottom Specify the rectangle (bottommost coordinate).
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 Crop(
     index: number,
     left: number,
@@ -935,14 +919,30 @@ Crop(
     right: number,
     bottom: number,
     successCallback?: () => void,
-    failureCallback?: (
-        errorCode: number,
-        errorString: string
-    ) => void
+    failureCallback?: (errorCode: number, errorString: string) => void
 ): void | boolean;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
+`left`: Specify the rectangle (leftmost coordinate).
+
+`top`: Specify the rectangle (topmost coordinate).
+
+`right`: Specify the rectangle (rightmost coordinate).
+
+`bottom`: Specify the rectangle (bottommost coordinate).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -952,7 +952,6 @@ Crop(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -962,8 +961,7 @@ Crop(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+</td>
-<td align="center">v18.0+</td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -973,21 +971,11 @@ Crop(
 
 ## Erase
 
+Erase a rectangular area from the specified image.
+
 **Syntax**
 
 ```typescript
-/**
- * Erase a rectangular area from the specified image.
- * @param index Specify the image.
- * @param left Specify the rectangle (leftmost coordinate).
- * @param top Specify the rectangle (topmost coordinate).
- * @param right Specify the rectangle (rightmost coordinate).
- * @param bottom Specify the rectangle (bottommost coordinate).
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 Erase(
     index: number,
     left: number,
@@ -995,14 +983,30 @@ Erase(
     right: number,
     bottom: number,
     successCallback?: () => void,
-    failureCallback?: (
-        errorCode: number,
-        errorString: string
-    ) => void
+    failureCallback?: (errorCode: number, errorString: string) => void
 ): void | boolean;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
+`left`: Specify the rectangle (leftmost coordinate).
+
+`top`: Specify the rectangle (topmost coordinate).
+
+`right`: Specify the rectangle (rightmost coordinate).
+
+`bottom`: Specify the rectangle (bottommost coordinate).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1012,7 +1016,6 @@ Erase(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -1022,8 +1025,7 @@ Erase(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+</td>
-<td align="center">v18.0+</td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -1033,17 +1035,20 @@ Erase(
 
 ## CopyToClipboard
 
+Copy the specified image to the clipboard of the operating system.
+
 **Syntax**
 
 ```typescript
-/**
- * Copy the specified image to the clipboard of the operating system.
- * @param index Specify the image.
- */
 CopyToClipboard(index: number): boolean;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1053,7 +1058,6 @@ CopyToClipboard(index: number): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -1063,13 +1067,11 @@ CopyToClipboard(index: number): boolean;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
 </div>
-
 
 ---
 
@@ -1091,17 +1093,20 @@ CopyToClipboardAsync(index: number): Promise<boolean>;
 
 ## CutToClipboard
 
+Cut the specified image to the clipboard of the operating system.
+
 **Syntax**
 
 ```typescript
-/**
- * Cut the specified image to the clipboard of the operating system.
- * @param index Specify the image.
- */
 CutToClipboard(index: number): boolean;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1111,61 +1116,6 @@ CutToClipboard(index: number): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
-</tr>
-
-<tr>
-<>
-align="center">v4.0+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-</tr>
-
-</table>
-</div>
-
-
----
-
-## CropToClipboard
-
-**Syntax**
-
-```typescript
-/**
- * Crop a rectangular area from the specified image to the clipboard of the operating system.
- * @param index Specify the image.
- * @param left Specify the rectangle (leftmost coordinate).
- * @param top Specify the rectangle (topmost coordinate).
- * @param right Specify the rectangle (rightmost coordinate).
- * @param bottom Specify the rectangle (bottommost coordinate).
- */
-CropToClipboard(
-    index: number,
-    left: number,
-    top: number,
-    right: number,
-    bottom: number
-): boolean;
-```
-
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -1175,30 +1125,22 @@ CropToClipboard(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
 </div>
 
-
 ---
 
-## CutFrameToClipboard
+## CropToClipboard
+
+Crop a rectangular area from the specified image to the clipboard of the operating system.
 
 **Syntax**
 
 ```typescript
-/**
- * Cut a rectangular area from the specified image to the clipboard of the operating system.
- * @param index Specify the image.
- * @param left Specify the rectangle (leftmost coordinate).
- * @param top Specify the rectangle (topmost coordinate).
- * @param right Specify the rectangle (rightmost coordinate).
- * @param bottom Specify the rectangle (bottommost coordinate).
- */
-CutFrameToClipboard(
+CropToClipboard(
     index: number,
     left: number,
     top: number,
@@ -1207,7 +1149,20 @@ CutFrameToClipboard(
 ): boolean;
 ```
 
+**Parameters**
+
+`index`: Specify the image.
+
+`left`: Specify the rectangle (leftmost coordinate).
+
+`top`: Specify the rectangle (topmost coordinate).
+
+`right`: Specify the rectangle (rightmost coordinate).
+
+`bottom`: Specify the rectangle (bottommost coordinate).
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1217,7 +1172,62 @@ CutFrameToClipboard(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
+<td align="center">Android Service</td>
+</tr>
+
+<tr>
+<td align="center">v4.0+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">v18.2+ </td>
+</tr>
+
+</table>
+</div>
+
+---
+
+## CutFrameToClipboard
+
+Cut a rectangular area from the specified image to the clipboard of the operating system.
+
+**Syntax**
+
+```typescript
+CutFrameToClipboard(
+    index: number,
+    left: number,
+    top: number,
+    right: number,
+    bottom: number
+): boolean;
+```
+
+**Parameters**
+
+`index`: Specify the image.
+
+`left`: Specify the rectangle (leftmost coordinate).
+
+`top`: Specify the rectangle (topmost coordinate).
+
+`right`: Specify the rectangle (rightmost coordinate).
+
+`bottom`: Specify the rectangle (bottommost coordinate).
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -1227,8 +1237,7 @@ CutFrameToClipboard(
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -1243,16 +1252,16 @@ The empty area resulted from the crop/erase/cut will be filled with the colour s
 
 ## BackgroundFillColor
 
+Return or set the fill colour for the empty area on an image that has been cut/cropped/erased.
+
 **Syntax**
 
 ```typescript
-/**
- * Return or set the fill colour for the empty area on an image that has been cut/cropped/erased.
- */
 BackgroundFillColor: number;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1262,7 +1271,6 @@ BackgroundFillColor: number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -1272,8 +1280,7 @@ BackgroundFillColor: number;
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v16.0+</td>
-<td align="center">v18.0+</td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -1287,18 +1294,25 @@ By default the colour is white (0xffffff). The byte-ordering of the 24-bit RGB v
 
 ## ChangeBrightnessAsync
 
+Change the image brightness.
+
 **Syntax**
 
 ```typescript
-/**
- * Change the image brightness.
- * @param index Specify the index of image in buffer.
- * @param val Specify the brightness. Allowed values [-1000~1000]. Negative value means decrease the brightness.
- */
-ChangeBrightnessAsync(index: number, val: number): Promise<boolean>;
+ChangeBrightnessAsync(
+    index: number, 
+    val: number
+): Promise<boolean>;
 ```
 
+**Parameters**
+
+`index`: Specify the index of image in buffer.
+
+`val`: Specify the brightness. Allowed values [-1000~1000]. Negative value means decrease the brightness.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1308,7 +1322,6 @@ ChangeBrightnessAsync(index: number, val: number): Promise<boolean>;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -1318,8 +1331,7 @@ ChangeBrightnessAsync(index: number, val: number): Promise<boolean>;
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
-<td align="center">v17.2+</td>
-<td align="center">v18.0+</td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -1329,18 +1341,25 @@ ChangeBrightnessAsync(index: number, val: number): Promise<boolean>;
 
 ## ChangeContrastAsnyc
 
+Change the image contrast.
+
 **Syntax**
 
 ```typescript
-/**
- * Change the image contrast.
- * @param index Specify the index of image in buffer.
- * @param val Specify the contrast. Allowed values [-1000~1000]. Negative value means decrease the contrast.
- */
-ChangeContrastAsnyc(index: number, val: number): Promise<boolean>;
+ChangeContrastAsnyc(
+    index: number, 
+    val: number
+): Promise<boolean>;
 ```
 
+**Parameters**
+
+`index`: Specify the index of image in buffer.
+
+`val`: Specify the contrast. Allowed values [-1000~1000]. Negative value means decrease the contrast.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1350,7 +1369,6 @@ ChangeContrastAsnyc(index: number, val: number): Promise<boolean>;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
 <td align="center">Android Service</td>
 </tr>
 
@@ -1360,8 +1378,7 @@ ChangeContrastAsnyc(index: number, val: number): Promise<boolean>;
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
-<td align="center">v17.2+</td>
-<td align="center">v18.0+</td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>

@@ -288,11 +288,6 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 
 ## `Dynamsoft.DWT.EnumDWT_PDFCompressionType`
 
-<div class="sample-code-prefix template-table"></div>
->- v17.3
->- v17.2.5
->
->1. 
 | Label | Value|
 |:-|:-|
 | PDF_AUTO | 0 |
@@ -301,16 +296,6 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | PDF_JPEG | 5 |
 | PDF_JP2000 | 6 |
 | PDF_JBIG2 | 7 |
->2. 
-| Label | Value|
-|:-|:-|
-| PDF_AUTO | 0 |
-| PDF_FAX4 | 2 |
-| PDF_LZW | 3 |
-| PDF_JPEG | 5 |
-| PDF_JP2000 | 6 |
-| PDF_JBig2 | 7 |
-
 
 ## `Dynamsoft.DWT.EnumDWT_ShowMode`
 
@@ -876,17 +861,26 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | Label | Value|
 |:-|:-|
 | TWAINSCANNER | 0x10 |
-| WIATWAINSCANNER | 0x20 |
+| WIASCANNER | 0x20 |
 | TWAINX64SCANNER | 0x40 |
 | ICASCANNER | 0x80 |
 | SANESCANNER | 0x100 |
 | ESCLSCANNER | 0x200 |
 | WIFIDIRECTSCANNER | 0x400 |
+| WIATWAINSCANNER | 0x800 |
+
 
 ## `Dynamsoft.DWT.EnumDWT_ExtImageInfo`
 
-| Label | Value|
+| Label | Value |
 |:-|:-|
 | default | 0 |
 | standard | 1 |
 | supported | 2 |
+
+## `Dynamsoft.DWT.EnumDWT_WorkMode`
+
+| Label | Value | Description |
+|:-|:-|:-|
+| Normal | 0 | Original mode, the image data is processed in the buffer |
+| Balance | 1 | The image data is processed in the browser canvas |

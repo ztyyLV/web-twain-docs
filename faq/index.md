@@ -92,6 +92,9 @@ permalink: /faq/
 <li><a href="{{site.faq}}scanner-not-shown-or-not-responding-in-the browser.html">Why is my scanner not shown or not responding in the browser?</a></li>
 
 <li><a href="{{site.faq}}download-virtual-scanner-for-testing.html">Download virtual scanner for testing</a></li>
+
+<li><a href="{{site.faq}}use-wia-insteadof-wiatwain.html">How to use pure WIA source instead of WIATWAIN source from version 18.2?</a></li>
+
 </ol>
 
 ## Image Viewer
@@ -285,8 +288,7 @@ permalink: /faq/
 
 <li><a href="{{site.faq}}service-backward-compatibility.html">Can I use two different websites integrated with two different versions of Dynamic Web TWAIN on the same computer?</a></li>
 
-<li><a href="{{site.faq}}how-come-would-you-need-local.dynamsoft.com.html">In which cases would I use local.dynamsoft.com instead of 127.0.0.1?</a></li>
-
+<!-- <li><a href="{{site.faq}}how-come-would-you-need-local.dynamsoft.com.html">In which cases would I use local.dynamsoft.com instead of 127.0.0.1?</a></li> -->
 <li><a href="{{site.faq}}upgrade-to-latest-version.html">How do I upgrade my project to use the latest version of the Dynamic Web TWAIN SDK?</a></li>
 
 <li><a href="{{site.faq}}upgrade-end-user-installations.html">How do I upgrade the end-user installation for all end users once I upgrade my project?</a></li>
@@ -358,6 +360,12 @@ permalink: /faq/
 <li><a href="{{site.faq}}source-has-nothing-to-capture.html">Error Message - Source has nothing to capture</a></li>
 
 <li><a href="{{site.faq}}chrome-106-107-warning.html">Warning Message - Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true</a></li>
+
+<li><a href="{{site.faq}}type-error-appendchild.html">Error Message - Uncaught TypeError: Cannot read properties of null (reading 'appendChild') or Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'</a></li>
+
+<li><a href="{{site.faq}}error-message-user-cancelled-the-operation.html">Error Message - User cancelled the operation</a></li>
+
+<li><a href="{{site.faq}}the-loading-bar-keeps-spinning-when-capture-the-image-with-iphone.html">The loading bar keeps spinning when capture the image with iPhone.</a></li>
  </ol>
 
 ## Licensing and Purchase

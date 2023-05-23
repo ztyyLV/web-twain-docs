@@ -23,13 +23,11 @@ permalink: /info/api/Addon_BarcodeReader.html
 
 ## decode
 
+Read an image in the buffer and try to locate and decode barcode(s) on it.
+
 **Syntax**
 
 ```typescript
-/**
- * Read an image in the buffer and try to locate and decode barcode(s) on it.
- * @param index Specify the image to decode.
- */
 decode(index: number): Promise < ITextResults > ;
 
 interface TextResults {
@@ -128,14 +126,14 @@ interface Result {
 }
 ```
 
+**Parameters**
+
+`index`: Specify the image to decode.
+
 **Availability**
+
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -143,8 +141,6 @@ interface Result {
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -153,8 +149,6 @@ interface Result {
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -164,13 +158,12 @@ interface Result {
 
 ## getRuntimeSettings
 
+Return the current runtime settings or the settings of the specified built-in template. The template can only be "speed", "balance", or "coverage".
+
 **Syntax**
 
 ```typescript
-/**
- * Get the current runtime settings.
- */
-getRuntimeSettings(): Promise < RuntimeSettings > ;
+getRuntimeSettings(template?: string): Promise < RuntimeSettings > ;
 
 interface RuntimeSettings {
     barcodeFormatIds: number;
@@ -225,18 +218,11 @@ interface Region {
 <table>
 
 <tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
 <td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -245,8 +231,6 @@ interface Region {
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -256,15 +240,41 @@ interface Region {
 
 ## updateRuntimeSettings
 
+Update the runtime settings with a given object or use the string "speed", "balance", or "coverage" to use our preset settings. The default setting is "coverage".
+
 **Syntax**
 
 ```typescript
-/**
- * Update the runtime settings with a given object or use the string "speed", "balance", or "coverage" to use our preset settings. The default setting is "coverage".
- * @param settings Specify the runtime settings.
- */
 updateRuntimeSettings(settings: RuntimeSettings): Promise < RuntimeSettings > ;
 ```
+
+**Parameters**
+
+`settings`: Specify the runtime settings.
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v14.3.1+ </td>
+<td align="center">v14.1+ </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+<td align="center">not supported </td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -286,59 +296,22 @@ DWObject.Addon.BarcodeReader.getRuntimeSettings("balance")
   });
 ```
 
-**Availability**
-<div class="availability">
-<table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
-</tr>
-
-<tr>
-<td align="center">v14.3.1+ </td>
-<td align="center">v14.1+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
-</tr>
-
-</table>
-</div>
-
 ---
 
 ## resetRuntimeSettings
 
+Reset all runtime settings to default values.
+
 **Syntax**
 
 ```typescript
-/**
- * Reset all runtime settings to default values.
- */
 resetRuntimeSettings(): Promise < RuntimeSettings > ;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
-
-<tr>
-<td colspan="5" align="center">Desktop Service Edition</td>
-<td>WebAssembly Edition</td>
-</tr>
 
 <tr>
 <td align="center">ActiveX</td>
@@ -346,8 +319,6 @@ resetRuntimeSettings(): Promise < RuntimeSettings > ;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -356,8 +327,6 @@ resetRuntimeSettings(): Promise < RuntimeSettings > ;
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -367,19 +336,22 @@ resetRuntimeSettings(): Promise < RuntimeSettings > ;
 
 ## initRuntimeSettingsWithString
 
+Set up the barcode reader with advanced settings.
+
 **Syntax**
 
 ```typescript
-/**
- * Set up the barcode reader with advanced settings.
- * @param settings The runtime setting in the form of a string.
- */
 initRuntimeSettingsWithString(
     settings: string
 ): Promise < RuntimeSettings > ;
 ```
 
+**Parameters**
+
+`settings`: The runtime setting in the form of a string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -389,8 +361,6 @@ initRuntimeSettingsWithString(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -399,8 +369,6 @@ initRuntimeSettingsWithString(
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
-<td align="center">v16.0+ </td>
-<td align="center">v18.0+</td>
 </tr>
 
 </table>

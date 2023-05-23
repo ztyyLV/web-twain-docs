@@ -17,7 +17,7 @@ permalink: /faq/how-to-exclude-wia-sources-in-the-source-list.html
 
 There are two ways to achieve this:
 
-* Set `IfUseTwainDSM` to `true`
+* Set [IfUseTwainDSM]({{site.info}}api/WebTwain_Acquire.html#ifusetwaindsm) to `true`
 
 ``` javascript
 DWObject.IfUseTwainDSM = true;
@@ -28,7 +28,7 @@ DWObject.IfUseTwainDSM = true;
 ``` javascript
 var sources = DWObject.GetSourceNames();
 for (var i = 0; i < sources.length; i++) {
-    if (sources[i].toLowerCase().indexOf('epson') != -1) {
+    if (sources[i].toLowerCase().indexOf('wia') != -1) {
         sources.splice(i, 1);
     }
 }

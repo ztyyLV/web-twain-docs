@@ -66,7 +66,7 @@ permalink: /index.html
 * [FAQs]({{site.faqs}}faq/index.html)
 
    - [SDK Download/Free Trial]({{site.faq}}#sdk-downloadfree-trial)
-   - [Capture/Image Source]({{site.indepth}}#captureimage-source)
+   - [Capture/Image Source]({{site.faq}}#captureimage-source)
    - [Image Viewer]({{site.faq}}#image-viewer)
    - [Image Editing]({{site.faq}}#image-editing)
    - [UI Customization]({{site.faq}}#ui-customization)

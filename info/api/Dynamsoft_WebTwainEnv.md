@@ -22,6 +22,16 @@ interface Dynamsoft.DWT {
     readonly ServerMacVersionInfo: string;
     readonly ServerVersionInfo: string;
     /**
+     * Whether to load UI related js files.
+    */
+    UseDefaultViewer: boolean;
+    /**
+    * Attach the callback function to the specified event.
+    * @param event Specify the event.
+    * @param callback Specify the callback.
+    */
+    RegisterEvent(event: string, callback: (...args: any[]) => void): void;
+    /**
      * Whether to create a WebTwain instance automatically.
      */
     AutoLoad: boolean;
@@ -41,12 +51,6 @@ interface Dynamsoft.DWT {
     readonly inited: boolean;
     ProductKey: string;
     ResourcesPath: string;
-    UseLocalService: boolean;
-     /**
-     * Whether to use camera wasm. The default value is false. 
-     * Set this property to true if you want to use camera wasm in service mode.
-     */
-    UseCameraAddonWasm: boolean;
     
     // Functions
     CreateDWTObject(
@@ -63,16 +67,12 @@ interface Dynamsoft.DWT {
         asyncFailureFunc: (errorString: string) => {}
     ): void;
     DeleteDWTObject(Id?: string): boolean;
-    GetWebTwain(ContainerId?: string): WebTwain;
-    GetWebTwainEx(WebTwainId: string): WebTwain;
+    GetWebTwain(ContainerIdOrWebTwainId?: string): WebTwain;
+    GetWebTwainEx(ContainerIdOrWebTwainId: string): WebTwain;
     Load(): void;
     Unload(): void;
-    RemoveAllAuthorizations: function () {};    
-    OnWebTwainNotFound: function () {};
     OnWebTwainPostExecute: function () {};
     OnWebTwainPreExecute: function () {};
-    OnWebTwainReady: function () {};
-    OnWebTwainWillInit: function () {};
 }
 
 /**
@@ -88,12 +88,11 @@ UpdateCert(
 
 ## licenseException
 
+Error message related to license.
+
 **Syntax**
 
 ``` typescript
-/**
- * Error message related to license.
- */
 licenseException: string;
 ```
 
@@ -133,44 +132,37 @@ Sets or returns the product key for the library. A product key is required to en
 ### `ResourcesPath`
 
 Sets or returns where the library looks for resources files including service installers, CSS, etc.
-  
-### `UseLocalService`
-
-Sets or returns whether to use the service or use WASM only. This property can be changed at runtime (but not recommended) and affects `WebTwain` instances created after the change.
-
-The default value is `true` .
-  
-### `UseCameraAddonWasm`
-
-Whether to use camera wasm. Set this property to true if you want to use camera wasm in service mode.
-
-The default value is false. 
 
 ## Functions
 
 ### `UpdateCert`
 
+Update and download certificate (server.pem.ldsc & server_key.pem.ldsc) to DynamsoftServicex64_17\cert.
+
 **Syntax**
 
 ``` typescript
-/**
- * Update and download certificate (server.pem.ldsc & server_key.pem.ldsc) to DynamsoftServicex64_17\cert.
- * @param url Url to download the new certificate. E.g. http://download.dynamsoft.com/cert.zip. server.pem.ldsc & server_key.pem.ldsc should be in cert.zip. 
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error string.
- */
 UpdateCert(
-        url: string,
-        optionalAsyncSuccessFunc?: () => void,
-        optionalAsyncFailureFunc?: (
-            errorCode: number, 
-            errorString: string) => void
-    );
+    url: string,
+    optionalAsyncSuccessFunc?: () => void,
+    optionalAsyncFailureFunc?: (
+        errorCode: number, 
+        errorString: string) => void
+);
 ```
 
+**Parameters**
+
+`url`: Url to download the new certificate. E.g. http://download.dynamsoft.com/cert.zip. server.pem.ldsc & server_key.pem.ldsc should be in cert.zip.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -180,8 +172,6 @@ UpdateCert(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -190,8 +180,6 @@ UpdateCert(
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
@@ -202,7 +190,7 @@ UpdateCert(
 // overwrite the following function in dynamsoft.webtwain.install.js
    Dynamsoft.OnSSLCertInfo = function (sslExpiredDate) {
         console.log(sslExpiredDate);
-   Dynamsoft.DWT.UpdateCert("https://xxx.com/cert.zip", 
+   Dynamsoft.DWT.UpdateCert("https://domainlocation.com/cert.zip", 
         function () { console.log("OK"); }, 
         function (errorCode, errorString) { console.log(errorString);}
     );
@@ -224,7 +212,6 @@ interface DWTInitialConfig {
         Host ? : string,
         Port ? : string,
         PortSSL ? : string,
-        UseLocalService? : boolean
 }
 ```
 
@@ -245,20 +232,16 @@ interface DWTInitialConfig {
   Initiates the library. If there are predefined `Containers` , one `WebTwain` instance will be created for each `Container` .
 
 ### `RegisterEvent()`
-
+  [We removed OnWebTWainReady...]: # 
   Registers an environmental event. Typically the event is `OnWebTwainReady` which is triggered when the initialization completes.
 
 ### `Unload()`
 
   Destroys all `WebTwain` instances and cuts off the connection to the Dynamsoft Service.
 
-### `RemoveAllAuthorizations()`
-
-Removes the specific authorizations made by end users on a client machine. Only effective when the security feature is enabled for local files, scanners or cameras.
-
 ### `UseDefaultViewer`
 
-Whether to use the built-in viewer. If it is set to `false` , the file `dynamsoft.viewer.js` is not loaded at all and there is no way to add it back later. Therefore, only set it to `false` when you absolutely won't need the viewer or will be building your own viewer.
+Whether to use the built-in viewer. If it is set to `false` , the file `dynamsoft.webtwain.viewer.js` is not loaded at all and there is no way to add it back later. Therefore, only set it to `false` when you absolutely won't need the viewer or will be building your own viewer.
 
 ### `CustomizableDisplayInfo`
 
@@ -292,22 +275,30 @@ Specify the source of the loader bar image. Check out more on [HTMLImageElement.
 
 Specify the class name of the DIV element that contains the loader bar. With this class, you can customize the loader bar even further with CSS.
 
-### `WasmConfig`
+#### `OnWebTwainReady`
 
-#### `maxHeapSize`
+A built-in callback triggered when the Web TWAIN resources have completed loading
 
-Specify the maximum memory allowed to be used by the library when it's in WASM-mode. By default, it's 200 (MB).
+**Example**
+```javascript
+Dynamsoft.DWT.RegisterEvent('OnWebTwainReady', 
+  Dynamsoft_OnReady //The typical function for initalizing the environment once the resources have loaded
+); 
+```
 
-#### `fetchOptions`
+#### `OnWebTwainError`
 
-* `headers`
+A built-in callback triggered when an error is detected when laoding the Web TWAIN environment
 
-A Headers object, an object literal, or an array of two-item arrays to set request's headers. Check out [HeadersInit](https://microsoft.github.io/PowerBI-JavaScript/modules/_node_modules_typedoc_node_modules_typescript_lib_lib_dom_d_.html#headersinit).
+**Example**
+```javascript
+Dynamsoft.DWT.RegisterEvent('OnWebTwainError', 
+  Dynamsoft_OnError 
+); 
 
-* `mode`
-
-A string to indicate whether the request will use CORS, or will be restricted to same-origin URLs. Sets request's mode. Check out [RequestMode](https://microsoft.github.io/PowerBI-JavaScript/modules/_node_modules_typedoc_node_modules_typescript_lib_lib_dom_d_.html#requestmode).
-
-* `credentials`
-
-A string indicating whether credentials will be sent with the request always, never, or only when sent to a same-origin URL. Sets request's credentials. Check out [RequestCredentials](https://microsoft.github.io/PowerBI-JavaScript/modules/_node_modules_typedoc_node_modules_typescript_lib_lib_dom_d_.html#requestcredentials).
+ 
+function Dynamsoft_OnError(error){
+  // error handling
+  console.error(error.message);
+} 
+```

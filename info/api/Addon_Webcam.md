@@ -25,26 +25,27 @@ permalink: /info/api/Addon_Webcam.html
 
 ## CaptureImage
 
+Capture an image from the current camera.
+
 **Syntax**
 
 ```typescript
-/**
- * Capture an image from the current camera.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument errorCode The error code.
- * @argument errorString The error String
- */
 CaptureImage(
     successCallback: () => void,
-    failureCallback: (
-        errorCode: number,
-        errorString: string
-    ) => void
+    failureCallback: (errorCode: number, errorString: string) => void
 ): void;
 ```
 
+**Parameters**
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error String
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -54,15 +55,11 @@ CaptureImage(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v10.2+ </td>
 <td align="center">v10.2+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -75,16 +72,16 @@ CaptureImage(
 
 ## GetSourceList
 
+Return a list of all available cameras.
+
 **Syntax**
 
 ```typescript
-/**
- * Return a list of all available cameras.
- */
 GetSourceList(): string[];
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -94,15 +91,11 @@ GetSourceList(): string[];
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v10.2+ </td>
 <td align="center">v10.2+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -115,17 +108,20 @@ GetSourceList(): string[];
 
 ## SelectSource
 
+Select a camera to use.
+
 **Syntax**
 
 ```typescript
-/**
- * Select a camera to use.
- * @param name Specify the camera.
- */
 SelectSource(name: string): boolean;
 ```
 
+**Parameters**
+
+`name`: Specify the camera.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -135,15 +131,11 @@ SelectSource(name: string): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v10.2+ </td>
 <td align="center">v10.2+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -156,12 +148,11 @@ SelectSource(name: string): boolean;
 
 ## CloseSource
 
+Close the current camera.
+
 **Syntax**
 
 ```typescript
-/**
- * Close the current camera.
- */
 CloseSource(): boolean;
 ```
 
@@ -170,6 +161,7 @@ CloseSource(): boolean;
 When you close the camera, the video stream will stop at the last frame.
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -179,15 +171,11 @@ When you close the camera, the video stream will stop at the last frame.
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v10.2+ </td>
 <td align="center">v10.2+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -200,15 +188,11 @@ When you close the camera, the video stream will stop at the last frame.
 
 ## PlayVideo
 
+Start to play the video stream from the current camera.
+
 **Syntax**
 
 ```typescript
-/**
- * Start to play the video stream from the current camera.
- * @param DWObject Specify a WebTwain instance to show the video.
- * @param quality Specify the quality of the video.
- * @param frameDidShow A callback function that is triggered after each video frame is shown.
- */
 PlayVideo(
     DWObject: WebTwain,
     quality: number,
@@ -216,7 +200,16 @@ PlayVideo(
 ): boolean;
 ```
 
+**Parameters**
+
+`DWObject`: Specify a WebTwain instance to show the video.
+
+`quality`: Specify the quality of the video.
+
+`frameDidShow`: A callback function that is triggered after each video frame is shown.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -226,15 +219,11 @@ PlayVideo(
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -247,16 +236,16 @@ PlayVideo(
 
 ## PauseVideo
 
+Pause the video.
+
 **Syntax**
 
 ```typescript
-/**
- * Pause the video.
- */
 PauseVideo(): boolean;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -266,15 +255,11 @@ PauseVideo(): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -287,22 +272,16 @@ PauseVideo(): boolean;
 
 ## StopVideo
 
+Stop the video.
+
 **Syntax**
 
 ```typescript
-/**
- * Stop the video.
- */
 StopVideo(): boolean;
 ```
 
-**Usage notes**
-
-When you capture a frame, it's always the actual latest frame from the camera even if you have paused the video.
-
-When you close the camera, the video stream will stop at the last frame.
-
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -312,8 +291,6 @@ When you close the camera, the video stream will stop at the last frame.
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -322,24 +299,26 @@ When you close the camera, the video stream will stop at the last frame.
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
 </div>
 
+**Usage notes**
+
+When you capture a frame, it's always the actual latest frame from the camera even if you have paused the video.
+
+When you close the camera, the video stream will stop at the last frame.
+
 ---
 
 ## GetCameraControlPropertySetting
 
+Return information about the specified camera property.
+
 **Syntax**
 
 ```typescript
-/**
- * Return information about the specified camera property.
- * @param property Specify the property.
- */
 GetCameraControlPropertySetting(
     property: Dynamsoft.DWT.EnumDWT_CameraControlProperty | number
 ): CameraControlProperty;
@@ -356,7 +335,12 @@ interface CameraControlProperty {
 }
 ```
 
+**Parameters**
+
+`property`: Specify the property. Please refer to [EnumDWT_CameraControlProperty]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_cameracontrolproperty).
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -366,15 +350,11 @@ interface CameraControlProperty {
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -387,13 +367,11 @@ interface CameraControlProperty {
 
 ## GetCameraControlPropertyMoreSetting
 
+Return detailed information about the specified camera property.
+
 **Syntax**
 
 ```typescript
-/**
- * Return detailed information about the specified camera property.
- * @param property Specify the property.
- */
 GetCameraControlPropertyMoreSetting(
     property: Dynamsoft.DWT.EnumDWT_CameraControlProperty | number
 ): CameraControlPropertyExtra;
@@ -422,7 +400,12 @@ interface CameraControlPropertyExtra {
 }
 ```
 
+**Parameters**
+
+`property`: Specify the property. Please refer to [EnumDWT_CameraControlProperty]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_cameracontrolproperty).
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -432,15 +415,11 @@ interface CameraControlPropertyExtra {
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -453,15 +432,11 @@ interface CameraControlPropertyExtra {
 
 ## SetCameraControlPropertySetting
 
+Set the specified camera property.
+
 **Syntax**
 
 ```typescript
-/**
- * Set the specified camera property.
- * @param property Specify the property.
- * @param value Specify the value.
- * @param auto Specify whether the propery should change automatically.
- */
 SetCameraControlPropertySetting(
     property: Dynamsoft.DWT.EnumDWT_CameraControlProperty | number,
     value: number,
@@ -469,11 +444,16 @@ SetCameraControlPropertySetting(
 ): boolean;
 ```
 
-**Usage notes**
+**Parameters**
 
-Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_cameracontrolproperty" target="_blank">Dynamsoft.DWT.EnumDWT_CameraControlProperty</a>.
+`property`: Specify the property. Please refer to [EnumDWT_CameraControlProperty]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_cameracontrolproperty).
+
+`value`: Specify the value.
+
+`auto`: Specify whether the propery should change automatically.
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -483,15 +463,11 @@ Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_came
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -504,13 +480,11 @@ Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_came
 
 ## GetVideoPropertySetting
 
+Return information about the specified video property.
+
 **Syntax**
 
 ```typescript
-/**
- * Return information about the specified video property.
- * @param property Specify the property.
- */
 GetVideoPropertySetting(
     property: Dynamsoft.DWT.EnumDWT_VideoProperty | number
 ): VideoControlProperty;
@@ -527,7 +501,12 @@ interface VideoControlProperty {
 }
 ```
 
+**Parameters**
+
+`property`: Specify the property. Please refer to [EnumDWT_VideoProperty]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_videoproperty).
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -537,15 +516,11 @@ interface VideoControlProperty {
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -558,13 +533,11 @@ interface VideoControlProperty {
 
 ## GetVideoPropertyMoreSetting
 
+Return detailed information about the specified video property.
+
 **Syntax**
 
 ```typescript
-/**
- * Return detailed information about the specified video property.
- * @param property Specify the property.
- */
 GetVideoPropertyMoreSetting(
     property: Dynamsoft.DWT.EnumDWT_VideoProperty | number
 ): VideoControlPropertyExtra;
@@ -593,7 +566,12 @@ interface VideoControlPropertyExtra {
 }
 ```
 
+**Parameters**
+
+`property`: Specify the property. Please refer to [EnumDWT_VideoProperty]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_videoproperty).
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -603,15 +581,11 @@ interface VideoControlPropertyExtra {
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -624,15 +598,11 @@ interface VideoControlPropertyExtra {
 
 ## SetVideoPropertySetting
 
+Set the specified video property.
+
 **Syntax**
 
 ```typescript
-/**
- * Set the specified video property.
- * @param property Specify the property.
- * @param value Specify the value.
- * @param auto Specify whether the propery should change automatically.
- */
 SetVideoPropertySetting(
     property: Dynamsoft.DWT.EnumDWT_VideoProperty | number,
     value: number,
@@ -640,11 +610,16 @@ SetVideoPropertySetting(
 ): boolean;
 ```
 
-**Usage notes**
+**Parameters**
 
-Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_videoproperty" target="_blank">Dynamsoft.DWT.EnumDWT_VideoProperty</a>.
+`property`: Specify the property. Please refer to [EnumDWT_VideoProperty]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_videoproperty).
+
+`value`: Specify the value.
+
+`auto`: Specify whether the propery should change automatically.
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -654,15 +629,11 @@ Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_vide
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -675,12 +646,11 @@ Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_vide
 
 ## GetFrameRate
 
+Return the frame rates supported by the current camera.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the frame rates supported by the current camera.
- */
 GetFrameRate(): FrameRate;
 
 interface FrameRate {
@@ -700,6 +670,7 @@ interface FrameRate {
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -709,15 +680,11 @@ interface FrameRate {
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">not supported </td>
 <td align="center">v14.3.1+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -730,12 +697,11 @@ interface FrameRate {
 
 ## GetMediaType
 
+Return the media types supported by the current camera.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the media types supported by the current camera.
- */
 GetMediaType(): MediaType;
 
 interface MediaType {
@@ -755,6 +721,7 @@ interface MediaType {
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -764,15 +731,11 @@ interface MediaType {
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -785,12 +748,11 @@ interface MediaType {
 
 ## GetResolution
 
+Return the resolutions supported by the current camera.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the resolutions supported by the current camera.
- */
 GetResolution(): Resolution;
 
 interface Resolution {
@@ -810,6 +772,7 @@ interface Resolution {
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -819,15 +782,11 @@ interface Resolution {
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -840,17 +799,20 @@ interface Resolution {
 
 ## SetFrameRate
 
+Set the frame rate.
+
 **Syntax**
 
 ```typescript
-/**
- * Set the frame rate.
- * @param rate Specify the frame rate.
- */
 SetFrameRate(rate: number): boolean;
 ```
 
+**Parameters**
+
+`rate`: Specify the frame rate.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -860,15 +822,11 @@ SetFrameRate(rate: number): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -881,17 +839,20 @@ SetFrameRate(rate: number): boolean;
 
 ## SetMediaType
 
+Set the media type.
+
 **Syntax**
 
 ```typescript
-/**
- * Set the media type.
- * @param type Sepcify the media type.
- */
 SetMediaType(type: string): boolean;
 ```
 
+**Parameters**
+
+`type`: Sepcify the media type.
+
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -901,15 +862,11 @@ SetMediaType(type: string): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -922,23 +879,20 @@ SetMediaType(type: string): boolean;
 
 ## SetResolution
 
+Set the resolution.
+
 **Syntax**
 
 ```typescript
-/**
- * Set the resolution.
- * @param resolution Specify the resolution.
- */
 SetResolution(resolution: string): boolean;
 ```
 
-**Example**
+**Parameters**
 
-```javascript
-DWObject.Addon.Webcam.SetResolution("640 x 480");
-```
+`resolution`: Specify the resolution.
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -948,15 +902,11 @@ DWObject.Addon.Webcam.SetResolution("640 x 480");
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -965,27 +915,32 @@ DWObject.Addon.Webcam.SetResolution("640 x 480");
 </table>
 </div>
 
+**Example**
+
+```javascript
+DWObject.Addon.Webcam.SetResolution("640 x 480");
+```
+
 ---
 
 ## SetVideoRotateMode
 
+Rotate the video.
+
 **Syntax**
 
 ```typescript
-/**
- * Rotate the video.
- * @param mode Specify the rotate mode
- */
 SetVideoRotateMode(
     mode: Dynamsoft.DWT.EnumDWT_VideoRotateMode | number
 ): boolean;
 ```
 
-**Usage notes**
+**Parameters**
 
-Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_videorotatemode" target="_blank">Dynamsoft.DWT.EnumDWT_VideoRotateMode</a>.
+`mode`: Specify the rotate mode. Please refer to [EnumDWT_VideoRotateMode]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_videorotatemode).
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -995,15 +950,11 @@ Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_vide
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -1016,16 +967,16 @@ Check out <a href="{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_vide
 
 ## GetFrameURL
 
+Return the URL (http(s)://) for the latest frame.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the URL (http(s)://) for the latest frame.
- */
 GetFrameURL(): string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1035,15 +986,11 @@ GetFrameURL(): string;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">not supported </td>
 <td align="center">v14.3.1+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -1056,22 +1003,16 @@ GetFrameURL(): string;
 
 ## GetFramePartURL
 
+Return the internal URL (dwt://) for the latest frame.
+
 **Syntax**
 
 ```typescript
-/**
- * Return the internal URL (dwt://) for the latest frame.
- */
 GetFramePartURL(): string;
 ```
 
-**Usage notes**
-
-`GetFrameURL()` returns a public URL that can be used to access the frame directly by any applicatoin capable of HTTP requests that runs on the same machine. For example: 'https://127.0.0.1:18623/dwt/dwt_16000428/img?id=853407158&index=-1&width=-1&height=-1&webcam=80&t=1590481406860'.
-
-`GetFramePartURL()` returns an internal URL that only Dynamsoft libraries such as the Barcode Reader add-on can read. For example: `dwt://dwt_16000428/img?id=853407158&index=-1&width=-1&height=-1&webcam=80&t=1590481403659` .
-
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1081,8 +1022,6 @@ GetFramePartURL(): string;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">WASM</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1091,9 +1030,13 @@ GetFramePartURL(): string;
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
 </tr>
 
 </table>
 </div>
+
+**Usage notes**
+
+`GetFrameURL()` returns a public URL that can be used to access the frame directly by any applicatoin capable of HTTP requests that runs on the same machine. For example: `https://127.0.0.1:18623/dwt/dwt_16000428/img?id=853407158&index=-1&width=-1&height=-1&webcam=80&t=1590481406860`.
+
+`GetFramePartURL()` returns an internal URL that only Dynamsoft libraries such as the Barcode Reader add-on can read. For example: `dwt://dwt_16000428/img?id=853407158&index=-1&width=-1&height=-1&webcam=80&t=1590481403659`.
