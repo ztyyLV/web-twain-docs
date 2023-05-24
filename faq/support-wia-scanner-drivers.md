@@ -2,16 +2,16 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: How do I support WIA scanner drivers in my application?
+title: How can I support WIA scanner drivers in my application?
 keywords: Dynamic Web TWAIN, Capture/ Image Source, WIA
-breadcrumbText: How do I support WIA scanner drivers in my application?
-description: How do I support WIA scanner drivers in my application?
+breadcrumbText: How can I support WIA scanner drivers in my application?
+description: How can I support WIA scanner drivers in my application?
 permalink: /faq/support-wia-scanner-drivers.html
 ---
 
 # Capture/Image Source
 
-## How do I support WIA scanner drivers in my application?
+## How can I support WIA scanner drivers in my application?
 
 Prior to Dynamic Web TWAIN version 18.2, WIA drivers are not supported and TWAIN drivers are recommended. Please refer to <a href="{{site.faq}}difference-between-Twain-and-wia.html" target="_blank">this article</a> for the differences between WIA and TWAIN drivers.
 

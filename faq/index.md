@@ -93,7 +93,7 @@ permalink: /faq/
 
 <li><a href="{{site.faq}}download-virtual-scanner-for-testing.html">Download virtual scanner for testing</a></li>
 
-<li><a href="{{site.faq}}use-wia-insteadof-wiatwain.html">How to use pure WIA source instead of WIATWAIN source from version 18.2?</a></li>
+<li><a href="{{site.faq}}support-wia-scanner-drivers.html">How can I support WIA scanner drivers in my application?</a></li>
 
 </ol>
 
