@@ -14,8 +14,8 @@ permalink: /info/schedule/Stable.html
 ## 18.2 (05/09/2023)
 
 ### New Features
-#### WIA Scanner Support
- - Added support for direct control of WIA drivers in [EnumDWT_DeviceType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_devicetype). <!-- Please see Insert link to FAQ -->
+#### WIA 2.0 Scanner Support
+ - Added support for direct control of WIA 2.0 drivers in [EnumDWT_DeviceType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_devicetype). <!-- Please see Insert link to FAQ -->
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mZcWLGwfCP4" title="WIA Scanner Support" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
