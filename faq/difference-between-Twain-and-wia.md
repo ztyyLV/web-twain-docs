@@ -13,7 +13,7 @@ permalink: /faq/difference-between-Twain-and-wia.html
 
 ## What are the differences between TWAIN and WIA drivers?
 
-TWAIN driver TWAIN is the most widely used protocol for physical document scanners. Almost all scanners in the market come with a TWAIN driver and are supported by TWAIN applications like the Dynamic Web TWAIN SDK.
+TWAIN is the most widely used protocol for physical document scanners. Almost all scanners in the market come with a TWAIN driver and are supported by TWAIN applications like the Dynamic Web TWAIN SDK.
 
 `WIA` stands for <a href="https://docs.microsoft.com/en-us/windows/win32/wia/-wia-startpage" target="_blank">Windows Image Acquisition</a>, which is a Microsoft driver model for capturing digital images from various devices, such as scanners, cameras and other imaging devices. The WIA protocol is built-in and supported by Windows OS, so no extra driver installation is required. WIA offers standardized hardware compatibility and a stable driver environment, making it easier to integrate imaging capabilities into web scanning applications. 
 
