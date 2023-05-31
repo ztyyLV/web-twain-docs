@@ -18,7 +18,7 @@ Prior to Dynamic Web TWAIN version 18.2, WIA drivers are not supported and TWAIN
 As of Dynamic Web TWAIN version 18.2, we officially support WIA 2.0. By comparison, `WIA` can only control a very limited set of general capabilities of the device, while `TWAIN` can control all standard and even custom capabilities of the device. In addition, `WIA` has only two transfer modes (Memory, File), while `TWAIN` has three (Native, Memory, File).
 
 Since Dynamic Web TWAIN v18.0, we introduced a new set of scanner related APIs.
-To support WIA 2.0, 
+To compatible with both TWAIN and WIA 2.0, 
 - If your application is already using the new set of APIs below, no application change is required.
 - If not, replace the old APIs with the matching new APIs.
 
@@ -28,6 +28,18 @@ To support WIA 2.0,
 | [SelectDeviceAsync()](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html#selectdeviceasync) | [SelectSourceByIndex()](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html#selectsourcebyindex), [SelectSourceByIndexAsync()](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html#selectsourcebyindexasync) |
 | [SelectSourceAsync()](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html#selectsourceasync) | [SelectSource()](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html#selectsource) |
 | [AcquireImageAsync()](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html#acquireimageasync) | [AcquireImage()](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html#acquireimage) |
+
+### Example Code
+
+```javascript
+DWObject.GetDevicesAsync(Dynamsoft.DWT.EnumDWT_DeviceType.TWAINSCANNER|Dynamsoft.DWT.EnumDWT_DeviceType.WIASCANNER).then((deviceList)=>{
+  return DWObject.SelectDeviceAsync(deviceList[0])  //Select the first device
+}).then(()=>{
+    return DWObject.AcquireImageAsync({}) 
+}).catch((e)=>{
+    console.error(e)
+})
+```
 
 ### Difference between the WIASCANNER and WIATWAINSCANNER DeviceType
 To support the WIA protocol in v18.2+, we added a new Enumaration `WIASCANNER` to [Dynamsoft.DWT.EnumDWT_DeviceType](https://www.dynamsoft.com/web-twain/docs/info/api/Dynamsoft_Enum.html?ver=latest&&cVer=true#dynamsoftdwtenumdwt_devicetype) . The enumaration named `WIATWAINSCANNER` represents WIA sources mapped through the TWAIN protocol after packaging by Microsoft. It was used in previous versions of Dynamic Web TWAIN and it will continue to be supported.
