@@ -12,6 +12,13 @@ permalink: /indepth/development/vue.html
 
 [Vue](https://vuejs.org/) is a progressive framework for building user interfaces. Check out the following guide on how to integrate `DWT` into a Vue application.
 
+<div class="multi-panel-switching-prefix"></div>
+
+- [Vue](#vue)
+- [Vue 3](#vue3)
+
+<div class="multi-panel-start"></div>
+
 ## Preparation
 
 Make sure you have [node](https://nodejs.org/), [yarn](https://yarnpkg.com/cli/install), and [Vue CLI](https://cli.vuejs.org/) installed. `node 14.4.0` , `yarn 1.22.4`, and `@vue/cli 4.46` are used in the example below.
@@ -203,4 +210,200 @@ If you have installed `DWT` and have configured a valid `ProductKey` . You will 
 
 You should be able to open a file or capture an image.
 
+<div class="multi-panel-end"></div>
 
+<div class="multi-panel-start"></div>
+
+## Preparation
+
+The recommended version for Vue and Node is `v3.2.22` and `v16+` respectively.
+
+## Create the sample project
+
+### Create a bootstrapped raw Vue 3 application
+
+Assume the project name is "dwt-vue3"
+
+``` cmd
+npm init vue@latest
+```
+
+### Navigate to the root directory of the application and install the `dwt` and `ncp` package
+
+``` cmd
+cd dwt-vue3
+```
+
+``` cmd
+npm install
+```
+
+``` cmd
+npm install dwt
+```
+
+``` cmd
+npm install ncp
+```
+
+## Configure the project
+
+Open `package.json` and change `scripts` as seen below:
+
+``` json
+"scripts": {
+    "dev": "ncp node_modules/dwt/dist public/dwt-resources && vite",
+    "build": "ncp node_modules/dwt/dist public/dwt-resources && vite build",
+    "preview": "vite preview"
+},
+```
+
+> The change ensures the static files required to run `DWT` are copied over to the resulting built project.
+
+## Start to implement
+
+### Edit the default component
+
+Create `localScan.vue` in the folder /src/components
+
+```html
+<script setup>
+import Dynamsoft from "dwt";
+import { onMounted, onUnmounted, ref } from "vue";
+let selectedIndex = ref(0);
+let sourceList=ref([]);
+let DWObject;
+const containerId = "dwtcontrolContainer";
+onMounted(() => {
+  /**
+   * ResourcesPath & ProductKey must be set in order to use the library!
+   */
+  Dynamsoft.DWT.AutoLoad = false;
+  Dynamsoft.DWT.ResourcesPath = "/dwt-resources";
+  Dynamsoft.DWT.ProductKey ="YOUR-PRODUCT-KEY";
+  Dynamsoft.DWT.Containers = [
+    {
+      WebTwainId: "dwtObject",
+      ContainerId: containerId,
+      Width: "500px",
+      Height: "600px",
+    },
+  ];
+  Dynamsoft.DWT.RegisterEvent("OnWebTwainReady", () => {
+    Dynamsoft_OnReady();
+  });
+  Dynamsoft.DWT.Load();
+});
+onUnmounted(()=>{
+    Dynamsoft.DWT.Unload();
+})
+function Dynamsoft_OnReady() {
+  DWObject = Dynamsoft.DWT.GetWebTwain(containerId);
+  DWObject.GetDevicesAsync()
+    .then((deviceList) => {
+      sourceList.value = deviceList;
+    })
+    .catch((e) => {
+      console.error(e);
+    });
+}
+/**
+ * Acquire images from scanners
+ */
+function acquireImage() {
+    DWObject.SelectDeviceAsync(sourceList.value[selectedIndex.value])
+      .then(() => {
+        return DWObject.AcquireImageAsync({IfCloseSourceAfterAcquire:true});
+      })
+      .catch((e) => {
+        console.error(e);
+      })
+}
+
+/**
+ * Open local images.
+ */
+function openImage() {
+  DWObject.IfShowFileDialog = true;
+  /**
+   * Note:
+   * This following line of code uses the PDF Rasterizer which is an extra add-on that is licensed seperately
+   */
+  DWObject.Addon.PDF.SetConvertMode(Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL);
+  DWObject.LoadImageEx(
+    "",
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL,
+    () => {
+      //success
+    },
+    () => {
+      //failure
+    }
+  );
+}
+</script>
+
+<template>
+  <div>
+    <select v-model="selectedIndex">
+      <option
+        v-for="(source, index) in sourceList"
+        :value="index"
+        :key="index"
+      >
+        {{ source.displayName }}
+      </option>
+    </select>
+    <button @click="acquireImage()">Acquire Images</button>
+    <button @click="openImage()">Open Documents</button>
+    <div :id="containerId"></div>
+  </div>
+</template>
+
+<style scoped></style>
+```
+
+> Note:
+> * `containerId` specifies the DIV to create `DWT` viewer, which is defined in the `template`.
+> * `OnWebTwainReady` is the callback triggered when `DWT` initialization succeeds.
+> * `ProductKey` must be set to a valid trial or full key.
+> * `ResourcesPath` is set to the location of the static files mentioned in [Configure the project](#configure-the-project).
+
+Change the file /src/App.vue
+
+```html
+<script setup>
+import HelloWorld from './components/localScan.vue'
+</script>
+
+<template>
+    <HelloWorld />
+</template>
+
+<style scoped>
+</style>
+```
+
+### Try running the project
+
+``` cmd
+npm run dev
+```
+
+#### On desktop
+
+If you have installed `DWT` and have configured a valid `ProductKey` . You will have a working page to scan documents from your scanner now. Otherwise, you should see instructions on [this page]({{site.indepth}}features/initialize.html#installation-of-the-dynamsoft-service) that guides you on installing the library.
+
+#### On mobile
+
+For Android, the scanners that support ESCL can be used.
+
+## Official Samples
+
+Check out the following sample project:
+
+* [dwt-vue](https://github.com/Dynamsoft/web-twain-vue-advanced)
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-switching-end"></div>
