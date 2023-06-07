@@ -92,6 +92,9 @@ permalink: /faq/
 <li><a href="{{site.faq}}scanner-not-shown-or-not-responding-in-the browser.html">Why is my scanner not shown or not responding in the browser?</a></li>
 
 <li><a href="{{site.faq}}download-virtual-scanner-for-testing.html">Download virtual scanner for testing</a></li>
+
+<li><a href="{{site.faq}}support-wia-scanner-drivers.html">How can I support WIA scanner drivers in my application?</a></li>
+
 </ol>
 
 ## Image Viewer
@@ -361,6 +364,8 @@ permalink: /faq/
 <li><a href="{{site.faq}}type-error-appendchild.html">Error Message - Uncaught TypeError: Cannot read properties of null (reading 'appendChild') or Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'</a></li>
 
 <li><a href="{{site.faq}}error-message-user-cancelled-the-operation.html">Error Message - User cancelled the operation</a></li>
+
+<li><a href="{{site.faq}}the-loading-bar-keeps-spinning-when-capture-the-image-with-iphone.html">The loading bar keeps spinning when capture the image with iPhone.</a></li>
  </ol>
 
 ## Licensing and Purchase
