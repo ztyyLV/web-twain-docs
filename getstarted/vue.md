@@ -216,7 +216,7 @@ You should be able to open a file or capture an image.
 
 ## Preparation
 
-The recommended version for Vue and Node is `v3.2.22` and `v16+` respectively.
+The recommended versions for Vue and Node are `v3.2.22` and `v16+` respectively.
 
 ## Create the sample project
 
