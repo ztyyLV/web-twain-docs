@@ -327,7 +327,7 @@ interface ThumbnailViewer {
 ```
 **Note**
 
-Please refer to [ViewMode]({{site.info}}api/Interface.html#viewmode) and [ThumbnailViewerEvent]({{site.info}}api/Interface.html#thumbnailviewerevent).
+Please refer to [ViewMode]({{site.info}}api/Interfaces.html#viewmode) and [ThumbnailViewerEvent]({{site.info}}api/Interfaces.html#thumbnailviewerevent).
 
 ---
 
@@ -674,7 +674,7 @@ interface SourceDetails {
 }
 ```
 
-Please refer to [Version]({{site.info}}api/Interface.html#version).
+Please refer to [Version]({{site.info}}api/Interfaces.html#version).
 
 ---
 
@@ -1046,7 +1046,7 @@ interface CapabilityDetails {
 }
 ```
 
-Please refer to [ValueAndLabel]({{site.info}}api/Interface.html#valueandlabel).
+Please refer to [ValueAndLabel]({{site.info}}api/Interfaces.html#valueandlabel).
 
 ---
 
@@ -1088,7 +1088,7 @@ interface Capabilities {
 }
 ```
 
-Please refer to [CapabilitySetup]({{site.info}}api/Interface.html#capabilitysetup).
+Please refer to [CapabilitySetup]({{site.info}}api/Interfaces.html#capabilitysetup).
 
 ---
 

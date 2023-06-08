@@ -173,7 +173,7 @@ createCustomElement(
 
 **Arguments**
 
-`CustomElement`: Please refer to [CustomElement]({{site.info}}api/Interfaces.html.html#customelement).
+`CustomElement`: Please refer to [CustomElement]({{site.info}}api/Interfaces.html#customelement).
 
 **Availability**
 
@@ -236,11 +236,11 @@ createImageEditor(
 
 **Parameters**
 
-`editorSettings`: Configure the object. Please refer to [EditorSettings]({{site.info}}api/Interfaces.html.html#editorsettings).
+`editorSettings`: Configure the object. Please refer to [EditorSettings]({{site.info}}api/Interfaces.html#editorsettings).
 
 **Arguments**
 
-`ImageEditor`: Please refer to [ImageEditor]({{site.info}}api/Interfaces.html.html#imageeditor).
+`ImageEditor`: Please refer to [ImageEditor]({{site.info}}api/Interfaces.html#imageeditor).
 
 **Availability**
 
@@ -408,11 +408,11 @@ createThumbnailViewer(
 
 **Parameters**
 
-`thumbnailViewerSettings`: Configure the ThumbnailViewer object. Please refer to [ThumbnailViewerSettings]({{site.info}}api/Interface.html#thumbnailviewersettings).
+`thumbnailViewerSettings`: Configure the ThumbnailViewer object. Please refer to [ThumbnailViewerSettings]({{site.info}}api/Interfaces.html#thumbnailviewersettings).
 
 **Arguments**
 
-`ThumbnailViewer`: Please refer to [ThumbnailViewer]({{site.info}}api/Interface.html#thumbnailviewer).
+`ThumbnailViewer`: Please refer to [ThumbnailViewer]({{site.info}}api/Interfaces.html#thumbnailviewer).
 
 **Availability**
 
@@ -1032,7 +1032,7 @@ setSelectedAreas(
 
 **Parameters**
 
-`areas`: Specify the rectangular area(s). Please refer to [Area]({{site.info}}api/Interface.html#area).
+`areas`: Specify the rectangular area(s). Please refer to [Area]({{site.info}}api/Interfaces.html#area).
 
 **Availability**
 
@@ -2123,7 +2123,7 @@ updateCheckboxStyle(checkboxSettings?: CheckboxSettings): void;
 
 **Parameters**
 
-`checkboxSettings`: Settings for checkboxex. Please refer to [CheckboxSettings]({{site.info}}api/Interface.html#checkboxsettings).
+`checkboxSettings`: Settings for checkboxex. Please refer to [CheckboxSettings]({{site.info}}api/Interfaces.html#checkboxsettings).
 
 **Availability**
 
@@ -2163,7 +2163,7 @@ updatePageNumberStyle(pageNumberSettings?: PageNumberSettings): void;
 
 **Parameters**
 
-`pageNumberSettings`: Settings for page numbers. Please refer to [PageNumberSettings]({{site.info}}api/Interface.html#pagenumbersettings).
+`pageNumberSettings`: Settings for page numbers. Please refer to [PageNumberSettings]({{site.info}}api/Interfaces.html#pagenumbersettings).
 
 **Availability**
 
@@ -2266,7 +2266,7 @@ on(
 `eventName`: Specify the event. Value: click, contextmenu, dblclick, mousemove, mousedown, mouseup, mouseout, mouseover, keydown, keyup.
 
 `callback`: Specify the callback.
-- `dwtEvent`: The viewer-specific event object. Please refer to [ViewerEvent]({{site.info}}api/Interface.html#viewerevent) and <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent" target="_blank">KeyboardEvent</a>.
+- `dwtEvent`: The viewer-specific event object. Please refer to [ViewerEvent]({{site.info}}api/Interfaces.html#viewerevent) and <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent" target="_blank">KeyboardEvent</a>.
 - `domEvent`: The original mouse event object. Please refer to <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent" target="_blank">MouseEvent</a>.
 
 **Availability**
@@ -2360,7 +2360,7 @@ on('pageAreaSelected',
 
 `index`: The index of the current page.
 
-`rect`: Some attribute values of the selected area. Please refer to [rect]({{site.info}}api/Interface.html#rect).
+`rect`: Some attribute values of the selected area. Please refer to [rect]({{site.info}}api/Interfaces.html#rect).
 
 **Availability**
 

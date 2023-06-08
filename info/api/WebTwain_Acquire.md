@@ -638,7 +638,7 @@ GetSourceNames(bIncludeDetails?: boolean): string[] | SourceDetails[];
 
 **Arguments**
 
-`SourceDetails`: Please refer to [SourceDetails]({{site.info}}api/Interface.html#sourcedetails).
+`SourceDetails`: Please refer to [SourceDetails]({{site.info}}api/Interfaces.html#sourcedetails).
 
 **Availability**
 
@@ -995,7 +995,7 @@ startScan(scanSetup: ScanSetup): Promise<IScanSetup>;
 
 **Parameters**
 
-`scanSetup`: Configuration for the acquisition. Please refer to [ScanSetup]({{site.info}}api/Interface.html#scansetup).
+`scanSetup`: Configuration for the acquisition. Please refer to [ScanSetup]({{site.info}}api/Interfaces.html#scansetup).
 
 **Availability**
 
@@ -3867,7 +3867,7 @@ RegisterEvent("OnPostTransferAsync", function (outputInfo: OutputInfo) {});
 
 **Parameters**
 
-`outputInfo`: Detailed information about the image that just got transferred. Please refer to [OutputInfo]({{site.info}}api/Interface.html#outputinfo).
+`outputInfo`: Detailed information about the image that just got transferred. Please refer to [OutputInfo]({{site.info}}api/Interfaces.html#outputinfo).
 
 **Availability**
 
@@ -4049,7 +4049,7 @@ getCapabilities(
 **Parameters**
 
 `successCallback`: A callback function that is executed if the request succeeds.
-- `capabilityDetails`: Detailed information about the specified capabilities. Please refer to [CapabilityDetails]({{site.info}}api/Interface.html#capabilitydetails).
+- `capabilityDetails`: Detailed information about the specified capabilities. Please refer to [CapabilityDetails]({{site.info}}api/Interfaces.html#capabilitydetails).
 
 `failureCallback`: A callback function that is executed if the request fails.
 - `errorCode`: The error code.
@@ -4104,10 +4104,10 @@ setCapabilities(
 `successCallback`: A callback function that is executed if the request succeeds.
 - `capabilities`: The capabilities to set.
 
-
 `failureCallback`: A callback function that is executed if the request fails.
+- `capabilities`: The capabilities to set.
 
-Please refer to [Capabilities]({{site.info}}api/Interface.html#capabilities).
+Please refer to [Capabilities]({{site.info}}api/Interfaces.html#capabilities).
 
 **Availability**
 
