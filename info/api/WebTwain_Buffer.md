@@ -232,12 +232,11 @@ Return the status of all current tags.
 
 ```typescript
 GetTagList(): TagInfo[];
-
-interface TagInfo {
-    name: string;
-    imageIds: number[];
-}
 ```
+
+**Arguments**
+
+`TagInfo`: Please refer to [TagInfo]({{site.info}}api/Interface.html#taginfo).
 
 **Availability**
 
@@ -1839,30 +1838,11 @@ An enhanced callback triggered when a change occurs in the buffer.
 RegisterEvent('OnBufferChanged',
     function (bufferChangeInfo: BufferChangeInfo) {}
 ): boolean;
-
-interface BufferChangeInfo {
-    /**
-     * Action type includes 'add', 'remove', 'modify', 'shift' and 'filter'
-     */
-    action: string;
-    /**
-     * The image id (not the index) of the current page.
-     */
-    currentId: number;
-    /**
-     * All image ids.
-     */
-    imageIds: number[];
-    /**
-     * All selected image ids.
-     */
-    selectedIds: number[];
-}
 ```
 
 **Parameters**
 
-`bufferChangeInfo`: Details about the buffer change.
+`bufferChangeInfo`: Details about the buffer change. `TagInfo`: Please refer to [BufferChangeInfo]({{site.info}}api/Interface.html#bufferchangeinfo).
 
 **Availability**
 
@@ -2339,12 +2319,11 @@ Get the list of all documents and their information.
 
 ```typescript
 GetDocumentInfoList(): DocumentInfo[];
-interface DocumentInfo {
-   name: string;
-   imageIds: number[];
-}
 ```
 
+**Arguments**
+
+`DocumentInfo`: Please refer to [DocumentInfo]({{site.info}}api/Interface.html#documentinfo).
 
 **Availability**
 

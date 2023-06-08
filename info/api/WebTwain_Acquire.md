@@ -630,62 +630,15 @@ Return all available data sources (scanners, etc.) and optionally all detailed i
 
 ```typescript
 GetSourceNames(bIncludeDetails?: boolean): string[] | SourceDetails[];
-
-interface SourceDetails {
-    /**
-     * The driver type which can be "TWAIN" | "ICA" | "SANE"
-     */
-    DriverType?: string;
-    /**
-     * Information about the driver if it's DriverType is "ICA"
-     */
-    DeviceInfo?: any;
-    /**
-     * The name of the data source. E.g. "TWAIN2 FreeImage Software Scanner".
-     */
-    ProductName?: string;
-    /**
-     * Whether it is the default source.
-     */
-    IsDefaultSource?: boolean;
-    /**
-     * Whether it is the current source.
-     */
-    IsCurrentSource?: boolean;
-    /**
-     * The family name of the data source. E.g. "Software Scan".
-     */
-    ProductFamily?: string;
-    /**
-     * The manufacturer of the data source. E.g. "TWAIN Working Group".
-     */
-    Manufacturer?: string;
-    /**
-     *
-     */
-    SupportedGroups?: 1073741827,
-    /**
-     * The version of the protocol based on which the data source is developed.
-     */
-    ProtocolMajor?: number;
-    ProtocolMinor?: number;
-    /**
-     * Detailed version of the data source.
-     */
-    Version?: Version;
-}
-interface Version {
-    MajorNum?: number;
-    MinorNum?: number;
-    Language?: number;
-    Country?: number;
-    Info?: string;
-}
 ```
 
 **Parameters**
 
 `bIncludeDetails`: Whether to return more details about the data sources or just their names.
+
+**Arguments**
+
+`SourceDetails`: Please refer to [SourceDetails]({{site.info}}api/Interface.html#sourcedetails).
 
 **Availability**
 
@@ -1038,271 +991,11 @@ Start the acquisition by passing all settings at once.
 
 ```typescript
 startScan(scanSetup: ScanSetup): Promise<IScanSetup>;
-
-interface ScanSetup {
-  /**
-   * An id that specifies this specific setup.
-   */
-  setupId?: string,
-  /**
-   * Whether to ignore or fail the acquistion when an exception is raised. Set "ignore" or "fail".
-   */
-  exception?: string,
-  /**
-   * The name of the data source (the scanner). If not set, the default data source is used.
-   */
-  scanner?: string,
-  ui?: {
-    /**
-     * Whether to show the UI of the device.
-     */
-    bShowUI?: boolean,
-    /**
-     * Whether to show the indicator of the device.
-     */
-    bShowIndicator?: boolean,
-  },
-  /**
-   * The TWAIN transfer mode.
-   */
-  transferMode?: Dynamsoft.DWT.EnumDWT_TransferMode | number,
-  /**
-   * Set how the transfer is done.
-   */
-  fileXfer?: {
-    /**
-     * Specify the file name (or pattern) for file transfer.
-     * Example: "C:\\WebTWAIN<%06d>.bmp"
-     */
-    fileName?: string,
-    /**
-     * Specify the file format.
-     */
-    fileFormat?: Dynamsoft.DWT.EnumDWT_FileFormat | number,
-    /**
-     * Specify the quality of JPEG files.
-     */
-    jpegQuality?: number,
-    /**
-     * Specify the compression type of the file.
-     */
-    compressionType?: Dynamsoft.DWT.EnumDWT_CompressionType | number
-  }
-  /**
-   * Set where the scanned images are inserted.
-   */
-  insertingIndex?: number,
-  /**
-   * The profile is a base64 string, if present, it overrides settings and more settings.
-   */
-  profile?: string,
-  /**
-   * Basic settings.
-   */
-  settings?: {
-    /**
-     * "ignore" (default) or "fail".
-     */
-    exception?: string,
-    /**
-     * Specify the pixel type.
-     */
-    pixelType?: Dynamsoft.DWT.EnumDWT_PixelType | number,
-    /**
-     * Specify the resolution.
-     */
-    resolution?: number,
-    /**
-     * Whether to enable document feader.
-     */
-    bFeeder?: boolean,
-    /**
-     * Whether to enable duplex scan.
-     */
-    bDuplex?: boolean
-  },
-  moreSettings?: {
-    /**
-     * "ignore" (default) or "fail".
-     */
-    exception?: string,
-    /**
-     * Specify the bit depth.
-     */
-    bitDepth?: number,
-    /**
-     * Specify the page size.
-     */
-    pageSize?: Dynamsoft.DWT.EnumDWT_CapSupportedSizes | number,
-    /**
-     * Specify the unit.
-     */
-    unit?: Dynamsoft.DWT.EnumDWT_UnitType | number,
-    /**
-     * Specify a layout to scan, if present, it'll override pageSize.
-     */
-    layout?: {
-      left?: number,
-      top?: number,
-      right?: number,
-      bottom?: number
-    },
-    /**
-     * Specify the pixel flavor.
-     */
-    pixelFlavor?: Dynamsoft.DWT.EnumDWT_CapPixelFlavor | number,
-    /**
-     * Specify Brightness.
-     */
-    brightness?: number,
-    /**
-     * Specify contrast.
-     */
-    contrast?: number,
-    /**
-     * Specify how many images are transferred per session.
-     */
-    nXferCount?: number,
-    /**
-     * Whether to enable automatic blank image detection and removal.
-     */
-    autoDiscardBlankPages?: boolean,
-    /**
-     * Whether to enable automatic border detection.
-     */
-    autoBorderDetection?: boolean,
-    /**
-     * Whether to enable automatic skew correction.
-     */
-    autoDeskew?: boolean,
-    /**
-     * Whether to enable automatic brightness adjustment.
-     */
-    autoBright?: boolean
-  },
-  /**
-   * A callback triggered before the scan, after the scan and after each page has been transferred.
-   * Returned status
-   * {event: 'beforeAcquire', result: {…}} //Equivalent to OnPreAllTransfers event
-   * {event: 'postTransfer', bScanCompleted: false, result: {…}} //Equivalent to OnPostTransfer event
-   * {event: 'postTransfer', bScanCompleted: true, result: {…}} //Equivalent to OnPostAllTransfers event
-   */
-  funcScanStatus?: (status: Status) => void,
-  /**
-   * Set up how the scanned images are outputted.
-   */
-  outputSetup?: {
-    /**
-     * Output type. "http" is the only supported type for now.
-     */
-    type?: string,
-    /**
-     * Set the output format.
-     */
-    format?: Dynamsoft.DWT.EnumDWT_ImageType | number,
-    /**
-     * Specify how many times the library will try the output.
-     */
-    reTries?: 3,
-    /**
-     * Whether to use the FileUploader.
-     */
-    useUploader?: false,
-    /**
-     * Whether to upload all images in one HTTP post.
-     */
-    singlePost?: boolean,
-    /**
-     * Whether to show a progress bar when outputting.
-     */
-    showProgressBar?: boolean,
-    /**
-     * Whether to remove the images after outputting.
-     */
-    removeAfterOutput?: boolean,
-    /**
-     * A callback triggered during the outputting.
-     * @argument fileInfo A JSON object that contains the fileName, percentage, statusCode, responseString, etc.
-     */
-    funcHttpUploadStatus?: (fileInfo: any) => void,
-    /**
-     * Setup for PDF output.
-     */
-    pdfSetup?: {
-      author?: string,
-      compression?: Dynamsoft.DWT.EnumDWT_PDFCompressionType | number,
-      creator?: string,
-      /**
-       * Example: 'D:20181231'
-       */
-      creationDate?: string,
-      keyWords?: string,
-      /**
-       * Example: 'D:20181231'
-       */
-      modifiedDate?: string,
-      producer?: string,
-      subject?: string,
-      title?: string,
-      version?: number,
-      quality?: number
-    },
-    /**
-     * Setup for TIFF output.
-     */
-    tiffSetup?: {
-      quality?: number,
-      compression?: Dynamsoft.DWT.EnumDWT_TIFFCompressionType | number,
-      /**
-       * Specify Tiff custom tags.
-       */
-      tiffTags?: TiffTag[]
-    },
-    /**
-     * Setup for HTTP upload via Post.
-     */
-    httpParams?: {
-      /**
-       * Target of the request.
-       * Example: "http://dynamsoft.com/receivepost.aspx"
-       */
-      url?: string,
-      /**
-       * Custom headers in the form.
-       * Example: {md5: ""}
-       */
-      headers?: any,
-      /**
-       * Custom form fields.
-       * Example: {"UploadedBy": "Dynamsoft"}
-       */
-      formFields?: any,
-      /**
-       * The maximum size of a file to be uploaded (in bytes).
-       */
-      maxSizeLimit?: number,
-      /**
-       * Specify how many threads (<=4) are to be used. Only valid when {useUploader} is true.
-       */
-      threads?: number,
-      /**
-       * Specify the names for the files in the form.
-       * Example: "RemoteName<%06d>"
-       */
-      remoteName?: string,
-      /**
-       * Specify the name(s) (pattern) of the uploaded files.
-       * Example: "uploadedFile<%06d>.jpg"
-       */
-      fileName?: string
-    }
-  }
-}
 ```
 
 **Parameters**
 
-`scanSetup`: Configuration for the acquisition.
+`scanSetup`: Configuration for the acquisition. Please refer to [ScanSetup]({{site.info}}api/Interface.html#scansetup).
 
 **Availability**
 
@@ -4174,7 +3867,7 @@ RegisterEvent("OnPostTransferAsync", function (outputInfo: OutputInfo) {});
 
 **Parameters**
 
-`outputInfo`: Detailed information about the image that just got transferred.
+`outputInfo`: Detailed information about the image that just got transferred. Please refer to [OutputInfo]({{site.info}}api/Interface.html#outputinfo).
 
 **Availability**
 
@@ -4202,28 +3895,6 @@ RegisterEvent("OnPostTransferAsync", function (outputInfo: OutputInfo) {});
 </table>
 </div>
 
-**Usage notes**
-
-```typescript
-interface outputInfo {
-  /**
-   * Id of the image if it's transferred to the buffer.
-   */
-  imageId?: number;
-  /**
-   * Path of the image if it's transferred to the disk.
-   */
-  Path?: string;
-  /**
-   * Information about the image.
-   */
-  imageInfo?: object;
-  /**
-   * Extended information about the image.
-   */
-  extendedImageInfo?: object;
-}
-```
 
 **Example**
 
@@ -4373,74 +4044,12 @@ getCapabilities(
     successCallback: (capabilityDetails: CapabilityDetails[]) => void,
     failureCallback: (errorCode: number, errorString: string) => void
 ): void;
-
-/**
- * Detailed information about a specific capability
- */
-interface CapabilityDetails {
-    /**
-     * The Capability.
-     */
-    capability: ValueAndLabel;
-    /**
-     * The container type of the Capability
-     */
-    conType?: ValueAndLabel;
-    /**
-     * The index for the current value of the Capability
-     */
-    curIndex?: number;
-    /**
-     * The current value of the Capability
-     */
-    curValue?: ValueAndLabel;
-    /**
-     * The index for the default value of the Capability
-     */
-    defIndex?: number;
-    /**
-     * The operation types that are supported by the Capability. Types include {"get", "set", "reset" "getdefault", "getcurrent"}
-     */
-    query?: string[];
-    /**
-     * The value type of the Capability. Value types include
-        TWTY_BOOL: 6
-        TWTY_FIX32: 7
-        TWTY_FRAME: 8
-        TWTY_INT8: 0
-        TWTY_INT16: 1
-        TWTY_INT32: 2
-        TWTY_STR32: 9
-        TWTY_STR64: 10
-        TWTY_STR128: 11
-        TWTY_STR255: 12
-        TWTY_UINT8: 3
-        TWTY_UINT16: 4
-        TWTY_int: 5
-     */
-    valueType?: ValueAndLabel;
-    /**
-     * The available values of the Capability
-     */
-    values?: ValueAndLabel[];
-}
-
-interface ValueAndLabel {
-    /**
-     * Numeric representation of the item
-     */
-    value?: Dynamsoft.DWT.EnumDWT_Cap | Dynamsoft.DWT.EnumDWT_CapType | Dynamsoft.DWT.EnumDWT_CapValueType | number;
-    /**
-     * Label or name of the item
-     */
-    label?: string;
-}
 ```
 
 **Parameters**
 
 `successCallback`: A callback function that is executed if the request succeeds.
-- `capabilityDetails`: Detailed information about the specified capabilities.
+- `capabilityDetails`: Detailed information about the specified capabilities. Please refer to [CapabilityDetails]({{site.info}}api/Interface.html#capabilitydetails).
 
 `failureCallback`: A callback function that is executed if the request fails.
 - `errorCode`: The error code.
@@ -4472,14 +4081,6 @@ interface ValueAndLabel {
 </table>
 </div>
 
-**Usage notes**
-
-Check out the Enumerations
-
-- [ `Dynamsoft.DWT.EnumDWT_Cap` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_cap)
-- [ `Dynamsoft.DWT.EnumDWT_CapType` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_captype)
-- [ `Dynamsoft.DWT.EnumDWT_CapValueType` ]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_capvaluetype)
-
 ---
 
 ## setCapabilities
@@ -4494,34 +4095,6 @@ setCapabilities(
     successCallback: (capabilities: Capabilities) => void,
     failureCallback: (capabilities: Capabilities) => void
 ): void;
-
-interface Capabilities {
-    /**
-     * Whether to "ignore" or "fail" the request if an exception occurs. This is an overall setting that is inherited by all capabilities.
-     */
-    exception: string;
-    /**
-     * Specifies how to set capabilities
-     */
-    capabilities: CapabilitySetup[]
-}
-
-interface CapabilitySetup {
-    /**
-     * Specify a capability
-     */
-    capability: Dynamsoft.DWT.EnumDWT_Cap | number;
-    /**
-     * The value to set to the capability or the value of the capability after setting.
-     */
-    curValue: number | string; //array is not supported
-    errorCode?: number;
-    errorString?: string;
-    /**
-     * Whether to "ignore" or "fail" the request if an exception occurs when setting this specific capability.
-     */
-    exception? : string;
-}
 ```
 
 **Parameters**
@@ -4529,9 +4102,12 @@ interface CapabilitySetup {
 `capabilities`: An object that describes how to set capabilities.
 
 `successCallback`: A callback function that is executed if the request succeeds.
+- `capabilities`: The capabilities to set.
+
 
 `failureCallback`: A callback function that is executed if the request fails.
-- `capabilities`: The capabilities to set.
+
+Please refer to [Capabilities]({{site.info}}api/Interface.html#capabilities).
 
 **Availability**
 
@@ -4625,7 +4201,12 @@ GetDevicesAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number, refresh?
 
 `deviceType`: The device type. Please refere to [EnumDWT_DeviceType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_devicetype)
 
+
 `refresh`: Default value is **false**
+
+**Arguments**
+
+`Device`: Please refer to [Device]({{site.info}}api/Interfaces.html#device).
 
 **Example**
 
@@ -4664,10 +4245,6 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 
 </table>
 </div>
-
-**Remark**
-
-Interface [Device]({{site.info}}api/Interfaces.html#device)
 
 ---
 
