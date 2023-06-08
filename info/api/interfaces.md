@@ -116,7 +116,7 @@ interface ImageEditor {
     zoomOrigin: {
         x: string; //Default is "center", values: "left", "right", "center".
         y: string; //Default is "center", values: "top", "bottom", "center"
-    } ；
+    };
 };
 ```
 <div class="multi-panel-end"></div>
