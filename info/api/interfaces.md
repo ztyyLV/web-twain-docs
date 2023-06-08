@@ -87,10 +87,11 @@ interface CustomElement {
 
 **Syntax**
 
-<div class="multi-panel-switching-prefix"></div>
-- [v18.3+](#18.3)
-- [v18.2](#18.2)
-<div class="multi-panel-start"></div>
+<div class="sample-code-prefix template2"></div>
+>- v18.3+
+>- v18.2
+>
+>
 
 ```typescript
 interface ImageEditor {
@@ -119,8 +120,6 @@ interface ImageEditor {
     };
 };
 ```
-<div class="multi-panel-end"></div>
-<div class="multi-panel-start"></div>
 
 ```typescript
 interface ImageEditor {
@@ -142,8 +141,6 @@ interface ImageEditor {
     dispose(): boolean;
 };
 ```
-<div class="multi-panel-end"></div>
-<div class="multi-panel-switching-end"></div>
 
 
 ---
@@ -152,10 +149,11 @@ interface ImageEditor {
 
 **Syntax**
 
-<div class="multi-panel-switching-prefix"></div>
-- [v18.3+](#18.3)
-- [v18.2](#18.2)
-<div class="multi-panel-start"></div>
+<div class="sample-code-prefix template2"></div>
+>- v18.3+
+>- v18.2
+>
+>
 
 ```typescript
 interface EditorSettings {
@@ -221,9 +219,6 @@ interface EditorSettings {
 }
 ```
 
-<div class="multi-panel-end"></div>
-<div class="multi-panel-start"></div>
-
 ```typescript
 interface EditorSettings {
     /**
@@ -280,9 +275,6 @@ interface EditorSettings {
     workMode?: number | Dynamsoft.DWT.EnumDWT_WorkMode;
 }
 ```
-
-<div class="multi-panel-end"></div>
-<div class="multi-panel-switching-end"></div>
 
 **Note**
 
