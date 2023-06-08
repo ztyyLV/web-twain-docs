@@ -234,16 +234,6 @@ Generate a URL to be used by a FileUpoader instance to fetch the data to upload.
 **Syntax**
 
 ```typescript
-/**
- * 
- * @param indices Specify the images to upload.
- * @param type Specify the file type.
- * @param successCallback A callback function that is executed if the request succeeds.
- * @param failureCallback A callback function that is executed if the request fails.
- * @argument resultURL The generated URL.
- * @argument indices The indices of the images.
- * @argument type The file type.
- */
 GenerateURLForUploadData(
     indices: number[],
     type: Dynamsoft.DWT.EnumDWT_ImageType | number,
