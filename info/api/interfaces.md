@@ -92,7 +92,6 @@ interface CustomElement {
 >- v18.2
 >
 >
-
 ```typescript
 interface ImageEditor {
     /**
@@ -120,7 +119,6 @@ interface ImageEditor {
     };
 };
 ```
-
 ```typescript
 interface ImageEditor {
     /**
@@ -154,7 +152,6 @@ interface ImageEditor {
 >- v18.2
 >
 >
-
 ```typescript
 interface EditorSettings {
     /**
@@ -218,7 +215,6 @@ interface EditorSettings {
     };
 }
 ```
-
 ```typescript
 interface EditorSettings {
     /**
