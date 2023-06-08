@@ -88,7 +88,7 @@ interface CustomElement {
 **Syntax**
 
 <div class="sample-code-prefix template2"></div>
->- v18.3+
+>- v18.3
 >- v18.2
 >
 >
@@ -148,7 +148,7 @@ interface ImageEditor {
 **Syntax**
 
 <div class="sample-code-prefix template2"></div>
->- v18.3+
+>- v18.3
 >- v18.2
 >
 >
