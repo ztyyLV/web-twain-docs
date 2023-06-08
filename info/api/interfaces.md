@@ -6,6 +6,7 @@ keywords: Dynamic Web TWAIN, Documentation, API Reference, Interfaces
 breadcrumbText: Utility
 description: Dynamic Web TWAIN SDK Documentation API Reference Interfaces Page
 permalink: /info/api/interfaces.html
+needGenerateH3Content: true
 ---
 
 # Interfaces
@@ -18,8 +19,9 @@ permalink: /info/api/interfaces.html
 
 ---
 
+## Scan
 
-## Device
+### Device
 
 **Syntax**
 
@@ -35,7 +37,7 @@ interface Device{
 
 ---
 
-## DeviceConfiguration
+### DeviceConfiguration
 
 **Syntax**
 
@@ -58,573 +60,7 @@ interface DeviceConfiguration {
 
 ---
 
-## CustomElement
-
-**Syntax**
-
-```typescript
-interface CustomElement {
-    /**
-     * Show the custom element.
-     */
-    show(): boolean;
-    /**
-     * Hide the custom element.
-     */
-    hide(): boolean;
-    /**
-     * Remove the custom element.
-     */
-    dispose(): boolean;
-    /**
-     * Return the created element.
-     */
-    element?: any;
-};
-```
-
-## ImageEditor
-
-**Syntax**
-
-<div class="sample-code-prefix template2"></div>
->- v18.3
->- v18.2
->
->
-```typescript
-interface ImageEditor {
-    /**
-     * Show the ImageEditor object.
-     */
-    show(): boolean;
-    /**
-     * Keeps the image data in the browser editor in sync with the buffer.
-     **/
-    save(): Promise<void>;
-    /**
-     * Hide the ImageEditor object.
-     */
-    hide(): boolean;
-    /**
-     * Remove the ImageEditor object.
-     */
-    dispose(): boolean;
-    /**
-     * Set the zoom origin.
-     */
-    zoomOrigin: {
-        x: string; //Default is "center", values: "left", "right", "center".
-        y: string; //Default is "center", values: "top", "bottom", "center"
-    };
-};
-```
-```typescript
-interface ImageEditor {
-    /**
-     * Show the ImageEditor object.
-     */
-    show(): boolean;
-    /**
-     * Keeps the image data in the browser editor in sync with the buffer.
-     **/
-    save(): Promise<void>;
-    /**
-     * Hide the ImageEditor object.
-     */
-    hide(): boolean;
-    /**
-     * Remove the ImageEditor object.
-     */
-    dispose(): boolean;
-};
-```
-
-
----
-
-## EditorSettings
-
-**Syntax**
-
-<div class="sample-code-prefix template2"></div>
->- v18.3
->- v18.2
->
->
-```typescript
-interface EditorSettings {
-    /**
-     * Specify an HTML Element.
-     */
-    element?: HTMLDivElement | HTMLElement;
-    /**
-     * The width of the image editor viewer. The default value is "100%".
-     * 'Invalid property value' will be reported when the set value is not string or number.
-     */
-    width?: number | string;
-    /**
-     * The height of the image editor viewer. The default value is "100%".
-     * 'Invalid property value' will be reported when the set value is not string or number.
-     */
-    height?: number | string;
-    /**
-     * The border of the ImageEditor viewer.
-     * 'Invalid property value' is reported when the set value does not meet the CSS standard.
-     */
-    border?: string;
-    /**
-     * Set the border of the top toolbar.
-     * 'Invalid property value' is reported when the set value does not meet the CSS standard.
-     */
-    topMenuBorder?: string;
-    /**
-     * The inner border of the image area.
-     */
-    innerBorder?: string;
-    /**
-     * The background color/image of the ImageEditor viewer.
-     * 'Invalid property value' is reported when the set value does not meet the CSS standard.
-     */
-    background?: string;
-    /**
-     * Whether to pop up a window prompting to save the changes. The default value is true.
-     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
-     */
-    promptToSaveChange?: boolean;
-    /**
-     * Modify button titles and whether to hide specific buttons in the image editor viewer.
-     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
-     */
-    buttons?: any;
-    /**
-     * Define the dialog text
-     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
-     */
-    dialogText?: any;
-    /**
-     * Default is normal, values: normal=0, balance=1.
-     */
-    workMode?: number | Dynamsoft.DWT.EnumDWT_WorkMode;
-    /**
-     * Set the zoom origin.
-     */
-    zoomOrigin?: {
-        x: string; //Default is "center", values: "left", "right", "center".
-        y: string; //Default is "center", values: "top", "bottom", "center"
-    };
-}
-```
-```typescript
-interface EditorSettings {
-    /**
-     * Specify an HTML Element.
-     */
-    element?: HTMLDivElement | HTMLElement;
-    /**
-     * The width of the image editor viewer. The default value is "100%".
-     * 'Invalid property value' will be reported when the set value is not string or number.
-     */
-    width?: number | string;
-    /**
-     * The height of the image editor viewer. The default value is "100%".
-     * 'Invalid property value' will be reported when the set value is not string or number.
-     */
-    height?: number | string;
-    /**
-     * The border of the ImageEditor viewer.
-     * 'Invalid property value' is reported when the set value does not meet the CSS standard.
-     */
-    border?: string;
-    /**
-     * Set the border of the top toolbar.
-     * 'Invalid property value' is reported when the set value does not meet the CSS standard.
-     */
-    topMenuBorder?: string;
-    /**
-     * The inner border of the image area.
-     */
-    innerBorder?: string;
-    /**
-     * The background color/image of the ImageEditor viewer.
-     * 'Invalid property value' is reported when the set value does not meet the CSS standard.
-     */
-    background?: string;
-    /**
-     * Whether to pop up a window prompting to save the changes. The default value is true.
-     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
-     */
-    promptToSaveChange?: boolean;
-    /**
-     * Modify button titles and whether to hide specific buttons in the image editor viewer.
-     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
-     */
-    buttons?: any;
-    /**
-     * Define the dialog text
-     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
-     */
-    dialogText?: any;
-    /**
-     * Default is normal, value: normal=0, balance=1.
-     */
-    workMode?: number | Dynamsoft.DWT.EnumDWT_WorkMode;
-}
-```
-
-**Note**
-
-Please refer to [EnumDWT_WorkMode]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_workmode).
-
----
-
-## ThumbnailViewer
-
-**Syntax**
-
-```typescript
-interface ThumbnailViewer {
-    /**
-     * Show the ThumbnailViewer object.
-     */
-    show(): boolean;
-    /**
-     * Hide the ThumbnailViewer object.
-     */
-    hide(): boolean;
-    /**
-     * Remove the ThumbnailViewer object.
-     */
-    dispose(): boolean;
-    /**
-     * Change the view mode of the thumbnail viewer.
-     * @param viewMode Specify the new mode.
-     */
-    updateViewMode(viewMode: ViewMode): void;
-    /**
-     * Change the checkbox style. Available in v17.3+.
-     * @param checkboxSettings Specify the checkbox settings.
-     */
-    updateCheckboxStyle(checkboxSettings?: CheckboxSettings): void;
-    /**
-     * Change the page number style. Available in v17.3+.
-     * @param pageNumberSettings Specify the page number settings.
-     */
-    updatePageNumberStyle(pageNumberSettings?: PageNumberSettings): void;
-    /**
-     * Bind a listner to the specified event. You can bind one or multiple listeners to the same event.
-     * @param eventName Specify the event name.
-     * @param callback Specify the listner.
-     */
-    on(eventName: string, callback: (event: ThumbnailViewerEvent | KeyboardEvent, domEvent?: MouseEvent) => void): void;
-    /**
-     * Unbind event listener(s) from the specified viewer event.
-     * @param eventName Specify the event.
-     * @param callback Specify the listener to remove
-     */
-    off(eventName: string, callback?: () => void): void;
-}
-```
-**Note**
-
-Please refer to [ViewMode]({{site.info}}api/Interfaces.html#viewmode) and [ThumbnailViewerEvent]({{site.info}}api/Interfaces.html#thumbnailviewerevent).
-
----
-
-## ThumbnailViewerSettings
-
-**Syntax**
-
-```typescript
-interface ThumbnailViewerSettings {
-    /**
-     * Specify how many images to display per row.
-     */  
-    columns?: number;
-    /**
-     * Specify how many images to display per column.
-     */  
-    rows?: number;    
-    /**
-     * Whether to allow keyboard control. Default: true.
-     */  
-    allowKeyboardControl?: boolean;
-    /**
-     * Whether to allow page dragging to reorder the pages.
-     * Default: true.
-     */
-    allowPageDragging?: boolean;
-    /**
-     * Whether to allow resizing of the thumbnail viewer.
-     * Default: false.
-     */
-    allowResizing?: boolean;
-    /**
-     * Set or return the CSS rule for the background of the thumbnail viewer.
-     * Default: "rgb(255, 255, 255)".
-     */
-    background?: string;
-    /**
-     * Set or return the CSS rule for the border of the thumbnail viewer.
-     * Default: "".
-     */
-    border?: string;
-    /**
-     * Set or return the CSS rule for the background of the page the mouse hovers over in the thumbnail viewer.
-     * Default: "rgb(239, 246, 253)".
-     */
-    hoverPageBackground?: string;
-    /**
-     * Set or return the CSS rule for the border of the page the mouse hovers over in the thumbnail viewer.
-     * Default: "1px solid rgb(238, 238, 238)".
-     */
-    hoverPageBorder?: string;
-    /**
-     * Set or return the location of the thumbnail viewer. Allowed values are "left", "right", "top", "bottom".
-     * Default: "left".
-     */
-    location?: string;
-    /**
-     * Set or return the CSS rule for the background of a normal page in the thumbnail viewer.
-     * Default: "transparent".
-     */
-    pageBackground?: string;
-    /**
-     * Set or return the CSS rule for the border of a normal page in the thumbnail viewer.
-     * Default: "1px solid rgb(238, 238, 238)".
-     */
-    pageBorder?: string;
-    /**
-     * Set or return the margin between two adjacent images and the margin between an image and the border of the thumbnail viewer. The value can either be in pixels or percentage.
-     * Default: 10.
-     */
-    pageMargin?: number | string;
-    /**
-     * Set or return the CSS rule for the background of the placeholder which appears when you drag page(s) to reorder them in the thumbnail viewer.
-     * Default: "rgb(251, 236, 136)".
-     */
-    placeholderBackground?: string;
-    /**
-     * Set or return whether the pages are arranged vertically or horizontally.
-     * Default: "vertical". Allowed values are "vertical" and "horizontal".
-     */
-    scrollDirection?: string;
-    /**
-     * Set or return the CSS rule for the background of the selected page(s) in the thumbnail viewer.
-     * Default: "rgb(199, 222, 252)".
-     */
-    selectedPageBackground?: string;
-    /**
-     * Set or return the CSS rule for the border of the selected page(s) in the thumbnail viewer.
-     * Default: "1px solid rgb(125,162,206)".
-     */
-    selectedPageBorder?: string;
-    /**
-     * Set or return the size of the thumbnail viewer. The value can either be in pixels or percentage (based on the width or height of the entire viewer).
-     * Default: "30%".
-     */
-    size?: number | string;
-    /**
-     * Set whether to select the index in the upper left corner of the viewer when scrolling.
-     * Default: false.
-     */
-    autoChangeIndex?: boolean;
-    checkbox?: {
-      visibility?: string; //"visible":hidden", default: "hidden"
-      width?: number | string; //default: "24px",number unit: px, string value: "24px"/"10%", relative to parent container
-      height?: number | string; //default: "24px",number unit: px, string value: "24px"/"10%", relative to parent container
-      background?: string; //default: "#ffffff"
-      borderWidth?: number | string;  //default: "2px", unit: px, percentage value not supported
-      borderColor?: string; //default: "#000000"
-      checkMarkColor?: string; //default: "#000000"
-      checkMarkLineWidth?: number | string; //default: "2px", unit: px, percentage value not supported
-      borderRadius?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%",relative to itself
-      opacity?: number; //default:0.5, value range [0-1], value greater 1 defaults to 1
-      left?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
-      top?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
-      right?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
-      bottom?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
-      translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
-      translateY?: number | string //default: "",  number unit: px, string value: "10px"/"10%", relative to itself
-    };
-    pageNumber?: {
-      visibility?: string; //"visible": hidden", default: "hidden"
-      width?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
-      height?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
-      background?: string; //default: "#ffffff"            
-      borderWidth?: number | string; //default: "1px", unit: px, percentage value not supported
-      borderColor?: string; //default: "#a79898"
-      borderRadius?: number | string; //default: "50%", number unit: px, string value: "10px"/"10%", relative to itself
-      opacity?:number; //default: 0.5, value range [0-1], value greater 1 defaults to 1
-      color?: string; //default: "#000000", supports #16 hexadecimal only
-      fontFamily?: string; //default: "sans-serif"
-      fontSize?: number | string; //default: 12, unit: px, percentage value not supported
-      left?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
-      top?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
-      right?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
-      bottom?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
-      translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
-      translateY?: number | string //default: "", number unit: px, string value: "10px"/"10%", relative to itself
-    }
-}
-```
-
----
-
-## ThumbnailViewerEvent
-
-**Syntax**
-
-```typescript
-interface ThumbnailViewerEvent {
-    // The index of the current page.
-    index: number;
-    // The x-coordinate of the browser page.
-    pageX: number;
-    // The y-coordinate of the browser page.
-    pageY: number;
-};
-```
-
----
-
-## ViewMode
-
-**Syntax**
-
-```typescript
-interface ViewMode {
-    /**
-     * Specify the number of images per row.
-     */
-    columns?: number;
-    /**
-     * Specify the number of images per column.
-     */
-    rows?: number;
-    /**
-     * Set or return whether the pages are arranged vertically or horizontally.
-     * Default: "vertical". Allowed values are "vertical" and "horizontal".
-     */
-    scrollDirection?: string;
-}
-```
-
----
-
-## Area
-
-**Syntax**
-
-```typescript
-interface Area {
-    left: number,
-    top: number,
-    right: number,
-    bottom: number,
-};
-```
-
----
-
-## CheckboxSettings
-
-**Syntax**
-
-```typescript
-interface CheckboxSettings {
-  visibility?: string; //"visible": hidden", default: "hidden" 
-  width?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
-  height?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
-  background?: string; //default: "#ffffff"
-  borderWidth?: number | string; //default: "2px", unit: px, percentage value not supported
-  borderColor?: string; //default: "#000000"
-  checkMarkColor?: string; //default: "#000000"
-  checkMarkLineWidth?: number | string; //default: "2px", unit: px, percentage value not supported
-  borderRadius?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to itself
-  opacity?: number; //default:0.5, value range [0-1], value greater 1 defaults to 1
-  left?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
-  top?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
-  right?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
-  bottom?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
-  translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
-  translateY?: number | string //default: "", number unit: px, string value: "10px"/"10%", relative to itself
-}
-```
-
----
-
-## PageNumberSettings
-
-**Syntax**
-
-```typescript
-interface PageNumberSettings {       
-  visibility?: string; //"visible": hidden", default: "hidden" 
-  width?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
-  height?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
-  background?: string; //default:"#ffffff"            
-  borderWidth?: number | string; //default: "1px", unit: px, percentage value not supported
-  borderColor?: string; //default: "#a79898"
-  borderRadius?: number | string; //default: "50%", number unit: px, string value: "10px"/"10%", relative to itself
-  opacity?:number; //default: 0.5, value range [0-1], value greater 1 defaults to 1
-  color?: string; //default: "#000000", supports #16 hexadecimal only
-  fontFamily?: string; //default: "sans-serif"
-  fontSize?: number | string; //default: 12, unit: px, percentage value not supported
-  left?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
-  top?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
-  right?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
-  bottom?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
-  translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
-  translateY?: number | string //default: "", number unit: px, string value: "10px"/"10%", relative to itself
-}
-```
-
----
-
-## ViewerEvent
-
-**Syntax**
-
-```typescript
-interface ViewerEvent{
-    // The index of the current page.
-    index: number;
-    //The x-coordinate of the upper-left corner of the page.
-    imageX: number;
-    //The y-coordinate of the upper-left corner of the page.
-    imageY: number;
-    // The x-coordinate of the browser page.
-    pageX: number;
-    // The y-coordinate of the browser page.
-    pageY: number;
-};
-```
-
----
-
-## rect
-
-**Syntax**
-
-```typescript
-interface rect{
-    // The index of the selected area. The index is 0-based. This is useful when you have multiple selected areas on one page.
-    areaIndex: number;
-    // The x-coordinate of the upper-left corner of the area.
-    x: number;
-    // The y-coordinate of the upper-left corner of the area.
-    y: number;
-    // The width of the selected area.
-    width: number;
-    // The height of the selected area.
-    height: number;
-};
-```
-
----
-
-## SourceDetails
+### SourceDetails
 
 **Syntax**
 
@@ -678,7 +114,7 @@ Please refer to [Version]({{site.info}}api/Interfaces.html#version).
 
 ---
 
-## Version
+### Version
 
 **Syntax**
 
@@ -694,7 +130,7 @@ interface Version {
 
 ---
 
-## ScanSetup
+### ScanSetup
 
 **Syntax**
 
@@ -962,7 +398,7 @@ interface ScanSetup {
 
 ---
 
-## OutputInfo
+### OutputInfo
 
 **Syntax**
 
@@ -989,7 +425,7 @@ interface OutputInfo {
 
 ---
 
-## CapabilityDetails
+### CapabilityDetails
 
 **Syntax**
 
@@ -1050,7 +486,7 @@ Please refer to [ValueAndLabel]({{site.info}}api/Interfaces.html#valueandlabel).
 
 ---
 
-## ValueAndLabel
+### ValueAndLabel
 
 **Syntax**
 
@@ -1071,7 +507,7 @@ Please refer to [EnumDWT_Cap]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwte
 
 ---
 
-## Capabilities
+### Capabilities
 
 **Syntax**
 
@@ -1092,7 +528,7 @@ Please refer to [CapabilitySetup]({{site.info}}api/Interfaces.html#capabilityset
 
 ---
 
-## CapabilitySetup
+### CapabilitySetup
 
 **Syntax**
 
@@ -1117,7 +553,577 @@ interface CapabilitySetup {
 
 ---
 
-## TagInfo
+## Viewer
+
+### CustomElement
+
+**Syntax**
+
+```typescript
+interface CustomElement {
+    /**
+     * Show the custom element.
+     */
+    show(): boolean;
+    /**
+     * Hide the custom element.
+     */
+    hide(): boolean;
+    /**
+     * Remove the custom element.
+     */
+    dispose(): boolean;
+    /**
+     * Return the created element.
+     */
+    element?: any;
+};
+```
+
+### ImageEditor
+
+**Syntax**
+
+<div class="sample-code-prefix template2"></div>
+>- v18.3
+>- v18.2
+>
+>
+```typescript
+interface ImageEditor {
+    /**
+     * Show the ImageEditor object.
+     */
+    show(): boolean;
+    /**
+     * Keeps the image data in the browser editor in sync with the buffer.
+     **/
+    save(): Promise<void>;
+    /**
+     * Hide the ImageEditor object.
+     */
+    hide(): boolean;
+    /**
+     * Remove the ImageEditor object.
+     */
+    dispose(): boolean;
+    /**
+     * Set the zoom origin.
+     */
+    zoomOrigin: {
+        x: string; //Default is "center", values: "left", "right", "center".
+        y: string; //Default is "center", values: "top", "bottom", "center"
+    };
+};
+```
+```typescript
+interface ImageEditor {
+    /**
+     * Show the ImageEditor object.
+     */
+    show(): boolean;
+    /**
+     * Keeps the image data in the browser editor in sync with the buffer.
+     **/
+    save(): Promise<void>;
+    /**
+     * Hide the ImageEditor object.
+     */
+    hide(): boolean;
+    /**
+     * Remove the ImageEditor object.
+     */
+    dispose(): boolean;
+};
+```
+
+
+---
+
+### EditorSettings
+
+**Syntax**
+
+<div class="sample-code-prefix template2"></div>
+>- v18.3
+>- v18.2
+>
+>
+```typescript
+interface EditorSettings {
+    /**
+     * Specify an HTML Element.
+     */
+    element?: HTMLDivElement | HTMLElement;
+    /**
+     * The width of the image editor viewer. The default value is "100%".
+     * 'Invalid property value' will be reported when the set value is not string or number.
+     */
+    width?: number | string;
+    /**
+     * The height of the image editor viewer. The default value is "100%".
+     * 'Invalid property value' will be reported when the set value is not string or number.
+     */
+    height?: number | string;
+    /**
+     * The border of the ImageEditor viewer.
+     * 'Invalid property value' is reported when the set value does not meet the CSS standard.
+     */
+    border?: string;
+    /**
+     * Set the border of the top toolbar.
+     * 'Invalid property value' is reported when the set value does not meet the CSS standard.
+     */
+    topMenuBorder?: string;
+    /**
+     * The inner border of the image area.
+     */
+    innerBorder?: string;
+    /**
+     * The background color/image of the ImageEditor viewer.
+     * 'Invalid property value' is reported when the set value does not meet the CSS standard.
+     */
+    background?: string;
+    /**
+     * Whether to pop up a window prompting to save the changes. The default value is true.
+     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
+     */
+    promptToSaveChange?: boolean;
+    /**
+     * Modify button titles and whether to hide specific buttons in the image editor viewer.
+     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
+     */
+    buttons?: any;
+    /**
+     * Define the dialog text
+     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
+     */
+    dialogText?: any;
+    /**
+     * Default is normal, values: normal=0, balance=1.
+     */
+    workMode?: number | Dynamsoft.DWT.EnumDWT_WorkMode;
+    /**
+     * Set the zoom origin.
+     */
+    zoomOrigin?: {
+        x: string; //Default is "center", values: "left", "right", "center".
+        y: string; //Default is "center", values: "top", "bottom", "center"
+    };
+}
+```
+```typescript
+interface EditorSettings {
+    /**
+     * Specify an HTML Element.
+     */
+    element?: HTMLDivElement | HTMLElement;
+    /**
+     * The width of the image editor viewer. The default value is "100%".
+     * 'Invalid property value' will be reported when the set value is not string or number.
+     */
+    width?: number | string;
+    /**
+     * The height of the image editor viewer. The default value is "100%".
+     * 'Invalid property value' will be reported when the set value is not string or number.
+     */
+    height?: number | string;
+    /**
+     * The border of the ImageEditor viewer.
+     * 'Invalid property value' is reported when the set value does not meet the CSS standard.
+     */
+    border?: string;
+    /**
+     * Set the border of the top toolbar.
+     * 'Invalid property value' is reported when the set value does not meet the CSS standard.
+     */
+    topMenuBorder?: string;
+    /**
+     * The inner border of the image area.
+     */
+    innerBorder?: string;
+    /**
+     * The background color/image of the ImageEditor viewer.
+     * 'Invalid property value' is reported when the set value does not meet the CSS standard.
+     */
+    background?: string;
+    /**
+     * Whether to pop up a window prompting to save the changes. The default value is true.
+     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
+     */
+    promptToSaveChange?: boolean;
+    /**
+     * Modify button titles and whether to hide specific buttons in the image editor viewer.
+     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
+     */
+    buttons?: any;
+    /**
+     * Define the dialog text
+     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
+     */
+    dialogText?: any;
+    /**
+     * Default is normal, value: normal=0, balance=1.
+     */
+    workMode?: number | Dynamsoft.DWT.EnumDWT_WorkMode;
+}
+```
+
+**Note**
+
+Please refer to [EnumDWT_WorkMode]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_workmode).
+
+---
+
+### ThumbnailViewer
+
+**Syntax**
+
+```typescript
+interface ThumbnailViewer {
+    /**
+     * Show the ThumbnailViewer object.
+     */
+    show(): boolean;
+    /**
+     * Hide the ThumbnailViewer object.
+     */
+    hide(): boolean;
+    /**
+     * Remove the ThumbnailViewer object.
+     */
+    dispose(): boolean;
+    /**
+     * Change the view mode of the thumbnail viewer.
+     * @param viewMode Specify the new mode.
+     */
+    updateViewMode(viewMode: ViewMode): void;
+    /**
+     * Change the checkbox style. Available in v17.3+.
+     * @param checkboxSettings Specify the checkbox settings.
+     */
+    updateCheckboxStyle(checkboxSettings?: CheckboxSettings): void;
+    /**
+     * Change the page number style. Available in v17.3+.
+     * @param pageNumberSettings Specify the page number settings.
+     */
+    updatePageNumberStyle(pageNumberSettings?: PageNumberSettings): void;
+    /**
+     * Bind a listner to the specified event. You can bind one or multiple listeners to the same event.
+     * @param eventName Specify the event name.
+     * @param callback Specify the listner.
+     */
+    on(eventName: string, callback: (event: ThumbnailViewerEvent | KeyboardEvent, domEvent?: MouseEvent) => void): void;
+    /**
+     * Unbind event listener(s) from the specified viewer event.
+     * @param eventName Specify the event.
+     * @param callback Specify the listener to remove
+     */
+    off(eventName: string, callback?: () => void): void;
+}
+```
+**Note**
+
+Please refer to [ViewMode]({{site.info}}api/Interfaces.html#viewmode) and [ThumbnailViewerEvent]({{site.info}}api/Interfaces.html#thumbnailviewerevent).
+
+---
+
+### ThumbnailViewerSettings
+
+**Syntax**
+
+```typescript
+interface ThumbnailViewerSettings {
+    /**
+     * Specify how many images to display per row.
+     */  
+    columns?: number;
+    /**
+     * Specify how many images to display per column.
+     */  
+    rows?: number;    
+    /**
+     * Whether to allow keyboard control. Default: true.
+     */  
+    allowKeyboardControl?: boolean;
+    /**
+     * Whether to allow page dragging to reorder the pages.
+     * Default: true.
+     */
+    allowPageDragging?: boolean;
+    /**
+     * Whether to allow resizing of the thumbnail viewer.
+     * Default: false.
+     */
+    allowResizing?: boolean;
+    /**
+     * Set or return the CSS rule for the background of the thumbnail viewer.
+     * Default: "rgb(255, 255, 255)".
+     */
+    background?: string;
+    /**
+     * Set or return the CSS rule for the border of the thumbnail viewer.
+     * Default: "".
+     */
+    border?: string;
+    /**
+     * Set or return the CSS rule for the background of the page the mouse hovers over in the thumbnail viewer.
+     * Default: "rgb(239, 246, 253)".
+     */
+    hoverPageBackground?: string;
+    /**
+     * Set or return the CSS rule for the border of the page the mouse hovers over in the thumbnail viewer.
+     * Default: "1px solid rgb(238, 238, 238)".
+     */
+    hoverPageBorder?: string;
+    /**
+     * Set or return the location of the thumbnail viewer. Allowed values are "left", "right", "top", "bottom".
+     * Default: "left".
+     */
+    location?: string;
+    /**
+     * Set or return the CSS rule for the background of a normal page in the thumbnail viewer.
+     * Default: "transparent".
+     */
+    pageBackground?: string;
+    /**
+     * Set or return the CSS rule for the border of a normal page in the thumbnail viewer.
+     * Default: "1px solid rgb(238, 238, 238)".
+     */
+    pageBorder?: string;
+    /**
+     * Set or return the margin between two adjacent images and the margin between an image and the border of the thumbnail viewer. The value can either be in pixels or percentage.
+     * Default: 10.
+     */
+    pageMargin?: number | string;
+    /**
+     * Set or return the CSS rule for the background of the placeholder which appears when you drag page(s) to reorder them in the thumbnail viewer.
+     * Default: "rgb(251, 236, 136)".
+     */
+    placeholderBackground?: string;
+    /**
+     * Set or return whether the pages are arranged vertically or horizontally.
+     * Default: "vertical". Allowed values are "vertical" and "horizontal".
+     */
+    scrollDirection?: string;
+    /**
+     * Set or return the CSS rule for the background of the selected page(s) in the thumbnail viewer.
+     * Default: "rgb(199, 222, 252)".
+     */
+    selectedPageBackground?: string;
+    /**
+     * Set or return the CSS rule for the border of the selected page(s) in the thumbnail viewer.
+     * Default: "1px solid rgb(125,162,206)".
+     */
+    selectedPageBorder?: string;
+    /**
+     * Set or return the size of the thumbnail viewer. The value can either be in pixels or percentage (based on the width or height of the entire viewer).
+     * Default: "30%".
+     */
+    size?: number | string;
+    /**
+     * Set whether to select the index in the upper left corner of the viewer when scrolling.
+     * Default: false.
+     */
+    autoChangeIndex?: boolean;
+    checkbox?: {
+      visibility?: string; //"visible":hidden", default: "hidden"
+      width?: number | string; //default: "24px",number unit: px, string value: "24px"/"10%", relative to parent container
+      height?: number | string; //default: "24px",number unit: px, string value: "24px"/"10%", relative to parent container
+      background?: string; //default: "#ffffff"
+      borderWidth?: number | string;  //default: "2px", unit: px, percentage value not supported
+      borderColor?: string; //default: "#000000"
+      checkMarkColor?: string; //default: "#000000"
+      checkMarkLineWidth?: number | string; //default: "2px", unit: px, percentage value not supported
+      borderRadius?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%",relative to itself
+      opacity?: number; //default:0.5, value range [0-1], value greater 1 defaults to 1
+      left?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+      top?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+      right?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+      bottom?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+      translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+      translateY?: number | string //default: "",  number unit: px, string value: "10px"/"10%", relative to itself
+    };
+    pageNumber?: {
+      visibility?: string; //"visible": hidden", default: "hidden"
+      width?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+      height?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+      background?: string; //default: "#ffffff"            
+      borderWidth?: number | string; //default: "1px", unit: px, percentage value not supported
+      borderColor?: string; //default: "#a79898"
+      borderRadius?: number | string; //default: "50%", number unit: px, string value: "10px"/"10%", relative to itself
+      opacity?:number; //default: 0.5, value range [0-1], value greater 1 defaults to 1
+      color?: string; //default: "#000000", supports #16 hexadecimal only
+      fontFamily?: string; //default: "sans-serif"
+      fontSize?: number | string; //default: 12, unit: px, percentage value not supported
+      left?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+      top?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+      right?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+      bottom?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+      translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+      translateY?: number | string //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+    }
+}
+```
+
+---
+
+### ThumbnailViewerEvent
+
+**Syntax**
+
+```typescript
+interface ThumbnailViewerEvent {
+    // The index of the current page.
+    index: number;
+    // The x-coordinate of the browser page.
+    pageX: number;
+    // The y-coordinate of the browser page.
+    pageY: number;
+};
+```
+
+---
+
+### ViewMode
+
+**Syntax**
+
+```typescript
+interface ViewMode {
+    /**
+     * Specify the number of images per row.
+     */
+    columns?: number;
+    /**
+     * Specify the number of images per column.
+     */
+    rows?: number;
+    /**
+     * Set or return whether the pages are arranged vertically or horizontally.
+     * Default: "vertical". Allowed values are "vertical" and "horizontal".
+     */
+    scrollDirection?: string;
+}
+```
+
+---
+
+### Area
+
+**Syntax**
+
+```typescript
+interface Area {
+    left: number,
+    top: number,
+    right: number,
+    bottom: number,
+};
+```
+
+---
+
+### CheckboxSettings
+
+**Syntax**
+
+```typescript
+interface CheckboxSettings {
+  visibility?: string; //"visible": hidden", default: "hidden" 
+  width?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+  height?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+  background?: string; //default: "#ffffff"
+  borderWidth?: number | string; //default: "2px", unit: px, percentage value not supported
+  borderColor?: string; //default: "#000000"
+  checkMarkColor?: string; //default: "#000000"
+  checkMarkLineWidth?: number | string; //default: "2px", unit: px, percentage value not supported
+  borderRadius?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to itself
+  opacity?: number; //default:0.5, value range [0-1], value greater 1 defaults to 1
+  left?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+  top?: number | string;  //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+  right?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+  bottom?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+  translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+  translateY?: number | string //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+}
+```
+
+---
+
+### PageNumberSettings
+
+**Syntax**
+
+```typescript
+interface PageNumberSettings {       
+  visibility?: string; //"visible": hidden", default: "hidden" 
+  width?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+  height?: number | string; //default: "24px", number unit: px, string value: "24px"/"10%", relative to parent container
+  background?: string; //default:"#ffffff"            
+  borderWidth?: number | string; //default: "1px", unit: px, percentage value not supported
+  borderColor?: string; //default: "#a79898"
+  borderRadius?: number | string; //default: "50%", number unit: px, string value: "10px"/"10%", relative to itself
+  opacity?:number; //default: 0.5, value range [0-1], value greater 1 defaults to 1
+  color?: string; //default: "#000000", supports #16 hexadecimal only
+  fontFamily?: string; //default: "sans-serif"
+  fontSize?: number | string; //default: 12, unit: px, percentage value not supported
+  left?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+  top?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
+  right?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+  bottom?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
+  translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+  translateY?: number | string //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+}
+```
+
+---
+
+### ViewerEvent
+
+**Syntax**
+
+```typescript
+interface ViewerEvent{
+    // The index of the current page.
+    index: number;
+    //The x-coordinate of the upper-left corner of the page.
+    imageX: number;
+    //The y-coordinate of the upper-left corner of the page.
+    imageY: number;
+    // The x-coordinate of the browser page.
+    pageX: number;
+    // The y-coordinate of the browser page.
+    pageY: number;
+};
+```
+
+---
+
+### rect
+
+**Syntax**
+
+```typescript
+interface rect{
+    // The index of the selected area. The index is 0-based. This is useful when you have multiple selected areas on one page.
+    areaIndex: number;
+    // The x-coordinate of the upper-left corner of the area.
+    x: number;
+    // The y-coordinate of the upper-left corner of the area.
+    y: number;
+    // The width of the selected area.
+    width: number;
+    // The height of the selected area.
+    height: number;
+};
+```
+
+---
+
+## Buffer
+
+### TagInfo
 
 **Syntax**
 
@@ -1130,7 +1136,7 @@ interface TagInfo {
 
 ---
 
-## BufferChangeInfo
+### BufferChangeInfo
 
 **Syntax**
 
@@ -1157,7 +1163,7 @@ interface BufferChangeInfo {
 
 ---
 
-## DocumentInfo
+### DocumentInfo
 
 **Syntax**
 
@@ -1170,7 +1176,9 @@ interface DocumentInfo {
 
 ---
 
-## Base64Result
+## Output
+
+### Base64Result
 
 **Syntax**
 
@@ -1195,7 +1203,7 @@ interface Base64Result {
 <!--
 ---
 
-##
+###
 
 **Syntax**
 
@@ -1205,7 +1213,7 @@ interface Base64Result {
 
 ---
 
-##
+###
 
 **Syntax**
 
@@ -1216,7 +1224,7 @@ interface Base64Result {
 
 ---
 
-##
+###
 
 **Syntax**
 
@@ -1226,7 +1234,7 @@ interface Base64Result {
 
 ---
 
-##
+###
 
 **Syntax**
 
@@ -1236,7 +1244,7 @@ interface Base64Result {
 
 ---
 
-##
+###
 
 **Syntax**
 
