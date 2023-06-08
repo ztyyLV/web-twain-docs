@@ -2516,7 +2516,7 @@ ConvertToBase64(
 `type`: The file type. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
 
 `successCallback`: A callback function that is executed if the request succeeds.
-- `result`: The resulting base64 string. Please refer to [Base64Result]({{site.info}}api/Interface.html#base64result).
+- `result`: The resulting base64 string. Please refer to [Base64Result]({{site.info}}api/Interfaces.html#base64result).
 - `indices`: The indices of the converted images.
 - `type`: The file type.
 

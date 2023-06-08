@@ -236,7 +236,7 @@ GetTagList(): TagInfo[];
 
 **Arguments**
 
-`TagInfo`: Please refer to [TagInfo]({{site.info}}api/Interface.html#taginfo).
+`TagInfo`: Please refer to [TagInfo]({{site.info}}api/Interfaces.html#taginfo).
 
 **Availability**
 
@@ -1842,7 +1842,7 @@ RegisterEvent('OnBufferChanged',
 
 **Parameters**
 
-`bufferChangeInfo`: Details about the buffer change. `TagInfo`: Please refer to [BufferChangeInfo]({{site.info}}api/Interface.html#bufferchangeinfo).
+`bufferChangeInfo`: Details about the buffer change. `TagInfo`: Please refer to [BufferChangeInfo]({{site.info}}api/Interfaces.html#bufferchangeinfo).
 
 **Availability**
 
@@ -2323,7 +2323,7 @@ GetDocumentInfoList(): DocumentInfo[];
 
 **Arguments**
 
-`DocumentInfo`: Please refer to [DocumentInfo]({{site.info}}api/Interface.html#documentinfo).
+`DocumentInfo`: Please refer to [DocumentInfo]({{site.info}}api/Interfaces.html#documentinfo).
 
 **Availability**
 
