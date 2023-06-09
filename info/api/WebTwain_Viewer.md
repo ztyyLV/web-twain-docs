@@ -6,6 +6,7 @@ keywords: Dynamic Web TWAIN, Documentation, API Reference, Viewer APIs
 breadcrumbText: Viewer
 description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 permalink: /info/api/WebTwain_Viewer.html
+needGenerateH3Content: true
 ---
 
 # `{WebTwainObject}.Viewer`
@@ -34,6 +35,7 @@ permalink: /info/api/WebTwain_Viewer.html
 | [`ifAutoScroll`](#ifautoscroll)             | [`innerBorder`](#innerborder)                           | [`pageMargin`](#pagemargin)                           | [`selectedAreaBorderColor`](#selectedareabordercolor) |
 | [`selectedPageBackground`](#selectedpagebackground) | [`selectedPageBorder`](#selectedpageborder)     | [`selectionRectAspectRatio`](#selectionrectaspectratio) | [`singlePageMode`](#singlepagemode)               |
 | [`width`](#width)                           | [`zoom`](#zoom)                                         | [`autoChangeIndex`](#autochangeindex)                 | [`selectionMode`](#selectionmode)                   |
+| [`zoomOrigin`](#zoomorigin) |
 
 **Events**
 
@@ -2245,6 +2247,57 @@ DWObject.Viewer.selectionMode = Dynamsoft.DWT.EnumDWT_SelectionMode.Multiple; //
 
 ---
 
+## zoomOrigin
+
+Set the zoom origin.
+
+**Syntax**
+
+```typescript
+zoomOrigin: {x: string; y: string;};
+```
+
+**Parameters**
+
+`x`: x-coordinate. Default is "center", values: "left", "right", "center".
+
+`y`: y-coordinate. Default is "center", values: "top", "bottom", "center".
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.3+</td>
+<td align="center">v18.3+</td>
+<td align="center">v18.3+</td>
+<td align="center">v18.3+</td>
+</tr>
+
+</table>
+</div>
+
+**Usage notes**
+
+The default value is `{x:"center", y:"center"}`, which means the zoom origin is center point of the image.
+
+**Example**
+
+```javascript
+DWObject.Viewer.zoomOrigin = {x:"left", y:"top"}; // Set the zoom origin to top left corner.
+```
+
+---
 
 ## Events
 
