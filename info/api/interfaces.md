@@ -611,8 +611,8 @@ interface ImageEditor {
      * Set the zoom origin.
      */
     zoomOrigin: {
-        x: string; //Default is "center", values: "left", "right", "center".
-        y: string; //Default is "center", values: "top", "bottom", "center"
+        x: string; //x-coordinate. Default is "center", values: "left", "right", "center".
+        y: string; //y-coordinate. Default is "center", values: "top", "bottom", "center"
     };
 };
 ```
@@ -707,8 +707,8 @@ interface EditorSettings {
      * Set the zoom origin.
      */
     zoomOrigin?: {
-        x: string; //Default is "center", values: "left", "right", "center".
-        y: string; //Default is "center", values: "top", "bottom", "center"
+        x: string; //x-coordinate. Default is "center", values: "left", "right", "center".
+        y: string; //y-coordinate. Default is "center", values: "top", "bottom", "center".
     };
 }
 ```

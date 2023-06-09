@@ -521,6 +521,7 @@ permalink: /info/api/
 |[`ifAutoScroll`]({{site.info}}api/WebTwain_Viewer.html#ifautoscroll)|[`innerBorder`]({{site.info}}api/WebTwain_Viewer.html#innerBorder)| [`pageMargin`]({{site.info}}api/WebTwain_Viewer.html#pagemargin)|[`selectedAreaBorderColor`]({{site.info}}api/WebTwain_Viewer.html#selectedareabordercolor)|
 |[`selectedPageBackground`]({{site.info}}api/WebTwain_Viewer.html#selectedpagebackground)|[`selectedPageBorder`]({{site.info}}api/WebTwain_Viewer.html#selectedpageborder)| [`selectionRectAspectRatio`]({{site.info}}api/WebTwain_Viewer.html#selectionrectaspectratio)|[`singlePageMode`]({{site.info}}api/WebTwain_Viewer.html#singlepagemode)|
 |[`width`]({{site.info}}api/WebTwain_Viewer.html#width)| [`zoom`]({{site.info}}api/WebTwain_Viewer.html#zoom)| [`autoChangeIndex`]({{site.info}}api/WebTwain_Viewer.html#autochangeindex)|[`selectionMode`]({{site.info}}api/WebTwain_Viewer.html#selectionmode)|
+|[`zoomOrigin`]({{site.info}}api/WebTwain_Viewer.html#zoomorigin)|
 
 <!--
 * [`acceptDrop`]({{site.info}}api/WebTwain_Viewer.html#acceptdrop)
@@ -1014,6 +1015,7 @@ permalink: /info/api/
 |[`ifAutoScroll`]({{site.info}}api/WebTwain_Viewer.html#ifautoscroll)|[`innerBorder`]({{site.info}}api/WebTwain_Viewer.html#innerBorder)| [`pageMargin`]({{site.info}}api/WebTwain_Viewer.html#pagemargin)|[`selectedAreaBorderColor`]({{site.info}}api/WebTwain_Viewer.html#selectedareabordercolor)|
 |[`selectedPageBackground`]({{site.info}}api/WebTwain_Viewer.html#selectedpagebackground)|[`selectedPageBorder`]({{site.info}}api/WebTwain_Viewer.html#selectedpageborder)| [`selectionRectAspectRatio`]({{site.info}}api/WebTwain_Viewer.html#selectionrectaspectratio)|[`singlePageMode`]({{site.info}}api/WebTwain_Viewer.html#singlepagemode)|
 |[`width`]({{site.info}}api/WebTwain_Viewer.html#width)| [`zoom`]({{site.info}}api/WebTwain_Viewer.html#zoom)| [`autoChangeIndex`]({{site.info}}api/WebTwain_Viewer.html#autochangeindex)|[`selectionMode`]({{site.info}}api/WebTwain_Viewer.html#selectionmode)|
+|[`zoomOrigin`]({{site.info}}api/WebTwain_Viewer.html#zoomorigin)|
 
 <!--
 * [`acceptDrop`]({{site.info}}api/WebTwain_Viewer.html#acceptdrop)

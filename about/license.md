@@ -51,22 +51,6 @@ If you have multiple license keys, separate them with semicolons like below:
 Dynamsoft.DWT.ProductKey = 't0076lQAAAGNcO61He******;t0076lQAAAGNcO61He******';
 ```
 
-### Update organizationID
-
-If you are using an **organizationID**, you can simply update the `organizationID` in your code.
-
-``` javascript
-Dynamsoft.DWT.organizationID = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
-```
-
-As of **version 17.3**, you can use the `ProductKey` API to specify an **organizationID**.
-
-``` javascript
-Dynamsoft.DWT.ProductKey = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
-```
-
-*Note: **ProductKey** and **organizationID** cannot be used together.*
-
 ## License Agreement
 
 View the <a href="https://www.dynamsoft.com/Products/WebTwain_license.aspx" target="_blank">Dynamic Web TWAIN License Agreement</a>.
