@@ -579,7 +579,7 @@ No changes in version 16.1.
 * In favor of the WASM mode, image transferring now uses JPEG more often than PNG. Previously, there was only the Local-Service mode and only PNG was used.
 * The following methods are made asynchronous (while still synchronous-compliant):
 
-`ChangeImageSize()` , `ConvertToBW()` , `ConvertToGrayScale()` , `Crop()` , `Erase()` , `FilterImageByTag()` , `Flip()` , `GetSelectedImageSize()` , `GetSkewAngle()` , `Invert()` , `Mirror()` , `Rotate()` , `RotateEx()` , `RotateLeft()` , `RotateRight()` , `SetDPI()` , `SetImageWidth()`
+`ChangeImageSize()` , `ConvertToBW()` , `ConvertToGrayScale()` , `Crop()` , `Erase()` , `FilterImageByTag()` , `Flip()` , `GetSelectedImagesSize()` , `GetSkewAngle()` , `Invert()` , `Mirror()` , `Rotate()` , `RotateEx()` , `RotateLeft()` , `RotateRight()` , `SetDPI()` , `SetImageWidth()`
 
 > NOTE
 >  
@@ -1387,7 +1387,7 @@ In v10.0.1 there is no limit to the size of an Http Request. In v10.0, the WebSo
 * Added clearing the specified area of an image and filling the area with a color.
 * `MaxImagesInBuffer` : In the trial version of Dynamic Web TWAIN, the maximum value you can set to the property has been raised from 4 to 1024.
 * Optimized `HTTPPostResponseString` in Plug-in Edition: You can use `HTTPPostResponseString` property to get much more detailed info returned from the web server.
-* Added methods: `CutFrameToClipboard()`,  `Erase()` ,      `FTPUploadSelectedImagesAsMultiPagePDF()` ,      `FTPUploadSelectedImagesAsMultiPageTIFF()` ,      `GetBarcodeInfo()` ,      `GetBarcodeText()` ,      `HTTPUploadSelectedImagesThroughPostAsMultiPagePDF()` ,      `HTTPUploadSelectedImagesThroughPostAsMultiPageTIFF()` ,      `HTTPUploadSelectedImagesThroughPutAsMultiPagePDF()` ,      `HTTPUploadSelectedImagesThroughPutAsMultiPageTIFF()` ,      `LoadImageFromBytes()` ,      `MoveImage()`,     `Print()`,  `Rotate()` ,      `SaveSelectedImagesAsMultiPagePDF()` ,      `SaveSelectedImagesAsMultiPageTIFF()` ,      `SaveSelectedImagesToBytes()`,  `GetSelectedImageSize()` .
+* Added methods: `CutFrameToClipboard()`,  `Erase()` ,      `FTPUploadSelectedImagesAsMultiPagePDF()` ,      `FTPUploadSelectedImagesAsMultiPageTIFF()` ,      `GetBarcodeInfo()` ,      `GetBarcodeText()` ,      `HTTPUploadSelectedImagesThroughPostAsMultiPagePDF()` ,      `HTTPUploadSelectedImagesThroughPostAsMultiPageTIFF()` ,      `HTTPUploadSelectedImagesThroughPutAsMultiPagePDF()` ,      `HTTPUploadSelectedImagesThroughPutAsMultiPageTIFF()` ,      `LoadImageFromBytes()` ,      `MoveImage()`,     `Print()`,  `Rotate()` ,      `SaveSelectedImagesAsMultiPagePDF()` ,      `SaveSelectedImagesAsMultiPageTIFF()` ,      `SaveSelectedImagesToBytes()`,  `GetSelectedImagesSize()` .
 * Added properties: `AllowMultiSelect`,  `BackgroundColor` ,      `BackgroundFillColor` ,      `BarcodeCount` ,      `HttpFieldNameOfUploadedImage` ,      `IfPASVMode` ,      `SelectedImageIndex`,     `SelectedImagesCount`,  `SelectionImageBorderColor` ,      `VScrollBar` .
 * Added event: `OnInternetTransferPercentageEx`
 
