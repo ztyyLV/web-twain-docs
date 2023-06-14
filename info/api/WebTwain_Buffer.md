@@ -895,7 +895,7 @@ GetSelectedImagesSize(type: Dynamsoft.DWT.EnumDWT_ImageType | number): number;
 
 **Parameters**
 
-`type`: Sepcify the expected file type.
+`type`: Specify the expected file type.
 
 **Availability**
 
