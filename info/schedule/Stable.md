@@ -11,6 +11,40 @@ permalink: /info/schedule/Stable.html
 
 # Stable Releases
 
+## 18.3 (06/20/2023)
+
+### New Features
+
+#### Image Viewer
+
+- Add a new property <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Viewer.html#zoomorigin" target="_blank">zoomOrigin</a> to determine the zoom origin as well as adding to <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Interfaces.html#imageeditor" target="_blank">ImageEditor</a> and <a href="https://www.dynamsoft.com/web-twain/docs/info/api/Interfaces.html#editorsettings" target="_blank">EditorSettings</a>.
+
+### Preview Feature
+
+#### PDF Compressor (Beta)
+
+- PDF Compressor is a compression technology based on color clustering which can help to reduce the file size when saving images as a PDF file. To preview this feature, please see <a href="https://demo.dynamsoft.com/Samples/dwt/PDF-Compressor/PDF-Compressor.aspx" target="_blank">this demo</a>. Please <a href="https://www.dynamsoft.com/company/customer-service/#contact" target="_blank">contact us</a> if you have any feedback or suggestions.
+
+### Improvements
+
+#### Image Viewer
+
+-	Optimize display speed of images in viewer in n*n <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Viewer.html#setviewmode" target="_blank">ViewMode</a>.
+
+#### Android Service
+
+-	When the remaining valid date of the local.dynamsoft.com certificate is less than or equal to 21 days, the certificate will be automatically renewed in the network environment.
+
+#### <a href="https://www.dynamsoft.com/remote-scan/docs/introduction/" target="_blank">Remote Scan</a>
+
+-	Optimize the configuration pages of Bonjour Service and Proxy Service to make the process clearer and easier to proceed.
+
+#### General Improvements
+
+- Update third-party libraries to the latest version.
+-	Remove redundant 32-bit dlls from Dynamsoft Service 64-bit installation directory.
+
+
 ## 18.2 (05/09/2023)
 
 ### New Features
