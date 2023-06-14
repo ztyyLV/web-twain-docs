@@ -39,6 +39,7 @@ permalink: /index.html
    - [Edit Images]({{site.indepth}}features/edit.html)
    - [Read Barcodes]({{site.indepth}}features/barcode.html)
    - [Handle PDFs]({{site.indepth}}features/pdf.html)
+   - [PDF Compressor (Beta)]({{site.indepth}}features/pdfc.html)
 
 * [API Reference]({{site.info}}api/index.html)
 
