@@ -15,7 +15,7 @@ permalink: /faq/what-are-the-resources-files.html
 
 Resources files help you include Dynamic Web TWAIN in your application. The following shows the purpose of these files.
 
-> *Resources* is the default name of the folder that contain these files. It can be changed. For example, in the [Dynamic Web TWAIN package](https://github.com/dynamsoft-dwt/web-twain-package), it's called *dist*.
+> *Resources* is the default name of the folder that contain these files. It can be changed. For example, in the <a href="https://github.com/Dynamsoft/Dynamic-Web-TWAIN" target="_blank">DWT package</a>, it's called *dist*.
 
 ### Default files
 

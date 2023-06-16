@@ -288,7 +288,7 @@ Dynamsoft.DWT.RegisterEvent('OnWebTwainReady',
 
 #### `OnWebTwainError`
 
-A built-in callback triggered when an error is detected when laoding the Web TWAIN environment
+A built-in callback triggered when an error is detected when loading the Web TWAIN environment
 
 **Example**
 ```javascript
