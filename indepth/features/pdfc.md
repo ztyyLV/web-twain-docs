@@ -13,6 +13,8 @@ permalink: /indepth/features/pdfc.html
 PDF Compressor is a compression technology based on color clustering which can help to reduce the file size when saving images as a PDF file.
 Color clustering is an algorithm, which is based on the RGB value of each pixel in the image to cluster similarly colored pixels to achieve compression.
 
+> This feature is only available for the color or gray-scale images and need a PDF Compressor module license.
+
 ## Benefits
 
 PDF Compressor provides a new way of PDF compression. For the image which is 
@@ -39,8 +41,6 @@ To preview this feature, please see <a href="https://demo.dynamsoft.com/Samples/
 
 ```typescript
 DWObject.Addon.PDF.Write.Setup({
-  compression: Dynamsoft.DWT.EnumDWT_PDFCompressionType.PDF_JP2000,
-  quality: 80,
   docCompressor: {
     enabled: true, //Enable PDF Compressor
   },
