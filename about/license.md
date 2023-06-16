@@ -35,7 +35,7 @@ You can set the new key via the `ProductKey` API.
 
 You can find all the full licenses you own via our <a href="https://www.dynamsoft.com/customer/license/fullLicense" target="_blank">customer portal</a>.
 
-Depending on the type of full license you are using, you can add/update the full license via the `ProductKey` or `organizationID` API (available for Dynamic Web TWAIN v17.0+).
+Depending on the type of full license you are using, you can add/update the full license via the `ProductKey` API (available for Dynamic Web TWAIN v17.0+).
 
 ### Update ProductKey
 
