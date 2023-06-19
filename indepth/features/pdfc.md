@@ -1,14 +1,14 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN SDK Features - PDF Compressor (Alpha)
+title: Dynamic Web TWAIN SDK Features - PDF Compressor (Beta)
 keywords: Dynamic Web TWAIN, Documentation, PDF Compressor
-breadcrumbText: PDF Compressor (Alpha)
+breadcrumbText: PDF Compressor (Beta)
 description: Dynamic Web TWAIN SDK Documentation PDF Compressor
 permalink: /indepth/features/pdfc.html
 ---
 
-# PDF Compressor (Alpha)
+# PDF Compressor (Beta)
 
 PDF Compressor is a compression technology based on color clustering which can help to reduce the file size when saving images as a PDF file.
 Color clustering is an algorithm, which is based on the RGB value of each pixel in the image to cluster similarly colored pixels to achieve compression.
