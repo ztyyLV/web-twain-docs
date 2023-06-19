@@ -21,7 +21,7 @@ permalink: /info/schedule/Stable.html
 
 ### Preview Feature
 
-#### PDF Compressor (Alpha)
+#### PDF Compressor (Beta)
 
 - PDF Compressor is a compression technology based on color clustering which can help to reduce the file size when saving images as a PDF file. To preview this feature, please see <a href="https://demo.dynamsoft.com/Samples/dwt/PDF-Compressor/PDF-Compressor.html" target="_blank">this demo</a>. Please <a href="https://www.dynamsoft.com/company/customer-service/#contact" target="_blank">contact us</a> if you have any feedback or suggestions.
 
