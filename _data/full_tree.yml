@@ -43,7 +43,7 @@ tree_list:
             path: /indepth/features/pdf.html 
           - name: Remote Scan
             path: https://www.dynamsoft.com/remote-scan/docs/introduction/
-          - name: PDF Compressor (Beta) 
+          - name: PDF Compressor (Alpha) 
             path: /indepth/features/pdfc.html 
   - name: Samples and Demos
     childList:
