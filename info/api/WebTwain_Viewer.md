@@ -275,6 +275,7 @@ createImageEditor(
 ```javascript
 // Use default settings
 var imageEditor = DWObject.Viewer.createImageEditor();
+imageEditor.zoomOrigin = {x:"center", y:"center"};
 imageEditor.show();
 ```
 
@@ -380,6 +381,10 @@ var editorSettings = {
     ],
   },
   workMode:Dynamsoft.DWT.EnumDWT_WorkMode.balance,
+  zoomOrigin: {
+    x: "center",
+    y: "center",
+  },
 };
 
 var imageEditor = DWObject.Viewer.createImageEditor(editorSettings);
