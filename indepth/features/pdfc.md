@@ -10,6 +10,8 @@ permalink: /indepth/features/pdfc.html
 
 # PDF Compressor (Beta)
 
+> Starting from version 18.3
+
 PDF Compressor is a new PDF compression technology which may help reduce the resulting file size when saving images as a PDF file. This technology is based on Dynamsoft's proprietary color clustering algorithms. 
 Color clustering uses operates using the RGB value of each pixel in the image to cluster similarly colored pixels.
 
