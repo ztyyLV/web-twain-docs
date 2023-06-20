@@ -35,7 +35,7 @@ You can set the new key via the `ProductKey` API.
 
 You can find all the full licenses you own via our <a href="https://www.dynamsoft.com/customer/license/fullLicense" target="_blank">customer portal</a>.
 
-Depending on the type of full license you are using, you can add/update the full license via the `ProductKey` or `organizationID` API (available for Dynamic Web TWAIN v17.0+).
+Depending on the type of full license you are using, you can add/update the full license via the `ProductKey` API (available for Dynamic Web TWAIN v17.0+).
 
 ### Update ProductKey
 
@@ -50,22 +50,6 @@ If you have multiple license keys, separate them with semicolons like below:
 ``` javascript
 Dynamsoft.DWT.ProductKey = 't0076lQAAAGNcO61He******;t0076lQAAAGNcO61He******';
 ```
-
-### Update organizationID
-
-If you are using an **organizationID**, you can simply update the `organizationID` in your code.
-
-``` javascript
-Dynamsoft.DWT.organizationID = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
-```
-
-As of **version 17.3**, you can use the `ProductKey` API to specify an **organizationID**.
-
-``` javascript
-Dynamsoft.DWT.ProductKey = "123456"; // replace the number 123456 with YOUR-ORGANIZATION-ID
-```
-
-*Note: **ProductKey** and **organizationID** cannot be used together.*
 
 ## License Agreement
 

@@ -49,4 +49,9 @@ This section covers how to implement the key capabilities of Dynamic Web TWAIN (
   Learn about PDF reading & writing capabilities.
 
 * [Remote Scan](https://www.dynamsoft.com/remote-scan/docs/introduction/)
+
   Learn about how to use Remote Scan.
+
+* [PDF Compressor (Beta)]({{site.indepth}}features/pdfc.html)
+
+  Learn about PDF Compressor.

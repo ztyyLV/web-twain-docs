@@ -14,21 +14,21 @@ permalink: /about/resources.html
 
 * <a href="https://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx" target="_blank">Official installer</a> 
 
-> This official package is meant for developers to evaluate the SDK. When the package is installed, you get all the [resource files]({{site.faq}}what-are-the-resources-files.html), documentation, and samples. A 30-day free trial is included when evaluating our SDK.
+> This official package is meant for developers to evaluate the SDK. When the package is installed, you get all the resource files, documentation, and samples. A 30-day free trial is included when evaluating our SDK.
 
 * <a href="https://www.npmjs.com/package/dwt" target="_blank">NPM package</a>
 
-> All the files in the [DWT package](https://github.com/dynamsoft-dwt/web-twain-package) will help you include `Dynamic Web TWAIN` in your web application both as a regular library and as a module. To try our SDK and included samples, a [trial license](#how-do-i-get-a-trial-license) is required.
+> All the files in the <a href="https://github.com/Dynamsoft/Dynamic-Web-TWAIN" target="_blank">DWT package</a> will help you include `Dynamic Web TWAIN` in your web application both as a regular library and as a module. To try our SDK and included samples, a [trial license](#how-do-i-get-a-trial-license) is required.
 
 * <a href="https://yarnpkg.com/package/dwt" target="_blank">YARN package</a>
 
-> Similar to using NPM, you will get all the files in the [DWT package](https://github.com/dynamsoft-dwt/web-twain-package).
+> Similar to using NPM, you will get all the files in the <a href="https://github.com/Dynamsoft/Dynamic-Web-TWAIN" target="_blank">DWT package</a>.
 
 ## Sample code
 
 * <a href="https://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx" target="_blank">Official samples</a> 
 
-> We have many prebuilt samples to demonstrate common user scenarios. All samples contain the [resource files]({{site.faq}}what-are-the-resources-files.html) required in your application. If a sample is hosted on the Dynamsoft website (not Github), then the sample comes with a 30-day free trial license as well. Otherwise, you can [get a trial license](#how-do-i-get-a-trial-license).
+> We have many prebuilt samples to demonstrate common user scenarios. All samples contain the resource files required in your application. If a sample is hosted on the Dynamsoft website (not Github), then the sample comes with a 30-day free trial license as well. Otherwise, you can [get a trial license](#how-do-i-get-a-trial-license).
 
 * <a href="https://github.com/dynamsoft-dwt" target="_blank">Github repo</a>
 
@@ -36,7 +36,7 @@ permalink: /about/resources.html
 
 ## How do I get a trial License
 
-Please visit our [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?product=dwt) to request for a trial license.
+Please visit our <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dwt" target="_blank">customer portal</a> to request for a trial license.
 
 ## Online Demo
 

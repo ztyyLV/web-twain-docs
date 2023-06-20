@@ -2507,23 +2507,6 @@ ConvertToBase64(
     successCallback: (result: Base64Result, indices: number[], type: number) => void,
     failureCallBack: (errorCode: number, errorString: string) => void
 ): void;
-
-interface Base64Result {
-    /**
-     * Return the length of the result string.
-     */
-    getLength(): number;
-    /**
-     * Return part of the string.
-     * @param offset The starting position.
-     * @param length The length of the expected string.
-     */
-    getData(offset: number, length: number): string;
-    /**
-     * Return the MD5 value of the result.
-     */
-    getMD5(): string;
-}
 ```
 
 **Parameters**
@@ -2533,7 +2516,7 @@ interface Base64Result {
 `type`: The file type. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
 
 `successCallback`: A callback function that is executed if the request succeeds.
-- `result`: The resulting base64 string.
+- `result`: The resulting base64 string. Please refer to [Base64Result]({{site.info}}api/Interfaces.html#base64result).
 - `indices`: The indices of the converted images.
 - `type`: The file type.
 
