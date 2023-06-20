@@ -272,13 +272,28 @@ createImageEditor(
 
 > The example code shows 2 ways to use the API `createImageEditor()`
 
+<div class="sample-code-prefix template2"></div>
+>- v18.3
+>- v18.2
+>
+>
 ```javascript
 // Use default settings
 var imageEditor = DWObject.Viewer.createImageEditor();
 imageEditor.zoomOrigin = {x:"center", y:"center"};
 imageEditor.show();
 ```
+```javascript
+// Use default settings
+var imageEditor = DWObject.Viewer.createImageEditor();
+imageEditor.show();
+```
 
+<div class="sample-code-prefix template2"></div>
+>- v18.3
+>- v18.2
+>
+>
 ```javascript
 // Customize the editor
 var editorSettings = {
@@ -385,6 +400,113 @@ var editorSettings = {
     x: "center",
     y: "center",
   },
+};
+
+var imageEditor = DWObject.Viewer.createImageEditor(editorSettings);
+imageEditor.show();
+```
+```javascript
+// Customize the editor
+var editorSettings = {
+  /* Show the editor within the DIV 'imageEditor'*/
+  element: document.getElementById("imageEditor"),
+  width: 600,
+  height: 400,
+  border: "1px solid rgb(204, 204, 204)",
+  topMenuBorder: "",
+  innerBorder: "",
+  background: "rgb(255, 255, 255)",
+  promptToSaveChange: true,
+  buttons: {
+    titles: {
+      previous: "Previous Image",
+      next: "Next Image",
+      print: "Print Image",
+      scan: "Scan Documents",
+      load: "Load Local Images",
+      rotateleft: "Rotate Left",
+      rotate: "Rotate",
+      rotateright: "Rotate Right",
+      deskew: "Deskew",
+      crop: "Crop Selected Area",
+      cut: "Cut Selected Area",
+      changeimagesize: "Change Image Size",
+      flip: "Flip Image",
+      mirror: "Mirror Image",
+      zoomin: "Zoom In",
+      originalsize: "Show Original Size",
+      zoomout: "Zoom Out",
+      stretch: "Stretch Mode",
+      fit: "Fit Window",
+      fitw: "Fit Horizontally",
+      fith: "Fit Vertically",
+      hand: "Hand Mode",
+      rectselect: "Select Mode",
+      zoom: "Click to Zoom In",
+      restore: "Restore Original Image",
+      save: "Save Changes",
+      close: "Close the Editor",
+      removeall: "Remove All Images",
+      removeselected: "Remove All Selected Images",
+    },
+    visibility: {
+      scan: true,
+      load: true,
+      print: true,
+      removeall: true,
+      removeselected: true,
+      rotateleft: true,
+      rotate: true,
+      rotateright: true,
+      deskew: true,
+      crop: true,
+      cut: true,
+      changeimagesize: true,
+      flip: true,
+      mirror: true,
+      zoomin: true,
+      originalsize: true,
+      zoomout: true,
+      stretch: true,
+      fit: true,
+      fitw: true,
+      fith: true,
+      hand: true,
+      rectselect: true,
+      zoom: true,
+      restore: true,
+      save: true,
+      close: true,
+    },
+  },
+  dialogText: {
+    dlgRotateAnyAngle: [
+      "Angle :",
+      "Interpolation:",
+      "Keep size",
+      "  OK  ",
+      "Cancel",
+    ],
+    dlgChangeImageSize: [
+      "New Height :",
+      "New Width :",
+      "Interpolation method:",
+      "  OK  ",
+      "Cancel",
+    ],
+    saveChangedImage: [
+      "You have changed the image, do you want to keep the change(s)?",
+      "  Yes  ",
+      "  No  ",
+    ],
+    selectSource: [
+      "Select Source:",
+      "Select",
+      "Cancel",
+      "There is no source available",
+    ],
+  },
+  workMode:Dynamsoft.DWT.EnumDWT_WorkMode.balance,
 };
 
 var imageEditor = DWObject.Viewer.createImageEditor(editorSettings);
