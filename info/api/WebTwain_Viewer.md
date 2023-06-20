@@ -401,7 +401,7 @@ var editorSettings = {
     y: "center",
   },
 };
-
+//Create the editor
 var imageEditor = DWObject.Viewer.createImageEditor(editorSettings);
 imageEditor.show();
 ```
@@ -508,7 +508,7 @@ var editorSettings = {
   },
   workMode:Dynamsoft.DWT.EnumDWT_WorkMode.balance,
 };
-
+//Create the editor 
 var imageEditor = DWObject.Viewer.createImageEditor(editorSettings);
 imageEditor.show();
 ```
