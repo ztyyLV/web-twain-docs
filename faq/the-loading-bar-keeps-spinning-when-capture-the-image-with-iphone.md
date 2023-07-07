@@ -36,7 +36,7 @@ if (Dynamsoft.navInfoSync.biPhone || Dynamsoft.navInfoSync.biPad) {
 - For framework project, please upgrade your dwt package to `v17.3.4` or `v18.0.2`.
 
 - For Non-framework application, please download the new camera.js file below and replace the old file with new one under `Resource/addon` directory.
-    - [v17.3 camera.js file](https://tst.dynamsoft.com/public/DWT_FIX/v17.3/OffscreenCanvas/dynamsoft.webtwain.addon.camera.js)
-    - [v18.0 camera.js file](https://tst.dynamsoft.com/public/DWT_FIX/v18.0/OffscreenCanvas/dynamsoft.webtwain.addon.camera.js)
+    - [v17.3 camera.js file](https://tst.dynamsoft.com/public/DWT_FIX/v17.3/OffscreenCanvas/dynamsoft.webtwain.addon.camera.zip)
+    - [v18.0 camera.js file](https://tst.dynamsoft.com/public/DWT_FIX/v18.0/OffscreenCanvas/dynamsoft.webtwain.addon.camera.zip)
 
 > If the resolution doesn't work for you, please [contact us](https://www.dynamsoft.com/company/contact/).
