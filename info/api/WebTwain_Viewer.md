@@ -1135,6 +1135,30 @@ setButtonClass(
 
 `className`: Specify the CSS class name.
 
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v16.0+ </td>
+<td align="center">v16.0+ </td>
+<td align="center">v16.0+ </td>
+<td align="center">v16.0+ </td>
+</tr>
+
+</table>
+</div>
+
 **Usage notes**
 
 Use this method to fine-tune the buttons in the viewer with CSS.
