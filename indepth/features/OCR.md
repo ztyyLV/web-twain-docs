@@ -8,9 +8,10 @@ description: Dynamic Web TWAIN SDK Documentation OCR Page
 permalink: /indepth/features/OCR.html
 ---
 
-# OCR
+# OCR (Retired)
+> This page is only provided as a reference for clients with existing Dynamsoft OCR licences. New OCR licences are not available as Dynamsoft has ended the development of OCR modules.
 
-Dynamsoft offers two OCR engines that can be used as addons for `Dynamic Web TWAIN` : OCR Basic ( `OCRB` for short) and OCR Professional ( `OCRPro` for short).
+Dynamsoft offers two OCR engines that can be used as add-ons for `Dynamic Web TWAIN` : OCR Basic ( `OCRB` for short) and OCR Professional ( `OCRPro` for short).
 
 `OCRB` is developed on top of the open source [Tesseract engine](https://github.com/tesseract-ocr/tesseract). `OCRPro` on the other hand was developed on top of Kofax's proprietary OCR engine. 
 
