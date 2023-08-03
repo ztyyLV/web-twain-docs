@@ -149,7 +149,7 @@ function openImage() {
         :value="index"
         :key="index"
       >
-        {{ source.displayName }}
+        {% raw %}{{ source.displayName }}{% endraw %}
       </option>
     </select>
     <button @click="acquireImage()">Acquire Images</button>
