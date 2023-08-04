@@ -31,8 +31,13 @@ Many modern scanners and multi-functional printers (MFPs) support the eSCL proto
 
 The following code shows how one way to acquire the image via the eSCL protocol.
 ``` javascript
+//Get the list of available eSCL scanners
 let esclDeviceList=await DWObject.GetDevicesAsync(Dynamsoft.DWT.EnumDWT_DeviceType.ESCLSCANNER)
+
+//Select the desired scanner from the list
 await DWObject.SelectDeviceAsync(esclDeviceList[0])
+
+//Acquire image (with configuration)
 await DWObject.AcquireImageAsync({Resolution:100,IfShowUI:false})
 ```
 
