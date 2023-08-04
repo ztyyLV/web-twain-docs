@@ -11,6 +11,14 @@ permalink: /info/schedule/Stable.html
 
 # Stable Releases
 
+## 18.4
+
+### Viewer Improvements
+- Added `cropBoxStyle` to allow custom styles of the selection UI.
+
+### Editor Functionality
+- Added `outputSelectedArea` to allow for outputting selected area on image to Blob or Base64
+
 ## 18.3 (06/20/2023)
 
 ### New Features
@@ -29,7 +37,7 @@ permalink: /info/schedule/Stable.html
 
 #### Image Viewer
 
--	Optimize display speed of images in viewer in n*n <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Viewer.html#setviewmode" target="_blank">ViewMode</a>.
+-	Optimized display speed of images in the viewer when view is set to n*n <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Viewer.html#setviewmode" target="_blank">ViewMode</a>.
 
 #### Android Service
 
