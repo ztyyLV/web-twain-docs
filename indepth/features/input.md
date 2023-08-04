@@ -26,26 +26,14 @@ A local scanner refers to a scanner that is plugged in the same desktop via USB 
 Many modern scanners and multi-functional printers (MFPs) support the eSCL protocol. The protocol is a vendor-neutral network protocol that allows driverless scanning via ethernet, wireless and USB-connected devices. eSCL-compatible scanners advertise themselves via mDNS so that we can find them easily. mDNS is a zero-configuration service. It is implemented by Apple Bonjour and the open-source Avahi software packages.
 > See [this blog post](https://www.dynamsoft.com/blog/announcement/dynamic-web-twain-escl-scanner/) for more information about eSCL.
 
-#### Scan from an eSCL Scanner to PC
-> The Dynamsoft Service must be installed on the client PC
+- To scan from an eSCL Scanner to PC, the Dynamsoft Service must be installed on the client PC
+- To scan from an eSCL Scanner to Android, you must install the Android Service on the client device from the [Play Store](https://play.google.com/store/apps/details?id=com.dynamsoft.mobilescan).
 
+The following code shows how one way to acquire the image via the eSCL protocol.
 ``` javascript
-//Get a list of eSCL scanners:
-let eSCLDevices = await DWObject.GetDevicesAsync(Dynamsoft.DWT.EnumDWT_DeviceType.ESCLSCANNER);
-
-//Scan documents from the first eSCL scanner:
-let deviceConfiguration = {Resolution:100,IfShowUI:false}; // scanning configuration. Check out the docs to learn more: https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html#acquireimage
-await eSCLDevices[0].acquireImage(deviceConfiguration, DWObject);
-```
-
-#### Scan from an eSCL Scanner to Android
-> Install the Android Service on the client device from the [Play Store](https://play.google.com/store/apps/details?id=com.dynamsoft.mobilescan).
-
-``` javascript
-let devices = await DWObject.GetDevicesAsync(); // get the devices list
-await DWObject.SelectDeviceAsync(devices[0]); // select the first device
-let deviceConfiguration = {Resolution:100,IfShowUI:false}; // scanning configuration. Check out the docs to learn more: https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html#acquireimage
-DWObject.AcquireImageAsync(deviceConfiguration); // scan documents with the selected device
+let esclDeviceList=await DWObject.GetDevicesAsync(Dynamsoft.DWT.EnumDWT_DeviceType.ESCLSCANNER)
+await DWObject.SelectDeviceAsync(esclDeviceList[0])
+await DWObject.AcquireImageAsync({Resolution:100,IfShowUI:false})
 ```
 
 ## Capture from cameras
