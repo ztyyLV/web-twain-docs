@@ -190,7 +190,7 @@ RemoveTag(tagName: string, indices?: number[]):boolean
 
 **Parameters**
 
-`tagName`: Specify the new tag name.
+`tagName`: Specify the tag to be removed.
 
 `indices`: Specify the index.
 
@@ -220,7 +220,7 @@ RemoveTag(tagName: string, indices?: number[]):boolean
 
 **Usage Notes**
 
-If the index is null, it will remove the tag you specified. If the index is not null, it will remove the specified tag on the image you selected.
+If the index is not specified, the tag will be removed from _all images_. If the index is specified, the tag will be removed from the specified image(s).
 
 ---
 

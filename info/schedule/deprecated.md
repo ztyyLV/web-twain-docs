@@ -84,15 +84,15 @@ The recommended fix is to patch the operating system, you can find the patch [he
 
 | v17.0 | v16.2- |
 |:-|:-|
-| [ `Viewer.autoChangeIndex` ]({{site.info}}api/Addon_Viewer.html#autoChangeIndex) | `Viewer.topPageChanged()` |
+| [ `Viewer.autoChangeIndex` ]({{site.info}}api/WebTwain_Viewer.html#autochangeindex) | `Viewer.topPageChanged()` |
 
 * The following APIs are new in v17.0
   + [ `RemoveTag` ]({{site.info}}api/WebTwain_Buffer.html#removetag)
   + [ `GetTagList` ]({{site.info}}api/WebTwain_Buffer.html#gettaglist)
-  + [ `DWT.licenseServer` ]({{site.info}}api/WebTwain_License.html#licenseServer)
-  + [ `DWT.handshakeCode` ]({{site.info}}api/WebTwain_License.html#handshakeCode)
-  + [ `DWT.sessionPassword` ]({{site.info}}api/WebTwain_License.html#sessionPassword)
-  + [ `DWT.licenseException` ]({{site.info}}api/WebTwain_License.html#licenseException)
+  + `DWT.licenseServer`
+  + `DWT.handshakeCode`
+  + `DWT.sessionPassword`
+  + `DWT.licenseException`
 
 ## 16.2 
 

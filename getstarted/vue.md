@@ -73,7 +73,7 @@ Change the file `/src/components/HelloWorld.vue` to match the following `templat
         v-bind:value="index"
         :key="index"
       >
-        {{ source.displayName }}
+        {% raw %}{{ source.displayName }}{% endraw %}
       </option>
     </select>
     <button @click="acquireImage()">Acquire Images</button>
@@ -351,7 +351,7 @@ function openImage() {
         :value="index"
         :key="index"
       >
-        {{ source.displayName }}
+        {% raw %}{{ source.displayName }}{% endraw %}
       </option>
     </select>
     <button @click="acquireImage()">Acquire Images</button>

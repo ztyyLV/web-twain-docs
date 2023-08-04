@@ -37,7 +37,7 @@ In the case that you have used our expired certificate - local.dynamsoft.com, yo
 
 - **High Level Security Requirement (<font color=red>Please note: you need to replace the certificate annually due to expiration</font>)**
 
-  1. (**<u>Recommended</u>**) Revert back to the self-signed certificate for "127.0.0.1". Dynamsoft understands the importance of information security and are committed to remaining one of the most security-compliant companies in the industry. Starting from April 9,2021, Dynamsoft becomes ISO 27001 certified. Although a self-sign certificate is being used all connections are limited to the device itself (127.0.0.1) which ensures security in most cases.
+  1. (**<u>Recommended</u>**) Revert back to the self-signed certificate for "127.0.0.1". Dynamsoft understands the importance of [information security](https://www.dynamsoft.com/Products/Dynamsoft_Security_Whitepaper.pdf) and are committed to remaining one of the most security-compliant companies in the industry. Starting from April 9,2021, Dynamsoft becomes ISO 27001 certified. Although a self-sign certificate is being used all connections are limited to the device itself (127.0.0.1) which ensures security in most cases.
 
   2. If you have to use "local.dynamsoft.com", the following methods can be taken:
         - Method 1 (**<u>Recommended</u>**). Take advantage of the new feature -- **Remote Scan** which released in v18.0. With Remote Scan, you can limit the number of Dynamsoft Service Installations to a minimum. For more details, please refer to [What is Remote Scan](https://www.dynamsoft.com/remote-scan/docs/introduction/).
