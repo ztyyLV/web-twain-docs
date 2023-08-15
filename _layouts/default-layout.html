@@ -41,8 +41,9 @@
                 </div>
                 <div class="main row showRightSideMenu" id="articleContent" data-needh3="{{page.needGenerateH3Content}}">
                     <div class="content markdown-body headCounter {{noTitleIndex}} col-xs-12 col-md-12 col-lg-9 col-xl-10 showRightSideMenu">
-                        {{ content }}
+                        <div class="pageNoteFoundNote" style="display: none; background-color: #fffbe6; border: 1px solid #ffe58f; padding: 8px 20px; margin-top: 5px;"></div>
 
+                        {{ content }}
                     </div>
                     <div class="rightSideMenu col-xs-12 col-md-12 col-lg-3 col-xl-2  hide-md hide-sm hide-xs showRightSideMenu">
                         <div id="feedbackFooter" style="color: #306877;">
@@ -87,7 +88,11 @@
     </script>
 
     <script type="text/javascript">
-
+        var redirectType = getUrlVars(document.URL)["redirect"]
+        if (redirectType != undefined && redirectType == '404') {
+            $(".pageNoteFoundNote").html(`Page not found. Please browse the sidebar to see if you can find the information you're looking for, or contact <a href="mailto:support@dynamsoft.com">support@dynamsoft.com</a> for assistance.`)
+            $(".pageNoteFoundNote").show()
+        }
         $('#txtSearch').keydown(function(e) {
             if (e.keyCode == 13) {
                 window.location.href = '/web-twain/docs/search.html?q=' + $('#txtSearch').val()
