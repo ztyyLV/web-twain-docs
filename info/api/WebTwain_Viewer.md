@@ -62,20 +62,20 @@ bind(element: HTMLDivElement | HTMLElement) : boolean;
 **Example**
 
 ```javascript
-var DWObject, template;
+var DWObject;
 Dynamsoft.DWT.CreateDWTObjectEx(
     {
-        WebTwainId: "a",
+        WebTwainId: "dwtControl"
     },
     function (obj) {
         DWObject = obj;
-        template = DWObject.Viewer.getElementById("dwtcontrolContainer_temp3");
-        DWObject.Viewer.width=500;
-        DWObject.Viewer.height=600;
+        DWObject.Viewer.bind("dwtcontrolContainer");
+        DWObject.Viewer.width=600;
+        DWObject.Viewer.height=800;
         DWObject.Viewer.show();    
     }, 
-    function (errorCode, errorString) {
-        console.log(errorString);
+    function (err) {
+        console.log(err);
     });
 ```
 
