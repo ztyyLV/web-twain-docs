@@ -72,3 +72,14 @@ If you do not wish to use an absolute path, learn more on how to [change the ref
 ```javascript
 Dynamsoft.DWT.ResourcesPath = "New folder/Resources";
 ```
+
+#### Relocate the folder holding the client installer files
+
+As of DWT 18.4, you can now relocate the folder that houses the DynamsoftService installer files to a location outside of the Resources folder.
+
+The below example relocates the Resources folder to a projectfiles folder in the same project, and refers externally to find the client installer files.
+
+```javascript
+Dynamsoft.DWT.ResourcesPath = "../projectfiles/DWTResources";
+Dynamsoft.DWT.ResourcesPath.InstallerLocation = "https://example.com/DWTInstallers";
+```
