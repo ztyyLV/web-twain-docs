@@ -33,7 +33,6 @@ jobs:
           cp -rfp ./web-twain-docs/* ./DWTDoc/
           cd Docs-Template-Repo-Preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview/* ./DWTDoc/
           cd DWTDoc && bundle exec jekyll build
-          python3 /home/ubuntu/ftp.py /home/ubuntu/DWTDoc/_site/ ./www.dynamsoft.com/web-twain/docs/ prod
 
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
@@ -43,7 +42,7 @@ jobs:
           password: ${{ secrets.FTP_DYNAMSOFT_LOCAL_PASSWORD }}
           port: 21 
           local-dir: /home/ubuntu/DWTDoc/_site/
-          server-dir: /www.dynamsoft.com/web-twain/docs/core/       
+          server-dir: /www.dynamsoft.com/web-twain/docs/       
           
   Build-Preview:
     if: ${{ github.ref == 'refs/heads/preview' }}
