@@ -33,7 +33,21 @@ jobs:
           cp -rfp ./web-twain-docs/* ./DWTDoc/
           cd Docs-Template-Repo-Preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview/* ./DWTDoc/
           cd DWTDoc && bundle exec jekyll build
-          python3 /home/ubuntu/ftp.py /home/ubuntu/DWTDoc/_site/ ./www.dynamsoft.com/web-twain/docs/ prod
+
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_DYNAMSOFT_LOCAL_SERVER }}
+          username: ${{ secrets.FTP_DYNAMSOFT_LOCAL_USER }}
+          password: ${{ secrets.FTP_DYNAMSOFT_LOCAL_PASSWORD }}
+          port: 21 
+          local-dir: /home/ubuntu/DWTDoc/_site/
+          server-dir: /www.dynamsoft.com/web-twain/docs/       
+
+      - name: Trigger Webhook 
+        run: | 
+          curl -X POST -H "${{ secrets.WEBHOOK_USER }}" -H "${{ secrets.WEBHOOK_TOKEN }}" -H "Content-Type: application/json" -d "[\"/web-twain/docs/*\"]" ${{ secrets.WEBHOOK_URL }}
+
           
   Build-Preview:
     if: ${{ github.ref == 'refs/heads/preview' }}
