@@ -7,7 +7,7 @@ breadcrumbText: Mobile Web Capture
 description: Dynamic Web TWAIN SDK Documentation Mobile Web Capture Page
 ---
 
-> [!WARNING]  
+<div class="blockquote-warning"></div>
 > Mobile Web Capture has been removed from Dynamic Web TWAIN as of Release 18.2. If you still require Mobile Web Capture, you must use the Plus edition of Dynamic Web TWAIN v18.1. Please contact [support@dynamsoft.com](mailto:support@dynamsoft.com) for further details.
 
 # How to Enable Mobile Web Capture
