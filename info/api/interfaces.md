@@ -589,6 +589,7 @@ interface CustomElement {
 >- v18.2
 >
 >
+
 ```typescript
 interface ImageEditor {
     /**
@@ -649,6 +650,7 @@ interface ImageEditor {
 >- v18.2
 >
 >
+
 ```typescript
 interface EditorSettings {
     /**
@@ -1079,6 +1081,21 @@ interface PageNumberSettings {
 
 ---
 
+### SelectionBoxStyleSettings
+```typescript
+interface SelectionBoxStyleSettings={ 
+	borderColor?: string, //Default: rgba(0,0,0,1). Colour in "rgba(r, g, b, a)"
+    borderWidth?: number, //Default: 1. Pixels. Width of individual pattern segments.
+   	lineDash?: [number,number], //Default: [5,2]. Pixels. Line spacing where x is shaded pixels and y is gap in pixels.
+    handleWidth?: number, //Default: 9. Pixels.
+    handleHeight?: number, //Default: 9. Pixels
+    handleColor?: string //Default: rgba(0,0,0,1). Colour in "rgba(r, g, b, a)"
+} 
+
+```
+
+---
+
 ### ViewerEvent
 
 **Syntax**
@@ -1200,6 +1217,60 @@ interface Base64Result {
     getMD5(): string;
 }
 ```
+
+---
+
+## PDF
+
+### ReaderOptions
+
+Sets the PDF Rasterizer parameters
+
+
+**Syntax**
+
+```typescript
+interface ReaderOptions {
+    /**
+     * Default value: CM_AUTO
+     */
+    convertMode: Dynamsoft.DWT.EnumDWT_ConvertMode | number,   
+    /**
+     * If a password is required to open the PDF, set it here. Default value: "".
+     */
+    password?: string,  
+    renderOptions: {
+        /**
+         * If convertMode is set to CM_RENDERALL or CM_AUTO, this controls whether or not annotations will be rendered. Default value: false.
+         */
+        renderAnnotations: boolean,
+        /**
+         * DPI. Only affects text being rasterized. Does not affect images extracted from the PDF file. Default value: 200.
+         */
+        resolution: number,  
+        /**
+         * Pixels. 0 is no limit. Default value: 0.
+         */
+        maxWidth: number,
+        /** 
+         * Pixels. 0 is no limit. Default value: 0.
+         */
+        maxHeight: number,
+        /**
+         * Whether or not to render in grayscale. Default value: false.
+         */
+        renderGrayscale?: boolean
+    }
+
+}
+
+```
+
+Please see [this list]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_convertmode) for available ConvertMode enumerations.
+
+---
+
+
 <!--
 ---
 

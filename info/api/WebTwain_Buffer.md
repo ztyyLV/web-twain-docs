@@ -27,7 +27,8 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`SelectAllImages()`](#selectallimages)         | [`MoveImage()`](#moveimage)                             | [`SwitchImage()`](#switchimage)                                     | [`RemoveImage()`](#removeimage)                     |
 | [`RemoveAllImages()`](#removeallimages)         | [`RemoveAllSelectedImages()`](#removeallselectedimages) | [`SelectImages()`](#selectimages)                                   | [`GetTagListByIndex()`](#gettaglistbyindex)         |
 | [`CreateDocument()`](#createdocument)         | [`OpenDocument()`](#opendocument)         | [`GetCurrentDocumentName()`](#getcurrentdocumentname)         | [`RenameDocument()`](#renamedocument)         |
-| [`RemoveDocument()`](#removedocument)         | [`GetDocumentInfoList()`](#getdocumentinfolist)         |
+| [`RemoveDocument()`](#removedocument)         | [`GetDocumentInfoList()`](#getdocumentinfolist)         | [`CopyToDocumentAsync`](#copytodocumentasync) |
+| [`MoveToDocumentAsync()`](#movetodocumentasync) | [`IsBlankImageAsync`](#isblankimageasync) |
 
 
 <!--* [GetImageBitDepthAsync()](#getimagebitdepthasync)-->
@@ -1733,6 +1734,58 @@ IsBlankImage(index: number): boolean;
 
 ---
 
+
+## IsBlankImageAsync
+
+Check whether the specified image is blank.
+
+**Syntax**
+
+```typescript
+IsBlankImageAsync(index: number， options?： {
+    minBlockHeight?: number，
+    maxBlockHeight?: number,
+}): Promise < boolean > ;
+
+```
+
+**Parameters**
+
+`index`: Specify the image to be analyzed.
+`minBlockHeight`: Minimum height of mark to be detected.
+`maxBlockHeight`: Maximum height of mark to be detected.
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">Android</td>
+</tr>
+
+<tr>
+<td align="center">N/A</td>
+<td align="center">v18.4+</td>
+<td align="center">N/A</td>
+<td align="center">N/A</td>
+<td align="center">N/A</td>
+<td align="center">N/A</td>
+</tr>
+
+</table>
+</div>
+
+**Usage Notes**
+This API uses a different algorithm than the one used in `IsBlankImage` and `IsBlankImageExpress`, which allows you to judge a page as blank even if it has a marks within the defined size.
+
+---
+
 ## IsBlankImageExpress
 
 Check whether the specified image is blank.
@@ -2081,6 +2134,51 @@ DWObject.GetTagListByIndex(0);
 
 ---
 
+## CopyToDocumentAsync
+
+Copy selected images to another document.
+
+**Syntax**
+
+```typescript
+CopyToDocumentAsync(from: string, to: string, sourceIndices?: number[], targetIndex?: number): Promise<void>;
+```
+
+**Parameters**
+
+`from`: The source document document name.
+`to`: The destination document name.
+`sourceIndices`: The indices of the images to be copied.
+`targetIndex`: The index at which the source images should be inserted into the new document. If not specifed, the images will be appended to the destination document.
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">Android</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.4+</td>
+<td align="center">v18.4+</td>
+<td align="center">v18.4+</td>
+<td align="center">v18.4+</td>
+<td align="center">v18.4+</td>
+</tr>
+
+</table>
+</div>
+
+---
+
 ## CreateDocument
 
 Create a document for the scanned image(s).
@@ -2133,6 +2231,51 @@ function failureCallback(errorCode, errorString) {
   alert(errorString);
 }
 ```
+
+---
+
+## MoveToDocumentAsync
+
+Move selected images to another document.
+
+**Syntax**
+
+```typescript
+MoveToDocumentAsync(from: string, to: string, sourceIndices?: number[], targetIndex?: number): Promise<void>;
+```
+
+**Parameters**
+
+`from`: The source document document name.
+`to`: The destination document name.
+`sourceIndices`: The indices of the images to be moved.
+`targetIndex`: The index at which the source images should be inserted into the new document. If not specifed, the images will be appended to the destination document.
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">Android</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.4+</td>
+<td align="center">v18.4+</td>
+<td align="center">v18.4+</td>
+<td align="center">v18.4+</td>
+<td align="center">v18.4+</td>
+</tr>
+
+</table>
+</div>
 
 ---
 

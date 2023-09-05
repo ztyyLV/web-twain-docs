@@ -67,7 +67,7 @@ If you wish to use an absolute path to include the library, this is supported.
 
 #### Change ResourcePath using a relative path
 
-If you do not wish to use an absolute path, learn more on how to [change the reference path]({{site.faq}}change-reference-path.html).
+If you do not wish to use an absolute path, you can [change the reference path]({{site.faq}}change-reference-path.html) to a relative path.
 
 ```javascript
 Dynamsoft.DWT.ResourcesPath = "New folder/Resources";

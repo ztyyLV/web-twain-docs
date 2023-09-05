@@ -10,8 +10,10 @@ permalink: /info/schedule/deprecated.html
 ---
 
 # All Deprecated Features & APIs
+<div class="blockquote-note"></div>
+> All deprecated APIs are considered unsupported as of the version they are deprecated. They may be removed at any time with no further notice.
 
-## Future deprecation planned
+## Planned
 
 ### SHA-1 signatures
 
@@ -34,6 +36,21 @@ For more information, check out [Preparing for the deprecation of SHA-1 signatur
 The prompts are one-time, once you accept the "risk", the software will install and run as usual.
 
 The recommended fix is to patch the operating system, you can find the patch [here](http://www.catalog.update.microsoft.com/search.aspx?q=kb4474419).
+
+## 18.4
+
+### PDF Rasterizer
+> [Alternative] Use the [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface
+
+* GetConvertMode()
+* SetConverMode()
+* SetPassword()
+* SetResolution()
+
+### Viewer
+> Moved into the [SelectionBoxStyleSettings]({{site.info}}api/interfaces.html#selectionboxstylesettings) interface
+
+* selectedAreaBorderColor
 
 ## 18.0
 

@@ -13,11 +13,53 @@ permalink: /info/schedule/Stable.html
 
 ## 18.4
 
-### Viewer Improvements
-- Added `cropBoxStyle` to allow custom styles of the selection UI.
+### Highlights
+-	Added the ability to change the in viewer selection indicator
+-	Added the ability to retrieve the selected area as a blob or base64 string
+-	Added property to relocate installers
 
-### Editor Functionality
-- Added `outputSelectedArea` to allow for outputting selected area on image to Blob or Base64
+### New APIs and Properties
+#### Viewer Improvements
+- Added `updateSelectionBoxStyle()` to allow custom styling of the selection UI.
+
+#### Editor Functionality
+- Added `outputSelectedArea()` to export the selected image area to blob or base64.
+
+#### Resource Optimization
+- Added `Dynamsoft.DWT.ServiceInstallerLocation` to allow moving the dist folder to a different location than the Resources folder.
+
+#### Buffer
+- Added `MoveToDocumentAsync()` and `CopyToDocumentAsync()` to allow for more multi-document handling.
+- Added `IsBlankImageAsync()` as a newer blank page detection method using a different algorithim than the existing `IsBlankImage()` and `IsBlankImageExpress()` functions. This API currently is Windows only.
+
+### Enhancements
+- Improved session security
+
+#### PDF Rasterizer
+- `CM_AUTO` will now use `CM_RENDERALLWITHANNOTATIONS` instead of `CM_RENDERALL` if text is detected.
+- Added new `ReaderOptions` interface.
+
+#### File Saving
+- Saving a Black and White JPG will now automatically convert the image to 8-bit colour space prior to saving. This is due to the limitation that JPGs do not allow 2-bit images, thus previously, Black and White images were not at all able to be saved to JPG without manually converting the colourspace prior.
+
+### Bug Fixes
+- Fixed a bug where the Content-Type of ConvertToBlob was sometimes incorrectly reported in the response back from the Dynamsoft Service.
+- Fixed a bug where setting the container size by percentage was causing incorrect viewer sizing.
+
+### Deprecations
+#### PDF Rasterizer
+> [Alternative] Use the new [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface
+
+* GetConvertMode()
+* SetConverMode()
+* SetPassword()
+* SetResolution()
+
+#### Viewer
+
+* selectedAreaBorderColor has been relocated into the [SelectionBoxStyleSettings]({{site.info}}api/interfaces.html#selectionboxstylesettings) interface
+
+
 
 ## 18.3 (06/20/2023)
 
@@ -165,6 +207,10 @@ Plus Edition is a temporary edition as its enhanced features will be separated i
 Remote Document Scanning enables document scanning from all available Dynamsoft Services and eSCL scanners on the intranet through one proxy service, via any supported devices and browsers, without any software installation. Please refer to <a href="https://www.dynamsoft.com/remote-scan/docs/introduction/" target="_blank">this documentation</a> for more details.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yMUmETWLDQ8" title="New Features in Dynamic Web TWAIN 18.0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Breaking Changes
+In 18.0+, if you call Dynamsoft.DWT.GetWebTwain against a non-existant ContainerID, you will get a null return. Previously, if you made the same call in the same situation, the WebTWAIN object would still initialize. To initiate the WebTWAIN object against a ContainerID, please use `GetWebTwain`. To utilize a viewer-less WebTWAIN object, please use [`CreateDWTObjectEx`]({{site.indepth}}/features/viewer.html#create-a-viewer-and-bind-a-viewer-less-webtwain-instance)
+
 
 ## 17.3 (06/30/2022)
 
