@@ -15,6 +15,7 @@ permalink: /info/schedule/Addon.html
 
 | Version | Service | Core | PDFR | Barcode | Camera/Webcam | OCRB | OCRPro| Uploader | 
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| v18.4| 1.8.4.0926 | 18.4.0.0926 | 11.5.1.0926 | 9.6.20.307 | N/A /15.0.0.0625 | N/A | N/A | 1.8.4.0926 |
 | v18.3| 1.8.3.627 | 18.3.0.0627 | 11.5.0.0627 | 9.6.20.307 | N/A /15.0.0.0625 | N/A | N/A | 1.8.3.627 |
 | v18.2| 1.8.2.0328 | 18.2.0.0328| 11.4.2.0328 | 9.6.0.0328 | N/A /15.0.0.0625 | N/A | N/A | 1.8.2.0328 |
 | v18.1 | 1.8.0.1025 | 18.1.0.0112 | 11.4.1.1025 | 9.4.0.1025 | N/A /15.0.0.0625 | N/A | N/A | 1.8.0.1025 |
@@ -30,14 +31,33 @@ permalink: /info/schedule/Addon.html
 
 ## PDFR
 
-It is a light-weighted PDF library working with Dynamic Web TWAIN SDK on the client side to convert text-based PDF files into images and display in the image viewer.
+A lightweight PDF library integrated with Dynamic Web TWAIN SDK on the client side to convert text-based PDF files into images and display in the image viewer.
+
+### `11.5.0.0627` (06/20/2023)
+* Introduced the preview version of Dynamsoft's PDF Compressor
+
+### `11.4.2.0328` (05/09/2023)
+* Updated underlying third party libraries
+
+### `11.4.1.1025` (12/22/2022)
+* Added support for the Android service
+
+### `11.4.0.0531` (06/30/2022)
+* General error message improvements
+
+### `11.3.0.1026` (01/20/2022)
+* Clarified error message when PDF Rasterizer licence is not present.
+* Added support for rendering annotiations. Please note that saving the image after rendering the annotiatons will flatten the annotations to the image.
+
+### `11.2.0.0330` (06/15/2021)
+* Added support for ARM64 and MIPs64EL
 
 ### `11.0.0.0428` (6/18/2020)
 
 #### IMPROVED
 
-This addon now works both in the Local-Service mode and the WASM mode.
-This addon now works on iOS, iPadOS & Android too.
+* This addon now works both in the Local-Service mode and the WASM mode.
+* This addon now works on iOS, iPadOS & Android too.
 
 ### `10.3.1.0124` (06/27/2019)
 
@@ -86,7 +106,28 @@ This addon now works on iOS, iPadOS & Android too.
 
 A professional linear & 2D barcode reading library for recognizing barcode from any document captured from scanners, cameras or file systems.
 
-### `8.2` (04/20/2021)
+### `9.6.20.307` (06/20/2023)
+* General algorithim improvements
+
+### `9.6.0.0328` (05/09/2023)
+* Improved decoding algorithims for EAN8 and QR Code
+
+### `9.4.0.1025` (12/22/2022)
+* Added support for Pharmacode and Code 11
+* Optimized confidence scoring for PDF417 codes
+* Improved decoding of warped/distorted linear barcodes
+
+### `8.8.0.0531` (17.3 release date)
+* Added new localization mode `ONED_FAST_SCAN` to imrpove reading of linear barcodes
+* Improved confidence scoring algorithim for 2D barcodes
+
+### `8.6.0.1026` (17.2 release date)
+* Added indicator for mirrored barcodes
+* Improved detection speed for dense QR Codes
+* Improved speed of border detection for DataMatrix codes
+* Improved confidence scoring algorithim for linear barcodes
+
+### `8.2.0.0525` (04/20/2021)
 
 * Added support for MSI Code (Modified Plessey).
 * Improved the recognition accuracy for GS1 Databar.

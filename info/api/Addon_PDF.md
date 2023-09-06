@@ -12,8 +12,6 @@ permalink: /info/api/Addon_PDF.html
 
 > {WebTwainObject} denotes the `WebTwain` instance.
 
-> All APIs on this page support Android Service from version 18.2.
-
 **Methods**
 
 |                                       |
@@ -24,6 +22,8 @@ permalink: /info/api/Addon_PDF.html
 ---
 
 ## GetConvertMode
+<div class="blockquote-note"></div>
+> This API has been deprecated. Please use the [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface
 
 Return the convert mode.
 
@@ -44,6 +44,7 @@ GetConvertMode(): number;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android</td>
 </tr>
 
 <tr>
@@ -52,6 +53,7 @@ GetConvertMode(): number;
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -80,6 +82,7 @@ IsModuleInstalled(): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android</td>
 </tr>
 
 <tr>
@@ -88,6 +91,7 @@ IsModuleInstalled(): boolean;
 <td align="center">v14.1+ </td>
 <td align="center">v14.1+ </td>
 <td align="center">v14.1+ </td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -120,6 +124,7 @@ IsTextBasedPDF(path: string): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android</td>
 </tr>
 
 <tr>
@@ -128,6 +133,7 @@ IsTextBasedPDF(path: string): boolean;
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -136,6 +142,9 @@ IsTextBasedPDF(path: string): boolean;
 ---
 
 ## SetConvertMode
+
+<div class="blockquote-note"></div>
+> This API has been deprecated. Please use the [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface
 
 Set the convert mode.
 
@@ -160,6 +169,7 @@ SetConvertMode(mode: Dynamsoft.DWT.EnumDWT_ConvertMode | number): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android</td>
 </tr>
 
 <tr>
@@ -168,6 +178,7 @@ SetConvertMode(mode: Dynamsoft.DWT.EnumDWT_ConvertMode | number): boolean;
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -187,6 +198,9 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 ---
 
 ## SetPassword
+
+<div class="blockquote-note"></div>
+> This API has been deprecated. Please use the [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface
 
 Set the password for reading encrypted PDF files.
 
@@ -211,6 +225,7 @@ SetPassword(password: string): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android</td>
 </tr>
 
 <tr>
@@ -219,6 +234,7 @@ SetPassword(password: string): boolean;
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -231,6 +247,9 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 ---
 
 ## SetResolution
+
+<div class="blockquote-note"></div>
+> This API has been deprecated. Please use the [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface
 
 Set the resolution for rasterizing.
 
@@ -255,6 +274,7 @@ SetResolution(resolution: number): boolean;
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android</td>
 </tr>
 
 <tr>
@@ -263,6 +283,7 @@ SetResolution(resolution: number): boolean;
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -296,9 +317,8 @@ interface PDFWSettings {
     compression?: Dynamsoft.DWT.EnumDWT_PDFCompressionType | number;
      /**
      * Specify the page type.
-     * Allowed values are 0: Original, 2: A4, 6: letter, 8: legal
      */
-    pageType?: number; 
+    pageType?: Dynamsoft.DWT.EnumPDF_Page | number; 
     /**
      * Specify the creator.
      */
@@ -331,8 +351,8 @@ interface PDFWSettings {
     title?: string;
     /**
      * Specify the PDF version. For example, 1.5. The allowed values are 1.1 ~ 1.7.
-     * NOTE: If the compression type is PDF_JBig2, the lowerest version is 1.4
-     * If the compression type is PDF_JP2000, the lowerest version is 1.5
+     * NOTE: If the compression type is PDF_JBig2, the lowest allowed version is 1.4
+     * If the compression type is PDF_JP2000, the lowest allowed version is 1.5
      */
     version?: string;
     /**
@@ -359,6 +379,7 @@ interface PDFWSettings {
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
+<td align="center">Android</td>
 </tr>
 
 <tr>
@@ -367,6 +388,7 @@ interface PDFWSettings {
 <td align="center">v15.1+ </td>
 <td align="center">v15.1+ </td>
 <td align="center">v15.1+ </td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
