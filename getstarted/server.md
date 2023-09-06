@@ -81,5 +81,5 @@ The below example relocates the Resources folder to a projectfiles folder in the
 
 ```javascript
 Dynamsoft.DWT.ResourcesPath = "../projectfiles/DWTResources";
-Dynamsoft.DWT.ResourcesPath.InstallerLocation = "https://example.com/DWTInstallers";
+Dynamsoft.DWT.ServiceInstallerLocation` = "https://example.com/DWTInstallers";
 ```
