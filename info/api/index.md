@@ -3,6 +3,7 @@ layout: default-layout
 needAutoGenerateSidebar: true
 title: Dynamic Web TWAIN SDK API Reference - Index
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Index
+description: Dynamic Web TWAIN Documentation API List
 breadcrumbText: API Reference
 permalink: /info/api/
 ---
