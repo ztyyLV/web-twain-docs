@@ -24,7 +24,7 @@ needGenerateH3Content: true
 | [`hide()`](#hide) | [`last()`](#last) | [`next()`](#next) | [`off()`](#off) |
 | [`on()`](#on) | [`previous()`](#previous) | [`render()`](#render) | [`setButtonClass()`](#setbuttonclass) |
 | [`setSelectedAreas()`](#setselectedareas) | [`setViewMode()`](#setviewmode) | [`show()`](#show) | [`unbind()`](#unbind) | 
-| [`updateCheckboxStyle()`](#updatecheckboxstyle) | [`updatePageNumberStyle()`](#updatepagenumberstyle) | 
+| [`updateCheckboxStyle()`](#updatecheckboxstyle) | [`updatePageNumberStyle()`](#updatepagenumberstyle) | [`updateSelectionBoxStyle()`](#updateselectionboxstyle) |
 
 **Properties**
 
@@ -37,7 +37,7 @@ needGenerateH3Content: true
 | [`selectionMode`](#selectionmode) | [`singlePageMode`](#singlepagemode) | [`width`](#width) | [`zoom`](#zoom) |
 | [`zoomOrigin`](#zoomorigin) |
 
-| ['updateSelectionBoxStyle'](#updateSelectionboxstyle) |
+
 
 **Events**
 
@@ -2166,6 +2166,9 @@ updateSelectionBoxStyle(selectionBoxStyleSettings?: SelectionBoxStyleSettings): 
 
 </table>
 </div>
+
+**Usage Notes**
+This stylization only affects the Viewer object. Styling of the Image Editor view is not yet supported.
 
 **Example**
 
