@@ -2139,7 +2139,7 @@ updateSelectionBoxStyle(selectionBoxStyleSettings?: SelectionBoxStyleSettings): 
 ```
 
 **Parameters**
-`selectionBoxStyleSettings`: Selection box settings. Please refer to [SelectionBoxStyleSettings]{{site.info}api/Interfaces.html#selectionboxstylesettings}
+`selectionBoxStyleSettings`: Selection box settings. Please refer to [SelectionBoxStyleSettings]{{site.info}}api/Interfaces.html#selectionboxstylesettings}
 
 **Availability**
 
