@@ -585,7 +585,7 @@ interface CustomElement {
 **Syntax**
 
 <div class="sample-code-prefix template2"></div>
->- v18.3
+>- v18.3+
 >- v18.2
 >
 >
@@ -608,6 +608,10 @@ interface ImageEditor {
      * Remove the ImageEditor object.
      */
     dispose(): boolean;
+    /**
+     * Set the selction box styling
+     */
+    updateSelectionBoxStyle(selectionBoxStyleSettings?: SelectionBoxStyleSettings): boolean;
     /**
      * Set the zoom origin.
      */
@@ -635,6 +639,10 @@ interface ImageEditor {
      * Remove the ImageEditor object.
      */
     dispose(): boolean;
+     /**
+     * Set the selction box styling
+     */
+    updateSelectionBoxStyle(selectionBoxStyleSettings?: SelectionBoxStyleSettings): boolean;
 };
 ```
 
@@ -646,7 +654,7 @@ interface ImageEditor {
 **Syntax**
 
 <div class="sample-code-prefix template2"></div>
->- v18.3
+>- v18.3+
 >- v18.2
 >
 >
@@ -1225,7 +1233,6 @@ interface Base64Result {
 ### ReaderOptions
 
 Sets the PDF Rasterizer parameters
-
 
 **Syntax**
 

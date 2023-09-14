@@ -2135,7 +2135,7 @@ Sets the graphical style for the selection box in the Viewer.
 **Syntax**
 
 ```javascript
-updateSelectionBoxStyle(selectionBoxStyleSettings?: SelectionBoxStyleSettings): void;
+updateSelectionBoxStyle(selectionBoxStyleSettings?: SelectionBoxStyleSettings): boolean;
 ```
 
 **Parameters**
@@ -2166,9 +2166,6 @@ updateSelectionBoxStyle(selectionBoxStyleSettings?: SelectionBoxStyleSettings): 
 
 </table>
 </div>
-
-**Usage Notes**
-This stylization only affects the Viewer object. Styling of the Image Editor view is not yet supported.
 
 **Example**
 

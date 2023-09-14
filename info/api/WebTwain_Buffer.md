@@ -27,8 +27,8 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`SelectAllImages()`](#selectallimages)         | [`MoveImage()`](#moveimage)                             | [`SwitchImage()`](#switchimage)                                     | [`RemoveImage()`](#removeimage)                     |
 | [`RemoveAllImages()`](#removeallimages)         | [`RemoveAllSelectedImages()`](#removeallselectedimages) | [`SelectImages()`](#selectimages)                                   | [`GetTagListByIndex()`](#gettaglistbyindex)         |
 | [`CreateDocument()`](#createdocument)         | [`OpenDocument()`](#opendocument)         | [`GetCurrentDocumentName()`](#getcurrentdocumentname)         | [`RenameDocument()`](#renamedocument)         |
-| [`RemoveDocument()`](#removedocument)         | [`GetDocumentInfoList()`](#getdocumentinfolist)         | [`CopyToDocumentAsync`](#copytodocumentasync) |
-| [`MoveToDocumentAsync()`](#movetodocumentasync) | [`IsBlankImageAsync`](#isblankimageasync) |
+| [`RemoveDocument()`](#removedocument)         | [`GetDocumentInfoList()`](#getdocumentinfolist)         | [`CopyToDocumentAsync()`](#copytodocumentasync) |
+| [`MoveToDocumentAsync()`](#movetodocumentasync) | [`IsBlankImageAsync()`](#isblankimageasync) |
 
 
 <!--* [GetImageBitDepthAsync()](#getimagebitdepthasync)-->
@@ -1742,11 +1742,11 @@ Check whether the specified image is blank.
 **Syntax**
 
 ```typescript
-IsBlankImageAsync(index: number， options?： {
-    minBlockHeight?: number，
+IsBlankImageAsync(index: number, 
+  options?: {
+    minBlockHeight?: number,
     maxBlockHeight?: number,
 }): Promise < boolean > ;
-
 ```
 
 **Parameters**
@@ -2141,7 +2141,13 @@ Copy selected images to another document.
 **Syntax**
 
 ```typescript
-CopyToDocumentAsync(from: string, to: string, sourceIndices?: number[], targetIndex?: number): Promise<void>;
+CopyToDocumentAsync(from: string, to: string): Promise<void>;
+
+CopyToDocumentAsync(from: string, to: string, sourceIndices: number[]): Promise<void>;
+
+CopyToDocumentAsync(from: string, to: string, targetIndex: number): Promise<void>;
+
+CopyToDocumentAsync(from: string, to: string, sourceIndices: number[], targetIndex: number): Promise<void>;
 ```
 
 **Parameters**
@@ -2241,7 +2247,13 @@ Move selected images to another document.
 **Syntax**
 
 ```typescript
-MoveToDocumentAsync(from: string, to: string, sourceIndices?: number[], targetIndex?: number): Promise<void>;
+MoveToDocumentAsync(from: string, to: string): Promise<void>;
+
+MoveToDocumentAsync(from: string, to: string, sourceIndices: number[]): Promise<void>;
+
+MoveToDocumentAsync(from: string, to: string, targetIndex: number): Promise<void>;
+
+MoveToDocumentAsync(from: string, to: string, sourceIndices: number[], targetIndex: number): Promise<void>;
 ```
 
 **Parameters**
