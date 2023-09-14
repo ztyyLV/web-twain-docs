@@ -585,7 +585,7 @@ interface CustomElement {
 **Syntax**
 
 <div class="sample-code-prefix template2"></div>
->- v18.3
+>- v18.3+
 >- v18.2
 >
 >
@@ -608,6 +608,10 @@ interface ImageEditor {
      * Remove the ImageEditor object.
      */
     dispose(): boolean;
+    /**
+     * Set the selction box styling
+     */
+    updateSelectionBoxStyle(selectionBoxStyleSettings?: SelectionBoxStyleSettings): boolean;
     /**
      * Set the zoom origin.
      */
@@ -635,6 +639,10 @@ interface ImageEditor {
      * Remove the ImageEditor object.
      */
     dispose(): boolean;
+     /**
+     * Set the selction box styling
+     */
+    updateSelectionBoxStyle(selectionBoxStyleSettings?: SelectionBoxStyleSettings): boolean;
 };
 ```
 
@@ -646,7 +654,7 @@ interface ImageEditor {
 **Syntax**
 
 <div class="sample-code-prefix template2"></div>
->- v18.3
+>- v18.3+
 >- v18.2
 >
 >
@@ -1226,7 +1234,6 @@ interface Base64Result {
 
 Sets the PDF Rasterizer parameters
 
-
 **Syntax**
 
 ```typescript
@@ -1241,7 +1248,7 @@ interface ReaderOptions {
     password?: string,  
     renderOptions: {
         /**
-         * If convertMode is set to CM_RENDERALL or CM_AUTO, this controls whether or not annotations will be rendered. Default value: false.
+         * Controls whether or not annotations will be rendered. Only valid if convertMode is set to CM_RENDERALL or CM_AUTO with a valid PDF Rastierzer license. Default value: false.
          */
         renderAnnotations: boolean,
         /**
