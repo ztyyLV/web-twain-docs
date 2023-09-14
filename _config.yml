@@ -29,8 +29,6 @@ dnt_icon: /web-twain/docs/assets/img-icon/icon-dnt.svg
 
 baseurl: /web-twain/docs/
 
-theme: jekyll-theme-cayman
-
 useVersionTreeV2: true
 
 webp:
