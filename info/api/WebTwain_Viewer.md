@@ -2182,6 +2182,9 @@ let styleSettings = {
 DWObject.Viewer.updateSelectionBoxStyle(styleSettings);
 ```
 
+**Usage Notes**
+If creating an `ImageEditor` object, the `Viewer` styling will be inherited by the `ImageEditor` on creation, but styles will be maintained seperately. That is to say that after creating the `ImageEditor`, changing one style will not affect the other.
+
 ---
 
 ## width

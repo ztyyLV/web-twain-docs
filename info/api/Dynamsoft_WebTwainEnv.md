@@ -51,6 +51,7 @@ interface Dynamsoft.DWT {
     readonly inited: boolean;
     ProductKey: string;
     ResourcesPath: string;
+    ServiceInstallerLocation: string;
     
     // Functions
     CreateDWTObject(

@@ -1751,7 +1751,7 @@ IsBlankImageAsync(index: number,
 
 **Parameters**
 
-`index`: Specify the image to be analyzed.
+`index`: Specify the image in buffer to be analyzed.
 `minBlockHeight`: Minimum height of mark to be detected.
 `maxBlockHeight`: Maximum height of mark to be detected.
 

@@ -2642,21 +2642,21 @@ DWObject.ConvertToBlob(
 ---
 ## OutputSelectedAreaAsync
 
-Copy selected area to blob/base64.
+Copy selected area to Blob or base64.
 
 **Syntax**
 
 ```typescript
 OutputSelectedAreaAsync(
-        index: number, //buffer index number
-        area: {
-                x: number, //top left x coord
-                y: number, //top left y coord
-                width: number,
-                height: number
-        },
-        type: Dynamsoft.DWT.EnumDWT_ImageType | number,
-        imageFormatType: Dynamsoft.DWT.EnumDWT_ImageFormatType | number, //only support Blob or base64
+    index: number,
+    area: {
+        x: number,
+        y: number,
+        width: number,
+        height: number
+    },
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
+    imageFormatType: Dynamsoft.DWT.EnumDWT_ImageFormatType | number,
 ): Promise < Blob | string > ;
 ```
 
@@ -2691,11 +2691,6 @@ OutputSelectedAreaAsync(
 
 </table>
 </div>
-
-**Usage Notes**
-
-If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to true.
-
 
 ---
 
