@@ -234,7 +234,7 @@ There are four conversion modes
 Use this method before you import a PDF into the viewer with methods such as <a href="{{site.info}}api/WebTwain_IO.html#loadimage" target="_blank">`LoadImage()`</a> , <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`HTTPDownload()`</a> and <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`FTPDownload()`</a>.
 
 ---
-## GetReaderOptions
+## SetReaderOptions
 
 Returns the current PDF reader options.
 
@@ -279,7 +279,7 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 **Example**
 
 ```javascript
-DWObject.PDF.SetRenderOptions(
+DWObject.PDF.SetReaderOptions(
     convertMode: Dynamsoft.DWT.EnumDWT_ConverMode.CM_RENDERALL,
     renderOptions: {
         renderAnnotations: false;
