@@ -271,6 +271,14 @@ permalink: /info/api/Dynamsoft_Enum.html
  
 Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType of [startScan]({{site.info}}api/WebTwain_Acquire.html#startscan)
 
+## `Dynamsoft.DWT.EnumDWT_ImageFormatType`
+
+| Label | Value|
+|:-|:-|
+| URL | 0 |
+| Blob | 1 |
+| Base64 | 2 |
+
 ## `Dynamsoft.DWT.EnumPDF_Page`
 
 | Label | Value|
