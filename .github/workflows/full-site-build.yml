@@ -71,7 +71,7 @@ jobs:
           cp -rfp ./Docs-Template-Repo-Preview/* ./DWTDocPreview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DWTDocPreview/_config.yml
-          cd DWTDocPreview && bundle exec jekyll build
+          cd DWTDocPreview&& bundle exec jekyll build
       - name: Sync files to Test Env
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
