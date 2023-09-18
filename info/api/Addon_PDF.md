@@ -24,7 +24,7 @@ permalink: /info/api/Addon_PDF.html
 
 ## GetConvertMode
 <div class="blockquote-note"></div>
-> This API has been deprecated as of release 18.4. Please use the [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface
+> This API has been deprecated as of release 18.4. Please use the [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface.
 
 Return the convert mode.
 
@@ -182,7 +182,7 @@ IsTextBasedPDF(path: string): boolean;
 ## SetConvertMode
 
 <div class="blockquote-note"></div>
-> This API has been deprecated as of release 18.4. Please use the [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface
+> This API has been deprecated as of release 18.4. Please use the [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface.
 
 Set the convert mode.
 
@@ -224,12 +224,11 @@ SetConvertMode(mode: Dynamsoft.DWT.EnumDWT_ConvertMode | number): boolean;
 
 **Usage notes**
 
-There are four conversion modes
+There are three conversion modes
 
 - CM_RENDERALL (1): All the content in the target PDF file will be rasterized.
 - CM_IMAGEONLY (2): The PDF Rasterizer is turned off.
 - CM_AUTO (3): The library automatically detect whether a file needs to be rasterized or not and then process the file accordingly.
-- CM_RENDERALLWITHANNOTATION (4): Support loading PDF file with annotation. 
 
 Use this method before you import a PDF into the viewer with methods such as <a href="{{site.info}}api/WebTwain_IO.html#loadimage" target="_blank">`LoadImage()`</a> , <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`HTTPDownload()`</a> and <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`FTPDownload()`</a>.
 
@@ -293,7 +292,7 @@ DWObject.PDF.SetReaderOptions(
 ## SetPassword
 
 <div class="blockquote-note"></div>
-> This API has been deprecated as of release 18.4. Please use the [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface
+> This API has been deprecated as of release 18.4. Please use the [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface.
 
 Set the password for reading encrypted PDF files.
 
@@ -342,7 +341,7 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 ## SetResolution
 
 <div class="blockquote-note"></div>
-> This API has been deprecated as of release 18.4. Please use the [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface
+> This API has been deprecated as of release 18.4. Please use the [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface.
 
 Set the resolution for rasterizing.
 
