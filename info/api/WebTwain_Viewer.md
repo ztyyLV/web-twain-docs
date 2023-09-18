@@ -1887,7 +1887,7 @@ DWObject.Viewer.pageMargin = 10;
 ## selectedAreaBorderColor
 
 <div class="blockquote-note"></div>
-> This API has been deprecated. Please use the [SelectionBoxStyleSettings]({{site.info}}api/interfaces.html#selectionboxstylesettings) interface
+> This API has been deprecated. Please use the [SelectionBoxStyleSettings]({{site.info}}/api/interfaces.html#selectionboxstylesettings) interface
 
 Set the border color of the selected area. Also applies to the selection box on the video opened by the method `showVideo`.
 
@@ -2139,7 +2139,7 @@ updateSelectionBoxStyle(selectionBoxStyleSettings?: SelectionBoxStyleSettings): 
 ```
 
 **Parameters**
-`selectionBoxStyleSettings`: Selection box settings. Please refer to [SelectionBoxStyleSettings]{{site.info}}api/Interfaces.html#selectionboxstylesettings}
+`selectionBoxStyleSettings`: Selection box settings. Please refer to [SelectionBoxStyleSettings]({{site.info}}api/Interfaces.html#selectionboxstylesettings}) for details.
 
 **Availability**
 
