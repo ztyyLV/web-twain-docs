@@ -2686,7 +2686,7 @@ OutputSelectedAreaAsync(
 <td align="center">v18.4+</td>
 <td align="center">v18.4+</td>
 <td align="center">v18.4+</td>
-<td align="center">N/A</td>
+<td align="center">v18.4+</td>
 </tr>
 
 </table>
