@@ -352,9 +352,11 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | CM_RENDERALL | 1 |
 | CM_IMAGEONLY | 2 |
 | CM_AUTO | 3 |
-| CM_RENDERALLWITHANNOTATION [^1]| 4 |
 
-[^1]: This enumeration has been deprecated as of 18.4.
+Note: The below enumeration value has been deprecated as of 18.4. 
+| Label | Value |
+|:-|:-|
+| CM_RENDERALLWITHANNOTATION | 4 | 
 
 ## `Dynamsoft.DWT.EnumDWT_DUPLEX`
 
