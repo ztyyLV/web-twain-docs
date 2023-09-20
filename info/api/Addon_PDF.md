@@ -278,7 +278,7 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 **Example**
 
 ```javascript
-DWObject.PDF.SetReaderOptions(
+DWObject.Addon.PDF.SetReaderOptions(
     convertMode: Dynamsoft.DWT.EnumDWT_ConverMode.CM_RENDERALL,
     renderOptions: {
         renderAnnotations: false;

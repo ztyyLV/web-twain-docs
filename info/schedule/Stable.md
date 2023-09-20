@@ -11,19 +11,19 @@ permalink: /info/schedule/Stable.html
 
 # Stable Releases
 
-## 18.4
+## 18.4 (09/26/2023)
 
-### Highlights
--	Added the ability to change the in viewer selection indicator
--	Added the ability to retrieve the selected area as a blob or base64 string
--	Added property to relocate installers
+### This Version's Highlights
+-	Added the ability to stylize the selection box in the Viewer and Image Editor.
+-	Added the ability to retrieve the selected area as a blob or base64 string.
+-	Added a property to relocate the server side folder that houses the Dynamsoft Service installers.
 
 ### New APIs and Properties
-#### Viewer Improvements
-- Added `updateSelectionBoxStyle()` to allow custom styling of the selection UI.
+#### Viewer and Image Editor Improvements
+- Added `UpdateSelectionBoxStyle()` to both the Viewer and the Image Editor to allow for custom styling of the rectangular selection box used when selecting a portion of an image in the Viewer and Image Editor.
 
 #### Editor Functionality
-- Added `outputSelectedArea()` to export the selected image area to blob or base64.
+- Added `OutputSelectedAreaAsync()` to export the selected image area to blob or base64.
 
 #### Resource Optimization
 - Added `Dynamsoft.DWT.ServiceInstallerLocation` to allow moving the dist folder to a different location than the Resources folder.
@@ -33,14 +33,14 @@ permalink: /info/schedule/Stable.html
 - Added `IsBlankImageAsync()` as a newer blank page detection method using a different algorithim than the existing `IsBlankImage()` and `IsBlankImageExpress()` functions. This API currently is Windows only.
 
 ### Enhancements
-- Improved session security
+- Improved local session security.
 
 #### PDF Rasterizer
-- `CM_AUTO` will now use `CM_RENDERALLWITHANNOTATIONS` instead of `CM_RENDERALL` if text is detected.
 - Added new `ReaderOptions` interface.
+- Added functions `SetReaderOptions()` and `GetReaderOptions()`
 
 #### File Saving
-- Saving a Black and White JPG will now automatically convert the image to 8-bit colour space prior to saving. This is due to the limitation that JPGs do not allow 2-bit images, thus previously, Black and White images were not at all able to be saved to JPG without manually converting the colourspace prior.
+- Saving a Black and White JPG will now automatically convert the image to grayscale prior to saving. This is due to the limitation that JPGs do not allow black and white images.  Previously, Black and White images were able to be saved to JPG without manually converting the colourspace prior.
 
 ### Bug Fixes
 - Fixed a bug where the Content-Type of ConvertToBlob was sometimes incorrectly reported in the response back from the Dynamsoft Service.
@@ -51,7 +51,7 @@ permalink: /info/schedule/Stable.html
 > [Alternative] Use the new [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface
 
 * GetConvertMode()
-* SetConverMode()
+* SetConvertMode()
 * SetPassword()
 * SetResolution()
 
