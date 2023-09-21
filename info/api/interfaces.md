@@ -615,7 +615,7 @@ interface ImageEditor {
     /**
      * Set the zoom origin.
      */
-    zoomOrigin: {
+    zoomOrigin?: {
         x: string; //x-coordinate. Default is "center", values: "left", "right", "center".
         y: string; //y-coordinate. Default is "center", values: "top", "bottom", "center"
     }
@@ -643,7 +643,7 @@ interface ImageEditor {
     /**
      * Set the zoom origin.
      */
-    zoomOrigin: {
+    zoomOrigin?: {
         x: string; //x-coordinate. Default is "center", values: "left", "right", "center".
         y: string; //y-coordinate. Default is "center", values: "top", "bottom", "center"
     };
