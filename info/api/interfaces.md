@@ -618,11 +618,8 @@ interface ImageEditor {
     zoomOrigin: {
         x: string; //x-coordinate. Default is "center", values: "left", "right", "center".
         y: string; //y-coordinate. Default is "center", values: "top", "bottom", "center"
-    };
-    /**
-     * Set the selction box styling
-     */
-    updateSelectionBoxStyle(selectionBoxStyleSettings?: SelectionBoxStyleSettings): boolean;
+    }
+    
 };
 ```
 ```typescript
@@ -643,10 +640,6 @@ interface ImageEditor {
      * Remove the ImageEditor object.
      */
     dispose(): boolean;
-    /**
-     * Set the selction box styling
-     */
-    updateSelectionBoxStyle(selectionBoxStyleSettings?: SelectionBoxStyleSettings): boolean;
     /**
      * Set the zoom origin.
      */
