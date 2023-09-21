@@ -40,7 +40,7 @@ The recommended fix is to patch the operating system, you can find the patch [he
 ## 18.4
 
 ### PDF Rasterizer
-> [Alternative] Use the [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface
+> [Alternative] Use the [SetReaderOptions()]({{site.info}}api/Addon_PDF.html#setreaderoptions) and [GetReaderOptions()]({{site.info}}api/Addon_PDF.html#getreaderoptions) functions instead.
 
 * GetConvertMode()
 * SetConverMode()

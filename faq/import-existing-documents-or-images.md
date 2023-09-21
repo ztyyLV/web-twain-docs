@@ -29,7 +29,10 @@ DWObject.IfShowFileDialog = true;
 DWObject.Addon.PDF.SetReaderOptions({
     convertMode: Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL,
     renderOptions:{
-        renderAnnotations: true;
+        renderAnnotations: true,
+        resolution: 300,
     }
 });
+
+DWObject.LoadImage();
 ```

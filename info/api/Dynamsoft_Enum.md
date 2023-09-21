@@ -354,7 +354,8 @@ Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType o
 | CM_AUTO | 3 |
 
 Note: The below enumeration value has been deprecated as of 18.4. 
-| Label | Value |
+
+| Label | Value|
 |:-|:-|
 | CM_RENDERALLWITHANNOTATION | 4 | 
 
