@@ -43,7 +43,7 @@ The recommended fix is to patch the operating system, you can find the patch [he
 > [Alternative] Use the [SetReaderOptions()]({{site.info}}api/Addon_PDF.html#setreaderoptions) and [GetReaderOptions()]({{site.info}}api/Addon_PDF.html#getreaderoptions) functions instead.
 
 * GetConvertMode()
-* SetConverMode()
+* SetConvertMode()
 * SetPassword()
 * SetResolution()
 

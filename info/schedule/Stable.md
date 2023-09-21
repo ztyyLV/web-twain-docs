@@ -48,7 +48,7 @@ permalink: /info/schedule/Stable.html
 
 ### Deprecations
 #### PDF Rasterizer
-> [Alternative] Use the new [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface
+> [Alternative] Use the [SetReaderOptions()]({{site.info}}api/Addon_PDF.html#setreaderoptions) and [GetReaderOptions()]({{site.info}}api/Addon_PDF.html#getreaderoptions) functions instead.
 
 * GetConvertMode()
 * SetConvertMode()
