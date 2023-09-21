@@ -2647,7 +2647,7 @@ Copy selected area to Blob or base64.
 **Syntax**
 
 ```typescript
-OutputSelectedAreaAsync(
+OutputSelectedAreaAsync({
     index: number,
     area: {
         x: number,
@@ -2657,7 +2657,7 @@ OutputSelectedAreaAsync(
     },
     type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     imageFormatType: Dynamsoft.DWT.EnumDWT_ImageFormatType | number,
-): Promise < Blob | string > ;
+}): Promise < Blob | string > ;
 ```
 
 **Parameters**
