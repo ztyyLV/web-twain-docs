@@ -657,7 +657,6 @@ interface ImageEditor {
 >- v18.2
 >
 >
-
 ```typescript
 interface EditorSettings {
     /**
