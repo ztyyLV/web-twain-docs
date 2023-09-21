@@ -16,7 +16,7 @@ permalink: /info/schedule/Stable.html
 ### This Version's Highlights
 -	Added the ability to stylize the selection box in the Viewer and Image Editor.
 -	Added the ability to retrieve the selected area as a blob or base64 string.
--	Added a property to relocate the server side folder that houses the Dynamsoft Service installers.
+-	Added a property to relocate the server-side folder that houses the Dynamsoft Service installers.
 
 ### New APIs and Properties
 #### Viewer and Image Editor Improvements
@@ -30,9 +30,11 @@ permalink: /info/schedule/Stable.html
 
 #### Buffer
 - Added `MoveToDocumentAsync()` and `CopyToDocumentAsync()` to allow for more multi-document handling.
-- Added `IsBlankImageAsync()` as a newer blank page detection method using a different algorithim than the existing `IsBlankImage()` and `IsBlankImageExpress()` functions. This API currently is Windows only.
+- Added `IsBlankImageAsync()` as an additional blank page detection method using a different algorithm than the existing `IsBlankImage()` and `IsBlankImageExpress()` functions. This API currently is Windows only.
 
-### Enhancements
+### Improvements
+
+#### General
 - Improved local session security.
 
 #### PDF Rasterizer
@@ -40,11 +42,11 @@ permalink: /info/schedule/Stable.html
 - Added functions `SetReaderOptions()` and `GetReaderOptions()`
 
 #### File Saving
-- Saving a Black and White JPG will now automatically convert the image to grayscale prior to saving. This is due to the limitation that JPGs do not allow black and white images.  Previously, Black and White images were able to be saved to JPG without manually converting the colourspace prior.
+- Saving a Black and White JPG will now automatically convert the image to grayscale prior to saving. This is due to the limitation that JPGs do not allow black and white images.  Previously, Black and White images were not able to be saved to JPG without manually converting the colourspace prior.
 
 ### Bug Fixes
 - Fixed a bug where the Content-Type of ConvertToBlob was sometimes incorrectly reported in the response back from the Dynamsoft Service.
-- Fixed a bug where setting the container size by percentage was causing incorrect viewer sizing.
+- Fixed a bug where setting the container size by percentage caused incorrect viewer sizing.
 
 ### Deprecations
 #### PDF Rasterizer
@@ -57,7 +59,7 @@ permalink: /info/schedule/Stable.html
 
 #### Viewer
 
-* selectedAreaBorderColor has been relocated into the [SelectionBoxStyleSettings]({{site.info}}api/interfaces.html#selectionboxstylesettings) interface
+* selectedAreaBorderColor has been relocated into the [SelectionBoxStyleSettings]({{site.info}}api/interfaces.html#selectionboxstylesettings) interface.
 
 
 

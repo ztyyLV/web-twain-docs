@@ -43,7 +43,7 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`SaveAsJPEG()`](#saveasjpeg)                                                           | [`SaveAsPDF()`](#saveaspdf)                                               | [`SaveAsPNG()`](#saveaspng)                                                     |
 | [`SaveAsTIFF()`](#saveastiff)                                                           | [`SaveSelectedImagesAsMultiPagePDF()`](#saveselectedimagesasmultipagepdf) | [`SaveSelectedImagesAsMultiPageTIFF()`](#saveselectedimagesasmultipagetiff)     |
 | [`SaveAllAsMultiPageTIFF()`](#saveallasmultipagetiff)                                   | [`SaveAllAsPDF()`](#saveallaspdf)                                         | [`ShareImages()`](#shareimages)                                                 |
-| [`OutputSelectedAreasAsync()`](#outputselectedareasasync)   |
+| [`OutputSelectedAreasAsync()`](#outputselectedareaasync)   |
 
 **Other Methods**
 
@@ -2661,10 +2661,14 @@ OutputSelectedAreaAsync(
 ```
 
 **Parameters**
+
 `index`: Image to be copied from.
+
 `area`: Area of image to be copied. X,Y is top left corner origin, width and height is size of area to be copied
-`type`: The target image type of the blob/base64 (See the [`ImageType enum list`]({{site.info}}/api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype) for allowable types).
-`imageFormatType`: Specify if the return should be Blob or base64 string (See [`ImageFormatType enum list`]({{site.info}}/api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imageformattype) for values)
+
+`type`: The target image type of the blob/base64 (See [`Dynamsoft.DWT.EnumDWT_ImageFormatType`]({{site.info}}/api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype) for allowable types).
+
+`imageFormatType`: Specify if the return should be Blob or base64 string ([`Dynamsoft.DWT.EnumDWT_ImageType`]({{site.info}}/api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imageformattype) for values)
 
 **Availability**
 

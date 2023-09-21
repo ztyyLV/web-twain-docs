@@ -235,7 +235,7 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 ---
 ## SetReaderOptions
 
-Returns the current PDF reader options.
+Sets the current PDF reader options.
 
 **Syntax**
 
@@ -278,13 +278,13 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 **Example**
 
 ```javascript
-DWObject.Addon.PDF.SetReaderOptions(
-    convertMode: Dynamsoft.DWT.EnumDWT_ConverMode.CM_RENDERALL,
+DWObject.Addon.PDF.SetReaderOptions({
+    convertMode: Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL,
     renderOptions: {
-        renderAnnotations: false;
-        renderGrayscale: true;
+        renderAnnotations: false,
+        renderGrayscale: true,
     }
-)
+});
 ```
 
 ---

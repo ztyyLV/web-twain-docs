@@ -585,10 +585,46 @@ interface CustomElement {
 **Syntax**
 
 <div class="sample-code-prefix template2"></div>
->- v18.3+
+>- v18.4
+>- v18.3
 >- v18.2
 >
 >
+```typescript
+interface ImageEditor {
+    /**
+     * Show the ImageEditor object.
+     */
+    show(): boolean;
+    /**
+     * Keeps the image data in the browser editor in sync with the buffer.
+     **/
+    save(): Promise<void>;
+    /**
+     * Hide the ImageEditor object.
+     */
+    hide(): boolean;
+    /**
+     * Remove the ImageEditor object.
+     */
+    dispose(): boolean;
+    /**
+     * Set the selction box styling
+     */
+    updateSelectionBoxStyle(selectionBoxStyleSettings?: SelectionBoxStyleSettings): boolean;
+    /**
+     * Set the zoom origin.
+     */
+    zoomOrigin: {
+        x: string; //x-coordinate. Default is "center", values: "left", "right", "center".
+        y: string; //y-coordinate. Default is "center", values: "top", "bottom", "center"
+    };
+    /**
+     * Set the selction box styling
+     */
+    updateSelectionBoxStyle(selectionBoxStyleSettings?: SelectionBoxStyleSettings): boolean;
+};
+```
 ```typescript
 interface ImageEditor {
     /**
@@ -638,10 +674,6 @@ interface ImageEditor {
      * Remove the ImageEditor object.
      */
     dispose(): boolean;
-     /**
-     * Set the selction box styling
-     */
-    updateSelectionBoxStyle(selectionBoxStyleSettings?: SelectionBoxStyleSettings): boolean;
 };
 ```
 
@@ -1244,23 +1276,23 @@ interface ReaderOptions {
      * If a password is required to open the PDF, set it here. Default value: "".
      */
     password?: string,  
-    renderOptions: {
+    renderOptions?: {
         /**
          * Controls whether or not annotations will be rendered. Only valid if convertMode is set to CM_RENDERALL or CM_AUTO with a valid PDF Rastierzer license. Default value: false.
          */
-        renderAnnotations: boolean,
+        renderAnnotations?: boolean,
         /**
          * DPI. Only affects text being rasterized. Does not affect images extracted from the PDF file. Default value: 200.
          */
-        resolution: number,  
+        resolution?: number,  
         /**
          * Pixels. 0 is no limit. Default value: 0.
          */
-        maxWidth: number,
+        maxWidth?: number,
         /** 
          * Pixels. 0 is no limit. Default value: 0.
          */
-        maxHeight: number,
+        maxHeight?: number,
         /**
          * Whether or not to render in grayscale. Default value: false.
          */

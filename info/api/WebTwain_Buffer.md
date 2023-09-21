@@ -27,8 +27,8 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`SelectAllImages()`](#selectallimages)         | [`MoveImage()`](#moveimage)                             | [`SwitchImage()`](#switchimage)                                     | [`RemoveImage()`](#removeimage)                     |
 | [`RemoveAllImages()`](#removeallimages)         | [`RemoveAllSelectedImages()`](#removeallselectedimages) | [`SelectImages()`](#selectimages)                                   | [`GetTagListByIndex()`](#gettaglistbyindex)         |
 | [`CreateDocument()`](#createdocument)         | [`OpenDocument()`](#opendocument)         | [`GetCurrentDocumentName()`](#getcurrentdocumentname)         | [`RenameDocument()`](#renamedocument)         |
-| [`RemoveDocument()`](#removedocument)         | [`GetDocumentInfoList()`](#getdocumentinfolist)         | [`CopyToDocumentAsync()`](#copytodocumentasync) |
-| [`MoveToDocumentAsync()`](#movetodocumentasync) | [`IsBlankImageAsync()`](#isblankimageasync) |
+| [`RemoveDocument()`](#removedocument)         | [`GetDocumentInfoList()`](#getdocumentinfolist)         | [`CopyToDocumentAsync()`](#copytodocumentasync) | [`MoveToDocumentAsync()`](#movetodocumentasync) |
+| [`IsBlankImageAsync()`](#isblankimageasync) |
 
 
 <!--* [GetImageBitDepthAsync()](#getimagebitdepthasync)-->
@@ -2136,7 +2136,7 @@ DWObject.GetTagListByIndex(0);
 
 ## CopyToDocumentAsync
 
-Copy selected images to another document.
+Copy specified images to another document.
 
 **Syntax**
 
@@ -2152,10 +2152,13 @@ CopyToDocumentAsync(from: string, to: string, sourceIndices: number[], targetInd
 
 **Parameters**
 
-`from`: The source document document name.
+`from`: The source document name.
+
 `to`: The destination document name.
+
 `sourceIndices`: The indices of the images to be copied.
-`targetIndex`: The index at which the source images should be inserted into the new document. If not specifed, the images will be appended to the destination document.
+
+`targetIndex`: The index at which the source images should be inserted into the new document. If not specified, the images will be appended to the destination document.
 
 **Availability**
 
@@ -2242,7 +2245,7 @@ function failureCallback(errorCode, errorString) {
 
 ## MoveToDocumentAsync
 
-Move selected images to another document.
+Move specified images to another document.
 
 **Syntax**
 
@@ -2258,10 +2261,13 @@ MoveToDocumentAsync(from: string, to: string, sourceIndices: number[], targetInd
 
 **Parameters**
 
-`from`: The source document document name.
+`from`: The source document name.
+
 `to`: The destination document name.
+
 `sourceIndices`: The indices of the images to be moved.
-`targetIndex`: The index at which the source images should be inserted into the new document. If not specifed, the images will be appended to the destination document.
+
+`targetIndex`: The index at which the source images should be inserted into the new document. If not specified, the images will be appended to the destination document.
 
 **Availability**
 

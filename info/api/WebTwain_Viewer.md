@@ -2176,7 +2176,7 @@ let styleSettings = {
     lineStyle:[4,2],
     handleWidth:10,
     handleHeight:10,
-    handleColor: "rgba(252, 92, 255, 1)";
+    handleColor: "rgba(252, 92, 255, 1)",
 }
 
 DWObject.Viewer.updateSelectionBoxStyle(styleSettings);
