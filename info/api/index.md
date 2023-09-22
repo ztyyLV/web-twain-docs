@@ -640,9 +640,9 @@ permalink: /info/api/
 | [`Init()`]({{site.info}}api/Dynamsoft_FileUploader.html#init)|[`CreateJob()`]({{site.info}}api/Dynamsoft_FileUploader.html#createjob)|[`Run()`]({{site.info}}api/Dynamsoft_FileUploader.html#run)|
 |[`Cancel()`]({{site.info}}api/Dynamsoft_FileUploader.html#cancel)| [`CancelAllUpload()`]({{site.info}}api/Dynamsoft_FileUploader.html#cancelallupload)|
 
-<div class="multi-panel-end"></div>
+<div class="multi-panel-end">
 
-<div class="multi-panel-start"></div>
+</div><div class="multi-panel-start"></div>
 
 >The Android Service Edition only supports a subset of the APIs available in the Desktop Service Edition. For the APIs that are compatible with both editions, the usage remains the same. To learn how to use the APIs, please refer to the documentation for the Desktop Service Edition.
 
