@@ -51,7 +51,7 @@ permalink: /info/api/
 |[`SelectAllImages()`]({{site.info}}api/WebTwain_Buffer.html#selectallimages)|[`MoveImage()`]({{site.info}}api/WebTwain_Buffer.html#moveimage) | [`SwitchImage()`]({{site.info}}api/WebTwain_Buffer.html#switchimage)| [`RemoveImage()`]({{site.info}}api/WebTwain_Buffer.html#removeimage) |
 | [`RemoveAllImages()`]({{site.info}}api/WebTwain_Buffer.html#removeallimages)|[`RemoveAllSelectedImages()`]({{site.info}}api/WebTwain_Buffer.html#removeallselectedimages) |[`SelectImages()`]({{site.info}}api/WebTwain_Buffer.html#selectimages)|[`GetTagListByIndex()`]({{site.info}}api/WebTwain_Buffer.html#gettaglistbyindex) |
 | [`CreateDocument()`]({{site.info}}api/WebTwain_Buffer.html#createdocument)|[`OpenDocument()`]({{site.info}}api/WebTwain_Buffer.html#opendocument)|[`GetCurrentDocumentName()`]({{site.info}}api/WebTwain_Buffer.html#getcurrentdocumentname)|[`RenameDocument()`]({{site.info}}api/WebTwain_Buffer.html#renamedocument)|
-|[`RemoveDocument()`]({{site.info}}api/WebTwain_Buffer.html#removedocument)| [`GetDocumentInfoList()`]({{site.info}}api/WebTwain_Buffer.html#getdocumentinfolist)|| [`IsBlankImageAsync()`]({{site.info}}api/WebTwain_Buffer.html#isblankimageasync) | [`CopyToDocumentAsync()`]({{site.info}}api/WebTwain_Buffer.html#copytodocumentasync) |
+|[`RemoveDocument()`]({{site.info}}api/WebTwain_Buffer.html#removedocument)| [`GetDocumentInfoList()`]({{site.info}}api/WebTwain_Buffer.html#getdocumentinfolist)| [`IsBlankImageAsync()`]({{site.info}}api/WebTwain_Buffer.html#isblankimageasync) | [`CopyToDocumentAsync()`]({{site.info}}api/WebTwain_Buffer.html#copytodocumentasync) |
 | [`MoveToDocumentAsync()`]({{site.info}}api/WebTwain_Buffer.html#movetodocumentasync) |
 
 <!--
@@ -353,7 +353,8 @@ permalink: /info/api/
 |[`HTTPUploadThroughPostAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostasmultipagetiff)|[`HTTPUploadThroughPostDirectly()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostdirectly)|[`SaveAsBMP()`]({{site.info}}api/WebTwain_IO.html#saveasbmp)| 
 |[`SaveAsJPEG()`]({{site.info}}api/WebTwain_IO.html#saveasjpeg)| [`SaveAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveaspdf)|[`SaveAsPNG()`]({{site.info}}api/WebTwain_IO.html#saveaspng)| 
 |[`SaveAsTIFF()`]({{site.info}}api/WebTwain_IO.html#saveastiff)| [`SaveSelectedImagesAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagepdf)|[`SaveSelectedImagesAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagetiff)|
-| [`SaveAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveallasmultipagetiff)|[`SaveAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveallaspdf)|[`ShareImages()`]({{site.info}}api/WebTwain_IO.html#shareimages)| [`OutputSelectedAreasAsync()`]({{site.info}}api/WebTwain_IO.html#outputselectedareaasync)   |
+| [`SaveAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveallasmultipagetiff)|[`SaveAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveallaspdf)|[`ShareImages()`]({{site.info}}api/WebTwain_IO.html#shareimages)| 
+|[`OutputSelectedAreasAsync()`]({{site.info}}api/WebTwain_IO.html#outputselectedareaasync)   |
 
 <!--
 * [`ConvertToBase64()`]({{site.info}}api/WebTwain_IO.html#converttobase64)
@@ -640,9 +641,9 @@ permalink: /info/api/
 |[`Cancel()`]({{site.info}}api/Dynamsoft_FileUploader.html#cancel)| [`CancelAllUpload()`]({{site.info}}api/Dynamsoft_FileUploader.html#cancelallupload)|
 
 
-<div class="multi-panel-end">
+<div class="multi-panel-end"></div>
 
-</div><div class="multi-panel-start"></div>
+<div class="multi-panel-start"></div>
 
 >The Android Service Edition only supports a subset of the APIs available in the Desktop Service Edition. For the APIs that are compatible with both editions, the usage remains the same. To learn how to use the APIs, please refer to the documentation for the Desktop Service Edition.
 
