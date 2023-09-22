@@ -640,7 +640,6 @@ permalink: /info/api/
 | [`Init()`]({{site.info}}api/Dynamsoft_FileUploader.html#init)|[`CreateJob()`]({{site.info}}api/Dynamsoft_FileUploader.html#createjob)|[`Run()`]({{site.info}}api/Dynamsoft_FileUploader.html#run)|
 |[`Cancel()`]({{site.info}}api/Dynamsoft_FileUploader.html#cancel)| [`CancelAllUpload()`]({{site.info}}api/Dynamsoft_FileUploader.html#cancelallupload)|
 
-
 <div class="multi-panel-end"></div>
 
 <div class="multi-panel-start"></div>
