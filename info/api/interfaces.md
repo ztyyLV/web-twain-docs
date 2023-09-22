@@ -588,6 +588,8 @@ interface CustomElement {
 >- v18.4
 >- v18.3
 >- v18.2
+>
+>
 ```typescript
 interface ImageEditor {
     /**
