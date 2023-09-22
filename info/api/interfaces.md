@@ -588,8 +588,6 @@ interface CustomElement {
 >- v18.4
 >- v18.3
 >- v18.2
->
->
 ```typescript
 interface ImageEditor {
     /**
@@ -616,10 +614,9 @@ interface ImageEditor {
      * Set the zoom origin.
      */
     zoomOrigin?: {
-        x: string; //x-coordinate. Default is "center", values: "left", "right", "center".
+        x: string; //x-coordinate. Default is "center", values: "left", "right", "center"
         y: string; //y-coordinate. Default is "center", values: "top", "bottom", "center"
     }
-    
 };
 ```
 ```typescript
@@ -646,7 +643,7 @@ interface ImageEditor {
     zoomOrigin?: {
         x: string; //x-coordinate. Default is "center", values: "left", "right", "center".
         y: string; //y-coordinate. Default is "center", values: "top", "bottom", "center"
-    };
+    }
 };
 ```
 ```typescript
