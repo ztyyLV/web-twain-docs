@@ -155,7 +155,9 @@ permalink: /info/api/appendix.html
 |-2823 | The http url redirected. |
 |-2824 | The Connection from the web page failed. Please make sure the Dynamsoft Service is running. |
 |-2825 | Failed to setup the Default Dynamsoft Service. |
+
 <!-- |-2826 | Failed to connect the Dynamsoft Service on [' + name + ']. | -->
+
 |-2827 | Failed to get Machine ID. |
 |-2828 | Invalid PDF Convert Mode Value. |
 |-2829 | The type of the PDF password must be a string. |
