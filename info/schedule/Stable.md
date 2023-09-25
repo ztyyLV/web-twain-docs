@@ -38,7 +38,7 @@ permalink: /info/schedule/Stable.html
 
 #### PDF Rasterizer
 - Added new [`ReaderOptions`]({{site.info}}api/Interfaces.html#readeroptions) interface.
-- Added functions [`SetReaderOptions()]({{site.info}}api/Addon_PDF.html#setreaderoptions) and [`GetReaderOptions()`]({{site.info}}api/Addon_PDF.html#getreaderoptions).
+- Added functions [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions) and [`GetReaderOptions()`]({{site.info}}api/Addon_PDF.html#getreaderoptions) to utilize the new `ReaderOptions` interface.
 
 #### File Saving
 - Saving a Black and White JPG will now automatically convert the image to grayscale prior to saving. This is due to the limitation that JPGs do not allow black and white images.  Previously, Black and White images were not able to be saved to JPG without manually converting the colourspace prior.
