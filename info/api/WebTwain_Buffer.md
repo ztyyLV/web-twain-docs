@@ -1782,7 +1782,9 @@ IsBlankImageAsync(index: number,
 </div>
 
 **Usage Notes**
-This API uses a different algorithm than the one used in `IsBlankImage` and `IsBlankImageExpress`, which allows you to judge a page as blank even if it has a marks within the defined size.
+This API uses a different algorithm than the one used in `IsBlankImage` and `IsBlankImageExpress`, which allows you to judge a page as blank even if it has a marks within the defined size. If the mark on the page satisfies the comparison parameters, then the page will be deemed not blank.
+
+Example: The mark on the page is 11 pixels tall, `minBlockHeight` is set to 9 pixels and `maxBlockHeight` is set to 13 pixels, the page will be marked as not blank.
 
 ---
 
