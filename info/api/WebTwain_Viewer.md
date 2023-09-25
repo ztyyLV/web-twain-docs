@@ -1887,7 +1887,7 @@ DWObject.Viewer.pageMargin = 10;
 ## selectedAreaBorderColor
 
 <div class="blockquote-note"></div>
-> This API has been deprecated as of release 18.4. Please use the [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions) function.
+> This API has been deprecated as of release 18.4. Please use the [`updateSelectionBoxStyle()`]({{site.info}}api/WebTwain_Viewer.html#updateselectionboxstyle) function.
 
 Set the border color of the selected area. Also applies to the selection box on the video opened by the method `showVideo`.
 
