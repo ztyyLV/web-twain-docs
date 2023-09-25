@@ -48,7 +48,7 @@ The recommended fix is to patch the operating system, you can find the patch [he
 * SetResolution()
 
 ### Viewer
-> Moved into the [SelectionBoxStyleSettings]({{site.info}}api/interfaces.html#selectionboxstylesettings) interface
+> This API has been deprecated as of release 18.4. Please use the [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions) function.
 
 * selectedAreaBorderColor
 

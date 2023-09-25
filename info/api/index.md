@@ -490,7 +490,7 @@ permalink: /info/api/
 | [`hide()`]({{site.info}}api/WebTwain_Viewer.html#hide)| [`last()`]({{site.info}}api/WebTwain_Viewer.html#last)| [`next()`]({{site.info}}api/WebTwain_Viewer.html#next)|[`off()`]({{site.info}}api/WebTwain_Viewer.html#off)|
 |[`on()`]({{site.info}}api/WebTwain_Viewer.html#on)| [`previous()`]({{site.info}}api/WebTwain_Viewer.html#previous)| [`render()`]({{site.info}}api/WebTwain_Viewer.html#render)| [`setButtonClass()`]({{site.info}}api/WebTwain_Viewer.html#setbuttonclass)|
 | [`setSelectedAreas()`]({{site.info}}api/WebTwain_Viewer.html#setselectedareas)| [`setViewMode()`]({{site.info}}api/WebTwain_Viewer.html#setviewmode) | [`show()`]({{site.info}}api/WebTwain_Viewer.html#show)| [`unbind()`]({{site.info}}api/WebTwain_Viewer.html#unbind)|
-| [`createDocumentEditor()`]({{site.info}}api/WebTwain_Viewer.html#createdocumenteditor)| [`updateCheckboxStyle()`]({{site.info}}api/WebTwain_Viewer.html#updatecheckboxstyle)| [`updatePageNumberStyle()`]({{site.info}}api/WebTwain_Viewer.html#updatepagenumberstyle)| [`updateSelectionBoxStyle()`]({{site.info}}api/WebTwainViewer.html#updateselectionboxstyle) |
+| [`createDocumentEditor()`]({{site.info}}api/WebTwain_Viewer.html#createdocumenteditor)| [`updateCheckboxStyle()`]({{site.info}}api/WebTwain_Viewer.html#updatecheckboxstyle)| [`updatePageNumberStyle()`]({{site.info}}api/WebTwain_Viewer.html#updatepagenumberstyle)| [`updateSelectionBoxStyle()`]({{site.info}}api/WebTwain_Viewer.html#updateselectionboxstyle) |
 
 <!--
 * [`bind()`]({{site.info}}api/WebTwain_Viewer.html#bind)
@@ -604,8 +604,8 @@ permalink: /info/api/
 | |
 |:-|:-|
 |[`GetConvertMode()`]({{site.info}}api/Addon_PDF.html#getconvertmode)| [`IsModuleInstalled()`]({{site.info}}api/Addon_PDF.html#ismoduleinstalled) | [`IsTextBasedPDF()`]({{site.info}}api/Addon_PDF.html#istextbasedpdf)| [`SetConvertMode()`]({{site.info}}api/Addon_PDF.html#setconvertmode)|
-|[`SetPassword()`]({{site.info}}api/Addon_PDF.html#setpassword)|[`SetResolution()`]({{site.info}}api/Addon_PDF.html#setresolution)|[`Write.Setup()`]({{site.info}}api/Addon_PDF.html#writesetup)| [`GetReaderOptions()`]({{site.info}}api/Addon_PDF.html#getreaderoptions) |
-| [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions) |
+|[`SetPassword()`]({{site.info}}api/Addon_PDF.html#setpassword)|[`SetResolution()`]({{site.info}}api/Addon_PDF.html#setresolution)|[`Write.Setup()`]({{site.info}}api/Addon_PDF.html#writesetup)| [`GetReaderOptions()`]({{site.info}}api/Addon_PDF.html#getreaderoptions)|
+| [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions)|
 
 <!-- ### Camera
 
@@ -984,7 +984,7 @@ permalink: /info/api/
 | [`hide()`]({{site.info}}api/WebTwain_Viewer.html#hide)| [`last()`]({{site.info}}api/WebTwain_Viewer.html#last)| [`next()`]({{site.info}}api/WebTwain_Viewer.html#next)|[`off()`]({{site.info}}api/WebTwain_Viewer.html#off)|
 |[`on()`]({{site.info}}api/WebTwain_Viewer.html#on)| [`previous()`]({{site.info}}api/WebTwain_Viewer.html#previous)| [`render()`]({{site.info}}api/WebTwain_Viewer.html#render)| [`setButtonClass()`]({{site.info}}api/WebTwain_Viewer.html#setbuttonclass)|
 | [`setSelectedAreas()`]({{site.info}}api/WebTwain_Viewer.html#setselectedareas)| [`setViewMode()`]({{site.info}}api/WebTwain_Viewer.html#setviewmode) | [`show()`]({{site.info}}api/WebTwain_Viewer.html#show)| [`unbind()`]({{site.info}}api/WebTwain_Viewer.html#unbind)|
-| [`createDocumentEditor()`]({{site.info}}api/WebTwain_Viewer.html#createdocumenteditor)| [`updateCheckboxStyle()`]({{site.info}}api/WebTwain_Viewer.html#updatecheckboxstyle)| [`updatePageNumberStyle()`]({{site.info}}api/WebTwain_Viewer.html#updatepagenumberstyle)| [`updateSelectionBoxStyle()`]({{site.info}}api/WebTwainViewer.html#updateselectionboxstyle) |
+| [`createDocumentEditor()`]({{site.info}}api/WebTwain_Viewer.html#createdocumenteditor)| [`updateCheckboxStyle()`]({{site.info}}api/WebTwain_Viewer.html#updatecheckboxstyle)| [`updatePageNumberStyle()`]({{site.info}}api/WebTwain_Viewer.html#updatepagenumberstyle)| [`updateSelectionBoxStyle()`]({{site.info}}api/WebTwain_Viewer.html#updateselectionboxstyle) |
 
 <!--
 * [`bind()`]({{site.info}}api/WebTwain_Viewer.html#bind)

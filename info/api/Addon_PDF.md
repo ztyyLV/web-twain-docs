@@ -24,7 +24,7 @@ permalink: /info/api/Addon_PDF.html
 
 ## GetConvertMode
 <div class="blockquote-note"></div>
-> This API has been deprecated as of release 18.4. Please use the [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface.
+> This API has been deprecated as of release 18.4. Please use the [`GetReaderOptions()`]({{site.info}}api/Addon_PDF.html#getreaderoptions) function.
 
 Return the convert mode.
 
@@ -182,7 +182,7 @@ IsTextBasedPDF(path: string): boolean;
 ## SetConvertMode
 
 <div class="blockquote-note"></div>
-> This API has been deprecated as of release 18.4. Please use the [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface.
+> This API has been deprecated as of release 18.4. Please use the [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions) function.
 
 Set the convert mode.
 
@@ -292,7 +292,7 @@ DWObject.Addon.PDF.SetReaderOptions({
 ## SetPassword
 
 <div class="blockquote-note"></div>
-> This API has been deprecated as of release 18.4. Please use the [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface.
+> This API has been deprecated as of release 18.4. Please [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions) function.
 
 Set the password for reading encrypted PDF files.
 
@@ -341,7 +341,7 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 ## SetResolution
 
 <div class="blockquote-note"></div>
-> This API has been deprecated as of release 18.4. Please use the [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface.
+> This API has been deprecated as of release 18.4. Please use the [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions) function.
 
 Set the resolution for rasterizing.
 
