@@ -585,6 +585,7 @@ interface CustomElement {
 **Syntax**
 
 <div class="sample-code-prefix template2"></div>
+>- v18.4
 >- v18.3
 >- v18.2
 >
@@ -608,12 +609,43 @@ interface ImageEditor {
      */
     dispose(): boolean;
     /**
+     * Set the selction box styling
+     */
+    updateSelectionBoxStyle(selectionBoxStyleSettings?: SelectionBoxStyleSettings): boolean;
+    /**
      * Set the zoom origin.
      */
-    zoomOrigin: {
+    zoomOrigin?: {
+        x: string; //x-coordinate. Default is "center", values: "left", "right", "center"
+        y: string; //y-coordinate. Default is "center", values: "top", "bottom", "center"
+    }
+};
+```
+```typescript
+interface ImageEditor {
+    /**
+     * Show the ImageEditor object.
+     */
+    show(): boolean;
+    /**
+     * Keeps the image data in the browser editor in sync with the buffer.
+     **/
+    save(): Promise<void>;
+    /**
+     * Hide the ImageEditor object.
+     */
+    hide(): boolean;
+    /**
+     * Remove the ImageEditor object.
+     */
+    dispose(): boolean;
+    /**
+     * Set the zoom origin.
+     */
+    zoomOrigin?: {
         x: string; //x-coordinate. Default is "center", values: "left", "right", "center".
         y: string; //y-coordinate. Default is "center", values: "top", "bottom", "center"
-    };
+    }
 };
 ```
 ```typescript
@@ -645,7 +677,7 @@ interface ImageEditor {
 **Syntax**
 
 <div class="sample-code-prefix template2"></div>
->- v18.3
+>- v18.3+
 >- v18.2
 >
 >
@@ -1079,6 +1111,21 @@ interface PageNumberSettings {
 
 ---
 
+### SelectionBoxStyleSettings
+```typescript
+interface SelectionBoxStyleSettings={ 
+    borderColor?: string, //Default: rgba(0,0,0,1). Colour in "rgba(r, g, b, a)"
+    borderWidth?: number, //Default: 1. Pixels. Width of individual pattern segments.
+    lineDash?: [number,number], //Default: [5,2]. Pixels. Line spacing where x is shaded pixels and y is gap in pixels.
+    handleWidth?: number, //Default: 9. Pixels.
+    handleHeight?: number, //Default: 9. Pixels
+    handleColor?: string //Default: rgba(0,0,0,1). Colour in "rgba(r, g, b, a)"
+} 
+
+```
+
+---
+
 ### ViewerEvent
 
 **Syntax**
@@ -1200,6 +1247,59 @@ interface Base64Result {
     getMD5(): string;
 }
 ```
+
+---
+
+## PDF
+
+### ReaderOptions
+
+Sets the PDF Rasterizer parameters
+
+**Syntax**
+
+```typescript
+interface ReaderOptions {
+    /**
+     * Default value: CM_AUTO
+     */
+    convertMode: Dynamsoft.DWT.EnumDWT_ConvertMode | number,   
+    /**
+     * If a password is required to open the PDF, set it here. Default value: "".
+     */
+    password?: string,  
+    renderOptions?: {
+        /**
+         * Controls whether or not annotations will be rendered. Only valid if convertMode is set to CM_RENDERALL or CM_AUTO with a valid PDF Rastierzer license. Default value: false.
+         */
+        renderAnnotations?: boolean,
+        /**
+         * DPI. Only affects text being rasterized. Does not affect images extracted from the PDF file. Default value: 200.
+         */
+        resolution?: number,  
+        /**
+         * Pixels. 0 is no limit. Default value: 0.
+         */
+        maxWidth?: number,
+        /** 
+         * Pixels. 0 is no limit. Default value: 0.
+         */
+        maxHeight?: number,
+        /**
+         * Whether or not to render in grayscale. Default value: false.
+         */
+        renderGrayscale?: boolean
+    }
+
+}
+
+```
+
+Please see [this list]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_convertmode) for available ConvertMode enumerations.
+
+---
+
+
 <!--
 ---
 

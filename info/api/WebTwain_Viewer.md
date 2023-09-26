@@ -17,29 +17,31 @@ needGenerateH3Content: true
 
 **Methods**
 
-|                                                     |
+| |
 | :-------------------------------------------------- | :-------------------------------------------- | ----------------------------------------------- | ------------------------------------------- |
-| [`bind()`](#bind)                                   | [`clearSelectedAreas()`](#clearselectedareas) | [`createCustomElement()`](#createcustomelement) | [`createImageEditor()`](#createimageeditor) |
-| [`createThumbnailViewer()`](#createthumbnailviewer) | [`first()`](#first)                           | [`fitWindow()`](#fitwindow)                     | [`gotoPage()`](#gotopage)                   |
-| [`hide()`](#hide)                                   | [`last()`](#last)                             | [`next()`](#next)                               | [`off()`](#off)                             |
-| [`on()`](#on)                                       | [`previous()`](#previous)                     | [`render()`](#render)                           | [`setButtonClass()`](#setbuttonclass)       |
-| [`setSelectedAreas()`](#setselectedareas)           | [`setViewMode()`](#setviewmode)               | [`show()`](#show)                               | [`unbind()`](#unbind)                       | 
-| [`updateCheckboxStyle()`](#updatecheckboxstyle)     | [`updatePageNumberStyle()`](#updatepagenumberstyle)       | 
+| [`bind()`](#bind) | [`clearSelectedAreas()`](#clearselectedareas) | [`createCustomElement()`](#createcustomelement) | [`createImageEditor()`](#createimageeditor) |
+| [`createThumbnailViewer()`](#createthumbnailviewer) | [`first()`](#first) | [`fitWindow()`](#fitwindow) | [`gotoPage()`](#gotopage) |
+| [`hide()`](#hide) | [`last()`](#last) | [`next()`](#next) | [`off()`](#off) |
+| [`on()`](#on) | [`previous()`](#previous) | [`render()`](#render) | [`setButtonClass()`](#setbuttonclass) |
+| [`setSelectedAreas()`](#setselectedareas) | [`setViewMode()`](#setviewmode) | [`show()`](#show) | [`unbind()`](#unbind) | 
+| [`updateCheckboxStyle()`](#updatecheckboxstyle) | [`updatePageNumberStyle()`](#updatepagenumberstyle) | [`updateSelectionBoxStyle()`](#updateselectionboxstyle) |
 
 **Properties**
 
-|                                             |
+| |
 | :------------------------------------------ | :------------------------------------------------------ | ----------------------------------------------------- | --------------------------------------------------- |
-| [`acceptDrop`](#acceptdrop)                 | [`allowSlide`](#allowslide)                             | [`allowPageDragging`](#allowpagedragging)             | [`background`](#background)                         |
-| [`border`](#border)                         | [`cursor`](#cursor)                                     | [`height`](#height)                                   | [`idPostfix`](#idpostfix)                           |
-| [`ifAutoScroll`](#ifautoscroll)             | [`innerBorder`](#innerborder)                           | [`pageMargin`](#pagemargin)                           | [`selectedAreaBorderColor`](#selectedareabordercolor) |
-| [`selectedPageBackground`](#selectedpagebackground) | [`selectedPageBorder`](#selectedpageborder)     | [`selectionRectAspectRatio`](#selectionrectaspectratio) | [`singlePageMode`](#singlepagemode)               |
-| [`width`](#width)                           | [`zoom`](#zoom)                                         | [`autoChangeIndex`](#autochangeindex)                 | [`selectionMode`](#selectionmode)                   |
+| [`acceptDrop`](#acceptdrop) | [`allowSlide`](#allowslide) | [`allowPageDragging`](#allowpagedragging) | [`autoChangeIndex`](#autochangeindex)|
+| [`background`](#background)| [`border`](#border) | [`cursor`](#cursor) | [`height`](#height) |
+| [`idPostfix`](#idpostfix) | [`ifAutoScroll`](#ifautoscroll) | [`innerBorder`](#innerborder) | [`pageMargin`](#pagemargin) |
+| [`selectedAreaBorderColor`](#selectedareabordercolor) | [`selectedPageBackground`](#selectedpagebackground) | [`selectedPageBorder`](#selectedpageborder) | [`selectionRectAspectRatio`](#selectionrectaspectratio) | 
+| [`selectionMode`](#selectionmode) | [`singlePageMode`](#singlepagemode) | [`width`](#width) | [`zoom`](#zoom) |
 | [`zoomOrigin`](#zoomorigin) |
+
+
 
 **Events**
 
-|                                 |
+| |
 | :------------------------------ | :---------------------------- | --------------------------------------- | ------------------------------------------- |
 | [`Events`](#events) |
 
@@ -1884,6 +1886,9 @@ DWObject.Viewer.pageMargin = 10;
 
 ## selectedAreaBorderColor
 
+<div class="blockquote-note"></div>
+> This API has been deprecated as of release 18.4. Please use the [`updateSelectionBoxStyle()`]({{site.info}}api/WebTwain_Viewer.html#updateselectionboxstyle) function.
+
 Set the border color of the selected area. Also applies to the selection box on the video opened by the method `showVideo`.
 
 **Syntax**
@@ -2119,6 +2124,66 @@ var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer();
 objThumbnailViewer.show();
 DWObject.Viewer.singlePageMode = true;
 ```
+
+---
+
+## updateSelectionBoxStyle
+
+Sets the graphical style for the selection box in the Viewer. 
+
+
+**Syntax**
+
+```javascript
+updateSelectionBoxStyle(selectionBoxStyleSettings?: SelectionBoxStyleSettings): boolean;
+```
+
+**Parameters**
+`selectionBoxStyleSettings`: Selection box settings. Please refer to [SelectionBoxStyleSettings]({{site.info}}api/Interfaces.html#selectionboxstylesettings) for details.
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">Android</td>
+</tr>
+
+<tr>
+<td align="center">N/A </td>
+<td align="center">v18.4+ </td>
+<td align="center">v18.4+ </td>
+<td align="center">v18.4+ </td>
+<td align="center">v18.4+ </td>
+<td align="center">v18.4+ </td>
+</tr>
+
+</table>
+</div>
+
+**Example**
+
+```javascript
+let styleSettings = {
+    borderColor: "rgba(255, 105, 110, 1)",
+    borderWidth:4,
+    lineDash:[4,2],
+    handleWidth:10,
+    handleHeight:10,
+    handleColor: "rgba(252, 92, 255, 1)",
+}
+
+DWObject.Viewer.updateSelectionBoxStyle(styleSettings);
+```
+
+**Usage Notes**
+If creating an `ImageEditor` object, the `Viewer` styling will be inherited by the `ImageEditor` on creation, but styles will be maintained seperately. That is to say that after creating the `ImageEditor`, changing one style will not affect the other.
 
 ---
 

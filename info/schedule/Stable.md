@@ -11,6 +11,56 @@ permalink: /info/schedule/Stable.html
 
 # Stable Releases
 
+## 18.4 (09/26/2023)
+
+### This Version's Highlights
+- Enhanced the encryption algorithm to strengthen local cache security.
+-	Added the ability to stylize the selection box in the Viewer and Image Editor.
+- Added a new function that allows you to export the selected image area to either a blob or base64 format.
+-	Added a property to relocate the server-side folder that hosts the Dynamsoft Service installers.
+- Added a new blank page detection method.
+
+### New APIs and Properties
+#### Viewer and Image Editor Improvements
+- Added [`updateSelectionBoxStyle()`]({{site.info}}api/WebTwain_Viewer.html#updateselectionboxstyle) to both the Viewer and the Image Editor to allow for custom styling of the rectangular selection box used when selecting a portion of an image in the Viewer and Image Editor.
+
+#### Editor Functionality
+- Added [`OutputSelectedAreaAsync()`]({{site.info}}api/WebTwain_IO.html#outputselectedareaasync) to export the selected image area to blob or base64.
+
+#### Resource Optimization
+- Added `Dynamsoft.DWT.ServiceInstallerLocation` to allow moving the dist folder to a different location than the Resources folder.
+
+#### Buffer
+- Added [`MoveToDocumentAsync()`]({{site.info}}api/WebTwain_Buffer.html#movetodocumentasync) and [`CopyToDocumentAsync()`]({{site.info}}api/WebTwain_Buffer.html#copytodocumentasync) to allow for more multi-document handling.
+- Added [`IsBlankImageAsync()`]({{site.info}}api/WebTwain_Buffer.html#isblankimageasync) as an additional blank page detection method using a different algorithm than the existing `IsBlankImage()` and `IsBlankImageExpress()` functions. This method allows for sensitivity customization, enabling users to overlook minor marks and disregard background patterns. This API currently is Windows only.
+
+### Improvements
+
+#### PDF Rasterizer
+- Added new [`ReaderOptions`]({{site.info}}api/Interfaces.html#readeroptions) interface.
+- Added functions [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions) and [`GetReaderOptions()`]({{site.info}}api/Addon_PDF.html#getreaderoptions) to utilize the new `ReaderOptions` interface.
+
+#### File Saving
+- Saving a Black and White JPG will now automatically convert the image to grayscale prior to saving. This is due to the limitation that JPGs do not allow black and white images.  Previously, Black and White images were not able to be saved to JPG without manually converting the colourspace prior.
+
+### Bug Fixes
+- Fixed a bug where the Content-Type of ConvertToBlob was sometimes incorrectly reported in the response back from the Dynamsoft Service.
+- Fixed a bug where setting the container size by percentage caused incorrect viewer sizing.
+
+### Deprecations
+#### PDF Rasterizer
+> [Alternative] Use the [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions) and [`GetReaderOptions()`]({{site.info}}api/Addon_PDF.html#getreaderoptions) functions instead.
+
+* GetConvertMode()
+* SetConvertMode()
+* SetPassword()
+* SetResolution()
+
+#### Viewer
+
+* selectedAreaBorderColor has been deprecated. Please use the [`updateSelectionBoxStyle()`]({{site.info}}api/WebTwain_Viewer.html#updateselectionboxstyle) function.
+
+
 ## 18.3 (06/20/2023)
 
 ### New Features
@@ -29,7 +79,7 @@ permalink: /info/schedule/Stable.html
 
 #### Image Viewer
 
--	Optimize display speed of images in viewer in n*n <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Viewer.html#setviewmode" target="_blank">ViewMode</a>.
+-	Optimized display speed of images in the viewer when view is set to n*n <a href="https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Viewer.html#setviewmode" target="_blank">ViewMode</a>.
 
 #### Android Service
 
@@ -157,6 +207,10 @@ Plus Edition is a temporary edition as its enhanced features will be separated i
 Remote Document Scanning enables document scanning from all available Dynamsoft Services and eSCL scanners on the intranet through one proxy service, via any supported devices and browsers, without any software installation. Please refer to <a href="https://www.dynamsoft.com/remote-scan/docs/introduction/" target="_blank">this documentation</a> for more details.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yMUmETWLDQ8" title="New Features in Dynamic Web TWAIN 18.0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Breaking Changes
+In 18.0+, if you call Dynamsoft.DWT.GetWebTwain against a non-existant ContainerID, you will get a null return. Previously, if you made the same call in the same situation, the WebTWAIN object would still initialize. To initiate the WebTWAIN object against a ContainerID, please use `GetWebTwain`. To utilize a viewer-less WebTWAIN object, please use [`CreateDWTObjectEx`]({{site.indepth}}/features/viewer.html#create-a-viewer-and-bind-a-viewer-less-webtwain-instance)
+
 
 ## 17.3 (06/30/2022)
 
