@@ -1113,7 +1113,7 @@ interface PageNumberSettings {
 
 ### SelectionBoxStyleSettings
 ```typescript
-interface SelectionBoxStyleSettings={ 
+interface SelectionBoxStyleSettings { 
     borderColor?: string, //Default: rgba(0,0,0,1). Colour in "rgba(r, g, b, a)"
     borderWidth?: number, //Default: 1. Pixels. Width of individual pattern segments.
     lineDash?: [number,number], //Default: [5,2]. Pixels. Line spacing where x is shaded pixels and y is gap in pixels.
@@ -1131,7 +1131,7 @@ interface SelectionBoxStyleSettings={
 **Syntax**
 
 ```typescript
-interface ViewerEvent{
+interface ViewerEvent {
     // The index of the current page.
     index: number;
     //The x-coordinate of the upper-left corner of the page.

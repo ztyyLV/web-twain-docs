@@ -1743,16 +1743,20 @@ Check whether the specified image is blank.
 
 ```typescript
 IsBlankImageAsync(index: number, 
-  options?: {
+  {options?: {
     minBlockHeight?: number,
     maxBlockHeight?: number,
-}): Promise < boolean > ;
+    }
+  }
+): Promise < boolean > ;
 ```
 
 **Parameters**
 
 `index`: Specify the image in buffer to be analyzed.
+
 `minBlockHeight`: Minimum height of mark to be detected.
+
 `maxBlockHeight`: Maximum height of mark to be detected.
 
 **Availability**
