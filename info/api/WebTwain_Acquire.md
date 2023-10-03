@@ -3139,6 +3139,7 @@ readonly ImageLayoutFrameNumber: number;
 </div>
 
 **Usage Notes**
+
 Usually a chronological index of the acquired frames, these frames are related to one another in some way. Usually, they were acquired from the same page. The source assigns these values. Initial value is 1. Reset when a new page is acquired.
 
 `ImageLayoutFrameNumber` property, along with other properties about the current image information, is valid only in the `OnPreTransfer` and `OnPostTransfer` events.
