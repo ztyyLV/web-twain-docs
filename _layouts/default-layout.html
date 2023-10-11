@@ -28,8 +28,11 @@
                 </div>
                 <div class="main row showRightSideMenu" id="articleContent" data-needh3="{{page.needGenerateH3Content}}">
                     <div class="content markdown-body headCounter {{noTitleIndex}} col-xs-12 col-md-12 col-lg-9 col-xl-10 showRightSideMenu">
+                        <div class="dbrThanksDownloading">
+                            <p class="thanksDownloadTitle">Thanks for downloading Dynamic Web Twain <span class="editionName"></span> Package!</p>
+                            <p style="margin-bottom: 0;">Your download will start shortly. If your download does not begin, <a class="bluelink downloadlink" href="">click here to retry</a>.</p>
+                        </div>
                         {{ content }}
-
                     </div>
                     <div class="rightSideMenu col-xs-12 col-md-12 col-lg-3 col-xl-2  hide-md hide-sm hide-xs showRightSideMenu">
                         <div id="feedbackFooter" style="color: #306877;">
@@ -91,6 +94,23 @@
         $('#txtSearch').keydown(function(e) {
             if (e.keyCode == 13) {
                 window.location.href = '/web-twain/docs/search.html?q=' + $('#txtSearch').val()
+            }
+        })
+
+        $(document).ready(function() {
+            var downloadLink = getUrlParam('download')
+            if (downloadLink != undefined) {
+                downloadLink = decodeURIComponent(downloadLink).toLowerCase()
+                if (downloadLink.endsWith(".exe")) {
+                    $('.editionName').text('Windows');
+                } else if (downloadLink.endsWith(".tar.gz")) {
+                    $('.editionName').text('Linux');
+                } else if (downloadLink.endsWith(".dmg.zip")) {
+                    $('.editionName').text('macOS');
+                }
+                $('.downloadlink').attr('href', downloadLink);
+                $('.dbrThanksDownloading').show();
+                $('.downloadlink')[0].click();
             }
         })
 
