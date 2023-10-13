@@ -27,7 +27,7 @@ Dynamsoft understands that not all manufacturers provide TWAIN drivers for MacOS
 
 If your environment uses Dynamic Web TWAIN 18.4, you may be able to simply install a patched Dynamsoft Service. Please contact [support@dynamsoft.com](mailto:support@dynamsoft.com) for further details.
 
-If you are unable to update your environment to Dynamic Web TWAIN 18.4, you may attempt to use the Memory [`TransferMode`]({{site.info}api/api/WebTwain_Acquire.html#transfermode).
+If you are unable to update your environment to Dynamic Web TWAIN 18.4, you may attempt to use the Memory [`TransferMode`]({{site.info}}api/api/WebTwain_Acquire.html#transfermode).
 
 ```javascript
 DWObject.OpenSource();
