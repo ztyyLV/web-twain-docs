@@ -19,6 +19,7 @@ permalink: /info/schedule/Stable.html
 - Added a new function that allows you to export the selected image area to either a blob or base64 format.
 -	Added a property to relocate the server-side folder that hosts the Dynamsoft Service installers.
 - Added a new blank page detection method.
+- Added a RESTful API (See [this article](https://www.dynamsoft.com/blog/announcement/dynamsoft-service-restful-api/) for more details)
 
 ### New APIs and Properties
 #### Viewer and Image Editor Improvements

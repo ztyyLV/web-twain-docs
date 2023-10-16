@@ -11,6 +11,7 @@ tree_list:
   - name: DEVELOPMENT
     isCategory: true      
   - name: User Guide
+    path: /getstarted/
     childList:
       - name: HelloWorld 
         path: /getstarted/helloworld.html
@@ -55,6 +56,8 @@ tree_list:
         path: /indepth/development/vue.html
       # - name: Use Web TWAIN in Vue 3
       #   path: /indepth/development/vue3.html
+      - name: Using Web TWAIN with REST APIs
+        path: /indepth/development/restful.html
       - name: Simple Demo
         path: https://www.dynamsoft.com/web-twain/resources/code-gallery/
   - name: API Reference
