@@ -11,11 +11,8 @@ permalink: /faq/macos-sonoma-distorted-scans.html
 
 # MacOS Sonoma issue identified
 
-<div class="blockquote-note"></div>
-> [10-16-2023] This information provided in this FAQ is still being updated with results of further testing.
-
 ## Symptoms
-The user may see distorted, duplicated, or ghost copies of the image when acquiring the scan.
+The user may see distorted, duplicated, or ghost copies of the image when acquiring the scan on MacOS while using Dynamic Web TWAIN 18.4 or below.
 
 ## Background
 ICA are the drivers that are put out by the manufacturers to specifically work with the [ImageCaptureCore](https://developer.apple.com/documentation/imagecapturecore) specification on the Mac platform. Generally, the ICA drivers are bundled with MacOS and are updated with MacOS updates. Some manufacturers will make ICA drivers available for their scanners through their own support portals. 
@@ -26,4 +23,4 @@ It has been discovered that with the release of MacOS Sonoma (MacOS 14.0), Dynam
 The recommended solution is to download and install the TWAIN driver from the scanner manufacturer, and use the TWAIN driver.
 
 ## Workaround
-Dynamsoft understands that not all manufacturers provide TWAIN drivers for MacOS, therefore a workaround has been identified that will help with the distortion, but may still have colour artifacts in the scanned image. If your environment uses Dynamic Web TWAIN 18.4, you may be able to simply install a patched Dynamsoft Service. Please contact [support@dynamsoft.com](mailto:support@dynamsoft.com) for further details.
+Dynamsoft understands that not all manufacturers provide TWAIN drivers for MacOS, therefore a workaround has been identified that will help with the distortion, but may still have colour artifacts in the scanned image. Dynamsoft has released Dynamic Web TWAIN 18.4.1 which includes an updated Dynamsoft Service for MacOS that should help alleviate the issue.

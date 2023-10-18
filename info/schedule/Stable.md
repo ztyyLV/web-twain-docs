@@ -11,6 +11,14 @@ permalink: /info/schedule/Stable.html
 
 # Stable Releases
 
+## 18.4.1 (10/19/2023)
+
+### MacOS Service Hotfix
+- Due to changes introduced with ICA drivers, Dynamic Web TWAIN may exhibit strange behaviour while scanning. This release updates the Dynamsoft Service for MacOS to address these issues. See [this article]({{site.faq}}macos-sonoma-distorted-scans.html) for more details.
+
+### DWObject process optimization
+- Fixed an issue where if the Web TWAIN object was deleted from context mid scan, the scanning queue would not terminate, leaving any future requests being left pending in queue.
+
 ## 18.4 (09/26/2023)
 
 ### This Version's Highlights
