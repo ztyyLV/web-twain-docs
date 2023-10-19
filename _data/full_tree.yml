@@ -56,39 +56,41 @@ tree_list:
         path: /indepth/development/vue.html
       # - name: Use Web TWAIN in Vue 3
       #   path: /indepth/development/vue3.html
-      # - name: Using Web TWAIN with REST APIs
+      # - name: Using Web TWAIN with REST API
       #   path: /indepth/development/restful.html
       - name: Code Gallery
         path: https://www.dynamsoft.com/web-twain/resources/code-gallery/
   - name: API Reference
     path: /info/api/
     childList:
-      - name: Global APIs
+      - name: Global
         path: /info/api/Dynamsoft_WebTwainEnv.html
       #- name: Device
       #  path: /info/api/Device.html
-      - name: Scan APIs
+      - name: Scan
         path: /info/api/WebTwain_Acquire.html
-      - name: Buffer APIs
+      - name: Buffer
         path: /info/api/WebTwain_Buffer.html
-      - name: Viewer APIs
+      - name: Viewer
         path: /info/api/WebTwain_Viewer.html
-      - name: Edit APIs
+      - name: Edit
         path: /info/api/WebTwain_Edit.html
-      - name: Input/Output APIs
+      - name: Input/Output
         path: /info/api/WebTwain_IO.html
-      - name: Utility APIs
+      - name: Utility
         path: /info/api/WebTwain_Util.html
-      - name: Barcode Reader Addon APIs
-        path: /info/api/Addon_BarcodeReader.html
-      # - name: Addon_Camera
-      #   path: /info/api/Addon_Camera.html
-      - name: PDF Rasterizer Add-on APIs
-        path: /info/api/Addon_PDF.html
-      - name: Webcam Add-on APIs
-        path: /info/api/Addon_Webcam.html
-      - name: Dynamsoft FileUploader APIs
+      - name: Dynamsoft FileUploader
         path: /info/api/Dynamsoft_FileUploader.html
+        name: Add-on Modules
+        childlist:
+          - name: Barcode Reader
+            path: /info/api/Addon_BarcodeReader.html
+          # - name: Addon_Camera
+          #   path: /info/api/Addon_Camera.html
+          - name: PDF Rasterizer
+            path: /info/api/Addon_PDF.html
+          - name: Webcam
+            path: /info/api/Addon_Webcam.html
       - name: Enumerations
         path: /info/api/Dynamsoft_Enum.html
       - name: Interfaces
