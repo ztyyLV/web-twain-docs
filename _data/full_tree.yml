@@ -63,36 +63,36 @@ tree_list:
   - name: API Reference
     path: /info/api/
     childList:
-      - name: Dynamsoft_DWT
+      - name: Global APIs
         path: /info/api/Dynamsoft_WebTwainEnv.html
-      - name: Dynamsoft_Enum
-        path: /info/api/Dynamsoft_Enum.html
-      - name: Interfaces
-        path: /info/api/Interfaces.html
       #- name: Device
       #  path: /info/api/Device.html
-      - name: WebTwain_Scanner
+      - name: Scan APIs
         path: /info/api/WebTwain_Acquire.html
-      - name: WebTwain_Buffer
+      - name: Buffer APIs
         path: /info/api/WebTwain_Buffer.html
-      - name: WebTwain_Viewer
+      - name: Viewer APIs
         path: /info/api/WebTwain_Viewer.html
-      - name: WebTwain_Edit
+      - name: Edit APIs
         path: /info/api/WebTwain_Edit.html
-      - name: WebTwain_IO
+      - name: Input/Output APIs
         path: /info/api/WebTwain_IO.html
-      - name: WebTwain_Util
+      - name: Utility APIs
         path: /info/api/WebTwain_Util.html
-      - name: Addon_BarcodeReader
+      - name: Barcode Reader Addon APIs
         path: /info/api/Addon_BarcodeReader.html
       # - name: Addon_Camera
       #   path: /info/api/Addon_Camera.html
-      - name: Addon_PDF
+      - name: PDF Rasterizer Add-on APIs
         path: /info/api/Addon_PDF.html
-      - name: Addon_Webcam
+      - name: Webcam Add-on APIs
         path: /info/api/Addon_Webcam.html
-      - name: Dynamsoft_FileUploader
+      - name: Dynamsoft FileUploader APIs
         path: /info/api/Dynamsoft_FileUploader.html
+      - name: Enumerations
+        path: /info/api/Dynamsoft_Enum.html
+      - name: Interfaces
+        path: /info/api/Interfaces.html
       - name: Error List
         path: /info/api/appendix.html
       # - name: Interface
