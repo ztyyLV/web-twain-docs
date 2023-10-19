@@ -81,7 +81,7 @@ tree_list:
         path: /info/api/WebTwain_Util.html
       - name: Dynamsoft FileUploader
         path: /info/api/Dynamsoft_FileUploader.html
-        name: Add-on Modules
+      - name: Add-on Modules
         childList:
           - name: Barcode Reader
             path: /info/api/Addon_BarcodeReader.html
