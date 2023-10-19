@@ -82,7 +82,7 @@ tree_list:
       - name: Dynamsoft FileUploader
         path: /info/api/Dynamsoft_FileUploader.html
         name: Add-on Modules
-        childlist:
+        childList:
           - name: Barcode Reader
             path: /info/api/Addon_BarcodeReader.html
           # - name: Addon_Camera
