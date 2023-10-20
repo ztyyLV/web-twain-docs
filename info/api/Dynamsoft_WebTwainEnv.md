@@ -9,8 +9,34 @@ permalink: /info/api/Dynamsoft_WebTwainEnv.html
 ---
 
 # `Dynamsoft.DWT`
-> Global properties and functions.
+> The global properties and methods on this page live in the namespace `{Dynamsoft.DWT}`,
 
+**Methods**
+
+|                                       |                                           |                                       |                                    |
+|---------------------------------------|-------------------------------------------|---------------------------------------|------------------------------------|
+| [CreateDWTObject()](#createdwtobject) | [CreateDWTobjectEx()](#createdwtobjectex) | [DeleteDWTObject()](#deletedwtobject) | [GetWebTwain()](#getwebtwain)      |
+| [Load()](#load)                       | [RegisterEvent()](#registerevent)         | [Unload()](#unload)                   | [UpdateCert()](#updatecert)        |
+
+
+**Properties**
+
+|                                       |                                                   |                                                          |                               |
+|---------------------------------------|---------------------------------------------------|----------------------------------------------------------|-------------------------------|
+| [Autoload]()                          | [Containers](#containers)                         | [CustomizableDisplayInfo](#customizabledisplayinfo)      | [DeviceFriendlyName]()        |
+| [Host]()                              | [IfAddMD5InUploadHeader](#ifaddmd5inuploadheader) | [IfConfineMaskWithinTheViewer]()                         | [IfUseActiveXForIE10PIus]()   |
+| [JSVersion]()                         | [ProductKey](#productkey)                         | [ResourcesPath](#resourcespath)                          | [ServiceInstallerLocation]()  |
+| [UseDefaultViewer](#usedefaultviewer) |                                                   |                                                          |                               |
+
+
+**Events**
+
+|                                     |                                     |                           |                          |
+|-------------------------------------|-------------------------------------|---------------------------|--------------------------|
+| [OnWebTwainReady](#onwebtwainready) | [OnWebTwainError](#onwebtwainerror) | [OnWebTwainPostExecute]() | [OnWebTwainPreExecute]() | 
+
+
+<!--
 ``` typescript
 interface Dynamsoft.DWT {
     readonly licenseException: string;
@@ -92,6 +118,7 @@ UpdateCert(
 );
 
 ```
+-->
 
 ## licenseException
 
