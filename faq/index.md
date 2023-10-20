@@ -29,6 +29,8 @@ permalink: /faq/
 
 ## Capture/Image Source
 <ol>
+<li><a href="{{site.faq}}download-virtual-scanner-for-testing.html">Download virtual scanner for testing</a></li>
+
 <li><a href="{{site.faq}}what-physical-scanners-are-supported.html">What physical document scanners does the Dynamic Web TWAIN SDK support?</a></li>
 
 <li><a href="{{site.faq}}how-to-use-TWACKER-to-check-if-your-device-is-TWAIN-Compliant.html">How to use TWACKER to check if your device is TWAIN Compliant?</a></li>
@@ -91,9 +93,9 @@ permalink: /faq/
 
 <li><a href="{{site.faq}}scanner-not-shown-or-not-responding-in-the browser.html">Why is my scanner not shown or not responding in the browser?</a></li>
 
-<li><a href="{{site.faq}}download-virtual-scanner-for-testing.html">Download virtual scanner for testing</a></li>
-
 <li><a href="{{site.faq}}support-wia-scanner-drivers.html">How can I support WIA scanner drivers in my application?</a></li>
+
+<li><a href="{{site.faq}}macos-sonoma-distorted-scans.html">Why are my images coming out distorted in MacOS Sonoma?</a></li>
 
 </ol>
 
