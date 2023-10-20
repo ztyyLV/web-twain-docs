@@ -11,6 +11,14 @@ permalink: /info/schedule/Stable.html
 
 # Stable Releases
 
+<!-- ## 18.4.1 (10/19/2023)
+
+### MacOS Service Hotfix
+- Due to changes introduced with ICA drivers, Dynamic Web TWAIN may exhibit strange behaviour while scanning. This release updates the Dynamsoft Service for MacOS to address these issues. See [this article]({{site.faq}}macos-sonoma-distorted-scans.html) for more details.
+
+### DWObject process optimization
+- Fixed an issue where if the Web TWAIN object was deleted from context mid scan, the scanning queue would not terminate, leaving any future requests being left pending in queue. -->
+
 ## 18.4 (09/26/2023)
 
 ### This Version's Highlights
@@ -19,6 +27,7 @@ permalink: /info/schedule/Stable.html
 - Added a new function that allows you to export the selected image area to either a blob or base64 format.
 -	Added a property to relocate the server-side folder that hosts the Dynamsoft Service installers.
 - Added a new blank page detection method.
+- Added a RESTful API (See [this article](https://www.dynamsoft.com/blog/announcement/dynamsoft-service-restful-api/) for more details)
 
 ### New APIs and Properties
 #### Viewer and Image Editor Improvements

@@ -11,6 +11,7 @@ tree_list:
   - name: DEVELOPMENT
     isCategory: true      
   - name: User Guide
+    path: /getstarted/
     childList:
       - name: HelloWorld 
         path: /getstarted/helloworld.html
@@ -55,41 +56,45 @@ tree_list:
         path: /indepth/development/vue.html
       # - name: Use Web TWAIN in Vue 3
       #   path: /indepth/development/vue3.html
+      # - name: Using Web TWAIN with REST API
+      #   path: /indepth/development/restful.html
       - name: Code Gallery
         path: https://www.dynamsoft.com/web-twain/resources/code-gallery/
   - name: API Reference
     path: /info/api/
     childList:
-      - name: Dynamsoft_DWT
+      - name: Global
         path: /info/api/Dynamsoft_WebTwainEnv.html
-      - name: Dynamsoft_Enum
+      #- name: Device
+      #  path: /info/api/Device.html
+      - name: Scan
+        path: /info/api/WebTwain_Acquire.html
+      - name: Buffer
+        path: /info/api/WebTwain_Buffer.html
+      - name: Viewer
+        path: /info/api/WebTwain_Viewer.html
+      - name: Edit
+        path: /info/api/WebTwain_Edit.html
+      - name: Input/Output
+        path: /info/api/WebTwain_IO.html
+      - name: Utility
+        path: /info/api/WebTwain_Util.html
+      - name: Dynamsoft FileUploader
+        path: /info/api/Dynamsoft_FileUploader.html
+      - name: Add-on Modules
+        childList:
+          - name: Barcode Reader
+            path: /info/api/Addon_BarcodeReader.html
+          # - name: Addon_Camera
+          #   path: /info/api/Addon_Camera.html
+          - name: PDF Rasterizer
+            path: /info/api/Addon_PDF.html
+          - name: Webcam
+            path: /info/api/Addon_Webcam.html
+      - name: Enumerations
         path: /info/api/Dynamsoft_Enum.html
       - name: Interfaces
         path: /info/api/Interfaces.html
-      #- name: Device
-      #  path: /info/api/Device.html
-      - name: WebTwain_Scanner
-        path: /info/api/WebTwain_Acquire.html
-      - name: WebTwain_Buffer
-        path: /info/api/WebTwain_Buffer.html
-      - name: WebTwain_Viewer
-        path: /info/api/WebTwain_Viewer.html
-      - name: WebTwain_Edit
-        path: /info/api/WebTwain_Edit.html
-      - name: WebTwain_IO
-        path: /info/api/WebTwain_IO.html
-      - name: WebTwain_Util
-        path: /info/api/WebTwain_Util.html
-      - name: Addon_BarcodeReader
-        path: /info/api/Addon_BarcodeReader.html
-      # - name: Addon_Camera
-      #   path: /info/api/Addon_Camera.html
-      - name: Addon_PDF
-        path: /info/api/Addon_PDF.html
-      - name: Addon_Webcam
-        path: /info/api/Addon_Webcam.html
-      - name: Dynamsoft_FileUploader
-        path: /info/api/Dynamsoft_FileUploader.html
       - name: Error List
         path: /info/api/appendix.html
       # - name: Interface

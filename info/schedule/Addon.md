@@ -29,6 +29,9 @@ permalink: /info/schedule/Addon.html
 | v15.3.1 | 1.5.3.0107 | 15.3.0.0116 | 10.3.3.0924 | 7.3.0.0107 | N/A /15.0.0.0625 | 10.0.0.0618 | 1.2.0.0806 | 1.4.0.0107 |
 | v14.3.1 |  1.4.1.0115 | 14.3.1.0115 | 10.3.0.0712 | 6.4.1.0115 | N/A /14.3.1.0115 | 10.0.0.0618 | 1.2.0.0806 | 1.2.1.0115 |
 
+<!-- | v18.4.1| 1.8.4.1013 | 18.4.1.1013 | 11.5.1.0926 | 9.6.20.307 | N/A /15.0.0.0625 | N/A | N/A | 1.8.4.0926 | -->
+
+
 ## PDFR
 
 A lightweight PDF library integrated with Dynamic Web TWAIN SDK on the client side to convert text-based PDF files into images and display in the image viewer.

@@ -23,17 +23,17 @@ permalink: /info/api/Dynamsoft_WebTwainEnv.html
 
 |                                         |                                                     |                                                            |                                 |
 |-----------------------------------------|-----------------------------------------------------|------------------------------------------------------------|---------------------------------|
-| [`Autoload`]()                          | [`Containers`](#containers)                         | [`CustomizableDisplayInfo`](#customizabledisplayinfo)      | [`DeviceFriendlyName`]()        |
-| [`Host`]()                              | [`IfAddMD5InUploadHeader`](#ifaddmd5inuploadheader) | [`IfConfineMaskWithinTheViewer`]()                         | [`IfUseActiveXForIE10PIus`]()   |
-| [`JSVersion`]()                         | [`ProductKey`](#productkey)                         | [`ResourcesPath`](#resourcespath)                          | [`ServiceInstallerLocation`]()  |
-| [`UseDefaultViewer`](#usedefaultviewer) |                                                     |                                                            |                                 |
+| [`Autoload`](#autoload)   | [`Containers`](#containers)  | [`CustomizableDisplayInfo`](#customizabledisplayinfo)   | [`DeviceFriendlyName`](#devicefriendlyname)   |
+| [`Host`](#host)  | [`IfAddMD5InUploadHeader`](#ifaddmd5inuploadheader) | [`IfConfineMaskWithinTheViewer`](#ifconfinemaskwithintheviewer)   | [`IfUseActiveXForIE10Plus`](#ifuseactivexforie10plus)   |
+| [`InstallerPath`](#installerpath)  | [`JSVersion`](#jsversion)     | [`ProductKey`](#productkey)     | [`ResourcesPath`](#resourcespath)      |
+| [`ServiceInstallerLocation`](#serviceinstallerlocation)  | [`UseDefaultViewer`](#usedefaultviewer) |                 |                      |
 
 
 **Events**
 
 |                                       |                                       |                             |                            |
 |---------------------------------------|---------------------------------------|-----------------------------|----------------------------|
-| [`OnWebTwainReady`](#onwebtwainready) | [`OnWebTwainError`](#onwebtwainerror) | [`OnWebTwainPostExecute`]() | [`OnWebTwainPreExecute`]() | 
+| [`OnWebTwainReady`](#onwebtwainready) | [`OnWebTwainError`](#onwebtwainerror) | [`OnWebTwainPostExecute`](#onwebtwainpostexecute) | [`OnWebTwainPreExecute`](#onwebtwainpreexecute) | 
 
 
 <!--
@@ -134,44 +134,98 @@ licenseException: string;
 
 Check [license error list](https://www.dynamsoft.com/license-tracking/docs/common/errorlist.html) 
 -->
-## Options
+<!-- ## Options -->
 
-### `Containers`
+<!-- 
+### errorMessages
 
-An array of `Container` definitions that specifies the UI elements for `WebTwain` instances. The `Container` interface is defined below
+Specify the error messages.
+
+### generalMessages
+
+Specify general messages.
+
+### customProgressText
+
+Specify text on progress bars.
+
+### buttons
+
+Specify the titles and whether to show one or multiple buttons on the image editor.
+
+### dialogText
+
+Specify the text on dialogs.
+
+### loaderBarSource
+
+Specify the source of the loader bar image. Check out more on [HTMLImageElement.src](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/src).
+
+### loaderBarClassName
+
+Specify the class name of the DIV element that contains the loader bar. With this class, you can customize the loader bar even further with CSS. -->
+
+
+## CreateDWTObject()
+
+Creates a new `WebTwain` instance that listens to the specified host & ports. An UI element specified by the parameter `ContainerId` which is typically a <div> is required. The library will generate a UI and bind it to this element.
+
+---
+
+## CreateDWTObjectEx()
+
+Creates a new UI-less `WebTwain` instance. This instance will be uniquely identified by the parameter `WebTwainId`.
 
 ``` typescript
-interface Container {
-    WebTwainId?: string, // Id of the WebTwain instance
-    ContainerId?: string, // Id of the element
-    Width?: string | number, // Width of the element
-    Height?: string | number // Height of the element
+interface DWTInitialConfig {
+    WebTwainId: string,
+        Host ? : string,
+        Port ? : string,
+        PortSSL ? : string,
 }
 ```
 
-`WebTwainId` and `ContainerId` are both optional but one must exist as the identifier for that `WebTwain` instance.
+---
 
-`Width` and `Height` determine the initial viewer size of the instance.
+## DeleteDWTObject()
 
-### `IfAddMD5InUploadHeader`
+Delete the `WebTwain` instance specified by `Id` which can either be a `ContainerId` or a `WebTwainId`.
+
+---
+
+## GetWebTwain()
+
+Gets an `WebTwain` instance by its `ContainerId`.
+
+---
+
+## GetWebTwainEx()
+
+Gets an `WebTwain` instance by its `WebTwainId`.
+
+---
   
-Whether or not an md5 header `dwt-md5` should be included in HTTP upload requests. Note that this header is not a standard header and may be deemed invalid on some web servers.
-  
-The default value is `false` .
+## Load()
 
-### `ProductKey`
+Initiates the library. If there are predefined `Containers` , one `WebTwain` instance will be created for each `Container`.
 
-Sets or returns the product key for the library. A product key is required to enables certain modules of the library.
-  
-### `ResourcesPath`
+---
 
-Sets or returns where the library looks for resources files including service installers, CSS, etc.
+## RegisterEvent()
 
-## Functions
+Registers an environmental event. Typically the event is `OnWebTwainReady` which is triggered when the initialization completes.
 
-### `UpdateCert`
+---
 
-Update and download certificate (server.pem.ldsc & server_key.pem.ldsc) to DynamsoftServicex64_17\cert.
+## Unload()
+
+Destroys all `WebTwain` instances and cuts off the connection to the Dynamsoft Service.
+
+---
+
+## UpdateCert
+
+Update and download certificate (server.pem.ldsc & server_key.pem.ldsc) to DynamsoftServicex64_{version}\cert.
 
 **Syntax**
 
@@ -231,85 +285,120 @@ UpdateCert(
   };
 ```
 
-### `CreateDWTObject()`
+---
 
-  Creates a new `WebTwain` instance that listens to the specified host & ports. An UI element specified by the parameter `ContainerId` which is typically a <div> is required. The library will generate a UI and bind it to this element.
-  
+## AutoLoad
 
-### `CreateDWTObjectEx()`
+Specifies whether or not to load the Web TWAIN environment when the Dynamic Web TWAIN scripts are loaded into memory.
 
-  Creates a new UI-less `WebTwain` instance. This instance will be uniquely identified by the parameter `WebTwainId` .
+**Usage Notes**
+
+Default value: `true`.
+
+---
+
+## Containers
+
+An array of `Container` definitions that specifies the UI elements for `WebTwain` instances. The `Container` interface is defined below
 
 ``` typescript
-interface DWTInitialConfig {
-    WebTwainId: string,
-        Host ? : string,
-        Port ? : string,
-        PortSSL ? : string,
+interface Container {
+    WebTwainId?: string, // Id of the WebTwain instance
+    ContainerId?: string, // Id of the element
+    Width?: string | number, // Width of the element
+    Height?: string | number // Height of the element
 }
 ```
 
-### `DeleteDWTObject()`
+`WebTwainId` and `ContainerId` are both optional but one must exist as the identifier for that `WebTwain` instance.
 
-  Delete the `WebTwain` instance specified by `Id` which can either be a `ContainerId` or a `WebTwainId` .
+`Width` and `Height` determine the initial size of `Viewer` object.
 
-### `GetWebTwain()`
+---
 
-  Gets an `WebTwain` instance by its `ContainerId` .
+## CustomizableDisplayInfo
 
-### `GetWebTwainEx()`
+This property contains all the customizable elements of the Dynamic Web TWAIN interface.
 
-  Gets an `WebTwain` instance by its `WebTwainId` .
+---
+
+## DeviceFriendlyName
+
+This property allows you to specify a specified name to the client machine that will be used to identify the client machine when using Dynamsoft License Server. If this is not set, a randomly generated non-tracable UID will be generated.
+
+---
+
+## Host
+
+This property allows you to specify the target address for the local Dynamsoft Service.
+
+**Usage Notes**
+
+Default value: `localhost`.
+
+---
+
+## `IfAddMD5InUploadHeader`
   
-### `Load()`
+Whether or not an md5 header `dwt-md5` should be included in HTTP upload requests. Note that this header is not a standard header and may be deemed invalid on some web servers.
 
-  Initiates the library. If there are predefined `Containers` , one `WebTwain` instance will be created for each `Container` .
+**Usage Notes**
 
-### `RegisterEvent()`
-  [We removed OnWebTWainReady...]: # 
-  Registers an environmental event. Typically the event is `OnWebTwainReady` which is triggered when the initialization completes.
+Default value: `false`.
 
-### `Unload()`
+---
 
-  Destroys all `WebTwain` instances and cuts off the connection to the Dynamsoft Service.
+## IfConfineMaskWithinTheViewer
 
-### `UseDefaultViewer`
+This property defines whether any Dynamic Web TWAIN generated masks will apply to the entire window or just the `Viewer` object. Setting this property to `true` will confine the mask to the `Viewer` object.
+
+**Usage Notes**
+
+Default Value: `false`.
+
+---
+
+## IfUseActiveXforIE10Plus
+
+This property specifies whether Dynamic Web TWAIN will be loaded using HTML5 or ActiveX when loaded in Internet Explorer 10+. If `true`, ActiveX will be used, else HTML5 will be used.
+
+**Usage Notes**
+
+Default value: `false`. 
+
+---
+
+## JSVersion
+
+This is a readonly property that specifies what version the server side Dynamic Web TWAIN resources are being used with the web application.
+
+---
+
+## ProductKey
+
+Sets or returns the product key for the library. A valid product key is required for each module of Dynamic Web TWAIN.
+
+---
+
+## ResourcesPath
+
+Sets or returns where the path to the Dynamic Web TWAIN resource files are hosted.
+
+---
+
+## ServiceInstallerLocation
+
+Sets or returns where the path to the Dynamsoft Service installers are hosted.
+
+---
+
+## UseDefaultViewer
 
 Whether to use the built-in viewer. If it is set to `false` , the file `dynamsoft.webtwain.viewer.js` is not loaded at all and there is no way to add it back later. Therefore, only set it to `false` when you absolutely won't need the viewer or will be building your own viewer.
 
-### `CustomizableDisplayInfo`
+---
 
-Use this API to customize the UI.
-
-#### `errorMessages`
-
-Specify the error messages.
-
-#### `generalMessages`
-
-Specify general messages.
-
-#### `customProgressText`
-
-Specify text on progress bars.
-
-#### `buttons`
-
-Specify the titles and whether to show one or multiple buttons on the image editor.
-
-#### `dialogText`
-
-Specify the text on dialogs.
-
-#### `loaderBarSource`
-
-Specify the source of the loader bar image. Check out more on [HTMLImageElement.src](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/src).
-
-#### `loaderBarClassName`
-
-Specify the class name of the DIV element that contains the loader bar. With this class, you can customize the loader bar even further with CSS.
-
-#### `OnWebTwainReady`
+## OnWebTwainReady
 
 A built-in callback triggered when the Web TWAIN resources have completed loading
 
@@ -320,7 +409,9 @@ Dynamsoft.DWT.RegisterEvent('OnWebTwainReady',
 ); 
 ```
 
-#### `OnWebTwainError`
+---
+
+## OnWebTwainError
 
 A built-in callback triggered when an error is detected when loading the Web TWAIN environment
 
@@ -336,3 +427,23 @@ function Dynamsoft_OnError(error){
   console.error(error.message);
 } 
 ```
+
+---
+
+## OnWebTwainPostExecute
+
+This event triggers at the resolution of an asynchronous API.
+
+The default behaviour is to hide the mask and loading spinner triggered by `OnWebTwainPreExecute`.
+
+You may override this function to implement your own post-excecute scenario.
+
+---
+
+## OnWebTwainPreExecute
+
+This event triggers at the beginning of an asynchronous API. 
+
+The default behaviour is to display a mask and a loading spinner.
+
+You may override this function to either hide the default loading spinner, or define your own
