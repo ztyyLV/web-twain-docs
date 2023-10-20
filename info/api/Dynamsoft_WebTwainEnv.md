@@ -23,10 +23,10 @@ permalink: /info/api/Dynamsoft_WebTwainEnv.html
 
 |                                         |                                                     |                                                            |                                 |
 |-----------------------------------------|-----------------------------------------------------|------------------------------------------------------------|---------------------------------|
-| [`Autoload`](#autoload)                          | [`Containers`](#containers)                         | [`CustomizableDisplayInfo`](#customizabledisplayinfo)      | [`DeviceFriendlyName`](#devicefriendlyname)        |
-| [`Host`](#host)                              | [`IfAddMD5InUploadHeader`](#ifaddmd5inuploadheader) | [`IfConfineMaskWithinTheViewer`](#ifconfinemaskwithintheviewer)                         | [`IfUseActiveXForIE10PIus`](ifuseactivexforie10plus)   |
-| [`JSVersion`](#jsversion)                         | [`ProductKey`](#productkey)                         | [`ResourcesPath`](#resourcespath)                          | [`ServiceInstallerLocation`](#serviceinstallerlocation)  |
-| [`UseDefaultViewer`](#usedefaultviewer) | [`InstallerPath`](#installerpath)                                                     |                                                            |                                 |
+| [`Autoload`](#autoload)   | [`Containers`](#containers)  | [`CustomizableDisplayInfo`](#customizabledisplayinfo)   | [`DeviceFriendlyName`](#devicefriendlyname)   |
+| [`Host`](#host)  | [`IfAddMD5InUploadHeader`](#ifaddmd5inuploadheader) | [`IfConfineMaskWithinTheViewer`](#ifconfinemaskwithintheviewer)   | [`IfUseActiveXForIE10Plus`](#ifuseactivexforie10plus)   |
+| [`InstallerPath`](#installerpath)  | [`JSVersion`](#jsversion)     | [`ProductKey`](#productkey)     | [`ResourcesPath`](#resourcespath)      |
+| [`ServiceInstallerLocation`](#serviceinstallerlocation)  | [`UseDefaultViewer`](#usedefaultviewer) |                 |                      |                 |
 
 
 **Events**
