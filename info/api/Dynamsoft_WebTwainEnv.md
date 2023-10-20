@@ -26,7 +26,7 @@ permalink: /info/api/Dynamsoft_WebTwainEnv.html
 | [`Autoload`](#autoload)                          | [`Containers`](#containers)                         | [`CustomizableDisplayInfo`](#customizabledisplayinfo)      | [`DeviceFriendlyName`](#devicefriendlyname)        |
 | [`Host`](#host)                              | [`IfAddMD5InUploadHeader`](#ifaddmd5inuploadheader) | [`IfConfineMaskWithinTheViewer`](#ifconfinemaskwithintheviewer)                         | [`IfUseActiveXForIE10PIus`](ifuseactivexforie10plus)   |
 | [`JSVersion`](#jsversion)                         | [`ProductKey`](#productkey)                         | [`ResourcesPath`](#resourcespath)                          | [`ServiceInstallerLocation`](#serviceinstallerlocation)  |
-| [`UseDefaultViewer`](#usedefaultviewer) | [`InstallerPath`]                                                     |                                                            |                                 |
+| [`UseDefaultViewer`](#usedefaultviewer) | [`InstallerPath`](#installerpath)                                                     |                                                            |                                 |
 
 
 **Events**
