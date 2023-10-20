@@ -118,7 +118,7 @@ UpdateCert(
 );
 
 ```
--->
+
 
 ## licenseException
 
@@ -133,7 +133,7 @@ licenseException: string;
 **Usage notes**
 
 Check [license error list](https://www.dynamsoft.com/license-tracking/docs/common/errorlist.html) 
-
+-->
 ## Options
 
 ### `Containers`
