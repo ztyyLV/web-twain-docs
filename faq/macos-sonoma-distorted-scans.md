@@ -23,4 +23,5 @@ It has been discovered that with the release of MacOS Sonoma (MacOS 14.0), Dynam
 The recommended solution is to download and install the TWAIN driver from the scanner manufacturer, and use the TWAIN driver.
 
 ## Workaround
-Dynamsoft understands that not all manufacturers provide TWAIN drivers for MacOS. Therefore, Dynamsoft has released Dynamic Web TWAIN 18.4.1 which includes an updated Dynamsoft Service for MacOS that should help alleviate the issue.
+<!-- Dynamsoft understands that not all manufacturers provide TWAIN drivers for MacOS. Therefore, Dynamsoft has released Dynamic Web TWAIN 18.4.1 which includes an updated Dynamsoft Service for MacOS that should help alleviate the issue. -->
+Dynamsoft understands that not all manufacturers provide TWAIN drivers for MacOS. There is an engineering build of the Dynamsoft Service for MacOS available that should help alleviate the issue. Please contact [support@dynamsoft.com](mailto:support@dynamsoft.com) for further details.
