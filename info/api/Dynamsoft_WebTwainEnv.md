@@ -23,10 +23,10 @@ permalink: /info/api/Dynamsoft_WebTwainEnv.html
 
 |                                         |                                                     |                                                            |                                 |
 |-----------------------------------------|-----------------------------------------------------|------------------------------------------------------------|---------------------------------|
-| [`Autoload`](#autoload)                          | [`Containers`](#containers)                         | [`CustomizableDisplayInfo`](#customizabledisplayinfo)      | [`DeviceFriendlyName`](#devicefriendlyname)        |
-| [`Host`](#host)                              | [`IfAddMD5InUploadHeader`](#ifaddmd5inuploadheader) | [`IfConfineMaskWithinTheViewer`](#ifconfinemaskwithintheviewer)                         | [`IfUseActiveXForIE10PIus`](ifuseactivexforie10plus)   |
-| [`JSVersion`](#jsversion)                         | [`ProductKey`](#productkey)                         | [`ResourcesPath`](#resourcespath)                          | [`ServiceInstallerLocation`](#serviceinstallerlocation)  |
-| [`UseDefaultViewer`](#usedefaultviewer) | [`InstallerPath`]                                                     |                                                            |                                 |
+| [`Autoload`](#autoload)   | [`Containers`](#containers)  | [`CustomizableDisplayInfo`](#customizabledisplayinfo)   | [`DeviceFriendlyName`](#devicefriendlyname)   |
+| [`Host`](#host)  | [`IfAddMD5InUploadHeader`](#ifaddmd5inuploadheader) | [`IfConfineMaskWithinTheViewer`](#ifconfinemaskwithintheviewer)   | [`IfUseActiveXForIE10Plus`](#ifuseactivexforie10plus)   |
+| [`InstallerPath`](#installerpath)  | [`JSVersion`](#jsversion)     | [`ProductKey`](#productkey)     | [`ResourcesPath`](#resourcespath)      |
+| [`ServiceInstallerLocation`](#serviceinstallerlocation)  | [`UseDefaultViewer`](#usedefaultviewer) |                 |                      |                 |
 
 
 **Events**
@@ -168,13 +168,13 @@ Specify the class name of the DIV element that contains the loader bar. With thi
 
 ## CreateDWTObject()
 
-  Creates a new `WebTwain` instance that listens to the specified host & ports. An UI element specified by the parameter `ContainerId` which is typically a <div> is required. The library will generate a UI and bind it to this element.
+Creates a new `WebTwain` instance that listens to the specified host & ports. An UI element specified by the parameter `ContainerId` which is typically a <div> is required. The library will generate a UI and bind it to this element.
 
 ---
 
 ## CreateDWTObjectEx()
 
-  Creates a new UI-less `WebTwain` instance. This instance will be uniquely identified by the parameter `WebTwainId`.
+Creates a new UI-less `WebTwain` instance. This instance will be uniquely identified by the parameter `WebTwainId`.
 
 ``` typescript
 interface DWTInitialConfig {
@@ -189,37 +189,37 @@ interface DWTInitialConfig {
 
 ## DeleteDWTObject()
 
-  Delete the `WebTwain` instance specified by `Id` which can either be a `ContainerId` or a `WebTwainId`.
+Delete the `WebTwain` instance specified by `Id` which can either be a `ContainerId` or a `WebTwainId`.
 
 ---
 
 ## GetWebTwain()
 
-  Gets an `WebTwain` instance by its `ContainerId`.
+Gets an `WebTwain` instance by its `ContainerId`.
 
 ---
 
 ## GetWebTwainEx()
 
-  Gets an `WebTwain` instance by its `WebTwainId`.
+Gets an `WebTwain` instance by its `WebTwainId`.
 
 ---
   
 ## Load()
 
-  Initiates the library. If there are predefined `Containers` , one `WebTwain` instance will be created for each `Container`.
+Initiates the library. If there are predefined `Containers` , one `WebTwain` instance will be created for each `Container`.
 
 ---
 
 ## RegisterEvent()
-  [We removed OnWebTWainReady...]: # 
-  Registers an environmental event. Typically the event is `OnWebTwainReady` which is triggered when the initialization completes.
+
+Registers an environmental event. Typically the event is `OnWebTwainReady` which is triggered when the initialization completes.
 
 ---
 
 ## Unload()
 
-  Destroys all `WebTwain` instances and cuts off the connection to the Dynamsoft Service.
+Destroys all `WebTwain` instances and cuts off the connection to the Dynamsoft Service.
 
 ---
 
@@ -291,6 +291,10 @@ UpdateCert(
 
 Specifies whether or not to load the Web TWAIN environment when the Dynamic Web TWAIN scripts are loaded into memory.
 
+**Usage Notes**
+
+Default value: `true`.
+
 ---
 
 ## Containers
@@ -308,7 +312,7 @@ interface Container {
 
 `WebTwainId` and `ContainerId` are both optional but one must exist as the identifier for that `WebTwain` instance.
 
-`Width` and `Height` determine the initial viewer size of the instance.
+`Width` and `Height` determine the initial size of `Viewer` object.
 
 ---
 
@@ -320,33 +324,47 @@ This property contains all the customizable elements of the Dynamic Web TWAIN in
 
 ## DeviceFriendlyName
 
-This property allows you to specify a specified name to the client machine that will be displayed when using Dynamsoft License Server
+This property allows you to specify a specified name to the client machine that will be used to identify the client machine when using Dynamsoft License Server. If this is not set, a randomly generated non-tracable UID will be generated.
 
 ---
 
 ## Host
 
-This property allows you to specify the target address for the local Dynamsoft Service
+This property allows you to specify the target address for the local Dynamsoft Service.
+
+**Usage Notes**
+
+Default value: `localhost`.
 
 ---
 
-## IfAddMD5InUploadHeader
+## `IfAddMD5InUploadHeader`
   
 Whether or not an md5 header `dwt-md5` should be included in HTTP upload requests. Note that this header is not a standard header and may be deemed invalid on some web servers.
 
-The default value is `false`.
+**Usage Notes**
+
+Default value: `false`.
 
 ---
 
 ## IfConfineMaskWithinTheViewer
 
+This property defines whether any Dynamic Web TWAIN generated masks will apply to the entire window or just the `Viewer` object. Setting this property to `true` will confine the mask to the `Viewer` object.
+
+**Usage Notes**
+
+Default Value: `false`.
+
 ---
 
 ## IfUseActiveXforIE10Plus
 
-boolean. Default value: false. 
-
 This property specifies whether Dynamic Web TWAIN will be loaded using HTML5 or ActiveX when loaded in Internet Explorer 10+. If `true`, ActiveX will be used, else HTML5 will be used.
+
+**Usage Notes**
+
+Default value: `false`. 
 
 ---
 
