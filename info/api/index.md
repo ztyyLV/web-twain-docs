@@ -25,7 +25,7 @@ permalink: /info/api/
 |:-|:-|
 |[`Dynamsoft.DWT`]({{site.info}}api/Dynamsoft_WebTwainEnv.html)  | [`Dynamsoft.DWT.Enum`]({{site.info}}api/Dynamsoft_Enum.html)  |
 
-### Events
+## Events
 
 | | |
 |:-|:-|
@@ -33,9 +33,9 @@ permalink: /info/api/
 
 ## WebTwain -->
 
-### Global
+## Global
 
-#### Methods
+### Methods
 
 |                                       |                                           |                                       |                                    |
 |---------------------------------------|-------------------------------------------|---------------------------------------|------------------------------------|
@@ -43,7 +43,7 @@ permalink: /info/api/
 | [`Load()`](#load)                       | [`RegisterEvent()`](#registerevent)         | [`Unload()`](#unload)                   | [`UpdateCert()`](#updatecert)        |
 
 
-#### Properties
+### Properties
 
 |                                         |                                                     |                                                            |                                 |
 |-----------------------------------------|-----------------------------------------------------|------------------------------------------------------------|---------------------------------|
@@ -53,15 +53,15 @@ permalink: /info/api/
 | [`UseDefaultViewer`](#usedefaultviewer) |                 |                      |
 
 
-#### Events
+### Events
 
 |                                       |                                       |                             |                            |
 |---------------------------------------|---------------------------------------|-----------------------------|----------------------------|
 | [`OnWebTwainReady`](#onwebtwainready) | [`OnWebTwainError`](#onwebtwainerror) | [`OnWebTwainPostExecute`](#onwebtwainpostexecute) | [`OnWebTwainPreExecute`](#onwebtwainpreexecute) | 
 
-### Buffer
+## Buffer
 
-#### Methods
+### Methods
 
 <!--* [`GetImageBitDepthAsync()`]({{site.info}}api/WebTwain_Buffer.html#getimagebitdepthasync)-->
 
@@ -122,7 +122,7 @@ permalink: /info/api/
 <!--* [`RemoveAllImagesAsync()`]({{site.info}}api/WebTwain_Buffer.html#removeallimagesasync)-->
 <!--* [`RemoveAllSelectedImagesAsync()`]({{site.info}}api/WebTwain_Buffer.html#removeallselectedimagesasync)-->
 
-#### Properties
+### Properties
 
 | | | | |
 |:-|:-|:-|:-|
@@ -142,15 +142,15 @@ permalink: /info/api/
 * [`SelectedImagesIndices`]({{site.info}}api/WebTwain_Buffer.html#selectedimagesindices)
 * [`MaxImagesInBuffer`]({{site.info}}api/WebTwain_Buffer.html#maximagesinbuffer) -->
 
-#### Events
+### Events
 
 | | | | |
 |:-|:-|:-|:-|
 | [`OnBufferChanged`]({{site.info}}api/WebTwain_Buffer.html#onbufferchanged) |[`OnBitmapChanged`]({{site.info}}api/WebTwain_Buffer.html#onbitmapchanged) | [`OnIndexChangeDragDropDone`]({{site.info}}api/WebTwain_Buffer.html#onindexchangedragdropdone)| [`OnTopImageInTheViewChanged`]({{site.info}}api/WebTwain_Buffer.html#ontopimageintheviewchanged)|
 
-### Edit
+## Edit
 
-#### Methods
+### Methods
 
 | | | | |
 |:-|:-|:-|:-|
@@ -189,7 +189,7 @@ permalink: /info/api/
 <!--* [`RotateRightAsync()`]({{site.info}}api/WebTwain_Edit.html#rotateright)-->
 <!--* [`ConvertToGrayScaleAsync()`]({{site.info}}api/WebTwain_Edit.html#converttograyscaleasync)-->
 
-#### Properties
+### Properties
 
 | |
 |:-|
@@ -198,9 +198,9 @@ permalink: /info/api/
 <!--
 * [`BackgroundFillColor`]({{site.info}}api/WebTwain_Edit.html#backgroundfillcolor) -->
 
-### Scan
+## Scan
 
-#### Methods
+### Methods
 
 | | | | |
 | :------------------------------------------------ | :------------------------------------------ | ----------------------------------------------- | --------------------------------------------------------- |
@@ -233,7 +233,7 @@ permalink: /info/api/
 * [`CloseSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#closesourceasync)
 * [`CloseWorkingProcess()`]({{site.info}}api/WebTwain_Acquire.html#closeworkingprocess) -->
 
-#### Properties
+### Properties
 
 | | |
 |:-|:-|
@@ -251,7 +251,7 @@ permalink: /info/api/
 * [`Resolution`]({{site.info}}api/WebTwain_Acquire.html#resolution) 
 * [`SourceCount`]({{site.info}}api/WebTwain_Acquire.html#sourcecount)
 -->
-#### Events
+### Events
 
 | | |
 |:-|:-|
@@ -267,7 +267,7 @@ permalink: /info/api/
 -->
 > The following APIs are compatible with TWAIN and ICA
 
-#### Methods
+### Methods
 
 | | |
 |:-|:-|
@@ -275,7 +275,7 @@ permalink: /info/api/
 
 > The following APIs are compatible with TWAIN (mostly Windows, but could also be macOS)
 
-#### Methods
+### Methods
 
 | | | | |
 |:-|:-|:-|:-|
@@ -284,7 +284,7 @@ permalink: /info/api/
 |[`ResetImageLayout()`]({{site.info}}api/WebTwain_Acquire.html#resetimagelayout) | [`RewindPage()`]({{site.info}}api/WebTwain_Acquire.html#rewindpage)| [`SetCustomDSData()`]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdata) | [`SetCustomDSDataEx()`]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdataex)|
 | [`SetFileXferInfo()`]({{site.info}}api/WebTwain_Acquire.html#setfilexferinfo) | [`SetImageLayout()`]({{site.info}}api/WebTwain_Acquire.html#setimagelayout)|
 
-#### Properties
+### Properties
 
 | | | | |
 |:-|:-|:-|:-|
@@ -334,15 +334,15 @@ permalink: /info/api/
 * [`Unit`]({{site.info}}api/WebTwain_Acquire.html#unit)
 * [`XferCount`]({{site.info}}api/WebTwain_Acquire.html#xfercount)
 -->
-#### Events
+### Events
 
 | | |
 |:-|:-|
 | [`OnSourceUIClose`]({{site.info}}api/WebTwain_Acquire.html#onsourceuiclose)| | 
 
-### Input
+## Input
 
-#### Methods
+### Methods
 
 | | | | |
 |:-|:-|:-|:-|
@@ -365,9 +365,9 @@ permalink: /info/api/
 
 <!--* [`LoadDibFromClipboardAsync()`]({{site.info}}api/WebTwain_IO.html#loaddibfromclipboardasync)-->
 
-### Output
+## Output
 
-#### Methods
+### Methods
 
 | | | | |
 |:-|:-|:-|:-|
@@ -410,9 +410,9 @@ permalink: /info/api/
 * [`SaveAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveallasmultipagetiff)
 * [`SaveAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveallaspdf) -->
 
-### Others
+## Others
 
-#### Methods
+### Methods
 
 | | | | |
 |:-|:-|:-|:-|
@@ -432,7 +432,7 @@ permalink: /info/api/
 * [`PrintEx()`]({{site.info}}api/WebTwain_IO.html#printex)
 -->
 
-#### Properties
+### Properties
 
 | | | | |
 |:-|:-|:-|:-|
@@ -459,7 +459,7 @@ permalink: /info/api/
 * [`MaxUploadImageSize`]({{site.info}}api/WebTwain_IO.html#maxuploadimagesize)
 * [`IfAppendImage`]({{site.info}}api/WebTwain_IO.html#ifappendimage) -->
 
-#### Events
+### Events
 
 | | | | |
 |:-|:-|:-|:-|
@@ -470,9 +470,9 @@ permalink: /info/api/
 * [`OnPostLoad`]({{site.info}}api/WebTwain_IO.html#onpostload)
 * [`OnInternetTransferPercentage`]({{site.info}}api/WebTwain_IO.html#oninternettransferpercentage) -->
 
-### Util
+## Util
 
-#### Methods
+### Methods
 
 | | | | |
 |:-|:-|:-|:-|
@@ -486,7 +486,7 @@ permalink: /info/api/
 * [`SetLanguage()`]({{site.info}}api/WebTwain_Util.html#setlanguage)
 * [`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)-->
 
-#### Properties
+### Properties
 
 | | | | |
 |:-|:-|:-|:-|
@@ -505,9 +505,9 @@ permalink: /info/api/
 * [`UseLocalService`]({{site.info}}api/WebTwain_Util.html#uselocalservice)
 -->
 
-### Viewer
+## Viewer
 
-#### Methods
+### Methods
 
 | | | | |
 |:-|:-|:-|:-|
@@ -541,7 +541,7 @@ permalink: /info/api/
 * [`unbind()`]({{site.info}}api/WebTwain_Viewer.html#unbind)
 -->
 
-#### Properties
+### Properties
 
 | | | | |
 |:-|:-|:-|:-|
@@ -575,7 +575,7 @@ permalink: /info/api/
 
 -->
 
-#### Events
+### Events
 
 | | | | |
 |:-|:-|:-|:-|
@@ -605,9 +605,9 @@ permalink: /info/api/
 
 ## Addon
 
-### BarcodeReader
+## BarcodeReader
 
-#### Methods
+### Methods
 
 | | | | |
 |:-|:-|:-|:-|
@@ -623,9 +623,9 @@ permalink: /info/api/
 * [`initRuntimeSettingsWithString()`]({{site.info}}api/Addon_BarcodeReader.html#initruntimesettingswithstring)
 -->
 
-### PDF
+## PDF
 
-#### Methods
+### Methods
 
 | | | | |
 |:-|:-|:-|:-|
@@ -633,9 +633,9 @@ permalink: /info/api/
 |[`SetPassword()`]({{site.info}}api/Addon_PDF.html#setpassword)|[`SetResolution()`]({{site.info}}api/Addon_PDF.html#setresolution)|[`Write.Setup()`]({{site.info}}api/Addon_PDF.html#writesetup)| [`GetReaderOptions()`]({{site.info}}api/Addon_PDF.html#getreaderoptions)|
 | [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions)|
 
-<!-- ### Camera
+<!-- ## Camera
 
-#### Methods
+### Methods
 
 | |
 |:-|:-|
@@ -644,9 +644,9 @@ permalink: /info/api/
 |[`pause()`]({{site.info}}api/Addon_Camera.html#pause)| [`resume()`]({{site.info}}api/Addon_Camera.html#resume)| [`stop()`]({{site.info}}api/Addon_Camera.html#stop)|[`getStatus()`]({{site.info}}api/Addon_Camera.html#getstatus)|
 |[`capture()`]({{site.info}}api/Addon_Camera.html#capture)| [`showVideo()`]({{site.info}}api/Addon_Camera.html#showvideo)| [`closeVideo()`]({{site.info}}api/Addon_Camera.html#closevideo)|[`scanDocument()`]({{site.info}}api/Addon_Camera.html#scandocument)| -->
 
-### Webcam
+## Webcam
 
-#### Methods
+### Methods
 
 | | | | |
 |:-|:-|:-|:-|
@@ -657,9 +657,9 @@ permalink: /info/api/
 |[`GetSourceList()`]({{site.info}}api/Addon_Webcam.html#getsourcelist) | [`SelectSource()`]({{site.info}}api/Addon_Webcam.html#selectsource)|[`PauseVideo()`]({{site.info}}api/Addon_Webcam.html#pausevideo) |[`PlayVideo()`]({{site.info}}api/Addon_Webcam.html#playvideo)|
 |[`SetVideoRotateMode()`]({{site.info}}api/Addon_Webcam.html#setvideorotatemode) | [`StopVideo()`]({{site.info}}api/Addon_Webcam.html#stopvideo)|
 
-### Dynamsoft.FileUploader
+## Dynamsoft.FileUploader
 
-#### Methods
+### Methods
 
 | | | | |
 |:-|:-|:-|:-|
@@ -678,7 +678,7 @@ permalink: /info/api/
 |:-|:-|
 |[`Dynamsoft.DWT`]({{site.info}}api/Dynamsoft_WebTwainEnv.html)  | [`Dynamsoft.DWT.Enum`]({{site.info}}api/Dynamsoft_Enum.html)  |
 
-### Events
+## Events
 
 | | |
 |:-|:-|
@@ -686,9 +686,9 @@ permalink: /info/api/
 
 ## WebTwain -->
 
-### Global
+## Global
 
-#### Methods
+### Methods
 
 |                                       |                                           |                                       |                                    |
 |---------------------------------------|-------------------------------------------|---------------------------------------|------------------------------------|
@@ -696,7 +696,7 @@ permalink: /info/api/
 | [`Load()`](#load)                       | [`RegisterEvent()`](#registerevent)         | [`Unload()`](#unload)                   | [`UpdateCert()`](#updatecert)        |
 
 
-#### Properties
+### Properties
 
 |                                         |                                                     |                                                            |                                 |
 |-----------------------------------------|-----------------------------------------------------|------------------------------------------------------------|---------------------------------|
@@ -706,15 +706,15 @@ permalink: /info/api/
 | [`UseDefaultViewer`](#usedefaultviewer) |                 |                      |
 
 
-#### Events
+### Events
 
 |                                       |                                       |                             |                            |
 |---------------------------------------|---------------------------------------|-----------------------------|----------------------------|
 | [`OnWebTwainReady`](#onwebtwainready) | [`OnWebTwainError`](#onwebtwainerror) | [`OnWebTwainPostExecute`](#onwebtwainpostexecute) | [`OnWebTwainPreExecute`](#onwebtwainpreexecute) |
 
-### Buffer
+## Buffer
 
-#### Methods
+### Methods
 
 <!--* [`GetImageBitDepthAsync()`]({{site.info}}api/WebTwain_Buffer.html#getimagebitdepthasync)-->
 
@@ -774,7 +774,7 @@ permalink: /info/api/
 <!--* [`RemoveAllImagesAsync()`]({{site.info}}api/WebTwain_Buffer.html#removeallimagesasync)-->
 <!--* [`RemoveAllSelectedImagesAsync()`]({{site.info}}api/WebTwain_Buffer.html#removeallselectedimagesasync)-->
 
-#### Properties
+### Properties
 
 | | | | |
 |:-|:-|:-|:-|
@@ -794,15 +794,15 @@ permalink: /info/api/
 * [`SelectedImagesIndices`]({{site.info}}api/WebTwain_Buffer.html#selectedimagesindices)
 * [`MaxImagesInBuffer`]({{site.info}}api/WebTwain_Buffer.html#maximagesinbuffer) -->
 
-#### Events
+### Events
 
 | | | | |
 |:-|:-|:-|:-|
 | [`OnBufferChanged`]({{site.info}}api/WebTwain_Buffer.html#onbufferchanged) |[`OnBitmapChanged`]({{site.info}}api/WebTwain_Buffer.html#onbitmapchanged) | [`OnIndexChangeDragDropDone`]({{site.info}}api/WebTwain_Buffer.html#onindexchangedragdropdone)| [`OnTopImageInTheViewChanged`]({{site.info}}api/WebTwain_Buffer.html#ontopimageintheviewchanged)|
 
-### Edit
+## Edit
 
-#### Methods
+### Methods
 
 | | | | |
 |:-|:-|:-|:-|
@@ -841,7 +841,7 @@ permalink: /info/api/
 <!--* [`RotateRightAsync()`]({{site.info}}api/WebTwain_Edit.html#rotateright)-->
 <!--* [`ConvertToGrayScaleAsync()`]({{site.info}}api/WebTwain_Edit.html#converttograyscaleasync)-->
 
-#### Properties
+### Properties
 
 | | | | |
 |:-|:-|:-|:-|
@@ -850,25 +850,25 @@ permalink: /info/api/
 <!--
 * [`BackgroundFillColor`]({{site.info}}api/WebTwain_Edit.html#backgroundfillcolor) -->
 
-### Scan
+## Scan
 
-#### Methods
+### Methods
 
 | | | | |
 | :------------------------------------------------ | :------------------------------------------ | ----------------------------------------------- | --------------------------------------------------------- |
 | [`SelectSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#selectsourceasync)  | [`CloseSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#closesourceasync)  | [`GetDevicesAsync()`]({{site.info}}api/WebTwain_Acquire.html#getdevicesasync)   | [`SelectDeviceAsync()`]({{site.info}}api/WebTwain_Acquire.html#selectdeviceasync)                   |
 | [`AcquireImageAsync()`]({{site.info}}api/WebTwain_Acquire.html#acquireimageasync)   |[`getCapabilities()`]({{site.info}}api/WebTwain_Acquire.html#getcapabilities) | [`setCapabilities()`]({{site.info}}api/WebTwain_Acquire.html#setcapabilities) |
 
-#### Events
+### Events
 
 | | | | |
 |:-|:-|:-|:-|
 | [`OnPostTransferAsync`]({{site.info}}api/WebTwain_Acquire.html#onposttransferasync) | 
 
 
-### Input
+## Input
 
-#### Methods
+### Methods
 
 | | | | |
 |:-|:-|:-|:-|
@@ -890,9 +890,9 @@ permalink: /info/api/
 
 <!--* [`LoadDibFromClipboardAsync()`]({{site.info}}api/WebTwain_IO.html#loaddibfromclipboardasync)-->
 
-### Output
+## Output
 
-#### Methods
+### Methods
 
 | | | | |
 |:-|:-|:-|:-|
@@ -932,9 +932,9 @@ permalink: /info/api/
 * [`SaveAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveallasmultipagetiff)
 * [`SaveAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveallaspdf) -->
 
-### Others
+## Others
 
-#### Methods
+### Methods
 
 | | | | |
 |:-|:-|:-|:-|
@@ -953,7 +953,7 @@ permalink: /info/api/
 * [`PrintEx()`]({{site.info}}api/WebTwain_IO.html#printex)
 -->
 
-#### Properties
+### Properties
 
 | | | | |
 |:-|:-|:-|:-|
@@ -979,7 +979,7 @@ permalink: /info/api/
 * [`MaxUploadImageSize`]({{site.info}}api/WebTwain_IO.html#maxuploadimagesize)
 * [`IfAppendImage`]({{site.info}}api/WebTwain_IO.html#ifappendimage) -->
 
-#### Events
+### Events
 
 | | |
 |:-|:-|
@@ -990,9 +990,9 @@ permalink: /info/api/
 * [`OnPostLoad`]({{site.info}}api/WebTwain_IO.html#onpostload)
 * [`OnInternetTransferPercentage`]({{site.info}}api/WebTwain_IO.html#oninternettransferpercentage) -->
 
-### Util
+## Util
 
-#### Methods
+### Methods
 
 | | | | |
 |:-|:-|:-|:-|
@@ -1005,7 +1005,7 @@ permalink: /info/api/
 * [`SetLanguage()`]({{site.info}}api/WebTwain_Util.html#setlanguage)
 * [`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)-->
 
-#### Properties
+### Properties
 
 | | | | |
 |:-|:-|:-|:-|
@@ -1024,9 +1024,9 @@ permalink: /info/api/
 * [`UseLocalService`]({{site.info}}api/WebTwain_Util.html#uselocalservice)
 -->
 
-### Viewer
+## Viewer
 
-#### Methods
+### Methods
 
 | | | | |
 |:-|:-|:-|:-|
@@ -1060,7 +1060,7 @@ permalink: /info/api/
 * [`unbind()`]({{site.info}}api/WebTwain_Viewer.html#unbind)
 -->
 
-#### Properties
+### Properties
 
 | | | | |
 |:-|:-|:-|:-|
@@ -1094,7 +1094,7 @@ permalink: /info/api/
 
 -->
 
-#### Events
+### Events
 
 | | | | |
 |:-|:-|:-|:-|
@@ -1124,9 +1124,9 @@ permalink: /info/api/
 
 ## Addon
 
-### PDF
+## PDF
 
-#### Methods
+### Methods
 
 | | | | |
 |:-|:-|:-|:-|
