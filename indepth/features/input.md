@@ -22,7 +22,7 @@ A local scanner refers to a scanner that is plugged in the same desktop via USB 
 
 > As far as `Dynamic Web TWAIN` is concerned, a network scanner is just like a local scanner because its driver has taken care of the network connection behind the scene.
 
-The following code shows how one way to acquire the image via the local Dynamsoft Service.
+The following code shows one way to acquire the image via the local Dynamsoft Service.
 ``` javascript
 //Get the list of available TWAIN scanners
 let scannerList=await DWObject.GetDevicesAsync()
@@ -41,7 +41,7 @@ Many modern scanners and multi-functional printers (MFPs) support the eSCL proto
 - To scan from an eSCL Scanner to PC, the Dynamsoft Service must be installed on the client PC
 - To scan from an eSCL Scanner to Android, you must install the Android Service on the client device from the [Play Store](https://play.google.com/store/apps/details?id=com.dynamsoft.mobilescan).
 
-The following code shows how one way to acquire the image via the eSCL protocol.
+The following code shows one way to acquire the image via the eSCL protocol.
 ``` javascript
 //Get the list of available eSCL scanners
 let esclDeviceList=await DWObject.GetDevicesAsync(Dynamsoft.DWT.EnumDWT_DeviceType.ESCLSCANNER)
