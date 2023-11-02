@@ -336,9 +336,9 @@ permalink: /info/api/
 -->
 ### Events
 
-| | |
-|:-|:-|
-| [`OnSourceUIClose`]({{site.info}}api/WebTwain_Acquire.html#onsourceuiclose)| | 
+| |
+|:-|
+| [`OnSourceUIClose`]({{site.info}}api/WebTwain_Acquire.html#onsourceuiclose) |
 
 ## Input
 
@@ -663,8 +663,8 @@ permalink: /info/api/
 
 | | | | |
 |:-|:-|:-|:-|
-| [`Init()`]({{site.info}}api/Dynamsoft_FileUploader.html#init)|[`CreateJob()`]({{site.info}}api/Dynamsoft_FileUploader.html#createjob)|[`Run()`]({{site.info}}api/Dynamsoft_FileUploader.html#run)|
-|[`Cancel()`]({{site.info}}api/Dynamsoft_FileUploader.html#cancel)| [`CancelAllUpload()`]({{site.info}}api/Dynamsoft_FileUploader.html#cancelallupload)|
+| [`Init()`]({{site.info}}api/Dynamsoft_FileUploader.html#init)|[`CreateJob()`]({{site.info}}api/Dynamsoft_FileUploader.html#createjob)|[`Run()`]({{site.info}}api/Dynamsoft_FileUploader.html#run) | [`Cancel()`]({{site.info}}api/Dynamsoft_FileUploader.html#cancel)|
+|[`CancelAllUpload()`]({{site.info}}api/Dynamsoft_FileUploader.html#cancelallupload)|
 
 <div class="multi-panel-end">
 
