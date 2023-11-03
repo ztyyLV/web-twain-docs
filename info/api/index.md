@@ -39,25 +39,25 @@ permalink: /info/api/
 
 |                                       |                                           |                                       |                                    |
 |---------------------------------------|-------------------------------------------|---------------------------------------|------------------------------------|
-| [`CreateDWTObject()`](#createdwtobject) | [`CreateDWTobjectEx()`](#createdwtobjectex) | [`DeleteDWTObject()`](#deletedwtobject) | [`GetWebTwain()`](#getwebtwain)      |
-| [`Load()`](#load)                       | [`RegisterEvent()`](#registerevent)         | [`Unload()`](#unload)                   | [`UpdateCert()`](#updatecert)        |
+| [`CreateDWTObject()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#createdwtobject) | [`CreateDWTobjectEx()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#createdwtobjectex) | [`DeleteDWTObject()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#deletedwtobject) | [`GetWebTwain()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#getwebtwain)      |
+| [`Load()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#load)                       | [`RegisterEvent()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#registerevent)         | [`Unload()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#unload)                   | [`UpdateCert()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#updatecert)        |
 
 
 ### Properties
 
 |                                         |                                                     |                                                            |                                 |
 |-----------------------------------------|-----------------------------------------------------|------------------------------------------------------------|---------------------------------|
-| [`Autoload`](#autoload)   | [`Containers`](#containers)  | [`CustomizableDisplayInfo`](#customizabledisplayinfo)   | [`DeviceFriendlyName`](#devicefriendlyname)   |
-| [`Host`](#host)  | [`IfAddMD5InUploadHeader`](#ifaddmd5inuploadheader) | [`IfConfineMaskWithinTheViewer`](#ifconfinemaskwithintheviewer)   | [`IfUseActiveXForIE10Plus`](#ifuseactivexforie10plus)   |
-| [`JSVersion`](#jsversion)     | [`ProductKey`](#productkey)     | [`ResourcesPath`](#resourcespath)      | [`ServiceInstallerLocation`](#serviceinstallerlocation) | 
-| [`UseDefaultViewer`](#usedefaultviewer) |                 |                      |
+| [`Autoload`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#autoload)   | [`Containers`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#containers)  | [`CustomizableDisplayInfo`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#customizabledisplayinfo)   | [`DeviceFriendlyName`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#devicefriendlyname)   |
+| [`Host`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#host)  | [`IfAddMD5InUploadHeader`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifaddmd5inuploadheader) | [`IfConfineMaskWithinTheViewer`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifconfinemaskwithintheviewer)   | [`IfUseActiveXForIE10Plus`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifuseactivexforie10plus)   |
+| [`JSVersion`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#jsversion)     | [`ProductKey`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#productkey)     | [`ResourcesPath`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#resourcespath)      | [`ServiceInstallerLocation`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#serviceinstallerlocation) | 
+| [`UseDefaultViewer`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#usedefaultviewer) |                 |                      |
 
 
 ### Events
 
 |                                       |                                       |                             |                            |
 |---------------------------------------|---------------------------------------|-----------------------------|----------------------------|
-| [`OnWebTwainReady`](#onwebtwainready) | [`OnWebTwainError`](#onwebtwainerror) | [`OnWebTwainPostExecute`](#onwebtwainpostexecute) | [`OnWebTwainPreExecute`](#onwebtwainpreexecute) | 
+| [`OnWebTwainReady`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainready) | [`OnWebTwainError`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainerror) | [`OnWebTwainPostExecute`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainpostexecute) | [`OnWebTwainPreExecute`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainpreexecute) | 
 
 ## Buffer
 
@@ -692,25 +692,25 @@ permalink: /info/api/
 
 |                                       |                                           |                                       |                                    |
 |---------------------------------------|-------------------------------------------|---------------------------------------|------------------------------------|
-| [`CreateDWTObject()`](#createdwtobject) | [`CreateDWTobjectEx()`](#createdwtobjectex) | [`DeleteDWTObject()`](#deletedwtobject) | [`GetWebTwain()`](#getwebtwain)      |
-| [`Load()`](#load)                       | [`RegisterEvent()`](#registerevent)         | [`Unload()`](#unload)                   | [`UpdateCert()`](#updatecert)        |
+| [`CreateDWTObject()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#createdwtobject) | [`CreateDWTobjectEx()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#createdwtobjectex) | [`DeleteDWTObject()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#deletedwtobject) | [`GetWebTwain()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#getwebtwain)      |
+| [`Load()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#load)                       | [`RegisterEvent()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#registerevent)         | [`Unload()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#unload)                   | [`UpdateCert()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#updatecert)        |
 
 
 ### Properties
 
 |                                         |                                                     |                                                            |                                 |
 |-----------------------------------------|-----------------------------------------------------|------------------------------------------------------------|---------------------------------|
-| [`Autoload`](#autoload)   | [`Containers`](#containers)  | [`CustomizableDisplayInfo`](#customizabledisplayinfo)   | [`DeviceFriendlyName`](#devicefriendlyname)   |
-| [`Host`](#host)  | [`IfAddMD5InUploadHeader`](#ifaddmd5inuploadheader) | [`IfConfineMaskWithinTheViewer`](#ifconfinemaskwithintheviewer)   | [`IfUseActiveXForIE10Plus`](#ifuseactivexforie10plus)   |
-| [`JSVersion`](#jsversion)     | [`ProductKey`](#productkey)     | [`ResourcesPath`](#resourcespath)      | [`ServiceInstallerLocation`](#serviceinstallerlocation) | 
-| [`UseDefaultViewer`](#usedefaultviewer) |                 |                      |
+| [`Autoload`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#autoload)   | [`Containers`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#containers)  | [`CustomizableDisplayInfo`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#customizabledisplayinfo)   | [`DeviceFriendlyName`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#devicefriendlyname)   |
+| [`Host`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#host)  | [`IfAddMD5InUploadHeader`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifaddmd5inuploadheader) | [`IfConfineMaskWithinTheViewer`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifconfinemaskwithintheviewer)   | [`IfUseActiveXForIE10Plus`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifuseactivexforie10plus)   |
+| [`JSVersion`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#jsversion)     | [`ProductKey`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#productkey)     | [`ResourcesPath`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#resourcespath)      | [`ServiceInstallerLocation`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#serviceinstallerlocation) | 
+| [`UseDefaultViewer`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#usedefaultviewer) |                 |                      |
 
 
 ### Events
 
 |                                       |                                       |                             |                            |
 |---------------------------------------|---------------------------------------|-----------------------------|----------------------------|
-| [`OnWebTwainReady`](#onwebtwainready) | [`OnWebTwainError`](#onwebtwainerror) | [`OnWebTwainPostExecute`](#onwebtwainpostexecute) | [`OnWebTwainPreExecute`](#onwebtwainpreexecute) |
+| [`OnWebTwainReady`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainready) | [`OnWebTwainError`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainerror) | [`OnWebTwainPostExecute`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainpostexecute) | [`OnWebTwainPreExecute`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainpreexecute) | 
 
 ## Buffer
 
