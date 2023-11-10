@@ -40,8 +40,10 @@ permalink: /info/api/
 |                                       |                                           |                                       |                                    |
 |---------------------------------------|-------------------------------------------|---------------------------------------|------------------------------------|
 | [`CreateDWTObject()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#createdwtobject) | [`CreateDWTobjectEx()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#createdwtobjectex) | [`DeleteDWTObject()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#deletedwtobject) | [`GetWebTwain()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#getwebtwain)      |
-| [`Load()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#load)                       | [`RegisterEvent()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#registerevent)         | [`Unload()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#unload)                   | [`UpdateCert()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#updatecert)        |
+| [`Load()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#load)                       | [`RegisterEvent()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#registerevent)         | [`Unload()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#unload)                   | |
 
+
+ <!-- [`UpdateCert()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#updatecert)         -->
 
 ### Properties
 
@@ -693,7 +695,9 @@ permalink: /info/api/
 |                                       |                                           |                                       |                                    |
 |---------------------------------------|-------------------------------------------|---------------------------------------|------------------------------------|
 | [`CreateDWTObject()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#createdwtobject) | [`CreateDWTobjectEx()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#createdwtobjectex) | [`DeleteDWTObject()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#deletedwtobject) | [`GetWebTwain()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#getwebtwain)      |
-| [`Load()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#load)                       | [`RegisterEvent()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#registerevent)         | [`Unload()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#unload)                   | [`UpdateCert()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#updatecert)        |
+| [`Load()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#load)                       | [`RegisterEvent()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#registerevent)         | [`Unload()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#unload)                   |        |
+
+<!-- [`UpdateCert()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#updatecert)  -->
 
 
 ### Properties
