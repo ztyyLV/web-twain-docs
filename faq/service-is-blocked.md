@@ -14,7 +14,6 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 # The scanner's UI or the system's file dialog does not open when scanning
 
-
 ### Symptom
 
 Dynamsoft Service is installed successfully, but when attempting to scan or load files, the scanner's UI or the system's file dialog does not open. You may also see the error, "The pipe is being closed."
@@ -33,7 +32,7 @@ If these two processes are not under the user account, we can confirm that Dynam
 
 **Cause Two**
 
-
+The issue occurs when the allocated memory address exceeds the 32-bit limit. In this situation, it becomes impossible to access resources under the current user's permissions, such as save/load operations. Notably, 32-bit scanning and memory uploads remain unaffected. This issue is present in all versions before 18.2.
 
 ### Resolution
 
